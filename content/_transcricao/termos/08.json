@@ -1,0 +1,26 @@
+{
+  "peca:itens": [
+    { "n": "1", "descricao": "Endereçamento correto: juízo da 5ª Vara Criminal (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["5 vara criminal"] } ] },
+    { "n": "2", "descricao": "Dispositivo legal que fundamenta a resposta à acusação: art. 396 e/ou art. 396-A do CPP (0,30).", "componentes": [ { "id": "c1", "valor": 0.3, "dispositivo": ["art. 396 CPP", "art. 396-A CPP"] } ] },
+    { "n": "3", "secao": "Mérito", "descricao": "A conduta de extorsão seria atípica (1,00) por ausência da elementar “vantagem indevida” (0,50).", "componentes": [ { "id": "c1", "valor": 1.0, "termos": ["atipic*", "extorsao"] }, { "id": "c2", "valor": 0.5, "termos": ["vantagem indevida | indevida"] } ] },
+    { "n": "4.1", "secao": "Mérito", "descricao": "A conduta se amoldaria ao exercício arbitrário das próprias razões (0,40), previsto no artigo 345, caput, do CP (0,10).", "componentes": [ { "id": "c1", "valor": 0.4, "termos": ["exercicio arbitrario das proprias razoes | exercicio arbitrario"] }, { "id": "c2", "valor": 0.1, "dispositivo": ["art. 345 CP"], "requer": "c1" } ] },
+    { "n": "4.2", "secao": "Mérito", "descricao": "O exercício arbitrário das próprias razões é persequível por ação penal privada (0,30).", "componentes": [ { "id": "c1", "valor": 0.3, "termos": ["acao penal privada | queixa | privada"] } ] },
+    { "n": "4.3", "secao": "Mérito", "descricao": "Decadência do direito de queixa (0,30), razão pela qual está extinta a punibilidade (0,20).", "componentes": [ { "id": "c1", "valor": 0.3, "termos": ["decaden*"] }, { "id": "c2", "valor": 0.2, "termos": ["extin* da punibilidade"] } ] },
+    { "n": "5", "secao": "Pedidos", "descricao": "Absolvição sumária (0,25) com fundamento no art. 397, III, do CPP (0,25) e art. 397, IV, do CPP (0,25); produção de prova testemunhal ou rol de testemunhas (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["absolvi* | absolver"] }, { "id": "c2", "valor": 0.25, "dispositivo": ["art. 397, III, CPP"], "requer": "c1" }, { "id": "c3", "valor": 0.25, "dispositivo": ["art. 397, IV, CPP"], "requer": "c1" }, { "id": "c4", "valor": 0.25, "termos": ["testemunha*"] } ] },
+    { "n": "6", "descricao": "Indicação do último dia do prazo (art. 396 do CPP): 28/01/2011 (0,40).", "componentes": [ { "id": "c1", "valor": 0.4, "termos": ["28 de janeiro de 2011"] } ] },
+    { "n": "7", "descricao": "Estrutura correta: divisão das partes, local, data, assinatura (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["local", "advogad* | assinatura | oab"] } ] }
+  ],
+  "q1:A1": { "componentes": [
+    { "id": "c1", "valor": 0.4, "termos": ["atipic*"] },
+    { "id": "c2", "valor": 0.4, "termos": ["lancamento definitivo | lancamento"], "dispositivo": ["Súmula Vinculante 24"], "requer": "c1", "rotulo": "Súmula Vinculante 24 OU ausência de lançamento definitivo do tributo" } ] },
+  "q1:A2": { "componentes": [ { "id": "c1", "valor": 0.45, "termos": ["absolvi* | absolver"], "rotulo": "Absolvição sumária (art. 397, III, do CPP)" } ] },
+  "q2:A.c1": ["estelionato"],
+  "q2:A.c2": ["fraude", "consentimento | induz* | erro"],
+  "q2:B.c1": ["furto"],
+  "q2:B.c2": { "alternativas": [["furto simples"], ["nao", "qualifica*"], ["nucleo do tipo"]] },
+  "q3:A.c1": ["mutatio libelli"],
+  "q3:B": { "componentes": [ { "id": "c1", "valor": 0.5, "alternativas": [["imparcialidade"], ["inercia"], ["acusatorio"], ["correlacao | congruencia"]], "rotulo": "Imparcialidade/inércia, sistema acusatório ou correlação entre acusação e sentença" } ] },
+  "q3:C": { "componentes": [ { "id": "c1", "valor": 0.25, "alternativas": [["sumula 453"], ["supressao de instancia"]], "rotulo": "Não: Súmula 453 do STF OU supressão de instância" } ] },
+  "q4:A.c1": ["prescri*", "retroativa"],
+  "q4:B": { "componentes": [ { "id": "c1", "valor": 0.5, "alternativas": [["pretensao executoria | prescricao executoria"], ["sumula 220"]], "rotulo": "Não: o aumento da reincidência só se aplica à prescrição executória OU Súmula 220 do STJ" } ] }
+}

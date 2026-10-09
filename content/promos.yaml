@@ -1,0 +1,45 @@
+# Anúncios e conteúdos promocionais.
+#
+# tipos:
+#   house   — anúncio da casa (Curso Completo). href vazio = COURSE_URL de src/config/site.ts
+#   ad      — espaço de rede de anúncios (AdSense etc.). Enquanto nenhuma rede estiver
+#             configurada em src/config/site.ts (ADS.provider), o espaço cai para um house.
+#   youtube — vídeo do canal. Carrega só a miniatura; o player (youtube-nocookie) abre
+#             apenas quando a pessoa clica. Ex.:
+#               - { tipo: youtube, id: aula-rese, video: "dQw4w9WgXcQ", titulo: "RESE em 5 minutos" }
+#
+# peso: chance relativa de sorteio dentro do mesmo local.
+
+locais:
+  # Centro da tela quando o cronômetro do simulado é pausado
+  pausa-simulado: [curso-completo, curso-correcao, ad-pausa]
+  # Lateral do jogo durante as perguntas
+  quiz-lateral: [ad-lateral, curso-completo, curso-jogo]
+  # Tela de resultado do simulado
+  resultado: [curso-correcao, curso-completo]
+
+promos:
+  - tipo: house
+    id: curso-completo
+    titulo: Curso Completo OAB – Penal
+    texto: Todas as peças cobradas pela FGV, teses recorrentes e cronograma até a prova.
+    cta: Conhecer o curso
+    peso: 2
+  - tipo: house
+    id: curso-correcao
+    titulo: Quer correção humana?
+    texto: No Curso Completo do Grifo, suas peças são corrigidas por professores com a tabela da FGV.
+    cta: Saiba mais
+  - tipo: house
+    id: curso-jogo
+    titulo: Errou a peça?
+    texto: O Curso Completo OAB – Penal ensina a identificar a peça cabível em qualquer enunciado.
+    cta: Ver o curso
+  - tipo: ad
+    id: ad-pausa
+    slot: ""
+    peso: 1
+  - tipo: ad
+    id: ad-lateral
+    slot: ""
+    peso: 2

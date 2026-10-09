@@ -1,0 +1,30 @@
+.slot { width: 100%; }
+.card { max-width: 320px; }
+.compact { max-width: 100%; }
+.placeholder { width: 100%; max-width: 320px; min-height: 120px; }
+.tag {
+  position: absolute; top: 8px; right: 10px; font-size: 0.65rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); font-weight: 700;
+}
+.house, .ad, .video {
+  position: relative; display: flex; flex-direction: column; gap: 0.45rem;
+  padding: 1.1rem 1.1rem 1rem; border-radius: var(--radius); border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); text-decoration: none; box-shadow: var(--shadow);
+}
+.house:hover { border-color: var(--accent); text-decoration: none; }
+.houseLogo { color: var(--accent); }
+.houseTitle { font-family: var(--font-title); font-size: 1.3rem; line-height: 1.15; }
+.houseText { color: var(--muted); font-size: 0.92rem; }
+.houseCta { font-weight: 700; color: var(--primary); margin-top: 0.2rem; }
+.compact .house { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.8rem; padding: 0.7rem 0.9rem; }
+.compact .houseText { flex-basis: 100%; }
+.compact .houseTitle { font-size: 1.05rem; }
+.ad { min-height: 250px; }
+.video iframe, .videoThumb { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius-sm); }
+.videoThumb { position: relative; padding: 0; cursor: pointer; overflow: hidden; background: #000; }
+.videoThumb img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; }
+.play {
+  position: absolute; inset: 0; margin: auto; width: 56px; height: 56px; border-radius: 50%;
+  display: grid; place-items: center; background: rgb(0 0 0 / 0.65); color: #fff; font-size: 1.4rem;
+}
+.videoTitle { font-weight: 600; font-size: 0.92rem; }

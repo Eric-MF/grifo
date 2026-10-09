@@ -1,0 +1,167 @@
+{
+ "1.c1": [
+  "execu*",
+  "sao paulo"
+ ],
+ "3.c1": [
+  "retrata* | efeito regressivo | reconsidera*"
+ ],
+ "4.c1": [
+  "tribunal de justica | tj",
+  "sao paulo | sp"
+ ],
+ "5.c1": [
+  "falta grave",
+  "invalid* | nulidade | nulo | nula | afast* | ilegal*"
+ ],
+ "5.c2": [
+  "regressao"
+ ],
+ "5.1.c1": [
+  "procedimento administrativo | procedimento disciplinar | pad"
+ ],
+ "5.1.c2": [
+  "direito de defesa | ampla defesa | contraditorio | defesa tecnica"
+ ],
+ "6.c1": [
+  "dias remidos | remicao",
+  "totalidade | todos os dias | integral*"
+ ],
+ "6.1.c1": [
+  "1/3 | um terco"
+ ],
+ "7.c1": [
+  "livramento condicional",
+  "reinicio | interrup* | nao interrompe | recontagem"
+ ],
+ "8.c1": [
+  "indulto",
+  "reinicio | interrup* | nao interrompe | recontagem"
+ ],
+ "9.c1": [
+  "legalidade"
+ ],
+ "10.c1": [
+  "conhec*"
+ ],
+ "10.c2": [
+  "provi*"
+ ],
+ "11.c1": [
+  "15 de julho de 2019"
+ ],
+ "12.c1": [
+  "local",
+  "advogad*",
+  "oab"
+ ],
+ "q1:A.c1": [
+  "liame subjetivo | vinculo subjetivo | acordo de vontades | unidade de designios"
+ ],
+ "q1:A.c2": [
+  "concurso de pessoas | concurso de agente*",
+  "afast* | exclu* | decote | nao incid* | nao deveria | nao houve"
+ ],
+ "q1:B.c1": [
+  "furto privilegiado | privilegio | privilegiado"
+ ],
+ "q1:B.c2": [
+  "pequeno valor",
+  "primari*"
+ ],
+ "q2:A.c1": [
+  "suspensao",
+  "prescri*",
+  "maximo | pena maxima | prazo prescricional"
+ ],
+ "q2:B.c1": [
+  "atipic*"
+ ],
+ "q2:B.c2": {
+  "alternativas": [
+   [
+    "via publica"
+   ],
+   [
+    "local habitado | lugar habitado"
+   ]
+  ]
+ },
+ "q3:A.c1": [
+  "ilicit* | ilegal*"
+ ],
+ "q3:A.c2": {
+  "alternativas": [
+   [
+    "autorizacao judicial | ordem judicial"
+   ],
+   [
+    "autorizacao",
+    "celular | wesley"
+   ]
+  ]
+ },
+ "q3:A.c3": {
+  "alternativas": [
+   [
+    "intimidade"
+   ],
+   [
+    "privacidade"
+   ],
+   [
+    "vida privada"
+   ]
+  ]
+ },
+ "q3:B.c1": [
+  "associacao para o trafico",
+  "hediondo"
+ ],
+ "q3:B.c2": {
+  "termos": [
+   "analogia | legalidade | rol taxativo"
+  ],
+  "dispositivo": [
+   "art. 1º Lei 8.072"
+  ],
+  "requer": "c1",
+  "rotulo": "Não previsto no Art. 1º da Lei 8.072/90, vedada a analogia in malam partem ou legalidade"
+ },
+ "q3:B.c3": [
+  "regime aberto | aberto"
+ ],
+ "q4:A.c1": {
+  "alternativas": [
+   [
+    "inver*",
+    "ordem"
+   ],
+   [
+    "defesa",
+    "antes",
+    "acusacao"
+   ]
+  ]
+ },
+ "q4:A.c2": {
+  "alternativas": [
+   [
+    "devido processo legal"
+   ],
+   [
+    "ampla defesa"
+   ],
+   [
+    "contraditorio"
+   ]
+  ]
+ },
+ "q4:B.c1": [
+  "retrata*",
+  "antes da sentenca"
+ ],
+ "q4:B.c2": [
+  "deixa de ser punivel | nao e punivel | extin* da punibilidade | extin*"
+ ]
+}

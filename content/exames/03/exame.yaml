@@ -1,0 +1,209 @@
+# III Exame de Ordem Unificado — Direito Penal
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
+id: "03"
+numero: 3
+numeral: III
+revisao:
+  status: rascunho
+  por: ""
+  em: ""
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
+peca:
+  nome: Recurso em Sentido Estrito
+  tipo: rese
+  aliases: []
+  enunciado: |-
+    O recurso cabível é o recurso em sentido estrito, na forma do art. 581, IV, do Código de Processo Penal, dirigido ao Juiz da 1ª Vara Criminal (Tribunal do Júri).
+
+    Em primeiro lugar, deverá o examinando requerer, em preliminar, o desentranhamento das provas ilícitas.
+
+    Isso porque o crime investigado, infanticídio (art. 123 do Código Penal), é punido com pena de detenção. Em razão disso, não era admissível a interceptação telefônica prevista na Lei 9.296/96, pois a lei em tela não admite a medida quando o crime só é punido com pena de detenção (art. 2º, III). É de ressaltar que o crime de aborto, previsto no art. 124, também só é punido com pena de detenção. Além disso, o enunciado indica não existir indícios suficientes de autoria, uma vez que o delegado representou pela decretação da quebra com base em meras suspeitas. Finalmente, não foram esgotados todos os meios de investigação, condição sine qua non para que a medida seja decretada.
+
+    Por outro lado, o examinando deverá registrar também que o testemunho de Lia, embora seja prova realizada de modo lícito, será ilícito por derivação, na forma do art. 157, § 1º, do Código e Processo Penal e, portanto, imprestável.
+
+    Ainda em preliminar, deverá o examinando suscitar a nulidade do processo por violação do art. 411, § 3º do Código de Processo Penal, c/c art. 384 do Código de Processo Penal. Com efeito, diante das regras acima referidas, o Juiz, vislumbrando a possibilidade de nova definição do fato em razão de prova nova, surgida durante a instrução, deverá abrir vista dos autos para que o Ministério Público, se for o caso, adite a denúncia, mesmo que a pena prevista para a nova definição jurídica seja menor, conforme a nova redação do art. 384 do Código de Processo Penal, dada pela Lei 11.719/2008.
+
+    O candidato deverá, ainda, sustentar que não restou provada a materialidade do crime de aborto, uma vez que nenhuma perícia foi feita no sentido de comprovar que a criança faleceu em decorrência da ingestão de substância abortiva.
+
+    Finalmente, deveria requerer, em caráter sucessivo, a impronúncia da acusada, uma vez que, retiradas as provas ilícitas dos autos, nenhuma prova de autoria existiria contra a denunciada.
+
+    Em relação aos itens da correção, assim ficaram divididos:
+  gabarito_comentado: ""
+  itens:
+    - n: "1"
+      descricao: "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) (0,35) e indicação da norma: art. 581, IV, CPP (0,35)."
+      componentes:
+        - { id: c1, valor: 0.35, termos: [ 1 vara criminal | tribunal do juri | juri ] }
+        - { id: c2, valor: 0.35, dispositivo: [ "art. 581, IV, CPP" ] }
+    - n: "2"
+      descricao: "Pedido de reconsideração ao juiz de 1º grau (0,10) e indicação da norma: art. 589, parágrafo único, CPP (0,10)."
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ retrata* | reconsidera* | efeito regressivo ] }
+        - { id: c2, valor: 0.1, dispositivo: [ art. 589 CPP ], requer: c1 }
+    - n: "3"
+      secao: Preliminares
+      descricao: Ilegitimidade/ilicitude da interceptação telefônica (0,40) por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação (0,40).
+      componentes:
+        - { id: c1, valor: 0.4, termos: [ interceptacao, ilicit* | ilegal* | ilegitim* | nulidade ] }
+        - { id: c2, valor: 0.4, alternativas: [ [ detencao ], [ esgota* | outros meios | meios de investigacao | indicios ] ] }
+    - n: "4"
+      secao: Preliminares
+      descricao: "Dispositivo legal: art. 2º, III, Lei 9.296/96 OU art. 2º, II, Lei 9.296/96 (0,50)."
+      componentes:
+        - { id: c1, valor: 0.5, dispositivo: [ "art. 2º, III, Lei 9.296", "art. 2º, II, Lei 9.296" ] }
+    - n: "5"
+      secao: Preliminares
+      descricao: Ilicitude por derivação da prova testemunhal (0,25), com fundamento no art. 157, § 1º, CPP (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ deriva* | arvore envenenada | fruits of the poisonous tree, testemunh* | lia ] }
+        - { id: c2, valor: 0.25, dispositivo: [ "art. 157, § 1º, CPP" ], requer: c1 }
+    - n: "6"
+      secao: Preliminares
+      descricao: Violação das regras da mutatio libelli (0,50), art. 384 do CPP (0,25), c/c art. 411, § 3º, do CPP (0,25).
+      componentes:
+        - { id: c1, valor: 0.5, termos: [ mutatio libelli | aditamento | aditar ] }
+        - { id: c2, valor: 0.25, dispositivo: [ art. 384 CPP ], requer: c1 }
+        - { id: c3, valor: 0.25, dispositivo: [ "art. 411, § 3º, CPP" ], requer: c1 }
+    - n: "7"
+      secao: Mérito
+      descricao: Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva (0,50).
+      componentes:
+        - { id: c1, valor: 0.5, termos: [ materialidade, pericia | laudo | exame ] }
+    - n: "8"
+      secao: Pedidos
+      descricao: "Pedidos principais (0,20 cada): desentranhamento da prova ilícita; impronúncia por ausência de indícios de autoria; impronúncia por ausência de prova da materialidade; absolvição sumária OU nulidade da pronúncia pela mutatio libelli."
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ desentranha* ] }
+        - { id: c2, valor: 0.2, termos: [ impronuncia, autoria ] }
+        - { id: c3, valor: 0.2, termos: [ impronuncia, materialidade ] }
+        - { id: c4, valor: 0.2, alternativas: [ [ absolvicao sumaria | absolver sumariamente ], [ nulidade, pronuncia ] ] }
+questoes:
+  - n: 1
+    enunciado: |-
+      a) Habeas Corpus, uma vez que não há previsão de recurso contra a decisão que não absolvera sumariamente o acusado, sendo cabível a ação mandamental, conforme estabelecem os artigos 647 e seguintes do CPP. No caso, não seria admissível o recurso em sentido estrito, uma vez que o enunciado não traz qualquer informação acerca da fundamentação utilizada pelo magistrado para deixar de absolver sumariamente o réu, não podendo o candidato deduzir que teria sido realizado e indeferido pedido expresso de reconhecimento de extinção da punibilidade.
+
+      b) Ao Tribunal Regional Federal.
+
+      c) Extinção da punibilidade pelo pagamento do débito quanto ao delito previsto no artigo 168-A, do CP, e, após, restando apenas acusação pertinente à sonegação de tributo de natureza estadual, incompetência absoluta – em razão da matéria – do juízo federal para processar e julgar a matéria. Quanto à Súmula Vinculante nº 24, o enunciado não traz qualquer informação no sentido de que a via administrativa ainda não teria se esgotado, não podendo o candidato deduzir tal fato.
+
+      Em relação à correção, levou-se em conta o seguinte critério de pontuação:
+    gabarito_comentado: ""
+    itens:
+      - n: A
+        descricao: "Habeas corpus (0,20): não há recurso contra a decisão que não absolveu sumariamente."
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ habeas corpus ] }
+      - n: B
+        descricao: Ao Tribunal Regional Federal (0,20).
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ tribunal regional federal | trf ] }
+      - n: C
+        descricao: Extinção da punibilidade (0,25) pelo pagamento (0,10) quanto ao art. 168-A do CP; restando o tributo estadual, incompetência absoluta da Justiça Federal (0,25).
+        componentes:
+          - { id: c1, valor: 0.25, termos: [ extin* da punibilidade ] }
+          - { id: c2, valor: 0.1, termos: [ pagamento | pagou | quitacao ] }
+          - { id: c3, valor: 0.25, termos: [ incompetencia | incompetente ] }
+    valor: 1
+  - n: 2
+    enunciado: |-
+      a) Não, uma vez que incide sobre o caso a escusa absolutória prevista no artigo 181, II, do CP.
+
+      b) Sim, uma vez que a circunstância relativa a Caio é de caráter pessoal, não se comunicando a ela (artigo 30 do CP). Assim, poderá ser punida pela prática do crime de furto qualificado pelo repouso noturno.
+
+      c) Belo Horizonte, local em que delito se consumou, conforme artigos 69, I, do CPP e 6º do CP.
+
+      Em relação à correção, levou-se em conta o seguinte critério de pontuação:
+    gabarito_comentado: ""
+    itens:
+      - n: A
+        descricao: "Não: incide a escusa absolutória (0,20) do art. 181, II, do CP (0,20)."
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ escusa absolutoria | isencao de pena | isento de pena ] }
+          - { id: c2, valor: 0.2, dispositivo: [ "art. 181, II, CP" ], requer: c1 }
+      - n: B
+        descricao: "Sim: a circunstância relativa a Caio é pessoal e não se comunica (0,20), com base no art. 30 OU 183, II, do CP (0,20)."
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ pessoal, nao se comunica | incomunica* | nao se estende ] }
+          - { id: c2, valor: 0.2, dispositivo: [ art. 30 CP, "art. 183, II, CP" ], requer: c1 }
+      - n: C
+        descricao: Belo Horizonte, local da consumação (0,10), conforme arts. 69, I, OU 70 do CPP (0,10).
+        componentes:
+          - { id: c1, valor: 0.1, termos: [ belo horizonte ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 69, I, CPP", art. 70 CPP ], requer: c1 }
+    valor: 1
+  - n: 3
+    enunciado: |-
+      a) Não, pois a competência para processamento e julgamento é de uma vara comum da justiça estadual, por se tratar de crime patrimonial e que não ofende bens, serviços ou interesses da União ou de suas entidades autárquicas.
+
+      b) Não, pois a jurisprudência é pacífica no sentido de que considerações genéricas e presunções de que em liberdade as testemunhas possam sentir-se amedrontadas não são argumentos válidos para a decretação da prisão antes do trânsito em julgado de decisão condenatória, pois tal providência possui natureza estritamente cautelar, de modo que somente poderá ser determinada quando calcada em elementos concretos que demonstrem a existência de risco efetivo à eficácia da prestação jurisdicional.
+
+      c) Tribunal Regional Federal, pois a autoridade coatora é juiz de direito federal.
+
+      Em relação à correção, levou-se em conta o seguinte critério de pontuação:
+    gabarito_comentado: ""
+    itens:
+      - n: A
+        descricao: Incompetência da Justiça Federal (0,15), por não se enquadrar no art. 109 da CRFB (0,15).
+        componentes:
+          - { id: c1, valor: 0.15, termos: [ incompet*, justica federal ] }
+          - { id: c2, valor: 0.15, dispositivo: [ art. 109 CF ], requer: c1 }
+      - n: B
+        descricao: Incompetência do Tribunal do Júri (0,15), pois o latrocínio tem natureza patrimonial (0,15).
+        componentes:
+          - { id: c1, valor: 0.15, termos: [ incompet*, juri ] }
+          - { id: c2, valor: 0.15, termos: [ patrimon* ] }
+      - n: C
+        descricao: "Ilegalidade da prisão preventiva (0,20): não pode se fundar na gravidade abstrata do crime OU na presunção de que as vítimas se sentiriam amedrontadas (0,20)."
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ preventiva, ilegal* | ilegitima | revoga* | indevida ] }
+          - { id: c2, valor: 0.2, alternativas: [ [ gravidade abstrata | gravidade em abstrato ], [ presuncao | amedronta* ] ] }
+    valor: 1
+  - n: 4
+    enunciado: |-
+      a) Incompetência do juízo, uma vez que Caio praticou homicídio culposo, pois agiu com culpa consciente, na medida em que, embora tenha previsto o resultado, acreditou que o evento não fosse ocorrer em razão de sua perícia.
+
+      b) Desclassificação da imputação para homicídio culposo e declínio de competência, conforme previsão do artigo 419 do CPP.
+
+      c) Recurso em sentido estrito, conforme previsão do artigo 581, IV, do CPP. A peça de interposição deveria ser dirigida ao juiz de direito da vara criminal vinculada ao tribunal do júri, prolator da decisão atacada.
+
+      Em relação à correção, levou-se em conta o seguinte critério de pontuação:
+    gabarito_comentado: ""
+    itens:
+      - n: A
+        descricao: "Incompetência do juízo: Caio praticou homicídio culposo (0,20), pois agiu com culpa consciente, acreditando que o resultado não ocorreria (0,20)."
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ homicidio culposo | culpos* ] }
+          - { id: c2, valor: 0.2, termos: [ culpa consciente ] }
+      - n: B
+        descricao: Desclassificação para homicídio culposo OU declínio de competência (0,15), conforme o art. 419 do CPP (0,15).
+        componentes:
+          - { id: c1, valor: 0.15, alternativas: [ [ desclassifica* ], [ declinio | declinar ] ] }
+          - { id: c2, valor: 0.15, dispositivo: [ art. 419 CPP ], requer: c1 }
+      - n: C
+        descricao: Recurso em sentido estrito (0,15), art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri (0,15).
+        componentes:
+          - { id: c1, valor: 0.15, termos: [ recurso em sentido estrito | rese ] }
+          - { id: c2, valor: 0.15, termos: [ juri | juiz de direito | vara criminal ] }
+    valor: 1
+  - n: 5
+    enunciado: |-
+      a) Habeas Corpus e agravo em execução penal.
+
+      b) Tendo em vista que a norma que alterou as regras relativas à progressão de regime possui natureza penal e é mais gravosa ao réu, não pode retroagir de modo a abarcar fatos que lhe são anteriores. No caso, o delito foi praticado antes da edição da lei, devendo, em consequência, ser aplicada a fração de 1/6 para a progressão de regime.
+
+      Em relação à correção, levou-se em conta o seguinte critério de pontuação:
+    gabarito_comentado: ""
+    itens:
+      - n: A
+        descricao: Habeas corpus e agravo em execução penal (0,15 cada).
+        componentes:
+          - { id: c1, valor: 0.15, termos: [ habeas corpus ] }
+          - { id: c2, valor: 0.15, termos: [ agravo ] }
+      - n: B
+        descricao: A norma que alterou a progressão tem natureza penal (0,30) e, mais gravosa, não retroage (0,20); o delito foi anterior à lei, aplicando-se a fração de 1/6 (0,20).
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ natureza penal | norma penal | material ] }
+          - { id: c2, valor: 0.2, termos: [ retroag* | irretroatividade ] }
+          - { id: c3, valor: 0.2, termos: [ 1/6 ] }
+    valor: 1
+observacoes: "Exame de 2010: peça (5,00) e cinco questões de 1,00 cada."

@@ -1,0 +1,301 @@
+# XXVIII Exame de Ordem Unificado — Direito Penal
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
+id: "28"
+numero: 28
+numeral: XXVIII
+aplicacao: 2019-05-05
+revisao:
+  status: rascunho
+  por: ""
+  em: ""
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
+peca:
+  nome: Recurso em Sentido Estrito
+  tipo: rese
+  aliases: []
+  enunciado: |-
+    Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
+
+    Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
+
+    Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
+
+    Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
+
+    Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
+
+    **Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)**
+
+    *Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.*
+  gabarito_comentado: |-
+    O examinando deveria apresentar, na qualidade de advogado de Túlio, Recurso em Sentido Estrito, com fundamento no Art. 581, inciso IV, do Código de Processo Penal.
+
+    Inicialmente, deveria o examinando apresentar petição de interposição do recurso, que deveria ser direcionada ao Juízo do Tribunal do Júri de Porto Alegre, Rio Grande do Sul, local onde foi praticado o ato de execução do delito imputado, sendo certo que o crime em questão é considerado doloso contra a vida. Já na petição de interposição, deveria ser formulado pedido de retratação por parte do juízo a quo, nos termos do Art. 589 do Código de Processo Penal. Em seguida, caso mantida a decisão de pronúncia, os autos deveriam ser encaminhados para o Tribunal de Justiça, com as respectivas razões recursais.
+
+    Após a petição de interposição, deveria o examinando apresentar as Razões do Recurso em Sentido Estrito, dessa vez direcionando as mesmas ao Tribunal de Justiça do Estado do Rio Grande do Sul.
+
+    Já no ínicio de sua manifestação, a defesa de Túlio deveria requerer o reconhecimento da extinção da punibilidade em razão da prescrição da pretensão punitiva pela pena em abstrato. Isso porque os fatos ocorreram em 03/01/2014, quando o réu era menor de 21 anos. A denúncia foi recebida em 22/01/2014, funcionando como causa de interrupção do prazo prescricional, nos termos do Art. 117, inciso I, do CP.
+
+    Durante a instrução passaram-se mais de 04 anos sem que houvesse suspensão do prazo prescricional ou nova causa de interrupção. Apenas em 18/06/2018 foi proferida e publicada decisão de pronúncia, que funciona como causa de interrupção, nos termos do Art. 117, inciso II, do CP.
+
+    O crime imputado ao agente possui pena máxima de 04 anos, certo que, ainda que reduzido pela tentativa (mínimo previsto) o prazo prescricional, a princípio, seria de 08 anos, conforme Art. 109, inciso IV, do Código Penal. Ocorre que o agente era menor de 21 anos na data dos fatos, logo o prazo deveria ser computado pela metade (Art. 115 do CP), fazendo com que o prazo prescricional seja de 04 anos, período esse ultrapassado entre o recebimento da denúncia e a pronúncia.
+
+    Ainda preliminarmente, deveria o examinando destacar que existia nulidade a ser reconhecida, anulando-se toda a instrução, tendo em vista que o crime imputado ao acusado possui pena prevista de 01 a 04 anos, logo possível a proposta de suspensão condicional do processo. De acordo com o Art. 89 da Lei nº 9.099/95, independente de o crime ser ou não de menor potencial ofensivo, ainda que doloso contra a vida, em sendo a pena mínima prevista de até 01 ano, preenchidos os demais requisitos legais, cabível a proposta de suspensão condicional do processo. No caso, Túlio era primário e não respondia a qualquer outra ação penal, não havendo motivação razoável para que não fosse oferecida a proposta do instituto despenalizador. Com a suspensão condicional do processo, sequer haveria que se falar em instrução e pronúncia, então deveria ser anulada a decisão de pronúncia, encaminhando-se os autos ao Ministério Público para manifestação sobre a proposta do benefício.
+
+    Superada tal questão, ainda haveria outra nulidade a ser alegada. Após as alegações finais das partes, foram juntados documentos aos autos relevantes para o julgamento da causa, tendo o magistrado, de imediato, sem dar vistas às partes, proferido decisão de pronúncia considerando a documentação apresentada. Diante disso, houve violação ao princípio da ampla defesa e do contraditório, já que a defesa não teve acesso a provas que foram acostadas ao procedimento.
+
+    No mérito, o principal argumento a ser apresentado em favor de Túlio é a necessidade de absolvição sumária, tendo em vista que o fato evidentemente não constitui crime, sendo sua conduta atípica. Isso porque estamos diante da hipótese de crime impossível.
+
+    Prevê o Art. 17 do Código Penal que não se pune a tentativa quando por ineficácia absoluta do meio ou por absoluta impropriedade do objeto é impossível consumar o crime. O legislador brasileiro decidiu, então, valorizar, nesse momento, a efetiva violação/risco do/ao bem jurídico protegido, em detrimento do elemento subjetivo. Na hipótese apresentada, estamos diante de clara situação de impropriedade do objeto, tendo em vista que a intenção do agente era causar aborto em uma pessoa que não estava sequer grávida. Em que pese Túlio acreditar estar praticando o delito e ter dolo de praticá-lo, no mundo fático não havia feto em risco e bem jurídico a ser protegido. Diante disso, ao entregar remédio abortivo para pessoa que não estava grávida, não sendo causada qualquer lesão, a conduta é atípica, devendo ser o agente absolvido de imediato, nos termos do Art. 415, inciso III, do CPP.
+
+    Em sua conclusão, deveria o examinando formular o pedido de conhecimento e provimento do recurso para:
+
+    a) ser reconhecida a prescrição da pretensão punitiva;
+
+    b) anulação da decisão de pronúncia;
+
+    c) absolvição sumária, nos termos do Art. 415, inciso III, do CPP.
+
+    O prazo para apresentação do Recurso em Sentido Estrito é de 05 dias, nos termos do Art. 586 do CPP, logo se encerra em 25 de junho de 2018, segunda-feira, uma vez que a intimação ocorreu em 18 de junho de 2018, então o prazo se encerraria no sábado, devendo ser estendido até o primeiro dia útil seguinte.
+
+    No fechamento, deveria o candidato indicar local, data, advogado e nº OAB.
+  itens:
+    - n: "1"
+      secao: Petição de interposição
+      descricao: "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ tribunal do juri | juri, porto alegre ] }
+    - n: "2"
+      secao: Petição de interposição
+      descricao: "Fundamento legal: Art. 581, inciso IV, do CPP (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, dispositivo: [ "art. 581, IV, CPP" ] }
+    - n: "3"
+      secao: Petição de interposição
+      descricao: Requerimento do exercício do juízo de retratação (0,30), nos termos do Art. 589 do CPP (0,10).
+      valores: [ 0, 0.3, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ retrata* | efeito regressivo | reconsidera* ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 589, CPP" ], requer: c1 }
+    - n: "4"
+      secao: Razões de Recurso
+      descricao: "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ tribunal de justica | tj, rio grande do sul | rs ] }
+    - n: "5"
+      secao: Razões de Recurso
+      descricao: Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado (0,30), com consequente extinção da punibilidade do agente (0,15), nos termos do Art. 107, inciso IV, do CP (0,10).
+      valores: [ 0, 0.15, 0.25, 0.3, 0.4, 0.45, 0.55 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ prescri* ] }
+        - { id: c2, valor: 0.15, termos: [ extin* da punibilidade ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 107, IV, CP" ], requer: c2 }
+    - n: "6"
+      secao: Razões de Recurso
+      descricao: A prescrição ocorreu porque, entre a data do recebimento da denúncia e da pronúncia foi ultrapassado o prazo de 4 anos OU o prazo de 4 anos foi ultrapassado porque o prazo prescricional deveria ser computado pela metade, já que o réu era menor de 21 anos (0,15).
+      valores: [ 0, 0.15 ]
+      componentes:
+        - { id: c1, valor: 0.15, alternativas: [ [ 4 anos ], [ metade, 21 anos | menor de 21 ] ] }
+    - n: "7"
+      secao: Razões de Recurso
+      descricao: "Preliminarmente, nulidade da decisão de pronúncia: (0,30)."
+      valores: [ 0, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ nulidade | nula | nulo, pronuncia ] }
+    - n: "7.1"
+      secao: Razões de Recurso
+      descricao: Nulidade em razão do não oferecimento de proposta de suspensão condicional do processo (0,30), nos termos do Art. 89 da Lei 9.099 (0,10), já que a pena mínima do delito imputado é de 1 ano (0,15).
+      valores: [ 0, 0.15, 0.25, 0.3, 0.4, 0.45, 0.55 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ suspensao condicional do processo | sursis processual ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 89, Lei 9" ], requer: c1 }
+        - { id: c3, valor: 0.15, termos: [ pena minima, 1 ano ] }
+    - n: "7.2"
+      secao: Razões de Recurso
+      descricao: Nulidade em razão do cerceamento de defesa OU violação ao princípio da ampla defesa OU violação ao princípio do contraditório (0,30), já que o juiz proferiu decisão após juntada de documentação, sem dar vista às partes (0,15).
+      valores: [ 0, 0.15, 0.3, 0.45 ]
+      componentes:
+        - { id: c1, valor: 0.3, alternativas: [ [ cerceamento ], [ ampla defesa ], [ contraditorio ] ] }
+        - { id: c2, valor: 0.15, termos: [ document*, vista | manifesta* | sem ouvir | sem intimar ] }
+    - n: "8"
+      secao: Razões de Recurso
+      descricao: No mérito, absolvição sumária (0,20) em razão de o fato evidentemente não constituir crime OU diante da atipicidade da conduta (0,25), nos termos do Art. 415, III, CPP (0,10)
+      valores: [ 0, 0.2, 0.25, 0.3, 0.35, 0.45, 0.55 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ absolvicao sumaria | absolvido sumariamente | absolver sumariamente ] }
+        - { id: c2, valor: 0.25, alternativas: [ [ nao constitui crime | nao constituir crime ], [ atipic* ] ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 415, III, CPP" ], requer: c2 }
+    - n: "9"
+      secao: Razões de Recurso
+      descricao: A conduta de Túlio configura crime impossível (0,80), nos termos do Art. 17 do CP (0,10).
+      valores: [ 0, 0.8, 0.9 ]
+      componentes:
+        - { id: c1, valor: 0.8, termos: [ crime impossivel ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 17, CP" ], requer: c1 }
+    - n: "10"
+      secao: Razões de Recurso
+      descricao: Houve absoluta impropriedade do objeto (0,15), tendo em vista que Joaquina não estava grávida quando da ação visando causar aborto (0,10).
+      valores: [ 0, 0.1, 0.15, 0.25 ]
+      componentes:
+        - { id: c1, valor: 0.15, termos: [ impropriedade absoluta | absoluta impropriedade | impropriedade do objeto ] }
+        - { id: c2, valor: 0.1, termos: [ nao estava gravida | nao gravida | ausencia de gravidez | inexistencia de gravidez ] }
+    - n: "11"
+      secao: Pedidos
+      descricao: Conhecimento (0,10) e provimento do recurso (0,30).
+      valores: [ 0, 0.1, 0.3, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ conhec* ] }
+        - { id: c2, valor: 0.3, termos: [ provi* ] }
+    - n: "12"
+      secao: Pedidos
+      descricao: "Prazo: 25 de junho de 2018 (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 25 de junho de 2018 ] }
+    - n: "13"
+      secao: Fechamento
+      descricao: Local, data, advogado e OAB (0,10).
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ local, advogad*, oab ] }
+questoes:
+  - n: 1
+    enunciado: |-
+      Matheus conduzia seu automóvel em alta velocidade. Em razão de manobra indevida, acabou por atropelar uma vítima, causando-lhe lesões corporais. Com a chegada da Polícia Militar, foi solicitado que Matheus realizasse exame de etilômetro (bafômetro); diante de sua recusa, foi informado pela autoridade policial, que comparecera ao local, que ele seria obrigado a realizar o exame para verificar eventual prática também do crime previsto no Art. 306 da Lei nº 9.503/97.
+
+      Diante da afirmativa da autoridade policial, Matheus, apesar de não desejar, viu-se obrigado a realizar o teste do bafômetro. Após conclusão do inquérito policial, com oitiva e representação da vítima, foi o feito encaminhado ao Ministério Público, que ofereceu denúncia imputando a Matheus apenas a prática do crime do Art. 303, da Lei nº 9.503/97, prosseguindo as investigações com relação ao crime do Art. 306 do mesmo diploma legal. Ainda na exordial acusatória, foi requerida a decretação da prisão preventiva de Matheus, pelo risco de reiteração delitiva, tendo em vista que ele seria reincidente específico, já que a única anotação constante de sua Folha de Antecedentes Criminais, para além do presente processo, seria a condenação definitiva pela prática de outro crime de lesão corporal culposa praticada na direção de veículo automotor. No recebimento da denúncia, o juiz competente decretou a prisão preventiva.
+
+      **Considerando as informações narradas, na condição de advogado(a) de Matheus, responda aos itens a seguir.**
+
+      **A) Poderia Matheus ter sido obrigado a realizar o teste de bafômetro, conforme informado pela autoridade policial, mesmo diante de sua recusa? Justifique. (Valor: 0,60)**
+
+      **B) Qual requerimento deveria ser formulado, em busca da liberdade de Matheus, diante da decisão do magistrado, que decretou sua prisão preventiva em razão de sua reincidência? Justifique. (Valor: 0,65)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar as respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A questão exige do examinando conhecimento sobre os princípios aplicáveis ao Processo Penal, bem como sobre as previsões do Código de Processo Penal sobre o tema “Prisão”.
+
+      A) Com base nas informações constantes do enunciado, não poderia Matheus ser obrigado a realizar o teste de bafômetro nos termos informados pela autoridade policial. Matheus foi o autor de um atropelamento de vítima que sofreu lesões corporais em razão de sua conduta com violação do dever objetivo de cuidado.
+
+      Independentemente, a autoridade policial não poderia exigir a contribuição de Matheus para produção de provas contra ele próprio em relação ao crime do Art. 306 da Lei nº 9.503/97 (CTB). O princípio do nemo tenetur se detegere, trazido, dentre outros diplomas, pelo Pacto de San Jose da Costa Rica, estabelece que ninguém é obrigado a produzir provas contra si. Apesar de haver controvérsia sobre a extensão desse princípio, em relação à exigência de conduta positiva do investigado/acusado na produção de prova que pode lhe prejudicar, prevalece o entendimento no sentido de que não existe obrigatoriedade na contribuição. O exame de etilômetro exige que o investigado adote um comportamento positivo, já que é preciso que ele sopre ar em determinado aparelho, de modo que não pode Matheus ser obrigado a realizar tal teste se assim não o desejar, podendo o crime do Art. 306 do CTB ser identificado por outros meios de prova.
+
+      B) Em busca da liberdade de Matheus, o advogado deveria formular requerimento de relaxamento da prisão, tendo em vista que a decretação da prisão preventiva exige a presença dos requisitos e pressupostos trazidos pelos Arts. 312 e 313 do Código de Processo Penal. Independentemente do risco de reiteração delitiva, os pressupostos do Art. 313 do CPP não foram atendidos. O crime imputado não é doloso e não tem pena máxima superior a 04 anos, ainda que considerada eventual causa de aumento. Em relação à reincidência, o Art. 313, inciso II, do CPP apenas admite a prisão se aquela for em crimes dolosos. No caso, o enunciado deixa claro que Matheus era reincidente específico na prática de crimes culposos, logo não preenchidos os requisitos legais desde o início, a decretação da prisão torna-se ilegal, devendo ser relaxada, nos termos do Art. 5º, inciso LXV, CRFB/88.
+    itens:
+      - n: A
+        descricao: Não poderia Matheus ter sido obrigado a realizar o teste do bafômetro, em respeito ao princípio de que ninguém é obrigado a produzir prova contra si OU diante do princípio nemo tenetur se detegere (0,60)
+        valores: [ 0, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.6, termos: [ produzir prova contra si | nemo tenetur | autoincrimina* | nao autoincriminacao ] }
+      - n: B
+        descricao: O requerimento a ser formulado é de relaxamento da prisão (0,30), conforme Art. 5º, inciso LXV, da CRFB/88 (0,10), tendo em vista que Matheus é reincidente na prática de crimes culposos OU tendo em vista que não foram preenchidos os requisitos do Art. 313 do CPP (0,25).
+        valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ relaxamento ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 5, LXV, CRFB" ], requer: c1 }
+          - { id: c3, valor: 0.25, alternativas: [ [ culpos* ], [ "313" ], [ requisitos, preventiva ] ] }
+  - n: 2
+    enunciado: |-
+      Após regular processamento em que figurava na condição de réu solto, Hugo foi condenado pela prática de crime de apropriação indébita majorada ao cumprimento da pena de 01 ano e 06 meses de reclusão e 14 dias-multa, sendo reconhecida a agravante da reincidência, tendo em vista que foi juntada aos autos Folha de Antecedentes Criminais a demonstrar trânsito em julgado, no ano anterior ao da prática da apropriação indébita, de condenação pelo crime de lesão corporal dolosa, praticada no contexto de violência doméstica e familiar contra a mulher.
+
+      No momento da sentença, considerando a reincidência, o magistrado aplicou o regime inicial fechado de cumprimento da pena. Destacou, ainda, que, apesar de Hugo estar trabalhando e cuidando de filhos menores, não poderia substituir a pena privativa de liberdade por restritiva de direitos por expressa vedação legal no caso de reincidência dolosa.
+
+      Intimado da sentença, Hugo procura seu advogado para a adoção das medidas cabíveis.
+
+      **Considerando apenas o narrado, na condição de advogado(a) de Hugo, responda aos questionamentos a seguir.**
+
+      **A) Diante da reincidência, de acordo com a jurisprudência do Superior Tribunal de Justiça, existe argumento a ser apresentado, em sede de recurso, em busca da aplicação de regime inicial mais benéfico de cumprimento de pena? Justifique. (Valor: 0,65)**
+
+      **B) É possível, em sede de recurso, buscar a substituição da pena privativa de liberdade por restritiva de direitos? Justifique. (Valor: 0,60)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar as respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) Sim, existe argumento em busca da aplicação do regime inicial semiaberto para cumprimento da pena. De acordo com a literalidade do Art. 33, § 2º, do Código Penal, em sendo o réu reincidente, cabível a aplicação do regime inicial fechado. Ocorre que tal previsão poderá ser extremamente severa diante de situações concretas onde outro regime de cumprimento de pena se mostre mais adequado. Diante disso, procurando mitigar as consequências dessa previsão do Código Penal, a jurisprudência dos Tribunais Superiores, inclusive através da Súmula 269 do Superior Tribunal de Justiça, admite a aplicação do regime inicial semiaberto aos reincidentes condenados ao cumprimento de pena fixada em até 04 anos, desde que favoráveis as demais circunstâncias judiciais. No caso, apesar da reincidência, a pena foi aplicada em 1 ano e 06 meses de reclusão, não sendo reconhecidas circunstâncias judiciais desfavoráveis. Ademais, a reincidência anterior sequer era específica. Diante disso, possível ao advogado de Hugo pleitear a fixação do regime inicial semiaberto de cumprimento de pena. A mera indicação do candidato de que com base na pena imposta o regime inicial adequado seria aberto não é suficiente para atribuição de pontos.
+
+      B) Sim, é possível ao advogado buscar a substituição da pena privativa de liberdade por restritiva de direitos. De fato, como destacado pelo magistrado, a princípio, o Art. 44, inciso II, do Código Penal, veda a substituição da pena privativa de liberdade por restritiva de direitos na hipótese de o réu ser reincidente na prática de crimes dolosos. Não há dúvida que Hugo era reincidente, já que possuía condenação pela prática de crime doloso anterior, com trânsito em julgado, sendo o crime de apropriação indébita praticado posteriormente.
+
+      Todavia, o próprio Art. 44, § 3º, do Código Penal, admite a substituição, mesmo diante de reincidência, desde que essa não seja específica e a medida seja socialmente recomendável. Na situação apresentada, Hugo não é reincidente específico sequer na prática de crimes contra o patrimônio, já que a condenação anterior refere-se ao crime de lesão corporal dolosa. Ademais, com base nas informações expostas, a medida seria socialmente recomendável, tendo em vista que Hugo estava trabalhando e cuidava de filhos menores de idade. O crime não envolveria violência ou grave ameaça à pessoa. Assim, excepcionalmente, possível a substituição da pena privativa de liberdade por restritiva de direitos.
+    itens:
+      - n: A
+        descricao: Sim. O advogado poderá argumentar que, apesar da reincidência, as circunstâncias judiciais são favoráveis e que a pena foi fixada abaixo de 04 anos (0,25), sendo cabível aplicação do regime semiaberto (0,30), nos termos da Súmula 269 do STJ (0,10).
+        valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.25, termos: [ circunstancias judiciais, favorave* ] }
+          - { id: c2, valor: 0.3, termos: [ semiaberto | semi-aberto ] }
+          - { id: c3, valor: 0.1, dispositivo: [ Súmula 269 STJ ], requer: c2 }
+      - n: B
+        descricao: É possível a substituição da pena privativa de liberdade por restritiva de direitos, tendo em vista que a reincidência não é específica (0,35) e a medida é socialmente recomendável (0,15), nos termos do Art. 44, § 3º, do CP (0,10).
+        valores: [ 0, 0.15, 0.25, 0.35, 0.45, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.35, termos: [ substitui*, reincid*, especific* ] }
+          - { id: c2, valor: 0.15, termos: [ socialmente recomendavel ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 44, § 3º, CP" ], requer: c2 }
+  - n: 3
+    enunciado: |-
+      Leal cumpre pena em regime semiaberto após condenação definitiva pela prática de crime de lesão corporal seguida de morte, ocasião em que foi aplicada pena de 06 anos de reclusão. Após permanecer 11 meses da pena penitenciário, em “serviço extramuros”, por 120 dias, pretende a obtenção de progressão para o regime aberto.
+
+      Diante disso, em visita realizada pela defesa técnica, demonstra sua intenção para o advogado, informando que não sofreu qualquer punição administrativa no período, mas demonstrou preocupação com o fato de que soube, por meio de outros detentos, que não haveria vagas disponíveis em estabelecimentos de regime aberto no Estado.
+
+      Sob o ponto de vista técnico, de acordo com a jurisprudência pacificada dos Tribunais Superiores, na condição de advogado(a) de Leal, esclareça os itens a seguir.
+
+      **A) Leal preencheu os requisitos objetivos para a progressão para o regime aberto? Justifique. (Valor: 0,65)**
+
+      **B) A inexistência de vagas no regime pretendido pelo apenado pode ser considerada fundamento idôneo para a não concessão do benefício por ocasião do preenchimento dos requisitos objetivos e subjetivos para progressão? Justifique. (Valor: 0,60)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar as respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A questão exige do examinando conhecimento sobre o tema Execução Penal. Narra o enunciado que Leal, apenado em regime inicial semiaberto, após estar cumprindo pena há 11 meses, considerando a prestação de serviços extramuros, pretende a progressão para o regime aberto, ressaltando que não sofreu qualquer sanção administrativa.
+
+      A) Sim, os requisitos legais estão preenchidos. De acordo com o Art. 112 da Lei nº 7.210/84, o requisito objetivo para progressão de regime é o cumprimento de 1/6 da pena aplicada, que, no caso, significaria 01 ano de pena privativa de liberdade. Segundo consta do enunciado, Leal ficou 11 meses preso em cumprimento da pena, o que, a princípio, não atenderia ao requisito objetivo. Todavia, há período de pena remida que justifica a progressão de regime. Leal trabalhou por 120 dias, o que gera uma remição de 40 dias de acordo com o Art. 126 da LEP, devendo ser esclarecido que o “trabalho extramuros” justifica a remição de pena, nos termos da Súmula 562 do STJ. Ademais, o tempo remido será computado como pena cumprida para todos os efeitos (Art. 128 da LEP).
+
+      Dessa forma, cumprido mais de 01 ano da pena aplicada, possível a progressão de regime.
+
+      B) A inexistência de vagas em regime compatível não é fundamento idôneo para manutenção do apenado em regime mais severo, nos termos da Súmula Vinculante 56 do STF. Preenchidos os requisitos legais, o apenado possui direito à progressão para regime compatível ao cumprimento de sua pena, não podendo a deficiência do estado lhe prejudicar. De acordo com a jurisprudência do STF, havendo déficit de vagas, deverão ser determinados: (i) a saída antecipada de sentenciado no regime com falta de vagas; (ii) a liberdade eletronicamente monitorada ao sentenciado que sai antecipadamente ou é posto em prisão domiciliar por falta de vagas; (iii) o cumprimento de penas restritivas de direito e/ou estudo ao sentenciado que progride ao regime aberto. Até que sejam estruturadas as medidas alternativas propostas, poderá ser deferida a prisão domiciliar ao sentenciado.
+    itens:
+      - n: A
+        descricao: Sim, tendo em vista que foi cumprido mais de 1/6 da pena aplicada OU mais de 01 ano da pena imposta (0,30), nos termos do Art. 112 OU do Art. 126, ambos da LEP OU da Súmula 562 do STJ (0,10), considerando como pena cumprida o tempo remido em razão do trabalho extramuros (0,25).
+        valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.3, alternativas: [ [ 1/6 ], [ 1 ano ] ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 112, LEP", "art. 126, LEP", Súmula 562 STJ ], requer: c1 }
+          - { id: c3, valor: 0.25, termos: [ remi* | remicao, trabalho ] }
+      - n: B
+        descricao: Não pode o apenado permanecer em regime mais gravoso em razão da falta de estabelecimento penal adequado, devendo ser colocado em liberdade ou regime mais favorável (0,50), nos termos da Súmula Vinculante 56/STF (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ regime | estabelecimento | vaga*, falta de vaga* | deficit de vaga* | ausencia de vaga* | inexistencia de vaga* | mais gravoso | deficiencia do estado ] }
+          - { id: c2, valor: 0.1, dispositivo: [ Súmula Vinculante 56 ], requer: c1 }
+  - n: 4
+    enunciado: |-
+      Na manhã do dia 09 de outubro de 2018, Talles, na cidade de Bom Jesus de Itabapoana, praticou 03 crimes de furto simples em continuidade delitiva, subtraindo, do primeiro estabelecimento, dinheiro e uma arma de brinquedo; do segundo estabelecimento, uma touca ninja e um celular; e, do terceiro estabelecimento, uma motocicleta.
+
+      De posse dos bens subtraídos, Talles foi até a cidade de Cardoso Moreira, abordou Joana, que passava pela rua segurando seu celular, e, utilizando-se do simulacro da arma para emprego de grave ameaça e da touca, segurou-a pelos braços e subtraiu o celular de suas mãos. De imediato, Talles empreendeu fuga, mas Joana compareceu em sede policial, narrou o ocorrido e Talles foi localizado e preso em flagrante na cidade de São Fidélis, ainda na posse dos bens da vítima e da motocicleta utilizada.
+
+      Assegurado o direito ao silêncio e o acompanhamento da defesa técnica, Talles prestou declarações na delegacia e confessou integralmente os fatos, sendo ele indiciado pela prática dos crimes previstos no Art. 155, caput, por três vezes, n/f do Art. 71 do CP e do Art. 157, § 2º, inciso V, também do CP.
+
+      **Considerando as informações expostas, responda, na condição de advogado(a) de Talles, aos itens a seguir.**
+
+      **A) Considerando que os delitos são conexos, de qual cidade será o juízo criminal competente para o julgamento de Talles? Justifique. (Valor: 0,65)**
+
+      **B) Qual o argumento de direito material para questionar a capitulação delitiva realizada pela autoridade policial? Justifique. (Valor: 0,60)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar as respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) Será competente para julgamento de Talles o juízo da Comarca de Cardoso Moreira, local onde teria sido praticado o crime de roubo. De acordo com as informações constantes do enunciado, três crimes de furto foram praticados em conexão com um crime de roubo, tendo em vista que o agente, em continuidade, subtraiu bens de estabelecimentos diversos para obter instrumentos para a prática do crime de roubo. A conexão probatória, então, é clara. Havendo conexão entre crimes que foram praticados em diferentes comarcas, sendo que todos os juízos seriam de mesma categoria, aplicam-se as previsões do Art. 78, inciso II, do Código de Processo Penal. Não há que se falar em competência da cidade de São Fidélis, pois nenhum dos crimes foi consumado do local, somente lá ocorrendo a prisão em flagrante. Restariam as cidades de Bom Jesus de Itabapoana e Cardoso Moreira. De acordo com o Art. 78, inciso II, alínea a, do CPP, o primeiro critério a ser observado é o local onde foi praticado o crime à qual for cominada a pena mais grave. O crime mais grave imputado é o de roubo majorado, logo competente a Comarca de Cardoso Moreira. O critério do número de crimes praticados somente seria relevante se a todos os delitos fosse prevista a mesma pena.
+
+      B) O argumento de direito material é o de que não haveria que se falar em crime de roubo majorado pela restrição da liberdade da vítima, tendo em vista que a restrição em questão foi a normal do tipo para subtração dos bens, não se estendendo por tempo significativo relevante, para além daquele necessário para a subtração, conforme exige a doutrina e a jurisprudência.
+    itens:
+      - n: A
+        descricao: Será competente o juízo da Comarca de Cardoso Moreira (0,35), local onde foi praticada a infração penal mais grave (0,20), nos termos do Art. 78, inciso II, alínea a, do CPP (0,10).
+        valores: [ 0, 0.2, 0.3, 0.35, 0.45, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.35, termos: [ cardoso moreira ] }
+          - { id: c2, valor: 0.2, termos: [ mais grave | pena mais grave ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 78, II, a, CPP" ], requer: c2 }
+      - n: B
+        descricao: Não houve restrição da liberdade da vítima por tempo significativo/suficiente para ultrapassar o normal do tipo, devendo ser afastada a causa de aumento de pena (0,60).
+        valores: [ 0, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.6, termos: [ causa de aumento | majorante, tempo | restricao da liberdade ] }

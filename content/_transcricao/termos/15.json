@@ -1,0 +1,37 @@
+{
+  "1.c1": ["juizado especial criminal | jecrim", "niteroi"],
+  "2.c1": { "dispositivo": ["art. 41 CPP", "art. 100, § 2º, CP", "art. 30 CPP", "art. 145 CP"] },
+  "3.1.c1": ["querelante"],
+  "3.1.c2": ["querelad*"],
+  "3.2.c1": ["procuracao", "poderes especiais"],
+  "4.c1": ["injuria"],
+  "4.c3": ["difama*"],
+  "4.3.c1": ["causa de aumento | majorante", "varias pessoas | presenca de varias | divulgacao"],
+  "4.4.c1": ["concurso formal"],
+  "5.c1": ["audiencia preliminar | audiencia de conciliacao | conciliacao"],
+  "5.c2": ["cita*"],
+  "5.c3": ["recebimento | receber | recebida"],
+  "5.c4": ["oitiva | ouvidas | inquiri*", "testemunhas"],
+  "5.c5": ["condena*"],
+  "5.c8": { "termos": ["causa de aumento | majorante"], "dispositivo": ["art. 141, III, CP"], "requer": "c5" },
+  "5.c10": ["indeniza* | reparacao | valor minimo"],
+  "6.c1": ["carlos", "miguel", "ramirez"],
+  "7.c1": ["local", "assinatura | advogad*"],
+  "q1:A.1.c1": ["agravo em execucao | agravo de execucao | agravo"],
+  "q1:A.2.c1": ["5 dias"],
+  "q1:B": { "componentes": [
+    { "id": "c1", "valor": 0.5, "alternativas": [["requisitos", "decreto"], ["requisito temporal | falta grave", "apos o decreto | posterior ao decreto"], ["legalidade"], ["outros requisitos | nao pode estabelecer"]], "rotulo": "Sim: preenchidos os requisitos do decreto OU falta grave posterior OU legalidade" } ] },
+  "q2:A": { "componentes": [
+    { "id": "c1", "valor": 0.55, "alternativas": [["imparcialidade"], ["inercia"], ["acusatorio"], ["de oficio", "inquerito | investigacao | fase processual"]], "rotulo": "Violação da imparcialidade/inércia/sistema acusatório OU vedação da preventiva de ofício no inquérito" },
+    { "id": "c2", "valor": 0.1, "dispositivo": ["art. 311 CPP", "art. 282, § 2º, CPP", "art. 129, I, CF"], "requer": "c1" } ] },
+  "q2:B.c1": ["gravidade abstrata | gravidade em abstrato"],
+  "q3:A.c1": ["habeas corpus"],
+  "q3:B": { "componentes": [
+    { "id": "c1", "valor": 0.55, "alternativas": [["atipic*"], ["esgotamento | via administrativa | procedimento administrativo"], ["lancamento definitivo | lancamento"], ["justa causa"]], "rotulo": "Atipicidade OU falta de lançamento definitivo/esgotamento da via administrativa OU ausência de justa causa" },
+    { "id": "c2", "valor": 0.1, "dispositivo": ["Súmula Vinculante 24"], "requer": "c1" } ] },
+  "q4:A": { "componentes": [
+    { "id": "c1", "valor": 0.65, "termos": ["prescri*", "retroativa | recebimento da denuncia | entre"], "rotulo": "Prescrição da pretensão punitiva retroativa" },
+    { "id": "c2", "valor": 0.1, "dispositivo": ["art. 109, V, CP", "art. 115 CP"], "requer": "c1" } ] },
+  "q4:B.c1": ["extin* da punibilidade"],
+  "q4:B.c2": ["efeitos"]
+}

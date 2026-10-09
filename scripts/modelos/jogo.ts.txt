@@ -1,0 +1,273 @@
+// __TITULO__ — criado por `npm run novo:jogo`. É um ponto de partida mínimo e jogável:
+// a cesta apanha os processos que caem e o ⚖️ é um poder que dispara uma pergunta de
+// 2ª fase (host.perguntar). Troque a lógica à vontade, mantendo o contrato GameModule
+// de src/games/types.ts. A plataforma (GameHost) já cuida de menu, nível, som, pausa,
+// perguntas, anúncio lateral, recordes, card de compartilhamento e código de verificação.
+// Passo a passo: docs/COMO-ADICIONAR.md › Novo jogo.
+import type { GameHostApi, GameInstance, GameModule, GameOptions } from "../types";
+
+// Estilos alternáveis no menu. O índice entra no código de verificação: acrescente no fim.
+const ESTILOS = [
+  { id: "classico", nome: "Clássico", descricao: "Azul-marinho e ouro", fundo: ["#0b2347", "#03112c"], cor: "#d69c45", item: "#f3ead8" },
+  { id: "papel", nome: "Papel", descricao: "Tons de pergaminho", fundo: ["#f7f0e1", "#e6d8bb"], cor: "#1a6099", item: "#807059" },
+];
+
+type Estado = "menu" | "pronto" | "jogando" | "pausado" | "pergunta" | "fim";
+interface Obj {
+  x: number;
+  y: number;
+  v: number;
+  poder: boolean;
+}
+
+function criar(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: GameOptions): GameInstance {
+  const ctx = canvas.getContext("2d")!;
+  let estilo = ESTILOS.find((e) => e.id === opcoes.estilo) ?? ESTILOS[0];
+  let nivel = opcoes.nivel;
+  let somLigado = opcoes.som;
+  let reduzido = opcoes.movimentoReduzido;
+  let debug = !!opcoes.debug; // ?debug=1 em dev: poder logo no início e sem perder vidas
+  let estado: Estado = "menu";
+  let W = 800;
+  let H = 600;
+  let dpr = 1;
+  let cesta = 400;
+  let alvo = 400;
+  let objs: Obj[] = [];
+  let pontos = 0;
+  let vidas = 3;
+  let perguntas = 0;
+  let acertos = 0;
+  let inicio = 0;
+  let proximo = 0;
+  let proxPoder = 0;
+  let dobro = 0;
+  let pegos = 0;
+  let raf = 0;
+  let ultimo = 0;
+  let destruido = false;
+  let audio: AudioContext | null = null;
+
+  const mudar = (e: Estado) => {
+    estado = e;
+    host.estado(e);
+  };
+  const hud = () =>
+    host.hud({
+      pontos,
+      vidas,
+      poderes: dobro > 0 ? [{ id: "dobro", nome: "Pontos em dobro", icone: "✖️", restante: dobro / 8 }] : [],
+      cenario: estilo.nome,
+    });
+
+  function bip(freq: number) {
+    if (!somLigado) return;
+    try {
+      audio ??= new AudioContext();
+      const o = audio.createOscillator();
+      const g = audio.createGain();
+      o.frequency.value = freq;
+      g.gain.setValueAtTime(0.08, audio.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.001, audio.currentTime + 0.15);
+      o.connect(g).connect(audio.destination);
+      o.start();
+      o.stop(audio.currentTime + 0.15);
+    } catch {
+      /* navegador sem WebAudio */
+    }
+  }
+
+  function redimensionar() {
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    W = canvas.clientWidth || 800;
+    H = canvas.clientHeight || 600;
+    canvas.width = Math.round(W * dpr);
+    canvas.height = Math.round(H * dpr);
+  }
+
+  function reiniciar() {
+    objs = [];
+    pontos = 0;
+    vidas = 3;
+    perguntas = 0;
+    acertos = 0;
+    inicio = 0;
+    proximo = 0;
+    proxPoder = debug ? 1 : 6;
+    dobro = 0;
+    pegos = 0;
+    cesta = alvo = W / 2;
+    mudar("pronto");
+    hud();
+  }
+
+  function comecar() {
+    if (estado !== "pronto") return;
+    inicio ||= performance.now();
+    ultimo = 0;
+    mudar("jogando");
+  }
+
+  function fim() {
+    mudar("fim");
+    host.fimDeJogo({ pontos, extras: [{ rotulo: "Processos", valor: pegos }], perguntas, acertos, duracaoSeg: Math.round((performance.now() - inicio) / 1000) });
+  }
+
+  async function poder() {
+    mudar("pergunta");
+    perguntas++;
+    const ok = await host.perguntar({ tipo: "poder", poderId: "dobro", poderNome: "Pontos em dobro" });
+    if (destruido) return;
+    if (ok) {
+      acertos++;
+      dobro = 8;
+      pontos += 10;
+      bip(880);
+    }
+    ultimo = 0;
+    mudar("jogando");
+    hud();
+  }
+
+  function atualizar(dt: number) {
+    const vel = (nivel === 1 ? 140 : nivel === 2 ? 180 : 220) + pontos * 0.4;
+    cesta += (alvo - cesta) * Math.min(1, dt * 12);
+    proximo -= dt;
+    proxPoder -= dt;
+    dobro = Math.max(0, dobro - dt);
+    if (proximo <= 0) {
+      objs.push({ x: 30 + Math.random() * (W - 60), y: -20, v: vel * (0.8 + Math.random() * 0.4), poder: false });
+      proximo = Math.max(0.35, 1.1 - pontos / 400);
+    }
+    if (proxPoder <= 0) {
+      objs.push({ x: debug ? cesta : 30 + Math.random() * (W - 60), y: -20, v: vel * 0.7, poder: true });
+      proxPoder = 9 + Math.random() * 6;
+    }
+    const yCesta = H - 50;
+    for (const o of [...objs]) {
+      o.y += o.v * dt;
+      if (o.y >= yCesta - 12 && o.y <= yCesta + 20 && Math.abs(o.x - cesta) < 56) {
+        objs.splice(objs.indexOf(o), 1);
+        if (o.poder) {
+          void poder();
+          return;
+        }
+        pontos += dobro > 0 ? 2 : 1;
+        pegos++;
+        bip(660);
+      } else if (o.y > H + 24) {
+        objs.splice(objs.indexOf(o), 1);
+        if (!o.poder && !debug && --vidas <= 0) {
+          bip(160);
+          fim();
+          return;
+        }
+      }
+    }
+    hud();
+  }
+
+  function desenhar() {
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const g = ctx.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, estilo.fundo[0]);
+    g.addColorStop(1, estilo.fundo[1]);
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, W, H);
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.font = "28px system-ui, sans-serif";
+    for (const o of objs) {
+      if (o.poder) {
+        ctx.fillText("⚖️", o.x, o.y);
+        continue;
+      }
+      ctx.fillStyle = estilo.item;
+      ctx.fillRect(o.x - 12, o.y - 16, 24, 32);
+      ctx.fillStyle = estilo.cor;
+      for (let i = 0; i < 3; i++) ctx.fillRect(o.x - 8, o.y - 8 + i * 6, i === 2 ? 10 : 16, 2);
+    }
+    if (dobro > 0 && !reduzido) {
+      ctx.shadowColor = estilo.cor;
+      ctx.shadowBlur = 18;
+    }
+    ctx.fillStyle = estilo.cor;
+    ctx.beginPath();
+    ctx.roundRect(cesta - 50, H - 50, 100, 24, 6);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+  }
+
+  function quadro(t: number) {
+    if (destruido) return;
+    raf = requestAnimationFrame(quadro);
+    const dt = Math.min(0.05, (t - (ultimo || t)) / 1000);
+    ultimo = t;
+    if (estado === "jogando") atualizar(dt);
+    desenhar();
+  }
+
+  const onPointer = (e: PointerEvent) => {
+    const r = canvas.getBoundingClientRect();
+    alvo = e.clientX - r.left;
+    if (e.type === "pointerdown") comecar();
+  };
+  const onKey = (e: KeyboardEvent) => {
+    if (estado !== "pronto" && estado !== "jogando") return; // deixa o teclado livre para a pergunta
+    if (e.code === "ArrowLeft") alvo = Math.max(0, alvo - 70);
+    else if (e.code === "ArrowRight") alvo = Math.min(W, alvo + 70);
+    else if (e.code !== "Space") return;
+    e.preventDefault();
+    comecar();
+  };
+  const onVis = () => {
+    if (document.hidden) inst.pausar();
+  };
+
+  const ro = new ResizeObserver(redimensionar);
+  ro.observe(canvas);
+  redimensionar();
+  canvas.addEventListener("pointerdown", onPointer);
+  canvas.addEventListener("pointermove", onPointer);
+  window.addEventListener("keydown", onKey);
+  document.addEventListener("visibilitychange", onVis);
+
+  const inst: GameInstance = {
+    iniciar: reiniciar,
+    pausar() {
+      if (estado === "jogando" || estado === "pronto") mudar("pausado");
+    },
+    continuar() {
+      if (estado === "pausado") mudar("pronto"); // retoma ao próximo toque
+    },
+    configurar(o) {
+      if (o.estilo) estilo = ESTILOS.find((e) => e.id === o.estilo) ?? estilo;
+      if (o.nivel) nivel = o.nivel;
+      if (o.som !== undefined) somLigado = o.som;
+      if (o.movimentoReduzido !== undefined) reduzido = o.movimentoReduzido;
+      if (o.debug !== undefined) debug = o.debug;
+    },
+    destruir() {
+      destruido = true;
+      cancelAnimationFrame(raf);
+      ro.disconnect();
+      canvas.removeEventListener("pointerdown", onPointer);
+      canvas.removeEventListener("pointermove", onPointer);
+      window.removeEventListener("keydown", onKey);
+      document.removeEventListener("visibilitychange", onVis);
+      void audio?.close();
+    },
+  };
+
+  raf = requestAnimationFrame(quadro); // fundo animado já no menu
+  return inst;
+}
+
+const modulo: GameModule = {
+  criar,
+  estilos: ESTILOS.map(({ id, nome, descricao }) => ({ id, nome, descricao })),
+  comoJogar: {
+    texto: "Arraste, clique ou use ← → para mover a cesta e pegar os processos. Deixou cair três, fim de jogo. O ⚖️ é um poder: acerte a pergunta para ganhar pontos em dobro.",
+  },
+};
+export default modulo;

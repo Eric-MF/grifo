@@ -1,0 +1,64 @@
+# Catálogo das peças processuais penais.
+# Usado para: (1) detectar peça inadequada no simulador; (2) aceitar sinônimos no quiz.
+# Aliases são comparados com o texto normalizado (minúsculo, sem acento).
+
+resposta-acusacao:
+  nome: Resposta à Acusação
+  aliases: [resposta a acusacao, resposta escrita a acusacao, defesa previa]
+memoriais:
+  nome: Memoriais
+  aliases: [memoriais, alegacoes finais por memoriais, alegacoes finais escritas, alegacoes finais]
+apelacao:
+  nome: Apelação
+  aliases: [apelacao, recurso de apelacao, razoes de apelacao]
+contrarrazoes-apelacao:
+  nome: Contrarrazões de Apelação
+  aliases: [contrarrazoes de apelacao, contrarrazoes a apelacao, contrarrazoes ao recurso de apelacao, contrarrazoes em apelacao]
+rese:
+  nome: Recurso em Sentido Estrito
+  aliases: [recurso em sentido estrito, rese, recurso no sentido estrito]
+contrarrazoes-rese:
+  nome: Contrarrazões de Recurso em Sentido Estrito
+  aliases: [contrarrazoes de recurso em sentido estrito, contrarrazoes ao recurso em sentido estrito]
+agravo-execucao:
+  nome: Agravo em Execução
+  aliases: [agravo em execucao, agravo de execucao, agravo em execucao penal]
+revisao-criminal:
+  nome: Revisão Criminal
+  aliases: [revisao criminal]
+relaxamento-prisao:
+  nome: Relaxamento de Prisão
+  aliases: [relaxamento de prisao, relaxamento da prisao, pedido de relaxamento, relaxamento da prisao em flagrante]
+liberdade-provisoria:
+  nome: Liberdade Provisória
+  aliases: [liberdade provisoria, pedido de liberdade provisoria]
+revogacao-preventiva:
+  nome: Revogação da Prisão Preventiva
+  aliases: [revogacao da prisao preventiva, revogacao de prisao preventiva, revogacao da preventiva]
+queixa-crime:
+  nome: Queixa-Crime
+  aliases: [queixa-crime, queixa crime, queixa]
+habeas-corpus:
+  nome: Habeas Corpus
+  aliases: [habeas corpus]
+embargos-declaracao:
+  nome: Embargos de Declaração
+  aliases: [embargos de declaracao, embargos declaratorios]
+embargos-infringentes:
+  nome: Embargos Infringentes e de Nulidade
+  aliases: [embargos infringentes, embargos infringentes e de nulidade, embargos de nulidade]
+carta-testemunhavel:
+  nome: Carta Testemunhável
+  aliases: [carta testemunhavel]
+recurso-especial:
+  nome: Recurso Especial
+  aliases: [recurso especial, resp]
+recurso-extraordinario:
+  nome: Recurso Extraordinário
+  aliases: [recurso extraordinario]
+recurso-ordinario-constitucional:
+  nome: Recurso Ordinário Constitucional
+  aliases: [recurso ordinario constitucional, recurso ordinario em habeas corpus, roc, rhc]
+mandado-seguranca:
+  nome: Mandado de Segurança
+  aliases: [mandado de seguranca]

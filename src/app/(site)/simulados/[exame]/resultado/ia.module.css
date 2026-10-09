@@ -1,0 +1,21 @@
+.box { display: grid; gap: 1rem; }
+.intro { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.feito { padding: 0.9rem 1rem; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--primary) 10%, transparent); }
+.feito p { margin: 0.4rem 0 0; font-size: 0.92rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 0.8rem; }
+.wide { grid-column: 1 / -1; }
+.field { display: grid; gap: 0.3rem; font-size: 0.85rem; font-weight: 700; }
+.field select, .field input {
+  font-weight: 400; font-size: 1rem; padding: 0.6rem 0.75rem; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: var(--surface-2); color: var(--text);
+}
+.field input[type="password"] { font-family: var(--font-mono); }
+.lembrar { display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.88rem; color: var(--muted); cursor: pointer; }
+.lembrar input { margin-top: 0.2rem; accent-color: var(--primary); }
+.acoes { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+.link { background: none; border: 0; padding: 0; color: var(--muted); text-decoration: underline; cursor: pointer; font-size: 0.85rem; margin-left: auto; }
+.progresso { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; }
+.spinner { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--border); border-top-color: var(--primary); animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.erro { margin: 0; color: var(--bad); font-weight: 600; }
+.nota { margin: 0; font-size: 0.8rem; color: var(--muted); }

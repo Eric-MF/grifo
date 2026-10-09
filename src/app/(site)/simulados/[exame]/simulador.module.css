@@ -1,0 +1,82 @@
+.inicio { max-width: 860px; }
+.regras { margin-top: 1.5rem; }
+.regras h2 { font-size: 1.5rem; }
+.regras ul { padding-left: 1.2rem; display: grid; gap: 0.35rem; margin: 0 0 1.25rem; }
+.check { display: flex; align-items: center; gap: 0.6rem; font-weight: 600; margin-bottom: 1.25rem; cursor: pointer; }
+.check input { width: 18px; height: 18px; accent-color: var(--primary); }
+.ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+/* ---- Prova ---- */
+.shell { padding-bottom: 4rem; }
+.toolbar {
+  position: sticky; top: 64px; z-index: 40;
+  background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.focoOn .toolbar { top: 0; }
+.toolbarInner { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; padding-block: 0.55rem; }
+.tabs { display: flex; gap: 0.25rem; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+.tab {
+  position: relative; white-space: nowrap; padding: 0.45rem 0.85rem; border-radius: 999px; border: 1px solid transparent;
+  background: none; cursor: pointer; font-weight: 600; color: var(--muted);
+}
+.tab:hover { background: var(--surface-2); color: var(--text); }
+.tab[aria-current="page"] { background: var(--surface); border-color: var(--border); color: var(--text); box-shadow: var(--shadow); }
+.dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--ok); margin-left: 0.4rem; vertical-align: middle; }
+.controls { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+.timer { font-variant-numeric: tabular-nums; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 8px; background: var(--surface-2); }
+.timerLow { color: var(--bad); }
+/* Versão celular (até 640px): barra em duas linhas, com os controles numa só */
+@media (max-width: 640px) {
+  :global(:root[data-layout="celular"]) .toolbarInner { gap: 0.35rem; padding-block: 0.4rem; }
+  :global(:root[data-layout="celular"]) .tabs { gap: 0.2rem; }
+  :global(:root[data-layout="celular"]) .tab { padding: 0.4rem 0.7rem; }
+  :global(:root[data-layout="celular"]) .controls { flex-wrap: nowrap; justify-content: space-between; gap: 0.3rem; width: 100%; }
+  :global(:root[data-layout="celular"]) .timer { font-size: 0.9rem; padding: 0.3rem 0.5rem; }
+  :global(:root[data-layout="celular"]) .soDesktop,
+  :global(:root[data-layout="celular"]) .rotuloPausa { display: none; }
+}
+.banner { background: var(--bad); color: #fff; text-align: center; padding: 0.6rem 1rem; font-weight: 600; }
+
+.body {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 2rem; padding-top: 1.5rem;
+  transition: filter 0.25s ease;
+}
+.stacked { grid-template-columns: minmax(0, 1fr); max-width: 900px; }
+.blurred { filter: blur(14px) saturate(0.6); user-select: none; pointer-events: none; }
+.enunciado {
+  position: sticky; top: calc(64px + 64px); align-self: start; max-height: calc(100dvh - 150px); overflow: auto;
+  padding: 1.25rem 1.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+}
+.stacked .enunciado { position: static; max-height: none; }
+.focoOn .enunciado { top: 72px; max-height: calc(100dvh - 90px); }
+.enunciado h2 { font-size: 1.35rem; border-bottom: 3px solid var(--text); padding-bottom: 0.35rem; font-variant: small-caps; }
+.enunciadoTexto { font-size: 0.97rem; text-align: justify; hyphens: auto; }
+.folha { min-width: 0; }
+@media (max-width: 960px) {
+  .body { grid-template-columns: minmax(0, 1fr); }
+  .enunciado { position: static; max-height: none; }
+}
+
+/* ---- Sobreposições (pausa, entrega) ---- */
+.overlay {
+  position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; padding: 1rem;
+  background: color-mix(in srgb, var(--navy) 45%, transparent);
+  animation: fade 0.2s ease;
+}
+@keyframes fade { from { opacity: 0; } }
+.pauseBox {
+  width: min(100%, 440px); max-height: calc(100dvh - 2rem); overflow: auto;
+  display: flex; flex-direction: column; align-items: center; gap: 0.9rem; text-align: center;
+  background: var(--bg); border: 1px solid var(--border); border-radius: calc(var(--radius) + 6px);
+  padding: 1.75rem 1.5rem; box-shadow: 0 30px 80px rgb(3 17 44 / 0.4);
+}
+.pauseBox > aside { align-self: stretch; margin-inline: auto; text-align: left; }
+.pauseEyebrow { margin: 0; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--accent-ink); }
+.pauseTime { margin: 0; font-family: var(--font-body); font-variant-numeric: tabular-nums; font-size: 2.6rem; font-weight: 800; }
+.pauseBox p { margin: 0; }
+.resumo { list-style: none; padding: 0; margin: 0; width: 100%; }
+.resumo li { display: flex; justify-content: space-between; padding: 0.45rem 0; border-bottom: 1px solid var(--border); }
+.vazio { color: var(--bad); font-weight: 600; }
+
+.obs { padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--primary) 10%, transparent); font-size: 0.92rem; }

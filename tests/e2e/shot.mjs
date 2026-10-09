@@ -1,0 +1,12 @@
+import { chromium } from "playwright";
+const [url, out, w = "1366", h = "900", theme = ""] = process.argv.slice(2);
+const b = await chromium.launch();
+const p = await b.newPage({ viewport: { width: +w, height: +h } });
+const errs = [];
+p.on("console", (m) => m.type() === "error" && errs.push(m.text()));
+p.on("pageerror", (e) => errs.push(String(e)));
+if (theme) await p.addInitScript((t) => localStorage.setItem("grifo:prefs", JSON.stringify({ theme: t })), theme);
+await p.goto(url, { waitUntil: "networkidle" });
+await p.screenshot({ path: out, fullPage: process.env.FULL === "1" });
+console.log("errors:", errs.length ? errs : "none");
+await b.close();

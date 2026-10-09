@@ -1,0 +1,360 @@
+# XXXII Exame de Ordem Unificado — Direito Penal
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
+id: "32"
+numero: 32
+numeral: XXXII
+aplicacao: 2021-08-08
+revisao:
+  status: rascunho
+  por: ""
+  em: ""
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
+peca:
+  nome: Memoriais
+  tipo: memoriais
+  aliases: []
+  enunciado: |-
+    Na madrugada do dia 1º de janeiro de 2020, Luiz, nascido em 24 de abril de 1948, estava em sua residência, em Porto Alegre, na companhia de seus três filhos e do irmão Igor, nascido em 29 de novembro de 1965, que também morava há dois anos no mesmo imóvel. Em determinado momento, um dos filhos de Luiz acionou fogos de artifício, no quintal do imóvel, para comemorar a chegada do novo ano. Ocorre que as faíscas atingiram o telhado da casa, que começou a pegar fogo. Todos correram para sair pela única e pequena porta da casa, mas Luiz, em razão de sua idade e pela dificuldade de locomoção, acabou ficando por último na fila para saída da residência. Percebendo que o fogo estava dele se aproximando e que iria atingi-lo em segundos, Luiz desferiu um forte soco na cabeça do irmão, que estava em sua frente, conseguindo deixar o imóvel. Igor ficou caído por alguns momentos, mas conseguiu sair da casa da família, sangrando em razão do golpe recebido.
+
+    Policiais chegaram ao local do ocorrido, sendo instaurado procedimento para investigar a autoria do crime de incêndio e outro procedimento para apurar o crime de lesão corporal. Luiz, verificando as consequências de seus atos, imediatamente levou o irmão para unidade de saúde e pagou pelo tratamento médico necessário. Igor compareceu em sede policial após ser intimado, narrando o ocorrido, apesar de destacar não ter interesse em ver o autor do fato responsabilizado criminalmente.
+
+    Concluídas as investigações em relação ao crime de lesão, os autos foram encaminhados ao Ministério Público, que, com base no laudo prévio de lesão corporal de Igor atestando a existência de lesão de natureza leve na cabeça, ofereceu denúncia, perante a 5ª Vara Criminal de Porto Alegre/RS, órgão competente, em face de Luiz como incurso nas sanções penais do Art. 129, § 9º, do Código Penal. Deixou o órgão acusador de oferecer proposta de suspensão condicional do processo com fundamento no Art. 41 da Lei nº 11.340/06, que veda a aplicação dos institutos da Lei nº 9.099/95, tendo em vista que aquela lei (Lei nº 11.340/06) estabeleceu nova pena para o delito imputado.
+
+    Após citação e apresentação de resposta à acusação, na qual Luiz demonstrou interesse na aplicação do Art. 89 da Lei nº 9.099/95, os fatos foram integralmente confirmados durante a instrução probatória. Igor confirmou a agressão, a ajuda posterior do irmão e o desinteresse em responsabilizá-lo. O réu permaneceu em silêncio durante seu interrogatório. Em seguida, foi acostado ao procedimento o laudo definitivo de lesão corporal da vítima atestando a existência de lesões de natureza leve, assim como a Folha de Antecedentes Criminais de Luiz, que registrava uma única condenação, com trânsito em julgado em 10 de dezembro de 2019, pela prática de contravenção penal.
+
+    O Ministério Público apresentou a manifestação cabível requerendo a condenação do réu nos termos da denúncia, destacando, ainda, a incidência do Art. 61, inciso I, do CP. Em seguida, a defesa técnica de Luiz foi intimada, em 19 de janeiro de 2021, terça-feira, para apresentação da medida cabível.
+
+    **Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Luiz, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses cabíveis de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)**
+
+    *Obs.: o examinando deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão.*
+
+    A mera citação do dispositivo legal não confere pontuação.
+  gabarito_comentado: |-
+    Considerando as informações expostas, o examinando, na condição de advogado(a) de Luiz, deveria apresentar Alegações Finais na forma de memoriais ou Memoriais, com fundamento no Art. 403, § 3º, do CPP.
+
+    A petição deveria ser direcionada ao juízo da 5ª Vara Criminal da Comarca de Porto Alegre, Rio Grande do Sul, local onde teriam ocorrido os fatos, constando do enunciado que esse seria o juízo competente.
+
+    Consta que Luiz foi denunciado pela prática do crime do Art. 129, § 9º, do CP, sendo realizada instrução probatória, de modo que não haveria que se falar em resposta à acusação. Ademais, não houve sentença, logo não caberia apresentação de apelação. O Ministério Público apresentou manifestação, após a instrução probatória ser encerrada, pugnando pela condenação nos termos da denúncia, razão pela qual a única medida cabível seria apresentação de alegações finais.
+
+    Inicialmente, o examinando deveria ter demonstrado que todo o procedimento é nulo, considerando que não houve a indispensável representação por parte da vítima.
+
+    O Art. 88 da Lei nº 9.099/95 estabelece que quando a lesão for de natureza leve a ação será pública condicionada à representação. Apesar de Igor ter comparecido à Delegacia após intimação, a todo momento deixou claro não ter interesse em ver o autor do fato responsabilizado criminalmente. Passados mais de 06 meses sem que houvesse representação da vítima, houve decadência e, consequentemente, deveria ter ocorrido a extinção da puniblidade do acusado, conforme o Art. 107, inciso IV, do CP.
+
+    Ademais, não foi oferecida proposta de suspensão condicional do processo ao réu. Argumentou o Ministério Público que não seria cabível a proposta, porque o Art. 129, § 9º, do CP, foi introduzido pela Lei nº 11.340/06, que, em seu Art. 41, veda a aplicação dos institutos despenalizadores previstos na Lei nº 9.099/95. Apesar de, efetivamente, a forma qualificada da lesão prevista no Art. 129, § 9º, do CP, ter sido introduzida pela Lei nº 11.340/06, o crime imputado não necessariamente envolve situação de violência doméstica e familiar contra a mulher. Quando o crime do Art. 129, § 9º, do CP, for praticado no contexto da Lei nº 11.340/06, desnecessária será a representação e impossível será a aplicação do Art. 89 da Lei nº 9.099/95, nos termos do Art. 41 da Lei Maria da Penha. Todavia, apesar de o dispositivo ter sido introduzido por tal lei, na situação em análise, os fatos teriam sido praticados contra vítima do sexo masculino, não sendo aplicáveis os dispositivos, vedações e procedimento trazidos pela Lei nº 11.340/06. Dessa forma, seria necessária a representação da vítima diante da natureza leve da lesão e cabível proposta de suspensão condicional do processo, sendo certo que a condenação anterior por contravenção não impede o benefício.
+
+    No mérito, o examinando deveria defender que os fatos foram praticados em situação de estado de necessidade, causa excludente da ilicitude, na forma do Art. 23, inciso I, e do Art. 24, ambos do CP. De acordo com o que consta do enunciado, o imóvel onde estaria Luiz e Igor estava pegando fogo em razão da conduta descuidada de terceiro.
+
+    Havia perigo atual, já que o fogo estava se aproximando de Luiz, que não conseguia deixar a residência em razão de ter diversas pessoas na sua frente e de sua dificuldade de locomoção. O perigo não foi provocado por vontade própria de Luiz, mas sim por descuido de seu filho. O réu violou a integridade física de seu irmão para resguardar a sua própria integridade de perigo atual, não sendo exigível o sacrifício na ocasião. Ademais, não poderia o acusado de outra forma deixar o imóvel e se proteger, já que o fogo estava se aproximando.
+
+    Preenchidos os requisitos do Art. 24 do CP, afastada estará a ilicitude da conduta.
+
+    De maneira subsidiária, caso não houvesse absolvição, deveria o examinando tratar sobre eventual pena a ser imposta. Não havendo circunstâncias judiciais do Art. 59 do CP a ser consideradas na primeira fase do processo dosimétrico, deveria a pena base ser aplicada no mínimo legal.
+
+    Na segunda fase, deveria o examinando afastar a agravante do Art. 61, inciso I, do CP, solicitada pelo Ministério Público, tendo em vista que o Art. 63 do CP afirma que somente será reincidente aquele que praticar fato após condenação com trânsito em julgado pela prática de CRIME anterior. Consta da Folha de Antecedentes Criminais de Luiz apenas condenação pela prática de contravenção, sendo tecnicamente primário.
+
+    Em seguida, deveria pugnar pelo reconhecimento da atenuante prevista no Art. 65, inciso I, do CP, considerando que o réu é maior de 70 anos. Também aplicável a atenuante prevista no Art. 65, iciso III, alínea b, do CP, pois Luiz procurou, logo após o crime, evitar ou minorar as consequências de seus atos, levando Igor para o hospital e pagando por seu tratamento.
+
+    Não foram narradas causas de aumento ou diminuição de pena.
+
+    O regime inicial a ser fixado, diante da primariedade técnica, seria o aberto, destacando-se que o delito imputado é punido apenas com pena de detenção.
+
+    Considerando que o crime imputado envolveria violência à pessoa, não seria cabível a substituição da pena privativa de liberdade por restritiva de direitos.
+
+    Todavia, na forma do Art. 77 do CP, não sendo cabível a substituição da PPL por PRD e considerando a primariedade técnica e a pena a ser aplicada, possível a suspensão condicional da pena.
+
+    Diante do exposto, deveria ser formulado pedido requerendo:
+
+    a) preliminarmente, reconhecimento da decadência ou extinção da punibilidade;
+
+    b) reconhecimento da nulidade em razão do não oferecimento de proposta de suspensão condicional do processo;
+
+    c) no mérito, absolvição, com fulcro no Art. 386, inciso VI, do CPP;
+
+    d) na eventualidade de condenação, aplicação da pena no mínimo legal, com fixação de regime aberto e suspensão condicional da pena.
+
+    A data a ser indicada é 25 de janeiro de 2021, tendo em vista que o prazo para Alegações Finais é de 05 dias, mas o prazo se encerraria em um domingo, devendo ser prorrogado para o primeiro dia útil seguinte.
+
+    No fechamento, deve o examinando indicar local, data, advogado e nº da OAB.
+  itens:
+    - n: "1"
+      descricao: "Endereçamento: 5ª Vara Criminal da Comarca de Porto Alegre/RS (0,10)"
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 5 vara criminal, porto alegre ] }
+    - n: "2"
+      descricao: "Fundamento legal: Art. 403, § 3º, do CPP ou Art. 404, parágrafo único do CPP(0,10)"
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, dispositivo: [ "art. 403, § 3º, CPP", "art. 404, parágrafo único, CPP" ] }
+    - n: "3"
+      secao: Preliminares
+      descricao: Preliminarmente, extinção da punibilidade do agente OU nulidade em razão da ausência de representação (0,20), com reconhecimento da decadência (0,15), conforme o Art. 107, inciso IV, do CP OU 564, inciso III, alínea a, ou inciso IV, CPP (0,10)
+      valores: [ 0, 0.15, 0.2, 0.25, 0.3, 0.35, 0.45 ]
+      componentes:
+        - { id: c1, valor: 0.2, alternativas: [ [ extin* da punibilidade ], [ nulidade, representacao ] ] }
+        - { id: c2, valor: 0.15, termos: [ decaden* ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 107, IV, CP" ], requer: c2 }
+    - n: "3.1"
+      secao: Preliminares
+      descricao: O crime de lesão corporal leve do Art. 129, § 9º, do CP é de ação penal pública condicionada à representação (0,20), nos termos do Art. 88 da Lei nº 9.099/95 (0,10), e a vítima demonstrou não ter interesse em ver o autor do fato responsabilizado criminalmente (0,15)
+      valores: [ 0, 0.15, 0.2, 0.25, 0.3, 0.35, 0.45 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ condicionada, representacao ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 88, Lei 9" ], requer: c1 }
+        - { id: c3, valor: 0.15, termos: [ interesse | desinteresse | nao desejava | nao quer | nao queria | nao manifestou ] }
+    - n: "4"
+      secao: Preliminares
+      descricao: Nulidade decorrente do não oferecimento de proposta de suspensão condicional do processo (0,30), tendo em vista que o crime não foi praticado no contexto da violência doméstica e familiar contra mulher ou tendo em vista não ser aplicável a previsão do Art. 41 da Lei nº 11.340 pelo fato de a vítima ser homem (0,20).
+      valores: [ 0, 0.2, 0.3, 0.5 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ suspensao condicional do processo | sursis processual ] }
+        - { id: c2, valor: 0.2, alternativas: [ [ violencia domestica ], [ homem | vitima masculina | sexo masculino ], [ 11340 | maria da penha ] ] }
+    - n: "5"
+      secao: MÉRITO
+      descricao: No mérito, reconhecimento do estado de necessidade (0,40), que é causa excludente da ilicitude (0,20), na forma do Art. 24 ou do Art. 23, inciso I, ambos do CP (0,10)
+      valores: [ 0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ]
+      componentes:
+        - { id: c1, valor: 0.4, termos: [ estado de necessidade ] }
+        - { id: c2, valor: 0.2, termos: [ ilicitude | antijuridicidade ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 24, CP", "art. 23, I, CP" ], requer: c2 }
+    - n: "5.1"
+      secao: MÉRITO
+      descricao: Luiz agiu diante de perigo atual para sua integridade física (0,20), utilizando meios disponíveis, não sendo razoável a exigência do sacrifício (0,10)
+      valores: [ 0, 0.1, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ perigo atual ] }
+        - { id: c2, valor: 0.1, alternativas: [ [ sacrificio ], [ meios disponiveis | unico meio | inevitavel ] ] }
+    - n: "6"
+      secao: MÉRITO
+      descricao: Aplicação da pena base no mínimo legal, já que circunstâncias do art. 59 do CP são favoráveis (0,10)
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ pena base | pena-base, minimo ] }
+    - n: "7"
+      secao: MÉRITO
+      descricao: Afastamento da agravante da reincidência OU afastamento da agravante do art. 61, I, do CP (0,20), tendo em vista que a condenação anterior se refere à contravenção ou tendo em vista que não ostenta condenação anterior definitiva pela prática de crime (0,10)
+      valores: [ 0, 0.1, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ reincid*, afast* | nao incid* | nao e reincidente | exclu* ] }
+        - { id: c2, valor: 0.1, termos: [ contraven* ] }
+    - n: "8"
+      secao: MÉRITO
+      descricao: Reconhecimento da atenuante prevista no Art. 65, inciso I, do CP (0,20), tendo em vista que o réu era maior de 70 anos na data da sentença (0,10)
+      valores: [ 0, 0.1, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ atenuante, 70 anos | setenta anos | idade ] }
+        - { id: c2, valor: 0.1, termos: [ 70 anos | maior de 70 | setenta anos ] }
+    - n: "9"
+      secao: MÉRITO
+      descricao: Reconhecimento da atenuante prevista no Art. 65, inciso III, alínea b, do CP (0,20), pois Luiz procurou reduzir as consequências de seus atos levando Igor para o hospital e pagando por seu tratamento (0,10)
+      valores: [ 0, 0.1, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ atenuante, reduzir as consequencias | minorar as consequencias | reparar | repara* | consequencias ] }
+        - { id: c2, valor: 0.1, termos: [ hospital | tratamento ] }
+    - n: "10"
+      secao: MÉRITO
+      descricao: Fixação do regime aberto para início do cumprimento da pena (0,20), considerando a pena a ser aplicada ou considerando que o delito é punido apenas com pena de detenção (0,10)
+      valores: [ 0, 0.1, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ regime, aberto ] }
+        - { id: c2, valor: 0.1, alternativas: [ [ detencao ], [ pena aplicada | quantum | pena fixada | pena a ser aplicada ] ] }
+    - n: "11"
+      secao: MÉRITO
+      descricao: Requerimento de suspensão condicional da pena (0,20), nos termos do Art. 77 do CP (0,10)
+      valores: [ 0, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ suspensao condicional da pena | sursis ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 77, CP" ], requer: c1 }
+    - n: "12"
+      secao: Pedidos
+      descricao: Preliminar de nulidade do processo OU reconhecimento da extinção da punibilidade OU decadência OU oferecimento de proposta de suspensão condicional do processo (0,10)
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, alternativas: [ [ nulidade ], [ extin* da punibilidade ], [ decaden* ], [ suspensao condicional do processo ] ] }
+    - n: "13"
+      secao: Pedidos
+      descricao: Absolvição (0,20), na forma do Art. 386, VI, do CPP (0,10)
+      valores: [ 0, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ absolvi* | absolver ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 386, VI, CPP" ], requer: c1 }
+    - n: "14"
+      secao: Pedidos
+      descricao: Aplicação da pena no mínimo legal OU reconhecimento das atenuantes (0,10)
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, alternativas: [ [ minimo legal ], [ atenuante* ] ] }
+    - n: "15"
+      secao: Pedidos
+      descricao: Fixação do regime aberto OU concessão de suspensão condicional da pena (0,10)
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, alternativas: [ [ regime aberto ], [ suspensao condicional da pena | sursis ] ] }
+    - n: "16"
+      secao: Fechamento
+      descricao: "Data: 25 de janeiro de 2021 (0,10)"
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 25 de janeiro de 2021 ] }
+    - n: "17"
+      secao: Fechamento
+      descricao: Local, data, advogado e OAB (0,10)
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ local, advogad*, oab ] }
+questoes:
+  - n: 1
+    enunciado: |-
+      Gabriel, estudante de farmácia, 22 anos, descobre que seu tio Jorge possuía grave doença no fígado, que lhe causava dores físicas. Durante seus estudos sobre medicina alternativa em livro oficial fornecido pela faculdade pública em que estudava, vem a ler que a droga conhecida como heroína poderia, em doenças semelhantes à de seu tio, funcionar como analgésico e aliviar a dor do paciente.
+
+      Tendo acesso ao material que sabia ser heroína e sua classificação como droga, Gabriel, em 27 de maio de 2019, transporta e entrega o material para o tio, acreditando que, apesar de existir a figura típica do tráfico de drogas, sua conduta seria lícita diante dos fins medicinais. Avisou que o material deveria ser usado naquele dia, de forma imediata.
+
+      No dia 29 de maio de 2019, após denúncia, policiais militares, com autorização para ingresso na residência de Jorge, apreendem o material ilícito e descobrem que Jorge o recebera de Gabriel, mas não o utilizou. Em seguida, comparecem à faculdade de Gabriel e realizam sua prisão em flagrante.
+
+      Jorge e Gabriel foram indiciados, após juntada do laudo confirmando a natureza do material, pelo crime de tráfico de drogas (Art. 33 da Lei nº 11.343/06), mas, em razão da doença, Jorge vem a falecer naquela mesma data. Ao tomar conhecimento dos fatos, de imediato a família de Gabriel procura você, como advogado, para esclarecimentos.
+
+      **Considerando apenas as informações expostas, responda, na condição de advogado(a) de Gabriel, aos itens a seguir.**
+
+      **A) Qual o argumento de direito processual a ser apresentado para questionar a prisão em flagrante de Gabriel? Justifique. (Valor: 0,60)**
+
+      **B) Existe argumento de direito material a ser apresentado em busca da absolvição de Gabriel pelo crime pelo qual foi indiciado? Justifique. (Valor: 0,65)**
+
+      *Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) A defesa técnica de Gabriel deveria argumentar que sua prisão em flagrante foi ilegal, o que ensejaria o relaxamento da mesma. Isso porque nenhuma das situações do Art. 302 do CPP restou configurada. Em que pese houvesse drogas sendo guardadas na residência de Jorge no momento da prisão em flagrante, não havia atuação deste em comunhão de ações e desígnios com Gabriel. Gabriel, em tese, teria praticado crime de tráfico ao transportar material entorpecente e entregá-lo para Jorge em 27 de maio de 2019. Ocorre que a apreensão do material só ocorreu em 29 de maio de 2019, logo não estava Gabriel cometendo o crime, não tinha acabado de cometê-lo, não foi perseguido logo após a infração e nem encontrado com instrumentos do delito que fizessem presumir a autoria. Diante da ausência das situações previstas no Art. 302 do CPP, impossível a prisão em flagrante de Gabriel.
+
+      B) Sim, o argumento de direito material a ser apresentado pela defesa técnica de Gabriel é o de que houve erro de proibição, afastando o potencial conhecimento da ilicitude indispensável para o reconhecimento da culpabilidade como elemento do crime. Para a doutrina majoritária, crime seria um fato típico, ilícito e culpável.
+
+      Sem dúvida, a conduta de Gabriel de transportar drogas seria típica e ilícita. Ocorre que o agente agiu por acreditar que, naquela situação, sua conduta seria lícita, já que estaria transportando droga para fins medicinais, conforme aprendeu em livro oficial obtido em faculdade pública. Diante disso, fica afastado o elemento da culpabilidade do potencial conhecimento da ilicitude. Cabe esclarecer que não estamos diante de hipótese de erro de tipo, já que ele tinha conhecimento sobre todas as elementares do crime e não houve falsa percepção da situação fática. Gabriel sabia estar transportando drogas. Também não há que se falar em desconhecimento da lei, que é inescusável. Gabriel sabia que o tráfico configura crime, apenas atuando em erro sobre a ilicitude do fato, nos termos da parte final do Art. 21 do CP. O advogado deveria defender que o erro foi inevitável, logo buscando a isenção de pena, ou, ao menos, que houve erro evitável, o que poderia funcionar como causa de diminuição de pena
+    itens:
+      - n: A
+        descricao: A prisão em flagrante foi ilegal (0,20), já que não estava configurada em qualquer das situações previstas no Art. 302 do CPP (0,40).
+        valores: [ 0, 0.2, 0.4, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ flagrante, ilegal* | ilicit* | relaxamento | nulidade ] }
+          - { id: c2, valor: 0.4, termos: [ hipotese* | situacao | situacoes | flagrancia | estado de flagrancia | nao estava em flagrante | nao havia flagrante ] }
+      - n: B
+        descricao: Sim, o argumento seria de que ocorreu erro de proibição OU erro sobre ilicitude (0,40), nos termos do Art. 21 do CP (0,10), que poderia funcionar como causa de isenção de pena OU que afasta a culpabilidade do agente OU que afasta o potencial conhecimento da ilicitude (0,15)
+        valores: [ 0, 0.15, 0.25, 0.4, 0.5, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.4, termos: [ erro de proibicao | erro sobre a ilicitude ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 21, CP" ], requer: c1 }
+          - { id: c3, valor: 0.15, alternativas: [ [ isencao de pena | isento de pena ], [ culpabilidade ], [ potencial conhecimento ] ] }
+  - n: 2
+    enunciado: |-
+      Luiz, no dia 05 de fevereiro de 2019, ingressou na residência de Henrique e, mediante grave ameaça contra a vítima, buscou subtrair a televisão do imóvel. Após o emprego da grave ameaça à pessoa e a retirada dos parafusos da televisão, mas ainda quando estava dentro da casa com o bem, Luiz é surpreendido pela Policía Militar, que informada dos fatos por vizinhos, realizou sua prisão em flagrante.
+
+      Em sede policial, foi descoberto que Luiz contou com a participação de José, que, sabendo do plano criminoso do amigo, foi o responsável por dizer o horário em que a vítima estaria sozinha em sua residência, bem como a porta que teria uma falha na fechadura, facilitando o ingresso de Luiz no imóvel. Luiz e José foram denunciados pela prática do crime de roubo majorado pelo concurso de agentes.
+
+      Observado o procedimento previsto em lei e confirmados os fatos, foi proferida sentença condenatória, sendo aplicada a pena mínima possível de 5 anos e 4 meses de reclusão, além de 13 dias-multa, para José. Já Luiz teve sua pena base fixada acima do mínimo legal, em 4 anos e 6 meses de reclusão e 12 dias-multa, reconhecendo o magistrado a existência de má conduta social, pelo fato de Luiz possuir 5 condenações sem trânsito em julgado pela suposta prática de crimes de roubo, apesar de admitir, na decisão, que as anotações constantes da Folha de Antecedentes Criminais não poderiam justificar o reconhecimento de maus antecedentes. Não foram reconhecidas agravantes, sendo, na terceira fase, a pena aumentada, no mínimo possível, em razão da majorante do concurso de agentes. Assim, a pena final de Luiz restou acomodada em 06 anos de reclusão e 15 dias-multa.
+
+      Intimado da decisão, o advogado de José apresentou recurso buscando reconhecimento da modalidade tentada do delito, bem como da causa de diminuição da participação de menor importância.
+
+      Luiz, então, consulta você, como advogado(a), para avaliar o interesse em apresentar recurso de apelação.
+
+      Na condição de advogado(a) de Luiz, esclareça os questionamentos formulados pelo seu cliente.
+
+      **A) Não sendo apresentado recurso de apelação por Luiz, poderá ele ser beneficiado pelo reconhecimento da causa de diminuição de pena da tentativa no julgamento do recurso apresentado por José? E da causa de diminuição de pena da participação de menor importância? Justifique. (Valor: 0,65)**
+
+      **B) Existe argumento de direito material a ser apresentado em busca da redução da pena base aplicada a Luiz? Justifique. (Valor: 0,60)**
+
+      *Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) Luiz não poderá ser beneficiado por eventual reconhecimento de causa de diminuição de pena de participação de menor importância, enquanto poderá ser beneficiado em caso de reconhecimento da modalidade tentada do delito, ainda que não tenha apresentado recurso de apelação questionando tal tema. De acordo com o Art. 580 do CPP, no caso de concurso de agentes, a decisão do recurso interposto por um dos réus, se fundado em motivos que não sejam de caráter exclusivamente pessoal, aproveitará aos outros. A causa de diminuição de pena da tentativa é dado objetivo, não sendo de caráter pessoal, já que o crime restou ou não consumado em relação a todos os agentes. Assim, reconhecida a modalidade tentada, possível a extensão dos efeitos ao corréu que não recorreu. Por outro lado, a participação de menor importância, trazida pelo Art. 29, § 1º, do CP, é dado exclusivamente pessoal. Luiz adotou conduta relevante na execução do crime, sendo o executor direto da grave ameaça e da subtração da televisão. A situação de José seria diferente, já que sua participação poderia vir a ser considerada de menor relevância. Luiz sequer é partícipe, mas sim autor. Dessa forma, mesmo que reconhecida a causa de diminuição de pena do Art. 29, § 1º, do CP, para José, não haverá extensão para Luiz.
+
+      B) Sim, existe argumento a ser apresentado em busca da redução da pena base aplicada, tendo em vista que ações em curso não podem ser valorizadas de maneira negativa no momento da aplicação da pena base. Durante muito tempo se controverteu sobre a possibilidade de as ações em curso, com ou sem condenações sem trânsito em julgado, poderem ser reconhecidas como maus antecedentes. Prevaleceu o entendimento pela impossibilidade, sob pena de violação ao princípio da presunção de inocência. Contudo, diversos magistrados valorizavam essas ações em curso como condição social negativa ou personalidade voltada para prática de crimes, aumentando a pena base. Ocorre que o Superior Tribunal de Justiça, por meio da Súmula 444, afastou a possibilidade de tal conduta por parte dos magistrados, já que decidiu que as ações em curso e inquéritos policiais não poderão ser considerados no momento da aplicação da pena base como um todo e não apenas como maus antecedentes, sob pena de violação transversa/indireta ao princípio da não culpabilidade.
+
+      Obs.: não será suficiente a mera afirmativa de que ações em curso não podem funcionar como maus antecedentes, já que esse não foi o argumento utilizado pelo magistrado para aumento da pena base.
+    itens:
+      - n: A
+        descricao: Luiz poderá ser beneficiado por eventual causa de diminuição de pena em razão da tentativa, mesmo não apresentando recurso, tendo em vista que se trata de circunstância objetiva ou de caráter não exclusivamente pessoal (0,30). A participação de menor importância é circunstância pessoal, não se estendendo ao corréu (0,25), nos termos do Art. 580 do CPP (0,10).
+        valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ tentativa, objetiva | nao exclusivamente pessoal | estende | extens* ] }
+          - { id: c2, valor: 0.25, termos: [ menor importancia, pessoal | nao se estende | nao se comunica ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 580, CPP" ], requer: c2 }
+      - n: B
+        descricao: Sim, o argumento seria de que ações penais em curso não podem ser valoradas de maneira negativa ao réu no momento de aplicação da pena base (0,35), sob pena de violação ao princípio da presunção de inocência ou da não culpabilidade (0,15), conforme Súmula 444 do STJ OU Art. 5º, inciso LVII, da CRFB (0,10).
+        valores: [ 0, 0.15, 0.25, 0.35, 0.45, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.35, termos: [ acoes penais em curso | acoes em curso | processos em curso, pena base | pena-base | antecedentes ] }
+          - { id: c2, valor: 0.15, termos: [ presuncao de inocencia | nao culpabilidade ] }
+          - { id: c3, valor: 0.1, dispositivo: [ Súmula 444 STJ, "art. 5, LVII, CRFB" ], requer: c2 }
+  - n: 3
+    enunciado: |-
+      O apenado Fabrício cumpria pena pela prática do delito de extorsão simples, tendo requerido, por meio de advogado, a extinção da punibilidade por satisfazer os requisitos, objetivos e subjetivos, previstos no Decreto Presidencial de Indulto, publicado no ano de 2018 (requisito objetivo temporal e requisito subjetivo de não possuir falta grave nos últimos 12 meses anteriores ao decreto).
+
+      Enquanto aguardava o deferimento do benefício requerido, no dia 02 de março de 2019, ocorreu uma rebelião na galeria em que se encontrava. O diretor do presídio, em procedimento disciplinar próprio, no qual foi garantida a ampla defesa e o contraditório, não conseguindo identificar aqueles que efetivamente participararam da rebelião, reconheceu que todos os apenados daquela galeria praticaram falta grave.
+
+      Ao tomar conhecimento dessa punição disciplinar, o juiz da execução indeferiu o pedido de indulto por ausência do requisito subjetivo. Ultrapassado o prazo recursal por desídia da defesa, novo advogado contratado pela família impetrou habeas corpus junto ao Tribunal de Justiça, na busca da extinção da punibilidade. A ordem foi denegada pelo Tribunal.
+
+      **Considerando a situação fática apresentada, na condição de novo advogado contratado, ao ser intimado da decisão que denegou a ordem, responda aos itens a seguir.**
+
+      **A) Qual o recurso a ser apresentado pela defesa para combater a decisão do Tribunal de Justiça que denegou a ordem no habeas corpus impetrado em favor do apenado Fabrício? Justifique. (Valor: 0,60)**
+
+      **B) Na busca da concessão do indulto e, consequentemente, da extinção da punibilidade, quais argumentos jurídicos poderão ser apresentados? Justifique. (Valor: 0,65)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A questão exige do examinando conhecimento sobre os temas recursos e execução penal.
+
+      Narra o enunciado que Fabrício cumpria pena pela prática de crime de extorsão, entendendo o apenado que teria direito à extinção da punibilidade em razão do indulto, já que preencheria os requisitos objetivos (temporal) e subjetivos (ausência de falta grave nos últimos 12 meses). Ocorre que, após o requerimento de indulto, Fabrício foi punido por falta grave, constando do enunciado que os fatos que justificaram a punição teriam ocorrido após a publicação do decreto de indulto, ou seja, após o preenchimento dos requisitos previstos na legislação, bem como que a punição aplicada pelo diretor do presídio foi coletiva.
+
+      A) De acordo com o Art. 105, inciso II, alínea a, da CRFB, caberá ao Superior Tribunal de Justiça, em sede de recurso ordinário constitucional, julgar os habeas corpus decididos em única ou última instância pelos Tribunais estaduais quando denegatória a decisão. Assim, considerando que o Tribunal denegou a ordem de habeas corpus pleiteada pela defesa, o único recurso cabível seria o Recurso Ordinário Constitucional. Poderia, também, a defesa apresentar novo habeas corpus ao STJ, mas o questionamento formulado era sobre o recurso cabível.
+
+      B) Existem dois principais argumentos em busca da extinção da punibilidade com o reconhecimento do indulto:
+
+      proibição de sanções disciplinares coletivas e aplicação do princípio da legalidade, o que impediria o magistrado de considerar faltas graves praticadas após a publicação do decreto de indulto, ainda que tivessem sido validamente reconhecidas. A sentença que tem por objeto o indulto tem natureza meramente declaratória, na medida em que o direito já fora constituído pelo decreto presidencial concessivo do benefício, devendo ser examinado se o apenado satisfazia os requisitos legais na data de sua edição, não podendo interferir no exame respectivo fato posterior. Fato é que Fabrício não praticou falta grave nos 12 meses anteriores ao decreto, logo, em respeito ao princípio da legalidade, não poderia o magistrado vedar a concessão do benefício com esse fundamento. Ademais, ainda que pudesse ser considerado no exame do requisito subjetivo fato posterior à edição do decreto presidencial, a LEP veda expressamente a punição coletiva (Art. 45, § 3º, da Lei nº 7.210), sendo o que ocorreu na hipótese vertente, porquanto o diretor do presídio puniu todos os apenados da galeria ao não identificar aqueles que efetivamente participaram da rebelião.
+    itens:
+      - n: A
+        descricao: Considerando a decisão do Tribunal de denegar a ordem de habeas corpus, o recurso cabível é o recurso ordinário constitucional (0,50), nos termos do Art. 105, inciso II, alínea a, da CRFB OU Art. 30 da Lei 8038/90 (0,10)
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ recurso ordinario constitucional | recurso ordinario ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 105, II, a, CRFB", "art. 30, Lei 8038" ], requer: c1 }
+      - n: B.1
+        descricao: A defesa deveria alegar a proibição de aplicação de sanções coletivas (0,20), nos termos do Art. 45, §3º, da LEP (0,10)
+        valores: [ 0, 0.2, 0.3 ]
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ sancoes coletivas | sancao coletiva | punicao coletiva ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 45, § 3º, LEP" ], requer: c1 }
+      - n: B.2
+        descricao: Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto (0,20), em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória (0,15)
+        valores: [ 0, 0.15, 0.2, 0.35 ]
+        componentes:
+          - { id: c1, valor: 0.2, alternativas: [ [ fato posterior ], [ 12 meses | doze meses ] ] }
+          - { id: c2, valor: 0.15, alternativas: [ [ legalidade ], [ declarator* ] ] }
+  - n: 4
+    enunciado: |-
+      Maria, no dia 07 de julho de 2020, compareceu à Delegacia e narrou que foi vítima, dois dias antes, de um crime de lesão corporal praticada por seu marido, Francisco, e motivada pela insatisfação com a qualidade da refeição que teria sido feita pela vítima.
+
+      Maria foi encaminhada para perícia, que constatou, por meio de laudo, a existência de lesão corporal de natureza leve. Ouvido, Francisco confessou a prática delitiva, dizendo que este seria um evento isolado em sua vida. Diante disso, Francisco foi indiciado pelo crime do Art. 129, § 9º, do CP, na forma da Lei nº 11.340/06.
+
+      **Considerando a pena prevista para o delito e a inexistência de envolvimento pretérito com aparato judicial ou policial pelo autor do fato, o Ministério Público apresentou proposta de acordo de não persecução penal a Francisco. Ao tomar conhecimento dos fatos, Maria procura você, como advogado, para esclarecimentos.**
+
+      **Considerando apenas as informações expostas, responda na qualidade de advogado de Maria, aos itens a seguir.**
+
+      **A) Existem argumentos para questionar a proposta de acordo de não persecução penal formulada pelo Ministério Público? Justifique. (Valor: 0,65)**
+
+      **B) Em caso de denúncia, diante da natureza da ação pública incondicionada, existe alguma forma de participação direta da vítima no processo, inclusive com posição ativa na produção das provas e interposição de recursos? Justifique. (Valor: 0,60)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      Narra o enunciado que Maria foi vítima de um crime de lesão corporal leve praticado no contexto da violência doméstica e familiar contra a mulher, sendo apontado como autor seu marido Francisco. O Ministério Público teria oferecido proposta de acordo de não persecução penal (ANPP), considerando apenas a pena do delito em tese praticado a primariedade e a confissão plena. Diante disso, Maria demonstrou interesse em intervir no processo.
+
+      A) Sim, existem argumentos para questionar a proposta de acordo de não persecução penal (ANPP) formulada pelo Ministério Público. De fato, considerando unicamente a pena de detenção de 3 meses a 3 anos prevista para o delito em tese praticado e a confissão, seria possível a proposta do acordo de não persecução penal (ANPP), pois a pena mínima cominada é inferior a 4 anos. Contudo, o Art. 28-A do CPP estabelece que o crime não poderá ter sido praticado com violência ou grave ameaça à pessoa. Ademais, em seu parágrafo 2º, inciso IV, o dispositivo veda a aplicação do instituto quando o crime for praticado no contexto da violência doméstica e familiar contra a mulher, como na situação apresentada. A vítima era do sexo feminino, as partes tinham relação de matrimônio e a motivação do delito foi relacionada à condição de mulher.
+
+      B) Sim, a vítima poderia, por meio de seu advogado, se habilitar como assistente de acusação, na forma do Art. 268 do CPP. De acordo com o dispositivo, em todos os termos da ação pública, poderá intervir, como assistente do Ministério Público, o ofendido. No caso, temos uma vítima determinada, Maria. Ademais, a ação penal é pública incondicionada, já que não se aplicam as previsões da Lei nº 9.099/95, nos termos do Art. 41 da Lei nº 11.340/06. Uma vez habilitada como assistente de acusação, Maria poderá interferir de diversas maneiras no processo, inclusive para propor meios de prova, realizar perguntas para testemunhas, apresentar manifestações de mérito e recursos, tudo na forma do Art. 271 do CPP.
+    itens:
+      - n: A
+        descricao: Sim, tendo em vista que o crime em tese praticado envolveu violência à pessoa OU porque foi praticado no contexto da violência doméstica e familiar contra a mulher, impossibilitando a proposta de ANPP (0,55), nos termos do Art. 28-A, caput, do CPP OU do Art. 28-A, § 2º, inciso IV, do CPP (0,10)
+        valores: [ 0, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.55, termos: [ anpp | acordo de nao persecucao, violencia | violencia domestica ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 28-A, CPP", "art. 28-A, § 2º, IV, CPP" ], requer: c1 }
+      - n: B
+        descricao: Sim. Maria poderá se habilitar como assistente de acusação ou assistente do Ministério Público (0,50), na forma do Art. 268 do CPP OU do Art. 271 do CPP (0,10)
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ assistente ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 268, CPP", "art. 271, CPP" ], requer: c1 }

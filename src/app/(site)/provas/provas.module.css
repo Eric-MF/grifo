@@ -1,0 +1,43 @@
+.filtros { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin: 2rem 0 1rem; }
+.filtros input, .filtros select {
+  padding: 0.6rem 0.9rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); min-width: 220px;
+}
+.scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.tabela { width: 100%; border-collapse: collapse; min-width: 860px; font-size: 0.94rem; }
+.tabela th, .tabela td { padding: 0.75rem 0.9rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: middle; }
+.tabela thead th { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); background: var(--surface-2); position: sticky; top: 0; }
+.tabela tbody tr:hover { background: var(--surface-2); }
+.tabela tbody tr:target { background: color-mix(in srgb, var(--accent) 16%, transparent); }
+.c { text-align: center !important; }
+.num { display: block; font-family: var(--font-title); font-size: 1.2rem; font-weight: 700; }
+.sub { font-size: 0.8rem; color: var(--muted); font-weight: 400; }
+.dl { display: inline-block; padding: 0.3rem 0.65rem; border-radius: 999px; border: 1px solid var(--border); text-decoration: none; font-weight: 700; font-size: 0.82rem; white-space: nowrap; }
+.dl:hover { border-color: var(--primary); text-decoration: none; }
+.dlGold { background: color-mix(in srgb, var(--accent) 20%, transparent); border-color: transparent; color: var(--accent-ink); }
+.sim { font-weight: 700; }
+.na { color: var(--muted); }
+
+/* Modo "Celular", abaixo de 640px: cada exame vira um cartão. Fora desse modo, a tabela segue como está. */
+@media (max-width: 640px) {
+  :global(:root[data-layout="celular"]) .filtros input,
+  :global(:root[data-layout="celular"]) .filtros select { min-width: 0; width: 100%; }
+  :global(:root[data-layout="celular"]) .filtros label { flex: 1 1 100%; }
+  :global(:root[data-layout="celular"]) .scroll { overflow: visible; border: 0; background: none; }
+  :global(:root[data-layout="celular"]) .tabela { min-width: 0; display: block; }
+  :global(:root[data-layout="celular"]) .tabela thead { display: none; }
+  :global(:root[data-layout="celular"]) .tabela tbody { display: grid; gap: 0.75rem; }
+  :global(:root[data-layout="celular"]) .tabela tbody tr {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; padding: 0.9rem;
+    border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface);
+  }
+  :global(:root[data-layout="celular"]) .tabela th,
+  :global(:root[data-layout="celular"]) .tabela td { border: 0; padding: 0; text-align: left !important; }
+  :global(:root[data-layout="celular"]) .tabela th[scope="row"] { grid-column: 1 / -1; }
+  :global(:root[data-layout="celular"]) .tabela td { display: grid; gap: 0.25rem; align-content: start; }
+  :global(:root[data-layout="celular"]) .tabela td:nth-of-type(1) { grid-column: 1 / -1; }
+  :global(:root[data-layout="celular"]) .tabela td::before {
+    content: attr(data-label); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+  }
+  :global(:root[data-layout="celular"]) .dl { min-height: 44px; display: inline-flex; align-items: center; }
+  :global(:root[data-layout="celular"]) .sim { min-height: 44px; display: inline-flex; align-items: center; }
+}

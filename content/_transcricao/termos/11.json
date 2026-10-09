@@ -1,0 +1,419 @@
+{
+ "_exame": {
+  "observacoes": "A FGV não publicou a distribuição de pontos deste exame. A tabela de pontos é uma estimativa do Grifo, montada a partir do padrão de resposta e dos valores de cada questão."
+ },
+ "peca:itens": [
+  {
+   "n": "1",
+   "secao": "Petição de interposição",
+   "descricao": "Endereçamento: Juiz da Vara do Tribunal do Júri (0,20).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.2,
+     "termos": [
+      "tribunal do juri | juri"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "secao": "Petição de interposição",
+   "descricao": "Fundamento legal: Art. 581, IV, do CPP (0,30).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "dispositivo": [
+      "art. 581, IV, CPP"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "secao": "Petição de interposição",
+   "descricao": "Pedido de retratação ou efeito regressivo (0,30), com fundamento no Art. 589 do CPP (0,10).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "retrata* | efeito regressivo | iterativo | reconsidera*"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.1,
+     "dispositivo": [
+      "art. 589 CPP"
+     ],
+     "requer": "c1"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "secao": "Razões",
+   "descricao": "Endereçamento das razões: Tribunal de Justiça (0,20).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.2,
+     "termos": [
+      "tribunal de justica | tj"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "secao": "Mérito",
+   "descricao": "Ausência de dolo eventual: além da previsão do resultado, o dolo eventual exige que o agente assuma o risco de produzi-lo (0,60), nos termos do Art. 18, I, parte final, do CP (teoria do consentimento) (0,20).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.6,
+     "termos": [
+      "dolo eventual",
+      "assum* o risco | assumir o risco | consentimento | aceit*"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.2,
+     "dispositivo": [
+      "art. 18, I, CP"
+     ],
+     "requer": "c1"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "secao": "Mérito",
+   "descricao": "A conduta de Jerusa é culposa e se amolda ao homicídio culposo na direção de veículo automotor (0,60), previsto no Art. 302 do CTB (0,20).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.6,
+     "termos": [
+      "culpa | culposo",
+      "veiculo automotor | transito | direcao"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.2,
+     "dispositivo": [
+      "art. 302 CTB"
+     ],
+     "requer": "c1"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "secao": "Mérito",
+   "descricao": "Não havendo crime doloso contra a vida, o Tribunal do Júri é incompetente (0,40), devendo ocorrer a desclassificação (0,40), nos termos do Art. 419 do CPP (0,20).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.4,
+     "termos": [
+      "incompet* | nao e competente | competencia",
+      "juri | doloso contra a vida | dolosos contra a vida"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.4,
+     "termos": [
+      "desclassifica*"
+     ]
+    },
+    {
+     "id": "c3",
+     "valor": 0.2,
+     "dispositivo": [
+      "art. 419 CPP"
+     ],
+     "requer": "c2"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "secao": "Pedidos",
+   "descricao": "Conhecimento e provimento do recurso (0,30), com a desclassificação para homicídio culposo na direção de veículo automotor (0,40).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "provi*"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.4,
+     "termos": [
+      "desclassifica*",
+      "302 | culposo"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "secao": "Prazo",
+   "descricao": "Data: 09/08/2013, último dia do prazo (0,30).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "9 de agosto de 2013"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "secao": "Estrutura",
+   "descricao": "Estrutura: duas petições (interposição e razões); local, data, advogado e OAB (0,30).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "local",
+      "advogad* | oab"
+     ]
+    }
+   ]
+  }
+ ],
+ "q1:itens": [
+  {
+   "n": "A",
+   "descricao": "Agravo em execução (0,40), com fundamento no Art. 197 da LEP (0,10).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.4,
+     "termos": [
+      "agravo"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.1,
+     "dispositivo": [
+      "art. 197 LEP"
+     ],
+     "requer": "c1"
+    }
+   ]
+  },
+  {
+   "n": "B",
+   "descricao": "Não: é inadmissível fixar pena substitutiva como condição especial do regime aberto (0,40), sob pena de bis in idem/dúplice sanção (0,20), conforme a Súmula 493 do STJ (0,15).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.4,
+     "termos": [
+      "inadmissivel | nao pode | vedad* | incorreta | nao esta correta",
+      "pena substitutiva | prestacao de servicos | restritiva",
+      "condicao especial | regime aberto"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.2,
+     "termos": [
+      "bis in idem | dupla | duplice | cumulativ*"
+     ]
+    },
+    {
+     "id": "c3",
+     "valor": 0.15,
+     "dispositivo": [
+      "Súmula 493 STJ"
+     ],
+     "requer": "c1"
+    }
+   ]
+  }
+ ],
+ "q2:itens": [
+  {
+   "n": "A",
+   "descricao": "Recurso especial (0,45), com fulcro no Art. 105, III, a, da CRFB/88 (0,10).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.45,
+     "termos": [
+      "recurso especial"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.1,
+     "dispositivo": [
+      "art. 105, III, a, CF"
+     ],
+     "requer": "c1"
+    }
+   ]
+  },
+  {
+   "n": "B",
+   "descricao": "O Tribunal não poderia fixar as condições do sursis em recurso exclusivo da defesa (0,20), configurando reformatio in pejus (0,40), vedada pelo Art. 617 do CPP (0,10).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.2,
+     "termos": [
+      "condic*",
+      "sursis | suspensao condicional",
+      "recurso exclusivo da defesa | somente a defesa | apenas a defesa | sem recurso do ministerio publico | nao houve impugnacao | juiz a quo"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.4,
+     "termos": [
+      "reformatio in pejus"
+     ]
+    },
+    {
+     "id": "c3",
+     "valor": 0.1,
+     "dispositivo": [
+      "art. 617 CPP"
+     ],
+     "requer": "c2"
+    }
+   ]
+  }
+ ],
+ "q3:itens": [
+  {
+   "n": "A",
+   "descricao": "Na sentença do roubo, Ricardo deve ser considerado portador de bons antecedentes (0,25).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.25,
+     "termos": [
+      "bons antecedentes"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "B",
+   "descricao": "Na sentença da extorsão: maus antecedentes (0,20), mas réu primário, sem reincidência, pois a extorsão foi cometida antes do trânsito em julgado do roubo (0,20), nos termos do Art. 63 do CP (0,10).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.2,
+     "termos": [
+      "maus antecedentes"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.2,
+     "termos": [
+      "primari* | nao reincidente | nao incide a reincidencia | sem reincidencia | nao e reincidente"
+     ]
+    },
+    {
+     "id": "c3",
+     "valor": 0.1,
+     "dispositivo": [
+      "art. 63 CP"
+     ],
+     "requer": "c2"
+    }
+   ]
+  },
+  {
+   "n": "C",
+   "descricao": "Na sentença do estelionato: maus antecedentes (0,20), mas réu primário, pois o estelionato foi cometido antes do trânsito em julgado de qualquer outra condenação (0,20), nos termos do Art. 63 do CP (0,10).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.2,
+     "termos": [
+      "maus antecedentes"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.2,
+     "termos": [
+      "primari* | nao reincidente | nao incide a reincidencia | sem reincidencia | permanece a primariedade | nao e reincidente"
+     ]
+    },
+    {
+     "id": "c3",
+     "valor": 0.1,
+     "dispositivo": [
+      "art. 63 CP"
+     ],
+     "requer": "c2"
+    }
+   ]
+  }
+ ],
+ "q4:itens": [
+  {
+   "n": "A",
+   "descricao": "O juiz deve absolver sumariamente a ré (0,50), com fundamento no Art. 397, III, do CPP (0,15).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.5,
+     "termos": [
+      "absolv* sumariamente | absolvicao sumaria"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.15,
+     "dispositivo": [
+      "art. 397, III, CPP"
+     ],
+     "requer": "c1"
+    }
+   ]
+  },
+  {
+   "n": "B",
+   "descricao": "Está ausente a tipicidade material (0,40): não houve lesão ou ameaça de lesão relevante ao bem jurídico tutelado (0,20).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.4,
+     "termos": [
+      "tipicidade material"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.2,
+     "termos": [
+      "lesao | ameaca de lesao | ofensividade | insignifican*",
+      "bem juridico"
+     ]
+    }
+   ]
+  }
+ ]
+}

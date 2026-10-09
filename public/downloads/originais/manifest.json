@@ -1,0 +1,330 @@
+[
+ {
+  "id": "01",
+  "numero": 1,
+  "variante": null,
+  "peca": "Memoriais",
+  "caderno": "caderno-01.pdf",
+  "gabarito": "gabarito-01.pdf"
+ },
+ {
+  "id": "02",
+  "numero": 2,
+  "variante": null,
+  "peca": "Resposta à Acusação",
+  "caderno": "caderno-02.pdf",
+  "gabarito": "gabarito-02.pdf"
+ },
+ {
+  "id": "03",
+  "numero": 3,
+  "variante": null,
+  "peca": "Recurso em Sentido Estrito",
+  "caderno": "caderno-03.pdf",
+  "gabarito": "gabarito-03.pdf"
+ },
+ {
+  "id": "04",
+  "numero": 4,
+  "variante": null,
+  "peca": "Apelação",
+  "caderno": "caderno-04.pdf",
+  "gabarito": "gabarito-04.pdf"
+ },
+ {
+  "id": "05",
+  "numero": 5,
+  "variante": null,
+  "peca": "Apelação",
+  "caderno": "caderno-05.pdf",
+  "gabarito": "gabarito-05.pdf"
+ },
+ {
+  "id": "06",
+  "numero": 6,
+  "variante": null,
+  "peca": "Relaxamento de Prisão",
+  "caderno": "caderno-06.pdf",
+  "gabarito": "gabarito-06.pdf"
+ },
+ {
+  "id": "07",
+  "numero": 7,
+  "variante": null,
+  "peca": "Apelação Assiste de Acusação",
+  "caderno": "caderno-07.pdf",
+  "gabarito": "gabarito-07.pdf"
+ },
+ {
+  "id": "08",
+  "numero": 8,
+  "variante": null,
+  "peca": "Resposta à Acusação",
+  "caderno": "caderno-08.pdf",
+  "gabarito": "gabarito-08.pdf"
+ },
+ {
+  "id": "09",
+  "numero": 9,
+  "variante": null,
+  "peca": "Memoriais",
+  "caderno": "caderno-09.pdf",
+  "gabarito": "gabarito-09.pdf"
+ },
+ {
+  "id": "10",
+  "numero": 10,
+  "variante": null,
+  "peca": "Revisão Criminal",
+  "caderno": "caderno-10.pdf",
+  "gabarito": "gabarito-10.pdf"
+ },
+ {
+  "id": "11",
+  "numero": 11,
+  "variante": null,
+  "peca": "Recurso em Sentido Estrito",
+  "caderno": "caderno-11.pdf",
+  "gabarito": "gabarito-11.pdf"
+ },
+ {
+  "id": "12",
+  "numero": 12,
+  "variante": null,
+  "peca": "Apelação",
+  "caderno": "caderno-12.pdf",
+  "gabarito": "gabarito-12.pdf"
+ },
+ {
+  "id": "13",
+  "numero": 13,
+  "variante": null,
+  "peca": "Apelação",
+  "caderno": "caderno-13.pdf",
+  "gabarito": "gabarito-13.pdf"
+ },
+ {
+  "id": "14",
+  "numero": 14,
+  "variante": null,
+  "peca": "Memoriais",
+  "caderno": "caderno-14.pdf",
+  "gabarito": "gabarito-14.pdf"
+ },
+ {
+  "id": "15",
+  "numero": 15,
+  "variante": null,
+  "peca": "Queixa",
+  "caderno": "caderno-15.pdf",
+  "gabarito": "gabarito-15.pdf"
+ },
+ {
+  "id": "16",
+  "numero": 16,
+  "variante": null,
+  "peca": "Agravo em Execução",
+  "caderno": "caderno-16.pdf",
+  "gabarito": "gabarito-16.pdf"
+ },
+ {
+  "id": "17",
+  "numero": 17,
+  "variante": null,
+  "peca": "Memoriais",
+  "caderno": "caderno-17.pdf",
+  "gabarito": "gabarito-17.pdf"
+ },
+ {
+  "id": "18",
+  "numero": 18,
+  "variante": null,
+  "peca": "Apelação",
+  "caderno": "caderno-18.pdf",
+  "gabarito": "gabarito-18.pdf"
+ },
+ {
+  "id": "19",
+  "numero": 19,
+  "variante": null,
+  "peca": "Contrarrazões em Apelação",
+  "caderno": "caderno-19.pdf",
+  "gabarito": "gabarito-19.pdf"
+ },
+ {
+  "id": "20",
+  "numero": 20,
+  "variante": null,
+  "peca": "Memoriais",
+  "caderno": "caderno-20.pdf",
+  "gabarito": "gabarito-20.pdf"
+ },
+ {
+  "id": "20-porto-velho",
+  "numero": 20,
+  "variante": "Porto Velho",
+  "peca": "Memoriais",
+  "caderno": "caderno-20-porto-velho.pdf",
+  "gabarito": "gabarito-20-porto-velho.pdf"
+ },
+ {
+  "id": "21",
+  "numero": 21,
+  "variante": null,
+  "peca": "Resposta à Acusação",
+  "caderno": "caderno-21.pdf",
+  "gabarito": "gabarito-21.pdf"
+ },
+ {
+  "id": "22",
+  "numero": 22,
+  "variante": null,
+  "peca": "Apelação",
+  "caderno": "caderno-22.pdf",
+  "gabarito": "gabarito-22.pdf"
+ },
+ {
+  "id": "23",
+  "numero": 23,
+  "variante": null,
+  "peca": "Memoriais",
+  "caderno": "caderno-23.pdf",
+  "gabarito": "gabarito-23.pdf"
+ },
+ {
+  "id": "24",
+  "numero": 24,
+  "variante": null,
+  "peca": "Agravo em Execução",
+  "caderno": "caderno-24.pdf",
+  "gabarito": "gabarito-24.pdf"
+ },
+ {
+  "id": "25",
+  "numero": 25,
+  "variante": null,
+  "peca": "Resposta à Acusação",
+  "caderno": "caderno-25.pdf",
+  "gabarito": "gabarito-25.pdf"
+ },
+ {
+  "id": "25-porto-alegre",
+  "numero": 25,
+  "variante": "Porto Alegre",
+  "peca": "Apelação",
+  "caderno": "caderno-25-porto-alegre.pdf",
+  "gabarito": "gabarito-25-porto-alegre.pdf"
+ },
+ {
+  "id": "26",
+  "numero": 26,
+  "variante": null,
+  "peca": "Memoriais",
+  "caderno": "caderno-26.pdf",
+  "gabarito": "gabarito-26.pdf"
+ },
+ {
+  "id": "27",
+  "numero": 27,
+  "variante": null,
+  "peca": "Contrarrazões em Apelação",
+  "caderno": "caderno-27.pdf",
+  "gabarito": "gabarito-27.pdf"
+ },
+ {
+  "id": "28",
+  "numero": 28,
+  "variante": null,
+  "peca": "Recurso em Sentido Estrito",
+  "caderno": "caderno-28.pdf",
+  "gabarito": "gabarito-28.pdf"
+ },
+ {
+  "id": "29",
+  "numero": 29,
+  "variante": null,
+  "peca": "Agravo em Execução",
+  "caderno": "caderno-29.pdf",
+  "gabarito": "gabarito-29.pdf"
+ },
+ {
+  "id": "30",
+  "numero": 30,
+  "variante": null,
+  "peca": "Apelação",
+  "caderno": "caderno-30.pdf",
+  "gabarito": "gabarito-30.pdf"
+ },
+ {
+  "id": "31",
+  "numero": 31,
+  "variante": null,
+  "peca": "Recurso em Sentido Estrito",
+  "caderno": "caderno-31.pdf",
+  "gabarito": "gabarito-31.pdf"
+ },
+ {
+  "id": "32",
+  "numero": 32,
+  "variante": null,
+  "peca": "Memoriais",
+  "caderno": "caderno-32.pdf",
+  "gabarito": "gabarito-32.pdf"
+ },
+ {
+  "id": "33",
+  "numero": 33,
+  "variante": null,
+  "peca": "Apelação",
+  "caderno": "caderno-33.pdf",
+  "gabarito": "gabarito-33.pdf"
+ },
+ {
+  "id": "34",
+  "numero": 34,
+  "variante": null,
+  "peca": "Recurso em Sentido Estrito",
+  "caderno": "caderno-34.pdf",
+  "gabarito": "gabarito-34.pdf"
+ },
+ {
+  "id": "35",
+  "numero": 35,
+  "variante": null,
+  "peca": "Apelação",
+  "caderno": "caderno-35.pdf",
+  "gabarito": "gabarito-35.pdf"
+ },
+ {
+  "id": "36",
+  "numero": 36,
+  "variante": null,
+  "peca": "Resposta à Acusação",
+  "caderno": "caderno-36.pdf",
+  "gabarito": "gabarito-36.pdf"
+ },
+ {
+  "id": "37",
+  "numero": 37,
+  "variante": null,
+  "peca": "Memoriais",
+  "caderno": null,
+  "gabarito": "gabarito-37.pdf"
+ },
+ {
+  "id": "38",
+  "numero": 38,
+  "variante": null,
+  "peca": "Agravo em Execução",
+  "caderno": "caderno-38.pdf",
+  "gabarito": "gabarito-38.pdf"
+ },
+ {
+  "id": "40",
+  "numero": 40,
+  "variante": null,
+  "peca": null,
+  "caderno": "caderno-40.pdf",
+  "gabarito": null
+ }
+]

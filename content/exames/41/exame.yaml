@@ -1,0 +1,91 @@
+# XLI Exame de Ordem Unificado — Direito Penal
+# Modelo em branco criado por `npm run novo:exame`. Substitua todos os TODO: enquanto
+# houver algum, `npm run validar` falha e o exame não entra no site.
+# Referência dos campos: docs/COMO-ADICIONAR.md e src/content/schema.ts.
+id: "41"
+numero: 41
+numeral: XLI
+aplicacao: TODO-AAAA-MM-DD
+area: penal
+revisao: { status: rascunho, por: "", em: "", notas: "" }
+corrigivel: true   # false = sem gabarito: só leitura em /provas, sem simulado corrigido
+peca:
+  nome: TODO Nome da Peça
+  tipo: TODO          # chave de content/pecas.yaml (ex.: apelacao, rese, agravo-execucao)
+  aliases: []          # outros nomes aceitos, minúsculos e sem acento
+  enunciado: |
+    TODO Enunciado da peça. Parágrafos separados por linha em branco; **negrito** e *itálico* funcionam.
+  gabarito_comentado: |
+    TODO Gabarito comentado da FGV.
+  itens:
+    # Um item = uma linha da tabela "Distribuição dos Pontos". Os componentes somam o valor do item;
+    # todos os itens da peça somam 5,00 (ou use teto quando a FGV limita a pontuação).
+    - n: "1"
+      secao: Petição de Interposição
+      descricao: "TODO Texto do item como na tabela, com os valores entre parênteses (0,10)."
+      componentes:
+        - { id: c1, valor: 0.10, termos: ["TODO termo obrigatório", "sinônimo a | sinônimo b"] }
+        - { id: c2, valor: 0.10, dispositivo: ["art. 593 CPP"], requer: c1 }
+    # … continue até somar 5,00
+questoes:
+  - n: 1
+    enunciado: |
+      TODO Enunciado da questão 1, com os itens A) e B).
+    gabarito_comentado: |
+      TODO
+    itens:
+      - n: "A"
+        descricao: "TODO (0,60)"
+        componentes:
+          - { id: c1, valor: 0.60, termos: ["TODO"] }
+      - n: "B"
+        descricao: "TODO (0,65)"
+        componentes:
+          - { id: c1, valor: 0.65, termos: ["TODO"] }
+  - n: 2
+    enunciado: |
+      TODO Enunciado da questão 2, com os itens A) e B).
+    gabarito_comentado: |
+      TODO
+    itens:
+      - n: "A"
+        descricao: "TODO (0,60)"
+        componentes:
+          - { id: c1, valor: 0.60, termos: ["TODO"] }
+      - n: "B"
+        descricao: "TODO (0,65)"
+        componentes:
+          - { id: c1, valor: 0.65, termos: ["TODO"] }
+  - n: 3
+    enunciado: |
+      TODO Enunciado da questão 3, com os itens A) e B).
+    gabarito_comentado: |
+      TODO
+    itens:
+      - n: "A"
+        descricao: "TODO (0,60)"
+        componentes:
+          - { id: c1, valor: 0.60, termos: ["TODO"] }
+      - n: "B"
+        descricao: "TODO (0,65)"
+        componentes:
+          - { id: c1, valor: 0.65, termos: ["TODO"] }
+  - n: 4
+    enunciado: |
+      TODO Enunciado da questão 4, com os itens A) e B).
+    gabarito_comentado: |
+      TODO
+    itens:
+      - n: "A"
+        descricao: "TODO (0,60)"
+        componentes:
+          - { id: c1, valor: 0.60, termos: ["TODO"] }
+      - n: "B"
+        descricao: "TODO (0,65)"
+        componentes:
+          - { id: c1, valor: 0.65, termos: ["TODO"] }
+# Opcional: notas de atualização legislativa (aparecem no caderno/gabarito atualizados)
+# atualizado:
+#   revisao: { status: rascunho }
+#   notas:
+#     - { alvo: peca, item: "3", lei: "Lei 14.994/2024", texto: "…" }

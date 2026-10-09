@@ -1,0 +1,163 @@
+{
+ "1.c1": [
+  "tribunal do juri | juri",
+  "porto alegre"
+ ],
+ "3.c1": [
+  "retrata* | efeito regressivo | reconsidera*"
+ ],
+ "4.c1": [
+  "tribunal de justica | tj",
+  "rio grande do sul | rs"
+ ],
+ "5.c1": [
+  "prescri*"
+ ],
+ "5.c2": [
+  "extin* da punibilidade"
+ ],
+ "6.c1": {
+  "alternativas": [
+   [
+    "4 anos"
+   ],
+   [
+    "metade",
+    "21 anos | menor de 21"
+   ]
+  ]
+ },
+ "7.c1": [
+  "nulidade | nula | nulo",
+  "pronuncia"
+ ],
+ "7.1.c1": [
+  "suspensao condicional do processo | sursis processual"
+ ],
+ "7.1.c3": [
+  "pena minima",
+  "1 ano"
+ ],
+ "7.2.c1": {
+  "alternativas": [
+   [
+    "cerceamento"
+   ],
+   [
+    "ampla defesa"
+   ],
+   [
+    "contraditorio"
+   ]
+  ]
+ },
+ "7.2.c2": [
+  "document*",
+  "vista | manifesta* | sem ouvir | sem intimar"
+ ],
+ "8.c1": [
+  "absolvicao sumaria | absolvido sumariamente | absolver sumariamente"
+ ],
+ "8.c2": {
+  "alternativas": [
+   [
+    "nao constitui crime | nao constituir crime"
+   ],
+   [
+    "atipic*"
+   ]
+  ]
+ },
+ "9.c1": [
+  "crime impossivel"
+ ],
+ "10.c1": [
+  "impropriedade absoluta | absoluta impropriedade | impropriedade do objeto"
+ ],
+ "10.c2": [
+  "nao estava gravida | nao gravida | ausencia de gravidez | inexistencia de gravidez"
+ ],
+ "11.c1": [
+  "conhec*"
+ ],
+ "11.c2": [
+  "provi*"
+ ],
+ "12.c1": [
+  "25 de junho de 2018"
+ ],
+ "13.c1": [
+  "local",
+  "advogad*",
+  "oab"
+ ],
+ "q1:A.c1": [
+  "produzir prova contra si | nemo tenetur | autoincrimina* | nao autoincriminacao"
+ ],
+ "q1:B.c1": [
+  "relaxamento"
+ ],
+ "q1:B.c3": {
+  "alternativas": [
+   [
+    "culpos*"
+   ],
+   [
+    "313"
+   ],
+   [
+    "requisitos",
+    "preventiva"
+   ]
+  ]
+ },
+ "q2:A.c1": [
+  "circunstancias judiciais",
+  "favorave*"
+ ],
+ "q2:A.c2": [
+  "semiaberto | semi-aberto"
+ ],
+ "q2:B.c1": [
+  "substitui*",
+  "reincid*",
+  "especific*"
+ ],
+ "q2:B.c2": [
+  "socialmente recomendavel"
+ ],
+ "q3:A.c1": {
+  "alternativas": [
+   [
+    "1/6"
+   ],
+   [
+    "1 ano"
+   ]
+  ]
+ },
+ "q3:A.c3": [
+  "remi* | remicao",
+  "trabalho"
+ ],
+ "q3:B.c1": [
+  "regime | estabelecimento | vaga*",
+  "falta de vaga* | deficit de vaga* | ausencia de vaga* | inexistencia de vaga* | mais gravoso | deficiencia do estado"
+ ],
+ "q3:B.c2": {
+  "dispositivo": [
+   "Súmula Vinculante 56"
+  ],
+  "requer": "c1"
+ },
+ "q4:A.c1": [
+  "cardoso moreira"
+ ],
+ "q4:A.c2": [
+  "mais grave | pena mais grave"
+ ],
+ "q4:B.c1": [
+  "causa de aumento | majorante",
+  "tempo | restricao da liberdade"
+ ]
+}

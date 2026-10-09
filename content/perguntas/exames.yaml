@@ -1,0 +1,96 @@
+# Perguntas fixas do quiz, baseadas em exames reais (casos resumidos).
+# Para incluir uma pergunta: copie um bloco, mude o id (único) e rode `npm run validar`.
+#   peca: chave de content/pecas.yaml · fundamentos: do mais esperado ao alternativo
+#   distratores: peças plausíveis para as alternativas do nível fácil
+perguntas:
+  - id: oab38-agravo-unificacao
+    fonte: XXXVIII Exame
+    caso: >-
+      Condenada em três processos por inserção de dados falsos em sistema do INSS, com fatos idênticos e próximos no tempo,
+      Marieta teve as penas somadas pelo juízo da execução, que fixou regime fechado e converteu as penas restritivas em
+      privativas de liberdade.
+    peca: agravo-execucao
+    fundamentos: ["art. 197 LEP"]
+    explicacao: "Contra decisão do juiz da execução (unificação de penas, regime, conversão) cabe Agravo em Execução (art. 197 da LEP), em 5 dias (Súmula 700 do STF)."
+    distratores: [apelacao, rese, habeas-corpus]
+  - id: oab37-memoriais
+    fonte: XXXVII Exame
+    caso: >-
+      Encerrada a instrução de processo por tentativa de furto qualificado, o juiz concedeu às partes prazo para
+      manifestação final por escrito, e o Ministério Público pediu a condenação dos dois réus.
+    peca: memoriais
+    fundamentos: ["art. 403, § 3º, CPP", "art. 404, parágrafo único, CPP"]
+    explicacao: "Substituídos os debates orais por manifestação escrita, a defesa apresenta Memoriais (art. 403, § 3º, ou art. 404, parágrafo único, do CPP)."
+    distratores: [resposta-acusacao, apelacao, contrarrazoes-apelacao]
+  - id: oab36-resposta-acusacao
+    fonte: XXXVI Exame
+    caso: >-
+      Matheus foi denunciado por lesão corporal sem que houvesse exame de corpo de delito nos autos. O juiz recebeu a
+      denúncia e determinou a citação, que acaba de ser cumprida.
+    peca: resposta-acusacao
+    fundamentos: ["art. 396-A CPP", "art. 396 CPP"]
+    explicacao: "Recebida a denúncia e citado o réu, cabe Resposta à Acusação em 10 dias (arts. 396 e 396-A do CPP), arguindo a nulidade/ausência de justa causa e pedindo absolvição sumária (art. 397 do CPP)."
+    distratores: [memoriais, habeas-corpus, rese]
+  - id: oab34-rese-pronuncia
+    fonte: XXXIV Exame
+    caso: >-
+      Rodrigo foi pronunciado por homicídio, embora estivesse completamente embriagado por caso fortuito e as testemunhas
+      de defesa tenham sido ouvidas antes das de acusação.
+    peca: rese
+    fundamentos: ["art. 581, IV, CPP"]
+    explicacao: "Contra a decisão de pronúncia cabe Recurso em Sentido Estrito (art. 581, IV, do CPP), com pedido de retratação (art. 589 do CPP)."
+    distratores: [apelacao, memoriais, habeas-corpus]
+  - id: oab27-contrarrazoes
+    fonte: XXVII Exame
+    caso: >-
+      O réu foi absolvido da associação para o tráfico e condenado por tráfico privilegiado com pena substituída. O
+      Ministério Público apelou pedindo condenação e regime fechado; a defesa foi intimada para se manifestar.
+    peca: contrarrazoes-apelacao
+    fundamentos: ["art. 600 CPP"]
+    explicacao: "Interposta apelação pela acusação, a defesa apresenta Contrarrazões de Apelação em 8 dias (art. 600 do CPP)."
+    distratores: [apelacao, memoriais, embargos-infringentes]
+  - id: oab15-queixa
+    fonte: XV Exame
+    caso: >-
+      Em uma festa, diante de várias pessoas, a vizinha chamou Carlos de "ladrão" e disse que ele vivia embriagado no
+      trabalho. Carlos procurou você dentro do prazo, com três testemunhas, querendo processá-la.
+    peca: queixa-crime
+    fundamentos: ["art. 41 CPP", "art. 30 CPP", "art. 100, § 2º, CP", "art. 145 CP"]
+    explicacao: "Injúria e difamação são, em regra, de ação penal privada: cabe Queixa-Crime (arts. 30 e 41 do CPP), com procuração com poderes especiais (art. 44 do CPP)."
+    distratores: [resposta-acusacao, habeas-corpus, memoriais]
+  - id: oab10-revisao
+    fonte: X Exame
+    caso: >-
+      Condenada definitivamente por furto qualificado pelo transporte para o exterior, a ré havia restituído todo o bem
+      antes do recebimento da denúncia, e o bem nunca saiu do país. A condenação já transitou em julgado.
+    peca: revisao-criminal
+    fundamentos: ["art. 621, I, CPP", "art. 621, III, CPP"]
+    explicacao: "Após o trânsito em julgado, cabe Revisão Criminal (art. 621 do CPP), para desclassificar e aplicar o arrependimento posterior."
+    distratores: [apelacao, agravo-execucao, habeas-corpus]
+  - id: oab6-relaxamento
+    fonte: VI Exame
+    caso: >-
+      José foi preso em flagrante após ser obrigado a fazer o teste do bafômetro; ficou dois dias sem falar com advogado
+      ou família, e o delegado não comunicou a prisão ao juiz nem à Defensoria.
+    peca: relaxamento-prisao
+    fundamentos: ["art. 5º, LXV, CF", "art. 310, I, CPP"]
+    explicacao: "Prisão em flagrante ilegal deve ser relaxada (art. 5º, LXV, da CF; art. 310, I, do CPP)."
+    distratores: [liberdade-provisoria, revogacao-preventiva, habeas-corpus]
+  - id: oab38-embargos
+    fonte: XXXVIII Exame (Questão 1)
+    caso: >-
+      A sentença considerou favoráveis as circunstâncias judiciais ao fixar a pena e ao substituí-la, mas, de forma
+      contraditória, disse que eram negativas para impor o regime semiaberto.
+    peca: embargos-declaracao
+    fundamentos: ["art. 382 CPP"]
+    explicacao: "Para sanar contradição na sentença cabem Embargos de Declaração em 2 dias (art. 382 do CPP)."
+    distratores: [apelacao, rese, revisao-criminal]
+  - id: oab32-roc
+    fonte: XXXII Exame (Questão 3)
+    caso: >-
+      O Tribunal de Justiça denegou habeas corpus impetrado em favor de um apenado que teve o indulto negado por fato
+      posterior ao decreto.
+    peca: recurso-ordinario-constitucional
+    fundamentos: ["art. 105, II, a, CF"]
+    explicacao: "Contra decisão denegatória de habeas corpus de TJ em única ou última instância cabe Recurso Ordinário Constitucional ao STJ (art. 105, II, a, da CF), em 5 dias."
+    distratores: [recurso-especial, habeas-corpus, recurso-extraordinario]

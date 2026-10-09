@@ -1,0 +1,312 @@
+# XXXIV Exame de Ordem Unificado — Direito Penal
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
+id: "34"
+numero: 34
+numeral: XXXIV
+aplicacao: 2022-04-24
+revisao:
+  status: rascunho
+  por: ""
+  em: ""
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
+peca:
+  nome: Recurso em Sentido Estrito
+  tipo: rese
+  aliases: []
+  enunciado: |-
+    Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+    Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+    Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+    Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+    **Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)**
+
+    *Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.*
+  gabarito_comentado: |-
+    Com base nas informações expostas, o examinando deveria apresentar, na qualidade de advogado(a) de Rodrigo, recurso em sentido estrito, com fundamento no Art. 581, inciso IV, do Código de Processo Penal.
+
+    Inicialmente, o examinando deveria apresentar petição de interposição do recurso, que deveria ser direcionada ao Juízo do Tribunal do Júri da Comarca de São Paulo/SP, juízo responsável pelo recebimento da denúncia e instrução, sendo certo que o crime imputado era de natureza dolosa contra a vida. Já na petição de interposição, deveria ser formulado pedido de retratação por parte do juízo a quo, nos termos do Art. 589 do CPP. Em seguida, caso mantida a decisão de pronúncia, os autos deveriam ser encaminhados para o Tribunal de Justiça, com as respectivas razões recursais.
+
+    Após a petição de interposição, deveria o examinando apresentar as Razões do Recurso em Sentido Estrito, desta vez, direcionando-as ao Tribunal de Justiça do Estado de São Paulo.
+
+    De maneira preliminar, a defesa técnica de Rodrigo deveria pedir o reconhecimento da nulidade do procedimento desde a realização da audiência de instrução e julgamento. Isso porque não foi respeitada a ordem estabelecida em lei para oitiva das testemunhas.
+
+    De acordo com o Art. 411 do CPP, na audiência de instrução e julgamento deverão ser ouvidas as testemunhas de acusação e defesa, nesta ordem. Na situação apresentada, justificando que os policiais, testemunhas de acusação, estariam atrasados, o magistrado inverteu a ordem legal, ouvindo, primeiro, as testemunhas arroladas por Rodrigo. Ainda que a nulidade possa ser considerada relativa, o inconformismo da defesa foi consignado pelo advogado. Ademais, houve claro prejuízo, já que as indagações foram formuladas sem que a defesa tivesse conhecimento sobre o teor das declarações das testemunhas de acusação. Com a pronúncia do réu, o prejuízo restou confirmado.
+
+    Dessa forma, a inversão da ordem determinada pelo magistrado prejudicou o exercício da ampla defesa e do contraditório, previsto no Art. 5º, inciso LV, da CRFB, justificando o reconhecimento da nulidade de todos os atos processuais praticados a partir da audiência.
+
+    Superada a preliminar, deveria a defesa de Rodrigo requerer, inicialmente, sua absolvição sumária em razão da presença de clara situação de isenção de pena, conforme o Art. 415, inciso IV, do CPP.
+
+    Em princípio, a embriaguez, culposa ou voluntária, não é capaz de excluir a imputabilidade penal, nos termos do Art. 28, inciso II, do CP. Todavia, o mesmo dispositivo, em seu parágrafo 1º, estabelece que é isento de pena o agente que, por embriaguez completa, proveniente de caso fortuito ou força maior, era, ao tempo da ação, inteiramente incapaz de entender o caráter ilícito do fato ou determinar-se de acordo com esse entendimento.
+
+    Consta a informação de que Rodrigo estava completamente embriagado em razão de substância entorpecente que havia sido inserida em sua bebida sem que ele percebesse, bem como que não entendia o caráter ilícito dos fatos. Diante disso, aplica-se a hipótese excepcional do Art. 28, § 1º, do CP, devendo ser reconhecido que Rodrigo é isento de pena.
+
+    Subsidiariamente, caso não seja reconhecida a absolvição sumária, deveria o examinando requerer a desclassificação do crime imputado para um que não fosse doloso contra a vida. Em que pese tenha ocorrido o resultado morte de João, consta a informação de que Rodrigo não pretendia esse resultado e que nem o aceitava, não havendo de se falar em dolo eventual.
+
+    Houve intenção (ainda que afetada pela inimputabilidade momentânea do agente) em relação ao ato de desferir um soco na barriga da vítima e um empurrão, o que poderia justificar o reconhecimento do crime de lesão corporal. Em relação ao resultado morte, já que João caiu em cima da garrafa de cerveja que segurava, teria havido “apenas” culpa, de modo que o crime em tese praticado por Rodrigo, caso reconhecida sua imputabilidade, seria o de lesão corporal seguida de morte, e não homicídio.
+
+    Diante disso, considerando que o crime de lesão seguido de morte não é doloso contra a vida, a defesa técnica deveria requerer a desclassificação, na forma do Art. 419 do CPP, encaminhando-se os autos ao juízo singular para julgamento.
+
+    Por fim, ainda de maneira subsidiária, caberia à defesa requerer o afastamento da causa de aumento imputada na denúncia e confirmada em pronúncia, já que absurda e em claro erro.
+
+    Prevê o Art. 121, § 4º, do CP, que a pena será aumentada em 1/3 se o agente deixar de prestar imediato socorro à vítima. Todavia, tal causa de aumento somente seria aplicável quando for imputado o crime de homicídio CULPOSO. No caso, o Ministério Público denunciou e o juiz pronunciou Rodrigo por crime de homicídio doloso, tanto assim que o procedimento foi perante o Tribunal do Júri, logo inaplicável a causa de aumento.
+
+    Em sua conclusão, deveria o examinando formular o pedido de conhecimento e provimento do recurso para a) ser reconhecida a nulidade dos atos praticados desde a audiência de instrução e julgamento;
+
+    b) a absolvição sumária, com fundamento no Art. 415, inciso IV, do CPP;
+
+    c) desclassificação, nos termos do Art. 419 do CPP;
+
+    d) afastamento da causa de aumento prevista no Art. 121, § 4º, do CP.
+
+    O prazo para apresentação do Recurso em Sentido Estrito é de 5 dias, nos termos do Art. 586 do CPP, logo se encerraria em 10 de abril de 2021, sábado, uma vez que a intimação ocorreu em 05 de abril de 2021, devendo ser prorrogado para o primeiro dia útil seguinte, qual seja, 12 de abril de 2021.
+
+    No fechamento, deve o candidato indicar local, data, advogado e nº OAB.
+  itens:
+    - n: "1"
+      secao: Petição de interposição
+      descricao: "Endereçamento: Juízo do Tribunal do Júri da Comarca de São Paulo/SP (0,10)"
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ tribunal do juri | juri, sao paulo ] }
+    - n: "2"
+      secao: Petição de interposição
+      descricao: "Fundamento legal: Art. 581, inciso IV, do CPP (0,10)"
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, dispositivo: [ "art. 581, IV, CPP" ] }
+    - n: "3"
+      secao: Petição de interposição
+      descricao: Requerimento do juízo de retratação ou exercício do efeito regressivo (0,30), nos termos do Art. 589 do CPP (0,10)
+      valores: [ 0, 0.3, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ retrata* | efeito regressivo | reconsidera* ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 589, CPP" ], requer: c1 }
+    - n: "4"
+      secao: Razões de recurso em sentido estrito
+      descricao: "Endereçamento: Tribunal de Justiça do Estado de São Paulo (0,10)"
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ tribunal de justica | tj, sao paulo | sp ] }
+    - n: "5"
+      secao: Razões de recurso em sentido estrito
+      descricao: Preliminarmente, nulidade da pronúncia ou nulidade da instrução (0,30), por violação ao princípio da ampla defesa e contraditório ou devido processo legal (0,15), nos termos do Art. 5º, inciso LIV ou LV, da CRFB/88 ou do Art. 564, inciso IV, do CPP (0,10)
+      valores: [ 0, 0.15, 0.25, 0.3, 0.4, 0.45, 0.55 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ nulidade | nula | nulo, pronuncia | instrucao ] }
+        - { id: c2, valor: 0.15, alternativas: [ [ ampla defesa ], [ contraditorio ], [ devido processo legal ] ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 5, LIV, CRFB", "art. 5, LV, CRFB", "art. 564, IV, CPP" ], requer: c2 }
+    - n: "5.1"
+      secao: Razões de recurso em sentido estrito
+      descricao: Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação (0,30), em desrespeito à previsão do Art. 411 do CPP (0,10)
+      valores: [ 0, 0.3, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ inver* | antes das testemunhas de acusacao | ordem ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 411, CPP" ], requer: c1 }
+    - n: "6"
+      secao: Razões de recurso em sentido estrito
+      descricao: No mérito, pedido de absolvição sumária (0,30), diante da manifesta causa de isenção de pena ou excludente de culpabilidade (0,15), nos termos do Art. 415, inciso IV, do CPP (0,10)
+      valores: [ 0, 0.15, 0.25, 0.3, 0.4, 0.45, 0.55 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ absolvicao sumaria | absolvido sumariamente | absolver sumariamente ] }
+        - { id: c2, valor: 0.15, termos: [ isencao de pena | isento de pena | culpabilidade ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 415, IV, CPP" ], requer: c2 }
+    - n: "6.1"
+      secao: Razões de recurso em sentido estrito
+      descricao: A imputabilidade penal restou afastada em razão da embriaguez (0,30), que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato (0,15), conforme o Art. 28, §1º, do CP (0,10)
+      valores: [ 0, 0.15, 0.25, 0.3, 0.4, 0.45, 0.55 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ embriaguez, imputab* | inimputab* ] }
+        - { id: c2, valor: 0.15, termos: [ completa, caso fortuito | forca maior ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 28, § 1º, CP" ], requer: c2 }
+    - n: "7"
+      secao: Razões de recurso em sentido estrito
+      descricao: Subsidiariamente, desclassificação para crime não doloso contra a vida (0,30), nos termos do Art. 419 do CPP (0,10), pois Rodrigo pretendia desferir um soco na barriga da vítima e um empurrão, tendo apenas intenção de causar lesão, mas não o resultado morte ou houve dolo na lesão e culpa em relação ao resultado morte (0,25)
+      valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ desclassifica* ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 419, CPP" ], requer: c1 }
+        - { id: c3, valor: 0.25, alternativas: [ [ lesao, intencao | dolo | queria | pretendia ], [ culpa, resultado morte | morte ] ] }
+    - n: "7.1"
+      secao: Razões de recurso em sentido estrito
+      descricao: Deveria Rodrigo responder, caso reconhecida a imputabilidade, pelo crime de lesão corporal seguida da morte (0,30), previsto no Art. 129, §3º, do CP (0,10)
+      valores: [ 0, 0.3, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ lesao corporal seguida de morte | lesao corporal com resultado morte ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 129, § 3º, CP" ], requer: c1 }
+    - n: "8"
+      secao: Razões de recurso em sentido estrito
+      descricao: Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia (0,30), tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso (0,40)
+      valores: [ 0, 0.3, 0.4, 0.7 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ causa de aumento | majorante, afast* | exclu* | decote | nao incid* ] }
+        - { id: c2, valor: 0.4, alternativas: [ [ culposo ], [ doloso ] ] }
+    - n: "9"
+      secao: Pedidos
+      descricao: Conhecimento (0,10) e provimento do recurso (0,20)
+      valores: [ 0, 0.1, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ conhec* ] }
+        - { id: c2, valor: 0.2, termos: [ provi* ] }
+    - n: "10"
+      secao: Pedidos
+      descricao: "Prazo: 12 de abril de 2021 (0,10)"
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 12 de abril de 2021 ] }
+    - n: "11"
+      secao: Fechamento
+      descricao: Local, data, advogado e OAB (0,10)
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ local, advogad*, oab ] }
+questoes:
+  - n: 1
+    enunciado: |-
+      Geraldo, 30 anos, constrangeu Eugênia, desconhecida que passava pela rua, mediante grave ameaça, a transferir R$ 2.000,00 (dois mil reais) para sua conta. Diante da grave ameaça, Eugênia compareceu ao estabelecimento bancário com Geraldo e fez a transferência devida, sendo liberada em seguida.
+
+      Eugênia, nervosa, compareceu à sede policial e narrou o ocorrido, sendo instaurado inquérito para identificação do autor do fato. Ocorre que Geraldo, no dia seguinte, antes de qualquer denúncia, arrependeu-se de sua conduta e transferiu de volta para a conta de Eugênia todo o valor antes obtido de maneira indevida.
+
+      Confirmada a autoria, o Ministério Público ofereceu denúncia em face de Geraldo pela prática do crime de extorsão simples consumada (Art. 158, caput, do Código Penal), sendo decretada sua prisão preventiva, em razão da gravidade do fato e da reincidência. Durante audiência de instrução e julgamento, foi ouvida a vítima, que confirmou os fatos narrados na denúncia. O réu permaneceu em sala de audiência, e o reconhecimento foi realizado ao final da oitiva da vítima, ainda no local, sob o argumento de que, como havia muitos presos no Fórum, não haveria policiais suficientes para transporte de presos até a sala de reconhecimento. Assim, Eugênia apenas apontou para o denunciado e disse que ele seria o autor. As demais testemunhas esclareceram que não presenciaram o ocorrido.
+
+      **Com base no reconhecimento realizado, foi o réu condenado nos termos da denúncia, sendo aplicada pena base de 04 anos; pena intermediária de 04 anos e 03 meses em razão da reincidência, não sendo reconhecidas atenuantes ou outras agravantes; na terceira fase, não foram reconhecidas causas de aumento ou de diminuição de pena. O regime inicial aplicado foi o fechado.**
+
+      Intimado da sentença, esclareça, na condição de advogado de Geraldo em atuação em recurso de apelação, os itens a seguir.
+
+      **A) Qual argumento de direito processual poderá ser apresentado para questionar a produção probatória em audiência? Justifique. (Valor: 0,65)**
+
+      **B) Qual argumento de direito material poderá ser apresentado, caso mantida a condenação, em busca da redução da pena aplicada? Justifique. (Valor: 0,60)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) O argumento de direito processual é o de que a produção de provas não foi integralmente válida, tendo em vista que o reconhecimento do réu não foi realizado observando as formalidades legais. De acordo com o Art. 226 do CPP, o reconhecimento, em sendo possível, deverá ser realizado na presença de outras pessoas com características semelhantes àquelas da pessoa a ser reconhecida. No caso, o reconhecimento foi na própria sala de audiência, apenas com o réu presente na condição de preso, então claramente foi viciado. Dessa forma, aquela prova não poderia ser considerada na sentença condenatória. Havia outros presos disponíveis para serem colocados ao lado do denunciado em sala especial para reconhecimento, não sendo o argumento de economia suficiente para afastar as exigências legais.
+
+      B) O argumento é o de que deveria ter sido reconhecida a atenuante da reparação do dano, prevista no Art. 65, inciso III, alínea b, do CP. De acordo com o enunciado, antes mesmo do oferecimento da denúncia, logo após a prática delitiva, o autor do fato procurou minorar as consequências de seu ato e reparou o dano, de modo que aplicável a atenuante antes mencionada. Não haveria de se falar em tentativa a justificar o reconhecimento de causa de diminuição de pena, já que o crime se consumou por ocasião do constrangimento. Ademais, mesmo a reparação tendo ocorrido antes do oferecimento da denúncia, não caberia aplicação da causa de diminuição de pena do arrependimento posterior, prevista no Art. 16 do Código Penal, pois o crime foi praticado com grave ameaça à pessoa.
+    itens:
+      - n: A
+        descricao: O argumento é o de que o reconhecimento realizado não foi válido, pois não foram observadas as formalidades legais (0,55), nos termos do Art. 226 do CPP (0,10).
+        valores: [ 0, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.55, termos: [ reconhecimento, formalidade* | invalid* | nulo | nulidade | ilicit* ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 226, CPP" ], requer: c1 }
+      - n: B
+        descricao: O argumento seria o de que deveria ter sido reconhecida a atenuante da reparação do dano, tendo em vista que o denunciado devolveu o valor obtido indevidamente (0,50), nos termos do Art. 65, inciso III, alínea b, do CP (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ atenuante, repara* ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 65, III, b, CP" ], requer: c1 }
+  - n: 2
+    enunciado: |-
+      Flávio figurava como indiciado em procedimento em que se investigava a prática do crime de concussão. Após não mais ter disponíveis outros meios de investigação, o Ministério Público formulou requerimento de interceptação das conversas telefônicas de Flávio, sendo o pedido deferido pela autoridade judicial pelo prazo de 10 dias.
+
+      No período interceptado, todas as conversas de Flávio foram transcritas. Em uma das conversas interceptadas, Flávio mantinha contato com seu advogado João e confessava a autoria do crime de concussão, solicitando orientação jurídica, sendo possível perceber que João não teria qualquer conhecimento anterior sobre aquela prática delitiva. A partir do teor das transcrições das conversas de Flávio, o Ministério Público ofereceu denúncia em desfavor do mesmo, imputando-lhe a prática do crime previsto no Art. 316 do Código Penal.
+
+      Ao tomar conhecimento da denúncia, Flávio contata seu advogado, que tem acesso ao procedimento, inclusive ao teor das transcrições obtidas a partir da interceptação das conversas telefônicas. Durante a instrução, após requerimento do Ministério Público, o juiz determina, sem anuência do acusado e de sua defesa técnica, que seja realizada perícia de voz em Flávio para confirmar que ele seria um dos interlocutores da conversa, intimando-o para apresentar gravação a servir de paradigma para o exame.
+
+      **Considerando apenas as informações expostas, responda, na condição de advogado(a) de Flávio, aos itens a seguir.**
+
+      **A) Qual o argumento a ser apresentado para questionar a prova obtida a partir da interceptação das comunicações telefônicas? Justifique. (Valor: 0,60)**
+
+      **B) Existe argumento a ser apresentado para questionar a decisão do magistrado que determinou a realização da perícia de voz, com apresentação de gravação que servisse de paradigma à perícia? Justifique. (Valor:**
+
+      0,65)
+
+      *Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) O argumento é de que a prova é ilícita, pois não poderia ter havido transcrição das conversas travadas entre o investigado e sua defesa técnica. O crime investigado é punido com pena de reclusão; havia indícios de autoria, tanto que Flávio figurava como indiciado; e não havia outros meios investigatórios para obtenção da prova. O prazo fixado pela autoridade judicial também está dentro do autorizado pela lei. Ocorre que, apesar de a interceptação em si ser válida, de acordo com a jurisprudência dos Tribunais Superiores, não pode haver transcrição, ou seja, a conversa travada entre o investigado e seu advogado não poderá ser utilizada como meio de prova, quando este não for alvo da investigação. Ademais, não estava o advogado praticando novo crime com seu cliente, mas tão só prestando assistência jurídica, de modo que o sigilo na relação advogado-cliente deverá ser resguardado. A garantia do sigilo das comunicações entre advogado e cliente não confere imunidade para a prática de crimes no exercício da advocacia, o que não ocorreu na hipótese. No mesmo sentido, a previsão do Art. 7º, incisos II e III, da Lei nº 8.906/94 ou Art. 157 caput do CPP ou Art. 5º, inciso LVI da CRFB/88.
+
+      B) Não poderia o magistrado ter determinado a realização de perícia de voz em Flávio, sem a sua concordância, tendo em vista que ninguém é obrigado a produzir prova contra si. O princípio do nemo tenetur se detegere tem previsão não apenas na legislação nacional, mas também em tratados internacionais, sendo direito relevante de todo aquele que figure como réu ou investigado. Sempre que a prova depender de uma participação ou contribuição positiva do réu, esta somente poderá ser determinada se houver concordância do acusado, sob pena de violação ao princípio supramencionado. Considerando que Flávio não concordou em se submeter à perícia de voz e, ainda, considerando que tal exame dependeria do fornecimento de sua voz para padrão de comparação, não poderia o magistrado ter imposto a produção da prova, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    itens:
+      - n: A
+        descricao: O argumento é de que a prova é ilícita, tendo em vista que não poderia ter havido transcrição da conversa travada entre Flávio e seu advogado, que tem direito ao sigilo ou inviolabilidade das comunicações, não sendo o advogado coautor de crimes e nem figurando como investigado (0,50), nos termos do Art. 7º, inciso II ou III, da Lei nº 8.906/94 ou Art. 157 caput do CPP ou Art. 5º, inciso LVI da CRFB/88 (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ ilicit* | ilegal*, advogado, sigilo | inviolab* ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 7, II, Lei 8906", "art. 7, III, Lei 8906", "art. 157, CPP", "art. 5, LVI, CRFB" ], requer: c1 }
+      - n: B
+        descricao: Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio (0,15), já que o acusado não pode ser obrigado a produzir prova contra si (0,40), conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992(0,10).
+        valores: [ 0, 0.15, 0.25, 0.4, 0.5, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.15, alternativas: [ [ voz, obrigad* | exigi* | concordancia | consentimento ], [ comportamento positivo | comportamento ativo ] ] }
+          - { id: c2, valor: 0.4, termos: [ produzir prova contra si | nao autoincriminacao | nemo tenetur | autoincrimina* ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 5, LXIII, CRFB", "art. 8, CRFB" ], requer: c2 }
+  - n: 3
+    enunciado: |-
+      Carla, funcionária de determinado estabelecimento comercial, inseriu, em documento particular, informação falsa acerca da data de determinado serviço que teria sido prestado pela empresa, em busca de prejudicar direito de terceiro, sendo realmente a inserção da informação de sua responsabilidade. Descobertos os fatos pelo superior hieráquico de Carla, foi apresentada notitia criminis em desfavor da funcionária, que veio a ser denunciada como incursa nas sanções penais do Art. 298 do Código Penal (falsificação de documento particular).
+
+      No momento da citação, o Oficial de Justiça compareceu ao endereço fornecido pelo Ministério Público, sendo que constatou, na primeira vez que foi ao local, que Carla lá residia, mas que estava se ocultando para não ser citada.
+
+      Diante disso, certificou tal fato e foi determinada a citação por edital pelo magistrado. Carla é informada do teor do edital por uma amiga que trabalhava no Tribunal de Justiça e procura você, como advogado(a), para prestar assistência jurídica.
+
+      Responda, na condição de advogado(a) de Carla, considerando apenas as informações expostas, aos seguintes questionamentos.
+
+      **A) A citação de Carla foi realizada de forma válida? Justifique. (Valor: 0,60)**
+
+      **B) Qual o argumento de direito material a ser apresentado para questionar a capitulação delitiva? Justifique. (Valor: 0,65)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) A citação de Carla não foi válida, pois a citação por edital é cabível quando o denunciado está em local incerto e não sabido, o que não é o caso, tendo em vista que o oficial de justiça confirmou que Carla residia no endereço informado pelo Ministério Público, apenas alegando que ela estava se ocultando para não ser citada. Em tese, estando se ocultando, pode ocorrer a citação com hora certa, prevista no Art. 362 do CPP, mas, para tanto, deve o Oficial de Justiça comparecer mais vezes ao local, na tentativa de citar a ré.
+
+      B) O argumento é no sentido de que houve crime de falsidade ideológica, previsto no Art. 299 do CP, e que tem a pena mais branda do que o crime imputado. O documento é falso em relação ao seu conteúdo e não em relação à sua forma. Não houve falsificação de documento particular, com sua alteração ou elaboração por quem não deveria. Pelo contrário, Carla era responsável por preencher o documento, que, quanto à forma, era hígido.
+
+      Todavia, inseriu informação falsa em seu conteúdo para prejudicar direito de terceiro, o que tipifica a conduta de falsidade ideológica.
+    itens:
+      - n: A
+        descricao: Não foi válida a citação de Carla, já que ela não estava em local incerto e não sabido ou que não estava se ocultando para não ser citada, já que Carla possuía endereço fixo e conhecido (0,50), conforme Art. 361 ou 362 ambos do CPP (0,10)
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ citacao, edital | endereco | local incerto | ocultando | invalid* | nula ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 361, CPP", "art. 362, CPP" ], requer: c1 }
+      - n: B
+        descricao: O argumento é o de que o crime praticado por Carla foi de falsidade ideológica, com inserção de conteúdo falseado, e não falsificação de documento particular (0,40), tendo em vista que inseriu informação falsa em documento verdadeiro quanto à sua forma (0,15), nos termos do Art. 299 do CP (0,10).
+        valores: [ 0, 0.15, 0.25, 0.4, 0.5, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.4, termos: [ falsidade ideologica ] }
+          - { id: c2, valor: 0.15, termos: [ informacao falsa | conteudo falso | declaracao falsa, verdadeiro | forma ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 299, CP" ], requer: c2 }
+  - n: 4
+    enunciado: |-
+      Renato e Abel foram denunciados pelo crime de “falsificação, corrupção, adulteração ou alteração de produto destinado a fins terapêuticos ou medicinais”, por terem exposto à venda, na farmácia em que eram sócios, diversos frascos de medicamentos fitoterápicos para tratamento urinário que estavam corrompidos. Lote de fabricação UR031FT-PLANT (Art. 273, § 1º, do CP).
+
+      A Vigilância Sanitária, ao fiscalizar aquela farmácia, apreendeu os referidos medicamentos e encontrou um aviso enviado pelo fabricante informando que os medicamentos relativos àquele lote não se achavam em condições para consumo por estarem corrompidos, devendo ser recolhidos e devolvidos.
+
+      Na instrução criminal, foram ouvidos os agentes da Vigilância Sanitária que fizeram as apreensões, os quais declararam ter recebido diversas reclamações de consumidores que compraram o medicamento relativo ao lote de fabricação UR031FT-PLANT, pois se sentiram mal. Ouvidos os farmacêuticos do fabricante, disseram que, feita a análise, constataram que o medicamento daquele lote estava corrompido e recomendaram aos comerciantes que os adquiriram que efetuassem a devolução.
+
+      Foi ouvida uma testemunha de defesa, ou seja, o gerente da farmácia que recebeu o aviso do fabricante. Ele esclareceu que não abriu a correspondência e nem deu ciência do recebimento ao farmacêutico da loja.
+
+      Interrogados, os réus negaram a autoria. Alegaram que desconheciam qualquer irregularidade no medicamento do lote de fabricação UR031FT-PLANT. Declararam que não receberam qualquer reclamação de clientes, considerando que 15 (quinze) unidades daquele lote foram comercializadas, além disso, pesquisaram e não encontraram reclamação no Procon relativa a esse fato. A corrupção do referido medicamento ficou demonstrada nos autos pelos documentos laboratoriais do fabricante.
+
+      Renato e Abel foram condenados nas penas mínimas (10 anos de reclusão, em regime fechado, 10 dias-multa ao valor mínimo legal).
+
+      O Ministério Público não recorreu. A defesa dos réus apelou.
+
+      **A) Em razões recursais defensivas, que eventual matéria processual poderia ser sustentada como preliminar? (Valor: 0,65)**
+
+      **B) Com vistas à absolvição de Renato e Abel, qual(is) tema(s) de direito material poderia(m) ser alegado(s)? (Valor: 0,60)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) Como se trata de crime que deixa vestígio, seria necessária a realização de exame pericial dos medicamentos apreendidos – Art. 158 do CPP, sendo esse um ônus da acusação. Essa diligência também poderia ter sido determinada de ofício e supletivamente pelo juiz – Art. 156 e inciso II do CPP.
+
+      B) Não houve comprovação do crime por falta de prova pericial, os documentos laboratoriais do fabricante não servem para a condenação, sendo o caso de absolvição dos recorrentes. Cabendo ainda absolvição por não estar provado que os recorrentes concorreram quer culposa ou dolosamente para a prática da infração penal. Ainda podemos entender que os recorrentes incorreram em erro de tipo ocasionando o reconhecimento da atipicidade de conduta.
+
+      Existem vários dados no enunciado que reforçam as teses dentre eles: o aviso do fabricante era desconhecido dos apelantes ou de qualquer outro funcionário, posto que a correspondência não foi entregue ao farmacêutico da loja e nem sequer foi aberta.
+
+      Acresça-se ainda que nenhum consumidor que adquiriu o medicamento do lote de fabricação UR031FT-PLANT fez qualquer reclamação, tendo sido vendidas 15 (quinze) unidades. Conforme o Art. 386, inciso III, IV ou V, do CPP ou Art. 20, caput do CP.
+    itens:
+      - n: A
+        descricao: Como se trata de crime que deixa vestígio, seria necessária a realização de exame pericial dos medicamentos apreendidos ou a prova do fato por perícia seria ônus da acusação, diligência que também poderia ter sido determinada de ofício e supletivamente pelo juiz (0,55), segundo o Art. 158, caput ou Art. 156, inciso II, ambos do CPP (0,10).
+        valores: [ 0, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.55, termos: [ vestigio*, pericia | pericial | exame ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 158, CPP", "art. 156, II, CPP" ], requer: c1 }
+      - n: B
+        descricao: Não houve comprovação do crime por falta de prova pericial, sendo o caso de absolvição ou absolvição por não estar provado que os recorrentes concorreram culposa ou dolosamente para eventual infração penal ou incorreram em erro de tipo ou atipicidade de conduta (0,50). Conforme o Art. 386, inciso III, IV ou V, do CPP ou Art. 20, caput do CP (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ absolvi* | absolver | atipic* | erro de tipo ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 386, III, CPP", "art. 386, IV, CPP", "art. 386, V, CPP", "art. 20, CP" ], requer: c1 }

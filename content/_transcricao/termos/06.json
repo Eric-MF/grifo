@@ -1,0 +1,33 @@
+{
+  "1.c1": ["local", "advogad* | assinatura | oab"],
+  "2.c1": { "dispositivo": ["art. 5º, LXV, CF", "art. 310, I, CPP"] },
+  "3.c1": ["vara criminal | juiz de direito"],
+  "4.1.c1": ["nulidade | nulo", "produzir prova contra si | nemo tenetur | autoincrimina* | nao autoincriminacao"],
+  "4.1.c2": { "dispositivo": ["art. 5º, LXIII, CF", "art. 8º Decreto 678"], "requer": "c1" },
+  "4.2.c1": ["teor alcoolico | bafometro | etilometro | alcoolemia", "ilicit*"],
+  "4.2.c2": { "dispositivo": ["art. 5º, LVI, CF", "art. 157 CPP"], "requer": "c1" },
+  "5.c1": ["comunica* | entrevista*", "advogado | familia*"],
+  "5.c2": { "dispositivo": ["art. 5º, LXIII, CF", "art. 7º, III, Lei 8.906"], "requer": "c1" },
+  "6.c1": ["comunica*", "24 horas | juiz | autoridade judiciaria | defensoria"],
+  "7.c1": ["relaxamento"],
+  "7.c2": ["alvara de soltura | alvara"],
+  "q1:A.c1": ["descriminante putativa | legitima defesa putativa | putativa"],
+  "q1:B.c1": ["excesso doloso | excesso"],
+  "q2:A": { "componentes": [
+    { "id": "c1", "valor": 0.1, "alternativas": [["resposta a acusacao"], ["habeas corpus"]] },
+    { "id": "c2", "valor": 0.1, "alternativas": [["10 dias"], ["nao possui prazo | sem prazo | qualquer tempo"]] },
+    { "id": "c3", "valor": 0.1, "alternativas": [["juri | vara criminal"], ["tribunal de justica | tj"]] } ] },
+  "q2:B.c1": ["legitima defesa"],
+  "q2:B.c2": ["injusta agressao | nao houve excesso"],
+  "q2:C.c1": ["nao praticou crime | nao ha crime | atipic* | nao praticou fato tipico | nao responde"],
+  "q2:C.c2": { "alternativas": [["acessoriedade limitada"], ["liame subjetivo"]] },
+  "q3:A": { "componentes": [
+    { "id": "c1", "valor": 0.3, "alternativas": [["relaxamento"], ["habeas corpus"]] },
+    { "id": "c2", "valor": 0.3, "alternativas": [["juiz de direito | juizo estadual | juiz estadual"], ["tribunal de justica | tj"]] } ] },
+  "q3:B1.c1": ["quadrilha | associacao criminosa", "um delito | um crime | unico delito | apenas um"],
+  "q3:B1.c2": ["temporaria", "estelionato | rol"],
+  "q3:B2.c1": ["temporaria", "inquerito"],
+  "q4:A.c1": ["dolo"],
+  "q4:A.c2": { "termos": ["autor | autoria mediata | autor mediato"], "dispositivo": ["art. 6º Lei 7.492"], "requer": "c1" },
+  "q4:B.c1": { "alternativas": [["erro de tipo"], ["nao agiu com dolo | sem dolo | ausencia de dolo"]] }
+}

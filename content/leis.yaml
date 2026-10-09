@@ -1,0 +1,106 @@
+# Diplomas legais reconhecidos pelo corretor e pelo quiz.
+# A chave é o identificador canônico. Os aliases são comparados com o texto já
+# normalizado (minúsculo, sem acentos, números sem ponto de milhar e ano abreviado
+# removido — "Lei nº 11.343/06" vira "lei 11343").
+# Para uma lei não listada, "lei 1234" já funciona sozinho; inclua aqui apenas
+# para aceitar apelidos ("lei de drogas") ou dar nome bonito.
+
+diplomas:
+  cp:
+    nome: Código Penal
+    aliases: [cp, codigo penal, decreto-lei 2848, decreto lei 2848, dl 2848, cpb]
+  cpp:
+    nome: Código de Processo Penal
+    aliases: [cpp, codigo de processo penal, decreto-lei 3689, decreto lei 3689, dl 3689]
+  lep:
+    nome: Lei de Execução Penal (Lei 7.210/1984)
+    aliases: [lep, lei de execucao penal, lei de execucoes penais, lei de execucao, lei 7210]
+  cf:
+    nome: Constituição Federal
+    aliases: [crfb, cf, constituicao federal, constituicao da republica, constituicao, carta magna]
+  lei-11343:
+    nome: Lei de Drogas (Lei 11.343/2006)
+    aliases: [lei 11343, lei de drogas, lei antidrogas, lei de toxicos]
+  lei-11340:
+    nome: Lei Maria da Penha (Lei 11.340/2006)
+    aliases: [lei 11340, lei maria da penha, lmp]
+  lei-9099:
+    nome: Lei dos Juizados Especiais (Lei 9.099/1995)
+    aliases: [lei 9099, lei dos juizados especiais, lei dos juizados]
+  lei-8072:
+    nome: Lei dos Crimes Hediondos (Lei 8.072/1990)
+    aliases: [lei 8072, lei dos crimes hediondos, lei de crimes hediondos]
+  lei-8137:
+    nome: Crimes contra a Ordem Tributária (Lei 8.137/1990)
+    aliases: [lei 8137]
+  lei-9503:
+    nome: Código de Trânsito Brasileiro (Lei 9.503/1997)
+    aliases: [lei 9503, ctb, codigo de transito brasileiro, codigo de transito]
+  lei-10826:
+    nome: Estatuto do Desarmamento (Lei 10.826/2003)
+    aliases: [lei 10826, estatuto do desarmamento]
+  lei-12850:
+    nome: Lei de Organizações Criminosas (Lei 12.850/2013)
+    aliases: [lei 12850, lei de organizacoes criminosas, lei das organizacoes criminosas]
+  lei-9613:
+    nome: Lei de Lavagem de Dinheiro (Lei 9.613/1998)
+    aliases: [lei 9613, lei de lavagem de dinheiro, lei de lavagem]
+  lei-13869:
+    nome: Lei de Abuso de Autoridade (Lei 13.869/2019)
+    aliases: [lei 13869, lei de abuso de autoridade]
+  lei-8069:
+    nome: Estatuto da Criança e do Adolescente (Lei 8.069/1990)
+    aliases: [lei 8069, eca, estatuto da crianca e do adolescente]
+  lei-9455:
+    nome: Lei de Tortura (Lei 9.455/1997)
+    aliases: [lei 9455, lei de tortura]
+  lei-9296:
+    nome: Lei de Interceptação Telefônica (Lei 9.296/1996)
+    aliases: [lei 9296, lei de interceptacao telefonica]
+  lei-8038:
+    nome: Lei 8.038/1990 (recursos nos tribunais superiores)
+    aliases: [lei 8038]
+  lei-7716:
+    nome: Lei de Crimes Raciais (Lei 7.716/1989)
+    aliases: [lei 7716]
+  lei-10741:
+    nome: Estatuto da Pessoa Idosa (Lei 10.741/2003)
+    aliases: [lei 10741, estatuto do idoso, estatuto da pessoa idosa]
+  lei-9605:
+    nome: Lei de Crimes Ambientais (Lei 9.605/1998)
+    aliases: [lei 9605, lei de crimes ambientais]
+  lei-8078:
+    nome: Código de Defesa do Consumidor (Lei 8.078/1990)
+    aliases: [lei 8078, cdc, codigo de defesa do consumidor]
+  lei-1521:
+    nome: Lei de Economia Popular (Lei 1.521/1951)
+    aliases: [lei 1521]
+  lei-7492:
+    nome: Crimes contra o Sistema Financeiro (Lei 7.492/1986)
+    aliases: [lei 7492]
+  lei-4898:
+    nome: Antiga Lei de Abuso de Autoridade (Lei 4.898/1965)
+    aliases: [lei 4898]
+  lei-12037:
+    nome: Lei de Identificação Criminal (Lei 12.037/2009)
+    aliases: [lei 12037]
+  lei-13964:
+    nome: Pacote Anticrime (Lei 13.964/2019)
+    aliases: [lei 13964, pacote anticrime]
+  lcp:
+    nome: Lei das Contravenções Penais (Decreto-Lei 3.688/1941)
+    aliases: [lcp, lei das contravencoes penais, lei de contravencoes penais, decreto-lei 3688, decreto lei 3688, dl 3688]
+  lei-8906:
+    nome: Estatuto da Advocacia e da OAB (Lei 8.906/1994)
+    aliases: [lei 8906, eoab, estatuto da oab, estatuto da advocacia, estatuto da ordem dos advogados do brasil]
+  decreto-678:
+    nome: Convenção Americana de Direitos Humanos (Decreto 678/1992)
+    aliases: [decreto 678, pacto de san jose da costa rica, pacto de sao jose da costa rica, convencao americana de direitos humanos, cadh]
+  cpc:
+    nome: Código de Processo Civil
+    aliases: [cpc, codigo de processo civil]
+
+# Tribunais para súmulas ("Súmula 700 do STF", "Súmula Vinculante 24").
+tribunais:
+  stf: [stf, supremo tribunal federal, supremo]
+  stj: [stj, superior tribunal de justica]

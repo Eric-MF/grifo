@@ -1,0 +1,33 @@
+{
+  "peca:itens": [
+    { "n": "1", "secao": "Petição de interposição", "descricao": "Endereçamento da petição de interposição: Juiz de Direito da ___ Vara Criminal da Comarca ___ (0,20).", "componentes": [ { "id": "c1", "valor": 0.2, "termos": ["vara criminal | juiz de direito | juizo"] } ] },
+    { "n": "2", "secao": "Petição de interposição", "descricao": "Fundamento legal da petição de interposição: artigo 593, I, do CPP (0,30).", "componentes": [ { "id": "c1", "valor": 0.3, "dispositivo": ["art. 593, I, CPP"] } ] },
+    { "n": "3", "secao": "Petição de interposição", "descricao": "Data: 03/09/2013 (0,25). É necessária a data correta na petição de interposição.", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["3 de setembro de 2013"] } ] },
+    { "n": "4", "secao": "Razões", "descricao": "Endereçamento das razões: Tribunal de Justiça do Estado ___ (0,20).", "componentes": [ { "id": "c1", "valor": 0.2, "termos": ["tribunal de justica | tj"] } ] },
+    { "n": "5.1", "secao": "Mérito", "descricao": "Da aplicação do princípio da consunção ou absorção (0,30): o crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou crime-meio, essencial à execução do crime-fim; deve ser excluída a condenação pela violação de domicílio (0,50).", "componentes": [ { "id": "c1", "valor": 0.3, "termos": ["consun* | absorc* | absorvid*"] }, { "id": "c2", "valor": 0.5, "termos": ["violacao de domicilio", "crime-meio | crime meio | meio | absorvid* | excluida | exclusao"] } ] },
+    { "n": "5.2a", "secao": "Mérito", "descricao": "Da inaplicabilidade da reincidência: não há que se falar em reincidência (0,30), nos termos do artigo 63 do CP (0,10).", "componentes": [ { "id": "c1", "valor": 0.3, "termos": ["reincid*", "nao ha | afast* | inaplica* | nao configura* | inexist*"] }, { "id": "c2", "valor": 0.1, "dispositivo": ["art. 63 CP"], "requer": "c1" } ] },
+    { "n": "5.2b", "secao": "Mérito", "descricao": "O delito não foi praticado após o trânsito em julgado de condenação anterior; sentença condenatória recorrível não gera reincidência (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["transit* em julgado | recorrivel"] } ] },
+    { "n": "5.3", "secao": "Mérito", "descricao": "Da consequente diminuição de pena (0,30).", "componentes": [ { "id": "c1", "valor": 0.3, "termos": ["diminui* | redu*", "pena"] } ] },
+    { "n": "5.4", "secao": "Mérito", "descricao": "Da consequente fixação do regime aberto (0,25), nos termos do artigo 33, § 2º, c, do CP (0,15).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["regime", "aberto"] }, { "id": "c2", "valor": 0.15, "dispositivo": ["art. 33, § 2º, c, CP"], "requer": "c1" } ] },
+    { "n": "5.5", "secao": "Mérito", "descricao": "Da substituição da pena privativa de liberdade por restritiva de direitos (0,25), nos termos do artigo 44 do CP (0,15).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["substitui*", "restritiva* de direito*"] }, { "id": "c2", "valor": 0.15, "dispositivo": ["art. 44 CP"], "requer": "c1" } ] },
+    { "n": "6a", "secao": "Pedidos", "descricao": "Absolvição do crime de violação de domicílio OU absolvição nos termos do art. 386, III, do CPP (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["absolvi* | absolver"] } ] },
+    { "n": "6b", "secao": "Pedidos", "descricao": "Afastamento da circunstância agravante da reincidência (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["reincid*"] } ] },
+    { "n": "6c", "secao": "Pedidos", "descricao": "Consequente diminuição da pena (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["diminui* | redu*"] } ] },
+    { "n": "6d", "secao": "Pedidos", "descricao": "Consequente fixação do regime aberto (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["aberto"] } ] },
+    { "n": "6e", "secao": "Pedidos", "descricao": "Substituição da pena privativa de liberdade por restritiva de direitos (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["substitui*"] } ] },
+    { "n": "7", "secao": "Estrutura", "descricao": "Estrutura: duas petições (interposição e razões); endereçamento nas petições; local, data, assinatura (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["local", "advogad* | assinatura"] } ] }
+  ],
+  "q1:A": { "componentes": [
+    { "id": "c1", "valor": 0.3, "alternativas": [["nao admite", "tentativa | tentada"], ["nao iniciou", "execucao"], ["cogitacao"], ["formal"]], "rotulo": "Corrupção ativa, como narrada, não admite tentativa OU não houve início da execução" },
+    { "id": "c2", "valor": 0.4, "termos": ["atipic*"] } ] },
+  "q1:B": { "componentes": [
+    { "id": "c1", "valor": 0.55, "alternativas": [["nao esta prevista | nao prevista | nao descrita"], ["atipic*"], ["concussao"]], "rotulo": "Não, pois a conduta (pagar o que foi exigido) não está prevista no tipo / é atípica" } ] },
+  "q2:A.c1": ["consum*", "disponibilidade | inversao da posse | subtracao foi completa"],
+  "q2:B.c1": ["furto privilegiado | privilegio | privilegiado"],
+  "q3:itens": [
+    { "n": "A", "descricao": "A competência é da Justiça Estadual (0,85), conforme preceitua a Súmula 192 do STJ (0,40).", "componentes": [ { "id": "c1", "valor": 0.85, "termos": ["justica estadual | juizo estadual | vara de execucoes estadual | juizo da execucao estadual"] }, { "id": "c2", "valor": 0.4, "dispositivo": ["Súmula 192 STJ"], "requer": "c1" } ] }
+  ],
+  "q4:A.c1": ["inconstitucional*", "regime | fechado"],
+  "q4:B.c1": ["substitui* | conversao", "inconstitucional*"],
+  "q4:B.c2": { "termos": ["requisitos"], "dispositivo": ["art. 44 CP"], "rotulo": "Desde que preenchidos os requisitos do Art. 44 do CP" }
+}

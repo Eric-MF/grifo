@@ -1,0 +1,171 @@
+{
+ "1.c1": [
+  "tribunal do juri | juri",
+  "marica"
+ ],
+ "3.c1": [
+  "retrata* | efeito regressivo | reconsidera*"
+ ],
+ "4.c1": [
+  "tribunal de justica | tj",
+  "rio de janeiro | rj"
+ ],
+ "5.c1": [
+  "extin* da punibilidade"
+ ],
+ "5.c2": [
+  "prescri*"
+ ],
+ "6.c1": {
+  "alternativas": [
+   [
+    "10 anos"
+   ],
+   [
+    "metade",
+    "idade | 70 anos | 21 anos | menor de 21"
+   ]
+  ]
+ },
+ "7.c1": [
+  "nulidade | nula | nulo",
+  "pronuncia | instrucao"
+ ],
+ "7.c2": [
+  "intima* | intimado",
+  "audiencia | testemunhas"
+ ],
+ "8.c1": [
+  "ampla defesa | autodefesa"
+ ],
+ "9.c1": [
+  "desclassifica*"
+ ],
+ "10.c1": [
+  "desistencia voluntaria"
+ ],
+ "10.c2": {
+  "alternativas": [
+   [
+    "circunstancias alheias"
+   ],
+   [
+    "prosseguir | nao prosseguir | interrompeu | parou | desistiu | nao continuar"
+   ]
+  ]
+ },
+ "11.c1": [
+  "atos ja praticados | atos praticados"
+ ],
+ "11.c2": [
+  "lesao corporal grave | lesao corporal de natureza grave | lesao grave"
+ ],
+ "12.c1": {
+  "alternativas": [
+   [
+    "feminicidio",
+    "afast* | exclu* | decote | nao incid*"
+   ],
+   [
+    "qualificadora",
+    "121",
+    "afast* | exclu* | decote | nao incid* | inaplica*"
+   ]
+  ]
+ },
+ "12.c2": [
+  "irretroatividade | nao retroage | nao pode retroagir | retroagir | lei posterior | lei mais grave | lex gravior | anterior a lei | antes da lei"
+ ],
+ "13.c1": [
+  "conhec*"
+ ],
+ "13.c2": [
+  "provi*"
+ ],
+ "14.c1": [
+  "16 de marco de 2020"
+ ],
+ "15.c1": [
+  "local",
+  "advogad*",
+  "oab"
+ ],
+ "q1:A.c1": [
+  "extin* da punibilidade",
+  "repara*"
+ ],
+ "q1:A.c2": [
+  "sentenca irrecorrivel | antes da sentenca | antes do transito"
+ ],
+ "q1:B.c1": [
+  "nulidade",
+  "defesa previa | defesa preliminar | resposta preliminar | notifica*"
+ ],
+ "q1:B.c2": [
+  "antes | previa | preliminar*",
+  "recebimento"
+ ],
+ "q2:A.c1": [
+  "absorvid* | absorcao | absorve | consun*"
+ ],
+ "q2:A.c2": {
+  "alternativas": [
+   [
+    "consun*"
+   ],
+   [
+    "elementar"
+   ]
+  ]
+ },
+ "q2:B.c1": {
+  "alternativas": [
+   [
+    "alcool | embriag* | influencia"
+   ],
+   [
+    "representacao",
+    "desnecessaria | dispensada | nao se exige"
+   ]
+  ]
+ },
+ "q3:A.c1": [
+  "injustificad* | sem justificativa | justifica*"
+ ],
+ "q3:A.c2": {
+  "alternativas": [
+   [
+    "intima* | intimado | ouvido | oitiva"
+   ],
+   [
+    "ampla defesa"
+   ],
+   [
+    "contraditorio"
+   ]
+  ]
+ },
+ "q3:B.c1": [
+  "prescricao da pretensao executoria | prescricao executoria"
+ ],
+ "q3:B.c2": [
+  "extin* da punibilidade"
+ ],
+ "q4:A.c1": [
+  "nao concorreu | nao participou | nao responde | nao ha participacao | atipic*"
+ ],
+ "q4:A.c2": {
+  "alternativas": [
+   [
+    "apos a consumacao | depois da consumacao | apos consumado"
+   ],
+   [
+    "liame subjetivo | vinculo subjetivo"
+   ]
+  ]
+ },
+ "q4:B.c1": [
+  "justo receio | receio",
+  "novas infracoes | novos crimes | reitera*"
+ ]
+}

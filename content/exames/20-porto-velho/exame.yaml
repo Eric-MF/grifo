@@ -1,0 +1,303 @@
+# XX Exame de Ordem Unificado — Direito Penal (Porto Velho)
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
+id: 20-porto-velho
+numero: 20
+numeral: XX
+variante: Porto Velho
+aplicacao: 2016-10-09
+revisao:
+  status: rascunho
+  por: ""
+  em: ""
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
+peca:
+  nome: Memoriais
+  tipo: memoriais
+  aliases: []
+  enunciado: |-
+    Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+    No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+    Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+    No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+    Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+    **Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)**
+
+    *Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.*
+  gabarito_comentado: |-
+    O examinando deve redigir Alegações Finais, na forma de memoriais, com fundamento no Art. 403, §3º, do Código de Processo Penal, devendo a petição ser direcionada ao juiz de uma das Varas Criminais da Comarca de Belo Horizonte/MG.
+
+    No mérito, deve o examinando defender a absolvição de Bruno, tendo em vista que nenhum crime de furto foi praticado. Prevê o Art. 155 do Código Penal que configura furto a subtração de coisa alheia móvel.
+
+    A doutrina leciona que a coisa perdida, conhecida como res desperdicta, em princípio, não pode ser objeto do crime de furto, pois ela não está na posse de outra pessoa para ser subtraída. Cabe destacar, porém, que a coisa só é considerada perdida quando está em local público ou de uso público, como efetivamente ocorreu com o relógio de Bernardo.
+
+    O relógio por Bruno encontrado no interior do coletivo e guardado em sua mochila era uma coisa perdida, tendo em vista que encontrado no chão do transporte público e que o seu proprietário, Bernardo, sequer estava no interior do ônibus quando Bruno nele ingressou. Não houve subtração.
+
+    Em tese, quando uma pessoa se apodera de uma coisa perdida, possivelmente será configurado o crime de apropriação de coisa achada, previsto no Art. 169, inciso II, do Código Penal. Contudo, na hipótese, nem mesmo cabível a desclassificação para esse delito, mas tão só a absolvição de Bruno, tendo em vista que uma das elementares do Art. 169, inciso II, do Código Penal não foi realizada. Isso porque o crime de apropriação de coisa achada somente se configura após o agente não restituir a coisa apropriada ao dono ou ao legítimo possuidor após 15 dias. Trata-se de infração penal conhecida como delito a prazo. Como Bruno havia pegado o relógio poucos minutos antes, não estava configurado o delito do Art. 169, inciso II, do Código Penal, pois ele ainda poderia decidir por devolver o bem ao seu proprietário ou na Delegacia dentro do prazo previsto em lei. Diante disso, deve ser requerida, nas Alegações Finais, a absolvição de Bruno.
+
+    Além disso, deve o candidato, com base no princípio da eventualidade, caso se entenda que houve subtração, alegar a atipicidade material da conduta por força do princípio da insignificância, eis que bastante reduzido o valor da coisa e da lesão (1/8do salário mínimo, aproximadamente).
+
+    Ainda com base na subsidiariedade, o examinando deve enfrentar eventual pena a ser aplicada em caso de condenação do réu. Na aplicação da pena base, deve o examinando destacar que deve ser fixada no mínimo legal, tendo em vista que o agente é primário e de bons antecedentes, não tendo como assim não ser, já que havia acabado de completar 18 anos na data em que foi preso em flagrante. O fato de o réu já ter sido punido com medida socioeducativa pela prática de ato infracional análogo ao crime de tráfico não permite o reconhecimento de maus antecedentes ou qualquer outra circunstância judicial desfavorável.
+
+    Na determinação da pena intermediária, deveria ser solicitado o reconhecimento da atenuante da confissão espontânea, prevista no Art. 65, inciso III, alínea d, do Código Penal, assim como da menoridade relativa, com base no Art. 65, inciso I, do CP, uma vez que Bruno era menor de 21 anos na data dos fatos.
+
+    Já na terceira fase de aplicação da reprimenda penal, o advogado deveria solicitar o reconhecimento do furto privilegiado, pois Bruno era primário e a coisa furtada era de pequeno valor, já que o relógio foi adquirido pela quantia de R$ 100,00 (cem reais) apenas. Assim, poderia o examinando pleitear a aplicação de alguma das medidas previstas no Art. 155, §2º, do Código Penal, quais sejam, substituição da pena de reclusão pela de detenção, diminuição de 1/3 a 2/3 da reprimenda penal ou aplicação somente da pena de multa.
+
+    Em caso de aplicação de pena privativa de liberdade, deveria ser, ainda, requerida a substituição desta por restritiva de direitos, pois preenchidos os requisitos do Art. 44 do Código Penal.
+
+    O regime inicial de cumprimento de pena a ser buscado é o aberto.
+
+    Por fim, em caso de não substituição da pena privativa de liberdade por restritiva de direitos por entender não preenchidos seus requisitos, deve o examinando solicitar a aplicação da suspensão condicional da pena, na forma do Art. 77 do Código Penal.
+
+    Diante do exposto, dever ser formulado pedido requerendo:
+
+    a) absolvição do crime de furto, na forma do Art. 386, inciso III, do CPP;
+
+    b) aplicação da pena base no mínimo legal;
+
+    c) reconhecimento das atenuantes da confissão espontânea e da menoridade relativa;
+
+    d) aplicação da forma privilegiada do furto, prevista no Art. 155, §2º, do Código Penal;
+
+    e) substituição da pena privativa de liberdade por restritiva de direitos;
+
+    f) aplicação do regime aberto;
+
+    g) subsidiariamente, suspensão condicional da pena.
+
+    A data a ser indicada é 30 de março de 2015, tendo em vista que o prazo para Alegações Finais é de 05 dias, mas o dia 28/03/2015 é um sábado.
+  itens:
+    - n: "1"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG.(0,10).
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ vara criminal ] }
+    - n: "2"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: "Fundamento legal: 403, §3º, do CPP(0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, dispositivo: [ "art. 403, § 3º, CPP" ] }
+    - n: "3"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: "No mérito: absolvição do crime de furto (0,50), pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime (0,70). Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada (0,10)."
+      componentes:
+        - { id: c1, valor: 0.5, termos: [ absolvi* | absolver, furto ] }
+        - { id: c2, valor: 0.7, termos: [ coisa perdida | res desperdicta | perdida ] }
+        - { id: c3, valor: 0.1, termos: [ apropriacao de coisa achada | coisa achada, 15 dias ] }
+    - n: "4"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: Aplicação do princípio da bagatela ou insignificância (0,40), afastando a tipicidade material (0,20)
+      valores: [ 0, 0.2, 0.4, 0.6 ]
+      componentes:
+        - { id: c1, valor: 0.4, termos: [ bagatela | insignificancia ] }
+        - { id: c2, valor: 0.2, termos: [ tipicidade material | atipic* ] }
+    - n: "5"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: "Subsidiariamente, em caso de condenação: aplicação da pena base no mínimo legal(0,20), destacando que a condenação em ação socioeducativa não gera maus antecedentes ou circunstância judicial desfavorável (0,10)."
+      valores: [ 0, 0.1, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ pena base | pena-base, minimo ] }
+        - { id: c2, valor: 0.1, termos: [ socioeducativ* | ato infracional, antecedentes | circunstancia judicial ] }
+    - n: "6"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: Reconhecimento da atenuante da menoridade relativa (0,20),na forma do Art. 65, inciso I, do CP (0,10).
+      valores: [ 0, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ menoridade relativa | menor de 21 ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 65, I, CP" ], requer: c1 }
+    - n: "7"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: Reconhecimento da atenuante da confissão espontânea (0,20),na forma do Art. 65, inciso III, alínea d, do CP(0,10).
+      valores: [ 0, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ confissao ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 65, III, d, CP" ], requer: c1 }
+    - n: "8"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: Requerimento de aplicação do furto privilegiado, pleiteando a adoção de alguma das medidas previstas em lei (ou substituição da reclusão por detenção ou causa de diminuição de pena ou aplicação exclusivamente da pena de multa) (0,20), na forma do Art. 155, §2º, do CP(0,10).
+      valores: [ 0, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ furto privilegiado | privilegio | privilegiado ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 155, § 2º, CP" ], requer: c1 }
+    - n: "9"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: Substituição da pena privativa de liberdade por restritiva de direitos (0,20),pois preenchidos os requisitos do Art. 44 do CP(0,10).
+      valores: [ 0, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ substitui*, restritiva* de direito* ] }
+        - { id: c2, valor: 0.1, dispositivo: [ art. 44 CP ], requer: c1 }
+    - n: "10"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: Aplicação do regime aberto para início do cumprimento da pena (0,20), na forma do Art. 33, §2º, alínea c, do Código Penal (0,10).
+      valores: [ 0, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ regime, aberto ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 33, § 2º, c, CP" ], requer: c1 }
+    - n: "11"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: Caso não seja substituída a pena privativa de liberdade por restritiva de direitos, aplicação da suspensão condicional da pena, na forma do Art. 77 do CP (0,10).
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ suspensao condicional da pena | sursis ] }
+    - n: "12"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: "Pedidos: absolvição do crime de furto (0,10), na forma do artigo 386, III, CPP (0,10);subsidiariamente, aplicação da pena base no mínimo legal (0,10);reconhecimento das atenuantes da confissão espontânea e da menoridade relativa (0,10);reconhecimento da forma privilegiada do furto (0,10);substituição da pena privativa de liberdade por restritiva de direitos (0,10);fixação do regime aberto (0,10); sursis da pena(0,10)."
+      valores: [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ absolvi* | absolver ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 386, III, CPP" ], requer: c1 }
+        - { id: c3, valor: 0.1, termos: [ pena base | pena-base, minimo ] }
+        - { id: c4, valor: 0.1, termos: [ atenuante* ] }
+        - { id: c5, valor: 0.1, termos: [ privilegi* ] }
+        - { id: c6, valor: 0.1, termos: [ substitui* ] }
+        - { id: c7, valor: 0.1, termos: [ regime, aberto ] }
+        - { id: c8, valor: 0.1, termos: [ sursis | suspensao condicional da pena ] }
+    - n: "13"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: "Indicação da data correta: 30 de março de 2015(0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 30 de marco de 2015 ] }
+    - n: "14"
+      secao: ALEGAÇÕES FINAIS POR MEMORIAIS
+      descricao: Estrutura – endereçamento, local, data, assinatura e OAB(0,10).
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ local, oab ] }
+questoes:
+  - n: 1
+    enunciado: |-
+      Jorge, com 21 anos de idade, reincidente, natural de São Gonçalo/RJ, entrou em uma briga com seus pais, razão pela qual foi morar na casa de sua tia Marta, irmã de seu pai, na cidade de Maricá/RJ, já que esta tinha apenas 40 anos e “o entenderia melhor”. Após 06 meses residindo no mesmo local que sua tia, Jorge subtraiu o carro de Marta, levando-o para uma favela em Niterói, onde pretendia morar no futuro. No começo, Marta não desconfiou da autoria, porém após alguns dias, teve certeza de que o autor do crime era seu sobrinho, mas nada fez para vê-lo responsabilizado criminalmente, em razão do afeto que tinha por ele. Apenas, então, comunicou à seguradora que seu veículo fora furtado.
+
+      Jorge, 01 ano após esses fatos, estava na direção do veículo que havia subtraído quando foi abordado por policiais militares que, constatando que aquele bem era produto de crime pretérito, realizaram sua prisão em flagrante. Jorge foi denunciado pela prática do crime de receptação, mas, no curso da instrução, foi descoberto que, na verdade, o acusado era o autor do crime de furto. O Ministério Público aditou a denúncia para adequá-la às novas descobertas e, após manifestação da Defensoria Pública, foi o aditamento recebido. Não houve requerimento de novas provas. Jorge o(a) procura para, na condição de advogado(a), apresentar as Alegações Finais.
+
+      **Considerando as informações extraídas da hipótese, responda aos itens a seguir.**
+
+      **A) Qual a principal tese defensiva a ser formulada nas Alegações Finais para evitar a condenação de Jorge? (Valor: 0,65)**
+
+      **B) Na condição de advogado(a) do acusado, o que você alegaria, no campo processual, caso o juiz viesse a condenar Jorge, após o aditamento, de acordo com a imputação original de receptação? (Valor: 0,60)**
+
+      *Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) O enunciado narra a prática de um crime de furto simples consumado, praticado por Jorge contra sua tia Marta, com quem ele coabitava. Diante dessa relação de coabitação e parentesco, a ação penal pela prática de tal delito tem natureza de ação pública condicionada à representação. Isso porque o Art. 182, inciso III, do Código Penal prevê que somente se procede mediante representação a ação penal pela prática de crime contra o patrimônio em desfavor de tio, com quem o agente coabita. Não houve violência ou grave ameaça e a vítima não era maior de 60 anos, logo inaplicável o Art. 183 do Código Penal. Sendo a ação condicionada à representação, e não tendo ocorrido no prazo de 06 meses, ocorreu a decadência, de modo que a punibilidade de Jorge deve ser extinta (Art. 107, inciso IV, do Código Penal).
+
+      B) Não poderia o magistrado condenar o denunciado nos termos da imputação original, pois tal conduta violaria os princípios da ampla defesa e do contraditório, além, do princípio da correlação. Ademais, de acordo com Art. 384, §4º, do Código de Processo Penal, o juiz ficará adstrito aos termos do aditamento.
+    itens:
+      - n: A
+        descricao: Extinção da punibilidade pela decadência (0,20),pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação (0,35), na forma do Art. 182, inciso III, do CP (0,10).
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ decaden* ] }
+          - { id: c2, valor: 0.35, termos: [ condicionada, representacao ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 182, III, CP" ], requer: c2 }
+      - n: B
+        descricao: Deveria ser alegada a impossibilidade de condenação na imputação originária, pois o juiz está adstrito aos termos do aditamento (Art. 384, §4º, do CPP) OU porque não foram observados os princípios da ampla defesa e do contraditório OU houve violação ao princípio da correlação (0,60).
+        valores: [ 0, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.6, alternativas: [ [ aditamento ], [ ampla defesa ], [ contraditorio ], [ correlacao | congruencia ] ] }
+  - n: 2
+    enunciado: |-
+      Lívia, primária e de bons antecedentes, foi presa em flagrante enquanto transportava 100g de cocaína a pedido do namorado, conhecido traficante da comunidade em que residiam.
+
+      Apesar de nunca ter participado de qualquer atividade do tráfico em momento anterior, Lívia atendeu ao pedido do namorado com medo de ele terminar o relacionamento em caso de negativa. Já na viatura da Polícia Militar, os policiais passaram a filmar Lívia e conversar sobre o ocorrido quando de sua prisão, tendo ela confirmado os fatos acima descritos sem que soubesse estar sendo filmada.
+
+      Lívia, então, foi denunciada como incursa nas sanções penais do Art. 33 da Lei nº 11.343/06. Durante a instrução, o Ministério Público juntou aos autos o vídeo feito no interior da viatura e dispensou a oitiva dos policiais responsáveis pela prisão, que eram as únicas testemunhas de acusação, tendo em vista que eles foram transferidos para um batalhão de outra comarca. Em seu interrogatório, Lívia permaneceu em silêncio.
+
+      Insatisfeitos com a defesa técnica que atuava até o momento, a família da acusada, no momento das alegações finais, o(a) contrata na condição de advogado(a).
+
+      **Considerando apenas os fatos narrados, responda, justificadamente, aos itens a seguir.**
+
+      **A) É possível a condenação de Lívia apenas com base no vídeo acostado aos autos? (Valor: 0,60)**
+
+      **B) Em caso de condenação de Lívia como incursa nas sanções do Art. 33, § 4º, da Lei nº 11.343/06, é possível a substituição de pena privativa de liberdade por restritiva de direitos?(Valor: 0,65)**
+
+      *Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) Não é possível a condenação de Lívia na hipótese narrada. Os policiais militares responsáveis pela prisão em flagrante não foram ouvidos em juízo, logo não foram produzidas provas testemunhais pela acusação sob o crivo do contraditório, sendo certo que o Art. 155 do Código de Processo Penal impede que uma condenação seja baseada exclusivamente em elementos informativos produzidos durante o inquérito. Por sua vez, o vídeo, acostado aos autos, deve ser considerado prova ilícita, pois realizado em um interrogatório sem assegurar as garantias constitucionais, quais sejam, a de o preso permanecer em silêncio e estar acompanhado por um advogado. Há quem defenda que a gravação por um dos interlocutores, por si só, não constitui prova ilícita.
+
+      Ocorre que, no caso concreto, a particularidade é que foi feito um interrogatório sem as garantias constitucionais, o que a jurisprudência tem chamado de “interrogatório sub-reptício”.
+
+      B) Sim, é possível a substituição da pena privativa de liberdade aplicada pela restritiva de direito. A redação do Art. 33, §4º, da Lei nº 11.343/06, veda expressamente esta substituição. Ocorre que, em sede de controle difuso de constitucionalidade, o STF considerou tal vedação em abstrato inconstitucional, por violar o princípio da individualização da pena. Em razão disso, o Senado, através da Resolução 05 de 2012, suspendeu a eficácia desta parte do dispositivo. Nada impede, assim, que, avaliando as particularidades do caso concreto, ocorra a substituição. Lívia é primária e de bons antecedentes, não tendo praticado crime com violência ou grave ameaça à pessoa, logo a substituição é adequada.
+    itens:
+      - n: A
+        descricao: Não é possível, devendo o vídeo ser considerado como prova ilícita (0,40), pois foi realizado em um interrogatório sem as garantias constitucionais (0,20).
+        valores: [ 0, 0.2, 0.4, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.4, termos: [ prova ilicita | ilicit* ] }
+          - { id: c2, valor: 0.2, termos: [ garantias | informal | sem advertencia | direito ao silencio | aviso de miranda ] }
+      - n: B
+        descricao: Sim, é possível a substituição de pena privativa de liberdade por restritiva de direitos, pois o STF considerou inconstitucional a vedação em abstrato do Art. 33, §4º, da Lei nº 11.343 OU porque o Senado suspendeu a eficácia de parte da redação do Art. 33, §4º da Lei nº 11.343 por meio da Resolução 05 OU porque é inconstitucional, por violar o princípio da individualização da pena, a vedação em abstrato de substituição trazida pelo Art. 33, §4º, da Lei nº 11.343 (0,65).
+        valores: [ 0, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.65, termos: [ substitui*, inconstitucional* | resolucao | individualizacao ] }
+  - n: 3
+    enunciado: |-
+      No curso de uma audiência criminal, João, advogado de Pedro, acusado da prática de um crime de estupro, em sede de alegações finais orais, assevera que o representante do Ministério Público “é arbitrário e tem a sede da condenação, não se importando em acusar uma pessoa comprovadamente inocente”.
+
+      Atendendo à manifestação do Promotor de Justiça, que se sentiu ofendido, o juiz destituiu o advogado e nomeou Defensor Público para continuar na defesa do acusado, que, na ocasião, não estava presente. O Defensor, então, concluiu as alegações finais orais. Na mesma assentada, o magistrado determinou a extração de peças, com o encaminhamento ao Ministério Público, para apurar possível crime contra a honra praticado por João. Pedro, assistido pela Defensoria Pública, acabou condenado na forma do pedido inicial. João, por sua vez, após representação do Promotor de Justiça vítima, foi denunciado pela prática de crime de injúria.
+
+      **Considerando apenas as informações constantes na hipótese narrada, responda, fundamentadamente, aos itens a seguir.**
+
+      **A) Na condição de advogado(a) de João, qual tese de direito material você alegaria em seu favor para afastar a imputação delitiva?(Valor: 0,60)**
+
+      **B) Na condição de advogado(a) de Pedro, qual é a tese a ser alegada, em sede de recurso, para anular a sentença condenatória?(Valor: 0,65)**
+
+      *Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) O examinando deve defender que não foi praticado crime contra a honra de funcionário público por parte de João, pois este estava apenas atuando na condição de advogado de Pedro, não ultrapassando os limites daquilo que sua função lhe permite. Em tese, o crime praticado por João seria o de injúria. Ocorre que, nos termos do Art. 142, inciso I, do Código Penal, não constitui crime de injúria a ofensa irrogada em juízo, na discussão da causa, pela parte ou por seu procurador. Assim, a conduta de João foi atípica, não configurando a prática de crime contra a honra, pois a possível ofensa praticada foi na discussão da causa, defendendo o interesse de Pedro em juízo.
+
+      B) O examinando deveria manifestar-se pela nulidade do processo a partir do ato ilegal de destituição do advogado legalmente constituído ou da sentença, pois não poderia o magistrado ter desconstituído de ofício o advogado, sendo uma escolha da parte indicar a defesa técnica de sua confiança. No caso de ser necessário outro defensor, deveria o juiz intimar o acusado para que manifeste seu interesse em constituir outro advogado ou ser assistido pela Defensoria Pública. Na hipótese, a desconstituição de João e a posterior nomeação de Defensor Público para elaborar alegações finais, sem nem mesmo ter conversado com Pedro, prejudicou sua ampla defesa, garantida pelo Art. 5º, inciso LV, da CRFB/88, razão pela qual deve a sentença ser anulada.
+    itens:
+      - n: A
+        descricao: João não praticou crime de injúria e deve ser absolvido, pois atuava na condição de advogado e a ofensa irrogada em juízo, na discussão da causa, por parte do procurador não constitui injúria (0,50), nos termos do Art. 142, inciso I, do CP (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ advogado | procurador, juizo | discussao da causa | imunidade ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 142, I, CP" ], requer: c1 }
+      - n: B
+        descricao: Nulidade da sentença ou de todos os atos a partir da desconstituição de João (0,10), por violação da ampla defesa de Pedro OU porque deveria Pedro ser intimado para manifestar interesse em constituir novo advogado OU porque não poderia o magistrado ter desconstituído advogado de Pedro na sua ausência (0,55).
+        valores: [ 0, 0.1, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.1, termos: [ nulidade | nula | nulo ] }
+          - { id: c2, valor: 0.55, alternativas: [ [ ampla defesa ], [ intima*, novo advogado | constituir ], [ ausencia, desconstitu* ] ] }
+  - n: 4
+    enunciado: |-
+      Maria, primária e com bons antecedentes, trabalha há vários anos dirigindo uma van de transporte de crianças.
+
+      Certo dia, após mudar o itinerário sempre observado, resolve fazer compras em um supermercado, onde permaneceu por duas horas, esquecendo de entregar uma das crianças de 03 anos na residência da mesma. Ao retornar ao veículo, encontra a criança desfalecida e, desesperada, leva-a ao hospital, não conseguindo, porém, evitar o óbito. Acabou denunciada e condenada pela prática do injusto do Art. 133, § 2º, do Código Penal (abandono de incapaz com resultado morte) à pena de 04 anos de reclusão em regime aberto.
+
+      Apesar de ter respondido ao processo em liberdade, não foi permitido à Maria apelar em liberdade, fundamentando o juiz a ordem de prisão na grande comoção social que o fato causou. A família dispensou o advogado anterior e o(a) procurou para que assumisse a defesa de Maria.
+
+      **Considerando apenas as informações narradas na situação hipotética, responda aos itens a seguir.**
+
+      **A) Qual a tese de direito material a ser alegada em eventual recurso defensivo para evitar a punição de Maria pelo crime pelo qual foi denunciada? Justifique. (Valor: 0,65)**
+
+      **B) Qual a medida que deve ser adotada na busca da liberdade imediata de Maria e com qual fundamento? Justifique. (Valor: 0,60)**
+
+      *Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) Deveria o advogado buscar a absolvição de Maria pelo fato de não ter praticado dolosamente o abandono de incapaz ou, ao menos, a desclassificação para homicídio culposo. O crime de abandono de incapaz somente pode ser praticado de forma dolosa, não admitindo a responsabilização criminal do agente a título de culpa. Na hipótese, de acordo com o texto apresentado, Maria não teve a intenção de abandonar a criança no veículo, tendo, de forma negligente, a esquecido no interior do carro. Dessa forma, não há como ser mantida a condenação pelo crime de abandono de incapaz. O Art. 133, §2º, do Código Penal, apesar de ser aplicável quando o resultado morte decorrer de culpa, exige que haja dolo na conduta antecedente, qual seja, abandono de incapaz, o que não ocorreu na presente hipótese.
+
+      B) Para garantir a liberdade imediata de Maria, o advogado deveria impetrar habeas corpus visando restabelecer a liberdade da ré até o trânsito em julgado da sentença condenatória. A regra geral, que obviamente admite exceções, é a de que o acusado deve apelar na mesma condição em que se encontrava no curso da instrução.
+
+      Estando solto, apela solto; estando preso e sendo condenado em primeira instância, em especial à pena em regime de cumprimento fechado, poderá ser mantida a prisão. No caso concreto deveria ser combatida a decisão que decreta a prisão preventiva de Maria. Alguns argumentos poderiam ser apresentados pelo examinando.
+
+      Primeiramente, poderia ele alegar que não houve circunstância fática nova a justificar a decretação da prisão preventiva, que é medida cautelar e não antecipação do cumprimento da pena. Da mesma forma, poderia esclarecer que a motivação pela comoção social é insuficiente, pois não confunde com o risco para a ordem pública, ademais, de acordo com jurisprudência firme dos Tribunais Superiores, comoção social não enseja prisão cautelar. A sentença condenatória não inovou a situação de modo a justificar a alteração do status libertatis. Por fim, poderia o examinando alegar que Maria foi condenada a 04 anos de reclusão, em regime inicial aberto. A imposição de prisão preventiva, que é medida cautelar, acabaria sendo mais gravosa do que a medida final aplicada, o que violaria o princípio da homogeneidade.
+    itens:
+      - n: A
+        descricao: A tese a ser alegada é que Maria deve ser absolvida ou ter sua conduta desclassificada para o crime de homicídio culposo (0,30), pois o abandono decorreu de culpa e não de dolo (0,35).
+        valores: [ 0, 0.3, 0.35, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.3, alternativas: [ [ absolvi* ], [ desclassifica*, homicidio culposo ] ] }
+          - { id: c2, valor: 0.35, termos: [ culpa, dolo ] }
+      - n: B
+        descricao: O advogado deveria impetrar habeas corpus (0,25), alegando que não houve alteração fática a justificar o decreto prisional OU que a comoção social não é motivação idônea, OU porque com a aplicação do regime aberto, a medida cautelar acabaria sendo mais gravoso que a definitiva (0,35).
+        valores: [ 0, 0.25, 0.35, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.25, termos: [ habeas corpus ] }
+          - { id: c2, valor: 0.35, alternativas: [ [ alteracao fatica | fato novo | contemporaneidade ], [ comocao social, idone* | nao justifica ], [ regime aberto | mais gravos* ] ] }

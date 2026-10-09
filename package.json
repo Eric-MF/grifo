@@ -1,0 +1,43 @@
+{
+  "name": "grifo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build-content.ts && (node scripts/build-content.ts --watch --quiet & next dev -H ${GRIFO_HOST:-100.80.118.27} -p ${GRIFO_PORT:-3100})",
+    "build": "next build --webpack",
+    "preview": "npx --yes serve out -l tcp://${GRIFO_HOST:-100.80.118.27}:${GRIFO_PORT:-3100}",
+    "lint": "eslint",
+    "test": "vitest run",
+    "validar": "node scripts/build-content.ts --check",
+    "content": "node scripts/build-content.ts",
+    "prebuild": "node scripts/build-content.ts",
+    "pdfs": "node scripts/build-pdfs.ts",
+    "build:completo": "npm run build && npm run pdfs && npm run build",
+    "revisar": "node scripts/marcar-revisado.ts",
+    "novo:exame": "node scripts/novo-exame.ts",
+    "nova:pergunta": "node scripts/nova-pergunta.ts",
+    "novo:jogo": "node scripts/novo-jogo.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "next": "16.3.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "^0.0.1",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "pdfjs-dist": "^6.3.289",
+    "playwright": "^1.63.0",
+    "sharp": "^0.35.4",
+    "typescript": "^5",
+    "vitest": "^5.0.2"
+  }
+}

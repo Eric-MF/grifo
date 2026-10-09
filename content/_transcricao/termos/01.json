@@ -1,0 +1,354 @@
+{
+ "_exame": {
+  "aplicacao": "2010-07-25",
+  "questoes.0.valor": 1,
+  "questoes.1.valor": 1,
+  "questoes.2.valor": 1,
+  "questoes.3.valor": 1,
+  "questoes.4.valor": 1,
+  "observacoes": "Exame de 2010 (banca CESPE/UnB): peça de 5,00 e cinco questões de 1,00. A banca não publicou a distribuição de pontos; a tabela é uma estimativa do Grifo a partir do padrão de resposta. Pela observação da banca, vale o conteúdo do dispositivo mesmo sem o número do artigo."
+ },
+ "peca:itens": [
+  {
+   "n": "1",
+   "descricao": "Memoriais endereçados ao Juiz do Tribunal do Júri (0,30).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "juri | tribunal do juri"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "descricao": "Fundamento: substituição dos debates orais por memoriais, por analogia ao art. 403, § 3º, do CPP, com anuência das partes (0,30).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "analogia | memoriais | memorial | alegacoes finais"
+     ],
+     "dispositivo": [
+      "art. 403, § 3º, CPP"
+     ],
+     "rotulo": "Memoriais por analogia ao art. 403, § 3º, do CPP"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "descricao": "Data: 19/7/2010 (0,40).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.4,
+     "termos": [
+      "19 de julho de 2010"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "secao": "Preliminar",
+   "descricao": "Prescrição da pretensão punitiva (0,50): pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (0,40) (CP, arts. 109, IV, 115 e 126) (0,20).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.5,
+     "termos": [
+      "prescri*"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.4,
+     "termos": [
+      "21 anos | menor de 21 | metade"
+     ]
+    },
+    {
+     "id": "c3",
+     "valor": 0.2,
+     "termos": [
+      "4 anos | quatro anos | 8 anos"
+     ],
+     "dispositivo": [
+      "art. 115 CP",
+      "art. 109, IV, CP"
+     ],
+     "requer": "c1",
+     "rotulo": "Arts. 109, IV, e 115 do CP (ou o prazo prescricional)"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "secao": "Mérito",
+   "descricao": "Impronúncia por falta de comprovação da materialidade: laudo pericial inconclusivo (0,60).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.6,
+     "termos": [
+      "materialidade",
+      "laudo | pericia | inconclusiv*"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "secao": "Mérito",
+   "descricao": "Inexistência de indícios suficientes de autoria: falta das declarações da menor (0,60).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.6,
+     "termos": [
+      "indicios | autoria",
+      "leila | menor | declarac* | ouvida"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "secao": "Mérito",
+   "descricao": "Ausência de dolo: a ré não sabia da gravidez e forneceu o remédio para curar úlcera (0,60).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.6,
+     "termos": [
+      "dolo",
+      "gravidez | ulcera | nao sabia | desconhec*"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "secao": "Pedidos",
+   "descricao": "Reconhecimento da preliminar e extinção da punibilidade (0,30); impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415) (0,40).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "extin* da punibilidade"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.4,
+     "alternativas": [
+      [
+       "impronuncia"
+      ],
+      [
+       "absolvicao sumaria | absolvida sumariamente | absolver sumariamente"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "descricao": "Estrutura: local, data, advogado, OAB (0,40).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.4,
+     "termos": [
+      "local",
+      "advogad* | oab | assinatura"
+     ]
+    }
+   ]
+  }
+ ],
+ "q1:itens": [
+  {
+   "n": "A",
+   "descricao": "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP) (0,50).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.5,
+     "termos": [
+      "transit* em julgado"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "B",
+   "descricao": "Não impede: os herdeiros podem promover a liquidação para apurar o dano efetivamente sofrido (art. 63, parágrafo único, CPP) (0,50).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.5,
+     "termos": [
+      "liquida*",
+      "dano efetivo | efetivamente sofrido | apuracao"
+     ]
+    }
+   ]
+  }
+ ],
+ "q2:itens": [
+  {
+   "n": "1",
+   "descricao": "Todos respondem por redução a condição análoga à de escravo (art. 149, § 1º, I e II, e § 2º, I, do CP) (0,40).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.4,
+     "termos": [
+      "escravo | condicao analoga | 149"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "descricao": "Os seguranças praticaram, ainda, o crime do art. 16 da Lei 10.826 e lesão corporal grave (CP, art. 129, § 2º) (0,30).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.15,
+     "termos": [
+      "arma | 10826 | estatuto do desarmamento"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.15,
+     "termos": [
+      "lesao corporal | lesoes"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "descricao": "Formação de quadrilha ou bando (art. 288 do CP) — basta o crime ou a fundamentação (0,30).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "quadrilha | bando | associacao criminosa | 288"
+     ]
+    }
+   ]
+  }
+ ],
+ "q3:itens": [
+  {
+   "n": "A",
+   "descricao": "Sim: a autoridade policial pode realizar diligências em outra circunscrição, independentemente de precatórias (art. 22 do CPP) (0,50).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.5,
+     "termos": [
+      "circunscri* | diligencia*",
+      "sim | pode | possivel | independentemente"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "B",
+   "descricao": "A ação penal privada subsidiária não seria viável: a autoria não foi esclarecida e não estariam atendidos os requisitos do art. 41 do CPP (0,50).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.5,
+     "termos": [
+      "subsidiaria | queixa",
+      "autoria | requisitos | 41"
+     ]
+    }
+   ]
+  }
+ ],
+ "q4:itens": [
+  {
+   "n": "A",
+   "descricao": "O juiz deve remeter os autos ao Juizado Especial: o dano é de menor potencial ofensivo (art. 383, § 2º, CPP; art. 61 da Lei 9.099) (0,50).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.5,
+     "termos": [
+      "juizado especial | jecrim",
+      "remet* | encaminh* | menor potencial"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "B",
+   "descricao": "Não há impedimento à emendatio libelli em segunda instância: não há surpresa, pois os fatos não mudam (0,50).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.5,
+     "termos": [
+      "emendatio libelli | 383",
+      "segunda instancia | tribunal | possivel | nao ha impedimento"
+     ]
+    }
+   ]
+  }
+ ],
+ "q5:itens": [
+  {
+   "n": "A",
+   "descricao": "Procedimento comum sumário: pena máxima inferior a 4 anos (art. 394, § 1º, II, CPP) (0,40).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.4,
+     "termos": [
+      "sumario"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "B",
+   "descricao": "A defesa pode arrolar até cinco testemunhas (art. 532 do CPP) (0,30).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "5 testemunhas | ate 5"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "C",
+   "descricao": "Alegações finais orais em 20 minutos, prorrogáveis por mais 10 (art. 534 do CPP) (0,30).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "20 minutos",
+      "prorroga* | mais 10 | 10 minutos"
+     ]
+    }
+   ]
+  }
+ ]
+}

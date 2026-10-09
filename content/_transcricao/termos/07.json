@@ -1,0 +1,197 @@
+{
+ "_exame": {
+  "peca.aliases": [
+   "apelacao do assistente de acusacao",
+   "apelacao"
+  ],
+  "peca.nome": "Apelação (assistente de acusação)"
+ },
+ "1.c1": [
+  "local",
+  "advogad* | assinatura | oab"
+ ],
+ "2.c1": {
+  "dispositivo": [
+   "art. 593, I, CPP",
+   "art. 416 CPP"
+  ]
+ },
+ "3.c1": [
+  "1 vara criminal | tribunal do juri | juri"
+ ],
+ "4.c1": [
+  "tribunal de justica | tj"
+ ],
+ "5.c1": [
+  "habilita*",
+  "assistente"
+ ],
+ "6.c1": [
+  "absolvicao sumaria | absolver sumariamente | absolvida sumariamente",
+  "inimputab*",
+  "unica tese | nao era a unica | outras teses | outra tese"
+ ],
+ "7.c1": [
+  "estado puerperal",
+  "elemento | elementar | infanticidio"
+ ],
+ "8.1.c1": [
+  "reforma*",
+  "sentenca | absolvicao"
+ ],
+ "8.2.c1": [
+  "pronuncia*"
+ ],
+ "9.c1": [
+  "15 dias | prazo"
+ ],
+ "q1:itens": [
+  {
+   "n": "A",
+   "descricao": "Mencionar o princípio da consunção OU o princípio da absorção (0,25).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.25,
+     "termos": [
+      "consun* | absorc*"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "B",
+   "descricao": "O crime do art. 299 do CP foi meio para o crime-fim contra a ordem tributária (0,60); Ricardo deve responder pelo delito do art. 1º da Lei 8.137/90 (0,40).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.6,
+     "termos": [
+      "meio | crime-meio | crime meio",
+      "ordem tributaria | sonegacao | 8137"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.4,
+     "termos": [
+      "responder | responde",
+      "8137 | ordem tributaria"
+     ],
+     "requer": "c1"
+    }
+   ]
+  }
+ ],
+ "q2:itens": [
+  {
+   "n": "1",
+   "descricao": "Larissa agiu em erro de tipo essencial (0,30), nos termos do art. 20, caput, do CP (0,15).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "erro de tipo"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.15,
+     "dispositivo": [
+      "art. 20 CP"
+     ],
+     "requer": "c1"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "descricao": "Faltava-lhe consciência de que praticava conduta típica OU não sabia que portava drogas, elementar do tipo (0,40).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.4,
+     "alternativas": [
+      [
+       "consciencia"
+      ],
+      [
+       "nao sabia | desconhec*",
+       "droga*"
+      ],
+      [
+       "elementar"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "descricao": "Não houve dolo e, como o tráfico (art. 33 da Lei 11.343/06) não admite modalidade culposa, o fato é atípico (0,40).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.4,
+     "termos": [
+      "culpos*",
+      "atipic*"
+     ]
+    }
+   ]
+  }
+ ],
+ "q3:A": {
+  "componentes": [
+   {
+    "id": "c1",
+    "valor": 0.65,
+    "alternativas": [
+     [
+      "morte | lesao corporal grave | lesao grave",
+      "consuma*"
+     ],
+     [
+      "nao e punivel | nao punivel | atipic*"
+     ]
+    ],
+    "rotulo": "Não houve crime (art. 122 só se consuma com morte ou lesão grave) OU o fato não é punível"
+   }
+  ]
+ },
+ "q3:B": {
+  "componentes": [
+   {
+    "id": "c1",
+    "valor": 0.6,
+    "termos": [
+     "lesao | lesoes",
+     "grave*",
+     "induzimento | instigacao | auxilio | 122"
+    ],
+    "rotulo": "Lesão grave consuma a instigação/auxílio ao suicídio: João responderia pelo art. 122"
+   }
+  ]
+ },
+ "q4:A.1.c1": [
+  "joana",
+  "conduta | nao cometeu | nenhum crime"
+ ],
+ "q4:A.2.c1": [
+  "estelionato"
+ ],
+ "q4:A.3.c1": [
+  "escusa absolutoria | isencao de pena | isento de pena"
+ ],
+ "q4:B.c1": [
+  "roubo"
+ ],
+ "q4:B.c2": [
+  "isencao | escusa | 183",
+  "nao se aplica | nao incide | inaplica* | afastad* | nao alcanca | nao abrange"
+ ],
+ "2.c2": {
+  "requer": null
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "_exame": { "observacoes": "A FGV aceitou duas peças neste exame: Revisão Criminal (tabela usada aqui) ou Justificação Criminal (art. 861 do CPC c/c art. 3º do CPP), com tabela própria. O corretor automático avalia pela tabela da Revisão Criminal." },
+  "peca:itens": [
+    { "n": "1", "descricao": "Endereçamento correto: Tribunal de Justiça do Estado de Mato Grosso (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["tribunal de justica | tj", "mato grosso | mt"] } ] },
+    { "n": "2", "descricao": "Dispositivo legal que embasa a Revisão Criminal: art. 621, I, do CPP OU art. 621, III, do CPP (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "dispositivo": ["art. 621, I, CPP", "art. 621, III, CPP"] } ] },
+    { "n": "3.1", "secao": "Mérito", "descricao": "Da tese do arrependimento posterior: incide o instituto do arrependimento posterior (0,50), nos termos do Art. 16 do CP (0,25).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["arrependimento posterior"] }, { "id": "c2", "valor": 0.25, "dispositivo": ["art. 16 CP"], "requer": "c1" } ] },
+    { "n": "3.2", "secao": "Mérito", "descricao": "A restituição do bem ocorreu antes do recebimento da denúncia (0,25) e foi integral (0,25), razão pela qual a revisionanda faz jus à diminuição da pena (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["restitui* | devolu* | devolveu", "antes do recebimento"] }, { "id": "c2", "valor": 0.25, "termos": ["integral*"] }, { "id": "c3", "valor": 0.25, "termos": ["diminui* | redu*", "pena"] } ] },
+    { "n": "4", "secao": "Mérito", "descricao": "Desclassificação para furto simples (0,50), pois não houve efetivo deslocamento do bem para o exterior (0,50), restando o crime do Art. 155, caput, do CP (0,25).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["desclassifica*", "furto simples"] }, { "id": "c2", "valor": 0.5, "termos": ["exterior | outro pais | fronteira", "nao houve | nao ocorreu | sem | ausencia"] }, { "id": "c3", "valor": 0.25, "dispositivo": ["art. 155 CP"], "requer": "c1" } ] },
+    { "n": "5", "secao": "Mérito", "descricao": "Consequente modificação do regime para o semiaberto (0,25), conforme a Súmula 269 do STJ (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["regime", "semiaberto | semi-aberto"] }, { "id": "c2", "valor": 0.25, "dispositivo": ["Súmula 269 STJ"], "requer": "c1" } ] },
+    { "n": "6", "secao": "Pedidos", "descricao": "Pedidos, com fundamento no art. 626 do CPP (0,25): desclassificação para furto simples (0,25); diminuição da pena (0,25); fixação do regime semiaberto (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "dispositivo": ["art. 626 CPP"] }, { "id": "c2", "valor": 0.25, "termos": ["desclassifica*"] }, { "id": "c3", "valor": 0.25, "termos": ["diminui* | redu*"] }, { "id": "c4", "valor": 0.25, "termos": ["semiaberto | semi-aberto"] } ] },
+    { "n": "7", "descricao": "Estrutura correta: divisão das partes, local, data, assinatura e demais formalidades (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["local", "advogad* | assinatura | oab"] } ] }
+  ],
+  "q1:A1": { "componentes": [ { "id": "c1", "valor": 0.85, "alternativas": [["falta de previsao legal | sem previsao legal | nao preve | ausencia de previsao"], ["sumula 441"], ["nao interrompe", "livramento"]], "rotulo": "Não: falta de previsão legal (art. 83 do CP) OU Súmula 441 do STJ" } ] },
+  "q1:A2": { "componentes": [ { "id": "c1", "valor": 0.4, "alternativas": [["legalidade"], ["bis in idem"], ["analogia", "in malam partem | prejudicial"]], "rotulo": "Violaria a legalidade, o ne bis in idem ou seria analogia in malam partem" } ] },
+  "q2:A1.c1": ["dolo", "homicidio culposo"],
+  "q2:A2.c1": ["resultado diverso | aberratio criminis | aberratio delicti"],
+  "q2:A2.c2": ["dano", "concurso formal"],
+  "q3:A": { "componentes": [
+    { "id": "c1", "valor": 0.5, "termos": ["justica estadual"] },
+    { "id": "c2", "valor": 0.25, "alternativas": [["brasil | territorio nacional"], ["nao houve", "trafico internacional | transnacional"], ["sumula 522"], ["70", "11343 | lei de drogas"]], "requer": "c1", "rotulo": "Cidades no Brasil OU não houve tráfico internacional OU Súmula 522 do STF OU art. 70 da Lei 11.343/06" } ] },
+  "q3:B": { "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["justica estadual", "dolo | exterior"] } ] },
+  "q4:itens": [
+    { "n": "A", "descricao": "Wilson, por ser agente garantidor (0,30), responde pelo delito de homicídio (0,30) praticado via omissão imprópria (0,30).", "componentes": [ { "id": "c1", "valor": 0.3, "termos": ["garantidor | garante | dever de agir | dever legal"] }, { "id": "c2", "valor": 0.3, "termos": ["wilson | salva-vidas | salva vidas", "homicidio"] }, { "id": "c3", "valor": 0.3, "termos": ["omissao impropria | comissivo por omissao | omissivo improprio"] } ] },
+    { "n": "B", "descricao": "Erika responde como partícipe de tal homicídio (0,35).", "componentes": [ { "id": "c1", "valor": 0.35, "termos": ["erika", "particip*"] } ] }
+  ]
+}

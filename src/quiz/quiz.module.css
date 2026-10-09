@@ -1,0 +1,35 @@
+/* Pergunta de 2ª fase: usada pelo jogo e pelo treino. */
+.quizOverlay { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center; padding: 0.75rem; background: rgb(3 17 44 / 0.55); overflow: auto; }
+.quizLayout { width: min(100%, 980px); display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 1rem; align-items: start; }
+.quizBox { background: var(--bg); color: var(--text); border-radius: 20px; padding: 1.3rem 1.4rem; box-shadow: 0 24px 60px rgb(0 0 0 / 0.35); max-height: calc(100dvh - 3rem); overflow: auto; }
+.quizAd { opacity: 0.92; }
+.quizEyebrow { margin: 0; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-ink); }
+.quizTitulo { font-size: 1.5rem; margin: 0.2rem 0 0.8rem; }
+.caso { font-size: 0.98rem; line-height: 1.55; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0.8rem 1rem; }
+.quizPoder { margin: 0 0 0.7rem; font-size: 0.92rem; color: var(--muted); }
+.quizPoder img { width: 28px; height: 28px; vertical-align: middle; margin-right: 0.2rem; }
+.comando { font-weight: 700; margin: 0.4rem 0 0.8rem; }
+.alts { display: grid; gap: 0.45rem; }
+.alt {
+  display: flex; align-items: center; gap: 0.7rem; text-align: left; padding: 0.7rem 0.9rem; border-radius: 12px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; font-weight: 600;
+}
+.alt:hover { border-color: var(--primary); }
+.altLetra { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--surface-2); font-weight: 800; flex: none; }
+.form { display: grid; gap: 0.7rem; }
+.form label { display: grid; gap: 0.25rem; font-size: 0.85rem; font-weight: 700; }
+.form input { padding: 0.65rem 0.8rem; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); font-size: 1rem; font-weight: 400; }
+.form button { justify-self: start; }
+.feedback { display: grid; gap: 0.35rem; padding: 0.9rem 1rem; border-radius: 12px; }
+.feedback p { margin: 0; }
+.fbOk { background: color-mix(in srgb, var(--ok) 14%, var(--surface)); }
+.fbErro { background: color-mix(in srgb, var(--bad) 12%, var(--surface)); }
+.fbTitulo { font-size: 1.2rem; }
+.fbDetalhe { font-size: 0.85rem; color: var(--muted); }
+.fbExp { font-size: 0.9rem; color: var(--muted); }
+.feedback button { justify-self: start; margin-top: 0.4rem; }
+@media (max-width: 760px) {
+  .quizLayout { grid-template-columns: 1fr; }
+  .quizAd { max-width: 100%; }
+  .quizAd > aside { max-width: none; }
+}

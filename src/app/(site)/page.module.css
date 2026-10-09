@@ -1,0 +1,88 @@
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: min(88vh, 760px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(180deg, #1a5b93 0%, #3b6e98 45%, #c98f45 100%);
+}
+.heroImg, .heroFallback {
+  position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; object-fit: cover; object-position: left center;
+}
+.hero::after {
+  /* véu para garantir legibilidade do texto à direita */
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, transparent 30%, rgb(3 17 44 / 0.35) 60%, rgb(3 17 44 / 0.55) 100%);
+}
+.heroFallback { display: flex; align-items: flex-end; }
+.temple { width: min(62vw, 720px); height: auto; fill: #0b2446; opacity: 0.95; }
+.heroInner { display: flex; justify-content: flex-end; padding-block: 4rem; }
+.heroText { max-width: 560px; text-shadow: 0 2px 18px rgb(3 17 44 / 0.35); }
+.heroText h1 { color: #fff; }
+.heroEyebrow {
+  display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.8rem;
+}
+.gold { color: var(--gold); }
+.heroLead { font-size: 1.2rem; color: #eef3f9; max-width: 46ch; }
+.ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+.btnLight { background: rgb(255 255 255 / 0.12); color: #fff; border-color: rgb(255 255 255 / 0.55); backdrop-filter: blur(4px); }
+.btnLight:hover { background: rgb(255 255 255 / 0.22); }
+:global(:root[data-theme="contraste"]) .hero { background: #000; }
+:global(:root[data-theme="contraste"]) .hero::after { background: rgb(0 0 0 / 0.75); }
+
+@media (max-width: 800px) {
+  .hero { min-height: auto; }
+  .hero::after { background: linear-gradient(180deg, rgb(3 17 44 / 0.25), rgb(3 17 44 / 0.7)); }
+  .heroInner { justify-content: flex-start; padding-block: 5rem 3rem; }
+  .temple { width: 110vw; opacity: 0.55; }
+}
+
+/* ---------- Ferramentas ---------- */
+.tools { margin-top: 1.5rem; }
+.tool { text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.18s ease, border-color 0.18s ease; }
+.tool:hover { transform: translateY(-3px); border-color: var(--accent); text-decoration: none; }
+.toolIcon {
+  width: 52px; height: 52px; display: grid; place-items: center; font-size: 1.6rem;
+  border-radius: 14px; background: color-mix(in srgb, var(--accent) 18%, transparent); margin-bottom: 1rem;
+}
+.toolCta { margin-top: auto; font-weight: 700; color: var(--primary); }
+
+/* ---------- Passos ---------- */
+.steps { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.step { position: relative; padding-top: 0.5rem; }
+.stepN {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  font-family: var(--font-title); font-size: 1.4rem; font-weight: 700;
+  background: var(--navy); color: var(--gold); margin-bottom: 0.8rem; font-variant-numeric: lining-nums;
+}
+:global(:root[data-theme="escuro"]) .stepN { background: var(--gold); color: var(--navy); }
+
+/* ---------- Banner do jogo ---------- */
+.gameBanner { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+.gameImg { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+.gameImgFallback {
+  aspect-ratio: 16 / 9; border-radius: var(--radius); display: grid; place-items: center; font-size: 5rem;
+  background: linear-gradient(180deg, #5a9ed6, #bfe0f7);
+}
+@media (max-width: 800px) { .gameBanner { grid-template-columns: 1fr; } }
+
+/* ---------- Curso ---------- */
+.course { background: var(--navy); color: #eaf0f7; padding-block: 5rem; }
+:global(:root[data-theme="contraste"]) .course { background: #000; border-block: 1px solid #fff; }
+.course h2 { color: #fff; }
+.courseInner { display: grid; grid-template-columns: auto 1fr; gap: 2.5rem; align-items: center; }
+.courseLogo { color: var(--gold); width: clamp(80px, 14vw, 160px); height: auto; }
+.courseList { padding-left: 1.2rem; margin: 0 0 1.5rem; display: grid; gap: 0.35rem; }
+.courseList li::marker { color: var(--gold); }
+.courseSoon { font-size: 0.85rem; color: #a9b8c8; margin-top: 0.75rem; }
+@media (max-width: 640px) { .courseInner { grid-template-columns: 1fr; } }
+
+/* ---------- FAQ ---------- */
+.faq { max-width: 820px; }
+.faqItem { border-bottom: 1px solid var(--border); padding-block: 0.4rem; }
+.faqItem summary { cursor: pointer; font-weight: 600; padding-block: 0.7rem; list-style-position: outside; }
+.faqItem p { color: var(--muted); }

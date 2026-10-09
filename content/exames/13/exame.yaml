@@ -1,0 +1,272 @@
+# XIII Exame de Ordem Unificado — Direito Penal
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
+id: "13"
+numero: 13
+numeral: XIII
+revisao:
+  status: rascunho
+  por: ""
+  em: ""
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
+peca:
+  nome: Apelação
+  tipo: apelacao
+  aliases: []
+  enunciado: |-
+    Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
+
+    Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
+
+    Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
+
+    Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
+
+    Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
+
+    O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
+  gabarito_comentado: |-
+    O examinando deverá elaborar um recurso de apelação, com fundamento no artigo 593, I do CPP, apenas.
+
+    A petição de interposição deverá ser endereçada ao Juiz da Vara Criminal.
+
+    As razões do recurso deverão ser endereçadas ao Tribunal de Justiça.
+
+    No mérito, o examinando deve alegar que:
+
+    (i) O crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou um crime-meio, essencial à execução do crime-fim, que era o furto qualificado. Assim, deve ser excluída a condenação pelo delito de violação de domicílio, restando, apenas, o delito de furto qualificado;
+
+    ii) Não há que se falar em reincidência, nos termos do artigo 63, do CP. Note-se que o delito em análise não foi praticado após o trânsito em julgado de condenação anterior. Uma simples sentença condenatória não tem o condão de gerar reincidência;
+
+    (iii) Levando em conta o afastamento do delito de violação de domicílio, bem como o afastamento da circunstância agravante da reincidência, o réu fará jus à diminuição da pena e consequente modificação de seu regime de cumprimento, passando do semi-aberto para o aberto, nos termos do artigo 33, §2º, c, do CP;
+
+    (iv) Levando em conta o afastamento da reincidência, verifica-se que o réu faz jus à substituição da pena privativa de liberdade por pena restritiva de direitos, nos termos do artigo 44, do CP.
+
+    Ao final, o examinando deverá elaborar os seguintes pedidos:
+
+    (i) Absolvição do crime de violação de domicílio;
+
+    (ii) Afastamento da circunstância agravante da reincidência;
+
+    (iii) Consequente diminuição da pena;
+
+    (iv) Consequente fixação do regime aberto para cumprimento de pena;
+
+    (v) Substituição da pena privativa de liberdade por pena restritiva de direitos.
+
+    Levando em conta o comando da questão, que determina datar as peças com o último dia do prazo cabível para a interposição, ambas as petições (interposição e razões do recurso) deverão ser datadas do dia 03/09/2013.
+  itens:
+    - n: "1"
+      secao: Petição de interposição
+      descricao: "Endereçamento da petição de interposição: Juiz de Direito da ___ Vara Criminal da Comarca ___ (0,20)."
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ vara criminal | juiz de direito | juizo ] }
+    - n: "2"
+      secao: Petição de interposição
+      descricao: "Fundamento legal da petição de interposição: artigo 593, I, do CPP (0,30)."
+      componentes:
+        - { id: c1, valor: 0.3, dispositivo: [ "art. 593, I, CPP" ] }
+    - n: "3"
+      secao: Petição de interposição
+      descricao: "Data: 03/09/2013 (0,25). É necessária a data correta na petição de interposição."
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ 3 de setembro de 2013 ] }
+    - n: "4"
+      secao: Razões
+      descricao: "Endereçamento das razões: Tribunal de Justiça do Estado ___ (0,20)."
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ tribunal de justica | tj ] }
+    - n: "5.1"
+      secao: Mérito
+      descricao: "Da aplicação do princípio da consunção ou absorção (0,30): o crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou crime-meio, essencial à execução do crime-fim; deve ser excluída a condenação pela violação de domicílio (0,50)."
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ consun* | absorc* | absorvid* ] }
+        - { id: c2, valor: 0.5, termos: [ violacao de domicilio, crime-meio | crime meio | meio | absorvid* | excluida | exclusao ] }
+    - n: 5.2a
+      secao: Mérito
+      descricao: "Da inaplicabilidade da reincidência: não há que se falar em reincidência (0,30), nos termos do artigo 63 do CP (0,10)."
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ reincid*, nao ha | afast* | inaplica* | nao configura* | inexist* ] }
+        - { id: c2, valor: 0.1, dispositivo: [ art. 63 CP ], requer: c1 }
+    - n: 5.2b
+      secao: Mérito
+      descricao: O delito não foi praticado após o trânsito em julgado de condenação anterior; sentença condenatória recorrível não gera reincidência (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ transit* em julgado | recorrivel ] }
+    - n: "5.3"
+      secao: Mérito
+      descricao: Da consequente diminuição de pena (0,30).
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ diminui* | redu*, pena ] }
+    - n: "5.4"
+      secao: Mérito
+      descricao: Da consequente fixação do regime aberto (0,25), nos termos do artigo 33, § 2º, c, do CP (0,15).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ regime, aberto ] }
+        - { id: c2, valor: 0.15, dispositivo: [ "art. 33, § 2º, c, CP" ], requer: c1 }
+    - n: "5.5"
+      secao: Mérito
+      descricao: Da substituição da pena privativa de liberdade por restritiva de direitos (0,25), nos termos do artigo 44 do CP (0,15).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ substitui*, restritiva* de direito* ] }
+        - { id: c2, valor: 0.15, dispositivo: [ art. 44 CP ], requer: c1 }
+    - n: 6a
+      secao: Pedidos
+      descricao: Absolvição do crime de violação de domicílio OU absolvição nos termos do art. 386, III, do CPP (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ absolvi* | absolver ] }
+    - n: 6b
+      secao: Pedidos
+      descricao: Afastamento da circunstância agravante da reincidência (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ reincid* ] }
+    - n: 6c
+      secao: Pedidos
+      descricao: Consequente diminuição da pena (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ diminui* | redu* ] }
+    - n: 6d
+      secao: Pedidos
+      descricao: Consequente fixação do regime aberto (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ aberto ] }
+    - n: 6e
+      secao: Pedidos
+      descricao: Substituição da pena privativa de liberdade por restritiva de direitos (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ substitui* ] }
+    - n: "7"
+      secao: Estrutura
+      descricao: "Estrutura: duas petições (interposição e razões); endereçamento nas petições; local, data, assinatura (0,25)."
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ local, advogad* | assinatura ] }
+questoes:
+  - n: 1
+    enunciado: |-
+      Gustavo, retornando para casa após ir a uma festa com sua esposa, é parado em uma blitz de rotina. Ele fica bastante nervoso, pois sabe que seu carro está com a documentação totalmente irregular (IPVA atrasado, multas vencidas e vistoria não realizada) e, muito provavelmente, o veículo será rebocado para o depósito. Após determinar a parada do veículo, o policial solicita que Gustavo saia do carro e exiba os documentos. Como havia diversos outros carros parados na fiscalização, forma-se uma fila de motoristas.
+
+      Gustavo, então, em pé, na fila, aguardando sua vez para exibir a documentação, fala baixinho à sua esposa:
+
+      “Vou ver se tem jogo. Vou oferecer cem reais pra ele liberar a gente. O que você acha? Será que dá?”. O que Gustavo não sabia, entretanto, é que exatamente atrás dele estava um policial que tudo escutara e, tão logo acaba de proferir as palavras à sua esposa, Gustavo é preso em flagrante. Atordoado, ele pergunta: “O que eu fiz?”, momento em que o policial que efetuava o flagrante responde: “Tentativa de corrupção ativa!”.
+
+      Atento(a) ao caso narrado e tendo como base apenas as informações descritas no enunciado, responda justificadamente, aos itens a seguir.
+
+      **A) É correto afirmar que Gustavo deve responder por tentativa de corrupção ativa? (Valor: 0,70)**
+
+      **B) Caso o policial responsável por fiscalizar os documentos, observando a situação irregular de Gustavo, solicitasse quantia em dinheiro para liberá-lo e, Gustavo, por medo, pagasse tal quantia, ele (Gustavo)**
+
+      responderia por corrupção ativa? (Valor: 0,55)
+
+      O mero “sim” ou “não”, desprovido de justificativa ou mesmo com a indicação de justificativa inaplicável ao caso, não será pontuado.
+    gabarito_comentado: |-
+      A questão objetiva extrair do examinando conhecimento acerca do iter criminis e dos crimes praticados por particular contra a administração pública.
+
+      Nesse sentido, relativamente à alternativa “A”, o examinando deve lastrear sua resposta no sentido de que o delito de corrupção ativa (artigo 333 do CP) é crime formal que não admite, via de regra, a modalidade tentada (exceto, como exemplo recorrente na doutrina, se o crime for praticado via escritos). Além disso, levando em conta a narrativa do enunciado, percebe-se que o delito em análise sequer teve o início da execução e, muito menos, atingiu a consumação. Isso porque a corrupção ativa somente se consuma com o efetivo oferecimento ou promessa de vantagem indevida, o que não ocorreu no caso narrado.
+
+      Consequentemente, a conduta levada a efeito por Gustavo é atípica.
+
+      No que se refere a alternativa “B”, por sua vez, o examinando deve indicar que caso Gustavo pagasse a quantia solicitada pelo policial ele não responderia por corrupção ativa pelo simples fato de que tal conduta sequer está descrita no tipo penal do artigo 333 do CP, configurando, portanto, fato atípico.
+    itens:
+      - n: A
+        descricao: Não, pois o delito de corrupção ativa, da maneira como foi narrado, não admite a modalidade tentada. (0,30) / Ademais, como sequer houve a prática de qualquer das condutas descritas no tipo penal, o fato é atípico. (0,40) OU Não, pois o agente não iniciou a execução do delito objetivado. (0,30) / Inclusive, como sequer houve a prática de qualquer das condutas descritas no tipo penal, o fato é atípico. (0,40)
+        valores: [ 0, 0.3, 0.4, 0.7 ]
+        componentes:
+          - { id: c1, valor: 0.3, alternativas: [ [ nao admite, tentativa | tentada ], [ nao iniciou, execucao ], [ cogitacao ], [ formal ] ], rotulo: "Corrupção ativa, como narrada, não admite tentativa OU não houve início da execução" }
+          - { id: c2, valor: 0.4, termos: [ atipic* ] }
+      - n: B
+        descricao: Não, pois nessa hipótese a conduta não está prevista no tipo penal. (0,55) OU Não, pois nessa hipótese a conduta é atípica. (0,55)
+        valores: [ 0, 0.55 ]
+        componentes:
+          - { id: c1, valor: 0.55, alternativas: [ [ nao esta prevista | nao prevista | nao descrita ], [ atipic* ], [ concussao ] ], rotulo: "Não, pois a conduta (pagar o que foi exigido) não está prevista no tipo / é atípica" }
+  - n: 2
+    enunciado: |-
+      Antônio, auxiliar de serviços gerais de uma multinacional, nos dias de limpeza, passa a observar uma escultura colocada na mesa de seu chefe. Com o tempo, o desejo de ter aquele objeto fica incontrolável, razão pela qual ele decide subtraí-lo.
+
+      Como Antônio não tem acesso livre à sala onde a escultura fica exposta, utiliza-se de uma chave adaptável a qualquer fechadura, adquirida por meio de um amigo chaveiro, que nada sabia sobre suas intenções.
+
+      Com ela, Antônio ingressa na sala do chefe, após o expediente de trabalho, e subtrai a escultura pretendida, colocando-a em sua bolsa.
+
+      Após subtrair o objeto e sair do edifício onde fica localizada a empresa, Antônio caminha tranquilamente cerca de 400 metros. Apenas nesse momento é que os seguranças da portaria suspeitam do ocorrido. Eles acham estranha a saída de Antônio do local após o expediente (já que não era comum a realização de horas extras), razão pela qual acionam policiais militares que estavam próximos do local, apontando Antônio como suspeito. Os policiais conseguem alcançá-lo e decidem revistá-lo, encontrando a escultura da sala do chefe na sua bolsa. Preso em flagrante, Antônio é conduzido até a Delegacia de Polícia.
+
+      Antônio, então, é denunciado e regularmente processado. Ocorre que, durante a instrução processual, verifica-se que a escultura subtraída, apesar de bela, foi construída com material barato, avaliada em R$ 250,00 (duzentos e cinquenta reais), sendo, portanto, de pequeno valor. A FAC (folha de antecedentes criminais) aponta que Antônio é réu primário.
+
+      Ao final da instrução, em que foram respeitadas todas as exigências legais, o juiz, em decisão fundamentada, condena Antônio a 2 (dois) anos de reclusão pela prática do crime de furto qualificado pela utilização de chave falsa, consumado, com base no artigo 155, § 4º, III, do CP.
+
+      Nesse sentido, levando em conta apenas os dados contidos no enunciado, responda aos itens a seguir.
+
+      **A) É correto afirmar que o crime de furto praticado por Antônio atingiu a consumação? Justifique. (Valor:**
+
+      0,40)
+
+      **B) Considerando que Antônio não preenche os requisitos elencados pelo STF e STJ para aplicação do princípio da insignificância, qual seria a principal tese defensiva a ser utilizada em sede de apelação? Justifique. (Valor: 0,85)**
+
+      O examinando deve fundamentar corretamente sua resposta. A simples menção ou transcrição do dispositivo legal não pontua.
+    gabarito_comentado: |-
+      A questão trata do crime de furto e busca extrair do examinando conhecimento específico sobre dois pontos importantes acerca do tema: o momento consumativo do delito e a incidência do privilégio. A primeira indagação tem cunho eminentemente teórico, enquanto a segunda é de caráter prático, pois exige que o examinando saiba interpretar informações dadas no enunciado e, a partir delas, identificar a incidência do privilégio, o que será capaz de reduzir significativamente a resposta penal a ser dada ao personagem da questão. Nesse sentido, para fazer jus aos pontos relativos ao item “A” o examinando deve responder afirmativamente, indicando que o furto atingiu a consumação. Com efeito, diversas teorias existem sobre o momento consumativo do crime de furto, sendo certo que a predominante, tanto na doutrina quanto na jurisprudência dos Tribunais Superiores, é a Teoria da Amotio, segundo a qual a consumação ocorre quando a coisa subtraída passa para o poder do agente, mesmo que num curto espaço de tempo – tal como ocorreu no caso narrado -, independentemente de deslocamento ou posse mansa e pacífica da coisa. Também merece destaque, embora não seja o entendimento majoritário, reflexão sobre o momento consumativo do crime de furto narrado no enunciado com a adoção da Teoria da Ablatio.
+
+      Perceba-se que ainda assim a resposta seria a mesma: o furto foi consumado. Isso porque, para aqueles que adotam a Teoria da Ablatio, o furto consuma-se quando o agente, depois de apoderar-se da coisa, consegue deslocá-la de um lugar para o outro – fato que, da mesma forma, foi narrado no enunciado. Cabe ressaltar que a Banca Examinadora, com o intuito de privilegiar a demonstração de conhecimento jurídico, aceitará como justificativa correta ambas as fundamentações acima expostas, sem perder de vista que os Tribunais Superiores adotam a Teoria da Amotio. Pelo mesmo motivo, entretanto, não será pontuada a resposta que traga apenas a afirmativa “sim”, desprovida de qualquer justificativa ou mesmo com justificativa equivocada.
+
+      No tocante ao item “B”, para que receba a pontuação respectiva, o examinando deve indicar que de acordo com a questão, desconsiderando a argumentação no sentido de aplicação do princípio da insignificância (que pelo próprio enunciado afigura-se como inaplicável), a principal tese defensiva deve ser o reconhecimento do furto qualificado e privilegiado (artigo 155, § 2º, c/c artigo 155, § 4º, III, ambos do CP).
+
+      Isso porque a qualificadora da utilização de chave falsa possui natureza objetiva, sendo compatível com o furto privilegiado, que é de ordem subjetiva. O reconhecimento do furto privilegiado ou mínimo deve ser o argumento defensivo em sede de apelação por trazer vários benefícios a Antônio como a substituição da pena de reclusão pela pena de detenção, a diminuição da pena de um a dois terços ou aplicação da pena de multa. Cabe destacar que há muito tempo a controvérsia sobre a possibilidade de furto privilegiado e qualificado foi superada, existindo diversos julgados tanto no STF quanto no STJ sobre o tema. Inclusive, o próprio STF, no Informativo 580, manifestou-se sobre a possibilidade de tal combinação, sendo, portanto, a melhor tese defensiva.
+    itens:
+      - n: A
+        descricao: Sim, porque a subtração foi completa, já que a res furtiva foi encontrada na bolsa de Antônio, havendo perda da disponibilidade por parte do proprietário do bem subtraído (0,40).
+        valores: [ 0, 0.4 ]
+        componentes:
+          - { id: c1, valor: 0.4, termos: [ consum*, disponibilidade | inversao da posse | subtracao foi completa ] }
+      - n: B
+        descricao: "Antônio tem direito ao reconhecimento do furto privilegiado (0,65), conforme o artigo 155, § 2º do CP (0,20). Obs.: A simples menção do dispositivo legal não pontua."
+        valores: [ 0, 0.65, 0.85 ]
+        componentes:
+          - { id: c1, valor: 0.65, termos: [ furto privilegiado | privilegio | privilegiado ] }
+          - { id: c2, valor: 0.2, dispositivo: [ "art. 155, § 2º, CP" ], requer: c1 }
+  - n: 3
+    enunciado: |-
+      Jeremias foi preso em flagrante, no Aeroporto Internacional de Arroizinhos, quando tentava viajar para Madri, Espanha, transportando três tabletes de cocaína. Quando já havia embarcado na aeronave, foi "convidado" por Agentes da Polícia Federal a se retirar do avião e acompanhá-los até o local onde se encontravam as bagagens. Lá chegando, foi solicitado a Jeremias que reconhecesse e abrisse sua bagagem, na qual foram encontrados, dentro da capa que acondicionava suas pranchas de surf, três tabletes de cocaína. Por essa razão, Jeremias foi processado e, ao final, condenado pela Justiça Federal de Arroizinhos por tráfico internacional de entorpecentes.
+
+      Após o trânsito em julgado da sentença condenatória, foi expedido o mandado de prisão e Jeremias foi recolhido ao estabelecimento prisional sujeito à administração estadual, já que em Arroizinhos não há estabelecimento prisional federal. Transcorrido o prazo legal e, tendo em vista que Jeremias preenchia os demais requisitos previstos na legislação, seu advogado deseja requerer a mudança para regime prisional menos severo.
+
+      Responda de forma fundamentada, de acordo com a jurisprudência sumulada dos Tribunais Superiores:
+
+      Qual Justiça é competente para processar e julgar o pedido de Jeremias? (Valor: 1,25)
+
+      A mera indicação da Súmula não pontua.
+    gabarito_comentado: |-
+      Não obstante Jeremias ter sido condenado pela Justiça Federal, a competência para o processamento do pedido é da Justiça Estadual, haja vista que Jeremias cumpre pena em estabelecimento sujeito à jurisdição ordinária; daí a transferência de competência da execução penal para a Justiça Estadual, conforme preceitua a Súmula 192 do Superior Tribunal de Justiça.
+
+      SÚMULA 192 - Compete ao Juízo das Execuções Penais do Estado a execução das penas impostas a sentenciados pela Justiça Federal, Militar ou Eleitoral, quando recolhidos a estabelecimentos sujeitos à administração estadual.
+    itens:
+      - n: A
+        descricao: A competência é da Justiça Estadual (0,85), conforme preceitua a Súmula 192 do STJ (0,40).
+        componentes:
+          - { id: c1, valor: 0.85, termos: [ justica estadual | juizo estadual | vara de execucoes estadual | juizo da execucao estadual ] }
+          - { id: c2, valor: 0.4, dispositivo: [ Súmula 192 STJ ], requer: c1 }
+  - n: 4
+    enunciado: |-
+      Pedro foi preso em flagrante por tráfico de drogas. Após a instrução probatória, o juiz ficou convencido de que o réu, por preencher os requisitos do artigo 33, § 4º, da lei 11.343/2006, merecia a redução máxima da pena. Na sentença penal condenatória, fixou o regime inicialmente fechado ao argumento de que o artigo 2º, § 1º, da lei 8.072/90, assim determina, vedando a conversão da pena privativa de liberdade em pena restritiva de direitos, com base no próprio artigo 33, § 4º, da lei 11.343/2006. O advogado de Pedro é intimado da sentença.
+
+      À luz da jurisprudência do STF, responda aos itens a seguir.
+
+      **A) Cabe ao advogado de defesa a impugnação da fixação do regime inicial fechado, fixado exclusivamente com base no artigo 2º, § 1º, da Lei nº 8.072/90? (Valor: 0,60)**
+
+      **B) Com relação ao tráfico-privilegiado, previsto na Lei nº 11.343/06, artigo 33, § 4º, é possível a conversão da pena privativa de liberdade em pena restritiva de direitos? (Valor: 0,65)**
+
+      O examinando deve fundamentar corretamente sua resposta. A simples menção ou transcrição do dispositivo legal não pontua.
+    gabarito_comentado: |-
+      A questão objetiva extrair do examinando conhecimento atualizado acerca da jurisprudência do STF.
+
+      Nesse sentido, relativamente ao item A, a resposta deve ser lastreada no sentido de que cabe, sim, impugnação ao regime inicial fechado, fixado exclusivamente com base no artigo 2º, § 1º, da Lei nº 8.072/90. Isso porque o STF, no HC 111.840/ES, declarou inconstitucional a previsão, na Lei dos Crimes Hediondos, da exigência da fixação do regime inicial fechado. Na oportunidade a Corte se manifestou no sentido de que a definição do regime deveria sempre ser analisada independentemente da natureza da infração. A CRFB/88 contemplaria as restrições aplicadas à Lei nº 8.072/90, dentre as quais não estaria a obrigatoriedade de imposição de regime extremo para início de cumprimento de pena. Tal posicionamento vem sendo reiterado pela Suprema Corte, sendo certo que a fixação do regime inicialmente fechado deve conter uma fundamentação em concreto, sob pena de ofensa à individualização da pena.
+
+      No tocante ao item B, devemos observar que o STF, no HC 97.256/RS, decidiu que o artigo 33, § 4º, da Lei nº 11.343/2006 é inconstitucional ao vedar a conversão da pena privativa de liberdade em pena restritiva de direitos. Após a reiteração do entendimento pela Suprema Corte foi editada a resolução nº 5 do Senado com o seguinte teor: “artigo 1º - É suspensa a execução da expressão "vedada a conversão em penas restritivas de direitos" do § 4º do artigo 33, da Lei nº 11.343, de 23 de agosto de 2006, declarada inconstitucional por decisão definitiva do Supremo Tribunal Federal nos autos do Habeas Corpus nº 97.256/RS.” Desta forma, é possível a conversão da pena privativa de liberdade em pena restritiva de direitos, desde que o réu preencha os requisitos do artigo 44, do CP.
+    itens:
+      - n: A
+        descricao: "Cabe impugnação ao regime fechado, pois o STF reconheceu a inconstitucionalidade da norma (0,60). Obs.: A justificativa é essencial para a atribuição de pontos."
+        valores: [ 0, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.6, termos: [ inconstitucional*, regime | fechado ] }
+      - n: B
+        descricao: "É possível a conversão da pena privativa de liberdade em pena restritiva de direitos no tráfico-privilegiado, pois o STF reconheceu a inconstitucionalidade da norma. (0,45), desde que o réu preencha os requisitos do artigo 44 do CP (0,20). Obs.: A justificativa é essencial para a atribuição de pontos."
+        valores: [ 0, 0.2, 0.45, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.45, termos: [ substitui* | conversao, inconstitucional* ] }
+          - { id: c2, valor: 0.2, termos: [ requisitos ], dispositivo: [ art. 44 CP ], rotulo: Desde que preenchidos os requisitos do Art. 44 do CP }

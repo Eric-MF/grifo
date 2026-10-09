@@ -1,0 +1,25 @@
+.painel { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 1.3rem 1.4rem; margin-top: 2rem; display: grid; gap: 1rem; }
+.subtitulo { font-size: 1.3rem; margin: 0; }
+.niveis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+.niveis button {
+  display: grid; gap: 0.2rem; text-align: left; padding: 0.8rem 0.9rem; border-radius: 12px;
+  border: 1px solid var(--border); background: var(--bg); color: var(--text); cursor: pointer;
+}
+.niveis button[aria-pressed="true"] { border-color: var(--primary); box-shadow: inset 0 0 0 1.5px var(--primary); }
+.niveis small { color: var(--muted); font-size: 0.8rem; line-height: 1.3; }
+.recorde { font-size: 0.8rem; color: var(--accent-ink); font-weight: 700; }
+.regras { margin: 0; color: var(--muted); font-size: 0.92rem; }
+.eyebrow { margin: 0; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-ink); }
+.tempo { margin: 0.2rem 0 0.8rem; font-size: 0.9rem; color: var(--muted); }
+.abandonar { margin: 0.8rem 0 0; text-align: center; }
+.linkBotao { background: none; border: 0; color: var(--muted); text-decoration: underline; cursor: pointer; font: inherit; }
+.total { margin: 0; font-size: clamp(2.2rem, 7vw, 3.2rem); font-weight: 900; }
+.total span { font-size: 1rem; font-weight: 600; color: var(--muted); }
+.tabelaWrap { overflow-x: auto; }
+.tabela { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.tabela th, .tabela td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); }
+.tabela td:first-child, .tabela th:first-child { width: 2.2rem; }
+.acoes { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+@media (max-width: 640px) {
+  .niveis { grid-template-columns: 1fr; }
+}

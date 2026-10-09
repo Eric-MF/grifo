@@ -1,0 +1,213 @@
+# X Exame de Ordem Unificado — Direito Penal
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
+id: "10"
+numero: 10
+numeral: X
+aplicacao: 2013-06-16
+revisao:
+  status: rascunho
+  por: ""
+  em: ""
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
+peca:
+  nome: Revisão Criminal
+  tipo: revisao-criminal
+  aliases: []
+  enunciado: |-
+    Leia com atenção o caso concreto a seguir:
+
+    Jane, no dia 18 de outubro de 2010, na cidade de Cuiabá – MT, subtraiu veículo automotor de propriedade de Gabriela. Tal subtração ocorreu no momento em que a vítima saltou do carro para buscar um pertence que havia esquecido em casa, deixando-o aberto e com a chave na ignição. Jane, ao ver tal situação, aproveitou-se e subtraiu o bem, com o intuito de revendê-lo no Paraguai. Imediatamente, a vítima chamou a polícia e esta empreendeu perseguição ininterrupta, tendo prendido Jane em flagrante somente no dia seguinte, exatamente quando esta tentava cruzar a fronteira para negociar a venda do bem, que estava guardado em local não revelado.
+
+    Em 30 de outubro de 2010, a denúncia foi recebida. No curso do processo, as testemunhas arroladas afirmaram que a ré estava, realmente, negociando a venda do bem no país vizinho e que havia um comprador, terceiro de boa-fé arrolado como testemunha, o qual, em suas declarações, ratificou os fatos. Também ficou apurado que Jane possuía maus antecedentes e reincidente específica nesse tipo de crime, bem como que Gabriela havia morrido no dia seguinte à subtração, vítima de enfarte sofrido logo após os fatos, já que o veículo era essencial à sua subsistência. A ré confessou o crime em seu interrogatório.
+
+    Ao cabo da instrução criminal, a ré foi condenada a cinco anos de reclusão no regime inicial fechado para cumprimento da pena privativa de liberdade, tendo sido levada em consideração a confissão, a reincidência específica, os maus antecedentes e as consequências do crime, quais sejam, a morte da vítima e os danos decorrentes da subtração de bem essencial à sua subsistência.
+
+    A condenação transitou definitivamente em julgado, e a ré iniciou o cumprimento da pena em 10 de novembro de 2012. No dia 5 de março de 2013, você, já na condição de advogado(a) de Jane, recebe em seu escritório a mãe de Jane, acompanhada de Gabriel, único parente vivo da vítima, que se identificou como sendo filho desta.
+
+    Ele informou que, no dia 27 de outubro de 2010, Jane, acolhendo os conselhos maternos, lhe telefonou, indicando o local onde o veículo estava escondido. O filho da vítima, nunca mencionado no processo, informou que no mesmo dia do telefonema, foi ao local e pegou o veículo de volta, sem nenhum embaraço, bem como que tal veículo estava em seu poder desde então.
+
+    **Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.**
+  gabarito_comentado: |-
+    O candidato deve redigir uma revisão criminal, com fundamento no art. 621, I e/ou III, do Código de Processo Penal. Deverá ser feita uma única petição, dirigida ao Desembargador Presidente do Tribunal de Justiça do Estado de Mato Grosso, onde o candidato deverá argumentar que, após a sentença, foi descoberta causa especial de diminuição de pena, prevista no art. 16 do Código Penal, qual seja, arrependimento posterior. O agente, anteriormente ao recebimento da denúncia, por ato voluntário, restituiu a res furtiva, sendo certo que tal restituição foi integral e que, portanto, faz jus ao máximo de diminuição. Assim, deverá pleitear, com base no art. 626 do Código de Processo Penal, a modificação da pena imposta, para que seja considerada referida causa de diminuição de pena.
+
+    Além disso, o fato novo comprova que o veículo não chegou a ser transportado para o exterior, não tendo se iniciado qualquer ato de execução referente à qualificadora prevista no §5º do artigo 155 do Código Penal. Por isso, cabível a desclassificação do furto qualificado para o furto simples (artigo 155, caput, do Código Penal).
+
+    Como consequência da aplicação da causa especial de diminuição de pena prevista no art. 16 do CP e da desclassificação do delito, o examinando deverá desenvolver raciocínio no sentido de que, em que pese a reincidência da revisionanda, o STJ tem entendimento sumulado no sentido de que poderá haver atribuição do regime semiaberto para cumprimento da pena privativa de liberdade (verbete 269 da Súmula do STJ).
+
+    Além disso, o fato de a revisionanda ter reparado o dano de forma voluntária prepondera sobre os maus antecedentes e demonstra que as circunstâncias pessoais lhe são favoráveis. Por isso, a fixação do regime fechado se mostra medida desproporcional e infundada, devendo ser abrandado o regime para o semiaberto, com base na no verbete 269 da Súmula do Superior Tribunal de Justiça.
+
+    Ao final, o examinando deverá elaborar, com base no art. 626 do CPP, os seguintes pedidos: i. a desclassificação da conduta, de furto qualificado para furto simples; ii. a diminuição da pena da pena privativa de liberdade; iii. a fixação do regime semiaberto (ou a mudança para referido regime) para o cumprimento da pena privativa de liberdade.
+
+    Com o fim de privilegiar a demonstração de conhecimento, será pontuada, também, a estrutura da peça prático-profissional apresentada. Assim, deve haver a correta divisão das partes, indicação de local, data, assinatura e observância às demais formalidades inerentes à estrutura da peça em análise.
+
+    Também com a finalidade de privilegiar a demonstração de conhecimento jurídico, a Banca aceitará, subsidiariamente, como peça prático-profissional adequada, o PEDIDO DE JUSTIFICAÇÃO.
+
+    Para garantir a atribuição dos pontos pertinentes, o examinando deve redigir um Pedido de Justificação, com fundamento no art. 861 do Código de Processo Civil c/c art. 3º do Código de Processo Penal.
+
+    Deverá ser feita uma única petição, dirigida à Vara Criminal do Tribunal de Justiça do Estado de Mato Grosso.
+
+    Em sua peça, o examinando deverá requerer oitiva da testemunha Gabriel, tendo em vista que as novas provas autorizariam diminuição especial de pena (nos termos do art. 621, III do CPP). Deverá, outrossim, argumentar acerca da impossibilidade de produção de provas em sede de revisão criminal.
+
+    Por tais razões o examinando deverá, ao final, pleitear: i. a intimação da testemunha Gabriel para comparecer à audiência a ser designada; ii. que, efetuada a justificação, seja, a mesma, homologada por sentença, entregando-se os autos ao requerente após decorridas 48 horas da decisão judicial, nos termos do art. 866 do CPC.
+
+    Ao final, o examinando deverá atribuir valor à causa, conforme art. 282, V, do CPC, bem como apresentar o rol de testemunhas.
+
+    Distribuição dos Pontos – Tipo 1 – REVISÃO CRIMINAL
+  itens:
+    - n: "1"
+      descricao: "Endereçamento correto: Tribunal de Justiça do Estado de Mato Grosso (0,25)."
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ tribunal de justica | tj, mato grosso | mt ] }
+    - n: "2"
+      descricao: "Dispositivo legal que embasa a Revisão Criminal: art. 621, I, do CPP OU art. 621, III, do CPP (0,25)."
+      componentes:
+        - { id: c1, valor: 0.25, dispositivo: [ "art. 621, I, CPP", "art. 621, III, CPP" ] }
+    - n: "3.1"
+      secao: Mérito
+      descricao: "Da tese do arrependimento posterior: incide o instituto do arrependimento posterior (0,50), nos termos do Art. 16 do CP (0,25)."
+      componentes:
+        - { id: c1, valor: 0.5, termos: [ arrependimento posterior ] }
+        - { id: c2, valor: 0.25, dispositivo: [ art. 16 CP ], requer: c1 }
+    - n: "3.2"
+      secao: Mérito
+      descricao: A restituição do bem ocorreu antes do recebimento da denúncia (0,25) e foi integral (0,25), razão pela qual a revisionanda faz jus à diminuição da pena (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ restitui* | devolu* | devolveu, antes do recebimento ] }
+        - { id: c2, valor: 0.25, termos: [ integral* ] }
+        - { id: c3, valor: 0.25, termos: [ diminui* | redu*, pena ] }
+    - n: "4"
+      secao: Mérito
+      descricao: Desclassificação para furto simples (0,50), pois não houve efetivo deslocamento do bem para o exterior (0,50), restando o crime do Art. 155, caput, do CP (0,25).
+      componentes:
+        - { id: c1, valor: 0.5, termos: [ desclassifica*, furto simples ] }
+        - { id: c2, valor: 0.5, termos: [ exterior | outro pais | fronteira, nao houve | nao ocorreu | sem | ausencia ] }
+        - { id: c3, valor: 0.25, dispositivo: [ art. 155 CP ], requer: c1 }
+    - n: "5"
+      secao: Mérito
+      descricao: Consequente modificação do regime para o semiaberto (0,25), conforme a Súmula 269 do STJ (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ regime, semiaberto | semi-aberto ] }
+        - { id: c2, valor: 0.25, dispositivo: [ Súmula 269 STJ ], requer: c1 }
+    - n: "6"
+      secao: Pedidos
+      descricao: "Pedidos, com fundamento no art. 626 do CPP (0,25): desclassificação para furto simples (0,25); diminuição da pena (0,25); fixação do regime semiaberto (0,25)."
+      componentes:
+        - { id: c1, valor: 0.25, dispositivo: [ art. 626 CPP ] }
+        - { id: c2, valor: 0.25, termos: [ desclassifica* ] }
+        - { id: c3, valor: 0.25, termos: [ diminui* | redu* ] }
+        - { id: c4, valor: 0.25, termos: [ semiaberto | semi-aberto ] }
+    - n: "7"
+      descricao: "Estrutura correta: divisão das partes, local, data, assinatura e demais formalidades (0,25)."
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ local, advogad* | assinatura | oab ] }
+questoes:
+  - n: 1
+    enunciado: |-
+      O Ministério Público, tomando conhecimento da prática de falta grave no curso de execução penal, pugna pela interrupção da contagem do prazo para efeitos de concessão do benefício do livramento condicional, fundamentando seu pleito em interpretação sistemática do Art. 83, do CP, e dos artigos 112 e 118, I, ambos da Lei n. 7.210/84.
+
+      Levando em conta apenas os dados contidos no enunciado, com base nos princípios do processo penal e no entendimento mais recente dos Tribunais Superiores, responda à seguinte questão:
+
+      O Ministério Público está com a razão? (Valor: 1,25)
+
+      O examinando deve fundamentar corretamente sua resposta. A simples menção ou transcrição do dispositivo legal não pontua.
+    gabarito_comentado: |-
+      A questão objetiva do examinando demonstração de conhecimento acerca de institutos relativos à execução penal, bem como de entendimento jurisprudencialmente consolidado acerca do tema.
+
+      Com efeito, existe jurisprudência no sentido de que o cometimento de falta grave interrompe o prazo de concessão do benefício de progressão de regime. Todavia, tal situação (progressão de regime) é diversa daquela narrada na questão, que trata de instituto distinto, qual seja, o livramento condicional.
+
+      Nesse sentido, a resposta do examinando deve ser dividida em duas alegações complementares: partindo-se da premissa que o art. 83 do CP não prevê a interrupção do prazo se cometida falta grave, é forçoso reconhecer a total ausência de previsão legal. Aliás, é pacífico o entendimento, tanto na doutrina quanto na jurisprudência, no sentido de que o cometimento de falta grave, por falta de previsão legal, não interrompe o prazo para aquisição do benefício do livramento condicional, o que se subsume, inclusive, pelo teor do Verbete 441 da Súmula do STJ, in verbis: “A falta grave não interrompe o prazo para obtenção de livramento condicional”.
+
+      Por fim, levando-se em conta o comando da questão, o examinando deve concluir seu raciocínio acerca da impossibilidade do pleito Ministerial com base em institutos principiológicos. Nesse sentido, cabe ressaltar que a alegação do Ministério Público configura ofensa ao princípio da legalidade; ofende, outrossim, a vedação de dupla punição (princípio do ne bis in idem).
+
+      Ressalte-se que com a finalidade de privilegiar a demonstração de conhecimento jurídico também poderá ser aceito desenvolvimento no sentido de que o objetivado pelo Parquet permitiria, em última análise, analogia in malam partem, o que também é vedado pelo Direito Penal, tendo em vista o já mencionado princípio da legalidade.
+    itens:
+      - n: A1
+        descricao: "Não, por falta de previsão legal (0,85). OU Não, porque o art. 83 do CP não prevê tal possibilidade (0,85). OU Não, com base no Verbete 441 da Súmula do STJ, verbis: “A falta grave não interrompe o prazo para obtenção de livramento condicional” (0,85). OBS.: A mera indicação ou reprodução literal de dispositivo legal ou verbete sumular impede a atribuição de pontos."
+        valores: [ 0, 0.85 ]
+        componentes:
+          - { id: c1, valor: 0.85, alternativas: [ [ falta de previsao legal | sem previsao legal | nao preve | ausencia de previsao ], [ sumula 441 ], [ nao interrompe, livramento ] ], rotulo: "Não: falta de previsão legal (art. 83 do CP) OU Súmula 441 do STJ" }
+      - n: A2
+        descricao: Admitir tal possibilidade seria ferir o princípio da legalidade (0,40). OU Admitir tal possibilidade seria ferir o princípio do ne bis in idem (0,40). OU Admitir tal possibilidade seria permitir analogia in malam partem, o que é vedado em Direito Penal (0,40).
+        valores: [ 0, 0.4 ]
+        componentes:
+          - { id: c1, valor: 0.4, alternativas: [ [ legalidade ], [ bis in idem ], [ analogia, in malam partem | prejudicial ] ], rotulo: "Violaria a legalidade, o ne bis in idem ou seria analogia in malam partem" }
+  - n: 2
+    enunciado: |-
+      Maria, mulher solteira de 40 anos, mora no Bairro Paciência, na cidade Esperança. Por conta de seu comportamento, Maria sempre foi alvo de comentários maldosos por parte dos vizinhos; alguns até chegavam a afirmar que ela tinha “cara de quem cometeu crime”. Não obstante tais comentários, nunca houve prova de qualquer das histórias contadas, mas o fato é que Maria é pessoa conhecida na localidade onde mora por ter má-índole, já que sempre arruma brigas e inimizades.
+
+      Certo dia, com raiva de sua vizinha Josefa, Maria resolve quebrar a janela da residência desta. Para tanto, espera chegar a hora em que sabia que Josefa não estaria em casa e, após olhar em volta para ter certeza de que ninguém a observava, Maria arremessa com força, na direção da casa da vizinha, um enorme tijolo. Ocorre que Josefa, naquele dia, não havia saído de casa e o tijolo após quebrar a vidraça, atinge também sua nuca. Josefa falece instantaneamente.
+
+      Nesse sentido, tendo por base apenas as informações descritas no enunciado, responda justificadamente:
+
+      É correto afirmar que Maria deve responder por homicídio doloso consumado? (Valor: 1,25)
+
+      A simples menção ou transcrição do dispositivo legal não pontua.
+    gabarito_comentado: |-
+      Na presente questão cabe ao examinando identificar o instituto por ela versado, qual seja, o erro de tipo acidental, na modalidade do resultado diverso do pretendido, previsto no art. 74 do Código Penal.
+
+      Referido instituto traz como consequência, para o caso sob exame, a punição do agente por crime doloso em relação ao objetivo por ele almejado (que no caso foi o crime de dano previsto no art. 163 do Código Penal), bem como a sua punição na modalidade culposa pelo resultado não intencional por ele alcançado, desde que o tal delito admita a modalidade culposa.
+
+      Nesse sentido, observa-se que o outro resultado alcançado foi o crime de homicídio, que admite a modalidade culposa, de acordo com o art. 121, § 3º, do CP.
+
+      Sendo assim, uma vez tendo, Maria, alcançado os dois resultados, deverá ser punida por ambos (dano doloso e homicídio culposo) na forma do art. 70 do Código Penal, ou seja, em concurso formal próprio, que determina a majoração da pena do crime mais grave de 1/6 até 1/2.
+    itens:
+      - n: A1
+        descricao: Não, uma vez que não houve dolo em relação à produção do resultado morte, razão pela qual responde por homicídio culposo (0,60).
+        valores: [ 0, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.6, termos: [ dolo, homicidio culposo ] }
+      - n: A2
+        descricao: "A hipótese é de resultado diverso do pretendido (art. 74 do CP) (0,50), devendo responder por dano em concurso formal com o crime de homicídio culposo (0,15). OBS.: a mera indicação de dispositivo legal ou transcrição de seu conteúdo não será pontuada."
+        valores: [ 0, 0.15, 0.5, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ resultado diverso | aberratio criminis | aberratio delicti ] }
+          - { id: c2, valor: 0.15, termos: [ dano, concurso formal ] }
+  - n: 3
+    enunciado: |-
+      José, conhecido em seu bairro por vender entorpecentes, resolve viajar para Foz do Iguaçu (PR). Em sua bagagem, José transporta 500g de cocaína e 50 ampolas de cloreto de etila. Em Foz do Iguaçu, José foi preso em flagrante pela Polícia Militar em virtude do transporte das substâncias entorpecentes. Na lavratura do flagrante, José afirma que seu objetivo era transportar a droga até a cidade de Porto Vera Cruz (RS), mencionando inclusive a passagem de avião que já havia comprado.
+
+      Você é contratado para efetuar um pedido de liberdade provisória e o que mais entender de Direito em favor de José.
+
+      Atento somente ao que foi narrado na hipótese acima, responda aos itens a seguir.
+
+      **A) O órgão competente para julgamento é a Justiça Estadual ou a Justiça Federal? Justifique. (Valor: 0,75)**
+
+      **B) Se José objetivasse apenas traficar drogas em Foz do Iguaçu, o órgão competente seria o mesmo da situação acima? Justifique. (Valor: 0,50)**
+
+      O examinando deve fundamentar corretamente sua resposta. A simples menção ou transcrição do dispositivo legal não pontua.
+    gabarito_comentado: |-
+      A. O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil (Porto Vera Cruz é município do Rio Grande do Sul e Foz do Iguaçu é município do Paraná) e que não há qualquer menção à transposição de fronteira nacional. A competência somente poderia ser atribuída à Justiça Federal se José tivesse cometido o crime de tráfico internacional de entorpecentes (objetivo de traficar para o exterior), na forma do disposto no art. 70, caput, da Lei 11.343/2006 e do verbete 522 da Súmula do STF.
+
+      B. Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior.
+    itens:
+      - n: A
+        descricao: "O órgão competente é a Justiça Estadual (0,50), haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06. (0,25). OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        valores: [ 0, 0.5, 0.75 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ justica estadual ] }
+          - { id: c2, valor: 0.25, alternativas: [ [ brasil | territorio nacional ], [ nao houve, trafico internacional | transnacional ], [ sumula 522 ], [ "70", 11343 | lei de drogas ] ], requer: c1, rotulo: Cidades no Brasil OU não houve tráfico internacional OU Súmula 522 do STF OU art. 70 da Lei 11.343/06 }
+      - n: B
+        descricao: "Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior (0,50). OBS.1: A justificativa correta é essencial para atribuição de pontos, pois não há intervalo de pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        valores: [ 0, 0.5 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ justica estadual, dolo | exterior ] }
+  - n: 4
+    enunciado: |-
+      Erika e Ana Paula, jovens universitárias, resolvem passar o dia em uma praia paradisíaca e, de difícil acesso (feito através de uma trilha), bastante deserta e isolada, tão isolada que não há qualquer estabelecimento comercial no local e nem mesmo sinal de telefonia celular. As jovens chegam bastante cedo e, ao chegarem, percebem que além delas há somente um salva-vidas na praia. Ana Paula decide dar um mergulho no mar, que estava bastante calmo naquele dia. Erika, por sua vez, sem saber nadar, decide puxar assunto com o salva-vidas, Wilson, pois o achou muito bonito. Durante a conversa, Erika e Wilson percebem que têm vários interesses em comum e ficam encantados um pelo outro. Ocorre que, nesse intervalo de tempo, Wilson percebe que Ana Paula está se afogando. Instigado por Erika, Wilson decide não efetuar o salvamento, que era perfeitamente possível. Ana Paula, então, acaba morrendo afogada.
+
+      Nesse sentido, atento(a) apenas ao caso narrado, indique a responsabilidade jurídico-penal de Erika e Wilson. (Valor: 1,25)
+
+      O examinando deve fundamentar corretamente sua resposta. A simples menção ou transcrição do dispositivo legal não pontua.
+    gabarito_comentado: "Segundo os dados narrados na questão, Wilson, por ser salva-vidas, tem o dever legal de agir para evitar o resultado e, naquele momento, podia perfeitamente agir. Assim, trata-se de agente garantidor. Nesse caso, responde por delito comissivo por omissão, qual seja, homicídio doloso praticado via omissão imprópria: art. 121 c/c art. 13, § 2º, alínea 'a' , ambos do CP. Erika, por sua vez, por ter instigado Wilson a não realizar o salvamento de Ana Paula, responde como partícipe de tal homicídio, nos termos do art. 29 do CP. Não há que se falar em omissão de socorro por parte de Erika, pois, conforme dados expressos no enunciado, ela não sabia nadar e nem tinha como chamar por ajuda."
+    itens:
+      - n: A
+        descricao: Wilson, por ser agente garantidor (0,30), responde pelo delito de homicídio (0,30) praticado via omissão imprópria (0,30).
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ garantidor | garante | dever de agir | dever legal ] }
+          - { id: c2, valor: 0.3, termos: [ wilson | salva-vidas | salva vidas, homicidio ] }
+          - { id: c3, valor: 0.3, termos: [ omissao impropria | comissivo por omissao | omissivo improprio ] }
+      - n: B
+        descricao: Erika responde como partícipe de tal homicídio (0,35).
+        componentes:
+          - { id: c1, valor: 0.35, termos: [ erika, particip* ] }
+observacoes: "A FGV aceitou duas peças neste exame: Revisão Criminal (tabela usada aqui) ou Justificação Criminal (art. 861 do CPC c/c art. 3º do CPP), com tabela própria. O corretor automático avalia pela tabela da Revisão Criminal."

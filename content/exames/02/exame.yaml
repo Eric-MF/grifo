@@ -1,0 +1,240 @@
+# II Exame de Ordem Unificado — Direito Penal
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
+id: "02"
+numero: 2
+numeral: II
+revisao:
+  status: rascunho
+  por: ""
+  em: ""
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
+peca:
+  nome: Resposta à Acusação
+  tipo: resposta-acusacao
+  aliases: []
+  enunciado: |-
+    A Polícia Civil do Estado do Rio Grande do Sul recebe notícia crime identificada, imputando a Maria Campos a prática de crime, eis que mandaria crianças brasileiras para o estrangeiro com documentos falsos. Diante da notícia crime, a autoridade policial instaura inquérito policial e, como primeira providência, representa pela decretação da interceptação das comunicações telefônicas de Maria Campos, “dada a gravidade dos fatos noticiados e a notória dificuldade de apurar crime de tráfico de menores para o exterior por outros meios, pois o ‘modus operandi’ envolve sempre atos ocultos e exige estrutura organizacional sofisticada, o que indica a existência de uma organização criminosa integrada pela investigada Maria”. O Ministério Público opina favoravelmente e o juiz defere a medida, limitando-se a adotar, como razão de decidir, “os fundamentos explicitados na representação policial”.
+
+    No curso do monitoramento, foram identificadas pessoas que contratavam os serviços de Maria Campos para providenciar expedição de passaporte para viabilizar viagens de crianças para o exterior. Foi gravada conversa telefônica de Maria com um funcionário do setor de passaportes da Polícia Federal, Antônio Lopes, em que Maria consultava Antônio sobre os passaportes que ela havia solicitado, se já estavam prontos, e se poderiam ser enviados a ela. A pedido da autoridade policial, o juiz deferiu a interceptação das linhas telefônicas utilizadas por Antônio Lopes, mas nenhum diálogo relevante foi interceptado.
+
+    O juiz, também com prévia representação da autoridade policial e manifestação favorável do Ministério Público, deferiu a quebra de sigilo bancário e fiscal dos investigados, tendo sido identificado um depósito de dinheiro em espécie na conta de Antônio, efetuado naquele mesmo ano, no valor de R$ 100.000,00 (cem mil reais). O monitoramento telefônico foi mantido pelo período de quinze dias, após o que foi deferida medida de busca e apreensão nos endereços de Maria e Antônio. A decisão foi proferida nos seguintes termos: “diante da gravidade dos fatos e da real possibilidade de serem encontrados objetos relevantes para investigação, defiro requerimento de busca e apreensão nos endereços de Maria (Rua dos Casais, 213) e de Antônio (Rua Castro, 170, apartamento 201)”. No endereço de Maria Campos, foi encontrada apenas uma relação de nomes que, na visão da autoridade policial, seriam clientes que teriam requerido a expedição de passaportes com os nomes de crianças que teriam viajado para o exterior. No endereço indicado no mandado de Antônio Lopes, nada foi encontrado. Entretanto, os policiais que cumpriram a ordem judicial perceberam que o apartamento 202 do mesmo prédio também pertencia ao investigado, motivo pelo qual nele ingressaram, encontrando e apreendendo a quantia de cinquenta mil dólares em espécie. Nenhuma outra diligência foi realizada.
+
+    Relatado o inquérito policial, os autos foram remetidos ao Ministério Público, que ofereceu a denúncia nos seguintes termos: “o Ministério Público vem oferecer denúncia contra Maria Campos e Antônio Lopes, pelos fatos a seguir descritos: Maria Campos, com o auxílio do agente da polícia federal Antônio Lopes, expediu diversos passaportes para crianças e adolescentes, sem observância das formalidades legais.
+
+    Maria tinha a finalidade de viabilizar a saída dos menores do país. A partir da quantia de dinheiro apreendida na casa de Antônio Lopes, bem como o depósito identificado em sua conta bancária, evidente que ele recebia vantagem indevida para efetuar a liberação dos passaportes. Assim agindo, a denunciada Maria Campos está incursa nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente), e nas penas do artigo 333, parágrafo único, c/c o artigo 69, ambos do Código Penal. Já o denunciado Antônio Lopes está incurso nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente) e nas penas do artigo 317, § 1º, c/c artigo 69, ambos do Código Penal”.
+
+    O juiz da 15ª Vara Criminal de Porto Alegre, RS, recebeu a denúncia, nos seguintes termos:
+
+    “compulsando os autos, verifico que há prova indiciária suficiente da ocorrência dos fatos descritos na denúncia e do envolvimento dos denunciados. Há justa causa para a ação penal, pelo que recebo a denúncia. Citem-se os réus, na forma da lei”. Antônio foi citado pessoalmente em 27.10.2010 (quarta-feira) e o respectivo mandado foi acostado aos autos dia 01.11.2010 (segunda-feira). Antônio contratou você como Advogado, repassando-lhe nomes de pessoas (Carlos de Tal, residente na Rua 1, n. 10, nesta capital; João de Tal, residente na Rua 4, n. 310, nesta capital; Roberta de Tal, residente na Rua 4, n. 310, nesta capital) que prestariam relevantes informações para corroborar com sua versão.
+
+    Nessa condição, redija a peça processual cabível desenvolvendo TODAS AS TESES DEFENSIVAS que podem ser extraídas do enunciado com indicação de respectivos dispositivos legais. Apresente a peça no último dia do prazo.
+  gabarito_comentado: |-
+    • O candidato deverá redigir Resposta à Acusação endereçada ao Juiz de Direito da 15ª Vara Criminal de Porto Alegre, RS, com base nos artigos 396 e/ou 396-A do Código de Processo Penal. É indispensável a indicação do dispositivo legal que fundamenta a apresentação da peça. Peças denominadas “Defesa Previa”, “Defesa Preliminar” e “Resposta Preliminar” sem indicação do dispositivo legal não serão aceitas. Peças com fundamento simultâneo nos artigos 406 e 514 do EXAME DE ORDEM 2010/2 PROVA DISCURSIVA – DIREITO PENAL Código de Processo Penal, ou em qualquer artigo de outra lei não serão aceitas. Quando se indicava os artigos 396 e/ou 396-A, as peças eram aceitas independente do nome, salvo quando também se fundamentavam no art. 514 do Código de Processo Penal ou em outro artigo não aplicável ao caso.
+
+    Admitiu-se a resposta acompanhada da exceção de incompetência, pontuando-se os argumentos constantes de ambas as peças.
+
+    • A primeira questão preliminar que deverá ser arguida é incompetência da Justiça Estadual para processar o feito, eis que o crime é de competência federal, nos termos do que prevê o artigo 109, V, da Constituição Federal. Relativamente a esse tema, admitiu-se também a arguição de incompetência com base no inciso IV do art. 109, da Constituição. Em ambos os casos, será considerada válida a indicação da transnacionalidade do crime ou a circunstância de ser uma acusação de crime supostamente praticado por funcionário público federal no exercício das funções e com estas relacionadas. Admite-se também a simples referência ao dispositivo da Constituição, ou até mesmo à Súmula n. 254, do extinto mas sempre Egrégio Tribunal Federal de Recursos. Não será aceita, por outro lado, a referência ao art. 109, I da Constituição nem às Súmulas 122 e/ou 147 do STJ.
+
+    • A segunda questão preliminar que deverá ser arguida é nulidade na interceptação telefônica. Aqui, foram pontuados separadamente os dois argumentos para sustentar a nulidade: (a) falta de fundamentação da decisão nos termos do que disciplina o artigo 5º, da Lei n. 9.296/96 e artigo 93, IX, da Constituição da República; no mesmo sentido; (b) impossibilidade de se decretar a medida de interceptação telefônica como primeira medida investigativa, não respeitando o princípio da excepcionalidade, violando o previsto no artigo 2º, II, da Lei n. 9.296/96. Na nulidade da interceptação não se aceitará o argumento do art. 4º, acerca da ausência de indicação de como seria implementada a medida. Também não se aceitará a nulidade decorrente da incompetência para a decretação, eis que o argumento da incompetência era objeto de pontuação específica.
+
+    • A terceira questão preliminar que deverá ser arguida é a nulidade da decisão que deferiu a busca e apreensão nula, eis que genérica e sem fundamentação, fulcro no artigo 93, IX, da Constituição da República.
+
+    • A quarta questão preliminar que deverá ser arguida é a nulidade da apreensão dos cinquenta mil dólares, eis que o ingresso no outro apartamento de Antônio, onde estava a quantia, não estava autorizado judicialmente. Relativamente a este ponto, era indispensável que se associasse a ilegalidade ao conceito de prova ilícita e consequentemente requerendo-se a desconsideração do dinheiro lá apreendido.
+
+    • A quinta questão preliminar que deverá ser arguida é a inépcia da inicial acusatória, eis que a conduta é genérica, sem descrever as elementares do tipo de corrupção passiva e sem imputar fato determinado. Isso viola o previsto no artigo 8º, 2, ‘b’, do Decreto 678/92, o qual prevê como garantia do acusado a comunicação prévia e pormenorizada da acusação formulada. Além disso, limita o exercício do direito de defesa, em desrespeito ao previsto no artigo 5º, LV, da Constituição da República. Por fim, há violação ao artigo 41, do Código de Processo Penal.
+
+    • Em relação ao crime de corrupção passiva, previsto no artigo 317, §1º, do Código Penal, o candidato deverá apontar a falta de justa causa para a ação penal. Afirmações genéricas de falta de justa causa não serão consideradas suficientes para obtenção da pontuação. Com efeito, é preciso que o candidato faça um cotejo entre o tipo penal (com seus elementos normativos, objetivos e subjetivos)
+
+    e os fatos narrados no enunciado da questão. São exemplos de argumentos: não há prova suficiente de que o réu recebia vantagem indevida para a emissão de passaportes de forma irregular; não há nenhuma prova de que os passaportes fossem emitidos de forma irregular; nenhum passaporte foi apreendido ou periciado na fase de inquérito policial; não há prova de que os passaportes supostamente requeridos por Maria na ligação telefônica foram, efetivamente, emitidos; não há prova de que houve o exaurimento do crime, nos termos do que prevê o §1º do artigo 317, do Código Penal, ou seja, que Antônio tenha efetivamente praticado ato infringindo dever funcional.
+
+    • No que tange ao crime previsto no artigo 239, parágrafo único, da Lei n. 8.069/90 (Estatuto da Criança e do Adolescente), não há qualquer indício da prática delituosa por parte de Antônio, eis que não há sequer referência de que ele tivesse ciência da intenção de Maria. Em outras palavras, o candidato deverá indicar que não havia consciência de que Antônio estivesse colaborando para a prática do crime supostamente praticado por Maria, inexistindo, dessa forma dolo. Assim como no caso do crime anterior, afirmações genéricas de falta de justa causa não serão consideradas suficientes para obtenção da pontuação. Com efeito, é preciso que o candidato faça um cotejo entre o tipo penal (com seus elementos normativos, objetivos e subjetivos) e os fatos narrados no enunciado da questão. Dessa forma, relativamente à atipicidade do crime do art. 239, é indispensável que o candidato apontasse a ausência de dolo ou falasse do elemento subjetivo do tipo. Argumentos relacionados exclusivamente ao nexo causal não serão considerados aptos.
+
+    EXAME DE ORDEM 2010/2 PROVA DISCURSIVA – DIREITO PENAL • Ao final, o candidato deverá especificar provas, indicando rol de testemunhas. Os requerimentos devem ser de declaração das nulidades, absolvição sumária e, alternativamente, instrução processual com produção da prova requerida pela defesa. Para pontuar o pedido não é necessário que o candidato faça todos os pedidos constantes do gabarito, mas que seus pedidos estejam coerentes com a argumentação desenvolvida na peça. Por outro lado, se houver argumentos flagrantemente equivocados em maior número do que adequados, o pedido deixará de ser pontuado. No pedido, não foi admitida absolvição com fulcro no art. 386 e do 415 do Código de Processo Penal, já que ele trata das hipóteses de absolvição após o transcurso do processo, e não na fase de resposta.
+
+    • O último dia do prazo é 08.11.2010, eis que a contagem inicia na data da intimação pessoal. Não serão aceitas datas como 06 ou 07 de novembro, pois o enunciado é claro ao especificar que a petição deveria ser protocolada no último dia do prazo, o qual se prorrogou até o dia útil subsequente. Erros como 08 de outubro e 08 de setembro (ou qualquer outra data) serão considerados insuscetíveis de pontuação.
+
+    • Por fim, o gabarito não contempla nenhuma atribuição de pontuação para as argumentações relativas à: (1) ausência de notificação para apresentar resposta preliminar (art. 514, Código de Processo Penal); (2) nulidade da decisão que decretou a quebra do sigilo bancário. Também não será atribuída pontuação á simples narrativa dos fatos nem às afirmações genéricas de que não havia justa causa para a ação penal.
+  itens:
+    - n: "1"
+      secao: Preliminares
+      descricao: "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF (0,75)."
+      componentes:
+        - { id: c1, valor: 0.75, termos: [ incompet*, justica estadual | justica federal ] }
+    - n: "2"
+      secao: Preliminares
+      descricao: Nulidade da interceptação telefônica decretada como primeira medida investigatória (art. 2º, II, Lei 9.296/96) (0,25) e sem fundamentação adequada (art. 5º da Lei 9.296/96 ou art. 93, IX, CF) (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ interceptacao, primeira medida | excepcional* | outros meios | subsidiari* ] }
+        - { id: c2, valor: 0.25, termos: [ interceptacao, fundamenta* ] }
+    - n: "3"
+      secao: Preliminares
+      descricao: Nulidade da busca e apreensão genérica e sem fundamentação, art. 93, IX, CF (0,50).
+      componentes:
+        - { id: c1, valor: 0.5, termos: [ busca e apreensao, generic* | fundamenta* ] }
+    - n: "4"
+      secao: Preliminares
+      descricao: Nulidade da apreensão dos cinquenta mil dólares em endereço sem autorização judicial (prova ilícita) (0,50).
+      componentes:
+        - { id: c1, valor: 0.5, termos: [ dolares | apartamento 202 | dinheiro, ilicit* | sem autorizacao | nulidade ] }
+    - n: "5"
+      secao: Preliminares
+      descricao: Inépcia da denúncia genérica (art. 8º, 2, ‘b’, do Decreto 678/92; art. 5º, LV, CF; art. 41 do CPP) (0,50).
+      componentes:
+        - { id: c1, valor: 0.5, termos: [ inepcia | inepta, denuncia ] }
+    - n: "6"
+      secao: Mérito
+      descricao: Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo (0,50).
+      componentes:
+        - { id: c1, valor: 0.5, termos: [ 239 | eca | estatuto da crianca, dolo ] }
+    - n: "7"
+      secao: Mérito
+      descricao: Falta de justa causa quanto à corrupção passiva (art. 317, § 1º, CP), com cotejo entre o tipo e os fatos (0,75).
+      componentes:
+        - { id: c1, valor: 0.75, termos: [ justa causa | prova, corrupcao passiva | 317 ] }
+    - n: "8"
+      secao: Pedidos
+      descricao: Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ absolvicao sumaria | absolvido sumariamente | absolver sumariamente | nulidade ] }
+    - n: "9"
+      secao: Pedidos
+      descricao: Apresentação de rol de testemunhas (0,25).
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ rol de testemunhas | testemunhas, carlos | joao | roberta ] }
+    - n: "10"
+      descricao: "Prazo: 08/11/2010 (0,50)."
+      componentes:
+        - { id: c1, valor: 0.5, termos: [ 8 de novembro de 2010 ] }
+questoes:
+  - n: 1
+    enunciado: |-
+      José da Silva foi preso em flagrante pela polícia militar quando transportava em seu carro grande quantidade de drogas. Levado pelos policiais à delegacia de polícia mais próxima, José telefonou para seu advogado, o qual requereu ao delegado que aguardasse sua chegada para lavrar o flagrante. Enquanto esperavam o advogado, o delegado de polícia conversou informalmente com José, o qual confessou que pertencia a um grupo que se dedicava ao tráfico de drogas e declinou o nome de outras cinco pessoas que participavam desse grupo. Essa conversa foi gravada pelo delegado de polícia.
+
+      Após a chegada do advogado à delegacia, a autoridade policial permitiu que José da Silva se entrevistasse particularmente com seu advogado e, só então, procedeu à lavratura do auto de prisão em flagrante, ocasião em que José foi informado de seu direito de permanecer calado e foi formalmente interrogado pela autoridade policial. Durante o interrogatório formal, assistido pelo advogado, José da Silva optou por permanecer calado, afirmando que só se manifestaria em juízo.
+
+      **Com base na gravação contendo a confissão e delação de José, o Delegado de Polícia, em um único ato, determina que um de seus policiais atue como agente infiltrado e requer, ainda, outras medidas cautelares investigativas para obter provas em face dos demais membros do grupo criminoso: 1. quebra de sigilo de dados telefônicos, autorizada pelo juiz competente; 2. busca e apreensão, deferida pelo juiz competente, a qual logrou apreender grande quantidade de drogas e armas; 3. prisão preventiva dos cinco comparsas de José da Silva, que estavam de posse das drogas e armas. Todas as provas coligidas na investigação corroboraram as informações fornecidas por José em seu depoimento.**
+
+      Relatado o inquérito policial, o promotor de justiça denunciou todos os envolvidos por associação para o tráfico de drogas (art. 35, Lei 11.343/2006), tráfico ilícito de entorpecentes (art. 33, Lei 11.343/2006) e quadrilha armada (art. 288, parágrafo único).
+
+      **Considerando tal narrativa, excluindo eventual pedido de aplicação do instituto da delação premiada, indique quais as teses defensivas, no plano do direito material e processual, que podem ser arguidas a partir do enunciado acima, pela defesa de José. Indique os dispositivos legais aplicáveis aos argumentos apresentados.**
+    gabarito_comentado: |-
+      1. gravação informal obtida pelo delegado de polícia constitui prova ilícita, já que o preso tem o direito de ser informado dos seus direitos, dentre os quais o de permanecer calado (art. 5º, inc. LXIII, Constituição). O depoimento policial é um ato formal e, segundo o artigo 6º, V, deve observar as regras para a oitiva do acusado na fase judicial, previstas no Capítulo III, Título VII do Código de Processo Penal. Como as demais provas foram obtidas a partir do depoimento que constitui prova ilícita, devem igualmente ser consideradas ilícitas (art. 157, §1º, Código de Processo Penal). (0,3)
+
+      2. A infiltração de agente policial, conforme determina o artigo 53, I da Lei 11343/06, só pode ser determinada mediante autorização judicial e oitiva do Ministério Público. (0,3)
+
+      3. Não se admite a acumulação das acusações de quadrilha e associação para o tráfico, já que as duas redações típicas compreendem as mesmas ações objetivas (estabilidade na comunhão de ações e desígnios para a prática de crimes). (0,4)
+    itens:
+      - n: "1"
+        descricao: "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP) (0,30)."
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ ilicit*, gravacao | confissao | silencio | deriva* ] }
+      - n: "2"
+        descricao: "Vício na infiltração: depende de autorização judicial e oitiva do MP (art. 53, I, Lei 11.343/06) (0,30)."
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ infiltra*, autorizacao judicial | ordem judicial | juiz ] }
+      - n: "3"
+        descricao: Não se admite cumular quadrilha e associação para o tráfico (0,40).
+        componentes:
+          - { id: c1, valor: 0.4, termos: [ quadrilha | associacao criminosa, associacao para o trafico, cumula* | bis in idem | mesmas acoes | dupla ] }
+    valor: 1
+  - n: 2
+    enunciado: |-
+      Caio, funcionário público, ao fiscalizar determinado estabelecimento comercial exige vantagem indevida.
+
+      A qual delito corresponde o fato narrado:
+
+      I. se a vantagem exigida servir para que Caio deixe de cobrar tributo devido;
+
+      II. se a vantagem, advinda de cobrança de tributo que Caio sabia não ser devida, for desviada para proveito de Caio?
+    gabarito_comentado: |-
+      Art. 3º da Lei n. 8.137/90 (0,5) e excesso de exação qualificada – art. 316, § 2º, do CP (0,5).
+
+      A exigência de vantagem indevida por funcionário público em razão de sua função caracteriza, em princípio, o delito de concussão. A Lei n. 8.137/90, a lei dos crimes contra a ordem tributária, criou , no que interessa à questão, dois tipos novos: inseriu no artigo 316 do Código Penal dois parágrafos, criando o excesso de exação – nas hipóteses em que a vantagem indevida for ela mesma um tributo ou contribuição social indevida -, e sua forma qualificada, que se dá quando a vantagem é apropriada pelo agente. O outro novel tipo penal está no artigo 3º da Lei n. 8.137/90, que tipifica uma forma específica de concussão: a exigência de vantagem indevida para deixar de cobrar tributo devido.
+    itens:
+      - n: I
+        descricao: Art. 3º da Lei 8.137/90 (0,50).
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ ordem tributaria | 8137 ], dispositivo: [ art. 3º Lei 8.137 ], rotulo: Crime funcional contra a ordem tributária (art. 3º da Lei 8.137/90) }
+      - n: II
+        descricao: Excesso de exação qualificado, art. 316, § 2º, do CP (0,50).
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ excesso de exacao ], dispositivo: [ "art. 316, § 2º, CP" ], rotulo: "Excesso de exação qualificado (art. 316, § 2º, do CP)" }
+    valor: 1
+  - n: 3
+    enunciado: |-
+      Pedro, almejando a morte de José, contra ele efetua disparo de arma de fogo, acertando-o na região toráxica. José vem a falecer, entretanto, não em razão do disparo recebido, mas porque, com intenção suicida, havia ingerido dose letal de veneno momentos antes de sofrer a agressão, o que foi comprovado durante instrução processual. Ainda assim, Pedro foi pronunciado nos termos do previsto no artigo 121, caput, do Código Penal.
+
+      Na condição de Advogado de Pedro:
+
+      I. indique o recurso cabível;
+
+      II. o prazo de interposição;
+
+      III. a argumentação visando à melhoria da situação jurídica do defendido.
+
+      Indique, ainda, para todas as respostas, os respectivos dispositivos legais.
+    gabarito_comentado: |-
+      (i) – Recurso em Sentido Estrito, nos termos do artigo 581, IV, do Código de Processo Penal. (0,2)
+
+      (ii) – 5 dias, nos termos do artigo 586, do Código de Processo Penal. (0,2)
+
+      (iii) – deveria ser requerida a desclassificação de crime consumado para tentado, já que a ação de Pedro não deu origem a morte de José. Trata-se de hipótese de concausa absolutamente independente pré-existente. (0,4)
+
+      Artigo 13, do Código Penal. (0,2)
+    itens:
+      - n: "1"
+        descricao: Recurso em sentido estrito, art. 581, IV, CPP (0,20).
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ recurso em sentido estrito | rese ] }
+      - n: "2"
+        descricao: Prazo de 5 dias, art. 586, CPP (0,20).
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ 5 dias ] }
+      - n: "3"
+        descricao: Desclassificação de consumado para tentado (causa superveniente, art. 13 do CP) (0,60).
+        componentes:
+          - { id: c1, valor: 0.6, termos: [ tentativa | tentado, superveniente | relativamente independente | 13 ] }
+    valor: 1
+  - n: 4
+    enunciado: |-
+      Aurélio, tentando defender-se da agressão a faca perpetrada por Berilo, saca de seu revólver e efetua um disparo contra o agressor. Entretanto, o disparo efetuado por Aurélio ao invés de acertar Berilo, atinge Cornélio, que se encontrava muito próximo de Berilo. Em consequência do tiro, Cornélio vem a falecer.
+
+      Aurélio é acusado de homicídio.
+
+      **Na qualidade de advogado de Aurélio indique a tese de defesa que melhor se adequa ao fato. Justifique sua resposta.**
+    gabarito_comentado: Trata-se o presente caso de um erro na execução (art. 73 do CP, 1ª parte), atendendo-se, conforme o citado artigo, ao disposto no parágrafo 3º do artigo 20 do Código Penal. Por outro lado verifica-se que Aurélio ao efetuar o disparo agiu em legítima defesa (art. 25 do CP) própria e real. Entretanto, por um erro acertou pessoa diversa (Cornélio) do agressor (Berilo). Mesmo assim, não fica afastada a legítima defesa posto que de acordo com o art. 20 § 3º do CP “não se consideram, neste caso, as condições ou qualidades da vítima, senão as da pessoa contra quem o agente queria praticar o crime”. Levando-se, ainda, em consideração o fato de que Aurélio agiu em defesa de uma agressão injusta e atual, utilizando-se, ainda, dos meios necessários e que dispunha para se defender.
+    itens:
+      - n: "1"
+        descricao: Legítima defesa (art. 25 do CP), com fundamentação (0,50).
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ legitima defesa ] }
+      - n: "2"
+        descricao: Erro na execução (art. 73 do CP), com fundamentação (0,50).
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ erro na execucao | aberratio ictus ] }
+    valor: 1
+  - n: 5
+    enunciado: |-
+      Lucas, processado em liberdade, foi condenado na 1ª instância à pena de 05 (cinco) anos em regime integralmente fechado, pelo crime de tráfico de drogas, cometido em setembro de 2006. Interpôs Recurso de Apelação o qual foi parcialmente provido. O Tribunal alterou apenas o dispositivo da sentença que fixava o regime em integralmente fechado para inicialmente fechado. Após o trânsito em julgado, Lucas deu inicio ao cumprimento de pena em 10 de fevereiro de 2009. O juízo da execução, em 10 de outubro de 2010, negou a progressão de regime sob o fundamento de que Lucas ainda não havia cumprido 2/5 da pena, em que pese os demais requisitos tenham sido preenchidos.
+
+      Diante dos fatos e da decisão acima exposta, sendo que sua intimação, na condição de Advogado de Lucas, ocorreu em 11.10.2010:
+
+      I. indique o recurso cabível.
+
+      II. apresente a argumentação adequada, indicando os respectivos dispositivos legais.
+    gabarito_comentado: |-
+      (a) - Recurso Cabível: Agravo em Execução, nos termos do previsto no artigo 197, da Lei n. 7.210/84.
+
+      (b) - Fundamentação: Com o advento da Lei 11.464/07, restou legalmente instituída a possibilidade de progressão de regime nos crimes hediondos e equiparados, respeitando, assim, o princípio constitucional da individualização da pena. A mencionada lei fixou prazo diferenciado para tais delitos, afastando o critério de cumprimento de 1/6 da pena, determinando o cumprimento de 2/5, para primários e 3/5, para reincidentes. No entanto, no caso em comento, o delito fora cometido antes da entrada em vigor da lei 11.464/07, sendo esta prejudicial ao réu no que tange ao prazo para progressão, razão pela qual não poderá ser aplicada retroativamente. Logo, quando do pedido perante o juízo da execução, Lucas já havia cumprido o requisito objetivo exigido para a progressão de regime, ou seja, 1/6, devendo ser concedido, nos termos do artigo 112, da Lei n. 7.210/84. O requerimento deve ser de progressão de regime. Pontuação para argumentação: 0,5. Pontuação para indicação dos dispositivos legais: 0,2
+    itens:
+      - n: "1"
+        descricao: Agravo em execução, art. 197 da LEP (0,30).
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ agravo ] }
+      - n: "2"
+        descricao: "A Lei 11.464/07 é posterior e mais gravosa (progressão com 2/5) e não retroage (0,20 pelos dispositivos; 0,50 pela argumentação): aplica-se 1/6, art. 112 da LEP."
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ 11464 | lei posterior | lei nova | 2/5, retroag* | irretroatividade | prejudicial | mais gravosa ] }
+          - { id: c2, valor: 0.2, termos: [ 1/6 ], dispositivo: [ art. 112 LEP ], requer: c1, rotulo: Progressão com 1/6 (art. 112 da LEP) }
+    valor: 1
+observacoes: "Exame de 2010: peça (5,00) e cinco questões de 1,00. Na peça, a FGV exigia a indicação dos arts. 396 e/ou 396-A do CPP para aceitar a resposta à acusação."

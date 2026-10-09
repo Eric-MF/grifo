@@ -1,0 +1,38 @@
+{
+  "_exame": { "questoes.0.valor": 1, "questoes.1.valor": 1, "questoes.2.valor": 1, "questoes.3.valor": 1, "questoes.4.valor": 1,
+    "observacoes": "Exame de 2010: peça (5,00) e cinco questões de 1,00. Na peça, a FGV exigia a indicação dos arts. 396 e/ou 396-A do CPP para aceitar a resposta à acusação." },
+  "peca:itens": [
+    { "n": "1", "secao": "Preliminares", "descricao": "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF (0,75).", "componentes": [ { "id": "c1", "valor": 0.75, "termos": ["incompet*", "justica estadual | justica federal"] } ] },
+    { "n": "2", "secao": "Preliminares", "descricao": "Nulidade da interceptação telefônica decretada como primeira medida investigatória (art. 2º, II, Lei 9.296/96) (0,25) e sem fundamentação adequada (art. 5º da Lei 9.296/96 ou art. 93, IX, CF) (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["interceptacao", "primeira medida | excepcional* | outros meios | subsidiari*"] }, { "id": "c2", "valor": 0.25, "termos": ["interceptacao", "fundamenta*"] } ] },
+    { "n": "3", "secao": "Preliminares", "descricao": "Nulidade da busca e apreensão genérica e sem fundamentação, art. 93, IX, CF (0,50).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["busca e apreensao", "generic* | fundamenta*"] } ] },
+    { "n": "4", "secao": "Preliminares", "descricao": "Nulidade da apreensão dos cinquenta mil dólares em endereço sem autorização judicial (prova ilícita) (0,50).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["dolares | apartamento 202 | dinheiro", "ilicit* | sem autorizacao | nulidade"] } ] },
+    { "n": "5", "secao": "Preliminares", "descricao": "Inépcia da denúncia genérica (art. 8º, 2, ‘b’, do Decreto 678/92; art. 5º, LV, CF; art. 41 do CPP) (0,50).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["inepcia | inepta", "denuncia"] } ] },
+    { "n": "6", "secao": "Mérito", "descricao": "Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo (0,50).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["239 | eca | estatuto da crianca", "dolo"] } ] },
+    { "n": "7", "secao": "Mérito", "descricao": "Falta de justa causa quanto à corrupção passiva (art. 317, § 1º, CP), com cotejo entre o tipo e os fatos (0,75).", "componentes": [ { "id": "c1", "valor": 0.75, "termos": ["justa causa | prova", "corrupcao passiva | 317"] } ] },
+    { "n": "8", "secao": "Pedidos", "descricao": "Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["absolvicao sumaria | absolvido sumariamente | absolver sumariamente | nulidade"] } ] },
+    { "n": "9", "secao": "Pedidos", "descricao": "Apresentação de rol de testemunhas (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["rol de testemunhas | testemunhas", "carlos | joao | roberta"] } ] },
+    { "n": "10", "descricao": "Prazo: 08/11/2010 (0,50).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["8 de novembro de 2010"] } ] }
+  ],
+  "q1:itens": [
+    { "n": "1", "descricao": "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP) (0,30).", "componentes": [ { "id": "c1", "valor": 0.3, "termos": ["ilicit*", "gravacao | confissao | silencio | deriva*"] } ] },
+    { "n": "2", "descricao": "Vício na infiltração: depende de autorização judicial e oitiva do MP (art. 53, I, Lei 11.343/06) (0,30).", "componentes": [ { "id": "c1", "valor": 0.3, "termos": ["infiltra*", "autorizacao judicial | ordem judicial | juiz"] } ] },
+    { "n": "3", "descricao": "Não se admite cumular quadrilha e associação para o tráfico (0,40).", "componentes": [ { "id": "c1", "valor": 0.4, "termos": ["quadrilha | associacao criminosa", "associacao para o trafico", "cumula* | bis in idem | mesmas acoes | dupla"] } ] }
+  ],
+  "q2:itens": [
+    { "n": "I", "descricao": "Art. 3º da Lei 8.137/90 (0,50).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["ordem tributaria | 8137"], "dispositivo": ["art. 3º Lei 8.137"], "rotulo": "Crime funcional contra a ordem tributária (art. 3º da Lei 8.137/90)" } ] },
+    { "n": "II", "descricao": "Excesso de exação qualificado, art. 316, § 2º, do CP (0,50).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["excesso de exacao"], "dispositivo": ["art. 316, § 2º, CP"], "rotulo": "Excesso de exação qualificado (art. 316, § 2º, do CP)" } ] }
+  ],
+  "q3:itens": [
+    { "n": "1", "descricao": "Recurso em sentido estrito, art. 581, IV, CPP (0,20).", "componentes": [ { "id": "c1", "valor": 0.2, "termos": ["recurso em sentido estrito | rese"] } ] },
+    { "n": "2", "descricao": "Prazo de 5 dias, art. 586, CPP (0,20).", "componentes": [ { "id": "c1", "valor": 0.2, "termos": ["5 dias"] } ] },
+    { "n": "3", "descricao": "Desclassificação de consumado para tentado (causa superveniente, art. 13 do CP) (0,60).", "componentes": [ { "id": "c1", "valor": 0.6, "termos": ["tentativa | tentado", "superveniente | relativamente independente | 13"] } ] }
+  ],
+  "q4:itens": [
+    { "n": "1", "descricao": "Legítima defesa (art. 25 do CP), com fundamentação (0,50).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["legitima defesa"] } ] },
+    { "n": "2", "descricao": "Erro na execução (art. 73 do CP), com fundamentação (0,50).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["erro na execucao | aberratio ictus"] } ] }
+  ],
+  "q5:itens": [
+    { "n": "1", "descricao": "Agravo em execução, art. 197 da LEP (0,30).", "componentes": [ { "id": "c1", "valor": 0.3, "termos": ["agravo"] } ] },
+    { "n": "2", "descricao": "A Lei 11.464/07 é posterior e mais gravosa (progressão com 2/5) e não retroage (0,20 pelos dispositivos; 0,50 pela argumentação): aplica-se 1/6, art. 112 da LEP.", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["11464 | lei posterior | lei nova | 2/5", "retroag* | irretroatividade | prejudicial | mais gravosa"] }, { "id": "c2", "valor": 0.2, "termos": ["1/6"], "dispositivo": ["art. 112 LEP"], "requer": "c1", "rotulo": "Progressão com 1/6 (art. 112 da LEP)" } ] }
+  ]
+}

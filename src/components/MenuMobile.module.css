@@ -1,0 +1,19 @@
+/* Só no modo "Celular" e abaixo de 640px. Fora disso, o botão e o painel não existem na tela. */
+.wrap { display: none; position: relative; }
+.trigger {
+  width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer;
+}
+.panel {
+  position: absolute; top: calc(100% + 0.5rem); right: 0; z-index: 60;
+  min-width: 12rem; display: grid; padding: 0.35rem;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.link {
+  min-height: 44px; display: flex; align-items: center; padding: 0 0.9rem; border-radius: 0.5rem;
+  color: var(--text); text-decoration: none; font-weight: 600;
+}
+.link:hover, .link:focus-visible { background: var(--surface-2); }
+@media (max-width: 640px) {
+  :global(:root[data-layout="celular"]) .wrap { display: block; }
+}

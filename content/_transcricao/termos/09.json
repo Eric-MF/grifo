@@ -1,0 +1,360 @@
+{
+ "peca:itens": [
+  {
+   "n": "1",
+   "descricao": "A peça deve ser endereçada ao Juiz do Juizado Especial Criminal (0,25).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.25,
+     "termos": [
+      "juizado especial criminal | jecrim | juizado especial"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "descricao": "Dispositivo legal que fundamenta a peça: Art. 403, § 3º, do CPP (0,20).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.2,
+     "dispositivo": [
+      "art. 403, § 3º, CPP"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "secao": "Preliminares",
+   "descricao": "Preliminar de decadência do direito de representação (0,50): os fatos ocorreram em 01/04/2009 e a representação só foi feita em 18/10/2009, após o prazo do Art. 38 do CPP (0,75).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.5,
+     "termos": [
+      "decaden*"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.75,
+     "termos": [
+      "6 meses | seis meses | prazo",
+      "representacao"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "secao": "Preliminares",
+   "descricao": "Nulidade do processo pela inobservância do rito da Lei 9.099/95 (0,25), anulando-se o recebimento da denúncia (0,25), com a consequente prescrição da pretensão punitiva (0,25).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.25,
+     "termos": [
+      "nulidade | nulo",
+      "9099 | juizado | rito"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.25,
+     "termos": [
+      "recebimento da denuncia",
+      "anula* | nulo | nulidade"
+     ]
+    },
+    {
+     "id": "c3",
+     "valor": 0.25,
+     "termos": [
+      "prescri*"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "secao": "Mérito",
+   "descricao": "Absolvição por falta de prova (0,25) e ausência de materialidade do delito (0,50).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.25,
+     "termos": [
+      "absolvi* | absolver",
+      "prova*"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.5,
+     "termos": [
+      "materialidade"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "secao": "Mérito",
+   "descricao": "Não incidência da agravante de crime contra mulher grávida, pois a hipótese é de erro quanto à pessoa (0,30), na forma do Art. 20, § 3º, do CP (0,10).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.3,
+     "termos": [
+      "gravid*",
+      "erro sobre a pessoa | erro quanto a pessoa | error in persona"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.1,
+     "dispositivo": [
+      "art. 20, § 3º, CP"
+     ],
+     "requer": "c1"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "secao": "Mérito",
+   "descricao": "Não incidência da agravante da reincidência (0,35).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.35,
+     "termos": [
+      "reincid*",
+      "nao incid* | afast* | nao ha | nao e reincidente | inexist*"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "8a",
+   "secao": "Pedidos",
+   "descricao": "Extinção da punibilidade pela decadência do direito de representação (0,20).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.2,
+     "termos": [
+      "extin* da punibilidade",
+      "decaden*"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "8b",
+   "secao": "Pedidos",
+   "descricao": "Nulidade do processo (0,10), com a consequente extinção da punibilidade pela prescrição (0,10).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.1,
+     "termos": [
+      "nulidade"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.1,
+     "termos": [
+      "prescri*"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "8c",
+   "secao": "Pedidos",
+   "descricao": "Absolvição (0,10) por falta de provas OU por não haver prova da existência do fato (0,10).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.1,
+     "termos": [
+      "absolvi* | absolver"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.1,
+     "termos": [
+      "prova*"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "8d",
+   "secao": "Pedidos",
+   "descricao": "Subsidiariamente: não incidência da agravante de crime contra mulher grávida (0,10); não incidência da reincidência (0,10); atenuante da menoridade relativa (0,10).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.1,
+     "termos": [
+      "gravid*"
+     ]
+    },
+    {
+     "id": "c2",
+     "valor": 0.1,
+     "termos": [
+      "reincid*"
+     ]
+    },
+    {
+     "id": "c3",
+     "valor": 0.1,
+     "termos": [
+      "menoridade | menor de 21"
+     ]
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "descricao": "Estrutura correta: partes, local, data, assinatura (0,15).",
+   "componentes": [
+    {
+     "id": "c1",
+     "valor": 0.15,
+     "termos": [
+      "local",
+      "advogad* | assinatura | oab"
+     ]
+    }
+   ]
+  }
+ ],
+ "q1:A": {
+  "componentes": [
+   {
+    "id": "c1",
+    "valor": 0.75,
+    "alternativas": [
+     [
+      "apos a consumacao | depois da consumacao | posterior a consumacao"
+     ],
+     [
+      "liame subjetivo | vinculo subjetivo"
+     ]
+    ],
+    "rotulo": "Não: o auxílio foi prometido após a consumação OU inexistente liame subjetivo"
+   }
+  ]
+ },
+ "q1:B.c1": {
+  "termos": [
+   "favorecimento real"
+  ],
+  "dispositivo": [
+   "art. 349 CP"
+  ]
+ },
+ "q2:A.c1": [
+  "arrependimento eficaz"
+ ],
+ "q2:A.c2": {
+  "alternativas": [
+   [
+    "atos ja praticados | atos praticados"
+   ],
+   [
+    "lesao corporal grave | lesoes corporais graves | lesao grave"
+   ]
+  ]
+ },
+ "q2:B.c1": {
+  "alternativas": [
+   [
+    "nao houve eficacia | ineficaz | sem eficacia | nao foi eficaz"
+   ],
+   [
+    "15"
+   ]
+  ]
+ },
+ "q2:B.c2": {
+  "alternativas": [
+   [
+    "resultado morte | pela morte"
+   ],
+   [
+    "homicidio",
+    "consumado"
+   ]
+  ]
+ },
+ "q3:A1.c1": [
+  "absolv*",
+  "sumari*"
+ ],
+ "q3:A2.c1": [
+  "crime impossivel"
+ ],
+ "q3:B1.c1": [
+  "recurso em sentido estrito | rese"
+ ],
+ "q3:B2.c1": [
+  "5 dias"
+ ],
+ "q3:B3.c1": [
+  "juiz a quo | juizo a quo | juiz de primeiro grau | juiz de direito | juizo de primeiro"
+ ],
+ "q3:B3.c2": [
+  "tribunal de justica | tj"
+ ],
+ "q4:A1.c1": {
+  "termos": [
+   "conexao | continencia | foro por prerrogativa | prerrogativa de funcao"
+  ],
+  "dispositivo": [
+   "Súmula 704 STF"
+  ],
+  "rotulo": "Não, com base na Súmula 704 do STF"
+ },
+ "q4:A2": {
+  "componentes": [
+   {
+    "id": "c1",
+    "valor": 0.4,
+    "alternativas": [
+     [
+      "outros recursos"
+     ],
+     [
+      "juiz natural"
+     ],
+     [
+      "tribunal de excecao"
+     ]
+    ],
+    "rotulo": "Não perde outros recursos OU não há violação ao juiz natural (não é tribunal de exceção)"
+   }
+  ]
+ },
+ "q4:B": {
+  "componentes": [
+   {
+    "id": "c1",
+    "valor": 0.5,
+    "termos": [
+     "duplo grau"
+    ],
+    "rotulo": "Não terá direito ao duplo grau de jurisdição"
+   }
+  ]
+ }
+}

@@ -1,0 +1,319 @@
+# XXII Exame de Ordem Unificado — Direito Penal
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
+id: "22"
+numero: 22
+numeral: XXII
+aplicacao: 2017-05-28
+revisao:
+  status: rascunho
+  por: ""
+  em: ""
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
+peca:
+  nome: Apelação
+  tipo: apelacao
+  aliases: []
+  enunciado: |-
+    Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
+
+    Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
+
+    Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
+
+    Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
+
+    Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
+
+    A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
+
+    **Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)**
+
+    *Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.*
+  gabarito_comentado: |-
+    O candidato deve elaborar, na condição de advogado, um Recurso de Apelação, com fundamento no Art. 593, inciso I, do Código de Processo Penal.
+
+    Em um primeiro momento, deve ser redigida a petição de interposição do recurso, direcionada ao Juízo da 1ª Vara Criminal da Comarca de Belo Horizonte/MG, requerendo o encaminhamento do feito para instância superior. A petição de interposição deve ser devidamente datada, contendo as expressões “assinatura” e “número da OAB”. Posteriormente, devem ser apresentadas as respectivas razões recursais, peça essa endereçada diretamente ao Tribunal de Justiça do Estado de Minas Gerais.
+
+    No conteúdo das Razões Recursais, preliminarmente, deveria o advogado alegar a nulidade da sentença, devendo os atos desde a apresentação das alegações finais pela defesa serem anulados. Isso porque Leonardo tinha advogado constituído nos autos que veio a renunciar. Diante disso, deveria o magistrado intimar o réu, que estava preso, para informar se tinha interesse em constituir novo advogado ou ser assistido pela Defensoria Pública. A decisão do juiz de, de imediato, encaminhar os autos para Defensoria Pública viola o princípio da ampla defesa na vertente da defesa técnica. Certamente houve prejuízo, pois as Alegações Finais foram apresentadas sem qualquer contato do Defensor com o acusado e este foi condenado.
+
+    Superada a preliminar, no mérito deve o advogado requerer a absolvição de Leonardo com fundamento na desistência voluntária. Prevê o Art. 15 do Código Penal que o agente que, voluntariamente, desistir de prosseguir na execução só responde pelos atos já praticados. A desistência voluntária não se confunde com a tentativa.
+
+    Nesta, o agente inicia atos de execução, mas não consuma o crime por circunstâncias alheias à sua vontade.
+
+    Naquela, por sua vez, o agente tem possibilidade de prosseguir na empreitada criminosa, mas antes de esgotar todos os meios que tem à sua disposição, desiste voluntariamente de prosseguir e consumar o delito. A particularidade da desistência voluntária é que ela é uma chamada “ponte de ouro” de volta para legalidade, pois o agente somente responderá pelos atos já praticados e não pela tentativa do crime que pretendia cometer originariamente.
+
+    No caso, claramente Leonardo poderia prosseguir na empreitada criminosa, mas optou por desistir. Iniciada a execução, teve acesso ao caixa do estabelecimento comercial contendo dinheiro, mas, ao verificar que o funcionário do local possuía dificuldades de locomoção, se arrependeu e abandonou a empreitada criminosa.
+
+    Leonardo nem mesmo tinha sido visto pelo funcionário, logo poderia prosseguir.
+
+    Restaria, apenas, os atos já praticados, no caso uma ameaça ao cliente que estava no local. Ocorre que o crime de ameaça é de ação penal pública condicionada à representação e como esta nunca ocorreu, não poderia Leonardo ser por este delito condenado neste momento.
+
+    Diante do exposto, Leonardo deve ser absolvido do roubo que lhe foi imputado.
+
+    Com base na eventualidade, em sendo mantida a condenação, deve o examinando, como advogado, requerer revisão da dosimetria da pena.
+
+    Em um primeiro momento, deve requerer a aplicação da pena base em seu mínimo legal. A existência de representação pela prática de ato infracional não justifica o reconhecimento de maus antecedentes, pois a punição de Leonardo quando inimputável não pode prejudica-lo penalmente, gerando o aumento de sua pena.
+
+    Na segunda fase, deve ser considerada a atenuante da menoridade relativa, pois Leonardo era menor de 21 anos na data dos fatos, assim como a atenuante da confissão, nos termos dos Artigos 65, inciso I e inciso III, alínea d, CP.
+
+    Na terceira fase, o advogado deve pleitear o afastamento da causa de aumento pelo emprego de arma de fogo, tendo em vista que não há prova de sua utilização. O enunciado apenas narra que o agente simulou estar portando arma de fogo, sendo certo que a vítima nem mesmo foi ouvida e não foi apreendida qualquer arma de fogo com o mesmo. O objetivo do legislador ao prever a punição mais severa em caso de emprego de arma foi que a integridade física da vítima é colocada em maior risco. A simulação de porte de arma, contudo, não traz este incremento do risco, além de nem mesmo se adequar ao princípio da legalidade, já que não houve prova de emprego de arma de fogo, mas tão só Leonardo simulou estar armado para configurar a grave ameaça. Deve, ainda, o examinando requerer a redução máxima da tentativa, o que permitiria aplicação do sursis da pena.
+
+    Por fim, deve requerer a aplicação do regime aberto ou semiaberto a depender da pena aplicada, pois a fundamentação do magistrado para aplicação do regime fechado foi insuficiente. Nos termos dos Enunciados 718 e 719 da Súmula de Jurisprudência do STF (ou 440, STJ), a gravidade em abstrato do crime não justifica o reconhecimento de regime inicial de cumprimento de pena mais severo do que aquele de acordo com a pena aplicada.
+
+    Por fim, deve o advogado pleitear o provimento do recurso, com consequente expedição do alvará de soltura.
+
+    Em relação ao prazo, deve a peça ser datada em 15 de maio de 2017, tendo em vista que o prazo para apelação é de 05 dias, mas o dia 13 de maio de 2017 é um sábado, logo o prazo é prorrogado para segunda-feira.
+
+    Tabela de Pontos
+  itens:
+    - n: "1"
+      secao: Petição de interposição
+      descricao: "Endereçamento correto: Juízo da 1ª Vara Criminal da Comarca de Belo Horizonte-MG (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 1 vara criminal, belo horizonte ] }
+    - n: "2"
+      secao: Petição de interposição
+      descricao: "Fundamentação legal: Art. 593, inciso I, do CPP (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, dispositivo: [ "art. 593, I, CPP" ] }
+    - n: "3"
+      secao: Razões de apelação
+      descricao: "Endereçamento correto: Tribunal de Justiça do Estado de Minas Gerais (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ tribunal de justica | tj, minas gerais | mg ] }
+    - n: "4"
+      secao: Razões de apelação
+      descricao: "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública (0,25), tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa (0,15)."
+      valores: [ 0, 0.15, 0.25, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ nulidade | nula | nulo ] }
+        - { id: c2, valor: 0.15, alternativas: [ [ intima*, novo advogado | constituir | indicar ], [ ampla defesa ] ] }
+    - n: "5"
+      secao: Razões de apelação
+      descricao: "No mérito: absolvição de Leonardo OU desclassificação para o delito de ameaça com consequente reconhecimento da decadência (0,40)"
+      valores: [ 0, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.4, alternativas: [ [ absolvi* | absolver ], [ desclassifica*, ameaca ] ] }
+    - n: "5.1"
+      secao: Razões de apelação
+      descricao: Houve desistência voluntária (0,80), nos termos do Art. 15 do CP (0,10)
+      valores: [ 0, 0.8, 0.9 ]
+      componentes:
+        - { id: c1, valor: 0.8, termos: [ desistencia voluntaria ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 15, CP" ], requer: c1 }
+    - n: "5.2"
+      secao: Razões de apelação
+      descricao: Leonardo deve responder apenas pelos atos já praticados OU não deve responder pela tentativa (0,45).
+      valores: [ 0, 0.45 ]
+      componentes:
+        - { id: c1, valor: 0.45, alternativas: [ [ atos ja praticados | atos praticados ], [ nao, tentativa ] ] }
+    - n: "6"
+      secao: Razões de apelação
+      descricao: "Subsidiariamente: a pena base deve ser fixada no mínimo legal (0,20), pois a existência de ação socioeducativa julgada procedente não justifica o reconhecimento de maus antecedentes (0,15)"
+      valores: [ 0, 0.15, 0.2, 0.35 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ pena base | pena-base, minimo ] }
+        - { id: c2, valor: 0.15, termos: [ socioeducativ* | ato infracional, antecedentes ] }
+    - n: "7"
+      secao: Razões de apelação
+      descricao: Reconhecimento da atenuante da menoridade relativa (0,15), nos termos do Art. 65, inciso I, do CP (0,10).
+      valores: [ 0, 0.15, 0.25 ]
+      componentes:
+        - { id: c1, valor: 0.15, termos: [ menoridade relativa | menor de 21 ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 65, I, CP" ], requer: c1 }
+    - n: "8"
+      secao: Razões de apelação
+      descricao: Reconhecimento da atenuante da confissão (0,15), nos termos do Art. 65, inciso III, alínea d, do CP (0,10)
+      valores: [ 0, 0.15, 0.25 ]
+      componentes:
+        - { id: c1, valor: 0.15, termos: [ confissao ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 65, III, d, CP" ], requer: c1 }
+    - n: "9"
+      secao: Razões de apelação
+      descricao: Afastamento da causa de aumento do Art. 157, §2º, inciso I, do CP (0,30), pois houve apenas simulação de porte de arma de fogo, sem incremento do potencial lesivo OU pois não existe prova do emprego de arma de fogo (0,20).
+      valores: [ 0, 0.2, 0.3, 0.5 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ causa de aumento | majorante, arma ] }
+        - { id: c2, valor: 0.2, alternativas: [ [ simula* ], [ prova, arma, nao existe | ausencia | inexistencia | nao ha ], [ potencial lesivo ] ] }
+    - n: "10"
+      secao: Razões de apelação
+      descricao: Redução da tentativa em seu patamar máximo (0,10), permitindo aplicação da suspensão condicional da pena (0,05)
+      valores: [ 0, 0.05, 0.1, 0.15 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ tentativa, maxim* | 2/3 ] }
+        - { id: c2, valor: 0.05, termos: [ suspensao condicional da pena | sursis ] }
+    - n: "11"
+      secao: Razões de apelação
+      descricao: Aplicação do regime inicial semiaberto ou aberto do cumprimento de pena (0,20), pois a gravidade em abstrato não justifica regime de pena mais severo OU a fixação de regime de cumprimento mais severo exige motivação concreta (0,15), nos termos da Súmula 718/STF OU 719/STF OU 440/STJ (0,10).
+      valores: [ 0, 0.15, 0.2, 0.25, 0.3, 0.35, 0.45 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ regime, semiaberto | semi-aberto | aberto ] }
+        - { id: c2, valor: 0.15, alternativas: [ [ gravidade abstrata | gravidade em abstrato ], [ motivacao concreta | fundamentacao concreta | motivacao idonea ] ] }
+        - { id: c3, valor: 0.1, dispositivo: [ Súmula 718 STF ], requer: c2 }
+    - n: "12"
+      secao: Razões de apelação
+      descricao: Pedido de provimento do recurso (0,30), com expedição de alvará de soltura (0,10).
+      valores: [ 0, 0.1, 0.3, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ provi* ] }
+        - { id: c2, valor: 0.1, termos: [ alvara de soltura | alvara ] }
+    - n: "13"
+      secao: Razões de apelação
+      descricao: "Prazo: 15 de maio de 2017 (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 15 de maio de 2017 ] }
+    - n: "14"
+      secao: Razões de apelação
+      descricao: "Fechamento: aposição de local, data, assinatura e OAB (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ local, oab ] }
+questoes:
+  - n: 1
+    enunciado: |-
+      Chegou ao Ministério Público denúncia de pessoa identificada apontando Cássio como traficante de drogas. Com base nessa informação, entendendo haver indícios de autoria e não havendo outra forma de obter prova do crime, a autoridade policial representou pela interceptação da linha telefônica que seria utilizada por Cássio e que fora mencionada na denúncia recebida, tendo o juiz da comarca deferido a medida pelo prazo inicial de 30 dias.
+
+      Nas conversas ouvidas, ficou certo que Cássio havia adquirido certa quantidade de cocaína, pela primeira vez, para ser consumida por ele, juntamente com seus amigos Pedro e Paulo, na comemoração de seu aniversário, no dia seguinte. Diante dessa prova, policiais militares obtiveram ordem judicial e chegaram à casa de Cássio quando este consumia e oferecia a seus amigos os seis papelotes de cocaína para juntos consumirem. Cássio, portador de maus antecedentes, foi preso em flagrante e autuado pela prática do crime de tráfico, sendo, depois, denunciado como incurso nas penas do Art. 33, caput, da Lei nº 11.343/06.
+
+      **Considerando os fatos narrados, responda, na qualidade de advogado(a) de Cássio, aos itens a seguir.**
+
+      **A) Qual a tese de direito processual a ser suscitada para afastar a validade da prova obtida? (Valor: 0,65)**
+
+      **B) Reconhecidos como verdadeiros os fatos narrados, qual a tese de direito material a ser alegada para tornar menos gravosa a tipificação da conduta de Cássio? (Valor: 0,60)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A questão exige do examinando conhecimento sobre os delitos tipificados na Lei nº 11.343/06, além dos requisitos para decretação válida de interceptação telefônica.
+
+      A) A tese de direito processual a ser suscitada para defesa de Cássio para afastar a prova obtida é a invalidade da decisão que determinou a interceptação telefônica de Cássio, tendo em vista que, de início, foi determinada pelo prazo de 30 dias. Inicialmente deve ser destacado que a autoridade policial possui legitimidade para representar pela decretação da interceptação de comunicações telefônicas, nos termos do Art. 3º, inciso I, da Lei nº 9.296/96.
+
+      Ademais, o crime investigado é punido com pena de reclusão e consta do enunciado que a prova não poderia ser obtida por outros meios disponíveis. Todavia, prevê o Art. 5º do mesmo diploma legal que a decisão que concede a medida deverá ser fundamentada e que não poderá exceder o prazo de 15 dias, renovável por igual período se comprovada a indispensabilidade do meio de prova. Diante disso, ainda que possa o período de 15 dias ser renovado, não pode, de início, a autoridade judicial determinar a interceptação por mais de 15 dias, sob pena de nulidade.
+
+      B) A tese de direito material a ser alegada para tornar a conduta de Cássio menos gravosa é que foi praticado o delito previsto no Art. 33, § 3º da Lei nº 11.343/06, já que o agente oferecia drogas, de maneira eventual, sem objetivo de lucro, para seus amigos para juntos consumirem. Não há, assim, que se falar em prática de tráfico do Art. 33 da Lei nº 11.343/06 e nem mesmo na aplicação do §4º do mesmo dispositivo, já que o agente era portador de maus antecedentes.
+
+      Tabela de Pontos
+    itens:
+      - n: A
+        descricao: A nulidade da decisão que decretou a interceptação das comunicações telefônicas OU ilicitude da prova obtida a partir das interceptações telefônicas (0,20), pois decretada a medida pelo prazo inicial de 30 dias (0,35), em desacordo com a previsão do Art. 5º da Lei nº 9.296/96 (0,10)
+        valores: [ 0, 0.2, 0.3, 0.35, 0.45, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ interceptacao, nulidade | ilicit* | ilegal* ] }
+          - { id: c2, valor: 0.35, termos: [ 30 dias | prazo ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 5, Lei 9296" ], requer: c2 }
+      - n: B
+        descricao: A tese de direito material é que foi praticado o crime previsto no Art. 33, § 3º da Lei nº 11.343/06 (0,45), tendo em vista que o agente tinha o material e o oferecia para junto consumir com seus amigos, de maneira eventual e sem intenção de lucro (0,15)
+        valores: [ 0, 0.15, 0.45, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.45, termos: [ 33 paragrafo 3 | uso compartilhado | consumo compartilhado | consumir juntos | oferecer droga | cessao gratuita ] }
+          - { id: c2, valor: 0.15, alternativas: [ [ eventual ], [ sem intencao de lucro | sem objetivo de lucro | gratuit* ] ] }
+  - n: 2
+    enunciado: |-
+      Em inquérito policial, Antônio é indiciado pela prática de crime de estupro de vulnerável, figurando como vítima Joana, filha da grande amiga da Promotora de Justiça Carla, que, inclusive, aconselhou a família sobre como agir diante do ocorrido.
+
+      Segundo consta do inquérito, Antônio encontrou Joana durante uma festa de música eletrônica e, após conversa em que Joana afirmara que cursava a Faculdade de Direito, foram para um motel onde mantiveram relações sexuais, vindo Antônio, posteriormente, a tomar conhecimento de que Joana tinha apenas 13 anos de idade.
+
+      Recebido o inquérito concluído, Carla oferece denúncia em face de Antônio, imputando-lhe a prática do crime previsto no Art. 217-A do Código Penal, ressaltando a jurisprudência do Supremo Tribunal Federal no sentido de que, para a configuração do delito, não se deve analisar o passado da vítima, bastando que a mesma seja menor de 14 anos.
+
+      **Considerando a situação narrada, na condição de advogado(a) de Antônio, responda aos itens a seguir.**
+
+      **A) Existe alguma medida a ser apresentada pela defesa técnica para impedir Carla de participar do processo? Justifique. (Valor: 0,60)**
+
+      **B) Qual a principal alegação defensiva de direito material a ser apresentada em busca da absolvição do denunciado? Justifique.(Valor: 0,65)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) Sim, o advogado de Antônio, já no momento de apresentar resposta à acusação, deveria apresentar exceção de suspeição em face da Promotora de Justiça, tendo em vista a presença da causa de suspeição prevista no Art. 254, incisos I e IV, do Código de Processo Penal (CPP). Prevê o dispositivo em questão que o juiz dar-se-á por suspeito quando for amigo íntimo de alguma das partes ou quando tiver aconselhado uma das partes. Carla é muito amiga da genitora da vítima e ainda aconselhou a ofendida e sua família sobre como agir diante do ocorrido. Ademais, o Art. 258 do CPP estabelece que as previsões referentes às causas de impedimento e suspeição do magistrado são aplicáveis, no que couber, ao Ministério Público. Claro está o envolvimento de Carla com a causa, de modo que sua suspeição deve ser reconhecida. Considerando que a mesma não se declarou suspeita, oferecendo denúncia, caberia ao advogado apresentar exceção de suspeição, nos termos do Art. 95, inciso I, do CPP, e do Art. 104 do CPP.
+
+      B) A principal alegação defensiva, de mérito, de direito material, é a de que houve erro de tipo por parte do denunciado, nos termos do Art. 20 do Código Penal, de modo que fica afastado o seu dolo. Diante da situação apresentada, claro está que Antônio não tinha conhecimento que Joana tinha apenas 13 anos de idade, merecendo destaque as partes se conheceram em uma festa de música eletrônica, ocasião em que a ofendida afirmara estar na faculdade, o que, por si só, já afastaria as suspeitas de que fosse menor de 14 anos. Ainda que se entendesse que o erro foi vencível, não poderia Antônio ser responsabilizado, tendo em vista que esse afasta o dolo e não há previsão de responsabilização culposa pelo crime de estupro de vulnerável. No caso, é irrelevante a posição dos Tribunais Superiores no sentido de que o passado sexual da vítima não deve ser analisado, bastando que a mesma tenha, objetivamente, menos de 14 anos de idade. Ocorre que o problema apresentado em nada com esse tema se confunde, já que sequer sabia o réu a idade da vítima, que é uma das elementares do tipo.
+
+      Tabela de Pontos
+    itens:
+      - n: A
+        descricao: Sim, com apresentação de exceção de suspeição (0,50), nos termos do Art. 95, inciso I, do CPP OU do Art. 104 do CPP (0,10)
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ excecao de suspeicao | suspeicao ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 95, I, CPP", "art. 104, CPP" ], requer: c1 }
+      - n: B
+        descricao: A principal tese defensiva é a ocorrência de erro de tipo (0,55), nos termos do Art. 20 do CP (0,10).
+        valores: [ 0, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.55, termos: [ erro de tipo ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 20, CP" ], requer: c1 }
+  - n: 3
+    enunciado: |-
+      Na cidade de Porto Alegre, no Rio Grande do Sul, Maurício iniciou a execução de determinada contravenção penal que visava atingir e gerar prejuízo em detrimento de patrimônio de entidade autárquica federal, mas a infração penal não veio a se consumar por circunstâncias alheias à sua vontade.
+
+      Ao tomar conhecimento dos fatos, o Ministério Público dá início a procedimento criminal perante juízo do Tribunal Regional Federal com competência para atuar no local dos fatos, imputando ao agente a prática da contravenção penal em sua modalidade tentada, oferecendo, desde já, proposta de transação penal.
+
+      Maurício conversa com sua família e procura um(a) advogado(a) para patrocinar seus interesses, destacando que não tem interesse em aceitar transação penal, suspensão condicional do processo ou qualquer outro benefício despenalizador.
+
+      **Com base apenas nas informações narradas e na condição de advogado(a) de Maurício, responda:**
+
+      **A) Considerando que a contravenção penal causaria prejuízo ao patrimônio de entidade autárquica federal, o órgão perante o qual o procedimento criminal foi iniciado é competente para julgamento da infração penal imputada? Justifique. (Valor: 0,65)**
+
+      **B) Qual argumento de direito material deverá ser apresentado para evitar a punição de Maurício? Justifique. (Valor: 0,60)**
+
+      *Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) Apesar de a contravenção penal causar prejuízo ao patrimônio de autarquia federal, a Justiça Federal não é competente para julgar a infração penal, tendo em vista que o Art. 109, inciso IV, da Constituição da República Federativa do Brasil prevê expressamente que a Justiça Federal terá competência para julgar infrações penais patricadas em detrimento de bens, serviços ou interesses da União e de suas entidades autárquicas e empresas públicas, excluídas as contravenções penais. Diferente da regra geral, as contravenções penais, ainda que nas circunstâncias do dispositivo acima mencionado, devem ser julgadas perante a Justiça Estadual, no caso, Juizado Especial Criminal Estadual.
+
+      B) Apesar de Maurício ter iniciado a execução de uma contravenção penal e a mesma não ter se consumado por circunstâncias alheias à vontade do agente, o que, em tese, configura tentativa, que, pela regra do Código Penal, impõe a punição pelo crime pretendido com redução de pena, na hipótese apresentada, a infração penal que não restou consumada foi uma contravenção. Nos termos do previsto no Art. 4º do Decreto-Lei 3.688/41, não se pune a tentativa de contravenção penal. Assim, no momento em que Maurício não conseguiu consumar o delito por circunstâncias alheias à sua vontade, sua conduta não é punível.
+
+      Tabela de Pontos
+    itens:
+      - n: A
+        descricao: Não, a Justiça Federal não é competente para julgamento de contravenções penais, ainda que praticadas em detrimento de bens, serviços e patrimônio de entidade autárquica da União (0,55), nos termos do Art. 109, inciso IV, da CRFB/88 OU Súmula 38/STJ (0,10).
+        valores: [ 0, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.55, termos: [ justica federal, contraven* ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 109, IV, CRFB", Súmula 38 STJ ], requer: c1 }
+      - n: B
+        descricao: O argumento a ser apresentado é que não se pune a tentativa de contravenção penal (0,50), nos termos do Art. 4º do DL 3.688/41 (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ tentativa, contraven* ] }
+          - { id: c2, valor: 0.1, dispositivo: [ art. 4º LCP ], requer: c1 }
+  - n: 4
+    enunciado: |-
+      Diego e Júlio caminham pela rua, por volta das 21h, retornando para suas casas após mais um dia de aula na faculdade, quando são abordados por Marcos, que, mediante grave ameaça de morte e utilizando simulacro de arma de fogo, exige que ambos entreguem as mochilas e os celulares que carregavam.
+
+      Após os fatos, Diego e Júlio comparecem em sede policial, narram o ocorrido e descrevem as características físicas do autor do crime. Por volta das 5h da manhã do dia seguinte, policiais militares em patrulhamento se deparam com Marcos nas proximidades do local do fato e verificam que ele possuía as mesmas características físicas do roubador. Todavia, não são encontrados com Marcos quaisquer dos bens subtraídos, nem o simulacro de arma de fogo. Ele é encaminhado para a Delegacia e, tendo-se verificado que era triplamente reincidente na prática de crimes patrimoniais, a autoridade policial liga para as residências de Diego e Júlio, que comparecem em sede policial e, em observância de todas as formalidades legais, realizam o reconhecimento de Marcos como responsável pelo assalto. O Delegado, então, lavra auto de prisão em flagrante em desfavor de Marcos, permanecendo este preso, e o indicia pela prática do crime previsto no Art. 157, caput, do Código Penal, por duas vezes, na forma do Art. 69 do Código Penal.
+
+      Diante disso, Marcos liga para seu advogado para informar sua prisão. Este comparece, imediatamente, em sede policial, para acesso aos autos do procedimento originado do Auto de Prisão em Flagrante.
+
+      **Considerando apenas as informações narradas, na condição de advogado de Marcos, responda, de acordo com a jurisprudência dos Tribunais Superiores, aos itens a seguir.**
+
+      **A) Qual requerimento deverá ser formulado, de imediato, em busca da liberdade de Marcos e sob qual fundamento? Justifique. (Valor: 0,65)**
+
+      **B) Oferecida denúncia na forma do indiciamento, qual argumento de direito material poderá ser apresentado pela defesa para questionar a capitulação delitiva constante da nota de culpa, em busca de uma punição mais branda? Justifique. (Valor: 0,60)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) A defesa de Marcos deverá formular requerimento de relaxamento da prisão, tendo em vista que não havia situação de flagrante a justificar a formalização do Auto de Prisão em Flagrante. Narra o enunciado que, de fato, Marcos, mediante grave ameaça, inclusive com emprego de simulacro de arma de fogo, subtraiu coisas alheias móveis de Diego e Julio, logo praticou dois crimes de roubo. As vítimas reconheceram o acusado, de modo que há justa causa para o oferecimento de denúncia. Todavia, não havia situação de flagrante a justificar a prisão do acusado. Isso porque o reconhecimento e prisão de Marcos ocorreram mais de 07 horas após o fato, sendo certo que não houve perseguição e nem com o agente foram encontrados instrumentos ou produtos do crime.
+
+      Dessa forma, nenhuma das situações previstas no Art. 302 do Código de Processo Penal restou configurada. Em sendo a prisão ilegal, o requerimento a ser formulado é de relaxamento da prisão. Insuficiente, no caso, o examinando apresentar requerimento de liberdade provisória. Primeiro porque, em sendo a prisão ilegal, sequer deveriam ser analisados os pressupostos dos Artigos 312 e 313 do Código de Processo Penal nesse momento.
+
+      Além disso, a princípio, não seria caso de reconhecimento de ausência dos motivos da preventiva, já que foi praticado crime com circunstâncias graves e o agente é triplamente reincidente.
+
+      B) O equívoco a ser alegado em relação à capitulação delitiva refere-se ao concurso de crimes. Sem dúvidas, confirmados os fatos, houve crime de roubo, já que foram subtraídas coisas alheias móveis e houve emprego de grave ameaça, ainda que apenas através de palavras de ordem e emprego de simulacro de arma de fogo. Da mesma forma, dois foram os crimes patrimoniais praticados. Isso porque dois patrimônios foram atingidos e presente o elemento subjetivo, tendo em vista que Marcos sabia que estava subtraindo pertences de duas pessoas diversas. Todavia, com uma só ação, mediante uma ameaça, foram subtraídos bens de dois patrimônios diferentes. Assim, deverá ser reconhecido o concurso formal de delitos, aplicando-se a regra da exasperação da pena, e não o concurso material, com aplicação do cúmulo material de sanções.
+
+      Tabela de Pontos
+    itens:
+      - n: A
+        descricao: O requerimento a ser formulado é de relaxamento da prisão (0,35), tendo em vista que não está presente nenhuma das situações de flagrante elencadas no Art. 302 do CPP (0,30).
+        valores: [ 0, 0.3, 0.35, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.35, termos: [ relaxamento ] }
+          - { id: c2, valor: 0.3, termos: [ flagrante, situacao | situacoes | hipotese* | flagrancia ] }
+      - n: B
+        descricao: O argumento é que houve concurso formal de crimes (0,35), tendo em vista que, com uma só ação, foram praticados dois delitos (0,15), nos termos do Art. 70 do CP (0,10).
+        valores: [ 0, 0.15, 0.25, 0.35, 0.45, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.35, termos: [ concurso formal ] }
+          - { id: c2, valor: 0.15, termos: [ uma so acao | unica acao | uma unica conduta | uma so conduta | uma acao | uma conduta ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 70, CP" ], requer: c2 }

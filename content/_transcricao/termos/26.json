@@ -1,0 +1,176 @@
+{
+ "1.c1": [
+  "vara criminal",
+  "campos"
+ ],
+ "2.c1": {
+  "dispositivo": [
+   "art. 403, § 3º, CPP"
+  ]
+ },
+ "3.c1": [
+  "nulidade",
+  "instrucao | atos"
+ ],
+ "4.c1": [
+  "intima*",
+  "reu | acusado | lauro",
+  "audiencia"
+ ],
+ "4.c2": {
+  "alternativas": [
+   [
+    "cerceamento"
+   ],
+   [
+    "ampla defesa"
+   ]
+  ]
+ },
+ "5.c1": [
+  "absolvi* | absolver"
+ ],
+ "6.c1": [
+  "atos executorios | execucao"
+ ],
+ "6.c2": [
+  "atos preparatorios | preparacao",
+  "impunive* | nao sao puniveis | nao puniveis"
+ ],
+ "7.c1": [
+  "qualificadora",
+  "idade"
+ ],
+ "8.c1": [
+  "pena base | pena-base",
+  "minimo"
+ ],
+ "9.c1": [
+  "agravante",
+  "afast* | exclu* | decote | nao incid*"
+ ],
+ "9.c2": [
+  "violencia domestica | coabitacao | contra a mulher | contra mulher"
+ ],
+ "10.c1": [
+  "confissao espontanea"
+ ],
+ "11.c1": [
+  "tentativa",
+  "maxim* | 2/3"
+ ],
+ "11.c2": {
+  "alternativas": [
+   [
+    "longe da consumacao | distante da consumacao"
+   ],
+   [
+    "iter criminis"
+   ]
+  ]
+ },
+ "12.c1": {
+  "alternativas": [
+   [
+    "regime",
+    "aberto | semiaberto | semi-aberto"
+   ],
+   [
+    "suspensao condicional da pena | sursis"
+   ]
+  ],
+  "rotulo": "Regime aberto ou semiaberto OU suspensão condicional da pena"
+ },
+ "13.c1": [
+  "nulidade"
+ ],
+ "14.c1": [
+  "absolvi* | absolver"
+ ],
+ "14.1.c1": [
+  "qualificadora"
+ ],
+ "14.2.c1": {
+  "alternativas": [
+   [
+    "minimo legal"
+   ],
+   [
+    "confissao"
+   ]
+  ]
+ },
+ "14.3.c1": [
+  "agravante"
+ ],
+ "14.4.c1": [
+  "tentativa"
+ ],
+ "14.5.c1": [
+  "regime",
+  "aberto | semiaberto | semi-aberto"
+ ],
+ "15.c1": [
+  "10 de setembro de 2018"
+ ],
+ "q1:A.c1": [
+  "mandado",
+  "generico | endereco | especific*"
+ ],
+ "q1:B.c1": [
+  "prestacao de servicos | prestacao de servico",
+  "privativa de liberdade | admoestacao | multa"
+ ],
+ "q2:A.c1": [
+  "restitui*"
+ ],
+ "q2:A.c2": [
+  "nao interessa | nao mais interessa | desnecessari* | nao ha interesse"
+ ],
+ "q2:B.c1": [
+  "violencia | grave ameaca",
+  "nao empregou | nao houve | ausencia | sem"
+ ],
+ "q2:B.c2": [
+  "furto"
+ ],
+ "q3:A.c1": [
+  "tribunal do juri | juri | dolosos contra a vida"
+ ],
+ "q3:B.c1": {
+  "alternativas": [
+   [
+    "atipic*"
+   ],
+   [
+    "nao e punivel | nao punivel | impunivel"
+   ]
+  ]
+ },
+ "q3:B.c2": [
+  "morte | lesao corporal grave | lesoes corporais graves | lesao grave"
+ ],
+ "q4:A.c1": [
+  "apelacao"
+ ],
+ "q4:A.c2": [
+  "10 dias"
+ ],
+ "q4:B.c1": [
+  "decaden* | prazo decadencial",
+  "conhecimento | autoria | 2017-10-23"
+ ],
+ "16.c1": [
+  "local",
+  "oab"
+ ],
+ "12.c2": {
+  "dispositivo": [
+   "art. 33, § 2º, b, CP",
+   "art. 33, § 2º, c, CP",
+   "art. 77 CP"
+  ],
+  "requer": "c1",
+  "rotulo": "Art. 33, § 2º, b ou c, do CP OU Art. 77 do CP"
+ }
+}

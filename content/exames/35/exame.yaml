@@ -1,0 +1,318 @@
+# XXXV Exame de Ordem Unificado — Direito Penal
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
+id: "35"
+numero: 35
+numeral: XXXV
+aplicacao: 2022-08-28
+revisao:
+  status: rascunho
+  por: ""
+  em: ""
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
+peca:
+  nome: Apelação
+  tipo: apelacao
+  aliases: []
+  enunciado: |-
+    No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+    Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+    **Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.**
+
+    Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+    **Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)**
+
+    *Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.*
+  gabarito_comentado: |-
+    Considerando as informações expostas na questão, deveria o candidato formular um recurso de apelação, na forma do Art. 593, inciso I, do CPP, com elaboração da petição de interposição acompanhada das respectivas razões recursais. A peça de interposição deveria ser direcionada para o Juízo da 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente indicado no enunciado, enquanto que as razões recursais deveriam ser endereçadas para o Tribunal de Justiça do Estado de Santa Catarina. A data indicada deveria ser o dia 18 de julho de 2022, tendo em vista o prazo de 05 dias para interposição da apelação.
+
+    Em suas razões recursais, inicialmente deveria o advogado buscar o reconhecimento da nulidade da oitiva da vítima, tendo em vista que inadequada a produção antecipada de provas com base no fundamento utilizado pelo magistrado. O Código de Processo Penal, assim como a doutrina e a jurisprudência, admitem que seja determinada a produção antecipada de provas quando houver risco de perecimento, em especial na situação de suspensão do processo com base no Art. 366 do CPP. Ocorre que a jurisprudência entende que o mero decurso natural do tempo não é fundamento idôneo para justificar a medida. No caso, o magistrado determinou a produção antecipada da prova simplesmente porque a data da audiência de instrução e julgamento estava longe, sem qualquer fato concreto a indicar o risco de perecimento da prova. Diante disso, considerando ainda o inconformismo manifestado pela defesa, deveria ser requerida a nulidade do ato, podendo o advogado fundamentar seu pedido no teor da Súmula 455 do STJ.
+
+    Em seguida, quanto ao mérito, caberia ao advogado, inicialmente, requerer o reconhecimento da atipicidade da conduta. Isso porque o crime de incêndio é crime de perigo comum, sendo indispensável que a conduta do agente exponha a perigo a vida, integridade física ou patrimônio de outrem, causando risco para número indeterminado de pessoas. Noutras palavras, o tipo exige perigo concreto. Na situação apresentada, Júlio colocou fogo em um imóvel isolado, sendo constatado na perícia que não havia pessoas ou bens de terceiro nas proximidades para serem atingidos. Em tese, a conduta de Júlio poderia configurar, no máximo, crime de dano.
+
+    Ademais, ainda que reconhecida a tipicidade, deveria Júlio ser absolvido em razão da inimputabilidade. Em princípio, com base no Art. 28, inciso II, do CP, a embriaguez não afasta a culpabilidade do agente. Contudo, quando esta for completa e decorrente de caso fortuito ou força maior, gerando uma total incapacidade de entendimento do caráter ilícito do fato ou de determinação de acordo com esse entendimento, será o agente isento de pena, com fulcro no Art. 28, § 1º, do Código Penal. Júlio somente ficou embriagado em razão de erro daquele que lhe serviu bebida, que colocou álcool apesar do pedido apenas de água, sendo certo que foi a mistura da bebida não solicitada com um remédio que causou a embriaguez do agente, que não pode ser considerada culposa ou voluntária. Afastada, então, a culpabilidade, sequer é necessária a aplicação de medida de segurança, já que a inimputabilidade foi apenas momentânea.
+
+    Superadas as principais teses de mérito, caberia ao advogado, com base no princípio da eventualidade, questionar a sanção penal aplicada.
+
+    No momento de aplicar a pena base, equivocou-se o magistrado, tendo em vista que o fato que justificou a condenação definitiva de Júlio por tráfico ocorreu depois da suposta prática do crime de incêndio, logo não pode ser considerado maus antecedentes.
+
+    Na segunda fase, deveria requerer o afastamento da agravante, já que ser utilizado instrumento que causou perigo comum já era elementar do tipo, uma vez que o crime de incêndio é classificado como crime de perigo comum. Alternativamente, aceita-se o pedido de afastamento da agravante por não haver a ocultação ou vantagem de outro ilícito. Ademais, deveria ter sido reconhecida a atenuante da confissão espontânea, nos termos do Art. 65, III, d, do CP.
+
+    Aplicada a pena no mínimo legal, deveria ter sido fixado o regime inicial aberto para cumprimento da pena, conforme Art. 33, § 2º, alínea c, do CP, bem como seria possível a substituição da pena privativa de liberdade por restritiva de direitos, nos termos do Art. 44 do CP.
+
+    Em razão do exposto, deveria o examinando formular o pedido de conhecimento e provimento do recurso, com os seguintes fundamentos:
+
+    a) Reconhecimento de nulidade na oitiva das vítimas;
+
+    b) Absolvição do crime de incêndio em razão da atipicidade da conduta;
+
+    c) Absolvição do crime de incêndio em razão da ausência de culpablidade;
+
+    d) Aplicação da pena base no mínimo legal, tendo em vista que não há fundamento para reconhecimento de maus antecedentes;
+
+    e) Afastamento da agravante reconhecida na sentença;
+
+    f) Reconhecimento da atenuante da confissão espontânea;
+
+    g) Aplicação do regime inicial aberto para cumprimento da pena;
+
+    h) Substituição da pena privativa de liberdade por restritiva de direitos.
+
+    O prazo a ser indicado na petição de interposição da apelação era o dia 18 de julho de 2022, já que o prazo previsto para a interposição do recurso de apelação é de 05 dias, de modo que se encerraria no sábado, devendo ser prorrogado para o primeiro dia útil seguinte.
+
+    No fechamento, deveria o examinando indicar local, data, advogado e OAB.
+  itens:
+    - n: "1"
+      secao: Petição de Interposição
+      descricao: "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 2 vara criminal, florianopolis ] }
+    - n: "2"
+      secao: Petição de Interposição
+      descricao: "Fundamento legal: Art. 593, inciso I, do CPP (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, dispositivo: [ "art. 593, I, CPP" ] }
+    - n: "3"
+      secao: Petição de Interposição
+      descricao: "Tempestividade: Prazo de 5 dias na forma do Art. 593, caput, do CPP (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 5 dias ] }
+    - n: "4"
+      secao: Razões de Apelação
+      descricao: "Endereçamento: Tribunal de Justiça do Estado de Santa Catarina (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ tribunal de justica | tj, santa catarina | sc ] }
+    - n: "5"
+      secao: Razões de Apelação
+      descricao: Preliminarmente, nulidade na oitiva das vítimas (0,35), tendo em vista que o mero decurso de tempo não é fundamento idôneo para produção antecipada de provas (0,15), nos termos do Art. 225 do CPP, ou Art. 564, inciso IV, do CPP, ou Súmula 455 do STJ (0,10).
+      valores: [ 0, 0.15, 0.25, 0.35, 0.45, 0.5, 0.6 ]
+      componentes:
+        - { id: c1, valor: 0.35, termos: [ nulidade, oitiva | depoimento* | vitimas ] }
+        - { id: c2, valor: 0.15, alternativas: [ [ decurso do tempo | decurso de tempo | passagem do tempo ], [ producao antecipada, idone* | fundament* | urgen* ] ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 225, CPP", "art. 564, IV, CPP", Súmula 455 STJ ], requer: c2 }
+    - n: "6"
+      secao: Razões de Apelação
+      descricao: No mérito, absolvição de Júlio (0,20), na forma do Art. 386, incisos III ou VI, do CPP (0,10).
+      valores: [ 0, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ absolvi* | absolver ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 386, III, CPP", "art. 386, VI, CPP" ], requer: c1 }
+    - n: "7"
+      secao: Razões de Apelação
+      descricao: Atipicidade da conduta ou desclassificação para crime de dano qualificado (0,25), tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas (0,15) e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto (0,35).
+      valores: [ 0, 0.15, 0.25, 0.35, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.25, alternativas: [ [ atipic* ], [ desclassifica*, dano ] ] }
+        - { id: c2, valor: 0.15, termos: [ numero indeterminado | perigo a pessoas | perigo comum | nao gerou perigo ] }
+        - { id: c3, valor: 0.35, termos: [ perigo concreto ] }
+    - n: "8.1"
+      secao: Razões de Apelação
+      descricao: Excludente de culpabilidade (0,30), em razão da inimputabilidade (0,20).
+      valores: [ 0, 0.2, 0.3, 0.5 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ culpabilidade | isento de pena | isencao de pena ] }
+        - { id: c2, valor: 0.2, termos: [ inimputab* ] }
+    - n: "8.2"
+      secao: Razões de Apelação
+      descricao: Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior (0,25), na forma do Art. 28, §1º, do CP (0,10).
+      valores: [ 0, 0.25, 0.35 ]
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ embriaguez, completa, caso fortuito | forca maior ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 28, § 1º, CP" ], requer: c1 }
+    - n: "9"
+      secao: Razões de Apelação
+      descricao: "Subsidiariamente: aplicação da pena base no mínimo legal (0,15), tendo em vista que o fato posterior ao crime julgado não pode ser considerado maus antecedentes (0,20)."
+      valores: [ 0, 0.15, 0.2, 0.35 ]
+      componentes:
+        - { id: c1, valor: 0.15, termos: [ pena base | pena-base, minimo ] }
+        - { id: c2, valor: 0.2, termos: [ maus antecedentes | antecedentes, posterior | apos | depois ] }
+    - n: "10"
+      secao: Razões de Apelação
+      descricao: Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP (0,15), pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime (0,25).
+      valores: [ 0, 0.15, 0.25, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.15, termos: [ agravante, afast* | nao incid* | exclu* | decote ] }
+        - { id: c2, valor: 0.25, alternativas: [ [ elementar ], [ bis in idem ], [ ocultacao | vantagem | impunidade ] ] }
+    - n: "11"
+      secao: Razões de Apelação
+      descricao: Reconhecimento da atenuante da confissão espontânea (0,15), na forma do Art. 65, inciso III, alínea d, do CP (0,10).
+      valores: [ 0, 0.15, 0.25 ]
+      componentes:
+        - { id: c1, valor: 0.15, termos: [ confissao espontanea ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 65, III, d, CP" ], requer: c1 }
+    - n: "12"
+      secao: Razões de Apelação
+      descricao: Aplicação do regime inicial aberto para cumprimento da pena (0,15), na forma do Art. 33, § 2º, alínea c, do CP (0,10).
+      valores: [ 0, 0.15, 0.25 ]
+      componentes:
+        - { id: c1, valor: 0.15, termos: [ regime, aberto ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 33, § 2º, c, CP" ], requer: c1 }
+    - n: "13"
+      secao: Razões de Apelação
+      descricao: Substituição da pena privativa de liberdade por restritiva de direitos (0,15), nos termos do Art. 44 do CP (0,10).
+      valores: [ 0, 0.15, 0.25 ]
+      componentes:
+        - { id: c1, valor: 0.15, termos: [ substitui*, restritiva* de direito* ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 44, CP" ], requer: c1 }
+    - n: "14"
+      secao: Razões de Apelação
+      descricao: "Pedido: Conhecimento (0,10) e provimento do recurso (0,30)."
+      valores: [ 0, 0.1, 0.3, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ conhec* ] }
+        - { id: c2, valor: 0.3, termos: [ provi* ] }
+    - n: "15"
+      secao: Razões de Apelação
+      descricao: "Prazo: 18 de julho de 2022 (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 18 de julho de 2022 ] }
+    - n: "16"
+      secao: Razões de Apelação
+      descricao: "Fechamento: local, data, advogado e OAB (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ local, advogad*, oab ] }
+questoes:
+  - n: 1
+    enunciado: |-
+      Pedro, nascido em 20 de janeiro de 2000, foi condenado, definitivamente, pela prática do crime furto simples à pena de 1 ano de reclusão em regime inicial aberto, tendo sua pena privativa de liberdade substituída por pena de multa.
+
+      O crime ocorreu no dia 14 de junho de 2018, e a sentença condenatória transitou em julgado, no dia 20 de abril de 2019, tendo sido feito o pagamento da multa no prazo legal. Ocorre que, no dia 23 de março de 2020, o agente foi preso em flagrante, após empregar ameaça para subtrair o aparelho telefônico de Luiza. Os policiais que efetuaram a prisão conseguiram evitar a consumação delitiva e, posteriormente, Pedro foi denunciado pela prática do crime de roubo, em sua modalidade tentada. Finda a instrução, foi condenado na forma do Art. 157, c/c. Art. 14, inciso II, ambos do Código Penal.
+
+      Ao aplicar a pena, o juiz fixou a pena-base no mínimo legal, pois favoráveis as circunstâncias judiciais. Na segunda fase, manteve a pena no patamar de 4 anos, apesar de reconhecer a agravante da reincidência. Isto porque observou a menoridade relativa do agente à data do fato. Aplicada a minorante da tentativa em sua fração máxima, alcançou a pena definitiva de 1 ano e 4 meses de reclusão e fixou o regime inicial semi-aberto, sendo negada a suspensão condicional da pena em razão da reincidência. A defesa técnica de Pedro interpôs, assim, recurso de apelação, insurgindo-se apenas quanto à negativa do sursis. O magistrado, no entanto, não admitiu o recurso, sustentando que a via adequada era a do Recurso em Sentido Estrito, a teor do Art. 581, inciso XI, do Código de Processo Penal.
+
+      **Considerando apenas as informações apresentadas, responda, na qualidade de advogado(a) de Pedro, aos itens a seguir.**
+
+      **A) Aponte o recurso a ser interposto em face da decisão do juiz de primeiro grau que não admitiu a apelação e o fundamento de direito processual penal a ser alegado para que o apelo seja admitido. Justifique. (Valor: 0,65)**
+
+      **B) Existe alguma tese de Direito Penal material que permita a concessão da suspensão condicional da pena no caso concreto? Justifique. (Valor: 0,60)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) O examinando deve apontar que o recurso adequado a impugnar a decisão que não admitiu a apelação é o Recurso em Sentido Estrito, nos termos do Art. 581, inciso XV, do CPP. Como fundamento para questionar a inadmissão do recurso de Apelação, deveria indicar que a negativa da suspensão condicional da pena ocorreu em sede de sentença penal condenatória, proferida por juiz de primeiro grau. Desse modo, a defesa técnica interpôs corretamente o Recurso de Apelação para questionar a sentença, pois, como dispõe o Art. 593, § 4º, do CPP, quando cabível a apelação, não poderá ser usado o recurso em sentido estrito, ainda que somente de parte da decisão se recorra. Desse modo, como disciplina o próprio Art. 593, inciso I, o recurso adequado para impugnar as sentenças de mérito, de condenação ou absolvição, é a apelação, no prazo de 5 dias, e não poderia o juízo a quo ter inadmitido o recurso defensivo.
+
+      B) O examinando deveria desenvolver raciocínio no sentido de que existe tese de direito material a ser alegada no caso concreto, objetivando a concessão do sursis. É que o magistrado negou a suspensão condicional da pena sustentando que o condenado era reincidente. De fato, Pedro ostentava condenação definitiva anterior à prática do crime de roubo tentado. Ocorre que o agente fora anteriormente condenado à pena de multa e, nos termos do Art. 77, § 1º, do Código Penal, a condenação anterior a pena de multa não impede a concessão da suspensão condicional da pena. Desse modo, Pedro faz jus ao benefício.
+    itens:
+      - n: A
+        descricao: O recurso cabível é o Recurso em Sentido Estrito (0,25), nos termos do Art. 581, inciso XV, do CPP (0,10). O argumento de direito processual é que a apelação deveria ser admitida, pois é o recurso adequado à impugnação das sentenças condenatórias, ainda que se recorra apenas de parte delas (0,30).
+        valores: [ 0, 0.25, 0.3, 0.35, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.25, termos: [ recurso em sentido estrito | rese ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 581, XV, CPP" ], requer: c1 }
+          - { id: c3, valor: 0.3, termos: [ apelacao, sentenca* | parte ] }
+      - n: B
+        descricao: A condenação anterior à pena de multa não impede a concessão da suspensão condicional da pena (0,50), de acordo com o Art. 77, § 1º, do CP (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ multa, suspensao condicional da pena | sursis ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 77, § 1º, CP" ], requer: c1 }
+  - n: 2
+    enunciado: |-
+      Roberto foi denunciado pelo crime de perseguição (Art. 147-A do CP). Segundo a denúncia, no dia 15 de janeiro de 2022, na filial da sociedade empresária Ruan S/A, situada no Rio de Janeiro/RJ, Roberto se aproveitou da proximidade física com Fábio (colega que trabalha na matriz da empresa em São Paulo/SP e estava visitando a filial carioca por um dia apenas) no ambiente de trabalho, para lançar-lhe olhares lascivos, o que teria “perturbado a esfera de liberdade ou privacidade” de Fábio. Este ofereceu representação contra Roberto.
+
+      O Ministério Público se recusou a formular proposta de transação penal a Roberto, com fundamento em uma anotação existente na sua Folha de Antecedentes Criminais (FAC), relativa à condenação definitiva à pena corporal – extinta há mais de 5 (cinco) anos – pela prática de crime.
+
+      Sobre a hipótese apresentada, responda aos itens a seguir.
+
+      **A) Quais teses de mérito podem ser invocadas pelo defensor técnico de Roberto? Justifique. (Valor: 0,60)**
+
+      **B) Qual medida pode ser adotada pelo defensor técnico de Roberto para viabilizar a proposta de transação penal? Justifique. (Valor: 0,65)**
+
+      *Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) Atipicidade objetiva da conduta, pois a figura delitiva da perseguição (Art. 147-A do CP) adota verbo nuclear no infinitivo (“perseguir”), o que denota crime habitual, a exigir reiteração do comportamento para a caracterização da tipicidade objetiva. No caso concreto, inexistiu reiteração, tratando-se de episódio isolado, ocorrido num único dia.
+
+      B) A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos (Art. 64, inciso I do CP).
+    itens:
+      - n: A
+        descricao: Atipicidade objetiva da conduta (0,20), pois a figura delitiva da perseguição (Art. 147-A do CP); adota verbo nuclear no infinitivo (“perseguir”), o que denota crime habitual, a exigir reiteração do comportamento para a caracterização da tipicidade objetiva (0,40)
+        valores: [ 0, 0.2, 0.4 ]
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ atipic* ] }
+          - { id: c2, valor: 0.4, termos: [ habitual | reiteracao | reiterada* ] }
+      - n: B
+        descricao: A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta (0,30). Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos (0,25), nos termos do Art. 64, inciso I, do CP (0,10).
+        valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ remessa | encaminhamento | enviar | remeter, orgao superior | procurador-geral | procurador geral | chefe do ministerio publico ] }
+          - { id: c2, valor: 0.25, termos: [ 5 anos, extin* | cumprimento | cumprida ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 64, I, CP" ], requer: c2 }
+  - n: 3
+    enunciado: |-
+      Em 09 de agosto de 2021, durante uma reunião de condomínio, iniciou-se uma discussão. O morador Paulo, lutador de vale tudo, chamou Fábio, o síndico, de ladrão. Ato contínuo, Paulo partiu para cima de Fábio, no intuito de quebrar seu nariz com um soco. Em seguida, Fábio, praticante de jiu jitsu, golpeou Paulo, que caiu no chão desmaiado. Paulo foi levado para o hospital, mas foi liberado horas depois. O laudo hospitalar atestou apenas escoriações leves.
+
+      Em 10 de maio de 2022, em outra reunião de condomínio, Paulo e Fábio encontraram-se novamente. Fábio já tinha esquecido os fatos ocorridos na ocasião anterior, porque não era pessoa de guardar rancor. No entanto, Paulo lembrou de tudo que passou, sentiu-se envergonhado perante os demais condôminos e resolveu seguir em frente para processar Fábio criminalmente. No dia seguinte, Paulo noticiou o ocorrido na reunião anterior à autoridade policial e apresentou o laudo hospitalar para comprovar a lesão sofrida.
+
+      Após os trâmites regulares das investigações, o promotor de justiça com atribuição para o caso ofereceu denúncia em face Fábio como incurso nas sanções do crime de lesão corporal leve, previsto no art. 129, caput do CP. A denúncia foi recebida e determinada a citação do réu.
+
+      **Considerando as informações acima, na condição de advogado(a) de Fábio, responda aos itens a seguir.**
+
+      **A) Qual tese a defesa pode alegar como preliminar? Justifique. (Valor: 0,60)**
+
+      **B) Qual tese de direito material pode ser utilizada para a defesa de Fábio? Justifique. (Valor: 0,65)**
+
+      *Obs.: O(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, na forma do Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP. Em se tratando de imputação pelo crime de lesão corporal leve, previsto no Art. 129, caput, do CP, a ação é penal pública condicionada à representação, conforme o Art. 88 da Lei nº 9.099/95. No caso, Paulo somente apresentou a representação após 6 meses do conhecimento da autoria do fato, quando transcorrido o prazo decadencial previsto no Art. 38 do CPP.
+
+      B) Fábio atuou em legítima defesa, uma vez que, usando moderadamente dos meios necessários, repeliu injusta e iminente agressão de Paulo, que foi em sua direção para lhe dar um soco com o intuito de quebrar seu nariz.
+
+      Assim, houve exclusão da ilicitude do fato e Fábio não responde por crime algum, na forma do Art. 23, inciso II c/c. o Art. 25, caput, ambos do CP.
+    itens:
+      - n: A
+        descricao: Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência (0,35), tendo em vista que Paulo deixou de oferecer representação no prazo de 6 meses, conhecendo a autoria desde a data do fato (0,15), conforme estabelecido no Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP (0,10).
+        valores: [ 0, 0.15, 0.25, 0.35, 0.45, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.35, termos: [ decaden* ] }
+          - { id: c2, valor: 0.15, termos: [ 6 meses, representacao | autoria ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 38, CPP", "art. 107, IV, CP" ], requer: c2 }
+      - n: B
+        descricao: Fábio atuou em legítima defesa, uma vez que, usando moderadamente dos meios necessários, repeliu injusta e iminente agressão de Paulo, que foi em sua direção para lhe dar um soco com o intuito de quebrar seu nariz (0,35). Assim, houve exclusão da ilicitude do fato (0,20), na forma do Art. 23, inciso II, c/c. o Art. 25, caput, ambos do CP (0,10).
+        valores: [ 0, 0.2, 0.3, 0.35, 0.45, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.35, termos: [ legitima defesa ] }
+          - { id: c2, valor: 0.2, termos: [ ilicitude | antijuridicidade | licito ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 23, II, CP", "art. 25, CP" ], requer: c2 }
+  - n: 4
+    enunciado: |-
+      Arnaldo e Fábio, 22 anos, são irmãos gêmeos idênticos, mas Arnaldo sempre fez mais sucesso com as meninas por ser mais extrovertido. Arnaldo inicia um relacionamento com Mônica, de 14 anos. Ambos costumam manter relação sexual consentida.
+
+      Elena, amiga de Mônica, sempre foi apaixonada por Arnaldo e, movida por ciúmes, resolve noticiar às autoridades sobre as relações mantidas entre Arnaldo e Mônica, no intuito de incriminá-lo por estupro de vulnerável.
+
+      Noticiado o fato em sede policial e concluídas as investigações, o Ministério Público ofereceu denúncia, imputando a Arnaldo o crime de estupro de vulnerável, previsto no Art. 217-A do CP. Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento. De posse do mandado, o oficial de justiça foi até a residência dos irmãos e realizou a intimação na pessoa de Fábio, que se fez passar por Arnaldo.
+
+      No dia da audiência, Arnaldo não compareceu, embora seu advogado estivesse presente. Finalizada a instrução e após alegações finais, o juiz condenou Arnaldo no crime de estupro de vulnerável, na forma do Art. 217-A do CP, a pena de 8 anos de reclusão, visto que Arnaldo não tinha qualquer anotação criminal, sendo favoráveis as condições do crime.
+
+      **Considerando apenas as informações narradas no enunciado, responda aos itens a seguir.**
+
+      **A) O que pode ser alegado em favor de Arnaldo em matéria processual? Justifique. (Valor: 0,60)**
+
+      **B) Qual argumento de direito material poderia ser apresentado? Justifique. (Valor: 0,65)**
+
+      *Obs.: O(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.*
+    gabarito_comentado: |-
+      A) Nulidade da intimação e dos demais atos, na forma do Art. 564, inciso IV, do CPP. A intimação deveria ter sido feita na pessoa do réu, Arnaldo, de modo que ele ficou privado de efetuar sua autodefesa na audiência de instrução e julgamento, restando evidente o prejuízo diante da condenação. Houve, portanto, violação ao Princípio da Ampla Defesa e do Contraditório ou ao Princípio do Devido Processo Legal, na forma do Art. 5º, incisos LV e LIV, da CRFB/88.
+
+      B) Arnaldo deve ser absolvido, na forma do Art. 386, inciso III, do CPP, porque o delito de estupro de vulnerável tem como vítima pessoa menor de 14 anos, conforme o Art. 217-A, caput, do CP. Mônica tinha 14 anos e, portanto, capacidade para consentir a relação sexual. Dessa forma, o fato é atípico.
+    itens:
+      - n: A
+        descricao: A intimação deveria ter sido feita na pessoa do réu, Arnaldo, de modo que ele ficou privado de efetuar sua autodefesa na audiência de instrução e julgamento, em violação ao Princípio da Ampla Defesa ou do Contraditório ou do Princípio do Devido Processo Legal (0,35). Houve, portanto, nulidade da intimação e dos demais atos subsequentes (0,15), na forma do Art. 564, inciso IV, do CPP ou do Art. 5º, incisos LV e LIV, da CRFB/88 (0,10).
+        valores: [ 0, 0.15, 0.25, 0.35, 0.45, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.35, alternativas: [ [ ampla defesa ], [ contraditorio ], [ devido processo legal ], [ autodefesa ] ] }
+          - { id: c2, valor: 0.15, termos: [ nulidade | nulo | nula ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 564, IV, CPP", "art. 5, LV, CRFB", "art. 5, LIV, CRFB" ], requer: c2 }
+      - n: B
+        descricao: O delito de estupro de vulnerável tem como vítima pessoa menor de 14 anos, conforme o Art. 217-A, caput, do CP. Mônica tinha 14 anos e, portanto, capacidade para consentir a relação sexual (0,35). Assim, o fato é atípico, devendo Arnaldo ser absolvido (0,20), segundo o Art. 386, inciso III, do CPP (0,10).
+        valores: [ 0, 0.2, 0.3, 0.35, 0.45, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.35, alternativas: [ [ 14 anos ], [ consenti* | consentimento ] ] }
+          - { id: c2, valor: 0.2, termos: [ atipic* | absolvi* ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 386, III, CPP" ], requer: c2 }

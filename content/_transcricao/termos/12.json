@@ -1,0 +1,28 @@
+{
+  "peca:itens": [
+    { "n": "1", "secao": "Petição de interposição", "descricao": "Endereçamento da petição de interposição: Juiz da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ (0,20).", "componentes": [ { "id": "c1", "valor": 0.2, "termos": ["41 vara criminal | vara criminal"] } ] },
+    { "n": "2", "secao": "Petição de interposição", "descricao": "Demonstração do cabimento do recurso: Art. 593, I, do CPP (0,20).", "componentes": [ { "id": "c1", "valor": 0.2, "dispositivo": ["art. 593, I, CPP"] } ] },
+    { "n": "3", "secao": "Razões", "descricao": "Endereçamento correto das razões: Tribunal de Justiça do Estado ‘X’ (0,20).", "componentes": [ { "id": "c1", "valor": 0.2, "termos": ["tribunal de justica | tj"] } ] },
+    { "n": "4.1", "secao": "Mérito", "descricao": "Atipicidade da conduta pela falta de tipicidade material: a conduta de Rita não configurou efetiva lesão ao patrimônio da grande rede de farmácias, assim, o fato é atípico (0,50) pela falta de tipicidade material (0,30).", "componentes": [ { "id": "c1", "valor": 0.5, "termos": ["atipic*"] }, { "id": "c2", "valor": 0.3, "alternativas": [["tipicidade material"], ["insignificancia | bagatela"]] } ] },
+    { "n": "4.2", "secao": "Mérito", "descricao": "Pedido subsidiário: aplicação do furto privilegiado (0,30), já que Rita é primária e o objeto furtado é de pequeno valor (0,20), conforme o § 2º do artigo 155 do CP (0,10).", "componentes": [ { "id": "c1", "valor": 0.3, "termos": ["furto privilegiado | privilegio | privilegiado"] }, { "id": "c2", "valor": 0.2, "termos": ["primari*", "pequeno valor"] }, { "id": "c3", "valor": 0.1, "dispositivo": ["art. 155, § 2º, CP"], "requer": "c1" } ] },
+    { "n": "4.3", "secao": "Mérito", "descricao": "Impossibilidade de bis in idem: o trânsito em julgado da sentença de estelionato não pode ensejar, ao mesmo tempo, elevação da pena-base e da pena intermediária (0,25), pois não se admite o bis in idem (0,15).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["pena base | pena-base | primeira fase", "intermediaria | segunda fase | agravante | reincidencia"] }, { "id": "c2", "valor": 0.15, "termos": ["bis in idem"] } ] },
+    { "n": "4.4", "secao": "Mérito", "descricao": "Não há reincidência (0,10), pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato (0,20), ausentes os pressupostos do Art. 63 do CP (0,10).", "componentes": [ { "id": "c1", "valor": 0.1, "termos": ["reincid*"] }, { "id": "c2", "valor": 0.2, "termos": ["antes", "transit* em julgado"] }, { "id": "c3", "valor": 0.1, "dispositivo": ["art. 63 CP"], "requer": "c2" } ] },
+    { "n": "4.5", "secao": "Mérito", "descricao": "Como a ré não é reincidente, faz jus ao regime aberto (0,25), conforme o Art. 33, § 2º, ‘c’, do CP ou Súmula 269 do STJ (0,15).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["regime", "aberto"] }, { "id": "c2", "valor": 0.15, "dispositivo": ["art. 33, § 2º, c, CP", "Súmula 269 STJ"], "requer": "c1" } ] },
+    { "n": "4.6", "secao": "Mérito", "descricao": "Possibilidade de substituição da pena privativa de liberdade por restritiva de direitos (0,25), conforme Art. 44 do CP (0,15) OU possibilidade de aplicação da pena de multa (0,25), conforme art. 155, § 2º, do CP (0,15).", "componentes": [ { "id": "c1", "valor": 0.25, "alternativas": [["substitui*", "restritiva* de direito*"], ["multa"]], "rotulo": "Substituição por restritiva de direitos OU aplicação só da multa" }, { "id": "c2", "valor": 0.15, "dispositivo": ["art. 44 CP", "art. 155, § 2º, CP"], "requer": "c1" } ] },
+    { "n": "5a", "secao": "Pedidos", "descricao": "Absolvição (0,10) com base na atipicidade da conduta ou art. 386, inciso III, do CPP (0,20).", "componentes": [ { "id": "c1", "valor": 0.1, "termos": ["absolvi* | absolver"] }, { "id": "c2", "valor": 0.2, "termos": ["atipic*"], "dispositivo": ["art. 386, III, CPP"], "requer": "c1", "rotulo": "Atipicidade da conduta OU Art. 386, III, do CPP" } ] },
+    { "n": "5b", "secao": "Pedidos", "descricao": "Subsidiariamente: furto privilegiado (0,25); diminuição da pena pelo afastamento da reincidência (0,25); regime aberto (0,25); substituição da pena privativa de liberdade por restritiva de direitos (0,25).", "componentes": [ { "id": "c1", "valor": 0.25, "termos": ["privilegi*"] }, { "id": "c2", "valor": 0.25, "termos": ["reincid*"] }, { "id": "c3", "valor": 0.25, "termos": ["aberto"] }, { "id": "c4", "valor": 0.25, "termos": ["substitui*"] } ] },
+    { "n": "6", "secao": "Fechamento", "descricao": "Fechamento da peça: data, local, advogado, OAB (0,10).", "componentes": [ { "id": "c1", "valor": 0.1, "termos": ["local", "oab"] } ] }
+  ],
+  "q1:A1.c1": ["excecao de incompetencia | incompetencia"],
+  "q1:A2.c1": ["prejuizo", "local | consuma*"],
+  "q1:A3.c1": { "termos": ["recusa | pagamento | prejuizo"], "dispositivo": ["Súmula 521 STF", "Súmula 244 STJ"], "rotulo": "Súmula 521 do STF OU Súmula 244 do STJ (com fundamentação)" },
+  "q2:A.c1": ["flagrante preparado | flagrante provocado"],
+  "q2:A.c2": ["agente provocador | provocad* | impeditiv*"],
+  "q2:B.c1": { "alternativas": [["crime impossivel"], ["atipic*"]] },
+  "q3:itens": [
+    { "n": "A", "descricao": "Félix não responde por tentativa de homicídio, pois agiu em hipótese de desistência voluntária (1,00), instituto descrito na primeira parte do Art. 15 do CP (0,25).", "componentes": [ { "id": "c1", "valor": 1.0, "termos": ["desistencia voluntaria"] }, { "id": "c2", "valor": 0.25, "dispositivo": ["art. 15 CP"], "requer": "c1" } ] }
+  ],
+  "q4:A.c1": ["agravo em execucao | agravo de execucao | agravo"],
+  "q4:B.c1": ["5 dias"],
+  "q4:C.c1": ["suspen* | efeito suspensivo | nao suspende"]
+}
