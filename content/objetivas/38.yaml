@@ -1,0 +1,134 @@
+# Gerado por scripts/extrair-objetivas.ts a partir do caderno Tipo 1 e do gabarito definitivo do XXXVIII Exame.
+# Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
+exame: "38"
+faixa:
+  penal: [57, 58, 59, 60, 61, 62]
+  processoPenal: [63, 64, 65, 66, 67, 68]
+anuladas:
+  - 60
+  - 62
+questoes:
+  - n: 57
+    disciplina: penal
+    enunciado: Bruno, 20 anos, residente no Rio de Janeiro/RJ, conduzia seu veículo de madrugada com destino à cidade de São Paulo/SP. Bruno dirigia dentro da velocidade permitida, portando sua carteira de habilitação e seu veículo apresentava condições adequadas de tráfego. Em determinado momento, André, 21 anos, que conduzia uma motocicleta alcoolizado, na outra mão, entrou na faixa na qual trafegava Bruno, violando a regra legal de mudança de faixa de rolamento. Bruno não conseguiu frear o veículo e evitar o contato. O veículo e a motocicleta chocaram-se lateralmente. Na sequência, André caiu da moto e esbarrou num fio de alta tensão que estava rompido de um poste na estrada. Bruno, assustado com o ocorrido, acelerou seu veículo, em retirada. Após 1 km, avistou um posto policial, mas acometido por forte emoção, optou por não parar para comunicar o fato. André permaneceu em coma por uma semana e depois veio a óbito. O laudo de necropsia constatou que a causa mortis fora determinada por eletrocussão, em razão do contato com o fio de alta tensão. Pelas razões expostas, analise penalmente as condutas praticadas por Bruno e assinale a afirmativa correta.
+    alternativas:
+      A: Deverá ser penalmente responsabilizado por omissão de socorro (Art. 304 do CTB), tendo em vista que o resultado morte foi determinado por culpa exclusiva da vítima.
+      B: Ele não praticou crime algum, porque a presença de concausa independente afasta a imputação de homicídio culposo, assim como a violenta emoção afasta a tipicidade do crime de omissão de socorro.
+      C: Deverá ser penalmente responsabilizado por homicídio culposo na condução de veículo, com a incidência da causa de aumento de omissão de socorro.
+      D: Bruno deverá ser penalmente responsabilizado por homicídio culposo na condução de veículo e omissão de socorro, em concurso material.
+    correta: A
+    dispositivos:
+      - art. 304, lei 9503
+    revisao:
+      status: revisado
+  - n: 58
+    disciplina: penal
+    enunciado: Luís Alberto, primário, foi condenado a uma pena de oito meses de detenção, em regime inicial aberto, por ter agredido sua companheira, causando-lhe lesões corporais. Na qualidade de advogado(a) de Luís Alberto, assinale a opção que apresenta o benefício de natureza penal que pode, neste momento processual, ser pleiteado em favor do seu assistido.
+    alternativas:
+      A: Aplicação de pena restritiva de direito, consistente em prestação de serviços à comunidade.
+      B: Suspensão condicional da pena, pelo período de dois anos.
+      C: Suspensão condicional do processo, pelo período de dois anos.
+      D: Substituição da pena privativa de liberdade por multa.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 59
+    disciplina: penal
+    enunciado: Alan é bombeiro civil e, atendendo a uma ocorrência, foi retirar um suposto animal selvagem de um condomínio residencial. Lá chegando, deparou-se com um aparente filhote de onça, o qual foi recolhido por Alan, que deveria levar o animal ao Centro de Triagem, distante do local onde encontrado (e que seria o procedimento adequado). Porém, Alan teve a iniciativa de deixar o felino em uma área de mata próxima ao condomínio, onde imaginava ser o habitat natural do animal, e, assim, poupar seu tempo. Carmen, residente no referido condomínio, ao chegar em casa, percebeu que seu gato Bengal (raça caracterizada por ser muito similar a uma onça) está desaparecido. Ao saber do ocorrido, percebeu que seu gato foi confundido com um filhote de onça e, por isso, foi levado por Alan e deixado na área de mata. Assim, Carmen procurou a Delegacia de Polícia e relatou o ocorrido. Neste caso, como advogado de Alan, é correto afirmar, sobre a conduta de seu assistido, que houve erro
+    alternativas:
+      A: de tipo permissivo, uma vez que Alan pensava agir sob estrito cumprimento de dever legal, e por isso, sua conduta é lícita, abarcada por excludente de ilicitude.
+      B: de tipo inescusável, pois Alan efetivamente se confundiu sobre a espécie do animal, mas deixou de adotar as cautelas devidas, excluindo-se apenas o dolo.
+      C: de tipo escusável, pois Alan efetivamente não conhecia a espécie do animal apreendido, tendo adotado todas as cautelas que lhe eram exigidas na situação, de forma a excluir o dolo e a culpa.
+      D: de proibição, tendo em vista que Alan não conhecia a espécie de animal doméstico, afastando-se a culpabilidade da sua conduta.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 61
+    disciplina: penal
+    enunciado: Francisco, funcionário público concursado de uma autarquia federal, recebeu de seu órgão de atuação um notebook funcional, tendo assinado o livro de carga referente ao objeto e assumido o compromisso de zelar pelo bem da administração. Durante suas férias, Francisco viaja para uma pousada no interior do estado de São Paulo e leva o computador na mochila, uma vez que tinha o costume de assistir séries através do aparelho. Durante sua estadia na pousada, Francisco leva o notebook para a piscina e o coloca na mesa onde deixara seus demais pertences. Após se ausentar por cerca de 40 minutos para jogar uma partida de futebol, retorna para a piscina e constata que o notebook fora furtado. Desesperado, procura a administração do local que após analisar as câmeras de segurança não consegue identificar quem teria subtraído o computador. Diante dos fatos, o órgão funcional ao qual Francisco era vinculado instaura procedimento administrativo e, ato contínuo, encaminha pedido de instauração de Inquérito na Polícia Federal que culmina no oferecimento de denúncia por parte do Ministério Público Federal pela prática do crime de peculato culposo. Francisco procura a repartição pública e se oferece para pagar o valor referente ao notebook, o que é aceito, sendo certo que o ressarcimento ao erário se deu antes do julgamento da ação penal. Diante dos fatos narrados, é correto afirmar que Francisco
+    alternativas:
+      A: terá direito à redução de metade da pena pelo fato de o ressarcimento ter sido feito após o recebimento da denúncia.
+      B: terá direito à extinção da punibilidade pelo fato de o ressarcimento ter sido feito antes da sentença irrecorrível.
+      C: não terá direito à atenuante referente à reparação do dano, prevista no Art. 65, inciso III, alínea b, do CP, na medida em que esta exige a reparação do dano antes do recebimento da denúncia.
+      D: poderá ser beneficiado pelo arrependimento posterior, previsto no Art. 16 do Código Penal em razão de ter reparado o dano antes da sentença.
+    correta: B
+    dispositivos:
+      - art. 65, III, cp
+      - art. 16, cp
+    revisao:
+      status: revisado
+  - n: 63
+    disciplina: processo-penal
+    enunciado: Luciane ajuizou na Vara Criminal da Comarca de Romã (ES) uma ação penal privada contra Jorge (guarda municipal daquele município) por crime de injúria (Art. 140, caput, do CP). Antes de oferecer a queixa-crime, Luciane propôs uma ação cível de indenização contra Jorge e não conseguiu citá-lo pessoalmente em sua residência, sita no próprio Município de Romã (ES), tendo em vista que o oficial de justiça certificou que esteve em duas oportunidades na casa de Jorge e não o localizou. Luciane foi informada por vizinhos que Jorge estava temporariamente residindo com sua mãe na cidade vizinha de Oeiras (ES), onde ela já havia passado um final de semana. Em se tratando de infração penal de menor potencial ofensivo, você, como advogado(a) da querelante, deverá, na ação penal privada, requerer a citação de Jorge
+    alternativas:
+      A: por intermédio do seu chefe de serviço, em razão de Jorge ser guarda municipal, expedindo-se ofício ao comandante da Guarda Municipal.
+      B: por hora certa, haja vista que Jorge estava se ocultando para não ser encontrado.
+      C: por carta precatória, visto que Jorge está residindo temporariamente fora da jurisdição do juiz processante, considerando que a querelante tinha conhecimento do endereço da mãe do querelado na Comarca de Oeiras (ES).
+      D: por correspondência com aviso de recebimento em mão própria, considerando que a querelante tinha conhecimento do endereço da mãe do querelado na Comarca de Oeiras (ES).
+    correta: C
+    dispositivos:
+      - art. 140, cp
+    revisao:
+      status: revisado
+  - n: 64
+    disciplina: processo-penal
+    enunciado: Arthur e sua esposa Aline, residentes no Distrito Federal, decidem viajar em um cruzeiro, partindo de Fortaleza com destino à cidade do Rio de Janeiro e fazendo uma parada em Recife. Durante passagem pela costa pernambucana, em alto-mar, o casal tem uma discussão e Arthur agride Aline, vindo a ser contido por seguranças do navio e retirado logo na primeira parada. Aline sofreu lesão que a incapacitou para suas atividades habituais por mais de trinta dias, mas que não deixou sequela ou debilidade permanente. Assinale a opção que indica a autoridade judiciária competente para processar Arthur.
+    alternativas:
+      A: O Juizado Especial Federal da cidade do Rio de Janeiro.
+      B: O Juizado Especial de Violência Doméstica e Familiar contra a Mulher do Distrito Federal.
+      C: O Juízo Federal de Recife.
+      D: A Vara Criminal da Comarca de Fortaleza.  TIPO 1 – BRANCA – Página 18
+    correta: C
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 65
+    disciplina: processo-penal
+    enunciado: João dirigia seu veículo, um Porsche Cayenne ano 2015, por uma rodovia quando, em abordagem de rotina, foi parado pela Polícia Militar. João exibiu sua carteira nacional de habilitação e o certificado de registro e licenciamento de veículo (CRLV) do ano corrente. Após consulta ao sistema, o que é feito rotineiramente em abordagens na estrada, a Polícia Militar constatou que o CRLV era falso e o veículo era produto de roubo. João admitiu que pagou cerca de R$ 35.000,00 (trinta e cinco mil reais) pelo veículo, avaliado em R$ 400.000,00, mas que não sabia que o veículo havia sido roubado, exibindo o respectivo recibo. Sabe-se que a pena do crime de receptação é de 1 a 4 anos e multa; e que a pena do crime de uso de documento público falso é de 2 a 6 anos e multa. Considerando a situação hipotética acima, assinale a opção que contém as regras processuais penais corretamente aplicáveis ao caso.
+    alternativas:
+      A: A circunstância de o acusado ter adquirido o bem por preço muito inferior ao valor de mercado configura indício da prática de receptação.
+      B: O delito de receptação, por expressa disposição legal, impõe a inversão do ônus da prova à defesa, cabendo a esta produzir a prova no sentido do desconhecimento da origem ilícita do bem.
+      C: A comprovação da materialidade do delito de uso de documento materialmente falso prescinde de produção de prova pericial.
+      D: O processo deve ser desmembrado, pois é cabível suspensão condicional do processo à receptação, devendo o feito prosseguir em relação ao uso de documento falso.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 66
+    disciplina: processo-penal
+    enunciado: Margot adquiriu de Cesar, de boa-fé e a título oneroso, um imóvel, mas não levou o instrumento ao Registro de Imóveis competente. Por isso, quando Cesar foi acusado de prática de crimes em uma ação penal, vindo a sofrer sequestro de todos os seus bens imóveis, foi incluído na ordem de sequestro o imóvel adquirido por Margot. Nessa situação hipotética, como advogado de Margot, assinale a opção que, de acordo com as disposições do Código de Processo Penal, melhor defenda os interesses da sua assistida.
+    alternativas:
+      A: Por não ser parte no processo penal, Margot não pode opor embargos ao sequestro, devendo efetuar pedido de reconsideração.
+      B: Margot pode opor embargos ao sequestro, alegando que a aquisição ocorreu a título oneroso e de boa-fé.
+      C: Por não ser parte no processo penal originário, Margot deve impetrar mandado de segurança em face da decisão que determinou o sequestro.
+      D: Margot pode opor embargos ao sequestro, alegando que os bens não foram adquiridos com os proventos da infração penal.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 67
+    disciplina: processo-penal
+    enunciado: A Polícia Civil ingressou na residência de Gustavo com o objetivo de cumprir mandado de prisão em desfavor de seu filho, Mariano, o qual era acusado de tráfico de drogas. A ordem de prisão foi expedida pelo Juiz de Direito da Comarca. Durante o cumprimento do mandado de prisão, a Polícia pegou o telefone celular de Gustavo, desbloqueado, que estava sobre uma mesa da residência e, sem sua autorização, passou a verificar seu conteúdo, constatando material de pornografia infantil, armazenado e compartilhado via aplicativo de troca de mensagens instantâneas, acessível pela internet a partir de qualquer país. Diante disso, a Polícia imediatamente realizou a prisão em flagrante de Gustavo. Sobre o meio de obtenção da prova extraída do celular de Gustavo, assinale a afirmativa correta.
+    alternativas:
+      A: É nula, e a nulidade decorre do fato de ser a pornografia infantil na internet crime de competência federal, de forma que somente a Polícia Federal poderia realizar a prisão em flagrante.
+      B: É válida, pois foi um encontro fortuito de provas, uma vez que os policiais tinham autorização legal para ingresso no domicílio de Gustavo e Mariano.
+      C: É ilícita, pois o cumprimento de mandado de prisão não compreende a autorização para busca em residência ou para o acesso a dados telemáticos, o que demandaria ordem judicial específica.
+      D: É anulável, porque somente com um mandado de busca e apreensão se poderia livremente acessar o conteúdo de comunicações telemáticas, ainda que diversos fossem o objeto ou o destinatário do mandado, podendo a autoridade judiciária, entretanto, ratificar a diligência.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 68
+    disciplina: processo-penal
+    enunciado: Flávia foi acompanhada por você, na qualidade de advogado(a), à presença da Autoridade Policial, para noticiar a prática dos crimes de apropriação indébita e fraude processual supostamente praticados por seu ex-marido, descrevendo a prática do crime, fornecendo os dados qualificativos completos do suposto autor do fato, apresentando rol de testemunhas e anexando documentação pertinente à materialidade delitiva e de indícios de autoria. O Delegado de Polícia Civil, após cinco dias da confecção do registro da ocorrência, sem que tenha sido praticado nenhum ato para a verificação da procedência das informações, despachou nos autos do Inquérito Policial pelo indeferimento da instauração do Inquérito Policial e determinou a suspensão do procedimento. Nesse caso, você deve
+    alternativas:
+      A: requerer a remessa dos autos ao Ministério Público para que se manifeste, uma vez que o Delegado de Polícia não possui poderes para arquivar o procedimento.
+      B: requerer a remessa dos autos ao Juízo para que se manifeste, uma vez que o Delegado de Polícia não possui poderes para arquivar o procedimento.
+      C: apresentar recurso para a Chefia de Polícia para que se manifeste sobre o indeferimento da instauração do Inquérito Policial.
+      D: apresentar recurso ao Ministério Público para que se manifeste sobre o indeferimento da instauração do Inquérito Policial.  TIPO 1 – BRANCA – Página 19
+    correta: C
+    dispositivos: []
+    revisao:
+      status: revisado

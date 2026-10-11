@@ -1,0 +1,142 @@
+# Gerado por scripts/extrair-objetivas.ts a partir do caderno Tipo 1 e do gabarito definitivo do XXXIX Exame.
+# Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
+exame: "39"
+faixa:
+  penal: [57, 58, 59, 60, 61, 62]
+  processoPenal: [63, 64, 65, 66, 67, 68]
+anuladas:
+  - 63
+questoes:
+  - n: 57
+    disciplina: penal
+    enunciado: João completou 20 anos e foi colocado em liberdade, após cumprir 3 anos de internação por medida socioeducativa em razão da prática de atos infracionais análogos a estupro e furto, conforme sentença proferida pelo Juizado da Infância e da Juventude de sua Comarca. Ao ser solto da unidade de internação, foi preso em flagrante pela prática do crime de roubo, sendo que João nunca respondeu por outros crimes. Para os fins deste novo processo, assinale a afirmativa correta.
+    alternativas:
+      A: João é primário e com bons antecedentes, ante a inaptidão de atos infracionais serem utilizados como circunstâncias judiciais ou induzir reincidência.
+      B: João é reincidente e com maus antecedentes, ante a pluralidade de infrações pretéritas, anteriores aos delitos de roubo.
+      C: João é tecnicamente primário, porém, com maus antecedentes, sendo este único efeito possível gerado pela aplicação de medidas socioeducativas.
+      D: João é reincidente ou com maus antecedentes, pois não é possível que a reincidência seja também considerada circunstância judicial, ainda que se tratem de condenações distintas.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 58
+    disciplina: penal
+    enunciado: Maciel teve sua prisão temporária prolongada sem motivo justo e excepcionalíssimo, por decisão de Xavier, diretor da unidade prisional em que Maciel estava custodiado. Esgotado o prazo legal para que ele fosse posto em liberdade, Xavier ignorou dolosamente o alvará de soltura por 5 (cinco) dias, com o objetivo de prejudicar Maciel, seu inimigo declarado. Sobre o procedimento de Xavier, assinale a afirmativa correta.
+    alternativas:
+      A: Ele praticou o crime de corrupção passiva privilegiada.
+      B: Ele praticou o crime de abuso de autoridade.
+      C: Ele praticou o crime de desobediência.
+      D: Não praticou crime algum, tendo em vista que o alvará de soltura foi cumprido.  Tipo Branca – Página 18
+    correta: B
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 59
+    disciplina: penal
+    enunciado: Pablo (13 anos) e Luís (19 anos), amigos de longa data, decidiram cometer suicídio. Durante todo o período em que conversaram sobre o tema, sempre condicionaram a realização do ato à presença de ambos, sendo certo que diariamente um instigava o outro a praticar o ato. No dia combinado, os dois se dirigiram à principal ponte da cidade e se posicionaram no vão central. Afastados um do outro, apenas se olharam para iniciar a contagem até se jogarem. Os dois pularam ao mesmo tempo. Apesar de a altura ser a mesma, Pablo ficou em coma por 90 dias no hospital e ao retornar teve diagnosticada a sua tetraplegia, perdendo completamente os movimentos dos braços e das pernas. Luís, por sua vez, sofreu apenas algumas escoriações. Sobre a participação de Luís no caso narrado, assinale a afirmativa correta, conforme expressa previsão legal.
+    alternativas:
+      A: Deverá responder pelo crime de instigação ao suicídio qualificado pelo resultado morte.
+      B: Será responsabilizado nas penas do crime de lesão corporal gravíssima.
+      C: Incidiu na conduta de tentativa de instigação ao suicídio.
+      D: Não será responsabilizado, porque será beneficiado pelo instituto do perdão judicial, independentemente de as consequências da infração o terem atingido de forma grave.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 60
+    disciplina: penal
+    enunciado: "Paulo estava desempregado, precisando de dinheiro, quando, dentro do metrô, avistou uma mulher com a bolsa entreaberta e a carteira à mostra. Paulo decidiu pegar a carteira, sem que ninguém visse. Durante a empreitada criminosa, Paulo inseriu a mão na bolsa da mulher e segurou a carteira. Porém, com crise de consciência, Paulo decidiu por livre e espontânea vontade não prosseguir na empreitada criminosa. Diante dos fatos narrados, é correto afirmar que Paulo deve ser beneficiado pelo instituto do(a):"
+    alternativas:
+      A: arrependimento posterior.
+      B: desistência voluntária.
+      C: tentativa.
+      D: arrependimento eficaz.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 61
+    disciplina: penal
+    enunciado: "Caio, lutador de MMA, estava na praia quando viu uma senhora ser agredida por um terceiro. Caio foi em direção ao agressor e tentou persuadi-lo a parar com as agressões, mas o agressor não deu ouvidos e continuou a agredir a senhora. Dessa forma, Caio não viu outra alternativa a não ser desferir um soco no agressor para afastá-lo da senhora e imobilizá-lo em seguida, até a chegada da polícia. Diante do exposto, a conduta de Caio pode ser beneficiada pela exclusão da:"
+    alternativas:
+      A: tipicidade em razão da coação física irresistível.
+      B: culpabilidade em razão da coação moral irresistível.
+      C: ilicitude em razão do exercício regular de um direito.
+      D: ilicitude por legítima defesa.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 62
+    disciplina: penal
+    enunciado: Paulo nasceu em outubro de 1990. Em julho de 2011, Paulo cometeu o delito de homicídio simples contra um vizinho. O Ministério Público ofereceu denúncia no ano de 2022. Sobre a hipótese apresentada, assinale a afirmativa correta.
+    alternativas:
+      A: Ocorreu a prescrição da pretensão punitiva no ano de 2021, pois, no caso de Paulo, a prescrição é reduzida pela metade.
+      B: A prescrição da pretensão punitiva só ocorrerá em 20 anos da data dos fatos, ou seja, no ano de 2031.
+      C: Por se tratar de crime hediondo, o prazo prescricional da prescrição da pretensão punitiva é acrescido de 1/3, de forma que a prescrição ocorrerá somente no ano de 2024.
+      D: Por se tratar de crime hediondo, o crime cometido por Paulo é imprescritível.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 64
+    disciplina: processo-penal
+    enunciado: Júnior foi condenado pelo delito de latrocínio, na modalidade tentada, a uma pena de 8 (oito) anos e 6 (seis) meses de reclusão, a ser cumprida em regime inicial fechado, já tendo a sentença transitado em julgado, sem nulidade. Júnior inicia a execução das penas e procura você, na qualidade de advogado(a). Assinale a afirmativa que apresenta, corretamente, a orientação jurídica que possibilita reduzir o tempo de encarceramento de Júnior.
+    alternativas:
+      A: Postular o perdão do ofendido e, assim, reduzir sua pena.
+      B: Aguardar o decreto presidencial de comutação de pena.
+      C: Requerer a classificação de Júnior para trabalho e estudo no sistema carcerário, a fim de viabilizar a remição de penas.
+      D: Pleitear um decreto de anistia no âmbito da Assembleia Legislativa do seu Estado.  Tipo Branca – Página 19
+    correta: C
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 65
+    disciplina: processo-penal
+    enunciado: Osvaldo foi denunciado pela prática do crime de estelionato em coautoria com Flávio. Durante a instrução processual, o Juízo ouviu três testemunhas da acusação, e, uma delas, Fabiana, apresentou versão conflitante com as apresentadas pelas defesas. Por isso, o Ministério Público requereu a realização de acareação prevista no Art. 229 do CPP, entre Osvaldo, Flávio e Fabiana. A defesa de Osvaldo informou que o acusado não iria participar da acareação, mas o Ministério Público insistiu com o Juízo que determinasse que Osvaldo se submetesse ao ato, sob pena de incidir nas penas do crime de desobediência. Sobre o caso narrado, assinale a afirmativa que indica o princípio que você, como advogado(a) de Osvaldo, deve alegar em defesa do seu cliente.
+    alternativas:
+      A: O da ampla defesa veda a realização de acareação entre testemunhas de defesa e de acusação, pois cada parte tem o ônus de provar os fatos que alega.
+      B: O de fundamentação das decisões exige que, ao determinar a realização de uma prova, o Juízo indique concretamente as razões que a justifiquem, sob pena de nulidade.
+      C: O de presunção de inocência impede a participação do réu em procedimento de acareação, ainda que a ele se apresente voluntariamente.
+      D: O de não autoincriminação ampara a pretensão de Osvaldo de não se submeter à produção de provas que exigem participação ativa do denunciado, tal como a acareação.
+    correta: D
+    dispositivos:
+      - art. 229, cpp
+    revisao:
+      status: revisado
+  - n: 66
+    disciplina: processo-penal
+    enunciado: Fabrício foi preso em flagrante pela prática do crime de roubo, tendo havido a regular conversão do flagrante em prisão preventiva. Contudo, passados mais de dois anos, a instrução processual não logrou finalizar a oitiva das testemunhas de acusação, pois o Ministério Público insiste na oitiva de policiais que, constantemente, faltam à audiência por motivos pessoais, alegando férias e licença. Fabrício permanece preso preventivamente, o que ensejou impetração de habeas corpus para o Tribunal de Justiça competente. O Tribunal de Justiça, em decisão colegiada, denegou a ordem de habeas corpus. Identifique, corretamente, a medida judicial a ser proposta para o caso narrado.
+    alternativas:
+      A: Recurso odinário constitucional, dirigido ao Superior Tribunal de Justiça.
+      B: Recurso de apelação, dirigido ao Superior Tribunal de Justiça.
+      C: Agravo interno, dirigido para o Tribunal de Justiça.
+      D: Recurso extraordinário, dirigido ao Supremo Tribunal Federal.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 67
+    disciplina: processo-penal
+    enunciado: André, primário, subtraiu o computador de Gustavo, enquanto este estava distraído em via pública, em uma sexta-feira. Na terça-feira da semana seguinte, após consultar as câmeras de vigilância, Gustavo identificou André como o responsável pela subtração, e acionou a Polícia Civil que, com base nas declarações de Gustavo, abordou André em via pública e com ele encontrou o computador subtraído dias antes. André foi, então, preso em flagrante pelo delito de receptação, na modalidade “conduzir” produto de furto. As penas do furto e da receptação são de 1 a 4 anos. Como advogado(a) de André, assinale a afirmativa correta.
+    alternativas:
+      A: Deve ser postulado o relaxamento da prisão em flagrante, porque André praticou apenas o delito de furto, crime de natureza instantânea, inexistindo situação flagrancial.
+      B: Deve ser postulada a liberdade provisória, pois, não obstante ter praticado dois delitos em concurso material, ainda assim é cabível a suspensão condicional do processo.
+      C: André praticou delito de furto em concurso formal com receptação, o que autoriza a prisão em flagrante pelo delito de natureza permanente, mas é cabível a liberdade provisória, mediante fiança.
+      D: André praticou apenas o delito de receptação, cuja pena máxima é igual a quatro anos, por isso, não é cabível a prisão preventiva, devendo ser postulada a liberdade provisória.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 68
+    disciplina: processo-penal
+    enunciado: Arthur, Bruno, Fernanda e Camille foram acusados de furto simples praticado em 2020. Arthur foi definitivamente condenado, Bruno foi condenado, porém, recorreu e ainda não houve decisão definitiva. Fernanda aceitou suspensão condicional do processo, já cumprida, e Camille foi absolvida, tendo havido recurso do Ministério Público, ainda não julgado. Em julho de 2023, sobreveio acusação de uso de documento particular falso contra os quatro. Considerando preenchidos os demais requisitos, e considerando apenas os antecedentes criminais mencionados, assinale a opção que indica os que podem celebrar Acordo de Não Persecução Penal.
+    alternativas:
+      A: Arthur e Bruno.
+      B: Arthur e Fernanda.
+      C: Bruno e Camille.
+      D: Fernanda e Camille.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: revisado

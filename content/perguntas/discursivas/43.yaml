@@ -35,7 +35,7 @@ perguntas:
         - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
         - "Endereçamento: Tribunal de Justiça do Estado de Santa Catarina."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 43-peca-3
     categoria: peca-detalhe
     parte: peca

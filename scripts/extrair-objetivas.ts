@@ -35,11 +35,10 @@ async function linhasDoPdf(caminho: string): Promise<string[]> {
   return linhas;
 }
 
-/** Texto ilegível (fonte sem mapa de caracteres): muitos símbolos fora do alfabeto latino. */
-const ilegivel = (linhas: string[]) => {
-  const t = linhas.slice(0, 400).join("");
-  const estranhos = [...t].filter((c) => /[^\x20-\x7EÀ-ÿ–—“”‘’ºª°§•]/.test(c)).length;
-  return estranhos / Math.max(1, t.length) > 0.05;
+/** Linha cifrada (fonte sem mapa de caracteres): muitos símbolos fora do alfabeto latino. */
+const cifrada = (linha: string) => {
+  const estranhos = [...linha].filter((c) => /[^\x20-\x7EÀ-ÿ–—“”‘’ºª°§•]/.test(c)).length;
+  return estranhos / Math.max(1, linha.length) > 0.05;
 };
 
 const juntar = (linhas: string[]) =>
@@ -55,7 +54,7 @@ interface Bruta {
 }
 
 function questoes(linhas: string[]): Bruta[] {
-  const cabecalho = /EXAME D[EO] ORDEM UNIFICADO|^Tipo .*P[áa]gina \d+|^P[áa]gina \d+/i;
+  const cabecalho = /EXAME D[EO] ORDEM UNIFICADO|^[IVXL]+ EX$|^Tipo .*P[áa]gina \d+|^P[áa]gina \d+/i;
   const uteis = linhas.filter((l) => !cabecalho.test(l));
   const saida: Bruta[] = [];
   let atual: { n: number; partes: string[] } | null = null;
@@ -81,10 +80,12 @@ function questoes(linhas: string[]): Bruta[] {
     atual = null;
   };
   for (const l of uteis) {
-    if (l === String(ultimo + 1) && (!atual || atual.partes.some((x) => x.match(ALTERNATIVA)?.[1] === "D"))) {
+    const cabeca = l.match(/^(?:Quest[ãa]o )?(\d+)$/);
+    const n = cabeca ? Number(cabeca[1]) : 0;
+    if (n > ultimo && n <= ultimo + 3 && (!atual || atual.partes.some((x) => x.match(ALTERNATIVA)?.[1] === "D"))) {
       fechar();
-      ultimo++;
-      atual = { n: ultimo, partes: [] };
+      ultimo = n;
+      atual = { n, partes: [] };
       continue;
     }
     atual?.partes.push(l);
@@ -97,8 +98,11 @@ const PENAL = /\b(crime|delito|pena|dolo|culpa|tipicidade|imputabilidade|leg[ií
 const PROCESSO = /\b(den[úu]ncia|inqu[ée]rito|c[óo]digo de processo penal|a[çc][ãa]o penal|pris[ãa]o (preventiva|tempor[áa]ria|em flagrante)|recurso|habeas corpus|tribunal do j[úu]ri|jurisdi[çc][ãa]o|compet[êe]ncia|nulidade|queixa|audi[êe]ncia|testemunha|prova)\b/gi;
 const conta = (re: RegExp, t: string) => (t.match(re) ?? []).length;
 
-/** Janela de 12 questões com mais termos de Penal e Processo Penal: 6 de cada, nessa ordem. */
-function faixas(qs: Bruta[]) {
+/**
+ * Janela de 12 questões com mais termos de Penal e Processo Penal. Dentro dela, cada questão vai para a
+ * disciplina de mais termos; empate fica com a posição (as 6 primeiras, Penal; as outras, Processo Penal).
+ */
+function faixas(qs: Bruta[]): { penal: number[]; processoPenal: number[] } {
   const sp = qs.map((q) => conta(PENAL, q.enunciado));
   const spp = qs.map((q) => conta(PROCESSO, q.enunciado) + (/processo penal/i.test(q.enunciado) ? 3 : 0));
   const pontos = (i: number) => sp.slice(i, i + 12).reduce((a, b) => a + b, 0) + spp.slice(i, i + 12).reduce((a, b) => a + b, 0);
@@ -107,10 +111,13 @@ function faixas(qs: Bruta[]) {
   // Nas provas recentes o bloco é 57–68: fica com ele se pontuar quase tanto quanto a melhor janela.
   const usual = qs.findIndex((q) => q.n === 57);
   if (usual >= 0 && usual + 12 <= qs.length && pontos(usual) >= 0.85 * melhor.score) melhor = { ini: usual, score: pontos(usual) };
-  // O edital fixa 6 questões de Direito Penal seguidas de 6 de Processo Penal.
-  const corte = { k: 6 };
-  const n = (i: number) => qs[i].n;
-  return { penal: [n(melhor.ini), n(melhor.ini + corte.k - 1)] as [number, number], processoPenal: [n(melhor.ini + corte.k), n(melhor.ini + 11)] as [number, number] };
+  const saida = { penal: [] as number[], processoPenal: [] as number[] };
+  for (let k = 0; k < 12; k++) {
+    const i = melhor.ini + k;
+    const disciplina = sp[i] !== spp[i] ? (sp[i] > spp[i] ? "penal" : "processoPenal") : k < 6 ? "penal" : "processoPenal";
+    saida[disciplina].push(qs[i].n);
+  }
+  return saida;
 }
 
 /** Gabarito do Tipo 1: linhas de números seguidas de linhas de letras ("*" = anulada). */
@@ -119,7 +126,7 @@ function gabaritoTipo1(linhas: string[]): Map<number, string> {
   let tipo: number | null = null;
   let numeros: number[] | null = null;
   for (const l of linhas) {
-    const cab = l.match(/TIPO\s+(\d+)$/i);
+    const cab = l.match(/(?:TIPO|PROVA)\s+(\d+)\b/i);
     if (cab) {
       tipo = Number(cab[1]);
       numeros = null;
@@ -172,11 +179,9 @@ for (const exame of exames) {
     console.log(`${exame}: falta caderno ou gabarito definitivo em ${dir}`);
     continue;
   }
-  const linhas = await linhasDoPdf(join(dir, "caderno-tipo1.pdf"));
-  if (ilegivel(linhas)) {
-    console.log(`${exame}: texto do caderno ilegível (fonte sem mapa de caracteres), ignorado`);
-    continue;
-  }
+  const todas = await linhasDoPdf(join(dir, "caderno-tipo1.pdf"));
+  const linhas = todas.filter((l) => !cifrada(l));
+  if (linhas.length < todas.length) console.log(`${exame}: ${todas.length - linhas.length} linhas cifradas ignoradas`);
   const qs = questoes(linhas);
   if (qs.length < 70) {
     console.log(`${exame}: só ${qs.length} questões reconhecidas, ignorado`);
@@ -187,7 +192,7 @@ for (const exame of exames) {
   const anuladas: number[] = [];
   const saida = [];
   for (const q of qs) {
-    const disciplina = q.n >= faixa.penal[0] && q.n <= faixa.penal[1] ? "penal" : q.n >= faixa.processoPenal[0] && q.n <= faixa.processoPenal[1] ? "processo-penal" : null;
+    const disciplina = faixa.penal.includes(q.n) ? "penal" : faixa.processoPenal.includes(q.n) ? "processo-penal" : null;
     if (!disciplina) continue;
     const correta = gabarito.get(q.n);
     if (correta === "*") {
@@ -208,5 +213,5 @@ for (const exame of exames) {
       `# Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.\n` +
       stringify({ exame, faixa, anuladas, questoes: saida }, { lineWidth: 0 }),
   );
-  console.log(`${exame}: ${qs.length} questões no caderno · Penal ${faixa.penal.join("–")} · Processo Penal ${faixa.processoPenal.join("–")} · ${saida.length} gravadas · anuladas: ${anuladas.join(", ") || "nenhuma"}`);
+  console.log(`${exame}: ${qs.length} questões no caderno · Penal ${faixa.penal.join(", ")} · Processo Penal ${faixa.processoPenal.join(", ")} · ${saida.length} gravadas · anuladas: ${anuladas.join(", ") || "nenhuma"}`);
 }

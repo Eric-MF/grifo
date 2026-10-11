@@ -1,0 +1,153 @@
+# Gerado a partir do caderno Tipo 1 e do gabarito definitivo do XXXV Exame (texto colado; o caderno em PDF tem glifos cifrados).
+# Confira a lista de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
+exame: "35"
+faixa:
+  penal:
+    - 58
+    - 59
+    - 60
+    - 62
+    - 63
+    - 64
+    - 67
+  processoPenal:
+    - 61
+    - 65
+    - 66
+    - 68
+    - 69
+anuladas:
+  - 59
+questoes:
+  - n: 58
+    disciplina: penal
+    enunciado: Para satisfazer sentimento pessoal, já que tinha grande relação de amizade com Joana, Alan, na condição de funcionário público, deixou de praticar ato de ofício em benefício da amiga. O supervisor de Alan, todavia, identificou o ocorrido e praticou o ato que Alan havia omitido, informando os fatos em procedimento administrativo próprio. Após a conclusão do procedimento administrativo, o Ministério Público denunciou Alan pelo crime de corrupção passiva consumado, destacando que a vantagem obtida poderia ser de qualquer natureza para tipificação do delito. Confirmados os fatos durante a instrução, caberá à defesa técnica de Alan pleitear sob o ponto de vista técnico, no momento das alegações finais,
+    alternativas:
+      A: o reconhecimento da tentativa em relação ao crime de corrupção passiva.
+      B: a desclassificação para o crime de prevaricação, na forma tentada.
+      C: a desclassificação para o crime de prevaricação, na forma consumada.
+      D: o reconhecimento da prática do crime de condescendência criminosa, na forma consumada.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 60
+    disciplina: penal
+    enunciado: Breno, policial civil, estressado em razão do trabalho, resolveu acampar em local deserto, no meio de uma trilha cercada apenas por vegetação. Após dois dias, já sentindo o tédio do local deserto, longe de qualquer residência, para distrair a mente, pegou sua arma de fogo, calibre permitido, devidamente registrada e cujo porte era autorizado, e efetuou um disparo para o alto para testar a capacidade da sua mão esquerda, já que, a princípio, seria destro. Ocorre que, em razão do disparo, policiais militares realizaram diligência e localizaram o imputado, sendo apreendida sua arma de fogo e verificado que um dos números do registro havia naturalmente se apagado em razão do desgaste do tempo. Confirmados os fatos, Breno foi denunciado pelos crimes de porte de arma de fogo com numeração suprimida e disparo de arma de fogo (Art. 15 e Art. 16, §1º, inciso IV, ambos da Lei nº 10.826/03, em concurso material). Após a instrução, provados todos os fatos acima narrados, você, como advogado(a) de Breno, deverá requerer, sob o ponto de vista técnico, em sede de alegações finais,
+    alternativas:
+      A: a absolvição em relação ao crime de porte de arma com numeração suprimida, restando apenas o crime de disparo de arma de fogo, menos grave, que é expressamente subsidiário.
+      B: a absorção do crime de disparo de arma de fogo pelo de porte de arma de fogo com numeração suprimida, considerando que é expressamente subsidiário.
+      C: o reconhecimento do concurso formal de delitos, afastando-se o concurso material.
+      D: a absolvição em relação a ambos os delitos.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 61
+    disciplina: processo-penal
+    enunciado: Natan, com 21 anos de idade, praticou, no dia 03 de fevereiro de 2020, crime de apropriação indébita simples. Considerando a pena do delito e a primariedade técnica, já que apenas respondia outra ação penal pela suposta prática de injúria racial, foi oferecida pelo Ministério Público proposta de acordo de não persecução penal, que foi aceita pelo agente e por sua defesa técnica. Natan, 15 dias após o acordo, procura seu(sua) advogado(a) e demonstra intenção de não cumprir as condições acordadas, indagando sobre aspectos relacionadas ao prazo prescricional aplicável ao Ministério Público para oferecimento da denúncia. O(A) advogado(a) de Natan deverá esclarecer, sobre o tema, que
+    alternativas:
+      A: enquanto não cumprido o acordo de não persecução penal, não correrá o prazo da prescrição da pretensão punitiva.
+      B: será o prazo prescricional da pretensão punitiva pela pena em abstrato reduzido pela metade, em razão da idade de Natan.
+      C: poderá, ultrapassado o prazo de 03 anos, haver reconhecimento da prescrição da pretensão punitiva com base na pena ideal ou hipotética.
+      D: poderá, ultrapassado o prazo legal, haver reconhecimento da prescrição da pretensão punitiva entre a data dos fatos e do recebimento da denúncia, considerando pena em concreto aplicada em eventual sentença.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 62
+    disciplina: penal
+    enunciado: No dia 31/12/2020, na casa da genitora da vítima, Fausto, com 39 anos, enquanto conversava com Ana Vitória, de 12 anos de idade, sem violência ou grave ameaça à pessoa, passava as mãos nos seios e nádegas da adolescente, conduta flagrada pela mãe da menor, que imediatamente acionou a polícia, sendo Fausto preso em flagrante. Preocupada com eventual represália e tendo interesse em ver o autor do fato punido, em especial porque sabe que Fausto cumpre pena em livramento condicional por condenação com trânsito em julgado pelo crime de latrocínio, a família de Ana Vitória procura você, na condição de advogado(a), para esclarecimento sobre a conduta praticada. Por ocasião da consulta jurídica, deverá ser esclarecido que o crime em tese praticado por Fausto é o de
+    alternativas:
+      A: estupro de vulnerável (Art. 217-A do CP), não fazendo jus Fausto, em caso de eventual condenação, a novo livramento condicional.
+      B: importunação sexual (Art. 215-A do CP), não fazendo jus Fausto, em caso de eventual condenação, a novo livramento condicional.
+      C: estupro de vulnerável (Art. 217-A do CP), podendo Fausto, em caso de condenação, após cumprimento de determinado tempo de pena e observados os requisitos subjetivos, obter novo livramento condicional.
+      D: importunação sexual (Art. 215-A do CP), podendo Fausto, em caso de condenação, após cumprimento de determinado tempo de pena e observados os requisitos subjetivos, obter novo livramento condicional.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 63
+    disciplina: penal
+    enunciado: Paulo foi condenado, com trânsito em julgado pela prática do crime de lesão corporal grave, à pena de 1 ano e oito meses de reclusão, tendo o trânsito ocorrido em 14 de abril de 2016. Uma vez que preenchia os requisitos legais, o magistrado houve, por bem, conceder a ele o benefício da suspensão condicional da pena pelo período de 2 anos. Por ter cumprido todas as condições impostas, teve sua pena extinta em 18 de abril de 2018. No dia 15 de maio de 2021, Paulo foi preso pela prática do crime de roubo. Diante do caso narrado, caso Paulo venha a ser condenado pela prática do crime de roubo, deverá ser considerado
+    alternativas:
+      A: reincidente, na medida em que, uma vez condenado com trânsito em julgado, o agente não recupera a primariedade.
+      B: reincidente, em razão de não ter passado o prazo desde a extinção da pena pelo crime anterior.
+      C: primário, em razão de ter cumprido o prazo para a recuperação de primariedade.
+      D: primário, em razão de a reincidência exigir a prática do mesmo tipo penal, o que não ocorreu no caso de Paulo.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 64
+    disciplina: penal
+    enunciado: Caio, primário e de bons antecedentes, sem envolvimento pretérito com o aparato policial ou judicial, foi denunciado pela suposta prática do crime de tráfico de drogas. Em sua entrevista particular com seu advogado, esclareceu que, de fato, estaria com as drogas, mas que as mesmas seriam destinadas ao seu próprio uso. Indagou, então, à sua defesa técnica sobre as consequências que poderiam advir do acolhimento pelo magistrado de sua versão a ser apresentada em interrogatório. Considerando apenas as informações expostas, o(a) advogado(a) deverá esclarecer ao seu cliente que, caso o magistrado entenda que as drogas seriam destinadas apenas ao uso de Caio, deverá o julgador
+    alternativas:
+      A: condenar o réu, de imediato, pelo crime de porte de drogas para consumo próprio, aplicando o instituto da mutatio libelli.
+      B: condenar o réu, de imediato, pelo crime de porte de drogas para consumo próprio, aplicando o instituto da emendatio libelli.
+      C: reconhecer que não foi praticado o crime de tráfico de drogas e encaminhar os autos ao Ministério Público para analisar eventual proposta de transação penal.
+      D: reconhecer que não foi praticado o crime de tráfico de drogas e encaminhar os autos ao Ministério Público para analisar proposta de suspensão condicional do processo, mas não transação penal, diante do procedimento especial previsto na Lei de Drogas.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 65
+    disciplina: processo-penal
+    enunciado: Rodrigo responde ação penal pela suposta prática do crime de venda irregular de arma de fogo de uso restrito, na condição de preso. O magistrado veio a tomar conhecimento de que Rodrigo seria pai de uma criança de 11 anos de idade e que seria o único responsável pelo menor, que, inclusive, foi encaminhado ao abrigo por não ter outros familiares ou pessoas amigas capazes de garantir seus cuidados. Com esse fundamento, substituiu, de ofício, a prisão preventiva por prisão domiciliar. Rodrigo, intimado da decisão, entrou em contato com seu(sua) advogado(a) em busca de esclarecimentos sobre o cabimento da medida e suas consequências. A defesa técnica de Rodrigo deverá esclarecer que a concessão da prisão domiciliar foi
+    alternativas:
+      A: adequada, e o tempo recolhido em casa justifica o reconhecimento de detração do período de cumprimento, que deverá ser observado na execução da pena, mas não no momento da fixação do regime inicial do cumprimento de pena.
+      B: adequada, e o tempo recolhido em casa justifica o reconhecimento de detração do período de cumprimento, que poderá ser observado no momento da fixação do regime inicial de cumprimento de pena.
+      C: inadequada, pois somente admitida para as mulheres que sejam mães de crianças menores de 12 anos.
+      D: adequada, mas não justifica o reconhecimento de detração.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 66
+    disciplina: processo-penal
+    enunciado: Joel está sendo processado por crime de estelionato na Vara Criminal da Comarca de Estoril. Na peça de resposta à acusação, o Dr. Roberto, advogado de Joel, arrolou 03 (três) testemunhas. Dentre elas, estava Olinto Silva, residente na Comarca de Vieiras. O juízo da Vara Criminal da Comarca de Estoril determinou a expedição de carta precatória ao juízo da Vara Criminal da Comarca de Vieiras com a finalidade de ser ouvido Olinto Silva, notificando o Promotor de Justiça e o Defensor Público. Na Vara Criminal da Comarca de Vieiras, o juiz designou a audiência para oitiva de Olinto Silva, notificando somente o Ministério Público, não obstante haver Defensor Público na comarca. Realizada a oitiva de Olinto Silva, a deprecata foi devolvida ao Juízo da Vara Criminal da Comarca de Estoril. Recebida a carta precatória, o Dr. Roberto tomou ciência do seu cumprimento. Assinale a opção que apresenta a providência que o advogado de Joel deve tomar em sua defesa.
+    alternativas:
+      A: Requerer ao Juízo da Vara Criminal da Comarca de Estoril a declaração de nulidade da audiência de oitiva de Olinto Silva, que se deu na Vara Criminal da Comarca de Vieiras, por ter sido realizado aquele ato processual sem a intimação do Defensor Público.
+      B: Requerer ao Juízo da Vara Criminal da Comarca de Vieiras a declaração de nulidade da audiência de oitiva de Olinto Silva, em razão de ter ocorrido aquele ato processual sem que tenha sido intimado como advogado de Joel.
+      C: Requerer ao Juízo da Vara Criminal da Comarca de Vieiras a declaração de nulidade da audiência de oitiva de Olinto Silva, em razão de ter ocorrido aquele ato processual sem que tenha sido intimado o Defensor Público.
+      D: Requerer ao Juízo da Vara Criminal da Comarca de Estoril a declaração de nulidade do processo a partir da expedição da carta precatória ao Juízo da Vara Criminal da Comarca de Vieiras, como também a dos atos que dela diretamente dependessem ou fossem consequência, haja vista que, como advogado de Joel, não foi intimado da remessa da referida carta ao juízo deprecado.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 67
+    disciplina: penal
+    enunciado: Tendo sido admitido a cursar uma universidade nos Estados Unidos da América (EUA), cuja apresentação deveria ocorrer em 05 (cinco) dias, Lucas verificou que o seu passaporte brasileiro estava vencido e entrou em contato com Bento, na cidade de Algarve, no Estado do Paraná, o qual lhe entregaria um passaporte feito pelo mesmo, idêntico ao expedido pelas autoridades brasileiras. Lucas fez a transferência da quantia de R$ 5.000,00 (cinco mil reais) para a conta corrente de Bento numa agência bancária situada na cidade de Vigo (PR). Confirmado o depósito, Lucas se encontrou com Bento no interior de um hospital federal, onde o primeiro aguardava uma consulta, na cidade de Antonésia (PR). Já no aeroporto de São Paulo, Lucas apresentou às autoridades brasileiras o passaporte feito por Bento, oportunidade em que a polícia federal constatou que o mesmo era falso. Lucas foi preso em flagrante delito. O Ministério Público do Estado de São Paulo ofereceu denúncia contra Lucas pelo crime de uso de documento falso, a qual foi recebida pelo juízo da 48ª Vara Criminal da Comarca da Capital (SP), oportunidade em que foi posto em liberdade, sendo-lhe impostas duas medidas cautelares diversas da prisão. O advogado de Lucas foi intimado para apresentar resposta à acusação, oportunidade em que se insurgiu contra a incompetência absoluta do juízo da 48ª Vara Criminal da Comarca da Capital (SP). Assinale a opção que indica a peça processual em que o advogado de Lucas deverá arguir a relatada incompetência.
+    alternativas:
+      A: Exceção de incompetência, por entender que o juízo natural seria uma das Varas Criminais da Comarca de Vigo (PR), onde se consumou o crime imputado, haja vista que a compra do passaporte se aperfeiçoou na cidade em que Bento possuía conta bancária e recebeu a quantia de R$ 5.000,00 (cinco mil reais).
+      B: Na própria resposta à acusação, sustentando que o juízo natural seria uma das Varas Criminais da Comarca de Algarve (PR), onde o passaporte falso foi confeccionado.
+      C: Na própria resposta à acusação, por entender que o juízo natural seria uma das Varas Criminais Federais da Seção Judiciária do Estado do Paraná, em razão de Bento ter entregue o passaporte falsificado no interior de um hospital federal na cidade de Antonésia (PR), onde Lucas aguardava uma consulta.
+      D: Exceção de incompetência, por entender que o juízo natural seria uma das Varas Criminais Federais da Seção Judiciária do Estado de São Paulo, em razão de Lucas ter tentado embarcar para os EUA manuseando o passaporte falso confeccionado por Bento.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 68
+    disciplina: processo-penal
+    enunciado: Policiais militares, ao avistarem Jairo roubar um carro no município de Toledo (PB), passaram a persegui-lo logo após a subtração, o que se deu ininterruptamente durante 28 (vinte e oito) horas. Por terem perdido de vista Jairo quando estavam prestes a ingressar no município de Córdoba (PB), os policiais militares se dirigiram à Delegacia de Polícia de Toledo para confecção do Boletim de Ocorrência. Antes que fosse finalizado o Boletim de Ocorrência, a Delegacia Policial de Toledo recebeu uma ligação telefônica do lesado (Luiz), informando que Jairo, na posse do seu carro (roubado), estava sentado numa mesa de bar naquele município tomando cerveja. Os policiais militares e os policiais da Distrital se deslocaram até o referido bar, encontrando Jairo como descrito no telefonema do lesado, apenas de chinelo e bermuda, portando uma carteira de identidade e a quantia de R$ 50,00 (cinquenta) reais. Nada mais foi encontrado com Jairo, que negou a autoria do crime. Jairo foi preso em flagrante delito e lavrado o respectivo auto pelo Delegado de Polícia, cujo despacho que determinou o recolhimento à prisão do indiciado teve como fundamento a situação de quase- flagrante, já que a diligência não havia sido encerrada e nem encerrado o Boletim de Ocorrência. Os policiais militares que efetuaram a perseguição reconheceram Jairo como o motorista que dirigia o carro roubado. O lesado (Luiz) também foi ouvido e reconheceu Jairo pessoalmente. A família de Jairo contratou você, como advogado(a), para participar da audiência de custódia na Comarca de Toledo e requerer a sua liberdade. Assinale a opção que indica o fundamento da sua manifestação nessa audiência para colocar Jairo em liberdade.
+    alternativas:
+      A: A prisão de Jairo era ilegal, pois a perseguição, ainda que não cessada como constou do despacho da autoridade policial, exigia que o carro fosse apreendido para comprovar a materialidade do crime.
+      B: A prisão de Jairo era ilegal, pois, ainda que fosse, inicialmente, uma situação de quase-flagrante (ou flagrante imprópio), a perseguição foi encerrada em Toledo, tanto que os policiais militares se dirigiram à Delegacia de Polícia do município para confecção do Boletim de Ocorrência. Restava cessada a situação a caracterizar um flagrante delito. Posterior prisão cautelar somente caberia por ordem judicial.
+      C: A prisão de Jairo era ilegal, pois o Código de Processo Penal somente autoriza a prisão em flagrante delito quando o agente está cometendo o crime, acaba de cometê-lo (flagrante real) ou é encontrado, logo depois, com instrumentos, armas, objetos ou papéis que façam presumir ser ele o autor da infração penal (flagrante presumido).
+      D: A prisão de Jairo era ilegal, pois o Código de Processo Penal autoriza a prisão em flagrante delito quando o agente é perseguido, logo após, pela autoridade em situação que faça presumir ser autor da infração (quase-flagrante), não podendo passar a perseguição de 24 (vinte e quatro) horas.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 69
+    disciplina: processo-penal
+    enunciado: Magda é servidora pública federal, trabalhando como professora em instituição de Ensino Superior mantida pela União no Estado do Rio de Janeiro. Magda vem a ser vítima de ofensa à sua honra subjetiva em sala de aula, sendo chamada de "piranha" e "vagabunda" por Márcio, aluno que ficara revoltado com sua reprovação em disciplina ministrada por Magda. Nessa situação, assinale a afirmativa correta.
+    alternativas:
+      A: Magda só pode ajuizar queixa-crime contra Márcio, imputando-lhe crime de injúria.
+      B: Magda só pode oferecer representação contra Márcio, imputando-lhe crime de injúria.
+      C: Magda não pode ajuizar queixa-crime nem oferecer representação contra Márcio, imputando-lhe crime de injúria.
+      D: Magda pode optar entre ajuizar queixa-crime ou oferecer representação contra Márcio, imputando-lhe crime de injúria.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho

@@ -25,7 +25,7 @@ perguntas:
         - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro"
         - "Endereçamento: Tribunal Regional Federal da 10ª Região."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 06-peca-4-1
     categoria: peca-detalhe
     parte: peca

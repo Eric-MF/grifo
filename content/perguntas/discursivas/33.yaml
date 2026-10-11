@@ -35,7 +35,7 @@ perguntas:
         - "Endereçamento correto: Juízo da Vara de Execuções Penais do Rio de Janeiro/RJ."
         - "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 33-peca-3
     categoria: peca-detalhe
     parte: peca

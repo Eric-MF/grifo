@@ -2,23 +2,47 @@
 # Não entram na linha do tempo (que usa datas de publicação e vigência). Cada entrada é conferida
 # à mão: `revisao: rascunho` até ser checada no acórdão, no site do STF.
 # Fontes consultadas em outubro de 2026: notícias do STF e do MP-MS, resumos jurídicos; o PDF oficial da
-# decisão (stf.jus.br) não pôde ser aberto (HTTP 403).
+# decisão (stf.jus.br) não pôde ser aberto (HTTP 403). Artigo de referência: Cassiolato e Aro, "O juízo das
+# garantias e o sistema acusatório: perspectivas constitucionais", Cadernos Jurídicos da FADI, vol. 7 (2025),
+# que descreve o acórdão da ADI 6.305 (Rel. Fux, 24/08/2023); não é o acórdão.
 
 pacote-anticrime-juiz-das-garantias:
   diploma: cpp
   dispositivos: "arts. 3º-A a 3º-F (juiz das garantias), no que foi impugnado"
+  acoes: "ADI 6298 (27/12/2019, AMB e AJUFE), 6299 (28/12/2019, PODEMOS e CIDADANIA), 6300 (01/01/2020, PSL) e 6305 (20/01/2020, CONAMP)"
   decisoes:
+    - data: 2020-01-15
+      tipo: liminar parcial
+      relator: Dias Toffoli (presidente do STF)
+      efeito: "deferiu parcialmente os pedidos cautelares (conteúdo não detalhado na fonte)"
     - data: 2020-01-22
       tipo: liminar
       relator: Luiz Fux
-      acoes: "ADI 6298, 6299, 6300 e 6305"
-      efeito: "suspensão sine die de trechos dos arts. 3º-A, 3º-B (em parte) e 3º-D, parágrafo único, segundo fonte secundária"
+      efeito: "reapreciou os pedidos e determinou a suspensão da eficácia da implantação do juiz das garantias. Alcance a conferir: ver nota"
     - data: 2023-08-24
       tipo: mérito
-      acoes: "ADI 6298, 6299, 6300 e 6305"
-      efeito: "instituto declarado constitucional; inconstitucionais o art. 3º-C, §§ 3º e 4º, e o art. 3º-D, parágrafo único; prazo de 12 meses, prorrogável por 12, para a implantação, contado da publicação do acórdão"
+      relator: Luiz Fux
+      efeito: "instituto declarado constitucional, com interpretações conforme e declarações de inconstitucionalidade por artigo (abaixo)"
+      artigos:
+        - art: "3º-A"
+          decisao: "interpretação conforme: vedada a substituição da atuação das partes pelo juiz, sem impedir diligências pontuais para dirimir dúvida sobre ponto relevante (arts. 156, II, 209 e 212)"
+        - art: "3º-B, XIV"
+          decisao: "competência do juiz das garantias fixada até o oferecimento da denúncia ou queixa (erro legístico ao citar o art. 399 foi reconhecido)"
+        - art: "3º-B, §§ 1º e 2º"
+          decisao: "relativizados: audiência de custódia presencial como regra, com videoconferência excepcional; prisão cautelar prorrogável por decisão fundamentada, sem relaxamento automático. A fonte diz também que houve redução de texto, sem especificar"
+        - art: "3º-C, caput e §§ 1º e 2º"
+          decisao: "referências à competência inconstitucionais; questões pendentes após a denúncia vão ao juiz da instrução e julgamento"
+        - art: "3º-C, §§ 3º e 4º"
+          decisao: "inconstitucionais, com redução de texto: os autos do inquérito são remetidos ao juiz da instrução e julgamento"
+        - art: "3º-D, caput e parágrafo único"
+          decisao: "caput inconstitucional (presunção absoluta de parcialidade, irrazoável); o parágrafo único cai por consequência. A fonte alterna entre inconstitucionalidade material e formal"
+        - art: "3º-E"
+          decisao: "interpretação conforme: o juiz das garantias é investido, não designado"
+        - art: "3º-F"
+          decisao: "interpretação conforme: divulgação sobre prisões e identidade de presos deve assegurar o direito à informação, a dignidade do preso e a efetividade da persecução penal"
+      prazo: "12 meses, prorrogáveis por igual período, contados da publicação do acórdão"
   revisao: rascunho
-  nota: "A liminar de 2020 foi reportada por fontes secundárias com alguns dispositivos diferentes (ADI 6305 e Toffoli em 15/01/2020). Conferir o acórdão e se a suspensão de 2020 ainda vigora."
+  nota: "Divergências entre fontes a conferir no acórdão: (1) alcance da liminar de 2020: a fonte de 2025 diz que suspendeu a implantação do instituto, e uma fonte anterior dizia que só atingiu trechos de 3º-A, 3º-B e 3º-D; (2) 3º-B, XIV: a aula diz inconstitucional, a fonte de 2025 diz interpretação conforme (competência até a denúncia); (3) 3º-C, §§ 3º e 4º: a aula diz que o § 3º foi mantido por interpretação conforme e o § 4º vale, a fonte de 2025 diz inconstitucionais com redução de texto; (4) 3º-D: caput e parágrafo único, material ou formal."
 
 cpp-art-157-par5:
   diploma: cpp
@@ -27,13 +51,14 @@ cpp-art-157-par5:
     - data: 2020-01-22
       tipo: liminar
       relator: Luiz Fux
-      acoes: "ADI 6299"
+      acoes: "ADI 6299 (atribuição a conferir)"
       efeito: "suspensão sine die do § 5º"
     - data: 2023-08-24
       tipo: mérito
       acoes: "ADI 6298, 6299, 6300 e 6305"
       efeito: "inconstitucionalidade do § 5º, por maioria (resumo do julgamento; conferir o voto)"
   revisao: rascunho
+  nota: "O artigo de 2025 não trata do § 5º do art. 157; não conferido por esta fonte."
 
 cpp-art-28-caput:
   diploma: cpp
@@ -42,10 +67,10 @@ cpp-art-28-caput:
     - data: 2020-01-22
       tipo: liminar
       relator: Luiz Fux
-      acoes: "ADI 6305"
+      acoes: "ADI 6305 (atribuição a conferir)"
       efeito: "suspensão sine die da alteração do procedimento de arquivamento"
   revisao: rascunho
-  nota: "Estado atual não verificado: conferir se o mérito de 2023 alcançou este dispositivo."
+  nota: "Estado atual não verificado. O artigo de 2025 não trata do art. 28. A aula diz que o juiz pode remeter o arquivamento à instância superior quando for ilegal ou teratológico; não confirmado."
 
 cpp-art-310-par4:
   diploma: cpp
@@ -54,7 +79,7 @@ cpp-art-310-par4:
     - data: 2020-01-22
       tipo: liminar
       relator: Luiz Fux
-      acoes: "ADI 6305"
+      acoes: "ADI 6305 (atribuição a conferir)"
       efeito: "suspensão sine die do § 4º"
   revisao: rascunho
-  nota: "Estado atual não verificado: conferir se o mérito de 2023 alcançou este dispositivo."
+  nota: "Estado atual não verificado. O artigo de 2025 trata da videoconferência só no art. 3º-B, § 1º. A aula diz que o STF admitiu extensão do prazo e videoconferência na audiência de custódia, desde que se verifique a integridade do preso; não confirmado."

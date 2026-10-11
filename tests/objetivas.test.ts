@@ -17,15 +17,16 @@ describe.each(arquivos)("objetivas/%s", (f) => {
     }
   });
 
-  it("total = tamanho das faixas menos as anuladas", () => {
-    const tamanho = ([a, b]: [number, number]) => b - a + 1;
-    expect(dados.questoes.length).toBe(tamanho(dados.faixa.penal) + tamanho(dados.faixa.processoPenal) - dados.anuladas.length);
+  it("total = questões das duas listas menos as anuladas, e as listas não se repetem", () => {
+    const { penal, processoPenal } = dados.faixa;
+    expect(new Set([...penal, ...processoPenal]).size).toBe(penal.length + processoPenal.length);
+    expect(dados.questoes.length).toBe(penal.length + processoPenal.length - dados.anuladas.length);
   });
 
-  it("cada questão está na faixa da sua disciplina", () => {
+  it("cada questão está na lista da sua disciplina", () => {
     for (const q of dados.questoes) {
-      const [a, b] = q.disciplina === "penal" ? dados.faixa.penal : dados.faixa.processoPenal;
-      expect(q.n >= a && q.n <= b, `questão ${q.n}`).toBe(true);
+      const lista = q.disciplina === "penal" ? dados.faixa.penal : dados.faixa.processoPenal;
+      expect(lista.includes(q.n), `questão ${q.n}`).toBe(true);
     }
   });
 });

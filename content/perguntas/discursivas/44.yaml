@@ -33,7 +33,7 @@ perguntas:
         - "Endereçamento: Vara Criminal da Comarca de Goiânia/GO."
         - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 44-peca-4
     categoria: peca-detalhe
     parte: peca

@@ -2,12 +2,8 @@
 # Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
 exame: "40"
 faixa:
-  penal:
-    - 57
-    - 62
-  processoPenal:
-    - 63
-    - 68
+  penal: [57, 58, 59, 60, 61, 62]
+  processoPenal: [63, 64, 65, 66, 67, 68]
 anuladas: []
 questoes:
   - n: 57
@@ -21,7 +17,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 58
     disciplina: penal
     enunciado: Júlio desferiu um tapa no rosto de Jacinto, que foi projetado contra um poste em que havia um fio de alta tensão exposto, algo que não foi visto nem poderia ser imaginado por Júlio, pois já era noite e havia pouca iluminação. Jacinto recebeu uma forte descarga elétrica, que foi causa suficiente de sua morte. Sobre a responsabilidade de Júlio pelo resultado morte, assinale a afirmativa correta.
@@ -33,7 +29,7 @@ questoes:
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 59
     disciplina: penal
     enunciado: Joaquim dirigia-se a uma agência bancária para sacar o valor de sua aposentadoria. Todavia, às 10h, ao se aproximar do estabelecimento, foi abordado por Gilson que, com emprego de arma de fogo, ordenou que Joaquim entrasse em seu carro. Em seguida, Gilson conduziu o veículo até um motel e, mediante ameaça de morte, exigiu que a vítima transferisse valores para a conta bancária de Gilson, por meio de operações via PIX e TED, sendo certo que houve restrição da liberdade da vítima por tempo relevante, condição necessária para obtenção da vantagem de R$ 12.000,00 (doze mil reais) efetivamente auferida em desfavor de Joaquim, após o que Gilson liberou a vítima. Diante do cenário descrito, assinale a opção que indica o(s) crime(s) praticados por Gilson.
@@ -45,7 +41,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 60
     disciplina: penal
     enunciado: Paulo é investigado em um Inquérito Policial pelos crimes de ameaça e lesão corporal em face de sua esposa, Maria. Ao longo da investigação, foi decretada medida protetiva de afastamento de 1.000m em relação à vítima. Posteriormente, movido por ciúmes em razão de uma mensagem de Maria a um amigo, Paulo foi ao encontro dela com o intuito de questioná-la sobre o fato, violando a medida protetiva da qual já havia sido regularmente intimado. Tendo em vista o que preconiza a Lei nº 11.340/2006, está correto afirmar que Paulo
@@ -57,7 +53,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 61
     disciplina: penal
     enunciado: Antônio, funcionário público, foi designado como servidor responsável por conduzir a licitação de um Hospital Público que desejava adquirir 100.000 (cem mil) doses de um determinado medicamento. Patrícia, funcionária da sociedade empresária Medicante Ltda., descobre o contato de Antônio e, de seu celular pessoal, manda um áudio no qual se oferece para dividir sua comissão com o funcionário público caso a sua empresa fosse a vencedora. O valor da comissão de Patrícia era de R$50.000,00 (cinquenta mil reais), em caso de vitória na licitação. Antônio, indignado com a proposta de Patrícia, encaminha os fatos aos seus superiores que enviam Notícia de Crime à autoridade policial com atribuição para investigar os fatos. Tomando por base o fato de não ter havido o pagamento do valor oferecido, assinale a opção que indica o crime pelo qual Patrícia poderá ser responsabilizada.
@@ -69,7 +65,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 62
     disciplina: penal
     enunciado: O médico João dos Santos, durante a realização de uma cirurgia na perna de um paciente, cometeu um erro que acabou provocando a necessária amputação do membro do paciente. A pena cominada à lesão corporal culposa é de dois meses a um ano, à lesão corporal grave é de um a cinco anos e à lesão corporal gravíssima, de dois a oito anos. Sobre a atuação do médico João Santos, assinale a afirmativa correta.
@@ -81,7 +77,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 63
     disciplina: processo-penal
     enunciado: Luís Vicente, secretário de fazenda do Município Alfa, foi ofendido por Iório, secretário de fazenda do Estado Beta, que, durante discurso na tribuna da Câmara dos Vereadores, afirmou que “Luís Vicente comete peculato, desviando recursos do caixa municipal em proveito próprio e de seus familiares!” Luís Vicente procurou você, como advogado(a), para que você o oriente sobre a medida cabível para responsabilizar Iório pela ofensa à sua honra. Nesse contexto, é correto afirmar que Luís Vicente
@@ -94,7 +90,7 @@ questoes:
     peca: queixa-crime
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 64
     disciplina: processo-penal
     enunciado: Vanessa, primária e sem antecedentes, grávida de seis meses, foi presa em flagrante no aeroporto no momento em que embarcava com destino à Espanha de posse de 10kg de substância entorpecente (cocaína). Vanessa foi autuada pela prática do crime de tráfico internacional de drogas (Art. 33, caput, c/c. Art. 40, inciso I, ambos da Lei nº 11.343/06). Sobre a possibilidade de prisão domiciliar em favor de Vanessa, assinale a afirmativa correta.
@@ -108,7 +104,7 @@ questoes:
       - art. 33, lei 11343
       - art. 40, I, lei 11343
     revisao:
-      status: rascunho
+      status: revisado
   - n: 65
     disciplina: processo-penal
     enunciado: Juliano foi definitivamente condenado à pena de 8 (oito) anos de reclusão, em regime inicial fechado. Após 2 (dois) anos de cumprimento da pena, foi detectado que Juliano passou a ter uma doença mental grave, tornando-o inteiramente incapaz de compreender o caráter ilícito dos fatos pelos quais havia sido condenado. Neste caso, como advogado(a) de Juliano, você deverá
@@ -120,7 +116,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 66
     disciplina: processo-penal
     enunciado: Roberto Jorge, após regular pronúncia, foi levado a Júri, ocasião em que foi mantido algemado durante toda a sessão de julgamento, com a justificativa de ser pessoa de índole perigosa, já que responde à acusação por crime doloso contra a vida. A defesa técnica impugnou, sem sucesso, a determinação do Juízo. O Ministério Público, em plenário, postulou a condenação do acusado, asseverando que sua periculosidade fica comprovada pela necessidade do uso de algemas durante o julgamento. Roberto Jorge foi condenado pelo Conselho de Sentença, tendo sido aplicada pena privativa de liberdade de 15 (quinze) anos de reclusão. Você, como advogado(a) de Roberto Jorge, interpôs apelação criminal. Assinale a afirmativa que apresenta, corretamente, o objetivo da sua demanda.
@@ -132,7 +128,7 @@ questoes:
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 67
     disciplina: processo-penal
     enunciado: "Depois do recebimento de denúncia anônima, a delegacia iniciou a verificação preliminar de informações e colheu indícios de que Juca desenvolvia atividades ilícitas de telecomunicações (pena: detenção, 2 a 4 anos). A fim de melhor apurar os fatos, foi instaurado inquérito policial e o delegado de polícia representou pela interceptação das comunicações telefônicas de Juca, o que foi deferido pelo Juiz. A fim de anular as provas colhidas a partir da interceptação telefônica, você, na condição de advogado(a) de defesa de Juca, deve alegar que"
@@ -144,7 +140,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 68
     disciplina: processo-penal
     enunciado: Suelen ajuizou queixa-crime contra Bolívar, pela prática do crime de exercício arbitrário das próprias razões praticado sem violência ou grave ameaça, previsto no Art. 345, caput e parágrafo único, do CP, cuja pena cominada é de detenção de quinze dias a um mês, ou multa. A queixa-crime foi ajuizada perante o Juízo competente, que, após todo o trâmite preliminar, sendo infrutífero qualquer tipo de solução negociada, já na audiência de instrução e julgamento, rejeitou a queixa. Diante do caso narrado, como advogado(a) de Suelen, assinale a opção que indica o recurso que deve ser interposto.
@@ -157,4 +153,4 @@ questoes:
     dispositivos:
       - art. 345, § único, cp
     revisao:
-      status: rascunho
+      status: revisado

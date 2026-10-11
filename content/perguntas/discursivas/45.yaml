@@ -35,7 +35,7 @@ perguntas:
         - "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
         - "Endereçamento: Tribunal de Justiça do Estado de São Paulo"
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 45-peca-3
     categoria: peca-detalhe
     parte: peca

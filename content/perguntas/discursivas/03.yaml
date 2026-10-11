@@ -33,7 +33,7 @@ perguntas:
         - "Endereçamento: Tribunal de Justiça do Estado de São Paulo."
         - "Interposição: Vara Criminal da comarca de Flores/CB."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 03-peca-2
     categoria: peca-detalhe
     parte: peca

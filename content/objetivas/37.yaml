@@ -1,0 +1,147 @@
+# Gerado por scripts/extrair-objetivas.ts a partir do caderno Tipo 1 e do gabarito definitivo do XXXVII Exame.
+# Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
+exame: "37"
+faixa:
+  penal: [58, 59, 60, 61, 62, 63]
+  processoPenal: [64, 65, 66, 67, 68, 69]
+anuladas:
+  - 69
+questoes:
+  - n: 58
+    disciplina: penal
+    enunciado: Antônio, de 49 anos, manteve numerosas relações sexuais consensuais com Miriam, à época com 13 anos, que tinha experiência sexual anterior, durante o namoro entre eles. Antônio tinha conhecimento da idade de Miriam. Sobre o caso, assinale a afirmativa correta.
+    alternativas:
+      A: Antônio cometeu conduta típica, ilícita e culpável.
+      B: Antônio cometeu conduta ilícita e culpável, mas não típica.
+      C: Antônio cometeu conduta típica e culpável, mas não ilícita.
+      D: Antônio cometeu conduta típica e ilícita, mas não culpável.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 59
+    disciplina: penal
+    enunciado: Quinho foi preso em flagrante delito portando 1 quilo de cocaína, ao tentar embarcar em ônibus na rodoviária Novo Rio (no Rio de Janeiro/RJ) que seguiria em direção a São Paulo/SP, onde Quinho pretendia vender tal substância para um comprador local. Ao ser denunciado por tráfico de drogas interestadual (Art. 33 c/c. Art. 40, inciso V, ambos da Lei nº. 11.343/2006), a defesa técnica de Quinho alegou que a hipótese seria de tráfico de drogas simples, pois, em razão da prisão em flagrante delito, o acusado jamais conseguiu efetivamente transpor a fronteira entre os Estados do Rio de Janeiro/RJ e São Paulo/SP. Sobre a incidência da majorante prevista no Art. 40, inciso V, da Lei nº 11.343/2006, assinale a afirmativa correta.
+    alternativas:
+      A: São imprescindíveis a inequívoca intenção de realizar o tráfico interestadual e a efetiva transposição de fronteiras.
+      B: São desnecessárias a inequívoca intenção de realizar o tráfico interestadual e a efetiva transposição de fronteiras.
+      C: Basta a inequívoca intenção de realizar o tráfico interestadual, sendo desnecessária a efetiva transposição de fronteiras.
+      D: Basta a efetiva transposição de fronteiras, sendo desnecessária a inequívoca intenção de realizar o tráfico interestadual.
+    correta: C
+    dispositivos:
+      - art. 33, lei 11343
+      - art. 40, V, lei 11343
+    revisao:
+      status: revisado
+  - n: 60
+    disciplina: penal
+    enunciado: Silvio, mediante emprego da ameaça de “esquartejá-la com sua espada”, arrancou o cordão de ouro do pescoço de Ana. Após tal subtração, Silvio foi perseguido por policiais militares, que lograram prendê-lo em flagrante delito e recuperar o bem subtraído da vítima. É correto afirmar que Silvio cometeu crime de
+    alternativas:
+      A: extorsão tentada.
+      B: roubo tentado.
+      C: roubo impróprio.
+      D: roubo consumado.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 61
+    disciplina: penal
+    enunciado: Eduardo trabalha como porteiro do condomínio, e possui um primo, de nome Ygor, envolvido em vários crimes. A semelhança entre ambos sempre foi notória. Certa noite, após Eduardo se ausentar da portaria para colocar as lixeiras do prédio na rua, Ygor, aproveitando-se dos traços físicos muito parecidos com os do seu primo, também vestido com um uniforme idêntico, ingressa no edifício e subtrai vários pacotes endereçados aos moradores. Alguns moradores viram a movimentação, mas pensaram que se tratava de Eduardo arrumando e conferindo os pacotes. Baseando-se no caso hipotético, Ygor cometeu
+    alternativas:
+      A: furto qualificado mediante fraude.
+      B: estelionato.
+      C: falsa identidade.
+      D: furto qualificado por abuso de confiança. PROVA APLICADA EM 26/2/2023 18
+    correta: A
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 62
+    disciplina: penal
+    enunciado: Fernanda trabalha como cuidadora de idosos e foi contratada para assistir ao idoso Luís Fernando, de 89 anos, que, não obstante a idade, seguia ativo, caminhando com algum apoio e realizando suas atividades de forma habitual, com relativa independência. Certo dia, Luís Fernando descia as escadas rolantes de um shoppingcenter, quando a barra de sua calça se prendeu nos degraus, o que levou Luís Fernando a se desequilibrar, e o suporte dado por Fernanda não foi suficiente para impedir a sua queda. O idoso fraturou o fêmur. Preocupada com eventual responsabilização criminal, Fernanda procura aconselhamento. Como advogado(a) de Fernanda, assinale a opção que apresenta sua orientação sobre os fatos e as possíveis consequências.
+    alternativas:
+      A: Fernanda ocupa a posição de garantidora, devendo ser responsabilizada por delito comissivo por omissão por ter se operado o resultado danoso.
+      B: A responsabilização de Fernanda dependeria de comprovação de efetiva negligência, imprudência ou imperícia, sem o que, não será responsabilizada pelo resultado danoso.
+      C: Fernanda pode ser responsabilizada por crime omissivo próprio, diante do resultado danoso.
+      D: Fernanda incidiu em conduta tipificada no Estatuto do Idoso.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 63
+    disciplina: penal
+    enunciado: Bernardo é servidor público e foi condenado porque, durante procedimento administrativo, prestou informações falsas ao interessado, com o intuito de prejudicá-lo. Recebeu condenação de um ano e dois meses pela prática de tal conduta, tipificada no Art. 29 da Lei de Abuso de Autoridade (Lei nº 13.869/2019). Sobre o caso narrado, assinale a afirmativa correta.
+    alternativas:
+      A: Em razão da quantidade de pena aplicada, é efeito automático da condenação a perda do cargo público ocupado por Bernardo.
+      B: A pena de Bernardo pode ser substituída por restritivas de direitos, consistente na inaptidão para o exercício de cargo ou emprego público pelo prazo de 1 a 5 anos.
+      C: A imposição do dever de indenizar a vítima depende de reincidência específica em crimes de abuso de autoridade.
+      D: Bernardo pode sofrer suspensão do exercício do cargo, por 1 a 6 meses, com a perda de vencimentos e vantagens, como medida alternativa à pena de prisão.
+    correta: D
+    dispositivos:
+      - art. 29, lei 13869
+    revisao:
+      status: revisado
+  - n: 64
+    disciplina: processo-penal
+    enunciado: No dia 10 de julho de 2020, Pedro, primário, é preso em flagrante delito comercializando ecstasy em uma rua do bairro onde mora. Com ele, são apreendidos 50 comprimidos e dinheiro em espécie. Assim, é imediatamente conduzido à delegacia, onde, no mesmo dia, é lavrado auto de prisão em flagrante pela prática do crime descrito no Art. 33, caput, da Lei nº 11.343/06, punido com pena de reclusão de 5 a 15 anos e multa. O laudo toxicológico provisório atesta que a substância consta da lista de substâncias proscritas. Feitas as comunicações devidas, o auto de prisão é remetido ao juízo competente e, desse modo, no dia 11 de julho, passadas 23 horas da prisão, Pedro é apresentado à autoridade judicial. A audiência é realizada sem a presença de órgão do Ministério Público e após entrevistar o preso e ouvir os requerimentos da defesa técnica, o Magistrado homologa a prisão em flagrante, que é convertida em preventiva, sob o fundamento de que existe risco à ordem pública na liberdade do agente, nos termos do Art. 312 do Código de Processo Penal. Assinale a opção que indica a tese de Direito Processual Penal adequada para se questionar a prisão preventiva de Pedro.
+    alternativas:
+      A: A prisão deve ser relaxada em razão da inobservância do prazo para a realização da audiência de custódia.
+      B: A prisão deve ser substituída por medidas cautelares diversas da prisão, já que suficientes para garantia da ordem pública e conveniência da instrução criminal.
+      C: A prisão deve ser relaxada, ante a ausência de pedido do Ministério Público, e concedida prisão domiciliar ao acusado para garantia da ordem pública.
+      D: A prisão deve ser relaxada, pois o magistrado não poderia, diante da ausência de pedido do Parquet, ter convertido a prisão em flagrante em preventiva de ofício. PROVA APLICADA EM 26/2/2023 19
+    correta: D
+    dispositivos:
+      - art. 33, lei 11343
+      - art. 312, cpp
+    revisao:
+      status: revisado
+  - n: 65
+    disciplina: processo-penal
+    enunciado: Leonardo praticou um crime que, objetivamente, admitia o acordo de não persecução penal (ANPP). Concluída a investigação criminal, e estando presente a justa causa, o Promotor de Justiça se recusou a fazer a proposta de ANPP, por entender que estava demonstrado que a conduta de Leonardo era habitual. Diante da recusa do Promotor de Justiça em propor o ANPP, o Juiz da Comarca de Cascais, acolhendo o requerimento do advogado de Leonardo, remeteu o investigatório ao Ministério Público para se manifestar sobre o tema. O MP apresentou ao Juiz da Vara Criminal da Comarca de Cascais uma proposta de ANPP para ser homologada. O juiz considerou insuficiente a condição de Leonardo pagar como prestação pecuniária a quantia correspondente a 02 (dois) saláriosmínimos a uma entidade pública, a ser indicada pelo juízo da execução, devolvendo os autos ao MP para reformular a proposta nesta parte. O MP manteve a proposta nos termos acordados com Leonardo, razão pela qual o Juiz da Vara Criminal de Cascais recusou-se a homologá-la. Sobre a decisão de não homologação da proposta de ANPP, assinale a opção que indica qual o recurso cabível e quem poderá interpô-lo.
+    alternativas:
+      A: Recurso de agravo previsto na Lei de Execução Penal, haja vista que a prestação pecuniária era destinada a uma entidade pública a ser indicada pelo juízo da execução. O legitimado para interpor esse recurso é Leonardo, haja vista que contra o mesmo seria cobrada a prestação pecuniária junto ao juízo da execução.
+      B: Recurso em sentido estrito, considerando se tratar de um ato judicial de natureza declaratória. Estavam legitimados a recorrer o Ministério Público e Leonardo, por terem, ambos, interesse recursal.
+      C: Recurso de apelação (residual), por se tratar de uma decisão definitiva. Somente estava legitimado a recorrer o Ministério Público, por ser o autor da proposta, ainda que a ela tenha aderido Leonardo.
+      D: Recurso de apelação (residual), por se tratar de uma decisão com força de definitiva, e dela poderia recorrer o Promotor de Justiça com atribuição e Leonardo, por terem, ambos, interesse recursal.
+    correta: B
+    peca: rese
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 66
+    disciplina: processo-penal
+    enunciado: Sérgio propôs uma ação penal privada contra Ana e Letícia por crime de dano (impossibilidade de qualquer medida penal consensual), isto porque as quereladas, dolosamente, quebraram o para-brisa traseiro do seu carro. Finda a instrução criminal restaram comprovadas autoria e materialidade, até mesmo porque, além da prova testemunhal confirmar a imputação contida na queixa-crime, as acusadas confessaram o delito. Em alegações finais orais, Dr. Lúcio, advogado constituído por Sérgio, sem se referir à inicial acusatória, finalizou a sua sustentação apenas pedindo que “fosse feita a melhor justiça.” Você, como advogado(a) das quereladas, alegaria como prejudicial de mérito a extinção da punibilidade
+    alternativas:
+      A: pelo perdão de Sérgio, pois não se manifestou em alegações finais juntamente com o seu patrono para pedir a condenação.
+      B: pela renúncia do querelante, haja vista que o seu advogado não ratificou em alegações finais os termos da acusação articulada na queixa-crime.
+      C: pela perempção, porque o advogado constituído por Sérgio, somente pediu em alegações finais que “fosse feita a melhor justiça”, deixando de ratificar a pretensão de que as quereladas fossem condenadas, sequer tendo renovado o pedido de condenação apresentado na queixa-crime.
+      D: pela retratação do querelante, pois não se manifestou em alegações finais juntamente com o seu patrono para pedir a condenação das quereladas, ou mesmo ratificar o pedido de condenação apresentado na queixa-crime.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 67
+    disciplina: processo-penal
+    enunciado: Gregório é defensor público no Estado do Rio de Janeiro, cuja Constituição lhe assegura foro por prerrogativa de função no Tribunal de Justiça local. Durante o carnaval, na cidade de Salvador/BA, Gregório por acaso se encontra com seu irmão e inimigo capital Sandro em uma rua erma, durante a dispersão de bloco carnavalesco. Gregório então se aproveita da oportunidade para matar Sandro com golpes de espada. Assinale a opção que indica o foro competente para conhecer e julgar esse crime.
+    alternativas:
+      A: O Tribunal do Júri da Comarca de Salvador/BA.
+      B: O Tribunal de Justiça do Estado da Bahia.
+      C: O Tribunal do Júri da Comarca do Rio de Janeiro/RJ.
+      D: O Tribunal de Justiça do Estado do Rio de Janeiro. PROVA APLICADA EM 26/2/2023 20
+    correta: A
+    dispositivos: []
+    revisao:
+      status: revisado
+  - n: 68
+    disciplina: processo-penal
+    enunciado: Antônio Silva foi denunciado pelo Ministério Público do Estado do Rio de Janeiro pelo crime de tráfico de drogas. Essa denúncia foi rejeitada pelo juízo da 50ª Vara Criminal da Comarca do Rio de Janeiro, por falta de prova mínima da autoria e materialidade (justa causa). O órgão ministerial então interpôs recurso em sentido estrito dessa decisão, já arrazoado. Para evitar a caracterização de uma nulidade processual, é correto afirmar que o juízo deve, em seguida,
+    alternativas:
+      A: nomear defensor público para apresentar contrarrazões recursais em favor de Antônio.
+      B: nomear defensor dativo para apresentar contrarrazões recursais em favor de Antônio.
+      C: notificar Antônio para apresentar contrarrazões recursais.
+      D: remeter os autos ao Tribunal competente.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: revisado

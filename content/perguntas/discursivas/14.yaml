@@ -47,7 +47,7 @@ perguntas:
         - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
         - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 14-peca-3-1
     categoria: peca-detalhe
     parte: peca

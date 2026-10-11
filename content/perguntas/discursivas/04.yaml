@@ -21,7 +21,7 @@ perguntas:
         - Vara Criminal da Comarca de Campos/RJ.
         - "Endereçamento: Juízo do Tribunal do Júri da Comarca de São Paulo/SP"
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 04-peca-4
     categoria: peca-detalhe
     parte: peca

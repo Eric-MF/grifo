@@ -35,7 +35,7 @@ export interface Versao {
 
 const CRIA: TipoAto[] = ["redacao", "incluido", "renumerado"];
 
-function dataDoAto(a: Ato, datas: Datas): Inicio {
+export function dataDoAto(a: Ato, datas: Datas): Inicio {
   const d = a.lei ? datas[a.lei] : undefined;
   if (d?.vigencia) return { data: d.vigencia, aproximado: !!d.aproximada };
   if (a.data) return { data: a.data, aproximado: true };

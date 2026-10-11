@@ -2,12 +2,8 @@
 # Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
 exame: "43"
 faixa:
-  penal:
-    - 57
-    - 62
-  processoPenal:
-    - 63
-    - 68
+  penal: [57, 58, 59, 60, 61, 62]
+  processoPenal: [63, 64, 65, 66, 67, 68]
 anuladas: []
 questoes:
   - n: 57
@@ -21,7 +17,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 58
     disciplina: penal
     enunciado: Oliver, que já fora condenado por crime culposo anteriormente e que terminara de cumprir sua pena há dois anos, cometeu o crime de lesão corporal de natureza grave, previsto no Art. 129, § 1º, do CP, cuja pena cominada é de um a cinco anos de reclusão. Ele foi condenado à pena de um ano e oito meses de reclusão, tendo sua condenação sido proferida três anos após o término do cumprimento da pena pelo crime culposo anterior. Tomando por base o delito praticado e a pena aplicada, sobre a possibilidade de Oliver ter sua pena privativa de liberdade substituída por duas penas restritivas de direitos, assinale a afirmativa correta.
@@ -34,7 +30,7 @@ questoes:
     dispositivos:
       - art. 129, § 1º, cp
     revisao:
-      status: rascunho
+      status: revisado
   - n: 59
     disciplina: penal
     enunciado: Rodrigo, brasileiro, obteve bolsa de estudos para intercâmbio de seis meses em uma universidade nos Estados Unidos. Nesse período, Rodrigo começou a namorar Mary, uma jovem estadunidense. Após uma crise de ciúmes, Rodrigo matou Mary, por estrangulamento, no apartamento em que morava na Flórida. O feminicídio constitui infração penal nos Estados Unidos. No dia seguinte aos fatos, Rodrigo retornou ao Brasil. Como advogado da família da vítima, esclareça a viabilidade de aplicação da Lei Penal brasileira a Rodrigo, identificando o princípio penal correspondente.
@@ -46,7 +42,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 60
     disciplina: penal
     enunciado: João mora em Ipanema e, há dois anos, faz aula de futevôlei na praia do Leblon, três vezes por semana. João sempre realiza tal trajeto em sua bicicleta elétrica, da marca Bike legal, cor preta com banco de couro marrom. No mês passado, ao final do treino, João pegou uma bicicleta elétrica idêntica à sua e voltou para casa. Dias depois, João foi intimado a comparecer à Delegacia de Polícia para prestar declarações sobre um possível crime de furto, uma vez que o circuito de câmeras permitiu identificar que João havia levado a bicicleta de uma moça de nome Fernanda. No caso narrado, é correto afirmar que João agiu diante de
@@ -58,7 +54,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 61
     disciplina: penal
     enunciado: Ateneu e Moisés combinaram a prática conjunta de um crime de furto. Moisés, exímio motorista, aguardou na rua com o carro já ligado e Ateneu, especialista em abertura de cofres, ingressou na residência de um famoso jogador de futebol que atuava no exterior. Ambos pensavam que a casa estava vazia, mas ao ingressar no imóvel, Ateneu se deparou com Izabel, empregada doméstica que trabalhava no local, tendo, então, sacado a arma de fogo que portava, sem a ciência de Moisés, e matado Izabel com um tiro na testa. Ateneu levou consigo joias e dinheiro. Ao tomar ciência da morte de Izabel, Moisés não quis ficar com nada. Diante de tal situação hipotética, assinale a afirmativa correta.
@@ -70,7 +66,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 62
     disciplina: penal
     enunciado: Após ter seu pedido de aumento salarial negado, Sara, empregada doméstica, adicionou, com intenção de matar, veneno na feijoada que preparou para Raquel, sua patroa. Raquel sentiu-se mal, sendo socorrida por terceiros e levada ao hospital, onde contraiu uma infecção. Ela veio a falecer dois meses após ser internada, pois a infecção fora agravada pela ingestão de veneno. Sobre tal situação hipotética, assinale a opção que indica, corretamente, o delito praticado por Sara.
@@ -82,7 +78,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 63
     disciplina: processo-penal
     enunciado: Gabriela se dirigiu a uma agência da Caixa Econômica Federal, empresa pública federal, a fim de tentar sacar benefício assistencial pago pela União a pessoas em situação de vulnerabilidade financeira, munida de documentos falsos, em nome de terceira pessoa. Gabriela foi presa em flagrante, sendo constatado que ela estava cumprindo pena em regime aberto domiciliar por condenação relativa a outro fato. Em relação à execução penal, assinale a afirmativa que define as consequências do evento narrado.
@@ -94,7 +90,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 64
     disciplina: processo-penal
     enunciado: Marcos foi denunciado como incurso nas penas do delito de furto simples, que consiste em um a quatro anos de reclusão. Ao apresentar resposta à acusação, a defesa se resguardou o direito de se manifestar sobre o mérito em momento oportuno. Entretanto, antes da audiência de instrução e do julgamento, você foi nomeado(a), em substituição ao advogado anterior, e percebeu que, à época da citação, já havia sido concluída a prescrição da pretensão punitiva. Assinale a opção que apresenta, corretamente, sua conduta para o caso.
@@ -106,7 +102,7 @@ questoes:
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 65
     disciplina: processo-penal
     enunciado: Fábio foi submetido a julgamento pelo Tribunal do Júri e, ao final, condenado a uma pena de 15 anos de reclusão, em regime inicial fechado. Você, como advogado(a) de Fábio, interpôs tempestivo e cabível recurso. Assinale a opção que indica o recurso correto interposto e/ou suas características.
@@ -118,7 +114,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 66
     disciplina: processo-penal
     enunciado: Leda se candidatou a uma vaga de emprego na sociedade empresária X. Ao se apresentar, a sócia-administradora Vera afirmou que “pessoas de cor de pele escura não são compatíveis com o perfil da vaga”, impedindo, assim, que Leda prosseguisse no processo seletivo. Indignada, Leda procura você, como advogado(a), a fim de defender seus interesses. Atuando na seara criminal em defesa dos interesses de Leda, você pode
@@ -130,7 +126,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 67
     disciplina: processo-penal
     enunciado: Bernardo agrediu Carolina, sua ex-companheira, causando-lhe lesões corporais leves, em razão de a vítima ser mulher. O delito em questão é apenado com reclusão de dois a cinco anos. Na qualidade de advogado(a) de Carolina, cabe notar que,
@@ -142,7 +138,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 68
     disciplina: processo-penal
     enunciado: Em uma audiência, o Ministério Público indicou como testemunha a psiquiatra do réu. Após a qualificação da testemunha, você, na condição de advogado(a) do réu, deve
@@ -154,4 +150,4 @@ questoes:
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado

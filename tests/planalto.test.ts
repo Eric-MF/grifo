@@ -2,6 +2,13 @@ import { describe, expect, it } from "vitest";
 import { citacoesEm } from "@/lib/leis/planalto";
 
 describe("citacoesEm", () => {
+  it("avisa inciso alterado pela EC 20/1998 e não avisa o artigo quando a data é anterior", () => {
+    const [antes] = citacoesEm("art. 7º, inciso XII, da CF", "1997-01-01");
+    expect(antes.aviso).toContain("Emenda Constitucional nº 20/1998");
+    const [depois] = citacoesEm("art. 7º, inciso XII, da CF", "2005-01-01");
+    expect(depois.aviso).toBeUndefined();
+  });
+
   it("liga artigo do CPP ao anchor do Planalto", () => {
     const [c] = citacoesEm("Cabe o recurso do art. 122 do CPP, segundo o texto.");
     expect(c.texto).toBe("art. 122 do CPP");

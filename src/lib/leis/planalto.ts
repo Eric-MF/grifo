@@ -4,6 +4,7 @@
 
 import leis from "@/content/generated/leis.json";
 import indiceLeitor from "@/content/generated/leis-indice.json";
+import vigenciasDerivadas from "@/content/generated/vigencias.json";
 import { normalize } from "@/lib/correcao/normalize";
 
 interface Diploma {
@@ -20,14 +21,11 @@ const POR_ALIAS = new Map(
 
 type Vigencia = { situacao: "revogado"; lei: string } | { situacao: "alterado"; lei: string; desde: string };
 
-/** Chave "<id em content/leis.yaml>:artigo" ou "…:artigo§parágrafo". `desde` é a data (ou ano) em que a alteração entrou em vigor. */
-const VIGENCIA: Record<string, Vigencia> = {
-  "cp:214": { situacao: "revogado", lei: "Lei nº 12.015/2009" },
-  "cp:154-A": { situacao: "alterado", lei: "Lei nº 14.155/2021", desde: "2021-05-28" },
+/** Derivado do texto das leis (scripts/build-content.ts). Chave "<id>:artigo" ou "<id>:artigo§parágrafo". */
+const VIGENCIA_EXCECOES: Record<string, Vigencia> = {
   "cp:217-A": { situacao: "alterado", lei: "Lei nº 15.280/2025 e Lei nº 15.353/2026", desde: "2025" },
-  "lei-8072:2§2": { situacao: "revogado", lei: "Lei nº 13.964/2019" },
-  "lei-12850:4§16": { situacao: "alterado", lei: "Lei nº 13.964/2019", desde: "2020-01-23" },
 };
+const VIGENCIA: Record<string, Vigencia> = { ...(vigenciasDerivadas as Record<string, Vigencia>), ...VIGENCIA_EXCECOES };
 
 const CITACAO =
   /\b[Aa]rt(?:s?\.|igos?)\s*(\d{1,4}(?:-\s?[A-Z])?)\b([^.;\n]{0,80}?)\b(?:do|da|de)\s+(Código Penal|Código de Processo Penal|CRFB|CPP|CP|CF|LEP|CTB|ECA|Lei\s*(?:n[º°.]?\s*)?[\d.]+\s*\/\s*\d{2,4})(?!\w)/g;
@@ -65,9 +63,10 @@ function ancora(artigo: string): string {
 
 function aviso(v: Vigencia | undefined, data?: string): string | undefined {
   if (!v) return undefined;
-  if (v.situacao === "revogado") return `Artigo revogado pela ${v.lei}: o texto do Planalto mostra a redação anterior.`;
+  const pela = v.lei ? ` pela ${v.lei}` : "";
+  if (v.situacao === "revogado") return `Artigo revogado${pela}: o texto do Planalto mostra a redação anterior.`;
   if (data === undefined || data >= v.desde) return undefined;
-  return `Artigo alterado pela ${v.lei}, depois desta prova: o texto do Planalto mostra a redação anterior.`;
+  return `Artigo alterado${pela}, depois desta prova: o texto do Planalto mostra a redação anterior.`;
 }
 
 /**
@@ -85,7 +84,10 @@ export function citacoesEm(texto: string, data?: string): Citacao[] {
     const inicio = m.index ?? 0;
     const base = `${diploma}:${artigo}`;
     const paragrafo = meio.match(/§\s*(\d+)/)?.[1];
-    const vigencia = (paragrafo ? VIGENCIA[`${base}§${paragrafo}`] : undefined) ?? VIGENCIA[base];
+    const unico = !paragrafo && /par[áa]grafo único|§\s*único/i.test(meio);
+    const inciso = !paragrafo && !unico ? meio.match(/\binciso\s+([IVXLC]+)\b/i)?.[1]?.toUpperCase() : undefined;
+    const nivel = paragrafo ? `§${paragrafo}` : unico ? "§único" : inciso ? `,${inciso}` : "";
+    const vigencia = (nivel ? VIGENCIA[base + nivel] : undefined) ?? VIGENCIA[base];
     const planalto = info.planalto + ancora(artigo);
     const art = `art${artigo.toLowerCase()}`;
     achados.push({

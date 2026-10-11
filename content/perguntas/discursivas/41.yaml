@@ -35,7 +35,7 @@ perguntas:
         - "Endereçamento correto: Tribunal de Justiça do Rio de Janeiro."
         - "Endereçamento: Tribunal Regional Federal da 10ª Região."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 41-peca-4
     categoria: peca-detalhe
     parte: peca

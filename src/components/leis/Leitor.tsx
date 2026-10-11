@@ -7,7 +7,7 @@ import indice from "@/content/generated/leis-indice.json";
 import prontosJson from "@/content/generated/grifos.json";
 import { gravarJSON, lerJSON } from "@/lib/storage";
 import { artigoDigitado, buscarTexto, sugerirArtigos, type Achado, type ArtigoTexto } from "@/lib/leis/busca";
-import { codificar, decodificar, LIMITE_LINK } from "@/lib/leis/compartilhar";
+import { codificar, decodificar, LIMITE_LINK, pareceCompartilhado, type Compartilhado } from "@/lib/leis/compartilhar";
 import { carregarArtigos, carregarDatas, carregarLei } from "@/lib/leis/dados";
 import { agregar, lerEventos, maisErrados, type Agregado } from "@/lib/erros";
 import { grifoDe, type GrifosProntos } from "@/lib/leis/grifos";
@@ -67,11 +67,6 @@ const PRONTOS = prontosJson as GrifosProntos;
 const LOTE = 200;
 
 type Painel = "leis" | "buscar" | "grifos" | "aa" | "mais" | "divisoes";
-interface Compartilhado {
-  lei: string;
-  m: Pick<Marcacao, "i" | "disp" | "exato" | "prefixo" | "sufixo" | "cor" | "nota">[];
-  s?: Sistema;
-}
 type Posicoes = Record<string, { art: string; rotulo: string; em: number }>;
 
 const blocosDe = (raiz: HTMLElement) => Array.from(raiz.querySelectorAll<HTMLElement>("[data-i]"));
@@ -153,9 +148,10 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
   const [estrelas, setEstrelas] = useState<string[]>([]);
   const [mapa, setMapa] = useState<ReturnType<typeof secoesDosArtigos>>({ secoes: [], marcos: [], divisoes: [] });
   const [regra, setRegra] = useState<{ x: number; y: number; rotulo: string; nota?: string; destaque: boolean } | null>(null);
-  const [compartilhar, setCompartilhar] = useState<{ comMarcas: boolean; link: string } | null>(null);
+  const [compartilhar, setCompartilhar] = useState<{ comMarcas: boolean; link: string; carga?: Compartilhado } | null>(null);
   const [recebido, setRecebido] = useState<Compartilhado | null>(null);
   const [vendoRecebido, setVendoRecebido] = useState(false);
+  const [erroArquivo, setErroArquivo] = useState<string | null>(null);
   const [perdidas, setPerdidas] = useState(0);
   const [editandoSistema, setEditandoSistema] = useState<Sistema | null>(null);
   const [aviso, setAviso] = useState<{ texto: string; acao?: { rotulo: string; fazer: () => void } } | null>(null);
@@ -181,7 +177,7 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
     setPosicoes(lerJSON<Posicoes>(K_POSICOES, {}));
     setErrados(maisErrados(agregar(lerEventos().filter((e) => e.d === lei), { janelaDias: null }), "baixo"));
     const h = location.hash.match(/^#c=(v1\..+)$/);
-    if (h) decodificar<Compartilhado>(h[1]).then((c) => c && c.lei === lei && setRecebido(c));
+    if (h) decodificar<unknown>(h[1]).then((c) => pareceCompartilhado(c) && c.lei === lei && setRecebido(c));
     /* eslint-enable react-hooks/set-state-in-effect */
   }, [lei]);
   const mudarPrefs = (p: Partial<PrefsLeitor>) =>
@@ -630,7 +626,29 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
       m: marcas.map(({ i, disp, exato, prefixo, sufixo, cor, nota }) => ({ i, disp, exato, prefixo, sufixo, cor, ...(nota ? { nota } : {}) })),
       s: sistema,
     };
-    setCompartilhar({ comMarcas, link: `${base}#c=${await codificar(carga)}` });
+    setCompartilhar({ comMarcas, link: `${base}#c=${await codificar(carga)}`, carga });
+  };
+  const baixarArquivo = () => {
+    if (!compartilhar?.carga) return;
+    const url = URL.createObjectURL(new Blob([JSON.stringify(compartilhar.carga)], { type: "application/json" }));
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${lei}.grifo.json`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+  const abrirArquivo = async (arquivo: File) => {
+    setErroArquivo(null);
+    let c: unknown;
+    try {
+      c = JSON.parse(await arquivo.text());
+    } catch {
+      return setErroArquivo("Esse arquivo não é um grifo do Grifo.");
+    }
+    if (!pareceCompartilhado(c)) return setErroArquivo("Esse arquivo não é um grifo do Grifo.");
+    if (c.lei !== lei) return setErroArquivo(`Esse arquivo é de outra lei (${c.lei}).`);
+    setRecebido(c);
+    setVendoRecebido(false);
   };
   const mudarLegendas = (n: typeof legendas) => {
     setLegendas(n);
@@ -1152,9 +1170,27 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
                   >
                     Imprimir / PDF
                   </button>
+                  <label className="btn btn-sm">
+                    Abrir arquivo .grifo.json
+                    <input
+                      type="file"
+                      accept=".json,application/json"
+                      hidden
+                      onChange={(e) => {
+                        const f = e.target.files?.[0];
+                        e.target.value = "";
+                        if (f) abrirArquivo(f);
+                      }}
+                    />
+                  </label>
                   <Link href="/vademecum/">Vade-mécum</Link>
                   <Link href="/leis/minha-leitura/">Minha leitura</Link>
                 </div>
+                {erroArquivo && (
+                  <p className={styles.miuda} role="alert">
+                    {erroArquivo}
+                  </p>
+                )}
               </fieldset>
             </div>
           )}
@@ -1266,13 +1302,18 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
             <input readOnly value={compartilhar.link} onFocus={(e) => e.target.select()} aria-label="Link" />
             <p className="muted">
               {compartilhar.link.length > LIMITE_LINK
-                ? `O link ficou com ${Math.round(compartilhar.link.length / 1024)} KB: grande demais para apps de mensagem. Compartilhe sem os grifos ou com menos deles.`
+                ? `O link ficou com ${Math.round(compartilhar.link.length / 1024)} KB, grande demais para apps de mensagem. Baixe o arquivo e envie-o; quem receber usa "Abrir arquivo .grifo.json" na lei.`
                 : "O conteúdo vai no próprio link (depois do #) e não passa por nenhum servidor. Quem abrir o link vê as anotações."}
             </p>
             <div className={styles.acoes}>
               <button type="button" className="btn btn-sm btn-gold" disabled={compartilhar.link.length > LIMITE_LINK} onClick={() => navigator.clipboard?.writeText(compartilhar.link)}>
                 Copiar link
               </button>
+              {compartilhar.carga && (
+                <button type="button" className={compartilhar.link.length > LIMITE_LINK ? "btn btn-sm btn-gold" : "btn btn-sm"} onClick={baixarArquivo}>
+                  Baixar .grifo.json
+                </button>
+              )}
               <button type="button" className="btn btn-sm" onClick={() => setCompartilhar(null)}>
                 Fechar
               </button>

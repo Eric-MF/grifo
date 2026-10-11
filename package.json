@@ -9,6 +9,7 @@
     "preview": "npx --yes serve out -l tcp://${GRIFO_HOST:-100.80.118.27}:${GRIFO_PORT:-3100}",
     "lint": "eslint",
     "test": "vitest run",
+    "e2e": "node tests/e2e/run.mjs",
     "validar": "node scripts/build-content.ts --check",
     "content": "node scripts/build-content.ts",
     "prebuild": "node scripts/build-content.ts",

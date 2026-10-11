@@ -29,7 +29,7 @@ perguntas:
         - Vara Criminal da Comarca de Campos/RJ.
         - "Endereçamento: Juízo Federal da Vara Federal Criminal de Alfa."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 34-peca-3
     categoria: peca-detalhe
     parte: peca

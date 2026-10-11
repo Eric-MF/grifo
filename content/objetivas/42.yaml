@@ -2,12 +2,8 @@
 # Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
 exame: "42"
 faixa:
-  penal:
-    - 57
-    - 62
-  processoPenal:
-    - 63
-    - 68
+  penal: [57, 58, 59, 60, 61, 62]
+  processoPenal: [63, 64, 65, 66, 67, 68]
 anuladas: []
 questoes:
   - n: 57
@@ -21,7 +17,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
   - n: 58
     disciplina: penal
@@ -34,7 +30,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
   - n: 59
     disciplina: penal
@@ -48,7 +44,7 @@ questoes:
     dispositivos:
       - art. 218-C, cp
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
   - n: 60
     disciplina: penal
@@ -61,7 +57,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
   - n: 61
     disciplina: penal
@@ -74,7 +70,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
   - n: 62
     disciplina: penal
@@ -88,7 +84,7 @@ questoes:
     dispositivos:
       - art. 159, cp
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
   - n: 63
     disciplina: processo-penal
@@ -101,7 +97,7 @@ questoes:
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
   - n: 64
     disciplina: processo-penal
@@ -114,7 +110,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
   - n: 65
     disciplina: processo-penal
@@ -127,7 +123,7 @@ questoes:
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
   - n: 66
     disciplina: processo-penal
@@ -140,7 +136,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
   - n: 67
     disciplina: processo-penal
@@ -153,7 +149,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
   - n: 68
     disciplina: processo-penal
@@ -166,5 +162,5 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
       notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.

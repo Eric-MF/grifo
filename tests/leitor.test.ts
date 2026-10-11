@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 
 vi.mock("@/lib/storage", () => ({ lerJSON: (_: string, d: unknown) => d, gravarJSON: () => true }));
 const { localizar, novaMarcacao } = await import("../src/lib/leis/marcacoes.ts");
-const { codificar, decodificar, LIMITE_LINK } = await import("../src/lib/leis/compartilhar.ts");
+const { codificar, decodificar, LIMITE_LINK, pareceCompartilhado } = await import("../src/lib/leis/compartilhar.ts");
 
 describe("marcações: reancoragem pelo texto", () => {
   const textos = ["Art. 1º Não há crime sem lei anterior que o defina.", "Pena - reclusão.", "Art. 2º Ninguém pode ser punido por fato que lei posterior deixa de considerar crime."];
@@ -62,5 +62,22 @@ describe("vade-mécum: faixas de artigos", async () => {
     const blocos = [b("estrutura", "TÍTULO I"), b("rubrica", "Homicídio simples"), b("artigo", "Art. 121", "art121"), b("rubrica", "Induzimento"), b("artigo", "Art. 122", "art122")];
     expect(blocosEscolhidos(blocos, { faixas: faixas("121") }).map((x) => x.bloco.texto)).toEqual(["TÍTULO I", "Homicídio simples", "Art. 121"]);
     expect(blocosEscolhidos(blocos, { artigos: new Set(["art122"]) }).map((x) => x.bloco.texto)).toEqual(["Induzimento", "Art. 122"]);
+  });
+});
+
+describe("pareceCompartilhado", () => {
+  const marca = { i: 3, exato: "trecho", prefixo: "", sufixo: "", cor: "#f5d76e" };
+
+  it("aceita a carga de um grifo, com ou sem sistema de cores", () => {
+    expect(pareceCompartilhado({ lei: "cp", m: [marca] })).toBe(true);
+    expect(pareceCompartilhado({ lei: "cp", m: [], s: { id: "x", nome: "X" } })).toBe(true);
+  });
+
+  it("recusa JSON que não é grifo", () => {
+    expect(pareceCompartilhado(null)).toBe(false);
+    expect(pareceCompartilhado([])).toBe(false);
+    expect(pareceCompartilhado({ lei: "cp" })).toBe(false);
+    expect(pareceCompartilhado({ lei: "cp", m: [{ ...marca, i: "3" }] })).toBe(false);
+    expect(pareceCompartilhado({ lei: "cp", m: [{ ...marca, cor: undefined }] })).toBe(false);
   });
 });

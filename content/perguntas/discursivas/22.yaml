@@ -33,7 +33,7 @@ perguntas:
         - "Endereçamento correto: Tribunal de Justiça do Rio de Janeiro."
         - "Endereçamento: Juízo do Tribunal do Júri da Comarca de Maricá/RJ"
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 22-peca-3
     categoria: peca-detalhe
     parte: peca

@@ -37,7 +37,7 @@ perguntas:
         - "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS."
         - "Endereçamento: Tribunal de Justiça de Santa Catarina."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 19-peca-3
     categoria: peca-detalhe
     parte: peca

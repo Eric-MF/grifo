@@ -2,12 +2,8 @@
 # Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
 exame: "47"
 faixa:
-  penal:
-    - 57
-    - 62
-  processoPenal:
-    - 63
-    - 68
+  penal: [57, 58, 59, 60, 61, 62]
+  processoPenal: [63, 64, 65, 66, 67, 68]
 anuladas: []
 questoes:
   - n: 57
@@ -21,7 +17,7 @@ questoes:
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 58
     disciplina: penal
     enunciado: Júlia, funcionária pública federal lotada no setor de compras de um órgão do Ministério da Fazenda, desviou dolosamente para sua conta particular a importância de R$ 10.000,00, que deveria ser utilizada na aquisição de material de escritório. A conduta se consumou em 1º de março de 2025. Após a instauração do inquérito policial para investigar a prática do crime de peculato, Júlia foi orientada por sua advogada e reparou integralmente o dano causado à Administração Pública em 1º de agosto de 2025, após o oferecimento da denúncia, mas antes de seu recebimento. Sobre a reparação integral do dano por Júlia, assinale a afirmativa correta.
@@ -33,7 +29,7 @@ questoes:
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 59
     disciplina: penal
     enunciado: "José planejou subtrair um valioso equipamento de informática de uma loja no período noturno. Para tanto, convenceu Pierre, primário e de bons antecedentes, a executar a ação. Pierre confiou no planejamento de José, pois tinha ciência de que este era reincidente específico em crimes patrimoniais. O plano consistia em Pierre arrombar a porta lateral da loja com um pé de cabra, subtrair o objeto e se encontrar com José a duas quadras de distância, onde este o aguardaria em um carro ligado para garantir a fuga. Pierre seguiu o plano à risca: arrombou a porta, pegou o equipamento e foi ao encontro de José. Ambos dividiram o produto do crime, mas foram descobertos e presos. A perícia técnica comprovou o rompimento de obstáculo à subtração. Ao final, José e Pierre foram denunciados pela prática do crime de furto qualificado pelo rompimento de obstáculo (Art. 155, § 4º, inciso I, do Código Penal). Diante de tal situação hipotética, assinale a afirmativa correta."
@@ -46,7 +42,7 @@ questoes:
     dispositivos:
       - art. 155, § 4º, I, cp
     revisao:
-      status: rascunho
+      status: revisado
   - n: 60
     disciplina: penal
     enunciado: "Mariana, primária e com bons antecedentes, foi condenada pela prática do crime de apropriação indébita (Art. 168 do CP), cuja pena mínima é de um ano e, a máxima, de quatro anos de reclusão. Na primeira fase da dosimetria, o Juiz, considerando favoráveis todas as circunstâncias judiciais do Art. 59 do CP, fixou a pena-base no mínimo legal, ou seja, um ano de reclusão. Na segunda e terceira fases da dosimetria, não houve alterações. Ao aplicar a pena, o Juiz determinou o regime inicial aberto e, em seguida, efetuou a substituição da pena privativa de liberdade por duas penas restritivas de direitos: prestação de serviços à comunidade e prestação pecuniária. Sobre a situação hipotética apresentada, assinale a afirmativa correta."
@@ -60,7 +56,7 @@ questoes:
       - art. 168, cp
       - art. 59, cp
     revisao:
-      status: rascunho
+      status: revisado
   - n: 61
     disciplina: penal
     enunciado: Carlos foi processado pela prática do crime de lesão corporal de natureza grave (Art. 129, § 1º, do Código Penal) e punido com pena de reclusão de um a cinco anos. No curso do processo, ficou comprovado que Carlos era inteiramente incapaz de entender o caráter ilícito do fato em razão de doença mental. O Juízo proferiu sentença absolutória, mas impôs a Carlos medida de segurança de internação. Após seis anos de internação ininterrupta, a defesa de Carlos requer a extinção da medida de segurança, sob o argumento de que o prazo de duração já ultrapassou a pena máxima cominada ao crime e que o último exame de periculosidade atestou melhora significativa no quadro, embora ainda não haja cessação total da patologia. Diante de tal situação hipotética, assinale a afirmativa correta.
@@ -73,7 +69,7 @@ questoes:
     dispositivos:
       - art. 129, § 1º, cp
     revisao:
-      status: rascunho
+      status: revisado
   - n: 62
     disciplina: penal
     enunciado: "Durante uma assembleia do condomínio em que reside, Paulo, Juiz de Direito, irritado com a gestão do síndico Roberto, advogado, pediu a palavra e, diante de todos os moradores presentes, afirmou categoricamente, ciente da falsidade da sua afirmação: “O Sr. Roberto desviou criminosamente R$ 10.000,00 do fundo de reserva no mês passado para pagar dívidas pessoais.” Roberto, que sempre agiu com probidade, sentiu-se profundamente ofendido em sua reputação perante a comunidade. No dia seguinte, Paulo enviou uma mensagem telefônica privada para Roberto dizendo: “Além de desonesto, você é um incapaz e um estúpido.” Diante de tal situação hipotética, assinale a afirmativa correta."
@@ -85,7 +81,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 63
     disciplina: processo-penal
     enunciado: Thaís está respondendo à ação penal pelo crime de roubo e teve decretada a quebra da fiança, em virtude de, deliberadamente, praticar ato destinado à obstrução do andamento do processo. O Juiz decretou, então, a perda da totalidade do valor da fiança. Sobre a hipótese apresentada, você, na condição de advogado(a), deve, em recurso, argumentar que
@@ -97,7 +93,7 @@ questoes:
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 64
     disciplina: processo-penal
     enunciado: Amanda, servidora pública federal, durante suas férias, agrediu Joana, sua vizinha, com socos, em razão de estacionamento indevido na vaga de garagem reservada a Amanda, no condomínio residencial onde ambas residem. Joana, em consequência da agressão, ficou 50 dias impossibilitada de comparecer ao trabalho. O Ministério Público Federal ofereceu denúncia contra Amanda pelo crime de lesão corporal grave. O Juiz Federal recebeu a denúncia. Na defesa de Amanda, além da matéria de mérito, você, como advogado(a), deve alegar, processualmente,
@@ -109,7 +105,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 65
     disciplina: processo-penal
     enunciado: Sílvia foi vítima de roubo praticado por Antônio, que subtraiu o relógio dela mediante grave ameaça. Antônio foi preso em flagrante e o relógio devolvido para Sílvia. Após a conclusão do inquérito, no dia da remessa deste para o Ministério Público, Sílvia, na condição de vítima, ofereceu uma queixa-crime. Assinale a opção que indica, corretamente, a alegação que você, como advogado(a) de Antônio, deve apresentar.
@@ -121,7 +117,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 66
     disciplina: processo-penal
     enunciado: João, funcionário público, após ser condenado à pena de seis anos de reclusão, pelo crime de peculato, interpôs recurso em face da sentença, requerendo a aplicação da pena mínima de dois anos de reclusão. No julgamento da apelação, a sentença foi mantida em seus termos, tendo como vencido o voto do relator, que foi favorável ao pleito defensivo e determinava a aplicação da pena mínima a João. Diante disso, a defesa deve opor
@@ -134,7 +130,7 @@ questoes:
     peca: embargos-infringentes
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 67
     disciplina: processo-penal
     enunciado: Rubens está sendo investigado pelo delito de tráfico internacional de drogas (Art. 33 c/c Art. 40, inciso I, ambos da Lei nº 11.343/2006). No curso da investigação, Rubens foi citado para responder a uma ação penal pela prática do crime de receptação de animais (Art. 180-A), cuja pena cominada para esse crime é de reclusão de 2 a 5 anos. Rubens não possui outras anotações criminais e o(a) procura, como advogado(a), para que você apresente uma resposta à acusação. Você, em preliminares, deve requerer a remessa dos autos ao Ministério Público para uma proposta de
@@ -148,7 +144,7 @@ questoes:
       - art. 33, lei 11343
       - art. 40, I, lei 11343
     revisao:
-      status: rascunho
+      status: revisado
   - n: 68
     disciplina: processo-penal
     enunciado: O Ministério Público arrolou Júlio como testemunha de acusação em ação penal deflagrada em face de Cesar. Na audiência de instrução e julgamento, Júlio prestou depoimento totalmente favorável à tese defensiva. Por isso, o Ministério Público requereu a dispensa e desconsideração da prova testemunhal, afirmando que, como apenas o Parquet arrolou Júlio, este poderia dispensar a prova quando o seu resultado lhe fosse desfavorável. Na defesa de Cesar, assinale a opção que apresenta o princípio processual penal pertinente a ser alegado, a fim de manter a prova produzida.
@@ -160,4 +156,4 @@ questoes:
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado

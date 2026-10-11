@@ -31,7 +31,7 @@ perguntas:
         - "Endereçamento: 1ª Vara Criminal da Comarca de Maceió/AL."
         - "Endereçamento: Juízo Federal da Vara Federal Criminal de Alfa."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 28-peca-3
     categoria: peca-detalhe
     parte: peca

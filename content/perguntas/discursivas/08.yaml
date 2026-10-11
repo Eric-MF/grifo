@@ -27,7 +27,7 @@ perguntas:
         - "Endereçamento: Tribunal de Justiça do Estado de São Paulo."
         - "Endereçamento: Tribunal de Justiça do Estado de Santa Catarina."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 08-peca-3
     categoria: peca-detalhe
     parte: peca

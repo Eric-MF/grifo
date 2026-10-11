@@ -2,12 +2,8 @@
 # Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
 exame: "41"
 faixa:
-  penal:
-    - 57
-    - 62
-  processoPenal:
-    - 63
-    - 68
+  penal: [57, 58, 59, 60, 61, 62]
+  processoPenal: [63, 64, 65, 66, 67, 68]
 anuladas: []
 questoes:
   - n: 57
@@ -22,7 +18,7 @@ questoes:
     dispositivos:
       - art. 147-A, cp
     revisao:
-      status: rascunho
+      status: revisado
   - n: 58
     disciplina: penal
     enunciado: Denis cumpria pena em regime fechado, após ser definitivamente condenado, quando ocorreu um movimento de subversão da ordem e disciplina dentro do ambiente carcerário. No inquérito disciplinar consta que cerca de cem presos rebelados incendiaram colchões e tentaram fugir, permanecendo a situação de rebelião por cerca de cinco dias, até que eficaz ação da polícia penal cessou o movimento. Todos os cem presos da ala em que Denis cumpre pena foram indiciados no âmbito disciplinar, indistintamente e sem individualização de condutas. Considerando o caso narrado, assinale o princípio de Direito Penal a ser utilizado pela defesa a fim de evitar a condenação de Denis.
@@ -34,7 +30,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 59
     disciplina: penal
     enunciado: Gabriel flagrou Júlia, sua namorada, em um momento íntimo com Pedro. Alucinado, Gabriel efetuou disparos de arma de fogo contra ambos, com a intenção de matá-los, mas errou a pontaria. Pedro, assustado com os tiros, saiu correndo do local e, na fuga, tropeçou em uma reentrância do piso, desequilibrou-se e bateu com a cabeça no solo, fato relativamente independente que, por si só, causou o resultado morte. Gabriel aproximou-se de Júlia ainda com munição em sua arma, porém, ao vê-la assustada, desistiu de prosseguir com seu intento original. Gabriel abraçou Júlia, que, na sequência, sofreu um fulminante ataque cardíaco, vindo a falecer. Gabriel foi denunciado pelo homicídio doloso de Pedro e Júlia. Na condição de advogado(a) de defesa de Gabriel, você deve alegar que
@@ -46,7 +42,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 60
     disciplina: penal
     enunciado: Amanda, maior e capaz, e Fernando, menor púbere, ingressaram em um supermercado com a intenção de furtar mercadorias. Assim, percorreram os corredores do supermercado, logrando coletar cerca de R$2.000,00 em mercadorias. A ação delituosa levantou a suspeita dos seguranças, que perceberam a ação de ambos pelas câmeras de vigilância do supermercado. Por isso, quando Amanda e Fernando se dirigiam à saída do estabelecimento, foram abordados pelos vigilantes, ainda dentro do supermercado, momento em que lograram realizar a prisão em flagrante de Amanda, que foi, então, denunciada por furto qualificado pelo concurso de agentes em concurso formal com o delito de corrupção de menores. Na qualidade de advogado(a) de Amanda, assinale a opção que apresenta a tese de Direito Penal que, corretamente, deve ser sustentada em seu favor.
@@ -58,7 +54,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 61
     disciplina: penal
     enunciado: Douglas, reincidente, pois condenado anteriormente por lesão corporal no âmbito da lei de violência doméstica e familiar contra a mulher, pena já extinta pelo cumprimento, foi condenado a uma pena de 3 (três) anos de reclusão em regime inicial fechado pela prática de furto qualificado, bem como ao pagamento de 15 diasmulta. Na defesa de Douglas, você, na qualidade de advogado(a), deve alegar, corretamente, o cabimento de regime inicial
@@ -70,7 +66,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 62
     disciplina: penal
     enunciado: "Enzo completou neste mês 18 anos de idade, sendo certo que, na sua infância, foi vítima de estupro de vulnerável (pena: de 8 a 15 anos de reclusão). Considerando que já se passaram 11 anos desde a data do fato, ocorrido em 2013, sem que tenha sido instaurado qualquer inquérito ou investigação, e que o autor do fato já completou 70 anos de idade, Enzo indagou a você, como advogado(a), se ainda seria possível iniciar a persecução penal. Nesse caso, como advogado(a) de Enzo, assinale a alternativa que, corretamente, orienta a vítima."
@@ -82,7 +78,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 63
     disciplina: processo-penal
     enunciado: "Marilda, após ter sido regularmente processada, foi condenada, pelo Juízo originariamente competente, pela prática de desacato (pena: de seis meses a dois anos). Marilda procura você, como advogado(a), porque deseja recorrer da condenação. Sobre a hipótese, assinale a opção que apresenta, corretamente, o recurso cabível."
@@ -95,7 +91,7 @@ questoes:
     peca: apelacao
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 64
     disciplina: processo-penal
     enunciado: A República Federativa Alfa reconhece o Poder Judiciário como um dos poderes independentes da República. Em Alfa há um órgão de acusação independente e diferente do Judiciário, responsável por formular acusações criminais, tendo a iniciativa probatória. Em Alfa, um acusado seria um sujeito de direitos no âmbito do processo penal, e os princípios democráticos do processo penal, tais como o princípio do Juiz Natural e da presunção de inocência, são reconhecidos. A partir dos dados fornecidos, o país Alfa adota o sistema processual com traços mais marcantes do sistema
@@ -107,7 +103,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 65
     disciplina: processo-penal
     enunciado: "Ana Rosa foi denunciada perante o Tribunal do Júri pela prática de homicídio duplamente qualificado, por ter sido praticado mediante tortura e em razão da idade da vítima, Inocêncio, criança de 8 anos de idade, ambas as qualificadoras devidamente sustentadas no plenário pela acusação. O Conselho de Sentença respondeu afirmativamente aos quesitos de autoria e materialidade, e negativamente ao quesito de clemência, reconhecendo, ainda, as duas qualificadoras. Na sentença, o Juiz Presidente utilizou a qualificadora sobejante como agravante genérica. Foi interposta apelação defensiva, com base na alegação de decisão contrária à decisão dos jurados e injustiça na aplicação da pena. Ao final da fundamentação, formulou os seguintes requerimentos: o afastamento da qualificadora da tortura, a inadmissibilidade de reconhecimento de agravantes, de ofício, pelo Juiz Presidente, e a absolvição da ré por ausência de provas. Como advogado(a) de Geminiana, mãe da vítima, prévia e regularmente admitida como assistente de acusação, intimada a se manifestar em contrarrazões, é pertinente alegar"
@@ -119,7 +115,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 66
     disciplina: processo-penal
     enunciado: Francisco e seu filho Alfredo depredaram o carro de Terezinha, o que motivou o ajuizamento de queixa-crime em face de Francisco e Alfredo, dentro do prazo decadencial, pelo crime de dano qualificado por motivo egoístico, disposto no Art. 163, inciso IV, do CP. No curso da ação penal, Francisco e Terezinha começaram a ter um relacionamento amoroso. Terezinha perdoou expressamente Francisco nos autos da queixa-crime. Intimado, Francisco aceitou o perdão da ofendida, o Juízo declarou a extinção da punibilidade em face de Francisco, mas, determinou o seguimento da ação penal em relação a Alfredo. Diante do caso narrado, assinale a opção que apresenta, corretamente, os princípios que você, como advogado(a) de Alfredo, deve alegar no interesse de seu cliente.
@@ -132,7 +128,7 @@ questoes:
     dispositivos:
       - art. 163, IV, cp
     revisao:
-      status: rascunho
+      status: revisado
   - n: 67
     disciplina: processo-penal
     enunciado: Ricardo é policial civil e disparou seis vezes, com intenção de matar, contra Marilene, sua ex-amante, que veio a óbito. Diversos transeuntes testemunharam os fatos, inclusive o delegado de polícia que trabalha com Ricardo, que estava de plantão no momento e imediatamente realizou a prisão em flagrante do acusado e apreendeu sua pistola, lavrando o auto de prisão em flagrante pela prática do crime de feminicídio. Diante do caso narrado, sobre a lavratura do flagrante assinale a opção correta.
@@ -144,7 +140,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 68
     disciplina: processo-penal
     enunciado: A família de Luís procura você, como advogado(a), explicando que existe uma lei nova, mais benéfica, que se aplica ao caso do seu parente. Você, ao estudar o caso, descobriu que já havia trânsito em julgado da condenação e que a lei era realmente mais benéfica. Nessa hipótese, você deve
@@ -156,4 +152,4 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado

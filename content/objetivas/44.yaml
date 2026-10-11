@@ -2,12 +2,8 @@
 # Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
 exame: "44"
 faixa:
-  penal:
-    - 57
-    - 62
-  processoPenal:
-    - 63
-    - 68
+  penal: [57, 58, 59, 60, 61, 62]
+  processoPenal: [63, 64, 65, 66, 67, 68]
 anuladas: []
 questoes:
   - n: 57
@@ -21,7 +17,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 58
     disciplina: penal
     enunciado: Saulo, em razão de seu posicionamento político, foi chamado de “burro” e “idiota” por João, Paulo e Sérgio, seus adversários políticos, que tinham a intenção de ofender sua dignidade e decoro. Inconformado, Saulo decidiu processar seus três ofensores. Após a propositura da queixa, Saulo reconciliou-se com Sérgio, sendo o perdão dado pela vítima aceito pelo ofensor, e comunicou o fato ao Juizado Especial em que tramitava a ação penal. Em relação ao caso narrado, assinale a opção que indica, corretamente, o crime cometido pelos três amigos e as implicações da reconciliação entre Saulo e Sérgio.
@@ -33,7 +29,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 59
     disciplina: penal
     enunciado: Thiago, 21 anos de idade, e Vinicius, 17 anos, se conheceram no interior de uma boate. Alterados em razão da ingestão de cerveja, decidiram praticar um crime de furto em um posto de gasolina, mas foram abordados por policiais logo após a prática delitiva. Apenas naquele momento, Thiago veio a tomar conhecimento da idade de Vinicius, e que ele já tinha sido apreendido uma vez pela suposta prática de ato infracional análogo ao crime de dano. O Ministério Público ofereceu denúncia em face de Thiago como incurso nas penas do Art. 155, § 4º, inciso IV, do CP (furto qualificado pelo concurso de agentes) e do Art. 244-B do ECA (corrupção de menores). Assinale a opção que indica a alegação que você, como advogado(a) de defesa de Thiago, deve apresentar para questionar a capitulação delitiva.
@@ -47,7 +43,7 @@ questoes:
       - art. 155, § 4º, IV, cp
       - art. 244-B, lei 8069
     revisao:
-      status: rascunho
+      status: revisado
   - n: 60
     disciplina: penal
     enunciado: Marisa administrava os proventos de pensão recebidos por sua mãe, Sônia, que faleceu em dezembro de 2022. Com a intenção de continuar recebendo os proventos, Marisa deixou de comunicar à autarquia previdenciária o falecimento de Sônia e, assim, conseguiu efetuar os saques dos valores depositados nos meses de janeiro a março de 2023. Em abril, a autarquia recebeu notícia do falecimento e cessou os pagamentos. Ato contínuo, apurou o valor dos saques indevidos realizados por Marisa após o falecimento da segurada, acrescidos de multa e juros e a inscreveu em dívida ativa. Marisa, notificada, efetuou o pagamento integral do débito, de forma parcelada, entre os meses de outubro de 2023 e janeiro de 2024. A denúncia foi ajuizada em janeiro de 2024, e recebida em fevereiro de 2024. De acordo com a teoria do crime, assinale a opção que apresenta o que a defesa de Marisa deve, corretamente, alegar.
@@ -59,7 +55,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 61
     disciplina: penal
     enunciado: Pierre, estrangeiro, nacional e residente no país Alfa, veio ao Brasil, onde praticou o crime de homicídio contra Bruna, cidadã brasileira. Em seguida, Pierre deixou o território nacional e retornou ao seu país de residência. Você, como advogado(a) de Pierre, deve analisar a aplicação da lei penal brasileira ao caso. Assinale a opção que apresenta seu parecer.
@@ -71,7 +67,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 62
     disciplina: penal
     enunciado: Hermes, aposentado com 65 anos de idade, encontrou sua esposa, Diana, 40 anos mais jovem, em plena execução de ato sexual com seu primo, Aquiles, também sexagenário. Tomado pela fúria, Hermes sacou sua arma de fogo e disparou um tiro no pescoço de Aquiles. Hermes possuía 18 munições restantes no cartucho de sua arma, mas conseguiu controlar sua ira e, arrependido, levou Aquiles ao hospital. Apesar de ter sofrido ferimento que lhe gerou perigo à vida, devido ao rápido atendimento médico, Aquiles sobreviveu e, como ficou livre de sequelas, retomou suas ocupações habituais em uma semana. Atualmente, Hermes, Diana e Aquiles mantêm relação de amizade. Com base na situação hipotética narrada, assinale a opção que indica, corretamente, o delito praticado por Hermes.
@@ -83,7 +79,7 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 63
     disciplina: processo-penal
     enunciado: "No dia 10 de agosto de 2023, foi publicada a decisão de rejeição da queixa-crime relativa ao crime de injúria (pena: um a seis meses de detenção), que teria sido praticado por Maria Aparecida contra Augusto. Augusto, inconformado com a sentença, procurou você, como advogado(a), para se insurgir contra a decisão de rejeição de exordial acusatória. Assinale a opção que indica, corretamente, o recurso cabível para o caso."
@@ -96,7 +92,7 @@ questoes:
     peca: apelacao
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 64
     disciplina: processo-penal
     enunciado: Cauã e Mayara são indígenas integrados e mantêm relação íntima de afeto, sendo residentes em comunidade tradicional. Certo dia, motivado por ciúmes, Cauã agrediu Mayara, atingindo-a no rosto, fato que ocasionou uma lesão corporal leve. Sobre a orientação assumida pelo(a) advogado(a) de defesa de Mayara, assinale a afirmativa correta.
@@ -108,7 +104,7 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 65
     disciplina: processo-penal
     enunciado: Peterson teve sua prisão temporária decretada pelo prazo de trinta dias, ao ser investigado pela prática do crime de homicídio culposo na direção de veículo automotor, disposto no Art. 302 da Lei nº 9.503/1997 (Código de Trânsito Brasileiro), cuja pena cominada é de dois a quatro anos de detenção. A decisão foi fundamentada na necessidade da coleta de provas imprescindíveis durante a investigação policial. Você foi procurado(a), como advogado(a), para atuar no melhor interesse de Peterson, no primeiro dia da sua prisão. Assinale a opção que apresenta, corretamente, o pedido cabível tendo em vista os interesses de seu cliente.
@@ -121,7 +117,7 @@ questoes:
     dispositivos:
       - art. 302, lei 9503
     revisao:
-      status: rascunho
+      status: revisado
   - n: 66
     disciplina: processo-penal
     enunciado: André foi denunciado por ter subtraído a bolsa de Márcia, mediante rompimento de obstáculo. A subtração foi legitimamente comprovada no processo, porém, não obstante tenha o rompimento de obstáculo deixado vestígios, não foi realizada qualquer perícia, sem justificativa plausível. Finda a instrução, manifestou-se o Ministério Público pela condenação, conforme a denúncia, sem requerer qualquer diligência. Dada a palavra ao(à) advogado(a) de André, em alegações finais defensivas, este(a) deve requerer
@@ -133,7 +129,7 @@ questoes:
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 67
     disciplina: processo-penal
     enunciado: Foi oferecida denúncia em face de Samuel, pelo delito de furto, que foi distribuída ao Juízo competente, tendo havido regular instrução processual. Os autos foram conclusos para sentença, porém, o Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial. Por isso, a Corregedoria do Tribunal designou Juiz substituto para atuar naquele Juízo. O Magistrado substituto prolatou a sentença, condenando Samuel, com base na prova oral colhida, ainda que nenhuma urgência houvesse nesse processo. Com base nas informações do enunciado, assinale a opção que indica a alegação que você, como advogado(a) de Samuel, deve apresentar.
@@ -145,7 +141,7 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 68
     disciplina: processo-penal
     enunciado: Flávio foi preso em flagrante junto com outros três indivíduos, todos acusados pela prática do crime de roubo, disposto no Art. 157 do CP. Flávio permaneceu preso preventivamente durante o processo. Na audiência de instrução e julgamento, uma das testemunhas arroladas pela defesa afirmou que, no dia dos fatos, Flávio estava trabalhando na loja de material de construção que funcionava na frente do local onde os autores do fato estavam praticando o crime, e acabou sendo preso junto com os outros acusados. A testemunha também mencionou que a loja possui sistema de monitoramento de segurança, e que o dono da loja guardou imagens desse dia, para fornecê-las em sede policial se isso fosse demandado. O interrogatório dos réus foi regularmente realizado. Diante do fato narrado, assinale a opção que indica, corretamente, a medida jurídica que você, como advogado(a) de Flávio, deve adotar.
@@ -158,4 +154,4 @@ questoes:
     dispositivos:
       - art. 157, cp
     revisao:
-      status: rascunho
+      status: revisado

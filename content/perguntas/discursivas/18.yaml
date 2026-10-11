@@ -31,7 +31,7 @@ perguntas:
         - "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS."
         - A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 18-peca-3
     categoria: peca-detalhe
     parte: peca

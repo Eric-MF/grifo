@@ -1,8 +1,24 @@
 // Compartilhamento sem servidor: o conteúdo vai no próprio link, depois do #, comprimido.
 // O que está depois do # nunca é enviado ao servidor.
 
+import type { Marcacao } from "./marcacoes";
+import type { Sistema } from "./legendas";
+
 export const LIMITE_LINK = 8 * 1024;
 const PREFIXO = "v1.";
+
+export interface Compartilhado {
+  lei: string;
+  m: Pick<Marcacao, "i" | "disp" | "exato" | "prefixo" | "sufixo" | "cor" | "nota">[];
+  s?: Sistema;
+}
+
+/** Confere a forma do conteúdo recebido (link ou arquivo) antes de mostrá-lo. */
+export function pareceCompartilhado(c: unknown): c is Compartilhado {
+  if (typeof c !== "object" || c === null) return false;
+  const { lei, m } = c as Compartilhado;
+  return typeof lei === "string" && Array.isArray(m) && m.every((x) => typeof x?.i === "number" && typeof x.exato === "string" && typeof x.cor === "string");
+}
 
 async function processar(bytes: Uint8Array, stream: CompressionStream | DecompressionStream): Promise<Uint8Array> {
   const saida = new Blob([bytes as BlobPart]).stream().pipeThrough(stream);

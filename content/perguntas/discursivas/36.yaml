@@ -31,7 +31,7 @@ perguntas:
         - "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
         - "Endereçamento: Juízo do Tribunal do Júri da Comarca de São Paulo/SP"
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 36-peca-4-1
     categoria: peca-detalhe
     parte: peca

@@ -33,7 +33,7 @@ perguntas:
         - "Endereçamento: Tribunal de Justiça do Rio de Janeiro"
         - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro"
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 25-porto-alegre-peca-3
     categoria: peca-detalhe
     parte: peca

@@ -247,8 +247,8 @@ const ObjetivaSchema = z.object({
 });
 export const ObjetivasArquivoSchema = z.object({
   exame: z.string(),
-  /** faixas de questões de cada disciplina no Tipo 1, conferidas à mão */
-  faixa: z.object({ penal: z.tuple([z.number(), z.number()]), processoPenal: z.tuple([z.number(), z.number()]) }),
+  /** números das questões de cada disciplina no Tipo 1, conferidos à mão */
+  faixa: z.object({ penal: z.array(z.number().int().positive()), processoPenal: z.array(z.number().int().positive()) }),
   anuladas: z.array(z.number()).default([]),
   questoes: z.array(ObjetivaSchema),
 });

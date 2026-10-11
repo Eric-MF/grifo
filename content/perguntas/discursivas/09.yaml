@@ -31,7 +31,7 @@ perguntas:
         - "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
         - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 09-peca-4
     categoria: peca-detalhe
     parte: peca

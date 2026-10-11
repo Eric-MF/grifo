@@ -27,13 +27,13 @@ export function carregarLei(id: string): LeiTexto {
   return lei;
 }
 
-/** Leis com texto coletado, na ordem de content/leis.yaml. */
+/** Leis com `ler: true` em content/leis.yaml e texto coletado, na ordem do arquivo. */
 export function leisDoLeitor(): { id: string; nome: string; artigos: number; coletadoEm: string }[] {
   if (!existsSync(DIR)) return [];
   const ids = new Set(readdirSync(DIR).filter((f) => f.endsWith(".json") && !f.startsWith("_")).map((f) => f.slice(0, -5)));
-  const ordem = Object.keys(parse(readFileSync(join(process.cwd(), "content", "leis.yaml"), "utf8")).diplomas);
-  return ordem
-    .filter((id) => ids.has(id))
+  const diplomas: Record<string, { ler?: boolean }> = parse(readFileSync(join(process.cwd(), "content", "leis.yaml"), "utf8")).diplomas;
+  return Object.keys(diplomas)
+    .filter((id) => diplomas[id]!.ler && ids.has(id))
     .map((id) => {
       const l = carregarLei(id);
       const artigos = new Set(l.blocos.filter((b) => b.tipo === "artigo" && !b.superada).map((b) => b.disp)).size;

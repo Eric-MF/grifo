@@ -35,7 +35,7 @@ perguntas:
         - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
         - "Endereçamento: Tribunal de Justiça do Estado de São Paulo"
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 46-peca-4
     categoria: peca-detalhe
     parte: peca

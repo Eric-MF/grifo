@@ -33,7 +33,7 @@ perguntas:
         - Vara Criminal da Comarca de Campos/RJ.
         - A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 31-peca-3
     categoria: peca-detalhe
     parte: peca

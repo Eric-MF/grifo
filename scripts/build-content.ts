@@ -27,6 +27,7 @@ import {
 import { buildLexico, parseDispositivo, toRoman } from "../src/lib/correcao/citacoes.ts";
 import { aplicarRotulos } from "../src/content/rotulos.ts";
 import { textoAtual, type Bloco } from "../src/lib/leis/linha-do-tempo.ts";
+import { vigenciasDaLei, type Vigencia } from "../src/lib/leis/vigencias.ts";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const CONTENT = join(ROOT, "content");
@@ -213,8 +214,8 @@ function build(): boolean {
     for (const q of questoes) {
       const id = `obj-${exame}-${q.n}`;
       if (anuladas.includes(q.n)) err(where, `${id}: questão anulada não entra no acervo`);
-      const [a, b] = q.disciplina === "penal" ? faixa.penal : faixa.processoPenal;
-      if (q.n < a || q.n > b) warnings.push(`! ${where}: questão ${q.n} fora da faixa de ${q.disciplina} (${a}–${b})`);
+      const lista = q.disciplina === "penal" ? faixa.penal : faixa.processoPenal;
+      if (!lista.includes(q.n)) warnings.push(`! ${where}: questão ${q.n} não está na lista de ${q.disciplina}`);
       if (q.peca && !pecas.data[q.peca]) err(where, `${id}: peça "${q.peca}" não existe em pecas.yaml`);
       dispositivosOk(where, id, q.dispositivos);
       objetivas.push({
@@ -307,11 +308,15 @@ function build(): boolean {
   const dirLeis = join(CONTENT, "leis-texto");
   const pubLeis = join(ROOT, "public", "dados", "leis");
   const indiceLeis: { id: string; nome: string; artigos: number }[] = [];
+  const vigencias: Record<string, Vigencia> = {};
   if (existsSync(dirLeis)) {
     rmSync(pubLeis, { recursive: true, force: true });
     mkdirSync(pubLeis, { recursive: true });
+    const arqDatas = join(CONTENT, "leis-alteradoras.yaml");
+    const datas: Record<string, { vigencia?: string; publicacao?: string; aproximada?: boolean }> = existsSync(arqDatas) ? (readYaml(arqDatas) ?? {}) : {};
     for (const f of readdirSync(dirLeis).filter((x) => x.endsWith(".json") && !x.startsWith("_"))) {
       const lei = JSON.parse(readFileSync(join(dirLeis, f), "utf8"));
+      Object.assign(vigencias, vigenciasDaLei(lei.id, lei.blocos as Bloco[], datas));
       writeFileSync(join(pubLeis, f), JSON.stringify({ id: lei.id, nome: lei.nome, url: lei.url, coletadoEm: lei.coletadoEm, blocos: lei.blocos }));
       // texto vigente de cada artigo, para o pop-up, a busca e o slide do leitor
       const porArtigo = new Map<string, { rotulo: string; partes: string[] }>();
@@ -330,14 +335,13 @@ function build(): boolean {
     }
     const ordem = Object.keys(leis.data.diplomas);
     indiceLeis.sort((a, b) => ordem.indexOf(a.id) - ordem.indexOf(b.id));
-    const arqDatas = join(CONTENT, "leis-alteradoras.yaml");
-    const datas: Record<string, { vigencia?: string; publicacao?: string; aproximada?: boolean }> = existsSync(arqDatas) ? (readYaml(arqDatas) ?? {}) : {};
     writeFileSync(
       join(pubLeis, "_datas.json"),
       JSON.stringify(
         Object.fromEntries(Object.entries(datas).map(([k, v]) => [k, { vigencia: v.vigencia, publicacao: v.publicacao, ...(v.aproximada ? { aproximada: true } : {}) }])),
       ),
     );
+    writeFileSync(join(OUT, "vigencias.json"), JSON.stringify(vigencias));
   }
   writeFileSync(join(OUT, "leis-indice.json"), JSON.stringify(indiceLeis));
 

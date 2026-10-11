@@ -31,7 +31,7 @@ perguntas:
         - "Endereçamento: Juízo da Vara de Execuções Penais de Belo Horizonte/MG"
         - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro"
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 07-peca-4
     categoria: peca-detalhe
     parte: peca

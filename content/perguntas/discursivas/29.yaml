@@ -33,7 +33,7 @@ perguntas:
         - "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS."
         - A petição deve ser endereçada à 05ª Vara Criminal da Comarca de Barnabeu/CN.
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 29-peca-3
     categoria: peca-detalhe
     parte: peca

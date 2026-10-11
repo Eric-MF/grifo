@@ -31,7 +31,7 @@ perguntas:
         - "Endereçamento: 3ª Vara Criminal da Comarca de São Gonçalo/RJ."
         - "Endereçamento: Tribunal Regional Federal da 10ª Região."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 10-peca-3-1
     categoria: peca-detalhe
     parte: peca

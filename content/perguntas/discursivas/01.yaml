@@ -33,7 +33,7 @@ perguntas:
         - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
         - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 01-peca-4
     categoria: peca-detalhe
     parte: peca

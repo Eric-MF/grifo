@@ -33,7 +33,7 @@ perguntas:
         - "Endereçamento: Tribunal de Justiça do Estado de São Paulo."
         - "Endereçamento: Juízo Federal da Vara Federal Criminal de Alfa."
     revisao: &a1
-      status: rascunho
+      status: revisado
   - id: 21-peca-3
     categoria: peca-detalhe
     parte: peca
