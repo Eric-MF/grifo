@@ -42,4 +42,9 @@ describe("barras", () => {
 describe("zeros à esquerda", () => {
   it("prazo com zero", () => expect(normalize("prazo de 05 dias")).toBe(" prazo de 5 dias "));
   it("data com zeros continua ISO", () => expect(normalize("09/03/2018")).toBe(" 2018-03-09 "));
+  it("zero do milhar no número da lei fica", () => {
+    expect(normalize("Lei 8.072/90")).toBe(" lei 8072 ");
+    expect(normalize("Lei nº 9.099/95")).toBe(" lei 9099 ");
+  });
+  it("data com pontos continua ISO", () => expect(normalize("01.09.2023")).toBe(" 2023-09-01 "));
 });

@@ -23,7 +23,7 @@ const modulo: GameModule = {
   }),
   comoJogar: {
     texto:
-      "Toque na tela, clique ou aperte espaço para a maleta bater as asas. Passe entre as colunas e pegue moedas. Cada coluna passada rende experiência (XP); níveis mais difíceis rendem mais. As colunas rachadas são mais estreitas: bater nelas não encerra a partida, mas traz uma penalidade. Os orbes coloridos são poderes: para ativá-los, responda qual é a peça cabível no caso. Se bater, você tem uma chance de Revisão Criminal. As moedas compram estilos; o XP libera personagens, e cada personagem tem um poder próprio que aparece com mais frequência. P ou Esc pausa.",
+      "Toque na tela, clique ou aperte espaço para a maleta bater as asas. Passe entre as colunas e pegue moedas. Cada coluna passada rende experiência (XP); níveis mais difíceis rendem mais. As colunas rachadas são mais estreitas: bater nelas não encerra a partida, mas traz uma penalidade. Os orbes coloridos são poderes: para ativá-los, responda qual é a peça cabível no caso. Se bater, você tem uma chance de Revisão Criminal. As moedas compram estilos; o XP libera personagens, e cada personagem tem um poder próprio que aparece com mais frequência. O poder do seu personagem é usado sozinho quando a barra enche; em Opções, desligue a opção para usá-lo tocando no alto da tela ou apertando E. P ou Esc pausa.",
     itens: PODERES.map((p) => {
       const dono = PERSONAGENS.find((q) => q.id === p.personagem);
       return { icone: p.icone, texto: `${p.nome}: ${p.descricao}${dono ? ` (poder do personagem ${dono.nome})` : ""}` };

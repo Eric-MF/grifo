@@ -1,14 +1,14 @@
-# XL Exame de Ordem Unificado — Direito Penal (sem gabarito no acervo)
+# XL Exame de Ordem Unificado — Direito Penal
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
 id: "40"
 numero: 40
 numeral: XL
-corrigivel: false
+aplicacao: 2024-05-19
 revisao:
   status: rascunho
   por: ""
   em: ""
-  notas: Sem gabarito no acervo; enunciados extraídos do caderno.
-observacoes: O padrão de resposta deste exame não está no acervo do Grifo; a correção automática será liberada quando ele for incluído.
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
 peca:
   nome: Apelação
   tipo: apelacao
@@ -31,8 +31,128 @@ peca:
     Considerando apenas as informações narradas, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
 
     Obs.: A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-  gabarito_comentado: ""
-  itens: []
+  gabarito_comentado: |-
+    De acordo com o exposto, considerando que foi prolatada sentença condenatória em desfavor do réu, deve o examinando apresentar recurso de apelação, com fundamento no Art. 593, inciso I, do CPP.
+
+    A petição de interposição do recurso de apelação deveria ser direcionada ao Juízo da Vara Criminal da comarca de Flores/CB, enquanto as razões recursais deveriam ser apresentadas ao Tribunal de Justiça do Estado de Campo Belo.
+
+    No capítulo preliminar de tempestividade deve ser indicada a aplicação do prazo de cinco dias, na forma do Art. 593, caput, do CPP.
+
+    Inicialmente, há de se notar a atipicidade dos sete primeiros fatos imputados a Gustavo. Em todos os casos de “furto” em que houve a integral restituição da res furtiva, que meramente foi utilizada, sem danos, sem a intenção de Gustavo de se apossar definitivamente do bem, e considerando a restituição à vítima antes mesmo que esta notasse, a conduta se amolda ao que a doutrina e jurisprudência denominam “furto de uso”. Por isso, em relação aos sete primeiros fatos, deve ser postulada a absolvição de Gustavo, na forma do Art. 386, inciso III, do CPP, pois o fato não é crime.
+
+    Contudo, no oitavo fato, houve, sim, a prática do furto consumado, pois, ao haver a destruição completa do bem, quando em poder do acusado, consumou-se o delito de furto. Entretanto, como a porta do depósito estava aberta, e Gustavo não se valeu da escalada para acessar o depósito, é certo que o furto verificado foi na modalidade simples (Art. 155, caput, do CP), e não na qualificada, devendo ser afastada a qualificadora.
+
+    Vale notar que ocorreu arrependimento posterior, pois, uma vez danificado o bem, Gustavo quitou a íntegra do valor da coisa danificada, antes do recebimento da denúncia, fazendo jus à causa de diminuição do Art. 16 do CP (arrependimento posterior).
+
+    Tendo em vista que os dados do enunciado já informam a fixação da pena-base no mínimo legal e o reconhecimento da atenuante, bastaria formular o pedido de fixação do regime inicial aberto ou semiaberto, na forma do Art. 33, § 2º, alínea b ou c, do CP, e de substituição por restritiva de direitos, na forma do Art. 44 do CP, diante da presença dos requisitos legais, pois a pena ficará abaixo de 4 (quatro) anos e o crime foi praticado sem violência ou grave ameaça, sendo as circunstâncias judiciais inteiramente positivas.
+
+    De forma subsidiária, deve ser defendida a aplicação da regra da continuidade delitiva, pois os fatos ocorreram nas mesmas condições de tempo, lugar e maneira de execução, na forma do Art. 71 do CP.
+
+    Em razão de todo o exposto, deve o examinando formular, em conclusão, o pedido de conhecimento e provimento do recurso.
+
+    O prazo a ser indicado ao final era o dia 17 de maio de 2024, tendo em vista que a previsão do prazo de apelação é de cinco dias. Como a intimação foi feita em uma sexta-feira, o prazo se iniciaria na segunda-feira seguinte, dia 13 de maio.
+
+    No fechamento, deve o examinando indicar local, data, advogado e OAB.
+  itens:
+    - n: "1"
+      secao: Endereçamento
+      descricao: "Interposição: Vara Criminal da comarca de Flores/CB (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ vara criminal, flores ] }
+    - n: "2"
+      secao: Endereçamento
+      descricao: "Fundamento legal: Art. 593, inciso I, do CPP (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, dispositivo: [ "art. 593, I, CPP" ] }
+    - n: "3"
+      secao: Endereçamento
+      descricao: "Tempestividade: 5 dias (0,10), na forma do Art. 593, caput, do CPP (0,10)."
+      valores: [ 0, 0.1, 0.2 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 5 dias | cinco dias ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 593, CPP" ], requer: c1 }
+    - n: "4"
+      secao: Razões
+      descricao: "Endereçamento: Tribunal de Justiça do Campo Belo (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ tribunal de justica | tj, campo belo ] }
+    - n: "5.1"
+      secao: Mérito
+      descricao: Atipicidade das condutas de “furto de uso” (0,30), pois não houve ânimo de assenhoramento definitivo da res furtiva ou porque foram os bens restituídos sem desgaste ou dano (0,20), devendo se constatar que o fato não é crime (0,15).
+      valores: [ 0, 0.15, 0.2, 0.3, 0.35, 0.45, 0.5, 0.65 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ atipic*, furto de uso ] }
+        - { id: c2, valor: 0.2, termos: [ assenhoramento | apossamento | apossar* | definitiv* | restitu* | sem desgaste | sem dano ] }
+        - { id: c3, valor: 0.15, termos: [ nao e crime | nao constitui crime | nao constitui infracao | fato atipico | atipic* ] }
+    - n: "5.2"
+      secao: Mérito
+      descricao: Deve ser requerida a absolvição de Gustavo (0,30) em relação aos sete primeiros furtos (0,15), na forma do Art. 386, inciso III, do CPP (0,10).
+      valores: [ 0, 0.15, 0.25, 0.3, 0.4, 0.45, 0.55 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ absolv* ] }
+        - { id: c2, valor: 0.15, termos: [ sete primeiros | 7 primeiros | sete fatos | 7 fatos | primeiros sete | primeiros fatos ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 386, III, CPP" ], requer: c2 }
+    - n: "6"
+      secao: Mérito
+      descricao: Pedido de desclassificação da conduta de furto qualificado para furto simples (0,40), pois, neste dia, Gustavo adentrou o depósito pela porta da frente, não se valendo de escalada ou qualquer outra qualificadora (0,20), na forma do Art. 155, caput, do CP (0,10).
+      valores: [ 0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ]
+      componentes:
+        - { id: c1, valor: 0.4, termos: [ desclassific* | desqualific* | afast*, furto simples | simples ] }
+        - { id: c2, valor: 0.2, termos: [ escalada | porta aberta | porta da frente | sem arrombamento | sem rompimento | qualificadora ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 155, CP" ], requer: c2 }
+    - n: "7"
+      secao: Mérito
+      descricao: Em acréscimo, deve ser postulada a aplicação da causa de diminuição de pena do arrependimento posterior (0,40), pois o acusado restituiu integralmente o valor do dano antes do recebimento da denúncia, presentes os demais requisitos (crime praticado sem violência ou grave ameaça) (0,20), na forma do Art. 16 do CP (0,10).
+      valores: [ 0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ]
+      componentes:
+        - { id: c1, valor: 0.4, termos: [ arrependimento posterior ] }
+        - { id: c2, valor: 0.2, termos: [ restitu* | ressarc* | quit* | reparac* | integral* ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 16, CP" ], requer: c2 }
+    - n: "8"
+      secao: Mérito
+      descricao: Subsidiariamente, a aplicação da continuidade delitiva (0,30), pois os fatos ocorreram nas mesmas condições de tempo, lugar e maneira de execução (0,25), na forma do Art. 71, caput, do CP (0,10).
+      valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ continuidade | continuad* ] }
+        - { id: c2, valor: 0.25, termos: [ mesmas condicoes | condicoes de tempo | mesmo modo | mesma maneira | maneira de execucao | modo de execucao ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 71, CP" ], requer: c2 }
+    - n: "9"
+      secao: Mérito
+      descricao: Pedido de fixação de regime inicial aberto ou semiaberto (0,20), na forma do Art. 33, § 2º, alínea b ou c, do CP (0,10).
+      valores: [ 0, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ regime, aberto | semiaberto | semi-aberto ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 33, § 2º, b, c, CP" ], requer: c1 }
+    - n: "10"
+      secao: Mérito
+      descricao: Substituição da pena privativa de liberdade por restritiva de direitos (0,20), pois a pena ficará abaixo de quatro anos e o crime foi praticado sem violência ou grave ameaça, sendo as circunstâncias judiciais inteiramente positivas (0,15), na forma do Art. 44 do CP (0,10).
+      valores: [ 0, 0.15, 0.2, 0.25, 0.35, 0.45 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ substitu* | restritiva de direitos | restritivas de direitos ] }
+        - { id: c2, valor: 0.15, termos: [ quatro anos | 4 anos | abaixo de quatro | inferior a quatro | menos de quatro, violencia | grave ameaca ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 44, CP" ], requer: c2 }
+    - n: "11"
+      secao: Pedidos
+      descricao: Conhecimento (0,10) e provimento do recurso (0,20).
+      valores: [ 0, 0.1, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ conhec* ] }
+        - { id: c2, valor: 0.2, termos: [ provimento | provido | prover | provej* ] }
+    - n: "12"
+      secao: Prazo e Fechamento
+      descricao: "Prazo: 17 de maio de 2024 (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 17 de maio | 17/05/2024 | 17/5/2024 | 17/05 ] }
+    - n: "13"
+      secao: Prazo e Fechamento
+      descricao: Local, data, advogado e OAB (0,10).
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ oab ] }
 questoes:
   - n: 1
     enunciado: |-
@@ -49,8 +169,26 @@ questoes:
       **B) Qual o argumento de direito material a ser deduzido em favor dos assistidos? Justifique. (Valor: 0,65)**
 
       Obs.: O(A) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
-    gabarito_comentado: ""
-    itens: []
+    gabarito_comentado: |-
+      A questão envolve conhecimentos sobre crimes tributários e defesa na fase de resposta à acusação.
+
+      A) Inicialmente, quanto à questão processual, deve ser observado que o recebimento da denúncia não é passível de recurso próprio, razão pela qual a decisão desafia habeas corpus, com fundamento no Art. 5º, LXVIII, da CF ou Art. 647 ou 648, inciso I, do CPP, ante a ausência de justa causa. Alternativamente, poderia indicar o cabimento de Reclamação ao Supremo Tribunal Federal, conforme Art. 103-A, § 3º, CF.
+
+      B) O direito material envolvido é a incidência da Súmula Vinculante nº 24, que assevera a não tipificação de crime material contra a ordem tributária antes do lançamento definitivo do tributo, exatamente a hipótese dos autos.
+    itens:
+      - n: A
+        descricao: Impetração de habeas corpus ou reclamação ao Supremo Tribunal Federal (0,50), com fundamento no Art. 5º, LXVIII, da CF ou Art. 647 ou Art. 648, inciso I, do CPP e Art. 103-A, § 3º, CF (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ habeas corpus | reclamacao ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 5, LXVIII, CRFB", "art. 647, CPP", "art. 648, I, CPP", "art. 103-A, § 3º, CRFB" ], requer: c1 }
+      - n: B
+        descricao: Atipicidade da conduta (0,30), ante a ausência de constituição definitiva do crédito tributário (0,25), na forma da Súmula Vinculante nº 24 (0,10).
+        valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ atipic* ] }
+          - { id: c2, valor: 0.25, termos: [ definitiv* | constituic* | credito tributario ] }
+          - { id: c3, valor: 0.1, dispositivo: [ Súmula Vinculante 24 ], requer: c2 }
   - n: 2
     enunciado: |-
       Márcia e Fábio, ambos maiores e capazes, mantiveram relação íntima de afeto, sem coabitação, até que Fábio agrediu Márcia com tapas e socos, o que a deixou lesionada, sem gravidade.
@@ -68,8 +206,25 @@ questoes:
       **B) Em relação ao delito de lesão corporal, é cabível a alegação de ausência de representação da ofendida ou mesmo a sua retratação para invalidar a propositura da ação penal em desfavor de Fábio? Fundamente. (Valor: 0,65)**
 
       Obs.: O(A) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
-    gabarito_comentado: ""
-    itens: []
+    gabarito_comentado: |-
+      A questão exige do examinando conhecimentos sobre violência doméstica e familiar contra a mulher.
+
+      A) Na forma do Art. 24-A, § 2º, da Lei nº 11.340/2006, à autoridade judicial, pois somente esta pode arbitrar a fiança pelo delito de descumprimento de medida protetiva de urgência.
+
+      B) Não. A vontade da vítima é desinfluente, uma vez que, nos delitos de violência doméstica e familiar contra a mulher, não se aplicam as disposições da Lei nº 9.099/1995, na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ, de forma que a ação penal é pública incondicionada. Por isso, não é cabível a retratação da representação.
+    itens:
+      - n: A
+        descricao: À autoridade judiciária (0,50), na forma do Art. 24-A, §2º, da Lei nº 11.340/2006 (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ autoridade judicia* ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 24-A, § 2º, Lei 11340" ], requer: c1 }
+      - n: B
+        descricao: A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher) (0,55), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ (0,10).
+        valores: [ 0, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.55, termos: [ retrat*, publica incondicionada | 9.099 | 9099 | nao e aplicavel | nao se aplica | nao aplicavel ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 41, Lei 11340", Súmula 542 STJ ], requer: c1 }
   - n: 3
     enunciado: |-
       Júlia, primária, sem filhos, sem antecedentes criminais e dedicada a atividades lícitas, foi presa em flagrante no aeroporto da cidade de Fortaleza, no Estado do Ceará, quando tentava embarcar em aeronave que a levaria à cidade de São Paulo, no Estado de São Paulo, com um urso de pelúcia que escondia 2kg de pasta-base de cocaína em seu interior, substância classificada como entorpecente pela autoridade competente. Júlia confessou os fatos em sede policial, tendo contribuído espontaneamente com as investigações.
@@ -83,8 +238,27 @@ questoes:
       **B) Em caso de condenação definitiva a pena que supere o limite de quatro anos, sendo fixado regime mais gravoso que o aberto, qual deverá ser a fração de progressão de regime aplicável a Júlia? Justifique, identificando a natureza do delito. (Valor: 0,60)**
 
       Obs.: O(A) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
-    gabarito_comentado: ""
-    itens: []
+    gabarito_comentado: |-
+      A questão exige do examinando conhecimentos sobre tráfico de drogas, execução penal e acordo de não persecução penal. Quanto à questão processual, o comando requer do examinando uma tese defensiva que obste a deflagração da ação penal.
+
+      A) A fim de evitar o recebimento da denúncia, deve a defesa requerer a remessa dos autos ao órgão superior do Ministério Público, nos termos do Art. 28-A, § 14, do CPP, a fim de que seja oferecido o Acordo de Não Persecução Penal, pois presentes os requisitos objetivos e subjetivos.
+
+      B) Caso efetivamente condenada à pena de reclusão em regime diverso do aberto, Júlia estaria sujeita a progressão de regime após o cumprimento de 16% das penas, conforme Art. 112, inciso I, da LEP, pois o delito de tráfico privilegiado não é violento e não é equiparado a hediondo, nos termos do Art. 112, § 5º, da LEP.
+    itens:
+      - n: A
+        descricao: Remessa dos autos ao órgão superior do Ministério Público (0,15), a fim de que seja oferecido o Acordo de Não Persecução Penal (0,40), nos termos do Art. 28-A, § 14º, do CPP (0,10).
+        valores: [ 0, 0.15, 0.25, 0.4, 0.5, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.15, termos: [ remessa | remet* | encaminh*, superior ] }
+          - { id: c2, valor: 0.4, termos: [ acordo de nao persecucao | anpp | nao persecucao ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 28-A, § 14º, CPP" ], requer: c2 }
+      - n: B
+        descricao: Tendo em vista que o delito de tráfico privilegiado não é crime equiparado a hediondo (0,35), aplica-se a progressão pelo percentual de 16% (0,15), nos termos do Art. 112, § 5º ou Art. 112, inciso I, da LEP (0,10).
+        valores: [ 0, 0.15, 0.25, 0.35, 0.45, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.35, termos: [ hediondo, nao ] }
+          - { id: c2, valor: 0.15, termos: [ 16% | 16 por cento | dezesseis por cento ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 112, § 5º, LEP", "art. 112, I, LEP" ], requer: c2 }
   - n: 4
     enunciado: |-
       Helena, inconformada com o desempenho de seu time de futebol no Campeonato Brasileiro, decidiu colocar explosivos no estádio do seu clube. Helena inseriu os explosivos em locais estratégicos para explodir e danificar todo o gramado, de forma a garantir que, por ocasião da explosão, ninguém fosse atingido. No entanto, após colocar os explosivos similares a dinamite, Helena se distraiu e não observou quando o cachorro do clube, Bob, pegou um dos explosivos e o levou para o vestiário.
@@ -100,5 +274,23 @@ questoes:
       **B) Qual o pedido de natureza processual cabível de ser deduzido em defesa de Helena? Justifique. (Valor: 0,60)**
 
       Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
-    gabarito_comentado: ""
-    itens: []
+    gabarito_comentado: |-
+      A questão exige do examinando conhecimento sobre o delito de explosão e sobre procedimento do Tribunal do Júri.
+
+      A) Em relação à questão penal, nota-se que Helena agiu com culpa quanto ao resultado morte, sendo imperioso concluir que o fato se amolda ao delito de explosão, com causa de aumento de pena em razão do resultado morte, na forma do Art. 251, c/c o Art. 258, ambos do CP, em vista do dolo de explosão. Também seria legítimo concluir pela tipificação como homicídio culposo, na forma do Art. 121, § 3º, CP.
+
+      B) O pedido processual cabível, nesta fase do procedimento, é o de desclassificação, na forma do Art. 418 ou do Art. 419, ambos do CPP.
+    itens:
+      - n: A
+        descricao: Helena agiu com culpa quanto ao resultado morte (0,40), cabendo à defesa postular a desclassificação para o delito de explosão com causa de aumento de pena em razão do resultado morte ou homicídio culposo (0,15), na forma do Art. 251, c/c o Art. 258, ou Art. 121, § 3º, todos do CP (0,10).
+        valores: [ 0, 0.15, 0.25, 0.4, 0.5, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.4, termos: [ culp* ] }
+          - { id: c2, valor: 0.15, termos: [ desclassific*, explosao | homicidio culposo | culposo ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 251, CP", "art. 258, CP", "art. 121, § 3º, CP" ], requer: c2 }
+      - n: B
+        descricao: O pedido processual cabível, nesta fase do procedimento, é o de desclassificação (0,50), na forma do Art. 418 ou do Art. 419, ambos do CPP (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ desclassific* ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 418, CPP", "art. 419, CPP" ], requer: c1 }

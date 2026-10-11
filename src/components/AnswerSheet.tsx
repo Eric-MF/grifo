@@ -81,6 +81,7 @@ export function AnswerSheet({ id, label, linhas, value, onChange, disabled }: Pr
   );
 
   useLayoutEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- medição do DOM antes da pintura
     setUsadas(medir(value));
     if (areaRef.current) ajustarAltura(areaRef.current);
   }, [value, medir, ajustarAltura]);

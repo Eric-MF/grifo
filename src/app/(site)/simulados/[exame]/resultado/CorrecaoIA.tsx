@@ -29,6 +29,7 @@ export function CorrecaoIA({ exame, tentativa, onConcluir }: { exame: Exame; ten
     const p = lerPrefs();
     const chaves = lerChaves();
     const pv = p.prov ?? "anthropic";
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- lê localStorage após montar (site estático)
     setProv(pv);
     setModelo(p.modelos?.[pv] ?? provedor(pv).modelos[0]);
     if (chaves[pv]) {

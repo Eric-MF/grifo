@@ -1,0 +1,298 @@
+# XLIII Exame de Ordem Unificado — Direito Penal
+# Fonte: padrão de resposta FGV. RASCUNHO: revisar e completar os termos marcados com TODO.
+id: "43"
+numero: 43
+numeral: XLIII
+aplicacao: 2025-06-15
+revisao:
+  status: rascunho
+  por: ""
+  em: ""
+  notas: Gerado por scripts/rascunho-exame.ts; termos em content/_transcricao/termos.
+peca:
+  nome: Contrarrazões em Apelação
+  tipo: contrarrazoes-apelacao
+  aliases: []
+  enunciado: |-
+    Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
+
+    Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
+
+    Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
+
+    Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
+
+    As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
+
+    Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
+
+    Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
+
+    Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
+
+    Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
+  gabarito_comentado: |-
+    Considerando as informações expostas, o examinando, na condição de advogado(a) de Aline, deveria apresentar contrarrazões de apelação (ou razões de apelado), com fundamento no Art. 600 do CPP.
+
+    A petição de juntada deveria ser direcionada ao Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, local onde teriam ocorrido os fatos, constando do enunciado que esse seria o juízo competente.
+
+    As razões deveriam ser endereçadas ao Tribunal de Justiça de Campo Belo, no prazo de 3 (três) dias, na forma do Art. 600, § 1º, do CPP.
+
+    Inicialmente, é imperioso observar que o delito de lesão corporal leve descrito no enunciado é de ação penal pública incondicionada, ante a inaplicabilidade da Lei nº 9.099/1995 aos crimes de violência doméstica e familiar contra a mulher, consoante o Art. 41 da Lei nº 11.340/2006 e (ou) o enunciado 542 da Súmula da Jurisprudência do Superior Tribunal de Justiça.
+
+    Ainda em preliminar, deve ser afastada a alegação de cerceamento de defesa, em razão da inadmissibilidade da utilização de circunstâncias ou elementos alheios aos fatos objetos de apuração, cabendo ao Juiz zelar pela integridade física e psicológica da vítima, nos termos do Art. 400-A, inciso I, do CPP.
+
+    Quanto ao mérito, também não merece prosperar o recurso interposto.
+
+    Deve-se concluir que a prova da materialidade delitiva, nos casos de violência doméstica e familiar contra a mulher, pode ser feita mediante exibição de laudos médicos, na forma do Art. 12, § 3º, da Lei nº 11.340/2006, ou do Art. 167 do CPP, não merecendo acolhimento a alegação de ausência de prova de materialidade delitiva.
+
+    Provada a materialidade e a autoria de fato típico e ilícito, em relação à culpabilidade do acusado, deveria ser lembrado que a embriaguez voluntária ou culposa não exclui a imputabilidade penal, na forma do Art. 28, inciso II, do CP.
+
+    Ainda, inviável substituir a pena privativa de liberdade por pena restritiva de direitos, pois o fato foi praticado mediante violência, havendo óbice legal, nos termos do Art. 44, inciso I, do CP.
+
+    Outrossim, é incabível, nos casos de violência doméstica e familiar contra a mulher, a fixação isolada de pena pecuniária, na forma do Art. 17 da Lei nº 11.340/2006.
+
+    Por fim, agiu corretamente o Magistrado ao fixar o valor mínimo de indenização no âmbito do processo penal, conforme determina o Art. 387, inciso IV, do CPP, salientando-se que os valores foram devidamente comprovados e que houve regular contraditório a respeito do tema.
+
+    Diante do exposto, deveria ser formulado pedido de desprovimento do recurso, com a manutenção da sentença condenatória.
+
+    A data a ser indicada é 4 de junho de 2025, quarta-feira, tendo em vista que a contagem do prazo se iniciou na segunda, dia 2 de junho, diante do fim de semana.
+
+    No fechamento, deve o examinando indicar local, data, advogado e nº da OAB.
+  itens:
+    - n: "1"
+      secao: Endereçamento
+      descricao: A petição de juntada deve ser endereçada ao Juizado de Violência Doméstica e Familiar contra a Mulher (0,10).
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ juizado, violencia domestica ] }
+    - n: "2"
+      secao: Endereçamento
+      descricao: "Fundamento legal: Art. 600 do CPP (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, dispositivo: [ "art. 600, CPP" ] }
+    - n: "3"
+      secao: Tempestividade
+      descricao: Prazo de 3 (três) dias (0,10), na forma do Art. 600, §1º, do CPP (0,10).
+      valores: [ 0, 0.1, 0.2 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 3 dias | tres dias | 3 (tres) dias ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 600, § 1º, CPP" ], requer: c1 }
+    - n: "4"
+      secao: Razões de Apelado/Contrarrazões
+      descricao: "Endereçamento: Tribunal de Justiça de Campo Belo (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ tribunal de justica | tj, campo belo ] }
+    - n: "5"
+      secao: Preliminares
+      descricao: A ação penal é pública incondicionada, por se tratar de violência doméstica e familiar contra a mulher (0,45), consoante Súmula 542 do STJ, ou Art. 41 da Lei nº 11.340/2006 ou ADI 4.424 (0,10).
+      valores: [ 0, 0.45, 0.55 ]
+      componentes:
+        - { id: c1, valor: 0.45, termos: [ publica incondicionada, violencia domestica | maria da penha ] }
+        - { id: c2, valor: 0.1, dispositivo: [ Súmula 542 STJ, "art. 41, Lei 11340" ], requer: c1 }
+    - n: "6"
+      secao: Preliminares
+      descricao: Deve ser afastada a alegação de cerceamento de defesa, em razão da inadmissibilidade da utilização de circunstâncias ou elementos alheios aos fatos objeto de apuração (0,55), nos termos do Art. 400, § 1º, ou 400-A, inciso I, ou Art. 212, todos do CPP ou ADPF 1107 (0,10).
+      valores: [ 0, 0.55, 0.65 ]
+      componentes:
+        - { id: c1, valor: 0.55, termos: [ cerceamento, elementos alheios | alheios aos fatos | alheio aos fatos | estranh* aos fatos | circunstancias alheias ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 400, § 1º, CPP", "art. 400-A, I, CPP", "art. 212, CPP" ], requer: c1 }
+    - n: "7"
+      secao: Mérito
+      descricao: Há prova suficiente da materialidade delitiva, diante do laudo médico fornecido pelo hospital onde Aline recebeu atendimento (0,55), nos termos do Art. 12, § 3º, da Lei nº 11.340/2006 (0,10).
+      valores: [ 0, 0.55, 0.65 ]
+      componentes:
+        - { id: c1, valor: 0.55, termos: [ materialidade, laudo ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 12, § 3º, Lei 11340" ], requer: c1 }
+    - n: "8"
+      secao: Mérito
+      descricao: A embriaguez voluntária ou culposa apresentada por Arthur não exclui a imputabilidade penal (0,55), na forma do Art. 28, inciso II, do CP (0,10).
+      valores: [ 0, 0.55, 0.65 ]
+      componentes:
+        - { id: c1, valor: 0.55, termos: [ embriaguez, imputabilidade | imputavel | responsabilidade penal ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 28, II, CP" ], requer: c1 }
+    - n: "9"
+      secao: Mérito
+      descricao: Não estão presentes os requisitos para a substituição da pena privativa de liberdade por restritiva de direitos, por se tratar de crime praticado mediante violência (0,55), nos termos do Art. 44, inciso I, do CP ou súmula 588 do STJ (0,10).
+      valores: [ 0, 0.55, 0.65 ]
+      componentes:
+        - { id: c1, valor: 0.55, termos: [ restritiva de direitos | substitu*, violencia ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 44, I, CP", Súmula 588 STJ ], requer: c1 }
+    - n: "10"
+      secao: Mérito
+      descricao: Não é cabível a aplicação isolada de pena pecuniária nos casos de violência doméstica e familiar contra a mulher (0,35), nos termos do Art. 17 da Lei nº 11.340/2006 (0,10).
+      valores: [ 0, 0.35, 0.45 ]
+      componentes:
+        - { id: c1, valor: 0.35, termos: [ pena pecuniaria | multa, isolad* | isoladamente | exclusiv* ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 17, Lei 11340" ], requer: c1 }
+    - n: "11"
+      secao: Mérito
+      descricao: Correta a sentença ao estipular valor mínimo de indenização, pois houve regular comprovação dos valores, devidamente submetidos ao contraditório acerca do tema (0,35), nos termos do Art. 387, inciso IV, do CPP (0,10).
+      valores: [ 0, 0.35, 0.45 ]
+      componentes:
+        - { id: c1, valor: 0.35, termos: [ valor minimo | indenizacao | indenizar, contradit* | regular comprovac* ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 387, IV, CPP" ], requer: c1 }
+    - n: "12"
+      secao: Pedidos
+      descricao: Desprovimento do recurso, com a manutenção da sentença condenatória (0,25).
+      valores: [ 0, 0.25 ]
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ desprov* | improv* | nao provim* | manutencao | mantid* | manter ] }
+    - n: "13"
+      secao: Pedidos
+      descricao: "Data: 4 de junho de 2025 (0,10)."
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ 4 de junho | 04 de junho | 04/06/2025 | 4/6/2025 ] }
+    - n: "14"
+      secao: Fechamento
+      descricao: Local, data, advogado e OAB (0,10).
+      valores: [ 0, 0.1 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ oab ] }
+questoes:
+  - n: 1
+    enunciado: |-
+      O casamento de Sílvio estava desgastado e ele desejava que Sônia, sua esposa, morresse. Assim, ele a convenceu a repousar embaixo de um coqueiro, na esperança de que um coco atingisse a sua cabeça. De fato, um coco caiu do coqueiro e atingiu a cabeça de Sônia, que veio a falecer.
+
+      Comprovou-se nos autos que Sílvio possuía o desejo de ver Sônia morta e que os acidentes fatais com coco são raríssimos e absolutamente improváveis. Sílvio foi denunciado pelo feminicídio de Sônia, mas a denúncia foi rejeitada.
+
+      Assim, o Ministério Público interpôs o competente recurso, sendo nomeado defensor dativo em favor de Sílvio, que até o momento, não foi citado nem intimado. O Tribunal deu provimento ao recurso e recebeu a inicial acusatória.
+
+      Como advogado(a) de Sílvio, responda às questões a seguir.
+
+      **A) A fim de afastar a imputação de feminicídio, qual a tese de Direito Penal a ser sustentada? Justifique. (Valor: 0,60)**
+
+      **B) Independentemente do instrumento processual usado para impugnar o recebimento da denúncia, a fim de arguir a nulidade da decisão do Tribunal, indique a tese de Direito Processual Penal que deve ser apresentada. Fundamente. (Valor: 0,65)**
+
+      Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    gabarito_comentado: |-
+      A questão exige do examinando conhecimentos sobre conduta, nexo causal e nulidade.
+
+      A) Atipicidade do fato, pois o resultado não decorre de qualquer conduta de Sílvio ou porque Não há nexo de causalidade entre a conduta de Sílvio e o resultado, nos termos do Art. 13 do CP.
+
+      B) Constitui nulidade a falta de intimação do denunciado para a constituição de defensor e o oferecimento de contrarrazões ao recurso interposto contra a decisão de rejeição da denúncia, não a suprindo a nomeação de defensor dativo, nos termos do enunciado 707 da Súmula da Jurisprudência do Supremo Tribunal Federal.
+    itens:
+      - n: A
+        secao: PONTUAÇÃO
+        descricao: Atipicidade do fato, pois o resultado não decorre de qualquer conduta de Sílvio ou porque não há nexo de causalidade entre a conduta de Sílvio e o resultado (0,50), nos termos do Art. 13 do CP (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ atipic*, nexo ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 13, CP" ], requer: c1 }
+      - n: B
+        secao: PONTUAÇÃO
+        descricao: Constitui nulidade a falta de intimação do denunciado para a constituição de defensor e o oferecimento de contrarrazões ao recurso interposto contra a decisão de rejeição da denúncia, não a suprindo a nomeação de defensor dativo (0,55), nos termos do enunciado 707 da Súmula da Jurisprudência do Supremo Tribunal Federal ou Art. 263, caput, do CPP. (0,10).
+        valores: [ 0, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.55, termos: [ nulidade | nulo | anulad*, intimac* | intimad*, contrarrazoes | defensor ] }
+          - { id: c2, valor: 0.1, dispositivo: [ Súmula 707 STF, "art. 263, CPP" ], requer: c1 }
+  - n: 2
+    enunciado: |-
+      André está cumprindo pena em regime semiaberto na Colônia Penal do Estado Alfa e foi acusado de portar e consumir bebida alcóolica dentro da unidade prisional. O regulamento carcerário local, aprovado por Decreto estadual, estabelece que a posse e o consumo de bebida alcóolica dentro do sistema penitenciário constitui falta grave.
+
+      Após tramitação de regular processo administrativo, ouvido o acusado, na presença de defesa técnica, e comprovados os fatos, o Diretor da unidade prisional aplicou a André as sanções pela prática da falta grave, e determinou a regressão ao regime fechado.
+
+      Como advogado(a) de André, responda às questões a seguir.
+
+      **A) Qual a tese de Direito Penal a ser sustentada pela defesa de André, a fim de afastar a natureza grave da falta imputada? Fundamente, indicando o princípio constitucional aplicável. (Valor: 0,65)**
+
+      **B) Ainda que eventualmente se considerasse ocorrida a prática de falta grave, qual a tese a ser defendida pela defesa a fim de sustentar a nulidade da determinação de regressão ao regime imposta pelo Diretor da unidade prisional? Fundamente. (Valor: 0,60)**
+
+      Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    gabarito_comentado: |-
+      A questão exige do examinando conhecimentos sobre execução penal.
+
+      A) Houve a violação ao princípio da legalidade penal, insculpido no Art. 5º, inciso XXXIX, da CRFB/88, ou no Art. 1º do CP, pois apenas por Lei Federal pode ser criada falta disciplinar de natureza grave, conforme o Art. 22, inciso I, da CRFB/88 ou Art. 49, da LEP.
+
+      B) Compete somente ao Juiz da Execução Penal decidir sobre a regressão de regime, nos termos do Art. 48, parágrafo único, ou Art. 54, ou 66, inciso III, alínea b, da Lei nº 7.210/1984.
+    itens:
+      - n: A
+        secao: PONTUAÇÃO
+        descricao: Violação ao princípio da legalidade penal (0,40), pois apenas por Lei Federal pode ser criada falta grave (0,15), nos termos do Art. 1º do CP, ou do Art. 5º, inciso XXXIX, ou do Art. 22, inciso I, ambos da CRFB/88 ou Art. 49, da LEP (0,10).
+        valores: [ 0, 0.15, 0.25, 0.4, 0.5, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.4, termos: [ legalidade | reserva legal ] }
+          - { id: c2, valor: 0.15, termos: [ falta grave, lei federal | apenas por lei | somente por lei | reserva legal ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 1, CP", "art. 5, XXXIX, CRFB", "art. 22, I, CRFB", "art. 49, LEP" ], requer: c2 }
+      - n: B
+        secao: PONTUAÇÃO
+        descricao: Compete somente ao Juiz da Execução Penal decidir sobre a regressão de regime (0,50), nos termos do Art. 48, parágrafo único, ou Art. 54, ou 66, inciso III, alínea b, da Lei nº 7.210/1984 (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ juiz da execucao | juizo da execucao | juiz da execucao penal | juizo da execucao penal, regress* ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 48, parágrafo único, LEP", "art. 54, LEP" ], requer: c1 }
+  - n: 3
+    enunciado: |-
+      Lucas, pai de Enzo, de 1 (um) ano de idade, esqueceu o filho dormindo no carro, deixando de entregá-lo na creche, e foi para o trabalho. Neste dia, a temperatura da cidade estava muito alta, e, como Enzo foi deixado no carro estacionado sob forte sol, havia sério risco de falecer por desidratação em pouco tempo.
+
+      Entretanto, por sorte, Maria passava pelo local e resgatou o infante, sem lesão, após quebrar o vidro do veículo.
+
+      Em razão de tais fatos, Lucas ofereceu queixa-crime em face de Maria pelo delito de dano (Art. 163 do CP), perante o Juízo ordinariamente competente. Rejeitada a queixa-crime, o querelante interpôs recurso em sentido estrito, na forma do Art. 581, inciso I, do CPP.
+
+      Como advogado(a) de Maria, responda às questões a seguir.
+
+      **A) Qual a tese de Direito Penal você deve apresentar em favor de Maria? Justifique. (Valor: 0,65)**
+
+      **B) Em face do recurso interposto pelo querelante, qual a tese preliminar de Direito Processual Penal você deve adotar? Fundamente. (Valor: 0,60)**
+
+      Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    gabarito_comentado: |-
+      A questão exige do examinando conhecimentos sobre excludente de ilicitude e Juizado Especial Criminal.
+
+      A) Excludente de ilicitude, em razão do estado de necessidade, na forma do Art. 23, inciso I, ou do Art. 24, ambos do CP.
+
+      B) O recurso interposto é inadmissível, configurando erro grosseiro, pois não cabe recurso em sentido estrito no rito dos Juizados Especiais Criminais, nos termos do Art. 82 da Lei nº 9.099/1995.
+    itens:
+      - n: A
+        secao: PONTUAÇÃO
+        descricao: Excludente de ilicitude (0,15), em razão do estado de necessidade (0,40), na forma forma do Art. 23, inciso I, ou do Art. 24, ambos do CP (0,10).
+        valores: [ 0, 0.15, 0.25, 0.4, 0.5, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.15, termos: [ excludente | exclusao da ilicitude | exclui a ilicitude ] }
+          - { id: c2, valor: 0.4, termos: [ estado de necessidade ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 23, I, CP", "art. 24, CP" ], requer: c2 }
+      - n: B
+        secao: PONTUAÇÃO
+        descricao: O recurso interposto é inadmissível, configurando erro grosseiro, pois não cabe recurso em sentido estrito no rito dos Juizados Especiais Criminais (0,50), na forma do Art. 82 da Lei nº 9.099/1995 (0,10).
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ nao cabe | inadmiss* | nao e cabivel | erro grosseiro, juizado* ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 82, Lei 9" ], requer: c1 }
+  - n: 4
+    enunciado: |-
+      Hugo, José e Luiz, servidores públicos, foram denunciados por cobrarem vantagens indevidas a fim de praticarem ou deixarem de praticar atos de ofício, constituindo, assim, entre os três, uma organização criminosa. Foi demonstrado, objetivamente, haver entre os denunciados uma organização estruturalmente ordenada e com divisão de tarefas com o objetivo de praticar crimes de corrupção passiva (Art. 317 do CP).
+
+      Com base em tais fatos, foram dados como incursos nas penas do Art. 317 do CP e do Art. 2º da Lei nº 12.850/2013, em concurso material. A prova das acusações foi respaldada, exclusivamente, na palavra de Hugo, que celebrou acordo de colaboração premiada com o Ministério Público, devidamente homologado pela autoridade judiciária competente.
+
+      Na qualidade de advogado(a) constituído pelos acusados José e Luiz, responda às questões a seguir.
+
+      **A) Qual é a tese de Direito Processual Penal apta a sustentar a rejeição da denúncia em relação a todos os delitos por ausência de justa causa? Fundamente. (Valor: 0,65)**
+
+      **B) Em relação ao delito de organização criminosa, qual é a tese de Direito Penal apta a sustentar a absolvição sumária? Fundamente. (Valor: 0,60)**
+
+      Obs.: o(a) examinando(a) deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    gabarito_comentado: |-
+      A questão exige do examinando conhecimentos sobre a Lei de Organização Criminosa.
+
+      A) Quanto à tese processual, deve ser lembrado que a palavra do colaborador, sem provas de corroboração, é insuficiente para respaldar o recebimento da denúncia, na forma do Art. 4º, § 16, inciso II, da Lei nº 12.850/2013.
+
+      B) Quanto à tese de direito material, deve ser sustentada a atipicidade da conduta, ante a inexistência de quatro pessoas na composição da organização criminosa, conforme previsto pelo Art. 1º, § 1º, da Lei nº 12.850/2013.
+    itens:
+      - n: A
+        secao: PONTUAÇÃO
+        descricao: A palavra do colaborador, sem provas de corroboração, é insuficiente para respaldar o recebimento da denúncia (0,55), na forma do Art. 4º, § 16, inciso II, da Lei nº 12.850/2013 (0,10).
+        valores: [ 0, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.55, termos: [ palavra do colaborador | palavra do delator | depoimento do colaborador | delacao, corrobor* ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 4, § 16º, II, Lei 12850" ], requer: c1 }
+      - n: B
+        secao: PONTUAÇÃO
+        descricao: Atipicidade da conduta (0,35), ante a inexistência de quatro pessoas na composição da organização criminosa (0,15), conforme exigido pelo Art. 1º, § 1º, da Lei nº 12.850/2013 (0,10).
+        valores: [ 0, 0.15, 0.25, 0.35, 0.45, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.35, termos: [ atipic* ] }
+          - { id: c2, valor: 0.15, termos: [ quatro pessoas | 4 pessoas | quatro integrantes | quatro ou mais | pelo menos quatro | ao menos quatro ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 1, § 1º, Lei 12850" ], requer: c2 }

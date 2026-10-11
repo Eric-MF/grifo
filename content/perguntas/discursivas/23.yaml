@@ -1,0 +1,704 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "23"
+perguntas:
+  - id: 23-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento: Vara Criminal da Comarca de Manaus/AM."
+    opcoes:
+      correta: "Endereçamento: Vara Criminal da Comarca de Manaus/AM."
+      erradas:
+        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
+        - "Endereçamento das razões: Tribunal de Justiça do Estado ___."
+        - "Endereçamento: Juízo da Vara de Execuções Penais de Belo Horizonte/MG"
+        - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro."
+        - "Endereçamento: Tribunal Regional Federal da 10ª Região."
+    revisao: &a1
+      status: rascunho
+  - id: 23-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: preliminar
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: Preliminarmente, reconhecimento da nulidade dos atos da instrução OU requerimento de aplicação, por analogia, do art. 28 do CPP, diante do não oferecimento de proposta de suspensão condicional do processo, pois preenchidos os requisitos do Art. 89 da Lei 9099/95 OU pois irrelevante o fato do delito imputado não ser infração de menor potencial ofensivo.
+    opcoes:
+      correta: Preliminarmente, reconhecimento da nulidade dos atos da instrução OU requerimento de aplicação, por analogia, do art. 28 do CPP, diante do não oferecimento de proposta de suspensão condicional do processo, pois preenchidos os requisitos do Art. 89 da Lei 9099/95 OU pois irrelevante o fato do delito imputado não ser infração de menor potencial ofensivo.
+      erradas:
+        - "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
+        - Nulidade decorrente do não oferecimento de proposta de suspensão condicional do processo, tendo em vista que o crime não foi praticado no contexto da violência doméstica e familiar contra mulher ou tendo em vista não ser aplicável a previsão do Art. 41 da Lei nº 11.340 pelo fato de a vítima ser homem.
+        - "Dispositivo legal: art. 2º, III, Lei 9.296/96 OU art. 2º, II, Lei 9.296/96."
+        - Preliminarmente, nulidade da decisão de pronúncia:.
+        - Nulidade em razão da ausência de exame de corpo de delito, direto ou indireto, nos termos do Art. 158 do CPP.
+    revisao: *a1
+  - id: 23-peca-4a
+    categoria: peca-detalhe
+    parte: peca
+    item: 4A
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: No mérito, absolvição de Roberta.
+    opcoes:
+      correta: No mérito, absolvição de Roberta.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Reconhecimento da atenuante prevista no Art. 65, inciso III, alínea b, do CP, pois Luiz procurou reduzir as consequências de seus atos levando Igor para o hospital e pagando por seu tratamento
+        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
+        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
+        - Redução do quantum de aumento realizado na terceira fase da dosimetria do crime de roubo, já que os fatos foram praticados antes da entrada em vigor da lei que aumentou o percentual de aumento em razão do emprego de arma de fogo OU em razão do princípio da irretroatividade da lei penal prejudicial ao réu, conforme Art. 5º, inciso XL, da CRFB.
+    revisao: *a1
+  - id: 23-peca-4b
+    categoria: peca-detalhe
+    parte: peca
+    item: 4B
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento da ocorrência de erro de tipo, previsto no artigo 20 do Código Penal.
+    opcoes:
+      correta: Reconhecimento da ocorrência de erro de tipo, previsto no artigo 20 do Código Penal.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Afastamento da agravante da reincidência OU afastamento da agravante do art. 61, I, do CP, tendo em vista que a condenação anterior se refere à contravenção ou tendo em vista que não ostenta condenação anterior definitiva pela prática de crime
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Patrick utilizou dos meios necessários para repelir injusta agressão atual.
+        - No mérito, pedido de absolvição sumária, diante da manifesta causa de isenção de pena ou excludente de culpabilidade, nos termos do Art. 415, inciso IV, do CPP
+    revisao: *a1
+  - id: 23-peca-4c
+    categoria: peca-detalhe
+    parte: peca
+    item: 4C
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
+    opcoes:
+      correta: O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Aplicação da pena base no mínimo legal, já que circunstâncias do art. 59 do CP são favoráveis
+        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
+        - Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
+        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
+    revisao: *a1
+  - id: 23-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
+    opcoes:
+      correta: Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Atipicidade da conduta.
+        - Descrição do delito de injúria e sua classificação típica (Art. 140 do CP) Item 4.2- Descrição do delito de difamação e sua classificação típica (Art. 139 do CP)
+        - porque ocorreu cerceamento de defesa OU porque houve violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB.
+        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
+    revisao: *a1
+  - id: 23-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
+    opcoes:
+      correta: Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Afastamento da agravante da reincidência OU afastamento da agravante do art. 61, I, do CP, tendo em vista que a condenação anterior se refere à contravenção ou tendo em vista que não ostenta condenação anterior definitiva pela prática de crime
+        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
+        - Patrick agiu amparado pela legítima defesa, prevista no Art. 25 do CP OU no Art. 23, II, do CP.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: *a1
+  - id: 23-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
+    opcoes:
+      correta: Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Reconhecimento da atenuante prevista no Art. 65, inciso I, do CP, tendo em vista que o réu era maior de 70 anos na data da sentença
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Patrick utilizou dos meios necessários para repelir injusta agressão atual.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: *a1
+  - id: 23-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+    opcoes:
+      correta: Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Afastamento da agravante da reincidência OU afastamento da agravante do art. 61, I, do CP, tendo em vista que a condenação anterior se refere à contravenção ou tendo em vista que não ostenta condenação anterior definitiva pela prática de crime
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Patrick utilizou dos meios necessários para repelir injusta agressão atual.
+        - No mérito, pedido de absolvição sumária, diante da manifesta causa de isenção de pena ou excludente de culpabilidade, nos termos do Art. 415, inciso IV, do CPP
+    revisao: *a1
+  - id: 23-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Aplicação do regime inicial aberto, nos termos do Art. 33, §2º, alínea c, do Código Penal.
+    opcoes:
+      correta: Aplicação do regime inicial aberto, nos termos do Art. 33, §2º, alínea c, do Código Penal.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Afastamento da agravante da reincidência OU afastamento da agravante do art. 61, I, do CP, tendo em vista que a condenação anterior se refere à contravenção ou tendo em vista que não ostenta condenação anterior definitiva pela prática de crime
+        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
+        - Patrick agiu amparado pela legítima defesa, prevista no Art. 25 do CP OU no Art. 23, II, do CP.
+        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
+    revisao: *a1
+  - id: 23-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Substituição da pena privativa de liberdade por restritiva de direitos, já que preenchidos os requisitos do Art. 44 do Código Penal.
+    opcoes:
+      correta: Substituição da pena privativa de liberdade por restritiva de direitos, já que preenchidos os requisitos do Art. 44 do Código Penal.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Reconhecimento da atenuante prevista no Art. 65, inciso I, do CP, tendo em vista que o réu era maior de 70 anos na data da sentença
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
+        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
+    revisao: *a1
+  - id: 23-peca-11
+    categoria: peca-detalhe
+    parte: peca
+    item: "11"
+    secao: pedido
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: "Pedidos: Nulidade dos atos da instrução em razão do não oferecimento de proposta de suspensão condicional do processo OU encaminhamento dos autos ao Ministério Público para oferecimento de proposta de suspensão condicional do processo."
+    opcoes:
+      correta: "Pedidos: Nulidade dos atos da instrução em razão do não oferecimento de proposta de suspensão condicional do processo OU encaminhamento dos autos ao Ministério Público para oferecimento de proposta de suspensão condicional do processo."
+      erradas:
+        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
+        - Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
+        - "Pedidos, com fundamento no art. 626 do CPP: desclassificação para furto simples; diminuição da pena; fixação do regime semiaberto."
+        - "Pedidos: Conhecimento e provimento do recurso OU concessão da progressão de regime"
+        - Pedido de nulidade do recebimento da denúncia ou rejeição da denúncia por ausência de justa causa, nos termos do Art. 395, inciso III, do CPP ou Art. 564, inciso III, alínea b, do CPP.
+    revisao: *a1
+  - id: 23-peca-11-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "11.1"
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Absolvição de Roberta, em razão da atipicidade da conduta.
+    opcoes:
+      correta: Absolvição de Roberta, em razão da atipicidade da conduta.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Afastamento da agravante da reincidência OU afastamento da agravante do art. 61, I, do CP, tendo em vista que a condenação anterior se refere à contravenção ou tendo em vista que não ostenta condenação anterior definitiva pela prática de crime
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Patrick utilizou dos meios necessários para repelir injusta agressão atual.
+        - No mérito, pedido de absolvição sumária, diante da manifesta causa de isenção de pena ou excludente de culpabilidade, nos termos do Art. 415, inciso IV, do CPP
+    revisao: *a1
+  - id: 23-peca-11-2
+    categoria: peca-detalhe
+    parte: peca
+    item: "11.2"
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Aplicação da pena no mínimo legal OU reconhecimento das atenuantes.
+    opcoes:
+      correta: Aplicação da pena no mínimo legal OU reconhecimento das atenuantes.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Fixação do regime aberto para início do cumprimento da pena, considerando a pena a ser aplicada ou considerando que o delito é punido apenas com pena de detenção
+        - Existência de Procuração com poderes especiais de acordo com o artigo 44 do CPP em anexo ou menção acerca de sua existência no corpo da qualificação.
+        - A conduta de Patrick visava resguardar direito de terceiro/sua sobrinha.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: *a1
+  - id: 23-peca-11-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "11.3"
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento do arrependimento posterior OU aplicação da causa de diminuição do Art. 16 do CP.
+    opcoes:
+      correta: Reconhecimento do arrependimento posterior OU aplicação da causa de diminuição do Art. 16 do CP.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Afastamento da agravante da reincidência OU afastamento da agravante do art. 61, I, do CP, tendo em vista que a condenação anterior se refere à contravenção ou tendo em vista que não ostenta condenação anterior definitiva pela prática de crime
+        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
+        - Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
+        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
+    revisao: *a1
+  - id: 23-peca-11-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "11.4"
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Substituição da pena privativa de liberdade por restritiva de direitos
+    opcoes:
+      correta: Substituição da pena privativa de liberdade por restritiva de direitos
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Reconhecimento da atenuante prevista no Art. 65, inciso III, alínea b, do CP, pois Luiz procurou reduzir as consequências de seus atos levando Igor para o hospital e pagando por seu tratamento
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
+        - Reconhecimento da atenuante da menoridade relativa, já que o réu era menor de 21 anos na data dos fatos, nos termos do Art. 65, inciso I, do CP.
+    revisao: *a1
+  - id: 23-peca-11-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "11.5"
+    secao: merito
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Aplicação de regime inicial aberto.
+    opcoes:
+      correta: Aplicação de regime inicial aberto.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Reconhecimento da atenuante prevista no Art. 65, inciso III, alínea b, do CP, pois Luiz procurou reduzir as consequências de seus atos levando Igor para o hospital e pagando por seu tratamento
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
+        - Redução do quantum de aumento realizado na terceira fase da dosimetria do crime de roubo, já que os fatos foram praticados antes da entrada em vigor da lei que aumentou o percentual de aumento em razão do emprego de arma de fogo OU em razão do princípio da irretroatividade da lei penal prejudicial ao réu, conforme Art. 5º, inciso XL, da CRFB.
+    revisao: *a1
+  - id: 23-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      José Barbosa, nascido em 11/03/1998, caminhava para casa após sair da faculdade, às 11h da manhã, no dia 07/03/2016, quando se deparou com Daniel, ex-namorado de sua atual companheira, conversando com esta. Em razão de ciúmes, retirou a faca que trazia na mochila e aplicou numerosas facadas no peito de Daniel, com a intenção de matá-lo. Daniel recebeu pronto atendimento médico, foi encaminhado para um hospital de Niterói, mas faleceu 05 dias após os golpes de faca.
+
+      Já no dia 08/03/2016, policiais militares, informados sobre o fato ocorrido no dia anterior, comparecem à residência de José Barbosa, já que um dos agentes da lei era seu vizinho. Apesar de não ter ninguém em casa, a janela estava aberta, e os policiais puderam ver seu interior, verificando que havia uma faca suja de sangue escondida junto ao sofá. Diante disso, para evitar que José Barbosa desaparecesse com a arma utilizada, ingressaram no imóvel e apreenderam a arma branca, que foi devidamente apresentada pela autoridade policial.
+
+      Com base na prova produzida a partir da apreensão da faca, o Ministério Público oferece denúncia em face de José Barbosa, imputando-lhe a prática do crime de homicídio consumado.
+
+      Considerando a situação narrada, na condição de advogado(a) de José Barbosa, responda aos itens a seguir.
+    comando: Qual argumento a ser apresentado pela defesa técnica do denunciado para combater a prova decorrente da apreensão da faca? Justifique.
+    gabarito: A defesa deveria alegar que a prova obtida a partir da apreensão da faca é ilícita, não podendo ser valorada no momento da sentença. Estabelece o Art. 5º, inciso XI, da CRFB/88 que a casa é asilo inviolável, não podendo nela ninguém ingressar sem consentimento do morador. A própria Constituição, todavia, traz exceções a esta regra, como na hipótese de flagrante delito ou mediante ordem judicial, durante o dia. Não havia, no caso apresentado, situação de flagrante delito, já que a simples posse de faca não configura crime e, em relação ao crime/ato infracional praticado no dia anterior, não havia situação de flagrância, pois ausentes os requisitos do Art. 302 do CPP. Ademais, não houve autorização do morador e nem existia ordem judicial de busca e apreensão, já que os policiais decidiram ingressar no imóvel porque viram a arma suja de sangue através da janela aberta.
+    opcoes:
+      correta: O meio de obtenção da prova quando da apreensão da faca foi ilícito, tendo em vista que houve ingresso na residência de José Barbosa sem autorização do morador, flagrante delito ou ordem judicial, nos termos do art. 5º, XI, CRFB OU 157 do CPP.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 23-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      José Barbosa, nascido em 11/03/1998, caminhava para casa após sair da faculdade, às 11h da manhã, no dia 07/03/2016, quando se deparou com Daniel, ex-namorado de sua atual companheira, conversando com esta. Em razão de ciúmes, retirou a faca que trazia na mochila e aplicou numerosas facadas no peito de Daniel, com a intenção de matá-lo. Daniel recebeu pronto atendimento médico, foi encaminhado para um hospital de Niterói, mas faleceu 05 dias após os golpes de faca.
+
+      Já no dia 08/03/2016, policiais militares, informados sobre o fato ocorrido no dia anterior, comparecem à residência de José Barbosa, já que um dos agentes da lei era seu vizinho. Apesar de não ter ninguém em casa, a janela estava aberta, e os policiais puderam ver seu interior, verificando que havia uma faca suja de sangue escondida junto ao sofá. Diante disso, para evitar que José Barbosa desaparecesse com a arma utilizada, ingressaram no imóvel e apreenderam a arma branca, que foi devidamente apresentada pela autoridade policial.
+
+      Com base na prova produzida a partir da apreensão da faca, o Ministério Público oferece denúncia em face de José Barbosa, imputando-lhe a prática do crime de homicídio consumado.
+
+      Considerando a situação narrada, na condição de advogado(a) de José Barbosa, responda aos itens a seguir.
+    comando: Existe argumento de direito material a ser apresentado em favor de José Barbosa para evitar o prosseguimento da ação penal? Justifique.
+    gabarito: Sim, existe, tendo em vista que José Barbosa não poderia ser denunciado pela prática de crime de homicídio qualificado, já que era inimputável na data dos fatos. O Código Penal, para definir o momento do crime, adota a Teoria da Atividade, prevendo o Art. 4º que se considerado praticado o crime no momento da ação ou omissão, ainda que em outro seja produzido o resultado. Dessa forma, o crime foi praticado no dia 07.03.2016, quando José Barbosa tinha 17 anos. Estabelece o Art. 27 do CP que será inimputável o menor de 18 anos. O fato de a consumação do delito só ter ocorrido após a maioridade penal de José Barbosa é irrelevante para o caso concreto, já que outro foi o momento da ação.
+    opcoes:
+      correta: Não poderia José Barbosa ser processado criminalmente pela prática do crime de homicídio, tendo em vista que era inimputável na data dos golpes desferidos OU tendo em vista que praticou ato infracional análogo ao crime de homicídio, pois o Código Penal adota a Teoria da Atividade para definir o momento do crime.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 23-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Gabriel, condenado pela prática do crime de porte de arma de fogo de uso restrito, obteve livramento condicional quando restava 01 ano e 06 meses de pena privativa de liberdade a ser cumprida.
+
+      No curso do livramento condicional, após 06 meses da obtenção do benefício, vem Gabriel a ser novamente condenado, definitivamente, pela prática de crime de roubo, que havia sido praticado antes mesmo do delito de porte de arma de fogo, mas cuja instrução foi prolongada.
+
+      Diante da nova condenação, o magistrado competente revogou o livramento condicional concedido e determinou que Gabriel deve cumprir aquele 01 ano e 06 meses de pena restante quando da obtenção do livramento em relação ao crime de porte, além da nova sanção imposta em razão do roubo.
+
+      Considerando a situação narrada, na condição de advogado(a) de Gabriel, responda aos itens a seguir.
+    comando: Qual o recurso cabível da decisão do magistrado que revogou o benefício do livramento condicional e determinou o cumprimento da pena restante quando da obtenção do benefício? É cabível juízo de retratação em tal modalidade recursal? Justifique.
+    gabarito: |-
+      Narra o enunciado que Gabriel cumpria pena privativa de liberdade pela prática de crime de porte de arma de fogo, quando obteve livramento condicional. No curso do livramento condicional, todavia, vem a ser condenado pela prática de crime de roubo, tendo o magistrado da execução decidido pela revogação do benefício e também por desconsiderar o período de pena cumprido em livramento. Da decisão proferida pelo juízo da execução cabe Agravo em Execução, na forma do Art. 197 da Lei de Execuções Penais, com prazo de interposição de 05 dias. Não há previsão expressa em lei sobre o procedimento a ser adotado no recurso de agravo, de modo que pacificou a doutrina e a jurisprudência que o processamento a ser adotado é semelhante ao do recurso em sentido estrito.
+
+      Diante disso, cabível o juízo de retratação pelo magistrado competente para execução.
+    opcoes:
+      correta: O recurso cabível da decisão é de Agravo de Execução, na forma do Art. 197 da LEP, cabendo ao magistrado exercer juízo de retratação em razão da aplicação, no recurso de agravo, do rito previsto para o recurso em sentido estrito.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento é que houve concurso formal de crimes, tendo em vista que, com uma só ação, foram praticados dois delitos, nos termos do Art. 70 do CP.
+        - O argumento é de que a prova é ilícita, tendo em vista que não poderia ter havido transcrição da conversa travada entre Flávio e seu advogado, que tem direito ao sigilo ou inviolabilidade das comunicações, não sendo o advogado coautor de crimes e nem figurando como investigado, nos termos do Art. 7º, inciso II ou III, da Lei nº 8.906/94 ou Art. 157 caput do CPP ou Art. 5º, inciso LVI da CRFB/88.
+    revisao: *a1
+  - id: 23-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Gabriel, condenado pela prática do crime de porte de arma de fogo de uso restrito, obteve livramento condicional quando restava 01 ano e 06 meses de pena privativa de liberdade a ser cumprida.
+
+      No curso do livramento condicional, após 06 meses da obtenção do benefício, vem Gabriel a ser novamente condenado, definitivamente, pela prática de crime de roubo, que havia sido praticado antes mesmo do delito de porte de arma de fogo, mas cuja instrução foi prolongada.
+
+      Diante da nova condenação, o magistrado competente revogou o livramento condicional concedido e determinou que Gabriel deve cumprir aquele 01 ano e 06 meses de pena restante quando da obtenção do livramento em relação ao crime de porte, além da nova sanção imposta em razão do roubo.
+
+      Considerando a situação narrada, na condição de advogado(a) de Gabriel, responda aos itens a seguir.
+    comando: Qual argumento deverá ser apresentado pela defesa de Gabriel para combater a decisão do magistrado? Justifique.
+    gabarito: O argumento a ser apresentado pela defesa de Gabriel é que não poderiam ter sido desconsiderados os dias de livramento condicional como pena cumprida. De fato, Gabriel foi condenado, definitivamente, pela prática de crime no curso do livramento condicional, logo cabível a revogação do benefício. Trata-se, inclusive, de hipótese de revogação obrigatória. Ocorre que a condenação que justificou a revogação foi em razão da prática de delito anterior à obtenção do benefício, e não de novo crime praticado no curso do livramento. Dessa forma, as condições do livramento condicional vinham sendo regularmente cumpridas pelo apenado, de modo que os dias em que ficou em livramento deverão ser computados como pena cumprida e não desconsiderados. Assim, errou o magistrado ao afirmar que deveria Gabriel cumprir 01 ano e 06 meses de pena, desconsiderando os 06 meses cumpridos de livramento. Nos termos do aqui exposto estão as previsões dos Art. 86 e do Art. 88, ambos do Código Penal, além do Art. 141 da Lei 7.210/84.
+    opcoes:
+      correta: O argumento para combater a decisão é o de que o período em livramento condicional deveria ser considerado como pena cumprida, tendo em vista que o delito que justificou a revogação é anterior ao benefício, nos termos do Art. 88 do CP OU Art. 141 da Lei nº 7.210/84.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 23-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: |-
+      No dia 29 de dezembro de 2011, Cláudio, 30 anos, profissional do ramo de informática, invadiu dispositivo informático alheio, mediante violação indevida de mecanismo de segurança, com o fim de obter informações pessoais de famoso ator da televisão brasileira, sem autorização do titular do dispositivo.
+
+      Após longa investigação e representação da vítima, o fato e a autoria de Cláudio foram identificados no ano de 2014, vindo o autor a ser indiciado e, posteriormente, oferecida pelo Ministério Público proposta de transação penal em razão da prática do crime do Art. 154-A do Código Penal, dispositivo este incluído pela Lei nº 12737/12.
+
+      Cláudio aceitou a proposta de transação penal, mas, em julho de 2015, interrompeu o cumprimento das condições impostas.
+
+      Temeroso em razão de sua conduta, Cláudio procura seu advogado, informando que não justificou o descumprimento e, diante disso, o Ministério Público ofereceu denúncia por aquele delito, tendo o juiz competente recebido a inicial acusatória em agosto de 2015.
+
+      Considerando apenas as informações narradas, esclareça, na condição de advogado(a) prestando consultoria jurídica para Cláudio, os seguintes questionamentos.
+    comando: De acordo com a jurisprudência do Supremo Tribunal Federal, é possível a revogação do benefício da transação penal pelo descumprimento das condições impostas, com posterior oferecimento de denúncia? Justifique.
+    gabarito: Sim, de acordo com a jurisprudência do Supremo Tribunal Federal, é possível a revogação do benefício da transação penal, com posterior oferecimento de denúncia pelo Ministério Público, caso as condições impostas venham a ser descumpridas, nos termos do Enunciado 35 da Súmula Vinculante do STF. Durante muito tempo se controverteu sobre as consequências do descumprimento das condições impostas quando da transação penal, alguns defendendo que apenas seria cabível a execução das mesmas, pois, uma vez homologada, haveria imediata extinção da punibilidade, enquanto outros admitiam a revogação do benefício, que estaria condicionado ao cumprimento das imposições. O STF, diante da controvérsia, pacificou o entendimento, por meio de enunciado vinculante, entendendo que a decisão homologatória de transação penal, nos termos do Art. 76 da Lei nº 9.099/95, não faz coisa julgada material, de modo que, descumpridas suas cláusulas, a situação anterior deve ser retomada, inclusive possibilitando ao Ministério Público o oferecimento de denúncia.
+    opcoes:
+      correta: Sim, é possível a revogação do benefício, nos termos da Súmula Vinculante 35 do STF OU Sim, pois a decisão que homologa transação penal não faz coisa julgada material
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 23-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      No dia 29 de dezembro de 2011, Cláudio, 30 anos, profissional do ramo de informática, invadiu dispositivo informático alheio, mediante violação indevida de mecanismo de segurança, com o fim de obter informações pessoais de famoso ator da televisão brasileira, sem autorização do titular do dispositivo.
+
+      Após longa investigação e representação da vítima, o fato e a autoria de Cláudio foram identificados no ano de 2014, vindo o autor a ser indiciado e, posteriormente, oferecida pelo Ministério Público proposta de transação penal em razão da prática do crime do Art. 154-A do Código Penal, dispositivo este incluído pela Lei nº 12737/12.
+
+      Cláudio aceitou a proposta de transação penal, mas, em julho de 2015, interrompeu o cumprimento das condições impostas.
+
+      Temeroso em razão de sua conduta, Cláudio procura seu advogado, informando que não justificou o descumprimento e, diante disso, o Ministério Público ofereceu denúncia por aquele delito, tendo o juiz competente recebido a inicial acusatória em agosto de 2015.
+
+      Considerando apenas as informações narradas, esclareça, na condição de advogado(a) prestando consultoria jurídica para Cláudio, os seguintes questionamentos.
+    comando: Os fatos praticados por Cláudio, de fato, permitem sua responsabilização penal pelo crime do Art. 154-A do Código Penal? Justifique.
+    gabarito: Embora, literalmente, os fatos praticados por Cláudio se adequem à figura típica descrita no Art. 154-A do Código Penal, não é possível a responsabilização penal do autor pelo crime em questão, tendo em vista que os fatos ocorreram antes da entrada em vigor da Lei nº 12.737/12, de modo que não pode uma lei mais grave ao acusado retroagir para prejudicá-lo. O princípio da legalidade impõe que não é possível a punição de qualquer pessoa por fato que a lei não define como crime no momento de sua ocorrência. Como consequência desse princípio, estabeleceu o Art. 5º, inciso XL, da CRFB/88 que a lei não retroagirá, salvo para favorecer o réu. No mesmo sentido as previsões do Art. 1º do Código Penal. Assim, diante da irretroatividade da lei penal desfavorável, considerando que os fatos ocorreram em 29/12/2011 e a Lei que introduziu o Art. 154-A no Código Penal somente foi editada no ano de 2012, incabível a punição de Cláudio pelo delito em questão, ainda que a denúncia seja em momento posterior.
+    opcoes:
+      correta: Não é possível a responsabilização penal de Cláudio pelo crime do Art. 154-A do Código Penal, tendo em vista que a lei posterior que de qualquer forma prejudique o acusado não pode retroagir para atingir situação pretérita OU tendo em vista que a lei que tipificou a conduta é posterior à data dos fatos, com base no Art. 5º, inciso XL, da CRFB/88 OU no Art. 1º do Código Penal.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 23-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Manoel conduzia sua bicicleta, levando em seu colo, sem qualquer observância às regras de segurança, seu filho de 02 anos de idade. Para tornar o passeio do filho mais divertido, Manoel pedalava em alta velocidade, quando, em determinado momento, perdeu o controle da bicicleta e caiu, vindo seu filho a bater a cabeça e falecer de imediato.
+
+      Após ser instaurado procedimento para investigar os fatos, a perícia constata que, de fato, Manoel estava em alta velocidade e não havia qualquer segurança para o filho em seu colo. O Ministério Público oferece denúncia em face de Manoel, imputando-lhe a prática do crime previsto no Art. 121, §§ 3º e 4º, do Código Penal, já que a vítima era menor de 14 anos. Durante a instrução, todos os fatos são confirmados por diversos meios de prova.
+
+      Considerando apenas as informações narradas, responda, na qualidade de advogado(a) de Manoel, aos itens a seguir.
+    comando: A capitulação delitiva realizada pelo Ministério Público está integralmente correta? Justifique.
+    gabarito: |-
+      A capitulação delitiva realizada pelo Ministério Público não está integralmente correta, pois, em que pese exista prova da materialidade e indícios de autoria em relação ao crime de homicídio culposo, não poderia ter sido imputada a causa de aumento prevista no Art. 121, § 4º, do CP, tendo em vista que a idade da vítima somente é relevante, no momento de analisar tal causa de aumento, quando o homicídio é de natureza dolosa.
+
+      Assim, deveria ser afastada a causa de aumento imputada.
+    opcoes:
+      correta: Não foi correta a capitulação delitiva do Ministério Público, pois em sendo o crime culposo, a idade da vítima não é relevante para imputação da causa de aumento do Art. 121, § 4º, do CP, OU pois a causa de aumento em razão de a vítima ser menor de 14 anos somente será aplicada ao crime de homicídio doloso.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 23-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Manoel conduzia sua bicicleta, levando em seu colo, sem qualquer observância às regras de segurança, seu filho de 02 anos de idade. Para tornar o passeio do filho mais divertido, Manoel pedalava em alta velocidade, quando, em determinado momento, perdeu o controle da bicicleta e caiu, vindo seu filho a bater a cabeça e falecer de imediato.
+
+      Após ser instaurado procedimento para investigar os fatos, a perícia constata que, de fato, Manoel estava em alta velocidade e não havia qualquer segurança para o filho em seu colo. O Ministério Público oferece denúncia em face de Manoel, imputando-lhe a prática do crime previsto no Art. 121, §§ 3º e 4º, do Código Penal, já que a vítima era menor de 14 anos. Durante a instrução, todos os fatos são confirmados por diversos meios de prova.
+
+      Considerando apenas as informações narradas, responda, na qualidade de advogado(a) de Manoel, aos itens a seguir.
+    comando: Qual argumento a ser apresentado para evitar a punição de Manoel pelo crime de homicídio culposo? Justifique.
+    gabarito: O argumento a ser apresentado pela defesa técnica é da aplicação do perdão judicial, devendo o juiz deixar de aplicar a pena. De acordo com o Art. 121, § 5º, do CP, o juiz poderá deixar de aplicar a pena se as consequências da infração atingirem o próprio agente de forma tão grave que a sanção se torne desnecessária. De fato, pelas circunstâncias narradas no enunciado, houve crime de homicídio culposo, já que Manoel conduzia sua bicicleta em alta velocidade, com o filho de 02 anos no colo, sem observância do dever objetivo de cuidado. Todavia, seu comportamento causou a morte de seu próprio filho, o que, por si só, demonstra que as consequências da infração já foram graves o suficiente para o autor do fato, tornando a sanção penal efetivamente desnecessária.
+    opcoes:
+      correta: Aplicação do perdão judicial, nos termos do Art. 121, § 5º, do CP.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1

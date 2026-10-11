@@ -1,0 +1,163 @@
+# Gerado por scripts/extrair-objetivas.ts a partir do caderno Tipo 1 e do gabarito definitivo do XLVII Exame.
+# Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
+exame: "47"
+faixa:
+  penal:
+    - 57
+    - 62
+  processoPenal:
+    - 63
+    - 68
+anuladas: []
+questoes:
+  - n: 57
+    disciplina: penal
+    enunciado: Teobaldo tem 59 anos de idade, está desempregado e usa drogas ilícitas recreativamente. Túlio, o filho dele, tem 20 anos de idade, é jogador de futebol profissional e colecionador de relógios raros. Teobaldo, aproveitando-se da ausência do filho, que disputava um jogo fora da sua cidade, pulou o muro e arrombou a porta da mansão em que Túlio morava, pegando o relógio mais valioso da coleção, avaliado em R$ 100.000,00, com o fim de vendê-lo para adquirir drogas. Diante de tal situação hipotética, assinale a afirmativa correta.
+    alternativas:
+      A: Teobaldo deve ser punido pelo crime de furto qualificado pelo rompimento de obstáculo.
+      B: Teobaldo praticou comportamento típico e ilícito, mas está isento de pena devido à relação de parentesco.
+      C: Teobaldo praticou comportamento típico, mas cuja antijuridicidade está excluída em razão da relação de parentesco.
+      D: Teobaldo praticou comportamento atípico por incidência do princípio da insignificância, haja vista o valor do bem subtraído em comparação com o patrimônio de Túlio.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 58
+    disciplina: penal
+    enunciado: Júlia, funcionária pública federal lotada no setor de compras de um órgão do Ministério da Fazenda, desviou dolosamente para sua conta particular a importância de R$ 10.000,00, que deveria ser utilizada na aquisição de material de escritório. A conduta se consumou em 1º de março de 2025. Após a instauração do inquérito policial para investigar a prática do crime de peculato, Júlia foi orientada por sua advogada e reparou integralmente o dano causado à Administração Pública em 1º de agosto de 2025, após o oferecimento da denúncia, mas antes de seu recebimento. Sobre a reparação integral do dano por Júlia, assinale a afirmativa correta.
+    alternativas:
+      A: A reparação antes do trânsito em julgado gera a extinção da punibilidade.
+      B: Configura o instituto do arrependimento posterior, gerando a diminuição da pena.
+      C: Configura causa legal de diminuição de pena especificamente aplicável ao crime de peculato, por força do princípio da especialidade.
+      D: A reparação antes do recebimento da denúncia configura o instituto do arrependimento eficaz, devendo Júlia responder apenas pelos atos praticados, se constituírem crime autônomo.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 59
+    disciplina: penal
+    enunciado: "José planejou subtrair um valioso equipamento de informática de uma loja no período noturno. Para tanto, convenceu Pierre, primário e de bons antecedentes, a executar a ação. Pierre confiou no planejamento de José, pois tinha ciência de que este era reincidente específico em crimes patrimoniais. O plano consistia em Pierre arrombar a porta lateral da loja com um pé de cabra, subtrair o objeto e se encontrar com José a duas quadras de distância, onde este o aguardaria em um carro ligado para garantir a fuga. Pierre seguiu o plano à risca: arrombou a porta, pegou o equipamento e foi ao encontro de José. Ambos dividiram o produto do crime, mas foram descobertos e presos. A perícia técnica comprovou o rompimento de obstáculo à subtração. Ao final, José e Pierre foram denunciados pela prática do crime de furto qualificado pelo rompimento de obstáculo (Art. 155, § 4º, inciso I, do Código Penal). Diante de tal situação hipotética, assinale a afirmativa correta."
+    alternativas:
+      A: Pierre é autor e José é partícipe do crime de furto, sendo a reincidência uma circunstância pessoal incomunicável a Pierre.
+      B: José deve responder por furto simples, pois o rompimento de obstáculo foi executado pessoalmente por outrem, e não se comunica com ele.
+      C: Ambos respondem como coautores do furto qualificado, sendo a reincidência comunicável a Pierre, pois estava ciente dessa circunstância que agrava a pena.
+      D: José e Pierre devem responder como coautores do furto qualificado pelo rompimento de obstáculo, sendo a reincidência uma circunstância pessoal incomunicável a Pierre.
+    correta: D
+    dispositivos:
+      - art. 155, § 4º, I, cp
+    revisao:
+      status: rascunho
+  - n: 60
+    disciplina: penal
+    enunciado: "Mariana, primária e com bons antecedentes, foi condenada pela prática do crime de apropriação indébita (Art. 168 do CP), cuja pena mínima é de um ano e, a máxima, de quatro anos de reclusão. Na primeira fase da dosimetria, o Juiz, considerando favoráveis todas as circunstâncias judiciais do Art. 59 do CP, fixou a pena-base no mínimo legal, ou seja, um ano de reclusão. Na segunda e terceira fases da dosimetria, não houve alterações. Ao aplicar a pena, o Juiz determinou o regime inicial aberto e, em seguida, efetuou a substituição da pena privativa de liberdade por duas penas restritivas de direitos: prestação de serviços à comunidade e prestação pecuniária. Sobre a situação hipotética apresentada, assinale a afirmativa correta."
+    alternativas:
+      A: A substituição da pena privativa de liberdade por duas penas restritivas de direitos é ilegal, pois nas condenações iguais ou inferiores a um ano, a substituição deve ser feita por multa ou uma pena restritiva de direitos.
+      B: A substituição da pena privativa de liberdade está equivocada, pois a pena definitiva não pode ser inferior a dois anos para ser substituída por duas penas restritivas de direitos, devendo, no caso, ser substituída apenas por uma multa ou uma pena restritiva de direitos.
+      C: A substituição da pena privativa de liberdade pela prestação de serviços e pela prestação pecuniária está correta, mas a modalidade de prestação de serviços à comunidade é obrigatória e deve ser aplicada sozinha, e não em cumulação com a prestação pecuniária.
+      D: A substituição da pena privativa de liberdade está correta, pois, sendo a pena inferior a um ano, é possível que a substituição seja feita por multa ou uma pena restritiva de direitos, mas, excepcionalmente, o Juiz pode aplicar duas, se fundamentado na insuficiência de apenas uma.
+    correta: A
+    dispositivos:
+      - art. 168, cp
+      - art. 59, cp
+    revisao:
+      status: rascunho
+  - n: 61
+    disciplina: penal
+    enunciado: Carlos foi processado pela prática do crime de lesão corporal de natureza grave (Art. 129, § 1º, do Código Penal) e punido com pena de reclusão de um a cinco anos. No curso do processo, ficou comprovado que Carlos era inteiramente incapaz de entender o caráter ilícito do fato em razão de doença mental. O Juízo proferiu sentença absolutória, mas impôs a Carlos medida de segurança de internação. Após seis anos de internação ininterrupta, a defesa de Carlos requer a extinção da medida de segurança, sob o argumento de que o prazo de duração já ultrapassou a pena máxima cominada ao crime e que o último exame de periculosidade atestou melhora significativa no quadro, embora ainda não haja cessação total da patologia. Diante de tal situação hipotética, assinale a afirmativa correta.
+    alternativas:
+      A: A medida de segurança deve ser extinta, uma vez que a sua duração não pode ultrapassar o limite máximo da pena abstrata cominada ao delito.
+      B: O Juiz poderá converter a medida de segurança em pena privativa de liberdade, uma vez que foi verificado que a patologia subsiste e o crime foi praticado com violência.
+      C: A medida de segurança de internação deve perdurar por prazo ilimitado, enquanto não for verificada, mediante perícia médica, a cessação da patologia do agente.
+      D: A desinternação de Carlos será sempre condicional, devendo ser restabelecida caso ele pratique, no prazo de dez anos, fato que revele a persistência de sua periculosidade.
+    correta: A
+    dispositivos:
+      - art. 129, § 1º, cp
+    revisao:
+      status: rascunho
+  - n: 62
+    disciplina: penal
+    enunciado: "Durante uma assembleia do condomínio em que reside, Paulo, Juiz de Direito, irritado com a gestão do síndico Roberto, advogado, pediu a palavra e, diante de todos os moradores presentes, afirmou categoricamente, ciente da falsidade da sua afirmação: “O Sr. Roberto desviou criminosamente R$ 10.000,00 do fundo de reserva no mês passado para pagar dívidas pessoais.” Roberto, que sempre agiu com probidade, sentiu-se profundamente ofendido em sua reputação perante a comunidade. No dia seguinte, Paulo enviou uma mensagem telefônica privada para Roberto dizendo: “Além de desonesto, você é um incapaz e um estúpido.” Diante de tal situação hipotética, assinale a afirmativa correta."
+    alternativas:
+      A: Paulo cometeu o crime de difamação durante a assembleia, ao imputar fato ofensivo à reputação de Roberto, e o crime de injúria, ao enviar a mensagem telefônica privada.
+      B: Em relação à afirmação feita na assembleia, Paulo poderia se valer da exceção da verdade apenas se Roberto fosse funcionário público e o crime tivesse sido cometido no exercício de suas funções.
+      C: A afirmação feita na assembleia configura o crime de calúnia, pois Paulo imputou falsamente a Roberto um fato definido como crime, enquanto a mensagem telefônica privada configura o crime de injúria.
+      D: Por se tratar de uma discussão em assembleia de condomínio, a conduta de Paulo é atípica em relação ao que foi dito publicamente, sendo protegida pela imunidade judiciária, restando apenas o crime de injúria pela mensagem telefônica privada.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 63
+    disciplina: processo-penal
+    enunciado: Thaís está respondendo à ação penal pelo crime de roubo e teve decretada a quebra da fiança, em virtude de, deliberadamente, praticar ato destinado à obstrução do andamento do processo. O Juiz decretou, então, a perda da totalidade do valor da fiança. Sobre a hipótese apresentada, você, na condição de advogado(a), deve, em recurso, argumentar que
+    alternativas:
+      A: não é possível decretar a quebra da fiança por ato de obstrução ao andamento do processo.
+      B: a consequência legal da quebra da fiança é a perda da metade de seu valor e não a totalidade da fiança.
+      C: a quebra da fiança não é matéria passível de discussão perante o Juiz de primeiro grau, porque somente pode ser decretada por decisão de Plenário de Tribunal.
+      D: a consequência legal da quebra da fiança é a perda de 1/3 do valor, não sendo possível decretar a quebra da fiança por ato de obstrução ao andamento do processo.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 64
+    disciplina: processo-penal
+    enunciado: Amanda, servidora pública federal, durante suas férias, agrediu Joana, sua vizinha, com socos, em razão de estacionamento indevido na vaga de garagem reservada a Amanda, no condomínio residencial onde ambas residem. Joana, em consequência da agressão, ficou 50 dias impossibilitada de comparecer ao trabalho. O Ministério Público Federal ofereceu denúncia contra Amanda pelo crime de lesão corporal grave. O Juiz Federal recebeu a denúncia. Na defesa de Amanda, além da matéria de mérito, você, como advogado(a), deve alegar, processualmente,
+    alternativas:
+      A: a incompetência relativa da Justiça Federal.
+      B: a exceção da verdade, uma vez que Joana estava estacionando na vaga reservada para Amanda.
+      C: a necessidade de enviar o processo para o Superior Tribunal de Justiça, uma vez que a ré é servidora pública federal.
+      D: a incompetência absoluta da Justiça Federal, uma vez que o fato não tem relação com a função de servidora pública de Amanda.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 65
+    disciplina: processo-penal
+    enunciado: Sílvia foi vítima de roubo praticado por Antônio, que subtraiu o relógio dela mediante grave ameaça. Antônio foi preso em flagrante e o relógio devolvido para Sílvia. Após a conclusão do inquérito, no dia da remessa deste para o Ministério Público, Sílvia, na condição de vítima, ofereceu uma queixa-crime. Assinale a opção que indica, corretamente, a alegação que você, como advogado(a) de Antônio, deve apresentar.
+    alternativas:
+      A: A falta de interesse de agir, uma vez que o relógio foi devolvido para a vítima.
+      B: A impossibilidade jurídica do pedido, uma vez que caberia ao Ministério Público formular o pedido.
+      C: A falta de justa causa para a ação, em virtude da devolução do bem subtraído ser causa extralegal de extinção de punibilidade.
+      D: A ilegitimidade ativa para a deflagração da demanda, porque o crime de roubo é de ação penal pública incondicionada e não existe inércia do Ministério Público.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 66
+    disciplina: processo-penal
+    enunciado: João, funcionário público, após ser condenado à pena de seis anos de reclusão, pelo crime de peculato, interpôs recurso em face da sentença, requerendo a aplicação da pena mínima de dois anos de reclusão. No julgamento da apelação, a sentença foi mantida em seus termos, tendo como vencido o voto do relator, que foi favorável ao pleito defensivo e determinava a aplicação da pena mínima a João. Diante disso, a defesa deve opor
+    alternativas:
+      A: revisão criminal.
+      B: agravo em execução.
+      C: embargos infringentes.
+      D: embargos de divergência.
+    correta: C
+    peca: embargos-infringentes
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 67
+    disciplina: processo-penal
+    enunciado: Rubens está sendo investigado pelo delito de tráfico internacional de drogas (Art. 33 c/c Art. 40, inciso I, ambos da Lei nº 11.343/2006). No curso da investigação, Rubens foi citado para responder a uma ação penal pela prática do crime de receptação de animais (Art. 180-A), cuja pena cominada para esse crime é de reclusão de 2 a 5 anos. Rubens não possui outras anotações criminais e o(a) procura, como advogado(a), para que você apresente uma resposta à acusação. Você, em preliminares, deve requerer a remessa dos autos ao Ministério Público para uma proposta de
+    alternativas:
+      A: suspensão condicional da pena.
+      B: acordo de não persecução penal.
+      C: acordo de colaboração premiada.
+      D: suspensão condicional do processo.
+    correta: B
+    dispositivos:
+      - art. 33, lei 11343
+      - art. 40, I, lei 11343
+    revisao:
+      status: rascunho
+  - n: 68
+    disciplina: processo-penal
+    enunciado: O Ministério Público arrolou Júlio como testemunha de acusação em ação penal deflagrada em face de Cesar. Na audiência de instrução e julgamento, Júlio prestou depoimento totalmente favorável à tese defensiva. Por isso, o Ministério Público requereu a dispensa e desconsideração da prova testemunhal, afirmando que, como apenas o Parquet arrolou Júlio, este poderia dispensar a prova quando o seu resultado lhe fosse desfavorável. Na defesa de Cesar, assinale a opção que apresenta o princípio processual penal pertinente a ser alegado, a fim de manter a prova produzida.
+    alternativas:
+      A: Princípio da oportunidade.
+      B: Princípio da comunhão da prova.
+      C: Princípio da presunção de inocência.
+      D: Princípio da obrigatoriedade da ação penal pública.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho

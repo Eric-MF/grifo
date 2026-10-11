@@ -1,5 +1,6 @@
 "use client";
 
+import { categoriasDaMascara, nomeCategoria } from "@/quiz/categorias";
 import { NOME_NIVEL } from "@/quiz/pontuacao";
 import type { Nivel } from "@/quiz/types";
 import { JOGOS } from "@/games/registry";
@@ -30,6 +31,7 @@ export function Verificador() {
   useEffect(() => {
     const c = params.get("c");
     if (c) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- lê a URL após montar (site estático)
       setCodigo(c);
       verificar(c);
     }
@@ -99,6 +101,12 @@ export function Verificador() {
               <dd className={styles.nota}>{res.dados.pontos.toLocaleString("pt-BR")}</dd>
               <dt>Nível</dt>
               <dd>{NOME_NIVEL[res.dados.nivel as Nivel]}</dd>
+              {res.dados.categorias !== undefined && (
+                <>
+                  <dt>Tipos de pergunta</dt>
+                  <dd>{categoriasDaMascara(res.dados.categorias).map(nomeCategoria).join(", ")}</dd>
+                </>
+              )}
               <dt>Perguntas</dt>
               <dd>
                 {res.dados.acertos} de {res.dados.perguntas} certas

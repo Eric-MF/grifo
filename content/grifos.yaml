@@ -1,0 +1,66 @@
+# Grifos prontos: marcações que já vêm feitas no leitor de leis, uma camada por sistema de cores.
+# `rotulo` é o significado da cor no sistema (src/lib/leis/legendas.ts).
+# Dois níveis, como quem grifa um vade-mécum:
+#   artigos / dispositivos            a área do tema: só uma barra de cor na margem
+#   destaques / destaquesDispositivos  o que mais cai: grifado com marca-texto
+# Destaque = citado em pelo menos 5 questões de Penal (objetivas, discursivas e peças da amostra).
+# Faixas: "69-91, 109". Dispositivos: "art387.p1" = art. 387, § 1º; "art5.i57" = art. 5º, LVII.
+# O usuário pode desligar os grifos prontos nas configurações de leitura.
+
+materias:
+  - rotulo: Competência
+    lei: cpp
+    artigos: "69-91"
+    nota: "Da competência (CPP, Título V)"
+  - { rotulo: Competência, lei: cf, dispositivos: [art102.i1, art105.i1, art108.i1], nota: "Competência originária do STF e do STJ" }
+  - { rotulo: Competência, lei: cf, artigos: "109", destaquesDispositivos: [art109.i4, art109.i5], nota: "Competência da Justiça Federal" }
+  - { rotulo: Competência, lei: lei-9099, artigos: "60-63", nota: "Competência do Juizado Especial Criminal" }
+  - { rotulo: Competência, lei: lei-11343, artigos: "70", destaques: "70", nota: "Tráfico transnacional: Justiça Federal" }
+  - { rotulo: Competência, lei: lep, artigos: "66", destaques: "66", nota: "Competência do juiz da execução" }
+
+  - rotulo: Recursos
+    lei: cpp
+    artigos: "574-667"
+    destaques: "581, 589, 593, 600"
+    nota: "Recursos em geral, RESE, apelação, embargos, revisão criminal, carta testemunhável e habeas corpus"
+  - { rotulo: Recursos, lei: cf, dispositivos: [art102.i2, art102.i3, art105.i2, art105.i3], nota: "Recurso ordinário, extraordinário e especial" }
+  - { rotulo: Recursos, lei: lep, artigos: "197", destaques: "197", nota: "Agravo em execução" }
+  - { rotulo: Recursos, lei: lei-9099, artigos: "82-83", nota: "Apelação e embargos no JECrim" }
+
+  - { rotulo: Procedimentos, lei: cpp, artigos: "4-62", destaques: "27, 28, 38, 41", nota: "Inquérito policial e ação penal" }
+  - { rotulo: Procedimentos, lei: cpp, artigos: "394-497", destaques: "395, 397, 399, 411, 414, 415, 419", nota: "Procedimento comum e Tribunal do Júri" }
+  - { rotulo: Procedimentos, lei: cpp, artigos: "513-562", nota: "Procedimentos especiais" }
+  - { rotulo: Procedimentos, lei: lei-9099, artigos: "69-81", nota: "Fase preliminar e procedimento sumaríssimo" }
+  - { rotulo: Procedimentos, lei: lei-11343, artigos: "48-59", nota: "Procedimento da Lei de Drogas" }
+
+  - rotulo: Direitos fundamentais
+    lei: cf
+    artigos: "5"
+    destaquesDispositivos: [art5.i11, art5.i39, art5.i40, art5.i53, art5.i54, art5.i55, art5.i56, art5.i57, art5.i63]
+    nota: "Direitos e garantias individuais"
+
+teses:
+  - { rotulo: Competência, lei: cpp, artigos: "69-91", nota: "Incompetência: endereçamento e nulidade" }
+  - { rotulo: Competência, lei: cf, artigos: "109", destaquesDispositivos: [art109.i4, art109.i5], nota: "Justiça Federal" }
+  - { rotulo: Competência, lei: lei-9099, artigos: "60-63", nota: "JECrim" }
+
+  - { rotulo: Teses preliminares, lei: cpp, artigos: "157", destaques: "157", nota: "Prova ilícita" }
+  - { rotulo: Teses preliminares, lei: cpp, artigos: "38, 395", destaques: "38, 395", nota: "Decadência e rejeição da denúncia ou queixa" }
+  - { rotulo: Teses preliminares, lei: cpp, artigos: "563-573", destaques: "564", nota: "Nulidades" }
+  - { rotulo: Teses preliminares, lei: cp, artigos: "100-120", destaques: "107, 109, 110, 115", nota: "Ação penal, extinção da punibilidade e prescrição" }
+  - { rotulo: Teses preliminares, lei: lei-9099, artigos: "88", destaques: "88", nota: "Representação na lesão corporal leve" }
+  - { rotulo: Teses preliminares, lei: lei-11340, artigos: "41", destaques: "41", nota: "Violência doméstica: não se aplica a Lei 9.099" }
+
+  - { rotulo: Teses principais, lei: cpp, artigos: "386, 397, 415", destaques: "386, 397, 415", nota: "Absolvição e absolvição sumária" }
+  - { rotulo: Teses principais, lei: cp, artigos: "13, 15, 17-28", destaques: "15, 17, 20, 23, 24, 25, 28", nota: "Nexo causal, crime impossível, erro, excludentes e culpabilidade" }
+
+  - { rotulo: Teses subsidiárias, lei: cp, artigos: "14, 16, 29, 33, 44, 59-71, 77", destaques: "14, 16, 33, 44, 59, 61, 63, 64, 65, 69, 70, 71, 77", nota: "Tentativa, arrependimento posterior, participação, regime, substituição, dosimetria, concursos e sursis" }
+  - { rotulo: Teses subsidiárias, lei: cpp, artigos: "383, 384, 419", destaques: "384, 419", nota: "Desclassificação (emendatio e mutatio libelli)" }
+  - { rotulo: Teses subsidiárias, lei: lei-11343, dispositivos: [art33.p4], destaquesDispositivos: [art33.p4], nota: "Tráfico privilegiado" }
+  - { rotulo: Teses subsidiárias, lei: lei-9099, artigos: "89", destaques: "89", nota: "Suspensão condicional do processo" }
+  - { rotulo: Teses subsidiárias, lei: lep, artigos: "112", destaques: "112", nota: "Progressão de regime" }
+  - { rotulo: Teses subsidiárias, lei: lei-8072, artigos: "2", destaques: "2", nota: "Regime de cumprimento dos crimes hediondos" }
+
+  - { rotulo: Pedidos acessórios, lei: cpp, artigos: "118-120, 282, 316, 319, 321", nota: "Restituição de coisas, cautelares, revogação da preventiva e liberdade provisória" }
+  - { rotulo: Pedidos acessórios, lei: cpp, dispositivos: [art387.p1, art387.p2], destaquesDispositivos: [art387.p1, art387.p2], nota: "Recorrer em liberdade e detração na sentença" }
+  - { rotulo: Pedidos acessórios, lei: cp, artigos: "42", nota: "Detração" }

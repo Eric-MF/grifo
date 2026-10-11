@@ -12,7 +12,7 @@ export default function TreinoPage() {
       <span className="eyebrow">Treino</span>
       <h1>Dez perguntas, do jeito da prova</h1>
       <p className="lead">
-        Sorteamos perguntas de peça e fundamento de todas as peças. Quanto mais rápido e quanto maior o nível, mais pontos.
+        Sorteamos perguntas dos tipos que você escolher: peça e fundamento, itens da peça, questões discursivas e objetivas da 1ª fase. Quanto mais rápido e quanto maior o nível, mais pontos.
       </p>
       <Treino />
     </div>

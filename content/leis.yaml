@@ -1,4 +1,5 @@
-# Diplomas legais reconhecidos pelo corretor e pelo quiz.
+# Diplomas legais reconhecidos pelo corretor, pelo quiz e pelo leitor de leis.
+# `planalto` é o texto compilado no Planalto; `ler: true` põe o diploma no leitor.
 # A chave é o identificador canônico. Os aliases são comparados com o texto já
 # normalizado (minúsculo, sem acentos, números sem ponto de milhar e ano abreviado
 # removido — "Lei nº 11.343/06" vira "lei 11343").
@@ -9,96 +10,205 @@ diplomas:
   cp:
     nome: Código Penal
     aliases: [cp, codigo penal, decreto-lei 2848, decreto lei 2848, dl 2848, cpb]
+    planalto: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848.htm
+    ler: true
+    sigla: CP
+    numero: "2.848"
+    ano: 1940
   cpp:
     nome: Código de Processo Penal
     aliases: [cpp, codigo de processo penal, decreto-lei 3689, decreto lei 3689, dl 3689]
+    planalto: https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm
+    ler: true
+    sigla: CPP
+    numero: "3.689"
+    ano: 1941
   lep:
     nome: Lei de Execução Penal (Lei 7.210/1984)
     aliases: [lep, lei de execucao penal, lei de execucoes penais, lei de execucao, lei 7210]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/l7210.htm
+    ler: true
+    sigla: LEP
+    numero: "7.210"
+    ano: 1984
   cf:
     nome: Constituição Federal
     aliases: [crfb, cf, constituicao federal, constituicao da republica, constituicao, carta magna]
+    planalto: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
+    ler: true
+    sigla: CF
+    ano: 1988
   lei-11343:
     nome: Lei de Drogas (Lei 11.343/2006)
     aliases: [lei 11343, lei de drogas, lei antidrogas, lei de toxicos]
+    planalto: https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm
+    ler: true
+    numero: "11.343"
+    ano: 2006
   lei-11340:
     nome: Lei Maria da Penha (Lei 11.340/2006)
     aliases: [lei 11340, lei maria da penha, lmp]
+    planalto: https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm
+    ler: true
+    sigla: LMP
+    numero: "11.340"
+    ano: 2006
   lei-9099:
     nome: Lei dos Juizados Especiais (Lei 9.099/1995)
     aliases: [lei 9099, lei dos juizados especiais, lei dos juizados]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/l9099.htm
+    ler: true
+    numero: "9.099"
+    ano: 1995
   lei-8072:
     nome: Lei dos Crimes Hediondos (Lei 8.072/1990)
     aliases: [lei 8072, lei dos crimes hediondos, lei de crimes hediondos]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/l8072.htm
+    ler: true
+    numero: "8.072"
+    ano: 1990
   lei-8137:
     nome: Crimes contra a Ordem Tributária (Lei 8.137/1990)
     aliases: [lei 8137]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/l8137.htm
+    ler: true
+    numero: "8.137"
+    ano: 1990
   lei-9503:
     nome: Código de Trânsito Brasileiro (Lei 9.503/1997)
     aliases: [lei 9503, ctb, codigo de transito brasileiro, codigo de transito]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/l9503.htm
+    ler: true
+    sigla: CTB
+    numero: "9.503"
+    ano: 1997
   lei-10826:
     nome: Estatuto do Desarmamento (Lei 10.826/2003)
     aliases: [lei 10826, estatuto do desarmamento]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826.htm
+    ler: true
+    numero: "10.826"
+    ano: 2003
   lei-12850:
     nome: Lei de Organizações Criminosas (Lei 12.850/2013)
     aliases: [lei 12850, lei de organizacoes criminosas, lei das organizacoes criminosas]
+    planalto: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm
+    ler: true
+    numero: "12.850"
+    ano: 2013
   lei-9613:
     nome: Lei de Lavagem de Dinheiro (Lei 9.613/1998)
     aliases: [lei 9613, lei de lavagem de dinheiro, lei de lavagem]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/l9613.htm
+    ler: true
+    numero: "9.613"
+    ano: 1998
   lei-13869:
     nome: Lei de Abuso de Autoridade (Lei 13.869/2019)
     aliases: [lei 13869, lei de abuso de autoridade]
+    planalto: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm
+    ler: true
+    numero: "13.869"
+    ano: 2019
   lei-8069:
     nome: Estatuto da Criança e do Adolescente (Lei 8.069/1990)
     aliases: [lei 8069, eca, estatuto da crianca e do adolescente]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+    ler: true
+    sigla: ECA
+    numero: "8.069"
+    ano: 1990
   lei-9455:
     nome: Lei de Tortura (Lei 9.455/1997)
     aliases: [lei 9455, lei de tortura]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/l9455.htm
+    ler: true
+    numero: "9.455"
+    ano: 1997
   lei-9296:
     nome: Lei de Interceptação Telefônica (Lei 9.296/1996)
     aliases: [lei 9296, lei de interceptacao telefonica]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/l9296.htm
+    ler: true
+    numero: "9.296"
+    ano: 1996
   lei-8038:
     nome: Lei 8.038/1990 (recursos nos tribunais superiores)
     aliases: [lei 8038]
+    numero: "8.038"
+    ano: 1990
   lei-7716:
     nome: Lei de Crimes Raciais (Lei 7.716/1989)
     aliases: [lei 7716]
+    numero: "7.716"
+    ano: 1989
   lei-10741:
     nome: Estatuto da Pessoa Idosa (Lei 10.741/2003)
     aliases: [lei 10741, estatuto do idoso, estatuto da pessoa idosa]
+    numero: "10.741"
+    ano: 2003
   lei-9605:
     nome: Lei de Crimes Ambientais (Lei 9.605/1998)
     aliases: [lei 9605, lei de crimes ambientais]
+    numero: "9.605"
+    ano: 1998
   lei-8078:
     nome: Código de Defesa do Consumidor (Lei 8.078/1990)
     aliases: [lei 8078, cdc, codigo de defesa do consumidor]
+    sigla: CDC
+    numero: "8.078"
+    ano: 1990
   lei-1521:
     nome: Lei de Economia Popular (Lei 1.521/1951)
     aliases: [lei 1521]
+    numero: "1.521"
+    ano: 1951
   lei-7492:
     nome: Crimes contra o Sistema Financeiro (Lei 7.492/1986)
     aliases: [lei 7492]
+    numero: "7.492"
+    ano: 1986
   lei-4898:
     nome: Antiga Lei de Abuso de Autoridade (Lei 4.898/1965)
     aliases: [lei 4898]
+    numero: "4.898"
+    ano: 1965
   lei-12037:
     nome: Lei de Identificação Criminal (Lei 12.037/2009)
     aliases: [lei 12037]
+    numero: "12.037"
+    ano: 2009
   lei-13964:
     nome: Pacote Anticrime (Lei 13.964/2019)
     aliases: [lei 13964, pacote anticrime]
+    planalto: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13964.htm
+    ler: true
+    numero: "13.964"
+    ano: 2019
   lcp:
     nome: Lei das Contravenções Penais (Decreto-Lei 3.688/1941)
     aliases: [lcp, lei das contravencoes penais, lei de contravencoes penais, decreto-lei 3688, decreto lei 3688, dl 3688]
+    sigla: LCP
+    numero: "3.688"
+    ano: 1941
   lei-8906:
     nome: Estatuto da Advocacia e da OAB (Lei 8.906/1994)
     aliases: [lei 8906, eoab, estatuto da oab, estatuto da advocacia, estatuto da ordem dos advogados do brasil]
+    sigla: EOAB
+    numero: "8.906"
+    ano: 1994
   decreto-678:
     nome: Convenção Americana de Direitos Humanos (Decreto 678/1992)
     aliases: [decreto 678, pacto de san jose da costa rica, pacto de sao jose da costa rica, convencao americana de direitos humanos, cadh]
+    sigla: CADH
+    numero: "678"
+    ano: 1992
   cpc:
     nome: Código de Processo Civil
     aliases: [cpc, codigo de processo civil]
+    sigla: CPC
+    numero: "13.105"
+    ano: 2015
 
 # Tribunais para súmulas ("Súmula 700 do STF", "Súmula Vinculante 24").
 tribunais:

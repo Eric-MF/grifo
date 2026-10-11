@@ -1,0 +1,578 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "25"
+perguntas:
+  - id: 25-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento: Vara Criminal da Comarca de Araruama/RJ."
+    opcoes:
+      correta: "Endereçamento: Vara Criminal da Comarca de Araruama/RJ."
+      erradas:
+        - "Endereçamento correto das razões: Tribunal de Justiça do Estado."
+        - "Endereçamento das razões: Tribunal de Justiça do Estado ___."
+        - "Endereçamento: Juízo da Vara de Execuções Penais de Belo Horizonte/MG"
+        - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro."
+        - "Endereçamento: Tribunal Regional Federal da 10ª Região."
+    revisao: &a1
+      status: rascunho
+  - id: 25-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: preliminar
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: Preliminarmente, deve ser requerido o reconhecimento da nulidade do ato de citação, nos termos do art. 564, inciso III, “e”, do CPP
+    opcoes:
+      correta: Preliminarmente, deve ser requerido o reconhecimento da nulidade do ato de citação, nos termos do art. 564, inciso III, “e”, do CPP
+      erradas:
+        - "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
+        - Inépcia da denúncia pois deixou de descrever todas as circunstâncias elementares do crime de lavagem de dinheiro, notadamente, a infração penal antecedente, nos termos do Art. 41 do CPP ou Art. 2º, § 1º, da Lei nº 9.613/98.
+        - Extinção da punibilidade pela decadência do direito de representação.
+        - Preliminarmente, nulidade da decisão de pronúncia:.
+        - Preliminar de nulidade do processo OU reconhecimento da extinção da punibilidade OU decadência OU oferecimento de proposta de suspensão condicional do processo
+    revisao: *a1
+  - id: 25-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: merito
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Patrick não estava se ocultando para ser citado e o oficial de justiça somente compareceu em uma oportunidade, não preenchendo os requisitos do Art. 362 do CPP.
+    opcoes:
+      correta: Patrick não estava se ocultando para ser citado e o oficial de justiça somente compareceu em uma oportunidade, não preenchendo os requisitos do Art. 362 do CPP.
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Afastamento da agravante do Art. 61, inciso II, alínea ´f´, do CP, pois o crime não foi praticado em situação de violência doméstica, familiar ou de coabitação contra mulher.
+        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    revisao: *a1
+  - id: 25-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Absolvição sumária, tendo em vista que a conduta narrada evidentemente não constitui crime.
+    opcoes:
+      correta: Absolvição sumária, tendo em vista que a conduta narrada evidentemente não constitui crime.
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Afastamento da agravante do Art. 61, inciso II, alínea ´f´, do CP, pois o crime não foi praticado em situação de violência doméstica, familiar ou de coabitação contra mulher.
+        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    revisao: *a1
+  - id: 25-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
+    opcoes:
+      correta: Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Afastamento da agravante do Art. 61, inciso II, alínea ´f´, do CP, pois o crime não foi praticado em situação de violência doméstica, familiar ou de coabitação contra mulher.
+        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    revisao: *a1
+  - id: 25-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
+    opcoes:
+      correta: A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Afastamento da agravante do Art. 61, inciso II, alínea ´f´, do CP, pois o crime não foi praticado em situação de violência doméstica, familiar ou de coabitação contra mulher.
+        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    revisao: *a1
+  - id: 25-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: merito
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
+    opcoes:
+      correta: Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Afastamento da agravante do Art. 61, inciso II, alínea ´f´, do CP, pois o crime não foi praticado em situação de violência doméstica, familiar ou de coabitação contra mulher.
+        - Subsidiariamente, desclassificação para crime não doloso contra a vida, nos termos do Art. 419 do CPP, pois Rodrigo pretendia desferir um soco na barriga da vítima e um empurrão, tendo apenas intenção de causar lesão, mas não o resultado morte ou houve dolo na lesão e culpa em relação ao resultado morte
+    revisao: *a1
+  - id: 25-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Patrick agiu amparado pela legítima defesa, prevista no Art. 25 do CP OU no Art. 23, II, do CP.
+    opcoes:
+      correta: Patrick agiu amparado pela legítima defesa, prevista no Art. 25 do CP OU no Art. 23, II, do CP.
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Afastamento da agravante do Art. 61, inciso II, alínea ´f´, do CP, pois o crime não foi praticado em situação de violência doméstica, familiar ou de coabitação contra mulher.
+        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    revisao: *a1
+  - id: 25-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: merito
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Patrick utilizou dos meios necessários para repelir injusta agressão atual.
+    opcoes:
+      correta: Patrick utilizou dos meios necessários para repelir injusta agressão atual.
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Afastamento da agravante do Art. 61, inciso II, alínea ´f´, do CP, pois o crime não foi praticado em situação de violência doméstica, familiar ou de coabitação contra mulher.
+        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    revisao: *a1
+  - id: 25-peca-11
+    categoria: peca-detalhe
+    parte: peca
+    item: "11"
+    secao: merito
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: A conduta de Patrick visava resguardar direito de terceiro/sua sobrinha.
+    opcoes:
+      correta: A conduta de Patrick visava resguardar direito de terceiro/sua sobrinha.
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Afastamento da agravante do Art. 61, inciso II, alínea ´f´, do CP, pois o crime não foi praticado em situação de violência doméstica, familiar ou de coabitação contra mulher.
+        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    revisao: *a1
+  - id: 25-peca-12
+    categoria: peca-detalhe
+    parte: peca
+    item: "12"
+    secao: pedido
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Absolvição sumária, com fundamento no Art. 397, inciso I, do CPP e no Art. 397, inciso III, do CPP.
+    opcoes:
+      correta: Absolvição sumária, com fundamento no Art. 397, inciso I, do CPP e no Art. 397, inciso III, do CPP.
+      erradas:
+        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
+        - Pedido de habilitação, na interposição, do pai da vítima como assistente de acusação.
+        - a) designação de audiência preliminar ou de conciliação b) a citação da querelada; c) recebimento da queixa d) a oitiva das testemunhas arroladas; e) a condenação da querelada pelo crime de injúria (Art. 140 do CP) e pelo crime de difamação (Art. 139 do CP) com a causa de aumento de pena (Art. 141, III do CP) em concurso formal de delitos (Art. 70 do CP) f) a fixação de valor mínimo de indenização, nos termos do Art. 387, IV, do CPP. OBS:. A mera indicação de dispositivo legal não pontua.
+        - Aplicação de regime inicial aberto ou semiaberto.
+        - Conhecimento e provimento do recurso
+    revisao: *a1
+  - id: 25-peca-13
+    categoria: peca-detalhe
+    parte: peca
+    item: "13"
+    secao: pedido
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Rol de testemunhas (Maria, José e Natália).
+    opcoes:
+      correta: Rol de testemunhas (Maria, José e Natália).
+      erradas:
+        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
+        - Absolvição, com argumento e base legal.
+        - Absolvição do réu, com base no art. 386, III ou VI, do CPP, OU Absolvição do réu por ausência de tipicidade;.
+        - Redução do máximo em razão da tentativa.
+        - Conhecimento e provimento do recurso
+    revisao: *a1
+  - id: 25-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      Lucas, jovem de 22 anos, primário, foi denunciado pela prática do crime de extorsão simples, tendo o magistrado, em 05/05/2016, recebido a denúncia e decretado a prisão preventiva do acusado. Cumprido o mandado de prisão no dia seguinte, Lucas permaneceu acautelado durante toda a instrução de seu processo, vindo a ser condenado, em 24 de janeiro de 2017, à pena de 04 anos e 03 meses de reclusão, além de 12 dias-multa, sendo certo que o aumento da pena-base foi fundamentado de maneira correta pelo magistrado em razão das circunstâncias do crime. Foi, ainda, aplicado o regime semiaberto para início do cumprimento da sanção, exclusivamente diante do quantum de pena aplicada, e o valor do dia-multa foi fixado em 3 vezes o salário mínimo, em razão das circunstâncias do fato.
+
+      Apesar de não se opor à condenação, nem à pena aplicada, Lucas, ainda preso, pergunta a seu advogado sobre a possibilidade de recurso para aplicação de regime de cumprimento de pena menos gravoso, ainda que mantido o quantum de pena. Também informa ao patrono que não tem condições de arcar com a multa aplicada, pois mora em comunidade carente e recebia, antes dos fatos, remuneração de meio salário mínimo pela prestação de serviços informais.
+
+      Considerando apenas as informações narradas, na condição de advogado de Lucas, responda aos itens a seguir.
+    comando: Qual o argumento a ser formulado em sede de recurso para alteração do regime prisional de início de cumprimento de pena aplicado, mantida a pena final em 04 anos e 03 meses de reclusão? Justifique.
+    gabarito: O argumento a ser apresentado pela defesa de Lucas é que o período de pena provisória cumprido deverá ser computado para aplicação do regime inicial do cumprimento de pena, nos termos do Art. 387, § 2º do Código de Processo Penal, de modo que o regime a ser fixado é o aberto. De início, destaca-se que a questão não apresentava elementos suficientes para justificar um pedido de redução de pena, de modo que a pena final aplicada fosse de até 04 anos e permitisse a aplicação do regime aberto. Ademais, o próprio enunciado da questão requer que o patrono de Lucas apresente argumento para alteração do regime ainda que mantida a pena de 04 anos e 03 meses de reclusão. Em princípio, estabelece o Art. 33, § 2º, alínea b, do Código Penal, que cabível o regime semiaberto ao condenado não reincidente, quando a pena aplicada for superior a 04 anos ou não exceda a oito, como é a situação de Lucas. Ao mesmo tempo, estabelece o Art. 42 do Código Penal que será computado, na pena privativa de liberdade, o tempo de prisão provisória, disciplinando, assim, o instituto conhecido como detração. Outrossim, o Art. 387, § 2º, do Código de Processo Penal, acrescentado pela Lei nº 12.736/12, prevê expressamente que o tempo de prisão provisória será computado para fins de determinação do regime inicial de pena privativa de liberdade. No caso, Lucas ficou preso por período superior a 08 meses, período esse que deve ser computado como pena cumprida, na forma da detração, para determinação do regime inicial. Assim, considerando os oitos meses apenas para fins de aplicação do regime inicial, seria possível a aplicação do regime aberto.
+    opcoes:
+      correta: O argumento a ser apresentado é o de que o tempo de prisão provisória deve ser computado no momento da determinação do regime inicial de cumprimento de pena, nos termos do Art. 387, § 2º do Código de Processo Penal.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Habeas corpus e agravo em execução penal (0,15 cada).
+        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+    revisao: *a1
+  - id: 25-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      Lucas, jovem de 22 anos, primário, foi denunciado pela prática do crime de extorsão simples, tendo o magistrado, em 05/05/2016, recebido a denúncia e decretado a prisão preventiva do acusado. Cumprido o mandado de prisão no dia seguinte, Lucas permaneceu acautelado durante toda a instrução de seu processo, vindo a ser condenado, em 24 de janeiro de 2017, à pena de 04 anos e 03 meses de reclusão, além de 12 dias-multa, sendo certo que o aumento da pena-base foi fundamentado de maneira correta pelo magistrado em razão das circunstâncias do crime. Foi, ainda, aplicado o regime semiaberto para início do cumprimento da sanção, exclusivamente diante do quantum de pena aplicada, e o valor do dia-multa foi fixado em 3 vezes o salário mínimo, em razão das circunstâncias do fato.
+
+      Apesar de não se opor à condenação, nem à pena aplicada, Lucas, ainda preso, pergunta a seu advogado sobre a possibilidade de recurso para aplicação de regime de cumprimento de pena menos gravoso, ainda que mantido o quantum de pena. Também informa ao patrono que não tem condições de arcar com a multa aplicada, pois mora em comunidade carente e recebia, antes dos fatos, remuneração de meio salário mínimo pela prestação de serviços informais.
+
+      Considerando apenas as informações narradas, na condição de advogado de Lucas, responda aos itens a seguir.
+    comando: Qual argumento a ser apresentado em sede de recurso em busca da redução do valor do dia-multa aplicado? Justifique.
+    gabarito: Na sentença condenatória, entendeu o magistrado que os dias-multa deveriam ser fixados no valor de 3 vezes o salário mínimo em razão das circunstâncias do fato. Ocorre que é pacificado o entendimento jurisprudencial, em especial diante da previsão do Art. 60 do Código Penal, que o critério para fixação do VALOR do dia-multa será o da capacidade econômica do réu. Na situação apresentada, Lucas era pessoa humilde, que recebia, antes da prisão, remuneração de meio salário mínimo em razão da prestação de serviços informais, logo não se justifica o fundamento apresentado pelo magistrado para fixação do valor do dia-multa.
+    opcoes:
+      correta: O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Habeas corpus e agravo em execução penal (0,15 cada).
+        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+    revisao: *a1
+  - id: 25-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Rodrigo, pela primeira vez envolvido com o aparato judicial, foi condenado definitivamente, pela prática do crime de rixa, ao pagamento de pena exclusivamente de multa. Para pensar sobre as consequências de seu ato, vai para local que acredita ser deserto, onde há uma linda lagoa. Ao chegar ao local, após longa caminhada, depara-se com uma criança, sozinha, banhando-se, mas verifica que ela tem dificuldades para deixar a água e, então, começa a se afogar.
+
+      Apesar de ter conhecimento sobre a situação da criança, Rodrigo nada faz, pois não sabia nadar, logo acreditando que não era possível prestar assistência sem risco pessoal. Ao mesmo tempo, o local era isolado e não havia autoridades públicas nas proximidades, além de Rodrigo estar sem celular ou outro meio de comunicação para avisar sobre a situação. Cerca de 10 minutos depois, chega ao local Marcus, que, ao ver o corpo da criança na lagoa, entra na água e retira a criança já falecida. Nesse momento, Rodrigo verifica que a lagoa não era profunda e que a água bateria na altura de sua cintura, não havendo risco pessoal para a prestação da assistência.
+
+      Após a perícia constatar a profundidade da lagoa, Rodrigo é denunciado pela prática do crime previsto no Art. 135, parágrafo único, do Código Penal. Não houve composição dos danos civis, e o Ministério Público não ofereceu proposta de transação penal, sob o argumento de que havia vedação legal diante da condenação de Rodrigo pela prática do crime de rixa.
+
+      Considerando apenas as informações narradas, responda, na condição de advogado(a) de Rodrigo, aos itens a seguir.
+    comando: Existe argumento a ser apresentado pela defesa para combater o fundamento utilizado pelo Ministério Público para não oferecer proposta de transação penal? Justifique.
+    gabarito: Sim, existe argumento. Inicialmente deve ser destacado que o delito imputado a Rodrigo, ainda que considerando a aplicação da pena de maneira triplificada em razão do resultado morte, é de menor potencial ofensivo. Prevê o Art. 76 da Lei 9.099/95 que o Ministério Público poderá oferecer proposta de aplicação imediata de pena restritiva de direitos ou multa, caso não haja composição dos danos e não seja hipótese de arquivamento. Todavia, o próprio Art. 76, em seu parágrafo 2º, traz hipóteses em que a proposta de transação penal não poderá ser realizada. O inciso I do dispositivo mencionado afirma que não caberá a proposta quando o autor da infração já tiver sido condenado, pela prática de crime, por sentença definitiva, à pena privativa de liberdade. Na hipótese apresentada, Rodrigo possuía condenação anterior com trânsito em julgado, mas apenas ao cumprimento de pena de multa e não pena privativa de liberdade. Assim, não há vedação legal, podendo o Ministério Público oferecer proposta de transação penal.
+    opcoes:
+      correta: Sim. O argumento é que não há vedação legal para oferecimento de transação porque a condenação anterior de Rodrigo foi apenas ao cumprimento de pena de multa e não de pena privativa de liberdade, nos termos do Art. 76, §2º, inciso I, da Lei 9.099/95
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Habeas corpus e agravo em execução penal (0,15 cada).
+        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+    revisao: *a1
+  - id: 25-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Rodrigo, pela primeira vez envolvido com o aparato judicial, foi condenado definitivamente, pela prática do crime de rixa, ao pagamento de pena exclusivamente de multa. Para pensar sobre as consequências de seu ato, vai para local que acredita ser deserto, onde há uma linda lagoa. Ao chegar ao local, após longa caminhada, depara-se com uma criança, sozinha, banhando-se, mas verifica que ela tem dificuldades para deixar a água e, então, começa a se afogar.
+
+      Apesar de ter conhecimento sobre a situação da criança, Rodrigo nada faz, pois não sabia nadar, logo acreditando que não era possível prestar assistência sem risco pessoal. Ao mesmo tempo, o local era isolado e não havia autoridades públicas nas proximidades, além de Rodrigo estar sem celular ou outro meio de comunicação para avisar sobre a situação. Cerca de 10 minutos depois, chega ao local Marcus, que, ao ver o corpo da criança na lagoa, entra na água e retira a criança já falecida. Nesse momento, Rodrigo verifica que a lagoa não era profunda e que a água bateria na altura de sua cintura, não havendo risco pessoal para a prestação da assistência.
+
+      Após a perícia constatar a profundidade da lagoa, Rodrigo é denunciado pela prática do crime previsto no Art. 135, parágrafo único, do Código Penal. Não houve composição dos danos civis, e o Ministério Público não ofereceu proposta de transação penal, sob o argumento de que havia vedação legal diante da condenação de Rodrigo pela prática do crime de rixa.
+
+      Considerando apenas as informações narradas, responda, na condição de advogado(a) de Rodrigo, aos itens a seguir.
+    comando: Qual argumento de direito material poderia ser apresentado em busca da absolvição do denunciado? Justifique.
+    gabarito: Rodrigo deve ser absolvido pois sua omissão ocorreu em erro de tipo. Para configuração do delito de omissão de socorro, previsto no Art. 135 do Código Penal, é preciso que a omissão tenha ocorrido quando era possível ao agente prestar assistência sem risco pessoal. Rodrigo somente não agiu porque acreditava que existia risco para si, já que não sabia nadar e a criança estava se afogando na lagoa. Em que pese a lagoa fosse rasa e não apresentasse risco para Rodrigo, ele não tinha conhecimento de tal situação, logo agiu em erro sobre a elementar “sem risco pessoal”. Havendo erro sobre elementar do tipo, a consequência é o afastamento do dolo, somente podendo o agente ser responsabilizado se o erro for evitável e prevista a modalidade culposa do delito, nos termos do Art. 20 do Código Penal. No caso, o crime do Art. 135 do Código Penal não traz a modalidade culposa, logo o fato é atípico.
+    opcoes:
+      correta: O argumento é de que Rodrigo agiu em erro sobre a elementar do tipo “sem risco pessoal”, nos termos do Art. 20 do Código Penal, logo sua conduta é atípica.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Habeas corpus e agravo em execução penal (0,15 cada).
+        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+    revisao: *a1
+  - id: 25-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A1
+    caso: |-
+      Na cidade de Goiânia funciona a boate Noite Cheia, onde ocorrem shows de música ao vivo toda sexta-feira. Em razão da grande quantidade de frequentadores, os proprietários João e Maria estabeleceram que somente poderia ingressar na boate aquele que colocasse o nome na lista de convidados, até 24 horas antes do evento.
+
+      Em determinada sexta-feira, Eduardo, morador de São Paulo, comparece ao local com a intenção de assistir ao show, mas foi informado sobre a impossibilidade de ingresso, já que seu nome não constava na lista.
+
+      Pretendendo ingressar ainda assim, Eduardo ofereceu vantagem indevida, qual seja, R$ 500,00, a Natan, integrante da segurança privada do evento, em troca de este permitir seu ingresso no local sem que os proprietários soubessem. Ocorre que a conduta foi filmada pelas câmeras de segurança e, de imediato, Natan recusou a vantagem, sendo Eduardo encaminhado à Delegacia mais próxima.
+
+      O Ministério Público ofereceu denúncia em face de Eduardo pela prática do crime de corrupção ativa consumada, previsto no Art. 333 do Código Penal. Durante a instrução, foi expedida carta precatória para determinada cidade de Minas Gerais, para oitiva de Natan, única testemunha, tendo em vista a mudança de endereço residencial do antigo segurança do estabelecimento, não sendo a defesa de Eduardo intimada do ato, uma vez que consta expressamente do Código de Processo Penal que a expedição de carta precatória não suspende o feito. Após o interrogatório, a defesa de Eduardo é intimada a apresentar alegações finais.
+
+      Considerando as informações narradas, na condição de advogado(a) de Eduardo, responda aos itens a seguir.
+    comando: Para questionar a prova testemunhal produzida durante a instrução, qual o argumento de direito processual a ser apresentado pela defesa? Justifique.
+    gabarito: O advogado de Eduardo deve alegar que ocorreu cerceamento de defesa, havendo violação aos princípios do contraditório e da ampla defesa, tendo em vista que não houve intimação em relação à expedição da carta precatória, conforme determina o CPP, que prevê expressamente, em seu Art. 222, que as partes deverão ser intimadas. De fato, conforme consta do enunciado, a expedição de carta precatória, de acordo com o Art. 222, § 1º, do CPP, não gera suspensão do processo. Todavia, essa informação não se confunde com a necessidade de intimação da defesa em relação à expedição. A jurisprudência admite que não ocorra intimação da defesa em relação à data da audiência a ser realizada no juízo deprecado somente no caso de ter ocorrido a devida intimação em relação à expedição da carta precatória, nos termos da Súmula 273 do Superior Tribunal de Justiça, o que não ocorreu na hipótese.
+    opcoes:
+      correta: Ocorrência de cerceamento de defesa ou violação ao princípio do contraditório ou violação ao princípio da ampla defesa, nos termos do art. 5º, inciso LV da CRFB/88. A defesa deveria ter sido intimada da expedição da carta precatória, nos termos do Art. 222 do CPP OU Súmula 273 do STJ.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Habeas corpus e agravo em execução penal (0,15 cada).
+        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+    revisao: *a1
+  - id: 25-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      Na cidade de Goiânia funciona a boate Noite Cheia, onde ocorrem shows de música ao vivo toda sexta-feira. Em razão da grande quantidade de frequentadores, os proprietários João e Maria estabeleceram que somente poderia ingressar na boate aquele que colocasse o nome na lista de convidados, até 24 horas antes do evento.
+
+      Em determinada sexta-feira, Eduardo, morador de São Paulo, comparece ao local com a intenção de assistir ao show, mas foi informado sobre a impossibilidade de ingresso, já que seu nome não constava na lista.
+
+      Pretendendo ingressar ainda assim, Eduardo ofereceu vantagem indevida, qual seja, R$ 500,00, a Natan, integrante da segurança privada do evento, em troca de este permitir seu ingresso no local sem que os proprietários soubessem. Ocorre que a conduta foi filmada pelas câmeras de segurança e, de imediato, Natan recusou a vantagem, sendo Eduardo encaminhado à Delegacia mais próxima.
+
+      O Ministério Público ofereceu denúncia em face de Eduardo pela prática do crime de corrupção ativa consumada, previsto no Art. 333 do Código Penal. Durante a instrução, foi expedida carta precatória para determinada cidade de Minas Gerais, para oitiva de Natan, única testemunha, tendo em vista a mudança de endereço residencial do antigo segurança do estabelecimento, não sendo a defesa de Eduardo intimada do ato, uma vez que consta expressamente do Código de Processo Penal que a expedição de carta precatória não suspende o feito. Após o interrogatório, a defesa de Eduardo é intimada a apresentar alegações finais.
+
+      Considerando as informações narradas, na condição de advogado(a) de Eduardo, responda aos itens a seguir.
+    comando: Em busca da absolvição de Eduardo pelo delito imputado, qual o argumento de direito material a ser apresentado? Justifique.
+    gabarito: O argumento a ser apresentado é o de que, apesar de Eduardo ter oferecido vantagem indevida para o segurança do estabelecimento para que ele não praticasse ato de seu ofício, não há que se falar em crime de corrupção ativa. O crime de corrupção ativa, previsto no Art. 333 do Código Penal, é crime praticado por particular contra a Administração Pública em Geral. Ocorre que, no caso, a vantagem foi oferecida para particular e não funcionário público, logo o fato é atípico.
+    opcoes:
+      correta: O argumento é que a vantagem foi oferecida para particular e não para funcionário público, logo não configurado crime contra a Administração Pública.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Habeas corpus e agravo em execução penal (0,15 cada).
+        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+    revisao: *a1
+  - id: 25-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Vitor, 23 anos, decide emprestar sua motocicleta, que é seu instrumento de trabalho, para seu pai, Francisco, 45 anos, por um mês, já que este se encontrava em dificuldade financeira. Após o prazo do empréstimo, Vitor, que não residia com Francisco, solicitou a devolução da motocicleta, mas este se recusou a devolver e passou a atuar como se proprietário do bem fosse, inclusive anunciando sua venda.
+
+      Diante do registro dos fatos em sede policial, o Ministério Público ofereceu denúncia em face de Francisco, imputando-lhe a prática do crime previsto no Art. 168, § 1º, inciso II, do Código Penal.
+
+      Após a confirmação dos fatos em juízo e a juntada da Folha de Antecedentes Criminais sem qualquer outra anotação, o magistrado julgou parcialmente procedente a pretensão punitiva, afastando a causa de aumento, mas condenando Francisco, pela prática do crime de apropriação indébita simples, à pena mínima prevista para o delito em questão (01 ano), substituindo a pena privativa de liberdade por restritiva de direito.
+
+      Considerando apenas as informações narradas no enunciado, na condição de advogado(a) de Francisco, responda aos itens a seguir.
+    comando: Para combater a decisão do magistrado, que, após afastar a causa de aumento, imediatamente decidiu por condenar o réu pela prática do crime de apropriação indébita simples, qual argumento de direito processual poderia ser apresentado? Justifique.
+    gabarito: |-
+      O argumento de direito processual a ser apresentado seria no sentido de que não poderia o magistrado, de imediato, condenar o réu pela prática do crime de apropriação indébita simples, tendo em vista que com o afastamento da causa de aumento, a pena mínima prevista para o delito do Art. 168, caput, do Código Penal admite o oferecimento de proposta de suspensão condicional do processo, de modo que deveria o magistrado ter encaminhado os autos ao Ministério Público para manifestação sobre o previsto no Art. 89 da Lei nº 9.099/95.
+
+      Ressalta-se que todos os demais requesitos previstos no dispositivo estão preenchidos, já que Francisco era primário, de bons antecedentes e as circunstâncias do crime eram favoráveis. Ademais, o Superior Tribunal de Justiça, na Súmula 337, prevê expressamente que é cabível a suspensão condicional do processo na desclassificação do crime ou na procedência parcial do pedido.
+    opcoes:
+      correta: O argumento é que, diante da parcial procedência do pedido, deveria ter sido analisada a possibilidade de oferecimento de proposta de suspensão condicional do processo, nos termos da Súmula 337 do STJ OU art. 89 da Lei 9.099/95.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Habeas corpus e agravo em execução penal (0,15 cada).
+        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+    revisao: *a1
+  - id: 25-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Vitor, 23 anos, decide emprestar sua motocicleta, que é seu instrumento de trabalho, para seu pai, Francisco, 45 anos, por um mês, já que este se encontrava em dificuldade financeira. Após o prazo do empréstimo, Vitor, que não residia com Francisco, solicitou a devolução da motocicleta, mas este se recusou a devolver e passou a atuar como se proprietário do bem fosse, inclusive anunciando sua venda.
+
+      Diante do registro dos fatos em sede policial, o Ministério Público ofereceu denúncia em face de Francisco, imputando-lhe a prática do crime previsto no Art. 168, § 1º, inciso II, do Código Penal.
+
+      Após a confirmação dos fatos em juízo e a juntada da Folha de Antecedentes Criminais sem qualquer outra anotação, o magistrado julgou parcialmente procedente a pretensão punitiva, afastando a causa de aumento, mas condenando Francisco, pela prática do crime de apropriação indébita simples, à pena mínima prevista para o delito em questão (01 ano), substituindo a pena privativa de liberdade por restritiva de direito.
+
+      Considerando apenas as informações narradas no enunciado, na condição de advogado(a) de Francisco, responda aos itens a seguir.
+    comando: Qual argumento de direito material, em sede de apelação, poderia ser apresentado em busca de evitar a punição de Francisco? Justifique.
+    gabarito: |-
+      O argumento de direito material a ser apresentado em busca de evitar a punição de Francisco é da aplicação da previsões do Art. 181, inciso II, do Código Penal, que traz o instituto conhecido como escusa absolutória. Em que pese a conduta praticada por Francisco abstratamente se adeque as previsões do Art. 168, caput, do Código Penal, de acordo com o dispositivo antes mencionado, é isento de pena quem comete crime previsto no título contra descendente, sendo certo que nenhuma das exceções trazidas pelo Art. 183 do Código Penal ocorreu.
+
+      Assim, em sendo o autor do fato pai da vítima e não havendo violência ou grave ameaça à pessoa, é ele isento de pena, não podendo ser criminalmente punido.
+    opcoes:
+      correta: Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Habeas corpus e agravo em execução penal (0,15 cada).
+        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
+        - Não foi correta a capitulação delitiva do Ministério Público, pois em sendo o crime culposo, a idade da vítima não é relevante para imputação da causa de aumento do Art. 121, § 4º, do CP, OU pois a causa de aumento em razão de a vítima ser menor de 14 anos somente será aplicada ao crime de homicídio doloso.
+        - Sim, deveria a defesa técnica alegar a existência de excludente de ilicitude, em razão do estado de necessidade, nos termos do Art. 24 ou do Art. 23, inciso I, do CP.
+    revisao: *a1

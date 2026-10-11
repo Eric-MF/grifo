@@ -259,3 +259,8 @@ questoes:
         componentes:
           - { id: c1, valor: 0.65, termos: [ requisitos, preventiva ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 313, CPP" ], requer: c1 }
+
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q2, lei: "Lei 12.015/2009", texto: "O art. 214 do Código Penal (atentado violento ao pudor) foi revogado pela Lei 12.015/2009, que passou a tratar essas condutas como estupro no art. 213." }

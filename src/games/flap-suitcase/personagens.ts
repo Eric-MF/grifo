@@ -108,10 +108,33 @@ const ACESSORIOS: Record<string, (c: Ctx, tema: Tema) => void> = {
   },
 };
 
+// Asas da balança: presas nas pontas do travessão (os "ombros", em y -34). A raiz fica no ombro e as
+// penas saem dali, a mais longa na ponta; o bater gira a asa inteira em torno do ombro.
+function asasDoOmbro(c: Ctx, fase: number, tema: Tema) {
+  const a = tema.paleta.asa;
+  const bate = Math.sin(fase) * 0.55;
+  for (const lado of [-1, 1]) {
+    c.save();
+    c.translate(lado * 22, -34);
+    c.scale(lado, 1);
+    c.rotate(-0.5 + bate);
+    c.lineWidth = 1.4;
+    c.strokeStyle = a.contorno;
+    c.fillStyle = a.cor;
+    for (let i = 0; i < 4; i++) {
+      c.beginPath();
+      c.ellipse(7 + i * 5.5, 0, 8 + i * 2.5, 5.5, i * 0.12, 0, Math.PI * 2);
+      c.fill();
+      c.stroke();
+    }
+    c.restore();
+  }
+}
+
 // Balança da Justiça inteira, sem maleta: coluna, degraus, travessão balançando e dois pratos.
 // Coordenadas: pivô em (0,-34); pedestal até y=16; ocupa cerca de x ±28 e y -40..16.
 function balanca(c: Ctx, tema: Tema, fase: number) {
-  asas(c, fase, tema);
+  asasDoOmbro(c, fase, tema);
   const m = tema.paleta.maleta;
   c.save();
   c.lineCap = "round";

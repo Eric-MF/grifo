@@ -1,0 +1,170 @@
+# Gerado a partir do texto colado do caderno Tipo 1 e do gabarito definitivo do XLII Exame (o PDF do caderno não tem texto legível).
+# Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
+exame: "42"
+faixa:
+  penal:
+    - 57
+    - 62
+  processoPenal:
+    - 63
+    - 68
+anuladas: []
+questoes:
+  - n: 57
+    disciplina: penal
+    enunciado: Maria, brasileira e residente no Brasil, resolveu viajar para o exterior e lá praticar o delito de embriaguez ao volante, que, embora típico no Brasil, no país onde seria praticado não é tipificado. Ao retornar ao Brasil, os fatos foram noticiados às autoridades competentes. Com base na hipótese apresentada, assinale a afirmativa correta.
+    alternativas:
+      A: Maria está sujeita à extraterritorialidade da lei penal brasileira em razão da sua nacionalidade, podendo responder pelo ilícito praticado.
+      B: Maria não poderá responder pelo fato, tendo em vista a inaplicabilidade da lei brasileira a fatos ocorridos fora dos limites territoriais do país.
+      C: Maria não poderá responder pelo fato, tendo em vista que é necessário que a incriminação da conduta se verifique no local do fato e no Brasil, simultaneamente.
+      D: Maria está sujeita à extraterritorialidade da lei penal brasileira, em razão de a lei em vigor no Estado de sua residência determinar o regime jurídico que lhe é aplicável.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 58
+    disciplina: penal
+    enunciado: Ana Paula é repórter esportiva de uma emissora de televisão. Ao participar de uma reportagem ao vivo na mídia televisiva, um torcedor presente ao estádio, com intenção de satisfazer sua própria lascívia, a abraça à força, beijando-a no rosto. Ana Paula sente-se afrontada em sua liberdade sexual. Em razão do fato, ela procura você, como advogado(a), para saber como proceder. Assinale a afirmativa que apresenta corretamente sua orientação.
+    alternativas:
+      A: O fato constitui importunação sexual e se processa mediante ação penal pública incondicionada.
+      B: O ato deve ser identificado como delito de injúria real e se processa mediante ação penal privada.
+      C: O episódio equivale a estupro e se processa mediante ação penal pública condicionada à representação da ofendida.
+      D: O caso tipifica posse sexual mediante fraude ou outro meio que dificulte ou impossibilite a livre manifestação de vontade da vítima e se processa mediante queixa.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 59
+    disciplina: penal
+    enunciado: Caio, muito atuante nas redes sociais, compartilhou vídeos e fotos pornográficos em um grupo de amigos. O material compartilhado continha imagens que teriam sido extraídas, ilegalmente, de computadores pessoais por terceiros, já tendo sido inclusive objeto de registros policiais por parte das vítimas. Uma das pessoas para as quais as imagens foram compartilhadas procura a polícia e relata a atitude de Caio. O Delegado indiciou Caio pela prática do crime descrito no Art. 218-C do CP, o qual prevê a figura penal do compartilhamento não autorizado de cena de sexo ou pornografia. Caio, surpreendido com a acusação, afirmou não ter conhecimento de que o fato por ele praticado seria criminoso. A tese defensiva correta, a partir da afirmação de Caio, é a ocorrência do erro
+    alternativas:
+      A: sobre a pessoa.
+      B: de tipo permissivo.
+      C: de proibição direto.
+      D: de proibição indireto.
+    correta: C
+    dispositivos:
+      - art. 218-C, cp
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 60
+    disciplina: penal
+    enunciado: Alfredo, motorista da sociedade empresária Guardião Ltda., pessoa jurídica de direito privado que presta serviços de segurança, é subordinado ao gerente Marcos. No dia 10/3/2023, Marcos ordenou que Alfredo fizesse a escolta de um cliente. No trajeto de volta, Alfredo foi parado em uma blitz, ocasião em foi constatado que o veículo funcional que conduzia era proveniente de roubo. A despeito de não ter ciência do crime antecedente, até mesmo por não ser o responsável pelas compras da empregadora, Alfredo foi preso em flagrante por suposta prática do crime de receptação dolosa. Diante do exposto, assinale a opção que apresenta, corretamente, a tese de mérito que pode ser invocada em defesa de Alfredo.
+    alternativas:
+      A: A de exclusão da ilicitude, por exercício regular do direito.
+      B: A de exclusão da ilicitude, por estrito cumprimento do dever legal.
+      C: A de exclusão da tipicidade, por ausência de elemento subjetivo do tipo.
+      D: A de exclusão da culpabilidade por inexigibilidade de conduta diversa, consistente na obediência hierárquica.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 61
+    disciplina: penal
+    enunciado: Filisteu, empresário, contratou Mateus para matar seu concorrente, Lucas, mediante pagamento antecipado de R$ 50.000,00 (cinquenta mil reais). Portando arma de fogo municiada, Mateus se pôs em campana, levando consigo seu amigo, Antônio, que nada sabia sobre os fatos. Quando Lucas saiu de casa com seu filho no colo, Mateus não teve coragem de cumprir o acordado e abandonou o local sem que Lucas o avistasse. Diante dessa situação hipotética, assinale a afirmativa correta.
+    alternativas:
+      A: Filisteu não praticou fato penalmente típico.
+      B: Filisteu e Mateus praticaram o crime de associação criminosa.
+      C: Filisteu deve responder por tentativa de homicídio em coautoria.
+      D: Filisteu deve responder por tentativa de homicídio, tendo a pena atenuada em razão do arrependimento posterior de Mateus.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 62
+    disciplina: penal
+    enunciado: Joelerson, foragido, com longa lista de antecedentes criminais, foi condenado ao cumprimento de uma pena privativa de liberdade de 24 anos de reclusão, mínima prevista para o delito que cometeu (extorsão mediante sequestro seguida de morte - Art. 159, § 3Q, do Código Penal). No dia seguinte ao trânsito em julgado da condenação, entrou em vigor a Lei A, que reduziu a pena mínima para o delito referido, fixando-a em 20 (vinte) anos de reclusão. Após intensa reação midiática, a Lei B revogou a Lei A, restabelecendo o patamar sancionatório mínimo anteriormente previsto. No dia seguinte à entrada em vigor da Lei B, Joelerson foi capturado e iniciou o cumprimento da pena. Diante dessa situação hipotética, assinale a afirmativa correta.
+    alternativas:
+      A: Joelerson somente faria jus à redução da pena se a execução da condenação fosse iniciada antes da entrada em vigor da Lei A.
+      B: Joelerson somente faria jus à redução da pena se a execução da condenação fosse iniciada antes da entrada em vigor da Lei B.
+      C: Joelerson faz jus à redução da pena, independentemente do trânsito em julgado da sentença condenatória e da entrada em vigor da Lei B.
+      D: Joelerson não faz jus à redução da pena, pois ambas as leis citadas entraram em vigor após o trânsito em julgado da sentença condenatória.
+    correta: C
+    dispositivos:
+      - art. 159, cp
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 63
+    disciplina: processo-penal
+    enunciado: Antônio e Rogério praticaram, em comunhão de ações e desígnios, um ilícito penal, e ambos foram condenados. Antônio e o Ministério Público interpuseram tempestivos recursos, ao passo que Rogério perdeu o prazo de recurso, porém constatou que havia prescrição da pretensão punitiva na modalidade retroativa, o que foi sustentado por sua defesa em contrarrazões recursais. Nesse caso, considerando os efeitos dos recursos, assinale a afirmativa correta.
+    alternativas:
+      A: O efeito devolutivo do recurso permite que o Juiz reconsidere a decisão recorrida.
+      B: O efeito translativo do recurso permite a Rogério arguir a prescrição em suas contrarrazões.
+      C: O efeito substitutivo do recurso permite que o Tribunal conheça toda a matéria impugnada.
+      D: O efeito extensivo do recurso permite que Rogério aproveite qualquer decisão favorável a Antônio.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 64
+    disciplina: processo-penal
+    enunciado: Em um inquérito policial, o Juiz decretou, de ofício, a prisão preventiva de Débora, sem que esta possuísse qualquer antecedente criminal, apontando como fundamento para a prisão a gravidade em abstrato do crime de homicídio culposo. Certo de que não houve a decretação anterior de medida cautelar diversa da prisão, assinale a opção que apresenta, corretamente, a alegação que você, como advogado(a) de Débora, deve apresentar.
+    alternativas:
+      A: O magistrado não pode decretar prisão preventiva de ofício, bem como não é cabível a decretação de prisão preventiva em delitos culposos.
+      B: O magistrado pode, de ofício, decretrar prisão preventiva, e a gravidade em abstrato do crime é fundamento legítimo para a decretação de preventiva.
+      C: O magistrado pode decretar prisão preventiva de ofício no inquérito e no processo, mas a gravidade em abstrato de um crime não é motivo legítimo para a decretação de preventiva.
+      D: O magistrado não pode decretar prisão preventiva de ofício, mas a gravidade em abstrato de um crime é um motivo legítimo para a decretação da prisão preventiva mesmo quando o suspeito for primário.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 65
+    disciplina: processo-penal
+    enunciado: Amanda impetra habeas corpus em favor de Telma, que foi presa preventivamente por decisão do Juiz de Primeiro Grau, sendo acusada da prática de crime hediondo. O habeas corpus foi impetrado com o argumento de excesso de prazo. O Tribunal concedeu a ordem de habeas corpus de ofício, fundamentado na incompetência do juiz que decretou a prisão. Sobre a hipótese narrada, assinale a afirmativa correta.
+    alternativas:
+      A: O Tribunal equivocou-se, uma vez que a incompetência do julgador não é fundamento para a concessão de habeas corpus.
+      B: O Tribunal agiu de modo correto, uma vez que é possível a concessão de habeas corpus de ofício sempre que houver constrangimento ilegal.
+      C: O Tribunal agiu de modo correto, pois a incompetência do Juízo é o único fundamento que admite a concessão da ordem de habeas corpus de ofício.
+      D: O Tribunal equivocou-se, pois fica vinculado aos argumentos apontados pelo impetrante do habeas corpus, sendo inadmissível a concessão de habeas corpus de ofício.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 66
+    disciplina: processo-penal
+    enunciado: Daniel foi denunciado pela prática do crime de instigação ao suicídio. Após a fase de instrução, o Juiz pronunciou o réu, afirmando ser Daniel totalmente culpado da prática do crime e que qualquer jurado teria a obrigação moral de reconhecer provada a materialidade e a autoria. Nessa hipótese, de acordo com nosso ordenamento jurídico, você, como advogado(a) de Daniel, afirma que a decisão de pronúncia é
+    alternativas:
+      A: ilegal, uma vez que houve excesso de linguagem.
+      B: legal, porque observa o livre convencimento motivado do julgador.
+      C: ilegal, uma vez que a pronúncia deveria ter sido decidida pelo Tribunal do Júri.
+      D: legal, porque a restrição legal de excesso de linguagem aplica- se apenas para o crime de homicídio.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 67
+    disciplina: processo-penal
+    enunciado: Policiais ingressaram no imóvel pertencente a Paulo, às 4 horas da manhã, em regular perseguição iniciada logo após a prática de um homicídio, a fim de prender Júnior (filho de Paulo) em flagrante delito. Ao ingressar no imóvel, os policiais capturaram Júnior e, em busca pessoal, localizaram o telefone celular do custodiado no bolso da calça. Além de prender Júnior em flagrante, a autoridade policial determinou o encaminhamento do telefone apreendido à perícia técnica, a fim de descobrir seu conteúdo. O laudo pericial indicou que nele havia conversas que confirmavam a pertinência de Júnior em associação criminosa. Assim, foi instaurado inquérito policial contra Júnior, para apurar o delito de associação criminosa. Nesse caso, assinale a opção que indica corretamente, a alegação que você, como advogado(a) de Júnior, deve apresentar.
+    alternativas:
+      A: A prisão em flagrante foi válida, porém esta não autoriza a apreensão do aparelho telefônico do flagranteado, o qual somente poderia ser apreendido por ordem judicial prévia e expressa.
+      B: O ingresso em domicílio para prisão em flagrante não pode ocorrer no período noturno, havendo nulidade de todos os atos subsequentes ao ingresso dos policiais no domicílio de Paulo, invalidando, inclusive, a prisão em flagrante.
+      C: O ingresso no interior da residência de terceiros depende de expedição de mandado de busca, havendo nulidade de todos os atos subsequentes ao ingresso dos policiais no domicílio de Paulo, invalidando, inclusive, a prisão em flagrante.
+      D: A prisão em flagrante foi válida, entretanto, a autoridade policial não poderia determinar a quebra de sigilo de dados dos telefones apreendidos, havendo nulidade da prova colhida a partir da perícia do aparelho e de todos os atos subsequentes.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 68
+    disciplina: processo-penal
+    enunciado: Anderson, motorista da sociedade empresária X, dirigindo o veículo da sociedade empresária fora do horário comercial e acima da velocidade permitida, atropelou Lucas. Lucas ficou internado pelo período de dois meses. Anderson foi condenado com trânsito em julgado, no âmbito criminal. Lucas propõe ação civil ex delicto de execução contra a sociedade empresária X. Sobre essa ação civil ex delicto, você, na qualidade de advogado(a) da sociedade empresária X, afirmou, corretamente, que ela é parte
+    alternativas:
+      A: legítima uma vez que é responsável civil.
+      B: legítima para figurar como ré, ainda que Anderson fosse absolvido criminalmente.
+      C: ilegítima para ação civil ex delicto de execução, uma vez que não teve oportunidade de participar da ação penal originária.
+      D: ilegítima para ação civil ex delicto, seja de conhecimento ou de execução, que somente pode ser proposta contra o autor do crime.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.

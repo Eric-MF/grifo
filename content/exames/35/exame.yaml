@@ -316,3 +316,8 @@ questoes:
           - { id: c1, valor: 0.35, alternativas: [ [ 14 anos ], [ consenti* | consentimento ] ] }
           - { id: c2, valor: 0.2, termos: [ atipic* | absolvi* ] }
           - { id: c3, valor: 0.1, dispositivo: [ "art. 386, III, CPP" ], requer: c2 }
+
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q4, lei: "Lei 15.280/2025 e Lei 15.353/2026", texto: "O art. 217-A do Código Penal (estupro de vulnerável) foi alterado pela Lei 15.280/2025, que fixou pena de reclusão de 10 a 18 anos (antes, de 8 a 15 anos), e pela Lei 15.353/2026, que acrescentou o § 4º-A (presunção absoluta de vulnerabilidade da vítima)." }

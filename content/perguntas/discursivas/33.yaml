@@ -1,0 +1,617 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "33"
+perguntas:
+  - id: 33-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento: 1ª Vara Criminal da Comarca de Florianópolis/SC."
+    opcoes:
+      correta: "Endereçamento: 1ª Vara Criminal da Comarca de Florianópolis/SC."
+      erradas:
+        - "Endereçamento correto das razões: Tribunal de Justiça do Estado."
+        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
+        - "Endereçamento: Turma Recursal do Estado de Campo Belo."
+        - "Endereçamento correto: Juízo da Vara de Execuções Penais do Rio de Janeiro/RJ."
+        - "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS."
+    revisao: &a1
+      status: rascunho
+  - id: 33-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: enderecamento
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: A quem devem ser endereçadas as razões?
+    gabarito: "Endereçamento: Tribunal de Justiça de Santa Catarina."
+    opcoes:
+      correta: "Endereçamento: Tribunal de Justiça de Santa Catarina."
+      erradas:
+        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
+        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
+        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
+        - Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG..
+        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
+    revisao: *a1
+  - id: 33-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: preliminar
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: "Preliminar: Nulidade da instrução, tendo em vista que houve inversão na ordem da realização das perguntas para as testemunhas OU tendo em vista que o juiz iniciou as perguntas para as partes, não permitindo complementação, o que viola o Art. 212 OU o Art. 564, inciso IV, ambos do CPP."
+    opcoes:
+      correta: "Preliminar: Nulidade da instrução, tendo em vista que houve inversão na ordem da realização das perguntas para as testemunhas OU tendo em vista que o juiz iniciou as perguntas para as partes, não permitindo complementação, o que viola o Art. 212 OU o Art. 564, inciso IV, ambos do CPP."
+      erradas:
+        - "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
+        - "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
+        - Ilicitude por derivação da prova testemunhal, com fundamento no art. 157, § 1º, CPP.
+        - Preliminarmente, reconhecimento da nulidade dos atos da instrução OU requerimento de aplicação, por analogia, do art. 28 do CPP, diante do não oferecimento de proposta de suspensão condicional do processo, pois preenchidos os requisitos do Art. 89 da Lei 9099/95 OU pois irrelevante o fato do delito imputado não ser infração de menor potencial ofensivo.
+        - O crime de lesão corporal leve do Art. 129, § 9º, do CP é de ação penal pública condicionada à representação, nos termos do Art. 88 da Lei nº 9.099/95, e a vítima demonstrou não ter interesse em ver o autor do fato responsabilizado criminalmente
+    revisao: *a1
+  - id: 33-peca-4-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "4.1"
+    secao: merito
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: A conduta do magistrado de não permitir complementação viola o princípio da ampla defesa OU do devido processo legal OU gera cerceamento de defesa, em desconformidade com Art. 5º, inciso LIV OU LV, da CRFB.
+    opcoes:
+      correta: A conduta do magistrado de não permitir complementação viola o princípio da ampla defesa OU do devido processo legal OU gera cerceamento de defesa, em desconformidade com Art. 5º, inciso LIV OU LV, da CRFB.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
+        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
+        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
+    revisao: *a1
+  - id: 33-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: No mérito, deveria ser buscada a absolvição do réu em relação ao crime de corrupção de menores, tendo em vista que ocorreu erro de tipo, nos termos do Art. 20, caput, do CP.
+    opcoes:
+      correta: No mérito, deveria ser buscada a absolvição do réu em relação ao crime de corrupção de menores, tendo em vista que ocorreu erro de tipo, nos termos do Art. 20, caput, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Atipicidade da conduta ou desclassificação para crime de dano qualificado, tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto.
+        - Da tese da incidência da atenuante da menoridade penal relativa
+        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
+        - Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
+    revisao: *a1
+  - id: 33-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
+    opcoes:
+      correta: Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
+        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
+        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
+    revisao: *a1
+  - id: 33-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: No que tange à aplicação da pena, deveria ser reduzida a pena base, considerando que inquéritos policiais e ações em curso não podem ser valoradas negativamente na pena base, nem mesmo para avaliar personalidade, nos termos do Art. 5º, inciso LVII, da CRFB, OU da Súmula 444 do STJ.
+    opcoes:
+      correta: No que tange à aplicação da pena, deveria ser reduzida a pena base, considerando que inquéritos policiais e ações em curso não podem ser valoradas negativamente na pena base, nem mesmo para avaliar personalidade, nos termos do Art. 5º, inciso LVII, da CRFB, OU da Súmula 444 do STJ.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
+        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 33-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: merito
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento da atenuante da menoridade relativa, já que o réu era menor de 21 anos na data dos fatos, nos termos do Art. 65, inciso I, do CP.
+    opcoes:
+      correta: Reconhecimento da atenuante da menoridade relativa, já que o réu era menor de 21 anos na data dos fatos, nos termos do Art. 65, inciso I, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - "Subsidiariamente: aplicação da pena base no mínimo legal, tendo em vista que o fato posterior ao crime julgado não pode ser considerado maus antecedentes."
+        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
+        - Aplicação do regime inicial aberto, nos termos do Art. 33, §2º, alínea c, do Código Penal.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 33-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Redução do quantum de aumento realizado na terceira fase da dosimetria do crime de roubo, já que os fatos foram praticados antes da entrada em vigor da lei que aumentou o percentual de aumento em razão do emprego de arma de fogo OU em razão do princípio da irretroatividade da lei penal prejudicial ao réu, conforme Art. 5º, inciso XL, da CRFB.
+    opcoes:
+      correta: Redução do quantum de aumento realizado na terceira fase da dosimetria do crime de roubo, já que os fatos foram praticados antes da entrada em vigor da lei que aumentou o percentual de aumento em razão do emprego de arma de fogo OU em razão do princípio da irretroatividade da lei penal prejudicial ao réu, conforme Art. 5º, inciso XL, da CRFB.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
+        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
+        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
+    revisao: *a1
+  - id: 33-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: merito
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
+    opcoes:
+      correta: Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 33-peca-11
+    categoria: peca-detalhe
+    parte: peca
+    item: "11"
+    secao: merito
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    opcoes:
+      correta: Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
+        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
+        - Houve desistência voluntária, já que Rômulo optou por não prosseguir na empreitada criminosa OU já que não ocorreram circunstâncias alheias à vontade do agente, nos termos do Art. 15 do CP
+    revisao: *a1
+  - id: 33-peca-12
+    categoria: peca-detalhe
+    parte: peca
+    item: "12"
+    secao: pedido
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Conhecimento e provimento do recurso.
+    opcoes:
+      correta: Conhecimento e provimento do recurso.
+      erradas:
+        - Absolvição, com argumento e base legal.
+        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
+        - Requerimento de aplicação do furto privilegiado, pleiteando a adoção de alguma das medidas previstas em lei (ou substituição da reclusão por detenção ou causa de diminuição de pena ou aplicação exclusivamente da pena de multa), na forma do Art. 155, §2º, do CP.
+        - Pedido de retratação pelo juízo a quo.
+        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
+    revisao: *a1
+  - id: 33-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      Em uma pequena cidade do interior do Amazonas, uma virose se espalha entre os adolescentes locais, gerando diversos casos de jovens com febre, vômitos e infecções. Considerando a dificuldade de acesso à cidade, que dependia de viagem de barco, e a inexistência de profissionais de medicina no local, os pais dos adolescentes procuram Jorge, 22 anos, estudante de odontologia, para auxílio. Verificando o estado de desidratação dos adolescentes e a urgência da situação, Jorge, que sempre gostara de ler livros sobre medicina, realiza o atendimento e indica os remédios e os tratamentos que deveriam ser realizados. Os adolescentes ficaram curados após o atendimento “médico” de Jorge e, em razão disso, passaram a ser constantes os atendimentos por ele realizados em casos urgentes, com perigo atual à vida e à saúde das pessoas da cidade, mas que não tinham qualquer vínculo com a virose anterior.
+
+      Descobertos os fatos e verificado que foram realizados 10 atendimentos diferentes ao longo de um ano, o Ministério Público denunciou Jorge como incurso nas sanções penais do Art. 282 do Código Penal, por 10 vezes, em continuidade delitiva. A proposta de suspensão condicional do processo não foi aceita pelo réu.
+
+      Após regular instrução, a pretensão punitiva do Estado foi julgada procedente, sendo Jorge condenado à pena de 10 meses de detenção (pena base no mínimo legal, aumentada de 2/3 em razão da continuidade delitiva), substituída a privativa de liberdade por uma restritiva de direitos.
+
+      Intimado da decisão, responda na condição de advogado de Jorge, aos itens a seguir.
+    comando: Existe argumento de direito material a ser apresentado em busca da absolvição de Jorge? Justifique.
+    gabarito: |-
+      Sim, existe argumento a ser apresentado pelo advogado de Jorge em busca de sua absolvição. O conceito de crime, de acordo com a doutrina majoritária, envolve o fato típico, ilícito e culpável. A princípio, a conduta de Jorge seria típica, já que realizou, com habitualidade, ao longo de um ano, atendimentos médicos sem autorização para exercer a profissão, sendo certo, porém, que tais atendimentos somente era realizados em situações de emergência. No caso, a conduta narrada seria típica de acordo com as previsões do Art. 282 do CP.
+
+      Todavia, claramente há situação de estado de necessidade. A todo momento consta do enunciado que Jorge somente atuava em situações de risco e urgência para vida e saúde das pessoas, sendo ainda destacado que a pequena cidade não tinha médico e que a obtenção de um profissional demandaria longo tempo. Assim, todos os requisitos do Art. 24 do CP foram preenchidos. Jorge agiu para salvar perigo atual, que não provocou por sua vontade, cujo sacrifício não era exigível na situação. Em razão disso, o advogado deveria pleitear o reconhecimento do estado de necessidade e, consequentemente, a exclusão da ilicitude da conduta.
+    opcoes:
+      correta: Sim, deveria a defesa técnica alegar a existência de excludente de ilicitude, em razão do estado de necessidade, nos termos do Art. 24 ou do Art. 23, inciso I, do CP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - À autoridade judiciária, na forma do Art. 24-A, §2º, da Lei nº 11.340/2006.
+        - Não, nos termos do verbete 453 da Súmula do STF. OU Não, pois nesse caso haveria supressão de instância.
+        - Deveria ser alegada a ocorrência de desistência voluntária, o que torna a conduta do agente atípica OU o que faz com que responda apenas pelos atos já praticados, na forma do Art. 15, primeira parte, do CP.
+        - Sim, o argumento de que ocorreu extinção da punibilidade diante da reparação do dano pelo réu, pagamento esse que precedeu sentença irrecorrível, nos termos do Art. 312, § 3º, do CP.
+    revisao: *a1
+  - id: 33-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      Em uma pequena cidade do interior do Amazonas, uma virose se espalha entre os adolescentes locais, gerando diversos casos de jovens com febre, vômitos e infecções. Considerando a dificuldade de acesso à cidade, que dependia de viagem de barco, e a inexistência de profissionais de medicina no local, os pais dos adolescentes procuram Jorge, 22 anos, estudante de odontologia, para auxílio. Verificando o estado de desidratação dos adolescentes e a urgência da situação, Jorge, que sempre gostara de ler livros sobre medicina, realiza o atendimento e indica os remédios e os tratamentos que deveriam ser realizados. Os adolescentes ficaram curados após o atendimento “médico” de Jorge e, em razão disso, passaram a ser constantes os atendimentos por ele realizados em casos urgentes, com perigo atual à vida e à saúde das pessoas da cidade, mas que não tinham qualquer vínculo com a virose anterior.
+
+      Descobertos os fatos e verificado que foram realizados 10 atendimentos diferentes ao longo de um ano, o Ministério Público denunciou Jorge como incurso nas sanções penais do Art. 282 do Código Penal, por 10 vezes, em continuidade delitiva. A proposta de suspensão condicional do processo não foi aceita pelo réu.
+
+      Após regular instrução, a pretensão punitiva do Estado foi julgada procedente, sendo Jorge condenado à pena de 10 meses de detenção (pena base no mínimo legal, aumentada de 2/3 em razão da continuidade delitiva), substituída a privativa de liberdade por uma restritiva de direitos.
+
+      Intimado da decisão, responda na condição de advogado de Jorge, aos itens a seguir.
+    comando: Em caso de manutenção da condenação, qual argumento poderá ser apresentado para questionar a capitulação realizada e a pena aplicada? Justifique.
+    gabarito: O argumento a ser apresentado é que, ainda que se considere que o crime foi praticado, haveria crime único do Art. 282 do CP e não concurso de delitos. A capitulação imputada pelo Ministério Público e acolhida pelo magistrado foi equivocada, não se tratando de erro apenas no momento de aplicação da pena. A acusação imputou na denúncia 10 CRIMES autônomos do Art. 282 do CP, o que era equivocado. O crime do Art. 282 do Código Penal é classificado, pela doutrina e pela jurisprudência, como crime de natureza habitual, ou seja, a própria configuração do delito exige situação de habitualidade, reiteração na prática dos atos. Apesar de realizados 10 “atendimentos médicos”, essas condutadas reiteradas configurariam, em tese, um crime de exercício ilegal da medicina, que pressupõe essa habitualidade. Assim, deveria a defesa técnica esclarecer que houve equívoco na imputação de 10 crimes, buscando o reconhecimento de delito único e, consequentemente, redução da pena com o afastamento da causa de aumento da continuidade delitiva.
+    opcoes:
+      correta: O argumento é o de que não houve concurso de crimes, mas sim crime único, diante da natureza de crime habitual da infração imputada ou diante da imprescindibilidade da reiteração para configuração do delito.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 33-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Bernardo, em 31 de dezembro de 2018, com a intenção de causar dano à loja de Bruno, seu inimigo, arremessou uma pedra na direção de uma janela com mosaico, que tinha valor significativo de mercado. Ocorre que, no momento da execução do crime, Bernardo errou o arremesso e a pedra acabou por atingir Joana, funcionária que passava em frente à loja e que não tinha sido percebida, causando-lhe lesões corporais que a impossibilitaram de trabalhar por 50 dias. A janela restou intacta. No momento do crime, não foi identificada a autoria, mas, após investigação, em 04 de março de 2019, foi descoberto que Bernardo seria o autor do arremesso.
+
+      O Ministério Público iniciou procedimento em face de Bernardo imputando-lhe o crime de lesão corporal de natureza culposa, figurando como vítima Joana, que apresentou representação quando da descoberta do autor.
+
+      Bruno, revoltado com o ocorrido, contratou um advogado, conferindo-lhe procuração com poderes gerais, constando o nome do ofendido e do ofensor. O procurador apresenta queixa-crime, em 02 de julho de 2019, imputando a prática do crime de tentativa de dano a Bernardo. Ao tomar conhecimento da queixa-crime, Bernardo o procura, como advogado.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Bernardo, responda aos questionamentos a seguir.
+    comando: Qual argumento de direito processual poderá ser apresentado em busca da rejeição da queixa-crime apresentada? Justifique.
+    gabarito: |-
+      O argumento é o de que não foram observadas as formalidades legais, tendo em vista que a queixa-crime foi apresentada por procurador sem poderes especiais. De acordo com o Art. 44 do Código de Processo Penal, a queixa-crime poderá ser apresentada por procurador, desde que sejam concedidos poderes especiais. Na hipótese, de acordo com o enunciado, a procuração concedida pelo querelante apenas previa poderes gerais;
+
+      logo, a queixa deveria ser rejeitada.
+    opcoes:
+      correta: A queixa-crime somente poderia ter sido apresentada por procurador com poderes especiais OU a procuração apenas previa poderes gerais, o que não é admitido, nos termos do Art. 44 do CPP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 33-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Bernardo, em 31 de dezembro de 2018, com a intenção de causar dano à loja de Bruno, seu inimigo, arremessou uma pedra na direção de uma janela com mosaico, que tinha valor significativo de mercado. Ocorre que, no momento da execução do crime, Bernardo errou o arremesso e a pedra acabou por atingir Joana, funcionária que passava em frente à loja e que não tinha sido percebida, causando-lhe lesões corporais que a impossibilitaram de trabalhar por 50 dias. A janela restou intacta. No momento do crime, não foi identificada a autoria, mas, após investigação, em 04 de março de 2019, foi descoberto que Bernardo seria o autor do arremesso.
+
+      O Ministério Público iniciou procedimento em face de Bernardo imputando-lhe o crime de lesão corporal de natureza culposa, figurando como vítima Joana, que apresentou representação quando da descoberta do autor.
+
+      Bruno, revoltado com o ocorrido, contratou um advogado, conferindo-lhe procuração com poderes gerais, constando o nome do ofendido e do ofensor. O procurador apresenta queixa-crime, em 02 de julho de 2019, imputando a prática do crime de tentativa de dano a Bernardo. Ao tomar conhecimento da queixa-crime, Bernardo o procura, como advogado.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Bernardo, responda aos questionamentos a seguir.
+    comando: Qual argumento de direito material a ser apresentado para questionar o delito imputado na queixa-crime? Justifique.
+    gabarito: A intenção de Bernardo era causar um dano à loja de Bruno, tendo o agente iniciado a execução desse ato, o que configuraria crime de tentativa de dano. Ocorre que, por política criminal, no Art. 74 do Código Penal, o legislador previu o instituto do “resultado diverso do pretendido” ou aberratio criminis, estabelecendo que quando, por erro na execução, advém resultado diverso do pretendido, o agente responde por culpa se o fato é previsto como culposo. Somente se ocorrer, também, o resultado inicialmente pretendido, será aplicada a regra do concurso formal. Diante da previsão legal, o crime de dano inicialmente pretendido fica afastado. Se houvesse dano e lesão, haveria concurso formal. Não ocorrendo o dano, o crime de tentativa de dano fica afastado, restando apenas o crime de lesão corporal culposa, que efetivamente foi imputado pelo Ministério Público, diante da previsão do Art. 74 do CP.
+    opcoes:
+      correta: Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 33-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: |-
+      Beatriz e seu esposo José, no dia 02/01/2021, enquanto celebravam o aniversário de casamento em um restaurante, iniciaram uma discussão, por José entender que a esposa não lhe dispensava a devida atenção.
+
+      Durante a discussão, José desferiu um soco no rosto de Beatriz, causando-lhe lesão corporal de natureza leve.
+
+      Testemunhas presenciais do fato chamaram a Polícia, sendo José preso em flagrante, mas posteriormente liberado pelo magistrado, em sede de audiência de custódia.
+
+      O Ministério Público ofereceu denúncia imputando a José a prática do crime do Art. 129, § 9º, do Código Penal, havendo habilitação imediata de Beatriz, por meio de seu advogado, como assistente de acusação, já que ela não aceitou ter sido agredida pelo então marido.
+
+      O magistrado em atuação no Juizado de Violência Doméstica e Familiar contra a Mulher não recebeu a denúncia, afirmando a inexistência de fato culpável, escorado em laudo apresentado pela defesa indicando que, no momento dos fatos, em razão da paixão, José era inteiramente incapaz de determinar-se de acordo com seu entendimento. Destacou o magistrado a possibilidade de rejeição da denúncia por não ser necessária a aplicação de medida de segurança, já que, atualmente, não haveria incapacidade de José.
+
+      Insatisfeita com o teor da decisão, Beatriz procura você, como advogado(a), para a adoção das medidas cabíveis e assistência técnica. Na condição de advogado(a) de Beatriz, esclareça os questionamentos a seguir.
+    comando: Para combater a decisão do magistrado, qual o recurso cabível? Justifique.
+    gabarito: A decisão do magistrado foi de rejeição da inicial acusatória. Contra a decisão de rejeição da denúncia, segundo o Art. 581, inciso I, do CPP, cabe recurso em sentido estrito, a ser apresentado no prazo de 05 dias.
+    opcoes:
+      correta: Caberá recurso em sentido estrito, nos termos do Art. 581, inciso I, do CPP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - Tendo em vista que o delito de tráfico privilegiado não é crime equiparado a hediondo, aplica-se a progressão pelo percentual de 16%, nos termos do Art. 112, § 5º ou Art. 112, inciso I, da LEP.
+        - Favorecimento real OU praticou o delito descrito no Art. 349, do CP.
+        - Deveria ser alegada a impossibilidade de condenação na imputação originária, pois o juiz está adstrito aos termos do aditamento (Art. 384, §4º, do CPP) OU porque não foram observados os princípios da ampla defesa e do contraditório OU houve violação ao princípio da correlação.
+        - Sim, o argumento seria de que ocorreu a prescrição da pretensão executória, com consequente extinção da punibilidade do agente, conforme o Art. 107, inciso IV, do CP, OU o Art. 109, inciso V, do CP, OU o Art. 110 do CP.
+    revisao: *a1
+  - id: 33-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      Beatriz e seu esposo José, no dia 02/01/2021, enquanto celebravam o aniversário de casamento em um restaurante, iniciaram uma discussão, por José entender que a esposa não lhe dispensava a devida atenção.
+
+      Durante a discussão, José desferiu um soco no rosto de Beatriz, causando-lhe lesão corporal de natureza leve.
+
+      Testemunhas presenciais do fato chamaram a Polícia, sendo José preso em flagrante, mas posteriormente liberado pelo magistrado, em sede de audiência de custódia.
+
+      O Ministério Público ofereceu denúncia imputando a José a prática do crime do Art. 129, § 9º, do Código Penal, havendo habilitação imediata de Beatriz, por meio de seu advogado, como assistente de acusação, já que ela não aceitou ter sido agredida pelo então marido.
+
+      O magistrado em atuação no Juizado de Violência Doméstica e Familiar contra a Mulher não recebeu a denúncia, afirmando a inexistência de fato culpável, escorado em laudo apresentado pela defesa indicando que, no momento dos fatos, em razão da paixão, José era inteiramente incapaz de determinar-se de acordo com seu entendimento. Destacou o magistrado a possibilidade de rejeição da denúncia por não ser necessária a aplicação de medida de segurança, já que, atualmente, não haveria incapacidade de José.
+
+      Insatisfeita com o teor da decisão, Beatriz procura você, como advogado(a), para a adoção das medidas cabíveis e assistência técnica. Na condição de advogado(a) de Beatriz, esclareça os questionamentos a seguir.
+    comando: "Existe argumento de direito material para questionar o conteúdo da decisão judicial? Justifique. (Valor:"
+    gabarito: Sim, existe, tendo em vista que a paixão não exclui a culpabilidade, nos termos do Art. 28, inciso I, do CP. De acordo com a doutrina majoritária, existe crime quando for praticado fato típico, ilícito e culpável. O magistrado entendeu que, apesar de praticado fato típico e ilícito, não haveria culpabilidade em razão da inimputabilidade momentânea do agente. Um dos elementos da culpabilidade é a imputabilidade, relacionada à capacidade do agente ter consciência de seus atos e determinar-se de acordo com esse entendimento. Ocorre que o Art. 28, inciso I, do CP, prevê expressamente que a emoção e a paixão não excluem a imputabilidade penal, de modo que não poderia o magistrado deixar de receber a denúncia sob o fundamento de que, em razão da paixão, o agente não tinha capacidade de determinar-se de acordo com seu entendimento e, consequentemente, a culpabilidade estaria afastada.
+    opcoes:
+      correta: Sim, o argumento seria que, considerando a imputabilidade elemento da culpabilidade, o fato praticado é típico, ilícito e culpável OU que não deveria ser afastada a culpabilidade do agente, tendo em vista que a paixão não exclui a imputabilidade penal, nos termos do Art. 28, inciso I, do CP
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 33-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Talita conduzia seu veículo automotor quando sofreu uma colisão na traseira de seu automóvel causada por Lauro, que conduzia seu automóvel a 120 km/h, apesar de a velocidade máxima permitida, na via pública em que estavam, ser de 50km/h.
+
+      A perícia realizada no local indicou que o acidente foi causado pela violação do dever de cuidado de Lauro, que, em razão da alta velocidade imprimida, não conseguiu frear a tempo de evitar a colisão. Talita realizou exame de corpo de delito que constatou a existência de lesão corporal de natureza leve. Lauro, por sua vez, fugiu do local do acidente sem prestar auxílio.
+
+      O Ministério Público, ao tomar conhecimento dos fatos e não havendo composição dos danos civis, ofereceu proposta de transação penal em favor de Lauro, destacando que o crime de lesão corporal culposa, previsto no Art. 303, § 1º, da Lei nº 9.503/97, admitia o benefício e que a Folha de Antecedentes Criminais do autor do fato apenas indicava a existência de uma outra anotação referente à infração em que Lauro foi beneficiado também por transação penal, mas o benefício foi oferecido e extinto há mais de 06 anos.
+
+      Talita ficou insatisfeita com a proposta do Ministério Público e procurou você, como advogado(a), para esclarecimentos.
+
+      Considerando as informações expostas, responda, na condição de advogado(a) de Talita, aos itens a seguir.
+    comando: Existe previsão de recurso para questionar a decisão homologatória de transação penal? Justifique.
+    gabarito: Sim, de acordo com o Art. 76, § 5º, da Lei nº 9.099/95, da decisão que homologa a transação penal caberá recurso de apelação, nos termos do Art. 82 do mesmo diploma legal. Diferente do que ocorre com a sentença que homologa composição civil dos danos, que é irrecorrível, conforme Art. 74 da Lei nº 9.099/95, a sentença que homologa a transação penal pode ser questionada por meio de recurso.
+    opcoes:
+      correta: Sim, a decisão homologatória de transação penal pode ser questionada por meio de apelação, nos termos do Art. 76, § 5º, da Lei nº 9.099/95.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - Remessa dos autos ao órgão superior do Ministério Público, a fim de que seja oferecido o Acordo de Não Persecução Penal, nos termos do Art. 28-A, § 14º, do CPP.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 33-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Talita conduzia seu veículo automotor quando sofreu uma colisão na traseira de seu automóvel causada por Lauro, que conduzia seu automóvel a 120 km/h, apesar de a velocidade máxima permitida, na via pública em que estavam, ser de 50km/h.
+
+      A perícia realizada no local indicou que o acidente foi causado pela violação do dever de cuidado de Lauro, que, em razão da alta velocidade imprimida, não conseguiu frear a tempo de evitar a colisão. Talita realizou exame de corpo de delito que constatou a existência de lesão corporal de natureza leve. Lauro, por sua vez, fugiu do local do acidente sem prestar auxílio.
+
+      O Ministério Público, ao tomar conhecimento dos fatos e não havendo composição dos danos civis, ofereceu proposta de transação penal em favor de Lauro, destacando que o crime de lesão corporal culposa, previsto no Art. 303, § 1º, da Lei nº 9.503/97, admitia o benefício e que a Folha de Antecedentes Criminais do autor do fato apenas indicava a existência de uma outra anotação referente à infração em que Lauro foi beneficiado também por transação penal, mas o benefício foi oferecido e extinto há mais de 06 anos.
+
+      Talita ficou insatisfeita com a proposta do Ministério Público e procurou você, como advogado(a), para esclarecimentos.
+
+      Considerando as informações expostas, responda, na condição de advogado(a) de Talita, aos itens a seguir.
+    comando: Existe argumento para questionar o oferecimento de transação penal ao autor do fato? Justifique.
+    gabarito: |-
+      O advogado de Talita deverá esclarecer que existe argumento para questionar a proposta de transação penal oferecida pelo Ministério Público. Com base na Folha de Antecedentes Criminais do autor do fato, ele é, tecnicamente, primário. Ademais, o benefício da transação penal anterior foi oferecido, cumprido e extinto há mais de 05 anos, de modo que não haveria impedimento, com base no Art. 76 da Lei nº 9.099/95. O Art. 291 do CTB (Lei nº 9.503/97), a princípio permite que sejam aplicados os institutos da composição dos danos civis, transação penal e exigência de representação da vítima nos crimes de lesão corporal culposa praticadas na condução de veículo automotor. Ocorre que o próprio Art. 291, § 1º, inciso III, do CTB, prevê que não serão aplicáveis tais institutos despenalizadores quando o crime for praticado por agente que esteja transitando em velocidade acima da máxima permitida para a via em 50 km/h. No caso, a velocidade máxima da via era de 50 km/h e Lauro conduzia seu automóvel a 120km/h, afastando a possibilidade de oferecimento de proposta de transação penal.
+
+      Não será considerado suficiente pela Banca apenas a afirmativa de que a pena máxima prevista para o delito supera 02 anos, tendo em vista que, mesmo com essa pena, se não constatadas as situações dos incisos I, II ou III do Art. 291, § 1º, do CTB, a proposta seria possível.
+    opcoes:
+      correta: Sim. Considerando que não poderia ser aplicado o instituto da transação penal, tendo em vista que o crime foi praticado quando o agente transitava em velocidade superior à máxima permitida para a via em mais de 50 km/h, conforme o Art. 291, § 1º, inciso III, do CTB.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1

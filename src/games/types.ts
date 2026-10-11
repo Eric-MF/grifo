@@ -1,6 +1,7 @@
 // Contrato entre a plataforma de jogos (React) e cada jogo (canvas).
 // Um jogo novo implementa GameModule; a plataforma fornece os serviços comuns
 // (perguntas, anúncios, recordes, compartilhamento) e a interface ao redor.
+import type { Categoria } from "@/quiz/types";
 
 interface PoderHud {
   id: string;
@@ -8,11 +9,22 @@ interface PoderHud {
   icone: string;
   restante: number; // 0..1
 }
+export interface PoderProprioHud {
+  nome: string;
+  icone: string;
+  cor: string;
+  /** carregando: enchendo a barra; pronto: cheio, pode ser usado; ativo: em efeito */
+  estado: "carregando" | "pronto" | "ativo";
+  /** 0..1: carga enquanto carrega, tempo restante enquanto ativo */
+  barra: number;
+  segundos: number;
+}
 export interface Hud {
   pontos: number;
   vidas: number;
   poderes: PoderHud[];
-  cenario: string;
+  /** poder próprio do personagem escolhido, sempre visível durante a partida */
+  poderProprio?: PoderProprioHud;
   /** aviso passageiro (ex.: penalidade); some quando o jogo deixa de enviá-lo */
   aviso?: { titulo: string; peca?: string; texto: string };
 }
@@ -51,6 +63,7 @@ export interface GameHostApi {
     poderIcone?: string;
     poderDescricao?: string;
     poderDuracao?: number;
+    carrega?: boolean;
   }): Promise<boolean>;
   hud(h: Hud): void;
   fimDeJogo(s: Estatisticas): void;
@@ -62,15 +75,20 @@ export interface GameOptions {
   nivel: 1 | 2 | 3;
   som: boolean;
   movimentoReduzido: boolean;
+  /** usa o poder do personagem sozinho assim que a barra enche */
+  autoPoder?: boolean;
   /** só em desenvolvimento (?debug=1): invulnerável e poder logo no início */
   debug?: boolean;
   personagem?: string;
+  /** tipos de pergunta que entram no quiz do jogo */
+  categorias?: Categoria[];
 }
 
 export interface GameInstance {
   iniciar(): void;
   pausar(): void;
   continuar(): void;
+  usarPoderProprio(): void;
   configurar(o: Partial<GameOptions>): void;
   destruir(): void;
 }

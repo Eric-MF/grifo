@@ -1,0 +1,160 @@
+# Gerado por scripts/extrair-objetivas.ts a partir do caderno Tipo 1 e do gabarito definitivo do XL Exame.
+# Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
+exame: "40"
+faixa:
+  penal:
+    - 57
+    - 62
+  processoPenal:
+    - 63
+    - 68
+anuladas: []
+questoes:
+  - n: 57
+    disciplina: penal
+    enunciado: Arthur resolveu furtar os cabos de eletricidade da linha férrea de sua cidade, a fim de revender o cobre, clandestinamente. Contudo, após iniciar o corte para retirar os fios de cobre, foi surpreendido pelo trem, que o atropelou, vindo a sofrer a amputação dos membros inferiores. Arthur foi denunciado como incurso nas penas do delito de furto. Sobre o caso, assinale a afirmativa que apresenta a linha de defesa correta.
+    alternativas:
+      A: Deve ser reconhecida a tentativa, com a correspondente diminuição da pena, já que o delito não chegou a se consumar.
+      B: Pode ser reduzida a pena diante do arrependimento posterior, uma vez que, em razão do fato, Arthur perdeu os dois membros inferiores.
+      C: Arthur deve ser absolvido, pois está-se diante de crime impossível, por absoluta ineficácia do meio.
+      D: Arthur pode ser beneficiado com o perdão judicial, diante do sofrimento que lhe foi imposto pelas consequências do delito.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 58
+    disciplina: penal
+    enunciado: Júlio desferiu um tapa no rosto de Jacinto, que foi projetado contra um poste em que havia um fio de alta tensão exposto, algo que não foi visto nem poderia ser imaginado por Júlio, pois já era noite e havia pouca iluminação. Jacinto recebeu uma forte descarga elétrica, que foi causa suficiente de sua morte. Sobre a responsabilidade de Júlio pelo resultado morte, assinale a afirmativa correta.
+    alternativas:
+      A: Júlio deve responder pelo homicídio doloso de Jacinto, tendo em vista que o resultado morte não teria ocorrido se não fosse a agressão dolosa.
+      B: A descarga elétrica é uma concausa superveniente relativamente independente que, por si só, produziu o resultado morte, devendo Júlio responder por lesão corporal.
+      C: Júlio agiu com dolo no delito antecedente e culpa no consequente, devendo responder por delito preterdoloso de lesão corporal seguida de morte.
+      D: A descarga elétrica pode ser imputada a Júlio, ante a violação objetiva de um dever de cuidado, devendo Júlio ser responsabilizado por homicídio culposo.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 59
+    disciplina: penal
+    enunciado: Joaquim dirigia-se a uma agência bancária para sacar o valor de sua aposentadoria. Todavia, às 10h, ao se aproximar do estabelecimento, foi abordado por Gilson que, com emprego de arma de fogo, ordenou que Joaquim entrasse em seu carro. Em seguida, Gilson conduziu o veículo até um motel e, mediante ameaça de morte, exigiu que a vítima transferisse valores para a conta bancária de Gilson, por meio de operações via PIX e TED, sendo certo que houve restrição da liberdade da vítima por tempo relevante, condição necessária para obtenção da vantagem de R$ 12.000,00 (doze mil reais) efetivamente auferida em desfavor de Joaquim, após o que Gilson liberou a vítima. Diante do cenário descrito, assinale a opção que indica o(s) crime(s) praticados por Gilson.
+    alternativas:
+      A: Roubo circunstanciado pelo emprego de arma de fogo.
+      B: Extorsão mediante sequestro.
+      C: Sequestro ou cárcere privado.
+      D: Extorsão mediante restrição da liberdade da vítima.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 60
+    disciplina: penal
+    enunciado: Paulo é investigado em um Inquérito Policial pelos crimes de ameaça e lesão corporal em face de sua esposa, Maria. Ao longo da investigação, foi decretada medida protetiva de afastamento de 1.000m em relação à vítima. Posteriormente, movido por ciúmes em razão de uma mensagem de Maria a um amigo, Paulo foi ao encontro dela com o intuito de questioná-la sobre o fato, violando a medida protetiva da qual já havia sido regularmente intimado. Tendo em vista o que preconiza a Lei nº 11.340/2006, está correto afirmar que Paulo
+    alternativas:
+      A: praticou um crime de ação penal pública incondicionada.
+      B: está incurso nas penas de um crime inafiançável.
+      C: cometeu uma contravenção penal que comporta o oferecimento de proposta de suspensão condicional do processo.
+      D: pode ser submetido a um decreto de prisão preventiva em seu desfavor, mas não cometeu crime.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 61
+    disciplina: penal
+    enunciado: Antônio, funcionário público, foi designado como servidor responsável por conduzir a licitação de um Hospital Público que desejava adquirir 100.000 (cem mil) doses de um determinado medicamento. Patrícia, funcionária da sociedade empresária Medicante Ltda., descobre o contato de Antônio e, de seu celular pessoal, manda um áudio no qual se oferece para dividir sua comissão com o funcionário público caso a sua empresa fosse a vencedora. O valor da comissão de Patrícia era de R$50.000,00 (cinquenta mil reais), em caso de vitória na licitação. Antônio, indignado com a proposta de Patrícia, encaminha os fatos aos seus superiores que enviam Notícia de Crime à autoridade policial com atribuição para investigar os fatos. Tomando por base o fato de não ter havido o pagamento do valor oferecido, assinale a opção que indica o crime pelo qual Patrícia poderá ser responsabilizada.
+    alternativas:
+      A: Corrupção passiva tentada, na medida em que o crime é material, sendo necessário o efetivo pagamento da vantagem indevida para o crime ser consumado.
+      B: Corrupção passiva consumada, na medida em que o crime é formal, bastando o oferecimento da vantagem ilícita ao servidor público para a sua consumação.
+      C: Corrupção ativa tentada, na medida em que o crime é material, sendo necessário o efetivo pagamento da vantagem indevida para o crime ser consumado.
+      D: Corrupção ativa consumada, na medida em que o crime é formal, bastando o oferecimento da vantagem ilícita ao servidor público para a sua consumação.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 62
+    disciplina: penal
+    enunciado: O médico João dos Santos, durante a realização de uma cirurgia na perna de um paciente, cometeu um erro que acabou provocando a necessária amputação do membro do paciente. A pena cominada à lesão corporal culposa é de dois meses a um ano, à lesão corporal grave é de um a cinco anos e à lesão corporal gravíssima, de dois a oito anos. Sobre a atuação do médico João Santos, assinale a afirmativa correta.
+    alternativas:
+      A: Ele cometeu o crime de lesão corporal culposa, devendo sua conduta ser julgada perante o Juizado Especial Criminal, o que, pela pena abstratamente cominada, torna aplicáveis, em tese, as medidas despenalizadoras da Lei nº 9.099/95.
+      B: Ele, apesar de não ter atuado com dolo, cometeu o crime de lesão corporal gravíssima em razão da perda de membro do paciente, não fazendo jus a nenhuma das medidas despenalizadoras da Lei nº 9.099/95, devendo o caso ser julgado perante a Vara Criminal.
+      C: Ele, apesar de não ter atuado com dolo, cometeu o crime de lesão corporal grave em razão da inutilização do membro e, apesar de ser julgado perante a Vara Criminal, fará jus à suspensão condicional do processo, medida despenalizadora prevista na Lei nº 9.099/95.
+      D: Ele cometeu o crime de lesão corporal gravíssima em razão da perda de membro do paciente, apesar de não ter atuado com dolo, e, em função da pena cominada ao delito, fará jus à suspensão condicional do processo, medida despenalizadora prevista na Lei nº 9.099/95.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 63
+    disciplina: processo-penal
+    enunciado: Luís Vicente, secretário de fazenda do Município Alfa, foi ofendido por Iório, secretário de fazenda do Estado Beta, que, durante discurso na tribuna da Câmara dos Vereadores, afirmou que “Luís Vicente comete peculato, desviando recursos do caixa municipal em proveito próprio e de seus familiares!” Luís Vicente procurou você, como advogado(a), para que você o oriente sobre a medida cabível para responsabilizar Iório pela ofensa à sua honra. Nesse contexto, é correto afirmar que Luís Vicente
+    alternativas:
+      A: só pode ajuizar uma queixa-crime em face de Iório, pois o delito contra a honra desafia ação penal privada.
+      B: pode oferecer representação contra Iório ao Ministério Público, pois sua qualidade de servidor público impõe a ação penal pública na defesa de sua honra.
+      C: pode optar entre ajuizar queixa-crime em face de Iório ou oferecer representação ao Ministério Público.
+      D: não pode fazer nada a respeito, diante da imunidade material de Iório, pela sua qualidade de ocupante de cargo político.
+    correta: C
+    peca: queixa-crime
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 64
+    disciplina: processo-penal
+    enunciado: Vanessa, primária e sem antecedentes, grávida de seis meses, foi presa em flagrante no aeroporto no momento em que embarcava com destino à Espanha de posse de 10kg de substância entorpecente (cocaína). Vanessa foi autuada pela prática do crime de tráfico internacional de drogas (Art. 33, caput, c/c. Art. 40, inciso I, ambos da Lei nº 11.343/06). Sobre a possibilidade de prisão domiciliar em favor de Vanessa, assinale a afirmativa correta.
+    alternativas:
+      A: A quantidade de drogas apreendida e a transnacionalidade do delito obstam a concessão de prisão domiciliar.
+      B: O pedido de prisão domiciliar é injustificável, tendo em vista que Vanessa ainda está no sexto mês de gestação.
+      C: A natureza não violenta do delito imputado e a gestação de Vanessa autorizam a concessão de prisão domiciliar.
+      D: Apenas se houver comprovação de gravidez de risco haverá previsão legal que justifique a concessão de prisão domiciliar.
+    correta: C
+    dispositivos:
+      - art. 33, lei 11343
+      - art. 40, I, lei 11343
+    revisao:
+      status: rascunho
+  - n: 65
+    disciplina: processo-penal
+    enunciado: Juliano foi definitivamente condenado à pena de 8 (oito) anos de reclusão, em regime inicial fechado. Após 2 (dois) anos de cumprimento da pena, foi detectado que Juliano passou a ter uma doença mental grave, tornando-o inteiramente incapaz de compreender o caráter ilícito dos fatos pelos quais havia sido condenado. Neste caso, como advogado(a) de Juliano, você deverá
+    alternativas:
+      A: postular ao Juiz da Execução Penal a conversão da pena em medida de segurança.
+      B: ajuizar uma ação de revisão criminal, postulando a substituição da pena privativa de liberdade por medida de segurança.
+      C: suscitar incidente de insanidade mental do acusado, a fim de apurar a integridade mental de Juliano ao tempo da ação criminosa.
+      D: solicitar que Juliano seja colocado em prisão-albergue domiciliar, como medida substitutiva do encarceramento.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 66
+    disciplina: processo-penal
+    enunciado: Roberto Jorge, após regular pronúncia, foi levado a Júri, ocasião em que foi mantido algemado durante toda a sessão de julgamento, com a justificativa de ser pessoa de índole perigosa, já que responde à acusação por crime doloso contra a vida. A defesa técnica impugnou, sem sucesso, a determinação do Juízo. O Ministério Público, em plenário, postulou a condenação do acusado, asseverando que sua periculosidade fica comprovada pela necessidade do uso de algemas durante o julgamento. Roberto Jorge foi condenado pelo Conselho de Sentença, tendo sido aplicada pena privativa de liberdade de 15 (quinze) anos de reclusão. Você, como advogado(a) de Roberto Jorge, interpôs apelação criminal. Assinale a afirmativa que apresenta, corretamente, o objetivo da sua demanda.
+    alternativas:
+      A: Postular a reforma da sentença, com a absolvição do acusado, pois este foi prejudicado no julgamento em razão do uso artbitrário de algemas.
+      B: Arguir a nulidade posterior à pronúncia, em razão da manutenção do réu algemado, sem necessidade concreta, e da referência a este fato pelo órgão do Ministério Público.
+      C: Arguir a nulidade da sessão de julgamento, em razão da manutenção do réu algemado; a manifestação do Ministério Público, contudo, não é vedada pela lei processual.
+      D: Postular a redução das penas aplicadas pelo Juiz-Presidente, pois o uso de algemas e sua menção como argumento de autoridade não caracterizam nenhuma nulidade.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 67
+    disciplina: processo-penal
+    enunciado: "Depois do recebimento de denúncia anônima, a delegacia iniciou a verificação preliminar de informações e colheu indícios de que Juca desenvolvia atividades ilícitas de telecomunicações (pena: detenção, 2 a 4 anos). A fim de melhor apurar os fatos, foi instaurado inquérito policial e o delegado de polícia representou pela interceptação das comunicações telefônicas de Juca, o que foi deferido pelo Juiz. A fim de anular as provas colhidas a partir da interceptação telefônica, você, na condição de advogado(a) de defesa de Juca, deve alegar que"
+    alternativas:
+      A: não é cabível a interceptação quando o ilícito apurado for punível com pena de detenção.
+      B: a pena mínima de 2 (dois) anos não autoriza o deferimento de interceptação.
+      C: o delegado de polícia não é legitimado a representar pela interceptação telefônica.
+      D: a ausência de contraditório, antes do deferimento da interceptação, é causa de nulidade.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+  - n: 68
+    disciplina: processo-penal
+    enunciado: Suelen ajuizou queixa-crime contra Bolívar, pela prática do crime de exercício arbitrário das próprias razões praticado sem violência ou grave ameaça, previsto no Art. 345, caput e parágrafo único, do CP, cuja pena cominada é de detenção de quinze dias a um mês, ou multa. A queixa-crime foi ajuizada perante o Juízo competente, que, após todo o trâmite preliminar, sendo infrutífero qualquer tipo de solução negociada, já na audiência de instrução e julgamento, rejeitou a queixa. Diante do caso narrado, como advogado(a) de Suelen, assinale a opção que indica o recurso que deve ser interposto.
+    alternativas:
+      A: Recurso em Sentido Estrito, interposto na Vara Criminal. As razões podem ser apresentadas diretamente no Tribunal.
+      B: Apelação, a ser interposta no Juizado Especial Criminal, já acompanhada de razões recursais dirigidas à Turma Recursal.
+      C: Apelação, a ser interposta na Vara Criminal. As razões podem ser apresentadas diretamente na Turma Recursal.
+      D: Recurso em Sentido Estrito, interposto no Juizado Especial Criminal, acompanhado de razões recursais dirigidas à Turma Recursal.
+    correta: B
+    dispositivos:
+      - art. 345, § único, cp
+    revisao:
+      status: rascunho

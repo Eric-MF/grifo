@@ -13,8 +13,10 @@
     "content": "node scripts/build-content.ts",
     "prebuild": "node scripts/build-content.ts",
     "pdfs": "node scripts/build-pdfs.ts",
+    "pdfs:leis": "node scripts/build-pdfs.ts --leis",
     "build:completo": "npm run build && npm run pdfs && npm run build",
     "revisar": "node scripts/marcar-revisado.ts",
+    "leis": "node scripts/baixar-leis.ts",
     "novo:exame": "node scripts/novo-exame.ts",
     "nova:pergunta": "node scripts/nova-pergunta.ts",
     "novo:jogo": "node scripts/novo-jogo.ts"
@@ -34,6 +36,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.6",
+    "parse5": "^8.0.1",
     "pdfjs-dist": "^6.3.289",
     "playwright": "^1.63.0",
     "sharp": "^0.35.4",

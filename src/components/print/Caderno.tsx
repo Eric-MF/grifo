@@ -178,7 +178,7 @@ export function Caderno({ exame }: { exame: Exame }) {
         </div>
         <h2 className="secao-tit">Peça Prático-Profissional</h2>
         <div className="texto ajuste" style={{ maxHeight: "180mm" }}>
-          <RichText text={exame.peca.enunciado} />
+          <RichText text={exame.peca.enunciado} data={exame.aplicacao} />
         </div>
         <Rodape rotulo={`Peça Prático-Profissional – Página ${prox()}`} />
       </section>
@@ -192,7 +192,7 @@ export function Caderno({ exame }: { exame: Exame }) {
             <Selo />
             <h2 className="secao-tit">Questão {q.n}</h2>
             <div className="texto ajuste" style={{ maxHeight: "235mm" }}>
-              <RichText text={q.enunciado} />
+              <RichText text={q.enunciado} data={exame.aplicacao} />
             </div>
             <Rodape rotulo={`Questão ${q.n} – Página ${prox()}`} />
           </section>
@@ -211,7 +211,7 @@ export function Caderno({ exame }: { exame: Exame }) {
                   {n.alvo === "peca" ? "Peça" : `Questão ${n.alvo.slice(1)}`}
                   {n.item ? `, item ${n.item}` : ""} — {n.lei}
                 </b>
-                <RichText text={n.texto} />
+                <RichText text={n.texto} data={exame.aplicacao} />
               </div>
             ))}
           </div>

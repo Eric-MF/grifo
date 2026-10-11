@@ -3,7 +3,7 @@
   padding: 0.6rem 0.9rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); min-width: 220px;
 }
 .scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
-.tabela { width: 100%; border-collapse: collapse; min-width: 860px; font-size: 0.94rem; }
+.tabela { width: 100%; border-collapse: collapse; min-width: 980px; font-size: 0.94rem; }
 .tabela th, .tabela td { padding: 0.75rem 0.9rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: middle; }
 .tabela thead th { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); background: var(--surface-2); position: sticky; top: 0; }
 .tabela tbody tr:hover { background: var(--surface-2); }
@@ -16,6 +16,7 @@
 .dlGold { background: color-mix(in srgb, var(--accent) 20%, transparent); border-color: transparent; color: var(--accent-ink); }
 .sim { font-weight: 700; }
 .na { color: var(--muted); }
+.par { display: inline-flex; gap: 0.35rem; flex-wrap: wrap; justify-content: center; }
 
 /* Modo "Celular", abaixo de 640px: cada exame vira um cartão. Fora desse modo, a tabela segue como está. */
 @media (max-width: 640px) {

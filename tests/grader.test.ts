@@ -24,9 +24,10 @@ describe.each(exameIds.filter((id) => loadExame(id).corrigivel))("exame %s", (id
     }
   });
 
-  it("resposta vazia tira zero", () => {
+  it("resposta vazia tira zero, exceto o que a FGV concede por item anulado", () => {
     const r = corrigirExame(ex, { peca: "", questoes: ["", "", "", ""] }, ctx);
-    expect(r.total).toBe(0);
+    const concedido = [ex.peca.itens, ...ex.questoes.map((q) => q.itens)].flat().reduce((s, i) => s + (i.anulado ?? 0), 0);
+    expect(r.total).toBeCloseTo(concedido, 2);
   });
 
   it("só citar artigos não pontua nos componentes de dispositivo", () => {

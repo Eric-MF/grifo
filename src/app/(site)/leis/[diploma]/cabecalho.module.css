@@ -1,0 +1,13 @@
+.cabecalho {
+  --text: #1f1b16;
+  --muted: #6b6257;
+  --primary: #1d4f91;
+  --accent-ink: #8a5a14;
+  color: var(--text);
+}
+:global(:root[data-leitor-fundo="escuro"]) .cabecalho {
+  --text: #e8e6e1;
+  --muted: #a3a09a;
+  --primary: #8fb8ff;
+  --accent-ink: #e5b56b;
+}

@@ -28,6 +28,7 @@ function sortear(local: string, excluir?: string): Promo | null {
 export function PromoSlot({ local, variant = "card", seed }: { local: string; variant?: "card" | "compact"; seed?: unknown }) {
   const [promo, setPromo] = useState<Promo | null>(null);
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- sorteio no cliente, de propósito
     setPromo(sortear(local));
   }, [local, seed]);
 

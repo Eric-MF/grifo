@@ -1,0 +1,522 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "44"
+perguntas:
+  - id: 44-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: A petição deve ser dirigida ao Juizado Especial Criminal da Comarca de Flores.
+    opcoes:
+      correta: A petição deve ser dirigida ao Juizado Especial Criminal da Comarca de Flores.
+      erradas:
+        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
+        - "Endereçamento: Vara Criminal da Comarca de Porto Alegre/RS."
+        - "Endereçamento correto: juízo da 5ª Vara Criminal."
+        - "Endereçamento: Vara Criminal da Comarca de Goiânia/GO."
+        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
+    revisao: &a1
+      status: rascunho
+  - id: 44-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: enderecamento
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem devem ser endereçadas as razões?
+    gabarito: "Endereçamento: Turma Recursal do Estado de Campo Belo."
+    opcoes:
+      correta: "Endereçamento: Turma Recursal do Estado de Campo Belo."
+      erradas:
+        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
+        - "Endereçamento: Vara Criminal da Comarca de Porto Alegre/RS."
+        - "Endereçamento correto: juízo da 5ª Vara Criminal."
+        - "Endereçamento: Vara Criminal da Comarca de Goiânia/GO."
+        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
+    revisao: *a1
+  - id: 44-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: preliminar
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: Extinção da punibilidade, na forma do Art. 107, inciso IV, do CP.
+    opcoes:
+      correta: Extinção da punibilidade, na forma do Art. 107, inciso IV, do CP.
+      erradas:
+        - "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
+        - "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
+        - Violação das regras da mutatio libelli, art. 384 do CPP, c/c art. 411, § 3º, do CPP.
+        - Preliminarmente, deve ser requerido o reconhecimento da nulidade do ato de citação, nos termos do art. 564, inciso III, “e”, do CPP
+        - Nulidade decorrente do não oferecimento de proposta de suspensão condicional do processo, tendo em vista que o crime não foi praticado no contexto da violência doméstica e familiar contra mulher ou tendo em vista não ser aplicável a previsão do Art. 41 da Lei nº 11.340 pelo fato de a vítima ser homem.
+    revisao: *a1
+  - id: 44-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: preliminar
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: Ocorrência de perempção, diante da ausência de requerimento condenatório nas alegações finais, conforme Art. 60, inciso III, do CPP.
+    opcoes:
+      correta: Ocorrência de perempção, diante da ausência de requerimento condenatório nas alegações finais, conforme Art. 60, inciso III, do CPP.
+      erradas:
+        - "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
+        - "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
+        - Violação das regras da mutatio libelli, art. 384 do CPP, c/c art. 411, § 3º, do CPP.
+        - Preliminarmente, deve ser requerido o reconhecimento da nulidade do ato de citação, nos termos do art. 564, inciso III, “e”, do CPP
+        - O crime de lesão corporal leve do Art. 129, § 9º, do CP é de ação penal pública condicionada à representação, nos termos do Art. 88 da Lei nº 9.099/95, e a vítima demonstrou não ter interesse em ver o autor do fato responsabilizado criminalmente
+    revisao: *a1
+  - id: 44-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Absolvição do acusado, pois o fato não constitui infração penal ou por haver causa que isenta o réu de pena, na forma do Art. 386, inciso III, ou VI do CPP.
+    opcoes:
+      correta: Absolvição do acusado, pois o fato não constitui infração penal ou por haver causa que isenta o réu de pena, na forma do Art. 386, inciso III, ou VI do CPP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
+        - Da tese da incidência da atenuante da menoridade penal relativa
+        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
+        - Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
+    revisao: *a1
+  - id: 44-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: merito
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: O acusado incorreu em erro de tipo permissivo (descriminante putativa ou estado de necessidade putativo), conforme o Art. 20, §1º, do CP.
+    opcoes:
+      correta: O acusado incorreu em erro de tipo permissivo (descriminante putativa ou estado de necessidade putativo), conforme o Art. 20, §1º, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
+        - Da tese da incidência da atenuante da menoridade penal relativa
+        - Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
+        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
+    revisao: *a1
+  - id: 44-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Atipicidade da conduta, já que o erro afasta o dolo ou porque não existe a figura culposa do delito imputado, nos termos do Art. 18, parágrafo único, do CP.
+    opcoes:
+      correta: Atipicidade da conduta, já que o erro afasta o dolo ou porque não existe a figura culposa do delito imputado, nos termos do Art. 18, parágrafo único, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
+        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
+        - Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
+    revisao: *a1
+  - id: 44-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: merito
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Subsidiariamente, afastamento da agravante da reincidência, pois a condenação anterior ocorreu por crime militar próprio, o que não induz reincidência, nos termos do Art. 64, inciso II, do CP.
+    opcoes:
+      correta: Subsidiariamente, afastamento da agravante da reincidência, pois a condenação anterior ocorreu por crime militar próprio, o que não induz reincidência, nos termos do Art. 64, inciso II, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
+        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
+        - Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
+    revisao: *a1
+  - id: 44-peca-11
+    categoria: peca-detalhe
+    parte: peca
+    item: "11"
+    secao: merito
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Fixação do regime inicial aberto, nos termos do Art. 33, §2º, alínea c, do CP.
+    opcoes:
+      correta: Fixação do regime inicial aberto, nos termos do Art. 33, §2º, alínea c, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
+        - Da tese da incidência da atenuante da menoridade penal relativa
+        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
+        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
+    revisao: *a1
+  - id: 44-peca-12
+    categoria: peca-detalhe
+    parte: peca
+    item: "12"
+    secao: merito
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Substituição da pena privativa de liberdade por multa ou restritiva de direitos ou aplicação isolada de multa, na forma do Art. 44, incisos I, II, III, ou §2º ou §3º, ou do Art. 60, §2º, ou do Art. 163, todos do CP.
+    opcoes:
+      correta: Substituição da pena privativa de liberdade por multa ou restritiva de direitos ou aplicação isolada de multa, na forma do Art. 44, incisos I, II, III, ou §2º ou §3º, ou do Art. 60, §2º, ou do Art. 163, todos do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - No que tange à aplicação da pena, deveria ser reduzida a pena base, considerando que inquéritos policiais e ações em curso não podem ser valoradas negativamente na pena base, nem mesmo para avaliar personalidade, nos termos do Art. 5º, inciso LVII, da CRFB, OU da Súmula 444 do STJ.
+        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 44-peca-13
+    categoria: peca-detalhe
+    parte: peca
+    item: "13"
+    secao: pedido
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Conhecimento e provimento do recurso.
+    opcoes:
+      correta: Conhecimento e provimento do recurso.
+      erradas:
+        - Absolvição, com argumento e base legal.
+        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
+        - Requerimento de aplicação do furto privilegiado, pleiteando a adoção de alguma das medidas previstas em lei (ou substituição da reclusão por detenção ou causa de diminuição de pena ou aplicação exclusivamente da pena de multa), na forma do Art. 155, §2º, do CP.
+        - Pedido de retratação pelo juízo a quo.
+        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
+    revisao: *a1
+  - id: 44-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      Carlos, com a intenção de obter vantagem indevida em detrimento da União, logrou efetuar o saque do seu Fundo de Garantia do Tempo de Serviço (FGTS) munido de laudo médico, atestando ser portador do vírus HIV, supostamente expedido por hospital público, documento materialmente falso e usado exclusivamente para esse fim.
+
+      O Ministério Público Federal, então, ofereceu Acordo de Não Persecução Penal (ANPP) a Carlos, propondo, como condições, a reparação do dano e a prestação de serviços à comunidade, pelo período equivalente à pena mínima cominada aos delitos de uso de documento público falso em concurso material com o delito de estelionato majorado (Art. 297 c/c o Art. 304 e Art. 171, § 3º, na forma do Art. 69, todos do Código Penal).
+
+      Como advogado(a) de Carlos, assistindo-o nas tratativas do Acordo de Não Persecução Penal, responda às questões a seguir.
+    comando: Qual a tese de Direito Penal deve ser sustentada em relação ao enquadramento típico realizado pelo Ministério Público Federal? Fundamente.
+    gabarito: Quando o falso se exaure no estelionato, sem mais potencialidade lesiva, é por este absorvido. Assim, deveria o examinando identificar a ocorrência de consunção, havendo apenas o delito de estelionato, nos termos do enunciado sumular nº 17 do Superior Tribunal de Justiça.
+    opcoes:
+      correta: Consunção, pois, quando o falso se exaure no estelionato, sem mais potencialidade lesiva, é por este absorvido, nos termos do enunciado sumular nº 17, do Superior Tribunal de Justiça.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 44-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      Carlos, com a intenção de obter vantagem indevida em detrimento da União, logrou efetuar o saque do seu Fundo de Garantia do Tempo de Serviço (FGTS) munido de laudo médico, atestando ser portador do vírus HIV, supostamente expedido por hospital público, documento materialmente falso e usado exclusivamente para esse fim.
+
+      O Ministério Público Federal, então, ofereceu Acordo de Não Persecução Penal (ANPP) a Carlos, propondo, como condições, a reparação do dano e a prestação de serviços à comunidade, pelo período equivalente à pena mínima cominada aos delitos de uso de documento público falso em concurso material com o delito de estelionato majorado (Art. 297 c/c o Art. 304 e Art. 171, § 3º, na forma do Art. 69, todos do Código Penal).
+
+      Como advogado(a) de Carlos, assistindo-o nas tratativas do Acordo de Não Persecução Penal, responda às questões a seguir.
+    comando: As condições da proposta estão em conformidade com a legislação processual penal de regência? Justifique.
+    gabarito: Não. De acordo com o Art. 28-A, inciso III, do CPP, a prestação de serviços à comunidade deve ser por período correspondente à pena mínima reduzida de um a dois terços.
+    opcoes:
+      correta: Não. A prestação de serviços à comunidade deve ser por período correspondente à pena mínima reduzida de um a dois terços, de acordo com o Art. 28-A, inciso III, do CPP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 44-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A1
+    caso: |-
+      Manoela, um dia antes de completar 18 anos, envolveu-se em uma briga na escola, tendo atingido sua adversária na cabeça, com uma cadeira. O golpe foi tão severo que Alessandra, a vítima, foi levada ao hospital, inconsciente.
+
+      Após um mês de internação, quando Manoela já tinha 18 anos, Alessandra faleceu, em decorrência da ação de Manoela.
+
+      Por tais fatos, o Ministério Público denunciou Manoela perante o 1º Tribunal do Júri da Comarca da Capital, local da ocorrência, pelo homicídio doloso de Alessandra. Recebida a denúncia e expedido o mandado de citação, o Oficial de Justiça se dirigiu à residência de Manoela, situada na comarca onde ocorreram os fatos, e foi atendido pela mãe da citanda, que esclareceu que sua filha havia saído para trabalhar e retornava mais tarde. O Oficial de Justiça certificou essa informação e devolveu o mandado, o que motivou o Juízo a ordenar a citação por edital, decretando a suspensão do processo e do prazo prescricional.
+
+      Como advogado(a) de Manoela, responda às questões a seguir.
+    comando: A fim de afastar, completamente, a responsabilidade penal de Manoela pelos fatos, qual a tese correta de Direito Penal deve ser sustentada em sua defesa? Justifique.
+    gabarito: De acordo com a teoria da atividade, considera-se praticado o delito na data da ação ou omissão, conforme o Art. 4º do CP ou Art. 104, caput, do ECA, daí porque Manoela, em razão da idade, era inimputável, nos termos do Art. 27 do CP, ou do Art. 228 da CRFB/88 ou Art. 104, parágrafo único, do ECA.
+    opcoes:
+      correta: Teoria da atividade, segundo a qual considera-se praticado o delito na data da ação ou omissão, conforme o Art. 4º, do CP ou Art. 104, caput, do ECA. Sendo assim, Manoela era inimputável em virtude da idade, nos termos do Art. 27 do CP ou do Art. 228 da CRFB/88 ou Art. 104, parágrafo único, do ECA.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 44-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Manoela, um dia antes de completar 18 anos, envolveu-se em uma briga na escola, tendo atingido sua adversária na cabeça, com uma cadeira. O golpe foi tão severo que Alessandra, a vítima, foi levada ao hospital, inconsciente.
+
+      Após um mês de internação, quando Manoela já tinha 18 anos, Alessandra faleceu, em decorrência da ação de Manoela.
+
+      Por tais fatos, o Ministério Público denunciou Manoela perante o 1º Tribunal do Júri da Comarca da Capital, local da ocorrência, pelo homicídio doloso de Alessandra. Recebida a denúncia e expedido o mandado de citação, o Oficial de Justiça se dirigiu à residência de Manoela, situada na comarca onde ocorreram os fatos, e foi atendido pela mãe da citanda, que esclareceu que sua filha havia saído para trabalhar e retornava mais tarde. O Oficial de Justiça certificou essa informação e devolveu o mandado, o que motivou o Juízo a ordenar a citação por edital, decretando a suspensão do processo e do prazo prescricional.
+
+      Como advogado(a) de Manoela, responda às questões a seguir.
+    comando: A citação por edital observou as normas do Direito Processual Penal? Justifique.
+    gabarito: Não, a citação por edital somente é cabível quando o réu estiver em lugar incerto e não sabido, nos termos do Art. 361 ou Art. 363, § 1º, ou do Art. 564, inciso III, alínea e, todos do CPP.
+    opcoes:
+      correta: Não, a citação por edital somente é cabível quando o réu estiver em lugar incerto e não sabido, nos termos do Art. 361 ou Art. 363, § 1º, ou Art. 564, inciso III, alínea e, todos do CPP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 44-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: Karina e Daniel, casados, celebraram um contrato de locação residencial com César, ajustando o direito de retenção de benfeitorias voluptuárias. Ao término da locação, César, locador, recusou-se a pagar pela banheira de hidromassagem instalada pelos locatários Karina e Daniel. Por isso, a banheira foi retirada. Indignado, César ajuizou queixa-crime em desfavor de Karina, pelo tipo penal de exercício arbitrário das próprias razões. Deixou de oferecer a queixa em desfavor de Daniel, pois eles eram colegas de time de futebol. Como advogado(a) de Karina, responda aos itens a seguir.
+    comando: Qual a tese de Direito Processual cabível para garantir a extinção da punibilidade de Karina? Fundamente.
+    gabarito: Em relação à extinção da punibilidade, deve-se observar que, diante do princípio da indivisibilidade da ação penal privada, a renúncia ao direito de queixa em favor de um dos querelados a todos aproveita, nos termos do Art. 48 ou 49 do CPP ou do Art. 107, inciso V, do CP.
+    opcoes:
+      correta: Diante do princípio da indivisibilidade da ação penal privada, a renúncia ao direito de queixa em favor de um dos querelados a todos aproveita, nos termos do Art. 48 ou 49 do CPP ou do Art. 107, inciso V, do CP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 44-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: Karina e Daniel, casados, celebraram um contrato de locação residencial com César, ajustando o direito de retenção de benfeitorias voluptuárias. Ao término da locação, César, locador, recusou-se a pagar pela banheira de hidromassagem instalada pelos locatários Karina e Daniel. Por isso, a banheira foi retirada. Indignado, César ajuizou queixa-crime em desfavor de Karina, pelo tipo penal de exercício arbitrário das próprias razões. Deixou de oferecer a queixa em desfavor de Daniel, pois eles eram colegas de time de futebol. Como advogado(a) de Karina, responda aos itens a seguir.
+    comando: Qual a tese correta de Direito Penal em face da imputação realizada? Justifique.
+    gabarito: Atipicidade da conduta, diante da previsão contratual de autotutela, não se verificando a elementar de arbitrariedade na conduta de Karina e Daniel.
+    opcoes:
+      correta: Atipicidade da conduta, diante da previsão contratual de autotutela, não se verificando a elementar de arbitrariedade na conduta de Karina e Daniel.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 44-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Com intenção de subtrair o conteúdo do cofre da agência bancária do Banco Beta, homens armados sequestraram e fizeram refém o filho de Vitor, gerente da referida agência bancária, e dele exigiram a abertura do cofre e o acesso a todo o seu conteúdo. Premido pelo sequestro de seu filho, Vitor atendeu às exigências, permitindo que os sequestradores, fortemente armados, ingressassem na agência e realizassem a subtração dos valores.
+
+      Instaurado inquérito policial, a autoridade policial concluiu pela responsabilidade penal de Vitor como partícipe da ação criminosa, pois localizou um vídeo que comprovaria prévio ajuste entre Vitor e os demais coautores, sugerindo ter havido simulação do sequestro.
+
+      Essa mídia foi determinante no indiciamento e na denúncia de Vitor, que constituiu você como advogado(a) e lhe informou que o vídeo era uma montagem, pois não conhecia nenhum dos envolvidos no sequestro e não teve qualquer participação voluntária nos fatos.
+
+      Você, na qualidade de advogado(a) de defesa de Vitor, responda às questões a seguir.
+    comando: Qual a tese adequada de Direito Penal a ser sustentada em favor de Vitor, a fim de afastar a sua responsabilidade penal pelo fato? Fundamente.
+    gabarito: A excludente de culpabilidade em razão da coação moral irresistível, pois não é razoável exigir de Vitor conduta diversa, na forma do Art. 22, do CP.
+    opcoes:
+      correta: A excludente de culpabilidade em razão da coação moral irresistível ou inexibigilidade de conduta diversa, na forma do Art. 22, do CP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 44-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Com intenção de subtrair o conteúdo do cofre da agência bancária do Banco Beta, homens armados sequestraram e fizeram refém o filho de Vitor, gerente da referida agência bancária, e dele exigiram a abertura do cofre e o acesso a todo o seu conteúdo. Premido pelo sequestro de seu filho, Vitor atendeu às exigências, permitindo que os sequestradores, fortemente armados, ingressassem na agência e realizassem a subtração dos valores.
+
+      Instaurado inquérito policial, a autoridade policial concluiu pela responsabilidade penal de Vitor como partícipe da ação criminosa, pois localizou um vídeo que comprovaria prévio ajuste entre Vitor e os demais coautores, sugerindo ter havido simulação do sequestro.
+
+      Essa mídia foi determinante no indiciamento e na denúncia de Vitor, que constituiu você como advogado(a) e lhe informou que o vídeo era uma montagem, pois não conhecia nenhum dos envolvidos no sequestro e não teve qualquer participação voluntária nos fatos.
+
+      Você, na qualidade de advogado(a) de defesa de Vitor, responda às questões a seguir.
+    comando: Identifique a medida processual adequada a ser manejada pela defesa de Vitor para questionar a idoneidade do vídeo, com o respectivo embasamento legal. Justifique.
+    gabarito: Incidente de falsidade documental, previsto no Art. 145, do CPP.
+    opcoes:
+      correta: Incidente de falsidade documental, previsto no Art. 145, do CPP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1

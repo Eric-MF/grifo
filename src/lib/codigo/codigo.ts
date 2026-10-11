@@ -5,8 +5,11 @@
 //
 //   carga simulado: versão(4) tipo(2) exame(7) variante(2) atualizado(1) total(10)
 //                   peça(9) modo(3) dia(15) duração(9) impressão(16)          = 78 bits
-//   carga jogo:     versão(4) tipo(2) jogo(4) pontos(20) nível(2) estilo(4)
+//   carga jogo v1:  versão(4) tipo(2) jogo(4) pontos(20) nível(2) estilo(4)
 //                   acertos(8) perguntas(8) dia(15) impressão(11)             = 78 bits
+//   carga jogo v2:  … estilo(4) categorias(4) acertos(8) perguntas(8) dia(15)
+//                   impressão(7)                                              = 78 bits
+//   (v2 guarda os tipos de pergunta escolhidos; os códigos v1 continuam válidos)
 //
 // "impressão" = SHA-256 truncado sobre tudo o que não cabe na carga (texto das
 // respostas, notas de cada questão, provedor de IA…); a página de resultado mostra
@@ -21,6 +24,9 @@ import { hmacSha256, sha256 } from "./sha256.ts";
 
 const ALFABETO = "0123456789ABCDEFGHJKMNPQRSTVWXYZ"; // Crockford base32
 const VERSAO = 1;
+const VERSAO_JOGO_CATEGORIAS = 2;
+/** bits de impressão do código de jogo v2 (com categorias) */
+export const BITS_IMPRESSAO_JOGO = 7;
 const BITS_CARGA = 78;
 const BITS_MAC = 32;
 const EPOCH = Date.UTC(2020, 0, 1);
@@ -49,7 +55,9 @@ interface DadosJogo {
   acertos: number;
   perguntas: number;
   data: Date;
-  impressao: number; // 11 bits
+  impressao: number; // 11 bits (v1) ou 7 bits (v2)
+  /** máscara de 4 bits das categorias de pergunta; presente = código v2 */
+  categorias?: number;
 }
 type DadosCodigo = DadosSimulado | DadosJogo;
 
@@ -81,11 +89,15 @@ const diaDe = (d: Date) => Math.floor((d.getTime() - EPOCH) / 86_400_000);
 const dataDe = (dia: number) => new Date(EPOCH + dia * 86_400_000);
 
 function carga(d: DadosCodigo): Bits {
-  const b = new Bits().push(VERSAO, 4);
+  const v2 = d.tipo === "jogo" && d.categorias !== undefined;
+  const b = new Bits().push(v2 ? VERSAO_JOGO_CATEGORIAS : VERSAO, 4);
   if (d.tipo === "simulado") {
     b.push(0, 2).push(d.exame, 7).push(d.variante, 2).push(d.atualizado ? 1 : 0, 1)
       .push(d.total * 100, 10).push(d.peca * 100, 9).push(MODOS.indexOf(d.modo), 3)
       .push(diaDe(d.data), 15).push(d.duracaoMin, 9).push(d.impressao, 16);
+  } else if (v2) {
+    b.push(1, 2).push(d.jogo, 4).push(d.pontos, 20).push(d.nivel, 2).push(d.estilo, 4).push(d.categorias!, 4)
+      .push(d.acertos, 8).push(d.perguntas, 8).push(diaDe(d.data), 15).push(d.impressao, BITS_IMPRESSAO_JOGO);
   } else {
     b.push(1, 2).push(d.jogo, 4).push(d.pontos, 20).push(d.nivel, 2).push(d.estilo, 4)
       .push(d.acertos, 8).push(d.perguntas, 8).push(diaDe(d.data), 15).push(d.impressao, 11);
@@ -173,8 +185,11 @@ export async function verificarCodigo(input: string): Promise<Verificacao> {
   if ((await mac(payload)) !== m) return { ok: false, motivo: "assinatura" };
 
   const r = reader(payload, BITS_CARGA);
-  if (r(4) !== VERSAO) return { ok: false, motivo: "versao" };
-  if (r(2) === 0) {
+  const versao = r(4);
+  if (versao !== VERSAO && versao !== VERSAO_JOGO_CATEGORIAS) return { ok: false, motivo: "versao" };
+  const tipo = r(2);
+  if (tipo === 0 && versao !== VERSAO) return { ok: false, motivo: "versao" };
+  if (tipo === 0) {
     return {
       ok: true,
       dados: {
@@ -191,18 +206,24 @@ export async function verificarCodigo(input: string): Promise<Verificacao> {
       },
     };
   }
+  const jogo = r(4);
+  const pontos = r(20);
+  const nivel = r(2);
+  const estilo = r(4);
+  const categorias = versao === VERSAO_JOGO_CATEGORIAS ? r(4) : undefined;
   return {
     ok: true,
     dados: {
       tipo: "jogo",
-      jogo: r(4),
-      pontos: r(20),
-      nivel: r(2),
-      estilo: r(4),
+      jogo,
+      pontos,
+      nivel,
+      estilo,
       acertos: r(8),
       perguntas: r(8),
       data: dataDe(r(15)),
-      impressao: r(11),
+      impressao: r(categorias === undefined ? 11 : BITS_IMPRESSAO_JOGO),
+      ...(categorias === undefined ? {} : { categorias }),
     },
   };
 }

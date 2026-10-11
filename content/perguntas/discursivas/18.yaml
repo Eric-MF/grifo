@@ -1,0 +1,527 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "18"
+perguntas:
+  - id: 18-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento correto: 1ª Vara Criminal da Comarca de Natal/RN"
+    opcoes:
+      correta: "Endereçamento correto: 1ª Vara Criminal da Comarca de Natal/RN"
+      erradas:
+        - "Endereçamento correto das razões: Tribunal de Justiça do Estado."
+        - "Endereçamento: Tribunal de Justiça do Estado de Santa Catarina."
+        - "Endereçamento das razões: Tribunal de Justiça."
+        - "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS."
+        - A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
+    revisao: &a1
+      status: rascunho
+  - id: 18-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: enderecamento
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: A quem devem ser endereçadas as razões?
+    gabarito: "Endereçamento correto: Tribunal de Justiça do Estado do Rio Grande do Norte"
+    opcoes:
+      correta: "Endereçamento correto: Tribunal de Justiça do Estado do Rio Grande do Norte"
+      erradas:
+        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
+        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
+        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
+        - Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG..
+        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
+    revisao: *a1
+  - id: 18-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: merito
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Desenvolvimento jurídico acerca da necessidade de reforma da decisão.
+    opcoes:
+      correta: Desenvolvimento jurídico acerca da necessidade de reforma da decisão.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
+        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
+        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
+    revisao: *a1
+  - id: 18-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Afastar o concurso de crimes, com o reconhecimento de um crime único de estupro (1,0), tendo em vista que o Art. 213 do CP traz um tipo misto alternativo OU tendo em vista que os atos foram praticados em um mesmo contexto e contra a mesma vítima.
+    opcoes:
+      correta: Afastar o concurso de crimes, com o reconhecimento de um crime único de estupro (1,0), tendo em vista que o Art. 213 do CP traz um tipo misto alternativo OU tendo em vista que os atos foram praticados em um mesmo contexto e contra a mesma vítima.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 18-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Afastar o aumento da pena base pelo reconhecimento de maus antecedentes, pois ações penais em curso não funcionam como circunstância judicial desfavorável, na forma da Súmula 444 do STJ OU em face do princípio da presunção de inocência.
+    opcoes:
+      correta: Afastar o aumento da pena base pelo reconhecimento de maus antecedentes, pois ações penais em curso não funcionam como circunstância judicial desfavorável, na forma da Súmula 444 do STJ OU em face do princípio da presunção de inocência.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
+        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
+    revisao: *a1
+  - id: 18-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Afastar o aumento da pena base pela violação da liberdade sexual da mulher, tendo em vista que é inerente ao tipo..
+    opcoes:
+      correta: Afastar o aumento da pena base pela violação da liberdade sexual da mulher, tendo em vista que é inerente ao tipo..
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 18-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: merito
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento da atenuante da menoridade relativa, na forma do Art. 65, inciso I, do CP..
+    opcoes:
+      correta: Reconhecimento da atenuante da menoridade relativa, na forma do Art. 65, inciso I, do CP..
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
+        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
+        - Absolvição de Roberta, em razão da atipicidade da conduta.
+        - Houve desistência voluntária, já que Rômulo optou por não prosseguir na empreitada criminosa OU já que não ocorreram circunstâncias alheias à vontade do agente, nos termos do Art. 15 do CP
+    revisao: *a1
+  - id: 18-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento da atenuante da confissão espontânea, na forma do Art. 65, inciso III, alínea d, do CP.
+    opcoes:
+      correta: Reconhecimento da atenuante da confissão espontânea, na forma do Art. 65, inciso III, alínea d, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+        - Substituição da pena privativa de liberdade por restritiva de direitos, já que preenchidos os requisitos do Art. 44 do Código Penal.
+        - Houve desistência voluntária, já que Rômulo optou por não prosseguir na empreitada criminosa OU já que não ocorreram circunstâncias alheias à vontade do agente, nos termos do Art. 15 do CP
+    revisao: *a1
+  - id: 18-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: merito
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Subsidiariamente, em caso de manutenção da condenação por dois crimes de estupro, redução do quantum de aumento pelo concurso de crimes para o mínimo legal, pois o critério a ser adotado é o número de delitos e não sua gravidade em abstrato.
+    opcoes:
+      correta: Subsidiariamente, em caso de manutenção da condenação por dois crimes de estupro, redução do quantum de aumento pelo concurso de crimes para o mínimo legal, pois o critério a ser adotado é o número de delitos e não sua gravidade em abstrato.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 18-peca-11
+    categoria: peca-detalhe
+    parte: peca
+    item: "11"
+    secao: merito
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Fixação do regime semiaberto, pois a imposição trazida pelo Art. 2º, § 1º, da Lei nº 8.072 é inconstitucional OU viola o princípio da individualização da pena.
+    opcoes:
+      correta: Fixação do regime semiaberto, pois a imposição trazida pelo Art. 2º, § 1º, da Lei nº 8.072 é inconstitucional OU viola o princípio da individualização da pena.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
+        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
+    revisao: *a1
+  - id: 18-peca-12-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "12.1"
+    secao: pedido
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: "Pedidos: provimento do recurso."
+    opcoes:
+      correta: "Pedidos: provimento do recurso."
+      erradas:
+        - Absolvição, com argumento e base legal.
+        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
+        - Requerimento de aplicação do furto privilegiado, pleiteando a adoção de alguma das medidas previstas em lei (ou substituição da reclusão por detenção ou causa de diminuição de pena ou aplicação exclusivamente da pena de multa), na forma do Art. 155, §2º, do CP.
+        - Pedido de retratação pelo juízo a quo.
+        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
+    revisao: *a1
+  - id: 18-peca-12-2
+    categoria: peca-detalhe
+    parte: peca
+    item: "12.2"
+    secao: merito
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento de crime único de estupro; aplicação da pena base no mínimo legal; reconhecimento da atenuante da confissão e da menoridade relativa; subsidiariamente, redução do quantum de aumento pelo concurso de crimes; e fixação do regime semiaberto.
+    opcoes:
+      correta: Reconhecimento de crime único de estupro; aplicação da pena base no mínimo legal; reconhecimento da atenuante da confissão e da menoridade relativa; subsidiariamente, redução do quantum de aumento pelo concurso de crimes; e fixação do regime semiaberto.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Atipicidade da conduta ou desclassificação para crime de dano qualificado, tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto.
+        - Da tese da prática de crime único, pois o delito de estupro de vulnerável é um tipo misto alternativo (de conteúdo múltiplo ou variado).
+        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
+        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
+    revisao: *a1
+  - id: 18-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      No dia 02 de março de 2008, Karen, 30 anos, funcionária do caixa do Supermercado Rei, subtraiu para si a quantia de R$ 700,00 (setecentos reais) do estabelecimento, ao final de seu expediente. No dia seguinte, percebendo a facilidade ocorrida no dia anterior, Karen voltou a subtrair determinada quantia do caixa do supermercado. Ainda na mesma semana, a funcionária, com o mesmo modus operandi, subtraiu, por mais duas vezes, valores pertencentes ao estabelecimento comercial. Ocorre que as condutas de Karen foram filmadas e os vídeos foram encaminhados para o Ministério Público, que ofereceu denúncia pela prática do crime descrito no Art. 155, § 4º, inciso II, do Código Penal, por quatro vezes, na forma do Art. 71 do mesmo diploma legal. Em 20 de abril de 2008 a denúncia foi recebida, tendo o feito seu regular processamento, até que, em 25 de abril de 2012, foi publicada decisão condenando Karen à pena final de 02 anos e 06 meses de reclusão e 12 dias multa, substituída por restritiva de direitos. Para cada um dos crimes foi aplicada a pena mínima de 02 anos de reclusão e 10 dias multa, mas fixou o magistrado a fração de 1/4 para aumento da pena, em virtude do reconhecimento do crime continuado. As partes não interpuseram recurso de apelação.
+
+      Considerando que não existe mais possibilidade de interposição de recurso da decisão, responda aos itens a seguir.
+    comando: Qual a tese defensiva a ser alegada, de modo a impedir que Karen cumpra a pena que lhe foi aplicada? Fundamente.
+    gabarito: |-
+      A questão exige do candidato conhecimento do tema da prescrição. Foi narrada, na hipótese, a condenação de Karen por quatro crimes de furto qualificado, sendo de 02 anos a pena definitiva de cada um deles.
+
+      Reconhecida a continuidade delitiva, a pena final fixada foi de 02 anos e 06 meses de reclusão.
+
+      Prevê o Art. 119 do Código Penal que, em caso de concurso de crimes, a análise da prescrição deverá ser feita sobre a pena de cada um dos crimes isoladamente. Assim, no caso, a prescrição deveria considerar a pena aplicada de 02 anos para cada um dos delitos, não de 02 anos e 06 meses. A pena fixada entre 01 e 02 anos prescreverá em 04 anos, na forma do Art. 109, V, do Código Penal. Entre o recebimento da denúncia e a publicação da sentença condenatória, foram ultrapassados mais de 04 anos; logo, ocorreu a prescrição da pretensão punitiva do Estado.
+
+      Diante do exposto, a tese defensiva a ser alegada é a ocorrência da prescrição da pretensão punitiva do Estado em sua modalidade retroativa.
+    opcoes:
+      correta: Ocorrência da prescrição da pretensão punitiva, já que a análise da prescrição ocorre de acordo com a pena fixada para cada um dos delitos em separado, segundo o Art. 109, V, do CP e/ou Art. 119, CP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 18-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      No dia 02 de março de 2008, Karen, 30 anos, funcionária do caixa do Supermercado Rei, subtraiu para si a quantia de R$ 700,00 (setecentos reais) do estabelecimento, ao final de seu expediente. No dia seguinte, percebendo a facilidade ocorrida no dia anterior, Karen voltou a subtrair determinada quantia do caixa do supermercado. Ainda na mesma semana, a funcionária, com o mesmo modus operandi, subtraiu, por mais duas vezes, valores pertencentes ao estabelecimento comercial. Ocorre que as condutas de Karen foram filmadas e os vídeos foram encaminhados para o Ministério Público, que ofereceu denúncia pela prática do crime descrito no Art. 155, § 4º, inciso II, do Código Penal, por quatro vezes, na forma do Art. 71 do mesmo diploma legal. Em 20 de abril de 2008 a denúncia foi recebida, tendo o feito seu regular processamento, até que, em 25 de abril de 2012, foi publicada decisão condenando Karen à pena final de 02 anos e 06 meses de reclusão e 12 dias multa, substituída por restritiva de direitos. Para cada um dos crimes foi aplicada a pena mínima de 02 anos de reclusão e 10 dias multa, mas fixou o magistrado a fração de 1/4 para aumento da pena, em virtude do reconhecimento do crime continuado. As partes não interpuseram recurso de apelação.
+
+      Considerando que não existe mais possibilidade de interposição de recurso da decisão, responda aos itens a seguir.
+    comando: Quais as consequências jurídicas do acolhimento dessa tese? Aquela condenação poderá ser considerada para efeito de reincidência futuramente?
+    gabarito: A consequência jurídica do acolhimento da tese é o reconhecimento da extinção da punibilidade de Karen, na forma do Art. 107, inciso IV, do Código Penal. Além disso, considerando que a prescrição foi da pretensão punitiva, essa condenação não gerará qualquer efeito, não podendo funcionar como maus antecedentes, reincidência ou título executivo na esfera cível.
+    opcoes:
+      correta: A principal consequência é a extinção da punibilidade, na forma do Art. 107, IV, do CP, não podendo aquela condenação funcionar como reincidência por não gerar qualquer efeito, já que a prescrição é da pretensão punitiva estatal e não executória.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 18-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      No dia 10 de fevereiro de 2012, João foi condenado pela prática do delito de quadrilha armada, previsto no Art. 288, parágrafo único, do Código Penal. Considerando as particularidades do caso concreto, sua pena foi fixada no máximo de 06 anos de reclusão, eis que duplicada a pena base por força da quadrilha ser armada. A decisão transitou em julgado. Enquanto cumpria pena, entrou em vigor a Lei nº 12.850/2013, que alterou o artigo pelo qual João fora condenado. Apesar da sanção em abstrato, excluídas as causas de aumento, ter permanecido a mesma (reclusão, de 1 (um) a 3 (três) anos), o aumento de pena pelo fato da associação ser armada passou a ser de até a metade e não mais do dobro.
+
+      Procurado pela família de João, responda aos itens a seguir.
+    comando: O que a defesa técnica poderia requerer em favor dele?
+    gabarito: A defesa técnica de João poderia requerer a aplicação da lei nova, que é mais benéfica para o acusado. A redação anterior do Art. 288, parágrafo único, do CP previa que, no caso daquele crime ser praticado com armas de fogo, a pena seria dobrada. Hoje, o dispositivo prevê que a pena, nessa mesma hipótese, será “apenas” aumentada de, no máximo, metade. Assim, no caso de João, como sua pena base foi aplicada em 03 anos, a pena final restaria em, no máximo, 04 anos e 06 meses. A nova lei, então, é favorável ao condenado, de modo que pode retroagir para atingir situações pretéritas, na forma do Art. 2º, parágrafo único, do CP.
+    opcoes:
+      correta: Poderia requerer a redução de sua pena pela aplicação da Lei nº 12.850/13 ou pela aplicação da nova redação do artigo 288, parágrafo único, do Código Penal, que traz previsão mais favorável ao acusado e deve retroagir, na forma do artigo 2º, parágrafo único, do Código Penal OU do artigo 5º, XL, CRFB.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 18-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      No dia 10 de fevereiro de 2012, João foi condenado pela prática do delito de quadrilha armada, previsto no Art. 288, parágrafo único, do Código Penal. Considerando as particularidades do caso concreto, sua pena foi fixada no máximo de 06 anos de reclusão, eis que duplicada a pena base por força da quadrilha ser armada. A decisão transitou em julgado. Enquanto cumpria pena, entrou em vigor a Lei nº 12.850/2013, que alterou o artigo pelo qual João fora condenado. Apesar da sanção em abstrato, excluídas as causas de aumento, ter permanecido a mesma (reclusão, de 1 (um) a 3 (três) anos), o aumento de pena pelo fato da associação ser armada passou a ser de até a metade e não mais do dobro.
+
+      Procurado pela família de João, responda aos itens a seguir.
+    comando: Qual o juízo competente para a formulação desse requerimento?
+    gabarito: Considerando que já houve trânsito em julgado da sentença condenatória, o juízo competente para formulação do requerimento é o da Vara de Execuções Penais, na forma do enunciado 611 da Súmula não vinculante do STF ou do Art. 66, inciso I, da LEP.
+    opcoes:
+      correta: O juízo competente é o da Vara de Execuções Penais, na forma do enunciado 611 da Súmula não vinculante do STF OU do Art. 66, inciso I, da LEP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 18-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: |-
+      Fernando foi pronunciado pela prática de um crime de homicídio doloso consumado que teve como vítima Henrique. Em sessão plenária do Tribunal do Júri, o réu e sua namorada, ouvida na condição de informante, afirmaram que Henrique iniciou agressões contra Fernando e que este agiu em legítima defesa. Por sua vez, a namorada da vítima e uma testemunha presencial asseguraram que não houve qualquer agressão pretérita por parte de Henrique.
+
+      No momento do julgamento, os jurados reconheceram a autoria e materialidade, mas optaram por absolver Fernando da imputação delitiva. Inconformado, o Ministério Público apresentou recurso de apelação com fundamento no Art. 593, inciso III, alínea ‘d’, do CPP, alegando que a decisão foi manifestamente contrária à prova dos autos. A família de Fernando fica preocupada com o recurso, em especial porque afirma que todos tinham conhecimento que dois dos jurados que atuaram no julgamento eram irmãos, mas em momento algum isso foi questionado pelas partes, alegado no recurso ou avaliado pelo Juiz Presidente.
+
+      Considerando a situação narrada, esclareça, na condição de advogado(a) de Fernando, os seguintes questionamentos da família do réu:
+    comando: A decisão dos jurados foi manifestamente contrária à prova dos autos? Justifique.
+    gabarito: A decisão dos jurados não foi manifestamente contrária à prova dos autos, tendo em vista que o acusado e sua namorada alegaram a existência de legítima defesa. De fato, a namorada da vítima e uma testemunha afirmaram que esta causa excludente da ilicitude não existiu. Contudo, existem duas versões nos autos, com provas em ambos os sentidos, logo os jurados são livres para optar por uma delas, de acordo com a íntima convicção. Não houve arbitrariedade ou total dissociação da prova dos autos, mas apenas escolha de uma das versões. Assim, a soberania dos vereditos deve prevalecer, não cabendo ao Tribunal fazer nova análise do mérito, se a decisão não foi manifestamente contrária às provas produzidas.
+    opcoes:
+      correta: Não. A decisão dos jurados não foi manifestamente contrária à prova dos autos, pois está baseada em uma das versões existentes nos autos OU porque as declarações do réu e de sua namorada escoram a decisão, devendo prevalecer a soberania dos vereditos OU a íntima convicção dos jurados.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 18-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      Fernando foi pronunciado pela prática de um crime de homicídio doloso consumado que teve como vítima Henrique. Em sessão plenária do Tribunal do Júri, o réu e sua namorada, ouvida na condição de informante, afirmaram que Henrique iniciou agressões contra Fernando e que este agiu em legítima defesa. Por sua vez, a namorada da vítima e uma testemunha presencial asseguraram que não houve qualquer agressão pretérita por parte de Henrique.
+
+      No momento do julgamento, os jurados reconheceram a autoria e materialidade, mas optaram por absolver Fernando da imputação delitiva. Inconformado, o Ministério Público apresentou recurso de apelação com fundamento no Art. 593, inciso III, alínea ‘d’, do CPP, alegando que a decisão foi manifestamente contrária à prova dos autos. A família de Fernando fica preocupada com o recurso, em especial porque afirma que todos tinham conhecimento que dois dos jurados que atuaram no julgamento eram irmãos, mas em momento algum isso foi questionado pelas partes, alegado no recurso ou avaliado pelo Juiz Presidente.
+
+      Considerando a situação narrada, esclareça, na condição de advogado(a) de Fernando, os seguintes questionamentos da família do réu:
+    comando: Poderá o Tribunal, no recurso do Ministério Público, anular o julgamento com fundamento em nulidade na formação do Conselho de Sentença? Justifique.
+    gabarito: Não poderá o Tribunal anular o julgamento com base na existência de nulidade ocorrida durante a sessão plenária. De fato, prevê o Art. 448, inciso IV, do CPP, que estão impedidos de servir no mesmo Conselho os irmãos. Ocorre que o enunciado 713 da Súmula não vinculante do STF afirma categoricamente que “o efeito devolutivo da apelação contra decisões do júri é adstrito aos fundamentos de sua interposição”. O Ministério Público apresentou apelação apenas com fundamento na alínea ‘d’ do Art. 593, inciso III, do Código de Processo Penal. Assim, está limitado o efeito devolutivo, de modo que o Tribunal somente poderá analisar a existência de decisão manifestamente contrária à prova dos autos. Decisão em contrário prejudicaria a ampla defesa, pois eventual nulidade não foi combatida pela defesa em sede de contrarrazões. Poderia, ainda, o candidato basear sua resposta no enunciado 160 da Súmula do STF, que afirma que é nula a decisão que acolhe, contra réu, nulidade não arguida pela acusação.
+    opcoes:
+      correta: Não, pois o Tribunal está limitado ao conteúdo da apelação apresentada pelo Ministério Público, OU Não, pois decisão em contrário prejudicaria a ampla defesa e/ou contraditório, tendo em vista que não foi rebatido em contrarrazões, na forma do enunciado 713 da Súmula não vinculante do STF OU do enunciado 160 da Súmula do STF.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 18-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      John, primário e de bons antecedentes, foi denunciado pela prática do crime de tráfico de drogas. Após a instrução, inclusive com realização do interrogatório, ocasião em que o acusado confessou os fatos, John foi condenado, na forma do Art. 33, § 4º, da Lei nº 11.343/06, à pena de 1 ano e 08 meses de reclusão, a ser cumprido em regime inicial aberto. O advogado de John interpôs o recurso cabível da sentença condenatória. Em julgamento pela Câmara Criminal do Tribunal de Justiça, a sentença foi integralmente mantida por maioria de votos. O Desembargador revisor, por sua vez, votou no sentido de manter a pena de 01 ano e 08 meses de reclusão, assim como o regime, mas foi favorável à substituição da pena privativa de liberdade por duas restritivas de direitos, no que restou vencido. O advogado de John é intimado do acórdão.
+
+      Considerando a situação narrada, responda aos itens a seguir.
+    comando: Qual medida processual, diferente de habeas corpus, deverá ser formulada pelo advogado de John para combater a decisão da Câmara Criminal do Tribunal de Justiça?
+    gabarito: A medida processual a ser adotada pelo advogado de John é a interposição de recurso de Embargos Infringentes, na forma do Art. 609, parágrafo único, do CPP, considerando que a decisão proferida em sede de Apelação não foi, em relação à substituição da pena, unânime.
+    opcoes:
+      correta: A medida processual é de embargos infringentes, na forma do Art. 609, parágrafo único, do CPP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 18-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      John, primário e de bons antecedentes, foi denunciado pela prática do crime de tráfico de drogas. Após a instrução, inclusive com realização do interrogatório, ocasião em que o acusado confessou os fatos, John foi condenado, na forma do Art. 33, § 4º, da Lei nº 11.343/06, à pena de 1 ano e 08 meses de reclusão, a ser cumprido em regime inicial aberto. O advogado de John interpôs o recurso cabível da sentença condenatória. Em julgamento pela Câmara Criminal do Tribunal de Justiça, a sentença foi integralmente mantida por maioria de votos. O Desembargador revisor, por sua vez, votou no sentido de manter a pena de 01 ano e 08 meses de reclusão, assim como o regime, mas foi favorável à substituição da pena privativa de liberdade por duas restritivas de direitos, no que restou vencido. O advogado de John é intimado do acórdão.
+
+      Considerando a situação narrada, responda aos itens a seguir.
+    comando: Qual fundamento de direito material deverá ser apresentado para fazer prevalecer o voto vencido?
+    gabarito: Para fazer prevalecer o voto vencido, deverá o examinando demonstrar a possibilidade de ser substituída a pena privativa de liberdade por restritiva de direitos, tendo em vista que foi reconhecido que o acusado é primário, de bons antecedentes e que não se dedica ao crime e nem integra organização criminosa. Em que pese o Art. 33, § 4º, da Lei nº 11.343/06, vedar a substituição da pena privativa de liberdade por restritiva de direitos, o Supremo Tribunal Federal, em sede de controle difuso de inconstitucionalidade, entendeu que tal vedação viola o princípio da individualização da pena. Ademais, diante dessa decisão o Senado Federal editou a Resolução nº 05, suspendendo a eficácia da parte da redação do Art. 33, § 4º, da Lei nº 11.343/06, que veda a substituição.
+    opcoes:
+      correta: O fundamento seria a possibilidade de substituição da pena privativa de liberdade por restritiva de direitos, tendo em vista que o STF considerou inconstitucional a vedação trazida pelo Art. 33, § 4º, da Lei nº 11.343/06 OU porque a vedação do Art. 33, § 4º, da Lei nº 11.343/06, viola o princípio da individualização da pena OU porque a Resolução 5 do Senado suspendeu a eficácia de parte da redação do Art. 33, § 4º, da Lei nº 11.343/06.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1

@@ -1,0 +1,548 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "38"
+perguntas:
+  - id: 38-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento: Juízo Federal da Vara Federal Criminal de Alfa."
+    opcoes:
+      correta: "Endereçamento: Juízo Federal da Vara Federal Criminal de Alfa."
+      erradas:
+        - "Endereçamento correto: Juízo da Vara de Execuções Penais do Rio de Janeiro/RJ."
+        - Endereçamento correto da interposição (1ª Vara Criminal/Tribunal do Júri)
+        - "Endereçamento correto: Interposição para o Juiz da XX Vara Criminal de Vitória, Estado do Espírito Santo."
+        - Vara Criminal da Comarca de Campos/RJ.
+        - "Endereçamento: Tribunal de Justiça do Estado de São Paulo"
+    revisao: &a1
+      status: rascunho
+  - id: 38-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: pedido
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Pedido de retratação, na forma do Art. 589 do CPP.
+    opcoes:
+      correta: Pedido de retratação, na forma do Art. 589 do CPP.
+      erradas:
+        - "Pedidos: Conhecimento e provimento do recurso OU concessão da progressão de regime"
+        - Conhecimento e provimento do recurso, com a desclassificação para homicídio culposo na direção de veículo automotor.
+        - "Pedidos: absolvição do crime de furto, na forma do artigo 386, III, CPP;subsidiariamente, aplicação da pena base no mínimo legal;reconhecimento das atenuantes da confissão espontânea e da menoridade relativa;reconhecimento da forma privilegiada do furto;substituição da pena privativa de liberdade por restritiva de direitos;fixação do regime aberto; sursis da pena."
+        - Conhecimento e provimento do recurso.
+        - Apresentação de rol de testemunhas.
+    revisao: *a1
+  - id: 38-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: enderecamento
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: A quem devem ser endereçadas as razões?
+    gabarito: "Endereçamento: Tribunal Regional Federal da 10ª Região."
+    opcoes:
+      correta: "Endereçamento: Tribunal Regional Federal da 10ª Região."
+      erradas:
+        - "Endereçamento correto: Juízo da Vara de Execuções Penais do Rio de Janeiro/RJ."
+        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
+        - "Endereçamento: Vara Criminal da Comarca do Rio de Janeiro"
+        - "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
+        - "Endereçamento: Tribunal de Justiça do Estado de Santa Catarina."
+    revisao: *a1
+  - id: 38-peca-6-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "6.1"
+    secao: merito
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Unificação de penas pela continuidade delitiva, na forma do Art. 71, caput, do CP, ou Art. 111 da LEP, devendo ser aplicada a lógica do sistema da exasperação.
+    opcoes:
+      correta: Unificação de penas pela continuidade delitiva, na forma do Art. 71, caput, do CP, ou Art. 111 da LEP, devendo ser aplicada a lógica do sistema da exasperação.
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
+        - Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
+        - No mérito, absolvição de Lauro.
+        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
+    revisao: *a1
+  - id: 38-peca-6-2
+    categoria: peca-detalhe
+    parte: peca
+    item: "6.2"
+    secao: merito
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Tendo em vista a prática de delitos da mesma espécie, nas mesmas circunstâncias de tempo, lugar e maneira de execução.
+    opcoes:
+      correta: Tendo em vista a prática de delitos da mesma espécie, nas mesmas circunstâncias de tempo, lugar e maneira de execução.
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
+        - Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
+        - No mérito, absolvição de Lauro.
+        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
+    revisao: *a1
+  - id: 38-peca-6-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "6.3"
+    secao: merito
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Repercussão da continuidade delitiva na pena de multa ou promoção da soma das penas de multa aplicadas, consoante entendimento jurisprudencial do Superior Tribunal de Justiça ou na forma do Art. 72 do CP.
+    opcoes:
+      correta: Repercussão da continuidade delitiva na pena de multa ou promoção da soma das penas de multa aplicadas, consoante entendimento jurisprudencial do Superior Tribunal de Justiça ou na forma do Art. 72 do CP.
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
+        - Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
+        - No mérito, absolvição de Lauro.
+        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
+    revisao: *a1
+  - id: 38-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Manutenção da substituição da pena privativa de liberdade por penas restritivas de direito, pois as penas alternativas são compatíveis entre si, podendo ser executadas de forma simultânea ou sucessiva ou por estar fora das hipóteses legais de conversão, na forma do Art. 69, § 2º, do CP, ou do Art. 44, §§ 4º e 5º, do CP ou Art. 181, § 1º, da LEP.
+    opcoes:
+      correta: Manutenção da substituição da pena privativa de liberdade por penas restritivas de direito, pois as penas alternativas são compatíveis entre si, podendo ser executadas de forma simultânea ou sucessiva ou por estar fora das hipóteses legais de conversão, na forma do Art. 69, § 2º, do CP, ou do Art. 44, §§ 4º e 5º, do CP ou Art. 181, § 1º, da LEP.
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Subsidiariamente, afastar a qualificadora pois não há prova nos autos da idade da vítima, nos termos do Art. 213, §1º do CP
+        - Atipicidade da conduta ou desclassificação para crime de dano qualificado, tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto.
+    revisao: *a1
+  - id: 38-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: merito
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Afastamento da reincidência, uma vez que não houve trânsito em julgado de condenação antes da prática do novo crime, na forma do Art. 63 do CP.
+    opcoes:
+      correta: Afastamento da reincidência, uma vez que não houve trânsito em julgado de condenação antes da prática do novo crime, na forma do Art. 63 do CP.
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
+        - Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
+        - No mérito, absolvição de Lauro.
+        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
+    revisao: *a1
+  - id: 38-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Portanto, deve haver manutenção do regime inicial aberto ou semiaberto, na forma do Art. 33, § 2º, alínea c ou b, do CP.
+    opcoes:
+      correta: Portanto, deve haver manutenção do regime inicial aberto ou semiaberto, na forma do Art. 33, § 2º, alínea c ou b, do CP.
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
+        - Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
+        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
+        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
+    revisao: *a1
+  - id: 38-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: pedido
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Conhecimento e provimento do recurso.
+    opcoes:
+      correta: Conhecimento e provimento do recurso.
+      erradas:
+        - Pedido de retratação.
+        - Absolvição por falta de provas OU por não haver prova da existência do fato.
+        - "Pedidos: Preliminarmente, a extinção da punibilidade."
+        - Requerimento do exercício do juízo de retratação, nos termos do Art. 589 do CPP.
+        - Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
+    revisao: *a1
+  - id: 38-peca-11
+    categoria: peca-detalhe
+    parte: peca
+    item: "11"
+    secao: pedido
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Imediata expedição de contramandado de prisão ou recolhimento ou revogação do mandado de prisão.
+    opcoes:
+      correta: Imediata expedição de contramandado de prisão ou recolhimento ou revogação do mandado de prisão.
+      erradas:
+        - Pedido de retratação.
+        - "Pedidos, com fundamento no art. 626 do CPP: desclassificação para furto simples; diminuição da pena; fixação do regime semiaberto."
+        - "Pedidos: absolvição do crime de furto, na forma do artigo 386, III, CPP;subsidiariamente, aplicação da pena base no mínimo legal;reconhecimento das atenuantes da confissão espontânea e da menoridade relativa;reconhecimento da forma privilegiada do furto;substituição da pena privativa de liberdade por restritiva de direitos;fixação do regime aberto; sursis da pena."
+        - Pedido de exercício do juízo de retratação, nos termos do Art. 589 do CPP
+        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
+    revisao: *a1
+  - id: 38-peca-12
+    categoria: peca-detalhe
+    parte: peca
+    item: "12"
+    secao: prazo
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Qual o prazo da peça e o seu fundamento?
+    gabarito: "Prazo: 1º de setembro de 2023."
+    opcoes:
+      correta: "Prazo: 1º de setembro de 2023."
+      erradas:
+        - "Tempestividade: Prazo de 5 dias na forma do Art. 593, caput, do CPP."
+        - "Tempestividade: prazo de 05 dias."
+        - "Tempestividade: prazo de cinco dias, na forma do Art. 593, caput, do CPP."
+        - Prazo de 3 (três) dias, na forma do Art. 600, §1º, do CPP.
+        - "Tempestividade: prazo de cinco dias."
+    revisao: *a1
+  - id: 38-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      Alberto, primário e com bons antecedentes, foi condenado pela prática de peculato a uma pena de 2 (dois) anos de reclusão.
+
+      Na fixação da pena, o Juiz considerou boas as circunstâncias judiciais do Art. 59 do CP, fixando a pena-base no mínimo legal e, à míngua de agravantes ou causas de aumento ou diminuição, tornou esta pena definitiva. Ao fixar o regime inicial, de forma contraditória, o magistrado asseverou que "as circunstâncias judiciais são negativas, pois o delito de peculato é de extrema gravidade, diante da lesão ao patrimônio público", razão pela qual fixou o regime inicial semiaberto. Em seguida, substituiu as penas por restritivas de direitos, porque "presentes os pressupostos legais, sendo favoráveis as circunstâncias judiciais, na forma do Art. 59 e do Art. 44, ambos do CP".
+
+      Na qualidade de advogado(a) de Alberto, responda às perguntas a seguir.
+    comando: Qual peça processual deverá ser oposta pela defesa de Alberto para sanar a contradição na sentença e em que prazo? Justifique.
+    gabarito: Tendo em vista que o enunciado relata situação de contradição no julgado, e espera peça a ser oposta pela defesa, são cabíveis embargos de declaração, no prazo de dois dias, na forma do Art. 382 do CPP.
+    opcoes:
+      correta: Embargos de declaração, no prazo de dois dias, na forma do Art. 382 do CPP.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - Mencionar o princípio da consunção OU o princípio da absorção.
+        - "Habeas Corpus. / Art. 5º, LXVIII, CRFB/88 OU Art. 647 do CPP OU Art. 648, incisos I ou VI do CPP. Obs.: a mera citação do artigo não pontua."
+        - O requerimento a ser formulado é de substituição da prisão preventiva por prisão domiciliar, nos termos do Art. 318, inciso IV, do CPP.
+        - Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, tendo em vista que Paulo deixou de oferecer representação no prazo de 6 meses, conhecendo a autoria desde a data do fato, conforme estabelecido no Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP.
+    revisao: *a1
+  - id: 38-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      Alberto, primário e com bons antecedentes, foi condenado pela prática de peculato a uma pena de 2 (dois) anos de reclusão.
+
+      Na fixação da pena, o Juiz considerou boas as circunstâncias judiciais do Art. 59 do CP, fixando a pena-base no mínimo legal e, à míngua de agravantes ou causas de aumento ou diminuição, tornou esta pena definitiva. Ao fixar o regime inicial, de forma contraditória, o magistrado asseverou que "as circunstâncias judiciais são negativas, pois o delito de peculato é de extrema gravidade, diante da lesão ao patrimônio público", razão pela qual fixou o regime inicial semiaberto. Em seguida, substituiu as penas por restritivas de direitos, porque "presentes os pressupostos legais, sendo favoráveis as circunstâncias judiciais, na forma do Art. 59 e do Art. 44, ambos do CP".
+
+      Na qualidade de advogado(a) de Alberto, responda às perguntas a seguir.
+    comando: Qual o fundamento de direito material a ser defendido em favor de Alberto? Justifique.
+    gabarito: O fundamento de direito material é que a opinião do julgador sobre a gravidade abstrata do delito não autoriza a fixação de regime inicial mais severo que o permitido pela pena aplicada, consoante enunciados das Súmulas 718 ou 719 do STF ou 440 do STJ ou do Art. 33, § 2º, do CP.
+    opcoes:
+      correta: A opinião do julgador sobre a gravidade abstrata do delito não autoriza a fixação de regime inicial mais gravoso que o permitido pela pena aplicada, nos termos das Súmulas 718 ou 719 do STF ou 440 do STJ ou do Art. 33 § 2º, do CP.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 38-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Bárbara e Rodrigo são namorados e ambos são maiores e plenamente capazes. Em uma discussão, Rodrigo proferiu diversas ameaças e desferiu tapas no rosto de Bárbara, deixando-o bastante vermelho (equimoses).
+
+      Bárbara, então, se dirigiu à Delegacia de Polícia e relatou o ocorrido, mostrando as mensagens de texto com o conteúdo das ameaças, afirmando expressamente o desejo de ver Rodrigo processado.
+
+      Ao finalizar o boletim de ocorrência, a autoridade policial forneceu encaminhamento de Bárbara ao Instituto Médico Legal para a realização do exame de corpo de delito. Contudo, Bárbara não realizou o referido exame, nem necessitou de qualquer atendimento médico posterior, já que as lesões corporais não eram graves.
+
+      Rodrigo foi denunciado pela prática de lesão corporal (Art. 129, § 13, do CP) e ameaça (Art. 147 do CP), e o recebimento da peça acusatória ainda não foi analisado pelo juízo. Bárbara, então, informou ao advogado de Rodrigo seu desejo de se retratar da representação.
+
+      Considerando apenas as informações do enunciado, na condição de advogado de Rodrigo responda aos questionamentos a seguir.
+    comando: Se cabível, qual a forma e o alcance da retratação da representação? Justifique.
+    gabarito: Apenas o delito de ameaça, por estar sujeito à representação (Art. 147, parágrafo único, do CP), admite a retratação da representação, que deve observar a forma do Art. 16 da Lei nº 11.340/06, qual seja, em audiência especialmente designada para tal fim, antes do recebimento da denúncia. Já o delito de lesão corporal, nos termos da Súmula 542 do STJ, está sujeito à ação penal pública incondicionada, sendo inadmissível, portanto, a retratação.
+    opcoes:
+      correta: Quanto ao alcance, apenas o delito de ameaça, por estar sujeito à representação, admite a renúncia da representação (ou no delito de lesão corporal no âmbito da violência doméstica e familiar contra a mulher, a ação penal é pública incondicionada, o que torna incabível a renúncia ou retratação da representação). Quanto à forma, em audiência especialmente designada para tal fim antes do recebimento da denúncia, na forma do Art. 16 da Lei 11.340/06.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 38-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Bárbara e Rodrigo são namorados e ambos são maiores e plenamente capazes. Em uma discussão, Rodrigo proferiu diversas ameaças e desferiu tapas no rosto de Bárbara, deixando-o bastante vermelho (equimoses).
+
+      Bárbara, então, se dirigiu à Delegacia de Polícia e relatou o ocorrido, mostrando as mensagens de texto com o conteúdo das ameaças, afirmando expressamente o desejo de ver Rodrigo processado.
+
+      Ao finalizar o boletim de ocorrência, a autoridade policial forneceu encaminhamento de Bárbara ao Instituto Médico Legal para a realização do exame de corpo de delito. Contudo, Bárbara não realizou o referido exame, nem necessitou de qualquer atendimento médico posterior, já que as lesões corporais não eram graves.
+
+      Rodrigo foi denunciado pela prática de lesão corporal (Art. 129, § 13, do CP) e ameaça (Art. 147 do CP), e o recebimento da peça acusatória ainda não foi analisado pelo juízo. Bárbara, então, informou ao advogado de Rodrigo seu desejo de se retratar da representação.
+
+      Considerando apenas as informações do enunciado, na condição de advogado de Rodrigo responda aos questionamentos a seguir.
+    comando: Qual a tese de defesa, quanto à materialidade delitiva, deve ser articulada em relação ao delito de lesão corporal? Justifique.
+    gabarito: O delito de lesão corporal deixa vestígios, por sua natureza não transeunte, tornando-se indispensável o exame de corpo de delito ou boletim de atendimento médico, na forma do Art. 158, do CPP ou Art. 12, § 3º, da Lei nº 11.340/06, sem o que não há prova da materialidade do fato.
+    opcoes:
+      correta: O delito de lesão corporal deixa vestígios, (ou) por sua natureza não transeunte, tornando-se indispensável o exame de corpo de delito ou laudos médicos a fim de comprovar a materialidade delitiva, na forma do Art. 158 do CPP ou do Art. 12, § 3º, da Lei nº 11.340/06.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 38-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: |-
+      Rodrigo estava desfilando em um bloco de carnaval fantasiado de "Presidente do Banco Nacional" da fictícia cidade de "Ratzana", trajando fantasia e adornos carnavalescos.
+
+      Ao ser abordado por um Policial Militar, foi realizada a busca pessoal, tendo sido localizado com Rodrigo notas impressas em papel "A4" onde se lia "dólar de Ratzana", com o símbolo e brasão da fictícia cidade. A Polícia Militar imediatamente realizou a prisão-captura de Rodrigo, e a autoridade policial competente lavrou o auto de prisão em flagrante, enquadrando a conduta de Rodrigo ao Art. 289, § 1º, do Código Penal, sem proceder, contudo, à oitiva do custodiado e dos Policiais Militares condutores do flagrante, ou mesmo de qualquer testemunha, sem justificativa. Em seguida, encaminhou a "nota de culpa" acompanhada da lavratura do auto de prisão em flagrante à Justiça competente, na forma da lei processual penal.
+
+      Considerando as informações do enunciado, como advogado de Rodrigo, responda aos itens a seguir.
+    comando: Qual a tese de Direito Penal a ser deduzida em favor de Rodrigo? Justifique.
+    gabarito: O delito de moeda falsa é doloso e exige que a falsificação seja eficiente para abalar a fé pública e que a moeda tenha curso legal no Brasil ou no estrangeiro. Logo, a descrição do enunciado indica que Rodrigo possuía um documento evidentemente inidôneo para tal fim (seja por incapacidade de abalar a fé pública, seja por não ter curso legal em qualquer país ou por ausência de dolo), tratando-se de absoluta impropriedade do objeto, diante a falsificação grosseira. Assim, deve ser alegada a atipicidade da conduta de Rodrigo, ante a impossibilidade de consumação do crime (crime impossível por absoluta impropriedade do objeto), na forma do Art. 17 do CP.
+    opcoes:
+      correta: Crime impossível ou ausência de elementar do tipo (curso legal em qualquer país ou aptidão de abalar a fé pública ou dolo), excluindo a tipicidade da conduta.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - "Habeas Corpus. / Art. 5º, LXVIII, CRFB/88 OU Art. 647 do CPP OU Art. 648, incisos I ou VI do CPP. Obs.: a mera citação do artigo não pontua."
+        - O requerimento a ser formulado é de substituição da prisão preventiva por prisão domiciliar, nos termos do Art. 318, inciso IV, do CPP.
+        - Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, tendo em vista que Paulo deixou de oferecer representação no prazo de 6 meses, conhecendo a autoria desde a data do fato, conforme estabelecido no Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP.
+    revisao: *a1
+  - id: 38-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      Rodrigo estava desfilando em um bloco de carnaval fantasiado de "Presidente do Banco Nacional" da fictícia cidade de "Ratzana", trajando fantasia e adornos carnavalescos.
+
+      Ao ser abordado por um Policial Militar, foi realizada a busca pessoal, tendo sido localizado com Rodrigo notas impressas em papel "A4" onde se lia "dólar de Ratzana", com o símbolo e brasão da fictícia cidade. A Polícia Militar imediatamente realizou a prisão-captura de Rodrigo, e a autoridade policial competente lavrou o auto de prisão em flagrante, enquadrando a conduta de Rodrigo ao Art. 289, § 1º, do Código Penal, sem proceder, contudo, à oitiva do custodiado e dos Policiais Militares condutores do flagrante, ou mesmo de qualquer testemunha, sem justificativa. Em seguida, encaminhou a "nota de culpa" acompanhada da lavratura do auto de prisão em flagrante à Justiça competente, na forma da lei processual penal.
+
+      Considerando as informações do enunciado, como advogado de Rodrigo, responda aos itens a seguir.
+    comando: Qual tese de Direito Processual deve ser sustentada a fim de garantir a liberdade de Rodrigo? Justifique.
+    gabarito: Deve ser alegada a nulidade da prisão em flagrante com o consequente relaxamento da prisão, na forma do Art. 310, inciso I, do CPP, ou do Art. 5º, inciso LXV, da CRFB/88, pois o auto de prisão em flagrante não observou as formalidades exigidas pelo Art. 304, caput, do CPP, notadamente, a oitiva do custodiado ou do condutor do flagrante ou da testemunha, ou a entrega da nota de culpa ao custodiado.
+    opcoes:
+      correta: A nulidade do auto de prisão em flagrante ou relaxamento da prisão em flagrante, que não observou as formalidades exigidas pelo CPP (notadamente, a oitiva do custodiado, ou do condutor do flagrante ou da testemunha, ou a entrega da nota de culpa ao custodiado), na forma do Art. 310, inciso I, ou Art. 304, caput, ambos do CPP, ou do Art. 5º, inciso LXV, da CRFB/88.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 38-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Elisa e Cláudio são vizinhos e mantinham relação de animosidade, com inúmeras brigas por motivos diversos. Certo dia, após uma destas brigas, Elisa decidiu quebrar os espelhos retrovisores do veículo de Cláudio, estacionado na garagem do condomínio.
+
+      Cláudio, de posse dos vídeos das câmeras de vigilância, que flagraram a ação de Elisa, ajuizou queixa-crime em desfavor desta, pela prática de delito previsto no Art. 163, caput, do Código Penal.
+
+      Em alegações finais, o advogado de Cláudio refutou a alegação de Elisa, no sentido de ter ocorrido prescrição da pretensão punitiva, pois a ré é reincidente (ostenta condenação anterior, transitada em julgado, pelo delito de ameaça, extinta há menos de cinco anos), razão pela qual deve se considerar o prazo prescricional de 4 (quatro) anos, ou seja, acrescido de um terço, conforme previsto no Código Penal e, ao fim, requereu apenas a "aplicação do melhor direito, para que seja feita justiça", sem formular pedido de condenação da ré.
+
+      Considere ter decorrido 3 (três) anos e 6 (seis) meses desde a data do recebimento da queixa até a presente data.
+
+      Na qualidade de advogado de Elisa, responda aos itens a seguir.
+    comando: Qual a tese de Direito Penal deve ser postulada pela defesa de Elisa? Justifique.
+    gabarito: Em relação ao Direito Penal aplicável, deve-se postular pelo reconhecimento da prescrição da pretensão punitiva, pois, nos termos da Súmula 220 do STJ, a reincidência não influi no prazo de prescrição da pretensão punitiva. Assim, tendo havido o transcurso de mais de 3 anos desde a data do recebimento da queixa-crime, sem que tenha sido prolatada sentença, é imperioso concluir pela ocorrência da prescrição da pretensão punitiva. Como o próprio dispositivo legal se refere à prescrição "após o trânsito em julgado", também admite-se, com igual pontuação, a referência ao Art. 110 do CP.
+    opcoes:
+      correta: A extinção da punibilidade pela prescrição, pois reincidência não influi no prazo de prescrição da pretensão punitiva, na forma da Súmula 220 do STJ ou do Art. 110, caput, do CP.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 38-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Elisa e Cláudio são vizinhos e mantinham relação de animosidade, com inúmeras brigas por motivos diversos. Certo dia, após uma destas brigas, Elisa decidiu quebrar os espelhos retrovisores do veículo de Cláudio, estacionado na garagem do condomínio.
+
+      Cláudio, de posse dos vídeos das câmeras de vigilância, que flagraram a ação de Elisa, ajuizou queixa-crime em desfavor desta, pela prática de delito previsto no Art. 163, caput, do Código Penal.
+
+      Em alegações finais, o advogado de Cláudio refutou a alegação de Elisa, no sentido de ter ocorrido prescrição da pretensão punitiva, pois a ré é reincidente (ostenta condenação anterior, transitada em julgado, pelo delito de ameaça, extinta há menos de cinco anos), razão pela qual deve se considerar o prazo prescricional de 4 (quatro) anos, ou seja, acrescido de um terço, conforme previsto no Código Penal e, ao fim, requereu apenas a "aplicação do melhor direito, para que seja feita justiça", sem formular pedido de condenação da ré.
+
+      Considere ter decorrido 3 (três) anos e 6 (seis) meses desde a data do recebimento da queixa até a presente data.
+
+      Na qualidade de advogado de Elisa, responda aos itens a seguir.
+    comando: Qual a tese de Direito Processual Penal deve ser suscitada por Elisa? Justifique.
+    gabarito: A tese de direito processual a ser defendida pela defesa de Elisa é a perempção, nos termos do Art. 60, inciso III, do CPP, pois não houve o pedido de condenação da acusada nas alegações finais.
+    opcoes:
+      correta: Extinção da punibilidade pela perempção, na forma do Art. 60, inciso III, parte final, do CPP.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - O requerimento a ser formulado é de substituição da prisão preventiva por prisão domiciliar, nos termos do Art. 318, inciso IV, do CPP.
+        - Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, tendo em vista que Paulo deixou de oferecer representação no prazo de 6 meses, conhecendo a autoria desde a data do fato, conforme estabelecido no Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP.
+    revisao: *a1

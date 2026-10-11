@@ -90,4 +90,6 @@ const memoriaisJuri: Gerador = {
   },
 };
 
-export default [respostaAcusacao, respostaAcusacaoJuri, memoriais, memoriaisJuri];
+const geradores = [respostaAcusacao, respostaAcusacaoJuri, memoriais, memoriaisJuri];
+
+export default geradores;

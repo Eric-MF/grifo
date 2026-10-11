@@ -18,12 +18,15 @@ import {
   PecasCatalogoSchema,
   PromosSchema,
   PerguntasArquivoSchema,
+  PerguntasItensArquivoSchema,
+  ObjetivasArquivoSchema,
   type Exame,
   type PerguntaFixa,
   type Item,
 } from "../src/content/schema.ts";
 import { buildLexico, parseDispositivo, toRoman } from "../src/lib/correcao/citacoes.ts";
 import { aplicarRotulos } from "../src/content/rotulos.ts";
+import { textoAtual, type Bloco } from "../src/lib/leis/linha-do-tempo.ts";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const CONTENT = join(ROOT, "content");
@@ -87,7 +90,7 @@ function build(): boolean {
     const checkItens = (itens: Item[], valor: number, parte: string) => {
       if (!ex.corrigivel) return;
       const soma = Math.round(itens.reduce((s, it) => {
-        const t = it.componentes.reduce((a, c) => a + c.valor, 0);
+        const t = it.componentes.reduce((a, c) => a + c.valor, it.anulado ?? 0);
         return s + (it.teto ? Math.min(it.teto, t) : t);
       }, 0) * 100) / 100;
       if (Math.abs(soma - valor) > 0.001) err(where, `${parte}: soma dos componentes = ${soma.toFixed(2)}, esperado ${valor.toFixed(2)}`);
@@ -146,6 +149,90 @@ function build(): boolean {
     }
   }
 
+  // ---------------- perguntas tiradas dos itens das provas ----------------
+  const perguntasItens: Record<string, unknown>[] = [];
+  const dirD = join(CONTENT, "perguntas", "discursivas");
+  const yamls = (d: string) => (existsSync(d) ? readdirSync(d).filter((x) => x.endsWith(".yaml")).sort() : []);
+  const dispositivosOk = (where: string, id: string, specs: string[]) => {
+    for (const d of specs) {
+      const c = parseDispositivo(d, lex);
+      if (!c || (c.tipo === "art" && !c.diploma)) err(where, `${id}: dispositivo não reconhecido "${d}"`);
+    }
+  };
+  for (const f of yamls(dirD)) {
+    const where = `perguntas/discursivas/${f}`;
+    const r = PerguntasItensArquivoSchema.safeParse(readYaml(join(dirD, f)));
+    if (!r.success) {
+      for (const i of r.error.issues) err(where, `${i.path.join(".")}: ${i.message}`);
+      continue;
+    }
+    const ex = exames.find((e) => e.id === r.data.exame);
+    if (!ex) {
+      err(where, `exame "${r.data.exame}" não existe em content/exames`);
+      continue;
+    }
+    for (const q of r.data.perguntas) {
+      if (perguntasItens.some((x) => x.id === q.id)) err(where, `id duplicado "${q.id}"`);
+      const itensParte = q.parte === "peca" ? ex.peca.itens : ex.questoes[Number(q.parte.slice(1)) - 1]?.itens;
+      const item = itensParte?.find((i) => String(i.n) === q.item);
+      if (!item) {
+        err(where, `${q.id}: item ${q.parte}/${q.item} não existe no exame ${ex.id}`);
+        continue;
+      }
+      if (!item.componentes.length) err(where, `${q.id}: item ${q.parte}/${q.item} não tem componentes de correção`);
+      dispositivosOk(where, q.id, q.dispositivos);
+      perguntasItens.push({
+        formato: "item",
+        id: q.id,
+        categorias: [q.categoria],
+        caso: q.caso,
+        comando: q.comando,
+        explicacao: q.gabarito,
+        fonte: `${ex.numeral} Exame`,
+        secao: q.secao,
+        itens: [item],
+        opcoes: [{ texto: q.opcoes.correta, correta: true }, ...q.opcoes.erradas.map((texto) => ({ texto, correta: false }))],
+        dispositivos: q.dispositivos.length ? q.dispositivos : item.componentes.flatMap((c) => c.dispositivo ?? []),
+        revisado: q.revisao.status === "revisado",
+      });
+    }
+  }
+
+  // ---------------- objetivas da 1ª fase ----------------
+  const objetivas: Record<string, unknown>[] = [];
+  const dirO = join(CONTENT, "objetivas");
+  for (const f of yamls(dirO)) {
+    const where = `objetivas/${f}`;
+    const r = ObjetivasArquivoSchema.safeParse(readYaml(join(dirO, f)));
+    if (!r.success) {
+      for (const i of r.error.issues) err(where, `${i.path.join(".")}: ${i.message}`);
+      continue;
+    }
+    const { exame, faixa, anuladas, questoes } = r.data;
+    const numeral = exames.find((e) => e.id === exame)?.numeral ?? toRoman(Number(exame));
+    for (const q of questoes) {
+      const id = `obj-${exame}-${q.n}`;
+      if (anuladas.includes(q.n)) err(where, `${id}: questão anulada não entra no acervo`);
+      const [a, b] = q.disciplina === "penal" ? faixa.penal : faixa.processoPenal;
+      if (q.n < a || q.n > b) warnings.push(`! ${where}: questão ${q.n} fora da faixa de ${q.disciplina} (${a}–${b})`);
+      if (q.peca && !pecas.data[q.peca]) err(where, `${id}: peça "${q.peca}" não existe em pecas.yaml`);
+      dispositivosOk(where, id, q.dispositivos);
+      objetivas.push({
+        formato: "objetiva",
+        id,
+        categorias: q.peca ? ["objetiva", "peca"] : ["objetiva"],
+        caso: q.enunciado,
+        comando: "Assinale a alternativa correta.",
+        explicacao: `Gabarito definitivo da FGV: letra ${q.correta}.`,
+        fonte: `${numeral} Exame · 1ª fase, questão ${q.n}`,
+        alternativas: q.alternativas,
+        correta: q.correta,
+        dispositivos: q.dispositivos,
+        revisado: q.revisao.status === "revisado",
+      });
+    }
+  }
+
   if (args.has("--check")) return report(errors, warnings);
   if (errors.length) return report(errors, warnings);
 
@@ -159,13 +246,15 @@ function build(): boolean {
       gabaritoOriginal: has("originais", `gabarito-${id}.pdf`),
       cadernoAtualizado: has("atualizados", `caderno-${id}-atualizado.pdf`),
       gabaritoAtualizado: has("atualizados", `gabarito-${id}-atualizado.pdf`),
+      objetivaCaderno: has("originais", `objetiva-caderno-${id}.pdf`),
+      objetivaGabarito: has("originais", `objetiva-gabarito-${id}.pdf`),
     };
   };
   // Exames só com PDF (sem transcrição) também aparecem em /provas, via manifesto.
   const manifestPath = join(DOWNLOADS, "originais", "manifest.json");
-  const manifest: { id: string; numero: number; variante: string | null; peca: string | null }[] = existsSync(manifestPath)
-    ? JSON.parse(readFileSync(manifestPath, "utf8"))
-    : [];
+  const manifest: { id: string; numero: number; variante: string | null; peca: string | null; fase2?: "aplicada" | "em-breve" }[] =
+    existsSync(manifestPath) ? JSON.parse(readFileSync(manifestPath, "utf8")) : [];
+  const fase2 = (id: string) => manifest.find((m) => m.id === id)?.fase2 ?? "aplicada";
   const idsTranscritos = new Set(exames.map((e) => e.id));
   const soPdf = manifest
     .filter((m) => !idsTranscritos.has(m.id))
@@ -181,6 +270,7 @@ function build(): boolean {
       transcrito: false,
       revisado: false,
       temAtualizacao: false,
+      fase2: fase2(m.id),
       downloads: downloads(m.id),
     }));
   const index = exames
@@ -196,6 +286,7 @@ function build(): boolean {
       transcrito: true,
       revisado: ex.revisao.status === "revisado",
       temAtualizacao: !!ex.atualizado?.notas.length,
+      fase2: fase2(ex.id),
       downloads: downloads(ex.id),
     }))
     .concat(soPdf)
@@ -209,8 +300,63 @@ function build(): boolean {
   writeFileSync(join(OUT, "leis.json"), JSON.stringify(leis.data));
   writeFileSync(join(OUT, "pecas.json"), JSON.stringify(pecas.data));
   writeFileSync(join(OUT, "perguntas.json"), JSON.stringify(perguntas));
+  writeFileSync(join(OUT, "perguntas-itens.json"), JSON.stringify(perguntasItens));
+  writeFileSync(join(OUT, "objetivas.json"), JSON.stringify(objetivas));
+
+  // Textos das leis do leitor: o navegador baixa sob demanda (linha do tempo, vade-mécum, minha leitura).
+  const dirLeis = join(CONTENT, "leis-texto");
+  const pubLeis = join(ROOT, "public", "dados", "leis");
+  const indiceLeis: { id: string; nome: string; artigos: number }[] = [];
+  if (existsSync(dirLeis)) {
+    rmSync(pubLeis, { recursive: true, force: true });
+    mkdirSync(pubLeis, { recursive: true });
+    for (const f of readdirSync(dirLeis).filter((x) => x.endsWith(".json") && !x.startsWith("_"))) {
+      const lei = JSON.parse(readFileSync(join(dirLeis, f), "utf8"));
+      writeFileSync(join(pubLeis, f), JSON.stringify({ id: lei.id, nome: lei.nome, url: lei.url, coletadoEm: lei.coletadoEm, blocos: lei.blocos }));
+      // texto vigente de cada artigo, para o pop-up, a busca e o slide do leitor
+      const porArtigo = new Map<string, { rotulo: string; partes: string[] }>();
+      for (const { bloco } of textoAtual(lei.blocos as Bloco[])) {
+        if (!bloco.disp) continue;
+        const art = bloco.disp.split(".")[0];
+        const a = porArtigo.get(art) ?? { rotulo: "", partes: [] };
+        if (bloco.tipo === "artigo" && !a.rotulo) a.rotulo = bloco.rotulo ?? art;
+        a.partes.push(bloco.texto);
+        porArtigo.set(art, a);
+      }
+      const lista = [...porArtigo].filter(([, a]) => a.rotulo).map(([art, a]) => [art, a.rotulo, a.partes.join("\n")]);
+      writeFileSync(join(pubLeis, f.replace(/\.json$/, ".artigos.json")), JSON.stringify({ id: lei.id, nome: lei.nome, artigos: lista }));
+      const artigos = lista.length;
+      if (artigos) indiceLeis.push({ id: lei.id, nome: lei.nome, artigos });
+    }
+    const ordem = Object.keys(leis.data.diplomas);
+    indiceLeis.sort((a, b) => ordem.indexOf(a.id) - ordem.indexOf(b.id));
+    const arqDatas = join(CONTENT, "leis-alteradoras.yaml");
+    const datas: Record<string, { vigencia?: string; publicacao?: string; aproximada?: boolean }> = existsSync(arqDatas) ? (readYaml(arqDatas) ?? {}) : {};
+    writeFileSync(
+      join(pubLeis, "_datas.json"),
+      JSON.stringify(
+        Object.fromEntries(Object.entries(datas).map(([k, v]) => [k, { vigencia: v.vigencia, publicacao: v.publicacao, ...(v.aproximada ? { aproximada: true } : {}) }])),
+      ),
+    );
+  }
+  writeFileSync(join(OUT, "leis-indice.json"), JSON.stringify(indiceLeis));
+
+  // Grifos prontos do leitor (content/grifos.yaml)
+  const arqGrifos = join(CONTENT, "grifos.yaml");
+  const grifos: Record<string, { rotulo: string; lei: string; artigos?: string; dispositivos?: string[]; nota?: string }[]> = existsSync(arqGrifos)
+    ? (readYaml(arqGrifos) ?? {})
+    : {};
+  for (const [sistema, regras] of Object.entries(grifos))
+    for (const r of regras) {
+      if (!indiceLeis.some((l) => l.id === r.lei)) warnings.push(`! grifos.yaml: ${sistema}: lei "${r.lei}" não está no leitor`);
+      if (!r.artigos && !r.dispositivos?.length) err("grifos.yaml", `${sistema}: regra sem artigos nem dispositivos (${r.lei})`);
+    }
+  writeFileSync(join(OUT, "grifos.json"), JSON.stringify(grifos));
   writeFileSync(join(OUT, "promos.json"), JSON.stringify(promos?.success ? promos.data : { locais: {}, promos: [] }));
-  console.log(`conteúdo: ${exames.length} exame(s) e ${perguntas.length} pergunta(s) fixa(s) gerados em src/content/generated`);
+  console.log(
+    `conteúdo: ${exames.length} exame(s), ${perguntas.length} pergunta(s) fixa(s), ${perguntasItens.length} pergunta(s) de itens e ` +
+      `${objetivas.length} objetiva(s) gerados em src/content/generated`,
+  );
   return report(errors, warnings);
 }
 

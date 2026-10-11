@@ -1,0 +1,555 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "35"
+perguntas:
+  - id: 35-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
+    opcoes:
+      correta: "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
+      erradas:
+        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
+        - "Endereçamento correto: Tribunal de Justiça do Estado de Minas Gerais."
+        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
+        - "Endereçamento correto: Tribunal de Justiça do Rio de Janeiro."
+        - "Endereçamento: Tribunal de Justiça do Estado de São Paulo."
+    revisao: &a1
+      status: rascunho
+  - id: 35-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: enderecamento
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem devem ser endereçadas as razões?
+    gabarito: "Endereçamento: Tribunal de Justiça do Estado de Santa Catarina."
+    opcoes:
+      correta: "Endereçamento: Tribunal de Justiça do Estado de Santa Catarina."
+      erradas:
+        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
+        - "Endereçamento: 1ª Vara Criminal da Comarca de Florianópolis/SC."
+        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
+        - Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG..
+        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
+    revisao: *a1
+  - id: 35-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: preliminar
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: Preliminarmente, nulidade na oitiva das vítimas, tendo em vista que o mero decurso de tempo não é fundamento idôneo para produção antecipada de provas, nos termos do Art. 225 do CPP, ou Art. 564, inciso IV, do CPP, ou Súmula 455 do STJ.
+    opcoes:
+      correta: Preliminarmente, nulidade na oitiva das vítimas, tendo em vista que o mero decurso de tempo não é fundamento idôneo para produção antecipada de provas, nos termos do Art. 225 do CPP, ou Art. 564, inciso IV, do CPP, ou Súmula 455 do STJ.
+      erradas:
+        - "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
+        - "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
+        - Ilicitude por derivação da prova testemunhal, com fundamento no art. 157, § 1º, CPP.
+        - Preliminarmente, reconhecimento da nulidade dos atos da instrução OU requerimento de aplicação, por analogia, do art. 28 do CPP, diante do não oferecimento de proposta de suspensão condicional do processo, pois preenchidos os requisitos do Art. 89 da Lei 9099/95 OU pois irrelevante o fato do delito imputado não ser infração de menor potencial ofensivo.
+        - Preliminarmente, extinção da punibilidade do agente OU nulidade em razão da ausência de representação, com reconhecimento da decadência, conforme o Art. 107, inciso IV, do CP OU 564, inciso III, alínea a, ou inciso IV, CPP
+    revisao: *a1
+  - id: 35-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
+    opcoes:
+      correta: No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - No mérito, deveria ser buscada a absolvição do réu em relação ao crime de corrupção de menores, tendo em vista que ocorreu erro de tipo, nos termos do Art. 20, caput, do CP.
+        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
+        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 35-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Atipicidade da conduta ou desclassificação para crime de dano qualificado, tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto.
+    opcoes:
+      correta: Atipicidade da conduta ou desclassificação para crime de dano qualificado, tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - No mérito, deveria ser buscada a absolvição do réu em relação ao crime de corrupção de menores, tendo em vista que ocorreu erro de tipo, nos termos do Art. 20, caput, do CP.
+        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+        - Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
+        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
+    revisao: *a1
+  - id: 35-peca-8-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "8.1"
+    secao: merito
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Excludente de culpabilidade, em razão da inimputabilidade.
+    opcoes:
+      correta: Excludente de culpabilidade, em razão da inimputabilidade.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 35-peca-8-2
+    categoria: peca-detalhe
+    parte: peca
+    item: "8.2"
+    secao: merito
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
+    opcoes:
+      correta: Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - No mérito, deveria ser buscada a absolvição do réu em relação ao crime de corrupção de menores, tendo em vista que ocorreu erro de tipo, nos termos do Art. 20, caput, do CP.
+        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+        - Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
+        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
+    revisao: *a1
+  - id: 35-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Subsidiariamente: aplicação da pena base no mínimo legal, tendo em vista que o fato posterior ao crime julgado não pode ser considerado maus antecedentes."
+    opcoes:
+      correta: "Subsidiariamente: aplicação da pena base no mínimo legal, tendo em vista que o fato posterior ao crime julgado não pode ser considerado maus antecedentes."
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - No mérito, deveria ser buscada a absolvição do réu em relação ao crime de corrupção de menores, tendo em vista que ocorreu erro de tipo, nos termos do Art. 20, caput, do CP.
+        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 35-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: merito
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
+    opcoes:
+      correta: Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
+        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
+        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 35-peca-11
+    categoria: peca-detalhe
+    parte: peca
+    item: "11"
+    secao: merito
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento da atenuante da confissão espontânea, na forma do Art. 65, inciso III, alínea d, do CP.
+    opcoes:
+      correta: Reconhecimento da atenuante da confissão espontânea, na forma do Art. 65, inciso III, alínea d, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
+        - Da tese da incidência da atenuante da menoridade penal relativa
+        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+        - Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
+    revisao: *a1
+  - id: 35-peca-12
+    categoria: peca-detalhe
+    parte: peca
+    item: "12"
+    secao: merito
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
+    opcoes:
+      correta: Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - No mérito, deveria ser buscada a absolvição do réu em relação ao crime de corrupção de menores, tendo em vista que ocorreu erro de tipo, nos termos do Art. 20, caput, do CP.
+        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
+    revisao: *a1
+  - id: 35-peca-13
+    categoria: peca-detalhe
+    parte: peca
+    item: "13"
+    secao: merito
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Substituição da pena privativa de liberdade por restritiva de direitos, nos termos do Art. 44 do CP.
+    opcoes:
+      correta: Substituição da pena privativa de liberdade por restritiva de direitos, nos termos do Art. 44 do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
+        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
+        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
+    revisao: *a1
+  - id: 35-peca-14
+    categoria: peca-detalhe
+    parte: peca
+    item: "14"
+    secao: pedido
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: "Pedido: Conhecimento e provimento do recurso."
+    opcoes:
+      correta: "Pedido: Conhecimento e provimento do recurso."
+      erradas:
+        - Absolvição, com argumento e base legal.
+        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
+        - Requerimento de aplicação do furto privilegiado, pleiteando a adoção de alguma das medidas previstas em lei (ou substituição da reclusão por detenção ou causa de diminuição de pena ou aplicação exclusivamente da pena de multa), na forma do Art. 155, §2º, do CP.
+        - Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
+        - Absolvição, na forma do Art. 386, inciso III, do CPP.
+    revisao: *a1
+  - id: 35-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      Pedro, nascido em 20 de janeiro de 2000, foi condenado, definitivamente, pela prática do crime furto simples à pena de 1 ano de reclusão em regime inicial aberto, tendo sua pena privativa de liberdade substituída por pena de multa.
+
+      O crime ocorreu no dia 14 de junho de 2018, e a sentença condenatória transitou em julgado, no dia 20 de abril de 2019, tendo sido feito o pagamento da multa no prazo legal. Ocorre que, no dia 23 de março de 2020, o agente foi preso em flagrante, após empregar ameaça para subtrair o aparelho telefônico de Luiza. Os policiais que efetuaram a prisão conseguiram evitar a consumação delitiva e, posteriormente, Pedro foi denunciado pela prática do crime de roubo, em sua modalidade tentada. Finda a instrução, foi condenado na forma do Art. 157, c/c. Art. 14, inciso II, ambos do Código Penal.
+
+      Ao aplicar a pena, o juiz fixou a pena-base no mínimo legal, pois favoráveis as circunstâncias judiciais. Na segunda fase, manteve a pena no patamar de 4 anos, apesar de reconhecer a agravante da reincidência. Isto porque observou a menoridade relativa do agente à data do fato. Aplicada a minorante da tentativa em sua fração máxima, alcançou a pena definitiva de 1 ano e 4 meses de reclusão e fixou o regime inicial semi-aberto, sendo negada a suspensão condicional da pena em razão da reincidência. A defesa técnica de Pedro interpôs, assim, recurso de apelação, insurgindo-se apenas quanto à negativa do sursis. O magistrado, no entanto, não admitiu o recurso, sustentando que a via adequada era a do Recurso em Sentido Estrito, a teor do Art. 581, inciso XI, do Código de Processo Penal.
+
+      Considerando apenas as informações apresentadas, responda, na qualidade de advogado(a) de Pedro, aos itens a seguir.
+    comando: Aponte o recurso a ser interposto em face da decisão do juiz de primeiro grau que não admitiu a apelação e o fundamento de direito processual penal a ser alegado para que o apelo seja admitido. Justifique.
+    gabarito: O examinando deve apontar que o recurso adequado a impugnar a decisão que não admitiu a apelação é o Recurso em Sentido Estrito, nos termos do Art. 581, inciso XV, do CPP. Como fundamento para questionar a inadmissão do recurso de Apelação, deveria indicar que a negativa da suspensão condicional da pena ocorreu em sede de sentença penal condenatória, proferida por juiz de primeiro grau. Desse modo, a defesa técnica interpôs corretamente o Recurso de Apelação para questionar a sentença, pois, como dispõe o Art. 593, § 4º, do CPP, quando cabível a apelação, não poderá ser usado o recurso em sentido estrito, ainda que somente de parte da decisão se recorra. Desse modo, como disciplina o próprio Art. 593, inciso I, o recurso adequado para impugnar as sentenças de mérito, de condenação ou absolvição, é a apelação, no prazo de 5 dias, e não poderia o juízo a quo ter inadmitido o recurso defensivo.
+    opcoes:
+      correta: O recurso cabível é o Recurso em Sentido Estrito, nos termos do Art. 581, inciso XV, do CPP. O argumento de direito processual é que a apelação deveria ser admitida, pois é o recurso adequado à impugnação das sentenças condenatórias, ainda que se recorra apenas de parte delas.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - Tendo em vista que o delito de tráfico privilegiado não é crime equiparado a hediondo, aplica-se a progressão pelo percentual de 16%, nos termos do Art. 112, § 5º ou Art. 112, inciso I, da LEP.
+        - Favorecimento real OU praticou o delito descrito no Art. 349, do CP.
+        - Deveria ser alegada a impossibilidade de condenação na imputação originária, pois o juiz está adstrito aos termos do aditamento (Art. 384, §4º, do CPP) OU porque não foram observados os princípios da ampla defesa e do contraditório OU houve violação ao princípio da correlação.
+        - Sim, o argumento seria de que ocorreu a prescrição da pretensão executória, com consequente extinção da punibilidade do agente, conforme o Art. 107, inciso IV, do CP, OU o Art. 109, inciso V, do CP, OU o Art. 110 do CP.
+    revisao: *a1
+  - id: 35-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      Pedro, nascido em 20 de janeiro de 2000, foi condenado, definitivamente, pela prática do crime furto simples à pena de 1 ano de reclusão em regime inicial aberto, tendo sua pena privativa de liberdade substituída por pena de multa.
+
+      O crime ocorreu no dia 14 de junho de 2018, e a sentença condenatória transitou em julgado, no dia 20 de abril de 2019, tendo sido feito o pagamento da multa no prazo legal. Ocorre que, no dia 23 de março de 2020, o agente foi preso em flagrante, após empregar ameaça para subtrair o aparelho telefônico de Luiza. Os policiais que efetuaram a prisão conseguiram evitar a consumação delitiva e, posteriormente, Pedro foi denunciado pela prática do crime de roubo, em sua modalidade tentada. Finda a instrução, foi condenado na forma do Art. 157, c/c. Art. 14, inciso II, ambos do Código Penal.
+
+      Ao aplicar a pena, o juiz fixou a pena-base no mínimo legal, pois favoráveis as circunstâncias judiciais. Na segunda fase, manteve a pena no patamar de 4 anos, apesar de reconhecer a agravante da reincidência. Isto porque observou a menoridade relativa do agente à data do fato. Aplicada a minorante da tentativa em sua fração máxima, alcançou a pena definitiva de 1 ano e 4 meses de reclusão e fixou o regime inicial semi-aberto, sendo negada a suspensão condicional da pena em razão da reincidência. A defesa técnica de Pedro interpôs, assim, recurso de apelação, insurgindo-se apenas quanto à negativa do sursis. O magistrado, no entanto, não admitiu o recurso, sustentando que a via adequada era a do Recurso em Sentido Estrito, a teor do Art. 581, inciso XI, do Código de Processo Penal.
+
+      Considerando apenas as informações apresentadas, responda, na qualidade de advogado(a) de Pedro, aos itens a seguir.
+    comando: Existe alguma tese de Direito Penal material que permita a concessão da suspensão condicional da pena no caso concreto? Justifique.
+    gabarito: O examinando deveria desenvolver raciocínio no sentido de que existe tese de direito material a ser alegada no caso concreto, objetivando a concessão do sursis. É que o magistrado negou a suspensão condicional da pena sustentando que o condenado era reincidente. De fato, Pedro ostentava condenação definitiva anterior à prática do crime de roubo tentado. Ocorre que o agente fora anteriormente condenado à pena de multa e, nos termos do Art. 77, § 1º, do Código Penal, a condenação anterior a pena de multa não impede a concessão da suspensão condicional da pena. Desse modo, Pedro faz jus ao benefício.
+    opcoes:
+      correta: A condenação anterior à pena de multa não impede a concessão da suspensão condicional da pena, de acordo com o Art. 77, § 1º, do CP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 35-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Roberto foi denunciado pelo crime de perseguição (Art. 147-A do CP). Segundo a denúncia, no dia 15 de janeiro de 2022, na filial da sociedade empresária Ruan S/A, situada no Rio de Janeiro/RJ, Roberto se aproveitou da proximidade física com Fábio (colega que trabalha na matriz da empresa em São Paulo/SP e estava visitando a filial carioca por um dia apenas) no ambiente de trabalho, para lançar-lhe olhares lascivos, o que teria “perturbado a esfera de liberdade ou privacidade” de Fábio. Este ofereceu representação contra Roberto.
+
+      O Ministério Público se recusou a formular proposta de transação penal a Roberto, com fundamento em uma anotação existente na sua Folha de Antecedentes Criminais (FAC), relativa à condenação definitiva à pena corporal – extinta há mais de 5 (cinco) anos – pela prática de crime.
+
+      Sobre a hipótese apresentada, responda aos itens a seguir.
+    comando: Quais teses de mérito podem ser invocadas pelo defensor técnico de Roberto? Justifique.
+    gabarito: Atipicidade objetiva da conduta, pois a figura delitiva da perseguição (Art. 147-A do CP) adota verbo nuclear no infinitivo (“perseguir”), o que denota crime habitual, a exigir reiteração do comportamento para a caracterização da tipicidade objetiva. No caso concreto, inexistiu reiteração, tratando-se de episódio isolado, ocorrido num único dia.
+    opcoes:
+      correta: Atipicidade objetiva da conduta, pois a figura delitiva da perseguição (Art. 147-A do CP); adota verbo nuclear no infinitivo (“perseguir”), o que denota crime habitual, a exigir reiteração do comportamento para a caracterização da tipicidade objetiva
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 35-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Roberto foi denunciado pelo crime de perseguição (Art. 147-A do CP). Segundo a denúncia, no dia 15 de janeiro de 2022, na filial da sociedade empresária Ruan S/A, situada no Rio de Janeiro/RJ, Roberto se aproveitou da proximidade física com Fábio (colega que trabalha na matriz da empresa em São Paulo/SP e estava visitando a filial carioca por um dia apenas) no ambiente de trabalho, para lançar-lhe olhares lascivos, o que teria “perturbado a esfera de liberdade ou privacidade” de Fábio. Este ofereceu representação contra Roberto.
+
+      O Ministério Público se recusou a formular proposta de transação penal a Roberto, com fundamento em uma anotação existente na sua Folha de Antecedentes Criminais (FAC), relativa à condenação definitiva à pena corporal – extinta há mais de 5 (cinco) anos – pela prática de crime.
+
+      Sobre a hipótese apresentada, responda aos itens a seguir.
+    comando: Qual medida pode ser adotada pelo defensor técnico de Roberto para viabilizar a proposta de transação penal? Justifique.
+    gabarito: A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos (Art. 64, inciso I do CP).
+    opcoes:
+      correta: A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 35-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: |-
+      Em 09 de agosto de 2021, durante uma reunião de condomínio, iniciou-se uma discussão. O morador Paulo, lutador de vale tudo, chamou Fábio, o síndico, de ladrão. Ato contínuo, Paulo partiu para cima de Fábio, no intuito de quebrar seu nariz com um soco. Em seguida, Fábio, praticante de jiu jitsu, golpeou Paulo, que caiu no chão desmaiado. Paulo foi levado para o hospital, mas foi liberado horas depois. O laudo hospitalar atestou apenas escoriações leves.
+
+      Em 10 de maio de 2022, em outra reunião de condomínio, Paulo e Fábio encontraram-se novamente. Fábio já tinha esquecido os fatos ocorridos na ocasião anterior, porque não era pessoa de guardar rancor. No entanto, Paulo lembrou de tudo que passou, sentiu-se envergonhado perante os demais condôminos e resolveu seguir em frente para processar Fábio criminalmente. No dia seguinte, Paulo noticiou o ocorrido na reunião anterior à autoridade policial e apresentou o laudo hospitalar para comprovar a lesão sofrida.
+
+      Após os trâmites regulares das investigações, o promotor de justiça com atribuição para o caso ofereceu denúncia em face Fábio como incurso nas sanções do crime de lesão corporal leve, previsto no art. 129, caput do CP. A denúncia foi recebida e determinada a citação do réu.
+
+      Considerando as informações acima, na condição de advogado(a) de Fábio, responda aos itens a seguir.
+    comando: Qual tese a defesa pode alegar como preliminar? Justifique.
+    gabarito: Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, na forma do Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP. Em se tratando de imputação pelo crime de lesão corporal leve, previsto no Art. 129, caput, do CP, a ação é penal pública condicionada à representação, conforme o Art. 88 da Lei nº 9.099/95. No caso, Paulo somente apresentou a representação após 6 meses do conhecimento da autoria do fato, quando transcorrido o prazo decadencial previsto no Art. 38 do CPP.
+    opcoes:
+      correta: Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, tendo em vista que Paulo deixou de oferecer representação no prazo de 6 meses, conhecendo a autoria desde a data do fato, conforme estabelecido no Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 35-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      Em 09 de agosto de 2021, durante uma reunião de condomínio, iniciou-se uma discussão. O morador Paulo, lutador de vale tudo, chamou Fábio, o síndico, de ladrão. Ato contínuo, Paulo partiu para cima de Fábio, no intuito de quebrar seu nariz com um soco. Em seguida, Fábio, praticante de jiu jitsu, golpeou Paulo, que caiu no chão desmaiado. Paulo foi levado para o hospital, mas foi liberado horas depois. O laudo hospitalar atestou apenas escoriações leves.
+
+      Em 10 de maio de 2022, em outra reunião de condomínio, Paulo e Fábio encontraram-se novamente. Fábio já tinha esquecido os fatos ocorridos na ocasião anterior, porque não era pessoa de guardar rancor. No entanto, Paulo lembrou de tudo que passou, sentiu-se envergonhado perante os demais condôminos e resolveu seguir em frente para processar Fábio criminalmente. No dia seguinte, Paulo noticiou o ocorrido na reunião anterior à autoridade policial e apresentou o laudo hospitalar para comprovar a lesão sofrida.
+
+      Após os trâmites regulares das investigações, o promotor de justiça com atribuição para o caso ofereceu denúncia em face Fábio como incurso nas sanções do crime de lesão corporal leve, previsto no art. 129, caput do CP. A denúncia foi recebida e determinada a citação do réu.
+
+      Considerando as informações acima, na condição de advogado(a) de Fábio, responda aos itens a seguir.
+    comando: Qual tese de direito material pode ser utilizada para a defesa de Fábio? Justifique.
+    gabarito: |-
+      Fábio atuou em legítima defesa, uma vez que, usando moderadamente dos meios necessários, repeliu injusta e iminente agressão de Paulo, que foi em sua direção para lhe dar um soco com o intuito de quebrar seu nariz.
+
+      Assim, houve exclusão da ilicitude do fato e Fábio não responde por crime algum, na forma do Art. 23, inciso II c/c. o Art. 25, caput, ambos do CP.
+    opcoes:
+      correta: Fábio atuou em legítima defesa, uma vez que, usando moderadamente dos meios necessários, repeliu injusta e iminente agressão de Paulo, que foi em sua direção para lhe dar um soco com o intuito de quebrar seu nariz. Assim, houve exclusão da ilicitude do fato, na forma do Art. 23, inciso II, c/c. o Art. 25, caput, ambos do CP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 35-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Arnaldo e Fábio, 22 anos, são irmãos gêmeos idênticos, mas Arnaldo sempre fez mais sucesso com as meninas por ser mais extrovertido. Arnaldo inicia um relacionamento com Mônica, de 14 anos. Ambos costumam manter relação sexual consentida.
+
+      Elena, amiga de Mônica, sempre foi apaixonada por Arnaldo e, movida por ciúmes, resolve noticiar às autoridades sobre as relações mantidas entre Arnaldo e Mônica, no intuito de incriminá-lo por estupro de vulnerável.
+
+      Noticiado o fato em sede policial e concluídas as investigações, o Ministério Público ofereceu denúncia, imputando a Arnaldo o crime de estupro de vulnerável, previsto no Art. 217-A do CP. Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento. De posse do mandado, o oficial de justiça foi até a residência dos irmãos e realizou a intimação na pessoa de Fábio, que se fez passar por Arnaldo.
+
+      No dia da audiência, Arnaldo não compareceu, embora seu advogado estivesse presente. Finalizada a instrução e após alegações finais, o juiz condenou Arnaldo no crime de estupro de vulnerável, na forma do Art. 217-A do CP, a pena de 8 anos de reclusão, visto que Arnaldo não tinha qualquer anotação criminal, sendo favoráveis as condições do crime.
+
+      Considerando apenas as informações narradas no enunciado, responda aos itens a seguir.
+    comando: O que pode ser alegado em favor de Arnaldo em matéria processual? Justifique.
+    gabarito: Nulidade da intimação e dos demais atos, na forma do Art. 564, inciso IV, do CPP. A intimação deveria ter sido feita na pessoa do réu, Arnaldo, de modo que ele ficou privado de efetuar sua autodefesa na audiência de instrução e julgamento, restando evidente o prejuízo diante da condenação. Houve, portanto, violação ao Princípio da Ampla Defesa e do Contraditório ou ao Princípio do Devido Processo Legal, na forma do Art. 5º, incisos LV e LIV, da CRFB/88.
+    opcoes:
+      correta: A intimação deveria ter sido feita na pessoa do réu, Arnaldo, de modo que ele ficou privado de efetuar sua autodefesa na audiência de instrução e julgamento, em violação ao Princípio da Ampla Defesa ou do Contraditório ou do Princípio do Devido Processo Legal. Houve, portanto, nulidade da intimação e dos demais atos subsequentes, na forma do Art. 564, inciso IV, do CPP ou do Art. 5º, incisos LV e LIV, da CRFB/88.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 35-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Arnaldo e Fábio, 22 anos, são irmãos gêmeos idênticos, mas Arnaldo sempre fez mais sucesso com as meninas por ser mais extrovertido. Arnaldo inicia um relacionamento com Mônica, de 14 anos. Ambos costumam manter relação sexual consentida.
+
+      Elena, amiga de Mônica, sempre foi apaixonada por Arnaldo e, movida por ciúmes, resolve noticiar às autoridades sobre as relações mantidas entre Arnaldo e Mônica, no intuito de incriminá-lo por estupro de vulnerável.
+
+      Noticiado o fato em sede policial e concluídas as investigações, o Ministério Público ofereceu denúncia, imputando a Arnaldo o crime de estupro de vulnerável, previsto no Art. 217-A do CP. Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento. De posse do mandado, o oficial de justiça foi até a residência dos irmãos e realizou a intimação na pessoa de Fábio, que se fez passar por Arnaldo.
+
+      No dia da audiência, Arnaldo não compareceu, embora seu advogado estivesse presente. Finalizada a instrução e após alegações finais, o juiz condenou Arnaldo no crime de estupro de vulnerável, na forma do Art. 217-A do CP, a pena de 8 anos de reclusão, visto que Arnaldo não tinha qualquer anotação criminal, sendo favoráveis as condições do crime.
+
+      Considerando apenas as informações narradas no enunciado, responda aos itens a seguir.
+    comando: Qual argumento de direito material poderia ser apresentado? Justifique.
+    gabarito: Arnaldo deve ser absolvido, na forma do Art. 386, inciso III, do CPP, porque o delito de estupro de vulnerável tem como vítima pessoa menor de 14 anos, conforme o Art. 217-A, caput, do CP. Mônica tinha 14 anos e, portanto, capacidade para consentir a relação sexual. Dessa forma, o fato é atípico.
+    opcoes:
+      correta: O delito de estupro de vulnerável tem como vítima pessoa menor de 14 anos, conforme o Art. 217-A, caput, do CP. Mônica tinha 14 anos e, portanto, capacidade para consentir a relação sexual. Assim, o fato é atípico, devendo Arnaldo ser absolvido, segundo o Art. 386, inciso III, do CPP.
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1

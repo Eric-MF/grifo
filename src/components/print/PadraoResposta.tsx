@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { fmtNota } from "@/lib/formato";
 import { RichText } from "@/components/RichText";
 import type { Exame, Item } from "@/content/schema";
@@ -32,7 +33,27 @@ function DescricaoComValores({ texto }: { texto: string }) {
 }
 
 function Tabela({ itens }: { itens: Item[] }) {
+  const linhas: ReactNode[] = [];
   let secao: string | undefined;
+  for (const it of itens) {
+    if (it.secao && it.secao !== secao) {
+      secao = it.secao;
+      linhas.push(
+        <tr key={`s-${it.n}`} className="sec">
+          <td>{it.secao}</td>
+          <td />
+        </tr>,
+      );
+    }
+    linhas.push(
+      <tr key={it.n}>
+        <td>
+          <b>{it.n}.</b> <DescricaoComValores texto={it.descricao} />
+        </td>
+        <td className="v">{valoresDoItem(it)}</td>
+      </tr>,
+    );
+  }
   return (
     <table className="tabela">
       <thead>
@@ -41,29 +62,7 @@ function Tabela({ itens }: { itens: Item[] }) {
           <th>PONTUAÇÃO</th>
         </tr>
       </thead>
-      <tbody>
-        {itens.flatMap((it) => {
-          const linhas = [];
-          if (it.secao && it.secao !== secao) {
-            secao = it.secao;
-            linhas.push(
-              <tr key={`s-${it.n}`} className="sec">
-                <td>{it.secao}</td>
-                <td />
-              </tr>,
-            );
-          }
-          linhas.push(
-            <tr key={it.n}>
-              <td>
-                <b>{it.n}.</b> <DescricaoComValores texto={it.descricao} />
-              </td>
-              <td className="v">{valoresDoItem(it)}</td>
-            </tr>,
-          );
-          return linhas;
-        })}
-      </tbody>
+      <tbody>{linhas}</tbody>
     </table>
   );
 }
@@ -120,13 +119,13 @@ export function PadraoResposta({ exame }: { exame: Exame }) {
           )}
           <div className="barra laranja">Enunciado</div>
           <div className="texto">
-            <RichText text={p.enunciado} />
+            <RichText text={p.enunciado} data={exame.aplicacao} />
           </div>
           {p.gabarito && (
             <>
               <div className="barra azul">Gabarito Comentado</div>
               <div className="texto">
-                <RichText text={p.gabarito} />
+                <RichText text={p.gabarito} data={exame.aplicacao} />
               </div>
             </>
           )}
@@ -145,7 +144,7 @@ export function PadraoResposta({ exame }: { exame: Exame }) {
                     {n.item ? `Item ${n.item} — ` : ""}
                     {n.lei}
                   </b>
-                  <RichText text={n.texto} />
+                  <RichText text={n.texto} data={exame.aplicacao} />
                 </div>
               ))}
             </>

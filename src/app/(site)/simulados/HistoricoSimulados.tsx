@@ -9,6 +9,7 @@ import styles from "./simulados.module.css";
 
 export function HistoricoSimulados() {
   const [lista, setLista] = useState<Tentativa[]>([]);
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- lê localStorage após montar (site estático)
   useEffect(() => setLista(listarTentativas().slice(0, 8)), []);
   if (!lista.length) return null;
   return (

@@ -21,6 +21,15 @@ describe("código de verificação", () => {
     const d = { tipo: "jogo" as const, jogo: 1, pontos: 12345, nivel: 3, estilo: 5, acertos: 17, perguntas: 20, data: new Date(Date.UTC(2026, 0, 2)), impressao: 1500 };
     expect(await verificarCodigo(await gerarCodigo(d))).toMatchObject({ ok: true, dados: d });
   });
+  it("jogo v2 com categorias: ida e volta", async () => {
+    const d = { tipo: "jogo" as const, jogo: 1, pontos: 9876, nivel: 2, estilo: 3, categorias: 0b1011, acertos: 9, perguntas: 12, data: new Date(Date.UTC(2026, 9, 10)), impressao: 100 };
+    expect(await verificarCodigo(await gerarCodigo(d))).toMatchObject({ ok: true, dados: d });
+  });
+  it("código de jogo v1 continua válido e sem categorias", async () => {
+    const d = { tipo: "jogo" as const, jogo: 1, pontos: 50, nivel: 1, estilo: 0, acertos: 1, perguntas: 1, data: new Date(Date.UTC(2025, 5, 1)), impressao: 2000 };
+    const r = await verificarCodigo(await gerarCodigo(d));
+    expect(r.ok && r.dados.tipo === "jogo" && r.dados.categorias).toBe(undefined);
+  });
   it("troca de um caractere quebra o dígito verificador", async () => {
     const c = (await gerarCodigo(base)).replace(/-/g, "");
     for (let i = 0; i < c.length - 1; i++) {

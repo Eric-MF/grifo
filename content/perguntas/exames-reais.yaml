@@ -1,0 +1,1330 @@
+# Gerado por scripts/gerar-perguntas-exames.ts: "Peça e fundamento" com o enunciado real de cada exame.
+perguntas:
+  - id: exame-01-peca
+    caso: |-
+      Leila, de quatorze anos de idade, inconformada com o fato de ter engravidado de seu namorado, Joel, de vinte e oito anos de idade, resolveu procurar sua amiga Fátima, de vinte anos de idade, para que esta lhe provocasse um aborto. Utilizando seus conhecimentos de estudante de enfermagem, Fátima fez que Leila ingerisse um remédio para úlcera. Após alguns dias, na véspera da comemoração da entrada do ano de 2005, Leila abortou e disse ao namorado que havia menstruado, alegando que não estivera, de fato, grávida. Desconfiado, Joel vasculhou as gavetas da namorada e encontrou, além de um envelope com o resultado positivo do exame de gravidez de Leila, o frasco de remédio para úlcera embrulhado em um papel com um bilhete de Fátima a Leila, no qual ela prescrevia as doses do remédio. Munido do resultado do exame e do bilhete escrito por Fátima, Joel narrou o fato à autoridade policial, razão pela qual Fátima foi indiciada por aborto.
+
+      Tanto na delegacia quanto em juízo, Fátima negou a prática do aborto, tendo confirmado que fornecera o remédio a Leila, acreditando que a amiga sofria de úlcera.
+
+      Leila foi encaminhada para perícia no Instituto Médico Legal de São Paulo, onde se confirmou a existência de resquícios de saco gestacional, compatível com gravidez, mas sem elementos suficientes para a confirmação de aborto espontâneo ou provocado.
+
+      Leila não foi ouvida durante o inquérito policial porque, após o exame, mudou-se para Brasília e, apesar dos esforços da autoridade policial, não foi localizada.
+
+      Em 30/1/2010, Fátima foi denunciada pela prática de aborto. Regularmente processada a ação penal, o juiz, no momento dos debates orais da audiência de instrução, permitiu, com a anuência das partes, a manifestação por escrito, no prazo sucessivo de cinco dias.
+
+      A acusação sustentou a comprovação da autoria, tanto pelo depoimento de Joel na fase policial e ratificação em juízo, quanto pela confirmação da ré de que teria fornecido remédio abortivo. Sustentou, ainda, a materialidade do fato, por meio do exame de laboratório e da conclusão da perícia pela existência da gravidez.
+
+      A defesa teve vista dos autos em 12/7/2010.
+
+      Em face dessa situação hipotética, na condição de advogado(a) constituído(a) por Fátima, redija a peça processual adequada à defesa de sua cliente, alegando toda a matéria de direito processual e material aplicável ao caso. Date o documento no último dia do prazo para protocolo.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: memoriais
+    fundamentos:
+      - art. 403, § 3º, CPP
+    explicacao: "Padrão de respostas do I Exame: Fundamento: substituição dos debates orais por memoriais, por analogia ao art. 403, § 3º, do CPP, com anuência das partes."
+    fonte: I Exame
+    distratores:
+      - apelacao
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: &a1
+      status: rascunho
+  - id: exame-04-peca
+    caso: |-
+      Tício foi denunciado e processado, na 1ª Vara Criminal da Comarca do Município X, pela prática de roubo qualificado em decorrência do emprego de arma de fogo. Ainda durante a fase de inquérito policial, Tício foi reconhecido pela vítima. Tal reconhecimento se deu quando a referida vítima olhou através de pequeno orifício da porta de uma sala onde se encontrava apenas o réu. Já em sede de instrução criminal, nem vítima nem testemunhas afirmaram ter escutado qualquer disparo de arma de fogo, mas foram uníssonas no sentido de assegurar que o assaltante portava uma. Não houve perícia, pois os policiais que prenderam o réu em flagrante não lograram êxito em apreender a arma. Tais policiais afirmaram em juízo que, após escutarem gritos de “pega ladrão!”, viram o réu correndo e foram em seu encalço. Afirmaram que, durante a perseguição, os passantes apontavam para o réu, bem como que este jogou um objeto no córrego que passava próximo ao local dos fatos, que acreditavam ser a arma de fogo utilizada. O réu, em seu interrogatório, exerceu o direito ao silêncio. Ao cabo da instrução criminal, Tício foi condenado a oito anos e seis meses de reclusão, por roubo com emprego de arma de fogo, tendo sido fixado o regime inicial fechado para cumprimento de pena. O magistrado, para fins de condenação e fixação da pena, levou em conta os depoimentos testemunhais colhidos em juízo e o reconhecimento feito pela vítima em sede policial, bem como o fato de o réu ser reincidente e portador de maus antecedentes, circunstâncias comprovadas no curso do processo.
+
+      Você, na condição de advogado(a) de Tício, é intimado(a) da decisão. Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, apresentando as razões e sustentando as teses jurídicas pertinentes. (Valor: 5,0)
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+    explicacao: "Padrão de respostas do IV Exame: Prazo e dispositivos legais que dão ensejo à apelação, na petição de interposição: art. 593, I, do CPP."
+    fonte: IV Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-06-peca
+    caso: |-
+      No dia 10 de março de 2011, após ingerir um litro de vinho na sede de sua fazenda, José Alves pegou seu automóvel e passou a conduzi-lo ao longo da estrada que tangencia sua propriedade rural. Após percorrer cerca de dois quilômetros na estrada absolutamente deserta, José Alves foi surpreendido por uma equipe da Polícia Militar que lá estava a fim de procurar um indivíduo foragido do presídio da localidade.
+
+      Abordado pelos policiais, José Alves saiu de seu veículo trôpego e exalando forte odor de álcool, oportunidade em que, de maneira incisiva, os policiais lhe compeliram a realizar um teste de alcoolemia em aparelho de ar alveolar. Realizado o teste, foi constatado que José Alves tinha concentração de álcool de um miligrama por litro de ar expelido pelos pulmões, razão pela qual os policiais o conduziram à Unidade de Polícia Judiciária, onde foi lavrado Auto de Prisão em Flagrante pela prática do crime previsto no artigo 306 da Lei 9.503/1997, c/c artigo 2º, inciso II, do Decreto 6.488/2008, sendo-lhe negado no referido Auto de Prisão em Flagrante o direito de entrevistar-se com seus advogados ou com seus familiares.
+
+      Dois dias após a lavratura do Auto de Prisão em Flagrante, em razão de José Alves ter permanecido encarcerado na Delegacia de Polícia, você é procurado pela família do preso, sob protestos de que não conseguiam vê-lo e de que o delegado não comunicara o fato ao juízo competente, tampouco à Defensoria Pública.
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, na qualidade de advogado de José Alves, redija a peça cabível, exclusiva de advogado, no que tange à liberdade de seu cliente, questionando, em juízo, eventuais ilegalidades praticadas pela Autoridade Policial, alegando para tanto toda a matéria de direito pertinente ao caso. (Valor: 5,0)
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: relaxamento-prisao
+    fundamentos:
+      - art. 5º, LXV, CF
+      - art. 310, I, CPP
+    explicacao: "Padrão de respostas do VI Exame: Indicação correta dos dispositivos legais que dão ensejo ao pedido de relaxamento de prisão – art. 5º, LXV, da CRFB OU art. 310, I, do CPP."
+    fonte: VI Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+    revisao: *a1
+  - id: exame-07-peca
+    caso: |-
+      Leia com atenção o caso concreto a seguir:
+
+      Grávida de nove meses, Ana entra em trabalho de parto, vindo dar à luz um menino saudável, o qual é imediatamente colocado em seu colo. Ao ter o recém-nascido em suas mãos, Ana é tomada por extremo furor, bradando aos gritos que seu filho era um “monstro horrível que não saiu de mim” e bate por seguidas vezes a cabeça da criança na parede do quarto do hospital, vitimando-a fatalmente. Após ser dominada pelos funcionários do hospital, Ana é presa em flagrante delito.
+
+      Durante a fase de inquérito policial, foi realizado exame médico-legal, o qual atestou que Ana agira sob influência de estado puerperal. Posteriormente, foi denunciada, com base nas provas colhidas na fase inquisitorial, sobretudo o laudo do expert, perante a 1ª Vara Criminal/Tribunal do Júri pela prática do crime de homicídio triplamente qualificado, haja vista ter sustentado o Parquet que Ana fora movida por motivo fútil, empregara meio cruel para a consecução do ato criminoso, além de se utilizar de recurso que tornou impossível a defesa da vítima. Em sede de Alegações Finais Orais, o Promotor de Justiça reiterou os argumentos da denúncia, sustentando que Ana teria agido impelida por motivo fútil ao decidir matar seu filho em razão de tê-lo achado feio e teria empregado meio cruel ao bater a cabeça do bebê repetidas vezes contra a parede, além de impossibilitar a defesa da vítima, incapaz, em razão da idade, de defender-se.
+
+      A Defensoria Pública, por sua vez, alegou que a ré não teria praticado o fato e, alternativamente, se o tivesse feito, não possuiria plena capacidade de autodeterminação, sendo inimputável. Ao proferir a sentença, o magistrado competente entendeu por bem absolver sumariamente a ré em razão de inimputabilidade, pois, ao tempo da ação, não seria ela inteiramente capaz de se autodeterminar em consequência da influência do estado puerperal. Tendo sido intimado o Ministério Público da decisão, em 11 de janeiro de 2011, o prazo recursal transcorreu in albis sem manifestação do Parquet.
+
+      Em relação ao caso acima, você, na condição de advogado(a), é procurado pelo pai da vítima, em 20 de janeiro de 2011, para habilitar-se como assistente da acusação e impugnar a decisão.
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, sustentando, para tanto, as teses jurídicas pertinentes, datando do último dia do prazo.
+
+      (valor: 5,00)
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+      - art. 416 CPP
+      - art. 598, CPP
+    explicacao: "Padrão de respostas do VII Exame: Indicação correta dos dispositivos legais que dão ensejo à apelação (art. 593, I, do CPP OU art. 416 do CPP E art. 598 do CPP"
+    fonte: VII Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-08-peca
+    caso: |-
+      Leia com atenção o caso concreto a seguir:
+
+      Visando abrir um restaurante, José pede vinte mil reais emprestados a Caio, assinando, como garantia, uma nota promissória no aludido valor, com vencimento para o dia 15 de maio de 2010. Na data mencionada, não tendo havido pagamento, Caio telefona para José e, educadamente, cobra a dívida, obtendo do devedor a promessa de que o valor seria pago em uma semana.
+
+      Findo o prazo, Caio novamente contata José, que, desta vez, afirma estar sem dinheiro, pois o restaurante não apresentara o lucro esperado. Indignado, Caio comparece no dia 24 de maio de 2010 ao restaurante e, mostrando para José uma pistola que trazia consigo, afirma que a dívida deveria ser saldada imediatamente, pois, do contrário, José pagaria com a própria vida. Aterrorizado, José entra no restaurante e telefona para a polícia, que, entretanto, não encontra Caio quando chega ao local.
+
+      Os fatos acima referidos foram levados ao conhecimento do delegado de polícia da localidade, que instaurou inquérito policial para apurar as circunstâncias do ocorrido. Ao final da investigação, tendo Caio confirmado a ocorrência dos eventos em sua integralidade, o Ministério Público o denuncia pela prática do crime de extorsão qualificada pelo emprego de arma de fogo. Recebida a inicial pelo juízo da 5ª Vara Criminal, o réu é citado no dia 18 de janeiro de 2011.
+
+      Procurado apenas por Caio para representá-lo na ação penal instaurada, sabendo-se que Joaquim e Manoel presenciaram os telefonemas de Caio cobrando a dívida vencida, e com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija, no último dia do prazo, a peça cabível, invocando todos os argumentos em favor de seu constituinte.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: resposta-acusacao
+    fundamentos:
+      - art. 396 CPP
+      - art. 396-A CPP
+    explicacao: "Padrão de respostas do VIII Exame: Dispositivo legal que fundamenta a resposta à acusação: art. 396 e/ou art. 396-A do CPP."
+    fonte: VIII Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-09-peca
+    caso: |-
+      Gisele foi denunciada, com recebimento ocorrido em 31/10/2010, pela prática do delito de lesão corporal leve, com a presença da circunstância agravante, de ter o crime sido cometido contra mulher grávida. Isso porque, segundo narrou a inicial acusatória, Gisele, no dia 01/04/2009, então com 19 anos, objetivando provocar lesão corporal leve em Amanda, deu um chute nas costas de Carolina, por confundi-la com aquela, ocasião em que Carolina (que estava grávida) caiu de joelhos no chão, lesionando-se.
+
+      A vítima, muito atordoada com o acontecido, ficou por um tempo sem saber o que fazer, mas foi convencida por Amanda (sua amiga e pessoa a quem Gisele realmente queria lesionar) a noticiar o fato na delegacia. Sendo assim, tão logo voltou de um intercâmbio, mais precisamente no dia 18/10/2009, Carolina compareceu à delegacia e noticiou o fato, representando contra Gisele. Por orientação do delegado, Carolina foi instruída a fazer exame de corpo de delito, o que não ocorreu, porque os ferimentos, muito leves, já haviam sarado. O Ministério Público, na denúncia, arrolou Amanda como testemunha.
+
+      Em seu depoimento, feito em sede judicial, Amanda disse que não viu Gisele bater em Carolina e nem viu os ferimentos, mas disse que poderia afirmar com convicção que os fatos noticiados realmente ocorreram, pois estava na casa da vítima quando esta chegou chorando muito e narrando a história. Não foi ouvida mais nenhuma testemunha e Gisele, em seu interrogatório, exerceu o direito ao silêncio. Cumpre destacar que a primeira e única audiência ocorreu apenas em 20/03/2012, mas que, anteriormente, três outras audiências foram marcadas;
+
+      apenas não se realizaram porque, na primeira, o magistrado não pôde comparecer, na segunda o Ministério Público não compareceu e a terceira não se realizou porque, no dia marcado, foi dado ponto facultativo pelo governador do Estado, razão pela qual todas as audiências foram redesignadas. Assim, somente na quarta data agendada é que a audiência efetivamente aconteceu. Também merece destaque o fato de que na referida audiência o parquet não ofereceu proposta de suspensão condicional do processo, pois, conforme documentos comprobatórios juntados aos autos, em 30/03/2009, Gisele, em processo criminal onde se apuravam outros fatos, aceitou o benefício proposto.
+
+      Assim, segundo o promotor de justiça, afigurava-se impossível formulação de nova proposta de suspensão condicional do processo, ou de qualquer outro benefício anterior não destacado, e, além disso, tal dado deveria figurar na condenação ora pleiteada para Gisele como outra circunstância agravante, qual seja, reincidência.
+
+      Nesse sentido, considere que o magistrado encerrou a audiência e abriu prazo, intimando as partes, para o oferecimento da peça processual cabível.
+
+      Como advogado de Gisele, levando em conta tão somente os dados contidos no enunciado, elabore a peça cabível. (Valor: 5,0)
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: memoriais
+    fundamentos:
+      - art. 403, § 3º, CPP
+    explicacao: "Padrão de respostas do IX Exame: Dispositivo legal que fundamenta a peça: Art. 403, § 3º, do CPP."
+    fonte: IX Exame
+    distratores:
+      - apelacao
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-10-peca
+    caso: |-
+      Leia com atenção o caso concreto a seguir:
+
+      Jane, no dia 18 de outubro de 2010, na cidade de Cuiabá – MT, subtraiu veículo automotor de propriedade de Gabriela. Tal subtração ocorreu no momento em que a vítima saltou do carro para buscar um pertence que havia esquecido em casa, deixando-o aberto e com a chave na ignição. Jane, ao ver tal situação, aproveitou-se e subtraiu o bem, com o intuito de revendê-lo no Paraguai. Imediatamente, a vítima chamou a polícia e esta empreendeu perseguição ininterrupta, tendo prendido Jane em flagrante somente no dia seguinte, exatamente quando esta tentava cruzar a fronteira para negociar a venda do bem, que estava guardado em local não revelado.
+
+      Em 30 de outubro de 2010, a denúncia foi recebida. No curso do processo, as testemunhas arroladas afirmaram que a ré estava, realmente, negociando a venda do bem no país vizinho e que havia um comprador, terceiro de boa-fé arrolado como testemunha, o qual, em suas declarações, ratificou os fatos. Também ficou apurado que Jane possuía maus antecedentes e reincidente específica nesse tipo de crime, bem como que Gabriela havia morrido no dia seguinte à subtração, vítima de enfarte sofrido logo após os fatos, já que o veículo era essencial à sua subsistência. A ré confessou o crime em seu interrogatório.
+
+      Ao cabo da instrução criminal, a ré foi condenada a cinco anos de reclusão no regime inicial fechado para cumprimento da pena privativa de liberdade, tendo sido levada em consideração a confissão, a reincidência específica, os maus antecedentes e as consequências do crime, quais sejam, a morte da vítima e os danos decorrentes da subtração de bem essencial à sua subsistência.
+
+      A condenação transitou definitivamente em julgado, e a ré iniciou o cumprimento da pena em 10 de novembro de 2012. No dia 5 de março de 2013, você, já na condição de advogado(a) de Jane, recebe em seu escritório a mãe de Jane, acompanhada de Gabriel, único parente vivo da vítima, que se identificou como sendo filho desta.
+
+      Ele informou que, no dia 27 de outubro de 2010, Jane, acolhendo os conselhos maternos, lhe telefonou, indicando o local onde o veículo estava escondido. O filho da vítima, nunca mencionado no processo, informou que no mesmo dia do telefonema, foi ao local e pegou o veículo de volta, sem nenhum embaraço, bem como que tal veículo estava em seu poder desde então.
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: revisao-criminal
+    fundamentos:
+      - art. 621, I, CPP
+      - art. 621, III, CPP
+    explicacao: "Padrão de respostas do X Exame: Dispositivo legal que embasa a Revisão Criminal: art. 621, I, do CPP OU art. 621, III, do CPP."
+    fonte: X Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+    revisao: *a1
+  - id: exame-11-peca
+    caso: |-
+      Jerusa, atrasada para importante compromisso profissional, dirige seu carro bastante preocupada, mas respeitando os limites de velocidade. Em uma via de mão dupla, Jerusa decide ultrapassar o carro à sua frente, o qual estava abaixo da velocidade permitida. Para realizar a referida manobra, entretanto, Jerusa não liga a respectiva seta luminosa sinalizadora do veículo e, no momento da ultrapassagem, vem a atingir Diogo, motociclista que, em alta velocidade, conduzia sua moto no sentido oposto da via. Não obstante a presteza no socorro que veio após o chamado da própria Jerusa e das demais testemunhas, Diogo falece em razão dos ferimentos sofridos pela colisão.
+
+      Instaurado o respectivo inquérito policial, após o curso das investigações, o Ministério Público decide oferecer denúncia contra Jerusa, imputando-lhe a prática do delito de homicídio doloso simples, na modalidade dolo eventual (Art. 121 c/c Art. 18, I parte final, ambos do CP).
+
+      Argumentou o ilustre membro do Parquet a imprevisão de Jerusa acerca do resultado que poderia causar ao não ligar a seta do veículo para realizar a ultrapassagem, além de não atentar para o trânsito em sentido contrário. A denúncia foi recebida pelo juiz competente e todos os atos processuais exigidos em lei foram regularmente praticados. Finda a instrução probatória, o juiz competente, em decisão devidamente fundamentada, decidiu pronunciar Jerusa pelo crime apontado na inicial acusatória. O advogado de Jerusa é intimado da referida decisão em 02 de agosto de 2013 (sexta-feira).
+
+      Atento ao caso apresentado e tendo como base apenas os elementos fornecidos, elabore o recurso cabível e date-o com o último dia do prazo para a interposição.
+
+      A simples menção ou transcrição do dispositivo legal não pontua.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: rese
+    fundamentos:
+      - art. 581, IV, CPP
+    explicacao: "Padrão de respostas do XI Exame: Fundamento legal: Art. 581, IV, do CPP."
+    fonte: XI Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-12-peca
+    caso: |-
+      Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
+
+      Instaurado inquérito policial, as investigações seguiram normalmente. O Ministério Público, então, por entender haver indícios suficientes de autoria, provas da materialidade e justa causa, resolveu denunciar Rita pela prática da conduta descrita no Art. 155, § 4º, inciso I, do CP (furto qualificado pelo rompimento de obstáculo). A denúncia foi regularmente recebida pelo juízo da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ e a ré foi citada para responder à acusação, o que foi devidamente feito. O processo teve seu curso regular e, durante todo o tempo, a ré ficou em liberdade.
+
+      Na audiência de instrução e julgamento, realizada no dia 18/10/2012 (quinta-feira), o Ministério Público apresentou certidão cartorária apta a atestar que no dia 15/05/2012 (terça-feira) ocorrera o trânsito em julgado definitivo de sentença que condenava Rita pela prática do delito de estelionato. A ré, em seu interrogatório, exerceu o direito ao silêncio. As alegações finais foram orais; acusação e defesa manifestaram-se. Finda a instrução criminal, o magistrado proferiu sentença em audiência. Na dosimetria da pena, o magistrado entendeu por bem elevar a penabase em patamar acima do mínimo, ao argumento de que o trânsito em julgado de outra sentença condenatória configurava maus antecedentes; na segunda fase da dosimetria da pena o magistrado também entendeu ser cabível a incidência da agravante da reincidência, levando em conta a data do trânsito em julgado definitivo da sentença de estelionato, bem como a data do cometimento do furto (ora objeto de julgamento); não verificando a incidência de nenhuma causa de aumento ou de diminuição, o magistrado fixou a pena definitiva em 4 (quatro) anos de reclusão no regime inicial semiaberto e 80 (oitenta) dias-multa. O valor do dia-multa foi fixado no patamar mínimo legal. Por entender que a ré não atendia aos requisitos legais, o magistrado não substituiu a pena privativa de liberdade por pena restritiva de direitos. Ao final, assegurou-se à ré o direito de recorrer em liberdade.
+
+      O advogado da ré deseja recorrer da decisão.
+
+      Atento ao caso narrado e levando em conta tão somente as informações contidas no texto, elabore o recurso cabível. (Valor: 5,0)
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+    explicacao: "Padrão de respostas do XII Exame: Demonstração do cabimento do recurso: Art. 593, I, do CPP."
+    fonte: XII Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-13-peca
+    caso: |-
+      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
+
+      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
+
+      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
+
+      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
+
+      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
+
+      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+    explicacao: "Padrão de respostas do XIII Exame: Fundamento legal da petição de interposição: artigo 593, I, do CPP."
+    fonte: XIII Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-14-peca
+    caso: |-
+      Felipe, com 18 anos de idade, em um bar com outros amigos, conheceu Ana, linda jovem, por quem se encantou. Após um bate-papo informal e trocarem beijos, decidiram ir para um local mais reservado. Nesse local trocaram carícias, e Ana, de forma voluntária, praticou sexo oral e vaginal com Felipe.
+
+      Depois da noite juntos, ambos foram para suas residências, tendo antes trocado telefones e contatos nas redes sociais.
+
+      No dia seguinte, Felipe, ao acessar a página de Ana na rede social, descobre que, apesar da aparência adulta, esta possui apenas 13 (treze) anos de idade, tendo Felipe ficado em choque com essa constatação.
+
+      O seu medo foi corroborado com a chegada da notícia, em sua residência, da denúncia movida por parte do Ministério Público Estadual, pois o pai de Ana, ao descobrir o ocorrido, procurou a autoridade policial, narrando o fato.
+
+      Por Ana ser inimputável e contar, à época dos fatos, com 13 (treze) anos de idade, o Ministério Público Estadual denunciou Felipe pela prática de dois crimes de estupro de vulnerável, previsto no artigo 217- A, na forma do artigo 69, ambos do Código Penal. O Parquet requereu o início de cumprimento de pena no regime fechado, com base no artigo 2º, §1º, da lei 8.072/90, e o reconhecimento da agravante da embriaguez preordenada, prevista no artigo 61, II, alínea “l”, do CP.
+
+      O processo teve início e prosseguimento na XX Vara Criminal da cidade de Vitória, no Estado do Espírito Santo, local de residência do réu.
+
+      Felipe, por ser réu primário, ter bons antecedentes e residência fixa, respondeu ao processo em liberdade.
+
+      Na audiência de instrução e julgamento, a vítima afirmou que aquela foi a sua primeira noite, mas que tinha o hábito de fugir de casa com as amigas para frequentar bares de adultos.
+
+      As testemunhas de acusação afirmaram que não viram os fatos e que não sabiam das fugas de Ana para sair com as amigas.
+
+      As testemunhas de defesa, amigos de Felipe, disseram que o comportamento e a vestimenta da Ana eram incompatíveis com uma menina de 13 (treze) anos e que qualquer pessoa acreditaria ser uma pessoa maior de 14 (quatorze) anos, e que Felipe não estava embriagado quando conheceu Ana.
+
+      O réu, em seu interrogatório, disse que se interessou por Ana, por ser muito bonita e por estar bem vestida. Disse que não perguntou a sua idade, pois acreditou que no local somente pudessem frequentar pessoas maiores de 18 (dezoito) anos. Corroborou que praticaram o sexo oral e vaginal na mesma oportunidade, de forma espontânea e voluntária por ambos.
+
+      A prova pericial atestou que a menor não era virgem, mas não pôde afirmar que aquele ato sexual foi o primeiro da vítima, pois a perícia foi realizada longos meses após o ato sexual.
+
+      O Ministério Público pugnou pela condenação de Felipe nos termos da denúncia.
+
+      A defesa de Felipe foi intimada no dia 10 de abril de 2014 (quinta-feira).
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, no último dia do prazo, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: memoriais
+    fundamentos:
+      - art. 403, § 3º, CPP
+    explicacao: "Padrão de respostas do XIV Exame: Indicação correta do dispositivo legal que embasa a alegação final em forma de memorial: art. 403, § 3, do CPP."
+    fonte: XIV Exame
+    distratores:
+      - apelacao
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-15-peca
+    caso: |-
+      Enrico, engenheiro de uma renomada empresa da construção civil, possui um perfil em uma das redes sociais existentes na Internet e o utiliza diariamente para entrar em contato com seus amigos, parentes e colegas de trabalho. Enrico utiliza constantemente as ferramentas da Internet para contatos profissionais e lazer, como o fazem milhares de pessoas no mundo contemporâneo.
+
+      No dia 19/04/2014, sábado, Enrico comemora aniversário e planeja, para a ocasião, uma reunião à noite com parentes e amigos para festejar a data em uma famosa churrascaria da cidade de Niterói, no estado do Rio de Janeiro. Na manhã de seu aniversário, resolveu, então, enviar o convite por meio da rede social, publicando postagem alusiva à comemoração em seu perfil pessoal, para todos os seus contatos.
+
+      Helena, vizinha e ex-namorada de Enrico, que também possui perfil na referida rede social e está adicionada nos contatos de seu ex, soube, assim, da festa e do motivo da comemoração. Então, de seu computador pessoal, instalado em sua residência, um prédio na praia de Icaraí, em Niterói, publicou na rede social uma mensagem no perfil pessoal de Enrico.
+
+      Naquele momento, Helena, com o intuito de ofender o ex-namorado, publicou o seguinte comentário: “não sei o motivo da comemoração, já que Enrico não passa de um idiota, bêbado, irresponsável e sem vergonha!”, e, com o propósito de prejudicar Enrico perante seus colegas de trabalho e denegrir sua reputação acrescentou, ainda, “ele trabalha todo dia embriagado! No dia 10 do mês passado, ele cambaleava bêbado pelas ruas do Rio, inclusive, estava tão bêbado no horário do expediente que a empresa em que trabalha teve que chamar uma ambulância para socorrê-lo!”.
+
+      Imediatamente, Enrico, que estava em seu apartamento e conectado à rede social por meio de seu tablet, recebeu a mensagem e visualizou a publicação com os comentários ofensivos de Helena em seu perfil pessoal.
+
+      Enrico, mortificado, não sabia o que dizer aos amigos, em especial a Carlos, Miguel e Ramirez, que estavam ao seu lado naquele instante. Muito envergonhado, Enrico tentou disfarçar o constrangimento sofrido, mas perdeu todo o seu entusiasmo, e a festa comemorativa deixou de ser realizada. No dia seguinte, Enrico procurou a Delegacia de Polícia Especializada em Repressão aos Crimes de Informática e narrou os fatos à autoridade policial, entregando o conteúdo impresso da mensagem ofensiva e a página da rede social na Internet onde ela poderia ser visualizada. Passados cinco meses da data dos fatos, Enrico procurou seu escritório de advocacia e narrou os fatos acima. Você, na qualidade de advogado de Enrico, deve assisti-lo. Informa-se que a cidade de Niterói, no Estado do Rio de Janeiro, possui Varas Criminais e Juizados Especiais Criminais.
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de habeas corpus, sustentando, para tanto, as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: queixa-crime
+    fundamentos:
+      - art. 41 CPP
+      - art. 100, § 2º, CP
+      - art. 30 CPP
+      - art. 145 CP
+    explicacao: "Padrão de respostas do XV Exame: Indicação correta do dispositivo legal que embasa a queixa-crime: art. 41 do CPP OU Art. 100, §2º, do CP OU o Art. 30, do CPP OU Art. 145 do CP"
+    fonte: XV Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+    revisao: *a1
+  - id: exame-16-peca
+    caso: |-
+      Gilberto, quando primário, apesar de portador de maus antecedentes, praticou um crime de roubo simples, pois, quando tinha 20 anos de idade, subtraiu de Renata, mediante grave ameaça, um aparelho celular. Apesar de o crime restar consumado, o telefone celular foi recuperado pela vítima. Os fatos foram praticados em 12 de dezembro de 2011. Por tal conduta, foi Gilberto denunciado e condenado como incurso nas sanções penais do Art. 157, caput, do Código Penal a uma pena privativa de liberdade de 04 anos e 06 meses de reclusão em regime inicial fechado e 12 dias multa, tendo a sentença transitada em julgado para ambas as partes em 11 de setembro de 2013. Gilberto havia respondido ao processo em liberdade, mas, desde o dia 15 de setembro de 2013, vem cumprindo a sanção penal que lhe foi aplicada regularmente, inclusive obtendo progressão de regime. Nunca foi punido pela prática de falta grave e preenchia os requisitos subjetivos para obtenção dos benefícios da execução penal.
+
+      No dia 25 de fevereiro de 2015, você, advogado(a) de Gilberto, formulou pedido de obtenção de livramento condicional junto ao Juízo da Vara de Execução Penal da comarca do Rio de Janeiro/RJ, órgão efetivamente competente. O pedido, contudo, foi indeferido, apesar de, em tese, os requisitos subjetivos estarem preenchidos, sob os seguintes argumentos: a) o crime de roubo é crime hediondo, não tendo sido cumpridos, até o momento do requerimento, 2/3 da pena privativa de liberdade; b) ainda que não fosse hediondo, não estariam preenchidos os requisitos objetivos para o benefício, tendo em vista que Gilberto, por ser portador de maus antecedentes, deveria cumprir metade da pena imposta para obtenção do livramento condicional; c) indispensabilidade da realização de exame criminológico, tendo em vista que os crimes de roubo, de maneira abstrata, são extremamente graves e causam severos prejuízos para a sociedade. Você, advogado(a) de Gilberto, foi intimado dessa decisão em 23 de março de 2015, uma segunda-feira.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para sua interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Responda justificadamente, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: agravo-execucao
+    fundamentos:
+      - art. 197, LEP
+    explicacao: "Padrão de respostas do XVI Exame: Fundamento legal: Art. 197 da Lei nº 7.210/84."
+    fonte: XVI Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-17-peca
+    caso: |-
+      Daniel, nascido em 02 de abril de 1990, é filho de Rita, empregada doméstica que trabalha na residência da família Souza. Ao tomar conhecimento, por meio de sua mãe, que os donos da residência estariam viajando para comemorar a virada de ano, vai até o local, no dia 02 de janeiro de 2010, e subtrai o veículo automotor dos patrões de sua genitora, pois queria fazer um passeio com sua namorada.
+
+      Desde o início, contudo, pretende apenas utilizar o carro para fazer um passeio pelo quarteirão e, depois, após encher o tanque de gasolina novamente, devolvê-lo no mesmo local de onde o subtraiu, evitando ser descoberto pelos proprietários. Ocorre que, quando foi concluir seu plano, já na entrada da garagem para devolver o automóvel no mesmo lugar em que o havia subtraído, foi surpreendido por policiais militares, que, sem ingressar na residência, perguntaram sobre a propriedade do bem.
+
+      Ao analisarem as câmeras de segurança da residência, fornecidas pelo próprio Daniel, perceberam os agentes da lei que ele havia retirado o carro sem autorização do verdadeiro proprietário. Foi, então, Daniel denunciado pela prática do crime de furto simples, destacando o Ministério Público que deixava de oferecer proposta de suspensão condicional do processo por não estarem preenchidos os requisitos do Art. 89 da Lei nº 9.099/95, tendo em vista que Daniel responde a outra ação penal pela prática do crime de porte de arma de fogo.
+
+      Em 18 de março de 2010, a denúncia foi recebida pelo juízo competente, qual seja, da 1ª Vara Criminal da Comarca de Florianópolis. Os fatos acima descritos são integralmente confirmados durante a instrução, sendo certo que Daniel respondeu ao processo em liberdade. Foram ouvidos os policiais militares como testemunhas de acusação, e o acusado foi interrogado, confessando que, de fato, utilizou o veículo sem autorização, mas que sua intenção era devolvê-lo, tanto que foi preso quando ingressava na garagem dos proprietários do automóvel.
+
+      Após, foi juntada a Folha de Antecedentes Criminais de Daniel, que ostentava apenas aquele processo pelo porte de arma de fogo, que não tivera proferida sentença até o momento, o laudo de avaliação indireta do automóvel e o vídeo da câmera de segurança da residência. O Ministério Público, em sua manifestação derradeira, requereu a condenação nos termos da denúncia. A defesa de Daniel é intimada em 17 de julho de 2015, sexta feira.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: memoriais
+    fundamentos:
+      - art. 403, § 3º, CPP
+    explicacao: "Padrão de respostas do XVII Exame: Fundamento legal: Art. 403, § 3º, do Código de Processo Penal."
+    fonte: XVII Exame
+    distratores:
+      - apelacao
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-18-peca
+    caso: |-
+      Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
+
+      Apesar de temerosa e envergonhada, Joana contou o ocorrido para sua mãe. A seguir, as duas compareceram à Delegacia e a vítima ofertou representação. Caio, então, foi denunciado pela prática como incurso nas sanções penais do Art. 213 do Código Penal, por duas vezes, na forma do Art. 71 do Estatuto Repressivo. Durante a instrução, foi ouvida a vítima, testemunhas de acusação e o réu confessou os fatos. Foi, ainda, juntado laudo de exame de conjunção carnal confirmando a prática de ato sexual violento recente com Joana e a Folha de Antecedentes Criminais (FAC) do acusado, que indicava a existência de duas condenações, embora nenhuma delas com trânsito em julgado.
+
+      Em alegações finais, o Ministério Público requereu a condenação de Caio nos termos da denúncia, enquanto a defesa buscou apenas a aplicação da pena no mínimo legal. No dia 25 de junho de 2015 foi proferida sentença pelo juízo competente, qual seja a 1ª Vara Criminal da Comarca de Natal, condenando Caio à pena privativa de liberdade de 10 anos e 06 meses de reclusão, a ser cumprida em regime inicial fechado. Na sentença consta que a pena base de cada um dos crimes deve ser aumentada em seis meses pelo fato de Caio possuir maus antecedentes, já que ostenta em sua FAC duas condenações pela prática de crimes, e mais 06 meses pelo fato de o acusado ter desrespeitado a liberdade sexual da mulher, um dos valores mais significativos da sociedade, restando a sanção penal da primeira fase em 07 anos de reclusão, para cada um dos delitos.
+
+      Na segunda fase, não foram reconhecidas atenuantes ou agravantes. Afirmou o magistrado que atualmente é o réu maior de 21 anos, logo não estaria presente a atenuante do Art. 65, inciso I, do CP. Ao analisar o concurso de crimes, o magistrado considerou a pena de um dos delitos, já que eram iguais, e aumentou de 1/2 (metade), na forma do Art. 71 do CP, justificando o acréscimo no fato de ambos os crimes praticados serem extremamente graves. Por fim, o regime inicial para o cumprimento da pena foi o fechado, justificando que, independente da pena aplicada, este seria o regime obrigatório, nos termos do Art. 2º, § 1º, da Lei nº 8.072/90. Apesar da condenação, como Caio respondeu ao processo em liberdade, o juiz concedeu a ele o direito de aguardar o trânsito em julgado da mesma forma.
+
+      Caio e sua família o (a) procuram para, na condição de advogado (a), adotar as medidas cabíveis, destacando que estão insatisfeitos com o patrono anterior. Constituído nos autos, a intimação da sentença ocorreu em 07 de julho de 2015, terça-feira, sendo quarta-feira dia útil em todo o país.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00 pontos)
+
+      Obs.: o examinando deve fundamentar suas respostas. A mera citação do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+    explicacao: "Padrão de respostas do XVIII Exame: Fundamento legal para petição de interposição: Art. 593, inciso I, do CPP."
+    fonte: XVIII Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-19-peca
+    caso: |-
+      No dia 24 de dezembro de 2014, na cidade do Rio de Janeiro, Rodrigo e um amigo não identificado foram para um bloco de rua que ocorria em razão do Natal, onde passaram a ingerir bebida alcoólica em comemoração ao evento festivo. Na volta para casa, ainda em companhia do amigo, já um pouco tonto em razão da quantidade de cerveja que havia bebido, subtraiu, mediante emprego de uma faca, os pertences de uma moça desconhecida que caminhava tranquilamente pela rua. A vítima era Maria, jovem de 24 anos que acabara de sair do médico e saber que estava grávida de um mês. Em razão dos fatos, Rodrigo foi denunciado pela prática de crime de roubo duplamente majorado, na forma do Art. 157, § 2º, incisos I e II, do Código Penal.
+
+      Durante a instrução, foi juntada a Folha de Antecedentes Criminais de Rodrigo, onde constavam anotações em relação a dois inquéritos policiais em que ele figurava como indiciado e três ações penais que respondia na condição de réu, apesar de em nenhuma delas haver sentença com trânsito em julgado. Foram, ainda, durante a Audiência de Instrução e Julgamento ouvidos a vítima e os policiais que encontraram Rodrigo, horas após o crime, na posse dos bens subtraídos. Durante seu interrogatório, Rodrigo permaneceu em silêncio. Ao final da instrução, após alegações finais, a pretensão punitiva do Estado foi julgada procedente, com Rodrigo sendo condenado a pena de 05 anos e 04 meses de reclusão, a ser cumprida em regime semiaberto, e 13 dias-multa. O juiz aplicou a pena-base no mínimo legal, além de não reconhecer qualquer agravante ou atenuante. Na terceira fase da aplicação da pena, reconheceu as majorantes mencionadas na denúncia e realizou um aumento de 1/3 da pena imposta.
+
+      O Ministério Público foi intimado da sentença em 14 de setembro de 2015, uma segunda-feira, sendo terça-feira dia útil. Inconformado, o Ministério Público apresentou recurso de apelação perante o juízo de primeira instância, acompanhado das respectivas razões recursais, no dia 30 de setembro de 2015, requerendo:
+
+      i) O aumento da pena-base, tendo em vista a existência de diversas anotações na Folha de Antecedentes Criminais do acusado;
+
+      ii) O reconhecimento das agravantes previstas no Art. 61, inciso II, alíneas ‘h’ e ‘l’, do Código Penal;
+
+      iii) A majoração do quantum de aumento em razão das causas de aumentos previstas no Art. 157, §2º, incisos I e II, do Código Penal, exclusivamente pelo fato de serem duas as majorantes;
+
+      iv) Fixação do regime inicial fechado de cumprimento de pena, pois o roubo com faca tem assombrado a população do Rio de Janeiro, causando uma situação de insegurança em toda a sociedade.
+
+      A defesa não apresentou recurso. O magistrado, então, recebeu o recurso de apelação do Ministério Público e intimou, no dia 19 de outubro de 2015 (segunda-feira), sendo terça feira dia útil em todo o país, você, advogado(a) de Rodrigo, para apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: contrarrazoes-apelacao
+    fundamentos:
+      - art. 600, CPP
+    explicacao: "Padrão de respostas do XIX Exame: Fundamento legal: Art. 600 do CPP"
+    fonte: XIX Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+    revisao: *a1
+  - id: exame-20-peca
+    caso: |-
+      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
+
+      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
+
+      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
+
+      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
+
+      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
+
+      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: memoriais
+    fundamentos:
+      - art. 403, § 3º, CPP
+      - art. 404, parágrafo único, CPP
+      - art. 57, Lei 11343
+    explicacao: "Padrão de respostas do XX Exame: Fundamento legal: Art. 403, §3º, do CPP OU Art. 404, parágrafo único, do CPP OU Art. 57 da Lei 11.343/06 c/c 403, §3º do CPP c/c 394, §5º do CPP."
+    fonte: XX Exame
+    distratores:
+      - apelacao
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-20-porto-velho-peca
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: memoriais
+    fundamentos:
+      - art. 403, § 3º, CPP
+    explicacao: "Padrão de respostas do XX Exame: Fundamento legal: 403, §3º, do CPP."
+    fonte: XX Exame
+    distratores:
+      - apelacao
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-21-peca
+    caso: |-
+      Gabriela, nascida em 28/04/1990, terminou relacionamento amoroso com Patrick, não mais suportando as agressões físicas sofridas, sendo expulsa do imóvel em que residia com o companheiro em comunidade carente na cidade de Fortaleza, Ceará, juntamente com o filho do casal de apenas 02 anos. Sem ter familiares no Estado e nem outros conhecidos, passou a pernoitar com o filho em igrejas e outros locais de acesso público, alimentando-se a partir de ajudas recebidas de desconhecidos. Nessa época, Gabriela fez amizade com Maria, outra mulher em situação de rua que frequentava os mesmos espaços que ela.
+
+      No dia 24 de dezembro de 2010, não mais aguentando a situação e vendo o filho chorar e ficar doente em razão da ausência de alimentação, após não conseguir emprego ou ajuda, Gabriela decidiu ingressar em um grande supermercado da região, onde escondeu na roupa dois pacotes de macarrão, cujo valor totalizava R$18,00 (dezoito reais). Ocorre que a conduta de Gabriela foi percebida pelo fiscal de segurança, que a abordou no momento em que ela deixava o estabelecimento comercial sem pagar pelos bens, e apreendeu os dois produtos escondidos.
+
+      Em sede policial, Gabriela confirmou os fatos, reiterando a ausência de recursos financeiros e a situação de fome e risco físico de seu filho. Juntado à Folha de Antecedentes Criminais sem outras anotações, o laudo de avaliação dos bens subtraídos confirmando o valor, e ouvidos os envolvidos, inclusive o fiscal de segurança e o gerente do supermercado, o auto de prisão em flagrante e o inquérito policial foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Gabriela pela prática do crime do Art. 155, caput, c/c Art. 14, inciso II, ambos do Código Penal, além de ter opinado pela liberdade da acusada.
+
+      O magistrado em atuação perante o juízo competente, no dia 18 de janeiro de 2011, recebeu a denúncia oferecida pelo Ministério Público, concedeu liberdade provisória à acusada, deixando de converter o flagrante em preventiva, e determinou que fosse realizada a citação da denunciada. Contudo, foi concedida a liberdade para Gabriela antes de sua citação e, como ela não tinha endereço fixo, não foi localizada para ser citada.
+
+      No ano de 2015, Gabriela consegue um emprego e fica em melhores condições. Em razão disso, procura um advogado, esclarecendo que nada sabe sobre o prosseguimento da ação penal a que respondia. Disse, ainda, que Maria, hoje residente na rua X, na época dos fatos também era moradora de rua e tinha conhecimento de suas dificuldades. Diante disso, em 16 de março de 2015, segunda-feira, sendo terça-feira dia útil em todo o país, Gabriela e o advogado compareceram ao cartório, onde são informados que o processo estava em seu regular prosseguimento desde 2011, sem qualquer suspensão, esperando a localização de Gabriela para citação.
+
+      Naquele mesmo momento, Gabriela foi citada, assim como intimada, junto ao seu advogado, para apresentação da medida cabível. Cabe destacar que a ré, acompanhada de seu patrono, já manifestou desinteresse em aceitar a proposta de suspensão condicional do processo oferecida pelo Ministério Público.
+
+      Considerando a situação narrada, apresente, na qualidade de advogado(a) de Gabriela, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada no último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: resposta-acusacao
+    fundamentos:
+      - art. 396-A, CPP
+      - art. 396, CPP
+    explicacao: "Padrão de respostas do XXI Exame: Fundamento legal: Art. 396-A OU Art. 396, ambos do Código de Processo Penal"
+    fonte: XXI Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-22-peca
+    caso: |-
+      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
+
+      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
+
+      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
+
+      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
+
+      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
+
+      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
+
+      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+    explicacao: "Padrão de respostas do XXII Exame: Fundamentação legal: Art. 593, inciso I, do CPP."
+    fonte: XXII Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-23-peca
+    caso: |-
+      No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
+
+      No dia seguinte, antes mesmo de qualquer busca e apreensão do bem ou atitude da autoridade policial, Roberta restituiu a coisa subtraída. As imagens da câmera de segurança foram encaminhadas ao Ministério Público, que denunciou Roberta pela prática do crime de furto simples, tipificado no Art. 155, caput, do Código Penal. O Ministério Público deixou de oferecer proposta de suspensão condicional do processo, destacando que o delito de furto não é de menor potencial ofensivo, não se sujeitando à aplicação da Lei nº 9.099/95, tendo a defesa se insurgido.
+
+      Recebida a denúncia, durante a instrução, foi ouvida Cláudia, que confirmou ter deixado seu notebook acoplado à tomada, mas que Roberta o subtraíra, somente havendo restituição do bem com a descoberta dos agentes da lei.
+
+      Também foram ouvidos os funcionários do curso preparatório, que disseram ter identificado a autoria a partir das câmeras de segurança. Roberta, em seu interrogatório, confirma os fatos, mas esclarece que acreditava que o notebook subtraído era seu e, por isso, levara-o para casa. Foi juntada a Folha de Antecedentes Criminais da ré sem qualquer outra anotação, o laudo de avaliação do bem subtraído, que constatou seu valor de R$ 3.000,00 (três mil reais), e o CD com as imagens captadas pela câmera de segurança. O Ministério Público, em sua manifestação derradeira, requereu a condenação da ré nos termos da denúncia.
+
+      Você, como advogado(a) de Roberta, é intimado(a) no dia 24 de agosto de 2016, quarta-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Roberta, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: memoriais
+    fundamentos:
+      - art. 403, § 3º, CPP
+    explicacao: "Padrão de respostas do XXIII Exame: Fundamento legal para apresentação de Alegações Finais por Memoriais: Art. 403, §3º do CPP."
+    fonte: XXIII Exame
+    distratores:
+      - apelacao
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-24-peca
+    caso: |-
+      Lucas, 22 anos, foi denunciado e condenado, definitivamente, pela prática de crime de associação para o tráfico, previsto no Art. 35 da Lei nº 11.343/06, sendo, em razão das circunstâncias do crime, aplicada a pena de 06 anos de reclusão em regime inicial semiaberto, entendendo o juiz de conhecimento que o crime não seria hediondo, não tendo sido reconhecida a presença de qualquer agravante ou atenuante.
+
+      No mês seguinte, após o início do cumprimento da pena, Lucas vem a sofrer nova condenação definitiva, dessa vez pela prática de crime de ameaça anterior ao de associação, sendo-lhe aplicada exclusivamente a pena de multa, razão pela qual não foi determinada a regressão de regime.
+
+      Após cumprir 01 ano da pena aplicada pelo crime de associação, o defensor público que defende os interesses de Lucas apresenta requerimento de progressão de regime, destacando que o apenado não sofreu qualquer sanção disciplinar.
+
+      O magistrado em atuação perante a Vara de Execução Penal da Comarca de Belo Horizonte/MG, órgão competente, indefere o pedido de progressão, sob os seguintes fundamentos:
+
+      a) o crime de associação para o tráfico, no entender do magistrado, é crime hediondo, tanto que o livramento condicional somente poderá ser deferido após o cumprimento de 2/3 da pena aplicada;
+
+      b) o apenado é reincidente, diante da nova condenação pela prática de crime de ameaça;
+
+      c) o requisito objetivo para a progressão de regime seria o cumprimento de 3/5 da pena aplicada e, caso ele não fosse reincidente, seria de 2/5, períodos esses ainda não ultrapassados;
+
+      d) em relação ao requisito subjetivo, é indispensável a realização de exame criminológico, diante da gravidade dos crimes de associação para o tráfico em geral.
+
+      Ao tomar conhecimento, de maneira informal, da decisão do magistrado, a família de Lucas procura você, na condição de advogado(a), para a adoção das medidas cabíveis. Após constituição nos autos, a defesa técnica é intimada da decisão de indeferimento do pedido de progressão de regime em 24 de novembro de 2017, sexta-feira, sendo certo que, de segunda a sexta-feira da semana seguinte, todos os dias são úteis em todo o território nacional.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Lucas, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: a peça processual deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: agravo-execucao
+    fundamentos:
+      - art. 197, LEP
+    explicacao: "Padrão de respostas do XXIV Exame: Fundamento legal: Art. 197 da Lei nº 7.210/84"
+    fonte: XXIV Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-25-peca
+    caso: |-
+      Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
+
+      Verificando o risco que sua sobrinha corria com a agressão, Patrick gritou com Lauro, que não parou de agredi-la.
+
+      Patrick não tinha outra forma de intervir, porque estava com uma perna enfaixada devido a um acidente de trânsito.
+
+      Ao ver que as agressões não cessavam, foi até o interior de sua residência e pegou uma arma de fogo, de uso permitido, que mantinha no imóvel, devidamente registrada, tendo ele autorização para tanto. Com intenção de causar lesão corporal que garantisse a debilidade permanente de membro de Lauro, apertou o gatilho para efetuar disparo na direção de sua perna. Por circunstâncias alheias à vontade de Patrick, a arma não funcionou, mas o barulho da arma de fogo causou temor em Lauro, que empreendeu fuga e compareceu à Delegacia para narrar a conduta de Patrick.
+
+      Após meses de investigações, com oitiva dos envolvidos e das testemunhas presenciais do fato, quais sejam, Natália, Maria e José, estes dois últimos sendo vizinhos que conversavam no portão da residência, o inquérito foi concluído, e o Ministério Público ofereceu denúncia, perante o juízo competente, em face de Patrick como incurso nas sanções penais do Art. 129, § 1º, inciso III, c/c. o Art. 14, inciso II, ambos do Código Penal. Juntamente com a denúncia, vieram as principais peças que constavam do inquérito, inclusive a Folha de Antecedentes Criminais, na qual constava outra anotação por ação penal em curso pela suposta prática do crime do Art. 168 do Código Penal, bem como o laudo de exame pericial na arma de Patrick apreendida, o qual concluiu pela total incapacidade de efetuar disparos.
+
+      Em busca do cumprimento do mandado de citação, o oficial de justiça comparece à residência de Patrick e verifica que o imóvel se encontrava trancado. Apenas em razão desse único comparecimento no dia 26/02/2018, certifica que o réu estava se ocultando para não ser citado e realiza, no dia seguinte, citação por hora certa, juntando o resultado do mandado de citação e intimação para defesa aos autos no mesmo dia. Maria, vizinha que presenciou a conduta do oficial de justiça, se assusta e liga para o advogado de Patrick, informando o ocorrido e esclarecendo que ele se encontra trabalhando e ficará embarcado por 15 dias. O advogado entra em contato com Patrick por e-mail e este apenas consegue encaminhar uma procuração para adoção das medidas cabíveis, fazendo uma pequena síntese do ocorrido por escrito.
+
+      Considerando a situação narrada, apresente, na qualidade do advogado de Patrick, a peça jurídica cabível, diferente do habeas corpus, apresentando todas as teses jurídicas de direito material e processual pertinentes. A peça deverá ser datada do último dia do prazo. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: resposta-acusacao
+    fundamentos:
+      - art. 396-A, CPP
+    explicacao: "Padrão de respostas do XXV Exame: Fundamento legal: Art. 396-A do Código de Processo Penal."
+    fonte: XXV Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-25-porto-alegre-peca
+    caso: |-
+      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
+
+      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
+
+      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
+
+      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
+
+      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+    explicacao: "Padrão de respostas do XXV Exame: Fundamento legal: Art. 593, inciso I, do Código de Processo Penal."
+    fonte: XXV Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-26-peca
+    caso: |-
+      Em 03 de outubro de 2016, na cidade de Campos, no Estado do Rio de Janeiro, Lauro, 33 anos, que é obcecado por Maria, estagiária de uma outra empresa que está situada no mesmo prédio em que fica o seu local de trabalho, não mais aceitando a rejeição dela, decidiu que a obrigaria a manter relações sexuais com ele, independentemente da sua concordância.
+
+      Confiante em sua decisão, resolveu adquirir arma de fogo de uso permitido, considerando que tinha autorização para tanto, e a registrou, tornando-a regular. Precisando que alguém o substituísse no local do trabalho no dia do crime, narrou sua intenção criminosa para José, melhor amigo com quem trabalha, assegurando-lhe que comprou a arma exclusivamente para ameaçar Maria a manter com ele conjunção carnal, mas que não a lesionaria de forma alguma. Ainda esclareceu a José, que alugara um quarto em um hotel e comprara uma mordaça para evitar que Maria gritasse e os fatos fossem descobertos.
+
+      Quando Lauro saía de casa, em seu carro, para encontrar Maria, foi surpreendido por viatura da Polícia Militar, que havia sido alertada por José sobre o crime prestes a acontecer, sendo efetuada a prisão de Lauro em flagrante. Em sede policial, Maria foi ouvida, afirmando, apesar de não apresentar documentos, que tinha 17 anos e que Lauro sempre manteve comportamento estranho com ela, razão pela qual tinha interesse em ver o autor dos fatos responsabilizado criminalmente.
+
+      Após receber os autos e considerando que o detido possuía autorização para portar arma de fogo, o Ministério Público denunciou Lauro apenas pela prática do crime de estupro qualificado, previsto no Art. 213, §1º c/c Art. 14, inciso II, c/c Art. 61, inciso II, alínea f, todos do Código Penal. O processo teve regular prosseguimento, mas, em razão da demora para realização da instrução, Lauro foi colocado em liberdade. Na audiência de instrução e julgamento, a vítima Maria foi ouvida, confirmou suas declarações em sede policial, disse que tinha 17 anos, apesar de ter esquecido seu documento de identificação para confirmar, apenas apresentando cópia de sua matrícula escolar, sem indicar data de nascimento, para demonstrar que, de fato, era Maria. José foi ouvido e também confirmou os fatos narrados na denúncia, assim como os policiais. O réu não estava presente na audiência por não ter sido intimado e, apesar de seu advogado ter-se mostrado inconformado com tal fato, o ato foi realizado, porque o interrogatório seria feito em outra data.
+
+      Na segunda audiência, Lauro foi ouvido, confirmando integralmente os fatos narrados na denúncia, mas demonstrou não ter conhecimento sobre as declarações das testemunhas e da vítima na primeira audiência. Na mesma ocasião, foi, ainda, juntado o laudo de exame do material apreendido, o laudo da arma de fogo demonstrando o potencial lesivo e a Folha de Antecedentes Criminais, sem outras anotações. Encaminhados os autos para o Ministério Público, foi apresentada manifestação requerendo condenação nos termos da denúncia.
+
+      Em seguida, a defesa técnica de Lauro foi intimada, em 04 de setembro de 2018, terça-feira, sendo quarta-feira dia útil em todo o país, para apresentação da medida cabível.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Lauro, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada do último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: memoriais
+    fundamentos:
+      - art. 403, § 3º, CPP
+    explicacao: "Padrão de respostas do XXVI Exame: Fundamento legal para apresentação de Alegações Finais por Memoriais: Art. 403, § 3º do CPP."
+    fonte: XXVI Exame
+    distratores:
+      - apelacao
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-27-peca
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: contrarrazoes-apelacao
+    fundamentos:
+      - art. 600, CPP
+    explicacao: "Padrão de respostas do XXVII Exame: Fundamento legal: Art. 600 do CPP."
+    fonte: XXVII Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+    revisao: *a1
+  - id: exame-28-peca
+    caso: |-
+      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
+
+      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
+
+      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
+
+      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
+
+      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: rese
+    fundamentos:
+      - art. 581, IV, CPP
+    explicacao: "Padrão de respostas do XXVIII Exame: Fundamento legal: Art. 581, inciso IV, do CPP."
+    fonte: XXVIII Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-29-peca
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: agravo-execucao
+    fundamentos:
+      - art. 197, LEP
+    explicacao: "Padrão de respostas do XXIX Exame: Fundamento legal: Art. 197 da LEP."
+    fonte: XXIX Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-30-peca
+    caso: |-
+      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
+
+      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
+
+      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
+
+      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
+
+      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
+
+      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+    explicacao: "Padrão de respostas do XXX Exame: Fundamento legal: Art. 593, inciso I, do CPP."
+    fonte: XXX Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-31-peca
+    caso: |-
+      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
+
+      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
+
+      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
+
+      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
+
+      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
+
+      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
+
+      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: rese
+    fundamentos:
+      - art. 581, IV, CPP
+    explicacao: "Padrão de respostas do XXXI Exame: Fundamento legal: Art. 581, inciso IV, do CPP"
+    fonte: XXXI Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-32-peca
+    caso: |-
+      Na madrugada do dia 1º de janeiro de 2020, Luiz, nascido em 24 de abril de 1948, estava em sua residência, em Porto Alegre, na companhia de seus três filhos e do irmão Igor, nascido em 29 de novembro de 1965, que também morava há dois anos no mesmo imóvel. Em determinado momento, um dos filhos de Luiz acionou fogos de artifício, no quintal do imóvel, para comemorar a chegada do novo ano. Ocorre que as faíscas atingiram o telhado da casa, que começou a pegar fogo. Todos correram para sair pela única e pequena porta da casa, mas Luiz, em razão de sua idade e pela dificuldade de locomoção, acabou ficando por último na fila para saída da residência. Percebendo que o fogo estava dele se aproximando e que iria atingi-lo em segundos, Luiz desferiu um forte soco na cabeça do irmão, que estava em sua frente, conseguindo deixar o imóvel. Igor ficou caído por alguns momentos, mas conseguiu sair da casa da família, sangrando em razão do golpe recebido.
+
+      Policiais chegaram ao local do ocorrido, sendo instaurado procedimento para investigar a autoria do crime de incêndio e outro procedimento para apurar o crime de lesão corporal. Luiz, verificando as consequências de seus atos, imediatamente levou o irmão para unidade de saúde e pagou pelo tratamento médico necessário. Igor compareceu em sede policial após ser intimado, narrando o ocorrido, apesar de destacar não ter interesse em ver o autor do fato responsabilizado criminalmente.
+
+      Concluídas as investigações em relação ao crime de lesão, os autos foram encaminhados ao Ministério Público, que, com base no laudo prévio de lesão corporal de Igor atestando a existência de lesão de natureza leve na cabeça, ofereceu denúncia, perante a 5ª Vara Criminal de Porto Alegre/RS, órgão competente, em face de Luiz como incurso nas sanções penais do Art. 129, § 9º, do Código Penal. Deixou o órgão acusador de oferecer proposta de suspensão condicional do processo com fundamento no Art. 41 da Lei nº 11.340/06, que veda a aplicação dos institutos da Lei nº 9.099/95, tendo em vista que aquela lei (Lei nº 11.340/06) estabeleceu nova pena para o delito imputado.
+
+      Após citação e apresentação de resposta à acusação, na qual Luiz demonstrou interesse na aplicação do Art. 89 da Lei nº 9.099/95, os fatos foram integralmente confirmados durante a instrução probatória. Igor confirmou a agressão, a ajuda posterior do irmão e o desinteresse em responsabilizá-lo. O réu permaneceu em silêncio durante seu interrogatório. Em seguida, foi acostado ao procedimento o laudo definitivo de lesão corporal da vítima atestando a existência de lesões de natureza leve, assim como a Folha de Antecedentes Criminais de Luiz, que registrava uma única condenação, com trânsito em julgado em 10 de dezembro de 2019, pela prática de contravenção penal.
+
+      O Ministério Público apresentou a manifestação cabível requerendo a condenação do réu nos termos da denúncia, destacando, ainda, a incidência do Art. 61, inciso I, do CP. Em seguida, a defesa técnica de Luiz foi intimada, em 19 de janeiro de 2021, terça-feira, para apresentação da medida cabível.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Luiz, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses cabíveis de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão.
+
+      A mera citação do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: memoriais
+    fundamentos:
+      - art. 403, § 3º, CPP
+      - art. 404, parágrafo único, CPP
+    explicacao: "Padrão de respostas do XXXII Exame: Fundamento legal: Art. 403, § 3º, do CPP ou Art. 404, parágrafo único do CPP"
+    fonte: XXXII Exame
+    distratores:
+      - apelacao
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-33-peca
+    caso: |-
+      Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
+
+      A dupla, então, comparece ao local, anuncia o assalto para o único funcionário presente e, no exato momento em que abriram o caixa onde era guardado o dinheiro, são abordados por policiais militares, que encaminham a dupla para a Delegacia. Em sede policial, foi constatado que Carlos era adolescente de 16 anos e que tinha se valido de documento falso para ingressar na festa em que conheceu Breno. A arma de fogo foi apreendida e devidamente periciada, sendo identificado que estava municiada e que era capaz de efetuar disparos. Houve, ainda, a juntada da Folha de Antecedentes Criminais de Breno, onde constava a existência de 03 inquéritos policiais em que figurava como indiciado em investigações relacionadas a crimes patrimoniais, além de 05 ações penais em curso, duas delas com condenações de primeira instância, pela suposta prática de crimes de roubo majorado, em nenhuma havendo trânsito em julgado.
+
+      Antes do oferecimento da denúncia, o Ministério Público solicitou que fossem realizadas diligências destinadas à obtenção da filmagem do estabelecimento onde os fatos teriam ocorrido, razão pela qual houve relaxamento da prisão de Breno. Após conclusão das diligências, sendo acostado ao procedimento a filmagem que confirmava a autoria delitiva de Breno, em 05 de junho de 2019, Breno foi denunciado pelo Ministério Público, perante a 1ª Vara Criminal da Comarca de Florianópolis/SC, órgão competente, como incurso nas sanções penais do Artigo 157, § 2º, inciso II e § 2º-A, inciso I, do Código Penal e do Art. 244-B da Lei n o 8.069/90, na forma do Art. 70 do Código Penal.
+
+      Após regular processamento, durante audiência de instrução e julgamento, o magistrado optou por perguntar diretamente para as testemunhas de acusação e defesa, não oportunizando manifestação das partes, tendo a defesa demonstrado seu inconformismo com a conduta. A vítima confirmou os fatos narrados na denúncia, destacando que ficou muito assustada porque Breno e Carlos eram muito altos e fortes, parecendo jovens de aproximadamente 25 anos de idade, além de destacar que havia cerca de R$ 5.000,00 no caixa do estabelecimento que seriam subtraídos se não houvesse a intervenção policial. O réu, em seu interrogatório, permaneceu em silêncio.
+
+      Após apresentação de manifestação derradeira pelas partes, foi proferida sentença condenatória nos termos da denúncia, conforme requerido pelo Ministério Público. Na primeira fase, fixou o magistrado a pena base dos crimes de roubo e corrupção de menores acima do mínimo legal, em razão da personalidade do réu, que seria voltada para prática de crimes, conforme indicaria sua folha de antecedentes criminais, restando a pena do roubo em 4 anos e 06 meses de reclusão e 12 dias multa e da corrupção em 01 ano e 02 meses de reclusão. Na segunda fase, não foram reconhecidas agravantes e nem atenuantes. Na terceira fase, a pena base do crime de corrupção de menores foi confirmada como definitiva, enquanto a pena de roubo foi aumentada em 2/3, em razão do emprego de arma de fogo, diante das previsões da Lei nº 13.654/18, restando a pena definitiva do roubo em 07 anos e 06 meses de reclusão e 20 dias multa, já que não foram reconhecidas causas de diminuição de pena. O regime inicial fixado foi o fechado, em razão da pena final de 8 anos e 8 meses de reclusão e 20 dias multa (Art. 70, parágrafo único, CP).
+
+      O Ministério Público, intimado da sentença, manteve-se inerte.
+
+      Você, como advogado(a) de Breno, é intimado(a) no dia 03 de dezembro de 2019, terça-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+    explicacao: "Padrão de respostas do XXXIII Exame: Fundamento legal: Art. 593, inciso I, do CPP."
+    fonte: XXXIII Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-34-peca
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: rese
+    fundamentos:
+      - art. 581, IV, CPP
+    explicacao: "Padrão de respostas do XXXIV Exame: Fundamento legal: Art. 581, inciso IV, do CPP"
+    fonte: XXXIV Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-35-peca
+    caso: |-
+      No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
+
+      Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
+
+      Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
+
+      Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Júlio, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+    explicacao: "Padrão de respostas do XXXV Exame: Fundamento legal: Art. 593, inciso I, do CPP."
+    fonte: XXXV Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-36-peca
+    caso: |-
+      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
+
+      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
+
+      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
+
+      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
+
+      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
+
+      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: resposta-acusacao
+    fundamentos:
+      - art. 396, CPP
+      - art. 396-A, CPP
+    explicacao: "Padrão de respostas do XXXVI Exame: Fundamento legal: Art. 396 ou 396-A, ambos do CPP."
+    fonte: XXXVI Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-37-peca
+    caso: |-
+      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
+
+      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
+
+      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
+
+      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
+
+      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
+
+      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
+
+      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
+
+      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
+
+      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
+
+      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
+
+      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: memoriais
+    fundamentos:
+      - art. 403, § 3º, CPP
+      - art. 404, parágrafo único, CPP
+    explicacao: "Padrão de respostas do XXXVII Exame: Fundamento legal: Art. 403, § 3º OU Art. 404, parágrafo único, ambos do CPP."
+    fonte: XXXVII Exame
+    distratores:
+      - apelacao
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-38-peca
+    caso: |-
+      Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
+
+      Marieta também foi condenada em idêntica pena, em outro processo, por infração ao Art. 313-A do Código Penal, porque em 15/09/2017, valendo-se do mesmo modus operandi, concedeu benefício previdenciário indevido em favor de Luíza, gerando prejuízo ao erário no montante de R$ 81.000,00 (oitenta e um mil reais). Ainda, Marieta foi condenada em um terceiro processo, por infração ao Art. 313-A do Código Penal, consoante mesmo modus operandi e com aplicação da mesma pena de dois anos de reclusão e 10 dias-multa, por inserir dados falsos no sistema informatizado e assim conceder benefício previdenciário fraudulento em favor de Anastácia, com prejuízo ao erário de R$ 120.000,00 (cento e vinte mil reais), fato ocorrido em 03/11/2017.
+
+      As referidas condenações transitaram em julgado nos dias 10/11/2022, 21/11/2022 e 02/12/2022, respectivamente, e todas elas substituíram as penas privativas de liberdade por duas restritivas de direitos. Marieta não possui outros processos em sua folha de antecedentes criminais.
+
+      As cartas de execução de sentença foram tombadas ao Juízo de execução penal da Vara Federal Criminal de Alfa (vinculada ao Tribunal Regional Federal da 10ª Região) em datas próximas. O Juízo, à luz das três cartas de execução definitivas, proferiu decisão somando as penas, na forma do Art. 69, do Código Penal, fixando a pena total de 6 (seis) anos de reclusão, em regime fechado, considerando que houve reincidência de Marieta quando da realização do segundo e terceiro fato, após já ter realizado o primeiro ato delituoso. Quanto à pena de multa, promoveu a readequação, consoante proporcionalidade à nova pena privativa de liberdade fixada, estabelecendo-a em 90 dias-multa. Determinou a conversão das penas restritivas de direito em privativas de liberdade e a expedição de mandado de prisão para o início de cumprimento das penas.
+
+      A intimação da decisão ocorreu no dia 25/08/2023, sexta-feira. O mandado de prisão foi expedido na mesma data, pendente de cumprimento.
+
+      Na qualidade de advogado de Marieta já constituído nos autos, redija a peça processual cabível, diferente de embargos de declaração e habeas corpus, para garantir os direitos de sua assistida, devendo ser deduzida toda a matéria de direito processual e material cabível. A peça deverá ser datada do último dia do prazo, levando-se em conta que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o examinando deve abordar todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: agravo-execucao
+    fundamentos:
+      - art. 197 LEP
+    explicacao: "Padrão de respostas do XXXVIII Exame: Fundamento legal: Art. 197 da LEP."
+    fonte: XXXVIII Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-40-peca
+    caso: |-
+      Gustavo trabalha como entregador por aplicativo e aluga bicicletas para desempenhar sua função. Certo dia, descobriu que, próximo à sua residência, havia um depósito de bicicletas seminovas para revenda. Gustavo, então, para ter economia na locação diária de bicicleta, valeu-se de escalada para adentrar o depósito e retirar uma bicicleta, devolvendo-a intacta e sem danos ao final do dia. Gustavo pôs-se a adotar o mesmo procedimento nos dias subsequentes, sempre com intenção de uso e restituição. No oitavo dia, Gustavo chegou ao depósito e percebeu que a porta estava aberta. Assim, conseguiu entrar e sair com uma bicicleta pela porta da frente. Porém, neste dia 30 de outubro de 2023, Gustavo sofreu uma queda, destruindo por completo a bicicleta. Ao perceberem a falta de uma bicicleta, os administradores do depósito consultaram as câmeras de vigilância e constataram toda a atividade de Gustavo ao longo dos oito dias anteriores, comprovando a escalada por sete vezes (com subtração e restituição de sete bicicletas) e a entrada pela porta principal no oitavo dia.
+
+      Levado o fato às autoridades, a Polícia Civil descobriu a autoria e, em sede policial, Gustavo voluntariamente efetuou o pagamento do valor de R$ 1.500,00 (mil e quinhentos reais) ao depósito, valor apontado pela própria vítima como montante integral do prejuízo, correspondente à oitava bicicleta subtraída, no dia 10 de dezembro de 2023.
+
+      Assim, o Ministério Público do Estado de Campo Belo denunciou Gustavo como incurso nas penas do Art. 155, §4º, inciso II, terceira figura, do Código Penal, por oito vezes, em concurso material (Art. 69 do CP). A denúncia foi recebida pelo Juízo da Vara Criminal da Comarca de Flores, local dos fatos, no dia 19 de dezembro de 2023. A folha de antecedentes criminais apontou que Gustavo já havia celebrado uma suspensão condicional do processo em 2022.
+
+      A instrução probatória confirmou a íntegra dos fatos relatados, tendo transcorrido sem intercorrências. O representante legal da vítima reiterou ter recebido a totalidade do valor do prejuízo sofrido. As partes se manifestaram regularmente em alegações finais.
+
+      A sentença condenou Gustavo como incurso nas penas do Art. 155, § 4º, inciso II, terceira figura, por oito vezes, na forma do Art. 69, ambos do Código Penal. Fixou pena-base no mínimo legal de 2 (dois) anos de reclusão para cada delito de furto qualificado, e, diante da incidência da Súmula 231, do Superior Tribunal de Justiça (que impede a atenuação da pena pela confissão abaixo do mínimo legal), tornou a pena de 2 (dois) anos de reclusão definitiva para cada crime, totalizando a condenação em 16 (dezesseis) anos de reclusão, em regime inicial fechado, diante do concurso material.
+
+      O Ministério Público manifestou imediata concordância com a sentença.
+
+      Você, como advogado(a) de Gustavo, é intimado(a) no dia 10 de maio de 2024, sexta-feira, sendo que os dias de segunda a sexta-feira são úteis em todo o país.
+
+      Considerando apenas as informações narradas, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+    explicacao: "Padrão de respostas do XL Exame: Fundamento legal: Art. 593, inciso I, do CPP."
+    fonte: XL Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-41-peca
+    caso: |-
+      O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
+
+      A denúncia foi distribuída à Vara Criminal da Comarca de Flores, Estado de Campo Belo (CB), local dos fatos.
+
+      Lineu celebrou acordo de colaboração premiada com o Ministério Público, nos termos da Lei nº 12.850/13, devidamente homologado pelo Juízo competente, fornecendo provas de que Abelardo lhe fez pagamentos no valor total de R$ 500.000,00 (quinhentos mil reais), a fim de que não realizasse os atos de ofício que lhe cabiam.
+
+      Asseverou que dividiu essa vantagem patrimonial indevida com Mendonça, seu superior imediato, e que agia sob suas ordens e comando, mas, quanto a este ponto, não apresentou provas de corroboração. A instrução processual ocorreu sem intercorrências, sendo que Mendonça se aposentou no curso do processo. Lineu reafirmou os termos de sua colaboração, Abelardo, por sua vez, fez uso de seu direito ao silêncio, enquanto Mendonça negou os fatos e afirmou que o imóvel onde reside é herança de sua mãe, exibindo os documentos públicos que comprovam a regular transmissão causa mortis.
+
+      O Juízo convolou os debates orais em memoriais e concedeu prazo para o Ministério Público e, em seguida, prazo comum às defesas dos três acusados, o que motivou os protestos da defesa de Mendonça.
+
+      O Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial, razão pela qual a sentença foi prolatada pelo Juiz substituto, designado para atuar apenas em causas urgentes, ainda que nenhuma urgência houvesse neste processo. Assim, Mendonça foi condenado como incurso nas penas do Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, considerando provada a corrupção passiva por meio do interrogatório de Lineu, colaborador, o que foi reputado suficiente para provar materialidade e autoria delitivas. Aplicou a pena-base no mínimo legal de dois anos, majorada em um terço por duas vezes consecutivas, justificada exclusivamente pela existência de duas causas de aumento previstas na parte especial do Código Penal, alcançando a pena de 3 (três)
+
+      anos, 6 (seis) meses e 20 (vinte) dias de reclusão, em regime aberto, e substituiu a pena privativa de liberdade por duas restritivas de direitos. Determinou a cassação da aposentadoria de Mendonça, na forma do Art. 92, inciso I, a, do CP, aplicável por analogia, bem como a perda do imóvel de sua propriedade, uma vez que de valor incompatível com seus proventos, fato suficiente para autorizar o perdimento. O Ministério Público, intimado da sentença, manteve-se inerte. Você, como advogado(a) de Mendonça, é intimado(a) no dia 6 de setembro de 2024, sexta-feira, sendo o dia seguinte e os dias de segunda a sexta-feira úteis em todo o país.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 593, I, CPP
+    explicacao: "Padrão de respostas do XLI Exame: Fundamento legal: Art. 593, inciso I, do CPP."
+    fonte: XLI Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-42-peca
+    caso: |-
+      Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
+
+      No local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em espécie, não tendo sido localizado nenhum vestígio de drogas ou outros elementos ilícitos que sequer ligassem Diogo à atividade de tráfico de drogas ou a qualquer outro ilícito penal.
+
+      Com base nos fatos estritamente descritos acima, Diogo foi denunciado pelo Ministério Público como incurso nas penas do crime de lavagem de dinheiro, na modalidade “ocultar” valores em espécie, na forma do Art. 1º, caput, da Lei nº 9.613/1998. O Ministério Público deixou de oferecer acordo de não persecução penal porque, de acordo com a versão acusatória, Diogo seria reincidente, tendo a acusação arrolado, como testemunhas, os dois policiais militares que participaram da ação, Soldado Fernando e Sargento Fábio.
+
+      A folha de antecedentes criminais de Diogo foi juntada aos autos, constando apenas uma condenação por lesão corporal resultante de violência doméstica e familiar contra a mulher, cuja pena foi extinta, pelo cumprimento, em 2017.
+
+      O Juízo da Vara Criminal da Comarca de Flores, Estado de Campo Belo, não obstante a ausência de descrição de delito antecedente, recebeu a denúncia e ordenou a citação de Diogo.
+
+      Diogo foi citado no dia 27 de janeiro de 2025, segunda-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Diogo, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vícios de obscuridade, ambiguidade, contradição ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: resposta-acusacao
+    fundamentos:
+      - art. 396, CPP
+      - art. 396-A, CPP
+    explicacao: "Padrão de respostas do XLII Exame: Fundamento legal: Art. 396 ou Art. 396-A, ambos do CPP."
+    fonte: XLII Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-43-peca
+    caso: |-
+      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
+
+      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
+
+      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
+
+      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
+
+      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
+
+      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
+
+      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: contrarrazoes-apelacao
+    fundamentos:
+      - art. 600, CPP
+    explicacao: "Padrão de respostas do XLIII Exame: Fundamento legal: Art. 600 do CPP."
+    fonte: XLIII Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+    revisao: *a1
+  - id: exame-44-peca
+    caso: |-
+      No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
+
+      Frustradas as tentativas de composição civil, e sendo recusada a transação penal pelo querelado, a instrução processual transcorreu sem intercorrências, tendo sido ouvidas as testemunhas que comprovaram a ocorrência do fato, tal como descrito. Ficou comprovado que o acusado danificou a peça de decoração pertencente a Manoel, bem como que Aluísio agiu sem as cautelas devidas na circunstância apresentada.
+
+      O advogado de Manoel, em alegações finais orais, se manifestou deixando de formular pedido condenatório, da seguinte forma: “Requeiro o prosseguimento do feito, com prolação de sentença”. A defesa de Aluísio e o Ministério Público, em seguida, manifestaram-se regularmente.
+
+      A folha de antecedentes criminais de Aluísio indicava apenas uma condenação transitada em julgado, em 2023, por crime militar próprio (deserção).
+
+      O Juiz do Juizado Especial Criminal da cidade de Flores, Estado de Campo Belo, local dos fatos, proferiu sentença condenando o acusado, nos termos da queixa. Fixou a pena-base em um mês de detenção e, diante da reincidência (condenação pelo delito de deserção), agravou a pena em mais um mês, chegando-se à pena de dois meses de detenção. Fixou o regime inicial semiaberto e deixou de substituir a pena privativa de liberdade por restritiva de direitos, em razão da reincidência.
+
+      A sentença foi publicada e a defesa técnica foi intimada no dia 3/10/2025, uma sexta-feira, sendo os dias de segunda a sexta-feira úteis em todo o país.
+
+      Como advogado(a) de Aluísio, redija a peça jurídica para o qual foi intimado(a), excluído o habeas corpus, considerando que a decisão não padece de vício de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas processuais e de direito material. A peça deverá ser datada no último dia do prazo legal de interposição. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: apelacao
+    fundamentos:
+      - art. 82, Lei 9
+    explicacao: "Padrão de respostas do XLIV Exame: Fundamentação legal: Art. 82 da Lei nº 9.099/1995."
+    fonte: XLIV Exame
+    distratores:
+      - memoriais
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-45-peca
+    caso: |-
+      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
+
+      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
+
+      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
+
+      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
+
+      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
+
+      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
+
+      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: memoriais
+    fundamentos:
+      - art. 403, § 3º, CPP
+      - art. 404, parágrafo único, CPP
+    explicacao: "Padrão de respostas do XLV Exame: Fundamento legal: Art. 403, §3º, ou Art. 404, parágrafo único, ambos do CPP."
+    fonte: XLV Exame
+    distratores:
+      - apelacao
+      - resposta-acusacao
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1
+  - id: exame-46-peca
+    caso: |-
+      Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288-A do CP, sendo acusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores, Estado de Campo Belo.
+
+      De acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de explorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os membros da sua milícia teriam funções variadas de segurança, tais como arrecadação e “apontadores”, todas essenciais para a consecução do fim do grupo que é a exploração do jogo ilícito naquela região.
+
+      A denúncia relatou que policiais militares, em patrulhamento de rotina na Zona Leste, legitimamente abordaram Jorge e, na abordagem, nada ilícito foi localizado. Contudo, os policiais haviam recebido uma denúncia anônima no sentido de que Jorge era integrante da milícia, razão pela qual passaram a vasculhar o celular dele, sem sua autorização, localizando diversas mensagens para Adilson, a quem Jorge se referia como “chefe”, no aplicativo de troca de mensagens.
+
+      Por isso, com base nos dados extraídos do telefone celular de Jorge pelos policiais militares, a denúncia foi oferecida, sem que fosse esclarecida qual a função de Jorge dentro da milícia privada. O rol de testemunhas incluía os policiais militares que participaram da abordagem, soldado Garcia e sargento Andrade.
+
+      O Juiz competente da Vara Criminal de Flores recebeu a denúncia e determinou a citação do denunciado.
+
+      Jorge foi citado no dia 8 de junho de 2026, segunda-feira, sendo certo que todos os dias são úteis em todo o país, exceto sábados e domingos.
+
+      Jorge apresentou a você, na condição de advogado(a), dez amigos (identificados como “Amigo” 1 a 10) que poderiam abonar o seu caráter.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Jorge, redija a peça jurídica cabível, diferente de habeas corpus, considerando que a decisão não padece de vícios de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Qual a peça cabível e o seu fundamento legal?
+    peca: resposta-acusacao
+    fundamentos:
+      - art. 396, CPP
+      - art. 396-A, CPP
+    explicacao: "Padrão de respostas do XLVI Exame: Fundamento legal: Art. 396 ou Art. 396-A, ambos do CPP."
+    fonte: XLVI Exame
+    distratores:
+      - apelacao
+      - memoriais
+      - rese
+      - agravo-execucao
+      - contrarrazoes-apelacao
+    revisao: *a1

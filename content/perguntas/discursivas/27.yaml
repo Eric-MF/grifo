@@ -1,0 +1,760 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "27"
+perguntas:
+  - id: 27-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento: 1ª Vara Criminal da Comarca de Maceió/AL."
+    opcoes:
+      correta: "Endereçamento: 1ª Vara Criminal da Comarca de Maceió/AL."
+      erradas:
+        - "Endereçamento: Tribunal de Justiça do Rio de Janeiro"
+        - "Endereçamento correto: Tribunal de Justiça do Estado de Mato Grosso."
+        - "Endereçamento correto: Juízo da Vara de Execuções Penais do Rio de Janeiro/RJ."
+        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
+        - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro"
+    revisao: &a1
+      status: rascunho
+  - id: 27-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: enderecamento
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem devem ser endereçadas as razões?
+    gabarito: "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
+    opcoes:
+      correta: "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
+      erradas:
+        - "Endereçamento: Vara Criminal da Comarca do Rio de Janeiro"
+        - "Endereçamento: Juiz da Vara do Tribunal do Júri."
+        - "Endereçamento: Vara Criminal da Comarca de Goiânia/GO."
+        - Vara Criminal da Comarca de Campos/RJ.
+        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
+    revisao: *a1
+  - id: 27-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: merito
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Afastamento da nulidade requerida, considerando que não foi arguida em momento adequado.
+    opcoes:
+      correta: Afastamento da nulidade requerida, considerando que não foi arguida em momento adequado.
+      erradas:
+        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - Arguição de que a conduta narrada evidentemente não constituir crime em razão da atipicidade, diante da aplicação do princípio da bagatela/insignificância
+        - Subsidiariamente, afastar a qualificadora pois não há prova nos autos da idade da vítima, nos termos do Art. 213, §1º do CP
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+    revisao: *a1
+  - id: 27-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: O interrogatório, como instrumento de defesa, poderá ser realizado como último ato da instrução OU o procedimento da Lei nº 11.343/06 deve se adequar àquele previsto no CPP.
+    opcoes:
+      correta: O interrogatório, como instrumento de defesa, poderá ser realizado como último ato da instrução OU o procedimento da Lei nº 11.343/06 deve se adequar àquele previsto no CPP.
+      erradas:
+        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - Arguição de que a conduta narrada evidentemente não constituir crime em razão da atipicidade, diante da aplicação do princípio da bagatela/insignificância
+        - Subsidiariamente, afastar a qualificadora pois não há prova nos autos da idade da vítima, nos termos do Art. 213, §1º do CP
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+    revisao: *a1
+  - id: 27-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Manutenção da absolvição em relação crime de associação para o tráfico, tendo em vista que não restou provada situação de permanência/estabilidade entre o adolescente e o acusado.
+    opcoes:
+      correta: Manutenção da absolvição em relação crime de associação para o tráfico, tendo em vista que não restou provada situação de permanência/estabilidade entre o adolescente e o acusado.
+      erradas:
+        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - Arguição de que a conduta narrada evidentemente não constituir crime em razão da atipicidade, diante da aplicação do princípio da bagatela/insignificância
+        - Subsidiariamente, afastar a qualificadora pois não há prova nos autos da idade da vítima, nos termos do Art. 213, §1º do CP
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+    revisao: *a1
+  - id: 27-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Manutenção da pena base no mínimo legal, uma vez que o argumento utilizado pelo Ministério Público considera a gravidade em abstrato do delito OU tendo em vista que haveria bis in idem no aumento da pena em razão de violação ao bem jurídico protegido pela norma.
+    opcoes:
+      correta: Manutenção da pena base no mínimo legal, uma vez que o argumento utilizado pelo Ministério Público considera a gravidade em abstrato do delito OU tendo em vista que haveria bis in idem no aumento da pena em razão de violação ao bem jurídico protegido pela norma.
+      erradas:
+        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - Arguição da existência de manifesta causa de exclusão da ilicitude, pois Gabriela agiu em estado de necessidade diante da situação de fome e risco para a saúde de seu filho, nos termos do Art. 24 do Código Penal.
+        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
+        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
+    revisao: *a1
+  - id: 27-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: merito
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Manutenção do reconhecimento da atenuante da confissão espontânea, considerando que foi a confissão utilizada como argumento/para formação da convicção do juiz, nos termos da Súmula 545 do STJ.
+    opcoes:
+      correta: Manutenção do reconhecimento da atenuante da confissão espontânea, considerando que foi a confissão utilizada como argumento/para formação da convicção do juiz, nos termos da Súmula 545 do STJ.
+      erradas:
+        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+        - Da tese da prática de crime único, pois o delito de estupro de vulnerável é um tipo misto alternativo (de conteúdo múltiplo ou variado).
+        - Reconhecimento da causa de extinção da punibilidade, em razão da ocorrência de prescrição da pretensão punitiva estatal. Citação do art. 107, IV, do CP
+        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
+        - Atipicidade da conduta ou desclassificação para crime de dano qualificado, tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto.
+    revisao: *a1
+  - id: 27-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Manutenção do reconhecimento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343, eis que o fato de o réu responder à ação penal por crime de furto não justifica o reconhecimento de maus antecedentes, nos termos da Súmula 444 do STJ, por analogia OU conforme o Art. 5º, LVII, da CRFB/88 (princípio da não culpabilidade ou da presunção de inocência).
+    opcoes:
+      correta: Manutenção do reconhecimento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343, eis que o fato de o réu responder à ação penal por crime de furto não justifica o reconhecimento de maus antecedentes, nos termos da Súmula 444 do STJ, por analogia OU conforme o Art. 5º, LVII, da CRFB/88 (princípio da não culpabilidade ou da presunção de inocência).
+      erradas:
+        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - Arguição de que a conduta narrada evidentemente não constituir crime em razão da atipicidade, diante da aplicação do princípio da bagatela/insignificância
+        - Subsidiariamente, afastar a qualificadora pois não há prova nos autos da idade da vítima, nos termos do Art. 213, §1º do CP
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+    revisao: *a1
+  - id: 27-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: merito
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Afastamento do pedido de aplicação do regime inicial fechado, pois o crime de tráfico privilegiado não é considerando hediondo pelo STF OU porque é inconstitucional a previsão do Art. 2º, § 1º, da Lei nº 8.072/90 de aplicação obrigatória do regime inicial fechado aos crimes hediondos.
+    opcoes:
+      correta: Afastamento do pedido de aplicação do regime inicial fechado, pois o crime de tráfico privilegiado não é considerando hediondo pelo STF OU porque é inconstitucional a previsão do Art. 2º, § 1º, da Lei nº 8.072/90 de aplicação obrigatória do regime inicial fechado aos crimes hediondos.
+      erradas:
+        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - Arguição de que a conduta narrada evidentemente não constituir crime em razão da atipicidade, diante da aplicação do princípio da bagatela/insignificância
+        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
+        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
+    revisao: *a1
+  - id: 27-peca-11
+    categoria: peca-detalhe
+    parte: peca
+    item: "11"
+    secao: merito
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Manutenção da substituição da pena privativa de liberdade por restritiva de direitos, já que a vedação em abstrato viola o princípio da individualização da pena OU porque o STF declarou a inconstitucionalidade da vedação trazida pelo Art. 33, § 4º, da Lei nº 11.343/06 OU porque a Resolução 05 do Senado suspendeu a eficácia da expressão que vedava a substituição.
+    opcoes:
+      correta: Manutenção da substituição da pena privativa de liberdade por restritiva de direitos, já que a vedação em abstrato viola o princípio da individualização da pena OU porque o STF declarou a inconstitucionalidade da vedação trazida pelo Art. 33, § 4º, da Lei nº 11.343/06 OU porque a Resolução 05 do Senado suspendeu a eficácia da expressão que vedava a substituição.
+      erradas:
+        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - Arguição da existência de manifesta causa de exclusão da ilicitude, pois Gabriela agiu em estado de necessidade diante da situação de fome e risco para a saúde de seu filho, nos termos do Art. 24 do Código Penal.
+        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
+        - Atipicidade da conduta ou desclassificação para crime de dano qualificado, tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto.
+    revisao: *a1
+  - id: 27-peca-12
+    categoria: peca-detalhe
+    parte: peca
+    item: "12"
+    secao: pedido
+    caso: |-
+      João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
+
+      Realizado laudo de exame de material entorpecente, constatou-se que João trazia 25 g de cocaína, acondicionados em 35 pinos plásticos, enquanto, na mochila do adolescente, foram encontrados 30 g de cocaína, quantidade essa distribuída em 50 pinos. Após a oitiva das testemunhas em sede policial, da juntada do laudo e da oitiva do adolescente e de João, que permaneceram em silêncio com relação aos fatos, foram lavrados o auto de prisão em flagrante em desfavor do imputável e o auto de apreensão em desfavor do adolescente. Toda a documentação foi encaminhada aos Promotores de Justiça com atribuição. O Promotor de Justiça, junto à 1ª Vara Criminal de Maceió/AL, órgão competente, ofereceu denúncia em face de João, imputando-lhe a prática dos crimes previstos nos artigos 33 e 35, ambos com a causa de aumento do Art. 40, inciso VI, todos da Lei nº 11.343/06. Foi concedida a liberdade provisória ao denunciado, aplicando-se as medidas cautelares alternativas.
+
+      Após a notificação, a apresentação de resposta prévia e o recebimento da denúncia e da citação, foi designada a audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação. Estas confirmaram a apreensão de drogas em poder de Marcelo e João, bem como que eles estariam juntos, esclarecendo que não se conheciam anteriormente e nem tinham informações pretéritas sobre o adolescente e o denunciado. O adolescente, ouvido, disse que conhecera João no dia anterior ao de sua apreensão e que nunca o tinha visto antes vendendo drogas. Em seguida à oitiva das testemunhas de acusação e defesa, foi realizado o interrogatório do acusado, sendo que nenhuma das partes questionou o momento em que este foi realizado. Na ocasião, João confirmou que o material que ele e Marcelo traziam seria destinado à ilícita comercialização. Ele ainda esclareceu que conhecera o adolescente no dia anterior, que era a primeira vez que venderia drogas e que tinha a intenção de praticar o ato junto com o adolescente somente aquela vez, com o objetivo de conseguir dinheiro para comprar uma moto.
+
+      Foi acostado o laudo de exame definitivo de material entorpecente confirmando o laudo preliminar e a Folha de Antecedentes Criminais de João, onde constava uma anotação referente a crime de furto, ainda pendente de julgamento.
+
+      O juiz, após a devida manifestação das partes, proferiu sentença julgando parcialmente procedente a pretensão punitiva estatal. Em um primeiro momento, absolveu o acusado do crime de associação para o tráfico por insuficiência probatória. Em seguida, condenou o réu pela prática do crime de tráfico de drogas, ressaltando que o réu confirmou a destinação das drogas à ilícita comercialização. No momento de aplicar a pena, fixou a pena-base no mínimo legal, reconhecendo a existência da atenuante da confissão espontânea; aumentou a pena em razão da causa de aumento do Art. 40, inciso VI, da Lei nº 11.343/06 e aplicou a causa de diminuição de pena do Art. 33, § 4º, da Lei nº 11.343/06, restando a pena final em 1 ano, 11 meses e 10 dias de reclusão e 195 dias multa, a ser cumprida em regime inicial aberto. Entendeu o magistrado pela substituição da pena privativa de liberdade por duas restritivas de direitos.
+
+      O Ministério Público, ao ser intimado pessoalmente em 22 de outubro de 2018, apresentou o recurso cabível, em 25 de outubro de 2018, acompanhado das respectivas razões recursais, requerendo:
+
+      a) nulidade da instrução, porque o interrogatório não foi o primeiro ato, como prevê a Lei nº 11.343/06;
+
+      b) condenação do réu pelo crime de associação para o tráfico, já que ele estaria agindo em comunhão de ações e desígnios com o adolescente no momento da prisão, e o Art. 35 da Lei nº 11.343/06 fala em “reiteradamente ou não”;
+
+      c) aumento da pena-base em relação ao crime de tráfico diante das consequências graves que vem causando para a saúde pública e a sociedade brasileira;
+
+      d) afastamento da atenuante da confissão, já que ela teria sido parcial;
+
+      e) afastamento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343/06, independentemente da condenação pelo crime do Art. 35 da Lei nº 11.343/06, considerando que o réu seria portador de maus antecedentes, já que responde a ação penal em que se imputa a prática do crime de furto;
+
+      f) aplicação do regime inicial fechado, diante da natureza hedionda do delito de tráfico;
+
+      g) afastamento da substituição da pena privativa de liberdade por restritiva de direitos, diante da vedação legal do Art. 33, § 4º, da Lei nº 11.343/06.
+
+      Já o acusado e a defesa técnica, intimados do teor da sentença, mantiveram-se inertes, não demonstrando interesse em questioná-la.
+
+      O magistrado, então, recebeu o recurso do Ministério Público e intimou, no dia 05 de novembro de 2018 (segunda-feira), sendo terça-feira dia útil em todo o país, você, advogado(a) de João, a apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluídas as possibilidades de habeas corpus e embargos de declaração, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Não provimento do recurso OU manutenção da sentença.
+    opcoes:
+      correta: Não provimento do recurso OU manutenção da sentença.
+      erradas:
+        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
+        - Conhecimento e provimento do recurso, com a desclassificação para homicídio culposo na direção de veículo automotor.
+        - "Pedidos: absolvição do crime de furto, na forma do artigo 386, III, CPP;subsidiariamente, aplicação da pena base no mínimo legal;reconhecimento das atenuantes da confissão espontânea e da menoridade relativa;reconhecimento da forma privilegiada do furto;substituição da pena privativa de liberdade por restritiva de direitos;fixação do regime aberto; sursis da pena."
+        - Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
+        - Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
+    revisao: *a1
+  - id: 27-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      Rafael subtraiu, mediante grave ameaça, coisa alheia móvel de Joana juntamente com outro indivíduo não identificado e com restrição da liberdade da vítima. Foi, então, denunciado pela prática do crime previsto no Art. 157, § 2º, incisos II e V, do Código Penal.
+
+      Durante a instrução, quando da oitiva da vítima, esta mencionou que todos os fatos foram presenciados, de longe, por sua amiga Carla, não tendo ela contado em momento anterior para preservar a amiga. Diante dessa menção, o advogado de Rafael requereu ao juízo a oitiva da testemunha Carla, mas o magistrado indeferiu o pedido sob o argumento de que, na resposta à acusação, foram arroladas testemunhas no número máximo permitido pela lei, de modo que não poderia a defesa acrescentar mais uma, apesar de reconhecer a conveniência da oitiva.
+
+      O advogado registrou seu inconformismo, foram ouvidas as testemunhas de defesa arroladas e foi realizado o interrogatório, em que o acusado negou o fato. Rafael foi condenado ao cumprimento da pena de 05 anos e 06 meses de reclusão, reconhecendo o magistrado o aumento de 3/8 na terceira fase de aplicação da pena exclusivamente em razão da existência de duas causas de aumento, não tendo a pena-base e a intermediária se afastado do mínimo legal.
+
+      Considerando as informações narradas, responda, na condição de advogado(a) de Rafael, na ocasião da apresentação de recurso de apelação:
+    comando: qual argumento de direito processual poderia ser alegado em busca de desconstituir a sentença condenatória? Justifique.
+    gabarito: |-
+      O argumento de direito processual é que houve nulidade da sentença em razão da existência de cerceamento de defesa, uma vez que a testemunha Carla poderia ter sido ouvida pelo magistrado. Primeiramente ressalta-se que Carla é classificada pela doutrina como testemunha referida, tendo em vista que somente se teve conhecimento da mesma e de que esta presenciou os fatos quando da oitiva da vítima em juízo. O Art. 209 do CPP menciona a possibilidade de oitiva das testemunhas referidas. Ademais, o Art. 401, § 1º do CPP estabelece que as testemunhas referidas, assim como as que não prestem compromisso, não serão computadas no número máximo de 08 testemunhas a serem ouvidas. Dessa forma, a decisão do magistrado, que reconheceu a conveniência da oitiva, mas indeferiu apenas por já ter atingido a defesa o limite máximo de testemunhas, foi equivocada e gerou um cerceamento no exercício do direito de defesa, precisando ser ressaltado que o advogado manifestou de imediato seu inconformismo com a decisão.
+
+      A alegação em abstrato no sentido de que o magistrado poderia ouvir testemunhas para além das arroladas não foi considerada suficiente pela Banca, tendo em vista que não combate o argumento do juiz no sentido de que as testemunhas referidas estariam abrangidas pelo limite máximo de testemunhas estabelecido no procedimento comum ordinário.
+    opcoes:
+      correta: Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
+      erradas:
+        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
+        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
+        - Não, pois viola o princípio da vedação da reformatio in pejus, tendo em vista que geraria prejuízo na aplicação do regime OU na prescrição OU na execução da pena
+        - O argumento é que, diante da parcial procedência do pedido, deveria ter sido analisada a possibilidade de oferecimento de proposta de suspensão condicional do processo, nos termos da Súmula 337 do STJ OU art. 89 da Lei 9.099/95.
+        - A condenação anterior à pena de multa não impede a concessão da suspensão condicional da pena, de acordo com o Art. 77, § 1º, do CP.
+    revisao: *a1
+  - id: 27-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      Rafael subtraiu, mediante grave ameaça, coisa alheia móvel de Joana juntamente com outro indivíduo não identificado e com restrição da liberdade da vítima. Foi, então, denunciado pela prática do crime previsto no Art. 157, § 2º, incisos II e V, do Código Penal.
+
+      Durante a instrução, quando da oitiva da vítima, esta mencionou que todos os fatos foram presenciados, de longe, por sua amiga Carla, não tendo ela contado em momento anterior para preservar a amiga. Diante dessa menção, o advogado de Rafael requereu ao juízo a oitiva da testemunha Carla, mas o magistrado indeferiu o pedido sob o argumento de que, na resposta à acusação, foram arroladas testemunhas no número máximo permitido pela lei, de modo que não poderia a defesa acrescentar mais uma, apesar de reconhecer a conveniência da oitiva.
+
+      O advogado registrou seu inconformismo, foram ouvidas as testemunhas de defesa arroladas e foi realizado o interrogatório, em que o acusado negou o fato. Rafael foi condenado ao cumprimento da pena de 05 anos e 06 meses de reclusão, reconhecendo o magistrado o aumento de 3/8 na terceira fase de aplicação da pena exclusivamente em razão da existência de duas causas de aumento, não tendo a pena-base e a intermediária se afastado do mínimo legal.
+
+      Considerando as informações narradas, responda, na condição de advogado(a) de Rafael, na ocasião da apresentação de recurso de apelação:
+    comando: qual argumento de direito material deverá ser apresentado em busca de redução da sanção penal aplicada? Justifique.
+    gabarito: |-
+      O argumento de direito material em busca da redução da sanção aplicada é o de que o aumento realizado na terceira fase de aplicação da pena deveria ser do mínimo legal, ou seja, de 1/3, uma vez que não foi apresentada fundamentação razoável para aumento acima do mínimo. Certo é que a mera indicação do número de majorantes – fundamento este exclusivo utilizado pelo magistrado – é considerada insuficiente para justificar o aumento acima do mínimo, nos termos da Súmula 443 do Superior Tribunal de Justiça. Assim, diante da ausência de fundamentação para o aumento de 3/8, o aumento deveria ser da fração mínima de 1/3.
+
+      Não será considerado suficiente pela Banca a afirmativa de não aplicação das causas de aumento pelo fato de o coautor não ser identificado.
+    opcoes:
+      correta: O número de majorantes não é fundamento adequado para aplicação da causa de aumento de pena acima do mínimo legal, nos termos da Súmula 443 do STJ.
+      erradas:
+        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
+        - Joana não cometeu crime algum, pois não houve conduta de sua parte.
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, tendo em vista que Paulo deixou de oferecer representação no prazo de 6 meses, conhecendo a autoria desde a data do fato, conforme estabelecido no Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP.
+    revisao: *a1
+  - id: 27-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Em cumprimento de mandado de busca e apreensão, o oficial de justiça Jorge compareceu ao local de trabalho de Lucas, sendo encontradas, no interior do imóvel, duas armas de fogo de calibre .38, calibre esse considerado de uso permitido, devidamente municiadas, ambas com numeração suprimida. Em razão disso, Lucas foi preso em flagrante e denunciado pela prática de dois crimes previstos no Art. 16, caput, da Lei 10.826/2003, em concurso material, sendo narrado que “Lucas, de forma livre e consciente, guardava, em seu local de trabalho, duas armas de fogo de calibre restrito, devidamente municiadas”.
+
+      Após a instrução, em que os fatos foram confirmados, foi juntado o laudo confirmando o calibre .38 das armas de fogo, a capacidade de efetuar disparos, bem como que ambas tinham a numeração suprimida. As partes apresentaram alegações finais, e o magistrado, em sentença, considerando o teor do laudo, condenou Lucas pela prática de dois crimes previstos no Art. 16, parágrafo único, inciso IV, da Lei nº 10.826/2003, em concurso formal.
+
+      Intimada a defesa técnica da sentença condenatória, responda, na condição de advogado(a) de Lucas, aos itens a seguir.
+    comando: Qual o argumento de direito processual a ser apresentado em busca da desconstituição da sentença condenatória? Justifique.
+    gabarito: |-
+      O argumento de direito processual a ser apresentado é o de que houve violação ao princípio da correlação, o que gera a nulidade da sentença por violação ao princípio da ampla defesa e ao princípio do contraditório. Isso porque a denúncia narrou que Lucas guardava, em seu local de trabalho, duas armas de fogo de calibre restrito.
+
+      Sem que houvesse aditamento da denúncia, o magistrado condenou o réu pela prática de dois crimes de posse de arma de fogo de numeração suprimida, previsto no Art. 16, parágrafo único, inciso IV, da Lei 10.826/03. Apesar do crime imputado na denúncia e o reconhecido na sentença estarem previsto no mesmo dispositivo legal, eles não se confundem e a narrativa dos fatos é diferente. O réu somente se defendeu sobre as armas apreendidas como sendo de uso restrito, não podendo, então, o magistrado modificar os fatos para dar nova capitulação jurídica, nos termos do Art. 384 do CPP. Se não houvesse alteração dos fatos, poderia o juiz aplicar o Art. 383 do CPP, mas não foi isso que ocorreu na hipótese narrada. Dessa forma, deve ser reconhecida a nulidade da sentença.
+    opcoes:
+      correta: Houve violação ao princípio da correlação OU não houve aditamento dos fatos narrados na denúncia, não podendo o magistrado alterá-los, nos termos do Art. 384 do CPP, o que representa violação ao princípio da ampla defesa OU contraditório
+      erradas:
+        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
+        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
+        - Não, pois viola o princípio da vedação da reformatio in pejus, tendo em vista que geraria prejuízo na aplicação do regime OU na prescrição OU na execução da pena
+        - O argumento é que, diante da parcial procedência do pedido, deveria ter sido analisada a possibilidade de oferecimento de proposta de suspensão condicional do processo, nos termos da Súmula 337 do STJ OU art. 89 da Lei 9.099/95.
+        - A condenação anterior à pena de multa não impede a concessão da suspensão condicional da pena, de acordo com o Art. 77, § 1º, do CP.
+    revisao: *a1
+  - id: 27-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Em cumprimento de mandado de busca e apreensão, o oficial de justiça Jorge compareceu ao local de trabalho de Lucas, sendo encontradas, no interior do imóvel, duas armas de fogo de calibre .38, calibre esse considerado de uso permitido, devidamente municiadas, ambas com numeração suprimida. Em razão disso, Lucas foi preso em flagrante e denunciado pela prática de dois crimes previstos no Art. 16, caput, da Lei 10.826/2003, em concurso material, sendo narrado que “Lucas, de forma livre e consciente, guardava, em seu local de trabalho, duas armas de fogo de calibre restrito, devidamente municiadas”.
+
+      Após a instrução, em que os fatos foram confirmados, foi juntado o laudo confirmando o calibre .38 das armas de fogo, a capacidade de efetuar disparos, bem como que ambas tinham a numeração suprimida. As partes apresentaram alegações finais, e o magistrado, em sentença, considerando o teor do laudo, condenou Lucas pela prática de dois crimes previstos no Art. 16, parágrafo único, inciso IV, da Lei nº 10.826/2003, em concurso formal.
+
+      Intimada a defesa técnica da sentença condenatória, responda, na condição de advogado(a) de Lucas, aos itens a seguir.
+    comando: Reconhecida a validade da sentença em segundo grau, qual o argumento de direito material a ser apresentado para questionar o mérito da sentença condenatória e, consequentemente, a pena aplicada? Justifique.
+    gabarito: Em busca de questionar o mérito da decisão, o advogado deveria argumentar que a conduta de Lucas de guardar, em seu local de trabalho, duas armas de fogo com numeração suprimida configura crime único previsto no Art. 16, parágrafo único, inciso IV, da Lei 10.826/03 e não dois crimes autônomos, seja em concurso material ou formal. As armas estavam sendo guardadas em um mesmo contexto, logo a violação ao bem jurídico protegido foi única, podendo, porém, a quantidade de armas ser considerada no momento da aplicação da pena.
+    opcoes:
+      correta: Houve crime único OU Não houve qualquer espécie de concurso de delitos, tendo em vista que as armas de fogo foram apreendidas em um mesmo contexto
+      erradas:
+        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
+        - Joana não cometeu crime algum, pois não houve conduta de sua parte.
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, tendo em vista que Paulo deixou de oferecer representação no prazo de 6 meses, conhecendo a autoria desde a data do fato, conforme estabelecido no Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP.
+    revisao: *a1
+  - id: 27-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: |-
+      No interior de um coletivo, Alberto, João, Francisco e Ronaldo, até então desconhecidos, começaram a conversar sobre a crise financeira que assombra o país e sobre as dificuldades financeiras que estavam passando.
+
+      Em determinado momento da conversa, Alberto informa que tinha um conhecido seu, Lucas, com intenção de importar uma arma de fogo de significativo potencial ofensivo, que seria um fuzil de venda proibida no Brasil, mas que ele precisava da ajuda de outras pessoas para conseguir a importação. Diante da oferta em dinheiro pelo serviço específico, todos concordaram em participar do plano criminoso, sendo que Alberto iria ao exterior adquirir a arma, João alugaria um barco para trazer o material, Francisco auxiliaria junto à imigração brasileira para que a conduta não fosse descoberta e Ronaldo entregaria o material para Lucas, que era o mentor do plano.
+
+      Após toda a organização do grupo e divisão de tarefas, assustado com as informações veiculadas na mídia sobre as punições de crime de organização criminosa, Francisco comparece ao Ministério Público com seu advogado e indica a intenção de realizar delação premiada.
+
+      Participaram das negociações do acordo Francisco, sua defesa técnica, o membro do Ministério Público com atribuição e o juiz que seria competente para julgamento, sendo acordada a redução de 1/3 da pena em relação ao crime de organização criminosa.
+
+      Após ser denunciado junto com Alberto, João, Ronaldo e Lucas pela prática do crime de organização criminosa (Art. 2º, da Lei nº 12.850/2013), Francisco contrata você, como novo(a) advogado(a), para patrocinar seus interesses.
+
+      Na condição de advogado(a) de Francisco, com base apenas nas informações narradas, esclareça os itens a seguir.
+    comando: "Considerando que aquela delação premiada não seria benéfica ao seu cliente, existe argumento a ser apresentado em busca de desconstituir o acordo celebrado quanto ao seu aspecto formal? Justifique. (Valor:"
+    gabarito: |-
+      A. A delação foi realizada de maneira inadequada sob o aspecto formal, podendo o novo advogado de Francisco buscar desconstituí-la. De acordo com o Art. 4º, § 6º, da Lei nº 12.850/2013, o juiz não participará do acordo de delação premiada. Em que pese o magistrado sempre deva assegurar o respeito ao direito dos envolvidos e a paridade de armas, fato é que nas negociações do acordo de colaboração o juiz deve se manter inerte, cabendo apenas a ele homologar o acordo caso tenham sido observadas as formalidades legais. No momento em que o magistrado participou das negociações, a ilegalidade do acordo restou configurada, podendo ser o mesmo desconstituído.
+
+      B. O argumento de direito material em busca de questionar a capitulação jurídica e, consequentemente, da absolvição, é o de que apesar de o crime envolver 05 agentes e haver plena divisão de tarefas, a reunião e comunhão de esforços era voltada para a prática de um crime específico e não de vários delitos, não havendo estabilidade e permanência a justificar a imputação do crime do Art. 2º da Lei nº 12.850/2013. Para a configuração do crime imputado, não basta a reunião com a intenção de praticar um crime específico, como consta do enunciado. Ainda que apenas um delito tenha sido praticado, a intenção do grupo deve ser a prática de CRIMES (no plural) e não uma infração penal em comunhão de ações e desígnios. A mera alegação em abstrato de que os requisitos do Art. 2º da Lei nº 12.850/2013 não foram preenchidos, sem enfrentar especificamente a pluralidade de crimes ou a exigência de estabilidade/permanência, não será considerada suficiente para a atribuição de pontos.
+    opcoes:
+      correta: Sim, poderia ser buscada a desconstituição do acordo de colaboração premiada, pois não poderia o magistrado ter participado das negociações do acordo, conforme o Art. 4º, § 6º, da Lei nº 12.850/13.
+      erradas:
+        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
+        - Joana não cometeu crime algum, pois não houve conduta de sua parte.
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, tendo em vista que Paulo deixou de oferecer representação no prazo de 6 meses, conhecendo a autoria desde a data do fato, conforme estabelecido no Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP.
+    revisao: *a1
+  - id: 27-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      No interior de um coletivo, Alberto, João, Francisco e Ronaldo, até então desconhecidos, começaram a conversar sobre a crise financeira que assombra o país e sobre as dificuldades financeiras que estavam passando.
+
+      Em determinado momento da conversa, Alberto informa que tinha um conhecido seu, Lucas, com intenção de importar uma arma de fogo de significativo potencial ofensivo, que seria um fuzil de venda proibida no Brasil, mas que ele precisava da ajuda de outras pessoas para conseguir a importação. Diante da oferta em dinheiro pelo serviço específico, todos concordaram em participar do plano criminoso, sendo que Alberto iria ao exterior adquirir a arma, João alugaria um barco para trazer o material, Francisco auxiliaria junto à imigração brasileira para que a conduta não fosse descoberta e Ronaldo entregaria o material para Lucas, que era o mentor do plano.
+
+      Após toda a organização do grupo e divisão de tarefas, assustado com as informações veiculadas na mídia sobre as punições de crime de organização criminosa, Francisco comparece ao Ministério Público com seu advogado e indica a intenção de realizar delação premiada.
+
+      Participaram das negociações do acordo Francisco, sua defesa técnica, o membro do Ministério Público com atribuição e o juiz que seria competente para julgamento, sendo acordada a redução de 1/3 da pena em relação ao crime de organização criminosa.
+
+      Após ser denunciado junto com Alberto, João, Ronaldo e Lucas pela prática do crime de organização criminosa (Art. 2º, da Lei nº 12.850/2013), Francisco contrata você, como novo(a) advogado(a), para patrocinar seus interesses.
+
+      Na condição de advogado(a) de Francisco, com base apenas nas informações narradas, esclareça os itens a seguir.
+    comando: Qual argumento de direito material deve ser apresentado para questionar a capitulação jurídica realizada pelo Ministério Público na denúncia? Justifique.
+    gabarito: |-
+      A. A delação foi realizada de maneira inadequada sob o aspecto formal, podendo o novo advogado de Francisco buscar desconstituí-la. De acordo com o Art. 4º, § 6º, da Lei nº 12.850/2013, o juiz não participará do acordo de delação premiada. Em que pese o magistrado sempre deva assegurar o respeito ao direito dos envolvidos e a paridade de armas, fato é que nas negociações do acordo de colaboração o juiz deve se manter inerte, cabendo apenas a ele homologar o acordo caso tenham sido observadas as formalidades legais. No momento em que o magistrado participou das negociações, a ilegalidade do acordo restou configurada, podendo ser o mesmo desconstituído.
+
+      B. O argumento de direito material em busca de questionar a capitulação jurídica e, consequentemente, da absolvição, é o de que apesar de o crime envolver 05 agentes e haver plena divisão de tarefas, a reunião e comunhão de esforços era voltada para a prática de um crime específico e não de vários delitos, não havendo estabilidade e permanência a justificar a imputação do crime do Art. 2º da Lei nº 12.850/2013. Para a configuração do crime imputado, não basta a reunião com a intenção de praticar um crime específico, como consta do enunciado. Ainda que apenas um delito tenha sido praticado, a intenção do grupo deve ser a prática de CRIMES (no plural) e não uma infração penal em comunhão de ações e desígnios. A mera alegação em abstrato de que os requisitos do Art. 2º da Lei nº 12.850/2013 não foram preenchidos, sem enfrentar especificamente a pluralidade de crimes ou a exigência de estabilidade/permanência, não será considerada suficiente para a atribuição de pontos.
+    opcoes:
+      correta: Não restou configurado o crime imputado, tendo em vista que o grupo tinha intenção de praticar apenas um crime específico e não várias infrações penais OU tendo em vista que não havia relação de estabilidade e permanência.
+      erradas:
+        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
+        - Joana não cometeu crime algum, pois não houve conduta de sua parte.
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, tendo em vista que Paulo deixou de oferecer representação no prazo de 6 meses, conhecendo a autoria desde a data do fato, conforme estabelecido no Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP.
+    revisao: *a1
+  - id: 27-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A1
+    caso: |-
+      Revoltada com o fato de que sua melhor amiga Clara estaria se relacionando com seu ex-companheiro João, Maria a procurou e iniciou uma discussão.
+
+      Durante a discussão, Clara, policial militar, afirmou que, se Maria a xingasse novamente, ela a mataria gastando apenas uma munição da sua arma. Persistindo na discussão, Maria voltou a ofender Clara. Esta, então, abriu sua bolsa e pegou um bem de cor preta. Acreditando que Clara cumpriria sua ameaça, Maria desferiu um golpe na cabeça da rival, utilizando um pedaço de pau que estava no chão. A perícia constatou que o golpe foi a causa eficiente da morte de Clara. Posteriormente, também foi constatado que Clara, de fato, estava com sua arma de fogo na bolsa, mas que ela apenas pegara seu telefone celular para ligar para João.
+
+      Após denúncia pela prática do crime de homicídio qualificado e encerrada a instrução da primeira fase do procedimento do Tribunal do Júri, entendeu o magistrado por pronunciar Maria nos termos da inicial acusatória.
+
+      Com base nas informações expostas, responda, na condição de advogado(a) de Maria, aos itens a seguir.
+    comando: Qual o recurso cabível da decisão proferida pelo magistrado? Caso tivesse ocorrido a impronúncia, o recurso pela parte interessada seria o mesmo? Justifique.
+    gabarito: A questão narra que Maria foi pronunciada pela suposta prática de crime de homicídio qualificado, sendo que, ao final da primeira fase do procedimento do Tribunal do Júri, entendeu o magistrado por pronunciar Maria nos termos da denúncia. Da decisão de pronúncia caberá recurso em sentido estrito, nos termos do Art. 581, inciso IV, do CPP. Caso a decisão proferida pelo magistrado fosse de impronúncia, não haveria que se falar em recurso em sentido estrito. Antes da edição da 11.689/08, a decisão de impronúncia também era combatida através de recurso em sentido estrito. Todavia, houve alteração legislativa e, desde então, da decisão de impronúncia, por ser terminativa, caberá recurso de apelação, assim como ocorreria na absolvição sumária, conforme previsão do Art. 416 do CPP.
+    opcoes:
+      correta: O recurso cabível da decisão de pronúncia é o recurso em sentido estrito, conforme Art. 581, inciso IV, do CPP. Caso a decisão fosse de impronúncia, o recurso cabível seria de apelação, conforme previsão do Art. 416 do CPP.
+      erradas:
+        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
+        - Joana não cometeu crime algum, pois não houve conduta de sua parte.
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
+        - Fábio atuou em legítima defesa, uma vez que, usando moderadamente dos meios necessários, repeliu injusta e iminente agressão de Paulo, que foi em sua direção para lhe dar um soco com o intuito de quebrar seu nariz. Assim, houve exclusão da ilicitude do fato, na forma do Art. 23, inciso II, c/c. o Art. 25, caput, ambos do CP.
+    revisao: *a1
+  - id: 27-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Revoltada com o fato de que sua melhor amiga Clara estaria se relacionando com seu ex-companheiro João, Maria a procurou e iniciou uma discussão.
+
+      Durante a discussão, Clara, policial militar, afirmou que, se Maria a xingasse novamente, ela a mataria gastando apenas uma munição da sua arma. Persistindo na discussão, Maria voltou a ofender Clara. Esta, então, abriu sua bolsa e pegou um bem de cor preta. Acreditando que Clara cumpriria sua ameaça, Maria desferiu um golpe na cabeça da rival, utilizando um pedaço de pau que estava no chão. A perícia constatou que o golpe foi a causa eficiente da morte de Clara. Posteriormente, também foi constatado que Clara, de fato, estava com sua arma de fogo na bolsa, mas que ela apenas pegara seu telefone celular para ligar para João.
+
+      Após denúncia pela prática do crime de homicídio qualificado e encerrada a instrução da primeira fase do procedimento do Tribunal do Júri, entendeu o magistrado por pronunciar Maria nos termos da inicial acusatória.
+
+      Com base nas informações expostas, responda, na condição de advogado(a) de Maria, aos itens a seguir.
+    comando: Qual a tese de direito material a ser apresentada em sede de recurso para combater a decisão de submeter a ré ao julgamento pelo Tribunal do Júri? Justifique.
+    gabarito: |-
+      A tese de direito material seria que Maria agiu em legítima defesa putativa, nos termos do Art. 20, §1º do Código Penal (erro de tipo permissivo), tendo em vista que acreditava estar atuando em legítima defesa. Isso porque Clara havia ameaçado Maria de morte caso essa realizasse um xingamento, o que foi feito por Maria.
+
+      Ainda que diante de eventual injúria, se verídica, a conduta de Clara de efetuar disparo de arma de fogo configuraria uma injusta agressão, pois, no mínimo, haveria excesso em sua conduta. Caso, de fato, Clara tivesse pego, em sua bolsa, sua arma de fogo, configurada estaria a legítima defesa e, consequentemente, a conduta de Maria seria legítima. Todavia, na verdade Maria supôs situação que não existia, já que Clara apenas pegou seu celular para realizar uma ligação. Diante disso, a atuação em legítima defesa foi apenas putativa.
+    opcoes:
+      correta: A tese de direito material seria que Maria agiu em legítima defesa putativa, estando amparada por descriminante putativa OU erro de tipo permissivo, conforme Art. 20, §1º do CP.
+      erradas:
+        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
+        - Joana não cometeu crime algum, pois não houve conduta de sua parte.
+        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
+        - O argumento é que, diante da parcial procedência do pedido, deveria ter sido analisada a possibilidade de oferecimento de proposta de suspensão condicional do processo, nos termos da Súmula 337 do STJ OU art. 89 da Lei 9.099/95.
+        - A condenação anterior à pena de multa não impede a concessão da suspensão condicional da pena, de acordo com o Art. 77, § 1º, do CP.
+    revisao: *a1

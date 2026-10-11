@@ -21,6 +21,7 @@ export const courseHref = () => COURSE_URL || "/#curso";
 export const NAV = [
   { href: "/provas/", label: "Provas" },
   { href: "/simulados/", label: "Simulados" },
+  { href: "/leis/", label: "Lei seca" },
   { href: "/jogos/", label: "Jogos" },
   { href: "/#curso", label: "Curso" },
 ] as const;

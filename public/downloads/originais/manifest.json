@@ -5,7 +5,10 @@
   "variante": null,
   "peca": "Memoriais",
   "caderno": "caderno-01.pdf",
-  "gabarito": "gabarito-01.pdf"
+  "gabarito": "gabarito-01.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "02",
@@ -13,7 +16,10 @@
   "variante": null,
   "peca": "Resposta à Acusação",
   "caderno": "caderno-02.pdf",
-  "gabarito": "gabarito-02.pdf"
+  "gabarito": "gabarito-02.pdf",
+  "objetivaCaderno": "objetiva-caderno-02.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "03",
@@ -21,7 +27,10 @@
   "variante": null,
   "peca": "Recurso em Sentido Estrito",
   "caderno": "caderno-03.pdf",
-  "gabarito": "gabarito-03.pdf"
+  "gabarito": "gabarito-03.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "04",
@@ -29,7 +38,10 @@
   "variante": null,
   "peca": "Apelação",
   "caderno": "caderno-04.pdf",
-  "gabarito": "gabarito-04.pdf"
+  "gabarito": "gabarito-04.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "05",
@@ -37,7 +49,10 @@
   "variante": null,
   "peca": "Apelação",
   "caderno": "caderno-05.pdf",
-  "gabarito": "gabarito-05.pdf"
+  "gabarito": "gabarito-05.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "06",
@@ -45,7 +60,10 @@
   "variante": null,
   "peca": "Relaxamento de Prisão",
   "caderno": "caderno-06.pdf",
-  "gabarito": "gabarito-06.pdf"
+  "gabarito": "gabarito-06.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "07",
@@ -53,7 +71,10 @@
   "variante": null,
   "peca": "Apelação Assiste de Acusação",
   "caderno": "caderno-07.pdf",
-  "gabarito": "gabarito-07.pdf"
+  "gabarito": "gabarito-07.pdf",
+  "objetivaCaderno": "objetiva-caderno-07.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "08",
@@ -61,7 +82,10 @@
   "variante": null,
   "peca": "Resposta à Acusação",
   "caderno": "caderno-08.pdf",
-  "gabarito": "gabarito-08.pdf"
+  "gabarito": "gabarito-08.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "09",
@@ -69,7 +93,10 @@
   "variante": null,
   "peca": "Memoriais",
   "caderno": "caderno-09.pdf",
-  "gabarito": "gabarito-09.pdf"
+  "gabarito": "gabarito-09.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "10",
@@ -77,7 +104,10 @@
   "variante": null,
   "peca": "Revisão Criminal",
   "caderno": "caderno-10.pdf",
-  "gabarito": "gabarito-10.pdf"
+  "gabarito": "gabarito-10.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "11",
@@ -85,7 +115,10 @@
   "variante": null,
   "peca": "Recurso em Sentido Estrito",
   "caderno": "caderno-11.pdf",
-  "gabarito": "gabarito-11.pdf"
+  "gabarito": "gabarito-11.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "12",
@@ -93,7 +126,10 @@
   "variante": null,
   "peca": "Apelação",
   "caderno": "caderno-12.pdf",
-  "gabarito": "gabarito-12.pdf"
+  "gabarito": "gabarito-12.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "13",
@@ -101,7 +137,10 @@
   "variante": null,
   "peca": "Apelação",
   "caderno": "caderno-13.pdf",
-  "gabarito": "gabarito-13.pdf"
+  "gabarito": "gabarito-13.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "14",
@@ -109,7 +148,10 @@
   "variante": null,
   "peca": "Memoriais",
   "caderno": "caderno-14.pdf",
-  "gabarito": "gabarito-14.pdf"
+  "gabarito": "gabarito-14.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "15",
@@ -117,7 +159,10 @@
   "variante": null,
   "peca": "Queixa",
   "caderno": "caderno-15.pdf",
-  "gabarito": "gabarito-15.pdf"
+  "gabarito": "gabarito-15.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "16",
@@ -125,7 +170,10 @@
   "variante": null,
   "peca": "Agravo em Execução",
   "caderno": "caderno-16.pdf",
-  "gabarito": "gabarito-16.pdf"
+  "gabarito": "gabarito-16.pdf",
+  "objetivaCaderno": "objetiva-caderno-16.pdf",
+  "objetivaGabarito": "objetiva-gabarito-16.pdf",
+  "fase2": "aplicada"
  },
  {
   "id": "17",
@@ -133,7 +181,10 @@
   "variante": null,
   "peca": "Memoriais",
   "caderno": "caderno-17.pdf",
-  "gabarito": "gabarito-17.pdf"
+  "gabarito": "gabarito-17.pdf",
+  "objetivaCaderno": "objetiva-caderno-17.pdf",
+  "objetivaGabarito": "objetiva-gabarito-17.pdf",
+  "fase2": "aplicada"
  },
  {
   "id": "18",
@@ -141,7 +192,10 @@
   "variante": null,
   "peca": "Apelação",
   "caderno": "caderno-18.pdf",
-  "gabarito": "gabarito-18.pdf"
+  "gabarito": "gabarito-18.pdf",
+  "objetivaCaderno": "objetiva-caderno-18.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "19",
@@ -149,7 +203,10 @@
   "variante": null,
   "peca": "Contrarrazões em Apelação",
   "caderno": "caderno-19.pdf",
-  "gabarito": "gabarito-19.pdf"
+  "gabarito": "gabarito-19.pdf",
+  "objetivaCaderno": "objetiva-caderno-19.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "20",
@@ -157,7 +214,10 @@
   "variante": null,
   "peca": "Memoriais",
   "caderno": "caderno-20.pdf",
-  "gabarito": "gabarito-20.pdf"
+  "gabarito": "gabarito-20.pdf",
+  "objetivaCaderno": "objetiva-caderno-20.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "20-porto-velho",
@@ -165,7 +225,10 @@
   "variante": "Porto Velho",
   "peca": "Memoriais",
   "caderno": "caderno-20-porto-velho.pdf",
-  "gabarito": "gabarito-20-porto-velho.pdf"
+  "gabarito": "gabarito-20-porto-velho.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "21",
@@ -173,7 +236,10 @@
   "variante": null,
   "peca": "Resposta à Acusação",
   "caderno": "caderno-21.pdf",
-  "gabarito": "gabarito-21.pdf"
+  "gabarito": "gabarito-21.pdf",
+  "objetivaCaderno": "objetiva-caderno-21.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "22",
@@ -181,7 +247,10 @@
   "variante": null,
   "peca": "Apelação",
   "caderno": "caderno-22.pdf",
-  "gabarito": "gabarito-22.pdf"
+  "gabarito": "gabarito-22.pdf",
+  "objetivaCaderno": "objetiva-caderno-22.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "23",
@@ -189,7 +258,10 @@
   "variante": null,
   "peca": "Memoriais",
   "caderno": "caderno-23.pdf",
-  "gabarito": "gabarito-23.pdf"
+  "gabarito": "gabarito-23.pdf",
+  "objetivaCaderno": "objetiva-caderno-23.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "24",
@@ -197,7 +269,10 @@
   "variante": null,
   "peca": "Agravo em Execução",
   "caderno": "caderno-24.pdf",
-  "gabarito": "gabarito-24.pdf"
+  "gabarito": "gabarito-24.pdf",
+  "objetivaCaderno": "objetiva-caderno-24.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "25",
@@ -205,7 +280,10 @@
   "variante": null,
   "peca": "Resposta à Acusação",
   "caderno": "caderno-25.pdf",
-  "gabarito": "gabarito-25.pdf"
+  "gabarito": "gabarito-25.pdf",
+  "objetivaCaderno": "objetiva-caderno-25.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "25-porto-alegre",
@@ -213,7 +291,10 @@
   "variante": "Porto Alegre",
   "peca": "Apelação",
   "caderno": "caderno-25-porto-alegre.pdf",
-  "gabarito": "gabarito-25-porto-alegre.pdf"
+  "gabarito": "gabarito-25-porto-alegre.pdf",
+  "objetivaCaderno": null,
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "26",
@@ -221,7 +302,10 @@
   "variante": null,
   "peca": "Memoriais",
   "caderno": "caderno-26.pdf",
-  "gabarito": "gabarito-26.pdf"
+  "gabarito": "gabarito-26.pdf",
+  "objetivaCaderno": "objetiva-caderno-26.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "27",
@@ -229,7 +313,10 @@
   "variante": null,
   "peca": "Contrarrazões em Apelação",
   "caderno": "caderno-27.pdf",
-  "gabarito": "gabarito-27.pdf"
+  "gabarito": "gabarito-27.pdf",
+  "objetivaCaderno": "objetiva-caderno-27.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "28",
@@ -237,7 +324,10 @@
   "variante": null,
   "peca": "Recurso em Sentido Estrito",
   "caderno": "caderno-28.pdf",
-  "gabarito": "gabarito-28.pdf"
+  "gabarito": "gabarito-28.pdf",
+  "objetivaCaderno": "objetiva-caderno-28.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "29",
@@ -245,7 +335,10 @@
   "variante": null,
   "peca": "Agravo em Execução",
   "caderno": "caderno-29.pdf",
-  "gabarito": "gabarito-29.pdf"
+  "gabarito": "gabarito-29.pdf",
+  "objetivaCaderno": "objetiva-caderno-29.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "30",
@@ -253,7 +346,10 @@
   "variante": null,
   "peca": "Apelação",
   "caderno": "caderno-30.pdf",
-  "gabarito": "gabarito-30.pdf"
+  "gabarito": "gabarito-30.pdf",
+  "objetivaCaderno": "objetiva-caderno-30.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "31",
@@ -261,7 +357,10 @@
   "variante": null,
   "peca": "Recurso em Sentido Estrito",
   "caderno": "caderno-31.pdf",
-  "gabarito": "gabarito-31.pdf"
+  "gabarito": "gabarito-31.pdf",
+  "objetivaCaderno": "objetiva-caderno-31.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "32",
@@ -269,7 +368,10 @@
   "variante": null,
   "peca": "Memoriais",
   "caderno": "caderno-32.pdf",
-  "gabarito": "gabarito-32.pdf"
+  "gabarito": "gabarito-32.pdf",
+  "objetivaCaderno": "objetiva-caderno-32.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "33",
@@ -277,7 +379,10 @@
   "variante": null,
   "peca": "Apelação",
   "caderno": "caderno-33.pdf",
-  "gabarito": "gabarito-33.pdf"
+  "gabarito": "gabarito-33.pdf",
+  "objetivaCaderno": "objetiva-caderno-33.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "34",
@@ -285,7 +390,10 @@
   "variante": null,
   "peca": "Recurso em Sentido Estrito",
   "caderno": "caderno-34.pdf",
-  "gabarito": "gabarito-34.pdf"
+  "gabarito": "gabarito-34.pdf",
+  "objetivaCaderno": "objetiva-caderno-34.pdf",
+  "objetivaGabarito": null,
+  "fase2": "aplicada"
  },
  {
   "id": "35",
@@ -293,7 +401,10 @@
   "variante": null,
   "peca": "Apelação",
   "caderno": "caderno-35.pdf",
-  "gabarito": "gabarito-35.pdf"
+  "gabarito": "gabarito-35.pdf",
+  "objetivaCaderno": "objetiva-caderno-35.pdf",
+  "objetivaGabarito": "objetiva-gabarito-35.pdf",
+  "fase2": "aplicada"
  },
  {
   "id": "36",
@@ -301,15 +412,21 @@
   "variante": null,
   "peca": "Resposta à Acusação",
   "caderno": "caderno-36.pdf",
-  "gabarito": "gabarito-36.pdf"
+  "gabarito": "gabarito-36.pdf",
+  "objetivaCaderno": "objetiva-caderno-36.pdf",
+  "objetivaGabarito": "objetiva-gabarito-36.pdf",
+  "fase2": "aplicada"
  },
  {
   "id": "37",
   "numero": 37,
   "variante": null,
   "peca": "Memoriais",
-  "caderno": null,
-  "gabarito": "gabarito-37.pdf"
+  "caderno": "caderno-37.pdf",
+  "gabarito": "gabarito-37.pdf",
+  "objetivaCaderno": "objetiva-caderno-37.pdf",
+  "objetivaGabarito": "objetiva-gabarito-37.pdf",
+  "fase2": "aplicada"
  },
  {
   "id": "38",
@@ -317,7 +434,21 @@
   "variante": null,
   "peca": "Agravo em Execução",
   "caderno": "caderno-38.pdf",
-  "gabarito": "gabarito-38.pdf"
+  "gabarito": "gabarito-38.pdf",
+  "objetivaCaderno": "objetiva-caderno-38.pdf",
+  "objetivaGabarito": "objetiva-gabarito-38.pdf",
+  "fase2": "aplicada"
+ },
+ {
+  "id": "39",
+  "numero": 39,
+  "variante": null,
+  "peca": null,
+  "caderno": "caderno-39.pdf",
+  "gabarito": "gabarito-39.pdf",
+  "objetivaCaderno": "objetiva-caderno-39.pdf",
+  "objetivaGabarito": "objetiva-gabarito-39.pdf",
+  "fase2": "aplicada"
  },
  {
   "id": "40",
@@ -325,6 +456,86 @@
   "variante": null,
   "peca": null,
   "caderno": "caderno-40.pdf",
-  "gabarito": null
+  "gabarito": "gabarito-40.pdf",
+  "objetivaCaderno": "objetiva-caderno-40.pdf",
+  "objetivaGabarito": "objetiva-gabarito-40.pdf",
+  "fase2": "aplicada"
+ },
+ {
+  "id": "41",
+  "numero": 41,
+  "variante": null,
+  "peca": null,
+  "caderno": "caderno-41.pdf",
+  "gabarito": "gabarito-41.pdf",
+  "objetivaCaderno": "objetiva-caderno-41.pdf",
+  "objetivaGabarito": "objetiva-gabarito-41.pdf",
+  "fase2": "aplicada"
+ },
+ {
+  "id": "42",
+  "numero": 42,
+  "variante": null,
+  "peca": null,
+  "caderno": "caderno-42.pdf",
+  "gabarito": "gabarito-42.pdf",
+  "objetivaCaderno": "objetiva-caderno-42.pdf",
+  "objetivaGabarito": "objetiva-gabarito-42.pdf",
+  "fase2": "aplicada"
+ },
+ {
+  "id": "43",
+  "numero": 43,
+  "variante": null,
+  "peca": null,
+  "caderno": "caderno-43.pdf",
+  "gabarito": "gabarito-43.pdf",
+  "objetivaCaderno": "objetiva-caderno-43.pdf",
+  "objetivaGabarito": "objetiva-gabarito-43.pdf",
+  "fase2": "aplicada"
+ },
+ {
+  "id": "44",
+  "numero": 44,
+  "variante": null,
+  "peca": null,
+  "caderno": "caderno-44.pdf",
+  "gabarito": "gabarito-44.pdf",
+  "objetivaCaderno": "objetiva-caderno-44.pdf",
+  "objetivaGabarito": "objetiva-gabarito-44.pdf",
+  "fase2": "aplicada"
+ },
+ {
+  "id": "45",
+  "numero": 45,
+  "variante": null,
+  "peca": null,
+  "caderno": "caderno-45.pdf",
+  "gabarito": "gabarito-45.pdf",
+  "objetivaCaderno": "objetiva-caderno-45.pdf",
+  "objetivaGabarito": "objetiva-gabarito-45.pdf",
+  "fase2": "aplicada"
+ },
+ {
+  "id": "46",
+  "numero": 46,
+  "variante": null,
+  "peca": null,
+  "caderno": "caderno-46.pdf",
+  "gabarito": "gabarito-46.pdf",
+  "objetivaCaderno": "objetiva-caderno-46.pdf",
+  "objetivaGabarito": "objetiva-gabarito-46.pdf",
+  "fase2": "aplicada"
+ },
+ {
+  "id": "47",
+  "numero": 47,
+  "variante": null,
+  "peca": null,
+  "caderno": null,
+  "gabarito": null,
+  "objetivaCaderno": "objetiva-caderno-47.pdf",
+  "objetivaGabarito": "objetiva-gabarito-47.pdf",
+  "fase2": "em-breve"
  }
 ]

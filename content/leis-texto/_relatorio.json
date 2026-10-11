@@ -1,0 +1,322 @@
+{
+ "cp": {
+  "blocos": 2906,
+  "porTipo": {
+   "rubrica": 400,
+   "texto": 597,
+   "estrutura": 222,
+   "artigo": 492,
+   "paragrafo": 609,
+   "inciso": 493,
+   "alinea": 93
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 407,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "cpp": {
+  "blocos": 2398,
+  "porTipo": {
+   "rubrica": 1,
+   "estrutura": 233,
+   "texto": 37,
+   "artigo": 846,
+   "inciso": 549,
+   "paragrafo": 643,
+   "alinea": 89
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 846,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lep": {
+  "blocos": 962,
+  "porTipo": {
+   "rubrica": 22,
+   "estrutura": 74,
+   "texto": 57,
+   "artigo": 243,
+   "paragrafo": 235,
+   "inciso": 268,
+   "alinea": 63
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 217,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "cf": {
+  "blocos": 4312,
+  "porTipo": {
+   "rubrica": 11,
+   "estrutura": 194,
+   "texto": 93,
+   "artigo": 514,
+   "inciso": 1698,
+   "paragrafo": 1367,
+   "alinea": 435
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 412,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-11343": {
+  "blocos": 553,
+  "porTipo": {
+   "texto": 24,
+   "estrutura": 59,
+   "artigo": 114,
+   "paragrafo": 185,
+   "inciso": 152,
+   "rubrica": 13,
+   "alinea": 6
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 100,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-11340": {
+  "blocos": 277,
+  "porTipo": {
+   "rubrica": 5,
+   "estrutura": 37,
+   "texto": 20,
+   "artigo": 60,
+   "paragrafo": 64,
+   "inciso": 87,
+   "alinea": 4
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 57,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-9099": {
+  "blocos": 317,
+  "porTipo": {
+   "rubrica": 24,
+   "estrutura": 25,
+   "texto": 14,
+   "artigo": 106,
+   "inciso": 47,
+   "paragrafo": 97,
+   "alinea": 4
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 99,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-8072": {
+  "blocos": 121,
+  "porTipo": {
+   "rubrica": 1,
+   "estrutura": 2,
+   "texto": 30,
+   "artigo": 20,
+   "inciso": 41,
+   "alinea": 8,
+   "paragrafo": 19
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 19,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-8137": {
+  "blocos": 132,
+  "porTipo": {
+   "rubrica": 1,
+   "estrutura": 6,
+   "texto": 22,
+   "artigo": 23,
+   "inciso": 51,
+   "paragrafo": 7,
+   "alinea": 22
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 19,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-9503": {
+  "blocos": 2761,
+  "porTipo": {
+   "rubrica": 1,
+   "estrutura": 57,
+   "texto": 688,
+   "artigo": 483,
+   "paragrafo": 676,
+   "inciso": 748,
+   "alinea": 108
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 388,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-10826": {
+  "blocos": 372,
+  "porTipo": {
+   "rubrica": 8,
+   "texto": 156,
+   "estrutura": 12,
+   "artigo": 53,
+   "inciso": 58,
+   "paragrafo": 85
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 41,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-12850": {
+  "blocos": 221,
+  "porTipo": {
+   "texto": 30,
+   "estrutura": 13,
+   "artigo": 37,
+   "paragrafo": 91,
+   "inciso": 49,
+   "rubrica": 1
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 37,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-9613": {
+  "blocos": 276,
+  "porTipo": {
+   "rubrica": 1,
+   "estrutura": 14,
+   "texto": 19,
+   "artigo": 44,
+   "inciso": 100,
+   "paragrafo": 73,
+   "alinea": 25
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 23,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-13869": {
+  "blocos": 232,
+  "porTipo": {
+   "rubrica": 3,
+   "estrutura": 22,
+   "texto": 76,
+   "artigo": 56,
+   "paragrafo": 37,
+   "inciso": 38
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 46,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-8069": {
+  "blocos": 1667,
+  "porTipo": {
+   "rubrica": 33,
+   "estrutura": 34,
+   "texto": 162,
+   "artigo": 383,
+   "paragrafo": 518,
+   "alinea": 78,
+   "inciso": 459
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 327,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-9455": {
+  "blocos": 30,
+  "porTipo": {
+   "rubrica": 1,
+   "estrutura": 1,
+   "texto": 7,
+   "artigo": 4,
+   "inciso": 7,
+   "alinea": 3,
+   "paragrafo": 7
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 4,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-9296": {
+  "blocos": 52,
+  "porTipo": {
+   "rubrica": 1,
+   "estrutura": 1,
+   "texto": 9,
+   "artigo": 15,
+   "paragrafo": 19,
+   "inciso": 7
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 14,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ },
+ "lei-13964": {
+  "blocos": 586,
+  "porTipo": {
+   "rubrica": 1,
+   "estrutura": 4,
+   "texto": 207,
+   "artigo": 20,
+   "paragrafo": 217,
+   "inciso": 121,
+   "alinea": 16
+  },
+  "anotacoesNaoReconhecidas": [],
+  "semDispositivo": 0,
+  "artigos": 20,
+  "novos": [],
+  "sumiram": [],
+  "textoSolto": 0
+ }
+}

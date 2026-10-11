@@ -1,0 +1,171 @@
+# Gerado a partir do texto colado do caderno Tipo 1 e do gabarito definitivo do XLV Exame (o PDF do caderno não tem texto legível).
+# Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
+exame: "45"
+faixa:
+  penal:
+    - 57
+    - 62
+  processoPenal:
+    - 63
+    - 68
+anuladas: []
+questoes:
+  - n: 57
+    disciplina: penal
+    enunciado: Waldir, cidadão brasileiro, depois de anos de poupança, conseguiu realizar o sonho de infância e comprou um pacote de viagem para conhecer a cidade de Orlando, nos EUA. Como nunca havia viajado em avião, Waldir irritou-se com as condições precárias disponibilizadas na classe econômica da aeronave privada registrada sob bandeira brasileira e desistiu da viagem durante o voo, exigindo, aos gritos, o imediato retorno ao aeroporto de origem. Ao ser advertido pela tripulação, Waldir agrediu fisicamente o comissário de bordo, de nacionalidade brasileira, causando-lhe lesão corporal grave, quando o avião já sobrevoava território estrangeiro. Sobre essa situação hipotética, assinale a afirmativa correta.
+    alternativas:
+      A: O fato está incondicionalmente sujeito à legislação brasileira, tendo em vista a nacionalidade do autor e da vítima do delito.
+      B: O fato está sujeito, simultaneamente, à legislação brasileira e à legislação estrangeira, sendo aplicável a teoria da ubiquidade quanto ao tempo do delito.
+      C: O fato está sujeito exclusivamente à legislação estrangeira, haja vista que a aeronave privada estava em território estrangeiro quando ocorreu a prática do delito.
+      D: O fato estará sujeito à legislação brasileira, caso não seja julgado no país estrangeiro em cujo território se encontrava a aeronave no momento da prática do delito.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 58
+    disciplina: penal
+    enunciado: Na noite em que completou 19 anos de idade, Júnior, morador do bairro Leblon, RJ, resolveu testar o Bugatti Chiron de seu pai, que é o carro mais caro do Brasil, avaliado em cerca de 10 milhões de reais. Júnior esqueceu a sua carteira de habilitação em casa e saiu com o veículo, mas, por desconhecer a extraordinária potência do motor, perdeu o controle da direção e abalroou José, morador de rua, que foi socorrido, mas teve as pernas amputadas. Diante de tal situação hipotética, com base nos princípios aplicáveis ao conflito aparente de normas penais, assinale a afirmativa correta.
+    alternativas:
+      A: Por força do princípio da consunção, Júnior deverá responder pelo delito de tentativa de homicídio culposo.
+      B: Por força do princípio da subsidiariedade, Júnior deverá responder pelo delito de lesão corporal de natureza grave.
+      C: Por força do princípio da especialidade, Júnior deverá responder pelo delito de lesão corporal culposa na direção de veículo automotor.
+      D: Por força do princípio da alternatividade, Júnior deverá responder pelo delito de dirigir veículo automotor, em via pública, sem a devida habilitação, ou pelo delito de lesão corporal culposa.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 59
+    disciplina: penal
+    enunciado: João é missionário, e Pedro é pastor, ambos da mesma igreja. O primeiro planejou apropriar-se do dinheiro dos dízimos que Pedro costumava guardar em uma urna em seu quarto, localizado nos fundos da igreja. Quando Pedro se ausentou durante a noite, João pulou o muro e arrombou a fechadura, mas, ao se aproximar da urna, foi tomado por um sentimento sobrenatural, orou para livrar-se dos maus pensamentos e foi embora. Sobre a ação praticada por João, assinale a afirmativa correta.
+    alternativas:
+      A: João percorreu as fases da cogitação, preparação e execução, que integram o iter criminis, mas não exauriu a conduta, o que era imprescindível para a caracterização da tentativa.
+      B: João praticou tentativa de furto e ser-lhe-á aplicada a pena do crime consumado a ser reduzida, dentro das margens legais, segundo o trecho do iter criminis que foi percorrido.
+      C: João praticou tentativa imperfeita de furto, pois, apesar de ter praticado todos os atos executórios, o resultado não foi atingido por circunstâncias sobrenaturais avessas à vontade do agente.
+      D: João consumou o crime de violação de domicílio, pois, de maneira livre e consciente, ingressou na casa alheia contra a vontade de quem de direito.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 60
+    disciplina: penal
+    enunciado: Abelardo pegou a filha de Geraldo na saída do colégio e a manteve sob seu poder durante cinco dias, liberando-a após ter sido cumprida a exigência de pagamento da quantia de R$ 100.000,00 (cem mil reais). No terceiro dia do encarceramento, entrou em vigor uma nova lei que dobrou a pena aplicável ao crime de extorsão mediante sequestro. Sobre a aplicabilidade da nova lei ao caso narrado, assinale a afirmativa correta.
+    alternativas:
+      A: É inaplicável, por força do princípio da retroatividade da lei penal.
+      B: É aplicável, por força do princípio da alternatividade da lei penal.
+      C: É aplicável, por força do princípio da continuidade das leis.
+      D: É inaplicável, por força do princípio da ubiquidade da lei penal.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 61
+    disciplina: penal
+    enunciado: Em 1Q de abril, dia da mentira, Maria resolveu "pregar uma peça" em Pedro, coveiro no cemitério Paz Eterna. Maria pediu a José que divulgasse nas redes sociais que ela falecera após ter sofrido um infarto. Como parte da encenação, Maria sedou-se e deitou-se em um caixão, que foi lacrado e encaminhado por José, com documentos sofisticadamente falsificados, para a sede do Paz Eterna. Sem ser avisado ou desconfiar da farsa, Pedro ficou muito triste e, após orar pela alma de Maria, cumpriu seu dever profissional, realizando a cremação e guardando as cinzas num pote de vidro, que se quebrou. Sobre o procedimento de Pedro, assinale a afirmativa correta.
+    alternativas:
+      A: Ele não praticou crime, pois agiu com base em erro de tipo invencível.
+      B: Ele praticou apenas o delito de vilipêndio culposo das cinzas do cadáver de Maria.
+      C: Ele praticou o delito de homicídio culposo por descumprir dever de cuidado objetivo.
+      D: Ele praticou o delito de homicídio qualificado pela impossibilidade de reação da vítima.
+    correta: A
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 62
+    disciplina: penal
+    enunciado: Bernardo é gerente bancário e teve seu filho levado por terceiros, que lhe exigiram o pagamento de um milhão de reais para devolvê- lo com vida. Bernardo, valendo-se de sua condição de gerente de banco, foi à agência em que trabalhava e subtraiu a quantia, sendo, entretanto, flagrado quando chegava em sua casa portando o dinheiro subtraído. Sobre a situação de Bernardo no fato hipotético, assinale a afirmativa correta.
+    alternativas:
+      A: Agiu amparado por exercício regular de direito.
+      B: Está isento de pena por inexigibilidade de conduta diversa.
+      C: Agiu em legítima defesa de terceiro e está excluída a antijuridicidade da conduta.
+      D: Deve responder pelo crime de furto consumado, pois chegou a ter posse pacífica do dinheiro.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 63
+    disciplina: processo-penal
+    enunciado: Lucas era investigado por estupro de vulnerável, pois, de acordo com as investigações, teria mantido relações sexuais com pessoa menor de 14 anos. A partir de indícios concretos, a 1ª Vara Criminal da Comarca correspondente ao local dos fatos expediu mandado de busca e apreensão de aparelhos eletrônicos de Lucas, após regular requerimento do Ministério Público. Nos dispositivos eletrônicos apreendidos foram localizados diversos arquivos, cujo conteúdo apresentava abuso sexual infantil, armazenados e compartilhados nas redes sociais, acessíveis de qualquer lugar do país e do exterior, sem se confirmar, contudo, a hipótese inicial de estupro de vulnerável. Assim, Lucas foi denunciado como incurso nas penas do Art. 241- A e do Art. 241-B, ambos do ECA (divulgação e armazenamento de conteúdo pornográfico envolvendo criança ou adolescente). A sentença foi proferida pelo Juiz de Direito da 1ª Vara Criminal da Comarca, tendo sido confirmada pelo Tribunal de Justiça correspondente, e transitada em julgado, condenando Lucas a 5 anos de reclusão, em regime semiaberto. A respeito dos fatos, assinale a opção que apresenta, corretamente, a providência de Direito Processual Penal que o(a) advogado(a) deve adotar.
+    alternativas:
+      A: A ocorrência do trânsito em julgado impede que sejam suscitadas questões processuais atinentes à nulidade ou à incompetência absoluta, admitindo-se a rediscussão dos fatos apenas se for baseada em prova nova, mediante revisão criminal.
+      B: Pode ser alegada a nulidade da busca e apreensão e de todos os atos dela decorrentes, diante da incompetência absoluta do Juízo que determinou a diligência, impetrando-se habeas corpus.
+      C: Pode ser impetrado habeas corpus, alegando a nulidade da sentença e de todos os atos decisórios posteriores à realização da busca e apreensão, diante da incompetência absoluta do Juízo.
+      D: Tendo em vista que a busca e apreensão foi deferida apenas para a investigação de estupro de vulnerável, é incabível a utilização das provas na persecução penal relativa a fato diverso, o que pode ser alegado pela impetração de um mandado de segurança.
+    correta: C
+    dispositivos:
+      - art. 241, lei 8069
+      - art. 241-B, lei 8069
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 64
+    disciplina: processo-penal
+    enunciado: Arthur está cumprindo pena privativa de liberdade pela prática do crime de furto qualificado. Durante o curso da execução penal sofreu uma queda e ficou tetraplégico, atestado em laudo médico oficial. No final do ano, o Presidente da República concedeu indulto natalino via Decreto, abrangendo os casos de tetraplegia superveniente à prática do delito, desde que o crime tivesse sido praticado sem violência ou grave ameaça. Sendo assim, você, como advogado(a) de Arthur, formulou o pedido de declaração da extinção da punibilidade ao Juízo da Execução, que indeferiu o pedido, sem apresentar fundamentação. Diante do caso narrado, na qualidade de advogado(a) de Arthur, você deve interpor
+    alternativas:
+      A: agravo em execução, no prazo de cinco dias. Sem prejuízo, pode ser impetrado habeas corpus.
+      B: recurso de apelação, no prazo de cinco dias. Sem prejuízo, pode ser impetrado habeas corpus.
+      C: agravo em execução, no prazo de cinco dias. Apenas em caso de não ser interposto recurso, pode-se optar pela via do habeas corpus.
+      D: recurso em sentido estrito, no prazo de cinco dias. Diante da unirecorribilidade das decisões, de forma alternativa, pode-se optar pela via do habeas corpus.
+    correta: A
+    peca: agravo-execucao
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 65
+    disciplina: processo-penal
+    enunciado: Túlio abriu sua geladeira, retirou sua água com gás e, ao beber, sentiu um gosto estranho, posteriormente vindo a descobrir que se tratava de solvente. Em seguida, Túlio entrou no quarto e chamou sua esposa, Felícia, de "assassina". Após o esclarecimento de que o solvente tinha sido colocado por equívoco na geladeira por seu filho Thor, Túlio pediu desculpas à Felícia. Alguns dias depois, Felícia contou, em uma roda informal, para a sua amiga Promotora de Justiça, que o marido a havia chamado de "assassina". Diante de tais fatos, o Ministério Público ofereceu a denúncia por crime de injúria em desfavor de Túlio. Sobre o caso narrado, como advogado(a) de Túlio, assinale a afirmativa correta.
+    alternativas:
+      A: Em razão de envolver violência doméstica, o crime é de ação penal pública incondicionada, cabendo apenas se defender quanto ao mérito da acusação.
+      B: O crime é de ação penal privada, devendo ser alegada a ilegitimidade do Ministério Público para a propositura da ação.
+      C: O crime é de ação penal pública condicionada à representação, e essa conversa informal já vale como representação, cabendo apenas se defender quanto ao mérito da acusação.
+      D: O crime é de ação pública condicionada à representação, mas a conversa informal não pode ser aceita como exercício do direito de representar.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 66
+    disciplina: processo-penal
+    enunciado: Joaquim, menor impúbere de 8 anos de idade, sofreu castigos físicos imoderados praticados por seu pai, Geraldo. Diante do fato, a mãe de Joaquim, representando-o, constituiu você como advogado(a) do menor. Assinale a opção que apresenta, corretamente, o requerimento que você, como advogado(a) de Joaquim, deve apresentar.
+    alternativas:
+      A: A fixação de medida cautelar do Código de Processo Penal, pois ausente um regramento específico em favor de vítimas do sexo masculino.
+      B: A destituição de guarda, no âmbito cível, e, somente então, haverá legitimidade de Joaquim para postular qualquer medida no âmbito criminal.
+      C: A fixação de medida protetiva de urgência de proibição de contato e aproximação, com base na lei específica de prevenção e enfrentamento à violência doméstica e familiar contra a criança e o adolescente.
+      D: A fixação de medida protetiva de urgência de alimentos provisórios, com base na lei de violência doméstica e familiar contra a mulher, por analogia, ante a ausência de lei específica que ampare a pretensão de Joaquim.
+    correta: C
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 67
+    disciplina: processo-penal
+    enunciado: Caim, desejando matar Abel, lhe ofereceu um pastel de camarão durante uma festa, sabendo que esse alimento lhe causaria severa alergia. Abel consumiu o pastel oferecido por Caim, além de diversos outros salgados e, em sequência, teve uma violenta crise alérgica, vindo a falecer. Acionada a polícia, os investigadores recolheram, em um mesmo invólucro, todos os alimentos da festa, os quais foram submetidos à perícia, que concluiu que "todos os alimentos periciados contêm traços de camarão em quantidade suficiente para causar a morte da vítima, da forma como ocorreu, não se podendo precisar se a contaminação de tais alimentos ocorreu durante o preparo, na cozinha, ou durante o recolhimento pela Polícia." A necropsia revelou que o consumo de substância alergênica causou a morte de Abel. Sabe-se, ainda, que não é mais possível repetir a colheita de vestígios e a perícia dos alimentos. Assim, Caim foi denunciado pelo homicídio doloso de Abel. Como advogado de Caim, é correto afirmar que a quebra da cadeia de custódia enseja
+    alternativas:
+      A: a ausência de fiabilidade do laudo de necrópsia.
+      B: a ausência de prova fiável do nexo de causalidade.
+      C: a nulidade absoluta do processo, atingindo todas as provas produzidas.
+      D: a nulidade da prova pericial, a qual deve ser desentranhada do processo.
+    correta: B
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.
+  - n: 68
+    disciplina: processo-penal
+    enunciado: Flávia foi pronunciada pela suposta prática de crime de aborto. O processo estava tramitando na cidade de Salgados, PA, e teve grande repercussão no local, havendo, inclusive, várias ameaças de populares contra a ré. A sessão de julgamento pelo júri popular já foi designada, tendo a defesa sido intimada da referida designação. Sobre a hipótese, assinale a opção que indica o modo adequado de você, como advogado(a) da ré, requerer que o julgamento ocorra em outra Comarca.
+    alternativas:
+      A: Suscitar incidente de deslocamento de competência para a Justiça Federal.
+      B: Apresentar um pedido de Revisão Criminal.
+      C: Oferecer exceção de incompetência territorial.
+      D: Pedir o desaforamento do júri.
+    correta: D
+    dispositivos: []
+    revisao:
+      status: rascunho
+      notas: Texto colado a partir do caderno (o PDF não tem texto legível). Conferir a faixa e o texto no PDF.

@@ -36,7 +36,11 @@ if (!arq) {
   console.error(`texto do gabarito ${id} não encontrado em .examples/_text`);
   process.exit(1);
 }
-const pecaNome = arq.match(/º - (.+?)(?: \(|\.txt)/)![1];
+const pecaNome = process.argv.find((a) => a.startsWith("--peca="))?.slice("--peca=".length) ?? arq.match(/º - (.+?)(?: \(|\.txt)/)?.[1];
+if (!pecaNome) {
+  console.error(`nome da peça não está no arquivo ${arq}: informe --peca="Nome da Peça"`);
+  process.exit(1);
+}
 
 const leis = LeisSchema.parse(parse(readFileSync(join(ROOT, "content/leis.yaml"), "utf8")));
 const pecas = parse(readFileSync(join(ROOT, "content/pecas.yaml"), "utf8")) as Record<string, { nome: string; aliases: string[] }>;

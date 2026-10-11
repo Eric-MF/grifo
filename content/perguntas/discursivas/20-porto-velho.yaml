@@ -1,0 +1,522 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: 20-porto-velho
+perguntas:
+  - id: 20-porto-velho-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG..
+    opcoes:
+      correta: Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG..
+      erradas:
+        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
+        - "Endereçamento correto: Tribunal de Justiça do Estado de Mato Grosso."
+        - "Endereçamento correto: Tribunal de Justiça do Estado do Rio Grande do Norte"
+        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
+        - "Endereçamento: Tribunal de Justiça do Estado de Santa Catarina."
+    revisao: &a1
+      status: rascunho
+  - id: 20-porto-velho-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: merito
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+    opcoes:
+      correta: "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - No mérito, reconhecimento do estado de necessidade, que é causa excludente da ilicitude, na forma do Art. 24 ou do Art. 23, inciso I, ambos do CP
+        - Da consequente diminuição de pena.
+        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
+        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
+    revisao: *a1
+  - id: 20-porto-velho-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: merito
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Aplicação do princípio da bagatela ou insignificância, afastando a tipicidade material
+    opcoes:
+      correta: Aplicação do princípio da bagatela ou insignificância, afastando a tipicidade material
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Aplicação do quantum máximo de redução de pena em razão da tentativa, tendo em vista que o crime ficou longe da consumação OU tendo em vista que o critério a ser observado é do iter criminis percorrido.
+        - O delito não foi praticado após o trânsito em julgado de condenação anterior; sentença condenatória recorrível não gera reincidência.
+        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: *a1
+  - id: 20-porto-velho-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Subsidiariamente, em caso de condenação: aplicação da pena base no mínimo legal, destacando que a condenação em ação socioeducativa não gera maus antecedentes ou circunstância judicial desfavorável."
+    opcoes:
+      correta: "Subsidiariamente, em caso de condenação: aplicação da pena base no mínimo legal, destacando que a condenação em ação socioeducativa não gera maus antecedentes ou circunstância judicial desfavorável."
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Luiz agiu diante de perigo atual para sua integridade física, utilizando meios disponíveis, não sendo razoável a exigência do sacrifício
+        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
+        - Patrick agiu amparado pela legítima defesa, prevista no Art. 25 do CP OU no Art. 23, II, do CP.
+        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
+    revisao: *a1
+  - id: 20-porto-velho-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento da atenuante da menoridade relativa,na forma do Art. 65, inciso I, do CP.
+    opcoes:
+      correta: Reconhecimento da atenuante da menoridade relativa,na forma do Art. 65, inciso I, do CP.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - No mérito, reconhecimento do estado de necessidade, que é causa excludente da ilicitude, na forma do Art. 24 ou do Art. 23, inciso I, ambos do CP
+        - Da consequente diminuição de pena.
+        - Patrick utilizou dos meios necessários para repelir injusta agressão atual.
+        - No mérito, pedido de absolvição sumária, diante da manifesta causa de isenção de pena ou excludente de culpabilidade, nos termos do Art. 415, inciso IV, do CPP
+    revisao: *a1
+  - id: 20-porto-velho-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
+    opcoes:
+      correta: Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Luiz agiu diante de perigo atual para sua integridade física, utilizando meios disponíveis, não sendo razoável a exigência do sacrifício
+        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
+        - Patrick utilizou dos meios necessários para repelir injusta agressão atual.
+        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
+    revisao: *a1
+  - id: 20-porto-velho-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: pedido
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Requerimento de aplicação do furto privilegiado, pleiteando a adoção de alguma das medidas previstas em lei (ou substituição da reclusão por detenção ou causa de diminuição de pena ou aplicação exclusivamente da pena de multa), na forma do Art. 155, §2º, do CP.
+    opcoes:
+      correta: Requerimento de aplicação do furto privilegiado, pleiteando a adoção de alguma das medidas previstas em lei (ou substituição da reclusão por detenção ou causa de diminuição de pena ou aplicação exclusivamente da pena de multa), na forma do Art. 155, §2º, do CP.
+      erradas:
+        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
+        - Absolvição, na forma do Art. 386, inciso III, do CPP.
+        - Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP.
+        - Rol de testemunhas (Maria, José e Natália).
+        - Oferecimento de proposta de suspensão condicional do processo.
+    revisao: *a1
+  - id: 20-porto-velho-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Substituição da pena privativa de liberdade por restritiva de direitos,pois preenchidos os requisitos do Art. 44 do CP.
+    opcoes:
+      correta: Substituição da pena privativa de liberdade por restritiva de direitos,pois preenchidos os requisitos do Art. 44 do CP.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Luiz agiu diante de perigo atual para sua integridade física, utilizando meios disponíveis, não sendo razoável a exigência do sacrifício
+        - Da consequente diminuição de pena.
+        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
+        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
+    revisao: *a1
+  - id: 20-porto-velho-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: merito
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Aplicação do regime aberto para início do cumprimento da pena, na forma do Art. 33, §2º, alínea c, do Código Penal.
+    opcoes:
+      correta: Aplicação do regime aberto para início do cumprimento da pena, na forma do Art. 33, §2º, alínea c, do Código Penal.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - No mérito, reconhecimento do estado de necessidade, que é causa excludente da ilicitude, na forma do Art. 24 ou do Art. 23, inciso I, ambos do CP
+        - Da consequente diminuição de pena.
+        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
+        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
+    revisao: *a1
+  - id: 20-porto-velho-peca-11
+    categoria: peca-detalhe
+    parte: peca
+    item: "11"
+    secao: merito
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Caso não seja substituída a pena privativa de liberdade por restritiva de direitos, aplicação da suspensão condicional da pena, na forma do Art. 77 do CP.
+    opcoes:
+      correta: Caso não seja substituída a pena privativa de liberdade por restritiva de direitos, aplicação da suspensão condicional da pena, na forma do Art. 77 do CP.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Aplicação do regime aberto ou semiaberto, considerando a pena mínima a ser aplicada, nos termos do Art. 33, §2º, alíneas b ou c, do CP OU Aplicação da suspensão condicional da pena, nos termos do Art. 77 do CP
+        - Da consequente diminuição de pena.
+        - Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: *a1
+  - id: 20-porto-velho-peca-12
+    categoria: peca-detalhe
+    parte: peca
+    item: "12"
+    secao: pedido
+    caso: |-
+      Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
+
+      No dia 10 de janeiro de 2015, na cidade de Belo Horizonte, Minas Gerais, Bruno se encontrava no interior de um ônibus, quando encontrou um relógio caído ao lado do banco em que estava sentado. Estando o ônibus vazio, Bruno aproveitou para pegar o relógio e colocá-lo dentro de sua mochila, não informando o ocorrido ao motorista. Mais adiante, porém, 15 minutos após esse fato, o proprietário do relógio, Bernardo, já na companhia de um policial, ingressou no coletivo procurando pelo seu pertence, que havia sido comprado apenas duas semanas antes por R$ 100,00 (cem reais). Verificando que Bruno estava sentado no banco por ele antes utilizado, revistou sua mochila e encontrou o relógio. Bernardo narrou ao motorista de ônibus o ocorrido, admitindo que Bruno não estava no coletivo quando ele o deixou.
+
+      Diante de tais fatos, Bruno foi denunciado perante o juízo competente pela prática do crime de furto simples, na forma do Art. 155, caput, do Código Penal. A denúncia foi recebida e foi formulada pelo Ministério Público a proposta de suspensão condicional do processo, não sendo aceita pelo acusado, que respondeu ao processo em liberdade.
+
+      No curso da instrução, o policial que efetivou a prisão do acusado, Bernardo, o motorista do ônibus e Bruno foram ouvidos e todos confirmaram os fatos acima narrados. Com a juntada do laudo de avaliação do bem arrecadado, confirmando o valor de R$ 100,00 (cem reais), os autos foram encaminhados ao Ministério Público, que se manifestou pela procedência do pedido nos termos da denúncia, pleiteando reconhecimento de maus antecedentes, em razão da medida socioeducativa antes aplicada.
+
+      Você, advogado(a) de Bruno, foi intimado(a), em 23 de março de 2015, segunda-feira, sendo o dia subsequente útil.
+
+      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00 pontos)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: "Pedidos: absolvição do crime de furto, na forma do artigo 386, III, CPP;subsidiariamente, aplicação da pena base no mínimo legal;reconhecimento das atenuantes da confissão espontânea e da menoridade relativa;reconhecimento da forma privilegiada do furto;substituição da pena privativa de liberdade por restritiva de direitos;fixação do regime aberto; sursis da pena."
+    opcoes:
+      correta: "Pedidos: absolvição do crime de furto, na forma do artigo 386, III, CPP;subsidiariamente, aplicação da pena base no mínimo legal;reconhecimento das atenuantes da confissão espontânea e da menoridade relativa;reconhecimento da forma privilegiada do furto;substituição da pena privativa de liberdade por restritiva de direitos;fixação do regime aberto; sursis da pena."
+      erradas:
+        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
+        - fixação do regime inicial semiaberto.
+        - Absolvição do crime de violação de domicílio OU absolvição nos termos do art. 386, III, do CPP.
+        - Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
+        - Apresentação de rol de testemunhas.
+    revisao: *a1
+  - id: 20-porto-velho-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      Jorge, com 21 anos de idade, reincidente, natural de São Gonçalo/RJ, entrou em uma briga com seus pais, razão pela qual foi morar na casa de sua tia Marta, irmã de seu pai, na cidade de Maricá/RJ, já que esta tinha apenas 40 anos e “o entenderia melhor”. Após 06 meses residindo no mesmo local que sua tia, Jorge subtraiu o carro de Marta, levando-o para uma favela em Niterói, onde pretendia morar no futuro. No começo, Marta não desconfiou da autoria, porém após alguns dias, teve certeza de que o autor do crime era seu sobrinho, mas nada fez para vê-lo responsabilizado criminalmente, em razão do afeto que tinha por ele. Apenas, então, comunicou à seguradora que seu veículo fora furtado.
+
+      Jorge, 01 ano após esses fatos, estava na direção do veículo que havia subtraído quando foi abordado por policiais militares que, constatando que aquele bem era produto de crime pretérito, realizaram sua prisão em flagrante. Jorge foi denunciado pela prática do crime de receptação, mas, no curso da instrução, foi descoberto que, na verdade, o acusado era o autor do crime de furto. O Ministério Público aditou a denúncia para adequá-la às novas descobertas e, após manifestação da Defensoria Pública, foi o aditamento recebido. Não houve requerimento de novas provas. Jorge o(a) procura para, na condição de advogado(a), apresentar as Alegações Finais.
+
+      Considerando as informações extraídas da hipótese, responda aos itens a seguir.
+    comando: Qual a principal tese defensiva a ser formulada nas Alegações Finais para evitar a condenação de Jorge?
+    gabarito: O enunciado narra a prática de um crime de furto simples consumado, praticado por Jorge contra sua tia Marta, com quem ele coabitava. Diante dessa relação de coabitação e parentesco, a ação penal pela prática de tal delito tem natureza de ação pública condicionada à representação. Isso porque o Art. 182, inciso III, do Código Penal prevê que somente se procede mediante representação a ação penal pela prática de crime contra o patrimônio em desfavor de tio, com quem o agente coabita. Não houve violência ou grave ameaça e a vítima não era maior de 60 anos, logo inaplicável o Art. 183 do Código Penal. Sendo a ação condicionada à representação, e não tendo ocorrido no prazo de 06 meses, ocorreu a decadência, de modo que a punibilidade de Jorge deve ser extinta (Art. 107, inciso IV, do Código Penal).
+    opcoes:
+      correta: Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 20-porto-velho-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      Jorge, com 21 anos de idade, reincidente, natural de São Gonçalo/RJ, entrou em uma briga com seus pais, razão pela qual foi morar na casa de sua tia Marta, irmã de seu pai, na cidade de Maricá/RJ, já que esta tinha apenas 40 anos e “o entenderia melhor”. Após 06 meses residindo no mesmo local que sua tia, Jorge subtraiu o carro de Marta, levando-o para uma favela em Niterói, onde pretendia morar no futuro. No começo, Marta não desconfiou da autoria, porém após alguns dias, teve certeza de que o autor do crime era seu sobrinho, mas nada fez para vê-lo responsabilizado criminalmente, em razão do afeto que tinha por ele. Apenas, então, comunicou à seguradora que seu veículo fora furtado.
+
+      Jorge, 01 ano após esses fatos, estava na direção do veículo que havia subtraído quando foi abordado por policiais militares que, constatando que aquele bem era produto de crime pretérito, realizaram sua prisão em flagrante. Jorge foi denunciado pela prática do crime de receptação, mas, no curso da instrução, foi descoberto que, na verdade, o acusado era o autor do crime de furto. O Ministério Público aditou a denúncia para adequá-la às novas descobertas e, após manifestação da Defensoria Pública, foi o aditamento recebido. Não houve requerimento de novas provas. Jorge o(a) procura para, na condição de advogado(a), apresentar as Alegações Finais.
+
+      Considerando as informações extraídas da hipótese, responda aos itens a seguir.
+    comando: Na condição de advogado(a) do acusado, o que você alegaria, no campo processual, caso o juiz viesse a condenar Jorge, após o aditamento, de acordo com a imputação original de receptação?
+    gabarito: Não poderia o magistrado condenar o denunciado nos termos da imputação original, pois tal conduta violaria os princípios da ampla defesa e do contraditório, além, do princípio da correlação. Ademais, de acordo com Art. 384, §4º, do Código de Processo Penal, o juiz ficará adstrito aos termos do aditamento.
+    opcoes:
+      correta: Deveria ser alegada a impossibilidade de condenação na imputação originária, pois o juiz está adstrito aos termos do aditamento (Art. 384, §4º, do CPP) OU porque não foram observados os princípios da ampla defesa e do contraditório OU houve violação ao princípio da correlação.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Não foi válida a citação de Carla, já que ela não estava em local incerto e não sabido ou que não estava se ocultando para não ser citada, já que Carla possuía endereço fixo e conhecido, conforme Art. 361 ou 362 ambos do CPP
+    revisao: *a1
+  - id: 20-porto-velho-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Lívia, primária e de bons antecedentes, foi presa em flagrante enquanto transportava 100g de cocaína a pedido do namorado, conhecido traficante da comunidade em que residiam.
+
+      Apesar de nunca ter participado de qualquer atividade do tráfico em momento anterior, Lívia atendeu ao pedido do namorado com medo de ele terminar o relacionamento em caso de negativa. Já na viatura da Polícia Militar, os policiais passaram a filmar Lívia e conversar sobre o ocorrido quando de sua prisão, tendo ela confirmado os fatos acima descritos sem que soubesse estar sendo filmada.
+
+      Lívia, então, foi denunciada como incursa nas sanções penais do Art. 33 da Lei nº 11.343/06. Durante a instrução, o Ministério Público juntou aos autos o vídeo feito no interior da viatura e dispensou a oitiva dos policiais responsáveis pela prisão, que eram as únicas testemunhas de acusação, tendo em vista que eles foram transferidos para um batalhão de outra comarca. Em seu interrogatório, Lívia permaneceu em silêncio.
+
+      Insatisfeitos com a defesa técnica que atuava até o momento, a família da acusada, no momento das alegações finais, o(a) contrata na condição de advogado(a).
+
+      Considerando apenas os fatos narrados, responda, justificadamente, aos itens a seguir.
+    comando: É possível a condenação de Lívia apenas com base no vídeo acostado aos autos?
+    gabarito: |-
+      Não é possível a condenação de Lívia na hipótese narrada. Os policiais militares responsáveis pela prisão em flagrante não foram ouvidos em juízo, logo não foram produzidas provas testemunhais pela acusação sob o crivo do contraditório, sendo certo que o Art. 155 do Código de Processo Penal impede que uma condenação seja baseada exclusivamente em elementos informativos produzidos durante o inquérito. Por sua vez, o vídeo, acostado aos autos, deve ser considerado prova ilícita, pois realizado em um interrogatório sem assegurar as garantias constitucionais, quais sejam, a de o preso permanecer em silêncio e estar acompanhado por um advogado. Há quem defenda que a gravação por um dos interlocutores, por si só, não constitui prova ilícita.
+
+      Ocorre que, no caso concreto, a particularidade é que foi feito um interrogatório sem as garantias constitucionais, o que a jurisprudência tem chamado de “interrogatório sub-reptício”.
+    opcoes:
+      correta: Não é possível, devendo o vídeo ser considerado como prova ilícita, pois foi realizado em um interrogatório sem as garantias constitucionais.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 20-porto-velho-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Lívia, primária e de bons antecedentes, foi presa em flagrante enquanto transportava 100g de cocaína a pedido do namorado, conhecido traficante da comunidade em que residiam.
+
+      Apesar de nunca ter participado de qualquer atividade do tráfico em momento anterior, Lívia atendeu ao pedido do namorado com medo de ele terminar o relacionamento em caso de negativa. Já na viatura da Polícia Militar, os policiais passaram a filmar Lívia e conversar sobre o ocorrido quando de sua prisão, tendo ela confirmado os fatos acima descritos sem que soubesse estar sendo filmada.
+
+      Lívia, então, foi denunciada como incursa nas sanções penais do Art. 33 da Lei nº 11.343/06. Durante a instrução, o Ministério Público juntou aos autos o vídeo feito no interior da viatura e dispensou a oitiva dos policiais responsáveis pela prisão, que eram as únicas testemunhas de acusação, tendo em vista que eles foram transferidos para um batalhão de outra comarca. Em seu interrogatório, Lívia permaneceu em silêncio.
+
+      Insatisfeitos com a defesa técnica que atuava até o momento, a família da acusada, no momento das alegações finais, o(a) contrata na condição de advogado(a).
+
+      Considerando apenas os fatos narrados, responda, justificadamente, aos itens a seguir.
+    comando: Em caso de condenação de Lívia como incursa nas sanções do Art. 33, § 4º, da Lei nº 11.343/06, é possível a substituição de pena privativa de liberdade por restritiva de direitos?
+    gabarito: Sim, é possível a substituição da pena privativa de liberdade aplicada pela restritiva de direito. A redação do Art. 33, §4º, da Lei nº 11.343/06, veda expressamente esta substituição. Ocorre que, em sede de controle difuso de constitucionalidade, o STF considerou tal vedação em abstrato inconstitucional, por violar o princípio da individualização da pena. Em razão disso, o Senado, através da Resolução 05 de 2012, suspendeu a eficácia desta parte do dispositivo. Nada impede, assim, que, avaliando as particularidades do caso concreto, ocorra a substituição. Lívia é primária e de bons antecedentes, não tendo praticado crime com violência ou grave ameaça à pessoa, logo a substituição é adequada.
+    opcoes:
+      correta: Sim, é possível a substituição de pena privativa de liberdade por restritiva de direitos, pois o STF considerou inconstitucional a vedação em abstrato do Art. 33, §4º, da Lei nº 11.343 OU porque o Senado suspendeu a eficácia de parte da redação do Art. 33, §4º da Lei nº 11.343 por meio da Resolução 05 OU porque é inconstitucional, por violar o princípio da individualização da pena, a vedação em abstrato de substituição trazida pelo Art. 33, §4º, da Lei nº 11.343.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
+        - Não foi válida a citação de Carla, já que ela não estava em local incerto e não sabido ou que não estava se ocultando para não ser citada, já que Carla possuía endereço fixo e conhecido, conforme Art. 361 ou 362 ambos do CPP
+    revisao: *a1
+  - id: 20-porto-velho-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: |-
+      No curso de uma audiência criminal, João, advogado de Pedro, acusado da prática de um crime de estupro, em sede de alegações finais orais, assevera que o representante do Ministério Público “é arbitrário e tem a sede da condenação, não se importando em acusar uma pessoa comprovadamente inocente”.
+
+      Atendendo à manifestação do Promotor de Justiça, que se sentiu ofendido, o juiz destituiu o advogado e nomeou Defensor Público para continuar na defesa do acusado, que, na ocasião, não estava presente. O Defensor, então, concluiu as alegações finais orais. Na mesma assentada, o magistrado determinou a extração de peças, com o encaminhamento ao Ministério Público, para apurar possível crime contra a honra praticado por João. Pedro, assistido pela Defensoria Pública, acabou condenado na forma do pedido inicial. João, por sua vez, após representação do Promotor de Justiça vítima, foi denunciado pela prática de crime de injúria.
+
+      Considerando apenas as informações constantes na hipótese narrada, responda, fundamentadamente, aos itens a seguir.
+    comando: Na condição de advogado(a) de João, qual tese de direito material você alegaria em seu favor para afastar a imputação delitiva?
+    gabarito: O examinando deve defender que não foi praticado crime contra a honra de funcionário público por parte de João, pois este estava apenas atuando na condição de advogado de Pedro, não ultrapassando os limites daquilo que sua função lhe permite. Em tese, o crime praticado por João seria o de injúria. Ocorre que, nos termos do Art. 142, inciso I, do Código Penal, não constitui crime de injúria a ofensa irrogada em juízo, na discussão da causa, pela parte ou por seu procurador. Assim, a conduta de João foi atípica, não configurando a prática de crime contra a honra, pois a possível ofensa praticada foi na discussão da causa, defendendo o interesse de Pedro em juízo.
+    opcoes:
+      correta: João não praticou crime de injúria e deve ser absolvido, pois atuava na condição de advogado e a ofensa irrogada em juízo, na discussão da causa, por parte do procurador não constitui injúria, nos termos do Art. 142, inciso I, do CP.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 20-porto-velho-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      No curso de uma audiência criminal, João, advogado de Pedro, acusado da prática de um crime de estupro, em sede de alegações finais orais, assevera que o representante do Ministério Público “é arbitrário e tem a sede da condenação, não se importando em acusar uma pessoa comprovadamente inocente”.
+
+      Atendendo à manifestação do Promotor de Justiça, que se sentiu ofendido, o juiz destituiu o advogado e nomeou Defensor Público para continuar na defesa do acusado, que, na ocasião, não estava presente. O Defensor, então, concluiu as alegações finais orais. Na mesma assentada, o magistrado determinou a extração de peças, com o encaminhamento ao Ministério Público, para apurar possível crime contra a honra praticado por João. Pedro, assistido pela Defensoria Pública, acabou condenado na forma do pedido inicial. João, por sua vez, após representação do Promotor de Justiça vítima, foi denunciado pela prática de crime de injúria.
+
+      Considerando apenas as informações constantes na hipótese narrada, responda, fundamentadamente, aos itens a seguir.
+    comando: Na condição de advogado(a) de Pedro, qual é a tese a ser alegada, em sede de recurso, para anular a sentença condenatória?
+    gabarito: O examinando deveria manifestar-se pela nulidade do processo a partir do ato ilegal de destituição do advogado legalmente constituído ou da sentença, pois não poderia o magistrado ter desconstituído de ofício o advogado, sendo uma escolha da parte indicar a defesa técnica de sua confiança. No caso de ser necessário outro defensor, deveria o juiz intimar o acusado para que manifeste seu interesse em constituir outro advogado ou ser assistido pela Defensoria Pública. Na hipótese, a desconstituição de João e a posterior nomeação de Defensor Público para elaborar alegações finais, sem nem mesmo ter conversado com Pedro, prejudicou sua ampla defesa, garantida pelo Art. 5º, inciso LV, da CRFB/88, razão pela qual deve a sentença ser anulada.
+    opcoes:
+      correta: Nulidade da sentença ou de todos os atos a partir da desconstituição de João, por violação da ampla defesa de Pedro OU porque deveria Pedro ser intimado para manifestar interesse em constituir novo advogado OU porque não poderia o magistrado ter desconstituído advogado de Pedro na sua ausência.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 20-porto-velho-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Maria, primária e com bons antecedentes, trabalha há vários anos dirigindo uma van de transporte de crianças.
+
+      Certo dia, após mudar o itinerário sempre observado, resolve fazer compras em um supermercado, onde permaneceu por duas horas, esquecendo de entregar uma das crianças de 03 anos na residência da mesma. Ao retornar ao veículo, encontra a criança desfalecida e, desesperada, leva-a ao hospital, não conseguindo, porém, evitar o óbito. Acabou denunciada e condenada pela prática do injusto do Art. 133, § 2º, do Código Penal (abandono de incapaz com resultado morte) à pena de 04 anos de reclusão em regime aberto.
+
+      Apesar de ter respondido ao processo em liberdade, não foi permitido à Maria apelar em liberdade, fundamentando o juiz a ordem de prisão na grande comoção social que o fato causou. A família dispensou o advogado anterior e o(a) procurou para que assumisse a defesa de Maria.
+
+      Considerando apenas as informações narradas na situação hipotética, responda aos itens a seguir.
+    comando: Qual a tese de direito material a ser alegada em eventual recurso defensivo para evitar a punição de Maria pelo crime pelo qual foi denunciada? Justifique.
+    gabarito: Deveria o advogado buscar a absolvição de Maria pelo fato de não ter praticado dolosamente o abandono de incapaz ou, ao menos, a desclassificação para homicídio culposo. O crime de abandono de incapaz somente pode ser praticado de forma dolosa, não admitindo a responsabilização criminal do agente a título de culpa. Na hipótese, de acordo com o texto apresentado, Maria não teve a intenção de abandonar a criança no veículo, tendo, de forma negligente, a esquecido no interior do carro. Dessa forma, não há como ser mantida a condenação pelo crime de abandono de incapaz. O Art. 133, §2º, do Código Penal, apesar de ser aplicável quando o resultado morte decorrer de culpa, exige que haja dolo na conduta antecedente, qual seja, abandono de incapaz, o que não ocorreu na presente hipótese.
+    opcoes:
+      correta: A tese a ser alegada é que Maria deve ser absolvida ou ter sua conduta desclassificada para o crime de homicídio culposo, pois o abandono decorreu de culpa e não de dolo.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 20-porto-velho-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Maria, primária e com bons antecedentes, trabalha há vários anos dirigindo uma van de transporte de crianças.
+
+      Certo dia, após mudar o itinerário sempre observado, resolve fazer compras em um supermercado, onde permaneceu por duas horas, esquecendo de entregar uma das crianças de 03 anos na residência da mesma. Ao retornar ao veículo, encontra a criança desfalecida e, desesperada, leva-a ao hospital, não conseguindo, porém, evitar o óbito. Acabou denunciada e condenada pela prática do injusto do Art. 133, § 2º, do Código Penal (abandono de incapaz com resultado morte) à pena de 04 anos de reclusão em regime aberto.
+
+      Apesar de ter respondido ao processo em liberdade, não foi permitido à Maria apelar em liberdade, fundamentando o juiz a ordem de prisão na grande comoção social que o fato causou. A família dispensou o advogado anterior e o(a) procurou para que assumisse a defesa de Maria.
+
+      Considerando apenas as informações narradas na situação hipotética, responda aos itens a seguir.
+    comando: Qual a medida que deve ser adotada na busca da liberdade imediata de Maria e com qual fundamento? Justifique.
+    gabarito: |-
+      Para garantir a liberdade imediata de Maria, o advogado deveria impetrar habeas corpus visando restabelecer a liberdade da ré até o trânsito em julgado da sentença condenatória. A regra geral, que obviamente admite exceções, é a de que o acusado deve apelar na mesma condição em que se encontrava no curso da instrução.
+
+      Estando solto, apela solto; estando preso e sendo condenado em primeira instância, em especial à pena em regime de cumprimento fechado, poderá ser mantida a prisão. No caso concreto deveria ser combatida a decisão que decreta a prisão preventiva de Maria. Alguns argumentos poderiam ser apresentados pelo examinando.
+
+      Primeiramente, poderia ele alegar que não houve circunstância fática nova a justificar a decretação da prisão preventiva, que é medida cautelar e não antecipação do cumprimento da pena. Da mesma forma, poderia esclarecer que a motivação pela comoção social é insuficiente, pois não confunde com o risco para a ordem pública, ademais, de acordo com jurisprudência firme dos Tribunais Superiores, comoção social não enseja prisão cautelar. A sentença condenatória não inovou a situação de modo a justificar a alteração do status libertatis. Por fim, poderia o examinando alegar que Maria foi condenada a 04 anos de reclusão, em regime inicial aberto. A imposição de prisão preventiva, que é medida cautelar, acabaria sendo mais gravosa do que a medida final aplicada, o que violaria o princípio da homogeneidade.
+    opcoes:
+      correta: O advogado deveria impetrar habeas corpus, alegando que não houve alteração fática a justificar o decreto prisional OU que a comoção social não é motivação idônea, OU porque com a aplicação do regime aberto, a medida cautelar acabaria sendo mais gravoso que a definitiva.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1

@@ -147,9 +147,10 @@ export function avaliarItens(itens: Item[], texto: string, ctx: Contexto): Resul
       }
     }
     const componentes = item.componentes.map((c) => resultados.get(c.id)!);
-    const soma = round2(componentes.reduce((s, c) => s + c.valor, 0));
+    const concedido = item.anulado ?? 0;
+    const soma = round2(componentes.reduce((s, c) => s + c.valor, concedido));
     const valor = item.teto ? Math.min(item.teto, soma) : soma;
-    const obtido = round2(Math.min(valor, componentes.reduce((s, c) => s + c.obtido, 0)));
+    const obtido = round2(Math.min(valor, componentes.reduce((s, c) => s + c.obtido, concedido)));
     return { n: item.n, secao: item.secao, descricao: item.descricao, valor, obtido, componentes };
   });
 }

@@ -139,4 +139,6 @@ const revisaoCriminal: Gerador = {
   },
 };
 
-export default [relaxamento, liberdadeProvisoria, revogacaoPreventiva, habeasCorpus, queixa, revisaoCriminal];
+const geradores = [relaxamento, liberdadeProvisoria, revogacaoPreventiva, habeasCorpus, queixa, revisaoCriminal];
+
+export default geradores;

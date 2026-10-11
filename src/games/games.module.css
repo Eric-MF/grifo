@@ -20,7 +20,20 @@
 .poder { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.5rem; border-radius: 999px; background: rgb(3 17 44 / 0.55); color: #fff; font-size: 0.9rem; }
 .barra { width: 38px; height: 5px; border-radius: 3px; background: rgb(255 255 255 / 0.25); overflow: hidden; }
 .barra span { display: block; height: 100%; background: var(--gold); }
-.cenario { position: absolute; left: 0.9rem; bottom: 0.6rem; font-size: 0.75rem; color: #fff; opacity: 0.8; text-shadow: 0 1px 2px #000; }
+.proprio { border: 0; font: inherit; pointer-events: auto; box-shadow: inset 0 0 0 2px rgb(255 255 255 / 0.25); }
+.proprio .poderIcone { filter: grayscale(1); opacity: 0.55; }
+.proprio .barra span { background: var(--cor); }
+.proprioAtivo, .proprioPronto { box-shadow: inset 0 0 0 2px var(--cor), 0 0 10px var(--cor); }
+.proprioAtivo .poderIcone, .proprioPronto .poderIcone { filter: none; opacity: 1; }
+.proprioPronto { cursor: pointer; animation: pulsarPoder 1.2s ease-in-out infinite; }
+.proprio:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.rotuloProprio { font-weight: 800; font-size: 0.8rem; white-space: nowrap; }
+@keyframes pulsarPoder {
+  50% { box-shadow: inset 0 0 0 2px var(--cor), 0 0 18px var(--cor); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .proprioPronto { animation: none; }
+}
 .hudBtns { grid-column: 3; justify-self: end; display: flex; gap: 0.35rem; pointer-events: auto; }
 .hudBtns button {
   width: 38px; height: 38px; border-radius: 50%; border: 0; background: rgb(3 17 44 / 0.55); color: #fff; cursor: pointer; font-size: 0.95rem;

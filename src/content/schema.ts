@@ -53,7 +53,11 @@ const ItemSchema = z.object({
   teto: z.number().positive().optional(),
   /** Valores possíveis publicados pela FGV (ex.: [0, 0.10, 0.20]). Informativo. */
   valores: z.array(z.number()).optional(),
-  componentes: z.array(ComponenteSchema).min(1),
+  /** Pontos que a FGV concede a todos quando anula o item. */
+  anulado: z.number().positive().optional(),
+  componentes: z.array(ComponenteSchema).default([]),
+}).refine((it) => it.componentes.length > 0 || it.anulado !== undefined, {
+  message: "item precisa de componentes ou de anulado",
 });
 
 const PecaSchema = z.object({
@@ -124,6 +128,11 @@ export const LeisSchema = z.object({
     z.object({
       nome: z.string(),
       aliases: z.array(z.string()).min(1),
+      planalto: z.string().url().optional(),
+      ler: z.boolean().default(false),
+      sigla: z.string().optional(),
+      numero: z.string().optional(),
+      ano: z.number().int().optional(),
     }),
   ),
   tribunais: z.record(z.string(), z.array(z.string())),
@@ -198,3 +207,49 @@ const PerguntaFixaSchema = z.object({
 });
 export const PerguntasArquivoSchema = z.object({ perguntas: z.array(PerguntaFixaSchema) });
 export type PerguntaFixa = z.infer<typeof PerguntaFixaSchema>;
+
+// ---------------------------------------------------------------------------
+// Perguntas tiradas dos itens das provas discursivas (content/perguntas/discursivas/<exame>.yaml).
+// Os componentes de correção não se repetem aqui: vêm do item do exame (parte + item).
+// ---------------------------------------------------------------------------
+const PerguntaItemFonteSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  categoria: z.enum(["peca-detalhe", "discursiva"]),
+  /** "peca" ou "q1".."q5" */
+  parte: z.string().regex(/^(peca|q\d)$/),
+  item: z.string(),
+  secao: z.string().optional(),
+  caso: z.string().min(20),
+  comando: z.string(),
+  gabarito: z.string(),
+  opcoes: z.object({ correta: z.string(), erradas: z.array(z.string()).min(2) }),
+  dispositivos: z.array(z.string()).default([]),
+  revisao: RevisaoSchema,
+});
+export const PerguntasItensArquivoSchema = z.object({ exame: z.string(), perguntas: z.array(PerguntaItemFonteSchema) });
+export type PerguntaItemFonte = z.infer<typeof PerguntaItemFonteSchema>;
+
+// ---------------------------------------------------------------------------
+// Questões objetivas da 1ª fase, só Penal e Processo Penal (content/objetivas/<exame>.yaml).
+// ---------------------------------------------------------------------------
+const LetraSchema = z.enum(["A", "B", "C", "D"]);
+const ObjetivaSchema = z.object({
+  /** número no caderno Tipo 1 */
+  n: z.number().int().positive(),
+  disciplina: z.enum(["penal", "processo-penal"]),
+  enunciado: z.string().min(20),
+  alternativas: z.object({ A: z.string(), B: z.string(), C: z.string(), D: z.string() }),
+  correta: LetraSchema,
+  /** a questão pergunta a peça ou o recurso cabível: entra também em "Peça e fundamento" */
+  peca: z.string().optional(),
+  dispositivos: z.array(z.string()).default([]),
+  revisao: RevisaoSchema,
+});
+export const ObjetivasArquivoSchema = z.object({
+  exame: z.string(),
+  /** faixas de questões de cada disciplina no Tipo 1, conferidas à mão */
+  faixa: z.object({ penal: z.tuple([z.number(), z.number()]), processoPenal: z.tuple([z.number(), z.number()]) }),
+  anuladas: z.array(z.number()).default([]),
+  questoes: z.array(ObjetivaSchema),
+});
+export type ObjetivasArquivo = z.infer<typeof ObjetivasArquivoSchema>;

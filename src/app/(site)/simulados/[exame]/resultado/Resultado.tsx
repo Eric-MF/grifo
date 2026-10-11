@@ -25,6 +25,7 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
   useEffect(() => {
     const id = params.get("t");
     const tent = id ? obterTentativa(id) : listarTentativas().find((x) => x.exameId === exame.id) ?? null;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- lê URL e localStorage após montar (site estático)
     setT(tent);
   }, [params, exame.id]);
 
@@ -149,6 +150,7 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
             key={p.parte}
             parte={p}
             gabarito={i === 0 ? exame.peca.gabarito_comentado : exame.questoes[i - 1]?.gabarito_comentado}
+            aplicacao={exame.aplicacao}
             ia={t.ia?.itens.filter((x) => x.parte === p.parte)}
           />
         ))}
@@ -195,7 +197,7 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
   );
 }
 
-function Parte({ parte, gabarito, ia }: { parte: ResultadoParte; gabarito?: string; ia?: { n: string; componentes: { id: string; obtido: number; justificativa: string }[] }[] }) {
+function Parte({ parte, gabarito, aplicacao, ia }: { parte: ResultadoParte; gabarito?: string; aplicacao?: string; ia?: { n: string; componentes: { id: string; obtido: number; justificativa: string }[] }[] }) {
   const [aberto, setAberto] = useState(parte.parte === "peca");
   return (
     <details className={styles.parte} open={aberto} onToggle={(e) => setAberto((e.target as HTMLDetailsElement).open)}>
@@ -264,7 +266,7 @@ function Parte({ parte, gabarito, ia }: { parte: ResultadoParte; gabarito?: stri
       {gabarito && (
         <details className={styles.gabarito}>
           <summary>Ver gabarito comentado da FGV</summary>
-          <RichText text={gabarito} />
+          <RichText text={gabarito} data={aplicacao} />
         </details>
       )}
     </details>

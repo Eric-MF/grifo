@@ -75,8 +75,9 @@ export function normalize(input: string): string {
     .replace(/\bc\/c\b/g, " combinado com ")
     .replace(/\bs\/n\b/g, " ");
 
-  // Zeros à esquerda: "05 dias" → "5 dias", "01/09/2023" → "1/9/2023" (antes das datas)
-  s = s.replace(/\b0+(?=\d)/g, "");
+  // Zeros à esquerda: "05 dias" → "5 dias", "01/09/2023" → "1/9/2023" (antes das datas).
+  // Depois de "dígito." o zero é do milhar ("Lei 8.072/90") e fica.
+  s = s.replace(/(?<!\d\.)\b0+(?=\d)/g, "");
 
   // Ordinais numéricos: 1º, 2ª, 1o → 1
   s = s.replace(/(\d+)\s*[º°ª]/g, "$1").replace(/\b(\d+)(o|a)\b/g, "$1");

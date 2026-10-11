@@ -297,7 +297,7 @@ const roc: Gerador = {
   },
 };
 
-export default [
+const geradores = [
   apelacao,
   apelacaoJuri,
   apelacaoJecrim,
@@ -312,3 +312,5 @@ export default [
   recursoExtraordinario,
   roc,
 ];
+
+export default geradores;

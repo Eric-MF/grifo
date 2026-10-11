@@ -1,0 +1,2731 @@
+# Datas das leis que alteraram os diplomas do leitor, usadas na linha do tempo.
+# Geradas por scripts/baixar-leis.ts a partir do Planalto. Para corrigir à mão, edite e marque `manual: true`.
+decreto-13084:
+  assinatura: 2026-07-29
+  publicacao: 2026-07-30
+  vigencia: 2026-07-30
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13084.htm
+decreto-2799:
+  assinatura: 1998-10-08
+  publicacao: 1998-10-10
+  vigencia: 1998-10-10
+  url: https://www.planalto.gov.br/ccivil_03/decreto/D2799.htm
+decreto-3000:
+  assinatura: 1999-03-26
+  publicacao: 1999-03-29
+  vigencia: 1999-03-29
+  url: https://www.planalto.gov.br/ccivil_03/decreto/D3000.htm
+decreto-6003:
+  assinatura: 2006-12-28
+  publicacao: 2006-12-29
+  vigencia: 2006-12-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Decreto/D6003.htm
+decreto-6049:
+  assinatura: 2007-02-27
+  publicacao: 2007-02-28
+  vigencia: 2007-02-28
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2007/Decreto/D6049.htm
+decreto-7212:
+  assinatura: 2010-06-15
+  publicacao: 2010-06-16
+  vigencia: 2010-06-16
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2010/Decreto/D7212.htm#art94
+decreto-7627:
+  assinatura: 2011-11-24
+  publicacao: 2011-11-25
+  vigencia: 2011-11-25
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Decreto/D7627.htm
+decreto-9889:
+  assinatura: 2019-06-27
+  publicacao: 2019-06-28
+  vigencia: 2019-06-28
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Decreto/D9889.htm#art1
+decreto-lei-385:
+  assinatura: 1968-12-26
+  publicacao: 1968-12-27
+  vigencia: 1968-12-27
+  url: https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0385.htm#art281
+decreto-lei-504:
+  assinatura: 1969-03-18
+  publicacao: 1969-03-19
+  vigencia: 1969-03-19
+  url: https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0504.htm#ART624
+decreto-lei-5452:
+  assinatura: 1943-05-01
+  publicacao: 1943-08-09
+  pendencia: 'cláusula de vigência não reconhecida: "a obrigatoriedade do uso da Carteira Profissional, para os atuais empregados"'
+  url: https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del5452.htm#art478%C2%A72
+decreto-lei-6109:
+  assinatura: 1943-12-16
+  publicacao: 1943-12-16
+  aproximada: true
+  vigencia: 1943-12-16
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del6109.htm#art712
+ec-1:
+  publicacao: 1992-04-06
+  vigencia: 1992-04-06
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc01.htm#art1
+ec-10:
+  assinatura: 1996-03-04
+  publicacao: 1996-03-07
+  vigencia: 1996-03-07
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc10.htm#art1
+ec-100:
+  assinatura: 2019-06-26
+  publicacao: 2019-06-27
+  vigencia: 2019-06-27
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc100.htm#art1
+ec-101:
+  assinatura: 2019-07-03
+  publicacao: 2019-07-04
+  vigencia: 2019-07-04
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc101.htm#art1
+ec-102:
+  assinatura: 2019-09-26
+  publicacao: 2019-09-27
+  vigencia: 2019-09-27
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc102.htm#art1
+ec-103:
+  assinatura: 2019-11-12
+  publicacao: 2019-11-13
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc103.htm#art1
+  vigencia: 2019-11-13
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-104:
+  assinatura: 2019-12-04
+  publicacao: 2019-12-05
+  vigencia: 2019-12-05
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc104.htm#art1
+ec-105:
+  assinatura: 2019-12-12
+  publicacao: 2019-12-13
+  vigencia: 2020-12-13
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc105.htm#art1
+ec-106:
+  assinatura: 2020-05-07
+  publicacao: 2020-05-08
+  vigencia: 2020-05-08
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc106.htm
+ec-108:
+  assinatura: 2020-08-26
+  publicacao: 2020-08-27
+  vigencia: 2020-08-27
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc108.htm#art1
+ec-109:
+  assinatura: 2021-03-15
+  publicacao: 2021-03-16
+  pendencia: 'cláusula de vigência não reconhecida: "a partir do início da primeira legislatura municipal após a data de publicação desta Emenda Constitucional"'
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc109.htm#art1
+ec-11:
+  assinatura: 1996-04-30
+  publicacao: 1996-05-02
+  vigencia: 1996-05-02
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc11.htm#art1
+ec-111:
+  assinatura: 2021-09-28
+  publicacao: 2021-09-29
+  vigencia: 2021-09-29
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc111.htm#art1
+ec-112:
+  assinatura: 2021-10-27
+  publicacao: 2021-10-28
+  vigencia: 2021-10-28
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc112.htm#art1
+ec-113:
+  assinatura: 2021-12-08
+  publicacao: 2021-12-09
+  vigencia: 2021-12-09
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc113.htm#art1
+ec-114:
+  assinatura: 2021-12-16
+  publicacao: 2021-12-17
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc114.htm#art1
+  vigencia: 2021-12-17
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-115:
+  assinatura: 2022-02-10
+  publicacao: 2022-02-11
+  vigencia: 2022-02-11
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc115.htm#art1
+ec-116:
+  assinatura: 2022-02-17
+  publicacao: 2022-02-18
+  vigencia: 2022-02-18
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc116.htm#art1
+ec-117:
+  assinatura: 2022-04-05
+  publicacao: 2022-04-06
+  vigencia: 2022-04-06
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc117.htm#art1
+ec-118:
+  assinatura: 2022-04-26
+  publicacao: 2022-04-27
+  vigencia: 2022-04-27
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc118.htm#art1
+ec-12:
+  assinatura: 1996-08-15
+  publicacao: 1996-08-16
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc12.htm#art1
+  vigencia: 1996-08-16
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-120:
+  assinatura: 2022-05-05
+  publicacao: 2022-05-06
+  vigencia: 2022-05-06
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc120.htm#art1
+ec-123:
+  assinatura: 2022-07-14
+  publicacao: 2022-07-15
+  vigencia: 2022-07-15
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc123.htm#art2
+ec-124:
+  assinatura: 2022-07-14
+  publicacao: 2022-07-15
+  vigencia: 2022-07-15
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc124.htm#art1
+ec-125:
+  assinatura: 2022-07-14
+  publicacao: 2022-07-15
+  vigencia: 2022-07-15
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc125.htm#art1
+ec-126:
+  assinatura: 2022-12-21
+  publicacao: 2022-12-22
+  vigencia: 2022-12-22
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc126.htm#art9
+ec-127:
+  assinatura: 2022-12-22
+  publicacao: 2022-12-23
+  vigencia: 2022-12-23
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc127.htm#art1
+ec-128:
+  assinatura: 2022-12-22
+  publicacao: 2022-12-23
+  vigencia: 2022-12-23
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc128.htm#art1
+ec-129:
+  assinatura: 2023-07-05
+  publicacao: 2023-07-06
+  vigencia: 2023-07-06
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc129.htm#art1
+ec-13:
+  assinatura: 1996-08-21
+  publicacao: 1996-08-22
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc13.htm#art1
+  vigencia: 1996-08-22
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-130:
+  assinatura: 2023-10-03
+  publicacao: 2023-10-04
+  vigencia: 2023-10-04
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc130.htm#art1
+ec-131:
+  assinatura: 2023-10-03
+  publicacao: 2023-10-04
+  vigencia: 2023-10-04
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc131.htm#art1
+ec-132:
+  assinatura: 2023-12-20
+  publicacao: 2023-12-21
+  pendencia: 'cláusula de vigência não reconhecida: "com o início da produção de efeitos do ajuste das alíquotas de referência de que trata o inciso I deste parágrafo"'
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc132.htm#art3
+ec-133:
+  assinatura: 2024-08-22
+  publicacao: 2024-08-23
+  vigencia: 2024-08-23
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc133.htm#art2
+ec-134:
+  assinatura: 2024-09-24
+  publicacao: 2024-09-25
+  vigencia: 2024-09-25
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc134.htm#art1
+ec-135:
+  assinatura: 2024-12-20
+  publicacao: 2024-12-20
+  vigencia: 2024-12-20
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc135.htm#art1
+ec-136:
+  assinatura: 2025-09-09
+  publicacao: 2025-09-10
+  vigencia: 2025-09-10
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc136.htm#art1
+ec-137:
+  assinatura: 2025-12-09
+  publicacao: 2025-12-10
+  vigencia: 2025-12-10
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc137.htm#art1
+ec-138:
+  assinatura: 2025-12-19
+  publicacao: 2025-12-22
+  vigencia: 2025-12-22
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc138.htm#art1
+ec-139:
+  assinatura: 2026-05-05
+  publicacao: 2026-05-06
+  vigencia: 2026-05-06
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc139.htm#art1
+ec-14:
+  assinatura: 1996-09-12
+  publicacao: 1996-09-13
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc14.htm#art1
+  vigencia: 1997-01-01
+  nota: 'Cláusula: "a primeiro de janeiro do ano subsequente ao de sua promulgação".'
+  manual: true
+ec-15:
+  assinatura: 1996-09-12
+  publicacao: 1996-09-13
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc15.htm#art1
+  vigencia: 1996-09-13
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-16:
+  assinatura: 1997-06-04
+  publicacao: 1997-06-05
+  vigencia: 1997-06-05
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc16.htm#art14%C2%A75
+ec-17:
+  assinatura: 1997-11-22
+  publicacao: 1997-11-25
+  vigencia: 1997-11-25
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc17.htm#art4
+ec-18:
+  assinatura: 1998-02-05
+  publicacao: 1998-02-06
+  vigencia: 1998-02-06
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc18.htm#art1
+ec-19:
+  assinatura: 1998-06-04
+  publicacao: 1998-06-05
+  vigencia: 1998-06-05
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc19.htm#art1
+ec-2:
+  assinatura: 1992-08-25
+  publicacao: 1992-08-25
+  aproximada: true
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc02.htm
+  vigencia: 1992-08-25
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-20:
+  assinatura: 1998-12-15
+  publicacao: 1998-12-16
+  vigencia: 1998-12-16
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc20.htm#art1
+ec-21:
+  assinatura: 1999-03-18
+  publicacao: 1999-03-19
+  vigencia: 1999-03-19
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc21.htm#art1
+ec-22:
+  assinatura: 1999-03-18
+  publicacao: 1999-03-19
+  vigencia: 1999-03-19
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc22.htm#art1
+ec-23:
+  assinatura: 1999-09-02
+  publicacao: 1999-09-03
+  vigencia: 1999-09-03
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc23.htm#art1
+ec-24:
+  assinatura: 1999-12-09
+  publicacao: 1999-12-10
+  vigencia: 1999-12-10
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc24.htm#art1
+ec-25:
+  assinatura: 2000-02-14
+  publicacao: 2000-02-15
+  vigencia: 2001-01-01
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc25.htm#art1
+ec-26:
+  assinatura: 2000-02-14
+  publicacao: 2000-02-15
+  vigencia: 2000-02-15
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc26.htm#1
+ec-27:
+  assinatura: 2000-03-21
+  publicacao: 2000-03-22
+  vigencia: 2000-03-22
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc27.htm#art1
+ec-28:
+  assinatura: 2000-05-25
+  publicacao: 2000-05-26
+  vigencia: 2000-05-26
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc28.htm#art1
+ec-29:
+  assinatura: 2000-09-13
+  publicacao: 2000-09-14
+  vigencia: 2000-09-14
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc29.htm#art1
+ec-3:
+  assinatura: 1993-03-17
+  publicacao: 1993-03-18
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc03.htm#art1
+  vigencia: 1993-03-18
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-30:
+  assinatura: 2000-09-13
+  publicacao: 2000-09-14
+  vigencia: 2000-09-14
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc30.htm#art1
+ec-31:
+  assinatura: 2000-12-14
+  publicacao: 2000-12-18
+  vigencia: 2000-12-18
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc31.htm#art1
+ec-32:
+  assinatura: 2001-09-11
+  publicacao: 2001-09-12
+  vigencia: 2001-09-12
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc32.htm#art1
+ec-33:
+  assinatura: 2001-12-11
+  publicacao: 2001-12-12
+  vigencia: 2001-12-12
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc33.htm#art149%C2%A71
+ec-34:
+  assinatura: 2001-12-13
+  publicacao: 2001-12-14
+  vigencia: 2001-12-14
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc34.htm#art1
+ec-35:
+  assinatura: 2001-12-20
+  publicacao: 2001-12-21
+  vigencia: 2001-12-21
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc35.htm#art1
+ec-36:
+  assinatura: 2002-05-28
+  publicacao: 2002-05-29
+  vigencia: 2002-05-29
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc36.htm#art1
+ec-37:
+  assinatura: 2002-06-12
+  publicacao: 2002-06-13
+  vigencia: 2002-06-13
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc37.htm#art1
+ec-38:
+  assinatura: 2002-06-12
+  publicacao: 2002-06-13
+  vigencia: 2002-06-13
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc38.htm#art1
+ec-39:
+  assinatura: 2002-12-19
+  publicacao: 2002-12-20
+  vigencia: 2002-12-20
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc39.htm#art1
+ec-4:
+  publicacao: 1993-09-15
+  vigencia: 1993-09-15
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc04.htm
+ec-40:
+  assinatura: 2003-05-29
+  publicacao: 2003-05-30
+  vigencia: 2003-05-30
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc40.htm#art1
+ec-41:
+  assinatura: 2003-12-19
+  publicacao: 2003-12-31
+  vigencia: 2003-12-31
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc41.htm#art1
+ec-42:
+  assinatura: 2003-12-19
+  publicacao: 2003-12-31
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc42.htm#art1
+  vigencia: 2003-12-31
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-43:
+  assinatura: 2004-04-15
+  publicacao: 2004-04-16
+  vigencia: 2004-04-16
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc43.htm#art1
+ec-44:
+  assinatura: 2004-06-30
+  publicacao: 2004-06-30
+  aproximada: true
+  vigencia: 2004-06-30
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc44.htm#art1
+ec-45:
+  assinatura: 2004-12-30
+  publicacao: 2004-12-31
+  vigencia: 2004-12-31
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc45.htm#art1
+ec-46:
+  assinatura: 2005-05-05
+  publicacao: 2005-05-06
+  vigencia: 2005-05-06
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc46.htm#art1
+ec-47:
+  assinatura: 2005-07-05
+  publicacao: 2005-07-06
+  vigencia: 2005-07-06
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc47.htm#art1
+ec-48:
+  assinatura: 2005-08-10
+  publicacao: 2005-08-11
+  vigencia: 2005-08-11
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc48.htm#art1
+ec-49:
+  assinatura: 2006-02-08
+  publicacao: 2006-02-09
+  vigencia: 2006-02-09
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc49.htm#art1
+ec-5:
+  assinatura: 1995-08-15
+  publicacao: 1995-08-16
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc05.htm#art1
+  vigencia: 1995-08-16
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-50:
+  assinatura: 2006-02-14
+  publicacao: 2006-02-15
+  vigencia: 2006-02-15
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc50.htm#art1
+ec-51:
+  assinatura: 2006-02-14
+  publicacao: 2006-02-15
+  vigencia: 2006-02-15
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc51.htm#art1
+ec-52:
+  assinatura: 2006-03-08
+  publicacao: 2006-03-09
+  vigencia: 2006-03-09
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc52.htm#art1
+ec-53:
+  assinatura: 2006-12-19
+  publicacao: 2006-12-20
+  vigencia: 2006-12-20
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc53.htm#art1
+ec-54:
+  assinatura: 2007-09-20
+  publicacao: 2007-09-21
+  vigencia: 2007-09-21
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc54.htm#art1
+ec-55:
+  assinatura: 2007-09-20
+  publicacao: 2007-09-21
+  vigencia: 2007-09-21
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc55.htm#art2
+ec-56:
+  assinatura: 2007-12-20
+  publicacao: 2007-12-21
+  vigencia: 2007-12-21
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc56.htm#art1
+ec-57:
+  assinatura: 2008-12-18
+  publicacao: 2008-12-18
+  vigencia: 2008-12-18
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc57.htm#art1
+ec-59:
+  assinatura: 2009-11-11
+  publicacao: 2009-11-12
+  vigencia: 2009-11-12
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc59.htm#art1
+ec-6:
+  assinatura: 1995-08-15
+  publicacao: 1995-08-16
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc06.htm#art1
+  vigencia: 1995-08-16
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-60:
+  assinatura: 2009-11-11
+  publicacao: 2009-11-12
+  vigencia: 2009-11-12
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc60.htm#art1
+ec-61:
+  assinatura: 2009-11-11
+  publicacao: 2009-11-12
+  vigencia: 2009-11-12
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc61.htm#art1
+ec-62:
+  assinatura: 2009-12-09
+  publicacao: 2009-12-10
+  vigencia: 2009-12-10
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc62.htm#art1
+ec-63:
+  assinatura: 2010-02-04
+  publicacao: 2010-02-05
+  vigencia: 2010-02-05
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc63.htm#art1
+ec-64:
+  assinatura: 2010-02-04
+  publicacao: 2010-02-04
+  vigencia: 2010-02-04
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc64.htm#art1
+ec-65:
+  assinatura: 2010-07-13
+  publicacao: 2010-07-14
+  vigencia: 2010-07-14
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc65.htm#art1
+ec-66:
+  assinatura: 2010-07-13
+  publicacao: 2010-07-14
+  vigencia: 2010-07-14
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc66.htm#art1
+ec-67:
+  assinatura: 2010-12-22
+  publicacao: 2010-12-23
+  vigencia: 2010-12-23
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc67.htm
+ec-68:
+  assinatura: 2011-12-21
+  publicacao: 2011-12-22
+  vigencia: 2011-12-22
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc68.htm#art1
+ec-69:
+  assinatura: 2012-03-29
+  publicacao: 2012-03-30
+  vigencia: 2012-03-30
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc69.htm#art1
+ec-7:
+  assinatura: 1995-08-15
+  publicacao: 1995-08-16
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc07.htm#art1
+  vigencia: 1995-08-16
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-71:
+  assinatura: 2012-11-29
+  publicacao: 2012-11-30
+  vigencia: 2012-11-30
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc71.htm
+ec-72:
+  assinatura: 2013-04-02
+  publicacao: 2013-04-03
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc72.htm
+  vigencia: 2013-04-03
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-73:
+  assinatura: 2013-06-06
+  publicacao: 2013-06-07
+  vigencia: 2013-06-07
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc73.htm
+ec-74:
+  assinatura: 2013-08-06
+  publicacao: 2013-08-07
+  vigencia: 2013-08-07
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc74.htm
+ec-75:
+  assinatura: 2013-10-15
+  publicacao: 2013-10-16
+  vigencia: 2013-10-16
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc75.htm#art1
+ec-76:
+  assinatura: 2013-11-28
+  publicacao: 2013-11-29
+  vigencia: 2013-11-29
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc76.htm#art1
+ec-77:
+  assinatura: 2014-02-11
+  publicacao: 2014-02-12
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc77.htm
+  vigencia: 2014-02-12
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-78:
+  assinatura: 2014-05-14
+  publicacao: 2014-05-15
+  pendencia: 'cláusula de vigência não reconhecida: "no exercício financeiro seguinte ao de sua publicação"'
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc78.htm#art1
+ec-8:
+  assinatura: 1995-08-15
+  publicacao: 1995-08-16
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc08.htm#art21xi
+  vigencia: 1995-08-16
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-80:
+  assinatura: 2014-06-04
+  publicacao: 2014-06-05
+  vigencia: 2014-06-05
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc80.htm#art1
+ec-81:
+  assinatura: 2014-06-05
+  publicacao: 2014-06-06
+  vigencia: 2014-06-06
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc81.htm#art1
+ec-82:
+  assinatura: 2014-07-16
+  publicacao: 2014-06-17
+  vigencia: 2014-06-17
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc82.htm
+ec-83:
+  assinatura: 2014-08-05
+  publicacao: 2014-08-06
+  vigencia: 2014-08-06
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc83.htm
+ec-84:
+  assinatura: 2014-12-02
+  publicacao: 2014-12-03
+  vigencia: 2014-12-03
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc84.htm#art1
+ec-85:
+  assinatura: 2015-02-26
+  publicacao: 2015-02-27
+  vigencia: 2015-02-27
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc85.htm#art1
+ec-86:
+  assinatura: 2015-03-17
+  publicacao: 2015-03-18
+  vigencia: 2015-03-18
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc86.htm#art1
+ec-87:
+  assinatura: 2015-04-16
+  publicacao: 2015-04-17
+  vigencia: 2015-04-17
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc87.htm#art1
+ec-88:
+  assinatura: 2015-05-07
+  publicacao: 2015-05-08
+  vigencia: 2015-05-08
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc88.htm#art1
+ec-89:
+  assinatura: 2015-09-15
+  publicacao: 2015-09-16
+  vigencia: 2015-09-16
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc89.htm
+ec-9:
+  assinatura: 1995-11-09
+  publicacao: 1995-11-10
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc09.htm#art3
+  vigencia: 1995-11-10
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-90:
+  assinatura: 2015-09-15
+  publicacao: 2015-09-16
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc90.htm
+  vigencia: 2015-09-16
+  nota: "Emenda sem cláusula de vigência: vigora na publicação."
+  manual: true
+ec-92:
+  assinatura: 2016-07-12
+  publicacao: 2016-07-13
+  vigencia: 2016-07-13
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc92.htm#art1
+ec-93:
+  assinatura: 2016-09-08
+  publicacao: 2016-09-09
+  vigencia: 2016-09-09
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc93.htm#art1
+ec-94:
+  assinatura: 2016-12-15
+  publicacao: 2016-12-16
+  vigencia: 2016-12-16
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc94.htm#art1
+ec-95:
+  assinatura: 2016-12-15
+  publicacao: 2016-12-15
+  vigencia: 2016-12-15
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc95.htm#art1
+ec-96:
+  assinatura: 2017-06-06
+  publicacao: 2017-06-07
+  vigencia: 2017-06-07
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc96.htm
+ec-97:
+  assinatura: 2017-10-04
+  publicacao: 2017-10-05
+  vigencia: 2017-10-05
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc97.htm#art1
+ec-99:
+  assinatura: 2017-12-14
+  publicacao: 2017-12-15
+  vigencia: 2017-12-15
+  url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc99.htm#art1
+lc-146:
+  assinatura: 2014-06-25
+  publicacao: 2014-06-26
+  vigencia: 2014-06-26
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/LCP/Lcp146.htm
+lc-147:
+  assinatura: 2014-08-07
+  publicacao: 2014-08-08
+  vigencia: 2014-08-08
+  url: https://www.planalto.gov.br/ccivil_03/leis/LCP/Lcp147.htm#art6
+lc-150:
+  assinatura: 2015-06-01
+  publicacao: 2015-06-02
+  vigencia: 2015-06-02
+  url: http://www.planalto.gov.br/ccivil_03/LEIS/LCP/Lcp150.htm#art27vii
+lc-152:
+  assinatura: 2015-12-03
+  publicacao: 2015-12-04
+  vigencia: 2015-12-04
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/LCP/Lcp152.htm
+lc-167:
+  assinatura: 2019-04-24
+  publicacao: 2019-04-25
+  vigencia: 2019-04-25
+  url: https://www.planalto.gov.br/ccivil_03/leis/LCP/Lcp167.htm#art11
+lc-214:
+  assinatura: 2025-01-16
+  publicacao: 2025-01-16
+  vigencia: 2025-01-16
+  url: https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm
+lc-224:
+  assinatura: 2025-12-26
+  publicacao: 2025-12-26
+  vigencia: 2025-12-26
+  url: https://www.planalto.gov.br/ccivil_03/leis/LCP/Lcp224.htm#art11
+lc-230:
+  assinatura: 2026-04-15
+  publicacao: 2026-04-16
+  vigencia: 2026-04-16
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/LCP/Lcp230.htm
+lc-62:
+  assinatura: 1989-12-28
+  publicacao: 1989-12-29
+  vigencia: 1990-01-01
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/LCP/Lcp62.htm
+lc-78:
+  assinatura: 1993-12-30
+  publicacao: 1994-01-05
+  vigencia: 1994-01-05
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/LCP/Lcp78.htm
+lei-:
+  assinatura: 1996-06-04
+  publicacao: 1996-06-07
+  vigencia: 1996-06-07
+  url: https://www.planalto.gov.br/ccivil_03/Leis/L9281.htm#art1
+lei-10028:
+  assinatura: 1950-04-10
+  publicacao: 2000-10-20
+  vigencia: 2000-10-20
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L10028.htm#art1
+lei-10224:
+  publicacao: 2001-05-16
+  vigencia: 2001-05-16
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/LEIS_2001/L10224.htm#art216a
+lei-10258:
+  publicacao: 2001-07-12
+  vigencia: 2001-07-12
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/LEIS_2001/L10258.htm#art295v
+lei-10259:
+  publicacao: 2001-07-13
+  vigencia: 2002-01-13
+  url: https://www.planalto.gov.br/ccivil_03/leis/LEIS_2001/L10259.htm#art2
+lei-10268:
+  publicacao: 2001-08-29
+  vigencia: 2001-08-29
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/LEIS_2001/L10268.htm#art342
+lei-10350:
+  publicacao: 2001-12-22
+  vigencia: 2002-02-20
+  url: https://www.planalto.gov.br/ccivil_03/leis/LEIS_2001/L10350.htm#art1
+lei-10446:
+  assinatura: 2002-05-08
+  publicacao: 2002-05-09
+  vigencia: 2002-05-09
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/2002/L10446.htm#art1i
+lei-10455:
+  publicacao: 2002-05-14
+  url: https://www.planalto.gov.br/ccivil_03/leis/2002/L10455.htm
+  vigencia: 2002-06-28
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-10467:
+  publicacao: 2002-06-12
+  vigencia: 2002-06-12
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/2002/L10467.htm#art2
+lei-10517:
+  publicacao: 2002-07-12
+  vigencia: 2002-07-12
+  url: https://www.planalto.gov.br/ccivil_03/leis/2002/L10517.htm#art1
+lei-10628:
+  publicacao: 2002-12-26
+  vigencia: 2002-12-26
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/2002/L10628.htm#art1
+lei-10683:
+  assinatura: 2003-05-23
+  publicacao: 2003-05-29
+  vigencia: 2003-05-29
+  url: https://www.planalto.gov.br/ccivil_03/leis/2003/L10.683.htm#art57
+lei-10695:
+  assinatura: 1998-02-19
+  publicacao: 2003-07-02
+  vigencia: 2003-08-01
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/2003/L10.695.htm#art1art184
+lei-10701:
+  assinatura: 1998-03-03
+  publicacao: 2003-07-10
+  vigencia: 2003-07-10
+  url: https://www.planalto.gov.br/ccivil_03/leis/2003/L10.701.htm#art1art1ii
+lei-10713:
+  publicacao: 2003-08-14
+  vigencia: 2003-11-12
+  url: https://www.planalto.gov.br/ccivil_03/leis/2003/L10.713.htm#art1
+lei-10741:
+  assinatura: 1994-01-04
+  publicacao: 2003-10-03
+  vigencia: 2004-01-01
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/2003/L10.741.htm#art61iih
+lei-10763:
+  publicacao: 2003-11-13
+  vigencia: 2003-11-13
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/2003/L10.763.htm#art33%C2%A74
+lei-10764:
+  publicacao: 2003-11-13
+  vigencia: 2003-11-13
+  url: https://www.planalto.gov.br/ccivil_03/leis/2003/L10.764.htm#art1
+lei-10792:
+  publicacao: 2003-12-02
+  vigencia: 2003-12-02
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/2003/L10.792.htm#art185
+lei-10803:
+  publicacao: 2003-12-12
+  vigencia: 2003-12-12
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/2003/L10.803.htm#art149
+lei-10830:
+  assinatura: 1997-09-23
+  publicacao: 2003-12-24
+  vigencia: 2003-12-24
+  url: https://www.planalto.gov.br/ccivil_03/leis/2003/L10.830.htm#art1
+lei-10867:
+  assinatura: 2004-05-12
+  publicacao: 2004-05-13
+  vigencia: 2004-05-13
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Lei/L10.867.htm#art6iv
+lei-10884:
+  assinatura: 2004-06-17
+  publicacao: 2004-06-18
+  vigencia: 2004-06-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Lei/L10.884.htm#art5
+lei-10886:
+  assinatura: 2004-06-17
+  publicacao: 2004-06-18
+  vigencia: 2004-06-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Lei/L10.886.htm#art1
+lei-10982:
+  assinatura: 2004-07-13
+  publicacao: 2004-07-14
+  vigencia: 2004-07-14
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Lei/L10.892.htm#art2%C2%A73
+lei-11035:
+  assinatura: 2004-12-22
+  publicacao: 2004-12-23
+  vigencia: 2004-12-23
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Lei/L11035.htm#art293i
+lei-11101:
+  assinatura: 2005-02-09
+  publicacao: 2005-02-09
+  vigencia: 2005-06-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2005/Lei/L11101.htm#art200
+lei-11106:
+  assinatura: 2005-03-28
+  publicacao: 2005-03-29
+  vigencia: 2005-03-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2005/Lei/L11106.htm#art5
+lei-11113:
+  assinatura: 2005-05-13
+  publicacao: 2005-05-16
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2005/Lei/L11113.htm#art1
+  vigencia: 2005-06-30
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-11118:
+  assinatura: 2005-05-19
+  publicacao: 2005-05-20
+  vigencia: 2005-05-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2005/Lei/L11118.htm#art4
+lei-11185:
+  assinatura: 2005-10-07
+  publicacao: 2005-10-10
+  vigencia: 2005-10-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2005/Lei/L11185.htm#art2
+lei-11191:
+  assinatura: 2005-11-10
+  publicacao: 2005-11-11
+  vigencia: 2005-11-11
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2005/Lei/L11191.htm#art2
+lei-11259:
+  assinatura: 2005-12-30
+  publicacao: 2006-01-02
+  vigencia: 2006-01-02
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2005/Lei/L11259.htm#art1
+lei-11275:
+  assinatura: 2006-02-07
+  publicacao: 2006-02-08
+  vigencia: 2006-02-08
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11275.htm#art1
+lei-11313:
+  assinatura: 2006-06-28
+  publicacao: 2006-06-29
+  vigencia: 2006-06-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11313.htm#art1
+lei-11334:
+  assinatura: 2006-07-25
+  publicacao: 2006-07-26
+  vigencia: 2006-07-26
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11334.htm#art1
+lei-11340:
+  assinatura: 2006-08-07
+  publicacao: 2006-08-08
+  vigencia: 2006-09-22
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm#art43
+lei-11417:
+  assinatura: 2006-12-19
+  publicacao: 2006-12-20
+  vigencia: 2007-03-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11417.htm
+lei-11435:
+  assinatura: 2006-12-28
+  publicacao: 2006-12-29
+  vigencia: 2006-12-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11435.htm#art2
+lei-11464:
+  assinatura: 2007-03-28
+  publicacao: 2007-03-29
+  vigencia: 2007-03-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2007/Lei/L11464.htm#art1
+lei-11466:
+  assinatura: 2007-03-28
+  publicacao: 2007-03-29
+  vigencia: 2007-03-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2007/Lei/L11466.htm#art2
+lei-11501:
+  assinatura: 2007-07-11
+  publicacao: 2007-07-12
+  vigencia: 2007-07-12
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2007/Lei/L11501.htm#art12
+lei-11596:
+  assinatura: 2007-11-29
+  publicacao: 2007-11-30
+  vigencia: 2007-11-30
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2007/Lei/L11596.htm#art2
+lei-11689:
+  assinatura: 2008-06-09
+  publicacao: 2008-06-10
+  vigencia: 2008-08-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2008/Lei/L11689.htm#art1
+lei-11690:
+  assinatura: 2008-06-09
+  publicacao: 2008-06-10
+  vigencia: 2008-08-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2008/Lei/L11690.htm#art1
+lei-11705:
+  assinatura: 2008-06-19
+  publicacao: 2008-06-20
+  vigencia: 2008-06-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2008/Lei/L11705.htm#art5
+lei-11706:
+  assinatura: 2008-06-19
+  publicacao: 2008-06-20
+  vigencia: 2008-06-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2008/Lei/L11706.htm#art1
+lei-11719:
+  assinatura: 2008-06-20
+  publicacao: 2008-06-23
+  vigencia: 2008-08-22
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2008/Lei/L11719.htm#art3
+lei-11829:
+  assinatura: 2008-11-25
+  publicacao: 2008-11-26
+  vigencia: 2008-11-26
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2008/Lei/L11829.htm#art1
+lei-11900:
+  assinatura: 2009-01-08
+  publicacao: 2009-01-09
+  vigencia: 2009-01-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L11900.htm#art1
+lei-11910:
+  assinatura: 2009-03-18
+  publicacao: 2009-03-19
+  vigencia: 2009-03-19
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L11910.htm#art1
+lei-11923:
+  assinatura: 2009-04-17
+  publicacao: 2009-04-17
+  vigencia: 2009-04-17
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L11923.htm#art1
+lei-11942:
+  assinatura: 2009-05-28
+  publicacao: 2009-05-29
+  vigencia: 2009-05-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L11942.htm#art1
+lei-12006:
+  assinatura: 2009-07-29
+  publicacao: 2009-07-30
+  vigencia: 2009-07-30
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12006.htm#art1
+lei-12009:
+  assinatura: 2009-07-29
+  publicacao: 2009-07-30
+  vigencia: 2009-07-30
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12009.htm#art4
+lei-12010:
+  assinatura: 2009-08-03
+  publicacao: 2009-08-04
+  vigencia: 2009-11-02
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12010.htm#art2
+lei-12012:
+  assinatura: 2009-08-06
+  publicacao: 2009-08-07
+  vigencia: 2009-08-07
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12012.htm#art2
+lei-12015:
+  assinatura: 2009-08-07
+  publicacao: 2009-08-10
+  vigencia: 2009-08-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12015.htm#art2
+lei-12033:
+  assinatura: 2009-09-29
+  publicacao: 2009-09-30
+  vigencia: 2009-09-30
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12033.htm#art2
+lei-12038:
+  assinatura: 2009-10-01
+  publicacao: 2009-10-02
+  vigencia: 2009-10-02
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12038.htm#art1
+lei-12058:
+  assinatura: 2009-10-13
+  publicacao: 2009-10-14
+  vigencia: 2009-10-14
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12058.htm#art4
+lei-12121:
+  assinatura: 2009-12-15
+  publicacao: 2009-12-16
+  vigencia: 2010-06-14
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12121.htm#art2
+lei-12126:
+  assinatura: 2009-12-16
+  publicacao: 2009-12-17
+  vigencia: 2009-12-17
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12126.htm#art2
+lei-12137:
+  assinatura: 2009-12-18
+  publicacao: 2009-12-21
+  vigencia: 2009-12-21
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2009/Lei/L12137.htm#art2
+lei-12217:
+  assinatura: 2010-03-17
+  publicacao: 2010-03-18
+  vigencia: 2010-05-17
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2010/Lei/L12217.htm#art1
+lei-12219:
+  assinatura: 2010-03-31
+  publicacao: 2010-03-31
+  aproximada: true
+  vigencia: 2010-03-31
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2010/Lei/L12219.htm#art1
+lei-12234:
+  assinatura: 2010-05-05
+  publicacao: 2010-05-06
+  vigencia: 2010-05-06
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2010/Lei/L12234.htm#art2
+lei-12245:
+  assinatura: 2010-05-24
+  publicacao: 2010-05-25
+  vigencia: 2010-05-25
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2010/Lei/L12245.htm#art1
+lei-12249:
+  assinatura: 2010-06-11
+  publicacao: 2010-06-14
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2010/Lei/L12249.htm#art140
+  vigencia: 2010-07-29
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-12258:
+  assinatura: 2010-06-15
+  publicacao: 2010-06-16
+  vigencia: 2010-06-16
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2010/Lei/L12258.htm#art2
+lei-12313:
+  assinatura: 2010-08-19
+  publicacao: 2010-08-20
+  vigencia: 2010-08-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2010/Lei/L12313.htm#art2
+lei-12403:
+  assinatura: 2011-05-04
+  publicacao: 2011-05-05
+  vigencia: 2011-07-04
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Lei/L12403.htm#art1
+lei-12415:
+  assinatura: 2011-06-09
+  publicacao: 2011-06-10
+  vigencia: 2011-06-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Lei/L12415.htm#art2
+lei-12433:
+  pendencia: "não foi possível baixar: HTTP 404 em https://www.planalto.gov.br/_Ato2011-2014/2011/Lei/L12433.htm#art1"
+  url: https://www.planalto.gov.br/_Ato2011-2014/2011/Lei/L12433.htm#art1
+lei-12452:
+  assinatura: 2011-07-21
+  publicacao: 2011-07-22
+  vigencia: 2011-07-22
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Lei/L12452.htm#art1
+lei-12453:
+  assinatura: 2011-07-21
+  publicacao: 2011-07-22
+  vigencia: 2011-07-22
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Lei/L12453.htm#art5
+lei-12527:
+  assinatura: 2011-11-18
+  publicacao: 2011-11-18
+  vigencia: 2012-05-16
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Lei/L12527.htm
+lei-12529:
+  assinatura: 2011-11-30
+  publicacao: 2011-11-30
+  aproximada: true
+  vigencia: 2012-05-28
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Lei/L12529.htm#art116
+lei-12547:
+  assinatura: 2011-12-14
+  publicacao: 2011-12-15
+  vigencia: 2011-12-15
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Lei/L12547.htm#art1
+lei-12550:
+  assinatura: 2011-12-15
+  publicacao: 2011-12-16
+  vigencia: 2011-12-16
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Lei/L12550.htm#art18
+lei-12594:
+  assinatura: 2012-01-18
+  publicacao: 2012-01-19
+  vigencia: 2012-04-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12594.htm#art86
+lei-12619:
+  assinatura: 2012-04-30
+  publicacao: 2012-05-02
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12619.htm#art5
+  vigencia: 2012-06-16
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-12650:
+  assinatura: 2012-05-17
+  publicacao: 2012-05-18
+  vigencia: 2012-05-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12650.htm
+lei-12653:
+  assinatura: 2012-05-28
+  publicacao: 2012-05-29
+  vigencia: 2012-05-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12653.htm#art1
+lei-12654:
+  assinatura: 2012-05-28
+  publicacao: 2012-05-29
+  vigencia: 2012-11-25
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12654.htm#art3
+lei-12681:
+  assinatura: 2012-07-04
+  publicacao: 2012-06-29
+  vigencia: 2012-06-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12681.htm#art12
+lei-12683:
+  assinatura: 2012-07-09
+  publicacao: 2012-07-10
+  vigencia: 2012-07-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12683.htm#art2
+lei-12694:
+  assinatura: 2012-07-24
+  publicacao: 2012-07-25
+  vigencia: 2012-10-23
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12694.htm#art4
+lei-12696:
+  assinatura: 2012-07-25
+  publicacao: 2012-07-26
+  vigencia: 2012-07-26
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12696.htm
+lei-12720:
+  assinatura: 2012-09-27
+  publicacao: 2012-09-28
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12720.htm#art3
+  vigencia: 2012-11-12
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-12726:
+  assinatura: 2012-10-16
+  publicacao: 2012-10-17
+  vigencia: 2012-10-17
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12726.htm
+lei-12736:
+  assinatura: 2012-11-30
+  publicacao: 2012-12-03
+  vigencia: 2012-12-03
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12736.htm
+lei-12737:
+  assinatura: 2012-11-30
+  publicacao: 2012-12-03
+  vigencia: 2013-04-02
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12737.htm#art2
+lei-12760:
+  assinatura: 2012-12-20
+  publicacao: 2012-12-21
+  vigencia: 2012-12-21
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12760.htm#art1
+lei-12850:
+  assinatura: 2013-08-02
+  publicacao: 2013-08-05
+  vigencia: 2013-09-19
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2013/Lei/L12850.htm#art25
+lei-12865:
+  assinatura: 2013-10-09
+  publicacao: 2013-10-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2013/Lei/L12865.htm#art22
+  vigencia: 2013-11-24
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-12955:
+  assinatura: 2014-02-05
+  publicacao: 2014-02-06
+  vigencia: 2014-02-06
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L12955.htm#art2
+lei-12961:
+  assinatura: 2014-04-04
+  publicacao: 2014-04-07
+  vigencia: 2014-04-07
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L12961.htm#art1
+lei-12962:
+  assinatura: 2014-04-08
+  publicacao: 2014-04-09
+  vigencia: 2014-04-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L12962.htm#art1
+lei-12971:
+  assinatura: 2014-05-09
+  publicacao: 2014-05-12
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L12971.htm#art1
+  vigencia: 2014-11-01
+  nota: 'Cláusula: "no 1º dia do 6º mês após a sua publicação".'
+  manual: true
+lei-12977:
+  assinatura: 2014-05-20
+  publicacao: 2014-05-21
+  vigencia: 2015-05-21
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L12977.htm#art18
+lei-12978:
+  assinatura: 2014-05-21
+  publicacao: 2014-05-22
+  vigencia: 2014-05-22
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L12978.htm#art1
+lei-12993:
+  assinatura: 2014-06-17
+  publicacao: 2014-06-18
+  vigencia: 2014-06-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L12993.htm#art1
+lei-12998:
+  assinatura: 2014-06-18
+  publicacao: 2014-06-20
+  vigencia: 2014-06-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L12998.htm#art27
+lei-13:
+  assinatura: 2016-05-04
+  publicacao: 2016-05-05
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13281.htm#art1
+  vigencia: 2016-06-19
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-13008:
+  assinatura: 2014-06-26
+  publicacao: 2014-06-27
+  vigencia: 2014-06-27
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L13008.htm#art1
+lei-13010:
+  assinatura: 2014-06-26
+  publicacao: 2014-06-27
+  vigencia: 2014-06-27
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L13010.htm#art2
+lei-13022:
+  assinatura: 2014-08-08
+  publicacao: 2014-08-11
+  vigencia: 2014-08-11
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L13022.htm#art1
+lei-13046:
+  assinatura: 2014-12-01
+  publicacao: 2014-12-02
+  vigencia: 2014-12-02
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L13046.htm
+lei-13097:
+  assinatura: 2015-01-19
+  publicacao: 2015-01-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13097.htm#art125
+  vigencia: 2015-03-06
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-13103:
+  assinatura: 2015-03-02
+  publicacao: 2015-03-03
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13103.htm#art7
+  vigencia: 2015-04-17
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-13104:
+  assinatura: 2015-03-09
+  publicacao: 2015-03-10
+  vigencia: 2015-03-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13104.htm#art1
+lei-13105:
+  assinatura: 2015-03-16
+  publicacao: 2015-03-17
+  vigencia: 2016-03-17
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13105.htm#art212%C2%A72
+lei-13106:
+  assinatura: 2015-03-17
+  publicacao: 2015-03-18
+  vigencia: 2015-03-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13106.htm#art1
+lei-13142:
+  assinatura: 2015-07-06
+  publicacao: 2015-07-07
+  vigencia: 2015-07-07
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13142.htm#art1
+lei-13146:
+  assinatura: 2015-07-06
+  publicacao: 2015-07-07
+  vigencia: 2016-01-03
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13146.htm#art109
+lei-13154:
+  assinatura: 2015-07-30
+  publicacao: 2015-07-31
+  vigencia: 2015-07-31
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13154.htm#art1
+lei-13160:
+  assinatura: 2015-08-25
+  publicacao: 2015-08-26
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13160.htm#art2
+  vigencia: 2016-01-23
+  nota: 'Cláusula: "após decorridos cento e cinquenta dias de sua publicação oficial".'
+  manual: true
+lei-13163:
+  assinatura: 2015-09-09
+  publicacao: 2015-09-10
+  vigencia: 2015-09-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13163.htm#art2
+lei-13167:
+  assinatura: 2015-10-06
+  publicacao: 2015-10-07
+  vigencia: 2015-10-07
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13167.htm#art1
+lei-13188:
+  assinatura: 2015-11-11
+  publicacao: 2015-11-12
+  vigencia: 2015-11-12
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13188.htm#art13
+lei-13190:
+  assinatura: 2015-11-19
+  publicacao: 2015-11-20
+  vigencia: 2015-11-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13190.htm#art2
+lei-13228:
+  assinatura: 2015-12-28
+  publicacao: 2015-12-29
+  vigencia: 2015-12-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13228.htm
+lei-13257:
+  assinatura: 2016-03-08
+  publicacao: 2016-03-09
+  vigencia: 2016-03-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13257.htm#art41
+lei-13258:
+  assinatura: 2016-03-08
+  publicacao: 2016-03-09
+  vigencia: 2016-03-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13258.htm#art1
+lei-13260:
+  assinatura: 2016-03-16
+  publicacao: 2016-03-17
+  vigencia: 2016-03-17
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13260.htm#art19
+lei-13281:
+  assinatura: 2016-05-04
+  publicacao: 2016-05-05
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13281.htm#art1
+  vigencia: 2016-06-19
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-13290:
+  assinatura: 2016-05-23
+  publicacao: 2016-05-24
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13290.htm#art1
+  vigencia: 2016-07-08
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-13306:
+  assinatura: 2016-07-04
+  publicacao: 2016-07-05
+  vigencia: 2016-07-05
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13306.htm#art1
+lei-13311:
+  assinatura: 2016-07-11
+  publicacao: 2016-07-12
+  vigencia: 2016-07-12
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13311.htm
+lei-13330:
+  assinatura: 2016-08-02
+  publicacao: 2016-08-03
+  vigencia: 2016-08-03
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13330.htm#art2
+lei-13344:
+  assinatura: 2016-10-06
+  publicacao: 2016-10-07
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13344.htm#art12
+  vigencia: 2016-11-21
+  nota: 'Cláusula: "após decorridos 45 dias de sua publicação oficial".'
+  manual: true
+lei-13431:
+  assinatura: 2017-04-04
+  publicacao: 2017-04-05
+  vigencia: 2018-04-05
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13431.htm#art25
+lei-13434:
+  assinatura: 2017-04-12
+  publicacao: 2017-04-13
+  vigencia: 2017-04-13
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13434.htm
+lei-13436:
+  assinatura: 2017-04-12
+  publicacao: 2017-04-13
+  vigencia: 2017-07-12
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13436.htm
+lei-13438:
+  assinatura: 2017-04-26
+  publicacao: 2017-04-27
+  vigencia: 2017-10-24
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13438.htm#art1
+lei-13440:
+  assinatura: 2017-05-08
+  publicacao: 2017-05-09
+  vigencia: 2017-05-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13440.htm
+lei-13441:
+  assinatura: 2017-05-08
+  publicacao: 2017-05-09
+  vigencia: 2017-05-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13441.htm
+lei-13495:
+  assinatura: 2017-10-24
+  publicacao: 2017-10-25
+  vigencia: 2018-01-23
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13495.htm#art2
+lei-13497:
+  assinatura: 2017-10-26
+  publicacao: 2017-10-27
+  vigencia: 2017-10-27
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13497.htm#art1
+lei-13500:
+  assinatura: 2017-10-26
+  publicacao: 2017-10-27
+  vigencia: 2017-10-27
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13500.htm#art4
+lei-13505:
+  assinatura: 2017-11-08
+  publicacao: 2017-11-09
+  vigencia: 2017-11-09
+  url: http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13505.htm#art2
+lei-13506:
+  assinatura: 2017-11-13
+  publicacao: 2017-11-14
+  vigencia: 2017-11-14
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13506.htm#art55
+lei-13509:
+  assinatura: 2017-11-22
+  publicacao: 2017-11-23
+  vigencia: 2017-11-23
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13509.htm#art2
+lei-13531:
+  assinatura: 2017-12-07
+  publicacao: 2017-12-08
+  vigencia: 2017-12-08
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13531.htm#art2
+lei-13546:
+  assinatura: 2017-12-19
+  publicacao: 2017-12-20
+  vigencia: 2018-04-19
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2017/Lei/L13546.htm#art2
+lei-13603:
+  assinatura: 2018-01-09
+  publicacao: 2018-01-10
+  vigencia: 2018-01-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13603.htm#art2
+lei-13606:
+  assinatura: 2018-01-09
+  publicacao: 2018-01-10
+  vigencia: 2018-01-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13606.htm#art17
+lei-13614:
+  assinatura: 2018-01-11
+  publicacao: 2018-01-12
+  vigencia: 2018-03-13
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13614.htm#art5
+lei-13641:
+  assinatura: 2018-04-03
+  publicacao: 2018-04-04
+  vigencia: 2018-04-04
+  url: http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13641.htm#art2
+lei-13654:
+  assinatura: 2018-04-23
+  publicacao: 2018-04-24
+  vigencia: 2018-04-24
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13654.htm#art1
+lei-13675:
+  assinatura: 2018-06-11
+  publicacao: 2018-06-12
+  vigencia: 2018-07-12
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13675.htm
+lei-13715:
+  assinatura: 2018-09-24
+  publicacao: 2018-09-25
+  vigencia: 2018-09-25
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13715.htm#art2
+lei-13718:
+  assinatura: 2018-09-24
+  publicacao: 2018-09-25
+  vigencia: 2018-09-25
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13718.htm#art1
+lei-13721:
+  assinatura: 2018-10-02
+  publicacao: 2018-10-03
+  vigencia: 2018-10-03
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13721.htm#art1
+lei-13728:
+  assinatura: 2018-10-31
+  publicacao: 2018-10-31
+  aproximada: true
+  vigencia: 2018-10-31
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13728.htm#art1
+lei-13769:
+  assinatura: 2018-12-19
+  publicacao: 2018-12-20
+  vigencia: 2018-12-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13769.htm#art2
+lei-13771:
+  assinatura: 2018-12-19
+  publicacao: 2018-12-20
+  vigencia: 2018-12-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13771.htm#art1
+lei-13772:
+  assinatura: 2018-12-19
+  publicacao: 2018-12-20
+  vigencia: 2018-12-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13772.htm#art3
+lei-13798:
+  assinatura: 2019-01-03
+  publicacao: 2019-01-04
+  vigencia: 2019-01-04
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13798.htm#art1
+lei-13804:
+  assinatura: 2019-01-10
+  publicacao: 2019-01-11
+  vigencia: 2019-05-11
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13804.htm#art2
+lei-13812:
+  assinatura: 2019-03-16
+  publicacao: 2019-03-18
+  vigencia: 2019-03-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13812.htm#art14
+lei-13824:
+  assinatura: 2019-05-09
+  publicacao: 2019-05-10
+  vigencia: 2019-05-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13824.htm#art1
+lei-13827:
+  assinatura: 2019-05-13
+  publicacao: 2019-05-14
+  vigencia: 2019-05-14
+  url: http://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13827.htm#art2
+lei-13836:
+  assinatura: 2019-06-04
+  publicacao: 2019-06-05
+  vigencia: 2019-06-05
+  url: http://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13836.htm#art1
+lei-13840:
+  assinatura: 2019-06-05
+  publicacao: 2019-06-06
+  vigencia: 2019-06-06
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13840.htm#art2
+lei-13845:
+  assinatura: 2019-06-18
+  publicacao: 2019-06-18
+  vigencia: 2019-06-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13845.htm#art2
+lei-13855:
+  assinatura: 2019-07-08
+  publicacao: 2019-07-09
+  vigencia: 2019-10-07
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13855.htm#art2
+lei-13869:
+  assinatura: 2019-09-05
+  publicacao: 2019-09-05
+  vigencia: 2020-01-03
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13869.htm#art44
+lei-13870:
+  assinatura: 2019-09-17
+  publicacao: 2019-09-18
+  vigencia: 2019-09-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13870.htm#art1
+lei-13871:
+  assinatura: 2019-09-17
+  publicacao: 2019-09-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13871.htm
+  vigencia: 2019-11-02
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-13874:
+  assinatura: 2019-09-20
+  publicacao: 2019-09-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13874.htm#art1
+  vigencia: 2019-11-04
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-13880:
+  assinatura: 2019-10-08
+  publicacao: 2019-10-09
+  vigencia: 2019-10-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13880.htm#art1
+lei-13882:
+  assinatura: 2019-10-08
+  publicacao: 2019-10-09
+  vigencia: 2019-10-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13882.htm#art2
+lei-13886:
+  assinatura: 2019-10-17
+  publicacao: 2019-10-18
+  vigencia: 2019-10-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13886.htm#art4
+lei-13894:
+  assinatura: 2019-10-29
+  publicacao: 2019-10-30
+  vigencia: 2019-10-30
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13894.htm#art1
+lei-13964:
+  assinatura: 2019-12-24
+  publicacao: 2019-12-24
+  vigencia: 2020-01-23
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13964.htm#art2
+lei-13968:
+  assinatura: 2019-12-26
+  publicacao: 2019-12-27
+  vigencia: 2019-12-27
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13968.htm#art2
+lei-13974:
+  assinatura: 2020-01-07
+  publicacao: 2020-01-08
+  vigencia: 2020-01-08
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L13974.htm#art14
+lei-13984:
+  assinatura: 2020-04-03
+  publicacao: 2020-04-03
+  vigencia: 2020-04-03
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L13984.htm#art2
+lei-13994:
+  assinatura: 2020-04-24
+  publicacao: 2020-04-27
+  vigencia: 2020-04-27
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L13994.htm#art1
+lei-14071:
+  assinatura: 2020-10-13
+  publicacao: 2020-10-13
+  aproximada: true
+  vigencia: 2021-04-11
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L14071.htm#art1
+lei-14110:
+  assinatura: 2020-12-18
+  publicacao: 2020-12-21
+  vigencia: 2020-12-21
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L14110.htm#art1
+lei-14132:
+  assinatura: 2021-03-31
+  publicacao: 2021-03-31
+  aproximada: true
+  vigencia: 2021-03-31
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2021/Lei/L14132.htm#art2
+lei-14133:
+  assinatura: 2021-04-01
+  publicacao: 2021-04-01
+  aproximada: true
+  vigencia: 2021-04-01
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2021/Lei/L14133.htm#art178
+lei-14149:
+  assinatura: 2021-05-05
+  publicacao: 2021-05-06
+  vigencia: 2021-05-06
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2021/Lei/L14149.htm#art3
+lei-14154:
+  assinatura: 2021-05-26
+  publicacao: 2021-05-27
+  vigencia: 2022-05-27
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2021/Lei/L14154.htm#art1
+lei-14155:
+  assinatura: 2021-05-27
+  publicacao: 2021-05-28
+  vigencia: 2021-05-28
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2021/Lei/L14155.htm#art1
+lei-14157:
+  assinatura: 2021-06-01
+  publicacao: 2021-06-02
+  vigencia: 2021-06-02
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2021/Lei/L14157.htm#art2
+lei-14183:
+  assinatura: 2021-07-14
+  publicacao: 2021-07-15
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2021/Lei/L14183.htm#art7
+  vigencia: 2021-08-29
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-14188:
+  assinatura: 2021-07-28
+  publicacao: 2021-07-29
+  vigencia: 2021-07-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2021/Lei/L14188.htm#art4
+lei-14197:
+  assinatura: 2021-09-01
+  publicacao: 2021-09-02
+  vigencia: 2021-12-01
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2021/Lei/L14197.htm#art3
+lei-14229:
+  assinatura: 2021-10-21
+  publicacao: 2021-10-22
+  vigencia: 2021-10-22
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2021/Lei/L14229.htm#art2
+lei-14245:
+  assinatura: 2021-11-22
+  publicacao: 2021-11-23
+  vigencia: 2021-11-23
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2021/Lei/L14245.htm#art2
+lei-14304:
+  assinatura: 2022-02-23
+  publicacao: 2022-02-24
+  vigencia: 2022-08-23
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Lei/L14304.htm#art4
+lei-14310:
+  assinatura: 2022-03-08
+  publicacao: 2022-03-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Lei/L14310.htm
+  vigencia: 2022-04-23
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-14316:
+  assinatura: 2022-03-29
+  publicacao: 2022-03-30
+  vigencia: 2022-03-30
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Lei/L14316.htm#art4
+lei-14321:
+  assinatura: 2022-03-31
+  publicacao: 2022-03-31
+  aproximada: true
+  vigencia: 2022-03-31
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/Lei/L14321.htm#art2
+lei-14322:
+  assinatura: 2022-04-06
+  publicacao: 2022-04-07
+  vigencia: 2022-04-07
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Lei/L14322.htm#art1
+lei-14326:
+  assinatura: 2022-04-12
+  publicacao: 2022-04-13
+  vigencia: 2022-04-13
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Lei/L14326.htm#art2
+lei-14340:
+  assinatura: 2022-05-18
+  publicacao: 2022-05-19
+  vigencia: 2022-05-19
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Lei/L14340.htm#art4
+lei-14344:
+  assinatura: 2022-05-24
+  publicacao: 2022-05-25
+  vigencia: 2022-07-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Lei/L14344.htm#art31
+lei-14365:
+  assinatura: 2022-06-02
+  publicacao: 2022-06-03
+  vigencia: 2022-06-03
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Lei/L14365.htm#art4
+lei-14440:
+  assinatura: 2022-09-02
+  publicacao: 2022-09-05
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Lei/L14440.htm#art15
+  vigencia: 2022-10-20
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-14478:
+  assinatura: 2022-12-21
+  publicacao: 2022-12-22
+  vigencia: 2023-06-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Lei/L14478.htm#art10
+lei-14532:
+  assinatura: 2023-01-11
+  publicacao: 2023-01-11
+  vigencia: 2023-01-11
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14532.htm#art2
+lei-14548:
+  assinatura: 2023-04-13
+  publicacao: 2023-04-14
+  vigencia: 2023-04-14
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14548.htm#art2
+lei-14550:
+  assinatura: 2023-04-19
+  publicacao: 2023-04-20
+  vigencia: 2023-04-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14550.htm#art1
+lei-14562:
+  assinatura: 2023-04-26
+  publicacao: 2023-04-27
+  vigencia: 2023-04-27
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14562.htm#art2
+lei-14599:
+  assinatura: 2023-06-19
+  publicacao: 2023-06-20
+  vigencia: 2023-06-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14599.htm#art1
+lei-14601:
+  assinatura: 2023-06-19
+  publicacao: 2023-06-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14601.htm
+  vigencia: 2023-08-04
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-14674:
+  assinatura: 2023-09-14
+  publicacao: 2023-09-14
+  aproximada: true
+  vigencia: 2023-09-14
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14674.htm#art1
+lei-14688:
+  assinatura: 2023-09-20
+  publicacao: 2023-09-27
+  vigencia: 2023-11-26
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14688.htm#art2
+lei-14692:
+  assinatura: 2023-10-03
+  publicacao: 2023-10-03
+  aproximada: true
+  vigencia: 2023-10-03
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14692.htm#art2
+lei-14721:
+  assinatura: 2023-11-08
+  publicacao: 2023-11-09
+  vigencia: 2024-05-07
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14721.htm#art1
+lei-14752:
+  assinatura: 2023-12-12
+  publicacao: 2023-12-13
+  vigencia: 2023-12-13
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14752.htm#art2
+lei-14811:
+  assinatura: 2024-01-12
+  publicacao: 2024-01-15
+  vigencia: 2024-01-15
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14811.htm#art5
+lei-14817:
+  assinatura: 2024-01-16
+  publicacao: 2024-01-17
+  vigencia: 2024-01-17
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14817.htm
+lei-14836:
+  assinatura: 2024-04-08
+  publicacao: 2024-04-09
+  vigencia: 2024-04-09
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14836.htm#art2
+lei-14843:
+  assinatura: 2024-04-11
+  publicacao: 2024-04-11
+  vigencia: 2024-04-11
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14843.htm#art2
+lei-14857:
+  assinatura: 2024-05-21
+  publicacao: 2024-05-22
+  vigencia: 2024-11-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14857.htm#art2
+lei-14861:
+  assinatura: 2024-05-27
+  publicacao: 2024-05-28
+  vigencia: 2024-11-24
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14861.htm#art1
+lei-14887:
+  assinatura: 2024-06-12
+  publicacao: 2024-06-13
+  vigencia: 2024-06-13
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14887.htm#art1
+lei-14921:
+  assinatura: 2024-07-10
+  publicacao: 2024-07-11
+  vigencia: 2024-07-11
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14921.htm#art2
+lei-14950:
+  assinatura: 2024-08-02
+  publicacao: 2024-08-05
+  vigencia: 2025-02-01
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14950.htm
+lei-14967:
+  assinatura: 2024-09-09
+  publicacao: 2024-09-10
+  vigencia: 2024-09-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14967.htm#art69
+lei-14973:
+  assinatura: 2024-09-16
+  publicacao: 2024-09-16
+  vigencia: 2024-09-16
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14973.htm#art49
+lei-14979:
+  assinatura: 2024-09-18
+  publicacao: 2024-09-19
+  vigencia: 2024-09-19
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14979.htm#art2
+lei-14987:
+  assinatura: 2024-09-25
+  publicacao: 2024-09-26
+  vigencia: 2024-12-25
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14987.htm
+lei-14994:
+  assinatura: 2024-10-09
+  publicacao: 2024-10-10
+  vigencia: 2024-10-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L14994.htm#art1
+lei-15006:
+  assinatura: 2024-10-17
+  publicacao: 2024-10-18
+  vigencia: 2024-10-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L15006.htm#art2
+lei-15035:
+  assinatura: 2024-11-27
+  publicacao: 2024-11-28
+  vigencia: 2024-11-28
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Lei/L15035.htm#art1
+lei-15123:
+  assinatura: 2025-04-24
+  publicacao: 2025-04-25
+  vigencia: 2025-04-25
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15123.htm#art2
+lei-15125:
+  assinatura: 2025-04-24
+  publicacao: 2025-04-25
+  vigencia: 2025-04-25
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15125.htm#art2
+lei-15134:
+  assinatura: 2025-05-06
+  publicacao: 2025-05-07
+  vigencia: 2025-05-07
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15134.htm#art6
+lei-15153:
+  assinatura: 2025-06-26
+  publicacao: 2025-06-27
+  vigencia: 2025-06-27
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15153.htm#art2
+lei-15159:
+  assinatura: 2025-07-03
+  publicacao: 2025-07-04
+  vigencia: 2025-07-04
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15159.htm#art2
+lei-15160:
+  assinatura: 2025-07-03
+  publicacao: 2025-07-04
+  vigencia: 2025-07-04
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15160.htm#art2
+lei-15163:
+  assinatura: 2025-07-03
+  publicacao: 2025-07-04
+  vigencia: 2025-07-04
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15163.htm#art2
+lei-15181:
+  assinatura: 2025-07-28
+  publicacao: 2025-07-29
+  vigencia: 2025-07-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15181.htm#art1
+lei-1521:
+  assinatura: 1951-12-26
+  publicacao: 1951-12-27
+  vigencia: 1952-02-25
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L1521.htm
+lei-15212:
+  assinatura: 2025-09-18
+  publicacao: 2025-09-19
+  vigencia: 2025-09-19
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15212.htm#art2
+lei-15229:
+  assinatura: 2025-10-02
+  publicacao: 2025-10-03
+  vigencia: 2025-10-03
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15229.htm#art1
+lei-15234:
+  assinatura: 2025-10-07
+  publicacao: 2025-10-08
+  vigencia: 2025-10-08
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15234.htm#art2
+lei-15240:
+  assinatura: 2025-10-28
+  publicacao: 2025-10-29
+  vigencia: 2025-10-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15240.htm#art1
+lei-15243:
+  assinatura: 2025-10-28
+  publicacao: 2025-10-29
+  vigencia: 2026-02-26
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15243.htm
+lei-15245:
+  assinatura: 2025-10-29
+  publicacao: 2025-10-30
+  vigencia: 2025-10-30
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15245.htm#art1
+lei-15268:
+  assinatura: 2025-11-21
+  publicacao: 2025-11-24
+  vigencia: 2025-11-24
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15268.htm#art1
+lei-15272:
+  assinatura: 2025-11-26
+  publicacao: 2025-11-27
+  vigencia: 2025-11-27
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15272.htm#art1
+lei-15280:
+  assinatura: 2025-12-05
+  publicacao: 2025-12-08
+  vigencia: 2025-12-08
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm#art1
+lei-15295:
+  assinatura: 2025-12-19
+  publicacao: 2025-12-22
+  vigencia: 2026-01-21
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15295.htm#art1
+lei-15306:
+  assinatura: 2025-12-22
+  publicacao: 2025-12-23
+  vigencia: 2025-12-23
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15306.htm#art1
+lei-15353:
+  assinatura: 2026-03-08
+  publicacao: 2026-03-08
+  vigencia: 2026-03-08
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Lei/L15353.htm#art2
+lei-15358:
+  assinatura: 2026-03-24
+  publicacao: 2026-03-25
+  vigencia: 2026-03-25
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Lei/L15358.htm#art33
+lei-15380:
+  assinatura: 2026-04-06
+  publicacao: 2026-04-07
+  vigencia: 2026-04-07
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Lei/L15380.htm#art2
+lei-15383:
+  assinatura: 2026-04-09
+  publicacao: 2026-04-10
+  vigencia: 2026-04-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Lei/L15383.htm#art2
+lei-15384:
+  assinatura: 2026-04-09
+  publicacao: 2026-04-10
+  vigencia: 2026-04-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Lei/L15384.htm#art3
+lei-15397:
+  assinatura: 2026-04-30
+  publicacao: 2026-05-04
+  vigencia: 2026-05-04
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15397.htm#art2
+lei-15402:
+  assinatura: 2026-05-08
+  publicacao: 2026-05-08
+  vigencia: 2026-05-08
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15402.htm#art2
+lei-15407:
+  assinatura: 2026-05-11
+  publicacao: 2026-05-12
+  vigencia: 2026-05-12
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15407.htm#art3
+lei-15410:
+  assinatura: 2026-05-20
+  publicacao: 2026-05-21
+  vigencia: 2026-05-21
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm#art2
+lei-15411:
+  assinatura: 2026-05-20
+  publicacao: 2026-05-21
+  vigencia: 2026-05-21
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15411.htm#art1
+lei-15412:
+  assinatura: 2026-05-20
+  publicacao: 2026-05-21
+  vigencia: 2026-05-21
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15412.htm#art1
+lei-15413:
+  assinatura: 2026-05-21
+  publicacao: 2026-05-22
+  vigencia: 2026-05-22
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15413.htm#art2
+lei-15425:
+  assinatura: 2026-06-03
+  publicacao: 2026-06-08
+  vigencia: 2026-06-08
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15425.htm#art2
+lei-15426:
+  assinatura: 2026-06-03
+  publicacao: 2026-06-08
+  vigencia: 2026-06-08
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15426.htm#art2
+lei-15428:
+  assinatura: 2026-06-05
+  publicacao: 2026-06-05
+  vigencia: 2026-06-05
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15428.htm#art2
+lei-15438:
+  assinatura: 2026-06-18
+  publicacao: 2026-06-19
+  vigencia: 2026-06-19
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15438.htm#art2
+lei-15450:
+  assinatura: 2026-06-30
+  publicacao: 2026-06-30
+  aproximada: true
+  vigencia: 2026-12-27
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15450.htm#art1
+lei-15452:
+  assinatura: 2026-06-30
+  publicacao: 2026-06-30
+  aproximada: true
+  vigencia: 2026-06-30
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15452.htm#art1
+lei-15455:
+  assinatura: 2026-07-01
+  publicacao: 2026-07-02
+  vigencia: 2026-07-02
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15455.htm#art4
+lei-15487:
+  assinatura: 2026-08-06
+  publicacao: 2026-08-07
+  vigencia: 2026-08-07
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm#art6
+lei-15503:
+  assinatura: 2026-09-14
+  publicacao: 2026-09-14
+  vigencia: 2026-09-14
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15503.htm#art14
+lei-15512:
+  assinatura: 2026-09-22
+  publicacao: 2026-09-23
+  vigencia: 2026-09-23
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15512.htm#art33
+lei-15517:
+  assinatura: 2026-09-22
+  publicacao: 2026-09-23
+  vigencia: 2026-09-23
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15517.htm#art2
+lei-15581:
+  assinatura: 2025-12-05
+  publicacao: 2025-12-08
+  vigencia: 2025-12-08
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15281.htm#art1
+lei-1720:
+  assinatura: 1941-10-03
+  publicacao: 1952-11-07
+  vigencia: 1952-11-07
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L1720-B.htm#art1
+lei-2505:
+  assinatura: 1940-12-07
+  publicacao: 1955-06-16
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L2505.htm#art180
+  vigencia: 1955-07-31
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-263:
+  pendencia: sem data de publicação nem de assinatura
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1930-1949/L263.htm#art2
+lei-3071:
+  assinatura: 1916-01-01
+  publicacao: 1916-01-05
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L3071.htm#art317
+  vigencia: 1917-01-01
+  nota: 'Cláusula: "no dia 1º de janeiro de 1917".'
+  manual: true
+lei-3181:
+  publicacao: 1957-06-13
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L3181.htm#art295ii
+  vigencia: 1957-07-28
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-3396:
+  publicacao: 1958-06-04
+  vigencia: 1958-06-04
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L3396.htm#art8
+lei-3653:
+  assinatura: 1941-10-03
+  publicacao: 1959-11-05
+  vigencia: 1959-11-05
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L3653.htm#ART221
+lei-4336:
+  publicacao: 1964-06-04
+  vigencia: 1964-06-04
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L4336.htm#art1
+lei-4451:
+  assinatura: 1964-11-04
+  publicacao: 1964-11-06
+  vigencia: 1964-11-06
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L4451.htm#art281
+lei-4611:
+  assinatura: 1965-04-02
+  publicacao: 1965-04-06
+  vigencia: 1965-04-06
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L4611.htm#art1
+lei-4729:
+  assinatura: 1965-07-14
+  publicacao: 1965-07-19
+  vigencia: 1965-09-17
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L4729.htm#art5
+lei-4893:
+  assinatura: 1965-12-09
+  publicacao: 1965-12-13
+  vigencia: 1965-12-13
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L4893.htm#art1
+lei-5010:
+  assinatura: 1966-05-30
+  publicacao: 1966-05-30
+  aproximada: true
+  vigencia: 1966-05-30
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L5010.htm#art69
+lei-5126:
+  assinatura: 1966-09-29
+  publicacao: 1966-09-30
+  vigencia: 1966-09-30
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L5126.htm#art1
+lei-5346:
+  assinatura: 1967-11-03
+  publicacao: 1967-11-07
+  vigencia: 1967-12-07
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1950-1969/L5346.htm#art163iii
+lei-5474:
+  assinatura: 1968-07-18
+  publicacao: 1968-07-19
+  vigencia: 1968-08-18
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L5474.htm#art172
+lei-5478:
+  assinatura: 1968-07-25
+  publicacao: 1968-07-26
+  vigencia: 1968-08-25
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L5478.htm#art244
+lei-5726:
+  assinatura: 1968-12-26
+  publicacao: 1968-12-26
+  aproximada: true
+  vigencia: 1969-01-25
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1970-1979/L5726.htm#art281
+lei-5741:
+  assinatura: 1964-08-21
+  publicacao: 1971-12-02
+  vigencia: 1971-12-02
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L5741.htm
+lei-5941:
+  assinatura: 1941-10-03
+  publicacao: 1975-11-25
+  vigencia: 1975-11-25
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1970-1979/L5941.htm#art596
+lei-5970:
+  publicacao: 1973-12-12
+  vigencia: 1973-12-12
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1970-1979/L5970.htm
+lei-5988:
+  assinatura: 1973-12-14
+  publicacao: 1973-12-18
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L5988.htm
+  vigencia: 1974-01-01
+  nota: 'Cláusula: "a 1º de janeiro de 1974, ressalvada a legislação especial".'
+  manual: true
+lei-6015:
+  assinatura: 1973-12-31
+  publicacao: 1973-12-31
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L6015original.htm
+  vigencia: 1975-07-01
+  nota: 'Cláusula: "no dia 1º de julho de 1975".'
+  manual: true
+lei-6368:
+  assinatura: 1976-10-21
+  publicacao: 1976-10-22
+  vigencia: 1976-11-21
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L6368.htm#art46
+lei-6404:
+  assinatura: 1976-12-07
+  publicacao: 1976-12-17
+  vigencia: 1977-02-15
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L6404consol.htm
+lei-6416:
+  assinatura: 1940-12-07
+  publicacao: 1977-05-25
+  vigencia: 1977-05-25
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L6416.htm#art121%C2%A75
+lei-6515:
+  assinatura: 1977-12-26
+  publicacao: 1977-12-27
+  vigencia: 1977-12-27
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L6515.htm
+lei-6538:
+  assinatura: 1978-06-22
+  publicacao: 1978-06-23
+  vigencia: 1978-06-23
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L6538.htm
+lei-6710:
+  publicacao: 1979-11-06
+  vigencia: 1979-11-06
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L6710.htm
+lei-6799:
+  assinatura: 1980-06-23
+  publicacao: 1980-06-24
+  vigencia: 1980-06-24
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1980-1988/L6799.htm#ART327%C2%A72
+lei-6895:
+  assinatura: 1980-12-17
+  publicacao: 1980-12-18
+  vigencia: 1980-12-18
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1980-1988/L6895.htm#art1
+lei-6898:
+  assinatura: 1981-03-30
+  publicacao: 1981-03-30
+  aproximada: true
+  pendencia: 'cláusula de vigência não reconhecida: "a data de sua publicação"'
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1980-1988/L6898.htm#art242
+lei-7209:
+  assinatura: 1984-07-11
+  publicacao: 1984-07-13
+  vigencia: 1985-01-13
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1980-1988/L7209.htm#art1
+lei-7210:
+  assinatura: 1984-07-11
+  publicacao: 1984-07-13
+  pendencia: 'cláusula de vigência não reconhecida: "concomitantemente com a lei de reforma da Parte Geral do Código Penal , revogadas as disposições em contrário, especialm"'
+  url: https://www.planalto.gov.br/ccivil_03/leis/L7210.htm#art9a
+lei-7251:
+  assinatura: 1984-11-19
+  publicacao: 1984-11-21
+  vigencia: 1984-11-21
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1980-1988/L7251.htm#art1
+lei-7417:
+  assinatura: 1985-12-10
+  publicacao: 1985-12-11
+  vigencia: 1985-12-11
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1980-1988/L7417.htm#art4
+lei-7492:
+  assinatura: 1941-10-03
+  publicacao: 1986-06-18
+  vigencia: 1986-06-18
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L7492.htm
+lei-7780:
+  assinatura: 1989-06-22
+  publicacao: 1989-06-23
+  vigencia: 1989-06-23
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L7780.htm#art1
+lei-7844:
+  assinatura: 1989-10-18
+  publicacao: 1989-10-19
+  vigencia: 1989-10-19
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L7844.htm
+lei-8041:
+  assinatura: 1990-06-05
+  publicacao: 1990-06-06
+  vigencia: 1990-06-06
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L8041.htm
+lei-8069:
+  assinatura: 1990-07-13
+  publicacao: 1990-07-16
+  vigencia: 1990-10-14
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L8069.htm#art263
+lei-8072:
+  assinatura: 1990-07-25
+  publicacao: 1990-07-26
+  vigencia: 1990-07-26
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L8072.htm#art83v
+lei-8137:
+  assinatura: 1990-12-27
+  publicacao: 1990-12-28
+  vigencia: 1990-12-28
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L8137.htm#art19
+lei-8176:
+  assinatura: 1991-02-08
+  publicacao: 1991-02-13
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L8176.htm
+  vigencia: 1991-02-18
+  nota: 'Cláusula: "cinco dias após a sua publicação".'
+  manual: true
+lei-8183:
+  assinatura: 1991-04-11
+  publicacao: 1991-04-12
+  vigencia: 1991-04-12
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L8183.htm
+lei-8242:
+  assinatura: 1991-10-12
+  publicacao: 1991-10-16
+  vigencia: 1991-10-16
+  url: https://www.planalto.gov.br/ccivil_03/leis/L8242.htm#art10
+lei-8383:
+  assinatura: 1991-06-28
+  publicacao: 1991-12-31
+  vigencia: 1991-12-31
+  url: https://www.planalto.gov.br/ccivil_03/leis/L8383.htm#art98
+lei-8392:
+  assinatura: 1990-06-28
+  publicacao: 1991-12-31
+  vigencia: 1991-12-31
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L8392.htm#art1
+lei-8448:
+  assinatura: 1992-07-21
+  publicacao: 1992-07-22
+  vigencia: 1992-07-22
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L8448.htm
+lei-8635:
+  assinatura: 1993-03-16
+  publicacao: 1993-03-17
+  vigencia: 1993-03-17
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1989_1994/L8635.htm#art1
+lei-8658:
+  assinatura: 1993-05-26
+  publicacao: 1993-05-27
+  vigencia: 1993-05-27
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L8658.htm#ART3
+lei-8683:
+  assinatura: 1993-07-15
+  publicacao: 1993-07-16
+  vigencia: 1993-07-16
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1989_1994/L8683.htm#art206
+lei-8699:
+  assinatura: 1941-10-03
+  publicacao: 1993-08-28
+  vigencia: 1993-08-28
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L8699.htm#art24%C2%A72
+lei-8862:
+  assinatura: 1994-03-28
+  publicacao: 1994-03-29
+  vigencia: 1994-03-29
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/1989_1994/L8862.htm#art1
+lei-8884:
+  assinatura: 1994-06-11
+  publicacao: 1994-06-13
+  vigencia: 1994-06-13
+  url: https://www.planalto.gov.br/ccivil_03/leis/L8884.htm#art85
+lei-8930:
+  assinatura: 1994-09-06
+  publicacao: 1994-09-07
+  vigencia: 1994-09-07
+  url: https://www.planalto.gov.br/ccivil_03/leis/L8930.htm#art1
+lei-9043:
+  assinatura: 1995-05-09
+  publicacao: 1995-05-10
+  vigencia: 1995-05-10
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9043.htm#art1
+lei-9046:
+  assinatura: 1995-05-18
+  publicacao: 1995-05-19
+  vigencia: 1995-05-19
+  url: https://www.planalto.gov.br/ccivil_03/leis/L9046.htm
+lei-9061:
+  assinatura: 1995-06-14
+  publicacao: 1995-06-16
+  vigencia: 1995-06-16
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9061.htm#art1
+lei-9080:
+  assinatura: 1995-07-19
+  publicacao: 1995-07-20
+  vigencia: 1995-07-20
+  url: https://www.planalto.gov.br/ccivil_03/leis/L9080.htm#art2
+lei-9127:
+  assinatura: 1995-11-16
+  publicacao: 1995-11-17
+  vigencia: 1995-11-17
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9127.htm#art1
+lei-9249:
+  assinatura: 1995-12-26
+  publicacao: 1995-12-27
+  vigencia: 1995-12-27
+  url: https://www.planalto.gov.br/ccivil_03/leis/L9249.htm#art34
+lei-9268:
+  assinatura: 1996-04-01
+  publicacao: 1996-04-02
+  vigencia: 1996-04-02
+  url: https://www.planalto.gov.br/ccivil_03/Leis/L9268.htm#art3
+lei-9269:
+  assinatura: 1996-04-02
+  publicacao: 1996-04-03
+  vigencia: 1996-04-03
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9269.htm#art1
+lei-9271:
+  assinatura: 1996-04-17
+  publicacao: 1996-04-18
+  vigencia: 1996-06-17
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9271.htm#art1
+lei-9279:
+  assinatura: 1996-05-14
+  publicacao: 1996-05-15
+  vigencia: 1996-05-15
+  url: https://www.planalto.gov.br/ccivil_03/Leis/L9279.htm#art244
+lei-9296:
+  assinatura: 1996-07-24
+  publicacao: 1996-07-25
+  vigencia: 1996-07-25
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9296.htm
+lei-9318:
+  assinatura: 1996-12-05
+  publicacao: 1996-12-06
+  vigencia: 1996-12-06
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9318.htm#art1
+lei-9426:
+  assinatura: 1996-12-24
+  publicacao: 1997-01-15
+  vigencia: 1997-01-15
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9426.htm#art1
+lei-9459:
+  assinatura: 1997-05-13
+  publicacao: 1997-05-14
+  vigencia: 1997-05-14
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9459.htm#art140%C2%A73
+lei-9460:
+  assinatura: 1997-06-04
+  publicacao: 1997-06-05
+  vigencia: 1997-06-05
+  url: https://www.planalto.gov.br/ccivil_03/leis/L9460.htm#art1
+lei-9520:
+  assinatura: 1997-11-27
+  publicacao: 1997-11-28
+  vigencia: 1997-11-28
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9520.htm#art1
+lei-9532:
+  assinatura: 1997-12-10
+  publicacao: 1997-12-11
+  vigencia: 1997-12-11
+  url: https://www.planalto.gov.br/ccivil_03/leis/L9532.htm#art82ii
+lei-9602:
+  assinatura: 1998-01-21
+  publicacao: 1998-01-22
+  url: https://www.planalto.gov.br/ccivil_03/leis/L9602.htm#art1
+  vigencia: 1998-03-08
+  nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
+  manual: true
+lei-9677:
+  assinatura: 1998-07-02
+  publicacao: 1998-07-03
+  vigencia: 1998-07-03
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9677.htm#art272
+lei-9695:
+  assinatura: 1998-08-20
+  publicacao: 1998-08-21
+  vigencia: 1998-08-21
+  url: https://www.planalto.gov.br/ccivil_03/leis/L9695.htm
+lei-9714:
+  assinatura: 1998-11-25
+  publicacao: 1998-11-26
+  vigencia: 1998-11-26
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9714.htm#art1
+lei-9777:
+  assinatura: 1998-12-29
+  publicacao: 1998-12-30
+  vigencia: 1998-12-30
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9777.htm#art1
+lei-9792:
+  publicacao: 1999-04-15
+  vigencia: 1999-04-15
+  url: https://www.planalto.gov.br/ccivil_03/leis/L9792.htm#art1
+lei-9839:
+  publicacao: 1999-09-28
+  vigencia: 1999-09-28
+  url: https://www.planalto.gov.br/ccivil_03/leis/L9839.htm
+lei-9964:
+  assinatura: 1990-05-11
+  publicacao: 2000-04-11
+  vigencia: 2000-04-11
+  url: https://www.planalto.gov.br/ccivil_03/leis/L9964.htm#art15
+lei-9975:
+  publicacao: 2000-06-26
+  vigencia: 2000-06-26
+  url: https://www.planalto.gov.br/ccivil_03/leis/L9975.htm
+lei-9983:
+  publicacao: 2000-07-17
+  vigencia: 2000-10-15
+  url: https://www.planalto.gov.br/ccivil_03/LEIS/L9983.htm#art2
+mp-1327:
+  assinatura: 2025-12-09
+  publicacao: 2025-12-10
+  vigencia: 2025-12-10
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Mpv/mpv1327.htm#art1
+mp-1360:
+  assinatura: 2026-05-19
+  publicacao: 2026-05-19
+  vigencia: 2026-05-19
+  url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1360.htm#art1
+mp-157:
+  publicacao: 2003-12-24
+  vigencia: 2003-12-24
+  url: https://www.planalto.gov.br/ccivil_03/MPV/Antigas_2003/157.htm#art1
+mp-297:
+  assinatura: 2006-06-09
+  publicacao: 2006-06-12
+  vigencia: 2006-06-12
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Mpv/297.htm
+mp-379:
+  assinatura: 2007-06-28
+  publicacao: 2007-06-29
+  vigencia: 2007-06-29
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2007/Mpv/379.htm#art1
+mp-390:
+  assinatura: 2007-09-18
+  publicacao: 2007-09-18
+  vigencia: 2007-09-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2007/Mpv/390.htm#art1
+mp-394:
+  assinatura: 2007-09-20
+  publicacao: 2007-09-21
+  vigencia: 2007-09-21
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2007/Mpv/394.htm#art1
+mp-417:
+  assinatura: 2008-01-31
+  publicacao: 2008-02-01
+  vigencia: 2008-02-01
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2008/Mpv/417.htm#art2
+mp-526:
+  assinatura: 2011-03-04
+  publicacao: 2011-03-04
+  vigencia: 2011-03-04
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Mpv/526.htm#art5
+mp-673:
+  assinatura: 2015-03-31
+  publicacao: 2015-03-31
+  aproximada: true
+  vigencia: 2015-03-31
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Mpv/mpv673.htm#art1
+mp-75:
+  assinatura: 1996-12-05
+  publicacao: 2002-10-25
+  vigencia: 2002-10-25
+  url: https://www.planalto.gov.br/ccivil_03/MPV/Antigas_2002/75.htm#art39
+mp-870:
+  assinatura: 2019-01-01
+  publicacao: 2019-01-01
+  aproximada: true
+  vigencia: 2019-01-01
+  pendencia: "publicação no DOU não encontrada: datas a partir da assinatura"
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Mpv/mpv870.htm#art72
+mp-882:
+  assinatura: 2019-05-03
+  publicacao: 2019-05-03
+  vigencia: 2019-05-03
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Mpv/mpv882.htm#art2
+mp-885:
+  assinatura: 2019-06-17
+  publicacao: 2019-06-18
+  vigencia: 2019-06-18
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Mpv/mpv885.htm#art4
+mp-886:
+  assinatura: 2019-06-18
+  publicacao: 2019-06-19
+  vigencia: 2019-06-19
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Mpv/mpv886.htm#art4
+mp-893:
+  assinatura: 2019-08-19
+  publicacao: 2019-08-20
+  vigencia: 2019-08-20
+  url: https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Mpv/mpv893.htm#art15

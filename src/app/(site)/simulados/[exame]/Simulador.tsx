@@ -8,6 +8,7 @@ import { PromoSlot } from "@/components/PromoSlot";
 import { RichText } from "@/components/RichText";
 import { contextoCorrecao } from "@/lib/correcao/cliente";
 import { contarLinhas, corrigirExame } from "@/lib/correcao/grader";
+import { eventosDoSimulado, migrarTentativas, registrar as registrarErros } from "@/lib/erros";
 import type { ExameSimulado } from "@/lib/correcao/simulado";
 import { gravarJSON, lerJSON } from "@/lib/storage";
 import { apagarRascunho, lerRascunho, salvarRascunho, salvarTentativa } from "@/lib/tentativas";
@@ -52,6 +53,7 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
   // Preferências de layout lembradas
   useEffect(() => {
     const p = lerJSON<{ layout?: Layout }>("grifo:simulador", {});
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- lê localStorage após montar (site estático)
     if (p.layout) setLayout(p.layout);
     setTemRascunho(!!lerRascunho(exame.id));
   }, [exame.id]);
@@ -156,14 +158,19 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
     return () => window.removeEventListener("keydown", h);
   }, [fase, pausado, confirmar, comTempo, pausar]);
 
+  useEffect(() => migrarTentativas(exame, contextoCorrecao().lex), [exame]);
+
   const entregar = () => {
     const respostas = { peca, questoes };
-    const resultado = corrigirExame(exame, respostas, contextoCorrecao());
-    const id = `${exame.id}-${Date.now().toString(36)}`;
+    const ctx = contextoCorrecao();
+    const criadaEm = Date.now();
+    const resultado = corrigirExame(exame, respostas, ctx);
+    registrarErros(eventosDoSimulado(exame, resultado, ctx.lex, criadaEm));
+    const id = `${exame.id}-${criadaEm.toString(36)}`;
     salvarTentativa({
       id,
       exameId: exame.id,
-      criadaEm: Date.now(),
+      criadaEm,
       duracaoSeg: Math.round(decorrido),
       respostas,
       resultado,
@@ -295,7 +302,7 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
       >
         <section className={styles.enunciado} aria-label={`Enunciado — ${atual.titulo}`}>
           <h2>{atual.titulo === "Peça" ? "Peça Prático-Profissional" : atual.titulo}</h2>
-          <EnunciadoMemo text={atual.enunciado} className={styles.enunciadoTexto} />
+          <EnunciadoMemo text={atual.enunciado} className={styles.enunciadoTexto} data={exame.aplicacao} />
         </section>
         <section className={styles.folha}>
           <FolhaMemo

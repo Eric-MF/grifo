@@ -1,0 +1,124 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "04"
+perguntas:
+  - id: 04-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: enderecamento
+    caso: |-
+      Tício foi denunciado e processado, na 1ª Vara Criminal da Comarca do Município X, pela prática de roubo qualificado em decorrência do emprego de arma de fogo. Ainda durante a fase de inquérito policial, Tício foi reconhecido pela vítima. Tal reconhecimento se deu quando a referida vítima olhou através de pequeno orifício da porta de uma sala onde se encontrava apenas o réu. Já em sede de instrução criminal, nem vítima nem testemunhas afirmaram ter escutado qualquer disparo de arma de fogo, mas foram uníssonas no sentido de assegurar que o assaltante portava uma. Não houve perícia, pois os policiais que prenderam o réu em flagrante não lograram êxito em apreender a arma. Tais policiais afirmaram em juízo que, após escutarem gritos de “pega ladrão!”, viram o réu correndo e foram em seu encalço. Afirmaram que, durante a perseguição, os passantes apontavam para o réu, bem como que este jogou um objeto no córrego que passava próximo ao local dos fatos, que acreditavam ser a arma de fogo utilizada. O réu, em seu interrogatório, exerceu o direito ao silêncio. Ao cabo da instrução criminal, Tício foi condenado a oito anos e seis meses de reclusão, por roubo com emprego de arma de fogo, tendo sido fixado o regime inicial fechado para cumprimento de pena. O magistrado, para fins de condenação e fixação da pena, levou em conta os depoimentos testemunhais colhidos em juízo e o reconhecimento feito pela vítima em sede policial, bem como o fato de o réu ser reincidente e portador de maus antecedentes, circunstâncias comprovadas no curso do processo.
+
+      Você, na condição de advogado(a) de Tício, é intimado(a) da decisão. Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, apresentando as razões e sustentando as teses jurídicas pertinentes. (Valor: 5,0)
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
+    opcoes:
+      correta: "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
+      erradas:
+        - Endereçamento correto das razões (Tribunal de Justiça).
+        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
+        - "Endereçamento das razões: Tribunal de Justiça."
+        - Vara Criminal da Comarca de Campos/RJ.
+        - "Endereçamento: Juízo do Tribunal do Júri da Comarca de São Paulo/SP"
+    revisao: &a1
+      status: rascunho
+  - id: 04-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: enderecamento
+    caso: |-
+      Tício foi denunciado e processado, na 1ª Vara Criminal da Comarca do Município X, pela prática de roubo qualificado em decorrência do emprego de arma de fogo. Ainda durante a fase de inquérito policial, Tício foi reconhecido pela vítima. Tal reconhecimento se deu quando a referida vítima olhou através de pequeno orifício da porta de uma sala onde se encontrava apenas o réu. Já em sede de instrução criminal, nem vítima nem testemunhas afirmaram ter escutado qualquer disparo de arma de fogo, mas foram uníssonas no sentido de assegurar que o assaltante portava uma. Não houve perícia, pois os policiais que prenderam o réu em flagrante não lograram êxito em apreender a arma. Tais policiais afirmaram em juízo que, após escutarem gritos de “pega ladrão!”, viram o réu correndo e foram em seu encalço. Afirmaram que, durante a perseguição, os passantes apontavam para o réu, bem como que este jogou um objeto no córrego que passava próximo ao local dos fatos, que acreditavam ser a arma de fogo utilizada. O réu, em seu interrogatório, exerceu o direito ao silêncio. Ao cabo da instrução criminal, Tício foi condenado a oito anos e seis meses de reclusão, por roubo com emprego de arma de fogo, tendo sido fixado o regime inicial fechado para cumprimento de pena. O magistrado, para fins de condenação e fixação da pena, levou em conta os depoimentos testemunhais colhidos em juízo e o reconhecimento feito pela vítima em sede policial, bem como o fato de o réu ser reincidente e portador de maus antecedentes, circunstâncias comprovadas no curso do processo.
+
+      Você, na condição de advogado(a) de Tício, é intimado(a) da decisão. Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, apresentando as razões e sustentando as teses jurídicas pertinentes. (Valor: 5,0)
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento correto das razões: Tribunal de Justiça do Estado."
+    opcoes:
+      correta: "Endereçamento correto das razões: Tribunal de Justiça do Estado."
+      erradas:
+        - Endereçamento correto da interposição (1ª Vara Criminal/Tribunal do Júri)
+        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
+        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
+        - Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG..
+        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
+    revisao: *a1
+  - id: 04-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      Tício foi denunciado e processado, na 1ª Vara Criminal da Comarca do Município X, pela prática de roubo qualificado em decorrência do emprego de arma de fogo. Ainda durante a fase de inquérito policial, Tício foi reconhecido pela vítima. Tal reconhecimento se deu quando a referida vítima olhou através de pequeno orifício da porta de uma sala onde se encontrava apenas o réu. Já em sede de instrução criminal, nem vítima nem testemunhas afirmaram ter escutado qualquer disparo de arma de fogo, mas foram uníssonas no sentido de assegurar que o assaltante portava uma. Não houve perícia, pois os policiais que prenderam o réu em flagrante não lograram êxito em apreender a arma. Tais policiais afirmaram em juízo que, após escutarem gritos de “pega ladrão!”, viram o réu correndo e foram em seu encalço. Afirmaram que, durante a perseguição, os passantes apontavam para o réu, bem como que este jogou um objeto no córrego que passava próximo ao local dos fatos, que acreditavam ser a arma de fogo utilizada. O réu, em seu interrogatório, exerceu o direito ao silêncio. Ao cabo da instrução criminal, Tício foi condenado a oito anos e seis meses de reclusão, por roubo com emprego de arma de fogo, tendo sido fixado o regime inicial fechado para cumprimento de pena. O magistrado, para fins de condenação e fixação da pena, levou em conta os depoimentos testemunhais colhidos em juízo e o reconhecimento feito pela vítima em sede policial, bem como o fato de o réu ser reincidente e portador de maus antecedentes, circunstâncias comprovadas no curso do processo.
+
+      Você, na condição de advogado(a) de Tício, é intimado(a) da decisão. Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, apresentando as razões e sustentando as teses jurídicas pertinentes. (Valor: 5,0)
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+    opcoes:
+      correta: Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+      erradas:
+        - "Desenvolvimento jurídico acerca da impossibilidade de se absolver sumariamente pela inimputabilidade por não ser a única tese defensiva alegada na primeira fase do júri e consequente violação ao art. 415, parágrafo único, do CPP. Obs.: a mera indicação do artigo não pontua."
+        - Redução do quantum de aumento realizado na terceira fase da dosimetria do crime de roubo, já que os fatos foram praticados antes da entrada em vigor da lei que aumentou o percentual de aumento em razão do emprego de arma de fogo OU em razão do princípio da irretroatividade da lei penal prejudicial ao réu, conforme Art. 5º, inciso XL, da CRFB.
+        - Da tese da prática de crime único, pois o delito de estupro de vulnerável é um tipo misto alternativo (de conteúdo múltiplo ou variado).
+        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
+        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
+    revisao: *a1
+  - id: 04-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      Tício foi denunciado e processado, na 1ª Vara Criminal da Comarca do Município X, pela prática de roubo qualificado em decorrência do emprego de arma de fogo. Ainda durante a fase de inquérito policial, Tício foi reconhecido pela vítima. Tal reconhecimento se deu quando a referida vítima olhou através de pequeno orifício da porta de uma sala onde se encontrava apenas o réu. Já em sede de instrução criminal, nem vítima nem testemunhas afirmaram ter escutado qualquer disparo de arma de fogo, mas foram uníssonas no sentido de assegurar que o assaltante portava uma. Não houve perícia, pois os policiais que prenderam o réu em flagrante não lograram êxito em apreender a arma. Tais policiais afirmaram em juízo que, após escutarem gritos de “pega ladrão!”, viram o réu correndo e foram em seu encalço. Afirmaram que, durante a perseguição, os passantes apontavam para o réu, bem como que este jogou um objeto no córrego que passava próximo ao local dos fatos, que acreditavam ser a arma de fogo utilizada. O réu, em seu interrogatório, exerceu o direito ao silêncio. Ao cabo da instrução criminal, Tício foi condenado a oito anos e seis meses de reclusão, por roubo com emprego de arma de fogo, tendo sido fixado o regime inicial fechado para cumprimento de pena. O magistrado, para fins de condenação e fixação da pena, levou em conta os depoimentos testemunhais colhidos em juízo e o reconhecimento feito pela vítima em sede policial, bem como o fato de o réu ser reincidente e portador de maus antecedentes, circunstâncias comprovadas no curso do processo.
+
+      Você, na condição de advogado(a) de Tício, é intimado(a) da decisão. Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, apresentando as razões e sustentando as teses jurídicas pertinentes. (Valor: 5,0)
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Ausência de apreensão da arma (ou de potencialidade lesiva), o que impede o exame pericial, nos termos do art. 158 do CPP; ninguém afirmou que a arma tenha disparado: impossível a perícia indireta."
+    opcoes:
+      correta: "Ausência de apreensão da arma (ou de potencialidade lesiva), o que impede o exame pericial, nos termos do art. 158 do CPP; ninguém afirmou que a arma tenha disparado: impossível a perícia indireta."
+      erradas:
+        - "Desenvolvimento jurídico acerca da impossibilidade de se absolver sumariamente pela inimputabilidade por não ser a única tese defensiva alegada na primeira fase do júri e consequente violação ao art. 415, parágrafo único, do CPP. Obs.: a mera indicação do artigo não pontua."
+        - Redução do quantum de aumento realizado na terceira fase da dosimetria do crime de roubo, já que os fatos foram praticados antes da entrada em vigor da lei que aumentou o percentual de aumento em razão do emprego de arma de fogo OU em razão do princípio da irretroatividade da lei penal prejudicial ao réu, conforme Art. 5º, inciso XL, da CRFB.
+        - Da tese da prática de crime único, pois o delito de estupro de vulnerável é um tipo misto alternativo (de conteúdo múltiplo ou variado).
+        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
+        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
+    revisao: *a1
+  - id: 04-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: pedido
+    caso: |-
+      Tício foi denunciado e processado, na 1ª Vara Criminal da Comarca do Município X, pela prática de roubo qualificado em decorrência do emprego de arma de fogo. Ainda durante a fase de inquérito policial, Tício foi reconhecido pela vítima. Tal reconhecimento se deu quando a referida vítima olhou através de pequeno orifício da porta de uma sala onde se encontrava apenas o réu. Já em sede de instrução criminal, nem vítima nem testemunhas afirmaram ter escutado qualquer disparo de arma de fogo, mas foram uníssonas no sentido de assegurar que o assaltante portava uma. Não houve perícia, pois os policiais que prenderam o réu em flagrante não lograram êxito em apreender a arma. Tais policiais afirmaram em juízo que, após escutarem gritos de “pega ladrão!”, viram o réu correndo e foram em seu encalço. Afirmaram que, durante a perseguição, os passantes apontavam para o réu, bem como que este jogou um objeto no córrego que passava próximo ao local dos fatos, que acreditavam ser a arma de fogo utilizada. O réu, em seu interrogatório, exerceu o direito ao silêncio. Ao cabo da instrução criminal, Tício foi condenado a oito anos e seis meses de reclusão, por roubo com emprego de arma de fogo, tendo sido fixado o regime inicial fechado para cumprimento de pena. O magistrado, para fins de condenação e fixação da pena, levou em conta os depoimentos testemunhais colhidos em juízo e o reconhecimento feito pela vítima em sede policial, bem como o fato de o réu ser reincidente e portador de maus antecedentes, circunstâncias comprovadas no curso do processo.
+
+      Você, na condição de advogado(a) de Tício, é intimado(a) da decisão. Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, apresentando as razões e sustentando as teses jurídicas pertinentes. (Valor: 5,0)
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Absolvição, com argumento e base legal.
+    opcoes:
+      correta: Absolvição, com argumento e base legal.
+      erradas:
+        - Pedido de habilitação, na interposição, do pai da vítima como assistente de acusação.
+        - Conhecimento e provimento do recurso.
+        - "Pedidos: Preliminarmente, a extinção da punibilidade."
+        - Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
+        - Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
+    revisao: *a1
+  - id: 04-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: pedido
+    caso: |-
+      Tício foi denunciado e processado, na 1ª Vara Criminal da Comarca do Município X, pela prática de roubo qualificado em decorrência do emprego de arma de fogo. Ainda durante a fase de inquérito policial, Tício foi reconhecido pela vítima. Tal reconhecimento se deu quando a referida vítima olhou através de pequeno orifício da porta de uma sala onde se encontrava apenas o réu. Já em sede de instrução criminal, nem vítima nem testemunhas afirmaram ter escutado qualquer disparo de arma de fogo, mas foram uníssonas no sentido de assegurar que o assaltante portava uma. Não houve perícia, pois os policiais que prenderam o réu em flagrante não lograram êxito em apreender a arma. Tais policiais afirmaram em juízo que, após escutarem gritos de “pega ladrão!”, viram o réu correndo e foram em seu encalço. Afirmaram que, durante a perseguição, os passantes apontavam para o réu, bem como que este jogou um objeto no córrego que passava próximo ao local dos fatos, que acreditavam ser a arma de fogo utilizada. O réu, em seu interrogatório, exerceu o direito ao silêncio. Ao cabo da instrução criminal, Tício foi condenado a oito anos e seis meses de reclusão, por roubo com emprego de arma de fogo, tendo sido fixado o regime inicial fechado para cumprimento de pena. O magistrado, para fins de condenação e fixação da pena, levou em conta os depoimentos testemunhais colhidos em juízo e o reconhecimento feito pela vítima em sede policial, bem como o fato de o réu ser reincidente e portador de maus antecedentes, circunstâncias comprovadas no curso do processo.
+
+      Você, na condição de advogado(a) de Tício, é intimado(a) da decisão. Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, apresentando as razões e sustentando as teses jurídicas pertinentes. (Valor: 5,0)
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: "Pedidos (0,50 cada, no mínimo 3, máximo 1,50): redução da pena; mudança de regime; nulidade da prova; afastamento da agravante/causa de aumento."
+    opcoes:
+      correta: "Pedidos (0,50 cada, no mínimo 3, máximo 1,50): redução da pena; mudança de regime; nulidade da prova; afastamento da agravante/causa de aumento."
+      erradas:
+        - Pedido de habilitação, na interposição, do pai da vítima como assistente de acusação.
+        - Pedido de fixação de regime inicial aberto ou semiaberto, na forma do Art. 33, § 2º, alínea b ou c, do CP.
+        - a) designação de audiência preliminar ou de conciliação b) a citação da querelada; c) recebimento da queixa d) a oitiva das testemunhas arroladas; e) a condenação da querelada pelo crime de injúria (Art. 140 do CP) e pelo crime de difamação (Art. 139 do CP) com a causa de aumento de pena (Art. 141, III do CP) em concurso formal de delitos (Art. 70 do CP) f) a fixação de valor mínimo de indenização, nos termos do Art. 387, IV, do CPP. OBS:. A mera indicação de dispositivo legal não pontua.
+        - Aplicação de regime inicial aberto ou semiaberto.
+        - Pedido de acolhimento das alegações para reconhecer a nulidade no ato de recebimento da denúncia ou rejeição da denúncia pela ausência de justa causa.
+    revisao: *a1

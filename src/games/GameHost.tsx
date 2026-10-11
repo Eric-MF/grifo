@@ -1,18 +1,20 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
 import { ShareCard } from "@/components/ShareCard";
-import { gerarCodigo, impressao } from "@/lib/codigo/codigo";
+import { BITS_IMPRESSAO_JOGO, gerarCodigo, impressao } from "@/lib/codigo/codigo";
 import { useModoCelular, useRetratoToque } from "@/lib/modo";
 import type { DadosCard } from "@/lib/share/card";
 import { gravarJSON, lerJSON } from "@/lib/storage";
+import { CATEGORIAS_PADRAO, mascaraCategorias } from "@/quiz/categorias";
 import { NOME_NIVEL } from "@/quiz/pontuacao";
+import { SeletorCategorias } from "@/quiz/SeletorCategorias";
 import type { Nivel } from "@/quiz/types";
 import { Aviso } from "./Aviso";
 import { QuizModal } from "./QuizModal";
 import { desbloqueado, PROGRESSO_INICIAL, type Progresso } from "./progresso";
 import { jogoPorSlug, type JogoInfo } from "./registry";
-import type { Estatisticas, GameInstance, GameModule, GameOptions, Hud, ItemJogo } from "./types";
+import type { Estatisticas, GameInstance, GameModule, GameOptions, Hud, ItemJogo, PoderProprioHud } from "./types";
 import styles from "./games.module.css";
 import quizCss from "@/quiz/quiz.module.css";
 
@@ -111,6 +113,51 @@ function Retrato({ desenhar, estilo }: { desenhar: (c: CanvasRenderingContext2D,
 }
 
 /** Plataforma genérica: carrega o jogo do registro e cuida de menus, perguntas, HUD e fim de jogo. */
+/** Compara dois HUDs campo a campo, para o motor não forçar re-render a cada 0,1 s sem mudança. */
+function PoderProprio({ poder, onUsar }: { poder: PoderProprioHud; onUsar: () => void }) {
+  const pronto = poder.estado === "pronto";
+  const rotulo =
+    poder.estado === "ativo" ? `Ativo · ${poder.segundos} s` : pronto ? "Pronto" : `${Math.floor(poder.barra * 100)}%`;
+  const destaque = poder.estado === "ativo" ? styles.proprioAtivo : pronto ? styles.proprioPronto : "";
+  return (
+    <button
+      type="button"
+      className={`${styles.poder} ${styles.proprio} ${destaque}`}
+      style={{ "--cor": poder.cor } as CSSProperties}
+      disabled={!pronto}
+      onClick={(e) => {
+        soltar(e);
+        onUsar();
+      }}
+      title={pronto ? `${poder.nome}: pronto. Toque ou aperte E para usar.` : `${poder.nome}: ${rotulo.toLowerCase()}`}
+    >
+      <img className={styles.poderIcone} src={poder.icone} alt="" />
+      <span className={styles.rotuloProprio}>{rotulo}</span>
+      <span className={styles.barra}>
+        <span style={{ width: `${poder.barra * 100}%` }} />
+      </span>
+    </button>
+  );
+}
+
+function hudIgual(a: Hud, b: Hud) {
+  return (
+    a.pontos === b.pontos &&
+    a.vidas === b.vidas &&
+    a.aviso?.titulo === b.aviso?.titulo &&
+    a.aviso?.texto === b.aviso?.texto &&
+    a.aviso?.peca === b.aviso?.peca &&
+    a.poderes.length === b.poderes.length &&
+    a.poderes.every((p, i) => p.id === b.poderes[i].id && p.restante === b.poderes[i].restante) &&
+    (a.poderProprio === b.poderProprio ||
+      (!!a.poderProprio &&
+        !!b.poderProprio &&
+        a.poderProprio.estado === b.poderProprio.estado &&
+        a.poderProprio.barra === b.poderProprio.barra &&
+        a.poderProprio.segundos === b.poderProprio.segundos))
+  );
+}
+
 export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string }) {
   const info = jogoPorSlug(slug) as JogoInfo;
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -118,11 +165,13 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
   const jogo = useRef<GameInstance | null>(null);
   const [mod, setMod] = useState<GameModule | null>(null);
   const [fase, setFase] = useState<Fase>("carregando");
-  const [opcoes, setOpcoes] = useState<GameOptions>({ estilo: "classico", nivel: 1, som: true, movimentoReduzido: false, personagem: "maleta" });
+  const [opcoes, setOpcoes] = useState<GameOptions>({ estilo: "classico", nivel: 1, som: true, movimentoReduzido: false, autoPoder: true, personagem: "maleta" });
   const [progresso, setProgresso] = useState<Progresso>(PROGRESSO_INICIAL);
   const progressoRef = useRef(progresso);
-  progressoRef.current = progresso;
-  const [hud, setHud] = useState<Hud>({ pontos: 0, vidas: 0, poderes: [], cenario: "" });
+  useLayoutEffect(() => {
+    progressoRef.current = progresso;
+  }, [progresso]);
+  const [hud, setHud] = useState<Hud>({ pontos: 0, vidas: 0, poderes: [] });
   const [quiz, setQuiz] = useState<{
     titulo: string;
     subtitulo: string;
@@ -146,6 +195,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
     const salvo = lerJSON<{ opcoes?: Partial<GameOptions>; recordes?: Recordes; progresso?: Progresso }>(chave, {});
     const reduzido = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
     const debug = process.env.NODE_ENV !== "production" && new URLSearchParams(location.search).has("debug");
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- lê localStorage após montar (site estático)
     setOpcoes((o) => ({ ...o, movimentoReduzido: reduzido, ...salvo.opcoes, debug }));
     recordesRef.current = salvo.recordes ?? {};
     setRecordes(recordesRef.current);
@@ -154,7 +204,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
   const salvar = useCallback(
     (o: GameOptions, r: Recordes, p: Progresso) =>
       gravarJSON(chave, {
-        opcoes: { estilo: o.estilo, nivel: o.nivel, som: o.som, personagem: o.personagem },
+        opcoes: { estilo: o.estilo, nivel: o.nivel, som: o.som, autoPoder: o.autoPoder, personagem: o.personagem, categorias: o.categorias },
         recordes: r,
         progresso: p,
       }),
@@ -176,7 +226,9 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
   }, [info]);
 
   const opcoesRef = useRef(opcoes);
-  opcoesRef.current = opcoes;
+  useLayoutEffect(() => {
+    opcoesRef.current = opcoes;
+  }, [opcoes]);
 
   // Cria a instância quando o módulo e o canvas estão prontos
   useEffect(() => {
@@ -184,11 +236,11 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
     const inst = mod.criar(
       canvasRef.current,
       {
-        perguntar: ({ tipo, poderNome, poderIcone, poderDescricao, poderDuracao }) =>
+        perguntar: ({ tipo, poderNome, poderIcone, poderDescricao, poderDuracao, carrega }) =>
           new Promise<boolean>((resolve) => {
             setQuiz({
               titulo: tipo === "reviver" ? "Revisão Criminal: responda para continuar" : `Poder: ${poderNome}`,
-              subtitulo: tipo === "reviver" ? "Última chance" : "Acerte para ativar o poder",
+              subtitulo: tipo === "reviver" ? "Última chance" : carrega ? "Acerte para carregar o seu poder" : "Acerte para ativar o poder",
               poder:
                 tipo === "poder" && poderIcone && poderDescricao !== undefined
                   ? { icone: poderIcone, descricao: poderDescricao, duracao: poderDuracao ?? 0 }
@@ -197,7 +249,8 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
               seed: Math.random(),
             });
           }),
-        hud: setHud,
+        // o motor manda o HUD a cada 0,1 s: só re-renderiza quando algo do HUD mudou
+        hud: (h) => setHud((anterior) => (hudIgual(anterior, h) ? anterior : h)),
         fimDeJogo: (est) => {
           const o = opcoesRef.current;
           const ganho = est.progresso ?? { xp: 0, moedas: 0 };
@@ -211,7 +264,8 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
           setRecordes(novo);
           salvar(o, novo, novoProgresso);
           (async () => {
-            const imp = await impressao({ slug, est, o: [o.estilo, o.nivel] }, 11);
+            const categorias = o.categorias ?? CATEGORIAS_PADRAO;
+            const imp = await impressao({ slug, est, o: [o.estilo, o.nivel, categorias] }, BITS_IMPRESSAO_JOGO);
             const estiloIdx = Math.max(0, mod.estilos.findIndex((s) => s.id === o.estilo));
             const codigo = await gerarCodigo({
               tipo: "jogo",
@@ -223,6 +277,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
               perguntas: est.perguntas,
               data: new Date(),
               impressao: imp,
+              categorias: mascaraCategorias(categorias),
             });
             setFim({ est, recorde: est.pontos > anterior && est.pontos > 0, codigo });
           })();
@@ -354,6 +409,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
         <div className={styles.hud} aria-live="off">
           <span className={styles.pontos}>{hud.pontos}</span>
           <div className={styles.poderes}>
+            {hud.poderProprio && <PoderProprio poder={hud.poderProprio} onUsar={() => jogo.current?.usarPoderProprio()} />}
             {hud.vidas > 0 && <span className={styles.poder} title="Vidas extras">❤️ ×{hud.vidas}</span>}
             {hud.poderes.map((p) => (
               <span key={p.id} className={styles.poder} title={p.nome}>
@@ -361,7 +417,6 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
               </span>
             ))}
           </div>
-          <span className={styles.cenario}>{hud.cenario}</span>
           <div className={styles.hudBtns}>
             <button type="button" onClick={(e) => { soltar(e); jogo.current?.pausar(); }} aria-label="Pausar" disabled={fase === "pergunta"}>
               ❚❚
@@ -416,6 +471,11 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
                     ))}
                   </div>
                 </fieldset>
+                <SeletorCategorias
+                  className={styles.grupo}
+                  valor={opcoes.categorias ?? CATEGORIAS_PADRAO}
+                  onChange={(categorias) => mudar({ categorias })}
+                />
                 <fieldset className={styles.grupo}>
                   <legend>Estilo</legend>
                   <div className={styles.estilos}>
@@ -466,6 +526,9 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
                   <label>
                     <input type="checkbox" checked={opcoes.movimentoReduzido} onChange={(e) => mudar({ movimentoReduzido: e.target.checked })} /> Menos efeitos
                   </label>
+                  <label>
+                    <input type="checkbox" checked={opcoes.autoPoder ?? true} onChange={(e) => mudar({ autoPoder: e.target.checked })} /> Poder automático
+                  </label>
                 </div>
                 {mod?.comoJogar && (
                   <details className={styles.como}>
@@ -506,6 +569,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
       {quiz && (
         <QuizModal
           nivel={opcoes.nivel}
+          categorias={opcoes.categorias ?? CATEGORIAS_PADRAO}
           titulo={quiz.titulo}
           subtitulo={quiz.subtitulo}
           poder={quiz.poder}

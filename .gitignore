@@ -41,9 +41,16 @@ yarn-error.log*
 next-env.d.ts
 
 # material de referência (não versionar)
+# Downloads da FGV (scripts/baixar-fgv.mjs) servem a um vídeo "Questões que até a FGV errou":
+# as diferenças entre gabaritos preliminares e definitivos são a matéria-prima.
 /.examples/
 
 # fontes de imagem originais (versionadas em public/img após otimização)
 
 # conteúdo gerado (scripts/build-content.ts)
 /src/content/generated/
+/public/dados/
+/public/downloads/leis/
+
+# cache de coleta (scripts/baixar-leis.ts)
+/.cache/

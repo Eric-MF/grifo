@@ -1,0 +1,550 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "29"
+perguntas:
+  - id: 29-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
+    opcoes:
+      correta: "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
+      erradas:
+        - "Endereçamento correto: Juízo da Vara de Execuções Penais do Rio de Janeiro/RJ."
+        - Endereçamento correto das razões (Tribunal de Justiça).
+        - "Endereçamento correto: 1ª Vara Criminal da Comarca de Natal/RN"
+        - "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS."
+        - A petição deve ser endereçada à 05ª Vara Criminal da Comarca de Barnabeu/CN.
+    revisao: &a1
+      status: rascunho
+  - id: 29-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: pedido
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Pedido de retratação pelo juízo a quo.
+    opcoes:
+      correta: Pedido de retratação pelo juízo a quo.
+      erradas:
+        - "Pedidos: Conhecimento e provimento do recurso OU concessão da progressão de regime"
+        - Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP.
+        - "Pedidos: absolvição do crime de furto, na forma do artigo 386, III, CPP;subsidiariamente, aplicação da pena base no mínimo legal;reconhecimento das atenuantes da confissão espontânea e da menoridade relativa;reconhecimento da forma privilegiada do furto;substituição da pena privativa de liberdade por restritiva de direitos;fixação do regime aberto; sursis da pena."
+        - Conhecimento e provimento do recurso.
+        - Absolvição, na forma do Art. 386, inciso III, do CPP.
+    revisao: *a1
+  - id: 29-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: enderecamento
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem devem ser endereçadas as razões?
+    gabarito: "Endereçamento: Tribunal de Justiça do Estado de São Paulo."
+    opcoes:
+      correta: "Endereçamento: Tribunal de Justiça do Estado de São Paulo."
+      erradas:
+        - "Endereçamento correto: Juízo da Vara de Execuções Penais do Rio de Janeiro/RJ."
+        - "Endereçamento correto: juízo da 5ª Vara Criminal."
+        - "Endereçamento correto: 1ª Vara Criminal da Comarca de Natal/RN"
+        - "Endereçamento: Vara Criminal da Comarca de Porto Alegre/RS."
+        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
+    revisao: *a1
+  - id: 29-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Invalidade no reconhecimento da prática de falta grave, não permitindo a regressão para o regime fechado de cumprimento de pena.
+    opcoes:
+      correta: Invalidade no reconhecimento da prática de falta grave, não permitindo a regressão para o regime fechado de cumprimento de pena.
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Como a ré não é reincidente, faz jus ao regime aberto, conforme o Art. 33, § 2º, ‘c’, do CP ou Súmula 269 do STJ.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
+        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
+    revisao: *a1
+  - id: 29-peca-5-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "5.1"
+    secao: merito
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: O reconhecimento de falta grave depende de prévio procedimento administrativo, garantido o direito de defesa, conforme a Súmula 533 do STJ
+    opcoes:
+      correta: O reconhecimento de falta grave depende de prévio procedimento administrativo, garantido o direito de defesa, conforme a Súmula 533 do STJ
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Como a ré não é reincidente, faz jus ao regime aberto, conforme o Art. 33, § 2º, ‘c’, do CP ou Súmula 269 do STJ.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
+        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
+    revisao: *a1
+  - id: 29-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Não é possível a perda da totalidade dos dias remidos, conforme Art. 127 da LEP.
+    opcoes:
+      correta: Não é possível a perda da totalidade dos dias remidos, conforme Art. 127 da LEP.
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Como a ré não é reincidente, faz jus ao regime aberto, conforme o Art. 33, § 2º, ‘c’, do CP ou Súmula 269 do STJ.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
+        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
+    revisao: *a1
+  - id: 29-peca-6-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "6.1"
+    secao: merito
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Ainda que válido o reconhecimento da falta grave, o juiz somente poderia decretar a perda de até 1/3 dos dias remidos
+    opcoes:
+      correta: Ainda que válido o reconhecimento da falta grave, o juiz somente poderia decretar a perda de até 1/3 dos dias remidos
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Como a ré não é reincidente, faz jus ao regime aberto, conforme o Art. 33, § 2º, ‘c’, do CP ou Súmula 269 do STJ.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
+        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
+    revisao: *a1
+  - id: 29-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
+    opcoes:
+      correta: A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Como a ré não é reincidente, faz jus ao regime aberto, conforme o Art. 33, § 2º, ‘c’, do CP ou Súmula 269 do STJ.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
+        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
+    revisao: *a1
+  - id: 29-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: merito
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
+    opcoes:
+      correta: A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Como a ré não é reincidente, faz jus ao regime aberto, conforme o Art. 33, § 2º, ‘c’, do CP ou Súmula 269 do STJ.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
+        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
+    revisao: *a1
+  - id: 29-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
+    opcoes:
+      correta: Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
+      erradas:
+        - Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
+        - Como a ré não é reincidente, faz jus ao regime aberto, conforme o Art. 33, § 2º, ‘c’, do CP ou Súmula 269 do STJ.
+        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
+        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
+        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
+    revisao: *a1
+  - id: 29-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: pedido
+    caso: |-
+      Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
+
+      Após cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na unidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da pena nesse regime, veio a ser encontrado escondido em seu colchão um aparelho de telefonia celular.
+
+      O diretor do estabelecimento penitenciário, ao tomar conhecimento do fato por meio dos agentes penitenciários, de imediato reconheceu na ficha do preso a prática de falta grave, apenas afirmando que a conduta narrada pelos agentes, e que teria sido praticada por Guilherme, se adequava ao Art. 50, inciso VII, da Lei nº 7.210/84.
+
+      O reconhecimento da falta pelo diretor foi comunicado ao Ministério Público, que apresentou promoção ao juízo da Vara de Execuções Penais de São Paulo, juízo este competente, requerendo a perda de benefícios da execução por parte do apenado. O juiz competente, analisando o requerimento do Ministério Público, decidiu que, “considerando a falta grave reconhecida pelo diretor da unidade, impõe-se: a) a regressão do regime de cumprimento de pena para o fechado; b) perda da totalidade dos dias remidos; c) reinício da contagem do prazo de livramento condicional; d) reinício da contagem do prazo do indulto.”
+
+      Ao ser intimado do teor da decisão, em 09 de julho de 2019, terça-feira, Guilherme entra em contato, de imediato, com você, na condição de advogado(a), esclarecendo que nunca fora ouvido sobre a aplicação da falta grave, apenas tendo conhecimento de que a Defensoria se manifestou no processo de execução após o requerimento do Ministério Público.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Guilherme, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
+
+      A peça deverá ser datada no último dia do prazo para interposição, considerando que, em todos os locais do país, de segunda a sexta-feira são dias úteis. (Valor: 5,00).
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: conhecimento e provimento do recurso.
+    opcoes:
+      correta: conhecimento e provimento do recurso.
+      erradas:
+        - Pedido de retratação.
+        - Absolvição sumária com fundamento no art. 397, III, do CPP e art. 397, IV, do CPP; produção de prova testemunhal ou rol de testemunhas.
+        - a) designação de audiência preliminar ou de conciliação b) a citação da querelada; c) recebimento da queixa d) a oitiva das testemunhas arroladas; e) a condenação da querelada pelo crime de injúria (Art. 140 do CP) e pelo crime de difamação (Art. 139 do CP) com a causa de aumento de pena (Art. 141, III do CP) em concurso formal de delitos (Art. 70 do CP) f) a fixação de valor mínimo de indenização, nos termos do Art. 387, IV, do CPP. OBS:. A mera indicação de dispositivo legal não pontua.
+        - Aplicação de regime inicial aberto ou semiaberto.
+        - Apresentação de rol de testemunhas.
+    revisao: *a1
+  - id: 29-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      Caio e Bruno são irmãos e estão em dificuldades financeiras. Caio, que estava sozinho em seu quarto, verifica que a janela da casa dos vizinhos está aberta; então, ingressa no local e subtrai um telefone celular avaliado em R$ 500,00. Ao mesmo tempo, apesar de não saber da conduta de seu irmão, Bruno percebe que a porta da residência dos vizinhos também ficou aberta. Tendo conhecimento que os proprietários eram um casal de empresários muito rico, ingressa no local e subtrai uma bolsa, avaliada em R$ 450,00.
+
+      Os fatos são descobertos dois dias depois, e Bruno e Caio são denunciados pelo crime de furto qualificado (Art. 155, § 4º, inciso IV, do Código Penal), sendo acostadas as Folhas de Antecedentes Criminais (FAC), contendo, cada uma delas, outra anotação pela suposta prática de crime de estelionato, sem, contudo, haver condenação com trânsito em julgado em ambas.
+
+      Após instrução, a pretensão punitiva do Estado é julgada procedente, sendo aplicada pena mínima de 02 anos de reclusão e 10 dias-multa, em regime inicial aberto, devidamente substituída por restritiva de direitos.
+
+      Com base nas informações expostas, intimado(a) para apresentação de recurso, responda, na condição de advogado(a) de Caio e Bruno, aos itens a seguir.
+    comando: Existe argumento de direito material a ser apresentado para questionar a capitulação jurídica apresentada pelo Ministério Público e acolhida na sentença?
+    gabarito: |-
+      Sim, a capitulação jurídica realizada pelo Ministério Público e acolhida na sentença poderá ser questionada, tendo em vista que não deveria ter sido imputada a qualificadora do concurso de agentes. O Art. 155, § 4º, inciso IV, do CP prevê qualificadora do furto quando este for praticado mediante concurso de duas ou mais pessoas.
+
+      Ocorre que, apesar de Caio e Bruno serem irmãos e terem praticado crimes de furto no mesmo local, data e horário, não houve concurso de agentes. Dentre os requisitos para configuração do concurso de agentes está o liame subjetivo, que não restou configurado na hipótese apresentada. A todo momento o enunciado deixa claro que Caio e Bruno sequer sabiam da conduta um do outro, não havendo que se falar, então, em comunhão de ações e desígnios e, consequentemente, concurso de agentes, apesar de configurado o crime de furto simples em relação a ambos.
+    opcoes:
+      correta: Sim, o argumento seria pela inexistência de liame subjetivo entre os agentes, afastando-se a qualificadora do concurso de pessoas.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 29-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      Caio e Bruno são irmãos e estão em dificuldades financeiras. Caio, que estava sozinho em seu quarto, verifica que a janela da casa dos vizinhos está aberta; então, ingressa no local e subtrai um telefone celular avaliado em R$ 500,00. Ao mesmo tempo, apesar de não saber da conduta de seu irmão, Bruno percebe que a porta da residência dos vizinhos também ficou aberta. Tendo conhecimento que os proprietários eram um casal de empresários muito rico, ingressa no local e subtrai uma bolsa, avaliada em R$ 450,00.
+
+      Os fatos são descobertos dois dias depois, e Bruno e Caio são denunciados pelo crime de furto qualificado (Art. 155, § 4º, inciso IV, do Código Penal), sendo acostadas as Folhas de Antecedentes Criminais (FAC), contendo, cada uma delas, outra anotação pela suposta prática de crime de estelionato, sem, contudo, haver condenação com trânsito em julgado em ambas.
+
+      Após instrução, a pretensão punitiva do Estado é julgada procedente, sendo aplicada pena mínima de 02 anos de reclusão e 10 dias-multa, em regime inicial aberto, devidamente substituída por restritiva de direitos.
+
+      Com base nas informações expostas, intimado(a) para apresentação de recurso, responda, na condição de advogado(a) de Caio e Bruno, aos itens a seguir.
+    comando: Mantida a capitulação acolhida na sentença (Art. 155, § 4º, inciso IV, do Código Penal), existe argumento em busca da redução da pena aplicada?
+    gabarito: |-
+      Mesmo em caso de manutenção da capitulação apresentada, ou seja, de furto qualificado, seria possível a redução da pena aplicada em razão do privilégio previsto no Art. 155, § 2º, do CP. Apesar de os agentes responderem a outras ações penais, nos termos da Súmula 444 do STJ, não havendo sentença condenatória anterior com trânsito em julgado, são considerados tecnicamente primários e de bons antecedentes. Ademais, as coisas furtadas podem ser consideradas de pequeno valor, não havendo que se falar em insignificância, na hipótese, seja pelo valor dos bens seja porque o enunciado indaga sobre a redução da pena aplicada e não afastamento da tipicidade da conduta.
+
+      É preciso, ainda, ressaltar que os Tribunais Superiores pacificaram o entendimento de que a figura do furto privilegiado poderá ser reconhecida ainda que o crime em questão seja de furto qualificado, topograficamente localizado após a disciplina do privilégio, nos termos da Súmula 511 do Superior Tribunal de Justiça.
+    opcoes:
+      correta: Sim, aplicação do furto privilegiado, já que a coisa é de pequeno valor e os réus são primários, conforme a Súmula 511 do STJ.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 29-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      No dia 01 de janeiro de 2008, após ingerir bebida alcoólica, Caio, 50 anos, policial militar reformado, efetuou dois disparos de arma de fogo em direção à parede de sua casa vazia, localizada no interior de grande quintal, com arma de sua propriedade, devidamente registrada e com posse autorizada.
+
+      Apesar de os tiros terem sido efetuados em direção ao interior do imóvel, vizinhos que passavam pela rua naquele momento, ao ouvirem os disparos, entraram em contato com a Polícia Militar, que compareceu ao local e constatou que as duas munições deflagradas ficaram alojadas na parede do imóvel, sendo a perícia acostada ao procedimento. Caio obteve liberdade provisória e foi denunciado como incurso nas sanções do Art. 15 da Lei nº 10.826/03, não sendo localizado, porém, por ocasião da citação, por ter mudado de endereço, apesar das diversas diligências adotadas pelo juízo.
+
+      Após não ser localizado, Caio foi corretamente citado por edital e, não comparecendo, nem constituindo advogado, foi aplicado o Art. 366 do Código de Processo Penal, suspendendo-se o processo e o curso do prazo prescricional, em 04 de abril de 2008. Em 06 de julho de 2018, o novo juiz titular da vara criminal competente determinou que fossem realizadas novas diligências na tentativa de localizar o denunciado, confirmando que o processo, assim como o curso do prazo prescricional, deveria permanecer suspenso.
+
+      Com base nas informações narradas, na condição de advogado(a) de Caio, que veio a tomar conhecimento dos fatos em julho de 2018, responda aos questionamentos a seguir.
+    comando: Existe argumento para questionar a decisão do magistrado que, em julho de 2018, determinou que o processo e o curso do prazo prescricional permanecessem suspensos?
+    gabarito: A decisão do magistrado não foi correta. De fato, uma vez que o denunciado não foi localizado para citação pessoal, seria cabível sua citação por edital. Em consequência, não comparecendo o denunciado e nem constituindo advogado, em razão da natureza de citação ficta, o processo, assim como o curso do prazo prescricional, deve ficar suspenso. Ocorre que uma suspensão indefinida do prazo prescricional acabaria por criar um crime, na prática, imprescritível, o que, de acordo com grande parte da doutrina, não poderia ocorrer através de legislação ordinária. Diante disso, através da Súmula 415 do STJ, foi pacificado o entendimento de que a suspensão do prazo prescricional somente poderia durar o período do prazo prescricional, regulado pela pena máxima do crime imputado. O delito do Art. 15 da Lei nº 10.826/03 tem pena máxima prevista de 04 anos, de modo que o prazo prescricional seria de 08 anos. Desde a suspensão do processo, na forma do Art. 366 do CPP, passaram-se mais de 08 anos, logo o prazo prescricional deveria voltar a correr em abril de 2016, sendo equivocada a decisão do magistrado de, em 2018, determinar que fosse mantida a suspensão do prazo prescricional.
+    opcoes:
+      correta: Sim, a suspensão da prescrição somente poderia durar o período do prazo prescricional, computado de acordo com o máximo da pena em abstrato prevista, voltando a correr em abril de 2016, nos termos da Súmula 415 do STJ.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 29-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      No dia 01 de janeiro de 2008, após ingerir bebida alcoólica, Caio, 50 anos, policial militar reformado, efetuou dois disparos de arma de fogo em direção à parede de sua casa vazia, localizada no interior de grande quintal, com arma de sua propriedade, devidamente registrada e com posse autorizada.
+
+      Apesar de os tiros terem sido efetuados em direção ao interior do imóvel, vizinhos que passavam pela rua naquele momento, ao ouvirem os disparos, entraram em contato com a Polícia Militar, que compareceu ao local e constatou que as duas munições deflagradas ficaram alojadas na parede do imóvel, sendo a perícia acostada ao procedimento. Caio obteve liberdade provisória e foi denunciado como incurso nas sanções do Art. 15 da Lei nº 10.826/03, não sendo localizado, porém, por ocasião da citação, por ter mudado de endereço, apesar das diversas diligências adotadas pelo juízo.
+
+      Após não ser localizado, Caio foi corretamente citado por edital e, não comparecendo, nem constituindo advogado, foi aplicado o Art. 366 do Código de Processo Penal, suspendendo-se o processo e o curso do prazo prescricional, em 04 de abril de 2008. Em 06 de julho de 2018, o novo juiz titular da vara criminal competente determinou que fossem realizadas novas diligências na tentativa de localizar o denunciado, confirmando que o processo, assim como o curso do prazo prescricional, deveria permanecer suspenso.
+
+      Com base nas informações narradas, na condição de advogado(a) de Caio, que veio a tomar conhecimento dos fatos em julho de 2018, responda aos questionamentos a seguir.
+    comando: Existe argumento de direito material a ser apresentado em busca da absolvição de Caio?
+    gabarito: Sim, existe argumento de direito material a ser apresentado pela defesa técnica de Caio em busca de sua absolvição. Deveria o advogado alegar a atipicidade da conduta, tendo em vista que nem todas as elementares do crime do Art. 15 da Lei nº 10.826/03 foram preenchidas. Em que pese tenha Caio realizado disparos de arma de fogo, não haveria que se falar no crime imputado, pois os disparos não foram realizados em via pública e nem em direção à via pública. Apesar de a rua da residência do denunciado ser habitada, os disparos foram realizados dentro de um quintal, em direção à parede da casa onde não havia ninguém. Independentemente de a conduta ser moralmente reprovável, não foi praticado o delito imputado.
+    opcoes:
+      correta: Sim, a atipicidade da conduta, tendo em vista que o disparo não foi realizado em via pública e nem em direção à via pública OU tendo em vista que o disparo não foi realizado em local habitado.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 29-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: |-
+      Em patrulhamento de rotina, policiais militares receberam uma informação não identificada de que Wesley, que estava parado em frente à padaria naquele momento, estaria envolvido com o tráfico de drogas da localidade.
+
+      Diante disso, os policiais identificaram e realizaram a abordagem de Wesley, não sendo, em um primeiro momento, encontrado qualquer material ilícito com ele. Diante da notícia recebida momentos antes da abordagem, porém, e considerando que o crime de associação para o tráfico seria de natureza permanente, os policiais apreenderam o celular de Wesley e, sem autorização, passaram a ter acesso às fotografias e conversas no WhatsApp, sendo verificado que existiam fotos armazenadas de Wesley portando suposta arma de fogo, bem como conversas sobre compra e venda de material entorpecente.
+
+      Entendendo pela existência de flagrante em relação ao crime permanente de associação para o tráfico, Wesley foi encaminhado para a Delegacia, sendo lavrado auto de prisão em flagrante. Após liberdade concedida em audiência de custódia, Wesley é denunciado como incurso nas sanções do Art. 35 da Lei nº 11.343/06. No curso da instrução, foram acostadas imagens das conversas de Wesley via aplicativo a que os agentes da lei tiveram acesso, assim como das fotografias. Os policiais foram ouvidos em audiência, ocasião em que confirmaram as circunstâncias do flagrante. O réu exerceu seu direito ao silêncio.
+
+      Com base nas fotografias acostadas, o juiz competente julgou a pretensão punitiva do estado procedente, aplicando a pena mínima de 03 anos de reclusão, além de multa, e fixando o regime inicial fechado, já que o crime imputado seria equiparado a hediondo. Ainda assim, substituiu a pena privativa de liberdade por restritiva de direitos.
+
+      Considerando as informações narradas, responda, na condição de advogado(a) de Wesley, intimado(a) para apresentação de recurso de apelação.
+    comando: Existe argumento a ser apresentado para questionar as provas utilizadas pelo magistrado como fundamento para condenação? Justifique.
+    gabarito: Sim, existe argumento para questionar as provas que serviram de fundamento para a condenação, tendo em vista que se tratam de provas ilícitas. As provas utilizadas pelo magistrado foram obtidas com violação ao direito à intimidade, já que os policiais obtiveram acesso ao teor das conversas de Wesley por mensagens e suas fotografias sem sua autorização ou sem prévia autorização judicial. Ocorreu violação à garantia de inviolabilidade da intimidade e vida privada, assegurada no Art. 5º, inciso X, da CRFB, já que não houve o indispensável requerimento (e autorização judicial) de quebra de sigilo de dados. Dessa forma, estamos diante de provas ilícitas, que devem ser desentranhadas do processo, nos termos do Art. 157 do CPP.
+    opcoes:
+      correta: Sim, a prova foi obtida por meio ilícito, diante da ausência de autorização judicial para quebra de sigilo de dados OU diante da ausência de autorização de Wesley para acesso ao conteúdo de seu celular, com violação ao direito à intimidade/privacidade/vida privada.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 29-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      Em patrulhamento de rotina, policiais militares receberam uma informação não identificada de que Wesley, que estava parado em frente à padaria naquele momento, estaria envolvido com o tráfico de drogas da localidade.
+
+      Diante disso, os policiais identificaram e realizaram a abordagem de Wesley, não sendo, em um primeiro momento, encontrado qualquer material ilícito com ele. Diante da notícia recebida momentos antes da abordagem, porém, e considerando que o crime de associação para o tráfico seria de natureza permanente, os policiais apreenderam o celular de Wesley e, sem autorização, passaram a ter acesso às fotografias e conversas no WhatsApp, sendo verificado que existiam fotos armazenadas de Wesley portando suposta arma de fogo, bem como conversas sobre compra e venda de material entorpecente.
+
+      Entendendo pela existência de flagrante em relação ao crime permanente de associação para o tráfico, Wesley foi encaminhado para a Delegacia, sendo lavrado auto de prisão em flagrante. Após liberdade concedida em audiência de custódia, Wesley é denunciado como incurso nas sanções do Art. 35 da Lei nº 11.343/06. No curso da instrução, foram acostadas imagens das conversas de Wesley via aplicativo a que os agentes da lei tiveram acesso, assim como das fotografias. Os policiais foram ouvidos em audiência, ocasião em que confirmaram as circunstâncias do flagrante. O réu exerceu seu direito ao silêncio.
+
+      Com base nas fotografias acostadas, o juiz competente julgou a pretensão punitiva do estado procedente, aplicando a pena mínima de 03 anos de reclusão, além de multa, e fixando o regime inicial fechado, já que o crime imputado seria equiparado a hediondo. Ainda assim, substituiu a pena privativa de liberdade por restritiva de direitos.
+
+      Considerando as informações narradas, responda, na condição de advogado(a) de Wesley, intimado(a) para apresentação de recurso de apelação.
+    comando: Mantida a condenação, qual o argumento a ser apresentado para questionar a sanção penal aplicada? Justifique.
+    gabarito: O argumento a ser apresentado para questionar a sanção penal aplicada é o de que o crime de associação para o tráfico não é delito equiparado ao hediondo, diferente do tráfico do Art. 33, caput, da Lei nº 11.343/06, tendo em vista que não está previsto no rol taxativo do Art. 1º da Lei nº 8.072/90. Em respeito ao princípio da legalidade, não há que se falar em analogia in malam partem. Considerando que o crime de associação para o tráfico não está previsto na Constituição como equiparado a hediondo e nem é mencionado no Art. 1º da Lei de Crimes Hediondos, não pode o magistrado conferir tal natureza em sua decisão, ainda que exista previsão no sentido de que o prazo do livramento condicional será de mais de 2/3, prazo esse típico dos crimes hediondos e equiparados. Ademais, ainda que fosse considerada a natureza hedionda do delito, a previsão de regime inicial fechado obrigatória vem sendo considerada inconstitucional pelos Tribunais Superiores (Art. 2º, § 1º, da Lei nº 8.072/90) por violar o princípio da individualização da pena.
+    opcoes:
+      correta: O crime de associação para o tráfico não é delito equiparado a hediondo porque não está previsto no Art. 1º da Lei nº 8.072 OU porque não cabe analogia in malam partem, OU em respeito ao princípio da legalidade, podendo ser aplicado regime aberto.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 29-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Em processo no qual se imputava a Antônio a prática do crime de constituição de milícia privada, foi designada audiência de instrução e julgamento para oitiva das testemunhas arroladas pela acusação e pela defesa. No dia da audiência, as testemunhas de acusação não compareceram, determinando o magistrado, por economia processual, a oitiva das testemunhas de defesa presentes, apesar de o advogado de Antônio se insurgir contra esse fato. Na ocasião, foram ouvidas três testemunhas de defesa, dentre as quais Pablo, que prestou declarações falsas para auxiliar o colega nesse processo criminal. Identificada sua conduta, porém, houve extração de peças ao Ministério Público, que, em 09 de abril de 2019, ofereceu denúncia em face de Pablo, imputando-lhe a prática do crime de falso testemunho na forma majorada.
+
+      No processo de Antônio, foi designada nova audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação; novamente, Pablo, a seu pedido, prestou declarações, confirmando que havia mentido na audiência anterior, mas que agora contava a verdade, o que veio a prejudicar a própria defesa do réu.
+
+      Com base nas declarações das testemunhas de acusação e nas novas declarações de Pablo, Antônio veio a ser condenado. Pablo, por sua vez, em seu processo pelo crime de falso testemunho, também veio a ser condenado, reconhecendo o magistrado a atenuante do Art. 65, inciso III, alínea b, do Código Penal.
+
+      Considerando as informações narradas, responda, na condição de advogado(a) de Antônio e Pablo.
+    comando: Qual argumento de direito processual poderá ser apresentado por você para desconstituir a sentença condenatória do réu? Justifique.
+    gabarito: O advogado de Antônio poderá buscar o reconhecimento da nulidade da sentença condenatória em razão da violação ao devido processo legal. Isso porque, de acordo com o Art. 400 do CPP, na audiência, primeiro devem ser ouvidas as testemunhas da acusação. Somente após a produção de provas pela acusação poderiam ser ouvidas as testemunhas de defesa e interrogado o acusado. Violando a ordem da oitiva das testemunhas, tendo a defesa se insurgido contra tal inversão e ficando claro o prejuízo com a condenação e alteração dos fatos por parte de Pablo, deverá ser reconhecida a nulidade do processo desde a primeira audiência de instrução e julgamento.
+    opcoes:
+      correta: Houve inversão na ordem de oitiva das testemunhas OU que as testemunhas de defesa não poderiam ter sido ouvidas antes das testemunhas de acusação, havendo violação ao devido processo legal OU violação à ampla defesa OU violação ao contraditório, conforme o Art. 564, inciso IV, do CPP OU Art. 400 do CPP.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 29-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Em processo no qual se imputava a Antônio a prática do crime de constituição de milícia privada, foi designada audiência de instrução e julgamento para oitiva das testemunhas arroladas pela acusação e pela defesa. No dia da audiência, as testemunhas de acusação não compareceram, determinando o magistrado, por economia processual, a oitiva das testemunhas de defesa presentes, apesar de o advogado de Antônio se insurgir contra esse fato. Na ocasião, foram ouvidas três testemunhas de defesa, dentre as quais Pablo, que prestou declarações falsas para auxiliar o colega nesse processo criminal. Identificada sua conduta, porém, houve extração de peças ao Ministério Público, que, em 09 de abril de 2019, ofereceu denúncia em face de Pablo, imputando-lhe a prática do crime de falso testemunho na forma majorada.
+
+      No processo de Antônio, foi designada nova audiência de instrução e julgamento, ocasião em que foram ouvidas as testemunhas de acusação; novamente, Pablo, a seu pedido, prestou declarações, confirmando que havia mentido na audiência anterior, mas que agora contava a verdade, o que veio a prejudicar a própria defesa do réu.
+
+      Com base nas declarações das testemunhas de acusação e nas novas declarações de Pablo, Antônio veio a ser condenado. Pablo, por sua vez, em seu processo pelo crime de falso testemunho, também veio a ser condenado, reconhecendo o magistrado a atenuante do Art. 65, inciso III, alínea b, do Código Penal.
+
+      Considerando as informações narradas, responda, na condição de advogado(a) de Antônio e Pablo.
+    comando: Qual o argumento de direito material a ser apresentado pela defesa técnica de Pablo para questionar a sentença condenatória? Justifique.
+    gabarito: "A conduta de Pablo de, em audiência de instrução e julgamento de processo criminal, fazer afirmação falsa como testemunha, a princípio, configura o crime realmente imputado: Art. 342, § 1º, do CP. Ocorre que, até como forma de incentivar a retratação e minorar os prejuízos causados em processos, previu o legislador, no Art. 342, § 2º, do CP, que se o agente se retrata ou declara a verdade antes da sentença ser proferida no processo em que ocorreu o ilícito, o fato deixa de ser punível. No caso, Pablo se retratou, narrou a verdade, antes mesmo de ser proferida a sentença condenatória de Antônio. Dessa forma, não poderia o magistrado reconhecer que tal retratação funcionaria apenas como atenuante do Art. 65, inciso III, alínea b, do CP, ou arrependimento posterior, devendo reconhecer a extinção da punibilidade do agente, já que o fato deixa de ser punível."
+    opcoes:
+      correta: Houve retratação antes da sentença ser proferida no processo de Antônio, deixando o fato de ser punível, nos termos do Art. 342, § 2º, do CP.
+      erradas:
+        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
+        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
+        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1

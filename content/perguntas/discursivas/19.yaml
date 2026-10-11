@@ -1,0 +1,506 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "19"
+perguntas:
+  - id: 19-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      No dia 24 de dezembro de 2014, na cidade do Rio de Janeiro, Rodrigo e um amigo não identificado foram para um bloco de rua que ocorria em razão do Natal, onde passaram a ingerir bebida alcoólica em comemoração ao evento festivo. Na volta para casa, ainda em companhia do amigo, já um pouco tonto em razão da quantidade de cerveja que havia bebido, subtraiu, mediante emprego de uma faca, os pertences de uma moça desconhecida que caminhava tranquilamente pela rua. A vítima era Maria, jovem de 24 anos que acabara de sair do médico e saber que estava grávida de um mês. Em razão dos fatos, Rodrigo foi denunciado pela prática de crime de roubo duplamente majorado, na forma do Art. 157, § 2º, incisos I e II, do Código Penal.
+
+      Durante a instrução, foi juntada a Folha de Antecedentes Criminais de Rodrigo, onde constavam anotações em relação a dois inquéritos policiais em que ele figurava como indiciado e três ações penais que respondia na condição de réu, apesar de em nenhuma delas haver sentença com trânsito em julgado. Foram, ainda, durante a Audiência de Instrução e Julgamento ouvidos a vítima e os policiais que encontraram Rodrigo, horas após o crime, na posse dos bens subtraídos. Durante seu interrogatório, Rodrigo permaneceu em silêncio. Ao final da instrução, após alegações finais, a pretensão punitiva do Estado foi julgada procedente, com Rodrigo sendo condenado a pena de 05 anos e 04 meses de reclusão, a ser cumprida em regime semiaberto, e 13 dias-multa. O juiz aplicou a pena-base no mínimo legal, além de não reconhecer qualquer agravante ou atenuante. Na terceira fase da aplicação da pena, reconheceu as majorantes mencionadas na denúncia e realizou um aumento de 1/3 da pena imposta.
+
+      O Ministério Público foi intimado da sentença em 14 de setembro de 2015, uma segunda-feira, sendo terça-feira dia útil. Inconformado, o Ministério Público apresentou recurso de apelação perante o juízo de primeira instância, acompanhado das respectivas razões recursais, no dia 30 de setembro de 2015, requerendo:
+
+      i) O aumento da pena-base, tendo em vista a existência de diversas anotações na Folha de Antecedentes Criminais do acusado;
+
+      ii) O reconhecimento das agravantes previstas no Art. 61, inciso II, alíneas ‘h’ e ‘l’, do Código Penal;
+
+      iii) A majoração do quantum de aumento em razão das causas de aumentos previstas no Art. 157, §2º, incisos I e II, do Código Penal, exclusivamente pelo fato de serem duas as majorantes;
+
+      iv) Fixação do regime inicial fechado de cumprimento de pena, pois o roubo com faca tem assombrado a população do Rio de Janeiro, causando uma situação de insegurança em toda a sociedade.
+
+      A defesa não apresentou recurso. O magistrado, então, recebeu o recurso de apelação do Ministério Público e intimou, no dia 19 de outubro de 2015 (segunda-feira), sendo terça feira dia útil em todo o país, você, advogado(a) de Rodrigo, para apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento: Vara Criminal da Comarca do Rio de Janeiro"
+    opcoes:
+      correta: "Endereçamento: Vara Criminal da Comarca do Rio de Janeiro"
+      erradas:
+        - "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
+        - "Endereçamento correto: Tribunal de Justiça do Estado de Mato Grosso."
+        - "Endereçamento correto: Tribunal de Justiça do Rio de Janeiro."
+        - "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS."
+        - "Endereçamento: Tribunal de Justiça de Santa Catarina."
+    revisao: &a1
+      status: rascunho
+  - id: 19-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: enderecamento
+    caso: |-
+      No dia 24 de dezembro de 2014, na cidade do Rio de Janeiro, Rodrigo e um amigo não identificado foram para um bloco de rua que ocorria em razão do Natal, onde passaram a ingerir bebida alcoólica em comemoração ao evento festivo. Na volta para casa, ainda em companhia do amigo, já um pouco tonto em razão da quantidade de cerveja que havia bebido, subtraiu, mediante emprego de uma faca, os pertences de uma moça desconhecida que caminhava tranquilamente pela rua. A vítima era Maria, jovem de 24 anos que acabara de sair do médico e saber que estava grávida de um mês. Em razão dos fatos, Rodrigo foi denunciado pela prática de crime de roubo duplamente majorado, na forma do Art. 157, § 2º, incisos I e II, do Código Penal.
+
+      Durante a instrução, foi juntada a Folha de Antecedentes Criminais de Rodrigo, onde constavam anotações em relação a dois inquéritos policiais em que ele figurava como indiciado e três ações penais que respondia na condição de réu, apesar de em nenhuma delas haver sentença com trânsito em julgado. Foram, ainda, durante a Audiência de Instrução e Julgamento ouvidos a vítima e os policiais que encontraram Rodrigo, horas após o crime, na posse dos bens subtraídos. Durante seu interrogatório, Rodrigo permaneceu em silêncio. Ao final da instrução, após alegações finais, a pretensão punitiva do Estado foi julgada procedente, com Rodrigo sendo condenado a pena de 05 anos e 04 meses de reclusão, a ser cumprida em regime semiaberto, e 13 dias-multa. O juiz aplicou a pena-base no mínimo legal, além de não reconhecer qualquer agravante ou atenuante. Na terceira fase da aplicação da pena, reconheceu as majorantes mencionadas na denúncia e realizou um aumento de 1/3 da pena imposta.
+
+      O Ministério Público foi intimado da sentença em 14 de setembro de 2015, uma segunda-feira, sendo terça-feira dia útil. Inconformado, o Ministério Público apresentou recurso de apelação perante o juízo de primeira instância, acompanhado das respectivas razões recursais, no dia 30 de setembro de 2015, requerendo:
+
+      i) O aumento da pena-base, tendo em vista a existência de diversas anotações na Folha de Antecedentes Criminais do acusado;
+
+      ii) O reconhecimento das agravantes previstas no Art. 61, inciso II, alíneas ‘h’ e ‘l’, do Código Penal;
+
+      iii) A majoração do quantum de aumento em razão das causas de aumentos previstas no Art. 157, §2º, incisos I e II, do Código Penal, exclusivamente pelo fato de serem duas as majorantes;
+
+      iv) Fixação do regime inicial fechado de cumprimento de pena, pois o roubo com faca tem assombrado a população do Rio de Janeiro, causando uma situação de insegurança em toda a sociedade.
+
+      A defesa não apresentou recurso. O magistrado, então, recebeu o recurso de apelação do Ministério Público e intimou, no dia 19 de outubro de 2015 (segunda-feira), sendo terça feira dia útil em todo o país, você, advogado(a) de Rodrigo, para apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: A quem devem ser endereçadas as razões?
+    gabarito: "Endereçamento: Tribunal de Justiça do Rio de Janeiro"
+    opcoes:
+      correta: "Endereçamento: Tribunal de Justiça do Rio de Janeiro"
+      erradas:
+        - "Endereçamento: 1ª Vara Criminal da Comarca de Maceió/AL."
+        - "Endereçamento: Juiz da Vara do Tribunal do Júri."
+        - "Endereçamento: Vara Criminal da Comarca de Goiânia/GO."
+        - Vara Criminal da Comarca de Campos/RJ.
+        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
+    revisao: *a1
+  - id: 19-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: preliminar
+    caso: |-
+      No dia 24 de dezembro de 2014, na cidade do Rio de Janeiro, Rodrigo e um amigo não identificado foram para um bloco de rua que ocorria em razão do Natal, onde passaram a ingerir bebida alcoólica em comemoração ao evento festivo. Na volta para casa, ainda em companhia do amigo, já um pouco tonto em razão da quantidade de cerveja que havia bebido, subtraiu, mediante emprego de uma faca, os pertences de uma moça desconhecida que caminhava tranquilamente pela rua. A vítima era Maria, jovem de 24 anos que acabara de sair do médico e saber que estava grávida de um mês. Em razão dos fatos, Rodrigo foi denunciado pela prática de crime de roubo duplamente majorado, na forma do Art. 157, § 2º, incisos I e II, do Código Penal.
+
+      Durante a instrução, foi juntada a Folha de Antecedentes Criminais de Rodrigo, onde constavam anotações em relação a dois inquéritos policiais em que ele figurava como indiciado e três ações penais que respondia na condição de réu, apesar de em nenhuma delas haver sentença com trânsito em julgado. Foram, ainda, durante a Audiência de Instrução e Julgamento ouvidos a vítima e os policiais que encontraram Rodrigo, horas após o crime, na posse dos bens subtraídos. Durante seu interrogatório, Rodrigo permaneceu em silêncio. Ao final da instrução, após alegações finais, a pretensão punitiva do Estado foi julgada procedente, com Rodrigo sendo condenado a pena de 05 anos e 04 meses de reclusão, a ser cumprida em regime semiaberto, e 13 dias-multa. O juiz aplicou a pena-base no mínimo legal, além de não reconhecer qualquer agravante ou atenuante. Na terceira fase da aplicação da pena, reconheceu as majorantes mencionadas na denúncia e realizou um aumento de 1/3 da pena imposta.
+
+      O Ministério Público foi intimado da sentença em 14 de setembro de 2015, uma segunda-feira, sendo terça-feira dia útil. Inconformado, o Ministério Público apresentou recurso de apelação perante o juízo de primeira instância, acompanhado das respectivas razões recursais, no dia 30 de setembro de 2015, requerendo:
+
+      i) O aumento da pena-base, tendo em vista a existência de diversas anotações na Folha de Antecedentes Criminais do acusado;
+
+      ii) O reconhecimento das agravantes previstas no Art. 61, inciso II, alíneas ‘h’ e ‘l’, do Código Penal;
+
+      iii) A majoração do quantum de aumento em razão das causas de aumentos previstas no Art. 157, §2º, incisos I e II, do Código Penal, exclusivamente pelo fato de serem duas as majorantes;
+
+      iv) Fixação do regime inicial fechado de cumprimento de pena, pois o roubo com faca tem assombrado a população do Rio de Janeiro, causando uma situação de insegurança em toda a sociedade.
+
+      A defesa não apresentou recurso. O magistrado, então, recebeu o recurso de apelação do Ministério Público e intimou, no dia 19 de outubro de 2015 (segunda-feira), sendo terça feira dia útil em todo o país, você, advogado(a) de Rodrigo, para apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: "Preliminarmente: Não conhecimento do recurso de Apelação, em razão da intempestividade, nos termos do art. 593 do CPP Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+    opcoes:
+      correta: "Preliminarmente: Não conhecimento do recurso de Apelação, em razão da intempestividade, nos termos do art. 593 do CPP Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+      erradas:
+        - A ação penal é pública incondicionada, por se tratar de violência doméstica e familiar contra a mulher, consoante Súmula 542 do STJ, ou Art. 41 da Lei nº 11.340/2006 ou ADI 4.424.
+        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
+        - "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
+        - Nulidade em razão do cerceamento de defesa OU violação ao princípio da ampla defesa OU violação ao princípio do contraditório, já que o juiz proferiu decisão após juntada de documentação, sem dar vista às partes.
+        - Preliminarmente, nulidade da pronúncia ou nulidade da instrução, por violação ao princípio da ampla defesa e contraditório ou devido processo legal, nos termos do Art. 5º, inciso LIV ou LV, da CRFB/88 ou do Art. 564, inciso IV, do CPP
+    revisao: *a1
+  - id: 19-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      No dia 24 de dezembro de 2014, na cidade do Rio de Janeiro, Rodrigo e um amigo não identificado foram para um bloco de rua que ocorria em razão do Natal, onde passaram a ingerir bebida alcoólica em comemoração ao evento festivo. Na volta para casa, ainda em companhia do amigo, já um pouco tonto em razão da quantidade de cerveja que havia bebido, subtraiu, mediante emprego de uma faca, os pertences de uma moça desconhecida que caminhava tranquilamente pela rua. A vítima era Maria, jovem de 24 anos que acabara de sair do médico e saber que estava grávida de um mês. Em razão dos fatos, Rodrigo foi denunciado pela prática de crime de roubo duplamente majorado, na forma do Art. 157, § 2º, incisos I e II, do Código Penal.
+
+      Durante a instrução, foi juntada a Folha de Antecedentes Criminais de Rodrigo, onde constavam anotações em relação a dois inquéritos policiais em que ele figurava como indiciado e três ações penais que respondia na condição de réu, apesar de em nenhuma delas haver sentença com trânsito em julgado. Foram, ainda, durante a Audiência de Instrução e Julgamento ouvidos a vítima e os policiais que encontraram Rodrigo, horas após o crime, na posse dos bens subtraídos. Durante seu interrogatório, Rodrigo permaneceu em silêncio. Ao final da instrução, após alegações finais, a pretensão punitiva do Estado foi julgada procedente, com Rodrigo sendo condenado a pena de 05 anos e 04 meses de reclusão, a ser cumprida em regime semiaberto, e 13 dias-multa. O juiz aplicou a pena-base no mínimo legal, além de não reconhecer qualquer agravante ou atenuante. Na terceira fase da aplicação da pena, reconheceu as majorantes mencionadas na denúncia e realizou um aumento de 1/3 da pena imposta.
+
+      O Ministério Público foi intimado da sentença em 14 de setembro de 2015, uma segunda-feira, sendo terça-feira dia útil. Inconformado, o Ministério Público apresentou recurso de apelação perante o juízo de primeira instância, acompanhado das respectivas razões recursais, no dia 30 de setembro de 2015, requerendo:
+
+      i) O aumento da pena-base, tendo em vista a existência de diversas anotações na Folha de Antecedentes Criminais do acusado;
+
+      ii) O reconhecimento das agravantes previstas no Art. 61, inciso II, alíneas ‘h’ e ‘l’, do Código Penal;
+
+      iii) A majoração do quantum de aumento em razão das causas de aumentos previstas no Art. 157, §2º, incisos I e II, do Código Penal, exclusivamente pelo fato de serem duas as majorantes;
+
+      iv) Fixação do regime inicial fechado de cumprimento de pena, pois o roubo com faca tem assombrado a população do Rio de Janeiro, causando uma situação de insegurança em toda a sociedade.
+
+      A defesa não apresentou recurso. O magistrado, então, recebeu o recurso de apelação do Ministério Público e intimou, no dia 19 de outubro de 2015 (segunda-feira), sendo terça feira dia útil em todo o país, você, advogado(a) de Rodrigo, para apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+    opcoes:
+      correta: "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+      erradas:
+        - Afastamento da nulidade requerida, considerando que não foi arguida em momento adequado.
+        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
+        - Caso não seja substituída a pena privativa de liberdade por restritiva de direitos, aplicação da suspensão condicional da pena, na forma do Art. 77 do CP.
+        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
+        - Excludente de culpabilidade, em razão da inimputabilidade.
+    revisao: *a1
+  - id: 19-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      No dia 24 de dezembro de 2014, na cidade do Rio de Janeiro, Rodrigo e um amigo não identificado foram para um bloco de rua que ocorria em razão do Natal, onde passaram a ingerir bebida alcoólica em comemoração ao evento festivo. Na volta para casa, ainda em companhia do amigo, já um pouco tonto em razão da quantidade de cerveja que havia bebido, subtraiu, mediante emprego de uma faca, os pertences de uma moça desconhecida que caminhava tranquilamente pela rua. A vítima era Maria, jovem de 24 anos que acabara de sair do médico e saber que estava grávida de um mês. Em razão dos fatos, Rodrigo foi denunciado pela prática de crime de roubo duplamente majorado, na forma do Art. 157, § 2º, incisos I e II, do Código Penal.
+
+      Durante a instrução, foi juntada a Folha de Antecedentes Criminais de Rodrigo, onde constavam anotações em relação a dois inquéritos policiais em que ele figurava como indiciado e três ações penais que respondia na condição de réu, apesar de em nenhuma delas haver sentença com trânsito em julgado. Foram, ainda, durante a Audiência de Instrução e Julgamento ouvidos a vítima e os policiais que encontraram Rodrigo, horas após o crime, na posse dos bens subtraídos. Durante seu interrogatório, Rodrigo permaneceu em silêncio. Ao final da instrução, após alegações finais, a pretensão punitiva do Estado foi julgada procedente, com Rodrigo sendo condenado a pena de 05 anos e 04 meses de reclusão, a ser cumprida em regime semiaberto, e 13 dias-multa. O juiz aplicou a pena-base no mínimo legal, além de não reconhecer qualquer agravante ou atenuante. Na terceira fase da aplicação da pena, reconheceu as majorantes mencionadas na denúncia e realizou um aumento de 1/3 da pena imposta.
+
+      O Ministério Público foi intimado da sentença em 14 de setembro de 2015, uma segunda-feira, sendo terça-feira dia útil. Inconformado, o Ministério Público apresentou recurso de apelação perante o juízo de primeira instância, acompanhado das respectivas razões recursais, no dia 30 de setembro de 2015, requerendo:
+
+      i) O aumento da pena-base, tendo em vista a existência de diversas anotações na Folha de Antecedentes Criminais do acusado;
+
+      ii) O reconhecimento das agravantes previstas no Art. 61, inciso II, alíneas ‘h’ e ‘l’, do Código Penal;
+
+      iii) A majoração do quantum de aumento em razão das causas de aumentos previstas no Art. 157, §2º, incisos I e II, do Código Penal, exclusivamente pelo fato de serem duas as majorantes;
+
+      iv) Fixação do regime inicial fechado de cumprimento de pena, pois o roubo com faca tem assombrado a população do Rio de Janeiro, causando uma situação de insegurança em toda a sociedade.
+
+      A defesa não apresentou recurso. O magistrado, então, recebeu o recurso de apelação do Ministério Público e intimou, no dia 19 de outubro de 2015 (segunda-feira), sendo terça feira dia útil em todo o país, você, advogado(a) de Rodrigo, para apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Não deve ser aplicada a agravante da gravidez da vítima, pois Rodrigo não tinha conhecimento de tal circunstância OU sob pena de configurar responsabilidade objetiva
+    opcoes:
+      correta: Não deve ser aplicada a agravante da gravidez da vítima, pois Rodrigo não tinha conhecimento de tal circunstância OU sob pena de configurar responsabilidade objetiva
+      erradas:
+        - Afastamento da nulidade requerida, considerando que não foi arguida em momento adequado.
+        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
+        - Aplicação do regime aberto para início do cumprimento da pena, na forma do Art. 33, §2º, alínea c, do Código Penal.
+        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
+        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
+    revisao: *a1
+  - id: 19-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      No dia 24 de dezembro de 2014, na cidade do Rio de Janeiro, Rodrigo e um amigo não identificado foram para um bloco de rua que ocorria em razão do Natal, onde passaram a ingerir bebida alcoólica em comemoração ao evento festivo. Na volta para casa, ainda em companhia do amigo, já um pouco tonto em razão da quantidade de cerveja que havia bebido, subtraiu, mediante emprego de uma faca, os pertences de uma moça desconhecida que caminhava tranquilamente pela rua. A vítima era Maria, jovem de 24 anos que acabara de sair do médico e saber que estava grávida de um mês. Em razão dos fatos, Rodrigo foi denunciado pela prática de crime de roubo duplamente majorado, na forma do Art. 157, § 2º, incisos I e II, do Código Penal.
+
+      Durante a instrução, foi juntada a Folha de Antecedentes Criminais de Rodrigo, onde constavam anotações em relação a dois inquéritos policiais em que ele figurava como indiciado e três ações penais que respondia na condição de réu, apesar de em nenhuma delas haver sentença com trânsito em julgado. Foram, ainda, durante a Audiência de Instrução e Julgamento ouvidos a vítima e os policiais que encontraram Rodrigo, horas após o crime, na posse dos bens subtraídos. Durante seu interrogatório, Rodrigo permaneceu em silêncio. Ao final da instrução, após alegações finais, a pretensão punitiva do Estado foi julgada procedente, com Rodrigo sendo condenado a pena de 05 anos e 04 meses de reclusão, a ser cumprida em regime semiaberto, e 13 dias-multa. O juiz aplicou a pena-base no mínimo legal, além de não reconhecer qualquer agravante ou atenuante. Na terceira fase da aplicação da pena, reconheceu as majorantes mencionadas na denúncia e realizou um aumento de 1/3 da pena imposta.
+
+      O Ministério Público foi intimado da sentença em 14 de setembro de 2015, uma segunda-feira, sendo terça-feira dia útil. Inconformado, o Ministério Público apresentou recurso de apelação perante o juízo de primeira instância, acompanhado das respectivas razões recursais, no dia 30 de setembro de 2015, requerendo:
+
+      i) O aumento da pena-base, tendo em vista a existência de diversas anotações na Folha de Antecedentes Criminais do acusado;
+
+      ii) O reconhecimento das agravantes previstas no Art. 61, inciso II, alíneas ‘h’ e ‘l’, do Código Penal;
+
+      iii) A majoração do quantum de aumento em razão das causas de aumentos previstas no Art. 157, §2º, incisos I e II, do Código Penal, exclusivamente pelo fato de serem duas as majorantes;
+
+      iv) Fixação do regime inicial fechado de cumprimento de pena, pois o roubo com faca tem assombrado a população do Rio de Janeiro, causando uma situação de insegurança em toda a sociedade.
+
+      A defesa não apresentou recurso. O magistrado, então, recebeu o recurso de apelação do Ministério Público e intimou, no dia 19 de outubro de 2015 (segunda-feira), sendo terça feira dia útil em todo o país, você, advogado(a) de Rodrigo, para apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Não deve ser aplicada a agravante da embriaguez preordenada, pois não existe prova que Rodrigo ingeriu bebida alcoólica com objetivo de cometer crime OU para aumentar sua coragem para cometer o delito OU porque a embriaguez foi voluntária ou culposa, mas não preordenada.
+    opcoes:
+      correta: Não deve ser aplicada a agravante da embriaguez preordenada, pois não existe prova que Rodrigo ingeriu bebida alcoólica com objetivo de cometer crime OU para aumentar sua coragem para cometer o delito OU porque a embriaguez foi voluntária ou culposa, mas não preordenada.
+      erradas:
+        - Afastamento da nulidade requerida, considerando que não foi arguida em momento adequado.
+        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
+        - Caso não seja substituída a pena privativa de liberdade por restritiva de direitos, aplicação da suspensão condicional da pena, na forma do Art. 77 do CP.
+        - No mérito, absolvição de Lauro.
+        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
+    revisao: *a1
+  - id: 19-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: merito
+    caso: |-
+      No dia 24 de dezembro de 2014, na cidade do Rio de Janeiro, Rodrigo e um amigo não identificado foram para um bloco de rua que ocorria em razão do Natal, onde passaram a ingerir bebida alcoólica em comemoração ao evento festivo. Na volta para casa, ainda em companhia do amigo, já um pouco tonto em razão da quantidade de cerveja que havia bebido, subtraiu, mediante emprego de uma faca, os pertences de uma moça desconhecida que caminhava tranquilamente pela rua. A vítima era Maria, jovem de 24 anos que acabara de sair do médico e saber que estava grávida de um mês. Em razão dos fatos, Rodrigo foi denunciado pela prática de crime de roubo duplamente majorado, na forma do Art. 157, § 2º, incisos I e II, do Código Penal.
+
+      Durante a instrução, foi juntada a Folha de Antecedentes Criminais de Rodrigo, onde constavam anotações em relação a dois inquéritos policiais em que ele figurava como indiciado e três ações penais que respondia na condição de réu, apesar de em nenhuma delas haver sentença com trânsito em julgado. Foram, ainda, durante a Audiência de Instrução e Julgamento ouvidos a vítima e os policiais que encontraram Rodrigo, horas após o crime, na posse dos bens subtraídos. Durante seu interrogatório, Rodrigo permaneceu em silêncio. Ao final da instrução, após alegações finais, a pretensão punitiva do Estado foi julgada procedente, com Rodrigo sendo condenado a pena de 05 anos e 04 meses de reclusão, a ser cumprida em regime semiaberto, e 13 dias-multa. O juiz aplicou a pena-base no mínimo legal, além de não reconhecer qualquer agravante ou atenuante. Na terceira fase da aplicação da pena, reconheceu as majorantes mencionadas na denúncia e realizou um aumento de 1/3 da pena imposta.
+
+      O Ministério Público foi intimado da sentença em 14 de setembro de 2015, uma segunda-feira, sendo terça-feira dia útil. Inconformado, o Ministério Público apresentou recurso de apelação perante o juízo de primeira instância, acompanhado das respectivas razões recursais, no dia 30 de setembro de 2015, requerendo:
+
+      i) O aumento da pena-base, tendo em vista a existência de diversas anotações na Folha de Antecedentes Criminais do acusado;
+
+      ii) O reconhecimento das agravantes previstas no Art. 61, inciso II, alíneas ‘h’ e ‘l’, do Código Penal;
+
+      iii) A majoração do quantum de aumento em razão das causas de aumentos previstas no Art. 157, §2º, incisos I e II, do Código Penal, exclusivamente pelo fato de serem duas as majorantes;
+
+      iv) Fixação do regime inicial fechado de cumprimento de pena, pois o roubo com faca tem assombrado a população do Rio de Janeiro, causando uma situação de insegurança em toda a sociedade.
+
+      A defesa não apresentou recurso. O magistrado, então, recebeu o recurso de apelação do Ministério Público e intimou, no dia 19 de outubro de 2015 (segunda-feira), sendo terça feira dia útil em todo o país, você, advogado(a) de Rodrigo, para apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "A fração do aumento de pena em razão do roubo circunstanciado não deve ser aumentada, pois o número de majorantes, de maneira isolada, não configura fundamentação idônea OU porque deve ser apresentada fundamentação concreta para o aumento de pena acima do mínimo previsto, não sendo o número de majorantes suficientes, na forma do Enunciado 443 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+    opcoes:
+      correta: "A fração do aumento de pena em razão do roubo circunstanciado não deve ser aumentada, pois o número de majorantes, de maneira isolada, não configura fundamentação idônea OU porque deve ser apresentada fundamentação concreta para o aumento de pena acima do mínimo previsto, não sendo o número de majorantes suficientes, na forma do Enunciado 443 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+      erradas:
+        - Afastamento da nulidade requerida, considerando que não foi arguida em momento adequado.
+        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
+        - Aplicação do regime aberto para início do cumprimento da pena, na forma do Art. 33, §2º, alínea c, do Código Penal.
+        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
+        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
+    revisao: *a1
+  - id: 19-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      No dia 24 de dezembro de 2014, na cidade do Rio de Janeiro, Rodrigo e um amigo não identificado foram para um bloco de rua que ocorria em razão do Natal, onde passaram a ingerir bebida alcoólica em comemoração ao evento festivo. Na volta para casa, ainda em companhia do amigo, já um pouco tonto em razão da quantidade de cerveja que havia bebido, subtraiu, mediante emprego de uma faca, os pertences de uma moça desconhecida que caminhava tranquilamente pela rua. A vítima era Maria, jovem de 24 anos que acabara de sair do médico e saber que estava grávida de um mês. Em razão dos fatos, Rodrigo foi denunciado pela prática de crime de roubo duplamente majorado, na forma do Art. 157, § 2º, incisos I e II, do Código Penal.
+
+      Durante a instrução, foi juntada a Folha de Antecedentes Criminais de Rodrigo, onde constavam anotações em relação a dois inquéritos policiais em que ele figurava como indiciado e três ações penais que respondia na condição de réu, apesar de em nenhuma delas haver sentença com trânsito em julgado. Foram, ainda, durante a Audiência de Instrução e Julgamento ouvidos a vítima e os policiais que encontraram Rodrigo, horas após o crime, na posse dos bens subtraídos. Durante seu interrogatório, Rodrigo permaneceu em silêncio. Ao final da instrução, após alegações finais, a pretensão punitiva do Estado foi julgada procedente, com Rodrigo sendo condenado a pena de 05 anos e 04 meses de reclusão, a ser cumprida em regime semiaberto, e 13 dias-multa. O juiz aplicou a pena-base no mínimo legal, além de não reconhecer qualquer agravante ou atenuante. Na terceira fase da aplicação da pena, reconheceu as majorantes mencionadas na denúncia e realizou um aumento de 1/3 da pena imposta.
+
+      O Ministério Público foi intimado da sentença em 14 de setembro de 2015, uma segunda-feira, sendo terça-feira dia útil. Inconformado, o Ministério Público apresentou recurso de apelação perante o juízo de primeira instância, acompanhado das respectivas razões recursais, no dia 30 de setembro de 2015, requerendo:
+
+      i) O aumento da pena-base, tendo em vista a existência de diversas anotações na Folha de Antecedentes Criminais do acusado;
+
+      ii) O reconhecimento das agravantes previstas no Art. 61, inciso II, alíneas ‘h’ e ‘l’, do Código Penal;
+
+      iii) A majoração do quantum de aumento em razão das causas de aumentos previstas no Art. 157, §2º, incisos I e II, do Código Penal, exclusivamente pelo fato de serem duas as majorantes;
+
+      iv) Fixação do regime inicial fechado de cumprimento de pena, pois o roubo com faca tem assombrado a população do Rio de Janeiro, causando uma situação de insegurança em toda a sociedade.
+
+      A defesa não apresentou recurso. O magistrado, então, recebeu o recurso de apelação do Ministério Público e intimou, no dia 19 de outubro de 2015 (segunda-feira), sendo terça feira dia útil em todo o país, você, advogado(a) de Rodrigo, para apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Deverá ser mantido o regime semiaberto para cumprimento de pena /, pois a gravidade em abstrato do crime não configura motivação idônea para aplicação de regime mais severo do que o compatível com a pena aplicada, na forma do Enunciado 718 OU 719 da Súmula do STF OU do Enunciado 440 da Súmula do STJ Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+    opcoes:
+      correta: "Deverá ser mantido o regime semiaberto para cumprimento de pena /, pois a gravidade em abstrato do crime não configura motivação idônea para aplicação de regime mais severo do que o compatível com a pena aplicada, na forma do Enunciado 718 OU 719 da Súmula do STF OU do Enunciado 440 da Súmula do STJ Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
+      erradas:
+        - Afastamento da nulidade requerida, considerando que não foi arguida em momento adequado.
+        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
+        - Caso não seja substituída a pena privativa de liberdade por restritiva de direitos, aplicação da suspensão condicional da pena, na forma do Art. 77 do CP.
+        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
+        - Atipicidade da conduta ou desclassificação para crime de dano qualificado, tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto.
+    revisao: *a1
+  - id: 19-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: pedido
+    caso: |-
+      No dia 24 de dezembro de 2014, na cidade do Rio de Janeiro, Rodrigo e um amigo não identificado foram para um bloco de rua que ocorria em razão do Natal, onde passaram a ingerir bebida alcoólica em comemoração ao evento festivo. Na volta para casa, ainda em companhia do amigo, já um pouco tonto em razão da quantidade de cerveja que havia bebido, subtraiu, mediante emprego de uma faca, os pertences de uma moça desconhecida que caminhava tranquilamente pela rua. A vítima era Maria, jovem de 24 anos que acabara de sair do médico e saber que estava grávida de um mês. Em razão dos fatos, Rodrigo foi denunciado pela prática de crime de roubo duplamente majorado, na forma do Art. 157, § 2º, incisos I e II, do Código Penal.
+
+      Durante a instrução, foi juntada a Folha de Antecedentes Criminais de Rodrigo, onde constavam anotações em relação a dois inquéritos policiais em que ele figurava como indiciado e três ações penais que respondia na condição de réu, apesar de em nenhuma delas haver sentença com trânsito em julgado. Foram, ainda, durante a Audiência de Instrução e Julgamento ouvidos a vítima e os policiais que encontraram Rodrigo, horas após o crime, na posse dos bens subtraídos. Durante seu interrogatório, Rodrigo permaneceu em silêncio. Ao final da instrução, após alegações finais, a pretensão punitiva do Estado foi julgada procedente, com Rodrigo sendo condenado a pena de 05 anos e 04 meses de reclusão, a ser cumprida em regime semiaberto, e 13 dias-multa. O juiz aplicou a pena-base no mínimo legal, além de não reconhecer qualquer agravante ou atenuante. Na terceira fase da aplicação da pena, reconheceu as majorantes mencionadas na denúncia e realizou um aumento de 1/3 da pena imposta.
+
+      O Ministério Público foi intimado da sentença em 14 de setembro de 2015, uma segunda-feira, sendo terça-feira dia útil. Inconformado, o Ministério Público apresentou recurso de apelação perante o juízo de primeira instância, acompanhado das respectivas razões recursais, no dia 30 de setembro de 2015, requerendo:
+
+      i) O aumento da pena-base, tendo em vista a existência de diversas anotações na Folha de Antecedentes Criminais do acusado;
+
+      ii) O reconhecimento das agravantes previstas no Art. 61, inciso II, alíneas ‘h’ e ‘l’, do Código Penal;
+
+      iii) A majoração do quantum de aumento em razão das causas de aumentos previstas no Art. 157, §2º, incisos I e II, do Código Penal, exclusivamente pelo fato de serem duas as majorantes;
+
+      iv) Fixação do regime inicial fechado de cumprimento de pena, pois o roubo com faca tem assombrado a população do Rio de Janeiro, causando uma situação de insegurança em toda a sociedade.
+
+      A defesa não apresentou recurso. O magistrado, então, recebeu o recurso de apelação do Ministério Público e intimou, no dia 19 de outubro de 2015 (segunda-feira), sendo terça feira dia útil em todo o país, você, advogado(a) de Rodrigo, para apresentar a medida cabível.
+
+      Com base nas informações expostas na situação hipotética e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5.00)
+
+      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
+    opcoes:
+      correta: "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
+      erradas:
+        - Desprovimento do recurso, com a manutenção da sentença condenatória.
+        - Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP.
+        - Requerimento de aplicação do furto privilegiado, pleiteando a adoção de alguma das medidas previstas em lei (ou substituição da reclusão por detenção ou causa de diminuição de pena ou aplicação exclusivamente da pena de multa), na forma do Art. 155, §2º, do CP.
+        - Requerimento do exercício do juízo de retratação, nos termos do Art. 589 do CPP.
+        - Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
+    revisao: *a1
+  - id: 19-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      João estava dirigindo seu automóvel a uma velocidade de 100 km/h em uma rodovia em que o limite máximo de velocidade é de 80 km/h. Nesse momento, foi surpreendido por uma bicicleta que atravessou a rodovia de maneira inesperada, vindo a atropelar Juan, condutor dessa bicicleta, que faleceu no local em virtude do acidente. Diante disso, João foi denunciado pela prática do crime previsto no Art. 302 da Lei nº 9.503/97. As perícias realizadas no cadáver da vítima, no automóvel de João, bem como no local do fato, indicaram que João estava acima da velocidade permitida, mas que, ainda que a velocidade do veículo do acusado fosse de 80 km/h, não seria possível evitar o acidente e Juan teria falecido. Diante da prova pericial constatando a violação do dever objetivo de cuidado pela velocidade acima da permitida, João foi condenado à pena de detenção no patamar mínimo previsto no dispositivo legal.
+
+      Considerando apenas os fatos narrados no enunciado, responda aos itens a seguir.
+    comando: Qual o recurso cabível da decisão do magistrado, indicando seu prazo e fundamento legal?
+    gabarito: O recurso cabível da sentença do magistrado que condenou João é o recurso de apelação, cujo prazo de interposição é de 05 dias e o fundamento é o Art. 593, inciso I, do Código de Processo Penal.
+    opcoes:
+      correta: O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
+      erradas:
+        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
+        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
+        - Não, pois viola o princípio da vedação da reformatio in pejus, tendo em vista que geraria prejuízo na aplicação do regime OU na prescrição OU na execução da pena
+        - O argumento é que a vantagem foi oferecida para particular e não para funcionário público, logo não configurado crime contra a Administração Pública.
+        - Atipicidade objetiva da conduta, pois a figura delitiva da perseguição (Art. 147-A do CP); adota verbo nuclear no infinitivo (“perseguir”), o que denota crime habitual, a exigir reiteração do comportamento para a caracterização da tipicidade objetiva
+    revisao: *a1
+  - id: 19-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      João estava dirigindo seu automóvel a uma velocidade de 100 km/h em uma rodovia em que o limite máximo de velocidade é de 80 km/h. Nesse momento, foi surpreendido por uma bicicleta que atravessou a rodovia de maneira inesperada, vindo a atropelar Juan, condutor dessa bicicleta, que faleceu no local em virtude do acidente. Diante disso, João foi denunciado pela prática do crime previsto no Art. 302 da Lei nº 9.503/97. As perícias realizadas no cadáver da vítima, no automóvel de João, bem como no local do fato, indicaram que João estava acima da velocidade permitida, mas que, ainda que a velocidade do veículo do acusado fosse de 80 km/h, não seria possível evitar o acidente e Juan teria falecido. Diante da prova pericial constatando a violação do dever objetivo de cuidado pela velocidade acima da permitida, João foi condenado à pena de detenção no patamar mínimo previsto no dispositivo legal.
+
+      Considerando apenas os fatos narrados no enunciado, responda aos itens a seguir.
+    comando: Qual a principal tese jurídica de direito material a ser alegada nas razões recursais?
+    gabarito: |-
+      A principal tese jurídica a ser apresentada é o requerimento de absolvição do acusado, pois, em que pese ter havido violação do dever objetivo de cuidado, essa violação não representou incremento do risco no caso concreto, pois, ainda que observada a velocidade máxima prevista para a pista, com respeito ao dever de cuidado, o resultado teria ocorrido da maneira como ocorreu. Dessa forma, o examinando pode fundamentar o pedido de absolvição com base na ausência de incremento do risco, sendo essa ausência, de acordo com a Teoria da Imputação Objetiva, fundamento para absolvição. De qualquer maneira, o cerne da resposta é a indicação de que não foi a violação do dever de cuidado a responsável pelo resultado lesivo, de modo que não deveria João ser por ele responsabilizado.
+
+      A Banca também considerou como correta a resposta que indicava a inexistência de culpa, apesar da violação do dever objetivo de cuidado, em razão da ausência do elemento previsibilidade, sob a alegação de que João não poderia prever que uma bicicleta atravessaria seu caminho em uma rodovia de tráfego intenso, em local inadequado.
+    opcoes:
+      correta: Não foi praticado crime OU deveria João ser absolvido, razão da aplicação da Teoria da Imputação Objetiva, pois ainda que não houvesse violação do dever objetivo de cuidado, o resultado teria ocorrido da mesma maneira que ocorreu, não havendo incremento do risco realizado no resultado OU porque não havia culpa em razão da ausência do elemento previsibilidade.
+      erradas:
+        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
+        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
+        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
+        - Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 19-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Ronaldo foi denunciado pela prática do crime de integrar organização criminosa por fatos praticados em 2014.
+
+      Até o momento, porém, somente ele foi identificado como membro da organização pelas autoridades policiais, razão pela qual prosseguiu o inquérito em relação aos demais agentes não identificados. Arrependido, Ronaldo procura seu advogado e afirma que deseja contribuir com as investigações, indicando o nome dos demais integrantes da organização, assim como esclarecendo os crimes cometidos.
+
+      Considerando apenas as informações narradas, responda aos itens a seguir.
+    comando: "Existe alguma medida a ser buscada pelo advogado de Ronaldo para evitar aplicação ou cumprimento de pena no processo pelo qual foi denunciado? Em caso positivo, qual? Em caso negativo, justifique. (Valor:"
+    gabarito: Sim, existe medida a ser buscada pelo advogado de Ronaldo para evitar sua punição. Ronaldo foi denunciado pela prática do delito previsto no Art. 2º da Lei nº 12.850/13. Ocorre que o Art. 4º, inciso I, deste mesmo diploma legal prevê o instituto da “colaboração premiada”, que poderá ocorrer quando o agente colaborar efetiva e voluntariamente com investigação, resultando na identificação dos demais coautores e partícipes da organização criminosa e das infrações por eles praticadas. Diante da vontade de Ronaldo de esclarecer sobre quem seriam os demais integrantes da organização criminosa, deveria o seu advogado buscar um acordo de colaboração premiada, sendo certo que algumas das consequências do acordo que podem ser aplicadas pelo juiz são o perdão judicial ou a substituição de pena privativa de liberdade por restritiva de direitos.
+    opcoes:
+      correta: Sim, deverá o advogado buscar um acordo de colaboração premiada ou delação premiada, nos termos do Art. 4º, inciso I, da Lei nº 12.850/13.
+      erradas:
+        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
+        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
+        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
+        - Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 19-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Ronaldo foi denunciado pela prática do crime de integrar organização criminosa por fatos praticados em 2014.
+
+      Até o momento, porém, somente ele foi identificado como membro da organização pelas autoridades policiais, razão pela qual prosseguiu o inquérito em relação aos demais agentes não identificados. Arrependido, Ronaldo procura seu advogado e afirma que deseja contribuir com as investigações, indicando o nome dos demais integrantes da organização, assim como esclarecendo os crimes cometidos.
+
+      Considerando apenas as informações narradas, responda aos itens a seguir.
+    comando: É possível um dos agentes identificados por Ronaldo ser condenado exclusivamente com base em suas declarações? Fundamente.
+    gabarito: Ainda que o acordo de “colaboração premiada” seja válido, de maneira adequada estabeleceu o legislador a impossibilidade de condenação exclusivamente com base nas declarações do agente colaborador, nos termos do Art. 4º, § 16º, da Lei nº 12.850/13. Para um decreto condenatório, é necessário que as declarações de Ronaldo sejam confirmadas por outros elementos de prova. Os Tribunais Superiores vêm decidindo que as informações procedentes da “colaboração premiada” precisam ser confirmadas por outros elementos de prova – a chamada prova de corroboração.
+    opcoes:
+      correta: Não é possível a condenação exclusivamente com base nas declarações do agente colaborador, segundo o Art. 4º, § 16º, da Lei nº 12.850/13, devendo ser corroborada por outros elementos de prova.
+      erradas:
+        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
+        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
+        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
+        - Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 19-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: |-
+      Sabendo que Vanessa, uma vizinha com quem nunca tinha conversado, praticava diversos furtos no bairro em que morava, João resolve convidá-la para juntos subtraírem R$ 1.000,00 de um cartório do Tribunal de Justiça, não contando para ela, contudo, que era funcionário público e nem que exercia suas funções nesse cartório.
+
+      Praticam, então, o delito, e Vanessa fica surpresa com a facilidade que tiveram para chegar ao cofre do cartório.
+
+      Descoberto o fato pelas câmeras de segurança, são os dois agentes denunciados, em 10 de março de 2015, pela prática do crime de peculato. João foi notificado e citado pessoalmente, enquanto Vanessa foi notificada e citada por edital, pois não foi localizada em sua residência.
+
+      A família de Vanessa constituiu advogado e o processo prosseguiu, mas dele a ré não tomou conhecimento. Foi decretada a revelia de Vanessa, que não compareceu aos atos processuais. Ao final, os acusados foram condenados pela prática do crime previsto no Art. 312 do Código Penal à pena de 02 anos de reclusão. Ocorre que, na verdade, Vanessa estava presa naquela mesma Comarca, desde 05 de março de 2015, em razão de prisão preventiva decretada em outros dois processos.
+
+      Ao ser intimada da sentença, ela procura você na condição de advogado(a).
+
+      Considerando a hipótese narrada, responda aos itens a seguir.
+    comando: Qual argumento de direito processual poderia ser apresentado em favor de Vanessa em sede de apelação? Justifique.
+    gabarito: O examinando deveria alegar que, em relação à Vanessa, o processo é nulo desde a citação. Quando Vanessa foi citada por edital, ela estava presa em estabelecimento na mesma unidade da Federação do juízo processante, logo sua citação foi nula, conforme Enunciado 351 da Súmula de Jurisprudência do STF. Como ela não tomou conhecimento da ação e nem mesmo foi interrogada, pois teve sua revelia decretada, o prejuízo é claro. Assim, em sede de apelação, antes de enfrentar o mérito da apelação, deveria o advogado buscar a anulação de todos os atos após sua citação, inclusive da sentença. Poderia, ainda, o candidato justificar a nulidade na exigência trazida pelo Art. 360 do CPP, que prevê que o réu preso deve ser citado pessoalmente.
+    opcoes:
+      correta: Nulidade dos atos processuais praticados após sua citação OU nulidade da sentença, pois a citação por edital foi inválida, já que Vanessa estava presa OU já que a citação de Vanessa deveria ter sido realizada pessoalmente, nos termos da Súmula 351 do STF OU do art. 360, CPP.
+      erradas:
+        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
+        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
+        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
+        - Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 19-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      Sabendo que Vanessa, uma vizinha com quem nunca tinha conversado, praticava diversos furtos no bairro em que morava, João resolve convidá-la para juntos subtraírem R$ 1.000,00 de um cartório do Tribunal de Justiça, não contando para ela, contudo, que era funcionário público e nem que exercia suas funções nesse cartório.
+
+      Praticam, então, o delito, e Vanessa fica surpresa com a facilidade que tiveram para chegar ao cofre do cartório.
+
+      Descoberto o fato pelas câmeras de segurança, são os dois agentes denunciados, em 10 de março de 2015, pela prática do crime de peculato. João foi notificado e citado pessoalmente, enquanto Vanessa foi notificada e citada por edital, pois não foi localizada em sua residência.
+
+      A família de Vanessa constituiu advogado e o processo prosseguiu, mas dele a ré não tomou conhecimento. Foi decretada a revelia de Vanessa, que não compareceu aos atos processuais. Ao final, os acusados foram condenados pela prática do crime previsto no Art. 312 do Código Penal à pena de 02 anos de reclusão. Ocorre que, na verdade, Vanessa estava presa naquela mesma Comarca, desde 05 de março de 2015, em razão de prisão preventiva decretada em outros dois processos.
+
+      Ao ser intimada da sentença, ela procura você na condição de advogado(a).
+
+      Considerando a hipótese narrada, responda aos itens a seguir.
+    comando: No mérito, foi Vanessa corretamente condenada pela prática do crime de peculato? Justifique.
+    gabarito: Vanessa não foi corretamente condenada pela prática do crime de peculato. Em que pese o Art. 30 do Código Penal prever que as “circunstâncias” de caráter pessoal se comunicam quando elementares do crime, não é possível, no caso concreto, a aplicação desse dispositivo, porque o enunciado deixa claro que Vanessa não tinha conhecimento da condição de funcionário público de João, não sendo possível responsabilizá-la por peculato. A simples afirmação de que as circunstâncias pessoais não se comunicam é insuficiente para atribuição da pontuação, pois, quando elementares, poderá haver comunicação, desde que o agente tenha conhecimento dessa situação. Da mesma forma, inadequada a afirmativa no sentido de que o particular não pode ser responsabilizado pelo crime próprio de peculato, pois insuficiente.
+    opcoes:
+      correta: Vanessa não foi corretamente condenada por peculato porque não tinha conhecimento da condição de funcionário público de João, dependendo a comunicação da elementar desse elemento subjetivo OU porque não pode ser aplicado o Art. 30 do CP pela ausência de elemento subjetivo.
+      erradas:
+        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
+        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
+        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
+        - Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
+        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
+    revisao: *a1
+  - id: 19-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Carlos foi condenado pela prática de um crime de receptação qualificada à pena de 04 anos e 06 meses de reclusão, sendo fixado o regime semiaberto para início do cumprimento de pena. Após o trânsito em julgado da decisão, houve início do cumprimento da sanção penal imposta. Cumprido mais de 1/6 da pena imposta e preenchidos os demais requisitos, o advogado de Carlos requer, junto ao Juízo de Execuções Penais, a progressão para o regime aberto. O magistrado competente profere decisão concedendo a progressão e fixa como condição especial o cumprimento de prestação de serviços à comunidade, na forma do Art. 115 da Lei nº 7.210/84. O advogado de Carlos é intimado dessa decisão.
+
+      Considerando apenas as informações apresentadas, responda aos itens a seguir.
+    comando: Qual medida processual deverá ser apresentada pelo advogado de Carlos, diferente do habeas corpus, para questionar a decisão do magistrado?
+    gabarito: A medida processual a ser apresentada pelo advogado de Carlos é o agravo previsto no Art. 197 da Lei nº 7.210/84, também conhecido como agravo de execução ou agravo em execução. Prevê o mencionado dispositivo que, das decisões proferidas em sede de execução, será cabível o recurso de agravo. No caso, o enunciado deixa claro que houve decisão condenatória com trânsito em julgado e que a decisão a ser combatida foi proferida pelo Juízo da Execução, analisando progressão de regime.
+    opcoes:
+      correta: A medida processual a ser apresentada é o Agravo OU Agravo de Execução OU Agravo em Execução, na forma do Art. 197 da Lei nº 7.210/84.
+      erradas:
+        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
+        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
+        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
+        - O argumento é que, diante da parcial procedência do pedido, deveria ter sido analisada a possibilidade de oferecimento de proposta de suspensão condicional do processo, nos termos da Súmula 337 do STJ OU art. 89 da Lei 9.099/95.
+        - A condenação anterior à pena de multa não impede a concessão da suspensão condicional da pena, de acordo com o Art. 77, § 1º, do CP.
+    revisao: *a1
+  - id: 19-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Carlos foi condenado pela prática de um crime de receptação qualificada à pena de 04 anos e 06 meses de reclusão, sendo fixado o regime semiaberto para início do cumprimento de pena. Após o trânsito em julgado da decisão, houve início do cumprimento da sanção penal imposta. Cumprido mais de 1/6 da pena imposta e preenchidos os demais requisitos, o advogado de Carlos requer, junto ao Juízo de Execuções Penais, a progressão para o regime aberto. O magistrado competente profere decisão concedendo a progressão e fixa como condição especial o cumprimento de prestação de serviços à comunidade, na forma do Art. 115 da Lei nº 7.210/84. O advogado de Carlos é intimado dessa decisão.
+
+      Considerando apenas as informações apresentadas, responda aos itens a seguir.
+    comando: Qual fundamento deverá ser apresentado pelo advogado de Carlos para combater a decisão do magistrado?
+    gabarito: |-
+      O argumento a ser apresentado pelo advogado de Carlos é o de que a decisão do magistrado foi equivocada, pois não é possível fixar, como condição especial ao regime aberto, o cumprimento de prestação de serviços à comunidade. O Art. 115 da LEP prevê expressamente que o magistrado, no momento de fixar o regime aberto, poderá fixar condições especiais, além das obrigatórias e genéricas estabelecidas nos incisos desse dispositivo.
+
+      Ocorre que a legislação penal não disciplina quais seriam essas condições especiais, de forma que surgiu a controvérsia sobre a possibilidade de serem fixadas penas substitutivas em atenção a esta previsão. O tema, porém, foi pacificado pelo Superior Tribunal de Justiça, que, no Enunciado 493 de sua Súmula de Jurisprudência, estabeleceu a inadmissibilidade de serem fixadas penas substitutivas (Art. 44 do Código Penal) como condições especiais ao regime aberto. A ideia que prevaleceu foi a de que, apesar de ser possível o estabelecimento de condições especiais, estas não podem ser penas previstas no Código Penal, sob pena de bis in idem ou dupla punição.
+    opcoes:
+      correta: Inadmissibilidade de ser fixada prestação de serviços à comunidade (ou pena substitutiva) como condição especial ao regime aberto, na forma do Enunciado 493 da Súmula do STJ, sob pena de configurar dupla punição OU bis in idem.
+      erradas:
+        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
+        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
+        - Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, tendo em vista que Paulo deixou de oferecer representação no prazo de 6 meses, conhecendo a autoria desde a data do fato, conforme estabelecido no Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP.
+    revisao: *a1

@@ -7,9 +7,9 @@
 .ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
 /* ---- Prova ---- */
-.shell { padding-bottom: 4rem; }
+.shell { --altura-cabecalho: 64px; --altura-barra: 64px; padding-bottom: 4rem; }
 .toolbar {
-  position: sticky; top: 64px; z-index: 40;
+  position: sticky; top: var(--altura-cabecalho); z-index: 40;
   background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -45,7 +45,7 @@
 .stacked { grid-template-columns: minmax(0, 1fr); max-width: 900px; }
 .blurred { filter: blur(14px) saturate(0.6); user-select: none; pointer-events: none; }
 .enunciado {
-  position: sticky; top: calc(64px + 64px); align-self: start; max-height: calc(100dvh - 150px); overflow: auto;
+  position: sticky; top: calc(var(--altura-cabecalho) + var(--altura-barra)); align-self: start; max-height: calc(100dvh - 150px); overflow: auto;
   padding: 1.25rem 1.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
 }
 .stacked .enunciado { position: static; max-height: none; }

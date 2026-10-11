@@ -1,0 +1,405 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "12"
+perguntas:
+  - id: 12-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
+
+      Instaurado inquérito policial, as investigações seguiram normalmente. O Ministério Público, então, por entender haver indícios suficientes de autoria, provas da materialidade e justa causa, resolveu denunciar Rita pela prática da conduta descrita no Art. 155, § 4º, inciso I, do CP (furto qualificado pelo rompimento de obstáculo). A denúncia foi regularmente recebida pelo juízo da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ e a ré foi citada para responder à acusação, o que foi devidamente feito. O processo teve seu curso regular e, durante todo o tempo, a ré ficou em liberdade.
+
+      Na audiência de instrução e julgamento, realizada no dia 18/10/2012 (quinta-feira), o Ministério Público apresentou certidão cartorária apta a atestar que no dia 15/05/2012 (terça-feira) ocorrera o trânsito em julgado definitivo de sentença que condenava Rita pela prática do delito de estelionato. A ré, em seu interrogatório, exerceu o direito ao silêncio. As alegações finais foram orais; acusação e defesa manifestaram-se. Finda a instrução criminal, o magistrado proferiu sentença em audiência. Na dosimetria da pena, o magistrado entendeu por bem elevar a penabase em patamar acima do mínimo, ao argumento de que o trânsito em julgado de outra sentença condenatória configurava maus antecedentes; na segunda fase da dosimetria da pena o magistrado também entendeu ser cabível a incidência da agravante da reincidência, levando em conta a data do trânsito em julgado definitivo da sentença de estelionato, bem como a data do cometimento do furto (ora objeto de julgamento); não verificando a incidência de nenhuma causa de aumento ou de diminuição, o magistrado fixou a pena definitiva em 4 (quatro) anos de reclusão no regime inicial semiaberto e 80 (oitenta) dias-multa. O valor do dia-multa foi fixado no patamar mínimo legal. Por entender que a ré não atendia aos requisitos legais, o magistrado não substituiu a pena privativa de liberdade por pena restritiva de direitos. Ao final, assegurou-se à ré o direito de recorrer em liberdade.
+
+      O advogado da ré deseja recorrer da decisão.
+
+      Atento ao caso narrado e levando em conta tão somente as informações contidas no texto, elabore o recurso cabível. (Valor: 5,0)
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento da petição de interposição: Juiz da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’."
+    opcoes:
+      correta: "Endereçamento da petição de interposição: Juiz da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’."
+      erradas:
+        - "Endereçamento correto das razões: Tribunal de Justiça do Estado."
+        - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro."
+        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
+        - "Endereçamento: Juízo da Vara de Execuções Penais de Belo Horizonte/MG"
+        - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro"
+    revisao: &a1
+      status: rascunho
+  - id: 12-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: enderecamento
+    caso: |-
+      Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
+
+      Instaurado inquérito policial, as investigações seguiram normalmente. O Ministério Público, então, por entender haver indícios suficientes de autoria, provas da materialidade e justa causa, resolveu denunciar Rita pela prática da conduta descrita no Art. 155, § 4º, inciso I, do CP (furto qualificado pelo rompimento de obstáculo). A denúncia foi regularmente recebida pelo juízo da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ e a ré foi citada para responder à acusação, o que foi devidamente feito. O processo teve seu curso regular e, durante todo o tempo, a ré ficou em liberdade.
+
+      Na audiência de instrução e julgamento, realizada no dia 18/10/2012 (quinta-feira), o Ministério Público apresentou certidão cartorária apta a atestar que no dia 15/05/2012 (terça-feira) ocorrera o trânsito em julgado definitivo de sentença que condenava Rita pela prática do delito de estelionato. A ré, em seu interrogatório, exerceu o direito ao silêncio. As alegações finais foram orais; acusação e defesa manifestaram-se. Finda a instrução criminal, o magistrado proferiu sentença em audiência. Na dosimetria da pena, o magistrado entendeu por bem elevar a penabase em patamar acima do mínimo, ao argumento de que o trânsito em julgado de outra sentença condenatória configurava maus antecedentes; na segunda fase da dosimetria da pena o magistrado também entendeu ser cabível a incidência da agravante da reincidência, levando em conta a data do trânsito em julgado definitivo da sentença de estelionato, bem como a data do cometimento do furto (ora objeto de julgamento); não verificando a incidência de nenhuma causa de aumento ou de diminuição, o magistrado fixou a pena definitiva em 4 (quatro) anos de reclusão no regime inicial semiaberto e 80 (oitenta) dias-multa. O valor do dia-multa foi fixado no patamar mínimo legal. Por entender que a ré não atendia aos requisitos legais, o magistrado não substituiu a pena privativa de liberdade por pena restritiva de direitos. Ao final, assegurou-se à ré o direito de recorrer em liberdade.
+
+      O advogado da ré deseja recorrer da decisão.
+
+      Atento ao caso narrado e levando em conta tão somente as informações contidas no texto, elabore o recurso cabível. (Valor: 5,0)
+    comando: A quem devem ser endereçadas as razões?
+    gabarito: "Endereçamento correto das razões: Tribunal de Justiça do Estado ‘X’."
+    opcoes:
+      correta: "Endereçamento correto das razões: Tribunal de Justiça do Estado ‘X’."
+      erradas:
+        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
+        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
+        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
+        - Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG..
+        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
+    revisao: *a1
+  - id: 12-peca-4-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "4.1"
+    secao: merito
+    caso: |-
+      Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
+
+      Instaurado inquérito policial, as investigações seguiram normalmente. O Ministério Público, então, por entender haver indícios suficientes de autoria, provas da materialidade e justa causa, resolveu denunciar Rita pela prática da conduta descrita no Art. 155, § 4º, inciso I, do CP (furto qualificado pelo rompimento de obstáculo). A denúncia foi regularmente recebida pelo juízo da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ e a ré foi citada para responder à acusação, o que foi devidamente feito. O processo teve seu curso regular e, durante todo o tempo, a ré ficou em liberdade.
+
+      Na audiência de instrução e julgamento, realizada no dia 18/10/2012 (quinta-feira), o Ministério Público apresentou certidão cartorária apta a atestar que no dia 15/05/2012 (terça-feira) ocorrera o trânsito em julgado definitivo de sentença que condenava Rita pela prática do delito de estelionato. A ré, em seu interrogatório, exerceu o direito ao silêncio. As alegações finais foram orais; acusação e defesa manifestaram-se. Finda a instrução criminal, o magistrado proferiu sentença em audiência. Na dosimetria da pena, o magistrado entendeu por bem elevar a penabase em patamar acima do mínimo, ao argumento de que o trânsito em julgado de outra sentença condenatória configurava maus antecedentes; na segunda fase da dosimetria da pena o magistrado também entendeu ser cabível a incidência da agravante da reincidência, levando em conta a data do trânsito em julgado definitivo da sentença de estelionato, bem como a data do cometimento do furto (ora objeto de julgamento); não verificando a incidência de nenhuma causa de aumento ou de diminuição, o magistrado fixou a pena definitiva em 4 (quatro) anos de reclusão no regime inicial semiaberto e 80 (oitenta) dias-multa. O valor do dia-multa foi fixado no patamar mínimo legal. Por entender que a ré não atendia aos requisitos legais, o magistrado não substituiu a pena privativa de liberdade por pena restritiva de direitos. Ao final, assegurou-se à ré o direito de recorrer em liberdade.
+
+      O advogado da ré deseja recorrer da decisão.
+
+      Atento ao caso narrado e levando em conta tão somente as informações contidas no texto, elabore o recurso cabível. (Valor: 5,0)
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Atipicidade da conduta pela falta de tipicidade material: a conduta de Rita não configurou efetiva lesão ao patrimônio da grande rede de farmácias, assim, o fato é atípico pela falta de tipicidade material."
+    opcoes:
+      correta: "Atipicidade da conduta pela falta de tipicidade material: a conduta de Rita não configurou efetiva lesão ao patrimônio da grande rede de farmácias, assim, o fato é atípico pela falta de tipicidade material."
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
+        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
+    revisao: *a1
+  - id: 12-peca-4-2
+    categoria: peca-detalhe
+    parte: peca
+    item: "4.2"
+    secao: pedido
+    caso: |-
+      Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
+
+      Instaurado inquérito policial, as investigações seguiram normalmente. O Ministério Público, então, por entender haver indícios suficientes de autoria, provas da materialidade e justa causa, resolveu denunciar Rita pela prática da conduta descrita no Art. 155, § 4º, inciso I, do CP (furto qualificado pelo rompimento de obstáculo). A denúncia foi regularmente recebida pelo juízo da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ e a ré foi citada para responder à acusação, o que foi devidamente feito. O processo teve seu curso regular e, durante todo o tempo, a ré ficou em liberdade.
+
+      Na audiência de instrução e julgamento, realizada no dia 18/10/2012 (quinta-feira), o Ministério Público apresentou certidão cartorária apta a atestar que no dia 15/05/2012 (terça-feira) ocorrera o trânsito em julgado definitivo de sentença que condenava Rita pela prática do delito de estelionato. A ré, em seu interrogatório, exerceu o direito ao silêncio. As alegações finais foram orais; acusação e defesa manifestaram-se. Finda a instrução criminal, o magistrado proferiu sentença em audiência. Na dosimetria da pena, o magistrado entendeu por bem elevar a penabase em patamar acima do mínimo, ao argumento de que o trânsito em julgado de outra sentença condenatória configurava maus antecedentes; na segunda fase da dosimetria da pena o magistrado também entendeu ser cabível a incidência da agravante da reincidência, levando em conta a data do trânsito em julgado definitivo da sentença de estelionato, bem como a data do cometimento do furto (ora objeto de julgamento); não verificando a incidência de nenhuma causa de aumento ou de diminuição, o magistrado fixou a pena definitiva em 4 (quatro) anos de reclusão no regime inicial semiaberto e 80 (oitenta) dias-multa. O valor do dia-multa foi fixado no patamar mínimo legal. Por entender que a ré não atendia aos requisitos legais, o magistrado não substituiu a pena privativa de liberdade por pena restritiva de direitos. Ao final, assegurou-se à ré o direito de recorrer em liberdade.
+
+      O advogado da ré deseja recorrer da decisão.
+
+      Atento ao caso narrado e levando em conta tão somente as informações contidas no texto, elabore o recurso cabível. (Valor: 5,0)
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: "Pedido subsidiário: aplicação do furto privilegiado, já que Rita é primária e o objeto furtado é de pequeno valor, conforme o § 2º do artigo 155 do CP."
+    opcoes:
+      correta: "Pedido subsidiário: aplicação do furto privilegiado, já que Rita é primária e o objeto furtado é de pequeno valor, conforme o § 2º do artigo 155 do CP."
+      erradas:
+        - Absolvição, com argumento e base legal.
+        - Conhecimento e provimento do recurso.
+        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
+        - Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
+        - Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
+    revisao: *a1
+  - id: 12-peca-4-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "4.3"
+    secao: merito
+    caso: |-
+      Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
+
+      Instaurado inquérito policial, as investigações seguiram normalmente. O Ministério Público, então, por entender haver indícios suficientes de autoria, provas da materialidade e justa causa, resolveu denunciar Rita pela prática da conduta descrita no Art. 155, § 4º, inciso I, do CP (furto qualificado pelo rompimento de obstáculo). A denúncia foi regularmente recebida pelo juízo da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ e a ré foi citada para responder à acusação, o que foi devidamente feito. O processo teve seu curso regular e, durante todo o tempo, a ré ficou em liberdade.
+
+      Na audiência de instrução e julgamento, realizada no dia 18/10/2012 (quinta-feira), o Ministério Público apresentou certidão cartorária apta a atestar que no dia 15/05/2012 (terça-feira) ocorrera o trânsito em julgado definitivo de sentença que condenava Rita pela prática do delito de estelionato. A ré, em seu interrogatório, exerceu o direito ao silêncio. As alegações finais foram orais; acusação e defesa manifestaram-se. Finda a instrução criminal, o magistrado proferiu sentença em audiência. Na dosimetria da pena, o magistrado entendeu por bem elevar a penabase em patamar acima do mínimo, ao argumento de que o trânsito em julgado de outra sentença condenatória configurava maus antecedentes; na segunda fase da dosimetria da pena o magistrado também entendeu ser cabível a incidência da agravante da reincidência, levando em conta a data do trânsito em julgado definitivo da sentença de estelionato, bem como a data do cometimento do furto (ora objeto de julgamento); não verificando a incidência de nenhuma causa de aumento ou de diminuição, o magistrado fixou a pena definitiva em 4 (quatro) anos de reclusão no regime inicial semiaberto e 80 (oitenta) dias-multa. O valor do dia-multa foi fixado no patamar mínimo legal. Por entender que a ré não atendia aos requisitos legais, o magistrado não substituiu a pena privativa de liberdade por pena restritiva de direitos. Ao final, assegurou-se à ré o direito de recorrer em liberdade.
+
+      O advogado da ré deseja recorrer da decisão.
+
+      Atento ao caso narrado e levando em conta tão somente as informações contidas no texto, elabore o recurso cabível. (Valor: 5,0)
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Impossibilidade de bis in idem: o trânsito em julgado da sentença de estelionato não pode ensejar, ao mesmo tempo, elevação da pena-base e da pena intermediária, pois não se admite o bis in idem."
+    opcoes:
+      correta: "Impossibilidade de bis in idem: o trânsito em julgado da sentença de estelionato não pode ensejar, ao mesmo tempo, elevação da pena-base e da pena intermediária, pois não se admite o bis in idem."
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
+        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
+    revisao: *a1
+  - id: 12-peca-4-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4.4"
+    secao: merito
+    caso: |-
+      Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
+
+      Instaurado inquérito policial, as investigações seguiram normalmente. O Ministério Público, então, por entender haver indícios suficientes de autoria, provas da materialidade e justa causa, resolveu denunciar Rita pela prática da conduta descrita no Art. 155, § 4º, inciso I, do CP (furto qualificado pelo rompimento de obstáculo). A denúncia foi regularmente recebida pelo juízo da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ e a ré foi citada para responder à acusação, o que foi devidamente feito. O processo teve seu curso regular e, durante todo o tempo, a ré ficou em liberdade.
+
+      Na audiência de instrução e julgamento, realizada no dia 18/10/2012 (quinta-feira), o Ministério Público apresentou certidão cartorária apta a atestar que no dia 15/05/2012 (terça-feira) ocorrera o trânsito em julgado definitivo de sentença que condenava Rita pela prática do delito de estelionato. A ré, em seu interrogatório, exerceu o direito ao silêncio. As alegações finais foram orais; acusação e defesa manifestaram-se. Finda a instrução criminal, o magistrado proferiu sentença em audiência. Na dosimetria da pena, o magistrado entendeu por bem elevar a penabase em patamar acima do mínimo, ao argumento de que o trânsito em julgado de outra sentença condenatória configurava maus antecedentes; na segunda fase da dosimetria da pena o magistrado também entendeu ser cabível a incidência da agravante da reincidência, levando em conta a data do trânsito em julgado definitivo da sentença de estelionato, bem como a data do cometimento do furto (ora objeto de julgamento); não verificando a incidência de nenhuma causa de aumento ou de diminuição, o magistrado fixou a pena definitiva em 4 (quatro) anos de reclusão no regime inicial semiaberto e 80 (oitenta) dias-multa. O valor do dia-multa foi fixado no patamar mínimo legal. Por entender que a ré não atendia aos requisitos legais, o magistrado não substituiu a pena privativa de liberdade por pena restritiva de direitos. Ao final, assegurou-se à ré o direito de recorrer em liberdade.
+
+      O advogado da ré deseja recorrer da decisão.
+
+      Atento ao caso narrado e levando em conta tão somente as informações contidas no texto, elabore o recurso cabível. (Valor: 5,0)
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
+    opcoes:
+      correta: Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
+        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
+    revisao: *a1
+  - id: 12-peca-4-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "4.5"
+    secao: merito
+    caso: |-
+      Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
+
+      Instaurado inquérito policial, as investigações seguiram normalmente. O Ministério Público, então, por entender haver indícios suficientes de autoria, provas da materialidade e justa causa, resolveu denunciar Rita pela prática da conduta descrita no Art. 155, § 4º, inciso I, do CP (furto qualificado pelo rompimento de obstáculo). A denúncia foi regularmente recebida pelo juízo da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ e a ré foi citada para responder à acusação, o que foi devidamente feito. O processo teve seu curso regular e, durante todo o tempo, a ré ficou em liberdade.
+
+      Na audiência de instrução e julgamento, realizada no dia 18/10/2012 (quinta-feira), o Ministério Público apresentou certidão cartorária apta a atestar que no dia 15/05/2012 (terça-feira) ocorrera o trânsito em julgado definitivo de sentença que condenava Rita pela prática do delito de estelionato. A ré, em seu interrogatório, exerceu o direito ao silêncio. As alegações finais foram orais; acusação e defesa manifestaram-se. Finda a instrução criminal, o magistrado proferiu sentença em audiência. Na dosimetria da pena, o magistrado entendeu por bem elevar a penabase em patamar acima do mínimo, ao argumento de que o trânsito em julgado de outra sentença condenatória configurava maus antecedentes; na segunda fase da dosimetria da pena o magistrado também entendeu ser cabível a incidência da agravante da reincidência, levando em conta a data do trânsito em julgado definitivo da sentença de estelionato, bem como a data do cometimento do furto (ora objeto de julgamento); não verificando a incidência de nenhuma causa de aumento ou de diminuição, o magistrado fixou a pena definitiva em 4 (quatro) anos de reclusão no regime inicial semiaberto e 80 (oitenta) dias-multa. O valor do dia-multa foi fixado no patamar mínimo legal. Por entender que a ré não atendia aos requisitos legais, o magistrado não substituiu a pena privativa de liberdade por pena restritiva de direitos. Ao final, assegurou-se à ré o direito de recorrer em liberdade.
+
+      O advogado da ré deseja recorrer da decisão.
+
+      Atento ao caso narrado e levando em conta tão somente as informações contidas no texto, elabore o recurso cabível. (Valor: 5,0)
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Como a ré não é reincidente, faz jus ao regime aberto, conforme o Art. 33, § 2º, ‘c’, do CP ou Súmula 269 do STJ.
+    opcoes:
+      correta: Como a ré não é reincidente, faz jus ao regime aberto, conforme o Art. 33, § 2º, ‘c’, do CP ou Súmula 269 do STJ.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
+        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
+    revisao: *a1
+  - id: 12-peca-4-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "4.6"
+    secao: merito
+    caso: |-
+      Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
+
+      Instaurado inquérito policial, as investigações seguiram normalmente. O Ministério Público, então, por entender haver indícios suficientes de autoria, provas da materialidade e justa causa, resolveu denunciar Rita pela prática da conduta descrita no Art. 155, § 4º, inciso I, do CP (furto qualificado pelo rompimento de obstáculo). A denúncia foi regularmente recebida pelo juízo da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ e a ré foi citada para responder à acusação, o que foi devidamente feito. O processo teve seu curso regular e, durante todo o tempo, a ré ficou em liberdade.
+
+      Na audiência de instrução e julgamento, realizada no dia 18/10/2012 (quinta-feira), o Ministério Público apresentou certidão cartorária apta a atestar que no dia 15/05/2012 (terça-feira) ocorrera o trânsito em julgado definitivo de sentença que condenava Rita pela prática do delito de estelionato. A ré, em seu interrogatório, exerceu o direito ao silêncio. As alegações finais foram orais; acusação e defesa manifestaram-se. Finda a instrução criminal, o magistrado proferiu sentença em audiência. Na dosimetria da pena, o magistrado entendeu por bem elevar a penabase em patamar acima do mínimo, ao argumento de que o trânsito em julgado de outra sentença condenatória configurava maus antecedentes; na segunda fase da dosimetria da pena o magistrado também entendeu ser cabível a incidência da agravante da reincidência, levando em conta a data do trânsito em julgado definitivo da sentença de estelionato, bem como a data do cometimento do furto (ora objeto de julgamento); não verificando a incidência de nenhuma causa de aumento ou de diminuição, o magistrado fixou a pena definitiva em 4 (quatro) anos de reclusão no regime inicial semiaberto e 80 (oitenta) dias-multa. O valor do dia-multa foi fixado no patamar mínimo legal. Por entender que a ré não atendia aos requisitos legais, o magistrado não substituiu a pena privativa de liberdade por pena restritiva de direitos. Ao final, assegurou-se à ré o direito de recorrer em liberdade.
+
+      O advogado da ré deseja recorrer da decisão.
+
+      Atento ao caso narrado e levando em conta tão somente as informações contidas no texto, elabore o recurso cabível. (Valor: 5,0)
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Possibilidade de substituição da pena privativa de liberdade por restritiva de direitos, conforme Art. 44 do CP OU possibilidade de aplicação da pena de multa, conforme art. 155, § 2º, do CP.
+    opcoes:
+      correta: Possibilidade de substituição da pena privativa de liberdade por restritiva de direitos, conforme Art. 44 do CP OU possibilidade de aplicação da pena de multa, conforme art. 155, § 2º, do CP.
+      erradas:
+        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
+        - Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
+    revisao: *a1
+  - id: 12-peca-5a
+    categoria: peca-detalhe
+    parte: peca
+    item: 5a
+    secao: pedido
+    caso: |-
+      Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
+
+      Instaurado inquérito policial, as investigações seguiram normalmente. O Ministério Público, então, por entender haver indícios suficientes de autoria, provas da materialidade e justa causa, resolveu denunciar Rita pela prática da conduta descrita no Art. 155, § 4º, inciso I, do CP (furto qualificado pelo rompimento de obstáculo). A denúncia foi regularmente recebida pelo juízo da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ e a ré foi citada para responder à acusação, o que foi devidamente feito. O processo teve seu curso regular e, durante todo o tempo, a ré ficou em liberdade.
+
+      Na audiência de instrução e julgamento, realizada no dia 18/10/2012 (quinta-feira), o Ministério Público apresentou certidão cartorária apta a atestar que no dia 15/05/2012 (terça-feira) ocorrera o trânsito em julgado definitivo de sentença que condenava Rita pela prática do delito de estelionato. A ré, em seu interrogatório, exerceu o direito ao silêncio. As alegações finais foram orais; acusação e defesa manifestaram-se. Finda a instrução criminal, o magistrado proferiu sentença em audiência. Na dosimetria da pena, o magistrado entendeu por bem elevar a penabase em patamar acima do mínimo, ao argumento de que o trânsito em julgado de outra sentença condenatória configurava maus antecedentes; na segunda fase da dosimetria da pena o magistrado também entendeu ser cabível a incidência da agravante da reincidência, levando em conta a data do trânsito em julgado definitivo da sentença de estelionato, bem como a data do cometimento do furto (ora objeto de julgamento); não verificando a incidência de nenhuma causa de aumento ou de diminuição, o magistrado fixou a pena definitiva em 4 (quatro) anos de reclusão no regime inicial semiaberto e 80 (oitenta) dias-multa. O valor do dia-multa foi fixado no patamar mínimo legal. Por entender que a ré não atendia aos requisitos legais, o magistrado não substituiu a pena privativa de liberdade por pena restritiva de direitos. Ao final, assegurou-se à ré o direito de recorrer em liberdade.
+
+      O advogado da ré deseja recorrer da decisão.
+
+      Atento ao caso narrado e levando em conta tão somente as informações contidas no texto, elabore o recurso cabível. (Valor: 5,0)
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Absolvição com base na atipicidade da conduta ou art. 386, inciso III, do CPP.
+    opcoes:
+      correta: Absolvição com base na atipicidade da conduta ou art. 386, inciso III, do CPP.
+      erradas:
+        - Absolvição, com argumento e base legal.
+        - Conhecimento e provimento do recurso.
+        - Pedido de retratação.
+        - Aplicação de regime inicial aberto ou semiaberto.
+        - Pedido de acolhimento das alegações para reconhecer a nulidade no ato de recebimento da denúncia ou rejeição da denúncia pela ausência de justa causa.
+    revisao: *a1
+  - id: 12-peca-5b
+    categoria: peca-detalhe
+    parte: peca
+    item: 5b
+    secao: pedido
+    caso: |-
+      Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
+
+      Instaurado inquérito policial, as investigações seguiram normalmente. O Ministério Público, então, por entender haver indícios suficientes de autoria, provas da materialidade e justa causa, resolveu denunciar Rita pela prática da conduta descrita no Art. 155, § 4º, inciso I, do CP (furto qualificado pelo rompimento de obstáculo). A denúncia foi regularmente recebida pelo juízo da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’ e a ré foi citada para responder à acusação, o que foi devidamente feito. O processo teve seu curso regular e, durante todo o tempo, a ré ficou em liberdade.
+
+      Na audiência de instrução e julgamento, realizada no dia 18/10/2012 (quinta-feira), o Ministério Público apresentou certidão cartorária apta a atestar que no dia 15/05/2012 (terça-feira) ocorrera o trânsito em julgado definitivo de sentença que condenava Rita pela prática do delito de estelionato. A ré, em seu interrogatório, exerceu o direito ao silêncio. As alegações finais foram orais; acusação e defesa manifestaram-se. Finda a instrução criminal, o magistrado proferiu sentença em audiência. Na dosimetria da pena, o magistrado entendeu por bem elevar a penabase em patamar acima do mínimo, ao argumento de que o trânsito em julgado de outra sentença condenatória configurava maus antecedentes; na segunda fase da dosimetria da pena o magistrado também entendeu ser cabível a incidência da agravante da reincidência, levando em conta a data do trânsito em julgado definitivo da sentença de estelionato, bem como a data do cometimento do furto (ora objeto de julgamento); não verificando a incidência de nenhuma causa de aumento ou de diminuição, o magistrado fixou a pena definitiva em 4 (quatro) anos de reclusão no regime inicial semiaberto e 80 (oitenta) dias-multa. O valor do dia-multa foi fixado no patamar mínimo legal. Por entender que a ré não atendia aos requisitos legais, o magistrado não substituiu a pena privativa de liberdade por pena restritiva de direitos. Ao final, assegurou-se à ré o direito de recorrer em liberdade.
+
+      O advogado da ré deseja recorrer da decisão.
+
+      Atento ao caso narrado e levando em conta tão somente as informações contidas no texto, elabore o recurso cabível. (Valor: 5,0)
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: "Subsidiariamente: furto privilegiado; diminuição da pena pelo afastamento da reincidência; regime aberto; substituição da pena privativa de liberdade por restritiva de direitos."
+    opcoes:
+      correta: "Subsidiariamente: furto privilegiado; diminuição da pena pelo afastamento da reincidência; regime aberto; substituição da pena privativa de liberdade por restritiva de direitos."
+      erradas:
+        - Absolvição, com argumento e base legal.
+        - Conhecimento e provimento do recurso.
+        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
+        - Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
+        - Apresentação de rol de testemunhas.
+    revisao: *a1
+  - id: 12-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Ricardo é delinquente conhecido em sua localidade, famoso por praticar delitos contra o patrimônio sem deixar rastros que pudessem incriminá-lo. Já cansando da impunidade, Wilson, policial e irmão de uma das vítimas de Ricardo, decide que irá empenhar todos os seus esforços na busca de uma maneira para prender, em flagrante, o facínora.
+
+      Assim, durante meses, se faz passar por amigo de Ricardo e, com isso, ganhar a confiança deste. Certo dia, decidido que havia chegada a hora, pergunta se Ricardo poderia ajudá-lo na próxima empreitada. Wilson diz que elaborou um plano perfeito para assaltar uma casa lotérica e que bastaria ao amigo seguir as instruções. O plano era o seguinte: Wilson se faria passar por um cliente da casa lotérica e, percebendo o melhor momento, daria um sinal para que Ricardo entrasse no referido estabelecimento e anunciasse o assalto, ocasião em que o ajudaria a render as pessoas presentes. Confiante nas suas próprias habilidades e empolgado com as ideias dadas por Wilson, Ricardo aceita. No dia marcado por ambos, Ricardo, seguindo o roteiro traçado por Wilson, espera o sinal e, tão logo o recebe, entra na casa lotérica e anuncia o assalto.
+
+      Todavia, é surpreendido ao constatar que tanto Wilson quanto todos os “clientes” presentes na casa lotérica eram policiais disfarçados. Ricardo acaba sendo preso em flagrante, sob os aplausos da comunidade e dos demais policiais, contentes pelo sucesso do flagrante. Levado à delegacia, o delegado de plantão imputa a Ricardo a prática do delito de roubo na modalidade tentada.
+
+      Nesse sentido, atento tão somente às informações contidas no enunciado, responda justificadamente:
+    comando: Qual a espécie de flagrante sofrido por Ricardo?
+    gabarito: |-
+      A situação narrada configura hipótese de flagrante preparado (ou provocado). Tal prisão em flagrante é nula e deve ser imediatamente relaxada, haja vista o fato de ter sido preparada por um agente provocador, que adotou medidas aptas a impedir por completo a consumação do crime.
+
+      Inclusive, o Verbete 145 da Súmula do STF disciplina que nas situações como a descrita no enunciado inexiste crime.
+
+      Aplica-se, também, o Art. 17 do Código Penal: o flagrante preparado constitui hipótese de crime impossível.
+
+      Sendo assim, a melhor tese defensiva aplicável a Ricardo é aquela no sentido de excluir a prática de crime com base no Verbete 145, da Súmula do STF, e no Art. 17, do Código Penal.
+
+      Note-se que o enunciado da questão deixa claro que busca a melhor tese defensiva no campo jurídico-penal. Assim, eventuais respostas indicativas de soluções no âmbito processual (tais como: prisão ilegal que deve ser relaxada), ainda que corretas, não serão consideradas para efeito de pontuação, haja vista o fato de não responderem ao questionado.
+
+      DIREITO PENAL
+    opcoes:
+      correta: "- Flagrante preparado (ou provocado), pois houve a presença da figura do agente provocador que adotou medidas impeditivas à consumação do crime. Obs.: o correto desenvolvimento, dissociado da indicação da correta espécie de flagrante (ou mesmo de indicação errônea) não será pontuado."
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - Remessa dos autos ao órgão superior do Ministério Público, a fim de que seja oferecido o Acordo de Não Persecução Penal, nos termos do Art. 28-A, § 14º, do CPP.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 12-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Ricardo é delinquente conhecido em sua localidade, famoso por praticar delitos contra o patrimônio sem deixar rastros que pudessem incriminá-lo. Já cansando da impunidade, Wilson, policial e irmão de uma das vítimas de Ricardo, decide que irá empenhar todos os seus esforços na busca de uma maneira para prender, em flagrante, o facínora.
+
+      Assim, durante meses, se faz passar por amigo de Ricardo e, com isso, ganhar a confiança deste. Certo dia, decidido que havia chegada a hora, pergunta se Ricardo poderia ajudá-lo na próxima empreitada. Wilson diz que elaborou um plano perfeito para assaltar uma casa lotérica e que bastaria ao amigo seguir as instruções. O plano era o seguinte: Wilson se faria passar por um cliente da casa lotérica e, percebendo o melhor momento, daria um sinal para que Ricardo entrasse no referido estabelecimento e anunciasse o assalto, ocasião em que o ajudaria a render as pessoas presentes. Confiante nas suas próprias habilidades e empolgado com as ideias dadas por Wilson, Ricardo aceita. No dia marcado por ambos, Ricardo, seguindo o roteiro traçado por Wilson, espera o sinal e, tão logo o recebe, entra na casa lotérica e anuncia o assalto.
+
+      Todavia, é surpreendido ao constatar que tanto Wilson quanto todos os “clientes” presentes na casa lotérica eram policiais disfarçados. Ricardo acaba sendo preso em flagrante, sob os aplausos da comunidade e dos demais policiais, contentes pelo sucesso do flagrante. Levado à delegacia, o delegado de plantão imputa a Ricardo a prática do delito de roubo na modalidade tentada.
+
+      Nesse sentido, atento tão somente às informações contidas no enunciado, responda justificadamente:
+    comando: Qual é a melhor tese defensiva aplicável à situação de Ricardo relativamente à sua responsabilidade jurídicopenal?
+    gabarito: |-
+      A situação narrada configura hipótese de flagrante preparado (ou provocado). Tal prisão em flagrante é nula e deve ser imediatamente relaxada, haja vista o fato de ter sido preparada por um agente provocador, que adotou medidas aptas a impedir por completo a consumação do crime.
+
+      Inclusive, o Verbete 145 da Súmula do STF disciplina que nas situações como a descrita no enunciado inexiste crime.
+
+      Aplica-se, também, o Art. 17 do Código Penal: o flagrante preparado constitui hipótese de crime impossível.
+
+      Sendo assim, a melhor tese defensiva aplicável a Ricardo é aquela no sentido de excluir a prática de crime com base no Verbete 145, da Súmula do STF, e no Art. 17, do Código Penal.
+
+      Note-se que o enunciado da questão deixa claro que busca a melhor tese defensiva no campo jurídico-penal. Assim, eventuais respostas indicativas de soluções no âmbito processual (tais como: prisão ilegal que deve ser relaxada), ainda que corretas, não serão consideradas para efeito de pontuação, haja vista o fato de não responderem ao questionado.
+
+      DIREITO PENAL
+    opcoes:
+      correta: "- A hipótese é de crime impossível (OU o fato é atípico), consoante Verbete 145 da Súmula do STF. Obs.: A mera indicação ou reprodução do conteúdo da Súmula não pontua.."
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - "Sim, resta configurada a prescrição da pretensão punitiva retroativa. Obs.: A indicação de espécie distinta de prescrição macula a integralidade do item “A”."
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
+    revisao: *a1
+  - id: 12-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Marcos, jovem inimputável conforme o Art. 26 do CP, foi denunciado pela prática de determinado crime.
+
+      Após o regular andamento do feito, o magistrado entendeu por bem aplicar medida de segurança consistente em internação em hospital psiquiátrico por período mínimo de 03 (três) anos. Após o cumprimento do período supramencionado, o advogado de Marcos requer ao juízo de execução que seja realizado o exame de cessação de periculosidade, requerimento que foi deferido. É realizada uma rigorosa perícia, e os experts atestam a cura do internado, opinando, consequentemente, por sua desinternação. O magistrado então, baseando-se no exame pericial realizado por médicos psiquiatras, exara sentença determinando a desinternação de Marcos. O Parquet, devidamente intimado da sentença proferida pelo juízo da execução, interpõe o recurso cabível na espécie.
+
+      A partir do caso apresentado, responda, fundamentadamente, aos itens a seguir.
+    comando: Qual o recurso cabível da sentença proferida pelo magistrado determinando a desinternação de Marcos?
+    gabarito: Como se trata de decisão proferida pelo juiz da execução penal, o recurso cabível é o Agravo, previsto no Art. 197, da Lei de Execução Penal - 7.210/84.
+    opcoes:
+      correta: "- Agravo em Execução, previsto no Art. 197 da Lei de Execução Penal - 7.210/84. Obs.: A mera indicação ou reprodução do conteúdo do artigo não pontua."
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Deveria ser alegada a impossibilidade de condenação na imputação originária, pois o juiz está adstrito aos termos do aditamento (Art. 384, §4º, do CPP) OU porque não foram observados os princípios da ampla defesa e do contraditório OU houve violação ao princípio da correlação.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1
+  - id: 12-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Marcos, jovem inimputável conforme o Art. 26 do CP, foi denunciado pela prática de determinado crime.
+
+      Após o regular andamento do feito, o magistrado entendeu por bem aplicar medida de segurança consistente em internação em hospital psiquiátrico por período mínimo de 03 (três) anos. Após o cumprimento do período supramencionado, o advogado de Marcos requer ao juízo de execução que seja realizado o exame de cessação de periculosidade, requerimento que foi deferido. É realizada uma rigorosa perícia, e os experts atestam a cura do internado, opinando, consequentemente, por sua desinternação. O magistrado então, baseando-se no exame pericial realizado por médicos psiquiatras, exara sentença determinando a desinternação de Marcos. O Parquet, devidamente intimado da sentença proferida pelo juízo da execução, interpõe o recurso cabível na espécie.
+
+      A partir do caso apresentado, responda, fundamentadamente, aos itens a seguir.
+    comando: Qual o prazo para interposição desse recurso?
+    gabarito: |-
+      O prazo para a interposição do recurso é de 05 (cinco) dias, contados da data da publicação da decisão no D.O., conforme dispõem as Súmulas do STF 699 e 700.
+
+      SÚMULA 699 - O PRAZO PARA INTERPOSIÇÃO DE AGRAVO, EM PROCESSO PENAL, É DE CINCO DIAS, DE ACORDO COM A LEI 8038/1990, NÃO SE APLICANDO O DISPOSTO A RESPEITO NAS ALTERAÇÕES DA LEI 8950/1994 AO CÓDIGO DE PROCESSO CIVIL.
+
+      SÚMULA 700 - É DE CINCO DIAS O PRAZO PARA INTERPOSIÇÃO DE AGRAVO CONTRA DECISÃO DO JUIZ DA EXECUÇÃO PENAL.
+    opcoes:
+      correta: "- O prazo para a interposição do recurso é de 05 (cinco) dias, conforme previsto na Súmula 700 ou Súmula 699, ambas do STF."
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
+        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
+        - Não agiu corretamente a autoridade policial, pois o delito praticado por Patrícia foi de injúria racial e não de racismo, conforme o Art. 140, § 3º, do Código Penal, pois a intenção da agente era ofender a honra de Joana.
+        - O crime do Art. 306, do CTB deve ser absorvido pelo crime do Art. 303, § 2º, do CTB, em razão da aplicação do princípio da consunção OU já que a capacidade psicomotora alterada em razão de álcool é elementar do crime de lesão corporal.
+    revisao: *a1
+  - id: 12-q4-c
+    categoria: discursiva
+    parte: q4
+    item: C
+    caso: |-
+      Marcos, jovem inimputável conforme o Art. 26 do CP, foi denunciado pela prática de determinado crime.
+
+      Após o regular andamento do feito, o magistrado entendeu por bem aplicar medida de segurança consistente em internação em hospital psiquiátrico por período mínimo de 03 (três) anos. Após o cumprimento do período supramencionado, o advogado de Marcos requer ao juízo de execução que seja realizado o exame de cessação de periculosidade, requerimento que foi deferido. É realizada uma rigorosa perícia, e os experts atestam a cura do internado, opinando, consequentemente, por sua desinternação. O magistrado então, baseando-se no exame pericial realizado por médicos psiquiatras, exara sentença determinando a desinternação de Marcos. O Parquet, devidamente intimado da sentença proferida pelo juízo da execução, interpõe o recurso cabível na espécie.
+
+      A partir do caso apresentado, responda, fundamentadamente, aos itens a seguir.
+    comando: A interposição desse recurso suspende ou não a eficácia da sentença proferida pelo magistrado?
+    gabarito: |-
+      Via de regra, o recurso de Agravo em Execução não tem efeito suspensivo, conforme previsão do Art. 197, da LEP. Todavia, a hipótese tratada no enunciado é a única exceção à regra supramencionada, i.e., o agravo possui, na hipótese do enunciado, efeito suspensivo, conforme previsto no Art. 179, da LEP.
+
+      Portanto, a interposição desse recurso suspende a eficácia da sentença.
+
+      DIREITO PENAL
+    opcoes:
+      correta: "- A interposição desse recurso suspende a eficácia da sentença, conforme previsto no Art. 179, da LEP c/c Art. 197, da LEP."
+      erradas:
+        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
+        - Remessa dos autos ao órgão superior do Ministério Público, a fim de que seja oferecido o Acordo de Não Persecução Penal, nos termos do Art. 28-A, § 14º, do CPP.
+        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
+        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
+        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
+    revisao: *a1

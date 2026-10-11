@@ -9,6 +9,10 @@
 .quizPoder { margin: 0 0 0.7rem; font-size: 0.92rem; color: var(--muted); }
 .quizPoder img { width: 28px; height: 28px; vertical-align: middle; margin-right: 0.2rem; }
 .comando { font-weight: 700; margin: 0.4rem 0 0.8rem; }
+.etiqueta { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.4rem; }
+.caso { white-space: pre-line; }
+/* No jogo, caso longo (enunciado real da prova) rola sozinho: as alternativas ficam à vista. */
+.quizOverlay .caso { max-height: 13rem; overflow: auto; }
 .alts { display: grid; gap: 0.45rem; }
 .alt {
   display: flex; align-items: center; gap: 0.7rem; text-align: left; padding: 0.7rem 0.9rem; border-radius: 12px;
@@ -18,7 +22,8 @@
 .altLetra { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--surface-2); font-weight: 800; flex: none; }
 .form { display: grid; gap: 0.7rem; }
 .form label { display: grid; gap: 0.25rem; font-size: 0.85rem; font-weight: 700; }
-.form input { padding: 0.65rem 0.8rem; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); font-size: 1rem; font-weight: 400; }
+.form input, .form textarea { padding: 0.65rem 0.8rem; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); font-size: 1rem; font-weight: 400; font-family: inherit; }
+.form textarea { resize: vertical; min-height: 6rem; }
 .form button { justify-self: start; }
 .feedback { display: grid; gap: 0.35rem; padding: 0.9rem 1rem; border-radius: 12px; }
 .feedback p { margin: 0; }

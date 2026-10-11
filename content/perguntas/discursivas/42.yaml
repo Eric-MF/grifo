@@ -1,0 +1,475 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "42"
+perguntas:
+  - id: 42-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
+
+      No local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em espécie, não tendo sido localizado nenhum vestígio de drogas ou outros elementos ilícitos que sequer ligassem Diogo à atividade de tráfico de drogas ou a qualquer outro ilícito penal.
+
+      Com base nos fatos estritamente descritos acima, Diogo foi denunciado pelo Ministério Público como incurso nas penas do crime de lavagem de dinheiro, na modalidade “ocultar” valores em espécie, na forma do Art. 1º, caput, da Lei nº 9.613/1998. O Ministério Público deixou de oferecer acordo de não persecução penal porque, de acordo com a versão acusatória, Diogo seria reincidente, tendo a acusação arrolado, como testemunhas, os dois policiais militares que participaram da ação, Soldado Fernando e Sargento Fábio.
+
+      A folha de antecedentes criminais de Diogo foi juntada aos autos, constando apenas uma condenação por lesão corporal resultante de violência doméstica e familiar contra a mulher, cuja pena foi extinta, pelo cumprimento, em 2017.
+
+      O Juízo da Vara Criminal da Comarca de Flores, Estado de Campo Belo, não obstante a ausência de descrição de delito antecedente, recebeu a denúncia e ordenou a citação de Diogo.
+
+      Diogo foi citado no dia 27 de janeiro de 2025, segunda-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Diogo, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vícios de obscuridade, ambiguidade, contradição ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: A peça deve ser encaminhada à Vara Criminal da Comarca de Flores/CB.
+    opcoes:
+      correta: A peça deve ser encaminhada à Vara Criminal da Comarca de Flores/CB.
+      erradas:
+        - "Endereçamento correto: juízo da 5ª Vara Criminal."
+        - "Endereçamento: Juiz da Vara do Tribunal do Júri."
+        - "Endereçamento correto: 1ª Vara Criminal da Comarca de Natal/RN"
+        - "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
+        - "Endereçamento: Juízo do Tribunal do Júri da Comarca de São Paulo/SP"
+    revisao: &a1
+      status: rascunho
+  - id: 42-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: preliminar
+    caso: |-
+      Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
+
+      No local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em espécie, não tendo sido localizado nenhum vestígio de drogas ou outros elementos ilícitos que sequer ligassem Diogo à atividade de tráfico de drogas ou a qualquer outro ilícito penal.
+
+      Com base nos fatos estritamente descritos acima, Diogo foi denunciado pelo Ministério Público como incurso nas penas do crime de lavagem de dinheiro, na modalidade “ocultar” valores em espécie, na forma do Art. 1º, caput, da Lei nº 9.613/1998. O Ministério Público deixou de oferecer acordo de não persecução penal porque, de acordo com a versão acusatória, Diogo seria reincidente, tendo a acusação arrolado, como testemunhas, os dois policiais militares que participaram da ação, Soldado Fernando e Sargento Fábio.
+
+      A folha de antecedentes criminais de Diogo foi juntada aos autos, constando apenas uma condenação por lesão corporal resultante de violência doméstica e familiar contra a mulher, cuja pena foi extinta, pelo cumprimento, em 2017.
+
+      O Juízo da Vara Criminal da Comarca de Flores, Estado de Campo Belo, não obstante a ausência de descrição de delito antecedente, recebeu a denúncia e ordenou a citação de Diogo.
+
+      Diogo foi citado no dia 27 de janeiro de 2025, segunda-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Diogo, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vícios de obscuridade, ambiguidade, contradição ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: "Preliminar: ilicitude do meio de obtenção da prova, tendo em vista ter sido obtida por meio ilícito, já que uma denúncia anônima é insuficiente para caracterizar a fundada suspeita de existência de flagrante delito, não autorizando o ingresso em domicílio, conforme trata o Art. 5º, inciso XI ou LVI, da CRFB/88 ou Art. 157, ou 241 ou 245, do CPP."
+    opcoes:
+      correta: "Preliminar: ilicitude do meio de obtenção da prova, tendo em vista ter sido obtida por meio ilícito, já que uma denúncia anônima é insuficiente para caracterizar a fundada suspeita de existência de flagrante delito, não autorizando o ingresso em domicílio, conforme trata o Art. 5º, inciso XI ou LVI, da CRFB/88 ou Art. 157, ou 241 ou 245, do CPP."
+      erradas:
+        - "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
+        - Preliminarmente, deve ser arguida a inépcia da denúncia, que não descreve qualquer conduta típica praticada pelo acusado no contexto do delito de milícia privada, nos termos do Art. 41 do CPP.
+        - Nulidade do processo, com a consequente extinção da punibilidade pela prescrição.
+        - Preliminarmente, nulidade da decisão de pronúncia:.
+        - Preliminar de nulidade do processo OU reconhecimento da extinção da punibilidade OU decadência OU oferecimento de proposta de suspensão condicional do processo
+    revisao: *a1
+  - id: 42-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
+
+      No local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em espécie, não tendo sido localizado nenhum vestígio de drogas ou outros elementos ilícitos que sequer ligassem Diogo à atividade de tráfico de drogas ou a qualquer outro ilícito penal.
+
+      Com base nos fatos estritamente descritos acima, Diogo foi denunciado pelo Ministério Público como incurso nas penas do crime de lavagem de dinheiro, na modalidade “ocultar” valores em espécie, na forma do Art. 1º, caput, da Lei nº 9.613/1998. O Ministério Público deixou de oferecer acordo de não persecução penal porque, de acordo com a versão acusatória, Diogo seria reincidente, tendo a acusação arrolado, como testemunhas, os dois policiais militares que participaram da ação, Soldado Fernando e Sargento Fábio.
+
+      A folha de antecedentes criminais de Diogo foi juntada aos autos, constando apenas uma condenação por lesão corporal resultante de violência doméstica e familiar contra a mulher, cuja pena foi extinta, pelo cumprimento, em 2017.
+
+      O Juízo da Vara Criminal da Comarca de Flores, Estado de Campo Belo, não obstante a ausência de descrição de delito antecedente, recebeu a denúncia e ordenou a citação de Diogo.
+
+      Diogo foi citado no dia 27 de janeiro de 2025, segunda-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Diogo, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vícios de obscuridade, ambiguidade, contradição ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Ante a nulidade da prova que embasou a denúncia, é imperioso reconhecer a ausência de justa causa.
+    opcoes:
+      correta: Ante a nulidade da prova que embasou a denúncia, é imperioso reconhecer a ausência de justa causa.
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
+        - Reconhecimento das atenuantes do Art. 65, incisos I e III, alíneas “c” e “d” do CP;
+        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
+        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    revisao: *a1
+  - id: 42-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: preliminar
+    caso: |-
+      Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
+
+      No local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em espécie, não tendo sido localizado nenhum vestígio de drogas ou outros elementos ilícitos que sequer ligassem Diogo à atividade de tráfico de drogas ou a qualquer outro ilícito penal.
+
+      Com base nos fatos estritamente descritos acima, Diogo foi denunciado pelo Ministério Público como incurso nas penas do crime de lavagem de dinheiro, na modalidade “ocultar” valores em espécie, na forma do Art. 1º, caput, da Lei nº 9.613/1998. O Ministério Público deixou de oferecer acordo de não persecução penal porque, de acordo com a versão acusatória, Diogo seria reincidente, tendo a acusação arrolado, como testemunhas, os dois policiais militares que participaram da ação, Soldado Fernando e Sargento Fábio.
+
+      A folha de antecedentes criminais de Diogo foi juntada aos autos, constando apenas uma condenação por lesão corporal resultante de violência doméstica e familiar contra a mulher, cuja pena foi extinta, pelo cumprimento, em 2017.
+
+      O Juízo da Vara Criminal da Comarca de Flores, Estado de Campo Belo, não obstante a ausência de descrição de delito antecedente, recebeu a denúncia e ordenou a citação de Diogo.
+
+      Diogo foi citado no dia 27 de janeiro de 2025, segunda-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Diogo, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vícios de obscuridade, ambiguidade, contradição ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: Inépcia da denúncia pois deixou de descrever todas as circunstâncias elementares do crime de lavagem de dinheiro, notadamente, a infração penal antecedente, nos termos do Art. 41 do CPP ou Art. 2º, § 1º, da Lei nº 9.613/98.
+    opcoes:
+      correta: Inépcia da denúncia pois deixou de descrever todas as circunstâncias elementares do crime de lavagem de dinheiro, notadamente, a infração penal antecedente, nos termos do Art. 41 do CPP ou Art. 2º, § 1º, da Lei nº 9.613/98.
+      erradas:
+        - "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
+        - Preliminarmente, deve ser arguida a inépcia da denúncia, que não descreve qualquer conduta típica praticada pelo acusado no contexto do delito de milícia privada, nos termos do Art. 41 do CPP.
+        - Nulidade do processo, com a consequente extinção da punibilidade pela prescrição.
+        - Preliminarmente, nulidade da decisão de pronúncia:.
+        - Preliminar de nulidade do processo OU reconhecimento da extinção da punibilidade OU decadência OU oferecimento de proposta de suspensão condicional do processo
+    revisao: *a1
+  - id: 42-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
+
+      No local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em espécie, não tendo sido localizado nenhum vestígio de drogas ou outros elementos ilícitos que sequer ligassem Diogo à atividade de tráfico de drogas ou a qualquer outro ilícito penal.
+
+      Com base nos fatos estritamente descritos acima, Diogo foi denunciado pelo Ministério Público como incurso nas penas do crime de lavagem de dinheiro, na modalidade “ocultar” valores em espécie, na forma do Art. 1º, caput, da Lei nº 9.613/1998. O Ministério Público deixou de oferecer acordo de não persecução penal porque, de acordo com a versão acusatória, Diogo seria reincidente, tendo a acusação arrolado, como testemunhas, os dois policiais militares que participaram da ação, Soldado Fernando e Sargento Fábio.
+
+      A folha de antecedentes criminais de Diogo foi juntada aos autos, constando apenas uma condenação por lesão corporal resultante de violência doméstica e familiar contra a mulher, cuja pena foi extinta, pelo cumprimento, em 2017.
+
+      O Juízo da Vara Criminal da Comarca de Flores, Estado de Campo Belo, não obstante a ausência de descrição de delito antecedente, recebeu a denúncia e ordenou a citação de Diogo.
+
+      Diogo foi citado no dia 27 de janeiro de 2025, segunda-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Diogo, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vícios de obscuridade, ambiguidade, contradição ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Os motivos apontados pelo Ministério Público para recusar a oferta de ANPP não são subsistentes (ou é cabível o Acordo de Não Persecução Penal).
+    opcoes:
+      correta: Os motivos apontados pelo Ministério Público para recusar a oferta de ANPP não são subsistentes (ou é cabível o Acordo de Não Persecução Penal).
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
+        - Reconhecimento das atenuantes do Art. 65, incisos I e III, alíneas “c” e “d” do CP;
+        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
+        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    revisao: *a1
+  - id: 42-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: merito
+    caso: |-
+      Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
+
+      No local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em espécie, não tendo sido localizado nenhum vestígio de drogas ou outros elementos ilícitos que sequer ligassem Diogo à atividade de tráfico de drogas ou a qualquer outro ilícito penal.
+
+      Com base nos fatos estritamente descritos acima, Diogo foi denunciado pelo Ministério Público como incurso nas penas do crime de lavagem de dinheiro, na modalidade “ocultar” valores em espécie, na forma do Art. 1º, caput, da Lei nº 9.613/1998. O Ministério Público deixou de oferecer acordo de não persecução penal porque, de acordo com a versão acusatória, Diogo seria reincidente, tendo a acusação arrolado, como testemunhas, os dois policiais militares que participaram da ação, Soldado Fernando e Sargento Fábio.
+
+      A folha de antecedentes criminais de Diogo foi juntada aos autos, constando apenas uma condenação por lesão corporal resultante de violência doméstica e familiar contra a mulher, cuja pena foi extinta, pelo cumprimento, em 2017.
+
+      O Juízo da Vara Criminal da Comarca de Flores, Estado de Campo Belo, não obstante a ausência de descrição de delito antecedente, recebeu a denúncia e ordenou a citação de Diogo.
+
+      Diogo foi citado no dia 27 de janeiro de 2025, segunda-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Diogo, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vícios de obscuridade, ambiguidade, contradição ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Diogo é tecnicamente primário, diante do transcurso do período depurador entre o término da pena anterior e a data do novo fato, nos termos do Art. 64, inciso I, do CP.
+    opcoes:
+      correta: Diogo é tecnicamente primário, diante do transcurso do período depurador entre o término da pena anterior e a data do novo fato, nos termos do Art. 64, inciso I, do CP.
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
+        - Reconhecimento das atenuantes do Art. 65, incisos I e III, alíneas “c” e “d” do CP;
+        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
+        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    revisao: *a1
+  - id: 42-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: merito
+    caso: |-
+      Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
+
+      No local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em espécie, não tendo sido localizado nenhum vestígio de drogas ou outros elementos ilícitos que sequer ligassem Diogo à atividade de tráfico de drogas ou a qualquer outro ilícito penal.
+
+      Com base nos fatos estritamente descritos acima, Diogo foi denunciado pelo Ministério Público como incurso nas penas do crime de lavagem de dinheiro, na modalidade “ocultar” valores em espécie, na forma do Art. 1º, caput, da Lei nº 9.613/1998. O Ministério Público deixou de oferecer acordo de não persecução penal porque, de acordo com a versão acusatória, Diogo seria reincidente, tendo a acusação arrolado, como testemunhas, os dois policiais militares que participaram da ação, Soldado Fernando e Sargento Fábio.
+
+      A folha de antecedentes criminais de Diogo foi juntada aos autos, constando apenas uma condenação por lesão corporal resultante de violência doméstica e familiar contra a mulher, cuja pena foi extinta, pelo cumprimento, em 2017.
+
+      O Juízo da Vara Criminal da Comarca de Flores, Estado de Campo Belo, não obstante a ausência de descrição de delito antecedente, recebeu a denúncia e ordenou a citação de Diogo.
+
+      Diogo foi citado no dia 27 de janeiro de 2025, segunda-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Diogo, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vícios de obscuridade, ambiguidade, contradição ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: O delito de lavagem de dinheiro somente se tipifica se os recursos ocultados forem provenientes de outra infração penal, de forma que a conduta narrada na denúncia é atípica, não constituindo o fato infração penal.
+    opcoes:
+      correta: O delito de lavagem de dinheiro somente se tipifica se os recursos ocultados forem provenientes de outra infração penal, de forma que a conduta narrada na denúncia é atípica, não constituindo o fato infração penal.
+      erradas:
+        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
+        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
+        - Reconhecimento das atenuantes do Art. 65, incisos I e III, alíneas “c” e “d” do CP;
+        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
+        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    revisao: *a1
+  - id: 42-peca-10
+    categoria: peca-detalhe
+    parte: peca
+    item: "10"
+    secao: pedido
+    caso: |-
+      Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
+
+      No local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em espécie, não tendo sido localizado nenhum vestígio de drogas ou outros elementos ilícitos que sequer ligassem Diogo à atividade de tráfico de drogas ou a qualquer outro ilícito penal.
+
+      Com base nos fatos estritamente descritos acima, Diogo foi denunciado pelo Ministério Público como incurso nas penas do crime de lavagem de dinheiro, na modalidade “ocultar” valores em espécie, na forma do Art. 1º, caput, da Lei nº 9.613/1998. O Ministério Público deixou de oferecer acordo de não persecução penal porque, de acordo com a versão acusatória, Diogo seria reincidente, tendo a acusação arrolado, como testemunhas, os dois policiais militares que participaram da ação, Soldado Fernando e Sargento Fábio.
+
+      A folha de antecedentes criminais de Diogo foi juntada aos autos, constando apenas uma condenação por lesão corporal resultante de violência doméstica e familiar contra a mulher, cuja pena foi extinta, pelo cumprimento, em 2017.
+
+      O Juízo da Vara Criminal da Comarca de Flores, Estado de Campo Belo, não obstante a ausência de descrição de delito antecedente, recebeu a denúncia e ordenou a citação de Diogo.
+
+      Diogo foi citado no dia 27 de janeiro de 2025, segunda-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Diogo, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vícios de obscuridade, ambiguidade, contradição ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Rejeição da denúncia por inépcia (e/ou) por ausência de justa causa, na forma do Art. 395, inciso I, do CPP e inciso III.
+    opcoes:
+      correta: Rejeição da denúncia por inépcia (e/ou) por ausência de justa causa, na forma do Art. 395, inciso I, do CPP e inciso III.
+      erradas:
+        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
+        - Pedido de habilitação, na interposição, do pai da vítima como assistente de acusação.
+        - a) designação de audiência preliminar ou de conciliação b) a citação da querelada; c) recebimento da queixa d) a oitiva das testemunhas arroladas; e) a condenação da querelada pelo crime de injúria (Art. 140 do CP) e pelo crime de difamação (Art. 139 do CP) com a causa de aumento de pena (Art. 141, III do CP) em concurso formal de delitos (Art. 70 do CP) f) a fixação de valor mínimo de indenização, nos termos do Art. 387, IV, do CPP. OBS:. A mera indicação de dispositivo legal não pontua.
+        - Aplicação de regime inicial aberto ou semiaberto.
+        - Conhecimento e provimento do recurso
+    revisao: *a1
+  - id: 42-peca-11
+    categoria: peca-detalhe
+    parte: peca
+    item: "11"
+    secao: pedido
+    caso: |-
+      Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
+
+      No local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em espécie, não tendo sido localizado nenhum vestígio de drogas ou outros elementos ilícitos que sequer ligassem Diogo à atividade de tráfico de drogas ou a qualquer outro ilícito penal.
+
+      Com base nos fatos estritamente descritos acima, Diogo foi denunciado pelo Ministério Público como incurso nas penas do crime de lavagem de dinheiro, na modalidade “ocultar” valores em espécie, na forma do Art. 1º, caput, da Lei nº 9.613/1998. O Ministério Público deixou de oferecer acordo de não persecução penal porque, de acordo com a versão acusatória, Diogo seria reincidente, tendo a acusação arrolado, como testemunhas, os dois policiais militares que participaram da ação, Soldado Fernando e Sargento Fábio.
+
+      A folha de antecedentes criminais de Diogo foi juntada aos autos, constando apenas uma condenação por lesão corporal resultante de violência doméstica e familiar contra a mulher, cuja pena foi extinta, pelo cumprimento, em 2017.
+
+      O Juízo da Vara Criminal da Comarca de Flores, Estado de Campo Belo, não obstante a ausência de descrição de delito antecedente, recebeu a denúncia e ordenou a citação de Diogo.
+
+      Diogo foi citado no dia 27 de janeiro de 2025, segunda-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Diogo, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vícios de obscuridade, ambiguidade, contradição ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Remessa dos autos ao órgão superior do Ministério Público, na forma do Art. 28- A, § 14, do CPP.
+    opcoes:
+      correta: Remessa dos autos ao órgão superior do Ministério Público, na forma do Art. 28- A, § 14, do CPP.
+      erradas:
+        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
+        - Absolvição, com argumento e base legal.
+        - Absolvição do réu, com base no art. 386, III ou VI, do CPP, OU Absolvição do réu por ausência de tipicidade;.
+        - Redução do máximo em razão da tentativa.
+        - Conhecimento e provimento do recurso
+    revisao: *a1
+  - id: 42-peca-12
+    categoria: peca-detalhe
+    parte: peca
+    item: "12"
+    secao: pedido
+    caso: |-
+      Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
+
+      No local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em espécie, não tendo sido localizado nenhum vestígio de drogas ou outros elementos ilícitos que sequer ligassem Diogo à atividade de tráfico de drogas ou a qualquer outro ilícito penal.
+
+      Com base nos fatos estritamente descritos acima, Diogo foi denunciado pelo Ministério Público como incurso nas penas do crime de lavagem de dinheiro, na modalidade “ocultar” valores em espécie, na forma do Art. 1º, caput, da Lei nº 9.613/1998. O Ministério Público deixou de oferecer acordo de não persecução penal porque, de acordo com a versão acusatória, Diogo seria reincidente, tendo a acusação arrolado, como testemunhas, os dois policiais militares que participaram da ação, Soldado Fernando e Sargento Fábio.
+
+      A folha de antecedentes criminais de Diogo foi juntada aos autos, constando apenas uma condenação por lesão corporal resultante de violência doméstica e familiar contra a mulher, cuja pena foi extinta, pelo cumprimento, em 2017.
+
+      O Juízo da Vara Criminal da Comarca de Flores, Estado de Campo Belo, não obstante a ausência de descrição de delito antecedente, recebeu a denúncia e ordenou a citação de Diogo.
+
+      Diogo foi citado no dia 27 de janeiro de 2025, segunda-feira, sendo o dia seguinte útil em todo o país, bem como todos os dias da semana seguinte, exceto sábado e domingo.
+
+      Considerando apenas as informações narradas, na condição de advogado(a) de Diogo, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vícios de obscuridade, ambiguidade, contradição ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Absolvição sumária, nos termos do Art. 397, inciso III, do CPP.
+    opcoes:
+      correta: Absolvição sumária, nos termos do Art. 397, inciso III, do CPP.
+      erradas:
+        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
+        - Pedido de habilitação, na interposição, do pai da vítima como assistente de acusação.
+        - "Diante da condenação, de forma subsidiária: a) Afastamento do concurso material de crimes, ou reconhecimento de crime único.. b) Incidência da atenuante da menoridade penal relativa.. c) Afastamento da agravante da embriaguez preordenada.. d) Fixação da pena-base no mínimo legal ou diminuição da pena e) Fixação de regime semiaberto."
+        - Redução do máximo em razão da tentativa.
+        - Conhecimento e provimento do recurso.
+    revisao: *a1
+  - id: 42-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      Frederico, policial, caminha à paisana quando vê um cachorro feroz avançar na direção de crianças que brincavam na rua. Frederico, imediatamente, sacou sua arma e a apontou na direção do cachorro, com o intuito de impedir o ataque.
+
+      Jonas, que estava na janela de sua residência, mantém sob sua guarda arma de fogo legalmente registrada, ante sua autorização de posse, e tem visão parcial da situação. Ele vê apenas um homem (Frederico) apontando uma arma na direção das crianças que brincavam na rua, sem perceber a aproximação do cachorro raivoso. Assim, Jonas, acreditando que Frederico representava uma ameaça à integridade física das crianças, violando o dever de diligência e cuidado que deveria adotar em situações como a apresentada, imediatamente efetua disparo de arma de fogo contra Frederico, que cai, sem vida, após ser atingido pelo projétil da arma de fogo de Jonas. Com isso, o cachorro prosseguiu o ataque às crianças, fato que, isoladamente, levou uma delas a óbito.
+
+      Comprovados os fatos tais como aqui relatados, Jonas é denunciado por duplo homicídio doloso, sendo-lhe imputadas as mortes de Frederico e da criança. Como advogado(a) de Jonas, responda às questões a seguir.
+    comando: Qual a tese de Direito Penal a ser sustentada em relação à imputação de homicídio contra Frederico? Fundamente.
+    gabarito: Jonas não deve responder pelo homicídio doloso de Frederico, pois agiu em erro de tipo permissivo vencível ou inescusável, isto é, Jonas atirou em Frederico acreditando estar agindo em legítima defesa de terceiros (legítima defesa putativa ou descriminante putativa). Por isso, Jonas deve responder por homicídio culposo, na forma do Art. 20, § 1º, do Código Penal.
+    opcoes:
+      correta: Jonas agiu em erro de tipo permissivo ou em legítima defesa putativa ou descriminante putativa, o que impõe a desclassificação da imputação para o delito de homicídio culposo, (ou) por se tratar de erro inescusável ou vencível, na forma do Art. 20, § 1º, do CP.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Habeas corpus e agravo em execução penal (0,15 cada).
+        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+    revisao: *a1
+  - id: 42-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      Frederico, policial, caminha à paisana quando vê um cachorro feroz avançar na direção de crianças que brincavam na rua. Frederico, imediatamente, sacou sua arma e a apontou na direção do cachorro, com o intuito de impedir o ataque.
+
+      Jonas, que estava na janela de sua residência, mantém sob sua guarda arma de fogo legalmente registrada, ante sua autorização de posse, e tem visão parcial da situação. Ele vê apenas um homem (Frederico) apontando uma arma na direção das crianças que brincavam na rua, sem perceber a aproximação do cachorro raivoso. Assim, Jonas, acreditando que Frederico representava uma ameaça à integridade física das crianças, violando o dever de diligência e cuidado que deveria adotar em situações como a apresentada, imediatamente efetua disparo de arma de fogo contra Frederico, que cai, sem vida, após ser atingido pelo projétil da arma de fogo de Jonas. Com isso, o cachorro prosseguiu o ataque às crianças, fato que, isoladamente, levou uma delas a óbito.
+
+      Comprovados os fatos tais como aqui relatados, Jonas é denunciado por duplo homicídio doloso, sendo-lhe imputadas as mortes de Frederico e da criança. Como advogado(a) de Jonas, responda às questões a seguir.
+    comando: Qual a tese de Direito Penal a ser sustentada em relação à imputação de homicídio contra a criança? Fundamente.
+    gabarito: Não há nexo de causalidade entre o atuar de Jonas e a morte da criança. A criança faleceu em decorrência de circunstância totalmente independente da conduta de Jonas, não podendo este, de acordo com a teoria da causalidade adequada, adotada pelo Art. 13 do Código Penal, ser responsabilizado pelo ataque do cachorro às crianças.
+    opcoes:
+      correta: De acordo com a teoria da causalidade adequada, não há nexo de causalidade entre o falecimento da criança e a conduta de Jonas, pois a morte da criança decorreu de circunstância independente, nos termos do Art. 13 do CP.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
+        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
+        - Aplicação do perdão judicial, nos termos do Art. 121, § 5º, do CP.
+        - A queixa-crime somente poderia ter sido apresentada por procurador com poderes especiais OU a procuração apenas previa poderes gerais, o que não é admitido, nos termos do Art. 44 do CPP.
+    revisao: *a1
+  - id: 42-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Rui, 20 anos, inconformado com o término do relacionamento com Vânia, também com 20 anos, divulgou fotos da ex-companheira nua. Em razão disso, foi denunciado e, depois do regular processamento da ação penal, foi condenado, nos termos do Art. 218-C, § 1º, do CP, à pena de um ano e quatro meses de reclusão, substituída por duas restritivas de direitos, consistentes em prestação pecuniária e multa.
+
+      O Ministério Público foi intimado da condenação, não tendo apresentado o recurso cabível no prazo legal. Vânia e seu(ua) advogado(a) foram intimados da sentença, porém, até o momento, Vânia não havia se habilitado como assistente de acusação, ainda que não concorde com as penas substitutivas aplicadas.
+
+      Como advogado(a) de Vânia, responda às questões a seguir.
+    comando: Qual a tese de Direito Penal a ser sustentada para a reforma da sentença condenatória? Justifique.
+    gabarito: Em relação ao Direito Penal aplicável, era essencial que o(a) examinando(a) identificasse que há, entre Rui e Vânia, uma relação íntima de afeto, ainda que já encerrada, o que atrai a incidência da lei de violência doméstica e familiar contra a mulher, de forma a ser inviável a aplicação isolada de pena pecuniária, nos termos do Art. 17 da Lei nº 11.340/2006.
+    opcoes:
+      correta: Inviabilidade de aplicação isolada de pena pecuniária no âmbito da Lei de Violência Doméstica e Familiar contra a Mulher, nos termos do Art. 17 da Lei nº 11.340/2006.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
+        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
+        - Aplicação do perdão judicial, nos termos do Art. 121, § 5º, do CP.
+        - A queixa-crime somente poderia ter sido apresentada por procurador com poderes especiais OU a procuração apenas previa poderes gerais, o que não é admitido, nos termos do Art. 44 do CPP.
+    revisao: *a1
+  - id: 42-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B1
+    caso: |-
+      Rui, 20 anos, inconformado com o término do relacionamento com Vânia, também com 20 anos, divulgou fotos da ex-companheira nua. Em razão disso, foi denunciado e, depois do regular processamento da ação penal, foi condenado, nos termos do Art. 218-C, § 1º, do CP, à pena de um ano e quatro meses de reclusão, substituída por duas restritivas de direitos, consistentes em prestação pecuniária e multa.
+
+      O Ministério Público foi intimado da condenação, não tendo apresentado o recurso cabível no prazo legal. Vânia e seu(ua) advogado(a) foram intimados da sentença, porém, até o momento, Vânia não havia se habilitado como assistente de acusação, ainda que não concorde com as penas substitutivas aplicadas.
+
+      Como advogado(a) de Vânia, responda às questões a seguir.
+    comando: Qual o recurso a ser interposto pela vítima e qual o prazo de interposição? Justifique, identificando o início da contagem do prazo.
+    gabarito: Apelação supletiva, no prazo de 15 (quinze) dias após o transcurso do prazo recursal do MP, nos termos do Art. 598 do CPP ou Súmula 448, do STF.
+    opcoes:
+      correta: Apelação supletiva, nos termos do Art. 598 do CPP ou Súmula 448, do STF. No prazo de 15 dias após o transcurso do prazo recursal do MP.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
+        - "Não foi correta a decisão do Tribunal de Justiça, pois o Tribunal não pode acolher, contra o réu, nulidade não arguida pela acusação em seu recurso. OU Não foi correta a decisão, nos termos do Verbete 160 ou 713 da Súmula do STF. OU Não foi correta a decisão, com base no princípio que veda a reformatio in pejus indireta. Obs.: A justificativa é essencial para a atribuição de pontos."
+        - Não é possível a responsabilização penal de Cláudio pelo crime do Art. 154-A do Código Penal, tendo em vista que a lei posterior que de qualquer forma prejudique o acusado não pode retroagir para atingir situação pretérita OU tendo em vista que a lei que tipificou a conduta é posterior à data dos fatos, com base no Art. 5º, inciso XL, da CRFB/88 OU no Art. 1º do Código Penal.
+        - Sim, deveria a defesa técnica alegar a existência de excludente de ilicitude, em razão do estado de necessidade, nos termos do Art. 24 ou do Art. 23, inciso I, do CP.
+    revisao: *a1
+  - id: 42-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      Douglas foi denunciado pela prática do delito de trânsito de participação em corrida do tipo “racha” (Art. 308 da Lei nº 9.503/1997 – CTB) e por falsa identidade (Art. 307 do CP). A denúncia foi recebida no dia 10/02/2020. Em razão da pandemia do Coronavírus-19, os autos ficaram paralisados aguardando a retomada da pauta de audiências presenciais do Juízo, o que somente aconteceu em 2022. Assim, em 10/10/2023, Douglas foi condenado como incurso nas penas do Art. 308 do CTB e absolvido em relação ao delito do Art. 307 do Código Penal, por falta de provas.
+
+      Apenas o Ministério Público interpôs tempestiva apelação, postulando a condenação de Douglas pelo delito de falsa identidade. Por maioria, o Tribunal de Justiça denegou o recurso de apelação, mantendo na íntegra a sentença recorrida, o que motivou a oposição de embargos infringentes por parte do Ministério Público.
+
+      Como advogado(a) de Douglas, você foi intimado, no dia 10/09/2024, para apresentar suas contrarrazões. Assim, com base nos dados do enunciado, responda às questões a seguir.
+    comando: Indique a tese processual que deve ser arguida em face do recurso oposto pelo MP. Justifique.
+    gabarito: O recurso de embargos infringentes é inadmissível, porquanto exclusivo em favor da defesa, nos termos do Art. 609, parágrafo único, do CPP.
+    opcoes:
+      correta: O recurso de embargos infringentes é inadmissível, porquanto exclusivo em favor da defesa, nos termos do Art. 609, parágrafo único, do CPP.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
+        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
+        - Aplicação do perdão judicial, nos termos do Art. 121, § 5º, do CP.
+        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+    revisao: *a1
+  - id: 42-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Thiago cumpria pena em regime semiaberto quando preencheu os requisitos objetivos para progredir ao regime aberto, tendo formulado o requerimento respectivo.
+
+      O Juiz, ao apreciar o pedido, condicionou a efetiva progressão à existência de vaga em casa de albergado, que, no momento, encontrava-se lotada, devendo o condenado aguardar na unidade de semiaberto.
+
+      Thiago interpôs agravo em execução, de forma que o Juiz reconsiderou a decisão anterior e permitiu que Thiago cumprisse o restante da pena em albergue domiciliar, desde que se comprometesse à prestação de serviços à comunidade como condição especial do regime aberto, na forma do Art. 113 da LEP.
+
+      Como advogado(a) de Thiago, responda às questões a seguir.
+    comando: A inexistência de vaga no regime mais brando pode impedir a progressão de regime? Justifique.
+    gabarito: Não. A falta de estabelecimento penal adequado não autoriza a manutenção do condenado em regime prisional mais gravoso, nos termos da Súmula Vinculante 56.
+    opcoes:
+      correta: Não. A falta de estabelecimento penal adequado não autoriza a manutenção do condenado em regime prisional mais gravoso, nos termos da Súmula Vinculante 56.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
+        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
+        - Aplicação do perdão judicial, nos termos do Art. 121, § 5º, do CP.
+        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+    revisao: *a1
+  - id: 42-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Thiago cumpria pena em regime semiaberto quando preencheu os requisitos objetivos para progredir ao regime aberto, tendo formulado o requerimento respectivo.
+
+      O Juiz, ao apreciar o pedido, condicionou a efetiva progressão à existência de vaga em casa de albergado, que, no momento, encontrava-se lotada, devendo o condenado aguardar na unidade de semiaberto.
+
+      Thiago interpôs agravo em execução, de forma que o Juiz reconsiderou a decisão anterior e permitiu que Thiago cumprisse o restante da pena em albergue domiciliar, desde que se comprometesse à prestação de serviços à comunidade como condição especial do regime aberto, na forma do Art. 113 da LEP.
+
+      Como advogado(a) de Thiago, responda às questões a seguir.
+    comando: É cabível a imposição de prestação de serviços à comunidade como condição especial do regime aberto? Justifique.
+    gabarito: Não. É inadmissível a fixação de pena substitutiva como condição especial ao regime aberto, nos termos do enunciado 493 da Súmula da Jurisprudência do Superior Tribunal de Justiça.
+    opcoes:
+      correta: Não. É inadmissível a fixação de pena substitutiva como condição especial ao regime aberto, nos termos do enunciado 493 da Súmula da Jurisprudência do Superior Tribunal de Justiça.
+      erradas:
+        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
+        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
+        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
+    revisao: *a1

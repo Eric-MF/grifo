@@ -1,0 +1,196 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "01"
+perguntas:
+  - id: 01-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: merito
+    caso: |-
+      Leila, de quatorze anos de idade, inconformada com o fato de ter engravidado de seu namorado, Joel, de vinte e oito anos de idade, resolveu procurar sua amiga Fátima, de vinte anos de idade, para que esta lhe provocasse um aborto. Utilizando seus conhecimentos de estudante de enfermagem, Fátima fez que Leila ingerisse um remédio para úlcera. Após alguns dias, na véspera da comemoração da entrada do ano de 2005, Leila abortou e disse ao namorado que havia menstruado, alegando que não estivera, de fato, grávida. Desconfiado, Joel vasculhou as gavetas da namorada e encontrou, além de um envelope com o resultado positivo do exame de gravidez de Leila, o frasco de remédio para úlcera embrulhado em um papel com um bilhete de Fátima a Leila, no qual ela prescrevia as doses do remédio. Munido do resultado do exame e do bilhete escrito por Fátima, Joel narrou o fato à autoridade policial, razão pela qual Fátima foi indiciada por aborto.
+
+      Tanto na delegacia quanto em juízo, Fátima negou a prática do aborto, tendo confirmado que fornecera o remédio a Leila, acreditando que a amiga sofria de úlcera.
+
+      Leila foi encaminhada para perícia no Instituto Médico Legal de São Paulo, onde se confirmou a existência de resquícios de saco gestacional, compatível com gravidez, mas sem elementos suficientes para a confirmação de aborto espontâneo ou provocado.
+
+      Leila não foi ouvida durante o inquérito policial porque, após o exame, mudou-se para Brasília e, apesar dos esforços da autoridade policial, não foi localizada.
+
+      Em 30/1/2010, Fátima foi denunciada pela prática de aborto. Regularmente processada a ação penal, o juiz, no momento dos debates orais da audiência de instrução, permitiu, com a anuência das partes, a manifestação por escrito, no prazo sucessivo de cinco dias.
+
+      A acusação sustentou a comprovação da autoria, tanto pelo depoimento de Joel na fase policial e ratificação em juízo, quanto pela confirmação da ré de que teria fornecido remédio abortivo. Sustentou, ainda, a materialidade do fato, por meio do exame de laboratório e da conclusão da perícia pela existência da gravidez.
+
+      A defesa teve vista dos autos em 12/7/2010.
+
+      Em face dessa situação hipotética, na condição de advogado(a) constituído(a) por Fátima, redija a peça processual adequada à defesa de sua cliente, alegando toda a matéria de direito processual e material aplicável ao caso. Date o documento no último dia do prazo para protocolo.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Memoriais endereçados ao Juiz do Tribunal do Júri.
+    opcoes:
+      correta: Memoriais endereçados ao Juiz do Tribunal do Júri.
+      erradas:
+        - Absolvição por falta de prova e ausência de materialidade do delito.
+        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
+        - "Da aplicação do princípio da consunção ou absorção: o crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou crime-meio, essencial à execução do crime-fim; deve ser excluída a condenação pela violação de domicílio."
+        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: &a1
+      status: rascunho
+  - id: 01-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: preliminar
+    caso: |-
+      Leila, de quatorze anos de idade, inconformada com o fato de ter engravidado de seu namorado, Joel, de vinte e oito anos de idade, resolveu procurar sua amiga Fátima, de vinte anos de idade, para que esta lhe provocasse um aborto. Utilizando seus conhecimentos de estudante de enfermagem, Fátima fez que Leila ingerisse um remédio para úlcera. Após alguns dias, na véspera da comemoração da entrada do ano de 2005, Leila abortou e disse ao namorado que havia menstruado, alegando que não estivera, de fato, grávida. Desconfiado, Joel vasculhou as gavetas da namorada e encontrou, além de um envelope com o resultado positivo do exame de gravidez de Leila, o frasco de remédio para úlcera embrulhado em um papel com um bilhete de Fátima a Leila, no qual ela prescrevia as doses do remédio. Munido do resultado do exame e do bilhete escrito por Fátima, Joel narrou o fato à autoridade policial, razão pela qual Fátima foi indiciada por aborto.
+
+      Tanto na delegacia quanto em juízo, Fátima negou a prática do aborto, tendo confirmado que fornecera o remédio a Leila, acreditando que a amiga sofria de úlcera.
+
+      Leila foi encaminhada para perícia no Instituto Médico Legal de São Paulo, onde se confirmou a existência de resquícios de saco gestacional, compatível com gravidez, mas sem elementos suficientes para a confirmação de aborto espontâneo ou provocado.
+
+      Leila não foi ouvida durante o inquérito policial porque, após o exame, mudou-se para Brasília e, apesar dos esforços da autoridade policial, não foi localizada.
+
+      Em 30/1/2010, Fátima foi denunciada pela prática de aborto. Regularmente processada a ação penal, o juiz, no momento dos debates orais da audiência de instrução, permitiu, com a anuência das partes, a manifestação por escrito, no prazo sucessivo de cinco dias.
+
+      A acusação sustentou a comprovação da autoria, tanto pelo depoimento de Joel na fase policial e ratificação em juízo, quanto pela confirmação da ré de que teria fornecido remédio abortivo. Sustentou, ainda, a materialidade do fato, por meio do exame de laboratório e da conclusão da perícia pela existência da gravidez.
+
+      A defesa teve vista dos autos em 12/7/2010.
+
+      Em face dessa situação hipotética, na condição de advogado(a) constituído(a) por Fátima, redija a peça processual adequada à defesa de sua cliente, alegando toda a matéria de direito processual e material aplicável ao caso. Date o documento no último dia do prazo para protocolo.
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
+    opcoes:
+      correta: "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
+      erradas:
+        - Nulidade do processo pela inobservância do rito da Lei 9.099/95, anulando-se o recebimento da denúncia, com a consequente prescrição da pretensão punitiva.
+        - O crime de lesão corporal leve do Art. 129, § 9º, do CP é de ação penal pública condicionada à representação, nos termos do Art. 88 da Lei nº 9.099/95, e a vítima demonstrou não ter interesse em ver o autor do fato responsabilizado criminalmente
+        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
+        - Preliminarmente, nulidade dos atos de instrução ou da sentença
+        - Preliminarmente, nulidade na oitiva das vítimas, tendo em vista que o mero decurso de tempo não é fundamento idôneo para produção antecipada de provas, nos termos do Art. 225 do CPP, ou Art. 564, inciso IV, do CPP, ou Súmula 455 do STJ.
+    revisao: *a1
+  - id: 01-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      Leila, de quatorze anos de idade, inconformada com o fato de ter engravidado de seu namorado, Joel, de vinte e oito anos de idade, resolveu procurar sua amiga Fátima, de vinte anos de idade, para que esta lhe provocasse um aborto. Utilizando seus conhecimentos de estudante de enfermagem, Fátima fez que Leila ingerisse um remédio para úlcera. Após alguns dias, na véspera da comemoração da entrada do ano de 2005, Leila abortou e disse ao namorado que havia menstruado, alegando que não estivera, de fato, grávida. Desconfiado, Joel vasculhou as gavetas da namorada e encontrou, além de um envelope com o resultado positivo do exame de gravidez de Leila, o frasco de remédio para úlcera embrulhado em um papel com um bilhete de Fátima a Leila, no qual ela prescrevia as doses do remédio. Munido do resultado do exame e do bilhete escrito por Fátima, Joel narrou o fato à autoridade policial, razão pela qual Fátima foi indiciada por aborto.
+
+      Tanto na delegacia quanto em juízo, Fátima negou a prática do aborto, tendo confirmado que fornecera o remédio a Leila, acreditando que a amiga sofria de úlcera.
+
+      Leila foi encaminhada para perícia no Instituto Médico Legal de São Paulo, onde se confirmou a existência de resquícios de saco gestacional, compatível com gravidez, mas sem elementos suficientes para a confirmação de aborto espontâneo ou provocado.
+
+      Leila não foi ouvida durante o inquérito policial porque, após o exame, mudou-se para Brasília e, apesar dos esforços da autoridade policial, não foi localizada.
+
+      Em 30/1/2010, Fátima foi denunciada pela prática de aborto. Regularmente processada a ação penal, o juiz, no momento dos debates orais da audiência de instrução, permitiu, com a anuência das partes, a manifestação por escrito, no prazo sucessivo de cinco dias.
+
+      A acusação sustentou a comprovação da autoria, tanto pelo depoimento de Joel na fase policial e ratificação em juízo, quanto pela confirmação da ré de que teria fornecido remédio abortivo. Sustentou, ainda, a materialidade do fato, por meio do exame de laboratório e da conclusão da perícia pela existência da gravidez.
+
+      A defesa teve vista dos autos em 12/7/2010.
+
+      Em face dessa situação hipotética, na condição de advogado(a) constituído(a) por Fátima, redija a peça processual adequada à defesa de sua cliente, alegando toda a matéria de direito processual e material aplicável ao caso. Date o documento no último dia do prazo para protocolo.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Impronúncia por falta de comprovação da materialidade: laudo pericial inconclusivo."
+    opcoes:
+      correta: "Impronúncia por falta de comprovação da materialidade: laudo pericial inconclusivo."
+      erradas:
+        - Absolvição por falta de prova e ausência de materialidade do delito.
+        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
+        - "Da aplicação do princípio da consunção ou absorção: o crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou crime-meio, essencial à execução do crime-fim; deve ser excluída a condenação pela violação de domicílio."
+        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: *a1
+  - id: 01-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      Leila, de quatorze anos de idade, inconformada com o fato de ter engravidado de seu namorado, Joel, de vinte e oito anos de idade, resolveu procurar sua amiga Fátima, de vinte anos de idade, para que esta lhe provocasse um aborto. Utilizando seus conhecimentos de estudante de enfermagem, Fátima fez que Leila ingerisse um remédio para úlcera. Após alguns dias, na véspera da comemoração da entrada do ano de 2005, Leila abortou e disse ao namorado que havia menstruado, alegando que não estivera, de fato, grávida. Desconfiado, Joel vasculhou as gavetas da namorada e encontrou, além de um envelope com o resultado positivo do exame de gravidez de Leila, o frasco de remédio para úlcera embrulhado em um papel com um bilhete de Fátima a Leila, no qual ela prescrevia as doses do remédio. Munido do resultado do exame e do bilhete escrito por Fátima, Joel narrou o fato à autoridade policial, razão pela qual Fátima foi indiciada por aborto.
+
+      Tanto na delegacia quanto em juízo, Fátima negou a prática do aborto, tendo confirmado que fornecera o remédio a Leila, acreditando que a amiga sofria de úlcera.
+
+      Leila foi encaminhada para perícia no Instituto Médico Legal de São Paulo, onde se confirmou a existência de resquícios de saco gestacional, compatível com gravidez, mas sem elementos suficientes para a confirmação de aborto espontâneo ou provocado.
+
+      Leila não foi ouvida durante o inquérito policial porque, após o exame, mudou-se para Brasília e, apesar dos esforços da autoridade policial, não foi localizada.
+
+      Em 30/1/2010, Fátima foi denunciada pela prática de aborto. Regularmente processada a ação penal, o juiz, no momento dos debates orais da audiência de instrução, permitiu, com a anuência das partes, a manifestação por escrito, no prazo sucessivo de cinco dias.
+
+      A acusação sustentou a comprovação da autoria, tanto pelo depoimento de Joel na fase policial e ratificação em juízo, quanto pela confirmação da ré de que teria fornecido remédio abortivo. Sustentou, ainda, a materialidade do fato, por meio do exame de laboratório e da conclusão da perícia pela existência da gravidez.
+
+      A defesa teve vista dos autos em 12/7/2010.
+
+      Em face dessa situação hipotética, na condição de advogado(a) constituído(a) por Fátima, redija a peça processual adequada à defesa de sua cliente, alegando toda a matéria de direito processual e material aplicável ao caso. Date o documento no último dia do prazo para protocolo.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Inexistência de indícios suficientes de autoria: falta das declarações da menor."
+    opcoes:
+      correta: "Inexistência de indícios suficientes de autoria: falta das declarações da menor."
+      erradas:
+        - Absolvição por falta de prova e ausência de materialidade do delito.
+        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
+        - "Da aplicação do princípio da consunção ou absorção: o crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou crime-meio, essencial à execução do crime-fim; deve ser excluída a condenação pela violação de domicílio."
+        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: *a1
+  - id: 01-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      Leila, de quatorze anos de idade, inconformada com o fato de ter engravidado de seu namorado, Joel, de vinte e oito anos de idade, resolveu procurar sua amiga Fátima, de vinte anos de idade, para que esta lhe provocasse um aborto. Utilizando seus conhecimentos de estudante de enfermagem, Fátima fez que Leila ingerisse um remédio para úlcera. Após alguns dias, na véspera da comemoração da entrada do ano de 2005, Leila abortou e disse ao namorado que havia menstruado, alegando que não estivera, de fato, grávida. Desconfiado, Joel vasculhou as gavetas da namorada e encontrou, além de um envelope com o resultado positivo do exame de gravidez de Leila, o frasco de remédio para úlcera embrulhado em um papel com um bilhete de Fátima a Leila, no qual ela prescrevia as doses do remédio. Munido do resultado do exame e do bilhete escrito por Fátima, Joel narrou o fato à autoridade policial, razão pela qual Fátima foi indiciada por aborto.
+
+      Tanto na delegacia quanto em juízo, Fátima negou a prática do aborto, tendo confirmado que fornecera o remédio a Leila, acreditando que a amiga sofria de úlcera.
+
+      Leila foi encaminhada para perícia no Instituto Médico Legal de São Paulo, onde se confirmou a existência de resquícios de saco gestacional, compatível com gravidez, mas sem elementos suficientes para a confirmação de aborto espontâneo ou provocado.
+
+      Leila não foi ouvida durante o inquérito policial porque, após o exame, mudou-se para Brasília e, apesar dos esforços da autoridade policial, não foi localizada.
+
+      Em 30/1/2010, Fátima foi denunciada pela prática de aborto. Regularmente processada a ação penal, o juiz, no momento dos debates orais da audiência de instrução, permitiu, com a anuência das partes, a manifestação por escrito, no prazo sucessivo de cinco dias.
+
+      A acusação sustentou a comprovação da autoria, tanto pelo depoimento de Joel na fase policial e ratificação em juízo, quanto pela confirmação da ré de que teria fornecido remédio abortivo. Sustentou, ainda, a materialidade do fato, por meio do exame de laboratório e da conclusão da perícia pela existência da gravidez.
+
+      A defesa teve vista dos autos em 12/7/2010.
+
+      Em face dessa situação hipotética, na condição de advogado(a) constituído(a) por Fátima, redija a peça processual adequada à defesa de sua cliente, alegando toda a matéria de direito processual e material aplicável ao caso. Date o documento no último dia do prazo para protocolo.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Ausência de dolo: a ré não sabia da gravidez e forneceu o remédio para curar úlcera."
+    opcoes:
+      correta: "Ausência de dolo: a ré não sabia da gravidez e forneceu o remédio para curar úlcera."
+      erradas:
+        - Absolvição por falta de prova e ausência de materialidade do delito.
+        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
+        - "Da aplicação do princípio da consunção ou absorção: o crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou crime-meio, essencial à execução do crime-fim; deve ser excluída a condenação pela violação de domicílio."
+        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: *a1
+  - id: 01-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: pedido
+    caso: |-
+      Leila, de quatorze anos de idade, inconformada com o fato de ter engravidado de seu namorado, Joel, de vinte e oito anos de idade, resolveu procurar sua amiga Fátima, de vinte anos de idade, para que esta lhe provocasse um aborto. Utilizando seus conhecimentos de estudante de enfermagem, Fátima fez que Leila ingerisse um remédio para úlcera. Após alguns dias, na véspera da comemoração da entrada do ano de 2005, Leila abortou e disse ao namorado que havia menstruado, alegando que não estivera, de fato, grávida. Desconfiado, Joel vasculhou as gavetas da namorada e encontrou, além de um envelope com o resultado positivo do exame de gravidez de Leila, o frasco de remédio para úlcera embrulhado em um papel com um bilhete de Fátima a Leila, no qual ela prescrevia as doses do remédio. Munido do resultado do exame e do bilhete escrito por Fátima, Joel narrou o fato à autoridade policial, razão pela qual Fátima foi indiciada por aborto.
+
+      Tanto na delegacia quanto em juízo, Fátima negou a prática do aborto, tendo confirmado que fornecera o remédio a Leila, acreditando que a amiga sofria de úlcera.
+
+      Leila foi encaminhada para perícia no Instituto Médico Legal de São Paulo, onde se confirmou a existência de resquícios de saco gestacional, compatível com gravidez, mas sem elementos suficientes para a confirmação de aborto espontâneo ou provocado.
+
+      Leila não foi ouvida durante o inquérito policial porque, após o exame, mudou-se para Brasília e, apesar dos esforços da autoridade policial, não foi localizada.
+
+      Em 30/1/2010, Fátima foi denunciada pela prática de aborto. Regularmente processada a ação penal, o juiz, no momento dos debates orais da audiência de instrução, permitiu, com a anuência das partes, a manifestação por escrito, no prazo sucessivo de cinco dias.
+
+      A acusação sustentou a comprovação da autoria, tanto pelo depoimento de Joel na fase policial e ratificação em juízo, quanto pela confirmação da ré de que teria fornecido remédio abortivo. Sustentou, ainda, a materialidade do fato, por meio do exame de laboratório e da conclusão da perícia pela existência da gravidez.
+
+      A defesa teve vista dos autos em 12/7/2010.
+
+      Em face dessa situação hipotética, na condição de advogado(a) constituído(a) por Fátima, redija a peça processual adequada à defesa de sua cliente, alegando toda a matéria de direito processual e material aplicável ao caso. Date o documento no último dia do prazo para protocolo.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
+    opcoes:
+      correta: Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
+      erradas:
+        - Absolvição por falta de provas OU por não haver prova da existência do fato.
+        - Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
+        - "Pedidos, com fundamento no art. 626 do CPP: desclassificação para furto simples; diminuição da pena; fixação do regime semiaberto."
+        - "Pedidos: Conhecimento e provimento do recurso OU concessão da progressão de regime"
+        - Pedido de nulidade do recebimento da denúncia ou rejeição da denúncia por ausência de justa causa, nos termos do Art. 395, inciso III, do CPP ou Art. 564, inciso III, alínea b, do CPP.
+    revisao: *a1

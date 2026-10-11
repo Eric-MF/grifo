@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import { listarExames } from "@/content/load";
 import { courseHref } from "@/config/site";
 import { optionalImage } from "@/lib/images";
 import styles from "./page.module.css";
@@ -31,8 +32,12 @@ const FERRAMENTAS = [
   },
 ];
 
+const ULTIMO = listarExames()
+  .filter((e) => e.transcrito)
+  .reduce((a, b) => (b.numero > a.numero ? b : a));
+
 const PASSOS = [
-  { n: "1", t: "Escolha o exame", d: "Do I ao XL Exame Unificado, com a peça cobrada em cada um." },
+  { n: "1", t: "Escolha o exame", d: `Do I ao ${ULTIMO.numeral} Exame Unificado, com a peça cobrada em cada um.` },
   { n: "2", t: "Responda como na prova", d: "Folha com 150 linhas para a peça e 30 por questão, cronômetro de 5 horas." },
   { n: "3", t: "Receba a nota detalhada", d: "Correção pela tabela de pontos oficial, com o que você acertou e o que faltou." },
   { n: "4", t: "Compartilhe e evolua", d: "Card com a sua nota e código de verificação, e histórico dos seus simulados." },

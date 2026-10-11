@@ -1,0 +1,33 @@
+.cartao, .painel { --grifo-alfa: 72%; }
+.cartao {
+  position: fixed; z-index: 100; transform: translateX(-50%); width: min(340px, calc(100vw - 24px));
+  max-height: 46vh; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; min-height: 0; gap: 0.4rem; padding: 0.85rem 1rem;
+  background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 14px;
+  box-shadow: 0 16px 40px rgb(0 0 0 / 0.22); animation: surgir 0.14s ease-out;
+}
+.painel {
+  position: fixed; z-index: 100; left: 0; right: 0; bottom: 0; max-height: 72vh; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; min-height: 0;
+  gap: 0.5rem; padding: 1rem 1.1rem calc(1rem + env(safe-area-inset-bottom)); background: var(--surface); color: var(--text);
+  border-radius: 18px 18px 0 0; box-shadow: 0 -12px 40px rgb(0 0 0 / 0.25); animation: subir 0.18s ease-out;
+}
+.fundo { position: fixed; inset: 0; z-index: 99; background: rgb(0 0 0 / 0.3); }
+.lei { margin: 0; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.texto { min-height: 0; overflow: auto; font-size: 0.92rem; line-height: 1.5; overscroll-behavior: contain; }
+.marca {
+  color: inherit; padding: 0.04em 0.18em; margin: 0 -0.08em; border-radius: 0.5em 0.2em 0.55em 0.25em;
+  background:
+    linear-gradient(100deg, transparent 0.12em, color-mix(in srgb, var(--c, #fde047) var(--grifo-alfa), transparent) 0.3em,
+      color-mix(in srgb, var(--c, #fde047) calc(var(--grifo-alfa) + 8%), transparent) 60%,
+      color-mix(in srgb, var(--c, #fde047) var(--grifo-alfa), transparent) calc(100% - 0.3em), transparent calc(100% - 0.12em));
+  background-repeat: no-repeat; background-size: 100% 100%;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.marca[data-so-nota="1"] { background: none; border-bottom: 2px dotted currentColor; border-radius: 0; }
+.marca[data-nota="1"]::after { content: "✎"; font-size: 0.62em; vertical-align: super; margin-left: 2px; opacity: 0.75; }
+.texto p { margin: 0 0 0.35em; }
+.texto p:first-child { font-weight: 600; }
+.carregando { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.acoes { display: flex; gap: 0.5rem; }
+@keyframes surgir { from { opacity: 0; transform: translateX(-50%) translateY(4px); } }
+@keyframes subir { from { transform: translateY(100%); } }
+@media (prefers-reduced-motion: reduce) { .cartao, .painel { animation: none; } }

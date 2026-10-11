@@ -135,7 +135,7 @@ peca:
       descricao: Deveria Rodrigo responder, caso reconhecida a imputabilidade, pelo crime de lesão corporal seguida da morte (0,30), previsto no Art. 129, §3º, do CP (0,10)
       valores: [ 0, 0.3, 0.4 ]
       componentes:
-        - { id: c1, valor: 0.3, termos: [ lesao corporal seguida de morte | lesao corporal com resultado morte ] }
+        - { id: c1, valor: 0.3, termos: [ lesao corporal seguida de morte | lesao corporal seguida da morte | lesao corporal com resultado morte ] }
         - { id: c2, valor: 0.1, dispositivo: [ "art. 129, § 3º, CP" ], requer: c1 }
     - n: "8"
       secao: Razões de recurso em sentido estrito

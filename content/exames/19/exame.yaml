@@ -270,3 +270,8 @@ questoes:
           - { id: c1, valor: 0.4, termos: [ prestacao de servicos | pena substitutiva, condicao especial | regime aberto ] }
           - { id: c2, valor: 0.1, dispositivo: [ Súmula 493 STJ ], requer: c1 }
           - { id: c3, valor: 0.15, termos: [ bis in idem | dupla punicao ] }
+
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q2, lei: "Lei 13.964/2019", texto: "O § 16 do art. 4º da Lei 12.850/2013 foi alterado pela Lei 13.964/2019, em vigor em 23/01/2020. A redação anterior só proibia a sentença condenatória fundamentada apenas nas declarações do colaborador. A atual estende a proibição às medidas cautelares reais ou pessoais e ao recebimento da denúncia ou queixa-crime." }

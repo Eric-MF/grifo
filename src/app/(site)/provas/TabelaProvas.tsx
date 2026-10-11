@@ -5,13 +5,19 @@ import { useMemo, useState } from "react";
 import type { ExameResumo } from "@/content/load";
 import styles from "./provas.module.css";
 
-function Baixar({ href, label, destaque }: { href: string | null; label: string; destaque?: boolean }) {
+function Baixar({ href, label, destaque, texto = "⬇ PDF" }: { href: string | null; label: string; destaque?: boolean; texto?: string }) {
   if (!href) return <span className={styles.na} title="Não disponível">—</span>;
   return (
     <a className={`${styles.dl} ${destaque ? styles.dlGold : ""}`} href={href} download aria-label={label}>
-      ⬇ PDF
+      {texto}
     </a>
   );
+}
+
+function Peca({ e }: { e: ExameResumo }) {
+  if (e.fase2 === "em-breve") return <span className="muted">2ª fase em breve</span>;
+  if (e.peca === "—") return <span className="muted">Gabarito não divulgado</span>;
+  return <>{e.peca}</>;
 }
 
 export function TabelaProvas({ exames, pecas }: { exames: ExameResumo[]; pecas: string[] }) {
@@ -53,6 +59,7 @@ export function TabelaProvas({ exames, pecas }: { exames: ExameResumo[]; pecas: 
               <th scope="col" className={styles.c}>Caderno atualizado</th>
               <th scope="col" className={styles.c}>Gabarito atualizado</th>
               <th scope="col" className={styles.c}>Simulado</th>
+              <th scope="col" className={styles.c}>1ª fase (Tipo 1)</th>
             </tr>
           </thead>
           <tbody>
@@ -65,7 +72,7 @@ export function TabelaProvas({ exames, pecas }: { exames: ExameResumo[]; pecas: 
                     {e.aplicacao ? ` · ${e.aplicacao.slice(0, 4)}` : ""}
                   </span>
                 </th>
-                <td data-label="Peça cobrada">{e.peca === "—" ? <span className="muted">Gabarito não divulgado</span> : e.peca}</td>
+                <td data-label="Peça cobrada"><Peca e={e} /></td>
                 <td className={styles.c} data-label="Caderno original"><Baixar href={e.downloads.cadernoOriginal} label={`Caderno original do ${e.numeral} Exame`} /></td>
                 <td className={styles.c} data-label="Gabarito original"><Baixar href={e.downloads.gabaritoOriginal} label={`Gabarito original do ${e.numeral} Exame`} /></td>
                 <td className={styles.c} data-label="Caderno atualizado"><Baixar href={e.downloads.cadernoAtualizado} label={`Caderno atualizado do ${e.numeral} Exame`} destaque /></td>
@@ -78,6 +85,12 @@ export function TabelaProvas({ exames, pecas }: { exames: ExameResumo[]; pecas: 
                   ) : (
                     <span className={styles.na}>—</span>
                   )}
+                </td>
+                <td className={styles.c} data-label="1ª fase (Tipo 1)">
+                  <span className={styles.par}>
+                    <Baixar href={e.downloads.objetivaCaderno} label={`Caderno da 1ª fase do ${e.numeral} Exame`} texto="Caderno" />
+                    <Baixar href={e.downloads.objetivaGabarito} label={`Gabarito definitivo da 1ª fase do ${e.numeral} Exame`} texto="Gabarito" />
+                  </span>
                 </td>
               </tr>
             ))}

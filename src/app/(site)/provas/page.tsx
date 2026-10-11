@@ -19,7 +19,7 @@ export default function ProvasPage() {
       <h1>Cadernos e gabaritos</h1>
       <p className="lead">
         Todas as provas da 2ª fase de Direito Penal aplicadas pela FGV, com o padrão de resposta oficial. As versões
-        atualizadas trazem o caderno no layout atual e notas sobre as mudanças na legislação desde a aplicação.
+        atualizadas trazem o caderno no layout atual e notas sobre as mudanças na legislação desde a aplicação. Na última coluna ficam o caderno Tipo 1 e o gabarito definitivo da 1ª fase.
       </p>
       <TabelaProvas exames={exames} pecas={pecas} />
       <section className="card" style={{ marginTop: "2.5rem" }} aria-labelledby="folhas">

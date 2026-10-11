@@ -7,11 +7,11 @@ import styles from "./ViewModeMenu.module.css";
 /** Menu "Aa" do cabeçalho: versão (padrão ou celular), tema, tamanho da fonte, densidade e leitura facilitada. */
 export function ViewModeMenu() {
   const [open, setOpen] = useState(false);
-  const [prefs, setPrefs] = useState<Prefs>(DEFAULT_PREFS);
+  // O painel só existe com `open`, então ler as preferências na montagem não gera diferença de hidratação
+  const [prefs, setPrefs] = useState<Prefs>(readPrefs);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setPrefs(readPrefs());
     const onChange = (e: Event) => setPrefs((e as CustomEvent<Prefs>).detail);
     window.addEventListener("grifo:prefs", onChange);
     return () => window.removeEventListener("grifo:prefs", onChange);

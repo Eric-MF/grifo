@@ -4,9 +4,11 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { lerJSON, gravarJSON } from "@/lib/storage";
 import { sortearPergunta } from "@/quiz/banco";
+import { CATEGORIAS_PADRAO, CHAVE_CATEGORIAS, nomeCategoria } from "@/quiz/categorias";
 import { PerguntaCorpo } from "@/quiz/PerguntaCorpo";
-import { LIMITE_SEG, maximoTreino, NOME_NIVEL, pontuar, TAMANHO_TREINO } from "@/quiz/pontuacao";
-import type { Nivel, Pergunta } from "@/quiz/types";
+import { LIMITE_SEG, limiteSeg, maximoTreino, NOME_NIVEL, pontuar, TAMANHO_TREINO } from "@/quiz/pontuacao";
+import { SeletorCategorias } from "@/quiz/SeletorCategorias";
+import type { Categoria, Nivel, Pergunta } from "@/quiz/types";
 import { nomePeca, type Correcao } from "@/quiz/verificar";
 import styles from "./treino.module.css";
 
@@ -54,6 +56,7 @@ const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).p
 export function Treino() {
   const [fase, setFase] = useState<Fase>("inicio");
   const [nivel, setNivel] = useState<Nivel>(1);
+  const [categorias, setCategorias] = useState<Categoria[]>(CATEGORIAS_PADRAO);
   const [recordes, setRecordes] = useState<Recordes>({});
   const [rodadas, setRodadas] = useState<Rodada[]>([]);
   const [indice, setIndice] = useState(0);
@@ -64,18 +67,25 @@ export function Treino() {
   const vistas = useRef(new Set<string>());
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- lê localStorage após montar (site estático)
     setRecordes(lerJSON<Recordes>(CHAVE, {}));
+    setCategorias(lerJSON<Categoria[]>(CHAVE_CATEGORIAS, CATEGORIAS_PADRAO));
   }, []);
+
+  const mudarCategorias = (c: Categoria[]) => {
+    setCategorias(c);
+    gravarJSON(CHAVE_CATEGORIAS, c);
+  };
 
   const proximaPergunta = (): Pergunta => {
     for (let i = 0; i < 20; i++) {
-      const p = sortearPergunta();
+      const p = sortearPergunta({ categorias });
       if (!vistas.current.has(p.id)) {
         vistas.current.add(p.id);
         return p;
       }
     }
-    return sortearPergunta();
+    return sortearPergunta({ categorias });
   };
 
   const comecar = () => {
@@ -93,7 +103,7 @@ export function Treino() {
   const aoResponder = (c: Correcao) => {
     if (!pergunta) return;
     const segundos = (performance.now() - inicio) / 1000;
-    const rodada: Rodada = { pergunta, acertou: c.acertou, segundos, pontos: pontuar(nivel, c.acertou, segundos) };
+    const rodada: Rodada = { pergunta, acertou: c.acertou, segundos, pontos: pontuar(nivel, c.acertou, segundos, limiteSeg(pergunta, nivel)) };
     setRodadas((r) => [...r, rodada]);
     setRespondida(true);
   };
@@ -139,8 +149,10 @@ export function Treino() {
         </div>
         <p className={styles.regras}>
           Acertar vale 60 pontos, mais até 40 pela rapidez: a bonificação zera depois de {fmt(LIMITE_SEG[nivel])}. O nível
-          multiplica o total por 1, 1,5 ou 2. São {TAMANHO_TREINO} perguntas sorteadas entre todas as peças.
+          multiplica o total por 1, 1,5 ou 2. São {TAMANHO_TREINO} perguntas sorteadas entre os tipos marcados abaixo; objetivas e
+          itens das provas têm tempos próprios.
         </p>
+        <SeletorCategorias valor={categorias} onChange={mudarCategorias} />
         <button type="button" className="btn btn-gold" onClick={comecar}>
           Começar treino
         </button>
@@ -151,7 +163,7 @@ export function Treino() {
   if (fase === "pergunta" && pergunta) {
     const n = indice + 1;
     const ultima = rodadas[rodadas.length - 1];
-    const limite = LIMITE_SEG[nivel];
+    const limite = limiteSeg(pergunta, nivel);
     return (
       <>
         <PerguntaCorpo
@@ -197,7 +209,7 @@ export function Treino() {
           <thead>
             <tr>
               <th>#</th>
-              <th>Peça</th>
+              <th>Pergunta</th>
               <th>Resultado</th>
               <th>Tempo</th>
               <th>Pontos</th>
@@ -207,7 +219,7 @@ export function Treino() {
             {rodadas.map((r, i) => (
               <tr key={r.pergunta.id}>
                 <td>{i + 1}</td>
-                <td>{nomePeca(r.pergunta.resposta.peca)}</td>
+                <td>{r.pergunta.formato === "peca" ? nomePeca(r.pergunta.resposta.peca) : nomeCategoria(r.pergunta.categorias[0])}</td>
                 <td>{r.acertou ? "✓ acerto" : "✗ erro"}</td>
                 <td>{fmt(r.segundos)}</td>
                 <td>{r.pontos}</td>

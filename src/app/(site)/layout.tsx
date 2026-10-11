@@ -1,5 +1,6 @@
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { PopupArtigos } from "@/components/leis/PopupArtigos";
 
 export default function SiteLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -10,6 +11,7 @@ export default function SiteLayout({ children }: Readonly<{ children: React.Reac
       <SiteHeader />
       <main id="conteudo">{children}</main>
       <SiteFooter />
+      <PopupArtigos />
     </>
   );
 }

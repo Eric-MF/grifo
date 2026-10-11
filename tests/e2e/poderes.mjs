@@ -13,6 +13,8 @@ const NIVEL = { denuncia: 3, presuncao: 3 };
 
 async function abrir(nivel = 1) {
   const ctx = await b.newContext({ viewport: { width: 1280, height: 860 } });
+  // o poder do personagem não pode disparar sozinho durante a medição de cada poder
+  await ctx.addInitScript(() => localStorage.setItem("grifo:jogo:flap-suitcase", JSON.stringify({ opcoes: { autoPoder: false } })));
   const p = await ctx.newPage();
   p.on("pageerror", (e) => erros.push(String(e)));
   await p.goto(`${BASE}/jogos/flap-suitcase/?debug=1`, { waitUntil: "networkidle" });

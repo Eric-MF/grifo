@@ -1,0 +1,644 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "14"
+perguntas:
+  - id: 14-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      Felipe, com 18 anos de idade, em um bar com outros amigos, conheceu Ana, linda jovem, por quem se encantou. Após um bate-papo informal e trocarem beijos, decidiram ir para um local mais reservado. Nesse local trocaram carícias, e Ana, de forma voluntária, praticou sexo oral e vaginal com Felipe.
+
+      Depois da noite juntos, ambos foram para suas residências, tendo antes trocado telefones e contatos nas redes sociais.
+
+      No dia seguinte, Felipe, ao acessar a página de Ana na rede social, descobre que, apesar da aparência adulta, esta possui apenas 13 (treze) anos de idade, tendo Felipe ficado em choque com essa constatação.
+
+      O seu medo foi corroborado com a chegada da notícia, em sua residência, da denúncia movida por parte do Ministério Público Estadual, pois o pai de Ana, ao descobrir o ocorrido, procurou a autoridade policial, narrando o fato.
+
+      Por Ana ser inimputável e contar, à época dos fatos, com 13 (treze) anos de idade, o Ministério Público Estadual denunciou Felipe pela prática de dois crimes de estupro de vulnerável, previsto no artigo 217- A, na forma do artigo 69, ambos do Código Penal. O Parquet requereu o início de cumprimento de pena no regime fechado, com base no artigo 2º, §1º, da lei 8.072/90, e o reconhecimento da agravante da embriaguez preordenada, prevista no artigo 61, II, alínea “l”, do CP.
+
+      O processo teve início e prosseguimento na XX Vara Criminal da cidade de Vitória, no Estado do Espírito Santo, local de residência do réu.
+
+      Felipe, por ser réu primário, ter bons antecedentes e residência fixa, respondeu ao processo em liberdade.
+
+      Na audiência de instrução e julgamento, a vítima afirmou que aquela foi a sua primeira noite, mas que tinha o hábito de fugir de casa com as amigas para frequentar bares de adultos.
+
+      As testemunhas de acusação afirmaram que não viram os fatos e que não sabiam das fugas de Ana para sair com as amigas.
+
+      As testemunhas de defesa, amigos de Felipe, disseram que o comportamento e a vestimenta da Ana eram incompatíveis com uma menina de 13 (treze) anos e que qualquer pessoa acreditaria ser uma pessoa maior de 14 (quatorze) anos, e que Felipe não estava embriagado quando conheceu Ana.
+
+      O réu, em seu interrogatório, disse que se interessou por Ana, por ser muito bonita e por estar bem vestida. Disse que não perguntou a sua idade, pois acreditou que no local somente pudessem frequentar pessoas maiores de 18 (dezoito) anos. Corroborou que praticaram o sexo oral e vaginal na mesma oportunidade, de forma espontânea e voluntária por ambos.
+
+      A prova pericial atestou que a menor não era virgem, mas não pôde afirmar que aquele ato sexual foi o primeiro da vítima, pois a perícia foi realizada longos meses após o ato sexual.
+
+      O Ministério Público pugnou pela condenação de Felipe nos termos da denúncia.
+
+      A defesa de Felipe foi intimada no dia 10 de abril de 2014 (quinta-feira).
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, no último dia do prazo, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento correto: Interposição para o Juiz da XX Vara Criminal de Vitória, Estado do Espírito Santo."
+    opcoes:
+      correta: "Endereçamento correto: Interposição para o Juiz da XX Vara Criminal de Vitória, Estado do Espírito Santo."
+      erradas:
+        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
+        - "Endereçamento correto: Tribunal de Justiça do Estado de Mato Grosso."
+        - "Endereçamento: Vara Criminal da Comarca de Fortaleza, Ceará"
+        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
+        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
+    revisao: &a1
+      status: rascunho
+  - id: 14-peca-3-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "3.1"
+    secao: merito
+    caso: |-
+      Felipe, com 18 anos de idade, em um bar com outros amigos, conheceu Ana, linda jovem, por quem se encantou. Após um bate-papo informal e trocarem beijos, decidiram ir para um local mais reservado. Nesse local trocaram carícias, e Ana, de forma voluntária, praticou sexo oral e vaginal com Felipe.
+
+      Depois da noite juntos, ambos foram para suas residências, tendo antes trocado telefones e contatos nas redes sociais.
+
+      No dia seguinte, Felipe, ao acessar a página de Ana na rede social, descobre que, apesar da aparência adulta, esta possui apenas 13 (treze) anos de idade, tendo Felipe ficado em choque com essa constatação.
+
+      O seu medo foi corroborado com a chegada da notícia, em sua residência, da denúncia movida por parte do Ministério Público Estadual, pois o pai de Ana, ao descobrir o ocorrido, procurou a autoridade policial, narrando o fato.
+
+      Por Ana ser inimputável e contar, à época dos fatos, com 13 (treze) anos de idade, o Ministério Público Estadual denunciou Felipe pela prática de dois crimes de estupro de vulnerável, previsto no artigo 217- A, na forma do artigo 69, ambos do Código Penal. O Parquet requereu o início de cumprimento de pena no regime fechado, com base no artigo 2º, §1º, da lei 8.072/90, e o reconhecimento da agravante da embriaguez preordenada, prevista no artigo 61, II, alínea “l”, do CP.
+
+      O processo teve início e prosseguimento na XX Vara Criminal da cidade de Vitória, no Estado do Espírito Santo, local de residência do réu.
+
+      Felipe, por ser réu primário, ter bons antecedentes e residência fixa, respondeu ao processo em liberdade.
+
+      Na audiência de instrução e julgamento, a vítima afirmou que aquela foi a sua primeira noite, mas que tinha o hábito de fugir de casa com as amigas para frequentar bares de adultos.
+
+      As testemunhas de acusação afirmaram que não viram os fatos e que não sabiam das fugas de Ana para sair com as amigas.
+
+      As testemunhas de defesa, amigos de Felipe, disseram que o comportamento e a vestimenta da Ana eram incompatíveis com uma menina de 13 (treze) anos e que qualquer pessoa acreditaria ser uma pessoa maior de 14 (quatorze) anos, e que Felipe não estava embriagado quando conheceu Ana.
+
+      O réu, em seu interrogatório, disse que se interessou por Ana, por ser muito bonita e por estar bem vestida. Disse que não perguntou a sua idade, pois acreditou que no local somente pudessem frequentar pessoas maiores de 18 (dezoito) anos. Corroborou que praticaram o sexo oral e vaginal na mesma oportunidade, de forma espontânea e voluntária por ambos.
+
+      A prova pericial atestou que a menor não era virgem, mas não pôde afirmar que aquele ato sexual foi o primeiro da vítima, pois a perícia foi realizada longos meses após o ato sexual.
+
+      O Ministério Público pugnou pela condenação de Felipe nos termos da denúncia.
+
+      A defesa de Felipe foi intimada no dia 10 de abril de 2014 (quinta-feira).
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, no último dia do prazo, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Absolvição pelo erro de tipo essencial, instituto descrito no artigo 20, caput, do CP que gera a atipicidade da conduta.
+    opcoes:
+      correta: Absolvição pelo erro de tipo essencial, instituto descrito no artigo 20, caput, do CP que gera a atipicidade da conduta.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Reconhecimento da atenuante da confissão espontânea, nos termos do Art. 65, III, ´d´, CP.
+        - O delito não foi praticado após o trânsito em julgado de condenação anterior; sentença condenatória recorrível não gera reincidência.
+        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: *a1
+  - id: 14-peca-3-2
+    categoria: peca-detalhe
+    parte: peca
+    item: "3.2"
+    secao: merito
+    caso: |-
+      Felipe, com 18 anos de idade, em um bar com outros amigos, conheceu Ana, linda jovem, por quem se encantou. Após um bate-papo informal e trocarem beijos, decidiram ir para um local mais reservado. Nesse local trocaram carícias, e Ana, de forma voluntária, praticou sexo oral e vaginal com Felipe.
+
+      Depois da noite juntos, ambos foram para suas residências, tendo antes trocado telefones e contatos nas redes sociais.
+
+      No dia seguinte, Felipe, ao acessar a página de Ana na rede social, descobre que, apesar da aparência adulta, esta possui apenas 13 (treze) anos de idade, tendo Felipe ficado em choque com essa constatação.
+
+      O seu medo foi corroborado com a chegada da notícia, em sua residência, da denúncia movida por parte do Ministério Público Estadual, pois o pai de Ana, ao descobrir o ocorrido, procurou a autoridade policial, narrando o fato.
+
+      Por Ana ser inimputável e contar, à época dos fatos, com 13 (treze) anos de idade, o Ministério Público Estadual denunciou Felipe pela prática de dois crimes de estupro de vulnerável, previsto no artigo 217- A, na forma do artigo 69, ambos do Código Penal. O Parquet requereu o início de cumprimento de pena no regime fechado, com base no artigo 2º, §1º, da lei 8.072/90, e o reconhecimento da agravante da embriaguez preordenada, prevista no artigo 61, II, alínea “l”, do CP.
+
+      O processo teve início e prosseguimento na XX Vara Criminal da cidade de Vitória, no Estado do Espírito Santo, local de residência do réu.
+
+      Felipe, por ser réu primário, ter bons antecedentes e residência fixa, respondeu ao processo em liberdade.
+
+      Na audiência de instrução e julgamento, a vítima afirmou que aquela foi a sua primeira noite, mas que tinha o hábito de fugir de casa com as amigas para frequentar bares de adultos.
+
+      As testemunhas de acusação afirmaram que não viram os fatos e que não sabiam das fugas de Ana para sair com as amigas.
+
+      As testemunhas de defesa, amigos de Felipe, disseram que o comportamento e a vestimenta da Ana eram incompatíveis com uma menina de 13 (treze) anos e que qualquer pessoa acreditaria ser uma pessoa maior de 14 (quatorze) anos, e que Felipe não estava embriagado quando conheceu Ana.
+
+      O réu, em seu interrogatório, disse que se interessou por Ana, por ser muito bonita e por estar bem vestida. Disse que não perguntou a sua idade, pois acreditou que no local somente pudessem frequentar pessoas maiores de 18 (dezoito) anos. Corroborou que praticaram o sexo oral e vaginal na mesma oportunidade, de forma espontânea e voluntária por ambos.
+
+      A prova pericial atestou que a menor não era virgem, mas não pôde afirmar que aquele ato sexual foi o primeiro da vítima, pois a perícia foi realizada longos meses após o ato sexual.
+
+      O Ministério Público pugnou pela condenação de Felipe nos termos da denúncia.
+
+      A defesa de Felipe foi intimada no dia 10 de abril de 2014 (quinta-feira).
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, no último dia do prazo, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Da tese da prática de crime único, pois o delito de estupro de vulnerável é um tipo misto alternativo (de conteúdo múltiplo ou variado).
+    opcoes:
+      correta: Da tese da prática de crime único, pois o delito de estupro de vulnerável é um tipo misto alternativo (de conteúdo múltiplo ou variado).
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Afastamento da agravante do Art. 61, inciso II, alínea ´f´, do CP, pois o crime não foi praticado em situação de violência doméstica, familiar ou de coabitação contra mulher.
+        - "Da aplicação do princípio da consunção ou absorção: o crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou crime-meio, essencial à execução do crime-fim; deve ser excluída a condenação pela violação de domicílio."
+        - Absolvição sumária, tendo em vista que a conduta narrada evidentemente não constitui crime.
+        - Redução do quantum de aumento realizado na terceira fase da dosimetria do crime de roubo, já que os fatos foram praticados antes da entrada em vigor da lei que aumentou o percentual de aumento em razão do emprego de arma de fogo OU em razão do princípio da irretroatividade da lei penal prejudicial ao réu, conforme Art. 5º, inciso XL, da CRFB.
+    revisao: *a1
+  - id: 14-peca-3-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3.3"
+    secao: merito
+    caso: |-
+      Felipe, com 18 anos de idade, em um bar com outros amigos, conheceu Ana, linda jovem, por quem se encantou. Após um bate-papo informal e trocarem beijos, decidiram ir para um local mais reservado. Nesse local trocaram carícias, e Ana, de forma voluntária, praticou sexo oral e vaginal com Felipe.
+
+      Depois da noite juntos, ambos foram para suas residências, tendo antes trocado telefones e contatos nas redes sociais.
+
+      No dia seguinte, Felipe, ao acessar a página de Ana na rede social, descobre que, apesar da aparência adulta, esta possui apenas 13 (treze) anos de idade, tendo Felipe ficado em choque com essa constatação.
+
+      O seu medo foi corroborado com a chegada da notícia, em sua residência, da denúncia movida por parte do Ministério Público Estadual, pois o pai de Ana, ao descobrir o ocorrido, procurou a autoridade policial, narrando o fato.
+
+      Por Ana ser inimputável e contar, à época dos fatos, com 13 (treze) anos de idade, o Ministério Público Estadual denunciou Felipe pela prática de dois crimes de estupro de vulnerável, previsto no artigo 217- A, na forma do artigo 69, ambos do Código Penal. O Parquet requereu o início de cumprimento de pena no regime fechado, com base no artigo 2º, §1º, da lei 8.072/90, e o reconhecimento da agravante da embriaguez preordenada, prevista no artigo 61, II, alínea “l”, do CP.
+
+      O processo teve início e prosseguimento na XX Vara Criminal da cidade de Vitória, no Estado do Espírito Santo, local de residência do réu.
+
+      Felipe, por ser réu primário, ter bons antecedentes e residência fixa, respondeu ao processo em liberdade.
+
+      Na audiência de instrução e julgamento, a vítima afirmou que aquela foi a sua primeira noite, mas que tinha o hábito de fugir de casa com as amigas para frequentar bares de adultos.
+
+      As testemunhas de acusação afirmaram que não viram os fatos e que não sabiam das fugas de Ana para sair com as amigas.
+
+      As testemunhas de defesa, amigos de Felipe, disseram que o comportamento e a vestimenta da Ana eram incompatíveis com uma menina de 13 (treze) anos e que qualquer pessoa acreditaria ser uma pessoa maior de 14 (quatorze) anos, e que Felipe não estava embriagado quando conheceu Ana.
+
+      O réu, em seu interrogatório, disse que se interessou por Ana, por ser muito bonita e por estar bem vestida. Disse que não perguntou a sua idade, pois acreditou que no local somente pudessem frequentar pessoas maiores de 18 (dezoito) anos. Corroborou que praticaram o sexo oral e vaginal na mesma oportunidade, de forma espontânea e voluntária por ambos.
+
+      A prova pericial atestou que a menor não era virgem, mas não pôde afirmar que aquele ato sexual foi o primeiro da vítima, pois a perícia foi realizada longos meses após o ato sexual.
+
+      O Ministério Público pugnou pela condenação de Felipe nos termos da denúncia.
+
+      A defesa de Felipe foi intimada no dia 10 de abril de 2014 (quinta-feira).
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, no último dia do prazo, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Da tese do afastamento da agravante da embriaguez preordenada.
+    opcoes:
+      correta: Da tese do afastamento da agravante da embriaguez preordenada.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Afastamento da agravante do Art. 61, inciso II, alínea ´f´, do CP, pois o crime não foi praticado em situação de violência doméstica, familiar ou de coabitação contra mulher.
+        - "Da aplicação do princípio da consunção ou absorção: o crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou crime-meio, essencial à execução do crime-fim; deve ser excluída a condenação pela violação de domicílio."
+        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
+        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
+    revisao: *a1
+  - id: 14-peca-3-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "3.4"
+    secao: merito
+    caso: |-
+      Felipe, com 18 anos de idade, em um bar com outros amigos, conheceu Ana, linda jovem, por quem se encantou. Após um bate-papo informal e trocarem beijos, decidiram ir para um local mais reservado. Nesse local trocaram carícias, e Ana, de forma voluntária, praticou sexo oral e vaginal com Felipe.
+
+      Depois da noite juntos, ambos foram para suas residências, tendo antes trocado telefones e contatos nas redes sociais.
+
+      No dia seguinte, Felipe, ao acessar a página de Ana na rede social, descobre que, apesar da aparência adulta, esta possui apenas 13 (treze) anos de idade, tendo Felipe ficado em choque com essa constatação.
+
+      O seu medo foi corroborado com a chegada da notícia, em sua residência, da denúncia movida por parte do Ministério Público Estadual, pois o pai de Ana, ao descobrir o ocorrido, procurou a autoridade policial, narrando o fato.
+
+      Por Ana ser inimputável e contar, à época dos fatos, com 13 (treze) anos de idade, o Ministério Público Estadual denunciou Felipe pela prática de dois crimes de estupro de vulnerável, previsto no artigo 217- A, na forma do artigo 69, ambos do Código Penal. O Parquet requereu o início de cumprimento de pena no regime fechado, com base no artigo 2º, §1º, da lei 8.072/90, e o reconhecimento da agravante da embriaguez preordenada, prevista no artigo 61, II, alínea “l”, do CP.
+
+      O processo teve início e prosseguimento na XX Vara Criminal da cidade de Vitória, no Estado do Espírito Santo, local de residência do réu.
+
+      Felipe, por ser réu primário, ter bons antecedentes e residência fixa, respondeu ao processo em liberdade.
+
+      Na audiência de instrução e julgamento, a vítima afirmou que aquela foi a sua primeira noite, mas que tinha o hábito de fugir de casa com as amigas para frequentar bares de adultos.
+
+      As testemunhas de acusação afirmaram que não viram os fatos e que não sabiam das fugas de Ana para sair com as amigas.
+
+      As testemunhas de defesa, amigos de Felipe, disseram que o comportamento e a vestimenta da Ana eram incompatíveis com uma menina de 13 (treze) anos e que qualquer pessoa acreditaria ser uma pessoa maior de 14 (quatorze) anos, e que Felipe não estava embriagado quando conheceu Ana.
+
+      O réu, em seu interrogatório, disse que se interessou por Ana, por ser muito bonita e por estar bem vestida. Disse que não perguntou a sua idade, pois acreditou que no local somente pudessem frequentar pessoas maiores de 18 (dezoito) anos. Corroborou que praticaram o sexo oral e vaginal na mesma oportunidade, de forma espontânea e voluntária por ambos.
+
+      A prova pericial atestou que a menor não era virgem, mas não pôde afirmar que aquele ato sexual foi o primeiro da vítima, pois a perícia foi realizada longos meses após o ato sexual.
+
+      O Ministério Público pugnou pela condenação de Felipe nos termos da denúncia.
+
+      A defesa de Felipe foi intimada no dia 10 de abril de 2014 (quinta-feira).
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, no último dia do prazo, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Da tese da incidência da atenuante da menoridade penal relativa
+    opcoes:
+      correta: Da tese da incidência da atenuante da menoridade penal relativa
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Reconhecimento da atenuante da confissão espontânea, nos termos do Art. 65, III, ´d´, CP.
+        - O delito não foi praticado após o trânsito em julgado de condenação anterior; sentença condenatória recorrível não gera reincidência.
+        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: *a1
+  - id: 14-peca-3-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "3.5"
+    secao: merito
+    caso: |-
+      Felipe, com 18 anos de idade, em um bar com outros amigos, conheceu Ana, linda jovem, por quem se encantou. Após um bate-papo informal e trocarem beijos, decidiram ir para um local mais reservado. Nesse local trocaram carícias, e Ana, de forma voluntária, praticou sexo oral e vaginal com Felipe.
+
+      Depois da noite juntos, ambos foram para suas residências, tendo antes trocado telefones e contatos nas redes sociais.
+
+      No dia seguinte, Felipe, ao acessar a página de Ana na rede social, descobre que, apesar da aparência adulta, esta possui apenas 13 (treze) anos de idade, tendo Felipe ficado em choque com essa constatação.
+
+      O seu medo foi corroborado com a chegada da notícia, em sua residência, da denúncia movida por parte do Ministério Público Estadual, pois o pai de Ana, ao descobrir o ocorrido, procurou a autoridade policial, narrando o fato.
+
+      Por Ana ser inimputável e contar, à época dos fatos, com 13 (treze) anos de idade, o Ministério Público Estadual denunciou Felipe pela prática de dois crimes de estupro de vulnerável, previsto no artigo 217- A, na forma do artigo 69, ambos do Código Penal. O Parquet requereu o início de cumprimento de pena no regime fechado, com base no artigo 2º, §1º, da lei 8.072/90, e o reconhecimento da agravante da embriaguez preordenada, prevista no artigo 61, II, alínea “l”, do CP.
+
+      O processo teve início e prosseguimento na XX Vara Criminal da cidade de Vitória, no Estado do Espírito Santo, local de residência do réu.
+
+      Felipe, por ser réu primário, ter bons antecedentes e residência fixa, respondeu ao processo em liberdade.
+
+      Na audiência de instrução e julgamento, a vítima afirmou que aquela foi a sua primeira noite, mas que tinha o hábito de fugir de casa com as amigas para frequentar bares de adultos.
+
+      As testemunhas de acusação afirmaram que não viram os fatos e que não sabiam das fugas de Ana para sair com as amigas.
+
+      As testemunhas de defesa, amigos de Felipe, disseram que o comportamento e a vestimenta da Ana eram incompatíveis com uma menina de 13 (treze) anos e que qualquer pessoa acreditaria ser uma pessoa maior de 14 (quatorze) anos, e que Felipe não estava embriagado quando conheceu Ana.
+
+      O réu, em seu interrogatório, disse que se interessou por Ana, por ser muito bonita e por estar bem vestida. Disse que não perguntou a sua idade, pois acreditou que no local somente pudessem frequentar pessoas maiores de 18 (dezoito) anos. Corroborou que praticaram o sexo oral e vaginal na mesma oportunidade, de forma espontânea e voluntária por ambos.
+
+      A prova pericial atestou que a menor não era virgem, mas não pôde afirmar que aquele ato sexual foi o primeiro da vítima, pois a perícia foi realizada longos meses após o ato sexual.
+
+      O Ministério Público pugnou pela condenação de Felipe nos termos da denúncia.
+
+      A defesa de Felipe foi intimada no dia 10 de abril de 2014 (quinta-feira).
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, no último dia do prazo, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+    opcoes:
+      correta: Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Reconhecimento da atenuante da confissão espontânea, nos termos do Art. 65, III, ´d´, CP.
+        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
+        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
+        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
+    revisao: *a1
+  - id: 14-peca-3-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "3.6"
+    secao: merito
+    caso: |-
+      Felipe, com 18 anos de idade, em um bar com outros amigos, conheceu Ana, linda jovem, por quem se encantou. Após um bate-papo informal e trocarem beijos, decidiram ir para um local mais reservado. Nesse local trocaram carícias, e Ana, de forma voluntária, praticou sexo oral e vaginal com Felipe.
+
+      Depois da noite juntos, ambos foram para suas residências, tendo antes trocado telefones e contatos nas redes sociais.
+
+      No dia seguinte, Felipe, ao acessar a página de Ana na rede social, descobre que, apesar da aparência adulta, esta possui apenas 13 (treze) anos de idade, tendo Felipe ficado em choque com essa constatação.
+
+      O seu medo foi corroborado com a chegada da notícia, em sua residência, da denúncia movida por parte do Ministério Público Estadual, pois o pai de Ana, ao descobrir o ocorrido, procurou a autoridade policial, narrando o fato.
+
+      Por Ana ser inimputável e contar, à época dos fatos, com 13 (treze) anos de idade, o Ministério Público Estadual denunciou Felipe pela prática de dois crimes de estupro de vulnerável, previsto no artigo 217- A, na forma do artigo 69, ambos do Código Penal. O Parquet requereu o início de cumprimento de pena no regime fechado, com base no artigo 2º, §1º, da lei 8.072/90, e o reconhecimento da agravante da embriaguez preordenada, prevista no artigo 61, II, alínea “l”, do CP.
+
+      O processo teve início e prosseguimento na XX Vara Criminal da cidade de Vitória, no Estado do Espírito Santo, local de residência do réu.
+
+      Felipe, por ser réu primário, ter bons antecedentes e residência fixa, respondeu ao processo em liberdade.
+
+      Na audiência de instrução e julgamento, a vítima afirmou que aquela foi a sua primeira noite, mas que tinha o hábito de fugir de casa com as amigas para frequentar bares de adultos.
+
+      As testemunhas de acusação afirmaram que não viram os fatos e que não sabiam das fugas de Ana para sair com as amigas.
+
+      As testemunhas de defesa, amigos de Felipe, disseram que o comportamento e a vestimenta da Ana eram incompatíveis com uma menina de 13 (treze) anos e que qualquer pessoa acreditaria ser uma pessoa maior de 14 (quatorze) anos, e que Felipe não estava embriagado quando conheceu Ana.
+
+      O réu, em seu interrogatório, disse que se interessou por Ana, por ser muito bonita e por estar bem vestida. Disse que não perguntou a sua idade, pois acreditou que no local somente pudessem frequentar pessoas maiores de 18 (dezoito) anos. Corroborou que praticaram o sexo oral e vaginal na mesma oportunidade, de forma espontânea e voluntária por ambos.
+
+      A prova pericial atestou que a menor não era virgem, mas não pôde afirmar que aquele ato sexual foi o primeiro da vítima, pois a perícia foi realizada longos meses após o ato sexual.
+
+      O Ministério Público pugnou pela condenação de Felipe nos termos da denúncia.
+
+      A defesa de Felipe foi intimada no dia 10 de abril de 2014 (quinta-feira).
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, no último dia do prazo, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
+    opcoes:
+      correta: Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - Reconhecimento da atenuante da confissão espontânea, nos termos do Art. 65, III, ´d´, CP.
+        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
+        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
+        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
+    revisao: *a1
+  - id: 14-peca-4-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "4.1"
+    secao: pedido
+    caso: |-
+      Felipe, com 18 anos de idade, em um bar com outros amigos, conheceu Ana, linda jovem, por quem se encantou. Após um bate-papo informal e trocarem beijos, decidiram ir para um local mais reservado. Nesse local trocaram carícias, e Ana, de forma voluntária, praticou sexo oral e vaginal com Felipe.
+
+      Depois da noite juntos, ambos foram para suas residências, tendo antes trocado telefones e contatos nas redes sociais.
+
+      No dia seguinte, Felipe, ao acessar a página de Ana na rede social, descobre que, apesar da aparência adulta, esta possui apenas 13 (treze) anos de idade, tendo Felipe ficado em choque com essa constatação.
+
+      O seu medo foi corroborado com a chegada da notícia, em sua residência, da denúncia movida por parte do Ministério Público Estadual, pois o pai de Ana, ao descobrir o ocorrido, procurou a autoridade policial, narrando o fato.
+
+      Por Ana ser inimputável e contar, à época dos fatos, com 13 (treze) anos de idade, o Ministério Público Estadual denunciou Felipe pela prática de dois crimes de estupro de vulnerável, previsto no artigo 217- A, na forma do artigo 69, ambos do Código Penal. O Parquet requereu o início de cumprimento de pena no regime fechado, com base no artigo 2º, §1º, da lei 8.072/90, e o reconhecimento da agravante da embriaguez preordenada, prevista no artigo 61, II, alínea “l”, do CP.
+
+      O processo teve início e prosseguimento na XX Vara Criminal da cidade de Vitória, no Estado do Espírito Santo, local de residência do réu.
+
+      Felipe, por ser réu primário, ter bons antecedentes e residência fixa, respondeu ao processo em liberdade.
+
+      Na audiência de instrução e julgamento, a vítima afirmou que aquela foi a sua primeira noite, mas que tinha o hábito de fugir de casa com as amigas para frequentar bares de adultos.
+
+      As testemunhas de acusação afirmaram que não viram os fatos e que não sabiam das fugas de Ana para sair com as amigas.
+
+      As testemunhas de defesa, amigos de Felipe, disseram que o comportamento e a vestimenta da Ana eram incompatíveis com uma menina de 13 (treze) anos e que qualquer pessoa acreditaria ser uma pessoa maior de 14 (quatorze) anos, e que Felipe não estava embriagado quando conheceu Ana.
+
+      O réu, em seu interrogatório, disse que se interessou por Ana, por ser muito bonita e por estar bem vestida. Disse que não perguntou a sua idade, pois acreditou que no local somente pudessem frequentar pessoas maiores de 18 (dezoito) anos. Corroborou que praticaram o sexo oral e vaginal na mesma oportunidade, de forma espontânea e voluntária por ambos.
+
+      A prova pericial atestou que a menor não era virgem, mas não pôde afirmar que aquele ato sexual foi o primeiro da vítima, pois a perícia foi realizada longos meses após o ato sexual.
+
+      O Ministério Público pugnou pela condenação de Felipe nos termos da denúncia.
+
+      A defesa de Felipe foi intimada no dia 10 de abril de 2014 (quinta-feira).
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, no último dia do prazo, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Absolvição do réu, com base no art. 386, III ou VI, do CPP, OU Absolvição do réu por ausência de tipicidade;.
+    opcoes:
+      correta: Absolvição do réu, com base no art. 386, III ou VI, do CPP, OU Absolvição do réu por ausência de tipicidade;.
+      erradas:
+        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
+        - Absolvição, na forma do Art. 386, inciso III, do CPP.
+        - Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP.
+        - Absolvição sumária, com fundamento no Art. 397, inciso I, do CPP e no Art. 397, inciso III, do CPP.
+        - Pedido de acolhimento das alegações para reconhecer a nulidade no ato de recebimento da denúncia ou rejeição da denúncia pela ausência de justa causa.
+    revisao: *a1
+  - id: 14-peca-4-2
+    categoria: peca-detalhe
+    parte: peca
+    item: "4.2"
+    secao: pedido
+    caso: |-
+      Felipe, com 18 anos de idade, em um bar com outros amigos, conheceu Ana, linda jovem, por quem se encantou. Após um bate-papo informal e trocarem beijos, decidiram ir para um local mais reservado. Nesse local trocaram carícias, e Ana, de forma voluntária, praticou sexo oral e vaginal com Felipe.
+
+      Depois da noite juntos, ambos foram para suas residências, tendo antes trocado telefones e contatos nas redes sociais.
+
+      No dia seguinte, Felipe, ao acessar a página de Ana na rede social, descobre que, apesar da aparência adulta, esta possui apenas 13 (treze) anos de idade, tendo Felipe ficado em choque com essa constatação.
+
+      O seu medo foi corroborado com a chegada da notícia, em sua residência, da denúncia movida por parte do Ministério Público Estadual, pois o pai de Ana, ao descobrir o ocorrido, procurou a autoridade policial, narrando o fato.
+
+      Por Ana ser inimputável e contar, à época dos fatos, com 13 (treze) anos de idade, o Ministério Público Estadual denunciou Felipe pela prática de dois crimes de estupro de vulnerável, previsto no artigo 217- A, na forma do artigo 69, ambos do Código Penal. O Parquet requereu o início de cumprimento de pena no regime fechado, com base no artigo 2º, §1º, da lei 8.072/90, e o reconhecimento da agravante da embriaguez preordenada, prevista no artigo 61, II, alínea “l”, do CP.
+
+      O processo teve início e prosseguimento na XX Vara Criminal da cidade de Vitória, no Estado do Espírito Santo, local de residência do réu.
+
+      Felipe, por ser réu primário, ter bons antecedentes e residência fixa, respondeu ao processo em liberdade.
+
+      Na audiência de instrução e julgamento, a vítima afirmou que aquela foi a sua primeira noite, mas que tinha o hábito de fugir de casa com as amigas para frequentar bares de adultos.
+
+      As testemunhas de acusação afirmaram que não viram os fatos e que não sabiam das fugas de Ana para sair com as amigas.
+
+      As testemunhas de defesa, amigos de Felipe, disseram que o comportamento e a vestimenta da Ana eram incompatíveis com uma menina de 13 (treze) anos e que qualquer pessoa acreditaria ser uma pessoa maior de 14 (quatorze) anos, e que Felipe não estava embriagado quando conheceu Ana.
+
+      O réu, em seu interrogatório, disse que se interessou por Ana, por ser muito bonita e por estar bem vestida. Disse que não perguntou a sua idade, pois acreditou que no local somente pudessem frequentar pessoas maiores de 18 (dezoito) anos. Corroborou que praticaram o sexo oral e vaginal na mesma oportunidade, de forma espontânea e voluntária por ambos.
+
+      A prova pericial atestou que a menor não era virgem, mas não pôde afirmar que aquele ato sexual foi o primeiro da vítima, pois a perícia foi realizada longos meses após o ato sexual.
+
+      O Ministério Público pugnou pela condenação de Felipe nos termos da denúncia.
+
+      A defesa de Felipe foi intimada no dia 10 de abril de 2014 (quinta-feira).
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, no último dia do prazo, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: "Diante da condenação, de forma subsidiária: a) Afastamento do concurso material de crimes, ou reconhecimento de crime único.. b) Incidência da atenuante da menoridade penal relativa.. c) Afastamento da agravante da embriaguez preordenada.. d) Fixação da pena-base no mínimo legal ou diminuição da pena e) Fixação de regime semiaberto."
+    opcoes:
+      correta: "Diante da condenação, de forma subsidiária: a) Afastamento do concurso material de crimes, ou reconhecimento de crime único.. b) Incidência da atenuante da menoridade penal relativa.. c) Afastamento da agravante da embriaguez preordenada.. d) Fixação da pena-base no mínimo legal ou diminuição da pena e) Fixação de regime semiaberto."
+      erradas:
+        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
+        - afastamento da causa de aumento.
+        - Absolvição com base na atipicidade da conduta ou art. 386, inciso III, do CPP.
+        - Não provimento do recurso OU manutenção da sentença.
+        - Absolvição sumária, nos termos do Art. 397, inciso II, do CPP.
+    revisao: *a1
+  - id: 14-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      Gustavo está sendo regularmente processado, perante o Tribunal do Júri da Comarca de Niterói-RJ, pela prática do crime de homicídio simples, conexo ao delito de sequestro e cárcere privado. Os jurados consideraram-no inocente em relação ao delito de homicídio, mas culpado em relação ao delito de sequestro e cárcere privado. O juiz presidente, então, proferiu a respectiva sentença. Irresignado, o Ministério Público interpôs apelação, sustentando que a decisão dos jurados fora manifestamente contrária à prova dos autos. A defesa, de igual modo, apelou, objetivando também a absolvição em relação ao delito de sequestro e cárcere privado.
+
+      O Tribunal de Justiça, no julgamento, negou provimento aos apelos, mas determinou a anulação do processo (desde o ato viciado, inclusive) com base no Art. 564, III, i, do CPP, porque restou verificado que, para a constituição do Júri, somente estavam presentes 14 jurados.
+
+      Nesse sentido, tendo como base apenas as informações contidas no enunciado, responda justificadamente às questões a seguir.
+    comando: A nulidade apresentada pelo Tribunal é absoluta ou relativa? Dê o respectivo fundamento legal.
+    gabarito: |-
+      A questão objetiva extrair do examinando conhecimento acerca da teoria geral das nulidades no Processo Penal. Nesse sentido, para garantir os pontos relativos à questão, o examinando deve, na alternativa "A", indicar que a hipótese é de nulidade absoluta, nos termos do artigo 564, III, alínea "i" c/c 572, ambos do CPP. Em relação à alternativa "B", o examinando deve lastrear sua resposta no sentido de que não foi correta a atitude do Tribunal de Justiça. Isso porque, de acordo com o Verbete 160 da Súmula do STF, o Tribunal de Justiça não pode acolher, contra o réu, nulidade não aventada pela acusação em seu recurso.
+
+      Assim agir significaria desrespeito ao princípio da veda a reformatio in pejus indireta.
+
+      O enunciado da questão foi claro ao informar que o recurso do Ministério Público não alegou nenhuma nulidade. Destarte, levando em conta que o réu foi absolvido em relação ao delito de homicídio, o reconhecimento de nulidade implicar-lhe-á em prejuízo.
+
+      Por fim, com a finalidade de privilegiar a demonstração de conhecimento jurídico, a Banca convencionou aceitar também, no item “B”, o verbete 713 da Súmula do STF como fundamento à impossibilidade de o Tribunal acolher, contra o réu, nulidade não aventada pela acusação em seu recurso.
+    opcoes:
+      correta: 'Nulidade Absoluta, nos termos do artigo 564, III, alínea "i" c/c 572, ambos do CPP. Obs: A mera indicação de artigo não pontua.'
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    revisao: *a1
+  - id: 14-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      Gustavo está sendo regularmente processado, perante o Tribunal do Júri da Comarca de Niterói-RJ, pela prática do crime de homicídio simples, conexo ao delito de sequestro e cárcere privado. Os jurados consideraram-no inocente em relação ao delito de homicídio, mas culpado em relação ao delito de sequestro e cárcere privado. O juiz presidente, então, proferiu a respectiva sentença. Irresignado, o Ministério Público interpôs apelação, sustentando que a decisão dos jurados fora manifestamente contrária à prova dos autos. A defesa, de igual modo, apelou, objetivando também a absolvição em relação ao delito de sequestro e cárcere privado.
+
+      O Tribunal de Justiça, no julgamento, negou provimento aos apelos, mas determinou a anulação do processo (desde o ato viciado, inclusive) com base no Art. 564, III, i, do CPP, porque restou verificado que, para a constituição do Júri, somente estavam presentes 14 jurados.
+
+      Nesse sentido, tendo como base apenas as informações contidas no enunciado, responda justificadamente às questões a seguir.
+    comando: A decisão do Tribunal de Justiça está correta?
+    gabarito: |-
+      A questão objetiva extrair do examinando conhecimento acerca da teoria geral das nulidades no Processo Penal. Nesse sentido, para garantir os pontos relativos à questão, o examinando deve, na alternativa "A", indicar que a hipótese é de nulidade absoluta, nos termos do artigo 564, III, alínea "i" c/c 572, ambos do CPP. Em relação à alternativa "B", o examinando deve lastrear sua resposta no sentido de que não foi correta a atitude do Tribunal de Justiça. Isso porque, de acordo com o Verbete 160 da Súmula do STF, o Tribunal de Justiça não pode acolher, contra o réu, nulidade não aventada pela acusação em seu recurso.
+
+      Assim agir significaria desrespeito ao princípio da veda a reformatio in pejus indireta.
+
+      O enunciado da questão foi claro ao informar que o recurso do Ministério Público não alegou nenhuma nulidade. Destarte, levando em conta que o réu foi absolvido em relação ao delito de homicídio, o reconhecimento de nulidade implicar-lhe-á em prejuízo.
+
+      Por fim, com a finalidade de privilegiar a demonstração de conhecimento jurídico, a Banca convencionou aceitar também, no item “B”, o verbete 713 da Súmula do STF como fundamento à impossibilidade de o Tribunal acolher, contra o réu, nulidade não aventada pela acusação em seu recurso.
+    opcoes:
+      correta: "Não foi correta a decisão do Tribunal de Justiça, pois o Tribunal não pode acolher, contra o réu, nulidade não arguida pela acusação em seu recurso. OU Não foi correta a decisão, nos termos do Verbete 160 ou 713 da Súmula do STF. OU Não foi correta a decisão, com base no princípio que veda a reformatio in pejus indireta. Obs.: A justificativa é essencial para a atribuição de pontos."
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "A hipótese é de resultado diverso do pretendido (art. 74 do CP), devendo responder por dano em concurso formal com o crime de homicídio culposo. OBS.: a mera indicação de dispositivo legal ou transcrição de seu conteúdo não será pontuada."
+        - O requerimento a ser formulado é de relaxamento da prisão, tendo em vista que não está presente nenhuma das situações de flagrante elencadas no Art. 302 do CPP.
+        - O argumento seria o de que deveria ter sido reconhecida a atenuante da reparação do dano, tendo em vista que o denunciado devolveu o valor obtido indevidamente, nos termos do Art. 65, inciso III, alínea b, do CP.
+    revisao: *a1
+  - id: 14-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Mário foi condenado a 24 (vinte e quatro) anos de reclusão no regime inicialmente fechado, com trânsito em julgado no dia 20/04/2005, pela prática de latrocínio (artigo 157, § 3º, parte final, do Código Penal).
+
+      Iniciou a execução da pena no dia seguinte. No dia 22/04/2009, seu advogado, devidamente constituído nos autos da execução penal, ingressou com pedido de progressão de regime, com fulcro no artigo 112 da Lei de Execuções Penais. O juiz indeferiu o pedido com base no artigo 2º, § 2º, da Lei 8.072/90, argumentando que o condenado não preencheu o requisito objetivo para a progressão de regime.
+
+      Como advogado de Mário, responda, de forma fundamentada e de acordo com o entendimento sumulado dos Tribunais Superiores, aos itens a seguir:
+    comando: Excetuando-se a possibilidade de Habeas Corpus, qual recurso deve ser interposto pelo advogado de Mário e qual o respectivo fundamento legal?
+    gabarito: |-
+      A questão objetiva extrair do examinando conhecimento acerca da lei penal no tempo (regramento legal e entendimento jurisprudencial), bem como da execução penal.
+
+      Nesse sentido, relativamente à alternativa “A”, o examinando deve indicar que o recurso a ser interposto é o agravo, previsto no artigo 197 da LEP.
+
+      Tendo em conta a própria natureza do Exame de Ordem, a mera indicação do dispositivo legal não será pontuada. No que tange ao item “B”, por sua vez, a resposta deve ser lastreada no sentido de que, de acordo com os verbetes 26 da súmula vinculante do STF e 471 da súmula do STJ, Mário, por ter cometido o crime hediondo antes da Lei 11.464/2007, não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90, por se tratar de novatio legis in pejus, devendo ocorrer sua progressão de regime com base no artigo 112 da Lei de Execuções Penais, observando o quantum de 1/6 de cumprimento de pena.
+
+      Cabe destacar que tal entendimento surgiu do combate ao artigo 2º, § 2º, da Lei 8.072/90, que previa o cumprimento de pena no regime integralmente fechado para os crimes hediondos ou equiparados. Após longo debate nos Tribunais Superiores, reconheceu-se a inconstitucionalidade da previsão legal, por violação ao princípio da individualização da pena, culminando na progressão de regime com o quorum até então existente, qual seja, 1/6 com base no artigo 112 da LEP.
+
+      O legislador pátrio, após o panorama jurisprudencial construído, alterou a redação do artigo 2º, § 2º, da Lei 8.072/90, autorizando a progressão de regime de forma mais gravosa para aqueles que cometeram crimes hediondos, por meio do cumprimento de 2/5 para os réus primários e 3/5 para os reincidentes.
+
+      No entanto, a nova redação conferida ao artigo 2º, § 2º, da Lei 8.072/90, por meio da Lei 11.464/2007, externa-se de forma prejudicial àqueles que cometeram crimes hediondos em data anterior a sua publicação, tendo em vista que os Tribunais Superiores autorizavam a sua progressão com o cumprimento de 1/6 da pena.
+
+      Diante dessa construção jurisprudencial, os Tribunais Superiores pacificaram o entendimento por meio dos verbetes 26 da súmula vinculante do STF e 471 da súmula do STJ.
+    opcoes:
+      correta: "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Agravo em execução, na forma do Art. 197 da LEP.
+        - "Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior. OBS.1: A justificativa correta é essencial para atribuição de pontos, pois não há intervalo de pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - Liberdade provisória, nos termos do Art. 310, parágrafo único, do CPP, já que o juiz pode verificar, com base nas informações do auto de prisão em flagrante, que Pablo agiu amparado em causa excludente da ilicitude.
+        - O argumento é o de que o crime praticado por Carla foi de falsidade ideológica, com inserção de conteúdo falseado, e não falsificação de documento particular, tendo em vista que inseriu informação falsa em documento verdadeiro quanto à sua forma, nos termos do Art. 299 do CP.
+    revisao: *a1
+  - id: 14-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Mário foi condenado a 24 (vinte e quatro) anos de reclusão no regime inicialmente fechado, com trânsito em julgado no dia 20/04/2005, pela prática de latrocínio (artigo 157, § 3º, parte final, do Código Penal).
+
+      Iniciou a execução da pena no dia seguinte. No dia 22/04/2009, seu advogado, devidamente constituído nos autos da execução penal, ingressou com pedido de progressão de regime, com fulcro no artigo 112 da Lei de Execuções Penais. O juiz indeferiu o pedido com base no artigo 2º, § 2º, da Lei 8.072/90, argumentando que o condenado não preencheu o requisito objetivo para a progressão de regime.
+
+      Como advogado de Mário, responda, de forma fundamentada e de acordo com o entendimento sumulado dos Tribunais Superiores, aos itens a seguir:
+    comando: Qual a principal tese defensiva?
+    gabarito: |-
+      A questão objetiva extrair do examinando conhecimento acerca da lei penal no tempo (regramento legal e entendimento jurisprudencial), bem como da execução penal.
+
+      Nesse sentido, relativamente à alternativa “A”, o examinando deve indicar que o recurso a ser interposto é o agravo, previsto no artigo 197 da LEP.
+
+      Tendo em conta a própria natureza do Exame de Ordem, a mera indicação do dispositivo legal não será pontuada. No que tange ao item “B”, por sua vez, a resposta deve ser lastreada no sentido de que, de acordo com os verbetes 26 da súmula vinculante do STF e 471 da súmula do STJ, Mário, por ter cometido o crime hediondo antes da Lei 11.464/2007, não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90, por se tratar de novatio legis in pejus, devendo ocorrer sua progressão de regime com base no artigo 112 da Lei de Execuções Penais, observando o quantum de 1/6 de cumprimento de pena.
+
+      Cabe destacar que tal entendimento surgiu do combate ao artigo 2º, § 2º, da Lei 8.072/90, que previa o cumprimento de pena no regime integralmente fechado para os crimes hediondos ou equiparados. Após longo debate nos Tribunais Superiores, reconheceu-se a inconstitucionalidade da previsão legal, por violação ao princípio da individualização da pena, culminando na progressão de regime com o quorum até então existente, qual seja, 1/6 com base no artigo 112 da LEP.
+
+      O legislador pátrio, após o panorama jurisprudencial construído, alterou a redação do artigo 2º, § 2º, da Lei 8.072/90, autorizando a progressão de regime de forma mais gravosa para aqueles que cometeram crimes hediondos, por meio do cumprimento de 2/5 para os réus primários e 3/5 para os reincidentes.
+
+      No entanto, a nova redação conferida ao artigo 2º, § 2º, da Lei 8.072/90, por meio da Lei 11.464/2007, externa-se de forma prejudicial àqueles que cometeram crimes hediondos em data anterior a sua publicação, tendo em vista que os Tribunais Superiores autorizavam a sua progressão com o cumprimento de 1/6 da pena.
+
+      Diante dessa construção jurisprudencial, os Tribunais Superiores pacificaram o entendimento por meio dos verbetes 26 da súmula vinculante do STF e 471 da súmula do STJ.
+    opcoes:
+      correta: "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Não, pois o emprego de arma é uma circunstância objetiva elementar do delito, razão pela qual há comunicabilidade, nos termos do Art. 30, do CP.
+        - "Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior. OBS.1: A justificativa correta é essencial para atribuição de pontos, pois não há intervalo de pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
+        - Não foi válida a citação de Carla, já que ela não estava em local incerto e não sabido ou que não estava se ocultando para não ser citada, já que Carla possuía endereço fixo e conhecido, conforme Art. 361 ou 362 ambos do CPP
+    revisao: *a1
+  - id: 14-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: |-
+      Daniel, Ana Paula, Leonardo e Mariana, participantes da quadrilha “X”, e Carolina, Roberta, Cristiano, Juliana, Flavia e Ralph, participantes da quadrilha “Y”, fazem parte de grupos criminosos especializados em assaltar agências bancárias. Após intensos estudos sobre divisão de tarefas, locais, armas, bancos etc., ambos os grupos, sem ciência um do outro, planejaram viajar até a pacata cidade de Arroizinho com o intuito de ali realizarem o roubo. Cumpre ressaltar que, na cidade de Arroizinho, havia apenas duas únicas agências bancárias, a saber: uma agência do Banco do Brasil, sociedade de economia mista, e outra da Caixa Econômica Federal, empresa pública federal. No dia marcado, os integrantes da quadrilha "X"
+
+      praticaram o crime objetivado contra o Banco do Brasil; os integrantes da quadrilha "Y" o fizeram contra a Caixa Econômica Federal. Cada grupo, com sua conduta, conseguiu auferir a vultosa quantia de R$ 1.000.000,00 (um milhão de reais).
+
+      Nesse caso, atento tão somente aos dados contidos no enunciado, responda fundamentadamente de acordo com a Constituição:
+    comando: Qual a justiça competente para o processo e julgamento do crime cometido pela quadrilha "Y"?
+    gabarito: |-
+      A Constituição da República, em seu artigo 109, IV, estabelece que compete à Justiça Federal o julgamento das as infrações penais praticadas em detrimento de bens, serviços ou interesse da União ou de suas entidades autárquicas ou empresas públicas. Trata-se de competência determinada ratione personae.
+
+      Assim, para se estabelecer a competência de julgamento dos crimes mencionados no enunciado, o examinando deverá, em primeiro lugar, levar em consideração a natureza jurídica da pessoa lesada.
+
+      Destarte, no caso do item "A", a competência para julgamento do crime em que foi lesada a CEF é da Justiça Federal, nos termos do art. 109, IV da CRFB/88.
+
+      Relativamente ao item "B", levando-se em conta que o lesado foi o Banco do Brasil, a competência para o julgamento do crime praticado é da Justiça Estadual, pois, como visto anteriormente, referida instituição está fora do alcance da regra insculpida no artigo 109, IV da CF, sendo certo que a competência da Justiça Estadual é residual. Além disso, há o verbete 42 da Súmula do STJ sobre o tema: Compete à Justiça Comum Estadual processar e julgar as causas cíveis em que é parte sociedade de economia mista e os crimes praticados em seu detrimento."
+    opcoes:
+      correta: "Justiça Federal, conforme disposto no Art. 109, IV da CRFB/88. Obs.: a mera indicação de artigo ou súmula não pontua."
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior. OBS.1: A justificativa correta é essencial para atribuição de pontos, pois não há intervalo de pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
+        - Não foi válida a citação de Carla, já que ela não estava em local incerto e não sabido ou que não estava se ocultando para não ser citada, já que Carla possuía endereço fixo e conhecido, conforme Art. 361 ou 362 ambos do CPP
+    revisao: *a1
+  - id: 14-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      Daniel, Ana Paula, Leonardo e Mariana, participantes da quadrilha “X”, e Carolina, Roberta, Cristiano, Juliana, Flavia e Ralph, participantes da quadrilha “Y”, fazem parte de grupos criminosos especializados em assaltar agências bancárias. Após intensos estudos sobre divisão de tarefas, locais, armas, bancos etc., ambos os grupos, sem ciência um do outro, planejaram viajar até a pacata cidade de Arroizinho com o intuito de ali realizarem o roubo. Cumpre ressaltar que, na cidade de Arroizinho, havia apenas duas únicas agências bancárias, a saber: uma agência do Banco do Brasil, sociedade de economia mista, e outra da Caixa Econômica Federal, empresa pública federal. No dia marcado, os integrantes da quadrilha "X"
+
+      praticaram o crime objetivado contra o Banco do Brasil; os integrantes da quadrilha "Y" o fizeram contra a Caixa Econômica Federal. Cada grupo, com sua conduta, conseguiu auferir a vultosa quantia de R$ 1.000.000,00 (um milhão de reais).
+
+      Nesse caso, atento tão somente aos dados contidos no enunciado, responda fundamentadamente de acordo com a Constituição:
+    comando: Qual a justiça competente para o processo e julgamento do crime cometido pela quadrilha "X"?
+    gabarito: |-
+      A Constituição da República, em seu artigo 109, IV, estabelece que compete à Justiça Federal o julgamento das as infrações penais praticadas em detrimento de bens, serviços ou interesse da União ou de suas entidades autárquicas ou empresas públicas. Trata-se de competência determinada ratione personae.
+
+      Assim, para se estabelecer a competência de julgamento dos crimes mencionados no enunciado, o examinando deverá, em primeiro lugar, levar em consideração a natureza jurídica da pessoa lesada.
+
+      Destarte, no caso do item "A", a competência para julgamento do crime em que foi lesada a CEF é da Justiça Federal, nos termos do art. 109, IV da CRFB/88.
+
+      Relativamente ao item "B", levando-se em conta que o lesado foi o Banco do Brasil, a competência para o julgamento do crime praticado é da Justiça Estadual, pois, como visto anteriormente, referida instituição está fora do alcance da regra insculpida no artigo 109, IV da CF, sendo certo que a competência da Justiça Estadual é residual. Além disso, há o verbete 42 da Súmula do STJ sobre o tema: Compete à Justiça Comum Estadual processar e julgar as causas cíveis em que é parte sociedade de economia mista e os crimes praticados em seu detrimento."
+    opcoes:
+      correta: "Justiça Estadual, pois o BB está fora do alcance da regra insculpida no artigo 109, IV da CF, sendo certo que a competência da Justiça Estadual é residual OU Justiça Estadual, nos termos do verbete 42 da Súmula do STJ. Obs.: a mera indicação de artigo ou súmula não pontua."
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "A hipótese é de resultado diverso do pretendido (art. 74 do CP), devendo responder por dano em concurso formal com o crime de homicídio culposo. OBS.: a mera indicação de dispositivo legal ou transcrição de seu conteúdo não será pontuada."
+        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
+        - O argumento é de que a prova é ilícita, tendo em vista que não poderia ter havido transcrição da conversa travada entre Flávio e seu advogado, que tem direito ao sigilo ou inviolabilidade das comunicações, não sendo o advogado coautor de crimes e nem figurando como investigado, nos termos do Art. 7º, inciso II ou III, da Lei nº 8.906/94 ou Art. 157 caput do CPP ou Art. 5º, inciso LVI da CRFB/88.
+    revisao: *a1
+  - id: 14-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Cristiano foi denunciado pela prática do delito tipificado no Art. 171, do Código Penal. No curso da instrução criminal, o magistrado que presidia o feito decretou a prisão preventiva do réu, com o intuito de garantir a ordem pública, “já que o crime causou grave comoção social, além de tratar-se de um crime grave, que coloca em risco a integridade social, configurando conduta inadequada ao meio social.”
+
+      O advogado de Cristiano, inconformado com a fundamentação da medida constritiva de liberdade, impetrou Habeas Corpus perante o Tribunal de Justiça, no intuito de relaxar tal prisão, já que a considerava ilegal, tendo em vista que toda decisão judicial deve estar amparada em uma fundamentação idônea.
+
+      O Tribunal de Justiça, por unanimidade, não concedeu a ordem, entendendo que a decisão que decretou a prisão preventiva estava corretamente fundamentada.
+
+      De acordo com a jurisprudência atualizada dos Tribunais Superiores, responda aos itens a seguir.
+    comando: Qual o recurso que o advogado de Cristiano deve manejar visando à reforma do acórdão?
+    gabarito: De acordo com a jurisprudência atualizada, tanto do STJ como do STF, bem como com o mandamento descrito no Art. 105, II, “a”, da Constituição Federal, em Habeas Corpus caberá Recurso Ordinário. O Art. 30, da Lei nº 8.038/90, determina ser de 05 (cinco) dias o prazo para interposição de recurso ordinário contra decisão denegatória de Habeas Corpus proferida pelos Tribunais dos Estados. No caso narrado no enunciado, o recurso deve ser dirigido ao Superior Tribunal de Justiça, conforme informa o Art. 105, II, “a”, da Constituição Federal, já que se trata de decisão proferida pelo Tribunal de Justiça.
+    opcoes:
+      correta: Recurso Ordinário.
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "A hipótese é de resultado diverso do pretendido (art. 74 do CP), devendo responder por dano em concurso formal com o crime de homicídio culposo. OBS.: a mera indicação de dispositivo legal ou transcrição de seu conteúdo não será pontuada."
+        - O requerimento a ser formulado é de relaxamento da prisão, tendo em vista que não está presente nenhuma das situações de flagrante elencadas no Art. 302 do CPP.
+        - O argumento é o de que o reconhecimento realizado não foi válido, pois não foram observadas as formalidades legais, nos termos do Art. 226 do CPP.
+    revisao: *a1
+  - id: 14-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Cristiano foi denunciado pela prática do delito tipificado no Art. 171, do Código Penal. No curso da instrução criminal, o magistrado que presidia o feito decretou a prisão preventiva do réu, com o intuito de garantir a ordem pública, “já que o crime causou grave comoção social, além de tratar-se de um crime grave, que coloca em risco a integridade social, configurando conduta inadequada ao meio social.”
+
+      O advogado de Cristiano, inconformado com a fundamentação da medida constritiva de liberdade, impetrou Habeas Corpus perante o Tribunal de Justiça, no intuito de relaxar tal prisão, já que a considerava ilegal, tendo em vista que toda decisão judicial deve estar amparada em uma fundamentação idônea.
+
+      O Tribunal de Justiça, por unanimidade, não concedeu a ordem, entendendo que a decisão que decretou a prisão preventiva estava corretamente fundamentada.
+
+      De acordo com a jurisprudência atualizada dos Tribunais Superiores, responda aos itens a seguir.
+    comando: Qual o prazo e para qual Tribunal deverá ser dirigido?
+    gabarito: De acordo com a jurisprudência atualizada, tanto do STJ como do STF, bem como com o mandamento descrito no Art. 105, II, “a”, da Constituição Federal, em Habeas Corpus caberá Recurso Ordinário. O Art. 30, da Lei nº 8.038/90, determina ser de 05 (cinco) dias o prazo para interposição de recurso ordinário contra decisão denegatória de Habeas Corpus proferida pelos Tribunais dos Estados. No caso narrado no enunciado, o recurso deve ser dirigido ao Superior Tribunal de Justiça, conforme informa o Art. 105, II, “a”, da Constituição Federal, já que se trata de decisão proferida pelo Tribunal de Justiça.
+    opcoes:
+      correta: O recurso deve ser dirigido ao Superior Tribunal de Justiça, no prazo de 05 (cinco) dias
+      erradas:
+        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
+        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
+        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
+        - O argumento é que houve concurso formal de crimes, tendo em vista que, com uma só ação, foram praticados dois delitos, nos termos do Art. 70 do CP.
+        - O argumento seria o de que deveria ter sido reconhecida a atenuante da reparação do dano, tendo em vista que o denunciado devolveu o valor obtido indevidamente, nos termos do Art. 65, inciso III, alínea b, do CP.
+    revisao: *a1

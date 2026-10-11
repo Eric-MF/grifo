@@ -1,0 +1,520 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "34"
+perguntas:
+  - id: 34-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento: Juízo do Tribunal do Júri da Comarca de São Paulo/SP"
+    opcoes:
+      correta: "Endereçamento: Juízo do Tribunal do Júri da Comarca de São Paulo/SP"
+      erradas:
+        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
+        - "Endereçamento da petição de interposição: Juiz da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’."
+        - "Endereçamento: Tribunal de Justiça do Rio de Janeiro"
+        - Vara Criminal da Comarca de Campos/RJ.
+        - "Endereçamento: Juízo Federal da Vara Federal Criminal de Alfa."
+    revisao: &a1
+      status: rascunho
+  - id: 34-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: pedido
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Requerimento do juízo de retratação ou exercício do efeito regressivo, nos termos do Art. 589 do CPP
+    opcoes:
+      correta: Requerimento do juízo de retratação ou exercício do efeito regressivo, nos termos do Art. 589 do CPP
+      erradas:
+        - "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
+        - Absolvição por falta de provas OU por não haver prova da existência do fato.
+        - "Pedidos: Absolvição, na forma do Art. 386, inciso VI, do CPP"
+        - Não provimento do recurso OU manutenção da sentença.
+        - Pedido de retratação, na forma do Art. 589 do CPP.
+    revisao: *a1
+  - id: 34-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: enderecamento
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: A quem devem ser endereçadas as razões?
+    gabarito: "Endereçamento: Tribunal de Justiça do Estado de São Paulo"
+    opcoes:
+      correta: "Endereçamento: Tribunal de Justiça do Estado de São Paulo"
+      erradas:
+        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
+        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
+        - "Endereçamento: Vara Criminal da Comarca do Rio de Janeiro"
+        - "Endereçamento: Vara Criminal da Comarca de Porto Alegre/RS."
+        - A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
+    revisao: *a1
+  - id: 34-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: preliminar
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: Preliminarmente, nulidade da pronúncia ou nulidade da instrução, por violação ao princípio da ampla defesa e contraditório ou devido processo legal, nos termos do Art. 5º, inciso LIV ou LV, da CRFB/88 ou do Art. 564, inciso IV, do CPP
+    opcoes:
+      correta: Preliminarmente, nulidade da pronúncia ou nulidade da instrução, por violação ao princípio da ampla defesa e contraditório ou devido processo legal, nos termos do Art. 5º, inciso LIV ou LV, da CRFB/88 ou do Art. 564, inciso IV, do CPP
+      erradas:
+        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
+        - "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
+        - Extinção da punibilidade pela decadência do direito de representação.
+        - Preliminarmente, deve ser requerido o reconhecimento da nulidade do ato de citação, nos termos do art. 564, inciso III, “e”, do CPP
+        - Preliminarmente, nulidade na oitiva das vítimas, tendo em vista que o mero decurso de tempo não é fundamento idôneo para produção antecipada de provas, nos termos do Art. 225 do CPP, ou Art. 564, inciso IV, do CPP, ou Súmula 455 do STJ.
+    revisao: *a1
+  - id: 34-peca-5-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "5.1"
+    secao: merito
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
+    opcoes:
+      correta: Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
+      erradas:
+        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
+        - Da tese da incidência da atenuante da menoridade penal relativa
+        - Substituição da pena privativa de liberdade por restritiva de direitos,pois preenchidos os requisitos do Art. 44 do CP.
+        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
+        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
+    revisao: *a1
+  - id: 34-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: No mérito, pedido de absolvição sumária, diante da manifesta causa de isenção de pena ou excludente de culpabilidade, nos termos do Art. 415, inciso IV, do CPP
+    opcoes:
+      correta: No mérito, pedido de absolvição sumária, diante da manifesta causa de isenção de pena ou excludente de culpabilidade, nos termos do Art. 415, inciso IV, do CPP
+      erradas:
+        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
+        - Da tese do afastamento da agravante da embriaguez preordenada.
+        - Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
+        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
+        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
+    revisao: *a1
+  - id: 34-peca-6-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "6.1"
+    secao: merito
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+    opcoes:
+      correta: A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
+      erradas:
+        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
+        - Da tese da incidência da atenuante da menoridade penal relativa
+        - Substituição da pena privativa de liberdade por restritiva de direitos,pois preenchidos os requisitos do Art. 44 do CP.
+        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
+        - Reconhecimento da atenuante da confissão espontânea, na forma do Art. 65, inciso III, alínea d, do CP.
+    revisao: *a1
+  - id: 34-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Subsidiariamente, desclassificação para crime não doloso contra a vida, nos termos do Art. 419 do CPP, pois Rodrigo pretendia desferir um soco na barriga da vítima e um empurrão, tendo apenas intenção de causar lesão, mas não o resultado morte ou houve dolo na lesão e culpa em relação ao resultado morte
+    opcoes:
+      correta: Subsidiariamente, desclassificação para crime não doloso contra a vida, nos termos do Art. 419 do CPP, pois Rodrigo pretendia desferir um soco na barriga da vítima e um empurrão, tendo apenas intenção de causar lesão, mas não o resultado morte ou houve dolo na lesão e culpa em relação ao resultado morte
+      erradas:
+        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
+        - Da tese da incidência da atenuante da menoridade penal relativa
+        - Substituição da pena privativa de liberdade por restritiva de direitos,pois preenchidos os requisitos do Art. 44 do CP.
+        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
+        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
+    revisao: *a1
+  - id: 34-peca-7-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "7.1"
+    secao: merito
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Deveria Rodrigo responder, caso reconhecida a imputabilidade, pelo crime de lesão corporal seguida da morte, previsto no Art. 129, §3º, do CP
+    opcoes:
+      correta: Deveria Rodrigo responder, caso reconhecida a imputabilidade, pelo crime de lesão corporal seguida da morte, previsto no Art. 129, §3º, do CP
+      erradas:
+        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
+        - Da tese da incidência da atenuante da menoridade penal relativa
+        - Substituição da pena privativa de liberdade por restritiva de direitos,pois preenchidos os requisitos do Art. 44 do CP.
+        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
+        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
+    revisao: *a1
+  - id: 34-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: merito
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
+    opcoes:
+      correta: Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
+      erradas:
+        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
+        - Da tese da incidência da atenuante da menoridade penal relativa
+        - Substituição da pena privativa de liberdade por restritiva de direitos,pois preenchidos os requisitos do Art. 44 do CP.
+        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
+        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
+    revisao: *a1
+  - id: 34-peca-9
+    categoria: peca-detalhe
+    parte: peca
+    item: "9"
+    secao: pedido
+    caso: |-
+      Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
+
+      Diante da inicial acusatória, Rodrigo procurou seu (sua) advogado (a), narrando que, no dia dos fatos, câmeras de segurança registraram o momento em que uma pessoa desconhecida, de maneira furtiva, teria colocado substâncias entorpecentes em sua bebida, o que teria causado uma embriaguez completa. Rodrigo teria ficado descontrolado e, em razão disso, sem motivação, teria desferido um soco na barriga de João, empurrando-o em seguida apenas para que, dele, se afastasse, nem mesmo percebendo que a vítima estaria com uma garrafa de cerveja nas mãos. Destacou sequer saber por que quis lesionar João, mas assegurou que o resultado morte não foi pretendido e nem aceito pelo mesmo, que precisou, inclusive, ser submetido a tratamento psicológico em razão dos fatos. Apresentou laudo do hospital, elaborado logo após o ocorrido, constatando que estaria completamente embriagado em razão da ingestão daquela substância entorpecente que teria sido colocada em sua bebida, bem como que, naquele momento, era inteiramente incapaz de entender o caráter ilícito dos fatos.
+
+      Após recebimento da denúncia, citação e apresentação de defesa, foi designada audiência de instrução e julgamento, na primeira fase do procedimento do Tribunal do Júri, para oitiva das testemunhas de acusação e defesa, além do interrogatório do réu. Os policiais responsáveis pelas investigações e pela oitiva dos envolvidos, arrolados como testemunhas pelo Ministério Público, informaram ao magistrado que se atrasariam para o ato judicial, pois estavam em importante diligência. Não querendo fracionar a colheita da prova, o magistrado determinou a oitiva das testemunhas de defesa antes das de acusação, apesar do registro do inconformismo da defesa. Ao final, o réu foi interrogado. As provas colhidas indicaram que a versão apresentada por Rodrigo ao seu advogado era totalmente verdadeira. Considerando que foi constatado o desferimento do soco e do empurrão por parte de Rodrigo em João, após manifestação das partes, o juiz pronunciou o acusado nos termos da denúncia.
+
+      Intimado, o Ministério Público se manteve inerte. Rodrigo e sua defesa técnica foram intimados da decisão em 05 de abril de 2021, segunda-feira.
+
+      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Rodrigo, a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e processual aplicáveis. A peça deverá ser datada do último dia do prazo para interposição, devendo ser considerado que segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
+
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Conhecimento e provimento do recurso
+    opcoes:
+      correta: Conhecimento e provimento do recurso
+      erradas:
+        - "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
+        - Reforma da sentença de absolvição sumária;
+        - "Diante da condenação, de forma subsidiária: a) Afastamento do concurso material de crimes, ou reconhecimento de crime único.. b) Incidência da atenuante da menoridade penal relativa.. c) Afastamento da agravante da embriaguez preordenada.. d) Fixação da pena-base no mínimo legal ou diminuição da pena e) Fixação de regime semiaberto."
+        - Aplicação da pena base no mínimo legal ou reconhecimento da atenuante da confissão.
+        - Absolvição, na forma do Art. 386, inciso III, do CPP.
+    revisao: *a1
+  - id: 34-q1-a
+    categoria: discursiva
+    parte: q1
+    item: A
+    caso: |-
+      Geraldo, 30 anos, constrangeu Eugênia, desconhecida que passava pela rua, mediante grave ameaça, a transferir R$ 2.000,00 (dois mil reais) para sua conta. Diante da grave ameaça, Eugênia compareceu ao estabelecimento bancário com Geraldo e fez a transferência devida, sendo liberada em seguida.
+
+      Eugênia, nervosa, compareceu à sede policial e narrou o ocorrido, sendo instaurado inquérito para identificação do autor do fato. Ocorre que Geraldo, no dia seguinte, antes de qualquer denúncia, arrependeu-se de sua conduta e transferiu de volta para a conta de Eugênia todo o valor antes obtido de maneira indevida.
+
+      Confirmada a autoria, o Ministério Público ofereceu denúncia em face de Geraldo pela prática do crime de extorsão simples consumada (Art. 158, caput, do Código Penal), sendo decretada sua prisão preventiva, em razão da gravidade do fato e da reincidência. Durante audiência de instrução e julgamento, foi ouvida a vítima, que confirmou os fatos narrados na denúncia. O réu permaneceu em sala de audiência, e o reconhecimento foi realizado ao final da oitiva da vítima, ainda no local, sob o argumento de que, como havia muitos presos no Fórum, não haveria policiais suficientes para transporte de presos até a sala de reconhecimento. Assim, Eugênia apenas apontou para o denunciado e disse que ele seria o autor. As demais testemunhas esclareceram que não presenciaram o ocorrido.
+
+      Com base no reconhecimento realizado, foi o réu condenado nos termos da denúncia, sendo aplicada pena base de 04 anos; pena intermediária de 04 anos e 03 meses em razão da reincidência, não sendo reconhecidas atenuantes ou outras agravantes; na terceira fase, não foram reconhecidas causas de aumento ou de diminuição de pena. O regime inicial aplicado foi o fechado.
+
+      Intimado da sentença, esclareça, na condição de advogado de Geraldo em atuação em recurso de apelação, os itens a seguir.
+    comando: Qual argumento de direito processual poderá ser apresentado para questionar a produção probatória em audiência? Justifique.
+    gabarito: O argumento de direito processual é o de que a produção de provas não foi integralmente válida, tendo em vista que o reconhecimento do réu não foi realizado observando as formalidades legais. De acordo com o Art. 226 do CPP, o reconhecimento, em sendo possível, deverá ser realizado na presença de outras pessoas com características semelhantes àquelas da pessoa a ser reconhecida. No caso, o reconhecimento foi na própria sala de audiência, apenas com o réu presente na condição de preso, então claramente foi viciado. Dessa forma, aquela prova não poderia ser considerada na sentença condenatória. Havia outros presos disponíveis para serem colocados ao lado do denunciado em sala especial para reconhecimento, não sendo o argumento de economia suficiente para afastar as exigências legais.
+    opcoes:
+      correta: O argumento é o de que o reconhecimento realizado não foi válido, pois não foram observadas as formalidades legais, nos termos do Art. 226 do CPP.
+      erradas:
+        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
+        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
+        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
+    revisao: *a1
+  - id: 34-q1-b
+    categoria: discursiva
+    parte: q1
+    item: B
+    caso: |-
+      Geraldo, 30 anos, constrangeu Eugênia, desconhecida que passava pela rua, mediante grave ameaça, a transferir R$ 2.000,00 (dois mil reais) para sua conta. Diante da grave ameaça, Eugênia compareceu ao estabelecimento bancário com Geraldo e fez a transferência devida, sendo liberada em seguida.
+
+      Eugênia, nervosa, compareceu à sede policial e narrou o ocorrido, sendo instaurado inquérito para identificação do autor do fato. Ocorre que Geraldo, no dia seguinte, antes de qualquer denúncia, arrependeu-se de sua conduta e transferiu de volta para a conta de Eugênia todo o valor antes obtido de maneira indevida.
+
+      Confirmada a autoria, o Ministério Público ofereceu denúncia em face de Geraldo pela prática do crime de extorsão simples consumada (Art. 158, caput, do Código Penal), sendo decretada sua prisão preventiva, em razão da gravidade do fato e da reincidência. Durante audiência de instrução e julgamento, foi ouvida a vítima, que confirmou os fatos narrados na denúncia. O réu permaneceu em sala de audiência, e o reconhecimento foi realizado ao final da oitiva da vítima, ainda no local, sob o argumento de que, como havia muitos presos no Fórum, não haveria policiais suficientes para transporte de presos até a sala de reconhecimento. Assim, Eugênia apenas apontou para o denunciado e disse que ele seria o autor. As demais testemunhas esclareceram que não presenciaram o ocorrido.
+
+      Com base no reconhecimento realizado, foi o réu condenado nos termos da denúncia, sendo aplicada pena base de 04 anos; pena intermediária de 04 anos e 03 meses em razão da reincidência, não sendo reconhecidas atenuantes ou outras agravantes; na terceira fase, não foram reconhecidas causas de aumento ou de diminuição de pena. O regime inicial aplicado foi o fechado.
+
+      Intimado da sentença, esclareça, na condição de advogado de Geraldo em atuação em recurso de apelação, os itens a seguir.
+    comando: Qual argumento de direito material poderá ser apresentado, caso mantida a condenação, em busca da redução da pena aplicada? Justifique.
+    gabarito: O argumento é o de que deveria ter sido reconhecida a atenuante da reparação do dano, prevista no Art. 65, inciso III, alínea b, do CP. De acordo com o enunciado, antes mesmo do oferecimento da denúncia, logo após a prática delitiva, o autor do fato procurou minorar as consequências de seu ato e reparou o dano, de modo que aplicável a atenuante antes mencionada. Não haveria de se falar em tentativa a justificar o reconhecimento de causa de diminuição de pena, já que o crime se consumou por ocasião do constrangimento. Ademais, mesmo a reparação tendo ocorrido antes do oferecimento da denúncia, não caberia aplicação da causa de diminuição de pena do arrependimento posterior, prevista no Art. 16 do Código Penal, pois o crime foi praticado com grave ameaça à pessoa.
+    opcoes:
+      correta: O argumento seria o de que deveria ter sido reconhecida a atenuante da reparação do dano, tendo em vista que o denunciado devolveu o valor obtido indevidamente, nos termos do Art. 65, inciso III, alínea b, do CP.
+      erradas:
+        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
+        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
+        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
+    revisao: *a1
+  - id: 34-q2-a
+    categoria: discursiva
+    parte: q2
+    item: A
+    caso: |-
+      Flávio figurava como indiciado em procedimento em que se investigava a prática do crime de concussão. Após não mais ter disponíveis outros meios de investigação, o Ministério Público formulou requerimento de interceptação das conversas telefônicas de Flávio, sendo o pedido deferido pela autoridade judicial pelo prazo de 10 dias.
+
+      No período interceptado, todas as conversas de Flávio foram transcritas. Em uma das conversas interceptadas, Flávio mantinha contato com seu advogado João e confessava a autoria do crime de concussão, solicitando orientação jurídica, sendo possível perceber que João não teria qualquer conhecimento anterior sobre aquela prática delitiva. A partir do teor das transcrições das conversas de Flávio, o Ministério Público ofereceu denúncia em desfavor do mesmo, imputando-lhe a prática do crime previsto no Art. 316 do Código Penal.
+
+      Ao tomar conhecimento da denúncia, Flávio contata seu advogado, que tem acesso ao procedimento, inclusive ao teor das transcrições obtidas a partir da interceptação das conversas telefônicas. Durante a instrução, após requerimento do Ministério Público, o juiz determina, sem anuência do acusado e de sua defesa técnica, que seja realizada perícia de voz em Flávio para confirmar que ele seria um dos interlocutores da conversa, intimando-o para apresentar gravação a servir de paradigma para o exame.
+
+      Considerando apenas as informações expostas, responda, na condição de advogado(a) de Flávio, aos itens a seguir.
+    comando: Qual o argumento a ser apresentado para questionar a prova obtida a partir da interceptação das comunicações telefônicas? Justifique.
+    gabarito: O argumento é de que a prova é ilícita, pois não poderia ter havido transcrição das conversas travadas entre o investigado e sua defesa técnica. O crime investigado é punido com pena de reclusão; havia indícios de autoria, tanto que Flávio figurava como indiciado; e não havia outros meios investigatórios para obtenção da prova. O prazo fixado pela autoridade judicial também está dentro do autorizado pela lei. Ocorre que, apesar de a interceptação em si ser válida, de acordo com a jurisprudência dos Tribunais Superiores, não pode haver transcrição, ou seja, a conversa travada entre o investigado e seu advogado não poderá ser utilizada como meio de prova, quando este não for alvo da investigação. Ademais, não estava o advogado praticando novo crime com seu cliente, mas tão só prestando assistência jurídica, de modo que o sigilo na relação advogado-cliente deverá ser resguardado. A garantia do sigilo das comunicações entre advogado e cliente não confere imunidade para a prática de crimes no exercício da advocacia, o que não ocorreu na hipótese. No mesmo sentido, a previsão do Art. 7º, incisos II e III, da Lei nº 8.906/94 ou Art. 157 caput do CPP ou Art. 5º, inciso LVI da CRFB/88.
+    opcoes:
+      correta: O argumento é de que a prova é ilícita, tendo em vista que não poderia ter havido transcrição da conversa travada entre Flávio e seu advogado, que tem direito ao sigilo ou inviolabilidade das comunicações, não sendo o advogado coautor de crimes e nem figurando como investigado, nos termos do Art. 7º, inciso II ou III, da Lei nº 8.906/94 ou Art. 157 caput do CPP ou Art. 5º, inciso LVI da CRFB/88.
+      erradas:
+        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
+        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
+        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
+    revisao: *a1
+  - id: 34-q2-b
+    categoria: discursiva
+    parte: q2
+    item: B
+    caso: |-
+      Flávio figurava como indiciado em procedimento em que se investigava a prática do crime de concussão. Após não mais ter disponíveis outros meios de investigação, o Ministério Público formulou requerimento de interceptação das conversas telefônicas de Flávio, sendo o pedido deferido pela autoridade judicial pelo prazo de 10 dias.
+
+      No período interceptado, todas as conversas de Flávio foram transcritas. Em uma das conversas interceptadas, Flávio mantinha contato com seu advogado João e confessava a autoria do crime de concussão, solicitando orientação jurídica, sendo possível perceber que João não teria qualquer conhecimento anterior sobre aquela prática delitiva. A partir do teor das transcrições das conversas de Flávio, o Ministério Público ofereceu denúncia em desfavor do mesmo, imputando-lhe a prática do crime previsto no Art. 316 do Código Penal.
+
+      Ao tomar conhecimento da denúncia, Flávio contata seu advogado, que tem acesso ao procedimento, inclusive ao teor das transcrições obtidas a partir da interceptação das conversas telefônicas. Durante a instrução, após requerimento do Ministério Público, o juiz determina, sem anuência do acusado e de sua defesa técnica, que seja realizada perícia de voz em Flávio para confirmar que ele seria um dos interlocutores da conversa, intimando-o para apresentar gravação a servir de paradigma para o exame.
+
+      Considerando apenas as informações expostas, responda, na condição de advogado(a) de Flávio, aos itens a seguir.
+    comando: "Existe argumento a ser apresentado para questionar a decisão do magistrado que determinou a realização da perícia de voz, com apresentação de gravação que servisse de paradigma à perícia? Justifique. (Valor:"
+    gabarito: Não poderia o magistrado ter determinado a realização de perícia de voz em Flávio, sem a sua concordância, tendo em vista que ninguém é obrigado a produzir prova contra si. O princípio do nemo tenetur se detegere tem previsão não apenas na legislação nacional, mas também em tratados internacionais, sendo direito relevante de todo aquele que figure como réu ou investigado. Sempre que a prova depender de uma participação ou contribuição positiva do réu, esta somente poderá ser determinada se houver concordância do acusado, sob pena de violação ao princípio supramencionado. Considerando que Flávio não concordou em se submeter à perícia de voz e, ainda, considerando que tal exame dependeria do fornecimento de sua voz para padrão de comparação, não poderia o magistrado ter imposto a produção da prova, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+    opcoes:
+      correta: Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
+      erradas:
+        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
+        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
+        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
+    revisao: *a1
+  - id: 34-q3-a
+    categoria: discursiva
+    parte: q3
+    item: A
+    caso: |-
+      Carla, funcionária de determinado estabelecimento comercial, inseriu, em documento particular, informação falsa acerca da data de determinado serviço que teria sido prestado pela empresa, em busca de prejudicar direito de terceiro, sendo realmente a inserção da informação de sua responsabilidade. Descobertos os fatos pelo superior hieráquico de Carla, foi apresentada notitia criminis em desfavor da funcionária, que veio a ser denunciada como incursa nas sanções penais do Art. 298 do Código Penal (falsificação de documento particular).
+
+      No momento da citação, o Oficial de Justiça compareceu ao endereço fornecido pelo Ministério Público, sendo que constatou, na primeira vez que foi ao local, que Carla lá residia, mas que estava se ocultando para não ser citada.
+
+      Diante disso, certificou tal fato e foi determinada a citação por edital pelo magistrado. Carla é informada do teor do edital por uma amiga que trabalhava no Tribunal de Justiça e procura você, como advogado(a), para prestar assistência jurídica.
+
+      Responda, na condição de advogado(a) de Carla, considerando apenas as informações expostas, aos seguintes questionamentos.
+    comando: A citação de Carla foi realizada de forma válida? Justifique.
+    gabarito: A citação de Carla não foi válida, pois a citação por edital é cabível quando o denunciado está em local incerto e não sabido, o que não é o caso, tendo em vista que o oficial de justiça confirmou que Carla residia no endereço informado pelo Ministério Público, apenas alegando que ela estava se ocultando para não ser citada. Em tese, estando se ocultando, pode ocorrer a citação com hora certa, prevista no Art. 362 do CPP, mas, para tanto, deve o Oficial de Justiça comparecer mais vezes ao local, na tentativa de citar a ré.
+    opcoes:
+      correta: Não foi válida a citação de Carla, já que ela não estava em local incerto e não sabido ou que não estava se ocultando para não ser citada, já que Carla possuía endereço fixo e conhecido, conforme Art. 361 ou 362 ambos do CPP
+      erradas:
+        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
+        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
+        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
+    revisao: *a1
+  - id: 34-q3-b
+    categoria: discursiva
+    parte: q3
+    item: B
+    caso: |-
+      Carla, funcionária de determinado estabelecimento comercial, inseriu, em documento particular, informação falsa acerca da data de determinado serviço que teria sido prestado pela empresa, em busca de prejudicar direito de terceiro, sendo realmente a inserção da informação de sua responsabilidade. Descobertos os fatos pelo superior hieráquico de Carla, foi apresentada notitia criminis em desfavor da funcionária, que veio a ser denunciada como incursa nas sanções penais do Art. 298 do Código Penal (falsificação de documento particular).
+
+      No momento da citação, o Oficial de Justiça compareceu ao endereço fornecido pelo Ministério Público, sendo que constatou, na primeira vez que foi ao local, que Carla lá residia, mas que estava se ocultando para não ser citada.
+
+      Diante disso, certificou tal fato e foi determinada a citação por edital pelo magistrado. Carla é informada do teor do edital por uma amiga que trabalhava no Tribunal de Justiça e procura você, como advogado(a), para prestar assistência jurídica.
+
+      Responda, na condição de advogado(a) de Carla, considerando apenas as informações expostas, aos seguintes questionamentos.
+    comando: Qual o argumento de direito material a ser apresentado para questionar a capitulação delitiva? Justifique.
+    gabarito: |-
+      O argumento é no sentido de que houve crime de falsidade ideológica, previsto no Art. 299 do CP, e que tem a pena mais branda do que o crime imputado. O documento é falso em relação ao seu conteúdo e não em relação à sua forma. Não houve falsificação de documento particular, com sua alteração ou elaboração por quem não deveria. Pelo contrário, Carla era responsável por preencher o documento, que, quanto à forma, era hígido.
+
+      Todavia, inseriu informação falsa em seu conteúdo para prejudicar direito de terceiro, o que tipifica a conduta de falsidade ideológica.
+    opcoes:
+      correta: O argumento é o de que o crime praticado por Carla foi de falsidade ideológica, com inserção de conteúdo falseado, e não falsificação de documento particular, tendo em vista que inseriu informação falsa em documento verdadeiro quanto à sua forma, nos termos do Art. 299 do CP.
+      erradas:
+        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
+        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
+        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
+    revisao: *a1
+  - id: 34-q4-a
+    categoria: discursiva
+    parte: q4
+    item: A
+    caso: |-
+      Renato e Abel foram denunciados pelo crime de “falsificação, corrupção, adulteração ou alteração de produto destinado a fins terapêuticos ou medicinais”, por terem exposto à venda, na farmácia em que eram sócios, diversos frascos de medicamentos fitoterápicos para tratamento urinário que estavam corrompidos. Lote de fabricação UR031FT-PLANT (Art. 273, § 1º, do CP).
+
+      A Vigilância Sanitária, ao fiscalizar aquela farmácia, apreendeu os referidos medicamentos e encontrou um aviso enviado pelo fabricante informando que os medicamentos relativos àquele lote não se achavam em condições para consumo por estarem corrompidos, devendo ser recolhidos e devolvidos.
+
+      Na instrução criminal, foram ouvidos os agentes da Vigilância Sanitária que fizeram as apreensões, os quais declararam ter recebido diversas reclamações de consumidores que compraram o medicamento relativo ao lote de fabricação UR031FT-PLANT, pois se sentiram mal. Ouvidos os farmacêuticos do fabricante, disseram que, feita a análise, constataram que o medicamento daquele lote estava corrompido e recomendaram aos comerciantes que os adquiriram que efetuassem a devolução.
+
+      Foi ouvida uma testemunha de defesa, ou seja, o gerente da farmácia que recebeu o aviso do fabricante. Ele esclareceu que não abriu a correspondência e nem deu ciência do recebimento ao farmacêutico da loja.
+
+      Interrogados, os réus negaram a autoria. Alegaram que desconheciam qualquer irregularidade no medicamento do lote de fabricação UR031FT-PLANT. Declararam que não receberam qualquer reclamação de clientes, considerando que 15 (quinze) unidades daquele lote foram comercializadas, além disso, pesquisaram e não encontraram reclamação no Procon relativa a esse fato. A corrupção do referido medicamento ficou demonstrada nos autos pelos documentos laboratoriais do fabricante.
+
+      Renato e Abel foram condenados nas penas mínimas (10 anos de reclusão, em regime fechado, 10 dias-multa ao valor mínimo legal).
+
+      O Ministério Público não recorreu. A defesa dos réus apelou.
+    comando: Em razões recursais defensivas, que eventual matéria processual poderia ser sustentada como preliminar?
+    gabarito: Como se trata de crime que deixa vestígio, seria necessária a realização de exame pericial dos medicamentos apreendidos – Art. 158 do CPP, sendo esse um ônus da acusação. Essa diligência também poderia ter sido determinada de ofício e supletivamente pelo juiz – Art. 156 e inciso II do CPP.
+    opcoes:
+      correta: Como se trata de crime que deixa vestígio, seria necessária a realização de exame pericial dos medicamentos apreendidos ou a prova do fato por perícia seria ônus da acusação, diligência que também poderia ter sido determinada de ofício e supletivamente pelo juiz, segundo o Art. 158, caput ou Art. 156, inciso II, ambos do CPP.
+      erradas:
+        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
+        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
+        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
+    revisao: *a1
+  - id: 34-q4-b
+    categoria: discursiva
+    parte: q4
+    item: B
+    caso: |-
+      Renato e Abel foram denunciados pelo crime de “falsificação, corrupção, adulteração ou alteração de produto destinado a fins terapêuticos ou medicinais”, por terem exposto à venda, na farmácia em que eram sócios, diversos frascos de medicamentos fitoterápicos para tratamento urinário que estavam corrompidos. Lote de fabricação UR031FT-PLANT (Art. 273, § 1º, do CP).
+
+      A Vigilância Sanitária, ao fiscalizar aquela farmácia, apreendeu os referidos medicamentos e encontrou um aviso enviado pelo fabricante informando que os medicamentos relativos àquele lote não se achavam em condições para consumo por estarem corrompidos, devendo ser recolhidos e devolvidos.
+
+      Na instrução criminal, foram ouvidos os agentes da Vigilância Sanitária que fizeram as apreensões, os quais declararam ter recebido diversas reclamações de consumidores que compraram o medicamento relativo ao lote de fabricação UR031FT-PLANT, pois se sentiram mal. Ouvidos os farmacêuticos do fabricante, disseram que, feita a análise, constataram que o medicamento daquele lote estava corrompido e recomendaram aos comerciantes que os adquiriram que efetuassem a devolução.
+
+      Foi ouvida uma testemunha de defesa, ou seja, o gerente da farmácia que recebeu o aviso do fabricante. Ele esclareceu que não abriu a correspondência e nem deu ciência do recebimento ao farmacêutico da loja.
+
+      Interrogados, os réus negaram a autoria. Alegaram que desconheciam qualquer irregularidade no medicamento do lote de fabricação UR031FT-PLANT. Declararam que não receberam qualquer reclamação de clientes, considerando que 15 (quinze) unidades daquele lote foram comercializadas, além disso, pesquisaram e não encontraram reclamação no Procon relativa a esse fato. A corrupção do referido medicamento ficou demonstrada nos autos pelos documentos laboratoriais do fabricante.
+
+      Renato e Abel foram condenados nas penas mínimas (10 anos de reclusão, em regime fechado, 10 dias-multa ao valor mínimo legal).
+
+      O Ministério Público não recorreu. A defesa dos réus apelou.
+    comando: Com vistas à absolvição de Renato e Abel, qual(is) tema(s) de direito material poderia(m) ser alegado(s)?
+    gabarito: |-
+      Não houve comprovação do crime por falta de prova pericial, os documentos laboratoriais do fabricante não servem para a condenação, sendo o caso de absolvição dos recorrentes. Cabendo ainda absolvição por não estar provado que os recorrentes concorreram quer culposa ou dolosamente para a prática da infração penal. Ainda podemos entender que os recorrentes incorreram em erro de tipo ocasionando o reconhecimento da atipicidade de conduta.
+
+      Existem vários dados no enunciado que reforçam as teses dentre eles: o aviso do fabricante era desconhecido dos apelantes ou de qualquer outro funcionário, posto que a correspondência não foi entregue ao farmacêutico da loja e nem sequer foi aberta.
+
+      Acresça-se ainda que nenhum consumidor que adquiriu o medicamento do lote de fabricação UR031FT-PLANT fez qualquer reclamação, tendo sido vendidas 15 (quinze) unidades. Conforme o Art. 386, inciso III, IV ou V, do CPP ou Art. 20, caput do CP.
+    opcoes:
+      correta: Não houve comprovação do crime por falta de prova pericial, sendo o caso de absolvição ou absolvição por não estar provado que os recorrentes concorreram culposa ou dolosamente para eventual infração penal ou incorreram em erro de tipo ou atipicidade de conduta. Conforme o Art. 386, inciso III, IV ou V, do CPP ou Art. 20, caput do CP.
+      erradas:
+        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
+        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
+        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
+        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
+        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
+    revisao: *a1

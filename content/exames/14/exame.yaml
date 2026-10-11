@@ -291,3 +291,8 @@ questoes:
         componentes:
           - { id: c1, valor: 0.4, termos: [ superior tribunal de justica | stj ] }
           - { id: c2, valor: 0.2, termos: [ 5 dias ] }
+
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q2, lei: "Lei 13.964/2019", texto: "O § 2º do art. 2º da Lei 8.072/1990, que tratava da apelação em liberdade, foi revogado pela Lei 13.964/2019 (art. 19)." }

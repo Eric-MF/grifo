@@ -1,0 +1,148 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "06"
+perguntas:
+  - id: 06-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: enderecamento
+    caso: |-
+      No dia 10 de março de 2011, após ingerir um litro de vinho na sede de sua fazenda, José Alves pegou seu automóvel e passou a conduzi-lo ao longo da estrada que tangencia sua propriedade rural. Após percorrer cerca de dois quilômetros na estrada absolutamente deserta, José Alves foi surpreendido por uma equipe da Polícia Militar que lá estava a fim de procurar um indivíduo foragido do presídio da localidade.
+
+      Abordado pelos policiais, José Alves saiu de seu veículo trôpego e exalando forte odor de álcool, oportunidade em que, de maneira incisiva, os policiais lhe compeliram a realizar um teste de alcoolemia em aparelho de ar alveolar. Realizado o teste, foi constatado que José Alves tinha concentração de álcool de um miligrama por litro de ar expelido pelos pulmões, razão pela qual os policiais o conduziram à Unidade de Polícia Judiciária, onde foi lavrado Auto de Prisão em Flagrante pela prática do crime previsto no artigo 306 da Lei 9.503/1997, c/c artigo 2º, inciso II, do Decreto 6.488/2008, sendo-lhe negado no referido Auto de Prisão em Flagrante o direito de entrevistar-se com seus advogados ou com seus familiares.
+
+      Dois dias após a lavratura do Auto de Prisão em Flagrante, em razão de José Alves ter permanecido encarcerado na Delegacia de Polícia, você é procurado pela família do preso, sob protestos de que não conseguiam vê-lo e de que o delegado não comunicara o fato ao juízo competente, tampouco à Defensoria Pública.
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, na qualidade de advogado de José Alves, redija a peça cabível, exclusiva de advogado, no que tange à liberdade de seu cliente, questionando, em juízo, eventuais ilegalidades praticadas pela Autoridade Policial, alegando para tanto toda a matéria de direito pertinente ao caso. (Valor: 5,0)
+    comando: A quem deve ser endereçada a peça?
+    gabarito: Endereçamento correto – Juiz de Direito da XX Vara Criminal da Comarca...
+    opcoes:
+      correta: Endereçamento correto – Juiz de Direito da XX Vara Criminal da Comarca...
+      erradas:
+        - "Endereçamento correto das razões: Tribunal de Justiça do Estado."
+        - "Endereçamento correto: Juizado Especial Criminal de Niterói."
+        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
+        - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro"
+        - "Endereçamento: Tribunal Regional Federal da 10ª Região."
+    revisao: &a1
+      status: rascunho
+  - id: 06-peca-4-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "4.1"
+    secao: merito
+    caso: |-
+      No dia 10 de março de 2011, após ingerir um litro de vinho na sede de sua fazenda, José Alves pegou seu automóvel e passou a conduzi-lo ao longo da estrada que tangencia sua propriedade rural. Após percorrer cerca de dois quilômetros na estrada absolutamente deserta, José Alves foi surpreendido por uma equipe da Polícia Militar que lá estava a fim de procurar um indivíduo foragido do presídio da localidade.
+
+      Abordado pelos policiais, José Alves saiu de seu veículo trôpego e exalando forte odor de álcool, oportunidade em que, de maneira incisiva, os policiais lhe compeliram a realizar um teste de alcoolemia em aparelho de ar alveolar. Realizado o teste, foi constatado que José Alves tinha concentração de álcool de um miligrama por litro de ar expelido pelos pulmões, razão pela qual os policiais o conduziram à Unidade de Polícia Judiciária, onde foi lavrado Auto de Prisão em Flagrante pela prática do crime previsto no artigo 306 da Lei 9.503/1997, c/c artigo 2º, inciso II, do Decreto 6.488/2008, sendo-lhe negado no referido Auto de Prisão em Flagrante o direito de entrevistar-se com seus advogados ou com seus familiares.
+
+      Dois dias após a lavratura do Auto de Prisão em Flagrante, em razão de José Alves ter permanecido encarcerado na Delegacia de Polícia, você é procurado pela família do preso, sob protestos de que não conseguiam vê-lo e de que o delegado não comunicara o fato ao juízo competente, tampouco à Defensoria Pública.
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, na qualidade de advogado de José Alves, redija a peça cabível, exclusiva de advogado, no que tange à liberdade de seu cliente, questionando, em juízo, eventuais ilegalidades praticadas pela Autoridade Policial, alegando para tanto toda a matéria de direito pertinente ao caso. (Valor: 5,0)
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Desenvolvimento jurídico acerca da nulidade do auto de prisão em flagrante por violação ao direito a não produzir prova contra si (0,5) [art. 5º, LXIII, da CRFB OU art. 8º, 2, “g” do Decreto 678/92 (Pacto de San José da Costa Rica)] Obs.: A mera indicação do artigo não é pontuada."
+    opcoes:
+      correta: "Desenvolvimento jurídico acerca da nulidade do auto de prisão em flagrante por violação ao direito a não produzir prova contra si (0,5) [art. 5º, LXIII, da CRFB OU art. 8º, 2, “g” do Decreto 678/92 (Pacto de San José da Costa Rica)] Obs.: A mera indicação do artigo não é pontuada."
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - "Dos Pedidos: Conhecimento e provimento do recurso OU concessão do livramento condicional; com a consequente expedição do alvará de soltura"
+        - No mérito, absolvição de Roberta.
+        - Afastamento do pedido de aplicação do regime inicial fechado, pois o crime de tráfico privilegiado não é considerando hediondo pelo STF OU porque é inconstitucional a previsão do Art. 2º, § 1º, da Lei nº 8.072/90 de aplicação obrigatória do regime inicial fechado aos crimes hediondos.
+        - Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
+    revisao: *a1
+  - id: 06-peca-4-2
+    categoria: peca-detalhe
+    parte: peca
+    item: "4.2"
+    secao: merito
+    caso: |-
+      No dia 10 de março de 2011, após ingerir um litro de vinho na sede de sua fazenda, José Alves pegou seu automóvel e passou a conduzi-lo ao longo da estrada que tangencia sua propriedade rural. Após percorrer cerca de dois quilômetros na estrada absolutamente deserta, José Alves foi surpreendido por uma equipe da Polícia Militar que lá estava a fim de procurar um indivíduo foragido do presídio da localidade.
+
+      Abordado pelos policiais, José Alves saiu de seu veículo trôpego e exalando forte odor de álcool, oportunidade em que, de maneira incisiva, os policiais lhe compeliram a realizar um teste de alcoolemia em aparelho de ar alveolar. Realizado o teste, foi constatado que José Alves tinha concentração de álcool de um miligrama por litro de ar expelido pelos pulmões, razão pela qual os policiais o conduziram à Unidade de Polícia Judiciária, onde foi lavrado Auto de Prisão em Flagrante pela prática do crime previsto no artigo 306 da Lei 9.503/1997, c/c artigo 2º, inciso II, do Decreto 6.488/2008, sendo-lhe negado no referido Auto de Prisão em Flagrante o direito de entrevistar-se com seus advogados ou com seus familiares.
+
+      Dois dias após a lavratura do Auto de Prisão em Flagrante, em razão de José Alves ter permanecido encarcerado na Delegacia de Polícia, você é procurado pela família do preso, sob protestos de que não conseguiam vê-lo e de que o delegado não comunicara o fato ao juízo competente, tampouco à Defensoria Pública.
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, na qualidade de advogado de José Alves, redija a peça cabível, exclusiva de advogado, no que tange à liberdade de seu cliente, questionando, em juízo, eventuais ilegalidades praticadas pela Autoridade Policial, alegando para tanto toda a matéria de direito pertinente ao caso. (Valor: 5,0)
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "em razão da colheita forçada do exame de teor alcoólico e consequente ilicitude da prova (0,5) [art. 5º, LVI, OU art. 157 do CPP] Obs.: A mera indicação do artigo não é pontuada."
+    opcoes:
+      correta: "em razão da colheita forçada do exame de teor alcoólico e consequente ilicitude da prova (0,5) [art. 5º, LVI, OU art. 157 do CPP] Obs.: A mera indicação do artigo não é pontuada."
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - "Dos Pedidos: Conhecimento e provimento do recurso OU concessão do livramento condicional; com a consequente expedição do alvará de soltura"
+        - No mérito, absolvição de Roberta.
+        - Afastamento do pedido de aplicação do regime inicial fechado, pois o crime de tráfico privilegiado não é considerando hediondo pelo STF OU porque é inconstitucional a previsão do Art. 2º, § 1º, da Lei nº 8.072/90 de aplicação obrigatória do regime inicial fechado aos crimes hediondos.
+        - Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
+    revisao: *a1
+  - id: 06-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: merito
+    caso: |-
+      No dia 10 de março de 2011, após ingerir um litro de vinho na sede de sua fazenda, José Alves pegou seu automóvel e passou a conduzi-lo ao longo da estrada que tangencia sua propriedade rural. Após percorrer cerca de dois quilômetros na estrada absolutamente deserta, José Alves foi surpreendido por uma equipe da Polícia Militar que lá estava a fim de procurar um indivíduo foragido do presídio da localidade.
+
+      Abordado pelos policiais, José Alves saiu de seu veículo trôpego e exalando forte odor de álcool, oportunidade em que, de maneira incisiva, os policiais lhe compeliram a realizar um teste de alcoolemia em aparelho de ar alveolar. Realizado o teste, foi constatado que José Alves tinha concentração de álcool de um miligrama por litro de ar expelido pelos pulmões, razão pela qual os policiais o conduziram à Unidade de Polícia Judiciária, onde foi lavrado Auto de Prisão em Flagrante pela prática do crime previsto no artigo 306 da Lei 9.503/1997, c/c artigo 2º, inciso II, do Decreto 6.488/2008, sendo-lhe negado no referido Auto de Prisão em Flagrante o direito de entrevistar-se com seus advogados ou com seus familiares.
+
+      Dois dias após a lavratura do Auto de Prisão em Flagrante, em razão de José Alves ter permanecido encarcerado na Delegacia de Polícia, você é procurado pela família do preso, sob protestos de que não conseguiam vê-lo e de que o delegado não comunicara o fato ao juízo competente, tampouco à Defensoria Pública.
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, na qualidade de advogado de José Alves, redija a peça cabível, exclusiva de advogado, no que tange à liberdade de seu cliente, questionando, em juízo, eventuais ilegalidades praticadas pela Autoridade Policial, alegando para tanto toda a matéria de direito pertinente ao caso. (Valor: 5,0)
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Desenvolvimento jurídico acerca da nulidade do auto de prisão em flagrante por violação ao direito à comunicação entre o preso e o advogado, bem como familiares (0,8), nos termos do art. 5º, LXIII, da CRFB OU art 7º, III, do EOAB (0,2). Obs.: A mera indicação do artigo não é pontuada."
+    opcoes:
+      correta: "Desenvolvimento jurídico acerca da nulidade do auto de prisão em flagrante por violação ao direito à comunicação entre o preso e o advogado, bem como familiares (0,8), nos termos do art. 5º, LXIII, da CRFB OU art 7º, III, do EOAB (0,2). Obs.: A mera indicação do artigo não é pontuada."
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - "Dos Pedidos: Conhecimento e provimento do recurso OU concessão do livramento condicional; com a consequente expedição do alvará de soltura"
+        - No mérito, absolvição de Roberta.
+        - Afastamento do pedido de aplicação do regime inicial fechado, pois o crime de tráfico privilegiado não é considerando hediondo pelo STF OU porque é inconstitucional a previsão do Art. 2º, § 1º, da Lei nº 8.072/90 de aplicação obrigatória do regime inicial fechado aos crimes hediondos.
+        - Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
+    revisao: *a1
+  - id: 06-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: merito
+    caso: |-
+      No dia 10 de março de 2011, após ingerir um litro de vinho na sede de sua fazenda, José Alves pegou seu automóvel e passou a conduzi-lo ao longo da estrada que tangencia sua propriedade rural. Após percorrer cerca de dois quilômetros na estrada absolutamente deserta, José Alves foi surpreendido por uma equipe da Polícia Militar que lá estava a fim de procurar um indivíduo foragido do presídio da localidade.
+
+      Abordado pelos policiais, José Alves saiu de seu veículo trôpego e exalando forte odor de álcool, oportunidade em que, de maneira incisiva, os policiais lhe compeliram a realizar um teste de alcoolemia em aparelho de ar alveolar. Realizado o teste, foi constatado que José Alves tinha concentração de álcool de um miligrama por litro de ar expelido pelos pulmões, razão pela qual os policiais o conduziram à Unidade de Polícia Judiciária, onde foi lavrado Auto de Prisão em Flagrante pela prática do crime previsto no artigo 306 da Lei 9.503/1997, c/c artigo 2º, inciso II, do Decreto 6.488/2008, sendo-lhe negado no referido Auto de Prisão em Flagrante o direito de entrevistar-se com seus advogados ou com seus familiares.
+
+      Dois dias após a lavratura do Auto de Prisão em Flagrante, em razão de José Alves ter permanecido encarcerado na Delegacia de Polícia, você é procurado pela família do preso, sob protestos de que não conseguiam vê-lo e de que o delegado não comunicara o fato ao juízo competente, tampouco à Defensoria Pública.
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, na qualidade de advogado de José Alves, redija a peça cabível, exclusiva de advogado, no que tange à liberdade de seu cliente, questionando, em juízo, eventuais ilegalidades praticadas pela Autoridade Policial, alegando para tanto toda a matéria de direito pertinente ao caso. (Valor: 5,0)
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: "Desenvolvimento jurídico acerca da nulidade do auto de prisão em flagrante por violação à exigência de comunicação da medida à autoridade judiciária e à defensoria pública dentro de 24 horas (0,8), nos termos do art. 306, §1º, do CPP OU art. 5º, LXII, da CRFB (0,2). Obs.: A mera indicação do artigo não é pontuada."
+    opcoes:
+      correta: "Desenvolvimento jurídico acerca da nulidade do auto de prisão em flagrante por violação à exigência de comunicação da medida à autoridade judiciária e à defensoria pública dentro de 24 horas (0,8), nos termos do art. 306, §1º, do CPP OU art. 5º, LXII, da CRFB (0,2). Obs.: A mera indicação do artigo não é pontuada."
+      erradas:
+        - Memoriais endereçados ao Juiz do Tribunal do Júri.
+        - "Dos Pedidos: Conhecimento e provimento do recurso OU concessão do livramento condicional; com a consequente expedição do alvará de soltura"
+        - No mérito, absolvição de Roberta.
+        - Afastamento do pedido de aplicação do regime inicial fechado, pois o crime de tráfico privilegiado não é considerando hediondo pelo STF OU porque é inconstitucional a previsão do Art. 2º, § 1º, da Lei nº 8.072/90 de aplicação obrigatória do regime inicial fechado aos crimes hediondos.
+        - Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
+    revisao: *a1
+  - id: 06-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: pedido
+    caso: |-
+      No dia 10 de março de 2011, após ingerir um litro de vinho na sede de sua fazenda, José Alves pegou seu automóvel e passou a conduzi-lo ao longo da estrada que tangencia sua propriedade rural. Após percorrer cerca de dois quilômetros na estrada absolutamente deserta, José Alves foi surpreendido por uma equipe da Polícia Militar que lá estava a fim de procurar um indivíduo foragido do presídio da localidade.
+
+      Abordado pelos policiais, José Alves saiu de seu veículo trôpego e exalando forte odor de álcool, oportunidade em que, de maneira incisiva, os policiais lhe compeliram a realizar um teste de alcoolemia em aparelho de ar alveolar. Realizado o teste, foi constatado que José Alves tinha concentração de álcool de um miligrama por litro de ar expelido pelos pulmões, razão pela qual os policiais o conduziram à Unidade de Polícia Judiciária, onde foi lavrado Auto de Prisão em Flagrante pela prática do crime previsto no artigo 306 da Lei 9.503/1997, c/c artigo 2º, inciso II, do Decreto 6.488/2008, sendo-lhe negado no referido Auto de Prisão em Flagrante o direito de entrevistar-se com seus advogados ou com seus familiares.
+
+      Dois dias após a lavratura do Auto de Prisão em Flagrante, em razão de José Alves ter permanecido encarcerado na Delegacia de Polícia, você é procurado pela família do preso, sob protestos de que não conseguiam vê-lo e de que o delegado não comunicara o fato ao juízo competente, tampouco à Defensoria Pública.
+
+      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, na qualidade de advogado de José Alves, redija a peça cabível, exclusiva de advogado, no que tange à liberdade de seu cliente, questionando, em juízo, eventuais ilegalidades praticadas pela Autoridade Policial, alegando para tanto toda a matéria de direito pertinente ao caso. (Valor: 5,0)
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: Pedido de relaxamento de prisão em razão da nulidade do auto de prisão em flagrante e expedição de alvará de soltura.
+    opcoes:
+      correta: Pedido de relaxamento de prisão em razão da nulidade do auto de prisão em flagrante e expedição de alvará de soltura.
+      erradas:
+        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
+        - Absolvição do crime de violação de domicílio OU absolvição nos termos do art. 386, III, do CPP.
+        - "Pedidos: Conhecimento e provimento do recurso OU concessão da progressão de regime"
+        - Pedido de desclassificação para afastar o reconhecimento de crime doloso contra a vida, nos termos do Art. 419 do CPP
+        - Conhecimento e provimento do recurso.
+    revisao: *a1

@@ -1,0 +1,260 @@
+# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+exame: "03"
+perguntas:
+  - id: 03-peca-1
+    categoria: peca-detalhe
+    parte: peca
+    item: "1"
+    secao: enderecamento
+    caso: |-
+      O recurso cabível é o recurso em sentido estrito, na forma do art. 581, IV, do Código de Processo Penal, dirigido ao Juiz da 1ª Vara Criminal (Tribunal do Júri).
+
+      Em primeiro lugar, deverá o examinando requerer, em preliminar, o desentranhamento das provas ilícitas.
+
+      Isso porque o crime investigado, infanticídio (art. 123 do Código Penal), é punido com pena de detenção. Em razão disso, não era admissível a interceptação telefônica prevista na Lei 9.296/96, pois a lei em tela não admite a medida quando o crime só é punido com pena de detenção (art. 2º, III). É de ressaltar que o crime de aborto, previsto no art. 124, também só é punido com pena de detenção. Além disso, o enunciado indica não existir indícios suficientes de autoria, uma vez que o delegado representou pela decretação da quebra com base em meras suspeitas. Finalmente, não foram esgotados todos os meios de investigação, condição sine qua non para que a medida seja decretada.
+
+      Por outro lado, o examinando deverá registrar também que o testemunho de Lia, embora seja prova realizada de modo lícito, será ilícito por derivação, na forma do art. 157, § 1º, do Código e Processo Penal e, portanto, imprestável.
+
+      Ainda em preliminar, deverá o examinando suscitar a nulidade do processo por violação do art. 411, § 3º do Código de Processo Penal, c/c art. 384 do Código de Processo Penal. Com efeito, diante das regras acima referidas, o Juiz, vislumbrando a possibilidade de nova definição do fato em razão de prova nova, surgida durante a instrução, deverá abrir vista dos autos para que o Ministério Público, se for o caso, adite a denúncia, mesmo que a pena prevista para a nova definição jurídica seja menor, conforme a nova redação do art. 384 do Código de Processo Penal, dada pela Lei 11.719/2008.
+
+      O candidato deverá, ainda, sustentar que não restou provada a materialidade do crime de aborto, uma vez que nenhuma perícia foi feita no sentido de comprovar que a criança faleceu em decorrência da ingestão de substância abortiva.
+
+      Finalmente, deveria requerer, em caráter sucessivo, a impronúncia da acusada, uma vez que, retiradas as provas ilícitas dos autos, nenhuma prova de autoria existiria contra a denunciada.
+
+      Em relação aos itens da correção, assim ficaram divididos:
+    comando: A quem deve ser endereçada a peça?
+    gabarito: "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
+    opcoes:
+      correta: "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
+      erradas:
+        - "Endereçamento das razões: Tribunal de Justiça."
+        - "Endereçamento da petição de interposição: Juiz da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’."
+        - "Endereçamento: Vara Criminal da Comarca de Fortaleza, Ceará"
+        - "Endereçamento: Tribunal de Justiça do Estado de São Paulo."
+        - "Interposição: Vara Criminal da comarca de Flores/CB."
+    revisao: &a1
+      status: rascunho
+  - id: 03-peca-2
+    categoria: peca-detalhe
+    parte: peca
+    item: "2"
+    secao: pedido
+    caso: |-
+      O recurso cabível é o recurso em sentido estrito, na forma do art. 581, IV, do Código de Processo Penal, dirigido ao Juiz da 1ª Vara Criminal (Tribunal do Júri).
+
+      Em primeiro lugar, deverá o examinando requerer, em preliminar, o desentranhamento das provas ilícitas.
+
+      Isso porque o crime investigado, infanticídio (art. 123 do Código Penal), é punido com pena de detenção. Em razão disso, não era admissível a interceptação telefônica prevista na Lei 9.296/96, pois a lei em tela não admite a medida quando o crime só é punido com pena de detenção (art. 2º, III). É de ressaltar que o crime de aborto, previsto no art. 124, também só é punido com pena de detenção. Além disso, o enunciado indica não existir indícios suficientes de autoria, uma vez que o delegado representou pela decretação da quebra com base em meras suspeitas. Finalmente, não foram esgotados todos os meios de investigação, condição sine qua non para que a medida seja decretada.
+
+      Por outro lado, o examinando deverá registrar também que o testemunho de Lia, embora seja prova realizada de modo lícito, será ilícito por derivação, na forma do art. 157, § 1º, do Código e Processo Penal e, portanto, imprestável.
+
+      Ainda em preliminar, deverá o examinando suscitar a nulidade do processo por violação do art. 411, § 3º do Código de Processo Penal, c/c art. 384 do Código de Processo Penal. Com efeito, diante das regras acima referidas, o Juiz, vislumbrando a possibilidade de nova definição do fato em razão de prova nova, surgida durante a instrução, deverá abrir vista dos autos para que o Ministério Público, se for o caso, adite a denúncia, mesmo que a pena prevista para a nova definição jurídica seja menor, conforme a nova redação do art. 384 do Código de Processo Penal, dada pela Lei 11.719/2008.
+
+      O candidato deverá, ainda, sustentar que não restou provada a materialidade do crime de aborto, uma vez que nenhuma perícia foi feita no sentido de comprovar que a criança faleceu em decorrência da ingestão de substância abortiva.
+
+      Finalmente, deveria requerer, em caráter sucessivo, a impronúncia da acusada, uma vez que, retiradas as provas ilícitas dos autos, nenhuma prova de autoria existiria contra a denunciada.
+
+      Em relação aos itens da correção, assim ficaram divididos:
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
+    opcoes:
+      correta: "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
+      erradas:
+        - Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP.
+        - Pronúncia da ré nos exatos termos da denúncia OU pronúncia por homicídio triplamente qualificado OU pronúncia da ré por infanticídio
+        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
+        - Não provimento do recurso OU manutenção da sentença.
+        - Conhecimento e provimento do recurso.
+    revisao: *a1
+  - id: 03-peca-3
+    categoria: peca-detalhe
+    parte: peca
+    item: "3"
+    secao: preliminar
+    caso: |-
+      O recurso cabível é o recurso em sentido estrito, na forma do art. 581, IV, do Código de Processo Penal, dirigido ao Juiz da 1ª Vara Criminal (Tribunal do Júri).
+
+      Em primeiro lugar, deverá o examinando requerer, em preliminar, o desentranhamento das provas ilícitas.
+
+      Isso porque o crime investigado, infanticídio (art. 123 do Código Penal), é punido com pena de detenção. Em razão disso, não era admissível a interceptação telefônica prevista na Lei 9.296/96, pois a lei em tela não admite a medida quando o crime só é punido com pena de detenção (art. 2º, III). É de ressaltar que o crime de aborto, previsto no art. 124, também só é punido com pena de detenção. Além disso, o enunciado indica não existir indícios suficientes de autoria, uma vez que o delegado representou pela decretação da quebra com base em meras suspeitas. Finalmente, não foram esgotados todos os meios de investigação, condição sine qua non para que a medida seja decretada.
+
+      Por outro lado, o examinando deverá registrar também que o testemunho de Lia, embora seja prova realizada de modo lícito, será ilícito por derivação, na forma do art. 157, § 1º, do Código e Processo Penal e, portanto, imprestável.
+
+      Ainda em preliminar, deverá o examinando suscitar a nulidade do processo por violação do art. 411, § 3º do Código de Processo Penal, c/c art. 384 do Código de Processo Penal. Com efeito, diante das regras acima referidas, o Juiz, vislumbrando a possibilidade de nova definição do fato em razão de prova nova, surgida durante a instrução, deverá abrir vista dos autos para que o Ministério Público, se for o caso, adite a denúncia, mesmo que a pena prevista para a nova definição jurídica seja menor, conforme a nova redação do art. 384 do Código de Processo Penal, dada pela Lei 11.719/2008.
+
+      O candidato deverá, ainda, sustentar que não restou provada a materialidade do crime de aborto, uma vez que nenhuma perícia foi feita no sentido de comprovar que a criança faleceu em decorrência da ingestão de substância abortiva.
+
+      Finalmente, deveria requerer, em caráter sucessivo, a impronúncia da acusada, uma vez que, retiradas as provas ilícitas dos autos, nenhuma prova de autoria existiria contra a denunciada.
+
+      Em relação aos itens da correção, assim ficaram divididos:
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
+    opcoes:
+      correta: Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
+      erradas:
+        - Preliminarmente, nulidade da decisão de pronúncia:.
+        - Nulidade da busca e apreensão genérica e sem fundamentação, art. 93, IX, CF.
+        - Prescrição em razão de entre a data do recebimento da denúncia e a manifestação do advogado ter sido ultrapassado o prazo prescricional de 04 anos, já que Gabriela era menor de 21 anos na data dos fatos, devendo o prazo ser computado pela metade. Citação do art. 109, IV E do art. 115 do CP
+        - Preliminarmente, extinção da punibilidade do agente OU nulidade em razão da ausência de representação, com reconhecimento da decadência, conforme o Art. 107, inciso IV, do CP OU 564, inciso III, alínea a, ou inciso IV, CPP
+        - Nulidade da sentença, ante a violação ao princípio da identidade física do Juiz ou do Juiz Natural, nos termos do Art. 399, § 2º, do CPP ou Art. 5º, LIII, CRFB.
+    revisao: *a1
+  - id: 03-peca-4
+    categoria: peca-detalhe
+    parte: peca
+    item: "4"
+    secao: preliminar
+    caso: |-
+      O recurso cabível é o recurso em sentido estrito, na forma do art. 581, IV, do Código de Processo Penal, dirigido ao Juiz da 1ª Vara Criminal (Tribunal do Júri).
+
+      Em primeiro lugar, deverá o examinando requerer, em preliminar, o desentranhamento das provas ilícitas.
+
+      Isso porque o crime investigado, infanticídio (art. 123 do Código Penal), é punido com pena de detenção. Em razão disso, não era admissível a interceptação telefônica prevista na Lei 9.296/96, pois a lei em tela não admite a medida quando o crime só é punido com pena de detenção (art. 2º, III). É de ressaltar que o crime de aborto, previsto no art. 124, também só é punido com pena de detenção. Além disso, o enunciado indica não existir indícios suficientes de autoria, uma vez que o delegado representou pela decretação da quebra com base em meras suspeitas. Finalmente, não foram esgotados todos os meios de investigação, condição sine qua non para que a medida seja decretada.
+
+      Por outro lado, o examinando deverá registrar também que o testemunho de Lia, embora seja prova realizada de modo lícito, será ilícito por derivação, na forma do art. 157, § 1º, do Código e Processo Penal e, portanto, imprestável.
+
+      Ainda em preliminar, deverá o examinando suscitar a nulidade do processo por violação do art. 411, § 3º do Código de Processo Penal, c/c art. 384 do Código de Processo Penal. Com efeito, diante das regras acima referidas, o Juiz, vislumbrando a possibilidade de nova definição do fato em razão de prova nova, surgida durante a instrução, deverá abrir vista dos autos para que o Ministério Público, se for o caso, adite a denúncia, mesmo que a pena prevista para a nova definição jurídica seja menor, conforme a nova redação do art. 384 do Código de Processo Penal, dada pela Lei 11.719/2008.
+
+      O candidato deverá, ainda, sustentar que não restou provada a materialidade do crime de aborto, uma vez que nenhuma perícia foi feita no sentido de comprovar que a criança faleceu em decorrência da ingestão de substância abortiva.
+
+      Finalmente, deveria requerer, em caráter sucessivo, a impronúncia da acusada, uma vez que, retiradas as provas ilícitas dos autos, nenhuma prova de autoria existiria contra a denunciada.
+
+      Em relação aos itens da correção, assim ficaram divididos:
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: "Dispositivo legal: art. 2º, III, Lei 9.296/96 OU art. 2º, II, Lei 9.296/96."
+    opcoes:
+      correta: "Dispositivo legal: art. 2º, III, Lei 9.296/96 OU art. 2º, II, Lei 9.296/96."
+      erradas:
+        - Preliminarmente, nulidade da decisão de pronúncia:.
+        - Nulidade da interceptação telefônica decretada como primeira medida investigatória (art. 2º, II, Lei 9.296/96) e sem fundamentação adequada (art. 5º da Lei 9.296/96 ou art. 93, IX, CF).
+        - "Preliminarmente: Extinção da punibilidade, em razão da prescrição da pretensão punitiva pela pena em abstrato, pois ultrapassados 4 anos desde o recebimento da denúncia, considerando a redução do prazo pela menoridade relativa, com fulcro no Art. 107, IV, do CP OU no Art. 109, IV, c/c Art. 115, ambos do CP."
+        - Nulidade dos atos da instrução.
+        - Preliminarmente, nulidade na oitiva das vítimas, tendo em vista que o mero decurso de tempo não é fundamento idôneo para produção antecipada de provas, nos termos do Art. 225 do CPP, ou Art. 564, inciso IV, do CPP, ou Súmula 455 do STJ.
+    revisao: *a1
+  - id: 03-peca-5
+    categoria: peca-detalhe
+    parte: peca
+    item: "5"
+    secao: preliminar
+    caso: |-
+      O recurso cabível é o recurso em sentido estrito, na forma do art. 581, IV, do Código de Processo Penal, dirigido ao Juiz da 1ª Vara Criminal (Tribunal do Júri).
+
+      Em primeiro lugar, deverá o examinando requerer, em preliminar, o desentranhamento das provas ilícitas.
+
+      Isso porque o crime investigado, infanticídio (art. 123 do Código Penal), é punido com pena de detenção. Em razão disso, não era admissível a interceptação telefônica prevista na Lei 9.296/96, pois a lei em tela não admite a medida quando o crime só é punido com pena de detenção (art. 2º, III). É de ressaltar que o crime de aborto, previsto no art. 124, também só é punido com pena de detenção. Além disso, o enunciado indica não existir indícios suficientes de autoria, uma vez que o delegado representou pela decretação da quebra com base em meras suspeitas. Finalmente, não foram esgotados todos os meios de investigação, condição sine qua non para que a medida seja decretada.
+
+      Por outro lado, o examinando deverá registrar também que o testemunho de Lia, embora seja prova realizada de modo lícito, será ilícito por derivação, na forma do art. 157, § 1º, do Código e Processo Penal e, portanto, imprestável.
+
+      Ainda em preliminar, deverá o examinando suscitar a nulidade do processo por violação do art. 411, § 3º do Código de Processo Penal, c/c art. 384 do Código de Processo Penal. Com efeito, diante das regras acima referidas, o Juiz, vislumbrando a possibilidade de nova definição do fato em razão de prova nova, surgida durante a instrução, deverá abrir vista dos autos para que o Ministério Público, se for o caso, adite a denúncia, mesmo que a pena prevista para a nova definição jurídica seja menor, conforme a nova redação do art. 384 do Código de Processo Penal, dada pela Lei 11.719/2008.
+
+      O candidato deverá, ainda, sustentar que não restou provada a materialidade do crime de aborto, uma vez que nenhuma perícia foi feita no sentido de comprovar que a criança faleceu em decorrência da ingestão de substância abortiva.
+
+      Finalmente, deveria requerer, em caráter sucessivo, a impronúncia da acusada, uma vez que, retiradas as provas ilícitas dos autos, nenhuma prova de autoria existiria contra a denunciada.
+
+      Em relação aos itens da correção, assim ficaram divididos:
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: Ilicitude por derivação da prova testemunhal, com fundamento no art. 157, § 1º, CPP.
+    opcoes:
+      correta: Ilicitude por derivação da prova testemunhal, com fundamento no art. 157, § 1º, CPP.
+      erradas:
+        - Preliminarmente, nulidade da decisão de pronúncia:.
+        - Nulidade da busca e apreensão genérica e sem fundamentação, art. 93, IX, CF.
+        - Prescrição em razão de entre a data do recebimento da denúncia e a manifestação do advogado ter sido ultrapassado o prazo prescricional de 04 anos, já que Gabriela era menor de 21 anos na data dos fatos, devendo o prazo ser computado pela metade. Citação do art. 109, IV E do art. 115 do CP
+        - Preliminarmente, extinção da punibilidade do agente OU nulidade em razão da ausência de representação, com reconhecimento da decadência, conforme o Art. 107, inciso IV, do CP OU 564, inciso III, alínea a, ou inciso IV, CPP
+        - Nulidade da sentença, ante a violação ao princípio da identidade física do Juiz ou do Juiz Natural, nos termos do Art. 399, § 2º, do CPP ou Art. 5º, LIII, CRFB.
+    revisao: *a1
+  - id: 03-peca-6
+    categoria: peca-detalhe
+    parte: peca
+    item: "6"
+    secao: preliminar
+    caso: |-
+      O recurso cabível é o recurso em sentido estrito, na forma do art. 581, IV, do Código de Processo Penal, dirigido ao Juiz da 1ª Vara Criminal (Tribunal do Júri).
+
+      Em primeiro lugar, deverá o examinando requerer, em preliminar, o desentranhamento das provas ilícitas.
+
+      Isso porque o crime investigado, infanticídio (art. 123 do Código Penal), é punido com pena de detenção. Em razão disso, não era admissível a interceptação telefônica prevista na Lei 9.296/96, pois a lei em tela não admite a medida quando o crime só é punido com pena de detenção (art. 2º, III). É de ressaltar que o crime de aborto, previsto no art. 124, também só é punido com pena de detenção. Além disso, o enunciado indica não existir indícios suficientes de autoria, uma vez que o delegado representou pela decretação da quebra com base em meras suspeitas. Finalmente, não foram esgotados todos os meios de investigação, condição sine qua non para que a medida seja decretada.
+
+      Por outro lado, o examinando deverá registrar também que o testemunho de Lia, embora seja prova realizada de modo lícito, será ilícito por derivação, na forma do art. 157, § 1º, do Código e Processo Penal e, portanto, imprestável.
+
+      Ainda em preliminar, deverá o examinando suscitar a nulidade do processo por violação do art. 411, § 3º do Código de Processo Penal, c/c art. 384 do Código de Processo Penal. Com efeito, diante das regras acima referidas, o Juiz, vislumbrando a possibilidade de nova definição do fato em razão de prova nova, surgida durante a instrução, deverá abrir vista dos autos para que o Ministério Público, se for o caso, adite a denúncia, mesmo que a pena prevista para a nova definição jurídica seja menor, conforme a nova redação do art. 384 do Código de Processo Penal, dada pela Lei 11.719/2008.
+
+      O candidato deverá, ainda, sustentar que não restou provada a materialidade do crime de aborto, uma vez que nenhuma perícia foi feita no sentido de comprovar que a criança faleceu em decorrência da ingestão de substância abortiva.
+
+      Finalmente, deveria requerer, em caráter sucessivo, a impronúncia da acusada, uma vez que, retiradas as provas ilícitas dos autos, nenhuma prova de autoria existiria contra a denunciada.
+
+      Em relação aos itens da correção, assim ficaram divididos:
+    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    gabarito: Violação das regras da mutatio libelli, art. 384 do CPP, c/c art. 411, § 3º, do CPP.
+    opcoes:
+      correta: Violação das regras da mutatio libelli, art. 384 do CPP, c/c art. 411, § 3º, do CPP.
+      erradas:
+        - Preliminarmente, nulidade da decisão de pronúncia:.
+        - Nulidade da busca e apreensão genérica e sem fundamentação, art. 93, IX, CF.
+        - Prescrição em razão de entre a data do recebimento da denúncia e a manifestação do advogado ter sido ultrapassado o prazo prescricional de 04 anos, já que Gabriela era menor de 21 anos na data dos fatos, devendo o prazo ser computado pela metade. Citação do art. 109, IV E do art. 115 do CP
+        - Preliminarmente, extinção da punibilidade do agente OU nulidade em razão da ausência de representação, com reconhecimento da decadência, conforme o Art. 107, inciso IV, do CP OU 564, inciso III, alínea a, ou inciso IV, CPP
+        - Nulidade da sentença, ante a violação ao princípio da identidade física do Juiz ou do Juiz Natural, nos termos do Art. 399, § 2º, do CPP ou Art. 5º, LIII, CRFB.
+    revisao: *a1
+  - id: 03-peca-7
+    categoria: peca-detalhe
+    parte: peca
+    item: "7"
+    secao: merito
+    caso: |-
+      O recurso cabível é o recurso em sentido estrito, na forma do art. 581, IV, do Código de Processo Penal, dirigido ao Juiz da 1ª Vara Criminal (Tribunal do Júri).
+
+      Em primeiro lugar, deverá o examinando requerer, em preliminar, o desentranhamento das provas ilícitas.
+
+      Isso porque o crime investigado, infanticídio (art. 123 do Código Penal), é punido com pena de detenção. Em razão disso, não era admissível a interceptação telefônica prevista na Lei 9.296/96, pois a lei em tela não admite a medida quando o crime só é punido com pena de detenção (art. 2º, III). É de ressaltar que o crime de aborto, previsto no art. 124, também só é punido com pena de detenção. Além disso, o enunciado indica não existir indícios suficientes de autoria, uma vez que o delegado representou pela decretação da quebra com base em meras suspeitas. Finalmente, não foram esgotados todos os meios de investigação, condição sine qua non para que a medida seja decretada.
+
+      Por outro lado, o examinando deverá registrar também que o testemunho de Lia, embora seja prova realizada de modo lícito, será ilícito por derivação, na forma do art. 157, § 1º, do Código e Processo Penal e, portanto, imprestável.
+
+      Ainda em preliminar, deverá o examinando suscitar a nulidade do processo por violação do art. 411, § 3º do Código de Processo Penal, c/c art. 384 do Código de Processo Penal. Com efeito, diante das regras acima referidas, o Juiz, vislumbrando a possibilidade de nova definição do fato em razão de prova nova, surgida durante a instrução, deverá abrir vista dos autos para que o Ministério Público, se for o caso, adite a denúncia, mesmo que a pena prevista para a nova definição jurídica seja menor, conforme a nova redação do art. 384 do Código de Processo Penal, dada pela Lei 11.719/2008.
+
+      O candidato deverá, ainda, sustentar que não restou provada a materialidade do crime de aborto, uma vez que nenhuma perícia foi feita no sentido de comprovar que a criança faleceu em decorrência da ingestão de substância abortiva.
+
+      Finalmente, deveria requerer, em caráter sucessivo, a impronúncia da acusada, uma vez que, retiradas as provas ilícitas dos autos, nenhuma prova de autoria existiria contra a denunciada.
+
+      Em relação aos itens da correção, assim ficaram divididos:
+    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    gabarito: Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
+    opcoes:
+      correta: Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
+      erradas:
+        - "Ausência de dolo eventual: além da previsão do resultado, o dolo eventual exige que o agente assuma o risco de produzi-lo, nos termos do Art. 18, I, parte final, do CP (teoria do consentimento)."
+        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
+        - "Subsidiariamente, em caso de condenação: aplicação da pena base no mínimo legal, destacando que a condenação em ação socioeducativa não gera maus antecedentes ou circunstância judicial desfavorável."
+        - Reconhecimento da tentativa, tendo em vista que o crime de estelionato é de natureza material e não houve obtenção da vantagem ilícita. 5
+        - "Subsidiariamente: aplicação da pena base no mínimo legal, tendo em vista que o fato posterior ao crime julgado não pode ser considerado maus antecedentes."
+    revisao: *a1
+  - id: 03-peca-8
+    categoria: peca-detalhe
+    parte: peca
+    item: "8"
+    secao: pedido
+    caso: |-
+      O recurso cabível é o recurso em sentido estrito, na forma do art. 581, IV, do Código de Processo Penal, dirigido ao Juiz da 1ª Vara Criminal (Tribunal do Júri).
+
+      Em primeiro lugar, deverá o examinando requerer, em preliminar, o desentranhamento das provas ilícitas.
+
+      Isso porque o crime investigado, infanticídio (art. 123 do Código Penal), é punido com pena de detenção. Em razão disso, não era admissível a interceptação telefônica prevista na Lei 9.296/96, pois a lei em tela não admite a medida quando o crime só é punido com pena de detenção (art. 2º, III). É de ressaltar que o crime de aborto, previsto no art. 124, também só é punido com pena de detenção. Além disso, o enunciado indica não existir indícios suficientes de autoria, uma vez que o delegado representou pela decretação da quebra com base em meras suspeitas. Finalmente, não foram esgotados todos os meios de investigação, condição sine qua non para que a medida seja decretada.
+
+      Por outro lado, o examinando deverá registrar também que o testemunho de Lia, embora seja prova realizada de modo lícito, será ilícito por derivação, na forma do art. 157, § 1º, do Código e Processo Penal e, portanto, imprestável.
+
+      Ainda em preliminar, deverá o examinando suscitar a nulidade do processo por violação do art. 411, § 3º do Código de Processo Penal, c/c art. 384 do Código de Processo Penal. Com efeito, diante das regras acima referidas, o Juiz, vislumbrando a possibilidade de nova definição do fato em razão de prova nova, surgida durante a instrução, deverá abrir vista dos autos para que o Ministério Público, se for o caso, adite a denúncia, mesmo que a pena prevista para a nova definição jurídica seja menor, conforme a nova redação do art. 384 do Código de Processo Penal, dada pela Lei 11.719/2008.
+
+      O candidato deverá, ainda, sustentar que não restou provada a materialidade do crime de aborto, uma vez que nenhuma perícia foi feita no sentido de comprovar que a criança faleceu em decorrência da ingestão de substância abortiva.
+
+      Finalmente, deveria requerer, em caráter sucessivo, a impronúncia da acusada, uma vez que, retiradas as provas ilícitas dos autos, nenhuma prova de autoria existiria contra a denunciada.
+
+      Em relação aos itens da correção, assim ficaram divididos:
+    comando: Que pedido deve ser formulado na peça?
+    gabarito: "Pedidos principais (0,20 cada): desentranhamento da prova ilícita; impronúncia por ausência de indícios de autoria; impronúncia por ausência de prova da materialidade; absolvição sumária OU nulidade da pronúncia pela mutatio libelli."
+    opcoes:
+      correta: "Pedidos principais (0,20 cada): desentranhamento da prova ilícita; impronúncia por ausência de indícios de autoria; impronúncia por ausência de prova da materialidade; absolvição sumária OU nulidade da pronúncia pela mutatio libelli."
+      erradas:
+        - Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP.
+        - Pronúncia da ré nos exatos termos da denúncia OU pronúncia por homicídio triplamente qualificado OU pronúncia da ré por infanticídio
+        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
+        - Não provimento do recurso OU manutenção da sentença.
+        - Conhecimento e provimento do recurso.
+    revisao: *a1

@@ -44,8 +44,6 @@ interface Orbe { x: number; y: number; poder: Poder; pego: boolean }
 interface Part { x: number; y: number; vx: number; vy: number; vida: number; max: number; cor: string; tam: number; tipo: 0 | 1 }
 interface Gota { x: number; y: number; v: number; s: number; r: number }
 
-const NOMES_TOD = ["Amanhecer", "Dia", "Entardecer", "Noite"];
-const NOMES_CLIMA: Record<Clima, string> = { limpo: "", chuva: "chuva", neve: "neve", folhas: "vento", tempestade: "tempestade", neblina: "neblina" };
 const artes = new Map<string, HTMLImageElement>();
 function arteDoPoder(id: string): HTMLImageElement {
   let img = artes.get(id);
@@ -58,6 +56,7 @@ function arteDoPoder(id: string): HTMLImageElement {
 }
 
 const achaPersonagem = (id?: string) => PERSONAGENS.find((p) => p.id === id) ?? PERSONAGENS[0];
+const CARGA_SEG = 15;
 
 function desenharRacha(c: Ctx, len: number) {
   c.save();
@@ -75,6 +74,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   let tema: Tema = temaPorId(opcoes.estilo);
   let nivel = opcoes.nivel;
   let reduzido = opcoes.movimentoReduzido;
+  let autoPoder = opcoes.autoPoder ?? true;
   const som = new Som();
   som.ligado = opcoes.som;
   som.onda = tema.onda;
@@ -96,6 +96,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   const gotas: Gota[] = [];
   const estrelas: [number, number, number][] = [];
   let ativos = new Map<string, number>();
+  let carga = 0;
   let vidas = 0;
   let pontos = 0;
   let nPilares = 0;
@@ -144,7 +145,9 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   });
 
   // ---------------- tamanho ----------------
+  let redesenhar = true;
   function redimensionar() {
+    redesenhar = true; // trocar o tamanho do canvas apaga o desenho
     const dpr = Math.min(2, window.devicePixelRatio || 1);
     const cw = canvas.clientWidth || 800;
     const ch = canvas.clientHeight || 640;
@@ -164,7 +167,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   }
 
   // ---------------- mundo ----------------
-  const velocidade = () => (165 + Math.min(nPilares, 60) * 2) * (efeitos().lento ? 0.6 : 1);
+  const velocidade = () => (165 + Math.min(nPilares, 60) * 2) * (ativos.has("lento") ? 0.6 : 1);
   const aberturaBase = () => Math.max(132, 178 - nPilares * 1.1) + (nivel === 1 ? 8 : 0);
 
   function novoPilar(x: number) {
@@ -210,6 +213,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     orbes = [];
     parts.length = 0;
     ativos = new Map();
+    carga = 0;
     vidas = 0;
     pontos = nPilares = nMoedas = nPerguntas = nAcertos = 0;
     xpRun = 0;
@@ -265,8 +269,11 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     if ((ev.target as HTMLElement)?.closest?.("input, textarea, select, button, [role=dialog]")) return;
     if (ev.code === "Space" || ev.code === "ArrowUp" || ev.code === "KeyW") {
       ev.preventDefault();
-      bater();
+      if (!ev.repeat) bater();
+    } else if (ev.code === "KeyE") {
+      if (!ev.repeat) usarPoder();
     } else if (ev.code === "KeyP" || ev.code === "Escape") {
+      if (ev.repeat) return;
       if (estado === "pausado") inst.continuar();
       else inst.pausar();
     }
@@ -276,6 +283,17 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   };
 
   // ---------------- lógica ----------------
+  function poderDoPersonagem() {
+    return PODERES.find((q) => q.personagem === personagem.id);
+  }
+
+  function usarPoder() {
+    const p = poderDoPersonagem();
+    if (estado !== "jogando" || !p || carga < 1 || ativos.has(p.id)) return;
+    carga = 0;
+    ativar(p);
+  }
+
   function ativar(p: Poder) {
     som.poder();
     explosao(jog.x, jog.y, 26, [p.cor, "#ffffff", tema.paleta.moeda[0]], 260);
@@ -301,6 +319,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       return;
     }
     if (p.id === "voo") {
+      ativos.set("voo", p.duracao);
       ativos.set("escudo", p.duracao);
       ativos.set("leve", p.duracao);
       return;
@@ -319,6 +338,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
         poderIcone: poder?.icone,
         poderDescricao: poder?.descricao,
         poderDuracao: poder?.duracao,
+        carrega: poder?.personagem === personagem.id,
       })
       .then((ok) => {
         if (destruido) return;
@@ -329,7 +349,10 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
           som.certo();
         } else som.errado();
         if (tipo === "poder") {
-          if (ok && poder) ativar(poder);
+          if (ok && poder) {
+            if (poder.personagem === personagem.id) carga = 1;
+            else ativar(poder);
+          }
           jog.graca = 1;
           mudarEstado("pronto");
         } else if (ok) reviver();
@@ -379,7 +402,11 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   // Asas de Ouro: mola até o centro do próximo vão, mais forte que a gravidade. Abaixo do vão o pássaro
   // sobe mesmo sem bater as asas; acima dele cai mais rápido, e a força também vence a batida.
   function guiar(dt: number) {
-    const alvo = pilares.filter((q) => !q.passou && q.x > jog.x - LARG_COL).sort((a, b) => a.x - b.x)[0];
+    let alvo: Pilar | undefined;
+    for (const q of pilares) {
+      if (q.passou || q.x <= jog.x - LARG_COL) continue;
+      if (!alvo || q.x < alvo.x) alvo = q;
+    }
     if (!alvo) return;
     const centro = alvo.vao + (alvo.mov ? Math.sin(alvo.fase) * alvo.mov : 0);
     const erro = centro - jog.y;
@@ -473,6 +500,12 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       if (r <= 0) ativos.delete(id);
       else ativos.set(id, r);
     }
+    const proprio = poderDoPersonagem();
+    if (proprio && !ativos.has(proprio.id) && carga < 1) {
+      carga = Math.min(1, carga + dt / CARGA_SEG);
+      if (carga >= 1) hudT = 0;
+    }
+    if (autoPoder && proprio) usarPoder();
     if (jog.graca > 0) jog.graca -= dt;
 
     // jogador
@@ -590,13 +623,14 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     const alvo = reduzido ? 0 : clima === "limpo" || clima === "neblina" ? 0 : clima === "tempestade" ? 140 : clima === "folhas" ? 26 : 90;
     while (gotas.length < alvo) gotas.push({ x: Math.random() * W, y: Math.random() * H, v: 0, s: Math.random(), r: Math.random() * 6 });
     if (gotas.length > alvo) gotas.length = alvo;
+    const vento = velocidade();
     for (const g of gotas) {
       if (clima === "chuva" || clima === "tempestade") {
         g.y += (700 + g.s * 300) * dt;
-        g.x -= (120 + velocidade() * 0.3) * dt;
+        g.x -= (120 + vento * 0.3) * dt;
       } else if (clima === "neve") {
         g.y += (50 + g.s * 40) * dt;
-        g.x += Math.sin(tempo + g.s * 10) * 20 * dt - velocidade() * 0.2 * dt;
+        g.x += Math.sin(tempo + g.s * 10) * 20 * dt - vento * 0.2 * dt;
       } else {
         g.y += (60 + g.s * 60) * dt;
         g.x -= (120 + g.s * 120) * dt;
@@ -619,14 +653,24 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   }
 
   function enviarHud() {
+    const proprio = PODERES.find((q) => q.personagem === personagem.id);
     const hud: Hud = {
       pontos,
       vidas,
-      poderes: [...ativos].map(([id, r]) => {
-        const p = poderPorId(id);
-        return { id, nome: p.nome, icone: p.icone, restante: Math.max(0, r / p.duracao) };
-      }),
-      cenario: `${NOMES_TOD[((Math.floor(tod + 0.5) % 4) + 4) % 4]}${NOMES_CLIMA[clima] ? ` · ${NOMES_CLIMA[clima]}` : ""}`,
+      poderes: [...ativos]
+        .filter(([id]) => id !== proprio?.id)
+        .map(([id, r]) => {
+          const p = poderPorId(id);
+          return { id, nome: p.nome, icone: p.icone, restante: Math.max(0, r / p.duracao) };
+        }),
+      poderProprio: proprio && {
+        nome: proprio.nome,
+        icone: proprio.icone,
+        cor: proprio.cor,
+        estado: ativos.has(proprio.id) ? "ativo" : carga >= 1 ? "pronto" : "carregando",
+        barra: ativos.has(proprio.id) ? (ativos.get(proprio.id) ?? 0) / proprio.duracao : carga,
+        segundos: Math.ceil(ativos.get(proprio.id) ?? 0),
+      },
       aviso: aviso && performance.now() < avisoAte ? aviso : undefined,
     };
     host.hud(hud);
@@ -832,6 +876,8 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       atualizarClima(dt);
       tempo += dt;
     }
+    if (estado === "pausado" && !redesenhar) return;
+    redesenhar = false;
     desenhar();
   }
 
@@ -853,6 +899,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     pausar() {
       if (estado === "jogando" || estado === "pronto") {
         estadoAntesPausa = estado;
+        redesenhar = true; // o último quadro da partida fica como fundo da pausa
         mudarEstado("pausado");
       }
     },
@@ -875,6 +922,10 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       if (o.personagem) personagem = achaPersonagem(o.personagem);
       if (o.som !== undefined) som.ligado = o.som;
       if (o.movimentoReduzido !== undefined) reduzido = o.movimentoReduzido;
+      if (o.autoPoder !== undefined) autoPoder = o.autoPoder;
+    },
+    usarPoderProprio() {
+      usarPoder();
     },
     destruir() {
       destruido = true;
@@ -915,6 +966,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
         penalidades: nPenalidades,
         aviso: aviso?.titulo ?? null,
         ativos: Object.fromEntries(ativos),
+        carga,
         efeitos: efeitos(),
         velocidade: velocidade(),
         velocidadeBase: 165 + Math.min(nPilares, 60) * 2,

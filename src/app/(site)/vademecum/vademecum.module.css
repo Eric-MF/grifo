@@ -1,0 +1,25 @@
+.editor { display: grid; gap: 1rem; margin-top: 1.5rem; }
+.titulo { display: grid; gap: 0.3rem; font-weight: 700; max-width: 32rem; }
+.titulo input, .adicionar input, .adicionar select { padding: 0.5rem 0.75rem; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); font: inherit; font-weight: 400; }
+.itens, .salvos { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+.itens li, .salvos li {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; align-items: center;
+  padding: 0.7rem 0.9rem; border: 1px solid var(--border); border-radius: 12px; background: var(--surface);
+}
+.itens { counter-reset: item; }
+.botoes { display: flex; gap: 0.35rem; }
+.botoes button { min-width: 36px; min-height: 36px; padding: 0 0.6rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); cursor: pointer; }
+.botoes button:disabled { opacity: 0.4; cursor: default; }
+.adicionar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: end; padding: 1rem; border: 1px dashed var(--border); border-radius: 12px; }
+.adicionar label { display: grid; gap: 0.3rem; font-size: 0.85rem; font-weight: 700; min-width: min(100%, 220px); }
+.erro { width: 100%; margin: 0; color: var(--bad); font-size: 0.85rem; }
+.acoes { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.filtros { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; margin: 1.25rem 0; }
+.filtros label { display: grid; gap: 0.3rem; font-size: 0.85rem; font-weight: 700; }
+.filtros select { padding: 0.45rem 0.6rem; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
+.contagem { font-size: 0.75em; font-family: var(--font-body), sans-serif; margin-left: 0.5em; padding: 0.05rem 0.45rem; border-radius: 999px; background: color-mix(in srgb, var(--bad) 18%, transparent); }
+.contagem[data-nivel="baixo"] { background: color-mix(in srgb, var(--warn) 22%, transparent); }
+.contagem[data-nivel="importante"] { background: color-mix(in srgb, var(--accent) 25%, transparent); }
+@media print {
+  .acoes, .filtros, .naoImprimir { display: none !important; }
+}

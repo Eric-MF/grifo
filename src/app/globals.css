@@ -231,3 +231,21 @@ body[data-foco] > header, body[data-foco] > footer { display: none; }
 
 a.citacao { color: inherit; text-decoration: underline dotted; text-underline-offset: 3px; }
 a.citacao:hover { text-decoration-style: solid; }
+
+/* Leitor de leis e vade-mécum: no papel, só o texto da lei. */
+@media print {
+  body:has([data-leitor]) > header,
+  body:has([data-leitor]) header:first-of-type,
+  body:has([data-leitor]) footer { display: none !important; }
+}
+
+/* Leitor de leis: a página inteira na cor da leitura (sem clarão ao rolar rápido, quando o navegador
+   ainda não pintou o trecho) e o cabeçalho do site some junto com os controles de leitura. */
+:root[data-leitor-fundo="papel"], :root[data-leitor-fundo="papel"] body { background: #fbf7ee; }
+:root[data-leitor-fundo="branco"], :root[data-leitor-fundo="branco"] body { background: #ffffff; }
+:root[data-leitor-fundo="sepia"], :root[data-leitor-fundo="sepia"] body { background: #f1e3c6; }
+:root[data-leitor-fundo="verde"], :root[data-leitor-fundo="verde"] body { background: #e6f0e1; }
+:root[data-leitor-fundo="escuro"], :root[data-leitor-fundo="escuro"] body { background: #17181b; }
+:root[data-leitor-fundo] body > header { backdrop-filter: none; background: var(--bg); transition: transform 0.22s ease; }
+body[data-leitor-oculto] > header { transform: translateY(-100%); }
+:root[data-leitor-fundo] body > footer { display: none; }
