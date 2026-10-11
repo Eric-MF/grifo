@@ -253,3 +253,25 @@ export const ObjetivasArquivoSchema = z.object({
   questoes: z.array(ObjetivaSchema),
 });
 export type ObjetivasArquivo = z.infer<typeof ObjetivasArquivoSchema>;
+
+// ---------------------------------------------------------------------------
+// Datas de vigência das leis alteradoras (content/leis-alteradoras.yaml).
+// ---------------------------------------------------------------------------
+const DataIsoSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "use AAAA-MM-DD");
+const AlteradoraSchema = z
+  .object({
+    nome: z.string().optional(),
+    assinatura: DataIsoSchema.optional(),
+    publicacao: DataIsoSchema.optional(),
+    vigencia: DataIsoSchema.optional(),
+    aproximada: z.boolean().optional(),
+    padrao: z.string().optional(),
+    locais: z.record(z.string(), z.object({ vigencia: DataIsoSchema, rotulo: z.string() }).strict()).optional(),
+    marcos: z.array(z.object({ data: DataIsoSchema, aproximada: z.boolean().optional(), disp: z.array(z.string()) }).strict()).optional(),
+    url: z.string().optional(),
+    pendencia: z.string().optional(),
+    nota: z.string().optional(),
+    manual: z.boolean().optional(),
+  })
+  .strict();
+export const AlteradorasArquivoSchema = z.record(z.string(), AlteradoraSchema.nullable());

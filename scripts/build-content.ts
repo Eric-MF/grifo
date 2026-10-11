@@ -26,7 +26,8 @@ import {
 } from "../src/content/schema.ts";
 import { buildLexico, parseDispositivo, toRoman } from "../src/lib/correcao/citacoes.ts";
 import { aplicarRotulos } from "../src/content/rotulos.ts";
-import { textoAtual, type Bloco } from "../src/lib/leis/linha-do-tempo.ts";
+import { paraSimulado } from "../src/lib/correcao/simulado.ts";
+import { datasComLocal, marcoDeRevogacao, textoAtual, type Bloco, type Datas, type DatasLei } from "../src/lib/leis/linha-do-tempo.ts";
 import { vigenciasDaLei, type Vigencia } from "../src/lib/leis/vigencias.ts";
 
 const ROOT = new URL("..", import.meta.url).pathname;
@@ -38,6 +39,11 @@ const args = new Set(process.argv.slice(2));
 
 function readYaml(path: string) {
   return parse(readFileSync(path, "utf8"));
+}
+
+/** Só o que o navegador usa; JSON.stringify descarta os campos indefinidos. */
+function paraCliente(v: DatasLei | undefined): DatasLei {
+  return { nome: v?.nome, vigencia: v?.vigencia, publicacao: v?.publicacao, aproximada: v?.aproximada, padrao: v?.padrao, locais: v?.locais, marcos: v?.marcos };
 }
 
 /** Caminhos de valores de texto que ainda contêm "TODO" (pendências de transcrição/modelo). */
@@ -297,6 +303,11 @@ function build(): boolean {
     ex.questoes.forEach((q) => aplicarRotulos(q.itens));
   }
   for (const ex of exames) writeFileSync(join(OUT, "exames", `${ex.id}.json`), JSON.stringify(ex));
+  // Recorte sem gabarito comentado, carregado pelo conferidor de texto da aba Provas.
+  const pubExames = join(ROOT, "public", "dados", "exames");
+  rmSync(pubExames, { recursive: true, force: true });
+  mkdirSync(pubExames, { recursive: true });
+  for (const ex of exames) if (ex.corrigivel) writeFileSync(join(pubExames, `${ex.id}.json`), JSON.stringify(paraSimulado(ex)));
   writeFileSync(join(OUT, "exames-index.json"), JSON.stringify(index, null, 1));
   writeFileSync(join(OUT, "leis.json"), JSON.stringify(leis.data));
   writeFileSync(join(OUT, "pecas.json"), JSON.stringify(pecas.data));
@@ -313,11 +324,20 @@ function build(): boolean {
     rmSync(pubLeis, { recursive: true, force: true });
     mkdirSync(pubLeis, { recursive: true });
     const arqDatas = join(CONTENT, "leis-alteradoras.yaml");
-    const datas: Record<string, { vigencia?: string; publicacao?: string; aproximada?: boolean }> = existsSync(arqDatas) ? (readYaml(arqDatas) ?? {}) : {};
+    const datas: Datas = existsSync(arqDatas) ? (readYaml(arqDatas) ?? {}) : {};
+    const datasPadrao = datasComLocal(datas);
     for (const f of readdirSync(dirLeis).filter((x) => x.endsWith(".json") && !x.startsWith("_"))) {
       const lei = JSON.parse(readFileSync(join(dirLeis, f), "utf8"));
-      Object.assign(vigencias, vigenciasDaLei(lei.id, lei.blocos as Bloco[], datas));
-      writeFileSync(join(pubLeis, f), JSON.stringify({ id: lei.id, nome: lei.nome, url: lei.url, coletadoEm: lei.coletadoEm, blocos: lei.blocos }));
+      Object.assign(vigencias, vigenciasDaLei(lei.id, lei.blocos as Bloco[], datasPadrao));
+      // o texto superado sai de `<id>.versoes.json`, carregado só quando o leitor precisa dele
+      const versoesSuperadas: Record<number, Bloco> = {};
+      const blocosPublicos = (lei.blocos as Bloco[]).map((b: Bloco, i: number) => {
+        if (!b.superada) return b;
+        versoesSuperadas[i] = b;
+        return { ...b, texto: marcoDeRevogacao(b) ? b.texto : "" };
+      });
+      writeFileSync(join(pubLeis, f), JSON.stringify({ id: lei.id, nome: lei.nome, url: lei.url, coletadoEm: lei.coletadoEm, blocos: blocosPublicos }));
+      writeFileSync(join(pubLeis, f.replace(/\.json$/, ".versoes.json")), JSON.stringify(versoesSuperadas));
       // texto vigente de cada artigo, para o pop-up, a busca e o slide do leitor
       const porArtigo = new Map<string, { rotulo: string; partes: string[] }>();
       for (const { bloco } of textoAtual(lei.blocos as Bloco[])) {
@@ -338,7 +358,7 @@ function build(): boolean {
     writeFileSync(
       join(pubLeis, "_datas.json"),
       JSON.stringify(
-        Object.fromEntries(Object.entries(datas).map(([k, v]) => [k, { vigencia: v.vigencia, publicacao: v.publicacao, ...(v.aproximada ? { aproximada: true } : {}) }])),
+        Object.fromEntries(Object.entries(datas).map(([k, v]) => [k, paraCliente(v)])),
       ),
     );
     writeFileSync(join(OUT, "vigencias.json"), JSON.stringify(vigencias));

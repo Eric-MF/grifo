@@ -1,6 +1,6 @@
 // Confere o leitor de leis em um site já servido: node tests/e2e/leis.mjs [BASE]
 import { chromium } from "playwright";
-import { mkdtempSync, writeFileSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
@@ -40,6 +40,7 @@ const caixaRevogados = p.getByLabel("Texto revogado e redações anteriores");
 await caixaRevogados.check();
 checar((await p.locator("[data-revogados]").first().getAttribute("data-revogados")) === "1", "opção não mostrou revogados");
 checar((await visiveis('[data-sup="1"]')) > 0, "nenhum revogado visível com a opção marcada");
+await p.waitForFunction(() => [...document.querySelectorAll('[data-sup="1"] .txt')].some((e) => e.offsetParent !== null && e.textContent.trim().length > 0), null, { timeout: 5000 }).catch(() => falhas.push("texto revogado não carregou ao marcar a opção"));
 
 // 2. Preferência persiste após recarregar
 await p.reload({ waitUntil: "networkidle" });
@@ -115,6 +116,35 @@ checar(link.startsWith(LEI), `link compartilhado fora do esperado: ${link.slice(
 checar(link.length < 8 * 1024, "link compartilhado acima de 8 KB sem grifos");
 await p.locator('[aria-labelledby="compartilhar-titulo"]').getByRole("button", { name: "Fechar", exact: true }).click();
 
+// 5b. Link acima de 8 KB: baixar o .grifo.json, conferir o conteúdo e apagar o arquivo
+const grandes = Array.from({ length: 24 }, (_, k) => ({ id: `teste-${k}`, i: 0, disp: "art121", exato: `trecho de teste ${k}`, prefixo: "", sufixo: "", cor: "#f5d76e", nota: Array.from({ length: 800 }, () => Math.random().toString(36)[2] ?? "a").join(""), em: Date.now() }));
+await p.evaluate((lista) => {
+  const chave = Object.keys(localStorage).find((k) => k.startsWith("grifo:marcacoes:cp")) ?? "grifo:marcacoes:cp";
+  localStorage.setItem(chave, JSON.stringify(lista));
+}, grandes);
+await p.reload({ waitUntil: "networkidle" });
+await abrirMais();
+await p.getByRole("button", { name: "Compartilhar", exact: true }).click();
+const modal = p.locator('[aria-labelledby="compartilhar-titulo"]');
+const caixa = modal.locator('input[type="checkbox"]');
+if (!(await caixa.isChecked())) await caixa.click();
+const linkDoModal = () => modal.getByLabel("Link", { exact: true }).inputValue();
+for (let t = 0; t < 20 && (await linkDoModal()).length <= 8 * 1024; t++) await p.waitForTimeout(150);
+checar((await linkDoModal()).length > 8 * 1024, "link com grifos grandes não passou de 8 KB");
+const botaoBaixar = modal.getByRole("button", { name: "Baixar .grifo.json", exact: true });
+const [download] = await Promise.all([p.waitForEvent("download", { timeout: 5000 }).catch(() => null), botaoBaixar.click()]);
+if (!download) falhas.push("Baixar .grifo.json não gerou download");
+else {
+  const arquivo = join(mkdtempSync(join(tmpdir(), "grifo-")), download.suggestedFilename());
+  await download.saveAs(arquivo);
+  const baixado = JSON.parse(readFileSync(arquivo, "utf8"));
+  checar(download.suggestedFilename() === "cp.grifo.json", `nome do download inesperado: ${download.suggestedFilename()}`);
+  checar(baixado.lei === "cp" && baixado.m.length === grandes.length, "arquivo baixado não traz todos os grifos");
+  unlinkSync(arquivo);
+  checar(!existsSync(arquivo), "arquivo baixado não foi excluído");
+}
+await modal.getByRole("button", { name: "Fechar", exact: true }).click();
+
 // 6. Abrir arquivo .grifo.json: aceita a mesma lei e recusa outra
 const pasta = mkdtempSync(join(tmpdir(), "grifo-"));
 const grifo = (lei) => join(pasta, `${lei}.grifo.json`);
@@ -141,6 +171,14 @@ if ((await p.locator('[role="dialog"][aria-label="Mais"]').count()) === 0) await
 await p.getByRole("button", { name: "Imprimir / PDF" }).click();
 await p.waitForTimeout(400);
 checar((await p.evaluate(() => window.__impressoes)) === 1, "Imprimir / PDF não chamou window.print");
+
+// 8. Vigência por local (Lei 263): a escolha fica salva
+await abrirMais();
+checar((await p.getByLabel("Vigência da Lei 263/1948", { exact: false }).count()) === 1, "seletor de local da Lei 263 não apareceu");
+await p.getByLabel("Vigência da Lei 263/1948", { exact: false }).selectOption("df");
+await p.reload({ waitUntil: "networkidle" });
+await abrirMais();
+checar((await p.getByLabel("Vigência da Lei 263/1948", { exact: false }).inputValue()) === "df", "local da Lei 263 não persistiu");
 
 await b.close();
 

@@ -1,4 +1,4 @@
-# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.
+# Gerado por scripts/gerar-perguntas-exames.ts.
 exame: "18"
 perguntas:
   - id: 18-peca-1

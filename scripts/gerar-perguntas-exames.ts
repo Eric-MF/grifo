@@ -210,7 +210,7 @@ for (const e of exames) {
   totalItens += finais.length;
   writeFileSync(
     arquivo,
-    `# Gerado por scripts/gerar-perguntas-exames.ts. Revise e marque revisao.status: revisado.\n` +
+    `# Gerado por scripts/gerar-perguntas-exames.ts.\n` +
       stringify({ exame: e.id, perguntas: finais }, { lineWidth: 0 }),
   );
 }

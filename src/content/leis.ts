@@ -3,7 +3,7 @@ import "server-only";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { parse } from "yaml";
-import type { Bloco, Datas } from "@/lib/leis/linha-do-tempo";
+import type { Bloco, Datas, DatasLei } from "@/lib/leis/linha-do-tempo";
 
 export interface LeiTexto {
   id: string;
@@ -45,6 +45,8 @@ export function leisDoLeitor(): { id: string; nome: string; artigos: number; col
 export function datasAlteradoras(): Datas {
   const f = join(process.cwd(), "content", "leis-alteradoras.yaml");
   if (!existsSync(f)) return {};
-  const bruto: Record<string, { vigencia?: string; publicacao?: string; aproximada?: boolean }> = parse(readFileSync(f, "utf8")) ?? {};
-  return Object.fromEntries(Object.entries(bruto).map(([k, v]) => [k, { vigencia: v.vigencia, publicacao: v.publicacao, aproximada: v.aproximada }]));
+  const bruto: Record<string, DatasLei | null> = parse(readFileSync(f, "utf8")) ?? {};
+  return Object.fromEntries(
+    Object.entries(bruto).map(([k, v]) => [k, { nome: v?.nome, vigencia: v?.vigencia, publicacao: v?.publicacao, aproximada: v?.aproximada, padrao: v?.padrao, locais: v?.locais, marcos: v?.marcos }]),
+  );
 }

@@ -54,8 +54,7 @@ decreto-lei-5452:
   assinatura: 1943-05-01
   publicacao: 1943-08-09
   vigencia: 1943-11-10
-  nota: "Vigência em 10/11/1943 segundo busca na web (Câmara/Planalto); o artigo final não foi conferido no Planalto."
-  manual: true
+  nota: "Art. 2º: entra em vigor em 10 de novembro de 1943."
   url: https://www.planalto.gov.br/ccivil_03/Decreto-Lei/Del5452.htm#art478%C2%A72
 decreto-lei-6109:
   assinatura: 1943-12-16
@@ -119,7 +118,7 @@ ec-109:
   assinatura: 2021-03-15
   publicacao: 2021-03-16
   vigencia: 2021-03-16
-  nota: "Vigora na publicação (DOU 16/03/2021, segundo busca na web), exceto o art. 29-A, que vale a partir da primeira legislatura municipal após a publicação."
+  nota: "Art. 7º: entra em vigor na data de sua publicação, exceto quanto ao art. 29-A, que vale a partir do início da primeira legislatura municipal após a publicação. Data de publicação (DOU 16/03/2021) veio de busca na web."
   manual: true
   url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc109.htm#art1
 ec-11:
@@ -234,9 +233,18 @@ ec-131:
   vigencia: 2023-10-04
   url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc131.htm#art1
 ec-132:
+  nome: EC 132/2023
   assinatura: 2023-12-20
   publicacao: 2023-12-21
-  pendencia: "vigência gradual, sem data única: arts. 3º e 11 em 2027 (busca na web); alterações de alíquota só com o ajuste das alíquotas de referência. Não dá para fixar uma data"
+  vigencia: 2023-12-21
+  marcos:
+    - data: 2027-01-01
+      aproximada: true
+      disp: [art37, art146, art153, art156-a, art195, art225, art239]
+    - data: 2033-01-01
+      aproximada: true
+      disp: [art146, art150, art153, art156-a, art159, art195, art212-a, art225, adct-art82, adct-art104]
+  nota: "Art. 23: entra em vigor em 2027 quanto aos arts. 3º e 11 (CF arts. 37, 146, 153, 156-A, 195, 225 e 239), em 2033 quanto aos arts. 4º e 5º (CF arts. 146, 150, 153, 156-A, 159, 195, 212-A e 225; ADCT arts. 82 e 104), e na publicação quanto aos demais dispositivos. O texto não traz dia, então usa-se 1º de janeiro. Os arts. 146, 153, 156-A, 195 e 225 mudaram nas duas fases; o texto compilado não separa as redações, então vale a data de 2027."
   url: https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc132.htm#art3
 ec-133:
   assinatura: 2024-08-22
@@ -2244,9 +2252,22 @@ lei-2505:
   nota: "Lei sem cláusula de vigência: 45 dias após a publicação (LINDB, art. 1º; contagem da LC 95, art. 8º, § 1º)."
   manual: true
 lei-263:
+  nome: Lei 263/1948
   assinatura: 1948-02-23
   publicacao: 1948-02-26
-  pendencia: "vigência não confirmada: o texto dá só 'CLBR, 1948'; a publicação (DOU 26/02/1948) veio de busca na web"
+  padrao: demais
+  locais:
+    df:
+      vigencia: 1948-02-29
+      rotulo: Distrito Federal
+    rj-sp-mg:
+      vigencia: 1948-03-07
+      rotulo: Rio de Janeiro, São Paulo e Minas Gerais
+    demais:
+      vigencia: 1948-03-17
+      rotulo: Demais Estados e Territórios
+  nota: "Art. 11, vigência escalonada por região: Distrito Federal, 3 dias após a publicação (29/02/1948); Rio de Janeiro, São Paulo e Minas Gerais, 10 dias (07/03/1948); demais Estados e Territórios, 20 dias (17/03/1948). A regra de 45 dias da LINDB não se aplica, porque a lei tem disposição própria. O local escolhido no leitor define a data; sem escolha, vale a dos demais Estados. Publicação (DOU 26/02/1948) veio de busca na web."
+  manual: true
   url: https://www.planalto.gov.br/ccivil_03/leis/1930-1949/l263.htm#art11
 lei-3071:
   assinatura: 1916-01-01
@@ -2408,8 +2429,8 @@ lei-7209:
 lei-7210:
   assinatura: 1984-07-11
   publicacao: 1984-07-13
-  vigencia: 1985-01-01
-  nota: 'Art. 204: "entra em vigor concomitantemente com a lei de reforma da Parte Geral do Código Penal" (Lei 7.209/1984, em vigor em 01/01/1985, segundo busca na web; conferir a data no art. 2º da Lei 7.209).'
+  vigencia: 1985-01-13
+  nota: 'Art. 204: "entra em vigor concomitantemente com a lei de reforma da Parte Geral do Código Penal". Lei 7.209/1984, art. 5º: vigora seis meses após a publicação (DOU 13/07/1984, segundo busca na web).'
   manual: true
   url: https://www.planalto.gov.br/ccivil_03/leis/L7210.htm#art9a
 lei-7251:

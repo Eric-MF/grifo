@@ -3,57 +3,92 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { ExameResumo } from "@/content/load";
+import { ToggleNomePeca, useMostrarPeca } from "@/components/NomePeca";
+import { BaixarTudo } from "./BaixarTudo";
+import { nomeDoArquivo, type Chave } from "./nomes";
+import type { PartePontos } from "./pontuacao";
+import { VisualizarExame } from "./VisualizarExame";
 import styles from "./provas.module.css";
 
-function Baixar({ href, label, destaque, texto = "⬇ PDF" }: { href: string | null; label: string; destaque?: boolean; texto?: string }) {
-  if (!href) return <span className={styles.na} title="Não disponível">—</span>;
+function Baixar({
+  e,
+  chave,
+  label,
+  rotulo,
+  texto = "⬇ PDF",
+  destaque,
+}: {
+  e: ExameResumo;
+  chave: Chave;
+  label: string;
+  rotulo: string;
+  texto?: string;
+  destaque?: boolean;
+}) {
+  const href = e.downloads[chave];
+  if (!href) return <span className={styles.na} title="Não disponível"><span className={styles.rotuloBotao}>{rotulo}</span>—</span>;
   return (
-    <a className={`${styles.dl} ${destaque ? styles.dlGold : ""}`} href={href} download aria-label={label}>
+    <a className={`${styles.dl} ${destaque ? styles.dlGold : ""}`} href={href} download={nomeDoArquivo(e, chave)} aria-label={label}>
+      <span className={styles.rotuloBotao}>{rotulo}</span>
       {texto}
     </a>
   );
 }
 
+const situacaoDe = (e: ExameResumo) => (e.fase2 === "em-breve" ? "2ª fase em breve" : e.peca === "—" ? "Gabarito não divulgado" : null);
+
 function Peca({ e }: { e: ExameResumo }) {
-  if (e.fase2 === "em-breve") return <span className="muted">2ª fase em breve</span>;
-  if (e.peca === "—") return <span className="muted">Gabarito não divulgado</span>;
-  return <>{e.peca}</>;
+  const situacao = situacaoDe(e);
+  return situacao ? <span className="muted">{situacao}</span> : <>{e.peca}</>;
 }
 
-export function TabelaProvas({ exames, pecas }: { exames: ExameResumo[]; pecas: string[] }) {
+const temPdf = (e: ExameResumo) => Object.values(e.downloads).some(Boolean);
+
+export function TabelaProvas({ exames, pecas, pontuacao }: { exames: ExameResumo[]; pecas: string[]; pontuacao: Record<string, PartePontos[]> }) {
+  const [mostrarPeca] = useMostrarPeca();
   const [peca, setPeca] = useState("");
   const [busca, setBusca] = useState("");
+  const [aberto, setAberto] = useState<ExameResumo | null>(null);
+  const filtroPeca = mostrarPeca ? peca : "";
+
   const lista = useMemo(() => {
     const q = busca.trim().toLowerCase();
     return exames.filter(
-      (e) => (!peca || e.peca === peca) && (!q || `${e.numero} ${e.numeral} ${e.peca} ${e.variante ?? ""}`.toLowerCase().includes(q)),
+      (e) =>
+        (!filtroPeca || e.peca === filtroPeca) &&
+        (!q || `${e.numero} ${e.numeral} ${mostrarPeca ? e.peca : ""} ${e.variante ?? ""}`.toLowerCase().includes(q)),
     );
-  }, [exames, peca, busca]);
+  }, [exames, filtroPeca, busca, mostrarPeca]);
 
   return (
     <>
       <div className={styles.filtros}>
         <label>
           <span className="sr-only">Buscar</span>
-          <input type="search" placeholder="Buscar exame ou peça…" value={busca} onChange={(e) => setBusca(e.target.value)} />
+          <input type="search" placeholder="Buscar exame…" value={busca} onChange={(e) => setBusca(e.target.value)} />
         </label>
-        <label>
-          <span className="sr-only">Filtrar por peça</span>
-          <select value={peca} onChange={(e) => setPeca(e.target.value)}>
-            <option value="">Todas as peças</option>
-            {pecas.map((p) => (
-              <option key={p}>{p}</option>
-            ))}
-          </select>
-        </label>
+        {mostrarPeca && (
+          <label>
+            <span className="sr-only">Filtrar por peça</span>
+            <select value={filtroPeca} onChange={(e) => setPeca(e.target.value)}>
+              <option value="">Todas as peças</option>
+              {pecas.map((p) => (
+                <option key={p}>{p}</option>
+              ))}
+            </select>
+          </label>
+        )}
+        <ToggleNomePeca />
         <span className="muted">{lista.length} exame(s)</span>
       </div>
+      <BaixarTudo exames={lista} />
       <div className={styles.scroll}>
         <table className={styles.tabela}>
           <thead>
             <tr>
               <th scope="col">Exame</th>
-              <th scope="col">Peça cobrada</th>
+              <th scope="col" className={styles.c}>Visualizar</th>
+              {mostrarPeca && <th scope="col">Peça cobrada</th>}
               <th scope="col" className={styles.c}>Caderno original</th>
               <th scope="col" className={styles.c}>Gabarito original</th>
               <th scope="col" className={styles.c}>Caderno atualizado</th>
@@ -71,25 +106,48 @@ export function TabelaProvas({ exames, pecas }: { exames: ExameResumo[]; pecas: 
                     {e.numero}º Exame{e.variante ? ` · ${e.variante}` : ""}
                     {e.aplicacao ? ` · ${e.aplicacao.slice(0, 4)}` : ""}
                   </span>
+                  {!mostrarPeca && situacaoDe(e) && <span className={styles.situacao}>{situacaoDe(e)}</span>}
                 </th>
-                <td data-label="Peça cobrada"><Peca e={e} /></td>
-                <td className={styles.c} data-label="Caderno original"><Baixar href={e.downloads.cadernoOriginal} label={`Caderno original do ${e.numeral} Exame`} /></td>
-                <td className={styles.c} data-label="Gabarito original"><Baixar href={e.downloads.gabaritoOriginal} label={`Gabarito original do ${e.numeral} Exame`} /></td>
-                <td className={styles.c} data-label="Caderno atualizado"><Baixar href={e.downloads.cadernoAtualizado} label={`Caderno atualizado do ${e.numeral} Exame`} destaque /></td>
-                <td className={styles.c} data-label="Gabarito atualizado"><Baixar href={e.downloads.gabaritoAtualizado} label={`Gabarito atualizado do ${e.numeral} Exame`} destaque /></td>
-                <td className={styles.c} data-label="Simulado">
+                <td className={`${styles.c} ${styles.larga}`}>
+                  {e.corrigivel || temPdf(e) ? (
+                    <button type="button" className={styles.ver} onClick={() => setAberto(e)} aria-label={`Visualizar ${e.numeral} Exame`}>
+                      Visualizar
+                    </button>
+                  ) : (
+                    <span className={styles.na}><span className={styles.rotuloBotao}>Visualizar</span>—</span>
+                  )}
+                </td>
+                {mostrarPeca && (
+                  <td className={styles.larga}>
+                    <Peca e={e} />
+                  </td>
+                )}
+                <td className={styles.c}>
+                  <Baixar e={e} chave="cadernoOriginal" rotulo="Caderno original" label={`Caderno original do ${e.numeral} Exame`} />
+                </td>
+                <td className={styles.c}>
+                  <Baixar e={e} chave="gabaritoOriginal" rotulo="Gabarito original" label={`Gabarito original do ${e.numeral} Exame`} />
+                </td>
+                <td className={styles.c}>
+                  <Baixar e={e} chave="cadernoAtualizado" rotulo="Caderno atualizado" label={`Caderno atualizado do ${e.numeral} Exame`} destaque />
+                </td>
+                <td className={styles.c}>
+                  <Baixar e={e} chave="gabaritoAtualizado" rotulo="Gabarito atualizado" label={`Gabarito atualizado do ${e.numeral} Exame`} destaque />
+                </td>
+                <td className={styles.c}>
                   {e.corrigivel ? (
-                    <Link className={styles.sim} href={`/simulados/${e.id}/`}>
+                    <Link className={styles.sim} href={`/simulados/${e.id}/`} aria-label={`Fazer o simulado do ${e.numeral} Exame`}>
+                      <span className={styles.rotuloBotao}>Simulado</span>
                       Fazer
                     </Link>
                   ) : (
-                    <span className={styles.na}>—</span>
+                    <span className={styles.na}><span className={styles.rotuloBotao}>Simulado</span>—</span>
                   )}
                 </td>
-                <td className={styles.c} data-label="1ª fase (Tipo 1)">
+                <td className={`${styles.c} ${styles.larga}`}>
                   <span className={styles.par}>
-                    <Baixar href={e.downloads.objetivaCaderno} label={`Caderno da 1ª fase do ${e.numeral} Exame`} texto="Caderno" />
-                    <Baixar href={e.downloads.objetivaGabarito} label={`Gabarito definitivo da 1ª fase do ${e.numeral} Exame`} texto="Gabarito" />
+                    <Baixar e={e} chave="objetivaCaderno" rotulo="1ª fase · caderno" texto="Caderno" label={`Caderno da 1ª fase do ${e.numeral} Exame`} />
+                    <Baixar e={e} chave="objetivaGabarito" rotulo="1ª fase · gabarito" texto="Gabarito" label={`Gabarito definitivo da 1ª fase do ${e.numeral} Exame`} />
                   </span>
                 </td>
               </tr>
@@ -97,6 +155,7 @@ export function TabelaProvas({ exames, pecas }: { exames: ExameResumo[]; pecas: 
           </tbody>
         </table>
       </div>
+      {aberto && <VisualizarExame key={aberto.id} exame={aberto} pontuacao={pontuacao[aberto.id]} onFechar={() => setAberto(null)} />}
     </>
   );
 }

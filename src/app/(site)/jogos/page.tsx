@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 export default function JogosPage() {
   const treinoCapa = optionalImage("treino-2fase");
+  const breveCapa = optionalImage("em-breve");
   return (
     <div className="container section">
       <span className="eyebrow">Jogos</span>
@@ -56,7 +57,11 @@ export default function JogosPage() {
           </div>
         </Link>
         <div className={`card ${styles.jogoCard} ${styles.breve}`} aria-hidden>
-          <div className={styles.jogoCapa}>⚖️</div>
+          {breveCapa ? (
+            <img className={styles.jogoCapa} src={breveCapa.src} srcSet={breveCapa.srcSet} sizes="400px" alt="" loading="lazy" />
+          ) : (
+            <div className={styles.jogoCapa}>⚖️</div>
+          )}
           <div className={styles.jogoInfo}>
             <h2 style={{ fontSize: "1.5rem" }}>Em breve</h2>
             <p className="muted">Novos jogos a caminho.</p>

@@ -20,8 +20,28 @@ export interface Bloco {
   atos: Ato[];
   ancora?: string;
 }
-/** vigência das leis alteradoras (content/leis-alteradoras.yaml) */
-export type Datas = Record<string, { vigencia?: string; publicacao?: string; aproximada?: boolean } | undefined>;
+/** Vigência escalonada: a emenda entra em vigor por artigo, em datas próprias. */
+export interface Marco {
+  data: string;
+  aproximada?: boolean;
+  disp: string[];
+}
+/** Vigência de uma lei conforme o local, quando o texto divide por região. */
+export interface Local {
+  vigencia: string;
+  rotulo: string;
+}
+/** Datas das leis alteradoras (content/leis-alteradoras.yaml) */
+export interface DatasLei {
+  nome?: string;
+  vigencia?: string;
+  publicacao?: string;
+  aproximada?: boolean;
+  padrao?: string;
+  locais?: Record<string, Local>;
+  marcos?: Marco[];
+}
+export type Datas = Record<string, DatasLei | undefined>;
 
 interface Inicio {
   data: string | null;
@@ -35,8 +55,23 @@ export interface Versao {
 
 const CRIA: TipoAto[] = ["redacao", "incluido", "renumerado"];
 
-export function dataDoAto(a: Ato, datas: Datas): Inicio {
+/** Vigências por local: o local escolhido vale; sem escolha, vale o `padrao` do diploma. */
+export function datasComLocal(datas: Datas, escolhas: Record<string, string> = {}): Datas {
+  return Object.fromEntries(
+    Object.entries(datas).map(([id, d]) => {
+      if (!d?.locais) return [id, d];
+      const escolhido = escolhas[id] && d.locais[escolhas[id]] ? escolhas[id] : d.padrao;
+      const local = escolhido ? d.locais[escolhido] : undefined;
+      return [id, local ? { ...d, vigencia: local.vigencia, aproximada: undefined } : d];
+    }),
+  );
+}
+
+export function dataDoAto(a: Ato, datas: Datas, disp?: string): Inicio {
   const d = a.lei ? datas[a.lei] : undefined;
+  const artigo = disp?.split(".")[0];
+  const marco = artigo ? d?.marcos?.find((m) => m.disp.includes(artigo)) : undefined;
+  if (marco) return { data: marco.data, aproximado: !!marco.aproximada };
   if (d?.vigencia) return { data: d.vigencia, aproximado: !!d.aproximada };
   if (a.data) return { data: a.data, aproximado: true };
   if (a.ano) return { data: `${a.ano}-01-01`, aproximado: true };
@@ -45,7 +80,7 @@ export function dataDoAto(a: Ato, datas: Datas): Inicio {
 
 /** Bloco que só registra a revogação ("Art. 214. (Revogado pela Lei …)"), sem texto próprio. */
 export function marcoDeRevogacao(b: Bloco): boolean {
-  if (!b.atos.some((a) => a.tipo === "revogado")) return false;
+  if (!b.texto || !b.atos.some((a) => a.tipo === "revogado")) return false;
   const resto = b.texto.replace(b.rotulo ?? "", "").replace(/[\s.\-–—:]/g, "").replace(/\(?revogad[oa]s?\)?/gi, "");
   return resto.length === 0;
 }
@@ -55,27 +90,28 @@ export function versoes(blocos: Bloco[], datas: Datas): Map<string, Versao[]> {
   const porDisp = new Map<string, Versao[]>();
   blocos.forEach((b, i) => {
     if (!b.disp) return;
-    const lista = porDisp.get(b.disp) ?? [];
-    porDisp.set(b.disp, lista);
+    const disp = b.disp;
+    const lista = porDisp.get(disp) ?? [];
+    porDisp.set(disp, lista);
     if (marcoDeRevogacao(b)) {
       const ultima = lista[lista.length - 1];
       const ato = b.atos.find((a) => a.tipo === "revogado")!;
-      if (ultima) ultima.fim = dataDoAto(ato, datas);
+      if (ultima) ultima.fim = dataDoAto(ato, datas, disp);
       return;
     }
     if (b.tipo !== "texto" || !lista.length) lista.push({ indices: [], inicio: { data: null, aproximado: false }, fim: { data: null, aproximado: false } });
     lista[lista.length - 1].indices.push(i);
   });
-  for (const lista of porDisp.values()) {
+  for (const [disp, lista] of porDisp) {
     for (const v of lista) {
       const ato = v.indices.flatMap((i) => blocos[i].atos).find((a) => CRIA.includes(a.tipo));
-      if (ato) v.inicio = dataDoAto(ato, datas);
+      if (ato) v.inicio = dataDoAto(ato, datas, disp);
     }
     lista.forEach((v, k) => {
       const prox = lista[k + 1];
       if (prox && prox.inicio.data) v.fim = prox.inicio;
       const revogacao = v.indices.flatMap((i) => blocos[i].atos).find((a) => a.tipo === "revogado");
-      if (!prox && revogacao) v.fim = dataDoAto(revogacao, datas);
+      if (!prox && revogacao) v.fim = dataDoAto(revogacao, datas, disp);
     });
   }
   return porDisp;

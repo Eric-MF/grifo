@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { listarExames } from "@/content/load";
+import { carregarExame, listarExames } from "@/content/load";
 import { TabelaProvas } from "./TabelaProvas";
+import { pontuacaoDo } from "./pontuacao";
 
 export const metadata: Metadata = {
   title: "Provas e gabaritos da 2ª fase de Penal",
@@ -13,6 +14,7 @@ export default function ProvasPage() {
   const exames = listarExames().slice().reverse();
   const folha = existsSync(join(process.cwd(), "public/downloads/folhas/folha-resposta-penal.pdf"));
   const pecas = [...new Set(exames.map((e) => e.peca).filter((p) => p && p !== "—"))].sort();
+  const pontuacao = Object.fromEntries(exames.filter((e) => e.corrigivel).map((e) => [e.id, pontuacaoDo(carregarExame(e.id))]));
   return (
     <div className="container section">
       <span className="eyebrow">Provas anteriores</span>
@@ -21,7 +23,7 @@ export default function ProvasPage() {
         Todas as provas da 2ª fase de Direito Penal aplicadas pela FGV, com o padrão de resposta oficial. As versões
         atualizadas trazem o caderno no layout atual e notas sobre as mudanças na legislação desde a aplicação. Na última coluna ficam o caderno Tipo 1 e o gabarito definitivo da 1ª fase.
       </p>
-      <TabelaProvas exames={exames} pecas={pecas} />
+      <TabelaProvas exames={exames} pecas={pecas} pontuacao={pontuacao} />
       <section className="card" style={{ marginTop: "2.5rem" }} aria-labelledby="folhas">
         <h2 id="folhas" style={{ fontSize: "1.5rem" }}>Folha de respostas para imprimir</h2>
         <p className="muted">

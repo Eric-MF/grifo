@@ -29,4 +29,6 @@ function obter<T>(url: string): Promise<T> {
 
 export const carregarLei = (lei: string) => obter<LeiCompleta>(`/dados/leis/${lei}.json`);
 export const carregarArtigos = (lei: string) => obter<ArtigosDaLei>(`/dados/leis/${lei}.artigos.json`);
+/** Texto superado de cada dispositivo, pelo índice do bloco. */
+export const carregarVersoes = (lei: string) => obter<Record<number, Bloco>>(`/dados/leis/${lei}.versoes.json`);
 export const carregarDatas = () => obter<Datas>("/dados/leis/_datas.json");

@@ -19,12 +19,13 @@ export default async function RevisaoExame({ params }: { params: Promise<{ exame
       {temPdf && <iframe src={pdf} title="Padrão de resposta original" style={{ width: "100%", height: "100%", border: 0, borderRight: "1px solid #ccc" }} />}
       <div style={{ overflow: "auto", padding: "1rem 1.25rem" }}>
         <p>
-          <Link href="/revisao/">← todos</Link> · <a href={`vscode://file${arquivo}`}>abrir YAML no VS Code</a> · <code>{arquivo.replace(process.cwd() + "/", "")}</code>
+          <Link href="/revisao/">← todos</Link> · <Link href={`/revisao/?arquivo=content/exames/${id}/exame.yaml#editor`}>editar e aprovar o YAML</Link> ·{" "}
+          <a href={`vscode://file${arquivo}`}>abrir no VS Code</a> · <code>{arquivo.replace(process.cwd() + "/", "")}</code>
         </p>
         <h1 style={{ fontFamily: "inherit", fontSize: 22 }}>
           {exame.numeral} Exame — {exame.peca.nome} ({exame.revisao.status})
         </h1>
-        {exame.observacoes && <p style={{ background: "#fff6dd", padding: 8 }}>{exame.observacoes}</p>}
+        {exame.observacoes && <p style={{ background: "#ffe98a", color: "#1a1600", padding: 8, borderRadius: 4 }}>{exame.observacoes}</p>}
         {(teste?.partes ?? []).map((p) => (
           <section key={p.parte} style={{ marginBottom: "1.5rem" }}>
             <h2 style={{ fontFamily: "inherit", fontSize: 17 }}>

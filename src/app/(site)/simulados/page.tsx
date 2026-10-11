@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { listarExames, tituloExame } from "@/content/load";
+import { ToggleNomePeca, LinhaDeExame } from "@/components/NomePeca";
 import { HistoricoSimulados } from "./HistoricoSimulados";
 import styles from "./simulados.module.css";
 
@@ -20,6 +21,9 @@ export default function SimuladosPage() {
         o que pontuou pela tabela oficial da FGV.
       </p>
       <HistoricoSimulados />
+      <div style={{ margin: "1.5rem 0 0.5rem" }}>
+        <ToggleNomePeca />
+      </div>
       <ul className={styles.list}>
         {exames.map((e) => (
           <li key={e.id}>
@@ -28,8 +32,7 @@ export default function SimuladosPage() {
               <span className={styles.info}>
                 <strong>{tituloExame(e)}</strong>
                 <span className="muted">
-                  Peça: {e.peca}
-                  {e.aplicacao ? ` · ${new Date(e.aplicacao + "T12:00:00").getFullYear()}` : ""}
+                  <LinhaDeExame nome={e.peca} ano={e.aplicacao ? String(new Date(e.aplicacao + "T12:00:00").getFullYear()) : undefined} />
                 </span>
               </span>
               <span className={styles.badges}>

@@ -252,7 +252,8 @@
 .grupos legend { font-weight: 700; margin-bottom: 0.35rem; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--leitor-muted); }
 .grupos label { display: grid; gap: 0.3rem; }
 .grupos input[type="range"] { width: 100%; }
-.grupos input[type="date"], .busca input { padding: 0.65rem 0.8rem; border: 1px solid var(--leitor-borda); border-radius: 12px; background: var(--leitor-bg); color: var(--leitor-fg); font: inherit; }
+.grupos input[type="date"], .grupos select, .busca input { padding: 0.65rem 0.8rem; border: 1px solid var(--leitor-borda); border-radius: 12px; background: var(--leitor-bg); color: var(--leitor-fg); font: inherit; }
+.grupos select option { background: var(--leitor-painel); color: var(--leitor-fg); }
 .opcao { display: flex !important; align-items: center; gap: 0.55rem; min-height: 40px; }
 .opcao input { width: 20px; height: 20px; }
 .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }

@@ -55,7 +55,7 @@ export function vigenciasDaLei(id: string, blocos: Bloco[], datas: Datas): Recor
     }
     const redacao = vigentes.flatMap((b) => b.atos).filter((a) => a.tipo === "redacao").at(-1);
     if (!redacao) continue;
-    const { data } = dataDoAto(redacao, datas);
+    const { data } = dataDoAto(redacao, datas, disp);
     if (!data) continue;
     saida[chave] = { situacao: "alterado", lei: nomeDaLei(redacao.bruto), desde: data };
   }

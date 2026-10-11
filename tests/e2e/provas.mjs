@@ -29,6 +29,18 @@ for (const href of hrefs) {
   checar(r.ok(), `download quebrado (${r.status()}): ${href}`);
 }
 
+checar((await p.locator("details", { hasText: "Baixar vários arquivos" }).evaluate((d) => d.open)) === false, "painel 'Baixar vários arquivos' deveria começar recolhido");
+
+const nomes = await p.locator("table a[download]").evaluateAll((as) => as.map((a) => a.getAttribute("download")));
+checar(nomes.length > 0, "nenhum link com nome de arquivo para download");
+checar(nomes.every((n) => n.endsWith(".pdf") && /^[12]ª fase/.test(n)), "nome de arquivo sem fase no início");
+
+await p.locator('button[aria-label="Visualizar I Exame"]').click();
+const dialogo = p.locator("dialog[open]");
+await dialogo.waitFor();
+const abas = await dialogo.locator("[role=group] button").allTextContents();
+checar(abas.includes("Conferir texto") && !abas.includes("Simulado"), "diálogo deveria ter 'Conferir texto' no lugar de 'Simulado'");
+
 await b.close();
 
 if (falhas.length) {

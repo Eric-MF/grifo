@@ -8,12 +8,12 @@ import prontosJson from "@/content/generated/grifos.json";
 import { gravarJSON, lerJSON } from "@/lib/storage";
 import { artigoDigitado, buscarTexto, sugerirArtigos, type Achado, type ArtigoTexto } from "@/lib/leis/busca";
 import { codificar, decodificar, LIMITE_LINK, pareceCompartilhado, type Compartilhado } from "@/lib/leis/compartilhar";
-import { carregarArtigos, carregarDatas, carregarLei } from "@/lib/leis/dados";
+import { carregarArtigos, carregarDatas, carregarLei, carregarVersoes } from "@/lib/leis/dados";
 import { agregar, lerEventos, maisErrados, type Agregado } from "@/lib/erros";
 import { grifoDe, type GrifosProntos } from "@/lib/leis/grifos";
 import { htmlBlocos, mapaAncoras } from "@/lib/leis/html";
 import { gravarLegendas, lerLegendas, sistemaAtivo, todosSistemas, type CorLegenda, type Sistema } from "@/lib/leis/legendas";
-import { textoEm, type Bloco } from "@/lib/leis/linha-do-tempo";
+import { datasComLocal, textoEm, type Bloco, type Datas } from "@/lib/leis/linha-do-tempo";
 import { gravarMarcacoes, lerMarcacoes, localizar, novaMarcacao, type Marcacao } from "@/lib/leis/marcacoes";
 import {
   imantar,
@@ -40,6 +40,8 @@ export interface PrefsLeitor {
   destino: "grifo" | "planalto";
   /** grifos prontos do Grifo (content/grifos.yaml) */
   prontos: boolean;
+  /** local escolhido para leis com vigência por região, por id da alteradora */
+  locais: Record<string, string>;
 }
 export const PREFS_PADRAO: PrefsLeitor = {
   fonte: "sans",
@@ -51,6 +53,7 @@ export const PREFS_PADRAO: PrefsLeitor = {
   erros: true,
   destino: "grifo",
   prontos: true,
+  locais: {},
 };
 const K_PREFS = "grifo:leitor";
 const K_IMPORTANTES = "grifo:leis:importantes";
@@ -131,10 +134,12 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
   const [prefs, setPrefs] = useState<PrefsLeitor>(PREFS_PADRAO);
   const [painel, setPainel] = useState<Painel | null>(null);
   const [pronto, setPronto] = useState(false);
+  const [versaoTextos, setVersaoTextos] = useState(0);
   const [artigos, setArtigos] = useState<ArtigoTexto[]>([]);
   const [atual, setAtual] = useState(0);
   const [oculto, setOculto] = useState(false);
   const [data, setData] = useState("");
+  const [datas, setDatas] = useState<Datas | null>(null);
   const [tempo, setTempo] = useState<{ carregando: boolean; aprox: number; erro?: string } | null>(null);
   const [marcas, setMarcas] = useState<Marcacao[]>([]);
   const [legendas, setLegendas] = useState(() => ({ ativo: "materias", meus: [] as Sistema[] }));
@@ -157,6 +162,7 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
   const [aviso, setAviso] = useState<{ texto: string; acao?: { rotulo: string; fazer: () => void } } | null>(null);
   const [posicoes, setPosicoes] = useState<Posicoes>({});
   const blocos = useRef<Bloco[] | null>(null);
+  const versoesPedidas = useRef<Promise<void> | null>(null);
   const novaMarca = useRef<string | null>(null);
   const antesDoSalto = useRef<number | null>(null);
   const barraFixa = useRef(0);
@@ -190,6 +196,9 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
   useEffect(() => {
     registrarVisita(lei);
   }, [lei]);
+  useEffect(() => {
+    carregarDatas().then(setDatas, () => {});
+  }, []);
   useEffect(() => {
     const h = lerJSON<Historico>(K_HISTORICO, HISTORICO_VAZIO);
     for (const vizinha of [h.pilha[h.pos - 1], h.pilha[h.pos + 1]]) if (vizinha && vizinha !== lei) router.prefetch(`/leis/${vizinha}/`);
@@ -271,6 +280,29 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
     };
   }, [lei, url, total, irParaArtigo]);
 
+  // Texto superado sai do arquivo principal: carrega na primeira vez e troca os dispositivos já desenhados.
+  const garantirVersoes = useCallback(() => {
+    if (!versoesPedidas.current)
+      versoesPedidas.current = carregarVersoes(lei)
+        .then((superadas) => {
+          const lista = blocos.current;
+          const el = folha.current;
+          if (!lista || !el) return;
+          for (const [k, b] of Object.entries(superadas)) lista[Number(k)] = b;
+          const ancoras = mapaAncoras(lista);
+          for (const antigo of blocosDe(el)) {
+            const i = Number(antigo.dataset.i);
+            if (superadas[i]) antigo.outerHTML = htmlBlocos(lista, i, i + 1, lei, url, ancoras, CLASSES);
+          }
+          setVersaoTextos((v) => v + 1);
+        })
+        .catch(() => {
+          versoesPedidas.current = null;
+          setAviso({ texto: "Não foi possível carregar o texto revogado. Tente de novo." });
+        });
+    return versoesPedidas.current;
+  }, [lei, url]);
+
   useEffect(() => {
     if (!aviso) return;
     const t = setTimeout(() => setAviso(null), 6000);
@@ -286,7 +318,7 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
       if (planalto) a.target = "_blank";
       else a.removeAttribute("target");
     });
-  }, [prefs.destino, pronto]);
+  }, [prefs.destino, pronto, versaoTextos]);
 
   // Artigos importantes (estrela)
   useEffect(() => {
@@ -336,7 +368,7 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
         b.style.removeProperty("--pronto");
       }
     }
-  }, [pronto, prefs.prontos, sistema, lei]);
+  }, [pronto, prefs.prontos, sistema, lei, versaoTextos]);
 
   // Marcações do usuário
   const rotuloDaCor = useCallback(
@@ -363,7 +395,10 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
     }
     novaMarca.current = null;
     setPerdidas(faltaram);
-  }, [exibidas, rotuloDaCor, pronto]);
+  }, [exibidas, rotuloDaCor, pronto, versaoTextos]);
+  useEffect(() => {
+    if (pronto && (prefs.revogados || exibidas.some((m) => blocos.current?.[m.i]?.superada))) void garantirVersoes();
+  }, [pronto, prefs.revogados, exibidas, garantirVersoes]);
   const salvarMarcas = (ms: Marcacao[]) => {
     setMarcas(ms);
     gravarMarcacoes(lei, ms);
@@ -599,9 +634,10 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
     let vivo = true;
     setTempo({ carregando: true, aprox: 0 });
     carregarDatas()
-      .then((datas) => {
+      .then(async (carregadas) => {
+        await garantirVersoes();
         if (!vivo || !blocos.current) return;
-        const visiveis = textoEm(blocos.current, data, datas);
+        const visiveis = textoEm(blocos.current, data, datasComLocal(carregadas, prefs.locais));
         const porIndice = new Map(visiveis.map((v) => [v.i, v.aproximado]));
         for (const b of blocosDe(el)) {
           const i = Number(b.dataset.i);
@@ -615,7 +651,7 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
     return () => {
       vivo = false;
     };
-  }, [data, pronto]);
+  }, [data, pronto, prefs.locais, garantirVersoes, versaoTextos]);
 
   // ---------- compartilhar ----------
   const gerarLink = async (comMarcas: boolean) => {
@@ -1150,6 +1186,23 @@ export function Leitor({ lei, nome, url, total, inicial }: { lei: string; nome: 
                   Ver a lei como estava em
                   <input type="date" value={data} max={new Date().toISOString().slice(0, 10)} onChange={(e) => setData(e.target.value)} />
                 </label>
+                {Object.entries(datas ?? {}).map(([id, d]) =>
+                  d?.locais ? (
+                    <label key={id}>
+                      Vigência da {d.nome ?? id} onde o fato ocorreu
+                      <select
+                        value={prefs.locais[id] && d.locais[prefs.locais[id]] ? prefs.locais[id] : (d.padrao ?? "")}
+                        onChange={(e) => mudarPrefs({ locais: { ...prefs.locais, [id]: e.target.value } })}
+                      >
+                        {Object.entries(d.locais).map(([k, l]) => (
+                          <option key={k} value={k}>
+                            {l.rotulo}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  ) : null,
+                )}
                 <p className={styles.miuda}>
                   Por exemplo, a data do fato. Reconstruído das anotações do compilado do Planalto: redações intermediárias omitidas, suspensões do STF e vetos
                   derrubados não aparecem.
