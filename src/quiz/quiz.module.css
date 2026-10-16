@@ -1,5 +1,6 @@
 /* Pergunta de 2ª fase: usada pelo jogo e pelo treino. */
-.quizOverlay { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center; padding: 0.75rem; background: rgb(3 17 44 / 0.55); overflow: auto; }
+/* O palco do jogo tem user-select: none (games.module.css); aqui o enunciado volta a poder ser copiado. */
+.quizOverlay { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center; padding: 0.75rem; background: rgb(3 17 44 / 0.55); overflow: auto; user-select: text; -webkit-user-select: text; -webkit-touch-callout: default; }
 .quizLayout { width: min(100%, 980px); display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 1rem; align-items: start; }
 .quizBox { background: var(--bg); color: var(--text); border-radius: 20px; padding: 1.3rem 1.4rem; box-shadow: 0 24px 60px rgb(0 0 0 / 0.35); max-height: calc(100dvh - 3rem); overflow: auto; }
 .quizAd { opacity: 0.92; }
@@ -32,9 +33,53 @@
 .fbTitulo { font-size: 1.2rem; }
 .fbDetalhe { font-size: 0.85rem; color: var(--muted); }
 .fbExp { font-size: 0.9rem; color: var(--muted); }
+.fbAcoes { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.9rem; font-family: var(--font-body); font-size: 0.85rem; }
+.fbAcoes .copiar { margin-top: 0; }
+/* Relatar erro e Sugerir melhoria: mesma tipografia em negrito do botão Copiar questão e do HUD, sem sublinhado de link */
+.fbAcoes a { font-weight: 700; color: var(--text); text-decoration: none; }
+.fbAcoes a:hover, .fbAcoes a:focus-visible { text-decoration: underline; }
+/* Copiar questão: o ícone de folhas vira um visto ao copiar, e o botão volta ao normal depois de instantes */
+.copiar {
+  display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.9rem; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; font-size: 0.85rem;
+  font-weight: 700; cursor: pointer;
+  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease, transform 0.2s ease;
+}
+.copiar:hover { border-color: var(--primary); }
+.copiar:active { transform: scale(0.97); }
+.copiar:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.copiarIcone {
+  width: 18px; height: 18px; flex: none; overflow: visible; fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.copiarFolha { transform-box: fill-box; transform-origin: center; transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.copiarVisto { stroke-dasharray: 24; stroke-dashoffset: 24; opacity: 0; transition: stroke-dashoffset 0.45s ease 0.08s, opacity 0.2s ease; }
+.copiarRotulo { animation: copiarRotuloEntra 0.3s ease; }
+.copiar[data-estado="copiada"] { background: color-mix(in srgb, var(--ok) 18%, var(--surface)); border-color: var(--ok); animation: copiarPulso 0.5s ease; }
+.copiar[data-estado="copiada"] .copiarFolha { opacity: 0; transform: scale(0.6); }
+.copiar[data-estado="copiada"] .copiarVisto { stroke-dashoffset: 0; opacity: 1; }
+.copiar[data-estado="falhou"] { border-color: var(--bad); color: var(--bad); animation: copiarTremer 0.4s ease; }
+@keyframes copiarPulso {
+  0% { transform: scale(0.94); }
+  55% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+@keyframes copiarTremer {
+  20%, 60% { transform: translateX(-3px); }
+  40%, 80% { transform: translateX(3px); }
+}
+@keyframes copiarRotuloEntra {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .copiar, .copiarFolha, .copiarVisto { transition: none; }
+  .copiar[data-estado="copiada"], .copiar[data-estado="falhou"], .copiarRotulo { animation: none; }
+}
 .feedback button { justify-self: start; margin-top: 0.4rem; }
 @media (max-width: 760px) {
   .quizLayout { grid-template-columns: 1fr; }
   .quizAd { max-width: 100%; }
   .quizAd > aside { max-width: none; }
 }
+.alt:disabled { opacity: 0.5; cursor: not-allowed; }

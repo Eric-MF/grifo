@@ -27,6 +27,24 @@ export const NAV = [
 ] as const;
 
 /**
+ * E-mails de contato. O "+" é a marcação do Gmail: sugestões e erros chegam na mesma caixa,
+ * separados pelo endereço.
+ */
+export const CONTATO = {
+  sugestao: "contatos.grifo+sugestoes@gmail.com",
+  erro: "contatos.grifo+erro@gmail.com",
+} as const;
+
+/** Link mailto para sugerir ou relatar erro. Com `questao` (id da pergunta), o corpo já traz o id. */
+export function linkContato(tipo: keyof typeof CONTATO, questao?: string): string {
+  const assunto = tipo === "erro" ? "Grifo: erro" : "Grifo: sugestão";
+  const corpo = questao ? `Questão: ${questao}\n\n` : "";
+  // com a questão, o assunto traz o mesmo texto do corpo logo em frente: quem vê só o assunto já sabe qual é a questão
+  const assuntoCompleto = questao ? `${assunto} — Questão: ${questao}` : assunto;
+  return `mailto:${CONTATO[tipo]}?subject=${encodeURIComponent(assuntoCompleto)}${corpo ? `&body=${encodeURIComponent(corpo)}` : ""}`;
+}
+
+/**
  * Rede de anúncios. Enquanto `provider` for "none", os espaços do tipo "ad"
  * mostram um anúncio da casa. Para AdSense: provider "adsense" + client "ca-pub-…"
  * (e os slots em content/promos.yaml).

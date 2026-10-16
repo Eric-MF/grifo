@@ -1,10 +1,20 @@
-// Estilos visuais do Flap Suitcase. Tudo é desenhado proceduralmente (sem sprites),
-// para o jogo ser leve e para cada estilo poder mudar forma, cor e efeitos.
+// Estilos visuais do Flap Suitcase. Quase tudo é desenhado proceduralmente, para o jogo ser leve e para cada
+// estilo poder mudar forma, cor e efeitos. O tema Pixel usa a arte 8-bit de arte8bit.ts, com desenho procedural de reserva.
 //
 // Para criar um estilo: copie um objeto de TEMAS, ajuste a paleta e, se quiser,
 // sobrescreva `decor`, `coluna` ou `maleta`.
 
+import { CENARIO, COLUNA, faixa, miniatura, pronta } from "./arte8bit";
+
 export type Ctx = CanvasRenderingContext2D;
+
+/** Linha do recorde e aviso de recorde quebrado: cada estilo tem os seus (ver recorde.ts). */
+export interface MarcaRecorde {
+  cor: string;
+  traco: number[];
+  largura: number;
+  aviso: { texto: string; fonte: string; corTexto: string; corContorno: string; corFundo: string; anima: "pulsa" | "pisca" | "treme" };
+}
 
 export interface Paleta {
   ceu: [string, string][]; // [topo, horizonte] para amanhecer, dia, entardecer, noite
@@ -17,8 +27,10 @@ export interface Paleta {
   asa: { cor: string; contorno: string };
   moeda: [string, string];
   particula: string[];
+  recorde: MarcaRecorde;
   hud: string;
   estrelas: string;
+  sprite?: string[]; // cores dos sprites de coluna: entram na paleta de encaixe do tema pixel
 }
 
 export interface Tema {
@@ -308,6 +320,10 @@ const CLASSICO: Tema = {
     asa: { cor: "#ffffff", contorno: "#b9c7d6" },
     moeda: ["#f3c44f", "#b8860b"],
     particula: ["#ffffff", "#f3c44f", "#d9c9a8"],
+    recorde: {
+      cor: "#2b4f7e", traco: [], largura: 3,
+      aviso: { texto: "NOVO RECORDE!", fonte: "700 30px Georgia, serif", corTexto: "#2b4f7e", corContorno: "#fff7e0", corFundo: "rgba(255,247,224,0.92)", anima: "pulsa" },
+    },
     hud: "#03112c",
     estrelas: "#ffffff",
   },
@@ -354,6 +370,10 @@ const FOFO: Tema = {
     asa: { cor: "#ffffff", contorno: "#ffc2da" },
     moeda: ["#ffe27a", "#f7a8c4"],
     particula: ["#ff8fb8", "#ffe27a", "#a8dcff", "#ffffff"],
+    recorde: {
+      cor: "#ff5fa2", traco: [10, 6], largura: 3.5,
+      aviso: { texto: "NOVO RECORDE!", fonte: "900 30px system-ui, sans-serif", corTexto: "#ff3d8b", corContorno: "#ffffff", corFundo: "rgba(255,255,255,0.9)", anima: "pulsa" },
+    },
     hud: "#8a3a63",
     estrelas: "#fff6a8",
   },
@@ -437,6 +457,10 @@ const RETRO: Tema = {
     asa: { cor: "#27e0ff", contorno: "#27e0ff" },
     moeda: ["#fff36b", "#ff3fd1"],
     particula: ["#27e0ff", "#ff3fd1", "#fff36b"],
+    recorde: {
+      cor: "#27e0ff", traco: [4, 5], largura: 3,
+      aviso: { texto: "RECORDE!!", fonte: "900 28px monospace", corTexto: "#27e0ff", corContorno: "#ff3fd1", corFundo: "rgba(3,17,44,0.88)", anima: "pisca" },
+    },
     hud: "#ffffff",
     estrelas: "#ffffff",
   },
@@ -533,6 +557,10 @@ const STEAMPUNK: Tema = {
     asa: { cor: "#c98b4a", contorno: "#6b4226" },
     moeda: ["#e0b766", "#8a5f22"],
     particula: ["#d9d2c5", "#b5863a", "#8a8178"],
+    recorde: {
+      cor: "#b5863a", traco: [14, 4, 3, 4], largura: 3.5,
+      aviso: { texto: "NOVO RECORDE", fonte: "700 28px Georgia, serif", corTexto: "#f3e3b5", corContorno: "#3b2a1a", corFundo: "rgba(59,42,26,0.92)", anima: "treme" },
+    },
     hud: "#2a1a0d",
     estrelas: "#f0d9a8",
   },
@@ -595,6 +623,26 @@ const STEAMPUNK: Tema = {
   },
 };
 
+/** Medidas da coluna pixel, em células do sprite (scripts/processar-8bit.mjs imprime a geometria). */
+const GEOMETRIA_COLUNA = { capitel: 7, base: 60, fim: 66 };
+
+/** Coluna em coordenadas locais: capitel em y = 0, fuste esticado, base em y = len. */
+function desenharColunaSprite(c: Ctx, w: number, len: number, img: HTMLImageElement, g: { capitel: number; base: number; fim: number }) {
+  const sw = img.naturalWidth;
+  const s = w / sw;
+  const dCapitel = g.capitel * s;
+  const dBase = (g.fim - g.base) * s;
+  c.imageSmoothingEnabled = true;
+  c.imageSmoothingQuality = "high";
+  if (len < dCapitel + dBase) c.drawImage(img, 0, 0, sw, g.fim, -w / 2, 0, w, len);
+  else {
+    c.drawImage(img, 0, 0, sw, g.capitel, -w / 2, 0, w, dCapitel);
+    c.drawImage(img, 0, g.capitel, sw, g.base - g.capitel, -w / 2, dCapitel, w, len - dCapitel - dBase);
+    c.drawImage(img, 0, g.base, sw, g.fim - g.base, -w / 2, len - dBase, w, dBase);
+  }
+  c.imageSmoothingEnabled = false;
+}
+
 const PIXEL: Tema = {
   id: "pixel",
   nome: "Pixel 8-bit",
@@ -602,7 +650,7 @@ const PIXEL: Tema = {
   onda: "square",
   somBase: 523,
   escala: 0.34,
-  semAntisserrilhado: true,
+  semAntisserrilhado: false,
   capitel: "dorico",
   paleta: {
     ceu: [["#f8b878", "#fce0a8"], ["#5c94fc", "#a4e4fc"], ["#d82800", "#fca044"], ["#000000", "#0000a8"]],
@@ -615,23 +663,50 @@ const PIXEL: Tema = {
     asa: { cor: "#fcfcfc", contorno: "#000000" },
     moeda: ["#fca044", "#c84c0c"],
     particula: ["#fcfcfc", "#fca044", "#5c94fc"],
+    recorde: {
+      cor: "#fca044", traco: [6, 6], largura: 3,
+      aviso: { texto: "RECORDE!", fonte: "bold 26px monospace", corTexto: "#fca044", corContorno: "#1a1a2e", corFundo: "#1a1a2e", anima: "pisca" },
+    },
     hud: "#000000",
     estrelas: "#fcfcfc",
+    sprite: ["#f0e0c0", "#e0d0b0", "#d0b080", "#c09070"],
   },
-  decor(ctx, w, h, off, tod, t, tema) {
-    const p = tema.paleta;
-    for (let i = 0; i < 4; i++) {
-      const x = ((i * 320 - off * 0.2) % (w + 200) + w + 200) % (w + 200) - 100;
-      ctx.fillStyle = "#fcfcfc";
-      ctx.fillRect(x, 80 + (i % 2) * 40, 60, 16);
-      ctx.fillRect(x + 14, 68 + (i % 2) * 40, 32, 12);
+  coluna(ctx, w, len, variante, quebrada, tema) {
+    const img = quebrada ? COLUNA.rachada : COLUNA.normal;
+    if (!pronta(img)) return colunaGrega(ctx, w, len, variante, quebrada, tema);
+    desenharColunaSprite(ctx, w, len, img, GEOMETRIA_COLUNA);
+  },
+  // Camadas de parallax, da mais distante para a mais próxima. Com a noite, o céu some (aparecem as estrelas)
+  // e as camadas escurecem.
+  decor(ctx, w, h, off, dia) {
+    if (!pronta(CENARIO.ceu)) return;
+    const noite = Math.max(0, 1 - Math.abs(dia - 3) * 1.4);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
+    ctx.globalAlpha = 1 - noite;
+    faixa(ctx, miniatura(CENARIO.ceu), off * 0.02, 0, h, w);
+    ctx.globalAlpha = 1;
+    // as montanhas sobem para os picos aparecerem acima das colinas (que são opacas até embaixo)
+    for (const [img, velocidade, subida] of [[CENARIO.montanhas, 0.08, 0.22], [CENARIO.colinas, 0.2, 0], [CENARIO.campos, 0.35, 0]] as const) {
+      if (pronta(img)) faixa(ctx, miniatura(img), off * velocidade, -subida * h, h, w);
     }
-    // morros em degraus
-    ctx.fillStyle = ciclo(p.longe, tod);
-    for (let k = -1; k < w / 200 + 2; k++) {
-      const x = k * 200 - ((off * 0.3) % 200);
-      for (let s = 0; s < 5; s++) ctx.fillRect(x + s * 12, h - 40 - (5 - s) * 16, 120 - s * 24, 16);
+    if (noite > 0) {
+      ctx.fillStyle = `rgb(0 8 40 / ${0.5 * noite})`;
+      ctx.fillRect(0, 0, w, h);
     }
+    ctx.imageSmoothingEnabled = false;
+  },
+  // Faixa do chão: a mesma velocidade das colunas, sem costura à vista.
+  chao(ctx, w, h, y, off, tema) {
+    if (!pronta(CENARIO.chao)) {
+      ctx.fillStyle = tema.paleta.chao;
+      ctx.fillRect(0, y, w, h - y);
+      return;
+    }
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
+    faixa(ctx, miniatura(CENARIO.chao), off, y, h - y, w);
+    ctx.imageSmoothingEnabled = false;
   },
 };
 
@@ -654,6 +729,10 @@ const NOIR: Tema = {
     asa: { cor: "#e8e8e8", contorno: "#8a8a8a" },
     moeda: ["#e0e0e0", "#7a7a7a"],
     particula: ["#dddddd", "#9a9a9a"],
+    recorde: {
+      cor: "#e6e6e6", traco: [2, 5], largura: 2.5,
+      aviso: { texto: "NOVO RECORDE", fonte: "700 28px Georgia, serif", corTexto: "#f2f2f2", corContorno: "#000000", corFundo: "rgba(0,0,0,0.82)", anima: "pulsa" },
+    },
     hud: "#ffffff",
     estrelas: "#bbbbbb",
   },
@@ -699,6 +778,10 @@ const PAPIRO: Tema = {
     asa: { cor: "#fbf4e2", contorno: "#3b2a1a" },
     moeda: ["#f4e8cc", "#3b2a1a"],
     particula: ["#3b2a1a", "#7a5c3a"],
+    recorde: {
+      cor: "#7a5c3a", traco: [16, 6], largura: 3,
+      aviso: { texto: "NOVO RECORDE!", fonte: "700 30px Georgia, serif", corTexto: "#5a3e1f", corContorno: "#f5e6c0", corFundo: "rgba(245,230,192,0.94)", anima: "pulsa" },
+    },
     hud: "#3b2a1a",
     estrelas: "#3b2a1a",
   },

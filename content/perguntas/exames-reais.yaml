@@ -29,8 +29,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: &a1
-      status: rascunho
+    revisao:
+      status: revisado
   - id: exame-04-peca
     caso: |-
       Tício foi denunciado e processado, na 1ª Vara Criminal da Comarca do Município X, pela prática de roubo qualificado em decorrência do emprego de arma de fogo. Ainda durante a fase de inquérito policial, Tício foi reconhecido pela vítima. Tal reconhecimento se deu quando a referida vítima olhou através de pequeno orifício da porta de uma sala onde se encontrava apenas o réu. Já em sede de instrução criminal, nem vítima nem testemunhas afirmaram ter escutado qualquer disparo de arma de fogo, mas foram uníssonas no sentido de assegurar que o assaltante portava uma. Não houve perícia, pois os policiais que prenderam o réu em flagrante não lograram êxito em apreender a arma. Tais policiais afirmaram em juízo que, após escutarem gritos de “pega ladrão!”, viram o réu correndo e foram em seu encalço. Afirmaram que, durante a perseguição, os passantes apontavam para o réu, bem como que este jogou um objeto no córrego que passava próximo ao local dos fatos, que acreditavam ser a arma de fogo utilizada. O réu, em seu interrogatório, exerceu o direito ao silêncio. Ao cabo da instrução criminal, Tício foi condenado a oito anos e seis meses de reclusão, por roubo com emprego de arma de fogo, tendo sido fixado o regime inicial fechado para cumprimento de pena. O magistrado, para fins de condenação e fixação da pena, levou em conta os depoimentos testemunhais colhidos em juízo e o reconhecimento feito pela vítima em sede policial, bem como o fato de o réu ser reincidente e portador de maus antecedentes, circunstâncias comprovadas no curso do processo.
@@ -48,7 +48,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-06-peca
     caso: |-
       No dia 10 de março de 2011, após ingerir um litro de vinho na sede de sua fazenda, José Alves pegou seu automóvel e passou a conduzi-lo ao longo da estrada que tangencia sua propriedade rural. Após percorrer cerca de dois quilômetros na estrada absolutamente deserta, José Alves foi surpreendido por uma equipe da Polícia Militar que lá estava a fim de procurar um indivíduo foragido do presídio da localidade.
@@ -71,7 +72,8 @@ perguntas:
       - resposta-acusacao
       - rese
       - agravo-execucao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-07-peca
     caso: |-
       Leia com atenção o caso concreto a seguir:
@@ -101,7 +103,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-08-peca
     caso: |-
       Leia com atenção o caso concreto a seguir:
@@ -126,7 +129,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-09-peca
     caso: |-
       Gisele foi denunciada, com recebimento ocorrido em 31/10/2010, pela prática do delito de lesão corporal leve, com a presença da circunstância agravante, de ter o crime sido cometido contra mulher grávida. Isso porque, segundo narrou a inicial acusatória, Gisele, no dia 01/04/2009, então com 19 anos, objetivando provocar lesão corporal leve em Amanda, deu um chute nas costas de Carolina, por confundi-la com aquela, ocasião em que Carolina (que estava grávida) caiu de joelhos no chão, lesionando-se.
@@ -154,7 +158,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-10-peca
     caso: |-
       Leia com atenção o caso concreto a seguir:
@@ -183,7 +188,8 @@ perguntas:
       - resposta-acusacao
       - rese
       - agravo-execucao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-11-peca
     caso: |-
       Jerusa, atrasada para importante compromisso profissional, dirige seu carro bastante preocupada, mas respeitando os limites de velocidade. Em uma via de mão dupla, Jerusa decide ultrapassar o carro à sua frente, o qual estava abaixo da velocidade permitida. Para realizar a referida manobra, entretanto, Jerusa não liga a respectiva seta luminosa sinalizadora do veículo e, no momento da ultrapassagem, vem a atingir Diogo, motociclista que, em alta velocidade, conduzia sua moto no sentido oposto da via. Não obstante a presteza no socorro que veio após o chamado da própria Jerusa e das demais testemunhas, Diogo falece em razão dos ferimentos sofridos pela colisão.
@@ -207,7 +213,8 @@ perguntas:
       - resposta-acusacao
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-12-peca
     caso: |-
       Rita, senhora de 60 anos, foi presa em flagrante no dia 10/11/2011 (quinta-feira), ao sair da filial de uma grande rede de farmácias, após ter furtado cinco tintas de cabelo. Para subtrair os itens, Rita arrebentou a fechadura do armário onde estavam os referidos produtos, conforme imagens gravadas pelas câmeras de segurança do estabelecimento. O valor total dos itens furtados perfazia a quantia de R$49,95 (quarenta e nove reais e noventa e cinco centavos).
@@ -231,7 +238,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-13-peca
     caso: |-
       Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
@@ -257,7 +265,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-14-peca
     caso: |-
       Felipe, com 18 anos de idade, em um bar com outros amigos, conheceu Ana, linda jovem, por quem se encantou. Após um bate-papo informal e trocarem beijos, decidiram ir para um local mais reservado. Nesse local trocaram carícias, e Ana, de forma voluntária, praticou sexo oral e vaginal com Felipe.
@@ -301,7 +310,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-15-peca
     caso: |-
       Enrico, engenheiro de uma renomada empresa da construção civil, possui um perfil em uma das redes sociais existentes na Internet e o utiliza diariamente para entrar em contato com seus amigos, parentes e colegas de trabalho. Enrico utiliza constantemente as ferramentas da Internet para contatos profissionais e lazer, como o fazem milhares de pessoas no mundo contemporâneo.
@@ -334,7 +344,8 @@ perguntas:
       - resposta-acusacao
       - rese
       - agravo-execucao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-16-peca
     caso: |-
       Gilberto, quando primário, apesar de portador de maus antecedentes, praticou um crime de roubo simples, pois, quando tinha 20 anos de idade, subtraiu de Renata, mediante grave ameaça, um aparelho celular. Apesar de o crime restar consumado, o telefone celular foi recuperado pela vítima. Os fatos foram praticados em 12 de dezembro de 2011. Por tal conduta, foi Gilberto denunciado e condenado como incurso nas sanções penais do Art. 157, caput, do Código Penal a uma pena privativa de liberdade de 04 anos e 06 meses de reclusão em regime inicial fechado e 12 dias multa, tendo a sentença transitada em julgado para ambas as partes em 11 de setembro de 2013. Gilberto havia respondido ao processo em liberdade, mas, desde o dia 15 de setembro de 2013, vem cumprindo a sanção penal que lhe foi aplicada regularmente, inclusive obtendo progressão de regime. Nunca foi punido pela prática de falta grave e preenchia os requisitos subjetivos para obtenção dos benefícios da execução penal.
@@ -356,7 +367,8 @@ perguntas:
       - resposta-acusacao
       - rese
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-17-peca
     caso: |-
       Daniel, nascido em 02 de abril de 1990, é filho de Rita, empregada doméstica que trabalha na residência da família Souza. Ao tomar conhecimento, por meio de sua mãe, que os donos da residência estariam viajando para comemorar a virada de ano, vai até o local, no dia 02 de janeiro de 2010, e subtrai o veículo automotor dos patrões de sua genitora, pois queria fazer um passeio com sua namorada.
@@ -384,7 +396,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-18-peca
     caso: |-
       Durante o carnaval do ano de 2015, no mês de fevereiro, a família de Joana resolveu viajar para comemorar o feriado, enquanto Joana, de 19 anos, decidiu ficar em sua residência, na cidade de Natal, sozinha, para colocar os estudos da faculdade em dia. Tendo conhecimento dessa situação, Caio, vizinho de Joana, nascido em 25 de março de 1994, foi até o local, entrou sorrateiramente no quarto de Joana e, mediante grave ameaça, obrigou-a a praticar com ele conjunção carnal e outros atos libidinosos diversos, deixando o local após os fatos e exigindo que a vítima não contasse sobre o ocorrido para qualquer pessoa.
@@ -412,7 +425,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-19-peca
     caso: |-
       No dia 24 de dezembro de 2014, na cidade do Rio de Janeiro, Rodrigo e um amigo não identificado foram para um bloco de rua que ocorria em razão do Natal, onde passaram a ingerir bebida alcoólica em comemoração ao evento festivo. Na volta para casa, ainda em companhia do amigo, já um pouco tonto em razão da quantidade de cerveja que havia bebido, subtraiu, mediante emprego de uma faca, os pertences de uma moça desconhecida que caminhava tranquilamente pela rua. A vítima era Maria, jovem de 24 anos que acabara de sair do médico e saber que estava grávida de um mês. Em razão dos fatos, Rodrigo foi denunciado pela prática de crime de roubo duplamente majorado, na forma do Art. 157, § 2º, incisos I e II, do Código Penal.
@@ -446,7 +460,8 @@ perguntas:
       - resposta-acusacao
       - rese
       - agravo-execucao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-20-peca
     caso: |-
       Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
@@ -480,7 +495,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-20-porto-velho-peca
     caso: |-
       Bruno Silva, nascido em 10 de janeiro de 1997, enquanto adolescente, aos 16 anos, respondeu perante a Vara da Infância e Juventude pela prática de ato infracional análogo ao crime de tráfico, sendo julgada procedente a ação socioeducativa e aplicada a medida de semiliberdade.
@@ -508,7 +524,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-21-peca
     caso: |-
       Gabriela, nascida em 28/04/1990, terminou relacionamento amoroso com Patrick, não mais suportando as agressões físicas sofridas, sendo expulsa do imóvel em que residia com o companheiro em comunidade carente na cidade de Fortaleza, Ceará, juntamente com o filho do casal de apenas 02 anos. Sem ter familiares no Estado e nem outros conhecidos, passou a pernoitar com o filho em igrejas e outros locais de acesso público, alimentando-se a partir de ajudas recebidas de desconhecidos. Nessa época, Gabriela fez amizade com Maria, outra mulher em situação de rua que frequentava os mesmos espaços que ela.
@@ -539,7 +556,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-22-peca
     caso: |-
       Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
@@ -569,7 +587,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-23-peca
     caso: |-
       No dia 23 de fevereiro de 2016, Roberta, 20 anos, encontrava-se em um curso preparatório para concurso na cidade de Manaus/AM. Ao final da aula, resolveu ir comprar um café na cantina do local, tendo deixado seu notebook carregando na tomada. Ao retornar, retirou um notebook da tomada e foi para sua residência. Ao chegar em casa, foi informada de que foi realizado registro de ocorrência na Delegacia em seu desfavor, tendo em vista que as câmeras de segurança da sala de aula captaram o momento em que subtraiu o notebook de Cláudia, sua colega de classe, que havia colocado seu computador para carregar em substituição ao de Roberta, o qual estava ao lado.
@@ -597,7 +616,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-24-peca
     caso: |-
       Lucas, 22 anos, foi denunciado e condenado, definitivamente, pela prática de crime de associação para o tráfico, previsto no Art. 35 da Lei nº 11.343/06, sendo, em razão das circunstâncias do crime, aplicada a pena de 06 anos de reclusão em regime inicial semiaberto, entendendo o juiz de conhecimento que o crime não seria hediondo, não tendo sido reconhecida a presença de qualquer agravante ou atenuante.
@@ -635,7 +655,8 @@ perguntas:
       - resposta-acusacao
       - rese
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-25-peca
     caso: |-
       Patrick, nascido em 04/06/1960, tio de Natália, jovem de 18 anos, estava na varanda de sua casa em Araruama, em 05/03/2017, no interior do Estado do Rio de Janeiro, quando vê o namorado de sua sobrinha, Lauro, agredindo-a de maneira violenta, em razão de ciúmes.
@@ -665,7 +686,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-25-porto-alegre-peca
     caso: |-
       Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
@@ -695,7 +717,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-26-peca
     caso: |-
       Em 03 de outubro de 2016, na cidade de Campos, no Estado do Rio de Janeiro, Lauro, 33 anos, que é obcecado por Maria, estagiária de uma outra empresa que está situada no mesmo prédio em que fica o seu local de trabalho, não mais aceitando a rejeição dela, decidiu que a obrigaria a manter relações sexuais com ele, independentemente da sua concordância.
@@ -725,7 +748,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-27-peca
     caso: |-
       João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo consigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no interior da mochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato, encaminhadas para a Delegacia.
@@ -773,7 +797,8 @@ perguntas:
       - resposta-acusacao
       - rese
       - agravo-execucao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-28-peca
     caso: |-
       Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
@@ -801,7 +826,8 @@ perguntas:
       - resposta-acusacao
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-29-peca
     caso: |-
       Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe aplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do fato.
@@ -831,7 +857,8 @@ perguntas:
       - resposta-acusacao
       - rese
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-30-peca
     caso: |-
       Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
@@ -861,7 +888,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-31-peca
     caso: |-
       Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
@@ -891,7 +919,8 @@ perguntas:
       - resposta-acusacao
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-32-peca
     caso: |-
       Na madrugada do dia 1º de janeiro de 2020, Luiz, nascido em 24 de abril de 1948, estava em sua residência, em Porto Alegre, na companhia de seus três filhos e do irmão Igor, nascido em 29 de novembro de 1965, que também morava há dois anos no mesmo imóvel. Em determinado momento, um dos filhos de Luiz acionou fogos de artifício, no quintal do imóvel, para comemorar a chegada do novo ano. Ocorre que as faíscas atingiram o telhado da casa, que começou a pegar fogo. Todos correram para sair pela única e pequena porta da casa, mas Luiz, em razão de sua idade e pela dificuldade de locomoção, acabou ficando por último na fila para saída da residência. Percebendo que o fogo estava dele se aproximando e que iria atingi-lo em segundos, Luiz desferiu um forte soco na cabeça do irmão, que estava em sua frente, conseguindo deixar o imóvel. Igor ficou caído por alguns momentos, mas conseguiu sair da casa da família, sangrando em razão do golpe recebido.
@@ -922,7 +951,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-33-peca
     caso: |-
       Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de menores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para Carlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de conveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com metade dos bens subtraídos.
@@ -954,7 +984,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-34-peca
     caso: |-
       Rodrigo foi denunciado pelo crime de homicídio simples consumado, com a causa de aumento prevista na primeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que consta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rodrigo teria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse em cima da garrafa de vidro que segurava. O corte gerado foi a causa eficiente da morte de João, conforme consta do laudo acostado ao procedimento. Rodrigo teria sido encaminhado por seus amigos ao hospital após os fatos, pois se mostrava descontrolado, não tendo prestado socorro à vítima, por isso, sendo imputada a causa de aumento da primeira parte do Art. 121, § 4º, do CP.
@@ -980,7 +1011,8 @@ perguntas:
       - resposta-acusacao
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-35-peca
     caso: |-
       No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinha fazendo contra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do centro da cidade. Para tanto, coloca gasolina na casa, que estava desabitada, e acende um fósforo, sendo certo que o fogo gerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e, como ninguém costumava passar pelo local, o crime demorou algumas horas para ser identificado.
@@ -1006,7 +1038,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-36-peca
     caso: |-
       No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
@@ -1035,7 +1068,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-37-peca
     caso: |-
       Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
@@ -1076,7 +1110,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-38-peca
     caso: |-
       Marieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código Penal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de direitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INSS informações fraudulentas, consistentes em vínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de Joana, com prejuízo ao erário no valor de R$ 75.000,00 (setenta e cinco mil reais).
@@ -1104,7 +1139,8 @@ perguntas:
       - resposta-acusacao
       - rese
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-40-peca
     caso: |-
       Gustavo trabalha como entregador por aplicativo e aluga bicicletas para desempenhar sua função. Certo dia, descobriu que, próximo à sua residência, havia um depósito de bicicletas seminovas para revenda. Gustavo, então, para ter economia na locação diária de bicicleta, valeu-se de escalada para adentrar o depósito e retirar uma bicicleta, devolvendo-a intacta e sem danos ao final do dia. Gustavo pôs-se a adotar o mesmo procedimento nos dias subsequentes, sempre com intenção de uso e restituição. No oitavo dia, Gustavo chegou ao depósito e percebeu que a porta estava aberta. Assim, conseguiu entrar e sair com uma bicicleta pela porta da frente. Porém, neste dia 30 de outubro de 2023, Gustavo sofreu uma queda, destruindo por completo a bicicleta. Ao perceberem a falta de uma bicicleta, os administradores do depósito consultaram as câmeras de vigilância e constataram toda a atividade de Gustavo ao longo dos oito dias anteriores, comprovando a escalada por sete vezes (com subtração e restituição de sete bicicletas) e a entrada pela porta principal no oitavo dia.
@@ -1123,7 +1159,7 @@ perguntas:
 
       Considerando apenas as informações narradas, redija a peça jurídica cabível, diferente de habeas corpus e considerando que a decisão não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
 
-      Obs.: A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
+      Obs.: A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
     comando: Qual a peça cabível e o seu fundamento legal?
     peca: apelacao
     fundamentos:
@@ -1136,7 +1172,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-41-peca
     caso: |-
       O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
@@ -1155,7 +1192,7 @@ perguntas:
 
       Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
 
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
     comando: Qual a peça cabível e o seu fundamento legal?
     peca: apelacao
     fundamentos:
@@ -1168,7 +1205,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-42-peca
     caso: |-
       Policiais militares receberam uma denúncia anônima, em 10/10/2023, indicando que Diogo seria o responsável pela distribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-se à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.
@@ -1199,7 +1237,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-43-peca
     caso: |-
       Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
@@ -1218,7 +1257,7 @@ perguntas:
 
       Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
 
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
+      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
     comando: Qual a peça cabível e o seu fundamento legal?
     peca: contrarrazoes-apelacao
     fundamentos:
@@ -1231,7 +1270,8 @@ perguntas:
       - resposta-acusacao
       - rese
       - agravo-execucao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-44-peca
     caso: |-
       No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-se com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no suposto animal, vindo a destruir a peça de decoração avaliada em R$15.000,00 (quinze mil reais). Em razão disso, Manoel ajuizou queixa-crime em face de Aluísio, imputando-o como incurso nas penas do Art. 163 do CP (dano simples).
@@ -1252,7 +1292,7 @@ perguntas:
     comando: Qual a peça cabível e o seu fundamento legal?
     peca: apelacao
     fundamentos:
-      - art. 82, Lei 9
+      - art. 82, Lei 9.099/95
     explicacao: "Padrão de respostas do XLIV Exame: Fundamentação legal: Art. 82 da Lei nº 9.099/1995."
     fonte: XLIV Exame
     distratores:
@@ -1261,7 +1301,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-45-peca
     caso: |-
       Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
@@ -1294,7 +1335,8 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado
   - id: exame-46-peca
     caso: |-
       Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288-A do CP, sendo acusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores, Estado de Campo Belo.
@@ -1327,4 +1369,5 @@ perguntas:
       - rese
       - agravo-execucao
       - contrarrazoes-apelacao
-    revisao: *a1
+    revisao:
+      status: revisado

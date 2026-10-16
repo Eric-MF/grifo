@@ -54,3 +54,6 @@ next-env.d.ts
 
 # cache de coleta (scripts/baixar-leis.ts)
 /.cache/
+
+# gerado no build (scripts/gerar-zip-padrao.ts)
+/public/downloads/grupos/

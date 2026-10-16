@@ -59,14 +59,14 @@ peca:
       descricao: "Fundamentação legal: Art. 82 da Lei nº 9.099/1995 (0,10)."
       valores: [ 0, 0.1 ]
       componentes:
-        - { id: c1, valor: 0.1, dispositivo: [ "art. 82, Lei 9" ] }
+        - { id: c1, valor: 0.1, dispositivo: [ "art. 82, Lei 9.099/95" ] }
     - n: "3"
       secao: Petição de interposição
       descricao: "Tempestividade: prazo de dez dias (0,10), na forma do Art. 82, §1º, da Lei nº 9.099/1995 (0,10)."
       valores: [ 0, 0.1, 0.2 ]
       componentes:
         - { id: c1, valor: 0.1, termos: [ dez dias | 10 dias ] }
-        - { id: c2, valor: 0.1, dispositivo: [ "art. 82, § 1º, Lei 9" ], requer: c1 }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 82, § 1º, Lei 9.099/95" ], requer: c1 }
     - n: "4"
       secao: Razões de apelação
       descricao: "Endereçamento: Turma Recursal do Estado de Campo Belo (0,10)."

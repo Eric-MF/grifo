@@ -7,18 +7,22 @@ import { useModoCelular, useRetratoToque } from "@/lib/modo";
 import type { DadosCard } from "@/lib/share/card";
 import { gravarJSON, lerJSON } from "@/lib/storage";
 import { CATEGORIAS_PADRAO, mascaraCategorias } from "@/quiz/categorias";
+import { atualizarConquistas, consumirAusencia, EVENTO_CONQUISTAS, lerConquistas, registrarFoco, registrarPausa, registrarTentativaCompra } from "@/lib/conquistas";
 import { NOME_NIVEL } from "@/quiz/pontuacao";
 import { SeletorCategorias } from "@/quiz/SeletorCategorias";
 import type { Nivel } from "@/quiz/types";
 import { Aviso } from "./Aviso";
 import { QuizModal } from "./QuizModal";
-import { desbloqueado, PROGRESSO_INICIAL, type Progresso } from "./progresso";
+import { desbloqueado, itensComoJogar, migrarXpLegado, ordenarPersonagens, PROGRESSO_INICIAL, type Progresso } from "./progresso";
+import { avaliarItens } from "./regras";
+import { liberadaEm } from "./toques";
 import { jogoPorSlug, type JogoInfo } from "./registry";
 import type { Estatisticas, GameInstance, GameModule, GameOptions, Hud, ItemJogo, PoderProprioHud } from "./types";
 import styles from "./games.module.css";
+import { abreviarMoedas, abreviarNumero, formatarMoedas, formatarXp, numeroContador, textoContador } from "./contadores";
 import quizCss from "@/quiz/quiz.module.css";
 
-type Fase = "carregando" | "menu" | "pronto" | "jogando" | "pausado" | "pergunta" | "fim";
+type Fase = "carregando" | "menu" | "pronto" | "jogando" | "pausado" | "pergunta" | "fim" | "recorde";
 const NIVEIS: { n: Nivel; desc: string }[] = [
   { n: 1, desc: "Alternativas, só o nome da peça" },
   { n: 2, desc: "Digite a peça e o artigo" },
@@ -26,31 +30,14 @@ const NIVEIS: { n: Nivel; desc: string }[] = [
 ];
 
 interface Recordes { [nivel: string]: number }
+/** Partida que quebrou o recorde de um nível: "Ver recorde" mostra a tela de fim dela. */
+interface DadoRecorde { est: Estatisticas; codigo: string; data: string }
 
 // Espaço é "bater as asas": não pode acionar um botão do palco (opção da pergunta, HUD, menu).
 const bloquearEspaco = (e: KeyboardEvent<HTMLElement>) => {
   if (e.code === "Space" && e.target instanceof HTMLButtonElement) e.preventDefault();
 };
 const soltar = (e: { currentTarget: HTMLButtonElement }) => e.currentTarget.blur();
-
-/** Texto que some para o jogador até clicar: nomes de peça aparecem censurados por padrão. */
-function Censurado({ children }: { children: string }) {
-  const [aberto, setAberto] = useState(false);
-  return (
-    <button
-      type="button"
-      className={`${styles.censura} ${aberto ? styles.revelado : ""}`}
-      onClick={(e) => {
-        soltar(e);
-        setAberto((a) => !a);
-      }}
-      aria-pressed={aberto}
-      title={aberto ? undefined : "Clique para revelar"}
-    >
-      {children}
-    </button>
-  );
-}
 
 /** Item ainda não liberado: não mostra nome, descrição nem visual, só o requisito. */
 function ItemBloqueado({ item, progresso, onComprar }: { item: ItemJogo; progresso: Progresso; onComprar: () => void }) {
@@ -59,16 +46,18 @@ function ItemBloqueado({ item, progresso, onComprar }: { item: ItemJogo; progres
     <button
       type="button"
       className={styles.bloqueado}
-      disabled={item.custo === undefined || !comprável}
+      // sem moedas suficientes o botão continua tocável: a tentativa de compra conta para uma regra
+      disabled={item.custo === undefined}
+      aria-disabled={item.custo !== undefined && !comprável}
       onClick={(e) => {
         soltar(e);
         onComprar();
       }}
-      title={item.custo === undefined ? `Libera com ${item.xp} XP` : `Comprar por ${item.custo} moedas`}
+      title={item.requisito ?? (item.custo === undefined ? `Libera com ${formatarXp(item.xp ?? 0)}` : `Comprar por ${formatarMoedas(item.custo)}`)}
     >
       <span aria-hidden>🔒</span>
       <span className={styles.estiloNome}>???</span>
-      <small>{item.custo !== undefined ? `${item.custo} moedas` : `${item.xp} XP`}</small>
+      <small>{item.requisito ?? (item.custo !== undefined ? formatarMoedas(item.custo) : formatarXp(item.xp ?? 0))}</small>
     </button>
   );
 }
@@ -76,7 +65,7 @@ function ItemBloqueado({ item, progresso, onComprar }: { item: ItemJogo; progres
 /** Balão com o poder do personagem; posicionado pelo GameHost em relação ao palco. */
 function DicaPoder({ item, x, y, abaixo }: { item: ItemJogo; x: number; y: number; abaixo: boolean }) {
   const poder = item.poder;
-  if (!poder) return null;
+  if (!poder && !item.comoObter) return null;
   return (
     <div
       role="tooltip"
@@ -84,13 +73,23 @@ function DicaPoder({ item, x, y, abaixo }: { item: ItemJogo; x: number; y: numbe
       className={styles.dicaPoder}
       style={{ left: x, top: y, transform: abaixo ? "translateX(-50%)" : "translate(-50%, -100%)" }}
     >
-      <img className={styles.poderIcone} src={poder.icone} alt="" />
+      {poder && <img className={styles.poderIcone} src={poder.icone} alt="" />}
       <div>
-        <strong>{poder.nome}</strong>
-        <span>
-          {poder.descricao}
-          {poder.duracao > 0 && ` Dura ${poder.duracao} s.`}
-        </span>
+        {item.comoObter && (
+          <div className={styles.comoObter}>
+            <strong>{item.nome}</strong>
+            <small>{item.comoObter}</small>
+          </div>
+        )}
+        {poder && (
+          <>
+            <strong>{poder.nome}</strong>
+            <span>
+              {poder.descricao}
+              {poder.duracao > 0 && ` Dura ${poder.duracao} s.`}
+            </span>
+          </>
+        )}
       </div>
     </div>
   );
@@ -111,6 +110,42 @@ function Retrato({ desenhar, estilo }: { desenhar: (c: CanvasRenderingContext2D,
   }, [desenhar, estilo]);
   return <canvas ref={ref} className={styles.retrato} width={72} height={64} aria-hidden />;
 }
+
+/** Ícone do XP: uma estrela, do mesmo tamanho do ícone de moedas (a cor e o contorno vêm do CSS). */
+function IconeXp() {
+  return (
+    <svg className={styles.xpIcone} viewBox="0 0 24 24" aria-hidden>
+      <path d="M12 2.5L15.53 7.65 21.51 9.41 17.71 14.35 17.88 20.59 12 18.5 6.12 20.59 6.29 14.35 2.49 9.41 8.47 7.65z" />
+      <text x="12" y="14" textAnchor="middle">xp</text>
+    </svg>
+  );
+}
+
+/** Ícones do menu: traço simples, na cor do texto (ver `.atalho svg` e `.chip svg` no CSS). */
+const IconeTrofeu = () => (
+  <svg viewBox="0 0 24 24" aria-hidden>
+    <path d="M8 4h8v5a4 4 0 0 1-8 0V4Z" />
+    <path d="M8 6H5v1a3 3 0 0 0 3 3M16 6h3v1a3 3 0 0 1-3 3M12 13v4M8 20h8M9 17h6" />
+  </svg>
+);
+const IconeHistorico = () => (
+  <svg viewBox="0 0 24 24" aria-hidden>
+    <path d="M3 12a9 9 0 1 0 2.6-6.4" />
+    <path d="M3 4v5h5" />
+    <path d="M12 7v5l3 2" />
+  </svg>
+);
+const IconeLiberado = () => (
+  <svg viewBox="0 0 24 24" aria-hidden>
+    <rect x="5" y="11" width="14" height="10" rx="2" />
+    <path d="M8 11V7a4 4 0 0 1 7.7-1.5" />
+  </svg>
+);
+const IconeFechar = () => (
+  <svg viewBox="0 0 24 24" aria-hidden>
+    <path d="M6 6l12 12M18 6L6 18" />
+  </svg>
+);
 
 /** Plataforma genérica: carrega o jogo do registro e cuida de menus, perguntas, HUD e fim de jogo. */
 /** Compara dois HUDs campo a campo, para o motor não forçar re-render a cada 0,1 s sem mudança. */
@@ -146,7 +181,6 @@ function hudIgual(a: Hud, b: Hud) {
     a.vidas === b.vidas &&
     a.aviso?.titulo === b.aviso?.titulo &&
     a.aviso?.texto === b.aviso?.texto &&
-    a.aviso?.peca === b.aviso?.peca &&
     a.poderes.length === b.poderes.length &&
     a.poderes.every((p, i) => p.id === b.poderes[i].id && p.restante === b.poderes[i].restante) &&
     (a.poderProprio === b.poderProprio ||
@@ -161,6 +195,7 @@ function hudIgual(a: Hud, b: Hud) {
 export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string }) {
   const info = jogoPorSlug(slug) as JogoInfo;
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const moedaRef = useRef<HTMLSpanElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
   const jogo = useRef<GameInstance | null>(null);
   const [mod, setMod] = useState<GameModule | null>(null);
@@ -171,7 +206,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
   useLayoutEffect(() => {
     progressoRef.current = progresso;
   }, [progresso]);
-  const [hud, setHud] = useState<Hud>({ pontos: 0, vidas: 0, poderes: [] });
+  const [hud, setHud] = useState<Hud>({ pontos: 0, vidas: 0, moedas: 0, poderes: [] });
   const [quiz, setQuiz] = useState<{
     titulo: string;
     subtitulo: string;
@@ -187,8 +222,15 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
   const retrato = useRetratoToque();
   const girar = celular && retrato; // celular em retrato: o jogo pede para girar
   const [compraPendente, setCompraPendente] = useState<ItemJogo | null>(null);
+  const [avisoJogo, setAvisoJogo] = useState<{ liberados: ItemJogo[]; cobrado: number } | null>(null);
+  const pausaInicio = useRef<number | null>(null);
+  // a avaliação de desbloqueios só roda depois de ler o progresso salvo (senão regravaria o inicial)
+  const progressoCarregado = useRef(false);
   const [dica, setDica] = useState<{ item: ItemJogo; x: number; y: number; abaixo: boolean } | null>(null);
   const chave = `grifo:jogo:${slug}`;
+  const chaveRecorde = `grifo:jogo:${slug}:recorde`;
+  const [dadosRecorde, setDadosRecorde] = useState<Record<string, DadoRecorde>>({});
+  const dadosRecordeRef = useRef<Record<string, DadoRecorde>>({});
 
   // Preferências e recordes
   useEffect(() => {
@@ -199,8 +241,11 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
     setOpcoes((o) => ({ ...o, movimentoReduzido: reduzido, ...salvo.opcoes, debug }));
     recordesRef.current = salvo.recordes ?? {};
     setRecordes(recordesRef.current);
+    dadosRecordeRef.current = lerJSON<Record<string, DadoRecorde>>(chaveRecorde, {});
+    setDadosRecorde(dadosRecordeRef.current);
     setProgresso({ ...PROGRESSO_INICIAL, ...salvo.progresso });
-  }, [chave]);
+    progressoCarregado.current = true;
+  }, [chave, chaveRecorde]);
   const salvar = useCallback(
     (o: GameOptions, r: Recordes, p: Progresso) =>
       gravarJSON(chave, {
@@ -230,6 +275,61 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
     opcoesRef.current = opcoes;
   }, [opcoes]);
 
+  // Regras de desbloqueio: reavalia quando o jogo carrega, quando há um evento de conquista (resposta, clique em
+  // artigo, visita...) e depois de cada partida. Itens liberados entram em `comprados`; cobranças descontam moedas.
+  const avaliarDesbloqueios = useCallback(() => {
+    if (!mod || !progressoCarregado.current) return;
+    const itens = [...mod.estilos, ...(mod.personagens ?? [])];
+    const p0 = progressoRef.current;
+    const p = migrarXpLegado(itens, p0);
+    const r = avaliarItens({ conquistas: lerConquistas(), moedas: p.moedas, comprados: p.comprados, itens, agora: new Date() });
+    if (!r.novos.length && !r.cobrar && !r.consumiuAusencia && p === p0) return;
+    const novo: Progresso = { ...p, moedas: p.moedas - r.cobrar, comprados: [...p.comprados, ...r.novos.filter((id) => !p.comprados.includes(id))] };
+    progressoRef.current = novo;
+    setProgresso(novo);
+    salvar(opcoesRef.current, recordesRef.current, novo);
+    if (r.consumiuAusencia) atualizarConquistas(consumirAusencia);
+    const liberados = r.novos.map((id) => itens.find((i) => i.id === id)).filter((i): i is ItemJogo => !!i);
+    if (liberados.length || r.cobrar) setAvisoJogo({ liberados, cobrado: r.cobrar });
+  }, [mod, salvar]);
+
+  useEffect(() => {
+    avaliarDesbloqueios();
+  }, [avaliarDesbloqueios]);
+  useEffect(() => {
+    const h = () => avaliarDesbloqueios();
+    window.addEventListener(EVENTO_CONQUISTAS, h);
+    return () => window.removeEventListener(EVENTO_CONQUISTAS, h);
+  }, [avaliarDesbloqueios]);
+
+  // Pombodoro: tempo seguido na tela do jogo; trocar de aba zera a contagem.
+  useEffect(() => {
+    let acumulado = 0;
+    let ultimo = performance.now();
+    let visivel = document.visibilityState === "visible";
+    const tick = () => {
+      const agora = performance.now();
+      if (visivel) acumulado += agora - ultimo;
+      ultimo = agora;
+      if (acumulado >= 1500000) {
+        const ms = acumulado;
+        acumulado = 0;
+        atualizarConquistas((c) => registrarFoco(c, ms));
+      }
+    };
+    const aoMudarAba = () => {
+      tick();
+      visivel = document.visibilityState === "visible";
+      if (!visivel) acumulado = 0;
+    };
+    const id = setInterval(tick, 1000);
+    document.addEventListener("visibilitychange", aoMudarAba);
+    return () => {
+      clearInterval(id);
+      document.removeEventListener("visibilitychange", aoMudarAba);
+    };
+  }, []);
+
   // Cria a instância quando o módulo e o canvas estão prontos
   useEffect(() => {
     if (!mod || !canvasRef.current) return;
@@ -251,6 +351,8 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
           }),
         // o motor manda o HUD a cada 0,1 s: só re-renderiza quando algo do HUD mudou
         hud: (h) => setHud((anterior) => (hudIgual(anterior, h) ? anterior : h)),
+        alvoMoedas: () => moedaRef.current?.getBoundingClientRect() ?? null,
+        recorde: () => recordesRef.current[opcoesRef.current.nivel] ?? 0,
         fimDeJogo: (est) => {
           const o = opcoesRef.current;
           const ganho = est.progresso ?? { xp: 0, moedas: 0 };
@@ -263,6 +365,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
           recordesRef.current = novo;
           setRecordes(novo);
           salvar(o, novo, novoProgresso);
+          window.dispatchEvent(new Event(EVENTO_CONQUISTAS));
           (async () => {
             const categorias = o.categorias ?? CATEGORIAS_PADRAO;
             const imp = await impressao({ slug, est, o: [o.estilo, o.nivel, categorias] }, BITS_IMPRESSAO_JOGO);
@@ -279,10 +382,25 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
               impressao: imp,
               categorias: mascaraCategorias(categorias),
             });
-            setFim({ est, recorde: est.pontos > anterior && est.pontos > 0, codigo });
+            const recorde = est.pontos > anterior && est.pontos > 0;
+            setFim({ est, recorde, codigo });
+            if (recorde) {
+              dadosRecordeRef.current = { ...dadosRecordeRef.current, [o.nivel]: { est, codigo, data: new Date().toISOString() } };
+              setDadosRecorde(dadosRecordeRef.current);
+              gravarJSON(chaveRecorde, dadosRecordeRef.current);
+            }
           })();
         },
-        estado: (e) => setFase(e === "menu" ? "menu" : e),
+        estado: (e) => {
+          // Prescritodáctilo: uma pausa longa, depois voltar ao jogo
+          if (e === "pausado" && pausaInicio.current === null) pausaInicio.current = performance.now();
+          else if (e !== "pausado" && pausaInicio.current !== null) {
+            const ms = performance.now() - pausaInicio.current;
+            pausaInicio.current = null;
+            atualizarConquistas((c) => registrarPausa(c, ms));
+          }
+          setFase(e === "menu" ? "menu" : e);
+        },
       },
       opcoesRef.current,
     );
@@ -292,7 +410,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
       inst.destruir();
       jogo.current = null;
     };
-  }, [mod, slug, salvar, info.id]);
+  }, [mod, slug, salvar, info.id, chaveRecorde]);
 
   useEffect(() => {
     jogo.current?.configurar(opcoes);
@@ -306,7 +424,11 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
   };
 
   const comprar = (item: ItemJogo) => {
-    if (progressoRef.current.moedas < (item.custo ?? 0)) return;
+    if (progressoRef.current.moedas < (item.custo ?? 0)) {
+      // tentar comprar sem moedas suficientes conta para o Falcão Falimentar
+      atualizarConquistas(registrarTentativaCompra);
+      return;
+    }
     setCompraPendente(item);
   };
 
@@ -364,26 +486,32 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
   }, [girar, fase]);
 
   const estiloAtual = mod?.estilos.find((s) => s.id === opcoes.estilo);
+  const icones = mod?.iconesHud?.(opcoes.estilo) ?? null;
   const nivelNome = NOME_NIVEL[opcoes.nivel];
 
-  const cardFim = useMemo<DadosCard | null>(() => (fim
+  // partida recorde deste nível (para "Ver recorde") e a tela de fim que se mostra: a última partida, ou o recorde guardado
+  const recordeGuardado = dadosRecorde[String(opcoes.nivel)];
+  const visao = useMemo<{ est: Estatisticas; recorde: boolean; codigo: string; guardado?: boolean } | null>(() => (fase === "recorde"
+    ? (recordeGuardado ? { est: recordeGuardado.est, recorde: false, codigo: recordeGuardado.codigo, guardado: true } : null)
+    : fim), [fase, fim, recordeGuardado]);
+  const cardFim = useMemo<DadosCard | null>(() => (visao
     ? {
         titulo: info.titulo,
         subtitulo: `Nível ${nivelNome} · estilo ${estiloAtual?.nome ?? ""}`,
-        nota: fim.est.pontos,
-        maximo: recordes[opcoes.nivel] ?? fim.est.pontos,
-        aprovado: fim.recorde,
-        destaque: fim.recorde ? "Novo recorde!" : `${fim.est.acertos}/${fim.est.perguntas} perguntas certas`,
+        nota: visao.est.pontos,
+        maximo: recordes[opcoes.nivel] ?? visao.est.pontos,
+        aprovado: visao.recorde,
+        destaque: visao.guardado ? "Seu recorde neste nível" : visao.recorde ? "Novo recorde!" : `${visao.est.acertos}/${visao.est.perguntas} perguntas certas`,
         rotuloNota: "PONTOS",
         formatoNota: (n) => Math.round(n).toLocaleString("pt-BR"),
         linhas: [
-          ...(fim.est.extras ?? []).map((x) => ({ rotulo: x.rotulo, valor: x.valor.toLocaleString("pt-BR") })),
-          { rotulo: "Acertos", valor: `${fim.est.acertos}/${fim.est.perguntas}` },
+          ...(visao.est.extras ?? []).map((x) => ({ rotulo: x.rotulo, valor: numeroContador(x.valor, x.formato) })),
+          { rotulo: "Acertos", valor: `${visao.est.acertos}/${visao.est.perguntas}` },
         ],
         rodape: `Recorde neste nível: ${(recordes[opcoes.nivel] ?? 0).toLocaleString("pt-BR")} · ${new Date().toLocaleDateString("pt-BR")}`,
-        codigo: `Verifique em grifo.com/verificar · ${fim.codigo}`,
+        codigo: `Verifique em grifo.com/verificar · ${visao.codigo}`,
       }
-    : null), [fim, info.titulo, nivelNome, estiloAtual, recordes, opcoes.nivel]);
+    : null), [visao, info.titulo, nivelNome, estiloAtual, recordes, opcoes.nivel]);
 
   return (
     <div
@@ -407,23 +535,37 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
 
       {(fase === "jogando" || fase === "pronto" || fase === "pergunta" || fase === "pausado") && (
         <div className={styles.hud} aria-live="off">
-          <span className={styles.pontos}>{hud.pontos}</span>
           <div className={styles.poderes}>
             {hud.poderProprio && <PoderProprio poder={hud.poderProprio} onUsar={() => jogo.current?.usarPoderProprio()} />}
-            {hud.vidas > 0 && <span className={styles.poder} title="Vidas extras">❤️ ×{hud.vidas}</span>}
+            {hud.vidas > 0 && <span className={styles.poder} title="Vidas extras">{icones ? <img className={styles.pixelIcone} src={icones.coracao} alt="" /> : "❤️"} ×{hud.vidas}</span>}
             {hud.poderes.map((p) => (
               <span key={p.id} className={styles.poder} title={p.nome}>
                 <img className={styles.poderIcone} src={p.icone} alt="" /> <span className={styles.barra}><span style={{ width: `${p.restante * 100}%` }} /></span>
               </span>
             ))}
           </div>
-          <div className={styles.hudBtns}>
-            <button type="button" onClick={(e) => { soltar(e); jogo.current?.pausar(); }} aria-label="Pausar" disabled={fase === "pergunta"}>
-              ❚❚
-            </button>
-            <button type="button" onClick={(e) => { soltar(e); mudar({ som: !opcoes.som }); }} aria-label={opcoes.som ? "Desligar som" : "Ligar som"}>
-              {opcoes.som ? "🔊" : "🔇"}
-            </button>
+          <div className={styles.direita}>
+            <div className={styles.hudBtns}>
+              <button type="button" onClick={(e) => { soltar(e); jogo.current?.pausar(); }} aria-label="Pausar" disabled={fase === "pergunta"}>
+                {icones ? <img className={styles.pixelIcone} src={icones.pausa} alt="" /> : "❚❚"}
+              </button>
+              <button type="button" onClick={(e) => { soltar(e); mudar({ som: !opcoes.som }); }} aria-label={opcoes.som ? "Desligar som" : "Ligar som"}>
+                {icones ? <img className={styles.pixelIcone} src={opcoes.som ? icones.somLigado : icones.somDesligado} alt="" /> : opcoes.som ? "🔊" : "🔇"}
+              </button>
+            </div>
+            <span className={styles.contador} title="XP nesta partida" aria-label={`${hud.pontos} XP`}>
+              <IconeXp />
+              {hud.pontos}
+            </span>
+            <span className={styles.contador} title="Moedas nesta partida" aria-label={`${hud.moedas} moedas`}>
+              <span
+                ref={moedaRef}
+                className={styles.moedaIcone}
+                style={hud.moeda ? ({ "--moeda-ouro": hud.moeda[0], "--moeda-borda": hud.moeda[1] } as CSSProperties) : undefined}
+                aria-hidden
+              />{" "}
+              {abreviarMoedas(hud.moedas)}
+            </span>
           </div>
         </div>
       )}
@@ -431,7 +573,6 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
       {hud.aviso && fase === "jogando" && (
         <div className={styles.aviso} role="status">
           <strong>{hud.aviso.titulo}</strong>
-          {hud.aviso.peca && <Censurado key={hud.aviso.peca}>{hud.aviso.peca}</Censurado>}
           <span>{hud.aviso.texto}</span>
         </div>
       )}
@@ -444,20 +585,56 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
 
       {(fase === "menu" || fase === "carregando") && (
         <div className={styles.menu}>
-          <div className={styles.menuBox} onScroll={() => setDica(null)}>
+          <div className={icones ? `${styles.menuBox} ${styles.menuPixel}` : styles.menuBox} style={icones ? ({ "--moldura": `url(${icones.moldura})` } as CSSProperties) : undefined} onScroll={() => setDica(null)}>
             <h1 className={styles.menuTitulo}>{info.titulo}</h1>
             <p className={styles.menuDesc}>{info.descricao}</p>
             {fase === "carregando" ? (
               <p>Carregando…</p>
             ) : (
               <>
-                <button type="button" className={`btn btn-gold ${styles.jogar}`} onClick={jogar} disabled={girar} autoFocus>
-                  ▶ Jogar
-                </button>
+                <div className={styles.jogarBarra}>
+                  <button type="button" className={`btn btn-gold ${styles.jogar}`} onClick={jogar} disabled={girar} autoFocus>
+                    ▶ Jogar
+                  </button>
+                </div>
                 {mod?.personagens && (
-                  <p className={styles.progresso}>
-                    Experiência: {progresso.xp} XP · Moedas: {progresso.moedas}
-                  </p>
+                  <div className={styles.barraStats}>
+                    {recordeGuardado && (
+                      <button type="button" className={styles.atalho} onClick={() => setFase("recorde")} title="Ver recorde" aria-label="Ver recorde">
+                        <IconeTrofeu />
+                      </button>
+                    )}
+                    <span className={styles.contador} title="Experiência" aria-label={`Experiência: ${abreviarNumero(progresso.xp)}`}>
+                      <IconeXp /> {abreviarNumero(progresso.xp)}
+                    </span>
+                    <span className={styles.contador} title="Moedas" aria-label={`Moedas: ${abreviarMoedas(progresso.moedas)}`}>
+                      <span className={styles.moedaIcone} aria-hidden /> {abreviarMoedas(progresso.moedas)}
+                    </span>
+                    {fim && (
+                      <button type="button" className={styles.atalho} onClick={() => setFase("fim")} title="Ver último jogo" aria-label="Ver último jogo">
+                        <IconeHistorico />
+                      </button>
+                    )}
+                  </div>
+                )}
+                {avisoJogo && (
+                  <div className={styles.avisoMenu} role="status">
+                    {avisoJogo.liberados.map((it) => (
+                      <span key={it.id} className={styles.chip} title={`Liberado: ${it.nome}`}>
+                        {it.desenhar && <Retrato desenhar={it.desenhar} estilo={opcoes.estilo} />}
+                        <IconeLiberado />
+                        <strong>{it.nome}</strong>
+                      </span>
+                    ))}
+                    {avisoJogo.cobrado > 0 && (
+                      <span className={styles.chip} title="Cobrado ao liberar">
+                        <span className={styles.moedaIcone} aria-hidden /> −{abreviarMoedas(avisoJogo.cobrado)}
+                      </span>
+                    )}
+                    <button type="button" className={styles.atalho} onClick={() => setAvisoJogo(null)} title="Fechar" aria-label="Fechar">
+                      <IconeFechar />
+                    </button>
+                  </div>
                 )}
                 <fieldset className={styles.grupo}>
                   <legend>Dificuldade das perguntas</legend>
@@ -496,7 +673,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
                   <fieldset className={styles.grupo}>
                     <legend>Personagem</legend>
                     <div className={styles.estilos}>
-                      {mod.personagens.map((p) =>
+                      {ordenarPersonagens(mod.personagens, progresso).map((p) =>
                         desbloqueado(p, progresso) ? (
                           <button
                             key={p.id}
@@ -536,7 +713,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
                     <p>{mod.comoJogar.texto}</p>
                     {mod.comoJogar.itens && (
                       <ul>
-                        {mod.comoJogar.itens.map((it) => (
+                        {itensComoJogar(mod.comoJogar.itens, mod.personagens ?? [], progresso).map((it) => (
                           <li key={it.texto}>
                             {it.icone && <img className={styles.poderIcone} src={it.icone} alt="" />}
                             <span>{it.texto}</span>
@@ -554,7 +731,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
 
       {fase === "pausado" && (
         <div className={styles.menu}>
-          <div className={styles.menuBox}>
+          <div className={icones ? `${styles.menuBox} ${styles.menuPixel}` : styles.menuBox} style={icones ? ({ "--moldura": `url(${icones.moldura})` } as CSSProperties) : undefined}>
             <h2 className={styles.menuTitulo}>Pausado</h2>
             <button type="button" className="btn btn-gold" onClick={() => jogo.current?.continuar()} disabled={girar} autoFocus>
               ▶ Continuar
@@ -574,6 +751,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
           subtitulo={quiz.subtitulo}
           poder={quiz.poder}
           seed={quiz.seed}
+          liberadaEm={liberadaEm}
           onFim={(ok) => {
             const r = quiz.resolve;
             setQuiz(null);
@@ -588,7 +766,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
       {compraPendente && (
         <Aviso
           titulo="Comprar estilo?"
-          texto={`Comprar o estilo ${compraPendente.nome} por ${compraPendente.custo} moedas? Você tem ${progresso.moedas}.`}
+          texto={`Comprar o estilo ${compraPendente.nome} por ${formatarMoedas(compraPendente.custo ?? 0)}? Você tem ${formatarMoedas(progresso.moedas)}.`}
           rotuloOk="Comprar"
           onOk={() => confirmarCompra(compraPendente)}
           onCancelar={() => setCompraPendente(null)}
@@ -596,17 +774,17 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
       )}
 
       <button type="button" className={styles.telaCheia} onClick={alternarTelaCheia} aria-label={telaCheia ? "Sair da tela cheia" : "Tela cheia"} title={telaCheia ? "Sair da tela cheia" : "Tela cheia"}>
-        {telaCheia ? "⤡" : "⛶"}
+        {icones ? <img className={styles.pixelIcone} src={icones.telaCheia} alt="" /> : telaCheia ? "⤡" : "⛶"}
       </button>
 
-      {fase === "fim" && fim && cardFim && (
+      {(fase === "fim" || fase === "recorde") && visao && cardFim && (
         <div className={`${styles.menu} ${styles.fimOverlay}`}>
           <div className={`${styles.menuBox} ${styles.fimBox}`}>
-            <p className={quizCss.quizEyebrow}>{fim.recorde ? "Novo recorde!" : "Fim de jogo"}</p>
-            <h2 className={styles.fimPontos}>{fim.est.pontos.toLocaleString("pt-BR")} pontos</h2>
+            <p className={quizCss.quizEyebrow}>{visao.guardado ? "Seu recorde neste nível" : visao.est.causa === "sol" ? "VOCÊ VOOU MUITO PERTO DO SOL" : visao.recorde ? "Novo recorde!" : "Fim de jogo"}</p>
+            <h2 className={styles.fimPontos}>{visao.est.pontos.toLocaleString("pt-BR")} pontos</h2>
             <p className="muted">
-              {(fim.est.extras ?? []).map((x) => `${x.valor.toLocaleString("pt-BR")} ${x.rotulo.toLowerCase()} · `).join("")}
-              {fim.est.acertos} de {fim.est.perguntas} perguntas certas ·
+              {(visao.est.extras ?? []).map((x) => `${textoContador(x.valor, x.rotulo, x.formato)} · `).join("")}
+              {visao.est.acertos} de {visao.est.perguntas} perguntas certas ·
               recorde {(recordes[opcoes.nivel] ?? 0).toLocaleString("pt-BR")}
             </p>
             <div className={styles.fimAcoes}>
@@ -617,17 +795,16 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
                 Mudar estilo/nível
               </button>
             </div>
-            <details className={styles.compartilhar}>
-              <summary>Compartilhar pontuação</summary>
+            <div className={styles.compartilhar}>
               <ShareCard
                 dados={cardFim}
                 fundo={fundoCard}
-                nomeArquivo={`grifo-${slug}-${fim.est.pontos}.png`}
+                nomeArquivo={`grifo-${slug}-${visao.est.pontos}.png`}
                 caminho={`/jogos/${slug}/`}
-                textoPost={`Fiz ${fim.est.pontos} pontos no ${info.titulo} do Grifo, acertando ${fim.est.acertos} perguntas de 2ª fase OAB Penal!`}
+                textoPost={`Fiz ${visao.est.pontos} pontos no ${info.titulo} do Grifo, acertando ${visao.est.acertos} perguntas de 2ª fase OAB Penal!`}
               />
-              <p className={styles.codigo}>Código de verificação: <code>{fim.codigo}</code></p>
-            </details>
+              <p className={styles.codigo}>Código de verificação: <code>{visao.codigo}</code></p>
+            </div>
           </div>
         </div>
       )}

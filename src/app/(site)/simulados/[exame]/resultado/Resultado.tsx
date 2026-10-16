@@ -7,6 +7,7 @@ import { useEffect, useMemo, useState } from "react";
 import { PromoSlot } from "@/components/PromoSlot";
 import { RichText } from "@/components/RichText";
 import { ShareCard } from "@/components/ShareCard";
+import { useMostrarPeca } from "@/components/NomePeca";
 import type { Exame } from "@/content/schema";
 import { gerarCodigo, impressao, impressaoHex, type ModoCorrecao } from "@/lib/codigo/codigo";
 import { NOTA_CORTE, type ResultadoParte } from "@/lib/correcao/grader";
@@ -21,6 +22,7 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
   const [t, setT] = useState<Tentativa | null | undefined>(undefined);
   const [fonte, setFonte] = useState<"auto" | "ia">("auto");
   const [codigos, setCodigos] = useState<{ auto?: string; ia?: string; imp?: number }>({});
+  const [mostrarPeca] = useMostrarPeca();
 
   useEffect(() => {
     const id = params.get("t");
@@ -70,7 +72,7 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
     const codigo = (fonte === "ia" ? codigos.ia : codigos.auto) ?? "gerando…";
     return {
       titulo: `${exame.numeral} Exame de Ordem`,
-      subtitulo: `Peça: ${exame.peca.nome}`,
+      subtitulo: mostrarPeca ? `Peça: ${exame.peca.nome}` : "2ª fase · Penal",
       nota,
       maximo: t.resultado.maximo,
       aprovado,
@@ -82,7 +84,7 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
       rodape: `${fonte === "ia" && t.ia ? `Corrigido por IA (${t.ia.modelo})` : "Correção automática Grifo"} · ${new Date(t.criadaEm).toLocaleDateString("pt-BR")}`,
       codigo: `Verifique em grifo.com/verificar · ${codigo}`,
     };
-  }, [t, fonte, codigos, exame, nota, aprovado, partesNota]);
+  }, [t, fonte, codigos, exame, nota, aprovado, partesNota, mostrarPeca]);
 
   if (t === undefined) return <div className="container section">Carregando…</div>;
   if (t === null) {

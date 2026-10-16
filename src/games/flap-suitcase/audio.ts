@@ -63,5 +63,12 @@ export class Som {
     this.tom(this.base * 0.4, 0.3, { ate: 60, vol: 0.5, tipo: "square" });
   }
   trovao() { this.ruido(1.2, 0.35); }
+  /** Pulso do fim de Asas de Ouro e de Voo do Grifo: um estouro grave que cai. */
+  pulso() { this.tom(this.base * 1.5, 0.35, { ate: this.base * 0.4, vol: 0.45, tipo: "square" }); }
+  /** Grito de águia (com o Grifo): a frequência sobe em dois tons. É uma aproximação sintetizada, não uma gravação. */
+  grito() {
+    this.tom(this.base * 2.6, 0.55, { ate: this.base * 4.2, vol: 0.3, tipo: "sawtooth" });
+    this.tom(this.base * 2.8, 0.5, { ate: this.base * 4.6, vol: 0.12, tipo: "square", atraso: 0.05 });
+  }
   fechar() { this.ctx?.close(); this.ctx = null; }
 }

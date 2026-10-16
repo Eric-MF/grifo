@@ -10,13 +10,31 @@
 .girarAtivo .canvas { pointer-events: none; }
 
 /* ---------- HUD ---------- */
-.hud { position: absolute; inset: 0 0 auto 0; display: grid; grid-template-columns: 1fr auto 1fr; align-items: start; padding: 0.7rem 0.9rem; pointer-events: none; }
-.pontos {
-  grid-column: 2; font-family: var(--font-body); font-weight: 900; font-size: clamp(2.2rem, 6vw, 3.4rem); color: #fff;
+.hud { position: absolute; inset: 0 0 auto 0; display: grid; grid-template-columns: 1fr auto; align-items: start; padding: 0.7rem 0.9rem; pointer-events: none; }
+/* coluna da direita: os botões e, sob eles, XP e moedas um abaixo do outro */
+.direita { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; }
+/* XP e moedas: o mesmo tipo e a mesma altura de linha; a moeda é ajustada para ter o tamanho visível da estrela */
+.contador {
+  font-family: var(--font-body); font-weight: 900; font-size: clamp(1.5rem, 4.6vw, 2.2rem); color: #fff; line-height: 1;
   -webkit-text-stroke: 2px rgb(3 17 44 / 0.8); text-shadow: 0 3px 0 rgb(3 17 44 / 0.35); font-variant-numeric: tabular-nums;
+  display: inline-flex; align-items: center; gap: 0.2em; white-space: nowrap;
+}
+/* estrela verde com "xp" dentro; o texto não herda o contorno do contador */
+.xpIcone { width: 0.8em; height: 0.8em; flex: none; fill: #6dd66f; stroke: #03112c; stroke-width: 1.5; stroke-linejoin: round; }
+.xpIcone text { fill: #03112c; stroke: none; -webkit-text-stroke: 0; text-shadow: none; font-family: var(--font-body); font-size: 8.5px; font-weight: 900; }
+.moedaIcone {
+  /* a caixa é menor que a da estrela; o anel de fora (0,07em de cada lado) completa o tamanho visível dela */
+  width: 0.56em; height: 0.56em; border-radius: 50%; flex: none;
+  /* cores da moeda do estilo (variáveis que o GameHost define); sem elas, o dourado padrão */
+  background: radial-gradient(circle at 35% 35%, #fff 0 15%, var(--moeda-ouro, #f0c77e) 40%, var(--moeda-borda, #8a5a2b) 100%);
+  box-shadow: 0 0 0 0.07em var(--moeda-borda, #8a5a2b);
 }
 .poderes { grid-column: 1; grid-row: 1; display: flex; flex-wrap: wrap; gap: 0.35rem; }
 .poderIcone { width: 22px; height: 22px; flex: none; }
+/* ícones 16×16 do tema Pixel: escala inteira (×2) e sem suavizar, para continuarem nítidos */
+.poderIcone[src$=".png"], .pixelIcone { width: 32px; height: 32px; image-rendering: pixelated; flex: none; }
+.pixelIcone { width: 22px; height: 22px; }
+.hudBtns .pixelIcone, .telaCheia .pixelIcone { width: 24px; height: 24px; }
 .poder { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.5rem; border-radius: 999px; background: rgb(3 17 44 / 0.55); color: #fff; font-size: 0.9rem; }
 .barra { width: 38px; height: 5px; border-radius: 3px; background: rgb(255 255 255 / 0.25); overflow: hidden; }
 .barra span { display: block; height: 100%; background: var(--gold); }
@@ -34,7 +52,7 @@
 @media (prefers-reduced-motion: reduce) {
   .proprioPronto { animation: none; }
 }
-.hudBtns { grid-column: 3; justify-self: end; display: flex; gap: 0.35rem; pointer-events: auto; }
+.hudBtns { display: flex; gap: 0.35rem; pointer-events: auto; }
 .hudBtns button {
   width: 38px; height: 38px; border-radius: 50%; border: 0; background: rgb(3 17 44 / 0.55); color: #fff; cursor: pointer; font-size: 0.95rem;
 }
@@ -52,16 +70,38 @@
   position: absolute; inset: 0; display: grid; place-items: center; padding: 1rem; overflow: auto;
   background: radial-gradient(ellipse at center, rgb(3 17 44 / 0.35), rgb(3 17 44 / 0.7));
 }
+/* estilo Pixel: painel com a moldura 8-bit (9-slice), sem o canto arredondado do estilo normal */
+.menuPixel { border-radius: 0; border: 0; padding: 1.1rem 1.4rem; border-image: var(--moldura) 3 fill / 12px stretch; image-rendering: pixelated; box-shadow: none; }
 .menuBox {
   width: min(100%, 560px); display: flex; flex-direction: column; gap: 0.9rem; align-items: stretch; text-align: center;
-  background: color-mix(in srgb, var(--bg) 94%, transparent); color: var(--text); border-radius: 22px; padding: 1.5rem;
+  background: var(--bg); color: var(--text); border-radius: 22px; padding: 1.5rem; --menu-pad-y: 1.5rem;
   box-shadow: 0 24px 60px rgb(0 0 0 / 0.35); max-height: calc(100% - 1rem); overflow: auto;
 }
 .menuTitulo { margin: 0; font-size: clamp(2rem, 5vw, 2.8rem); }
 .menuDesc { margin: 0; color: var(--muted); }
-.progresso { margin: 0.6rem 0 0; font-weight: 600; color: var(--accent-ink); }
 .jogar { font-size: 1.15rem; padding: 0.9rem 1.5rem; }
+/* barra do Jogar: fica sempre visível ao rolar o menu. Ela começa na borda de cima da caixa e termina 1px abaixo do
+   botão. Do topo até o botão o fundo é sólido (cobre o texto que passa por cima dele); depois degrada até transparente
+   no fim da barra, para o texto que passa por trás dos lados do botão ir sumindo */
+.jogarBarra {
+  position: sticky; top: calc(-1 * var(--menu-pad-y)); z-index: 3; display: flex; justify-content: center;
+  margin: 0 -1.5rem; padding: var(--menu-pad-y) 1.5rem 1px;
+  background: linear-gradient(to bottom, var(--bg) 0, var(--bg) var(--menu-pad-y), transparent 100%);
+}
 .jogar:disabled { opacity: 0.5; cursor: not-allowed; }
+/* botão com o estilo da HUD: pílula escura e translúcida, como os poderes e os botões do jogo */
+/* resumo do menu: recorde, XP e moedas (com os mesmos ícones da HUD) e o último jogo, numa linha só */
+.barraStats { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem 1.1rem; }
+.barraStats .contador { font-size: 1.3rem; color: var(--text); -webkit-text-stroke: 0; text-shadow: none; }
+.atalho { display: inline-grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; cursor: pointer;
+  background: rgb(3 17 44 / 0.55); color: #fff; }
+.atalho:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.atalho svg, .chip svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.avisoMenu { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.45rem; }
+.chip { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.7rem 0.2rem 0.2rem; border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--text); font-size: 0.9rem; }
+.chip .retrato { width: 30px; height: 26px; }
+.chip svg { width: 14px; height: 14px; }
 .grupo { border: 0; margin: 0; padding: 0; text-align: left; }
 .grupo legend { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
 .niveis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
@@ -78,16 +118,13 @@
 .bloqueado { flex-direction: row; align-items: center; gap: 0.45rem; font-size: 0.88rem; min-width: 0; opacity: 0.6; }
 .bloqueado small { display: block; font-size: 0.75rem; color: var(--muted); font-weight: 600; }
 .bloqueado:disabled { cursor: not-allowed; }
+.bloqueado[aria-disabled="true"] { cursor: not-allowed; }
 .retrato { width: 36px; height: 32px; flex: none; }
-.censura { font: inherit; color: inherit; background: none; border: 0; padding: 0 0.2rem; border-radius: 4px; cursor: pointer; filter: blur(5px); user-select: none; }
-.censura.revelado { filter: none; user-select: text; }
-.censura:focus-visible { outline: 2px solid var(--accent); }
 .aviso {
   position: absolute; left: 50%; top: 4.5rem; transform: translateX(-50%); max-width: min(92%, 26rem); display: grid; gap: 0.25rem;
   padding: 0.6rem 0.9rem; border-radius: 12px; background: rgb(3 17 44 / 0.82); color: #fff; font-size: 0.9rem; text-align: center;
   pointer-events: none;
 }
-.aviso .censura { pointer-events: auto; justify-self: center; }
 .estiloDesc { font-size: 0.82rem; color: var(--muted); margin: 0.4rem 0 0; }
 .swatch { width: 18px; height: 18px; border-radius: 6px; flex: none; }
 .swatch[data-estilo="classico"] { background: linear-gradient(135deg, #4f9fe0 50%, #efe6d6 50%); }
@@ -115,6 +152,8 @@
   text-align: left; box-shadow: 0 10px 30px rgb(0 0 0 / 0.35);
 }
 .dicaPoder .poderIcone { width: 30px; height: 30px; }
+.comoObter { display: grid; gap: 0.15rem; margin-bottom: 0.45rem; padding-bottom: 0.45rem; border-bottom: 1px solid rgb(255 255 255 / 0.22); }
+.comoObter small { font-size: 0.8rem; font-weight: 500; opacity: 0.85; }
 .dicaPoder strong { display: block; font-size: 0.9rem; }
 
 /* ---------- Modo "Celular" (ver src/lib/modo.ts) ---------- */
@@ -134,13 +173,14 @@
 :global(:root[data-layout="celular"]) .dica { white-space: normal; max-width: calc(100% - 2rem); text-align: center; }
 :global(:root[data-layout="celular"]) .estilos { grid-template-columns: repeat(auto-fill, minmax(min(100%, 130px), 1fr)); }
 @media (max-width: 420px) {
-  :global(:root[data-layout="celular"]) .menuBox { padding: 1rem; }
+  :global(:root[data-layout="celular"]) .menuBox { padding: 1rem; --menu-pad-y: 1rem; }
 }
 @media (orientation: landscape) and (max-height: 500px) {
   :global(:root[data-layout="celular"]) .stage { height: calc(100dvh - 72px); min-height: 0; }
-  :global(:root[data-layout="celular"]) .menuBox { padding: 0.75rem 1rem; gap: 0.5rem; }
+  :global(:root[data-layout="celular"]) .menuBox { padding: 0.75rem 1rem; gap: 0.5rem; --menu-pad-y: 0.75rem; }
   :global(:root[data-layout="celular"]) .menuTitulo { font-size: 1.6rem; }
   :global(:root[data-layout="celular"]) .jogar { padding: 0.6rem 1.5rem; }
+  :global(:root[data-layout="celular"]) .jogarBarra { margin: 0 -1rem; }
 }
 
 /* ---------- Pop-up de aviso (dentro do palco) ---------- */
@@ -159,7 +199,6 @@
 .fimPontos { font-family: var(--font-body); font-weight: 900; font-size: clamp(2.2rem, 7vw, 3.4rem); margin: 0; }
 .fimAcoes { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
 .compartilhar { text-align: left; }
-.compartilhar summary { cursor: pointer; font-weight: 700; color: var(--primary); margin-bottom: 0.8rem; text-align: center; }
 .codigo { font-size: 0.8rem; color: var(--muted); overflow-wrap: anywhere; }
 .codigo code { font-family: var(--font-mono); }
 

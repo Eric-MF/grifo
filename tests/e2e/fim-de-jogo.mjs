@@ -31,6 +31,11 @@ for (let i = 0; i < 20; i++) {
       (bs.find((b) => b.innerText.trim() === "Continuar") ?? bs.find((b) => /^A\s+\S/.test(b.innerText.trim())))?.click();
     });
     await p.waitForTimeout(800);
+  } else if (estado === "morrendo") {
+    await p.waitForTimeout(300);
+  } else if (estado === "pronto") {
+    await p.keyboard.press("Space");
+    await p.waitForTimeout(300);
   } else break;
 }
 await p.getByText(/Fim de jogo|Novo recorde!/).first().waitFor({ timeout: 15000 });

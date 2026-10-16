@@ -44,7 +44,7 @@ export function PromoSlot({ local, variant = "card", seed }: { local: string; va
 
 function House({ promo }: { promo: Extract<Promo, { tipo: "house" }> }) {
   return (
-    <a className={styles.house} href={promo.href || courseHref()}>
+    <a className={styles.house} href={promo.href || courseHref()} target="_blank" rel="noopener noreferrer">
       <span className={styles.tag}>Grifo</span>
       <Logo size={40} className={styles.houseLogo} title="" />
       <strong className={styles.houseTitle}>{promo.titulo}</strong>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { NAV, SITE } from "@/config/site";
+import { CONTATO, linkContato, NAV, SITE } from "@/config/site";
 import { Logo } from "./Logo";
 import styles from "./SiteFooter.module.css";
 
@@ -23,6 +23,9 @@ export function SiteFooter() {
           ))}
           <Link href="/verificar/">Verificar nota</Link>
         </nav>
+        <p className={styles.small}>
+          Sugestões: <a href={linkContato("sugestao")}>{CONTATO.sugestao}</a> · Erros: <a href={linkContato("erro")}>{CONTATO.erro}</a>
+        </p>
         <p className={styles.small}>
           Material de estudo independente. Não temos vínculo com a OAB ou a FGV. Provas e gabaritos oficiais
           são reproduzidos para fins educacionais.

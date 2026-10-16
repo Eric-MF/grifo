@@ -7,7 +7,16 @@ import { PODERES, poderPorId, type Efeitos, type Poder } from "./powers";
 import { tirarAntisserrilhado } from "./pixel";
 import { CHANCE_RACHADA, MULTIPLICADOR_XP, PENALIDADES, PERSONAGENS, type Personagem } from "./progressao";
 import { ciclo, colunaGrega, temaPorId, type Clima, type Ctx, type Tema } from "./themes";
-import { desenharPersonagem } from "./personagens";
+import { desenharAsaSolta, desenharPersonagem } from "./personagens";
+import { colunasDoPulso, PODERES_COM_PULSO } from "./pulso";
+import { coresDaRacha, desenharColunaRachada, sementeRacha } from "./racha";
+import { toques } from "../toques";
+import { alvoRecolhimento, bordasRecolhidas, intersectaCirculo, molaRecolhimento, passoMola } from "./recolher";
+import { fatorVelocidadeVidas } from "../contadores";
+import { EFEITO, MOEDA, desenharQuadro, iconePoder, imagemPoder, pronta } from "./arte8bit";
+import { avancarVoo, criarVoo, posicaoVoo, type VooMoeda } from "./sucao";
+import { atingiuBatidas, registrarBatida } from "./teto";
+import { desenharAvisoRecorde, desenharMarcaRecorde, DURACAO_AVISO, marcarRecorde, quebrouRecorde } from "./recorde";
 
 const H = 640;
 const CHAO = 40;
@@ -22,6 +31,12 @@ const QUEDA_LEVE = 1100;
 const LARG_COL = 74;
 const ESPACO = 250;
 const RAIO = 15;
+// Batida de asas (Ícaro e Prescritodáctilo): raio do círculo invisível em volta do pássaro, 8 vezes o raio dele
+const RAIO_BATIDA = 8 * RAIO;
+// limite do recuo de uma parte da coluna, com folga para o quique da mola
+const RECUO_MAX = 2 * RAIO_BATIDA;
+// moedas sugadas ao contador (sucao.ts): no máximo este número de voos ao mesmo tempo
+const LIMITE_VOOS = 40;
 
 interface Pilar {
   x: number;
@@ -38,10 +53,22 @@ interface Pilar {
   penalizada: boolean;
   /** arquivada pelo poder: existe só para manter o espaçamento; não pontua, não colide e não aparece */
   arquivado?: boolean;
+  /** quanto a coluna está recolhida (0 inteira, 1 fora da tela e sem colisão), ver recolher.ts */
+  recolhido: number;
+  /** velocidade do recolhimento do galope (a mola de recolher.ts) */
+  velRecolhido: number;
+  /** a batida de asas empurrou a parte de cima (ou de baixo) da coluna para fora do círculo do pássaro: o recuo fica */
+  deslocTopo: number;
+  deslocBase: number;
+  /** velocidade e alvo desses recuos: a mola leva cada um ao alvo, com um quique */
+  velTopo: number;
+  velBase: number;
+  alvoTopo: number;
+  alvoBase: number;
 }
 interface Moeda { x: number; y: number; pega: boolean; fase: number }
 interface Orbe { x: number; y: number; poder: Poder; pego: boolean }
-interface Part { x: number; y: number; vx: number; vy: number; vida: number; max: number; cor: string; tam: number; tipo: 0 | 1 }
+interface Part { x: number; y: number; vx: number; vy: number; vida: number; max: number; cor: string; tam: number; tipo: 0 | 1 | 2 }
 interface Gota { x: number; y: number; v: number; s: number; r: number }
 
 const artes = new Map<string, HTMLImageElement>();
@@ -56,17 +83,13 @@ function arteDoPoder(id: string): HTMLImageElement {
 }
 
 const achaPersonagem = (id?: string) => PERSONAGENS.find((p) => p.id === id) ?? PERSONAGENS[0];
+/** Pontos que cada coluna passada rende, com os poderes ativos (Foco, Concurso Material, Dosimetria). */
+const pontosDaColuna = (e: Efeitos) => (e.foco ? 3 : e.dobro ? 2 : 1) * (e.dosimetria ? 3 : 1);
 const CARGA_SEG = 15;
 
-function desenharRacha(c: Ctx, len: number) {
-  c.save();
-  c.strokeStyle = "rgba(20,12,4,0.8)";
-  c.lineWidth = 3;
-  c.beginPath();
-  c.moveTo(LARG_COL / 2, 0);
-  for (let y = 12, k = 1; y < len; y += 12, k++) c.lineTo(LARG_COL / 2 + (k % 2 ? 9 : -7), y);
-  c.stroke();
-  c.restore();
+/** Coluna rachada: a pedra fratura perto da passagem (racha.ts); a semente vem de dados fixos do pilar. */
+function desenharRacha(c: Ctx, desenhar: () => void, len: number, q: Pilar, metade: "cima" | "baixo", tema: Tema) {
+  desenharColunaRachada(c, desenhar, LARG_COL, len, sementeRacha(q.variante, q.vao, metade), coresDaRacha(tema.paleta.coluna), metade);
 }
 
 export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: GameOptions): GameInstance {
@@ -82,6 +105,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
 
   let low: HTMLCanvasElement | null = null;
   let lowCtx: Ctx | null = null;
+  let bloco = 1; // pixel de tela por pixel do buffer baixo: inteiro, para a arte não ficar irregular
 
   // ---------------- estado ----------------
   let W = 800;
@@ -91,6 +115,8 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   const jog = { x: 0, y: H / 2, vy: 0, fase: 0, graca: 0 };
   let pilares: Pilar[] = [];
   let moedas: Moeda[] = [];
+  // moedas sugadas ao contador (sucao.ts): só entram no HUD quando chegam
+  let voos: VooMoeda[] = [];
   let orbes: Orbe[] = [];
   const parts: Part[] = [];
   const gotas: Gota[] = [];
@@ -103,6 +129,10 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   let nMoedas = 0;
   let nPerguntas = 0;
   let xpRun = 0;
+  // recorde guardado deste nível (lido ao começar a partida) e a posição (x) em que a partida o passou
+  let recordeAtual = 0;
+  let marcaRecordeX: number | null = null;
+  let avisoRecordeT = 0;
   let personagem: Personagem = achaPersonagem(opcoes.personagem);
   let aviso: Hud["aviso"];
   let avisoAte = 0;
@@ -124,6 +154,17 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   let orbesLigados = true;
   let nPenalidades = 0;
   let morteT = 0;
+  // Ícaro Liminar: instantes (segundos de jogo) das batidas de cabeça no teto, e se as asas já se soltaram
+  let batidasTeto: number[] = [];
+  let relogioJogo = 0;
+  let semAsas = false;
+  // asas soltas do Ícaro: caem à metade da velocidade do pássaro (ver morrerPeloSol)
+  let asasSoltas: { x: number; y: number; vy: number; ang: number; va: number; esc: number; atras: boolean }[] = [];
+  // efeitos em quadros (faísca, destroço, explosão) do tema Pixel
+  let efeitos8: { tipo: keyof typeof EFEITO; x: number; y: number; t0: number }[] = [];
+  const efeito8 = (tipo: keyof typeof EFEITO, x: number, y: number) => {
+    if (tema.id === "pixel") efeitos8.push({ tipo, x, y, t0: tempo });
+  };
   let hudT = 0;
   let raf = 0;
   let ultimo = 0;
@@ -132,7 +173,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
 
   const efeitos = (): Efeitos => ({
     escudo: ativos.has("escudo"),
-    ima: ativos.has("ima"),
+    ima: ativos.has("ima") || ativos.has("eco"),
     lento: ativos.has("lento"),
     mini: ativos.has("mini"),
     fantasma: ativos.has("fantasma"),
@@ -142,6 +183,12 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     equilibrio: ativos.has("equilibrio"),
     presuncao: ativos.has("presuncao"),
     dosimetria: ativos.has("dosimetria"),
+    galope: ativos.has("galope"),
+    eco: ativos.has("eco"),
+    sabedoria: ativos.has("sabedoria"),
+    pterossauro: ativos.has("pterossauro"),
+    foco: ativos.has("foco"),
+    agravo: ativos.has("agravo"),
   });
 
   // ---------------- tamanho ----------------
@@ -161,13 +208,19 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   }
   function prepararLow() {
     low ??= document.createElement("canvas");
-    low.width = Math.ceil(W * tema.escala!);
-    low.height = Math.ceil(H * tema.escala!);
+    bloco = Math.max(2, Math.round(canvas.height / 200));
+    low.width = Math.floor(canvas.width / bloco);
+    low.height = Math.floor(canvas.height / bloco);
     lowCtx = low.getContext("2d", { willReadFrequently: true })!; // lido a cada quadro (tirarAntisserrilhado)
   }
 
   // ---------------- mundo ----------------
-  const velocidade = () => (165 + Math.min(nPilares, 60) * 2) * (ativos.has("lento") ? 0.6 : 1);
+  // Vidas extras aceleram o mundo, só em quem tem o esquema de vidas (Fênixame e Harpia Corpus), para equilibrar
+  const velocidade = () =>
+    (165 + Math.min(nPilares, 60) * 2) *
+    (ativos.has("lento") ? 0.6 : 1) *
+    (personagem.vidasAceleram ? fatorVelocidadeVidas(vidas) : 1) *
+    (ativos.has("eco") ? 0.85 : 1);
   const aberturaBase = () => Math.max(132, 178 - nPilares * 1.1) + (nivel === 1 ? 8 : 0);
 
   function novoPilar(x: number) {
@@ -192,6 +245,14 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       fase: Math.random() * Math.PI * 2,
       passou: arquivado,
       arquivado,
+      recolhido: 0,
+      velRecolhido: 0,
+      deslocTopo: 0,
+      deslocBase: 0,
+      velTopo: 0,
+      velBase: 0,
+      alvoTopo: 0,
+      alvoBase: 0,
     };
     pilares.push(p);
     if (arquivado) return;
@@ -210,8 +271,17 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   function reiniciar() {
     pilares = [];
     moedas = [];
+    voos = [];
+    batidasTeto = [];
+    relogioJogo = 0;
+    recordeAtual = host.recorde?.() ?? 0;
+    marcaRecordeX = null;
+    avisoRecordeT = 0;
+    semAsas = false;
+    asasSoltas = [];
     orbes = [];
     parts.length = 0;
+    efeitos8 = [];
     ativos = new Map();
     carga = 0;
     vidas = 0;
@@ -237,7 +307,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   }
 
   // ---------------- partículas ----------------
-  function explosao(x: number, y: number, n: number, cores: string[], forca = 220, tipo: 0 | 1 = 0) {
+  function explosao(x: number, y: number, n: number, cores: string[], forca = 220, tipo: 0 | 1 | 2 = 0) {
     const qtd = reduzido ? Math.ceil(n / 3) : n;
     for (let i = 0; i < qtd; i++) {
       if (parts.length > 320) parts.shift();
@@ -249,15 +319,25 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
 
   // ---------------- entrada ----------------
   function bater() {
+    toques.ultimoVoo = performance.now();
     if (estado === "pronto") {
       mudarEstado("jogando");
       jog.graca = Math.max(jog.graca, 0.6);
     }
     if (estado !== "jogando") return;
-    jog.vy = IMPULSO;
+    jog.vy = IMPULSO * (ativos.has("pterossauro") ? 1.3 : 1);
     jog.fase += 1.4;
     som.flap();
-    if (!reduzido) explosao(jog.x - 18, jog.y + 6, 3, tema.paleta.particula, 60);
+    // Asas de cera e pterossauro: a batida empurra para fora do círculo em volta do pássaro as partes das colunas que
+    // ele toca; o recuo fica no novo lugar
+    if (ativos.has("asas-de-cera") || ativos.has("pterossauro")) {
+      for (const q of pilares) if (!q.passou && !q.arquivado) empurrarPeloCirculo(q);
+    }
+    if (!reduzido) {
+      // personagens com moedas no desenho soltam mini moedas da cor do estilo, no lugar das partículas comuns
+      if (personagem.moedas) explosao(jog.x - 18, jog.y + 6, 3, [...tema.paleta.moeda, "#ffffff"], 70, 2);
+      else explosao(jog.x - 18, jog.y + 6, 3, tema.paleta.particula, 60);
+    }
   }
   const onPointer = (ev: PointerEvent) => {
     // Só o botão principal e o primeiro dedo: um segundo toque não bate as asas duas vezes
@@ -324,6 +404,49 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       ativos.set("leve", p.duracao);
       return;
     }
+    const ordenadas = () => colunasDoPulso(pilares, jog.x).sort((a, b) => a.x - b.x);
+    if (p.id === "garras") {
+      quebrar(ordenadas().slice(0, 2));
+      return;
+    }
+    if (p.id === "renascer") {
+      vidas += 2;
+      return;
+    }
+    if (p.id === "tesouro") {
+      nMoedas += 20;
+      for (let i = 0; i < 20; i++) sugarMoeda(jog.x, jog.y, i * 0.04);
+      ativos.set("ima", 6);
+      return;
+    }
+    if (p.id === "liberdade") {
+      vidas += 2;
+      ativos.set("escudo", 5);
+      return;
+    }
+    if (p.id === "chifre") {
+      pontos += 5;
+      quebrar(ordenadas().slice(0, 1));
+      return;
+    }
+    if (p.id === "penhora") {
+      let i = 0;
+      for (const m of moedas) {
+        if (m.pega || m.x < 0 || m.x > W) continue;
+        m.pega = true;
+        nMoedas++;
+        pontos += 2;
+        sugarMoeda(m.x, m.y, i++ * 0.04);
+        explosao(m.x, m.y, 6, [tema.paleta.moeda[0], "#ffffff"], 120);
+      }
+      return;
+    }
+    if (p.id === "praga") {
+      nMoedas += 10;
+      for (let i = 0; i < 10; i++) sugarMoeda(jog.x, jog.y, i * 0.04);
+      ativos.set("lento", 6);
+      return;
+    }
     if (p.id === "escudo") ativos.set("escudo", p.duracao);
     else ativos.set(p.id, p.duracao);
   }
@@ -335,7 +458,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
         tipo,
         poderId: poder?.id,
         poderNome: poder?.nome,
-        poderIcone: poder?.icone,
+        poderIcone: poder && (tema.id === "pixel" ? iconePoder(poder.id) : poder.icone),
         poderDescricao: poder?.descricao,
         poderDuracao: poder?.duracao,
         carrega: poder?.personagem === personagem.id,
@@ -356,6 +479,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
           jog.graca = 1;
           mudarEstado("pronto");
         } else if (ok) reviver();
+        else if (agravo("O recurso suspendeu a derrota: você segue voando.")) reviver();
         else morrer();
       });
   }
@@ -419,7 +543,41 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     q.passou = true;
   }
 
+  /** Quebra colunas: somem da tela sem pontuar, com o estouro nas duas bordas do vão. */
+  function quebrar(alvo: Pilar[]) {
+    for (const q of alvo) {
+      const topo = q.vao - q.abertura / 2;
+      const base = q.vao + q.abertura / 2;
+      remover(q);
+      explosao(q.x, topo, 14, [tema.paleta.coluna.corpo, tema.paleta.coluna.sombra], 200);
+      explosao(q.x, base, 14, [tema.paleta.coluna.corpo, tema.paleta.coluna.sombra], 200);
+      efeito8("destroco", q.x, topo);
+      efeito8("destroco", q.x, base);
+    }
+  }
+
+  /** Pulso do fim de Asas de Ouro e de Voo do Grifo: quebra as colunas à frente, sem pontuar. Com o Grifo, sai um grito. */
+  function soltarPulso() {
+    quebrar(colunasDoPulso(pilares, jog.x));
+    som.pulso();
+    if (personagem.id === "grifo") som.grito();
+    flash = Math.max(flash, 0.3);
+    tremor = reduzido ? 0 : 3;
+  }
+
+  /** Agravo: suspende a próxima penalidade (coluna rachada ou resposta errada ao bater). Devolve true se absorveu. */
+  function agravo(texto: string): boolean {
+    if (!ativos.has("agravo")) return false;
+    ativos.delete("agravo");
+    som.poder();
+    explosao(jog.x, jog.y, 12, ["#c9a64a", "#ffffff"], 160);
+    aviso = { titulo: "Agravo", texto };
+    avisoAte = performance.now() + 3000;
+    return true;
+  }
+
   function penalizar() {
+    if (agravo("O recurso suspendeu a penalidade.")) return;
     nPenalidades++;
     const pen = PENALIDADES[Math.floor(Math.random() * PENALIDADES.length)];
     som.batida();
@@ -429,14 +587,63 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     else if (pen.efeito === "pontos") pontos = Math.max(0, pontos - pen.valor);
     else if (pen.efeito === "vida") vidas = Math.max(0, vidas - pen.valor);
     else nMoedas = Math.max(0, nMoedas - pen.valor);
-    aviso = { titulo: "Coluna rachada", peca: pen.peca, texto: pen.texto };
+    aviso = { titulo: "Coluna rachada", texto: pen.texto };
     avisoAte = performance.now() + 4000;
   }
 
+  /**
+   * Ícaro Liminar que bate a cabeça no teto sem parar: as asas de cera se soltam do corpo, ele cai e a partida acaba
+   * na hora, sem vidas, escudo nem pergunta de segunda chance.
+   */
+  function morrerPeloSol() {
+    if (opcoes.debug && invulneravel) return;
+    semAsas = true;
+    som.batida();
+    tremor = reduzido ? 0 : 5;
+    // as duas asas se soltam na posição em que estavam; caem à metade da velocidade do pássaro (ver o estado morrendo)
+    const bate = Math.sin(jog.fase) * 0.22;
+    const esc = efeitos().mini ? 0.6 : 1;
+    asasSoltas = [
+      { x: jog.x, y: jog.y, vy: 0, ang: bate * 0.85 - 0.22, va: -2.2, esc, atras: true },
+      { x: jog.x, y: jog.y, vy: 0, ang: bate, va: 2.6, esc, atras: false },
+    ];
+    jog.vy = 0;
+    morteT = 0;
+    estado = "morrendo";
+  }
+
   function morrer() {
+    efeito8("explosao", jog.x, jog.y);
     morteT = 0;
     jog.vy = -250;
     estado = "morrendo";
+  }
+
+  /** Bordas de cima e de baixo da coluna onde ela está de fato: com o recolhimento do galope e o recuo da batida. */
+  function bordasDaColuna(q: Pilar): { topo: number; base: number } {
+    const centro = q.vao + (q.mov ? Math.sin(q.fase) * q.mov : 0);
+    const { topo, base } = bordasRecolhidas(centro - q.abertura / 2, centro + q.abertura / 2, q.recolhido, H);
+    return { topo: topo - q.deslocTopo, base: base + q.deslocBase };
+  }
+
+  /**
+   * Batida de asas: as partes da coluna que tocam o círculo em volta do pássaro (raio RAIO_BATIDA)
+   * recuam para fora dele. O recuo fica no novo lugar, e a mola o leva até lá com um quique.
+   */
+  function empurrarPeloCirculo(q: Pilar): void {
+    const R = RAIO_BATIDA;
+    const cx = jog.x;
+    const cy = jog.y;
+    const { topo, base } = bordasDaColuna(q);
+    const x = q.x - LARG_COL / 2 + 4;
+    // a parte de cima acaba em `topo`: se o círculo a toca, ela recua para cima dele
+    if (topo > -50 && intersectaCirculo(cx, cy, R, x, -50, LARG_COL - 8, topo + 50)) {
+      q.alvoTopo = Math.max(q.alvoTopo, q.deslocTopo + (topo - (cy - R - 2)));
+    }
+    // a parte de baixo começa em `base`: se o círculo a toca, ela recua para baixo dele
+    if (base < H && intersectaCirculo(cx, cy, R, x, base, LARG_COL - 8, H - base)) {
+      q.alvoBase = Math.max(q.alvoBase, q.deslocBase + (cy + R + 2 - base));
+    }
   }
 
   function circuloRet(cx: number, cy: number, r: number, x: number, y: number, w: number, h: number) {
@@ -447,6 +654,8 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
 
   function atualizar(dt: number) {
     tempo += dt;
+    if (avisoRecordeT > 0) avisoRecordeT -= dt;
+    efeitos8 = efeitos8.filter((f) => tempo - f.t0 < EFEITO[f.tipo].quadros / EFEITO[f.tipo].fps);
     const e = efeitos();
     tod += (todAlvo - tod) * Math.min(1, dt * 0.4);
     if (flash > 0) flash -= dt * 2.5;
@@ -476,13 +685,20 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       morteT += dt;
       jog.vy += GRAVIDADE * dt;
       jog.y = Math.min(H - CHAO - 12, jog.y + jog.vy * dt);
+      // as asas soltas caem à metade da velocidade do pássaro e continuam girando
+      for (const a of asasSoltas) {
+        a.vy = jog.vy * 0.5;
+        a.y = Math.min(H - CHAO - 14, a.y + a.vy * dt);
+        a.ang += a.va * dt;
+      }
       if (morteT > 0.9) {
         mudarEstado("fim");
         host.fimDeJogo({
           pontos,
+          causa: semAsas ? "sol" : undefined,
           extras: [
-            { rotulo: "Experiência", valor: Math.floor(xpRun) },
-            { rotulo: "Moedas", valor: nMoedas },
+            { rotulo: "Experiência", valor: Math.floor(xpRun), formato: "xp" },
+            { rotulo: "Moedas", valor: nMoedas, formato: "moedas" },
           ],
           progresso: { xp: Math.floor(xpRun), moedas: nMoedas },
           perguntas: nPerguntas,
@@ -495,11 +711,15 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     if (estado !== "jogando") return;
 
     // poderes
+    let pulsar = false;
     for (const [id, rest] of ativos) {
       const r = rest - dt;
-      if (r <= 0) ativos.delete(id);
-      else ativos.set(id, r);
+      if (r <= 0) {
+        ativos.delete(id);
+        if (PODERES_COM_PULSO.includes(id)) pulsar = true;
+      } else ativos.set(id, r);
     }
+    if (pulsar) soltarPulso();
     const proprio = poderDoPersonagem();
     if (proprio && !ativos.has(proprio.id) && carga < 1) {
       carga = Math.min(1, carga + dt / CARGA_SEG);
@@ -509,14 +729,26 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     if (jog.graca > 0) jog.graca -= dt;
 
     // jogador
+    relogioJogo += dt;
     jog.vy = Math.min(e.leve ? QUEDA_LEVE : 720, jog.vy + GRAVIDADE * dt);
     if (e.leve) guiar(dt);
     jog.y += jog.vy * dt;
     jog.fase += dt * (jog.vy < 0 ? 22 : 8);
     const raio = RAIO * (e.mini ? 0.6 : 1);
     if (jog.y < raio) {
+      // bater a cabeça no teto é subir e ser barrado pelo teto
+      const batida = jog.vy < 0;
       jog.y = raio;
       jog.vy = 0;
+      // Ícaro Liminar: 5 batidas de cabeça no teto em 10 s soltam as asas de cera (ver morrerPeloSol)
+      if (batida && personagem.id === "icaro-liminar") {
+        batidasTeto = registrarBatida(batidasTeto, relogioJogo);
+        if (atingiuBatidas(batidasTeto)) {
+          batidasTeto = [];
+          morrerPeloSol();
+          if (estado !== "jogando") return;
+        }
+      }
     }
     if (jog.y > H - CHAO - raio) {
       jog.y = H - CHAO - raio;
@@ -529,6 +761,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     // mundo
     const v = velocidade();
     off += v * dt;
+    if (marcaRecordeX !== null) marcaRecordeX -= v * dt;
     for (const p of pilares) {
       p.x -= v * dt;
       if (p.arquivado) continue;
@@ -538,21 +771,36 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       if (!p.passou && p.x < jog.x - LARG_COL / 2) {
         p.passou = true;
         nPilares++;
-        xpRun += MULTIPLICADOR_XP[nivel];
-        pontos += (e.dobro ? 2 : 1) * (e.dosimetria ? 3 : 1);
+        xpRun += MULTIPLICADOR_XP[nivel] * (ativos.has("sabedoria") ? 2 : 1);
+        pontos += pontosDaColuna(e);
+        const antesMarca = marcaRecordeX;
+        marcaRecordeX = marcarRecorde(marcaRecordeX, pontos, recordeAtual, p.x);
+        if (antesMarca === null && marcaRecordeX !== null) celebrarRecorde();
         if (nPilares % 8 === 0) mudarSegmento();
       }
-      const centro = p.vao + (p.mov ? Math.sin(p.fase) * p.mov : 0);
-      const topo = centro - p.abertura / 2;
-      const base = centro + p.abertura / 2;
+      // galope: a coluna que ainda não passou se recolhe à medida que chega; a batida de asas empurra as partes dela
+      // para fora do círculo (ver empurrarPeloCirculo), e elas assentam no novo lugar com um quique
+      if (!p.passou) {
+        const mola = molaRecolhimento(p.recolhido, p.velRecolhido, alvoRecolhimento(p.x - jog.x, e.galope), dt);
+        p.recolhido = mola.x;
+        p.velRecolhido = mola.v;
+        const cima = passoMola(p.deslocTopo, p.velTopo, p.alvoTopo, dt, 0, RECUO_MAX);
+        p.deslocTopo = cima.x;
+        p.velTopo = cima.v;
+        const baixo = passoMola(p.deslocBase, p.velBase, p.alvoBase, dt, 0, RECUO_MAX);
+        p.deslocBase = baixo.x;
+        p.velBase = baixo.v;
+      }
+      const { topo, base } = bordasDaColuna(p);
       const hx = p.x - LARG_COL / 2 + 4;
       if (
-        circuloRet(jog.x, jog.y, raio - 2, hx, -50, LARG_COL - 8, topo + 50) ||
-        circuloRet(jog.x, jog.y, raio - 2, hx, base, LARG_COL - 8, H)
+        (topo > -50 && circuloRet(jog.x, jog.y, raio - 2, hx, -50, LARG_COL - 8, topo + 50)) ||
+        (base < H && circuloRet(jog.x, jog.y, raio - 2, hx, base, LARG_COL - 8, H))
       ) {
         if (p.rachada) {
           if (!p.penalizada) {
             p.penalizada = true;
+            efeito8("destroco", p.x, jog.y);
             if (!e.presuncao) penalizar();
           }
         } else {
@@ -582,12 +830,16 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       if (inquerito || d2 < (raio + 10) ** 2) {
         m.pega = true;
         nMoedas++;
-        pontos += inquerito ? 3 : e.dobro ? 2 : 1;
+        pontos += inquerito || e.foco ? 3 : e.dobro ? 2 : 1;
         som.moeda();
+        efeito8("faisca", m.x, m.y);
         explosao(m.x, m.y, 8, [tema.paleta.moeda[0], "#ffffff"], 140);
+        sugarMoeda(m.x, m.y);
       }
     }
     moedas = moedas.filter((m) => !m.pega && m.x > -30);
+    // moedas sugadas: cada voo avança e, ao chegar, o contador sobe (ver enviarHud)
+    voos = voos.filter((v) => !avancarVoo(v, dt));
 
     for (const o of orbes) {
       o.x -= v * dt;
@@ -652,20 +904,59 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     }
   }
 
+  /** Onde fica o contador de moedas do HUD, em coordenadas lógicas; null enquanto o HUD não está na tela. */
+  function alvoDoContador(): { x: number; y: number } | null {
+    const r = host.alvoMoedas?.();
+    const cv = canvas.getBoundingClientRect();
+    if (!r || !cv.width || !cv.height) return null;
+    return { x: ((r.left + r.width / 2 - cv.left) / cv.width) * W, y: ((r.top + r.height / 2 - cv.top) / cv.height) * H };
+  }
+
+  /**
+   * Onde a linha do recorde aparece antes de o pássaro passar: a próxima coluna não passada, se a pontuação dela
+   * já quebra o recorde (é a mesma conta de marcarRecorde, na passagem). Depois de passada, vale a marca.
+   */
+  function previsaoRecordeX(): number | null {
+    if (marcaRecordeX !== null) return null;
+    let proxima: Pilar | null = null;
+    for (const q of pilares) if (!q.passou && !q.arquivado && (proxima === null || q.x < proxima.x)) proxima = q;
+    if (proxima === null) return null;
+    return quebrouRecorde(pontos + pontosDaColuna(efeitos()), recordeAtual) ? proxima.x : null;
+  }
+
+  /** Recorde quebrado: aviso no alto da tela e um estouro de partículas nas duas pontas da linha. */
+  function celebrarRecorde() {
+    avisoRecordeT = DURACAO_AVISO;
+    if (marcaRecordeX === null) return;
+    const cores = [tema.paleta.recorde.cor, "#ffffff"];
+    explosao(marcaRecordeX, 60, 26, cores, 230);
+    explosao(marcaRecordeX, H - CHAO - 60, 26, cores, 230);
+  }
+
+  /** Quem tem moedas no desenho manda a moeda pega voar até o contador, em vez de só somar (ver sucao.ts). */
+  function sugarMoeda(x: number, y: number, atraso = 0) {
+    if (!personagem.moedas || voos.length >= LIMITE_VOOS) return;
+    const alvo = alvoDoContador();
+    if (alvo) voos.push(criarVoo(x, y, alvo.x, alvo.y, atraso, Math.random()));
+  }
+
   function enviarHud() {
     const proprio = PODERES.find((q) => q.personagem === personagem.id);
     const hud: Hud = {
       pontos,
       vidas,
+      // as moedas que ainda voam ao contador só entram na conta quando chegam
+      moedas: Math.max(0, nMoedas - voos.length),
+      moeda: tema.paleta.moeda,
       poderes: [...ativos]
         .filter(([id]) => id !== proprio?.id)
         .map(([id, r]) => {
           const p = poderPorId(id);
-          return { id, nome: p.nome, icone: p.icone, restante: Math.max(0, r / p.duracao) };
+          return { id, nome: p.nome, icone: tema.id === "pixel" ? iconePoder(id) : p.icone, restante: Math.max(0, r / p.duracao) };
         }),
       poderProprio: proprio && {
         nome: proprio.nome,
-        icone: proprio.icone,
+        icone: tema.id === "pixel" ? iconePoder(proprio.id) : proprio.icone,
         cor: proprio.cor,
         estado: ativos.has(proprio.id) ? "ativo" : carga >= 1 ? "pronto" : "carregando",
         barra: ativos.has(proprio.id) ? (ativos.get(proprio.id) ?? 0) / proprio.duracao : carga,
@@ -679,8 +970,9 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   // ---------------- desenho ----------------
   function desenhar() {
     const alvo = tema.escala && lowCtx ? lowCtx : ctx;
-    if (tema.escala && lowCtx) {
-      lowCtx.setTransform(tema.escala, 0, 0, tema.escala, 0, 0);
+    if (tema.escala && lowCtx && low) {
+      const s = low.height / H;
+      lowCtx.setTransform(s, 0, 0, s, 0, 0);
       lowCtx.imageSmoothingEnabled = false;
     } else ctx.setTransform(escala, 0, 0, escala, 0, 0);
     const c = alvo;
@@ -688,6 +980,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     if (tremor > 0) c.translate(Math.sin(tempo * 7) * tremor * 0.5, Math.cos(tempo * 5) * tremor * 0.5);
     const t = ((tod % 4) + 4) % 4;
     const p = tema.paleta;
+    const sb = tema.escala && low ? low.height / H : 1;
 
     // céu
     const [ceuTopo, ceuBaixo] = [ciclo(p.ceu.map((x) => x[0]), t), ciclo(p.ceu.map((x) => x[1]), t)];
@@ -713,21 +1006,26 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     // colunas
     for (const q of pilares) {
       if (q.arquivado) continue;
-      const centro = q.vao + (q.mov ? Math.sin(q.fase) * q.mov : 0);
-      const topo = centro - q.abertura / 2;
-      const base = centro + q.abertura / 2;
+      const { topo, base } = bordasDaColuna(q);
       const desenhaCol = tema.coluna ?? ((cx: Ctx, w: number, len: number, v: number, qb: boolean) => colunaGrega(cx, w, len, v, qb, tema));
-      c.save();
-      c.translate(q.x, base);
-      desenhaCol(c, LARG_COL, H - base, q.variante, q.quebradaBaixo, tema, tempo);
-      if (q.rachada) desenharRacha(c, H - base);
-      c.restore();
-      c.save();
-      c.translate(q.x, topo);
-      c.scale(1, -1);
-      desenhaCol(c, LARG_COL, topo + 20, (q.variante + 1) % 3, q.quebradaCima, tema, tempo);
-      if (q.rachada) desenharRacha(c, topo + 20);
-      c.restore();
+      // com o recolhimento, cada metade some pela borda da tela: desenha só o que ainda aparece
+      if (base < H) {
+        c.save();
+        c.translate(q.x, base);
+        const desenhaBaixo = () => desenhaCol(c, LARG_COL, H - base, q.variante, q.quebradaBaixo, tema, tempo);
+        if (q.rachada) desenharRacha(c, desenhaBaixo, H - base, q, "baixo", tema);
+        else desenhaBaixo();
+        c.restore();
+      }
+      if (topo > -20) {
+        c.save();
+        c.translate(q.x, topo);
+        c.scale(1, -1);
+        const desenhaCima = () => desenhaCol(c, LARG_COL, topo + 20, (q.variante + 1) % 3, q.quebradaCima, tema, tempo);
+        if (q.rachada) desenharRacha(c, desenhaCima, topo + 20, q, "cima", tema);
+        else desenhaCima();
+        c.restore();
+      }
     }
 
     // chão
@@ -741,8 +1039,16 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       for (let x = -(off % 48); x < W; x += 48) c.fillRect(x, yChao + 12, 24, 3);
     }
 
-    // moedas
-    for (const m of moedas) {
+    // linha do recorde: de cima a baixo, já na coluna que vai quebrar o recorde (antes de ser passada)
+    const xLinha = marcaRecordeX ?? previsaoRecordeX();
+    if (xLinha !== null && xLinha > -20 && xLinha < W + 20) desenharMarcaRecorde(c, xLinha, H, p.recorde);
+    // moedas, e as que voam ao contador (sugadas por quem tem moedas no desenho)
+    const emVoo = voos.filter((v) => v.atraso <= 0).map((v) => ({ ...posicaoVoo(v), fase: v.fase }));
+    for (const m of [...moedas, ...emVoo]) {
+      if (tema.id === "pixel" && pronta(MOEDA)) {
+        desenharQuadro(c, MOEDA, 4, Math.floor(m.fase) & 3, m.x, m.y, sb);
+        continue;
+      }
       const larg = Math.abs(Math.cos(m.fase)) * 9 + 2;
       c.fillStyle = p.moeda[1];
       c.beginPath();
@@ -756,12 +1062,18 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     // orbes
     for (const o of orbes) {
       const pulso = 1 + Math.sin(tempo * 5) * 0.08;
+      const pixel = tema.id === "pixel";
       c.globalAlpha = 0.3;
       c.fillStyle = o.poder.cor;
       c.beginPath();
-      c.arc(o.x, o.y, 24 * pulso, 0, Math.PI * 2);
+      c.arc(o.x, o.y, (pixel ? 30 : 24) * pulso, 0, Math.PI * 2);
       c.fill();
       c.globalAlpha = 1;
+      const pixelArte = pixel ? imagemPoder(o.poder.id) : null;
+      if (pronta(pixelArte)) {
+        desenharQuadro(c, pixelArte, 1, 0, o.x, o.y, sb);
+        continue;
+      }
       c.beginPath();
       c.arc(o.x, o.y, 17, 0, Math.PI * 2);
       c.fill();
@@ -774,6 +1086,14 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
 
     // jogador
     const e = efeitos();
+    // asas soltas do Ícaro: no mundo, sem a inclinação do corpo
+    for (const a of asasSoltas) {
+      c.save();
+      c.translate(a.x, a.y);
+      c.scale(a.esc, a.esc);
+      desenharAsaSolta(c, tema, a.ang, a.atras);
+      c.restore();
+    }
     c.save();
     c.translate(jog.x, jog.y);
     c.rotate(Math.max(-0.45, Math.min(1.1, jog.vy / 650)));
@@ -787,7 +1107,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       c.arc(0, -6, 34, 0, Math.PI * 2);
       c.fill();
     }
-    desenharPersonagem(c, personagem.id, tema, jog.fase, tempo);
+    desenharPersonagem(c, personagem.id, tema, jog.fase, tempo, sb, e.sabedoria, semAsas);
     c.globalAlpha = 1;
     if (e.escudo) {
       c.strokeStyle = "rgba(90,158,214,0.9)";
@@ -804,9 +1124,20 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     for (const q of parts) {
       c.globalAlpha = 1 - q.vida / q.max;
       c.fillStyle = q.cor;
-      c.fillRect(q.x, q.y, q.tam, q.tam * (q.tipo ? 1.8 : 1));
+      if (q.tipo === 2) {
+        // mini moeda de ouro: gira em torno do eixo vertical, com a largura pulsando
+        c.beginPath();
+        c.ellipse(q.x, q.y, Math.max(0.8, q.tam * Math.abs(Math.cos(q.vida * 12 + q.tam))), q.tam * 0.8, 0, 0, Math.PI * 2);
+        c.fill();
+      } else c.fillRect(q.x, q.y, q.tam, q.tam * (q.tipo ? 1.8 : 1));
     }
     c.globalAlpha = 1;
+    // efeitos em quadros (tema Pixel)
+    for (const f of efeitos8) {
+      const ef = EFEITO[f.tipo];
+      const k = Math.floor((tempo - f.t0) * ef.fps);
+      if (pronta(ef.img) && k >= 0 && k < ef.quadros) desenharQuadro(c, ef.img, ef.quadros, k, f.x, f.y, sb);
+    }
 
     // clima
     if (gotas.length) {
@@ -848,13 +1179,15 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       c.fillStyle = `rgba(255,255,255,${Math.max(0, flash) * 0.7})`;
       c.fillRect(0, 0, W, H);
     }
+    // aviso de recorde quebrado: por cima de tudo que é do mundo, antes da cópia do buffer do tema Pixel
+    if (avisoRecordeT > 0) desenharAvisoRecorde(c, tema.paleta.recorde, W, avisoRecordeT, tempo);
     c.restore();
 
     if (tema.escala && low && lowCtx) {
       if (tema.semAntisserrilhado) tirarAntisserrilhado(lowCtx, low.width, low.height, tema.paleta);
-      ctx.setTransform(escala, 0, 0, escala, 0, 0);
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.imageSmoothingEnabled = false;
-      ctx.drawImage(low, 0, 0, W, H);
+      ctx.drawImage(low, 0, 0, canvas.width, canvas.height);
       ctx.imageSmoothingEnabled = true;
     }
   }
@@ -963,6 +1296,11 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
         pontos,
         vidas,
         nMoedas,
+        voosNoAr: voos.length,
+        batidasTeto: batidasTeto.length,
+        marcaRecorde: marcaRecordeX,
+        avisoRecorde: avisoRecordeT,
+        previsaoRecorde: previsaoRecordeX(),
         penalidades: nPenalidades,
         aviso: aviso?.titulo ?? null,
         ativos: Object.fromEntries(ativos),
@@ -982,6 +1320,9 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
           passou: q.passou,
           penalizada: !!q.penalizada,
           arquivado: !!q.arquivado,
+          recolhido: q.recolhido,
+          deslocTopo: q.deslocTopo,
+          deslocBase: q.deslocBase,
         })),
         moedas: moedas.map((m) => ({ x: m.x, y: m.y, pega: m.pega })),
         jogador: { x: jog.x, y: jog.y, vy: jog.vy, graca: jog.graca },

@@ -12,7 +12,7 @@
     "e2e": "node tests/e2e/run.mjs",
     "validar": "node scripts/build-content.ts --check",
     "content": "node scripts/build-content.ts && node scripts/gerar-zip-padrao.ts",
-    "prebuild": "node scripts/build-content.ts && node scripts/gerar-zip-padrao.ts",
+    "prebuild": "node scripts/build-content.ts && node scripts/gerar-zip-padrao.ts && node scripts/optimize-images.mjs",
     "pdfs": "node scripts/build-pdfs.ts",
     "pdfs:leis": "node scripts/build-pdfs.ts --leis",
     "build:completo": "npm run build && npm run pdfs && npm run build",

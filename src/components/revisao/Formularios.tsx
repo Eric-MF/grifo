@@ -41,6 +41,35 @@ export function FormLei() {
     campo("url", f.url),
   ].filter(Boolean);
   const texto = f.id.trim() ? `${f.id.trim()}:\n${linhas.join("\n")}` : "";
+  const [buscando, setBuscando] = useState(false);
+  const [aviso, setAviso] = useState("");
+
+  async function buscarNoPlanalto() {
+    if (!f.id.trim()) return setAviso("Preencha o id antes: a busca usa o número da lei.");
+    if (!f.url.trim()) return setAviso("Cole o link do Planalto antes de buscar.");
+    setBuscando(true);
+    setAviso("");
+    try {
+      const r = await fetch(`/revisao/planalto/?${new URLSearchParams({ url: f.url.trim(), id: f.id.trim() })}`);
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.erro ?? `status ${r.status}`);
+      const { assinatura, publicacao, vigencia, pendencias } = j.datas;
+      setF((atual) => ({
+        ...atual,
+        assinatura: assinatura ?? "",
+        publicacao: publicacao ?? "",
+        vigencia: vigencia ?? "",
+        pendencia: pendencias.join("; "),
+        nota: "Planalto (busca automática, conferir)",
+      }));
+      setAviso("Campos preenchidos a partir do Planalto. Confira antes de copiar.");
+    } catch (erro) {
+      setAviso(`Não foi possível buscar: ${erro instanceof Error ? erro.message : String(erro)}`);
+    } finally {
+      setBuscando(false);
+    }
+  }
+
   return (
     <Bloco titulo="Inserir lei em content/leis-alteradoras.yaml">
       <input style={entrada} placeholder="id (ex.: lei-15000)" value={f.id} onChange={set("id")} />
@@ -48,6 +77,10 @@ export function FormLei() {
       <input style={entrada} placeholder="publicação AAAA-MM-DD" value={f.publicacao} onChange={set("publicacao")} />
       <input style={entrada} placeholder="vigência AAAA-MM-DD (deixe vazio se houver cláusula)" value={f.vigencia} onChange={set("vigencia")} />
       <input style={entrada} placeholder="link do Planalto" value={f.url} onChange={set("url")} />
+      <button type="button" onClick={buscarNoPlanalto} disabled={buscando} style={{ marginBottom: 6 }}>
+        {buscando ? "Buscando…" : "Buscar no Planalto"}
+      </button>
+      {aviso && <p style={{ fontSize: 13, margin: "0 0 6px" }}>{aviso}</p>}
       <input style={entrada} placeholder="pendência (o que falta conferir)" value={f.pendencia} onChange={set("pendencia")} />
       <input style={entrada} placeholder="nota (fonte e cláusula)" value={f.nota} onChange={set("nota")} />
       <label style={{ fontSize: 13 }}>

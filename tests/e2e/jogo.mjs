@@ -37,7 +37,7 @@ if (quiz) {
   await p.getByRole("button", { name: "Continuar" }).click();
 }
 // troca de estilos (volta ao menu pela pausa)
-for (const estilo of ["Fofo", "Retrofuturista", "Steampunk", "Pixel 8-bit", "Noir Tribunal", "Papiro"]) {
+for (const estilo of ["Fofo", "Retrofuturista", "Steampunk", "Noir Tribunal", "Papiro"]) {
   await p.keyboard.press("KeyP");
   await p.waitForTimeout(150);
   const menu = p.getByRole("button", { name: "Menu" });

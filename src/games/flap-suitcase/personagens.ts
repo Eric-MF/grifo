@@ -1,5 +1,7 @@
 // Personagens desenhados proceduralmente, no mesmo traço da maleta: asas, contornos e cores do estilo.
+import { PERSONAGEM, desenharQuadro, pronta } from "./arte8bit";
 import { asas, maletaPadrao, type Ctx, type Tema } from "./themes";
+import { DESENHOS_NOVOS } from "./personagens-novos";
 
 function corpoBase(c: Ctx, tema: Tema, fase: number, t: number) {
   (tema.maleta ?? ((x: Ctx, f: number, tt: number) => maletaPadrao(x, f, tt, tema)))(c, fase, t, tema);
@@ -75,9 +77,10 @@ const ACESSORIOS: Record<string, (c: Ctx, tema: Tema) => void> = {
     c.rotate(-0.5);
     c.fillStyle = "#8a5a2b";
     c.strokeStyle = "#4a2e14";
-    c.fillRect(-16, -1, 30, 3);
+    // cabo com a pegada perto do corpo; a cabeça do martelo, a parte que bate, fica na ponta, longe dele
+    c.fillRect(-12, -1, 28, 3);
     c.beginPath();
-    c.roundRect(-18, -8, 10, 12, 2);
+    c.roundRect(14, -8, 10, 12, 2);
     c.fill();
     c.stroke();
     c.restore();
@@ -324,8 +327,24 @@ function grifo(c: Ctx, tema: Tema, fase: number) {
   c.restore();
 }
 
-/** Desenha o personagem na origem (0,0). */
-export function desenharPersonagem(c: Ctx, id: string, tema: Tema, fase: number, t: number) {
+/**
+ * Desenha o personagem na origem (0,0). No tema Pixel usa a folha 8-bit; `sb` são os pixels do buffer por
+ * unidade lógica (com ele, cada célula da arte vira um pixel do buffer). `poder` é o poder próprio ativo: a Corujuris
+ * fecha os olhos enquanto a sabedoria da noite dura.
+ */
+export function desenharPersonagem(c: Ctx, id: string, tema: Tema, fase: number, t: number, sb = 1, poder = false, semAsas = false) {
+  const folha = tema.id === "pixel" ? PERSONAGEM[id] : null;
+  if (pronta(folha)) {
+    // asas para cima (quadro 0), na horizontal (1) e para baixo (2), conforme o seno da fase do bater
+    const v = Math.sin(fase);
+    desenharQuadro(c, folha, 3, v > 0.4 ? 0 : v < -0.4 ? 2 : 1, 0, 0, sb);
+    return;
+  }
+  const desenho = DESENHOS_NOVOS[id];
+  if (desenho) {
+    desenho(c, tema, fase, t, poder, semAsas);
+    return;
+  }
   if (id === "codigo") {
     codigo(c, tema, fase);
     return;
@@ -341,3 +360,5 @@ export function desenharPersonagem(c: Ctx, id: string, tema: Tema, fase: number,
   corpoBase(c, tema, fase, t);
   ACESSORIOS[id]?.(c, tema);
 }
+
+export { desenharAsaSolta } from "./personagens-novos";

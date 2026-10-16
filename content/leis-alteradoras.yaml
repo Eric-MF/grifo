@@ -1,5 +1,5 @@
 # Datas das leis que alteraram os diplomas do leitor, usadas na linha do tempo.
-# Geradas por scripts/baixar-leis.ts a partir do Planalto. Para corrigir à mão, edite e marque `manual: true`.
+# Mantidas à mão. Novas leis entram pelo FormLei do painel de revisão (dev) ou direto aqui. Para corrigir, edite e marque `manual: true`.
 decreto-13084:
   assinatura: 2026-07-29
   publicacao: 2026-07-30

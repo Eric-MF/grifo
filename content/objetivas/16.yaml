@@ -2,46 +2,36 @@
 # Confira a faixa de cada disciplina e o texto de cada questão; depois marque revisao.status: revisado.
 exame: "16"
 faixa:
-  penal: [58, 59, 60, 61, 62, 63]
-  processoPenal: [64, 65, 66, 67, 68, 69]
+  penal: [59, 60, 61, 62, 63, 64]
+  processoPenal: [65, 66, 67, 68, 69]
 anuladas: []
 questoes:
-  - n: 58
-    disciplina: penal
-    enunciado: Ludmila é proprietária de imóvel residencial locado a Renato por mais de três anos, não chegando a um acordo para fixação do valor do aluguel no momento do seu reajuste impasse quanto ao valor, Renato ajuizou ação revisional de aluguel sem pedido de fixação de aluguel provisório, atendendo a todos os requisitos da petição inicial, bem como colacionando documentação consistente em vários laudos de corretores de imóveis atestando qual seria o novo valor de mercado pretendido para o aluguel mensal. C respondeu apresentando contestação, colacionando vários laudos de corretores de imóveis atestando que o valor de mercado seria duas vezes superior ao indicado por Renato em sua petição inicial. Acerca da ação revisional de aluguel, assinale correta.
-    alternativas:
-      A: Diante do impasse contratual, tanto Ludmila quanto Renato têm legitimidade para ajuizamento da ação revisional de aluguel.
-      B: O valor fixado pela sentença proferida na ação revisional ajuizada por Renato não produzirá retroativos à cit
-      C: Na ação revisional de aluguel ajuizada por Renato, é dado ao magistrado liminarmente fixar alugueres provisórios de ofício, quando fornecidos pelas partes elementos suficientes.
-      D: No caso narrado, a fixação de alugueres provisórios pelo magistrado não pode ser objeto de pedido de revisão por Ludmila, em nenhuma hipótese, antes da audiência de conciliação.
-    correta: A
-    dispositivos: []
-    revisao:
-      status: rascunho
   - n: 59
     disciplina: penal
-    enunciado: Maria Joaquina, empregada doméstica de uma residência, profundamente apaixonada pelo vizinho Fernando, sem que este soubesse, escuta sua conversa com uma terceira pessoa acordando o furto da casa em que ela trabalha durante os dias de semana à tarde. Para facilitar o sucesso da operação de amado, ela deixa a porta aberta ao sair do trabalho. Durante a empreitada criminosa, sem saber que a porta da frente se encontrava destrancada, Fernando e seu comparsa arrombam a porta dos fundos, ingressam na residên diversos objetos. Diante desse quadro fático, assinale a opção que apresenta a correta responsabilidade penal de Maria Joaquina.
+    enunciado: Maria Joaquina, empregada doméstica de uma residência, profundamente apaixonada pelo vizinho Fernando, sem que este soubesse, escuta sua conversa com uma terceira pessoa acordando o furto da casa em que ela trabalha durante os dias de semana à tarde. Para facilitar o sucesso da operação de seu amado, ela deixa a porta aberta ao sair do trabalho. Durante a empreitada criminosa, sem saber que a porta da frente se encontrava destrancada, Fernando e seu comparsa arrombam a porta dos fundos, ingressam na residência e subtraem diversos objetos. Diante desse quadro fático, assinale a opção que apresenta a correta responsabilidade penal de Maria Joaquina.
     alternativas:
       A: Deverá responder pelo mesmo crime de Fernando, na qualidade de partícipe, eis que contribuiu de alguma forma para o sucesso da empreitada criminosa ao não denunciar o plano.
       B: Deverá responder pelo crime de furto qualificado pelo concurso de agentes, afastada a qualificadora do rompimento de obstáculo, por esta não se encontrar na linha de seu conhecimento.
       C: Não deverá responder por qualquer infração penal, sendo a sua participação irrelevante para o sucesso da empreitada criminosa.
-      D: Deverá responder pelo crime de omissão de socorro. udmila é proprietária de imóvel residencial locado a Renato por mais de três anos, não chegando a um acordo para fixação momento do seu reajuste. Diante do impasse quanto ao valor, Renato ajuizou ação revisional de de fixação de aluguel provisório, atendendo a todos os requisitos da petição inicial, bem como colacionando documentação consistente em vários laudos de corretores de imóveis atestando qual seria o novo valor de mercado pretendido para o aluguel mensal. Citada, Ludmila respondeu apresentando contestação, colacionando vários laudos de corretores de imóveis atestando que o valor de mercado seria duas vezes superior ao indicado por Renato em Acerca da ação revisional de aluguel, assinale a afirmativa Diante do impasse contratual, tanto Ludmila quanto Renato têm legitimidade para ajuizamento da ação O valor fixado pela sentença proferida na ação revisional ajuizada por Renato não produzirá retroativos à citação. Na ação revisional de aluguel ajuizada por Renato, é dado ao magistrado liminarmente fixar alugueres provisórios de ofício, quando fornecidos pelas partes elementos No caso narrado, a fixação de alugueres provisórios pelo pode ser objeto de pedido de revisão por Ludmila, em nenhuma hipótese, antes da audiência de Maria Joaquina, empregada doméstica de uma residência, profundamente apaixonada pelo vizinho Fernando, sem que este soubesse, escuta sua conversa com uma terceira pessoa acordando o furto da casa em que ela trabalha durante os dias facilitar o sucesso da operação de seu aberta ao sair do trabalho. Durante a empreitada criminosa, sem saber que a porta da frente se encontrava destrancada, Fernando e seu comparsa arrombam a porta dos fundos, ingressam na residência e subtraem Diante desse quadro fático, assinale a opção que apresenta a correta responsabilidade penal de Maria Joaquina. Deverá responder pelo mesmo crime de Fernando, na qualidade de partícipe, eis que contribuiu de alguma forma ara o sucesso da empreitada criminosa ao não denunciar Deverá responder pelo crime de furto qualificado pelo concurso de agentes, afastada a qualificadora do rompimento de obstáculo, por esta não se encontrar na linha de seu conhecimento. deverá responder por qualquer infração penal, sendo a sua participação irrelevante para o sucesso da Deverá responder pelo crime de omissão de socorro.
+      D: Deverá responder pelo crime de omissão de socorro.
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
+      notas: "Corrigido conforme o caderno (PDF): palavras faltando no enunciado; texto das questões 58 e 59 removido da alternativa D."
   - n: 60
     disciplina: penal
-    enunciado: Patrício e Luiz estavam em um bar, quando o primeiro, mediante ameaça de arma de fogo, obriga o último a beber dois copos de tequila. Luiz ficou inteiramente embriagado. A dupla, então, deixou o local, sendo que Patrício conduzia Luiz, que caminhava com muitas dificuldades. Ao encontrarem Juliana, que caminhava sozinha pela calçada, Patrício e Luiz, se utilizando da arma que era portada pelo primeiro, constrangeram-na a com eles praticar sexo oral, sendo flagrados por populares que passavam ocasionalmente pelo local, ocorrendo a prisão em flagrante. Denunciados pelo crime de estupro, no curso da instrução, mediante perícia, restou constatado que Patrício era possuidor de doença mental grave e que, quando da prática do fato, era inteiramente incapaz de entender o caráter ilícito do seu comportamento, situação, aliás, que perma momento do julgamento. Também ficou demonstrado que, no momento do crime, Luiz estava completamente embriagado. O Ministério Público requereu a condenação dos acusados. Não havendo dúvida com relação ao injusto, tecnicamente, a defesa técnica dos acusados deverá requerer, nas alegações finais,
+    enunciado: Patrício e Luiz estavam em um bar, quando o primeiro, mediante ameaça de arma de fogo, obriga o último a beber dois copos de tequila. Luiz ficou inteiramente embriagado. A dupla, então, deixou o local, sendo que Patrício conduzia Luiz, que caminhava com muitas dificuldades. Ao encontrarem Juliana, que caminhava sozinha pela calçada, Patrício e Luiz, se utilizando da arma que era portada pelo primeiro, constrangeram-na a com eles praticar sexo oral, sendo flagrados por populares que passavam ocasionalmente pelo local, ocorrendo a prisão em flagrante. Denunciados pelo crime de estupro, no curso da instrução, mediante perícia, restou constatado que Patrício era possuidor de doença mental grave e que, quando da prática do fato, era inteiramente incapaz de entender o caráter ilícito do seu comportamento, situação, aliás, que permanece até o momento do julgamento. Também ficou demonstrado que, no momento do crime, Luiz estava completamente embriagado. O Ministério Público requereu a condenação dos acusados. Não havendo dúvida com relação ao injusto, tecnicamente, a defesa técnica dos acusados deverá requerer, nas alegações finais,
     alternativas:
       A: a absolvição dos acusados por força da inimputabilidade, aplicando, porém, medida de segurança para ambos.
-      B: a absolvição de Luiz por ausência de culpabilidade em razão da embriaguez culposa e a absolvição Patrício, com aplicação, para este, de medida de segurança.
+      B: a absolvição de Luiz por ausência de culpabilidade em razão da embriaguez culposa e a absolvição imprópria de Patrício, com aplicação, para este, de medida de segurança.
       C: a absolvição de Luiz por ausência de culpabilidade em razão da embriaguez completa decorrente de força maior e a absolvição imprópria de Patrício, com aplicação, para este, de medida de segurança.
       D: a absolvição imprópria de Patrício, com a aplicação de medida de segurança, e a condenação de Luiz na pena mínima, porque a embriaguez nunca exclui a culpabilidade.
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
+      notas: "Corrigido conforme o caderno (PDF): palavras faltando no enunciado e na alternativa B."
   - n: 61
     disciplina: penal
     enunciado: Felipe, menor de 21 anos de idade e reincidente, no dia 10 de abril de 2009, foi preso em flagrante pela prática do crime de roubo. Foi solto no curso da instrução e acabou condenado em 08 de julho de 2010, nos termos do pedido inicial, ficando a pena acomodada em 04 anos de reclusão em regime fechado e multa de 10 dias, certo que houve a compensação da agravante da reincidência com a atenuante da menoridade. A decisão transitou em julgado para ambas as partes em 20 de julho de 2010. Foi expedido mandado de prisão e Felipe nunca veio a ser preso. Considerando a questão fática, assinale a afirmativa correta.
@@ -49,37 +39,40 @@ questoes:
       A: A extinção da punibilidade pela prescrição da pretensão executória ocorrerá em 20 de julho de 2016.
       B: A extinção da punibilidade pela prescrição da pretensão executória ocorreu em 20 de julho de 2014.
       C: A extinção da punibilidade pela prescrição da pretensão executória ocorrerá em 20 de julho de 2022.
-      D: A extinção da punibilidade pela prescrição da pretensão executória ocorrerá em 20 de novembro de 2015. 18 Patrício e Luiz estavam em um bar, quando o primeiro, de arma de fogo, obriga o último a beber dois copos de tequila. Luiz ficou inteiramente embriagado. A dupla, então, deixou o local, sendo que Patrício conduzia Luiz, que caminhava com muitas dificuldades. Ao encontrarem calçada, Patrício e Luiz, se utilizando da arma que era portada pelo primeiro, na a com eles praticar sexo oral, sendo flagrados por populares que passavam ocasionalmente pelo local, ocorrendo a prisão em flagrante. Denunciados pelo estupro, no curso da instrução, mediante perícia, restou constatado que Patrício era possuidor de doença mental grave e que, quando da prática do fato, era inteiramente incapaz de entender o caráter ilícito do seu comportamento, situação, aliás, que permanece até o momento do julgamento. Também ficou demonstrado que, no momento do crime, Luiz estava completamente embriagado. O Ministério Público requereu a condenação dos acusados. Não havendo dúvida com relação ao injusto, tecnicamente, a dos acusados deverá requerer, nas alegações a absolvição dos acusados por força da inimputabilidade, aplicando, porém, medida de segurança para ambos. a absolvição de Luiz por ausência de culpabilidade em razão da embriaguez culposa e a absolvição imprópria de Patrício, com aplicação, para este, de medida de a absolvição de Luiz por ausência de culpabilidade em razão da embriaguez completa decorrente de força maior e a absolvição imprópria de Patrício, com aplicação, para a absolvição imprópria de Patrício, com a aplicação de medida de segurança, e a condenação de Luiz na pena mínima, porque a embriaguez nunca exclui a culpabilidade. Felipe, menor de 21 anos de idade e reincidente, no dia 10 de abril de 2009, foi preso em flagrante pela prática do crime de roubo. Foi solto no curso da instrução e acabou condenado em 08 de julho de 2010, nos termos do pedido inicial, ficando a pena acomodada em 04 anos de reclusão em regime ias, certo que houve a compensação da agravante da reincidência com a atenuante da menoridade. A decisão transitou em julgado para ambas as partes em 20 de julho de 2010. Foi expedido mandado de prisão e Felipe nunca ão fática, assinale a afirmativa correta. A extinção da punibilidade pela prescrição da pretensão executória ocorrerá em 20 de julho de 2016. A extinção da punibilidade pela prescrição da pretensão executória ocorreu em 20 de julho de 2014. punibilidade pela prescrição da pretensão executória ocorrerá em 20 de julho de 2022. A extinção da punibilidade pela prescrição da pretensão executória ocorrerá em 20 de novembro de 2015.
+      D: A extinção da punibilidade pela prescrição da pretensão executória ocorrerá em 20 de novembro de 2015.
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
+      notas: "Corrigido conforme o caderno (PDF): texto das questões 60 e 61 removido da alternativa D."
   - n: 62
     disciplina: penal
-    enunciado: Carlos e seu filho de dez anos caminhavam por uma rua com pouco movimento e bastante escura, já de madrugada, quando são surpreendidos com a vinda de um cão direção deles. Quando o animal iniciou o ataque contra a criança, Carlos, que estava arm assim se encontrar, efetuou um disparo na direção do cão, que não foi atingido, ricocheteando a bala em uma pedra e acabando por atingir o dono do animal, Leandro, que chegava correndo em sua busca, pois notou que ele fugira clandestinamente da casa. A vítima atingida veio a falecer, ficando constatado que Carlos não teria outro modo de agir para evitar o ataque do cão contra o seu filho, não sendo sua conduta tachada de descuidada. Diante desse quadro, assinale a opção que apr situação jurídica de Carlos.
+    enunciado: Carlos e seu filho de dez anos caminhavam por uma rua com pouco movimento e bastante escura, já de madrugada, quando são surpreendidos com a vinda de um cão pitbull na direção deles. Quando o animal iniciou o ataque contra a criança, Carlos, que estava armado e tinha autorização para assim se encontrar, efetuou um disparo na direção do cão, que não foi atingido, ricocheteando a bala em uma pedra e acabando por atingir o dono do animal, Leandro, que chegava correndo em sua busca, pois notou que ele fugira clandestinamente da casa. A vítima atingida veio a falecer, ficando constatado que Carlos não teria outro modo de agir para evitar o ataque do cão contra o seu filho, não sendo sua conduta tachada de descuidada. Diante desse quadro, assinale a opção que apresenta a situação jurídica de Carlos.
     alternativas:
       A: Carlos atuou em legítima defesa de seu filho, devendo responder, porém, pela morte de Leandro.
       B: Carlos atuou em estado de necessidade defensivo, devendo responder, porém, pela morte de Leandro.
-      C: Carlos atuou em estado responder pela morte de Leandro.
+      C: Carlos atuou em estado de necessidade e não deve responder pela morte de Leandro.
       D: Carlos atuou em estado de necessidade putativo, razão pela qual não deve responder pela morte de Leandro.
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
+      notas: "Corrigido conforme o caderno (PDF): palavras faltando no enunciado e na alternativa C."
   - n: 63
     disciplina: penal
-    enunciado: Moura, maior de 70 anos, primário e de bons antecedentes, mediante grave ameaça, subtraiu o relógio da vítima Lúcia, avaliado em R$ 550,00 (quinhentos e cinquenta reais). Cerca de 45 minutos após a subtração, Moura foi procurado e localizado pelos policiais que foram avisados do ocorrido, sendo a coisa subtraída recuperada, não sofr qualquer prejuízo patrimonial. O fato foi confessado e Moura foi condenado pela prática do crime de roubo simples, ficando a pena acomodada em 04 anos de reclusão em regime aberto e multa de 10 dias. Procurado pela família do acusado, você, poderá apelar, buscando
+    enunciado: Moura, maior de 70 anos, primário e de bons antecedentes, mediante grave ameaça, subtraiu o relógio da vítima Lúcia, avaliado em R$ 550,00 (quinhentos e cinquenta reais). Cerca de 45 minutos após a subtração, Moura foi procurado e localizado pelos policiais que foram avisados do ocorrido, sendo a coisa subtraída recuperada, não sofrendo a vítima qualquer prejuízo patrimonial. O fato foi confessado e Moura foi condenado pela prática do crime de roubo simples, ficando a pena acomodada em 04 anos de reclusão em regime aberto e multa de 10 dias. Procurado pela família do acusado, você, como advogado poderá apelar, buscando
     alternativas:
       A: o reconhecimento da forma tentada do roubo.
       B: a aplicação do sursis da pena.
       C: o reconhecimento da atipicidade comportamental por força da insignificância.
-      D: a redução da pena abaixo do mínimo legal, em razão das atenuantes da confissão espontânea e da senilidade. Carlos e seu filho de dez anos caminhavam por uma rua com pouco movimento e bastante escura, já de madrugada, quando são surpreendidos com a vinda de um cão pitbull na direção deles. Quando o animal iniciou o ataque contra a criança, Carlos, que estava armado e tinha autorização para assim se encontrar, efetuou um disparo na direção do cão, que não foi atingido, ricocheteando a bala em uma pedra e acabando por atingir o dono do animal, Leandro, que chegava correndo em sua busca, pois notou que ele fugira andestinamente da casa. A vítima atingida veio a falecer, ficando constatado que Carlos não teria outro modo de agir para evitar o ataque do cão contra o seu filho, não sendo sua conduta tachada de descuidada. Diante desse quadro, assinale a opção que apresenta a Carlos atuou em legítima defesa de seu filho, devendo responder, porém, pela morte de Leandro. Carlos atuou em estado de necessidade defensivo, devendo responder, porém, pela morte de Leandro. Carlos atuou em estado de necessidade e não deve responder pela morte de Leandro. Carlos atuou em estado de necessidade putativo, razão pela qual não deve responder pela morte de Leandro. Moura, maior de 70 anos, primário e de bons antecedentes, a, subtraiu o relógio da vítima Lúcia, 550,00 (quinhentos e cinquenta reais). Cerca de 45 minutos após a subtração, Moura foi procurado e localizado pelos policiais que foram avisados do ocorrido, sendo a coisa subtraída recuperada, não sofrendo a vítima qualquer prejuízo patrimonial. O fato foi confessado e Moura foi condenado pela prática do crime de roubo simples, ficando a pena acomodada em 04 anos de reclusão em regime aberto Procurado pela família do acusado, você, como advogado o reconhecimento da forma tentada do roubo. da pena. o reconhecimento da atipicidade comportamental por a redução da pena abaixo do mínimo legal, em razão das da confissão espontânea e da senilidade.
+      D: a redução da pena abaixo do mínimo legal, em razão das atenuantes da confissão espontânea e da senilidade.
     correta: B
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
+      notas: "Corrigido conforme o caderno (PDF): palavras faltando no enunciado; texto das questões 62 e 63 removido da alternativa D."
   - n: 64
-    disciplina: processo-penal
+    disciplina: penal
     enunciado: Paloma, sob o efeito do estado puerperal, logo após o parto, durante a madrugada, vai até o berçário onde acredita encontrar-se seu filho recém-nascido e o sufoca até a morte, retornando ao local de origem sem ser notada. No dia seguinte, foi descoberta a morte da criança e, pelo circuito interno do hospital, é verificado que Paloma foi a autora do crime. Todavia, constatou-se que a criança morta não era o seu filho, que se encontrava no berçário ao lado, tendo ela se equivocado quanto à vítima desejada. Diante desse quadro, Paloma deverá responder pelo crime de
     alternativas:
       A: homicídio culposo.
@@ -89,10 +82,11 @@ questoes:
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
+      notas: Disciplina corrigida para Penal (bloco 59–64 da tabela de correspondência do gabarito).
   - n: 65
     disciplina: processo-penal
-    enunciado: O inquérito policial pode ser definido como um procedimento investigatório prévio, cuja principal finalidade é a obtenção de indícios para que o titular da ação penal possa propô o suposto autor da infração penal. Sobre o tema, assinale a afirmativa correta.
+    enunciado: O inquérito policial pode ser definido como um procedimento investigatório prévio, cuja principal finalidade é a obtenção de indícios para que o titular da ação penal possa propô-la contra o suposto autor da infração penal. Sobre o tema, assinale a afirmativa correta.
     alternativas:
       A: A exigência de indícios de autoria e materialidade para oferecimento de denúncia torna o inquérito policial um procedimento indispensável.
       B: O despacho que indeferir o requerimento de abertura de inquérito policial é irrecorrível.
@@ -101,19 +95,21 @@ questoes:
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
+      notas: "Corrigido conforme o caderno (PDF): palavras faltando no enunciado."
   - n: 66
     disciplina: processo-penal
-    enunciado: Melinda Cunha foi denunciada pela prática bigamia. Ocorre que existe ação em curso no juízo cível onde se discute a validade do primeiro casamento celebrado pela denunciada. Entendendo o magistrado penal que a existência da infração penal depende da solução da controvérsia no juízo cível e que esta é séria e fundada, estaremos diante de
+    enunciado: Melinda Cunha foi denunciada pela prática do crime de bigamia. Ocorre que existe ação em curso no juízo cível onde se discute a validade do primeiro casamento celebrado pela denunciada. Entendendo o magistrado penal que a existência da infração penal depende da solução da controvérsia no juízo cível e que esta é séria e fundada, estaremos diante de
     alternativas:
       A: prejudicial obrigatória, o que levará à suspensão do processo criminal e do prazo prescricional.
       B: prejudicial facultativa, podendo o magistrado suspender o processo por, no máximo, 06 meses.
       C: prejudicial obrigatória, o que levará à suspensão do processo criminal, mas não do curso do prazo prescricional.
-      D: prejudicial facultativa, podendo o magistrado suspender o processo por, no máximo, 01 ano. 19 Paloma, sob o efeito do estado puerperal, logo após o parto, durante a madrugada, vai até o berçário onde acredita nascido e o sufoca até a morte, local de origem sem ser notada. No dia seguinte, foi descoberta a morte da criança e, pelo circuito interno do hospital, é verificado que Paloma foi a autora do se que a criança morta não era o çário ao lado, tendo ela se Diante desse quadro, Paloma deverá responder pelo crime de ser definido como um procedimento investigatório prévio, cuja principal finalidade é a obtenção de indícios para que o titular da ação penal possa propô-la contra de indícios de autoria e materialidade para oferecimento de denúncia torna o inquérito policial um O despacho que indeferir o requerimento de abertura de go o defensor não poderá ter acesso aos elementos informativos que nele A autoridade policial, ainda que convencida da inexistência do crime, não poderá mandar arquivar os autos do Melinda Cunha foi denunciada pela prática do crime de existe ação em curso no juízo cível onde se discute a validade do primeiro casamento celebrado pela denunciada. Entendendo o magistrado penal que a existência de da solução da controvérsia no juízo cível e que esta é séria e fundada, estaremos diante de prejudicial obrigatória, o que levará à suspensão do processo criminal e do prazo prescricional. prejudicial facultativa, podendo o magistrado suspender o prejudicial obrigatória, o que levará à suspensão do processo criminal, mas não do curso do prazo prejudicial facultativa, podendo o magistrado suspender o
+      D: prejudicial facultativa, podendo o magistrado suspender o processo por, no máximo, 01 ano.
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
+      notas: "Corrigido conforme o caderno (PDF): palavras faltando no enunciado; texto das questões 64 a 66 removido da alternativa D."
   - n: 67
     disciplina: processo-penal
     enunciado: Juan da Silva foi autor de uma contravenção penal, em detrimento dos interesses da Caixa Econômica Federal, empresa pública. Praticou, ainda, outra contravenção em conexão, dessa vez em detrimento dos bens do Banco do Brasil, sociedade de economia mista. Dessa forma, para julgá-lo será competente
@@ -125,19 +121,20 @@ questoes:
     correta: A
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
   - n: 68
     disciplina: processo-penal
-    enunciado: A prisão temporária pode ser definida como cautelar restritiva, decretada por tempo determinado, destinada a possibilitar as investigações de certos crimes considerados pelo legislador como graves, antes da propositura da ação penal. Sobre o tema, assinale a afirmativa correta.
+    enunciado: A prisão temporária pode ser definida como uma medida cautelar restritiva, decretada por tempo determinado, destinada a possibilitar as investigações de certos crimes considerados pelo legislador como graves, antes da propositura da ação penal. Sobre o tema, assinale a afirmativa correta.
     alternativas:
       A: Assim como a prisão preventiva, pode ser decretada de ofício pelo juiz, após requerimento do Ministério Público ou representação da autoridade policial.
-      B: Sendo o crime investigado hediondo, o prazo poderá ser fixado em, no máximo, 15 dias, prorrogáveis uma vez pe mesmo período.
+      B: Sendo o crime investigado hediondo, o prazo poderá ser fixado em, no máximo, 15 dias, prorrogáveis uma vez pelo mesmo período.
       C: Findo o prazo da temporária sem prorrogação, o preso deve ser imediatamente solto.
       D: O preso, em razão de prisão temporária, poderá ficar detido no mesmo local em que se encontram os presos provisórios ou os condenados definitivos.
     correta: C
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
+      notas: "Corrigido conforme o caderno (PDF): palavras faltando no enunciado e na alternativa B."
   - n: 69
     disciplina: processo-penal
     enunciado: Scott procurou um advogado, pois tinha a intenção de ingressar com queixa-crime contra dois vizinhos que vinham lhe injuriando constantemente. Narrados os fatos e conferida procuração com poderes especiais, o patrono da vítima ingressou com a ação penal no Juizado Especial Criminal, órgão efetivamente competente, contudo o magistrado rejeitou a queixa apresentada. Dessa decisão do magistrado caberá
@@ -145,8 +142,9 @@ questoes:
       A: recurso em sentido estrito, no prazo de 05 dias.
       B: apelação, no prazo de 05 dias.
       C: recurso em sentido estrito, no prazo de 02 dias.
-      D: apelação, no prazo de 10 dias. da Silva foi autor de uma contravenção penal, em detrimento dos interesses da Caixa Econômica Federal, empresa pública. Praticou, ainda, outra contravenção em conexão, dessa vez em detrimento dos bens do Banco do Brasil, sociedade de economia mista. lo será competente a Justiça Estadual, pelas duas infrações. a Justiça Federal, no caso da contravenção praticada em detrimento da Caixa Econômica Federal, e Justiça Estadual, no caso da infração em detrimento do Banco do Brasil. Justiça Federal, pelas duas infrações. a Justiça Federal, no caso de contravenção praticada em detrimento do Banco do Brasil, e Justiça Estadual pela infração em detrimento da Caixa Econômica Federal. A prisão temporária pode ser definida como uma medida cautelar restritiva, decretada por tempo determinado, destinada a possibilitar as investigações de certos crimes considerados pelo legislador como graves, antes da Sobre o tema, assinale a afirmativa correta. como a prisão preventiva, pode ser decretada de ofício pelo juiz, após requerimento do Ministério Público ou representação da autoridade policial. Sendo o crime investigado hediondo, o prazo poderá ser fixado em, no máximo, 15 dias, prorrogáveis uma vez pelo Findo o prazo da temporária sem prorrogação, o preso deve ser imediatamente solto. , em razão de prisão temporária, poderá ficar no mesmo local em que se encontram os presos provisórios ou os condenados definitivos. Scott procurou um advogado, pois tinha a intenção de crime contra dois vizinhos que vinham lhe injuriando constantemente. Narrados os fatos e conferida procuração com poderes especiais, o patrono da vítima penal no Juizado Especial Criminal, órgão efetivamente competente, contudo o magistrado rejeitou a queixa apresentada. Dessa decisão do magistrado caberá recurso em sentido estrito, no prazo de 05 dias. apelação, no prazo de 05 dias. strito, no prazo de 02 dias. apelação, no prazo de 10 dias.
+      D: apelação, no prazo de 10 dias.
     correta: D
     dispositivos: []
     revisao:
-      status: rascunho
+      status: revisado
+      notas: "Corrigido conforme o caderno (PDF): texto das questões 67 a 69 removido da alternativa D."

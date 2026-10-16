@@ -15,10 +15,12 @@ interface Props {
   poder?: { icone: string; descricao: string; duracao: number };
   onFim: (acertou: boolean) => void;
   seed: number;
+  /** instante a partir do qual as alternativas respondem (ver src/games/toques.ts) */
+  liberadaEm?: () => number;
 }
 
 /** Pergunta de 2ª fase com espaço promocional discreto ao lado. Serve a qualquer jogo. */
-export function QuizModal({ nivel, categorias, titulo, subtitulo, poder, onFim, seed }: Props) {
+export function QuizModal({ nivel, categorias, titulo, subtitulo, poder, onFim, seed, liberadaEm }: Props) {
   const pergunta = useMemo<Pergunta>(() => sortearPergunta({ categorias }), [seed]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -29,6 +31,7 @@ export function QuizModal({ nivel, categorias, titulo, subtitulo, poder, onFim, 
           nivel={nivel}
           rotuloContinuar="Continuar"
           aoContinuar={(r) => onFim(r.acertou)}
+          liberadaEm={liberadaEm}
           cabecalho={
             <>
               <p className={styles.quizEyebrow}>{subtitulo}</p>

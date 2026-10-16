@@ -40,7 +40,7 @@ const caixaRevogados = p.getByLabel("Texto revogado e redações anteriores");
 await caixaRevogados.check();
 checar((await p.locator("[data-revogados]").first().getAttribute("data-revogados")) === "1", "opção não mostrou revogados");
 checar((await visiveis('[data-sup="1"]')) > 0, "nenhum revogado visível com a opção marcada");
-await p.waitForFunction(() => [...document.querySelectorAll('[data-sup="1"] .txt')].some((e) => e.offsetParent !== null && e.textContent.trim().length > 0), null, { timeout: 5000 }).catch(() => falhas.push("texto revogado não carregou ao marcar a opção"));
+await p.waitForFunction(() => [...document.querySelectorAll('[data-sup="1"] [class*="_txt__"]')].some((e) => e.offsetParent !== null && e.textContent.trim().length > 0), null, { timeout: 5000 }).catch(() => falhas.push("texto revogado não carregou ao marcar a opção"));
 
 // 2. Preferência persiste após recarregar
 await p.reload({ waitUntil: "networkidle" });

@@ -6,6 +6,11 @@
           data-fonte = p | m | g | gg   data-densidade = compacta   data-leitura = facil
    ========================================================================== */
 
+/* Cabeçalho sticky (4rem): sem isso, a rolagem automática da navegação deixa o topo da página atrás dele. */
+html {
+  scroll-padding-top: 5.5rem;
+}
+
 :root {
   --navy: #03112c;
   --gold: #d69c45;
