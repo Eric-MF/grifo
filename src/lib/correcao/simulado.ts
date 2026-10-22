@@ -5,6 +5,7 @@ import type { Exame, Item, Peca, Questao } from "@/content/schema";
 
 export interface ExameSimulado {
   id: string;
+  numero: number;
   numeral: string;
   aplicacao?: string;
   observacoes?: string;
@@ -16,6 +17,7 @@ export function paraSimulado(e: Exame): ExameSimulado {
   const { peca, questoes } = e;
   return {
     id: e.id,
+    numero: e.numero,
     numeral: e.numeral,
     aplicacao: e.aplicacao,
     observacoes: e.observacoes,

@@ -5,7 +5,7 @@ export const CATEGORIAS: { id: Categoria; nome: string; resumo: string }[] = [
     id: "peca",
     nome: "Peça e fundamento",
     resumo:
-      "Leia o caso e diga qual peça ou recurso cabe e em que artigo ele se apoia. Inclui questões da 1ª fase sobre peça ou recurso cabível.",
+      "Um caso curto: diga qual peça ou recurso cabe e em que artigo ele se apoia. Inclui questões da 1ª fase sobre peça ou recurso cabível.",
   },
   {
     id: "peca-detalhe",

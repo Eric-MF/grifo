@@ -1,6 +1,8 @@
 // Gera perguntas do quiz a partir das provas discursivas transcritas em content/exames.
 //
-//   content/perguntas/exames-reais.yaml          "Peça e fundamento" com o enunciado real da peça
+//   content/perguntas/exames-reais.yaml          "Peça e fundamento" com o enunciado real da peça (sai como rascunho
+//                                                e precisa ser resumido à mão: o quiz só usa casos de até 700
+//                                                caracteres, ver MAX_CASO_PECA em src/quiz/banco.ts)
 //   content/perguntas/discursivas/<exame>.yaml   "Por dentro da peça" (um item da tabela por pergunta)
 //                                                e "Questões discursivas" (um subitem A/B por pergunta)
 //

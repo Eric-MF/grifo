@@ -57,6 +57,9 @@ function fullYear(y: string) {
 export function normalize(input: string): string {
   let s = stripAccents(input.toLowerCase());
 
+  // a palavra partida por hífen no fim da linha ("inadmis-" + "sível") é uma palavra só, e a quebra suave não separa
+  s = s.replace(/([a-z])-[ \t\u200b]*\n[ \t\u200b]*(?=[a-z])/g, "$1");
+
   // Símbolos e abreviações jurídicas
   s = s
     .replace(/[“”«»"'`´]/g, " ")

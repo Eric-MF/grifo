@@ -49,9 +49,9 @@ export default function JogosPage() {
             </div>
           )}
           <div className={styles.jogoInfo}>
-            <h2 style={{ fontSize: "1.5rem" }}>Treino da 2ª fase</h2>
+            <h2 style={{ fontSize: "1.5rem" }}>Treinar questões</h2>
             <p className="muted">
-              Dez perguntas de peça e fundamento, pontuadas por acerto, rapidez e nível. Sem jogo, só estudo.
+              De 10 a 50 questões, ou o modo infinito, dos tipos que você escolher: peça e fundamento, por dentro da peça, discursivas e objetivas da 1ª fase. Pontos por acerto, rapidez e nível; no fim, reveja cada questão. Sem jogo, só estudo.
             </p>
             <span className="btn btn-gold btn-sm">Treinar</span>
           </div>

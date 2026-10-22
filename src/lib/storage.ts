@@ -7,12 +7,18 @@ export function lerJSON<T>(chave: string, padrao: T): T {
     return padrao;
   }
 }
-export function gravarJSON(chave: string, valor: unknown) {
+/** O navegador recusou a gravação por falta de espaço (a cota do site)? Outros erros (modo privado) não contam. */
+function ehCotaCheia(e: unknown): boolean {
+  return e instanceof DOMException && (e.name === "QuotaExceededError" || e.name === "NS_ERROR_DOM_QUOTA_REACHED" || e.code === 22);
+}
+
+/** Grava. Devolve false só quando não há espaço: quem guarda dados do aluno avisa nesse caso. */
+export function gravarJSON(chave: string, valor: unknown): boolean {
   try {
     localStorage.setItem(chave, JSON.stringify(valor));
     return true;
-  } catch {
-    return false;
+  } catch (e) {
+    return !ehCotaCheia(e);
   }
 }
 export function remover(chave: string) {

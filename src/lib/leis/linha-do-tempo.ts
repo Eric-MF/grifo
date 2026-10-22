@@ -6,10 +6,18 @@ export type TipoAto = "redacao" | "incluido" | "revogado" | "vide" | "vigencia" 
 export interface Ato {
   tipo: TipoAto;
   lei?: string;
+  /** dispositivo de `lei` para onde o ato aponta (o "Vide" entre súmulas): vira link interno */
+  art?: string;
   ano?: number;
   data?: string;
   href?: string;
   bruto: string;
+}
+/** Informação extra de um dispositivo (as súmulas têm julgamento, fonte, jurisprudência…): só aparece quando o leitor pede. */
+export interface InfoBloco {
+  rotulo: string;
+  texto: string;
+  href?: string;
 }
 export interface Bloco {
   tipo: "estrutura" | "rubrica" | "artigo" | "paragrafo" | "inciso" | "alinea" | "texto";
@@ -19,6 +27,11 @@ export interface Bloco {
   superada: boolean;
   atos: Ato[];
   ancora?: string;
+  info?: InfoBloco[];
+  /** quando o texto foi escrito (AAAA-MM-DD): nas súmulas, a aprovação; as citações seguem a lei da época */
+  data?: string;
+  /** links que o Planalto pôs no texto (posições em `texto`; href relativo à página da lei no Planalto) */
+  links?: { ini: number; fim: number; href: string }[];
 }
 /** Vigência escalonada: a emenda entra em vigor por artigo, em datas próprias. */
 export interface Marco {

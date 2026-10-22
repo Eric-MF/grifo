@@ -10,20 +10,22 @@ const { imantar, indicePorPosicao, modoPorPosicao, mover, proximoPonto, secoesDo
 const { grifoDe } = await import("../src/lib/leis/grifos.ts");
 const { SISTEMAS_PRONTOS } = await import("../src/lib/leis/legendas.ts");
 
-const C = { b: "b", txt: "txt", ref: "ref", atos: "atos", ato: "ato", estrela: "est", tipos: { estrutura: "e", rubrica: "r", artigo: "a", paragrafo: "p", inciso: "i", alinea: "al", texto: "t" } };
+const C = { b: "b", txt: "txt", ref: "ref", atos: "atos", ato: "ato", info: "inf", infoLinha: "infl", estrela: "est", naoEncontrada: "nao", rotulo: "rot", tipos:{ estrutura: "e", rubrica: "r", artigo: "a", paragrafo: "p", inciso: "i", alinea: "al", texto: "t" } };
 const bloco = (o: Record<string, unknown>) => ({ superada: false, atos: [], ...o }) as never;
 
 describe("HTML dos blocos", () => {
   const blocos = [
     bloco({ tipo: "artigo", disp: "art121", rotulo: "Art. 121", texto: "Art. 121. Matar <alguém>, salvo o art. 59 e a Lei nº 8.072, de 25 de julho de 1990", atos: [{ tipo: "redacao", bruto: "(Redação dada pela Lei nº 1)", href: "../L1.htm" }] }),
     bloco({ tipo: "artigo", disp: "art121", rotulo: "Art. 121", texto: "Art. 121. antigo", superada: true }),
+    // o Código Penal tem o art. 59: a referência a ele é do próprio diploma
+    bloco({ tipo: "artigo", disp: "art59", rotulo: "Art. 59", texto: "Art. 59. Pena." }),
   ];
-  const html = htmlBloco(blocos[0], 0, "cp", "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848.htm", mapaAncoras(blocos), C);
+  const html = htmlBloco(blocos[0], 0, "cp", "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848.htm", mapaAncoras(blocos, "cp"), C);
 
   it("escapa o texto e põe a âncora no bloco vigente", () => {
     expect(html).toContain('id="art121"');
     expect(html).toContain("Matar &lt;alguém&gt;");
-    expect(htmlBloco(blocos[1], 1, "cp", "https://x/", mapaAncoras(blocos), C)).not.toContain("id=");
+    expect(htmlBloco(blocos[1], 1, "cp", "https://x/", mapaAncoras(blocos, "cp"), C)).not.toContain("id=");
   });
   it("referências levam lei e artigo para o pop-up", () => {
     expect(html).toContain('href="#art59"');
@@ -35,7 +37,7 @@ describe("HTML dos blocos", () => {
   });
   it("estrela só no artigo vigente", () => {
     expect(html).toContain('data-estrela="art121"');
-    expect(htmlBloco(blocos[1], 1, "cp", "https://x/", mapaAncoras(blocos), C)).not.toContain("data-estrela");
+    expect(htmlBloco(blocos[1], 1, "cp", "https://x/", mapaAncoras(blocos, "cp"), C)).not.toContain("data-estrela");
   });
 });
 

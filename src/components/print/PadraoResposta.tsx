@@ -71,7 +71,7 @@ function Cabecalho({ exame, titulo }: { exame: Exame; titulo: string }) {
   return (
     <>
       <div className="pr-cab">
-        <img src="/img/oab-capa.png" alt="OAB" />
+        <img src="/img/logo-grifo-em-progresso.svg" alt="Grifo em Progresso · grifo.net" />
         <div className="tit">
           <b>ORDEM DOS ADVOGADOS DO BRASIL</b>
           <span>{exame.numeral} Exame de Ordem Unificado</span>

@@ -10,8 +10,14 @@
 .fonte button[aria-checked="true"] { background: var(--primary); color: var(--primary-ink); }
 
 .barras { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55rem; }
-.barras li { display: grid; grid-template-columns: 7rem 1fr 6.5rem; align-items: center; gap: 0.75rem; font-size: 0.95rem; }
+.barras li { display: grid; grid-template-columns: 6rem 1fr 4.5rem 6.5rem; align-items: center; gap: 0.75rem; font-size: 0.95rem; }
+.barraRotulo { white-space: nowrap; }
+.barraTempo { color: var(--muted); font-size: 0.82rem; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.tempoTotal { margin: 0.4rem 0 0; color: var(--muted); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
 .barras strong { text-align: right; font-variant-numeric: tabular-nums; }
+/* a barra de cada parte é um link para a correção dela: o link não cria caixa, e a linha da barra segue igual */
+.barraLink { display: contents; color: inherit; text-decoration: none; }
+.barraLink:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
 .barras small { color: var(--muted); font-weight: 500; }
 .bar { height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; border: 1px solid var(--border); }
 .bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--blue), var(--accent)); border-radius: inherit; }
@@ -20,7 +26,8 @@
 .bloco { margin-top: 3rem; }
 .bloco > h2 { font-size: 1.8rem; }
 
-.parte { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); margin-bottom: 1rem; overflow: hidden; }
+/* clip (e não hidden): corta os cantos sem virar contêiner de rolagem, que desligaria a resposta fixa (sticky) */
+.parte { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); margin-bottom: 1rem; overflow: clip; }
 .parte > summary { display: flex; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; cursor: pointer; font-weight: 700; }
 .parteTitulo { font-family: var(--font-title); font-size: 1.3rem; }
 .parteNota { font-variant-numeric: tabular-nums; }
@@ -62,8 +69,9 @@
 
 /* Modo "Celular", abaixo de 420px: o rótulo e a nota ficam na primeira linha e a barra embaixo. */
 @media (max-width: 420px) {
-  :global(:root[data-layout="celular"]) .barras li { grid-template-columns: minmax(0, 1fr) auto; row-gap: 0.35rem; }
-  :global(:root[data-layout="celular"]) .barras li > span:first-child { grid-column: 1; grid-row: 1; }
-  :global(:root[data-layout="celular"]) .barras li > .bar { grid-column: 1 / -1; grid-row: 2; }
-  :global(:root[data-layout="celular"]) .barras li > strong { grid-column: 2; grid-row: 1; }
+  :global(:root[data-layout="celular"]) .barras li { grid-template-columns: minmax(0, 1fr) auto auto; row-gap: 0.35rem; }
+  :global(:root[data-layout="celular"]) .barras li .barraRotulo { grid-column: 1; grid-row: 1; }
+  :global(:root[data-layout="celular"]) .barras li .bar { grid-column: 1 / -1; grid-row: 2; }
+  :global(:root[data-layout="celular"]) .barras li .barraTempo { grid-column: 2; grid-row: 1; }
+  :global(:root[data-layout="celular"]) .barras li strong { grid-column: 3; grid-row: 1; }
 }

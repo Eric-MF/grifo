@@ -15,7 +15,7 @@ export function useLeis(ids: string[]) {
   const chave = ids.join("|");
   useEffect(() => {
     let vivo = true;
-    Promise.all(chave.split("|").filter(Boolean).map(carregarLei))
+    Promise.all(chave.split("|").filter(Boolean).map((l) => carregarLei(l)))
       .then((ls) => vivo && setLeis(Object.fromEntries(ls.map((l) => [l.id, l]))))
       .catch(() => vivo && setErro("Não foi possível carregar o texto das leis."));
     return () => {
@@ -45,12 +45,21 @@ export function resolverNaPagina(lei: string, presente: (lei: string, art: strin
   };
 }
 
+/**
+ * Links do artigo: "Grifo" (a lei no leitor) e "Planalto" (o texto original). São chips na tela e somem na impressão,
+ * que não tem como seguir link; o arquivo baixado os mantém conforme a opção (atributo data-link-visual).
+ */
 export function LinksArtigo({ lei, url, disp }: { lei: string; url: string; disp: string }) {
   const origem = typeof location !== "undefined" ? location.origin : SITE.url;
   const art = artigoDe(disp);
   return (
-    <span className={styles.linksArtigo}>
-      <a href={`${origem}/leis/${lei}/#${art}`}>Grifo</a> · <a href={`${url}#${art.replace(/-/g, "")}`}>Planalto</a>
+    <span className={styles.linksArtigo} data-link-visual>
+      <a className={styles.chipLink} href={`${origem}/leis/${lei}/#${art}`} data-chip="grifo">
+        Grifo <span aria-hidden>↗</span>
+      </a>
+      <a className={styles.chipLink} href={`${url}#${art.replace(/-/g, "")}`} target="_blank" rel="noopener" data-chip="planalto">
+        Planalto <span aria-hidden>↗</span>
+      </a>
     </span>
   );
 }

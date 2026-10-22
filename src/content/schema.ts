@@ -130,6 +130,7 @@ export const LeisSchema = z.object({
       aliases: z.array(z.string()).min(1),
       planalto: z.string().url().optional(),
       ler: z.boolean().default(false),
+      tipo: z.enum(["codigo", "constituicao", "estatuto", "lei"]).optional(),
       sigla: z.string().optional(),
       numero: z.string().optional(),
       ano: z.number().int().optional(),
@@ -147,9 +148,30 @@ export const PecasCatalogoSchema = z.record(
   z.object({
     nome: z.string(),
     aliases: z.array(z.string()).default([]),
+    /** Siglas e nomes curtos aceitos só no campo de peça do quiz (no texto inteiro do simulador dariam falso positivo). */
+    siglas: z.array(z.string()).default([]),
+    /** Fundamento padrão da peça (o artigo em que ela se apoia), do principal para o complementar. */
+    fundamento: z.array(z.string()).default([]),
   }),
 );
 export type PecasCatalogo = z.infer<typeof PecasCatalogoSchema>;
+
+// ---------------------------------------------------------------------------
+// Nomes das questões: as pessoas das provas (content/nomes-pessoas.yaml) e os nomes que as substituem na tela
+// (content/nomes-mitologia.yaml). Ver src/lib/nomes/marcar.ts.
+// ---------------------------------------------------------------------------
+export const NomesPessoasSchema = z.object({
+  masculinos: z.array(z.string()),
+  femininos: z.array(z.string()),
+  sobrenomes: z.array(z.string()).default([]),
+  antes_de_lugar: z.array(z.string()).default([]),
+  expressoes: z.array(z.string()).default([]),
+  nao_pessoas: z.array(z.string()).default([]),
+});
+export const NomesMitologiaSchema = z.object({
+  masculinos: z.array(z.string()).min(12),
+  femininos: z.array(z.string()).min(12),
+});
 
 // ---------------------------------------------------------------------------
 // Promoções (anúncios da casa, slots de publicidade e vídeos do YouTube).

@@ -179,7 +179,7 @@ questoes:
         valores: [ 0, 0.55, 0.65 ]
         componentes:
           - { id: c1, valor: 0.55, termos: [ consunc* | absorc* | absorv* | absorvid*, estelionato ] }
-          - { id: c2, valor: 0.1, termos: [ sumula 17 | sumula n 17 | sumula n. 17 | enunciado 17 | sumula 17 do stj ] }
+          - { id: c2, valor: 0.1, dispositivo: [ Súmula 17 STJ ] }
       - n: B
         descricao: Não. A prestação de serviços à comunidade deve ser por período correspondente à pena mínima reduzida de um a dois terços (0,50), de acordo com o Art. 28-A, inciso III, do CPP (0,10).
         valores: [ 0, 0.5, 0.6 ]

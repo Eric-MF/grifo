@@ -113,7 +113,7 @@ questoes:
       - n: B
         descricao: "Não: a Súmula 160 do STF proíbe que o Tribunal conheça de nulidade não arguida no recurso da acusação (0,30); a violação ao art. 478, I, do CPP não poderia ser analisada sem menção no recurso (0,30)."
         componentes:
-          - { id: c1, valor: 0.3, alternativas: [ [ sumula 160 ], [ nao arguida | nao alegada | nao suscitada ] ] }
+          - { id: c1, valor: 0.3, dispositivo: [ Súmula 160 STF ], alternativas: [ [ nao arguida | nao alegada | nao suscitada ] ] }
           - { id: c2, valor: 0.3, termos: [ 478 | leitura | pronuncia, recurso | mencao | arguida ] }
   - n: 3
     enunciado: |-

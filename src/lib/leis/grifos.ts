@@ -28,3 +28,25 @@ export function grifoDe(prontos: GrifosProntos, sistema: string, lei: string): (
     return null;
   };
 }
+
+/**
+ * Blocos (índices) que recebem um grifo pronto no sistema ativo, com o que o leitor pinta: "area" (a barra na margem)
+ * ou "destaque" (o artigo grifado de verdade). Só o texto vigente recebe; a regra precisa de uma cor no sistema.
+ */
+export function prontosDosBlocos(
+  blocos: { disp?: string; superada?: boolean }[],
+  prontos: GrifosProntos,
+  sistemaId: string,
+  lei: string,
+  corDo: (rotulo: string) => string | undefined,
+): Map<number, { tipo: "area" | "destaque"; rotulo: string; cor: string; nota?: string }> {
+  const regra = grifoDe(prontos, sistemaId, lei);
+  const saida = new Map<number, { tipo: "area" | "destaque"; rotulo: string; cor: string; nota?: string }>();
+  blocos.forEach((b, i) => {
+    if (!b.disp || b.superada) return;
+    const g = regra(b.disp);
+    const cor = g ? corDo(g.regra.rotulo) : undefined;
+    if (g && cor) saida.set(i, { tipo: g.destaque ? "destaque" : "area", rotulo: g.regra.rotulo, cor, ...(g.regra.nota ? { nota: g.regra.nota } : {}) });
+  });
+  return saida;
+}

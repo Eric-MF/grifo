@@ -113,3 +113,23 @@ describe("vigência: outras redações da cláusula", () => {
     });
   });
 });
+
+describe("parser: anotações e o ponto final do parágrafo", () => {
+  const texto = (p: string) => lerHtml(`<html><body>${p}</body></html>`).blocos.map((b) => b.texto);
+
+  it("não deixa '. .' quando o ponto vem depois da anotação", () => {
+    expect(texto('<p>Art. 1º. Texto um.<a href="x">(Incluído pela Lei nº 9.271, de 17.4.1996)</a>.</p>')).toEqual(["Art. 1º. Texto um."]);
+  });
+
+  it("junta o ponto que sobra quando há duas anotações seguidas", () => {
+    expect(texto('<p>Art. 366. Texto.<a href="x">(Incluído pela Lei nº 9.271, de 1996)</a> <a href="y">(Revogado \r\npela Lei nº 11.719, de 2008).</a></p>')).toEqual(["Art. 366. Texto."]);
+  });
+
+  it("separa o ponto que vem depois do espaço e da anotação, num link de anotação", () => {
+    expect(texto('<p>Art. 234-C. <a href="x">(VETADO)\n</a><span>.&nbsp;&nbsp;</span> <a href="y">(Incluído pela Lei nº 12.015, de 2009) </a></p>')).toEqual(["Art. 234-C."]);
+  });
+
+  it("não deixa '. .' de fechamento na fonte", () => {
+    expect(texto("<p>§ 7o O disposto neste artigo aplica-se às hipóteses de prisão cautelar. .</p>")).toEqual(["§ 7o O disposto neste artigo aplica-se às hipóteses de prisão cautelar."]);
+  });
+});

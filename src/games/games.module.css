@@ -3,9 +3,9 @@
   position: relative; width: 100%; height: min(78dvh, 720px); min-height: 460px;
   border-radius: var(--radius); overflow: hidden; background: #0b1830; box-shadow: var(--shadow);
   user-select: none; -webkit-user-select: none; touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; overscroll-behavior: contain;
+  -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none;
 }
-.full { position: fixed; inset: 0; height: 100dvh; border-radius: 0; z-index: 90; }
+.full { position: fixed; inset: 0; height: 100dvh; border-radius: 0; z-index: 90; overscroll-behavior: contain; }
 .canvas { display: block; width: 100%; height: 100%; outline: none; cursor: pointer; touch-action: none; }
 .girarAtivo .canvas { pointer-events: none; }
 

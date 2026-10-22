@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CLASSES } from "@/components/leis/classes";
 import { Leitor } from "@/components/leis/Leitor";
+import { indiceDeCitacoes } from "@/content/citacoes";
 import { carregarLei, leisDoLeitor } from "@/content/leis";
+import { GRUPOS_LEIS, unidadesDeLeitura } from "@/lib/leis/leitura";
 import { htmlBlocos, mapaAncoras } from "@/lib/leis/html";
 import styles from "./cabecalho.module.css";
 
@@ -26,13 +28,16 @@ export async function generateMetadata({ params }: { params: Promise<{ diploma: 
 export default async function Page({ params }: { params: Promise<{ diploma: string }> }) {
   const { diploma } = await params;
   const l = carregarLei(diploma);
-  const inicial = htmlBlocos(l.blocos, 0, INICIAIS, l.id, l.url, mapaAncoras(l.blocos), CLASSES);
+  const inicial = htmlBlocos(l.blocos, 0, INICIAIS, l.id, l.url, mapaAncoras(l.blocos, l.id), CLASSES, new Set(Object.keys(indiceDeCitacoes().citacoes)));
   const pdf = existsSync(join(process.cwd(), "public/downloads/leis", `${l.id}.pdf`));
+  const { ids, rotulos } = unidadesDeLeitura(l.blocos);
+  const tipo = leisDoLeitor().find((x) => x.id === l.id)?.tipo ?? "lei";
+  const cor = GRUPOS_LEIS.find((g) => g.tipo === tipo)!.cor;
   return (
     <div className="container section">
       <div className={styles.cabecalho}>
         <span className="eyebrow">
-          <Link href="/leis/">Lei seca</Link>
+          <Link href="/leis/">Vade Mecum</Link>
         </span>
         <h1>{l.nome}</h1>
         <p className="muted">
@@ -52,7 +57,7 @@ export default async function Page({ params }: { params: Promise<{ diploma: stri
           )}
         </p>
       </div>
-      <Leitor lei={l.id} nome={l.nome} url={l.url} total={l.blocos.length} inicial={inicial} />
+      <Leitor lei={l.id} nome={l.nome} url={l.url} total={l.blocos.length} inicial={inicial} ids={ids} rotulos={rotulos} cor={cor} />
     </div>
   );
 }

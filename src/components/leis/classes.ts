@@ -9,7 +9,11 @@ export const CLASSES: Classes = {
   ref: styles.ref,
   atos: styles.atos,
   ato: styles.ato,
+  info: styles.info,
+  infoLinha: styles.infoLinha,
   estrela: styles.estrela,
+  naoEncontrada: styles.naoEncontrada,
+  rotulo: styles.rotulo,
   tipos: {
     estrutura: styles.estrutura,
     rubrica: styles.rubrica,

@@ -55,6 +55,10 @@ describe("corrigirResposta", () => {
     expect(corrigirResposta(a, 2, { peca: "contrarrazões de apelação", fundamento: "art. 593 CPP" }).acertouPeca).toBe(false);
     expect(corrigirResposta(a, 2, { peca: "recurso de apelação", fundamento: "Art. 593, I, CPP" }).acertou).toBe(true);
   });
+  it("sigla HC no campo de peça do quiz (nível 2) conta como habeas corpus", () => {
+    const h = gerarPergunta("habeas-corpus", 1);
+    expect(corrigirResposta(h, 2, { peca: "HC", fundamento: "art. 648, I, CPP" }).acertouPeca).toBe(true);
+  });
 });
 
 describe("perguntas fixas (content/perguntas)", async () => {
@@ -136,7 +140,8 @@ describe("perguntas de itens das provas (content/perguntas/discursivas)", async 
   // Itens cujos termos dependem de dados do caso que a descrição do item não repete.
   const EXCECOES = new Set(["02-peca-9" /* exige os nomes das testemunhas */]);
   it.each(itens.filter((p) => !EXCECOES.has(p.id)).map((p) => [p.id, p]))("%s: o gabarito do item passa no nível médio", (_, p) => {
-    const texto = `${p.itens.map((i) => i.descricao).join("\n")}\n${p.explicacao}`;
+    // um só parágrafo: a regra dos termos no mesmo parágrafo tem testes próprios
+    const texto = `${p.itens.map((i) => i.descricao).join(" ")} ${p.explicacao}`;
     expect(corrigirItem(p, 2, { texto }).acertou).toBe(true);
     expect(p.opcoes.filter((o) => o.correta)).toHaveLength(1);
   });

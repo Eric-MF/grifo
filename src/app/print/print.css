@@ -52,7 +52,7 @@ html:has(.print-root), body:has(.print-root) { background: #8a8a8a; color: #000;
 
 /* ===== padrão de resposta ===== */
 .pr-cab { display: grid; grid-template-columns: 24mm 1fr 30mm; align-items: center; gap: 4mm; margin-bottom: 3mm; }
-.pr-cab img { height: 14mm; }
+.pr-cab img { height: 14mm; max-width: 100%; object-fit: contain; }
 .pr-cab .tit { text-align: center; font-family: Arial, sans-serif; }
 .pr-cab .tit b { display: block; font-size: 13pt; }
 .pr-cab .tit span { font-size: 11pt; font-weight: 700; }

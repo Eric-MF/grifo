@@ -1,19 +1,24 @@
-/* Pergunta de 2ª fase: usada pelo jogo e pelo treino. */
+/* Questão: usada pelo jogo e pelo "Treinar questões" (inclusive na revisão do resultado). */
 /* O palco do jogo tem user-select: none (games.module.css); aqui o enunciado volta a poder ser copiado. */
 .quizOverlay { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center; padding: 0.75rem; background: rgb(3 17 44 / 0.55); overflow: auto; user-select: text; -webkit-user-select: text; -webkit-touch-callout: default; }
 .quizLayout { width: min(100%, 980px); display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 1rem; align-items: start; }
 .quizBox { background: var(--bg); color: var(--text); border-radius: 20px; padding: 1.3rem 1.4rem; box-shadow: 0 24px 60px rgb(0 0 0 / 0.35); max-height: calc(100dvh - 3rem); overflow: auto; }
 .quizAd { opacity: 0.92; }
+/* a questão que volta para o topo no treino não fica embaixo do cabeçalho fixo do site */
+.quizBox { scroll-margin-top: 5.5rem; }
+:global(body[data-foco]) .quizBox { scroll-margin-top: 1rem; }
 .quizEyebrow { margin: 0; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-ink); }
 .quizTitulo { font-size: 1.5rem; margin: 0.2rem 0 0.8rem; }
-.caso { font-size: 0.98rem; line-height: 1.55; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0.8rem 1rem; }
+/* O enunciado é o cartão; o ícone de copiar fica no canto de cima, numa faixa à direita que o texto não ocupa */
+.enunciado { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0.8rem 3.1rem 0.8rem 1rem; margin: 0 0 0.2rem; }
+.caso { margin: 0; font-size: 0.98rem; line-height: 1.55; }
 .quizPoder { margin: 0 0 0.7rem; font-size: 0.92rem; color: var(--muted); }
 .quizPoder img { width: 28px; height: 28px; vertical-align: middle; margin-right: 0.2rem; }
 .comando { font-weight: 700; margin: 0.4rem 0 0.8rem; }
 .etiqueta { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.4rem; }
 .caso { white-space: pre-line; }
 /* No jogo, caso longo (enunciado real da prova) rola sozinho: as alternativas ficam à vista. */
-.quizOverlay .caso { max-height: 13rem; overflow: auto; }
+.quizOverlay .caso { max-height: 13rem; overflow: auto; overscroll-behavior: contain; }
 .alts { display: grid; gap: 0.45rem; }
 .alt {
   display: flex; align-items: center; gap: 0.7rem; text-align: left; padding: 0.7rem 0.9rem; border-radius: 12px;
@@ -26,60 +31,197 @@
 .form input, .form textarea { padding: 0.65rem 0.8rem; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); font-size: 1rem; font-weight: 400; font-family: inherit; }
 .form textarea { resize: vertical; min-height: 6rem; }
 .form button { justify-self: start; }
+/* o campo e, logo abaixo, a prévia do que a correção vai ler (a linha fica reservada para o texto não pular) */
+.campo { display: grid; gap: 0.25rem; }
+.previa { margin: 0; min-height: 1.35em; font-size: 0.82rem; line-height: 1.35; color: var(--muted); }
+.previa strong { color: var(--text); font-weight: 650; }
+.previa[data-erro] { color: color-mix(in srgb, var(--bad) 70%, var(--muted)); }
+/* parágrafo ou inciso digitado que o artigo não tem */
+.inexistente { font-size: 0.88rem; margin: 0.35rem 0 0 !important; }
+.inexistente strong { color: var(--bad); }
 .feedback { display: grid; gap: 0.35rem; padding: 0.9rem 1rem; border-radius: 12px; }
 .feedback p { margin: 0; }
 .fbOk { background: color-mix(in srgb, var(--ok) 14%, var(--surface)); }
 .fbErro { background: color-mix(in srgb, var(--bad) 12%, var(--surface)); }
-.fbTitulo { font-size: 1.2rem; }
+.fbTopo { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; }
+.fbTitulo { font-size: 1.2rem; line-height: 1.3; padding-top: 0.2rem; }
 .fbDetalhe { font-size: 0.85rem; color: var(--muted); }
 .fbExp { font-size: 0.9rem; color: var(--muted); }
-.fbAcoes { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.9rem; font-family: var(--font-body); font-size: 0.85rem; }
-.fbAcoes .copiar { margin-top: 0; }
-/* Relatar erro e Sugerir melhoria: mesma tipografia em negrito do botão Copiar questão e do HUD, sem sublinhado de link */
-.fbAcoes a { font-weight: 700; color: var(--text); text-decoration: none; }
-.fbAcoes a:hover, .fbAcoes a:focus-visible { text-decoration: underline; }
-/* Copiar questão: o ícone de folhas vira um visto ao copiar, e o botão volta ao normal depois de instantes */
-.copiar {
-  display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.9rem; border-radius: 999px;
-  border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; font-size: 0.85rem;
-  font-weight: 700; cursor: pointer;
-  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease, transform 0.2s ease;
+/* "Resposta correta" e "Sua resposta" na correção da peça */
+.fbRotulo { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.suaResposta { display: grid; gap: 0.35rem; margin: 0.3rem 0 0.2rem; padding-top: 0.55rem; border-top: 1px solid color-mix(in srgb, var(--bad) 30%, var(--border)); }
+.marca { font-weight: 700; }
+.suaResposta [data-certo="1"] > .marca, .suaResposta [data-certo="1"] > p > .marca { color: var(--ok); }
+.suaResposta [data-certo="0"] > .marca, .suaResposta [data-certo="0"] > p > .marca { color: var(--bad); }
+/* o que diz o artigo digitado: o artigo inteiro, numa caixa com rolagem */
+.artigoTexto {
+  position: relative; margin: 0.35rem 0 0; padding: 0.5rem 0.75rem; border-left: 3px solid color-mix(in srgb, var(--bad) 55%, var(--border));
+  background: var(--surface); border-radius: 0 8px 8px 0; font-size: 0.88rem; display: grid; gap: 0.25rem;
+  max-height: 15rem; overflow-y: auto; overscroll-behavior: contain;
 }
-.copiar:hover { border-color: var(--primary); }
-.copiar:active { transform: scale(0.97); }
-.copiar:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
-.copiarIcone {
-  width: 18px; height: 18px; flex: none; overflow: visible; fill: none; stroke: currentColor; stroke-width: 2;
-  stroke-linecap: round; stroke-linejoin: round;
+.artigoTexto:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.artigoTexto [data-tipo="inciso"], .artigoTexto [data-tipo="paragrafo"] { padding-left: 0.9rem; }
+.artigoTexto [data-tipo="alinea"] { padding-left: 1.8rem; }
+.artigoTexto [data-citado] { background: color-mix(in srgb, var(--bad) 14%, transparent); border-radius: 4px; box-shadow: -0.35rem 0 0 color-mix(in srgb, var(--bad) 14%, transparent); }
+
+/* Botão só com ícone (copiar, relatar erro, sugerir melhoria): mesmo tamanho, borda e foco em todos */
+.icone {
+  position: relative; display: inline-grid; place-items: center; flex: none; width: 2.25rem; height: 2.25rem; padding: 0;
+  border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--muted);
+  cursor: pointer; text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
+.icone svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.icone:hover { color: var(--text); border-color: var(--primary); }
+.icone:active { transform: scale(0.94); }
+.icone:focus-visible { outline: none; box-shadow: var(--focus); color: var(--text); }
+@media (pointer: coarse) { .icone { width: 2.5rem; height: 2.5rem; } }
+/* a dica com o nome do botão: ao passar o mouse ou focar pelo teclado; abre para baixo, alinhada pela direita */
+.icone[data-dica]::after {
+  content: attr(data-dica); position: absolute; top: calc(100% + 6px); right: 0; z-index: 2; padding: 0.3rem 0.55rem;
+  border-radius: 8px; background: var(--text); color: var(--bg); font: 600 0.75rem/1.2 var(--font-body); white-space: nowrap;
+  pointer-events: none; opacity: 0; transform: translateY(-2px); transition: opacity 0.15s ease, transform 0.15s ease;
+}
+@media (hover: hover) { .icone[data-dica]:hover::after { opacity: 1; transform: none; transition-delay: 0.35s; } }
+.icone[data-dica]:focus-visible::after { opacity: 1; transform: none; }
+
+/* Relatar erro e Sugerir melhoria: no canto de cima da resposta, sobre o fundo verde ou vermelho dela */
+.contatos { display: inline-flex; gap: 0.4rem; flex: none; }
+.contatos .icone { background: color-mix(in srgb, var(--surface) 70%, transparent); border-color: color-mix(in srgb, var(--text) 16%, transparent); }
+
+/* Copiar questão: no canto do enunciado; o ícone de folhas vira um visto e o aviso aparece ao lado por instantes */
+.copiarCanto { position: absolute; top: 0.45rem; right: 0.45rem; display: flex; align-items: center; gap: 0.4rem; }
+.copiar[data-estado="copiada"] { color: var(--ok); border-color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, var(--surface)); animation: copiarPulso 0.5s ease; }
+.copiar[data-estado="falhou"] { color: var(--bad); border-color: var(--bad); animation: copiarTremer 0.4s ease; }
+/* com o aviso à mostra, a dica do botão não aparece junto */
+.copiar[data-estado="copiada"]::after, .copiar[data-estado="falhou"]::after { display: none; }
+.copiarIcone { overflow: visible; }
 .copiarFolha { transform-box: fill-box; transform-origin: center; transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); }
 .copiarVisto { stroke-dasharray: 24; stroke-dashoffset: 24; opacity: 0; transition: stroke-dashoffset 0.45s ease 0.08s, opacity 0.2s ease; }
-.copiarRotulo { animation: copiarRotuloEntra 0.3s ease; }
-.copiar[data-estado="copiada"] { background: color-mix(in srgb, var(--ok) 18%, var(--surface)); border-color: var(--ok); animation: copiarPulso 0.5s ease; }
 .copiar[data-estado="copiada"] .copiarFolha { opacity: 0; transform: scale(0.6); }
 .copiar[data-estado="copiada"] .copiarVisto { stroke-dashoffset: 0; opacity: 1; }
-.copiar[data-estado="falhou"] { border-color: var(--bad); color: var(--bad); animation: copiarTremer 0.4s ease; }
+.copiarAviso {
+  padding: 0.3rem 0.6rem; border-radius: 8px; background: var(--text); color: var(--bg); font: 600 0.75rem/1.2 var(--font-body);
+  white-space: nowrap; pointer-events: none; opacity: 0; transform: translateX(4px); transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.copiarAviso:empty { padding: 0; }
+.copiarAviso[data-estado="copiada"], .copiarAviso[data-estado="falhou"] { opacity: 1; transform: none; }
+.copiarAviso[data-estado="falhou"] { background: var(--bad); color: #fff; }
 @keyframes copiarPulso {
-  0% { transform: scale(0.94); }
-  55% { transform: scale(1.05); }
+  0% { transform: scale(0.9); }
+  55% { transform: scale(1.08); }
   100% { transform: scale(1); }
 }
 @keyframes copiarTremer {
   20%, 60% { transform: translateX(-3px); }
   40%, 80% { transform: translateX(3px); }
 }
-@keyframes copiarRotuloEntra {
-  from { opacity: 0; transform: translateY(3px); }
-  to { opacity: 1; transform: none; }
+
+/* Rever as alternativas depois de responder: fechado por padrão, abre logo abaixo do comando */
+.revisao { margin: 0 0 0.7rem; }
+.revisaoBotao {
+  display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.4rem 0.75rem 0.4rem 0.55rem; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); font: 600 0.85rem/1.2 var(--font-body); cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+.revisaoBotao:hover { border-color: var(--primary); }
+.revisaoBotao:focus-visible { outline: none; box-shadow: var(--focus); }
+.revisaoBotao svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s ease; }
+.revisao[data-aberta] .revisaoBotao svg { transform: rotate(90deg); }
+.revisaoCorpo { margin-top: 0.5rem; animation: revisaoAbre 0.2s ease-out; }
+.revisaoLista { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.revisaoItem {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 0.25rem 0.7rem; padding: 0.6rem 0.8rem;
+  border-radius: 12px; border: 1px solid var(--border); background: var(--surface); font-weight: 600; color: var(--muted);
+}
+.revisaoTexto { min-width: 0; }
+.revisaoSelo { grid-column: 2; justify-self: start; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.revisaoItem[data-correta] { color: var(--text); border-color: var(--ok); background: color-mix(in srgb, var(--ok) 10%, var(--surface)); }
+.revisaoItem[data-correta] .altLetra { background: var(--ok); color: #fff; }
+.revisaoItem[data-correta] .revisaoSelo { color: var(--ok); }
+.revisaoItem[data-errada] { color: var(--text); border-color: var(--bad); background: color-mix(in srgb, var(--bad) 8%, var(--surface)); }
+.revisaoItem[data-errada] .altLetra { background: var(--bad); color: #fff; }
+.revisaoItem[data-errada] .revisaoSelo { color: var(--bad); }
+@keyframes revisaoAbre {
+  from { opacity: 0; transform: translateY(-4px); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .copiar, .copiarFolha, .copiarVisto { transition: none; }
-  .copiar[data-estado="copiada"], .copiar[data-estado="falhou"], .copiarRotulo { animation: none; }
+  .icone, .copiarFolha, .copiarVisto, .copiarAviso, .icone[data-dica]::after, .revisaoBotao svg { transition: none; }
+  .copiar[data-estado="copiada"], .copiar[data-estado="falhou"], .revisaoCorpo { animation: none; }
 }
 .feedback button { justify-self: start; margin-top: 0.4rem; }
+/* a questão revista no fim do treino: o mesmo cartão, sem a caixa do jogo */
+.revista { display: grid; }
+.revista .revisao { margin-bottom: 0.8rem; }
 @media (max-width: 760px) {
   .quizLayout { grid-template-columns: 1fr; }
   .quizAd { max-width: 100%; }
   .quizAd > aside { max-width: none; }
 }
 .alt:disabled { opacity: 0.5; cursor: not-allowed; }
+.alt:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+/* Modo foco do treino (body[data-foco]): só a questão, numa coluna de leitura, sem cartões nem sombras. Copiar,
+   relatar erro e sugerir somem até o mouse passar pela questão (ou o Tab chegar neles). */
+/* o caso e a resposta: fora do modo foco (e no jogo), um embaixo do outro, como se as caixas não existissem */
+.miolo, .ladoCaso, .ladoResposta { display: contents; }
+:global(body[data-foco]) .quizBox {
+  max-width: min(100%, var(--foco-largura, 52rem)); margin: 0 auto; padding: 0; background: transparent; box-shadow: none; max-height: none;
+  overflow: visible; container-type: inline-size;
+}
+:global(body[data-foco]) .enunciado { background: none; border: 0; padding: 0 2.8rem 0 0; }
+:global(body[data-foco]) .caso { font-size: 1.06rem; line-height: 1.62; }
+:global(body[data-foco]) .comando { font-size: 1.04rem; margin: 0.9rem 0 1rem; }
+/* "Caso ao lado da resposta", com largura para as duas colunas: o caso fica parado à esquerda (rola sozinho se for
+   maior que a tela) e a pergunta, a resposta e a correção correm à direita */
+/* só com mouse: no celular (mesmo com "site para computador", que dá largura de sobra) fica uma coluna */
+@media (hover: hover) and (pointer: fine) {
+@container (min-width: 54rem) {
+  :global(body[data-foco-lado]) .miolo { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 2.4rem; align-items: start; }
+  :global(body[data-foco-lado]) .ladoCaso {
+    display: block; position: sticky; top: 0.75rem; max-height: calc(100dvh - 1.5rem); overflow-y: auto; overscroll-behavior: contain;
+    padding-right: 0.4rem; scrollbar-width: thin;
+  }
+  :global(body[data-foco-lado]) .ladoResposta { display: block; }
+  :global(body[data-foco-lado]) .ladoResposta > .comando { margin-top: 0; }
+}
+}
+:global(body[data-foco]) .alts { gap: 0.55rem; }
+:global(body[data-foco]) .alt { background: transparent; border-color: color-mix(in srgb, var(--border) 75%, transparent); font-weight: 500; }
+:global(body[data-foco]) .alt:hover, :global(body[data-foco]) .alt:focus-visible { background: var(--surface); }
+:global(body[data-foco]) .altLetra { background: transparent; border: 1px solid var(--border); }
+:global(body[data-foco]) .form input, :global(body[data-foco]) .form textarea { background: transparent; }
+:global(body[data-foco]) .feedback { border-radius: 10px; }
+:global(body[data-foco]) .copiarCanto, :global(body[data-foco]) .contatos { opacity: 0; transition: opacity 0.2s; }
+:global(body[data-foco]) .quizBox:hover .copiarCanto, :global(body[data-foco]) .copiarCanto:focus-within,
+:global(body[data-foco]) .quizBox:hover .contatos, :global(body[data-foco]) .contatos:focus-within { opacity: 1; }
+/* o copiar no topo da questão (treino, no celular); o aviso de copiada abre à esquerda dele */
+.copiarTopo { position: relative; display: none; }
+.copiarTopo .copiarAviso { position: absolute; right: calc(100% + 0.4rem); top: 50%; translate: 0 -50%; white-space: nowrap; }
+@media (max-width: 760px) {
+  .copiarTopo { display: inline-flex; }
+  .enunciado[data-copiar-fora] { padding-right: 1rem; }
+  .enunciado[data-copiar-fora] .copiarCanto { display: none; }
+  :global(body[data-foco]) .enunciado[data-copiar-fora] { padding-right: 0; }
+}
+/* no modo foco o copiar fica no menu do treino: o do cartão some */
+:global(body[data-foco]) .enunciado[data-copiar-fora] { padding-right: 0; }
+:global(body[data-foco]) .enunciado[data-copiar-fora] .copiarCanto { display: none; }
+/* item do menu do modo foco (o copiar); o mesmo desenho de .itemMenu em menuFoco.module.css */
+.itemMenu {
+  display: flex; align-items: center; gap: 0.6rem; width: 100%; min-height: 2.6rem; padding: 0.4rem 0.6rem; border: 0; border-radius: 10px;
+  background: none; color: var(--text); font: inherit; font-size: 0.9rem; font-weight: 700; text-align: left; cursor: pointer;
+}
+.itemMenu:hover { background: color-mix(in srgb, var(--primary) 9%, transparent); }
+.itemMenu:focus-visible { outline: 2px solid var(--primary); outline-offset: -2px; }
+.itemMenu svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.itemMenu[data-estado="copiada"] { color: var(--ok); }
+.itemMenu[data-estado="falhou"] { color: var(--bad); }
+/* o campo de uma linha (textarea, ver CampoLinha): a altura de um input, cresce se o texto quebrar */
+.form textarea.linha { min-height: 0; resize: none; overflow: hidden; line-height: 1.4; field-sizing: content; }
+/* riscar a alternativa arrastando para o lado (toque): ela segue o dedo, avermelha e, solta, fica riscada */
+.alt { touch-action: pan-y; transition: translate 0.2s ease, opacity 0.2s ease, background-color 0.15s; }
+.alt[data-arrastando] { transition: none; background: color-mix(in srgb, var(--bad) calc(var(--arraste, 0) * 14%), var(--surface)); }
+.alt[data-riscada] { opacity: 0.45; text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: color-mix(in srgb, var(--bad) 70%, var(--text)); }
+@media (pointer: coarse) {
+  .alts::after { content: "Arraste uma alternativa para o lado para riscá-la."; font-size: 0.75rem; color: var(--muted); text-align: center; }
+}

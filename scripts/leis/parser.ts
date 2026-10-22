@@ -78,6 +78,67 @@ const ANOTACAO = /\((?:[^()]|\([^()]*\))*?\b(Reda[çc][ãa]o\s+(?:dada|pela)|Tra
 // como "(Decreto-Lei nº 2.848, de 1940)", não têm o "pelo/pela" e ficam de fora.
 const PARECE_ANOTACAO = /\(\s*[A-ZÀ-Ú][a-zà-ú]+(?:\s+[a-zà-ú]+){0,3}\s+pel[oa]s?\s+(?:Lei|Decreto|Medida Provis[óo]ria|Emenda)[^()]*\)/g;
 
+/**
+ * Tira as anotações do texto. No Planalto o ponto final da frase vem depois da anotação ("ano.  (Redação dada
+ * pela Lei…)."): sem tratar, sobra um ". ." no fim do parágrafo. Se o ponto já vinha antes, o de depois some.
+ */
+function tirarAnotacoes(t: string): string {
+  // o texto já sem as anotações anteriores é o que vale para decidir se o ponto cabe (duas anotações seguidas)
+  let saida = "";
+  let pos = 0;
+  for (const m of t.matchAll(new RegExp(`\\s*${ANOTACAO.source}\\s*\\.?`, "gi"))) {
+    saida += t.slice(pos, m.index);
+    pos = m.index + m[0].length;
+    const antes = saida.trimEnd();
+    if (!/\.$/.test(m[0])) saida += " ";
+    else if (!antes || antes.endsWith(".")) saida += " ";
+    else saida = `${antes}.`;
+  }
+  return saida + t.slice(pos);
+}
+
+/** Pontuação que sobra no fim: ". ." vira "."; ";." vira ";"; alínea revogada ("a) (revogada);") fica só com a letra. */
+function limparFinal(t: string): string {
+  const semPonto = t.replace(/\.\s\.$/, ".").replace(/([;,:])\s*\.$/, "$1");
+  return /^[a-z0-9]{1,4}\)\s*[;,:.]*$/i.test(semPonto) ? semPonto.replace(/\s*[;,:.]+$/, "") : semPonto;
+}
+
+/**
+ * Os links que o próprio Planalto pôs no texto ("§ 1º, II," apontando para o art. 81 do CP), fora das anotações,
+ * nas posições do texto final. O leitor os usa onde não tem link próprio.
+ */
+function linksDoTexto(ps: Pedaco[], texto: string): { ini: number; fim: number; href: string }[] {
+  const bruto = ps.map((x) => x.texto).join("");
+  const anotacoes = [...bruto.matchAll(ANOTACAO)].map((m) => [m.index, m.index + m[0].length] as const);
+  // pedaços seguidos com o mesmo link são um link só
+  const corridas: { href: string; ini: number; fim: number }[] = [];
+  let pos = 0;
+  for (const x of ps) {
+    const fim = pos + x.texto.length;
+    if (x.href && !/^(javascript|mailto):/i.test(x.href)) {
+      const ultima = corridas.at(-1);
+      if (ultima && ultima.href === x.href && ultima.fim === pos) ultima.fim = fim;
+      else corridas.push({ href: x.href, ini: pos, fim });
+    }
+    pos = fim;
+  }
+  const links: { ini: number; fim: number; href: string }[] = [];
+  let cursor = 0;
+  for (const c of corridas) {
+    if (anotacoes.some(([a, b]) => c.ini < b && c.fim > a)) continue;
+    const alvo = espacos(bruto.slice(c.ini, c.fim));
+    if (alvo.length < 2) continue;
+    const achado = texto.indexOf(alvo, cursor);
+    if (achado < 0) continue;
+    cursor = achado + alvo.length;
+    // o Planalto às vezes põe no link a palavra de ligação ("no IV do mesmo artigo", "o § 1º"): ela fica fora
+    const ligacao = alvo.match(/^(?:(?:n[oa]s?|d[oa]s?|[oa]s?|e|em|aos?)\s+)+/)?.[0].length ?? 0;
+    if (ligacao >= alvo.length) continue;
+    links.push({ ini: achado + ligacao, fim: cursor, href: c.href });
+  }
+  return links;
+}
+
 function tipoAto(bruto: string): TipoAto {
   if (/reda[çc][ãa]o\s+(dada|pela)|express[ãa]o\s+(suprimida|substitu)|suprimid|substitu[íi]d/i.test(bruto)) return "redacao";
   if (/inclu[íi]d|acrescid/i.test(bruto)) return "incluido";
@@ -187,7 +248,8 @@ export function lerHtml(html: string): { blocos: Bloco[]; relatorio: Relatorio }
       });
       atos.push(lerAto(m[0], pedacoLink?.href));
     }
-    texto = espacos(texto.replace(ANOTACAO, " ").replace(/\s+Vig[êe]ncia\s*$/i, ""));
+    // ". ." no fim do parágrafo: o Planalto traz um ponto a mais em alguns textos; ";." é o ponto da anotação
+    texto = limparFinal(espacos(tirarAnotacoes(texto).replace(/\s+Vig[êe]ncia\s*$/i, "")));
     for (const m of texto.matchAll(PARECE_ANOTACAO)) naoReconhecidas.add(espacos(m[0]).slice(0, 160));
 
     const comTexto = ps.filter((x) => espacos(x.texto));
@@ -239,6 +301,8 @@ export function lerHtml(html: string): { blocos: Bloco[]; relatorio: Relatorio }
       const atual = [...blocos].reverse().find((b) => b.disp);
       if (art && atual?.disp) bloco.disp = atual.disp;
     }
+    const links = linksDoTexto(ps, bloco.texto);
+    if (links.length) bloco.links = links;
     blocos.push(bloco);
   }
 

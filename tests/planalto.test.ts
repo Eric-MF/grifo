@@ -13,7 +13,7 @@ describe("citacoesEm", () => {
     const [c] = citacoesEm("Cabe o recurso do art. 122 do CPP, segundo o texto.");
     expect(c.texto).toBe("art. 122 do CPP");
     expect(c.url).toBe("/leis/cpp/#art122");
-    expect(c.planalto).toBe("https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm#art122");
+    expect(c.planalto).toBe("https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm#art122");
     expect(c).toMatchObject({ lei: "cpp", art: "art122" });
   });
 
@@ -48,10 +48,19 @@ describe("citacoesEm", () => {
 });
 
 describe("citacoesEm — súmulas do STF", () => {
-  it("liga Súmula do STF à respectiva súmula", () => {
+  it("liga Súmula do STF à súmula do leitor, com a prévia e o STF como original", () => {
     const [c] = citacoesEm("Tempestividade, na forma da Súmula 707 do STF.");
     expect(c.texto).toBe("Súmula 707 do STF");
-    expect(c.url).toBe("https://jurisprudencia.stf.jus.br/pages/search/seq-sumula707/false");
+    expect(c.url).toBe("/leis/sumulas/stf/#s-707");
+    expect(c.lei).toBe("sumulas-stf");
+    expect(c.art).toBe("s-707");
+    expect(c.planalto).toBe("https://jurisprudencia.stf.jus.br/pages/search/seq-sumula707/false");
+  });
+
+  it("sem a súmula no leitor, aponta para o STF", () => {
+    const [c] = citacoesEm("Súmula 0 do STF");
+    expect(c.url).toBe("https://jurisprudencia.stf.jus.br/pages/search/seq-sumula0/false");
+    expect(c.lei).toBeUndefined();
   });
 
   it("mantém a ordem quando súmula e artigo aparecem juntos", () => {

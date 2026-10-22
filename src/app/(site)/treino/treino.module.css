@@ -15,11 +15,234 @@
 .linkBotao { background: none; border: 0; color: var(--muted); text-decoration: underline; cursor: pointer; font: inherit; }
 .total { margin: 0; font-size: clamp(2.2rem, 7vw, 3.2rem); font-weight: 900; }
 .total span { font-size: 1rem; font-weight: 600; color: var(--muted); }
-.tabelaWrap { overflow-x: auto; }
-.tabela { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
-.tabela th, .tabela td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); }
-.tabela td:first-child, .tabela th:first-child { width: 2.2rem; }
+/* Resultado: uma linha por questão (acerto, tempo e pontos), que abre a questão como ficou depois de respondida */
+.revisao { display: grid; gap: 0.5rem; }
+.revisao .regras { margin-top: -0.2rem; }
+.rodadas { list-style: none; margin: 0.2rem 0 0; padding: 0; display: grid; gap: 0.5rem; }
+.rodada {
+  border: 1px solid var(--border); border-radius: 14px; background: var(--bg); overflow: hidden;
+  box-shadow: inset 3px 0 0 var(--bad);
+}
+.rodada[data-acertou] { box-shadow: inset 3px 0 0 var(--ok); }
+.rever {
+  width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; gap: 0.75rem;
+  padding: 0.7rem 0.85rem 0.7rem 1rem; border: 0; background: none; color: var(--text); font: inherit; text-align: left; cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+@media (hover: hover) { .rever:hover { background: color-mix(in srgb, var(--text) 4%, transparent); } }
+.rever:focus-visible { outline: 2px solid var(--primary); outline-offset: -2px; border-radius: 14px; }
+.rodadaN {
+  width: 1.9rem; height: 1.9rem; border-radius: 50%; display: grid; place-items: center; background: var(--surface-2);
+  font-weight: 800; font-size: 0.85rem; font-variant-numeric: tabular-nums;
+}
+.rodadaTitulo { display: grid; gap: 0.1rem; min-width: 0; }
+.rodadaTitulo strong { font-size: 0.95rem; line-height: 1.3; overflow-wrap: anywhere; }
+.rodadaTitulo small { font-size: 0.75rem; color: var(--muted); }
+.rodadaNumeros { display: grid; justify-items: end; gap: 0.15rem; font-size: 0.8rem; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.selo { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--bad); }
+.rodada[data-acertou] .selo { color: var(--ok); }
+.rever svg { width: 18px; height: 18px; fill: none; stroke: var(--muted); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s ease; }
+.rodada[data-aberta] .rever svg { transform: rotate(90deg); }
+.rodadaCorpo { padding: 0.9rem 0.9rem 0.9rem 1rem; border-top: 1px solid var(--border); animation: abrir 0.2s ease-out; }
+@keyframes abrir { from { opacity: 0; transform: translateY(-4px); } }
+@media (prefers-reduced-motion: reduce) {
+  .rever, .rever svg { transition: none; }
+  .rodadaCorpo { animation: none; }
+}
+/* no celular, acerto, tempo e pontos descem para uma linha sob o título, que fica com a largura toda */
+@media (max-width: 520px) {
+  .rever { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "n titulo seta" "n numeros seta"; row-gap: 0.3rem; }
+  .rodadaN { grid-area: n; }
+  .rodadaTitulo { grid-area: titulo; }
+  .rodadaNumeros { grid-area: numeros; display: flex; gap: 0.5rem; justify-items: start; }
+  .rever svg { grid-area: seta; }
+}
 .acoes { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 @media (max-width: 640px) {
   .niveis { grid-template-columns: 1fr; }
+}
+/* quantas questões: 10, 20, 30, 50 ou o modo infinito */
+.tamanhos { border: 0; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.tamanhos legend { font-weight: 700; margin-bottom: 0.45rem; }
+.tamanhos [role="group"] { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.tamanhos button, .niveisCompactos button, .filtros button {
+  min-height: 40px; min-width: 3.2rem; padding: 0.4rem 0.9rem; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--text); font: inherit; font-weight: 700; font-variant-numeric: tabular-nums; cursor: pointer;
+}
+.tamanhos button[aria-pressed="true"], .niveisCompactos button[aria-pressed="true"], .filtros button[aria-pressed="true"] {
+  border-color: var(--primary); box-shadow: inset 0 0 0 1.5px var(--primary); color: var(--primary);
+}
+.tamanhos button:focus-visible, .niveisCompactos button:focus-visible, .filtros button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.infinito span { font-size: 1.15em; margin-right: 0.2rem; }
+/* modo infinito: o placar acima do tempo e os ajustes (nível e tipos) entre uma questão e outra */
+.placar { margin: 0.15rem 0 0; font-weight: 700; font-variant-numeric: tabular-nums; }
+.ajustes { margin-top: 1rem; display: grid; justify-items: center; gap: 0.6rem; }
+.ajustesCorpo { width: 100%; display: grid; gap: 0.8rem; padding: 1rem 1.1rem; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
+.niveisCompactos { position: relative; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+/* a dica do nível nos ajustes: a largura do grupo, abaixo dos botões (como a dica dos tipos de pergunta) */
+.dicaNivel {
+  position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 20; text-align: left;
+  padding: 0.55rem 0.75rem; border-radius: 10px; background: var(--text); color: var(--bg);
+  font-size: 0.8rem; font-weight: 400; line-height: 1.4; box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
+  opacity: 0; visibility: hidden; transition: opacity 0.12s; pointer-events: none;
+}
+.niveisCompactos button:hover .dicaNivel, .niveisCompactos button:focus-visible .dicaNivel { opacity: 1; visibility: visible; }
+/* o número da questão e, à direita, o botão do modo foco */
+.topoQuestao { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; }
+.botaoFoco {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  min-height: 34px; padding: 0.3rem 0.8rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface);
+  color: var(--muted); font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer;
+}
+.botaoFoco svg { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.botaoFoco[aria-pressed="true"] { border-color: var(--primary); color: var(--primary); }
+.botaoFoco:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+/* modo foco: some a apresentação da página (o cabeçalho e o rodapé do site somem pelo globals.css) */
+:global(body[data-foco]) .intro { display: none; }
+/* resultado: os números do treino, o acerto por nível e por tipo, e o filtro da revisão */
+.numeros { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 0.6rem; }
+.numeros div { padding: 0.7rem 0.85rem; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
+.numeros dt { font-size: 0.75rem; color: var(--muted); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.numeros dd { margin: 0.15rem 0 0; font-size: 1.15rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.numeros small { font-size: 0.8rem; font-weight: 600; color: var(--muted); }
+.grupos { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 0.8rem 1.4rem; }
+.grupos h3 { margin: 0 0 0.4rem; font-size: 0.95rem; }
+.grupos ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+.grupos li { display: grid; grid-template-columns: minmax(0, 1fr) 5rem auto; align-items: center; gap: 0.6rem; font-size: 0.88rem; }
+.grupos li > span:first-child { overflow-wrap: anywhere; }
+.grupos li > span:last-child { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.barra { height: 8px; border-radius: 999px; background: linear-gradient(90deg, var(--ok) var(--p), color-mix(in srgb, var(--bad) 35%, var(--surface-2)) var(--p)); }
+.filtros { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.revisao > .btn { justify-self: center; }
+/* modo automático: a explicação no início, onde o aluno está e o aviso de quando sobe */
+.automatico { display: grid; gap: 0.5rem; }
+.ondeEsta { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.8rem; font-size: 0.95rem; }
+.situacaoAuto { margin: 0.1rem 0 0; font-size: 0.85rem; color: var(--muted); }
+.situacaoAuto strong { color: var(--text); }
+.situacaoAuto[data-recapitulacao] { color: var(--accent-ink); }
+/* o aviso de subiu ou desceu: por cima da página, no topo, entra, fica um pouco e some (a duração vem do Treino) */
+.avanco {
+  position: fixed; top: max(0.9rem, env(safe-area-inset-top)); left: 50%; z-index: 60; margin: 0; max-width: calc(100vw - 2rem); width: max-content;
+  padding: 0.5rem 1rem; border-radius: 999px; font-size: 0.9rem; font-weight: 800; text-align: center; pointer-events: none;
+  background: color-mix(in srgb, var(--ok) 16%, var(--surface)); color: color-mix(in srgb, var(--ok) 70%, var(--text));
+  border: 1px solid color-mix(in srgb, var(--ok) 35%, transparent); box-shadow: 0 8px 24px rgb(0 0 0 / 0.16);
+  translate: -50% 0; animation: avanco var(--duracao, 3.6s) ease both;
+}
+@keyframes avanco {
+  0% { transform: translateY(-0.8rem) scale(0.85); opacity: 0; }
+  10%, 85% { transform: none; opacity: 1; }
+  100% { transform: translateY(-0.5rem); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  @keyframes avanco { 0%, 100% { opacity: 0; } 5%, 90% { opacity: 1; } }
+}
+
+/* Modo foco: só o essencial. O topo vira uma linha discreta, os botões perdem a moldura e o resto esmaece até o mouse
+   passar por cima (os cartões e ícones da questão ficam em quiz.module.css) */
+:global(body[data-foco]) .eyebrow { letter-spacing: 0.08em; color: var(--muted); }
+:global(body[data-foco]) .botaoFoco { border-color: transparent; background: none; padding-inline: 0.4rem; }
+:global(body[data-foco]) .tempo { margin-bottom: 1.2rem; font-size: 0.82rem; }
+:global(body[data-foco]) .ajustes, :global(body[data-foco]) .abandonar { max-width: 46rem; margin-inline: auto; opacity: 0.45; transition: opacity 0.2s; }
+:global(body[data-foco]) .ajustes:hover, :global(body[data-foco]) .ajustes:focus-within,
+:global(body[data-foco]) .abandonar:hover, :global(body[data-foco]) .abandonar:focus-within { opacity: 1; }
+/* modo automático: a opção de descer de nível e o aviso de quando desce */
+.opcao { display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; }
+.opcao input { width: 1.15rem; height: 1.15rem; margin: 0.15rem 0 0; accent-color: var(--primary); flex: none; }
+.opcao span { display: grid; gap: 0.1rem; }
+.opcao small { color: var(--muted); font-size: 0.82rem; }
+.avanco[data-desceu] { background: color-mix(in srgb, var(--bad) 14%, var(--surface)); color: color-mix(in srgb, var(--bad) 70%, var(--text)); }
+/* os botões do topo da questão: os ajustes do modo foco (quando ligado) e o próprio modo foco */
+.controlesFoco { display: flex; align-items: center; gap: 0.3rem; }
+/* a largura e o caso ao lado, dentro do menu do modo foco */
+.ajustesFoco { display: grid; gap: 0.8rem; padding: 0 0.6rem 0.5rem; }
+.ajustesFoco hr { margin: 0.25rem -0.6rem 0.2rem; }
+.ajustesFoco .opcao { font-size: 0.85rem; }
+.ajustesFoco .opcao small { display: block; color: var(--muted); font-weight: 400; }
+.largura { display: grid; gap: 0.35rem; font-weight: 700; font-size: 0.9rem; }
+.largura small { font-weight: 500; color: var(--muted); margin-left: 0.3rem; }
+.largura input { width: 100%; accent-color: var(--primary); }
+/* no celular a largura é a da tela: o ajuste some */
+@media (max-width: 760px) { .ajustesFoco { display: none; } }
+
+/* Modo foco: a página usa a tela toda (a largura da questão vem do ajuste, em --foco-largura) e o topo vira uma linha só:
+   número da questão, bolinhas, tempo e os botões, para o caso começar logo */
+:global(body[data-foco]) .pagina { width: calc(100% - 2rem); max-width: none; padding-block: 0.6rem 2rem; }
+:global(body[data-foco]) .cabecalho { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 1.1rem; margin-bottom: 0.9rem; }
+:global(body[data-foco]) .cabecalho .topoQuestao { display: contents; }
+:global(body[data-foco]) .cabecalho .eyebrow { order: -2; }
+:global(body[data-foco]) .cabecalho > :first-child { order: -1; }
+:global(body[data-foco]) .cabecalho .tempo { margin: 0; }
+:global(body[data-foco]) .cabecalho .placar { margin: 0; font-size: 0.85rem; }
+:global(body[data-foco]) .cabecalho .controlesFoco { order: 5; margin-left: auto; gap: 0.9rem; }
+:global(body[data-foco]) .cabecalho .controlesFoco:hover, :global(body[data-foco]) .cabecalho .controlesFoco:focus-within { opacity: 1; }
+:global(body[data-foco]) .cabecalho .situacaoAuto { order: 6; flex-basis: 100%; margin: 0; }
+:global(body[data-foco]) .ajustes, :global(body[data-foco]) .abandonar { max-width: min(100%, var(--foco-largura, 52rem)); }
+
+/* a opção de pular os acertos, abaixo da questão */
+.opcaoQuestao { max-width: 46rem; margin: 1rem auto 0; font-size: 0.9rem; }
+.opcaoQuestao small { display: block; color: var(--muted); }
+:global(body[data-foco]) .opcaoQuestao { max-width: min(100%, var(--foco-largura, 52rem)); opacity: 0.45; transition: opacity 0.2s; }
+:global(body[data-foco]) .opcaoQuestao:hover, :global(body[data-foco]) .opcaoQuestao:focus-within { opacity: 1; }
+
+/* Celular: o copiar e o modo foco (só o ícone) ficam na linha do modo automático ("Peça e fundamento · 3 acertos…");
+   sem essa linha, ao lado do número da questão */
+@media (max-width: 760px) {
+  .cabecalho { display: flex; flex-wrap: wrap; align-items: center; column-gap: 0.6rem; }
+  .cabecalho > * { flex: 1 1 100%; }
+  .cabecalho .topoQuestao { display: contents; }
+  .cabecalho > :first-child { order: 1; }
+  .cabecalho .eyebrow { order: 2; flex: 1 1 100%; }
+  .cabecalho .situacaoAuto { order: 3; flex: 1 1 0; min-width: 0; }
+  .cabecalho .controlesFoco { order: 4; flex: none; margin-left: auto; gap: 0.4rem; }
+  .cabecalho:not(:has(.situacaoAuto)) .eyebrow { flex: 1 1 0; min-width: 0; order: 3; }
+  .cabecalho > :not(:first-child, .topoQuestao, .situacaoAuto) { order: 5; }
+  .botaoFoco { width: 2.5rem; height: 2.5rem; padding: 0; justify-content: center; }
+  .botaoFoco span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .botaoFoco svg { width: 18px; height: 18px; }
+  :global(body[data-foco]) .cabecalho > * { flex: 0 1 auto; }
+  :global(body[data-foco]) .cabecalho .situacaoAuto { order: 6; flex: 1 1 12rem; }
+  :global(body[data-foco]) .cabecalho .controlesFoco { order: 7; }
+  :global(body[data-foco]) .botaoFoco { border-color: var(--primary); background: var(--surface); padding: 0; }
+}
+/* modo foco no celular: o XP e o menu (com o tempo e o strike) flutuam no canto, sempre à vista ao rolar o caso */
+@media (max-width: 760px) {
+  :global(body[data-foco]) .cabecalho .controlesFoco {
+    position: fixed; z-index: 50; top: max(0.5rem, env(safe-area-inset-top)); right: 0.6rem; gap: 0.6rem;
+    padding: 0.2rem 0.2rem 0.2rem 0.7rem; border-radius: 999px; background: color-mix(in srgb, var(--surface) 88%, transparent);
+    box-shadow: 0 4px 16px rgb(3 17 44 / 0.14); backdrop-filter: blur(6px);
+  }
+  /* o número da questão e o tempo correm ao lado do menu flutuante */
+  :global(body[data-foco]) .cabecalho .linhaFoco { padding-right: 9.5rem; }
+}
+
+/* modo foco: "Q2·Peça e fundamento" numa linha, as barrinhas do nível embaixo */
+.linhaFoco { margin: 0; font-size: 0.95rem; font-weight: 700; color: var(--text); }
+.linhaFoco strong { font-weight: 900; color: var(--accent-ink); }
+.linhaFoco small { font-weight: 500; color: var(--muted); }
+:global(body[data-foco]) .cabecalho > [role="img"] { order: 6; flex: 1 1 100%; margin: 0.15rem 0 0; }
+/* o rodapé do modo foco: apagado, só para dar espaço embaixo */
+.rodapeFoco {
+  min-height: max(25dvh, 10rem); margin-top: 2.5rem; padding: 1.5rem 1rem 2rem; display: grid; align-content: start; justify-items: center; gap: 0.3rem;
+  border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent); color: var(--muted); opacity: 0.55; text-align: center; font-size: 0.75rem;
+}
+.rodapeFoco p { margin: 0; max-width: 34rem; }
+.rodapeFoco svg { opacity: 0.7; margin-bottom: 0.3rem; }
+/* celular: a página começa sem o espaço de cima e o botão de começar fica no topo das opções */
+@media (max-width: 760px) {
+  .pagina:global(.section) { padding-top: 0.75rem; }
+  .intro :global(.lead) { margin-bottom: 0; }
+  .painel { margin-top: 1rem; }
+  .comecar { order: -1; justify-self: stretch; }
+  /* o título fica em cima, as opções (com o botão) logo abaixo dele e a explicação longa depois */
+  .pagina { display: flex; flex-direction: column; }
+  /* numa coluna flex, quem tem margem automática encolhe ao conteúdo; a questão no modo foco (que mede a própria
+     largura, "container-type") encolhia a quase nada e ia para a direita. Todos ocupam a largura toda. */
+  .pagina > * { width: 100%; }
+  .intro { display: contents; }
+  .intro :global(.lead) { order: 2; margin-top: 1.25rem; font-size: 1rem; }
+  .intro h1 { margin-bottom: 0; }
+}
+/* digitando no modo foco (celular), o XP e o menu descem para baixo da faixa da barra de notificações (globals.css) */
+@media (max-width: 760px) {
+  :global(body[data-foco][data-digitando]) .cabecalho .controlesFoco { top: calc(env(safe-area-inset-top, 0px) + 2.3rem); }
 }

@@ -1,0 +1,76 @@
+/* Placar do strike: as bolinhas acima da questão */
+.placar { display: grid; gap: 0.35rem; margin: 0 0 0.7rem; }
+.bolinhas { display: flex; flex-wrap: wrap; gap: clamp(3px, 0.8vw, 6px); }
+.bolinha {
+  width: clamp(9px, 2.2vw, 14px); aspect-ratio: 1; border-radius: 50%; flex: none;
+  border: 1.5px solid color-mix(in srgb, var(--cor) 55%, var(--border)); background: transparent;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.bolinha[data-cheia] { background: var(--cor); border-color: var(--cor); }
+.bolinha[data-ultima] { animation: entrar 0.45s cubic-bezier(0.3, 1.8, 0.5, 1); box-shadow: 0 0 0 3px color-mix(in srgb, var(--cor) 28%, transparent), 0 0 10px var(--cor); }
+@keyframes entrar { from { transform: scale(0.2); } 60% { transform: scale(1.35); } }
+/* o erro apaga tudo: as bolinhas tremem */
+.bolinhas[data-perdeu] { animation: tremer 0.45s ease; }
+@keyframes tremer { 20%, 60% { transform: translateX(-5px); } 40%, 80% { transform: translateX(5px); } }
+/* o strike feito: as bolinhas piscam em onda */
+.bolinhas[data-fez] .bolinha { animation: piscar 0.6s ease-in-out infinite alternate; animation-delay: calc(var(--k, 0) * 0.04s); box-shadow: 0 0 8px var(--cor); }
+@keyframes piscar { to { transform: scale(1.3); filter: brightness(1.25); } }
+.legenda { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.75rem; font-size: 0.8rem; color: var(--muted); }
+.rotulo { font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--cor) 75%, var(--text)); }
+.total { font-weight: 800; color: var(--accent-ink); }
+.som {
+  margin-left: auto; width: 2rem; height: 2rem; padding: 0; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--muted); display: inline-grid; place-items: center; cursor: pointer;
+}
+.som svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.som[aria-pressed="true"] { color: var(--primary); }
+.som:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+/* A comemoração: por cima de tudo, sem bloquear o clique */
+.comemoracao { position: fixed; inset: 0; z-index: 60; pointer-events: none; display: grid; place-items: center; overflow: hidden; animation: sumir 2.9s ease forwards; }
+@keyframes sumir { 0%, 82% { opacity: 1; } 100% { opacity: 0; } }
+.clarao { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, rgb(255 214 102 / 0.55), rgb(255 107 74 / 0.18) 35%, transparent 65%); animation: clarao 0.9s ease-out forwards; }
+@keyframes clarao { from { opacity: 0; transform: scale(0.6); } 25% { opacity: 1; } to { opacity: 0.35; transform: scale(1.15); } }
+.aneis { position: absolute; left: 50%; top: 45%; width: 0; height: 0; }
+.aneis span {
+  position: absolute; left: -9rem; top: -9rem; width: 18rem; height: 18rem; border-radius: 50%;
+  border: 6px solid #f5b82e; opacity: 0; animation: anel 1.3s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+}
+.aneis span:nth-child(2) { border-color: #ff3d7f; animation-delay: 0.15s; }
+.aneis span:nth-child(3) { border-color: #2fb7ff; animation-delay: 0.3s; }
+@keyframes anel { from { opacity: 0.9; transform: scale(0.1); } to { opacity: 0; transform: scale(2.6); border-width: 1px; } }
+.letreiro { position: relative; display: grid; justify-items: center; gap: 0.4rem; text-align: center; padding: 0 1rem; margin-top: -6vh; }
+.strike { display: flex; font-size: clamp(3.2rem, 14vw, 7.5rem); font-weight: 900; line-height: 1; letter-spacing: 0.02em; }
+.strike span {
+  display: inline-block; background: linear-gradient(180deg, #ffe066 0%, #f5b82e 40%, #ff6b4a 75%, #ff3d7f 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 4px 0 rgb(120 40 0 / 0.55)) drop-shadow(0 10px 24px rgb(255 107 74 / 0.45));
+  animation: saltar 0.7s cubic-bezier(0.3, 1.9, 0.45, 1) both; animation-delay: calc(var(--i) * 0.05s + 0.1s);
+}
+@keyframes saltar { from { opacity: 0; transform: translateY(40px) scale(0.3) rotate(-12deg); } 70% { opacity: 1; } }
+.detalhe, .proximo {
+  font-weight: 800; font-size: clamp(0.95rem, 3vw, 1.2rem); padding: 0.35rem 0.9rem; border-radius: 999px;
+  background: rgb(20 20 30 / 0.78); color: #fff; animation: subir 0.5s 0.55s ease-out both;
+}
+.proximo { font-size: clamp(0.8rem, 2.6vw, 0.95rem); font-weight: 700; background: rgb(124 92 255 / 0.85); animation-delay: 0.8s; }
+@keyframes subir { from { opacity: 0; transform: translateY(12px); } }
+.confetes { position: absolute; inset: 0; }
+.confetes span {
+  position: absolute; top: -4vh; left: var(--x); width: 10px; height: 14px; background: var(--cor); border-radius: 2px;
+  animation: cair var(--duracao) var(--atraso) cubic-bezier(0.25, 0.6, 0.45, 1) forwards; opacity: 0;
+}
+.confetes span[data-forma="1"] { width: 8px; height: 8px; border-radius: 50%; }
+.confetes span[data-forma="2"] { width: 14px; height: 6px; }
+@keyframes cair {
+  0% { opacity: 1; transform: translate(0, 0) rotate(0); }
+  100% { opacity: 0.9; transform: translate(var(--deriva), 110vh) rotate(var(--giro)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bolinha[data-ultima], .bolinhas[data-perdeu], .bolinhas[data-fez] .bolinha { animation: none; }
+  .clarao, .aneis, .confetes { display: none; }
+  .strike span, .detalhe, .proximo { animation: none; }
+}
+/* modo foco: as bolinhas e a legenda numa linha só, no topo */
+:global(body[data-foco]) .placar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.7rem; margin: 0; }
+:global(body[data-foco]) .bolinha { width: 10px; }
+:global(body[data-foco]) .som { margin-left: 0; width: 1.8rem; height: 1.8rem; }

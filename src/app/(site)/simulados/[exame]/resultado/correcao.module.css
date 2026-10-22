@@ -1,0 +1,172 @@
+/* Correção detalhada: a resposta e a tabela lado a lado (ou em coluna). Os trechos que pontuaram ficam marcados. */
+
+/* A barra de controles (uma só, para todas as peças e questões). Fica presa no topo e por cima do texto da resposta, sem
+   ocupar espaço na página: a resposta começa onde começaria sem ela. Transparente; o mouse por cima a torna opaca */
+.barraSlot { position: sticky; top: 72px; z-index: 5; height: 0; }
+.painel {
+  position: absolute; top: 0.25rem; left: 0; width: fit-content; display: flex; align-items: center; gap: 0.35rem;
+  padding: 0.2rem 0.3rem; border-radius: 999px; background: transparent; opacity: 0.35;
+  transition: opacity 0.2s, background 0.2s, box-shadow 0.2s;
+}
+.painel:hover,
+.painel:focus-within { opacity: 1; background: var(--surface); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12); }
+.segmento { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; background: transparent; }
+.segmento button {
+  border: 0; background: transparent; color: var(--text); padding: 0.35rem 0.6rem;
+  font: inherit; font-size: 0.9rem; line-height: 1; cursor: pointer;
+}
+.segmento button[aria-pressed="true"] { background: var(--primary); color: #fff; }
+/* o ✂ de retirar pontuação: vale para todas as partes, e não é salvo (ao sair da página, volta desligado) */
+.ferramenta {
+  width: 2.1rem; height: 2.1rem; display: inline-grid; place-items: center; border-radius: 10px; border: 1px solid var(--border);
+  background: transparent; color: var(--muted); font-size: 0.95rem; line-height: 1; cursor: pointer;
+}
+.ferramenta[aria-checked="true"] { color: #fff; background: #b45309; border-color: #b45309; }
+.ferramenta:focus-visible,
+.segmento button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+.lado { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 2rem; align-items: start; }
+
+/* a coluna da resposta: a resposta e, logo abaixo, o recurso automático (quando há cortes). As duas dividem a altura
+   visível, cada uma com a sua rolagem: uma embaixo da outra, sem uma rolagem geral por cima delas */
+.coluna { display: flex; flex-direction: column; gap: 0.9rem; min-height: 0; max-height: calc(100vh - 96px); }
+/* com o recurso na tela, a coluna ocupa a altura visível: a resposta e o recurso dividem o espaço, e o recurso cresce até o fim */
+.colunaComRecurso { height: calc(100vh - 96px); }
+/* No modo lado a lado a coluna acompanha a rolagem, presa logo abaixo da barra (que fica por cima dela).
+   Em coluna ela não é presa: fica no lugar, na ordem do texto. */
+.lado > .coluna { position: sticky; top: 72px; }
+
+.resposta {
+  padding: 1rem 1.15rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface);
+  flex: 0 1 auto; min-height: 0; overflow-y: auto;
+}
+/* o recurso automático: a mesma caixa, com a cor do corte; só o texto dele rola (a caixa não tem rolagem própria) */
+.recurso {
+  display: flex; flex-direction: column; box-sizing: border-box; flex: 1 1 auto; min-height: 50%; overflow: hidden; padding: 0;
+  border: 1px solid color-mix(in srgb, #b45309 45%, var(--border)); border-radius: var(--radius-sm); background: var(--surface);
+}
+/* os rótulos ficam à direita, para o canto de cima à esquerda ficar livre para a barra de controles */
+.rotuloResposta {
+  display: flex; align-items: center; justify-content: flex-end; gap: 0.45rem; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 0.7rem; text-align: right;
+}
+.paragrafo { margin: 0 0 0.6rem; white-space: pre-wrap; line-height: 1.65; }
+.paragrafo[data-destacada="1"] {
+  background: color-mix(in srgb, #facc15 16%, transparent); border-left: 3px solid #ca8a04;
+  border-radius: 4px; padding: 0.15rem 0.5rem; margin-left: -0.5rem;
+}
+/* O grifo de acerto: texto escuro explícito (nos dois temas), para o contraste ficar forte sobre o amarelo */
+.marca {
+  background: #fde047; color: #111827; border-radius: 3px; padding: 0 0.15em;
+  box-shadow: 0 0 0 1px #a16207; font-weight: 700;
+}
+/* o enunciado grifado: a linha que tem o critério que pontuou */
+.linhaEnunciado {
+  display: block; background: color-mix(in srgb, #facc15 18%, transparent); border-left: 3px solid #ca8a04;
+  border-radius: 4px; padding: 0.1rem 0.5rem; margin: 0 -0.5rem;
+}
+/* a prova do critério na tabela: texto normal, com peso, para ler sem esforço */
+.evidencia { display: block; margin-top: 0.2rem; font-size: 0.86rem; font-style: normal; font-weight: 600; color: var(--text); overflow-wrap: anywhere; }
+/* o critério cortado (✂): a borda tracejada, e o selo "Pontuação retirada" */
+.compRetirado { border-left: 3px dashed #b45309; padding-left: 0.45rem; }
+.selo {
+  display: inline-block; margin-left: 0.4rem; padding: 0.05rem 0.5rem; border-radius: 999px;
+  background: #b45309; color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; vertical-align: middle;
+}
+
+.secao { margin-bottom: 1.9rem; }
+.secao h4 {
+  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+  margin: 0 0 0.55rem;
+}
+.dica { font-size: 0.8rem; color: var(--muted); margin: 0 0 0.6rem; }
+
+.compAtivo { background: color-mix(in srgb, #facc15 22%, transparent); border-radius: 6px; }
+.linhaAtiva td { background: color-mix(in srgb, #facc15 14%, transparent); }
+.comentado { cursor: pointer; }
+
+/* Um parágrafo do gabarito que comenta componentes que pontuaram: passar o mouse marca a resposta */
+.gabPar { border-radius: 6px; padding: 0.1rem 0.45rem; margin: 0 -0.45rem 0.45rem; transition: background 0.15s; }
+.gabComenta { cursor: pointer; }
+.gabComenta:hover { background: color-mix(in srgb, #facc15 12%, transparent); }
+.gabAtivo { background: color-mix(in srgb, #facc15 20%, transparent); }
+
+/* o botão ✂ de cortar, ao lado de cada critério ✓ (só com o ✂ da barra ligado) */
+.btnCortar {
+  flex: none; width: 1.5rem; height: 1.5rem; margin-right: 0.35rem; display: inline-grid; place-items: center; padding: 0;
+  border: 1px dashed #b45309; border-radius: 6px; background: transparent; color: #92400e; font-size: 0.8rem; line-height: 1; cursor: pointer;
+}
+.btnCortar:hover { background: color-mix(in srgb, #b45309 12%, transparent); }
+.btnCortar[aria-pressed="true"] { border-style: solid; background: #b45309; color: #fff; }
+.btnCortar:focus-visible { outline: 2px solid #b45309; outline-offset: 2px; }
+/* o "−" do corte: amarelo (só o ✓ é verde) */
+.sinalCorte { color: #ca8a04; font-weight: 900; }
+/* a coluna do número do item: estreita, para o texto dos critérios ganhar espaço */
+.colItem { width: 1%; white-space: nowrap; padding-left: 0.45rem; padding-right: 0.25rem; text-align: center; }
+/* o marcador do critério: o ✂ (quando há) e o sinal ✓/✗/− lado a lado, como um só item da linha */
+.marcador { display: inline-flex; align-items: center; gap: 0.1rem; flex: none; }
+
+/* o recurso automático: o texto editável e as ações */
+/* a caixa do texto do recurso: a área de texto (editável) por cima de uma cópia do texto, onde a marcação aparece */
+.recursoCampo { position: relative; flex: 1 1 0; min-height: 7rem; border: 0; border-top: 1px solid var(--border); background: var(--surface); overflow: hidden; }
+.recursoMedidas {
+  position: absolute; inset: 0; box-sizing: border-box; width: 100%; height: 100%; margin: 0; border: 0;
+  padding: 0.8rem 0.9rem; font: inherit; font-size: 0.92rem; line-height: 1.6; white-space: pre-wrap; overflow-wrap: break-word;
+  scrollbar-gutter: stable;
+}
+.recursoTexto { background: transparent; color: var(--text); resize: none; overflow-y: auto; }
+.recursoFundo { color: transparent; overflow: hidden; pointer-events: none; }
+/* a marcação do critério destacado: aparece com o clique e some em fade */
+.marcaRecurso { color: transparent; border-radius: 3px; animation: marcaRecursoSome 2.6s ease-out forwards; }
+@keyframes marcaRecursoSome {
+  0%, 30% { background-color: rgba(253, 224, 71, 0.75); }
+  100% { background-color: rgba(253, 224, 71, 0); }
+}
+/* o cabeçalho do recurso: uma faixa fina; as ações (ícones) à esquerda do rótulo, que fica à direita, como o da resposta */
+.cabecalhoRecurso { display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem; flex-wrap: wrap; padding: 0.35rem 0.9rem; margin: 0; }
+.cabecalhoRecurso .rotuloResposta { margin: 0; gap: 0.35rem; font-size: 0.7rem; letter-spacing: 0.1em; }
+.cabecalhoRecurso .contagem { min-width: 1rem; height: 1rem; padding: 0 0.25rem; font-size: 0.62rem; }
+.acoesRecurso { display: inline-flex; align-items: center; gap: 0.25rem; }
+.acaoRecurso {
+  display: inline-flex; align-items: center; height: 1.5rem; padding: 0 0.4rem; border-radius: 999px; overflow: hidden;
+  border: 1px solid var(--border); background: transparent; color: var(--muted); font: inherit; font-size: 0.7rem; font-weight: 700;
+  line-height: 1; white-space: nowrap; cursor: pointer; transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.acaoRecurso svg { flex: none; width: 13px; height: 13px; }
+.acaoRecurso:hover,
+.acaoRecurso:focus-visible,
+.acaoRecurso[data-revelado="1"] { color: var(--text); border-color: var(--primary); background: color-mix(in srgb, var(--primary) 10%, transparent); }
+.acaoRecurso:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+/* o texto da ação: escondido, cresce ao passar o mouse (ou ao focar) e na confirmação da cópia */
+.acaoTexto {
+  display: inline-block; max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; margin-left: 0;
+  transition: max-width 0.2s ease, opacity 0.2s ease, margin-left 0.2s ease;
+}
+.acaoRecurso:hover .acaoTexto,
+.acaoRecurso:focus-visible .acaoTexto,
+.acaoRecurso[data-revelado="1"] .acaoTexto { max-width: 8rem; opacity: 1; margin-left: 0.3rem; }
+/* o texto só para leitores de tela (o aviso da cópia) */
+.soLeitura { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.contagem {
+  display: inline-grid; place-items: center; min-width: 1.25rem; height: 1.25rem; padding: 0 0.3rem; border-radius: 999px;
+  background: #b45309; color: #fff; font-size: 0.7rem; letter-spacing: 0;
+}
+
+/* os rótulos das laterais: o exame, a fase e a matéria, na vertical, só com o contorno (o miolo fica transparente) */
+.lateral {
+  position: fixed; top: 50%; z-index: 1; margin: 0; pointer-events: none; user-select: none; white-space: nowrap;
+  writing-mode: vertical-rl; transform: translateY(-50%);
+  font-size: 0.8rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase;
+  color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, var(--muted) 75%, transparent); opacity: 0.6;
+}
+.lateralEsquerda { left: 0.6rem; transform: translateY(-50%) rotate(180deg); }
+.lateralDireita { right: 0.6rem; }
+
+@media (max-width: 1279px) {
+  .lateral { display: none; }
+}
+
+@media (max-width: 900px) {
+  .lado { grid-template-columns: minmax(0, 1fr); }
+  .lado > .coluna { position: static; }
+}

@@ -241,7 +241,7 @@ questoes:
         componentes:
           - { id: c1, valor: 0.35, termos: [ multa, suspensao condicional do processo | sursis processual ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 77, § 1º, CP" ], requer: c1 }
-          - { id: c3, valor: 0.15, alternativas: [ [ sumula 696 ], [ procurador-geral | procurador geral | orgao superior | autoridade superior | camara de coordenacao ] ] }
+          - { id: c3, valor: 0.15, dispositivo: [ Súmula 696 STF ], alternativas: [ [ procurador-geral | procurador geral | orgao superior | autoridade superior | camara de coordenacao ] ] }
   - n: 3
     enunciado: |-
       Marcelo, condenado em regime semiaberto, formulou, por meio de sua defesa técnica, pedido de remição de penas em razão de trabalho realizado no curso da execução, o qual é executado mediante supervisão de seu empregador e com autorização do Juiz da Vara de Execuções Penais.

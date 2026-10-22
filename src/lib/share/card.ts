@@ -2,6 +2,7 @@
 // o que sai no PNG vem dos dados salvos do resultado).
 import { fmtNota } from "@/lib/formato";
 import { LOGO_PATHS } from "@/components/logo-paths";
+import { SITE } from "@/config/site";
 
 export type Formato = "retrato" | "paisagem";
 const TAMANHOS: Record<Formato, [number, number]> = { retrato: [1080, 1350], paisagem: [1200, 630] };
@@ -153,7 +154,7 @@ export async function desenharCard(canvas: HTMLCanvasElement, d: DadosCard, form
       texto(ctx, l.rotulo, x, 1098, `500 22px ${sans}`, "#9fb0c3");
     });
     texto(ctx, d.rodape, cx, 1185, `500 22px ${sans}`, "#9fb0c3");
-    texto(ctx, "www.grifo.com", cx, 1225, `700 26px ${sans}`, GOLD_LIGHT);
+    texto(ctx, SITE.dominio, cx, 1225, `700 26px ${sans}`, GOLD_LIGHT);
     texto(ctx, d.codigo, cx, 1268, `500 17px ui-monospace, monospace`, "rgba(238,242,247,0.55)");
   } else {
     logo(ctx, 90, 150, 170, GOLD);
@@ -168,7 +169,7 @@ export async function desenharCard(canvas: HTMLCanvasElement, d: DadosCard, form
     texto(ctx, `/ ${fmt(d.maximo)}`, x0 + nw + 14, 360, `500 34px ${sans}`, "#b9c6d6", "left");
     if (d.destaque) texto(ctx, d.destaque, x0, 420, `800 30px ${sans}`, d.aprovado ? GOLD : INK, "left");
     texto(ctx, d.linhas.map((l) => `${l.rotulo} ${l.valor}`).join("   ·   "), x0, 480, `500 22px ${sans}`, "#cbd6e2", "left", w - x0 - 80);
-    texto(ctx, `${d.rodape} · www.grifo.com`, x0, 530, `500 18px ${sans}`, "#9fb0c3", "left");
+    texto(ctx, `${d.rodape} · ${SITE.dominio}`, x0, 530, `500 18px ${sans}`, "#9fb0c3", "left");
     texto(ctx, d.codigo, x0, 565, `500 15px ui-monospace, monospace`, "rgba(238,242,247,0.55)", "left");
   }
 }

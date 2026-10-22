@@ -1,6 +1,6 @@
 # Grifo · 2ª Fase OAB – Penal
 
-Site do curso Grifo (www.grifo.com). É 100% estático (Next.js com `output: "export"`), sem
+Site do curso Grifo (grifo.net.br). É 100% estático (Next.js com `output: "export"`), sem
 backend; as preferências e o histórico do aluno ficam no `localStorage`.
 
 - **Provas** (`/provas`): cadernos e padrões de resposta originais da FGV e versões atualizadas

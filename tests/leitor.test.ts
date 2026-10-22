@@ -26,7 +26,7 @@ describe("marcações: reancoragem pelo texto", () => {
 
 describe("link compartilhado", () => {
   it("ida e volta", async () => {
-    const dados = { t: "Meu vade-mécum", d: [{ lei: "cp" }, { lei: "cpp", artigos: "1-28, 28-A" }] };
+    const dados = { t: "Meu Vade Mecum", d: [{ lei: "cp" }, { lei: "cpp", artigos: "1-28, 28-A" }] };
     const c = await codificar(dados);
     expect(c.startsWith("v1.")).toBe(true);
     expect(c).toMatch(/^[\w.-]+$/);
@@ -44,7 +44,7 @@ describe("link compartilhado", () => {
   });
 });
 
-describe("vade-mécum: faixas de artigos", async () => {
+describe("Vade Mecum: faixas de artigos", async () => {
   const { faixas, artigoNaFaixa, blocosEscolhidos } = await import("../src/lib/leis/vademecum.ts");
   it("entende faixas, artigos soltos e letras", () => {
     const f = faixas("1-120, 155, 157-A a 157-C")!;

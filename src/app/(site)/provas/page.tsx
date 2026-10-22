@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { existsSync } from "node:fs";
-import { join } from "node:path";
 import { carregarExame, listarExames } from "@/content/load";
+import { FolhaResposta } from "./FolhaResposta";
 import { TabelaProvas } from "./TabelaProvas";
 import { pontuacaoDo } from "./pontuacao";
 
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 
 export default function ProvasPage() {
   const exames = listarExames().slice().reverse();
-  const folha = existsSync(join(process.cwd(), "public/downloads/folhas/folha-resposta-penal.pdf"));
   const pecas = [...new Set(exames.map((e) => e.peca).filter((p) => p && p !== "—"))].sort();
   const pontuacao = Object.fromEntries(exames.filter((e) => e.corrigivel).map((e) => [e.id, pontuacaoDo(carregarExame(e.id))]));
   return (
@@ -27,16 +25,15 @@ export default function ProvasPage() {
       <section className="card" style={{ marginTop: "2.5rem" }} aria-labelledby="folhas">
         <h2 id="folhas" style={{ fontSize: "1.5rem" }}>Folha de respostas para imprimir</h2>
         <p className="muted">
-          Folha pautada no padrão do caderno de textos definitivos: 5 páginas para a peça (linhas 1 a 150) e 30 linhas por
-          questão, com a numeração reiniciando em cada uma. Ideal para treinar à mão.
+          No padrão do caderno de textos definitivos: 5 páginas para a peça (linhas 1 a 150) e uma página de 30 linhas para
+          cada questão. A folha é gerada na hora, com o exame que você escolher no rodapé (por padrão, o último que você
+          baixou aqui). Ideal para treinar à mão.
         </p>
-        {folha ? (
-          <a className="btn btn-gold" href="/downloads/folhas/folha-resposta-penal.pdf" download>
-            Baixar folha de respostas (PDF)
-          </a>
-        ) : (
-          <span className="badge">Em breve</span>
-        )}
+        <FolhaResposta
+          // um exame por número (as variantes, como as de Porto Alegre e Porto Velho, têm o mesmo)
+          exames={[...new Map(exames.map((e) => [e.numero, { numero: e.numero, numeral: e.numeral }])).values()]}
+          caligrafia={process.env.NODE_ENV === "development"}
+        />
       </section>
     </div>
   );

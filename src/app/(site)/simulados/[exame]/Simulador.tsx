@@ -1,11 +1,14 @@
 "use client";
 
-import { fmtNota } from "@/lib/formato";
+import { fmtNota, fmtTempo } from "@/lib/formato";
 import { useRouter } from "next/navigation";
-import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { AnswerSheet } from "@/components/AnswerSheet";
+import { PreviaSwitch } from "@/components/PreviaSwitch";
 import { PromoSlot } from "@/components/PromoSlot";
 import { RichText } from "@/components/RichText";
+import { assinarPrevia, lerPrevia } from "@/lib/previa";
+import { numeralComArabico } from "@/content/titulo";
 import { contextoCorrecao } from "@/lib/correcao/cliente";
 import { contarLinhas, corrigirExame } from "@/lib/correcao/grader";
 import { eventosDoSimulado, migrarTentativas, registrar as registrarErros } from "@/lib/erros";
@@ -26,14 +29,6 @@ function valorDe(a: Aba, peca: string, questoes: string[]) {
   return a === "peca" ? peca : questoes[Number(a.slice(1)) - 1] ?? "";
 }
 
-function fmtTempo(seg: number) {
-  const s = Math.max(0, Math.floor(seg));
-  const h = Math.floor(s / 3600);
-  const m = Math.floor((s % 3600) / 60);
-  const ss = s % 60;
-  return `${h}:${String(m).padStart(2, "0")}:${String(ss).padStart(2, "0")}`;
-}
-
 export function Simulador({ exame }: { exame: ExameSimulado }) {
   const router = useRouter();
   const [fase, setFase] = useState<"inicio" | "prova">("inicio");
@@ -46,9 +41,31 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
   const [pausado, setPausado] = useState(false);
   const [pausas, setPausas] = useState(0);
   const [confirmar, setConfirmar] = useState(false);
+  // o navegador ficou sem espaço para guardar o rascunho: o texto pode não ser salvo
+  const [semEspaco, setSemEspaco] = useState(false);
   const [layout, setLayout] = useState<Layout>("lado");
+  // a prévia dos artigos citados no enunciado: a mesma preferência do gabarito (src/lib/previa.ts)
+  const previa = useSyncExternalStore(assinarPrevia, lerPrevia, () => true);
   const [foco, setFoco] = useState(false);
   const tick = useRef<number | null>(null);
+  const retomarFolha = useRef(false);
+  const shellRef = useRef<HTMLDivElement>(null);
+  const barraRef = useRef<HTMLDivElement>(null);
+  // o tempo de cada parte (em segundos), com o cronômetro correndo: a pausa não conta
+  const [tempos, setTempos] = useState<Record<string, number>>({});
+  const abaRef = useRef<Aba>("peca");
+  const relogio = useRef<number | null>(null); // o instante (performance.now) em que o decorrido valia zero
+  const contado = useRef(0); // o decorrido (s) até o qual o tempo já foi somado a uma parte
+  // soma à parte atual o tempo que passou desde a última contagem
+  const contar = useCallback(() => {
+    if (relogio.current === null) return;
+    const ate = (performance.now() - relogio.current) / 1000;
+    const delta = ate - contado.current;
+    contado.current = ate;
+    if (delta <= 0) return;
+    const parte = abaRef.current;
+    setTempos((t) => ({ ...t, [parte]: (t[parte] ?? 0) + delta }));
+  }, []);
 
   // Preferências de layout lembradas
   useEffect(() => {
@@ -58,14 +75,44 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
     setTemRascunho(!!lerRascunho(exame.id));
   }, [exame.id]);
   useEffect(() => {
-    gravarJSON("grifo:simulador", { layout });
+    // grava o layout sem apagar a prévia (que tem a sua própria preferência)
+    gravarJSON("grifo:simulador", { ...lerJSON<Record<string, unknown>>("grifo:simulador", {}), layout });
   }, [layout]);
 
-  // Modo foco: esconde cabeçalho e rodapé do site
+  // A altura real da barra de controles: a folha e o enunciado grudam logo abaixo dela, sem vão
+  useEffect(() => {
+    const barra = barraRef.current;
+    const shell = shellRef.current;
+    if (!barra || !shell) return;
+    const ajustar = () => shell.style.setProperty("--altura-barra", `${barra.getBoundingClientRect().height}px`);
+    ajustar();
+    const ro = new ResizeObserver(ajustar);
+    ro.observe(barra);
+    return () => ro.disconnect();
+  }, [fase]);
+
+  // Modo foco: tela cheia do navegador, sem o cabeçalho e o rodapé do site
   useEffect(() => {
     document.body.toggleAttribute("data-foco", foco && fase === "prova");
     return () => document.body.removeAttribute("data-foco");
   }, [foco, fase]);
+  const alternarFoco = () => {
+    if (foco) {
+      if (document.fullscreenElement) void document.exitFullscreen().catch(() => {});
+      setFoco(false);
+    } else {
+      void document.documentElement.requestFullscreen?.().catch(() => {});
+      setFoco(true);
+    }
+  };
+  // Esc (ou sair da tela cheia pelo navegador) também desliga o modo foco
+  useEffect(() => {
+    const aoMudarTela = () => {
+      if (!document.fullscreenElement) setFoco(false);
+    };
+    document.addEventListener("fullscreenchange", aoMudarTela);
+    return () => document.removeEventListener("fullscreenchange", aoMudarTela);
+  }, []);
 
   const esgotado = comTempo && decorrido >= DURACAO;
 
@@ -73,22 +120,30 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
   useEffect(() => {
     if (fase !== "prova" || pausado || esgotado) return;
     const inicio = performance.now() - decorrido * 1000;
-    tick.current = window.setInterval(() => setDecorrido((performance.now() - inicio) / 1000), 500);
+    relogio.current = inicio;
+    contado.current = decorrido;
+    tick.current = window.setInterval(() => {
+      setDecorrido((performance.now() - inicio) / 1000);
+      contar();
+    }, 500);
     return () => {
       if (tick.current) window.clearInterval(tick.current);
+      // a última fatia (até a pausa, ou o fim) também é da parte em que o examinando estava
+      contar();
+      relogio.current = null;
     };
     // decorrido é lido só na (re)partida do cronômetro
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fase, pausado, esgotado]);
+  }, [fase, pausado, esgotado, contar]);
 
   // Autosave. O cronômetro muda `decorrido` a cada 500 ms: se ele estivesse nas dependências,
   // o timer de 600 ms seria cancelado antes de disparar. Por isso o salvamento lê o estado por ref.
-  const vivo = useRef({ peca, questoes, decorrido });
+  const vivo = useRef({ peca, questoes, decorrido, tempos, aba });
   useEffect(() => {
-    vivo.current = { peca, questoes, decorrido };
-  }, [peca, questoes, decorrido]);
+    vivo.current = { peca, questoes, decorrido, tempos, aba };
+  }, [peca, questoes, decorrido, tempos, aba]);
   const salvarAgora = useCallback(() => {
-    salvarRascunho(exame.id, { ...vivo.current, atualizadoEm: Date.now() });
+    setSemEspaco(!salvarRascunho(exame.id, { ...vivo.current, atualizadoEm: Date.now() }));
   }, [exame.id]);
 
   // 600 ms depois de cada mudança no texto
@@ -96,7 +151,7 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
     if (fase !== "prova") return;
     const t = window.setTimeout(salvarAgora, 600);
     return () => window.clearTimeout(t);
-  }, [peca, questoes, fase, salvarAgora]);
+  }, [peca, questoes, fase, aba, salvarAgora]);
 
   // Com a prova correndo: a cada 10 s (para o tempo decorrido), ao esconder a aba e ao sair da página
   useEffect(() => {
@@ -129,16 +184,36 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
         setPeca(r.peca);
         setQuestoes(exame.questoes.map((_, i) => r.questoes[i] ?? ""));
         setDecorrido(r.decorrido);
+        setTempos(r.tempos ?? {});
+        // volta para a parte em que o examinando estava (se ela ainda existe na prova)
+        const parte = r.aba === "peca" || /^q[1-9]\d*$/.test(r.aba ?? "") ? (r.aba as Aba) : "peca";
+        setAba(parte);
+        abaRef.current = parte;
+        retomarFolha.current = true;
       }
     } else {
       apagarRascunho(exame.id);
       setPeca("");
       setQuestoes(exame.questoes.map(() => ""));
       setDecorrido(0);
+      setTempos({});
+      setAba("peca");
+      abaRef.current = "peca";
     }
     setFase("prova");
     window.scrollTo({ top: 0 });
   };
+
+  // Ao continuar, o cursor vai para o fim do texto da parte em que o examinando parou: ele já pode digitar
+  useEffect(() => {
+    if (fase !== "prova" || !retomarFolha.current) return;
+    retomarFolha.current = false;
+    const folha = document.getElementById(`folha-${aba}`) as HTMLTextAreaElement | null;
+    if (folha) {
+      folha.focus();
+      folha.setSelectionRange(folha.value.length, folha.value.length);
+    }
+  }, [fase, aba]);
 
   const pausar = useCallback(() => {
     setPausado(true);
@@ -167,14 +242,27 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
     const resultado = corrigirExame(exame, respostas, ctx);
     registrarErros(eventosDoSimulado(exame, resultado, ctx.lex, criadaEm));
     const id = `${exame.id}-${criadaEm.toString(36)}`;
-    salvarTentativa({
+    // a última fatia é da parte em que o examinando está agora (o cronômetro ainda corre até a tela trocar)
+    const fatia = relogio.current === null ? 0 : (performance.now() - relogio.current) / 1000 - contado.current;
+    const parteAtual = abaRef.current;
+    const porParte: Record<string, number> = { ...tempos, [parteAtual]: (tempos[parteAtual] ?? 0) + Math.max(0, fatia) };
+    const gravou = salvarTentativa({
       id,
       exameId: exame.id,
       criadaEm,
       duracaoSeg: Math.round(decorrido),
+      tempos: {
+        peca: Math.round(porParte.peca ?? 0),
+        questoes: exame.questoes.map((_, i) => Math.round(porParte[`q${i + 1}`] ?? 0)),
+      },
       respostas,
       resultado,
     });
+    // sem espaço, a nota não pode ser guardada: fica na prova, com o texto, para o aluno liberar espaço
+    if (!gravou) {
+      setSemEspaco(true);
+      return;
+    }
     apagarRascunho(exame.id);
     setFase("inicio");
     router.push(`/simulados/${exame.id}/resultado/?t=${id}`);
@@ -183,7 +271,7 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
   const partes = useMemo(
     () => [
       { aba: "peca" as Aba, titulo: "Peça", enunciado: exame.peca.enunciado, linhas: exame.peca.linhas },
-      ...exame.questoes.map((q, i) => ({ aba: `q${i + 1}` as Aba, titulo: `Questão ${q.n}`, enunciado: q.enunciado, linhas: q.linhas })),
+      ...exame.questoes.map((q, i) => ({ aba: `q${i + 1}` as Aba, titulo: `Q${q.n}`, enunciado: q.enunciado, linhas: q.linhas })),
     ],
     [exame],
   );
@@ -193,6 +281,12 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
     else setQuestoes((qs) => qs.map((q, i) => (i === Number(a.slice(1)) - 1 ? v : q)));
   }, []);
   const aoMudarFolha = useCallback((v: string) => setValor(atual.aba, v), [setValor, atual.aba]);
+  // trocar de parte: o tempo até aqui é da parte em que o examinando estava
+  const trocarAba = (a: Aba) => {
+    contar();
+    abaRef.current = a;
+    setAba(a);
+  };
   // contagem de linhas por parte: calculada só quando o texto muda, não a cada tick do cronômetro
   const linhasPorParte = useMemo(
     () => new Map(partes.map((p) => [p.aba, contarLinhas(valorDe(p.aba, peca, questoes))])),
@@ -203,7 +297,7 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
     return (
       <div className={`container section ${styles.inicio}`}>
         <span className="eyebrow">Simulado · Direito Penal</span>
-        <h1>{exame.numeral} Exame de Ordem Unificado</h1>
+        <h1>{numeralComArabico(exame)} Exame de Ordem Unificado</h1>
         <p className="lead">
           Peça prático-profissional ({fmtNota(exame.peca.valor)} pontos) e {exame.questoes.length} questões
           discursivas ({(exame.questoes[0] ? fmtNota(exame.questoes[0].valor) : "")} cada). Você escreve na folha pautada:{" "}
@@ -239,8 +333,8 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
   }
 
   return (
-    <div className={`${styles.shell} ${foco ? styles.focoOn : ""}`}>
-      <div className={styles.toolbar} role="toolbar" aria-label="Controles da prova">
+    <div ref={shellRef} className={`${styles.shell} ${foco ? styles.focoOn : ""}`}>
+      <div ref={barraRef} className={styles.toolbar} role="toolbar" aria-label="Controles da prova">
         <div className={`container ${styles.toolbarInner}`}>
           <nav className={styles.tabs} aria-label="Partes da prova">
             {partes.map((p) => {
@@ -251,7 +345,7 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
                   type="button"
                   className={styles.tab}
                   aria-current={aba === p.aba ? "page" : undefined}
-                  onClick={() => setAba(p.aba)}
+                  onClick={() => trocarAba(p.aba)}
                 >
                   {p.titulo}
                   {n > 0 && <span className={styles.dot} aria-label="respondida" />}
@@ -267,7 +361,7 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
             )}
             {comTempo && (
               <button type="button" className="btn btn-ghost btn-sm" onClick={pausar} disabled={esgotado} title="Pausar (Esc)" aria-label="Pausar">
-                ❚❚ <span className={styles.rotuloPausa}>Pausar</span>
+                ❚❚
               </button>
             )}
             <button
@@ -279,7 +373,8 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
             >
               {layout === "lado" ? "▤" : "◫"}
             </button>
-            <button type="button" className="btn btn-ghost btn-sm" onClick={() => setFoco((f) => !f)} aria-pressed={foco} title="Modo foco">
+            <PreviaSwitch />
+            <button type="button" className="btn btn-ghost btn-sm" onClick={alternarFoco} aria-pressed={foco} title="Modo foco">
               {foco ? "Sair do foco" : "Foco"}
             </button>
             <button type="button" className="btn btn-gold btn-sm" onClick={() => setConfirmar(true)}>
@@ -289,6 +384,12 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
         </div>
       </div>
 
+      {semEspaco && (
+        <div className={styles.banner} role="alert">
+          Sem espaço para salvar neste navegador: o texto pode não ser guardado. Libere espaço (apagando dados do site ou
+          de outras abas) antes de sair; sem isso, a nota também não pode ser gravada ao entregar.
+        </div>
+      )}
       {esgotado && (
         <div className={styles.banner} role="alert">
           Tempo esgotado. A folha foi travada. Entregue a prova para ver sua nota.
@@ -300,9 +401,10 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
         inert={pausado || confirmar}
         aria-hidden={pausado}
       >
-        <section className={styles.enunciado} aria-label={`Enunciado — ${atual.titulo}`}>
+        <section className={styles.enunciado} aria-label={`Enunciado — ${atual.titulo}`} data-previa={previa ? "1" : "0"}>
           <h2>{atual.titulo === "Peça" ? "Peça Prático-Profissional" : atual.titulo}</h2>
-          <EnunciadoMemo text={atual.enunciado} className={styles.enunciadoTexto} data={exame.aplicacao} />
+          {/* com a prévia desligada, as citações são só texto: nem link nem pop-up */}
+          <EnunciadoMemo text={atual.enunciado} className={styles.enunciadoTexto} data={exame.aplicacao} citacoes={previa} />
         </section>
         <section className={styles.folha}>
           <FolhaMemo

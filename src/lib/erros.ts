@@ -14,7 +14,7 @@ export interface Evento {
   /** instante, em ms */
   t: number;
   o: Origem;
-  /** diploma (id de content/leis.yaml) */
+  /** diploma (id de content/leis.yaml), ou "sumulas-stf" / "sumulas-stj" para súmulas */
   d: string;
   /** artigo, normalizado ("154-a") */
   a: string;
@@ -92,7 +92,10 @@ export function maisErrados(agregados: Map<string, Agregado>, minimo: NivelErro)
     .sort((x, y) => y.erros - x.erros || y.taxa - x.taxa || y.ultimo - x.ultimo);
 }
 
-/** Eventos dos artigos de lei citados nos dispositivos (súmulas ficam de fora). */
+/**
+ * Eventos dos dispositivos citados: um por artigo de lei (com diploma) e um por súmula não vinculante
+ * do STF ou do STJ ("sumulas-stf" / "sumulas-stj", pelo número). Súmulas vinculantes e as sem tribunal ficam de fora.
+ */
 export function eventosDeDispositivos(
   specs: string[],
   r: 0 | 1,
@@ -104,11 +107,22 @@ export function eventosDeDispositivos(
   const eventos: Evento[] = [];
   for (const spec of specs) {
     const c = parseDispositivo(spec, lex);
-    if (!c || c.tipo !== "art" || !c.diploma) continue;
-    const chave = `${c.diploma}:${c.art}`;
+    if (!c) continue;
+    let d: string;
+    let a: string;
+    let extra: Pick<Evento, "p" | "i"> = {};
+    if (c.tipo === "art" && c.diploma) {
+      d = c.diploma;
+      a = c.art;
+      extra = { ...(c.pars[0] ? { p: c.pars[0] } : {}), ...(c.incs[0] ? { i: c.incs[0] } : {}) };
+    } else if (c.tipo === "sumula" && !c.vinculante && (c.tribunal === "stf" || c.tribunal === "stj")) {
+      d = `sumulas-${c.tribunal}`;
+      a = c.n;
+    } else continue;
+    const chave = `${d}:${a}`;
     if (vistos.has(chave)) continue;
     vistos.add(chave);
-    eventos.push({ t, o, d: c.diploma, a: c.art, ...(c.pars[0] ? { p: c.pars[0] } : {}), ...(c.incs[0] ? { i: c.incs[0] } : {}), r, ...(q ? { q } : {}) });
+    eventos.push({ t, o, d, a, ...extra, r, ...(q ? { q } : {}) });
   }
   return eventos;
 }

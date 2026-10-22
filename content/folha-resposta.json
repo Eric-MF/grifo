@@ -1,0 +1,184 @@
+{
+  "materia": "DIREITO PENAL",
+  "textos": {
+    "pecaTitulo": "PEÇA",
+    "pecaSubtitulo": "PROFISSIONAL – PÁGINA",
+    "pecaPagina": "{p}/{total}",
+    "questaoTitulo": "QUESTÃO {n}",
+    "atencaoPeca": "**\\*ATENÇÃO:** Utilize as 05 (cinco) primeiras páginas para transcrever a **PEÇA PROFISSIONAL**. Caso utilize um número inferior de páginas para sua resposta, as demais deverão permanecer em branco. As questões práticas devem ser respondidas a partir da página 06 (seis) deste caderno.",
+    "atencaoQuestao": "**\\*ATENÇÃO:** Espaço destinado para responder à\n**QUESTÃO PRÁTICA Nº {nn}.** Em hipótese alguma transcreva a resposta de outra questão no espaço abaixo e não ultrapasse o limite de 30 (trinta) linhas, sob pena de ter o texto desconsiderado para avaliação.",
+    "rodapeExame": "{exame}º EXAME DE ORDEM UNIFICADO - 2ª FASE",
+    "rodapeSimulado": "SIMULADO PRÁTICO-PROFISSIONAL",
+    "rodapePagina": "Página {i} de {total}"
+  },
+  "paginasPeca": 5,
+  "questoes": 4,
+  "cabecalho": {
+    "pecaTitulo": {
+      "x": 11.5,
+      "y": 24.2,
+      "tamanho": 26,
+      "fonte": "helvetica",
+      "negrito": true,
+      "alinhamento": "esquerda"
+    },
+    "pecaSubtitulo": {
+      "x": 40.5,
+      "y": 23.4,
+      "tamanho": 12,
+      "fonte": "helvetica",
+      "negrito": true,
+      "alinhamento": "esquerda"
+    },
+    "pecaPagina": {
+      "x": 96.7,
+      "y": 23.9,
+      "tamanho": 37,
+      "fonte": "helvetica",
+      "negrito": true,
+      "alinhamento": "esquerda"
+    },
+    "questaoTitulo": {
+      "x": 11,
+      "y": 23.5,
+      "tamanho": 40,
+      "fonte": "helvetica",
+      "negrito": true,
+      "alinhamento": "esquerda"
+    },
+    "atencao": {
+      "x": 11,
+      "y": 32,
+      "largura": 104,
+      "tamanho": 8.67,
+      "entrelinha": 1.37,
+      "fonte": "helvetica",
+      "justificar": true
+    },
+    "numero": {
+      "x": 198.5,
+      "y": 11.4,
+      "tamanho": 6.9,
+      "fonte": "helvetica",
+      "negrito": false,
+      "alinhamento": "direita"
+    },
+    "barras": {
+      "x": 124.5,
+      "y": 15.3,
+      "largura": 74,
+      "altura": 13.25
+    },
+    "numeroBarras": {
+      "x": 160.1,
+      "y": 36.9,
+      "tamanho": 12,
+      "fonte": "helvetica",
+      "negrito": true,
+      "alinhamento": "centro"
+    },
+    "materia": {
+      "x": 198.8,
+      "y": 45.9,
+      "tamanho": 10,
+      "fonte": "helvetica",
+      "negrito": true,
+      "alinhamento": "direita"
+    }
+  },
+  "linhas": {
+    "x": 10.9,
+    "y": 48,
+    "largura": 189.5,
+    "altura": 7.5,
+    "quantidade": 30,
+    "colunaNumero": 7,
+    "espessura": 0.5,
+    "tamanhoNumero": 8,
+    "fonteNumero": "helvetica",
+    "negritoNumero": true,
+    "cinzaCada5": true,
+    "cinza": 0.21,
+    "codigo": {
+      "x": 200.3,
+      "y": 275.3,
+      "tamanho": 3.9,
+      "fonte": "helvetica",
+      "negrito": false,
+      "alinhamento": "direita"
+    }
+  },
+  "rodape": {
+    "linha": {
+      "y": 287.2,
+      "x": 11,
+      "largura": 191.5,
+      "espessura": 0.35
+    },
+    "logoGrifo": {
+      "x": 11.8,
+      "y": 285.9,
+      "altura": 10,
+      "alinhamento": "esquerda"
+    },
+    "palavraGrifo": {
+      "x": 20.7,
+      "y": 286.1,
+      "tamanho": 19.5,
+      "fonte": "times",
+      "negrito": true,
+      "alinhamento": "esquerda"
+    },
+    "exame": {
+      "x": 10.5,
+      "y": 289.9,
+      "tamanho": 7,
+      "fonte": "helvetica",
+      "negrito": true,
+      "alinhamento": "esquerda"
+    },
+    "logoProgresso": {
+      "x": 102.2,
+      "y": 285.8,
+      "altura": 7.5,
+      "alinhamento": "centro"
+    },
+    "simulado": {
+      "x": 102.2,
+      "y": 290,
+      "tamanho": 7,
+      "fonte": "helvetica",
+      "negrito": true,
+      "alinhamento": "centro"
+    },
+    "materia": {
+      "x": 201.2,
+      "y": 286.1,
+      "tamanho": 7,
+      "fonte": "helvetica",
+      "negrito": true,
+      "alinhamento": "direita"
+    },
+    "pagina": {
+      "x": 201.4,
+      "y": 289.9,
+      "tamanho": 7,
+      "fonte": "helvetica",
+      "negrito": true,
+      "alinhamento": "direita"
+    }
+  },
+  "caligrafia": {
+    "margemTopo": 10,
+    "margemBase": 10,
+    "meiaLinha": 0.5,
+    "numeroPagina": {
+      "x": 200,
+      "y": 293,
+      "tamanho": 6,
+      "fonte": "helvetica",
+      "negrito": false,
+      "alinhamento": "direita"
+    }
+  }
+}

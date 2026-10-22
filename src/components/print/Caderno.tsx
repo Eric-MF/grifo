@@ -1,6 +1,7 @@
 import { Logo } from "@/components/Logo";
 import { RichText } from "@/components/RichText";
 import type { Exame } from "@/content/schema";
+import { SITE } from "@/config/site";
 
 // Caderno de prova no layout atual da FGV (40º Exame), com marca Grifo no lugar da FGV.
 // Usado apenas pelas rotas /print/* para gerar os PDFs "atualizados".
@@ -19,7 +20,7 @@ export function MarcaGrifo() {
 function Cabecalho({ exame }: { exame: Exame }) {
   return (
     <div className="cab">
-      <img src="/img/oab-cabecalho.png" alt="OAB – Conselho Federal" />
+      <img src="/img/logo-grifo-em-progresso.svg" alt="Grifo em Progresso · grifo.net" />
       <span className="exame">{exame.numero}º Exame de Ordem Unificado</span>
     </div>
   );
@@ -81,7 +82,7 @@ function Capa({ exame }: { exame: Exame }) {
     <section className="folha">
       <Selo />
       <div className="capa-topo">
-        <img src="/img/oab-capa.png" alt="OAB – Conselho Federal" />
+        <img src="/img/logo-grifo-em-progresso.svg" alt="Grifo em Progresso · grifo.net" />
         <h1>
           {exame.numero}
           <sup style={{ fontSize: "0.6em", textDecoration: "underline" }}>o</sup> EXAME DE ORDEM UNIFICADO
@@ -224,7 +225,7 @@ export function Caderno({ exame }: { exame: Exame }) {
           <span className="marca" style={{ fontSize: "16pt" }}>
             <Logo size={48} title="" /> GRIFO
           </span>
-          <p style={{ fontSize: "8pt", color: "#666", marginTop: "3mm" }}>www.grifo.com · versão de estudo, não oficial</p>
+          <p style={{ fontSize: "8pt", color: "#666", marginTop: "3mm" }}>{SITE.dominio} · versão de estudo, não oficial</p>
         </div>
       </section>
       <AjusteTexto />

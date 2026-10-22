@@ -56,7 +56,7 @@ peca:
       descricao: "Endereçamento: Juízo Federal da Vara Federal Criminal de Alfa (0,10)."
       valores: [ 0, 0.1 ]
       componentes:
-        - { id: c1, valor: 0.1, termos: [ vara federal criminal | juizo federal | juiz federal, alfa ] }
+        - { id: c1, valor: 0.1, termos: [ federal criminal | juizo federal | juiz federal, alfa ] }
     - n: "2"
       secao: Petição de Interposição
       descricao: "Fundamento legal: Art. 197 da LEP (0,10)."
@@ -90,7 +90,7 @@ peca:
       componentes:
         - { id: c1, valor: 0.35, termos: [ continuidade delitiva | crime continuado | continuacao delitiva ] }
         - { id: c2, valor: 0.1, dispositivo: [ art. 71 CP, art. 111 LEP ], requer: c1 }
-        - { id: c3, valor: 0.2, termos: [ exaspera* | aumento de 1/6 a 2/3 | fracao de aumento | 1/6 a 2/3 | 1/6 ate 2/3 ] }
+        - { id: c3, valor: 0.2, termos: [ exaspera* | aumento de 1/6 a 2/3 | fracao de aumento | 1/6 a 2/3 | 1/6 ate 2/3 | aumentada de um sexto* a dois terços] }
     - n: "6.2"
       secao: Mérito
       descricao: Tendo em vista a prática de delitos da mesma espécie (0,20), nas mesmas circunstâncias de tempo, lugar e maneira de execução (0,35).
@@ -227,7 +227,7 @@ questoes:
         valores: [ 0, 0.15, 0.25, 0.35, 0.45, 0.5, 0.6 ]
         componentes:
           - { id: c1, valor: 0.15, termos: [ vestigio* | nao transeunte ] }
-          - { id: c2, valor: 0.35, termos: [ exame de corpo de delito | laudo* medico* | boletim de atendimento medico | prontuario medico, materialidade | indispensavel | imprescindivel | obrigatori* ] }
+          - { id: c2, valor: 0.35, alternativas: [ [ exame de corpo de delito | laudo* medico* | boletim de atendimento medico ], [ prontuario medico, materialidade ], [ indispensavel | imprescindivel | obrigatori* ] ] }
           - { id: c3, valor: 0.1, dispositivo: [ art. 158 CPP, "art. 12, § 3º, Lei 11.340" ], requer: c2 }
   - n: 3
     enunciado: |
@@ -262,7 +262,7 @@ questoes:
         valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
         componentes:
           - { id: c1, valor: 0.3, alternativas: [ [ relaxamento ], [ nulidade, flagrante ], [ ilegalidade, prisao ] ] }
-          - { id: c2, valor: 0.25, alternativas: [ [ oitiva | ouvi* | depoimento ], [ nota de culpa ], [ formalidades ] ] }
+          - { id: c2, valor: 0.25, alternativas: [ [ oitiva | ouvi* | depoimento ], [ nota de culpa ], [ formalidades ], [ descumprimento do procedimento | procedimento previsto ] ] }
           - { id: c3, valor: 0.1, dispositivo: [ "art. 310, I, CPP", art. 304 CPP, "art. 5º, LXV, CF" ], requer: c1 }
   - n: 4
     enunciado: |

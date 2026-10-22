@@ -142,10 +142,16 @@ function engrenagem(ctx: Ctx, x: number, y: number, r: number, dentes: number, a
 // Coluna grega padrão (desenhada a partir da ponta voltada para o vão, em y=0,
 // crescendo para +y). O engine espelha a de cima.
 // ---------------------------------------------------------------------------
+/** Altura do capitel, em unidades lógicas: a faixa do topo da coluna que o fuste não ocupa (0 se a coluna está quebrada). */
+export function alturaCapitel(variante: number, quebrada: boolean, tema: Tema): number {
+  const ordem = tema.capitel === "misto" || !tema.capitel ? (["dorico", "jonico", "corintio"] as const)[variante % 3] : tema.capitel;
+  return quebrada ? 0 : ordem === "dorico" ? 16 : ordem === "jonico" ? 20 : 26;
+}
+
 export function colunaGrega(ctx: Ctx, w: number, len: number, variante: number, quebrada: boolean, tema: Tema) {
   const c = tema.paleta.coluna;
   const ordem = tema.capitel === "misto" || !tema.capitel ? (["dorico", "jonico", "corintio"] as const)[variante % 3] : tema.capitel;
-  const capH = quebrada ? 0 : ordem === "dorico" ? 16 : ordem === "jonico" ? 20 : 26;
+  const capH = alturaCapitel(variante, quebrada, tema);
   ctx.lineWidth = 1.5;
   ctx.strokeStyle = c.contorno;
 
@@ -399,11 +405,15 @@ const FOFO: Tema = {
   },
   coluna(ctx, w, len, variante, quebrada, tema) {
     colunaGrega(ctx, w, len, variante, quebrada, tema);
-    // listras de bala
+    // listras de bala: começam logo abaixo do capitel, sem faixa lisa entre ele e a primeira listra
+    const capH = alturaCapitel(variante, quebrada, tema);
     ctx.save();
     ctx.beginPath();
-    ctx.rect(-w / 2, 26, w, len);
+    ctx.rect(-w / 2, capH, w, len - capH);
     ctx.clip();
+    // base da listra encostada no capitel: a diagonal deixa um vão nas bordas, que esta faixa fecha
+    ctx.fillStyle = "rgba(255,143,184,0.35)";
+    ctx.fillRect(-w / 2, capH, w, 6);
     ctx.strokeStyle = "rgba(255,143,184,0.35)";
     ctx.lineWidth = 7;
     for (let y = 20; y < len + w; y += 22) {

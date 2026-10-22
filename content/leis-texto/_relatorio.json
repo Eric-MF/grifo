@@ -3,11 +3,11 @@
   "blocos": 2906,
   "porTipo": {
    "rubrica": 400,
-   "texto": 597,
+   "texto": 598,
    "estrutura": 222,
    "artigo": 492,
    "paragrafo": 609,
-   "inciso": 493,
+   "inciso": 492,
    "alinea": 93
   },
   "anotacoesNaoReconhecidas": [],
@@ -18,19 +18,19 @@
   "textoSolto": 0
  },
  "cpp": {
-  "blocos": 2398,
+  "blocos": 3018,
   "porTipo": {
    "rubrica": 1,
-   "estrutura": 233,
-   "texto": 37,
-   "artigo": 846,
-   "inciso": 549,
-   "paragrafo": 643,
-   "alinea": 89
+   "estrutura": 249,
+   "texto": 53,
+   "artigo": 1098,
+   "inciso": 716,
+   "paragrafo": 790,
+   "alinea": 111
   },
   "anotacoesNaoReconhecidas": [],
   "semDispositivo": 0,
-  "artigos": 846,
+  "artigos": 811,
   "novos": [],
   "sumiram": [],
   "textoSolto": 0
@@ -39,11 +39,11 @@
   "blocos": 962,
   "porTipo": {
    "rubrica": 22,
-   "estrutura": 74,
-   "texto": 57,
+   "estrutura": 75,
+   "texto": 59,
    "artigo": 243,
    "paragrafo": 235,
-   "inciso": 268,
+   "inciso": 265,
    "alinea": 63
   },
   "anotacoesNaoReconhecidas": [],
@@ -58,9 +58,9 @@
   "porTipo": {
    "rubrica": 11,
    "estrutura": 194,
-   "texto": 93,
+   "texto": 98,
    "artigo": 514,
-   "inciso": 1698,
+   "inciso": 1693,
    "paragrafo": 1367,
    "alinea": 435
   },
@@ -147,10 +147,10 @@
   "blocos": 132,
   "porTipo": {
    "rubrica": 1,
-   "estrutura": 6,
+   "estrutura": 7,
    "texto": 22,
    "artigo": 23,
-   "inciso": 51,
+   "inciso": 50,
    "paragrafo": 7,
    "alinea": 22
   },
@@ -165,11 +165,11 @@
   "blocos": 2761,
   "porTipo": {
    "rubrica": 1,
-   "estrutura": 57,
-   "texto": 688,
+   "estrutura": 64,
+   "texto": 690,
    "artigo": 483,
    "paragrafo": 676,
-   "inciso": 748,
+   "inciso": 739,
    "alinea": 108
   },
   "anotacoesNaoReconhecidas": [],
@@ -217,10 +217,10 @@
   "blocos": 276,
   "porTipo": {
    "rubrica": 1,
-   "estrutura": 14,
+   "estrutura": 15,
    "texto": 19,
    "artigo": 44,
-   "inciso": 100,
+   "inciso": 99,
    "paragrafo": 73,
    "alinea": 25
   },
@@ -235,11 +235,11 @@
   "blocos": 232,
   "porTipo": {
    "rubrica": 3,
-   "estrutura": 22,
+   "estrutura": 24,
    "texto": 76,
    "artigo": 56,
    "paragrafo": 37,
-   "inciso": 38
+   "inciso": 36
   },
   "anotacoesNaoReconhecidas": [],
   "semDispositivo": 0,
@@ -253,11 +253,11 @@
   "porTipo": {
    "rubrica": 33,
    "estrutura": 34,
-   "texto": 162,
+   "texto": 163,
    "artigo": 383,
    "paragrafo": 518,
    "alinea": 78,
-   "inciso": 459
+   "inciso": 458
   },
   "anotacoesNaoReconhecidas": [],
   "semDispositivo": 0,
@@ -305,11 +305,11 @@
   "blocos": 586,
   "porTipo": {
    "rubrica": 1,
-   "estrutura": 4,
+   "estrutura": 5,
    "texto": 207,
    "artigo": 20,
    "paragrafo": 217,
-   "inciso": 121,
+   "inciso": 120,
    "alinea": 16
   },
   "anotacoesNaoReconhecidas": [],

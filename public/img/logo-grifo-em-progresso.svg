@@ -1,0 +1,1270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 900 472" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(0.24,0,0,0.24,180,182.5)">
+        <circle cx="0" cy="0" r="735" style="fill:url(#_Radial1);"/>
+        <clipPath id="_clip2">
+            <circle cx="0" cy="0" r="735"/>
+        </clipPath>
+        <g clip-path="url(#_clip2)">
+            <path d="M-2205,1470C-2205,490.778 -1399.22,-315 -420,-315C559.222,-315 1365,490.778 1365,1470L1260,1470C1260,548.379 501.621,-210 -420,-210C-1341.62,-210 -2100,548.379 -2100,1470L-2205,1470Z" style="fill:white;fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-420,1470)">
+            <g id="lG" transform="matrix(0.991828,-0.127584,0.127584,0.991828,-216.574,-1683.63)">
+                <clipPath id="_clip3">
+                    <path d="M-31.5,0L-31.5,-70L31.5,-70L31.5,0L-31.5,0ZM0,-47L0,-35L31.5,-35L31.5,-47L0,-47Z"/>
+                </clipPath>
+                <g clip-path="url(#_clip3)">
+                    <path d="M0,0C17.28,-0 31.5,-15.8 31.5,-35C31.5,-54.2 17.28,-70 0,-70C-17.28,-70 -31.5,-54.2 -31.5,-35C-31.5,-15.8 -17.28,0 0,0M0,-13C10.149,-13 18.5,-22.931 18.5,-35C18.5,-47.069 10.149,-57 0,-57C-10.149,-57 -18.5,-47.069 -18.5,-35C-18.5,-22.931 -10.149,-13 0,-13" style="fill:rgb(3,17,44);"/>
+                </g>
+                <rect x="5" y="-35" width="26.5" height="10" style="fill:rgb(3,17,44);fill-rule:nonzero;"/>
+                <rect x="21.5" y="-35" width="10" height="35" style="fill:rgb(3,17,44);fill-rule:nonzero;"/>
+            </g>
+            <g id="lR" transform="matrix(0.997146,-0.0755008,0.0755008,0.997146,-128.163,-1692.65)">
+                <path d="M-31.5,0L-18.5,0L-18.5,-26L9.5,-26C21.569,-26 31.5,-35.931 31.5,-48C31.5,-60.069 21.569,-70 9.5,-70L-30.5,-70L-31.5,0ZM-18.5,-39L8.5,-39C13.437,-39 17.5,-43.063 17.5,-48C17.5,-52.937 13.437,-57 8.5,-57L-18.5,-57L-18.5,-39Z" style="fill:rgb(3,17,44);"/>
+                <path d="M28,0C28,-10 28,-32 13,-32L-6,-32C16,-32 16,-10 16,0L28,0Z" style="fill:rgb(3,17,44);fill-rule:nonzero;"/>
+            </g>
+            <g id="lI" transform="matrix(0.999236,-0.0390854,0.0390854,0.999236,-66.3475,-1696.2)">
+                <rect x="-6.5" y="-70" width="13" height="70" style="fill:rgb(3,17,44);"/>
+            </g>
+            <g id="lF" transform="matrix(0.999976,-0.00698126,0.00698126,0.999976,-11.8507,-1697.46)">
+                <path d="M-30,0L-17,0L-17,-31L21,-31L21,-43L-17,-43L-17,-57L30,-57L30,-70L-30,-70L-30,0Z" style="fill:rgb(3,17,44);"/>
+            </g>
+            <g id="lO" transform="matrix(0.999173,0.040655,-0.040655,0.999173,69.0118,-1696.1)">
+                <path d="M0,0C17.28,-0 31.5,-15.8 31.5,-35C31.5,-54.2 17.28,-70 0,-70C-17.28,-70 -31.5,-54.2 -31.5,-35C-31.5,-15.8 -17.28,0 0,0M0,-13C10.149,-13 18.5,-22.931 18.5,-35C18.5,-47.069 10.149,-57 0,-57C-10.149,-57 -18.5,-47.069 -18.5,-35C-18.5,-22.931 -10.149,-13 0,-13" style="fill:rgb(3,17,44);"/>
+            </g>
+            <g id="lE" transform="matrix(0.992375,0.123255,-0.123255,0.992375,209.225,-1684.56)">
+                <path d="M-31.5,0L31.5,0L31.5,-13L-19.5,-13L-19.5,-31L20.5,-31L20.5,-43L-19.5,-43L-19.5,-57L28.5,-57L28.5,-70L-31.5,-70L-31.5,0Z" style="fill:rgb(3,17,44);"/>
+            </g>
+            <g id="lM" transform="matrix(0.984564,0.175023,-0.175023,0.984564,297.102,-1671.3)">
+                <path d="M-31.5,0L-19.5,0L-19.5,-48L-5.5,0L5.5,0L19.5,-48L19.5,0L31.5,0L31.5,-70L14,-70L0,-22L-14,-70L-31.5,-70L-31.5,0Z" style="fill:rgb(3,17,44);"/>
+            </g>
+            <g id="lP" transform="matrix(0.96669,0.255952,-0.255952,0.96669,434.478,-1640.96)">
+                <path d="M-31.5,0L-18.5,0L-18.5,-26L9.5,-26C21.569,-26 31.5,-35.931 31.5,-48C31.5,-60.069 21.569,-70 9.5,-70L-30.5,-70L-31.5,0ZM-18.5,-39L8.5,-39C13.437,-39 17.5,-43.063 17.5,-48C17.5,-52.937 13.437,-57 8.5,-57L-18.5,-57L-18.5,-39Z" style="fill:rgb(3,17,44);"/>
+            </g>
+            <g id="lR1" serif:id="lR" transform="matrix(0.951969,0.306194,-0.306194,0.951969,519.764,-1615.97)">
+                <path d="M-31.5,0L-18.5,0L-18.5,-26L9.5,-26C21.569,-26 31.5,-35.931 31.5,-48C31.5,-60.069 21.569,-70 9.5,-70L-30.5,-70L-31.5,0ZM-18.5,-39L8.5,-39C13.437,-39 17.5,-43.063 17.5,-48C17.5,-52.937 13.437,-57 8.5,-57L-18.5,-57L-18.5,-39Z" style="fill:rgb(3,17,44);"/>
+                <path d="M28,0C28,-10 28,-32 13,-32L-6,-32C16,-32 16,-10 16,0L28,0Z" style="fill:rgb(3,17,44);fill-rule:nonzero;"/>
+            </g>
+            <g id="lO1" serif:id="lO" transform="matrix(0.93464,0.355596,-0.355596,0.93464,603.625,-1586.55)">
+                <path d="M0,0C17.28,-0 31.5,-15.8 31.5,-35C31.5,-54.2 17.28,-70 0,-70C-17.28,-70 -31.5,-54.2 -31.5,-35C-31.5,-15.8 -17.28,0 0,0M0,-13C10.149,-13 18.5,-22.931 18.5,-35C18.5,-47.069 10.149,-57 0,-57C-10.149,-57 -18.5,-47.069 -18.5,-35C-18.5,-22.931 -10.149,-13 0,-13" style="fill:rgb(3,17,44);"/>
+            </g>
+            <g id="lG1" serif:id="lG" transform="matrix(0.914748,0.404024,-0.404024,0.914748,685.831,-1552.79)">
+                <clipPath id="_clip4">
+                    <path d="M-31.5,0L-31.5,-70L31.5,-70L31.5,0L-31.5,0ZM0,-47L0,-35L31.5,-35L31.5,-47L0,-47Z"/>
+                </clipPath>
+                <g clip-path="url(#_clip4)">
+                    <path d="M0,0C17.28,-0 31.5,-15.8 31.5,-35C31.5,-54.2 17.28,-70 0,-70C-17.28,-70 -31.5,-54.2 -31.5,-35C-31.5,-15.8 -17.28,0 0,0M0,-13C10.149,-13 18.5,-22.931 18.5,-35C18.5,-47.069 10.149,-57 0,-57C-10.149,-57 -18.5,-47.069 -18.5,-35C-18.5,-22.931 -10.149,-13 0,-13" style="fill:rgb(3,17,44);"/>
+                </g>
+                <rect x="5" y="-35" width="26.5" height="10" style="fill:rgb(3,17,44);fill-rule:nonzero;"/>
+                <rect x="21.5" y="-35" width="10" height="35" style="fill:rgb(3,17,44);fill-rule:nonzero;"/>
+            </g>
+            <g id="lR2" serif:id="lR" transform="matrix(0.89235,0.451345,-0.451345,0.89235,766.158,-1514.76)">
+                <path d="M-31.5,0L-18.5,0L-18.5,-26L9.5,-26C21.569,-26 31.5,-35.931 31.5,-48C31.5,-60.069 21.569,-70 9.5,-70L-30.5,-70L-31.5,0ZM-18.5,-39L8.5,-39C13.437,-39 17.5,-43.063 17.5,-48C17.5,-52.937 13.437,-57 8.5,-57L-18.5,-57L-18.5,-39Z" style="fill:rgb(3,17,44);"/>
+                <path d="M28,0C28,-10 28,-32 13,-32L-6,-32C16,-32 16,-10 16,0L28,0Z" style="fill:rgb(3,17,44);fill-rule:nonzero;"/>
+            </g>
+            <g id="lE1" serif:id="lE" transform="matrix(0.867505,0.497428,-0.497428,0.867505,844.384,-1472.59)">
+                <path d="M-31.5,0L31.5,0L31.5,-13L-19.5,-13L-19.5,-31L20.5,-31L20.5,-43L-19.5,-43L-19.5,-57L28.5,-57L28.5,-70L-31.5,-70L-31.5,0Z" style="fill:rgb(3,17,44);"/>
+            </g>
+            <g id="lS" transform="matrix(0.840283,0.542148,-0.542148,0.840283,920.297,-1426.38)">
+                <path d="M-15.75,-22C-15.75,-15 -9,-11.5 1,-11.5C11,-11.5 15.74,-14.75 15.75,-19.25C15.75,-33.5 -31,-24.5 -30.75,-49.5C-30.5,-71 -6,-70 3,-70C12,-70 29,-66 28.75,-48.75L13.5,-48.75C13.5,-56.25 6.5,-59 -1.5,-59C-9.25,-59 -14.75,-57.75 -14.75,-50.5C-15,-38.75 31.5,-46.5 31.5,-21.75C31.5,-3.5 13.5,0 0,0C-11.5,0 -31.55,-4.5 -31.5,-22L-15.75,-22Z" style="fill:rgb(3,17,44);"/>
+            </g>
+            <g id="lS1" serif:id="lS" transform="matrix(0.810757,0.585382,-0.585382,0.810757,993.686,-1376.26)">
+                <path d="M-15.75,-22C-15.75,-15 -9,-11.5 1,-11.5C11,-11.5 15.74,-14.75 15.75,-19.25C15.75,-33.5 -31,-24.5 -30.75,-49.5C-30.5,-71 -6,-70 3,-70C12,-70 29,-66 28.75,-48.75L13.5,-48.75C13.5,-56.25 6.5,-59 -1.5,-59C-9.25,-59 -14.75,-57.75 -14.75,-50.5C-15,-38.75 31.5,-46.5 31.5,-21.75C31.5,-3.5 13.5,0 0,0C-11.5,0 -31.55,-4.5 -31.5,-22L-15.75,-22Z" style="fill:rgb(3,17,44);"/>
+            </g>
+            <g id="lO2" serif:id="lO" transform="matrix(0.77901,0.627012,-0.627012,0.77901,1064.35,-1322.37)">
+                <path d="M0,0C17.28,-0 31.5,-15.8 31.5,-35C31.5,-54.2 17.28,-70 0,-70C-17.28,-70 -31.5,-54.2 -31.5,-35C-31.5,-15.8 -17.28,0 0,0M0,-13C10.149,-13 18.5,-22.931 18.5,-35C18.5,-47.069 10.149,-57 0,-57C-10.149,-57 -18.5,-47.069 -18.5,-35C-18.5,-22.931 -10.149,-13 0,-13" style="fill:rgb(3,17,44);"/>
+            </g>
+        </g>
+        <g>
+            <g id="estrela" transform="matrix(31.5,0,0,31.5,-600,-132)">
+                <g id="ponta">
+                    <g id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta1" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta1" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta2" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta3" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta2" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta4" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta5" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta3" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta6" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta7" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta4" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta8" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta9" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela1" serif:id="estrela" transform="matrix(31.5,0,0,31.5,-535,177)">
+                <g id="ponta5" serif:id="ponta">
+                    <g id="meiaPonta10" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta11" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta6" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta12" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta13" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta7" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta14" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta15" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta8" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta16" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta17" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta9" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta18" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta19" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela2" serif:id="estrela" transform="matrix(26.25,0,0,26.25,-625,243)">
+                <g id="ponta10" serif:id="ponta">
+                    <g id="meiaPonta20" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta21" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta11" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta22" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta23" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta12" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta24" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta25" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta13" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta26" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta27" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta14" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta28" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta29" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela3" serif:id="estrela" transform="matrix(15,0,0,15,-463,132)">
+                <g id="ponta15" serif:id="ponta">
+                    <g id="meiaPonta30" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta31" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta16" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta32" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta33" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta17" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta34" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta35" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta18" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta36" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta37" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta19" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta38" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta39" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela4" serif:id="estrela" transform="matrix(26.25,0,0,26.25,-382,250)">
+                <g id="ponta20" serif:id="ponta">
+                    <g id="meiaPonta40" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta41" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta21" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta42" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta43" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta22" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta44" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta45" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta23" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta46" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta47" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta24" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta48" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta49" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela5" serif:id="estrela" transform="matrix(21,0,0,21,-404,323)">
+                <g id="ponta25" serif:id="ponta">
+                    <g id="meiaPonta50" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta51" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta26" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta52" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta53" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta27" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta54" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta55" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta28" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta56" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta57" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta29" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta58" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta59" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela6" serif:id="estrela" transform="matrix(31.5,0,0,31.5,228,-228)">
+                <g id="ponta30" serif:id="ponta">
+                    <g id="meiaPonta60" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta61" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta31" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta62" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta63" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta32" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta64" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta65" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta33" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta66" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta67" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta34" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta68" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta69" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela7" serif:id="estrela" transform="matrix(31.5,0,0,31.5,515,258)">
+                <g id="ponta35" serif:id="ponta">
+                    <g id="meiaPonta70" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta71" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta36" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta72" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta73" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta37" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta74" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta75" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta38" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta76" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta77" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta39" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta78" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta79" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela8" serif:id="estrela" transform="matrix(21,0,0,21,617,265)">
+                <g id="ponta40" serif:id="ponta">
+                    <g id="meiaPonta80" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta81" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta41" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta82" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta83" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta42" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta84" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta85" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta43" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta86" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta87" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta44" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta88" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta89" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela9" serif:id="estrela" transform="matrix(26.25,0,0,26.25,545,323)">
+                <g id="ponta45" serif:id="ponta">
+                    <g id="meiaPonta90" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta91" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta46" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta92" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta93" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta47" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta94" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta95" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta48" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta96" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta97" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta49" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta98" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta99" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela10" serif:id="estrela" transform="matrix(26.25,0,0,26.25,368,477)">
+                <g id="ponta50" serif:id="ponta">
+                    <g id="meiaPonta100" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta101" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta51" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta102" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta103" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta52" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta104" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta105" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta53" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta106" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta107" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta54" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta108" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta109" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela11" serif:id="estrela" transform="matrix(21,0,0,21,367,551)">
+                <g id="ponta55" serif:id="ponta">
+                    <g id="meiaPonta110" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta111" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta56" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta112" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta113" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta57" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta114" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta115" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta58" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta116" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta117" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta59" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta118" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta119" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela12" serif:id="estrela" transform="matrix(21,0,0,21,441,419)">
+                <g id="ponta60" serif:id="ponta">
+                    <g id="meiaPonta120" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta121" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta61" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta122" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta123" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta62" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta124" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta125" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta63" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta126" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta127" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta64" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta128" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta129" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela13" serif:id="estrela" transform="matrix(26.25,0,0,26.25,500,382)">
+                <g id="ponta65" serif:id="ponta">
+                    <g id="meiaPonta130" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta131" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta66" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta132" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta133" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta67" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta134" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta135" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta68" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta136" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta137" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta69" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta138" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta139" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela14" serif:id="estrela" transform="matrix(21,0,0,21,365,405)">
+                <g id="ponta70" serif:id="ponta">
+                    <g id="meiaPonta140" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta141" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta71" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta142" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta143" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta72" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta144" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta145" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta73" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta146" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta147" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta74" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta148" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta149" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela15" serif:id="estrela" transform="matrix(26.25,0,0,26.25,-280,30)">
+                <g id="ponta75" serif:id="ponta">
+                    <g id="meiaPonta150" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta151" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta76" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta152" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta153" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta77" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta154" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta155" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta78" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta156" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta157" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta79" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta158" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta159" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela16" serif:id="estrela" transform="matrix(21,0,0,21,200,-37)">
+                <g id="ponta80" serif:id="ponta">
+                    <g id="meiaPonta160" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta161" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta81" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta162" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta163" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta82" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta164" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta165" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta83" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta166" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta167" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta84" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta168" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta169" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela17" serif:id="estrela" transform="matrix(31.5,0,0,31.5,0,330)">
+                <g id="ponta85" serif:id="ponta">
+                    <g id="meiaPonta170" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta171" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta86" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta172" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta173" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta87" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta174" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta175" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta88" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta176" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta177" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta89" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta178" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta179" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela18" serif:id="estrela" transform="matrix(26.25,0,0,26.25,85,184)">
+                <g id="ponta90" serif:id="ponta">
+                    <g id="meiaPonta180" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta181" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta91" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta182" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta183" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta92" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta184" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta185" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta93" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta186" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta187" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta94" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta188" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta189" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela19" serif:id="estrela" transform="matrix(26.25,0,0,26.25,0,118)">
+                <g id="ponta95" serif:id="ponta">
+                    <g id="meiaPonta190" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta191" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta96" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta192" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta193" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta97" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta194" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta195" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta98" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta196" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta197" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta99" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta198" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta199" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela20" serif:id="estrela" transform="matrix(21,0,0,21,-74,184)">
+                <g id="ponta100" serif:id="ponta">
+                    <g id="meiaPonta200" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta201" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta101" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta202" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta203" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta102" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta204" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta205" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta103" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta206" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta207" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta104" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta208" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta209" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela21" serif:id="estrela" transform="matrix(15,0,0,15,-37,235)">
+                <g id="ponta105" serif:id="ponta">
+                    <g id="meiaPonta210" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta211" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta106" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta212" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta213" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta107" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta214" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta215" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta108" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta216" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta217" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta109" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta218" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta219" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela22" serif:id="estrela" transform="matrix(26.25,0,0,26.25,220,495)">
+                <g id="ponta110" serif:id="ponta">
+                    <g id="meiaPonta220" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta221" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta111" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta222" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta223" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta112" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta224" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta225" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta113" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta226" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta227" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta114" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta228" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta229" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela23" serif:id="estrela" transform="matrix(21,0,0,21,283,430)">
+                <g id="ponta115" serif:id="ponta">
+                    <g id="meiaPonta230" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta231" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta116" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta232" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta233" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta117" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta234" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta235" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta118" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta236" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta237" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta119" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta238" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta239" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela24" serif:id="estrela" transform="matrix(21,0,0,21,162,412)">
+                <g id="ponta120" serif:id="ponta">
+                    <g id="meiaPonta240" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta241" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta121" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta242" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta243" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta122" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta244" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta245" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta123" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta246" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta247" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta124" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta248" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta249" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela25" serif:id="estrela" transform="matrix(31.5,0,0,31.5,-295,390)">
+                <g id="ponta125" serif:id="ponta">
+                    <g id="meiaPonta250" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta251" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta126" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta252" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta253" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta127" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta254" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta255" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta128" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta256" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta257" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta129" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta258" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta259" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="estrela26" serif:id="estrela" transform="matrix(10.5,0,0,10.5,0,575)">
+                <g id="ponta130" serif:id="ponta">
+                    <g id="meiaPonta260" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta261" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta131" serif:id="ponta" transform="matrix(0.309017,0.951057,-0.951057,0.309017,0,0)">
+                    <g id="meiaPonta262" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta263" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta132" serif:id="ponta" transform="matrix(0.309017,-0.951057,0.951057,0.309017,0,0)">
+                    <g id="meiaPonta264" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta265" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta133" serif:id="ponta" transform="matrix(-0.809017,0.587785,-0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta266" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta267" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="ponta134" serif:id="ponta" transform="matrix(-0.809017,-0.587785,0.587785,-0.809017,0,0)">
+                    <g id="meiaPonta268" serif:id="meiaPonta" transform="matrix(0.951057,0.309017,-0.309017,0.951057,-0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="meiaPonta269" serif:id="meiaPonta" transform="matrix(-0.951057,0.309017,0.309017,0.951057,0.309017,-0.0489435)">
+                        <path d="M0,-1L0,0L0.5,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <path d="M681.01,53.45L805.4,177.85L805.4,0L900.71,0L900.71,365L857.76,365L726.98,234.22C704.126,311.552 632.601,364.997 551.963,364.997C451.846,364.997 369.463,282.613 369.463,182.497C369.463,82.38 451.846,-0.003 551.963,-0.003C600.346,-0.003 646.798,19.238 681.01,53.45ZM519.47,157.05L635.35,157.05C624.186,120.473 590.2,95.313 551.958,95.313C504.127,95.313 464.768,134.672 464.768,182.503C464.768,230.334 504.127,269.693 551.958,269.693C579.288,269.693 605.086,256.844 621.55,235.03L519.47,235.03L519.47,157.05Z" style="fill:url(#_Linear5);"/>
+    <g>
+        <clipPath id="_clip6">
+            <path d="M681.01,53.45L805.4,177.85L805.4,0L900.71,0L900.71,365L857.76,365L726.98,234.22C704.126,311.552 632.601,364.997 551.963,364.997C451.846,364.997 369.463,282.613 369.463,182.497C369.463,82.38 451.846,-0.003 551.963,-0.003C600.346,-0.003 646.798,19.238 681.01,53.45ZM519.47,157.05L635.35,157.05C624.186,120.473 590.2,95.313 551.958,95.313C504.127,95.313 464.768,134.672 464.768,182.503C464.768,230.334 504.127,269.693 551.958,269.693C579.288,269.693 605.086,256.844 621.55,235.03L519.47,235.03L519.47,157.05Z"/>
+        </clipPath>
+        <g clip-path="url(#_clip6)">
+            <g>
+                <clipPath id="_clip7">
+                    <path d="M355,250C560,248 742,232 912,176L912,400L355,400L355,250Z"/>
+                </clipPath>
+                <g clip-path="url(#_clip7)">
+                    <rect x="355" y="150" width="560" height="220" style="fill:url(#_Linear8);"/>
+                    <path d="M681.01,53.45L805.4,177.85L805.4,0L900.71,0L900.71,365L857.76,365L726.98,234.22C704.126,311.552 632.601,364.997 551.963,364.997C451.846,364.997 369.463,282.613 369.463,182.497C369.463,82.38 451.846,-0.003 551.963,-0.003C600.346,-0.003 646.798,19.238 681.01,53.45ZM519.47,157.05L635.35,157.05C624.186,120.473 590.2,95.313 551.958,95.313C504.127,95.313 464.768,134.672 464.768,182.503C464.768,230.334 504.127,269.693 551.958,269.693C579.288,269.693 605.086,256.844 621.55,235.03L519.47,235.03L519.47,157.05Z" style="fill:none;fill-rule:nonzero;stroke:url(#_Linear9);stroke-width:13px;"/>
+                    <path d="M355,250C560,248 742,232 912,176" style="fill:none;fill-rule:nonzero;stroke:url(#_Linear10);stroke-width:6.5px;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g>
+        <g transform="matrix(1,0,0,1,286,405)">
+            <path d="M28,18L28,15C28,9 25,6 19,6L15,6C9,6 6,9 6,15L6,47C6,53 9,56 15,56L19,56C25,56 28,53 28,47L28,33L18,33" style="fill:none;fill-rule:nonzero;stroke:rgb(3,17,44);stroke-width:12px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,329,405)">
+            <path d="M6,62L6,6L19,6C25,6 28,9 28,15L28,21C28,27 25,30 19,30L6,30M13.666,30C22.267,36.551 27.377,52.398 27.377,62" style="fill:none;fill-rule:nonzero;stroke:rgb(3,17,44);stroke-width:12px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,372,405)">
+            <path d="M6,0L6,62" style="fill:none;fill-rule:nonzero;stroke:rgb(3,17,44);stroke-width:12px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,393,405)">
+            <path d="M6,62L6,6L31,6M6,30L27,30" style="fill:none;fill-rule:nonzero;stroke:rgb(3,17,44);stroke-width:12px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,433,405)">
+            <path d="M15,6L19,6C25,6 28,9 28,15L28,47C28,53 25,56 19,56L15,56C9,56 6,53 6,47L6,15C6,9 9,6 15,6Z" style="fill:none;fill-rule:nonzero;stroke:rgb(3,17,44);stroke-width:12px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,476,405)">
+            <rect x="0" y="50" width="12" height="12" style="fill:rgb(3,17,44);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,497,405)">
+            <path d="M0,62L0,0L12,0L12,62L0,62ZM22,62L22,0L34,0L34,62L22,62ZM0,0L12.4,0L34,61L34,62L21.6,62L0,1L0,0Z" style="fill:rgb(3,17,44);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,540,405)">
+            <path d="M31,6L6,6L6,56L31,56M6,31L27,31" style="fill:none;fill-rule:nonzero;stroke:rgb(3,17,44);stroke-width:12px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,580,405)">
+            <path d="M0,6L34,6M17,6L17,62" style="fill:none;fill-rule:nonzero;stroke:rgb(3,17,44);stroke-width:12px;"/>
+        </g>
+    </g>
+    <defs>
+        <radialGradient id="_Radial1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1080,0,0,1080,-230,-40)"><stop offset="0" style="stop-color:rgb(124,184,230);stop-opacity:1"/><stop offset="0.35" style="stop-color:rgb(47,120,181);stop-opacity:1"/><stop offset="0.62" style="stop-color:rgb(26,96,153);stop-opacity:1"/><stop offset="0.9" style="stop-color:rgb(10,42,82);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(3,17,44);stop-opacity:1"/></radialGradient>
+        <linearGradient id="_Linear5" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(2.23498e-14,-365,365,2.23498e-14,0,365)"><stop offset="0" style="stop-color:rgb(125,80,19);stop-opacity:1"/><stop offset="0.3" style="stop-color:rgb(148,98,29);stop-opacity:1"/><stop offset="0.62" style="stop-color:rgb(194,139,58);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(236,196,126);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear8" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.22465e-14,200,-200,1.22465e-14,0,165)"><stop offset="0" style="stop-color:rgb(180,124,44);stop-opacity:1"/><stop offset="0.45" style="stop-color:rgb(207,152,70);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(239,194,122);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear9" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(2.23498e-14,-365,365,2.23498e-14,0,365)"><stop offset="0" style="stop-color:rgb(125,80,19);stop-opacity:1"/><stop offset="0.3" style="stop-color:rgb(148,98,29);stop-opacity:1"/><stop offset="0.62" style="stop-color:rgb(194,139,58);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(236,196,126);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear10" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(2.23498e-14,-365,365,2.23498e-14,0,365)"><stop offset="0" style="stop-color:rgb(125,80,19);stop-opacity:1"/><stop offset="0.3" style="stop-color:rgb(148,98,29);stop-opacity:1"/><stop offset="0.62" style="stop-color:rgb(194,139,58);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(236,196,126);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>

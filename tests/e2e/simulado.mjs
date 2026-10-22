@@ -24,7 +24,7 @@ await p.screenshot({ path: `${OUT}/pausa.png` });
 await p.getByRole("button", { name: /Continuar a prova/ }).click();
 // Questões
 for (let i = 0; i < 4; i++) {
-  await p.getByRole("button", { name: `Questão ${i + 1}`, exact: true }).click();
+  await p.getByRole("button", { name: `Q${i + 1}`, exact: true }).click();
   await p.locator(`#folha-q${i + 1}`).fill(ex.questoes[i].gabarito_comentado.replace(/\*/g, ""));
 }
 await p.getByRole("button", { name: "Entregar", exact: true }).click();

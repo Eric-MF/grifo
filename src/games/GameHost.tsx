@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
 import { ShareCard } from "@/components/ShareCard";
+import { SITE } from "@/config/site";
 import { BITS_IMPRESSAO_JOGO, gerarCodigo, impressao } from "@/lib/codigo/codigo";
 import { useModoCelular, useRetratoToque } from "@/lib/modo";
 import type { DadosCard } from "@/lib/share/card";
@@ -256,6 +257,39 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
     [chave],
   );
 
+  // Fora de tela cheia, arrastar na vertical sobre o palco rola a página (o toque ainda bate as asas).
+  // A rolagem é feita aqui, pelo movimento do dedo: assim o gesto não depende do que o navegador faz sobre o canvas.
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    let y0: number | null = null;
+    const inicio = (e: TouchEvent) => {
+      y0 = e.touches[0]?.clientY ?? null;
+    };
+    const mover = (e: TouchEvent) => {
+      const y = e.touches[0]?.clientY;
+      if (y === undefined || y0 === null) return;
+      const dy = y0 - y;
+      y0 = y;
+      if (el.classList.contains(styles.full) || dy === 0) return;
+      window.scrollBy(0, dy);
+      e.preventDefault();
+    };
+    const fim = () => {
+      y0 = null;
+    };
+    el.addEventListener("touchstart", inicio, { passive: true });
+    el.addEventListener("touchmove", mover, { passive: false });
+    el.addEventListener("touchend", fim, { passive: true });
+    el.addEventListener("touchcancel", fim, { passive: true });
+    return () => {
+      el.removeEventListener("touchstart", inicio);
+      el.removeEventListener("touchmove", mover);
+      el.removeEventListener("touchend", fim);
+      el.removeEventListener("touchcancel", fim);
+    };
+  }, []);
+
   // Carrega o módulo do jogo sob demanda
   useEffect(() => {
     let vivo = true;
@@ -509,7 +543,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
           { rotulo: "Acertos", valor: `${visao.est.acertos}/${visao.est.perguntas}` },
         ],
         rodape: `Recorde neste nível: ${(recordes[opcoes.nivel] ?? 0).toLocaleString("pt-BR")} · ${new Date().toLocaleDateString("pt-BR")}`,
-        codigo: `Verifique em grifo.com/verificar · ${visao.codigo}`,
+        codigo: `Verifique em ${SITE.dominio}/verificar · ${visao.codigo}`,
       }
     : null), [visao, info.titulo, nivelNome, estiloAtual, recordes, opcoes.nivel]);
 

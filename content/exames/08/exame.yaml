@@ -198,7 +198,7 @@ questoes:
         descricao: Não, nos termos do verbete 453 da Súmula do STF (0,25). OU Não, pois nesse caso haveria supressão de instância.
         valores: [ 0, 0.25 ]
         componentes:
-          - { id: c1, valor: 0.25, alternativas: [ [ sumula 453 ], [ supressao de instancia ] ], rotulo: "Não: Súmula 453 do STF OU supressão de instância" }
+          - { id: c1, valor: 0.25, dispositivo: [ Súmula 453 STF ], alternativas: [ [ supressao de instancia ] ], rotulo: "Não: Súmula 453 do STF OU supressão de instância" }
   - n: 4
     enunciado: |-
       João foi denunciado pela prática do delito previsto no art. 299 caput e parágrafo único do Código Penal. A inicial acusatória foi recebida em 30/10/2000 e o processo teve seu curso normal. A sentença penal, publicada em 29/07/2005, condenou o réu à pena de 01 (um) ano, 11 (onze) meses e 10 (dez) dias de reclusão, em regime semi-aberto, mais pagamento de 16 (dezesseis) dias-multa. Irresignada, somente a defesa interpôs apelação.
@@ -234,4 +234,4 @@ questoes:
         descricao: Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. (0,50) OU Não, conforme o verbete 220 da Súmula do STJ. (0,50)
         valores: [ 0, 0.5 ]
         componentes:
-          - { id: c1, valor: 0.5, alternativas: [ [ pretensao executoria | prescricao executoria ], [ sumula 220 ] ], rotulo: "Não: o aumento da reincidência só se aplica à prescrição executória OU Súmula 220 do STJ" }
+          - { id: c1, valor: 0.5, dispositivo: [ Súmula 220 STJ ], alternativas: [ [ pretensao executoria | prescricao executoria ] ], rotulo: "Não: o aumento da reincidência só se aplica à prescrição executória OU Súmula 220 do STJ" }

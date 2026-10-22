@@ -1,18 +1,31 @@
 .cartao, .painel { --grifo-alfa: 72%; }
 .cartao {
   position: fixed; z-index: 100; transform: translateX(-50%); width: min(340px, calc(100vw - 24px));
-  max-height: 46vh; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; min-height: 0; gap: 0.4rem; padding: 0.85rem 1rem;
+  max-height: 46vh; display: flex; flex-direction: column; min-height: 0; gap: 0.4rem; padding: 0.85rem 1rem;
   background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 14px;
   box-shadow: 0 16px 40px rgb(0 0 0 / 0.22); animation: surgir 0.14s ease-out;
 }
 .painel {
-  position: fixed; z-index: 100; left: 0; right: 0; bottom: 0; max-height: 72vh; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; min-height: 0;
+  position: fixed; z-index: 100; left: 0; right: 0; bottom: 0; max-height: 72vh; display: flex; flex-direction: column; min-height: 0;
   gap: 0.5rem; padding: 1rem 1.1rem calc(1rem + env(safe-area-inset-bottom)); background: var(--surface); color: var(--text);
   border-radius: 18px 18px 0 0; box-shadow: 0 -12px 40px rgb(0 0 0 / 0.25); animation: subir 0.18s ease-out;
 }
 .fundo { position: fixed; inset: 0; z-index: 99; background: rgb(0 0 0 / 0.3); }
-.lei { margin: 0; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.texto { min-height: 0; overflow: auto; font-size: 0.92rem; line-height: 1.5; overscroll-behavior: contain; }
+/* topo: voltar e avançar (quando a prévia já abriu outro artigo por dentro) e o nome da lei */
+.topo { display: flex; align-items: center; gap: 0.5rem; min-width: 0; }
+.lei { margin: 0; min-width: 0; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.historico { display: inline-flex; gap: 0.25rem; flex: none; }
+.passo {
+  display: inline-grid; place-items: center; width: 1.75rem; height: 1.75rem; padding: 0; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer;
+}
+.passo svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.passo:hover:not(:disabled) { border-color: var(--primary); }
+.passo:focus-visible { outline: none; box-shadow: var(--focus); }
+.passo:disabled { opacity: 0.35; cursor: default; }
+@media (pointer: coarse) { .passo { width: 2.25rem; height: 2.25rem; } }
+/* sem rolagem lateral: as linhas de pontos das leis que alteram outras ("......") quebram onde precisar */
+.texto { flex: 1 1 auto; min-height: 0; overflow: hidden auto; overflow-wrap: anywhere; font-size: 0.92rem; line-height: 1.5; overscroll-behavior: contain; }
 .marca {
   color: inherit; padding: 0.04em 0.18em; margin: 0 -0.08em; border-radius: 0.5em 0.2em 0.55em 0.25em;
   background:
@@ -24,10 +37,56 @@
 }
 .marca[data-so-nota="1"] { background: none; border-bottom: 2px dotted currentColor; border-radius: 0; }
 .marca[data-nota="1"]::after { content: "✎"; font-size: 0.62em; vertical-align: super; margin-left: 2px; opacity: 0.75; }
-.texto p { margin: 0 0 0.35em; }
-.texto p:first-child { font-weight: 600; }
+/* os blocos do artigo, com o HTML do leitor (src/lib/leis/html.ts) */
+.texto > * { margin: 0 0 0.35em; font-size: inherit; font-weight: inherit; }
+.texto > :first-child { font-weight: 600; }
+.inciso { padding-left: 1em; }
+.alinea { padding-left: 2em; }
+.estrutura, .rubrica { font-weight: 700; text-align: center; }
+.oculto { display: none; }
+.ref { color: var(--primary); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--primary) 40%, transparent); text-underline-offset: 0.15em; }
+.ref:hover { text-decoration-color: currentColor; }
+.naoEncontrada { text-decoration: underline dotted; text-underline-offset: 0.15em; cursor: help; }
+/* o link que faz a citação (vindo do "citado por") e o inciso ou parágrafo citado: marcados, e a marca some aos poucos */
+.citante, .alvo { border-radius: 0.3em; animation: destaqueSome 2.8s ease-out forwards; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+@keyframes destaqueSome {
+  0%, 45% { background-color: color-mix(in srgb, var(--accent) 42%, transparent); box-shadow: 0 0 0 0.15em color-mix(in srgb, var(--accent) 42%, transparent); }
+  100% { background-color: transparent; box-shadow: 0 0 0 0.15em transparent; }
+}
+/* troca de artigo por dentro da prévia: o texto novo entra do lado de onde veio */
+.texto[data-dir="avancar"] { animation: entraDaDireita 0.18s ease-out; }
+.texto[data-dir="voltar"] { animation: entraDaEsquerda 0.18s ease-out; }
+@keyframes entraDaDireita { from { opacity: 0; transform: translateX(14px); } }
+@keyframes entraDaEsquerda { from { opacity: 0; transform: translateX(-14px); } }
+.dica { align-self: center; margin-left: auto; font-size: 0.72rem; color: var(--muted); }
 .carregando { margin: 0; color: var(--muted); font-size: 0.9rem; }
-.acoes { display: flex; gap: 0.5rem; }
+.acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
 @keyframes surgir { from { opacity: 0; transform: translateX(-50%) translateY(4px); } }
+/* ao lado do "citado por" o cartão não é centrado no link: a entrada não pode deslizar de lado (passaria por baixo do
+   mouse, sobre a lista, e a saída do mouse fecharia a prévia) */
+.aoLado { animation-name: surgirAoLado; }
+@keyframes surgirAoLado { from { opacity: 0; transform: translateY(4px); } }
 @keyframes subir { from { transform: translateY(100%); } }
-@media (prefers-reduced-motion: reduce) { .cartao, .painel { animation: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .cartao, .painel, .texto[data-dir] { animation: none; }
+  .citante, .alvo { animation: destaqueSome 0.01s linear 2.2s both; }
+}
+
+/* grifos prontos, como no leitor: a barra na margem (tema de prova) e a moldura (destaque) */
+.texto[data-com-prontos] { padding-left: 0.65em; }
+.texto > [data-pronto] { position: relative; }
+.texto > [data-pronto="area"]::before {
+  content: ""; position: absolute; left: -0.6em; top: 0.25em; bottom: 0.25em; width: 3px; border-radius: 3px;
+  background: color-mix(in srgb, var(--pronto) 70%, transparent);
+}
+.texto > [data-pronto="destaque"] { box-shadow: 0 0 0 2px var(--pronto); border-radius: 0.45em 0.2em 0.5em 0.25em; }
+/* um grifo (do usuário ou pronto) abre o detalhe com o significado da cor e o comentário */
+.texto [data-rotulo] { cursor: pointer; }
+.detalhe {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.2rem 0.45rem; flex: none; padding: 0.45rem 0.65rem; border-radius: 10px;
+  background: color-mix(in srgb, var(--c, var(--accent)) 16%, var(--surface)); border: 1px solid color-mix(in srgb, var(--c, var(--accent)) 50%, var(--border));
+  font-size: 0.84rem; animation: surgirAoLado 0.12s ease-out;
+}
+.detalhe .amostra { width: 0.8rem; height: 0.8rem; border-radius: 3px; background: var(--c, transparent); border: 1px solid color-mix(in srgb, var(--text) 25%, transparent); }
+.detalhe small { margin-left: auto; color: var(--muted); font-size: 0.72rem; }
+.comentario { flex-basis: 100%; margin: 0.1rem 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }

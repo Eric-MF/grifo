@@ -7,19 +7,33 @@
 # para aceitar apelidos ("lei de drogas") ou dar nome bonito.
 
 diplomas:
+  lei-6368:
+    nome: Lei 6.368/1976 (substâncias entorpecentes)
+    aliases: [lei 6368]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/l6368.htm
+    numero: "6.368"
+    ano: 1976
+  lei-5869:
+    nome: Código de Processo Civil de 1973 (Lei 5.869/1973, revogado)
+    aliases: [lei 5869, codigo de processo civil de 1973]
+    planalto: https://www.planalto.gov.br/ccivil_03/leis/l5869.htm
+    numero: "5.869"
+    ano: 1973
   cp:
     nome: Código Penal
     aliases: [cp, codigo penal, decreto-lei 2848, decreto lei 2848, dl 2848, cpb]
     planalto: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848.htm
     ler: true
+    tipo: codigo
     sigla: CP
     numero: "2.848"
     ano: 1940
   cpp:
     nome: Código de Processo Penal
     aliases: [cpp, codigo de processo penal, decreto-lei 3689, decreto lei 3689, dl 3689]
-    planalto: https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm
+    planalto: https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm
     ler: true
+    tipo: codigo
     sigla: CPP
     numero: "3.689"
     ano: 1941
@@ -28,6 +42,7 @@ diplomas:
     aliases: [lep, lei de execucao penal, lei de execucoes penais, lei de execucao, lei 7210]
     planalto: https://www.planalto.gov.br/ccivil_03/leis/l7210.htm
     ler: true
+    tipo: lei
     sigla: LEP
     numero: "7.210"
     ano: 1984
@@ -36,6 +51,7 @@ diplomas:
     aliases: [crfb, cf, constituicao federal, constituicao da republica, constituicao, carta magna]
     planalto: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
     ler: true
+    tipo: constituicao
     sigla: CF
     ano: 1988
   lei-11343:
@@ -43,6 +59,7 @@ diplomas:
     aliases: [lei 11343, lei de drogas, lei antidrogas, lei de toxicos]
     planalto: https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm
     ler: true
+    tipo: lei
     numero: "11.343"
     ano: 2006
   lei-11340:
@@ -50,6 +67,7 @@ diplomas:
     aliases: [lei 11340, lei maria da penha, lmp]
     planalto: https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm
     ler: true
+    tipo: lei
     sigla: LMP
     numero: "11.340"
     ano: 2006
@@ -58,6 +76,7 @@ diplomas:
     aliases: [lei 9099, lei dos juizados especiais, lei dos juizados]
     planalto: https://www.planalto.gov.br/ccivil_03/leis/l9099.htm
     ler: true
+    tipo: lei
     numero: "9.099"
     ano: 1995
   lei-8072:
@@ -65,6 +84,7 @@ diplomas:
     aliases: [lei 8072, lei dos crimes hediondos, lei de crimes hediondos]
     planalto: https://www.planalto.gov.br/ccivil_03/leis/l8072.htm
     ler: true
+    tipo: lei
     numero: "8.072"
     ano: 1990
   lei-8137:
@@ -72,6 +92,7 @@ diplomas:
     aliases: [lei 8137]
     planalto: https://www.planalto.gov.br/ccivil_03/leis/l8137.htm
     ler: true
+    tipo: lei
     numero: "8.137"
     ano: 1990
   lei-9503:
@@ -79,6 +100,7 @@ diplomas:
     aliases: [lei 9503, ctb, codigo de transito brasileiro, codigo de transito]
     planalto: https://www.planalto.gov.br/ccivil_03/leis/l9503.htm
     ler: true
+    tipo: codigo
     sigla: CTB
     numero: "9.503"
     ano: 1997
@@ -87,13 +109,15 @@ diplomas:
     aliases: [lei 10826, estatuto do desarmamento]
     planalto: https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826.htm
     ler: true
+    tipo: estatuto
     numero: "10.826"
     ano: 2003
   lei-12850:
     nome: Lei de Organizações Criminosas (Lei 12.850/2013)
-    aliases: [lei 12850, lei de organizacoes criminosas, lei das organizacoes criminosas]
+    aliases: [lei 12850, lei de organizacoes criminosas, lei das organizacoes criminosas, lei que institui o marco legal do combate ao crime organizado]
     planalto: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm
     ler: true
+    tipo: lei
     numero: "12.850"
     ano: 2013
   lei-9613:
@@ -101,6 +125,7 @@ diplomas:
     aliases: [lei 9613, lei de lavagem de dinheiro, lei de lavagem]
     planalto: https://www.planalto.gov.br/ccivil_03/leis/l9613.htm
     ler: true
+    tipo: lei
     numero: "9.613"
     ano: 1998
   lei-13869:
@@ -108,6 +133,7 @@ diplomas:
     aliases: [lei 13869, lei de abuso de autoridade]
     planalto: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm
     ler: true
+    tipo: lei
     numero: "13.869"
     ano: 2019
   lei-8069:
@@ -115,6 +141,7 @@ diplomas:
     aliases: [lei 8069, eca, estatuto da crianca e do adolescente]
     planalto: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
     ler: true
+    tipo: estatuto
     sigla: ECA
     numero: "8.069"
     ano: 1990
@@ -123,6 +150,7 @@ diplomas:
     aliases: [lei 9455, lei de tortura]
     planalto: https://www.planalto.gov.br/ccivil_03/leis/l9455.htm
     ler: true
+    tipo: lei
     numero: "9.455"
     ano: 1997
   lei-9296:
@@ -130,6 +158,7 @@ diplomas:
     aliases: [lei 9296, lei de interceptacao telefonica]
     planalto: https://www.planalto.gov.br/ccivil_03/leis/l9296.htm
     ler: true
+    tipo: lei
     numero: "9.296"
     ano: 1996
   lei-8038:
@@ -183,6 +212,7 @@ diplomas:
     aliases: [lei 13964, pacote anticrime]
     planalto: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13964.htm
     ler: true
+    tipo: lei
     numero: "13.964"
     ano: 2019
   lcp:

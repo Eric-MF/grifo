@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { ExameResumo } from "@/content/load";
 import { ToggleNomePeca, useMostrarPeca } from "@/components/NomePeca";
+import { gravarUltimoExame } from "@/lib/folha/ultimo-exame";
 import { BaixarTudo } from "./BaixarTudo";
 import { nomeDoArquivo, type Chave } from "./nomes";
 import type { PartePontos } from "./pontuacao";
@@ -28,7 +29,7 @@ function Baixar({
   const href = e.downloads[chave];
   if (!href) return <span className={styles.na} title="Não disponível"><span className={styles.rotuloBotao}>{rotulo}</span>—</span>;
   return (
-    <a className={`${styles.dl} ${destaque ? styles.dlGold : ""}`} href={href} download={nomeDoArquivo(e, chave)} aria-label={label}>
+    <a className={`${styles.dl} ${destaque ? styles.dlGold : ""}`} href={href} download={nomeDoArquivo(e, chave)} aria-label={label} onClick={() => gravarUltimoExame(e.numero)}>
       <span className={styles.rotuloBotao}>{rotulo}</span>
       {texto}
     </a>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { listarExames, tituloExame } from "@/content/load";
+import { listarExames } from "@/content/load";
+import { tituloSimulado } from "@/content/titulo";
 import { ToggleNomePeca, LinhaDeExame } from "@/components/NomePeca";
 import { HistoricoSimulados } from "./HistoricoSimulados";
 import styles from "./simulados.module.css";
@@ -30,7 +31,7 @@ export default function SimuladosPage() {
             <Link href={e.corrigivel ? `/simulados/${e.id}/` : `/provas/#exame-${e.id}`} className={`card ${styles.item}`}>
               <span className={styles.num}>{e.numeral}</span>
               <span className={styles.info}>
-                <strong>{tituloExame(e)}</strong>
+                <strong>{tituloSimulado(e)}</strong>
                 <span className="muted">
                   <LinhaDeExame nome={e.peca} ano={e.aplicacao ? String(new Date(e.aplicacao + "T12:00:00").getFullYear()) : undefined} />
                 </span>

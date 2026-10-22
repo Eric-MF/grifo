@@ -61,8 +61,8 @@ export function decodificar(buf: Uint8Array): string {
 }
 
 /** HTML decodificado, com cache em disco. */
-async function pagina(url: string, cache: string): Promise<string> {
-  if (!atualizar && existsSync(cache)) return decodificar(readFileSync(cache));
+async function pagina(url: string, cache: string, forcar = false): Promise<string> {
+  if (!atualizar && !forcar && existsSync(cache)) return decodificar(readFileSync(cache));
   let corpo: Buffer;
   let r: Response | null = null;
   if (!viaProxy) {
@@ -101,10 +101,11 @@ const falhas: string[] = [];
 const alteradoras = new Map<string, string>(); // lei → URL absoluta da página
 
 for (const [id, d] of alvo) {
-  const html = await pagina(d.planalto!, join(CACHE, `${id}.html`));
-  const { blocos, relatorio: r } = lerHtml(html);
   const arquivo = join(OUT, `${id}.json`);
   const anterior: LeiTexto | null = existsSync(arquivo) ? JSON.parse(readFileSync(arquivo, "utf8")) : null;
+  // a URL da lei mudou (ex.: do texto compilado para o texto original): o cache da página antiga não serve
+  const html = await pagina(d.planalto!, join(CACHE, `${id}.html`), anterior?.url !== d.planalto);
+  const { blocos, relatorio: r } = lerHtml(html);
   const antes = new Set(anterior?.blocos.filter((b) => b.tipo === "artigo" && !b.superada).map((b) => b.disp!) ?? []);
   const agora = new Set(r.artigos);
   const novos = [...agora].filter((a) => !antes.has(a));

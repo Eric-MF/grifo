@@ -13,7 +13,6 @@ const OUT = join(ROOT, "out");
 const DEST = join(ROOT, "public/downloads");
 if (!existsSync(OUT)) throw new Error("rode `npm run build` antes (pasta out/ não encontrada)");
 mkdirSync(join(DEST, "atualizados"), { recursive: true });
-mkdirSync(join(DEST, "folhas"), { recursive: true });
 
 const TIPOS: Record<string, string> = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".png": "image/png", ".svg": "image/svg+xml", ".woff2": "font/woff2", ".webp": "image/webp", ".json": "application/json" };
 const srv = createServer((req, res) => {
@@ -47,7 +46,7 @@ async function imprimir(rota: string, arquivo: string) {
   await page.pdf({ path: arquivo, format: "A4", printBackground: true, preferCSSPageSize: true });
   console.log("✓", arquivo.replace(ROOT, ""));
 }
-if (!filtro.length && !soLeis) await imprimir("/print/folha-resposta/", join(DEST, "folhas/folha-resposta-penal.pdf"));
+// a folha de respostas é gerada no navegador, na hora do download (src/lib/folha/pdf.ts)
 if (soLeis) {
   mkdirSync(join(DEST, "leis"), { recursive: true });
   const leis: { id: string }[] = JSON.parse(readFileSync(join(ROOT, "src/content/generated/leis-indice.json"), "utf8"));

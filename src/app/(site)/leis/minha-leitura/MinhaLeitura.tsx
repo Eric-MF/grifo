@@ -130,7 +130,7 @@ export function MinhaLeitura() {
         <>
           <div className={styles.acoes}>
             <button type="button" className="btn btn-gold" onClick={salvarComoVade}>
-              Salvar como vade-mécum ({total} artigo{total > 1 ? "s" : ""})
+              Salvar como Vade Mecum ({total} artigo{total > 1 ? "s" : ""})
             </button>
             <button type="button" className="btn" onClick={() => window.print()}>
               Imprimir / PDF

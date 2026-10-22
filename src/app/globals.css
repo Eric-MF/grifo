@@ -202,6 +202,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .btn-ghost:hover { background: var(--surface-2); }
 .btn-sm { padding: 0.45rem 0.9rem; font-size: 0.9rem; }
 .btn[disabled] { opacity: 0.5; cursor: not-allowed; transform: none; }
+/* o anel de foco do teclado vence a sombra própria do botão (o dourado tem uma) */
+.btn:focus-visible { box-shadow: var(--focus); outline: 2px solid var(--text); outline-offset: 3px; }
+.btn-gold:focus-visible { box-shadow: var(--focus), 0 6px 18px rgb(214 156 69 / 0.35); }
 
 /* Cartões */
 .card {
@@ -233,11 +236,17 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 /* Modo foco do simulador: esconde cabeçalho e rodapé do site */
 body[data-foco] > header, body[data-foco] > footer { display: none; }
+/* Modo foco em tela cheia, digitando no celular: com o teclado aberto o Android mostra os ícones da barra de
+   notificações sobre a página, com fundo transparente. Uma faixa na cor do fundo, no alto, separa os ícones do texto. */
+body[data-foco][data-digitando]::before {
+  content: ""; position: fixed; inset: 0 0 auto; z-index: 45; height: calc(env(safe-area-inset-top, 0px) + 1.9rem);
+  background: var(--bg); box-shadow: 0 1px 0 var(--border); pointer-events: none;
+}
 
 a.citacao { color: inherit; text-decoration: underline dotted; text-underline-offset: 3px; }
 a.citacao:hover { text-decoration-style: solid; }
 
-/* Leitor de leis e vade-mécum: no papel, só o texto da lei. */
+/* Leitor de leis e Vade Mecum: no papel, só o texto da lei. */
 @media print {
   body:has([data-leitor]) > header,
   body:has([data-leitor]) header:first-of-type,
@@ -252,5 +261,8 @@ a.citacao:hover { text-decoration-style: solid; }
 :root[data-leitor-fundo="verde"], :root[data-leitor-fundo="verde"] body { background: #e6f0e1; }
 :root[data-leitor-fundo="escuro"], :root[data-leitor-fundo="escuro"] body { background: #17181b; }
 :root[data-leitor-fundo] body > header { backdrop-filter: none; background: var(--bg); transition: transform 0.22s ease; }
+/* a barra de rolagem do navegador some na leitura, a menos que o usuário a ligue em "Mais" (o slide faz esse papel) */
+:root[data-barra-navegador="0"] { scrollbar-width: none; }
+:root[data-barra-navegador="0"]::-webkit-scrollbar { display: none; }
 body[data-leitor-oculto] > header { transform: translateY(-100%); }
 :root[data-leitor-fundo] body > footer { display: none; }

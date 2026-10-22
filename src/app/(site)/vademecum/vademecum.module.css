@@ -10,7 +10,7 @@
 .botoes { display: flex; gap: 0.35rem; }
 .botoes button { min-width: 36px; min-height: 36px; padding: 0 0.6rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); cursor: pointer; }
 .botoes button:disabled { opacity: 0.4; cursor: default; }
-.adicionar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: end; padding: 1rem; border: 1px dashed var(--border); border-radius: 12px; }
+.adicionar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: flex-end; padding: 1rem; border: 1px dashed var(--border); border-radius: 12px; }
 .adicionar label { display: grid; gap: 0.3rem; font-size: 0.85rem; font-weight: 700; min-width: min(100%, 220px); }
 .erro { width: 100%; margin: 0; color: var(--bad); font-size: 0.85rem; }
 .acoes { display: flex; flex-wrap: wrap; gap: 0.75rem; }
@@ -23,3 +23,30 @@
 @media print {
   .acoes, .filtros, .naoImprimir { display: none !important; }
 }
+
+/* ---------- criação: o que entra da lei e as opções do Vade Mecum ---------- */
+.escolha { display: grid; gap: 0.5rem; margin: 0; padding: 0; border: 0; min-width: min(100%, 22rem); }
+.escolha legend { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem; }
+.escolha label, .opcao {
+  display: flex; gap: 0.6rem; align-items: flex-start; padding: 0.6rem 0.8rem; border: 1px solid var(--border); border-radius: 12px;
+  background: var(--surface); cursor: pointer; font-weight: 400;
+}
+.escolha label span, .opcao span, .opcaoSaida span { display: grid; gap: 0.15rem; min-width: 0; }
+.escolha strong, .opcao strong, .opcaoSaida strong { font-size: 0.92rem; font-weight: 650; line-height: 1.25; }
+.escolha small, .opcao small, .opcaoSaida small { font-size: 0.8rem; line-height: 1.35; color: var(--muted, #6b6257); }
+.escolha input, .opcao input, .opcaoSaida input { margin-top: 0.2rem; width: 1.05rem; height: 1.05rem; accent-color: var(--primary); }
+.escolha label:has(input:checked), .opcao:has(input:checked), .opcaoSaida:has(input:checked) { border-color: var(--primary); }
+.opcoesVade { display: grid; gap: 1rem; }
+.grupo { display: grid; gap: 0.5rem; margin: 0; padding: 1rem; border: 1px solid var(--border); border-radius: 14px; }
+.grupo legend { font-weight: 700; padding: 0 0.4rem; }
+.linhaOpcao { display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); gap: 0.7rem 0.9rem; }
+.linhaOpcao label { display: grid; gap: 0.3rem; font-size: 0.85rem; font-weight: 700; }
+.linhaOpcao select { padding: 0.45rem 0.6rem; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); font: inherit; font-weight: 400; }
+.nota { margin: 0; font-size: 0.85rem; color: var(--muted, #6b6257); }
+
+/* ---------- leitura do Vade Mecum: a impressão e o arquivo, cada um com as suas opções ---------- */
+.saidas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1rem; margin: 1.25rem 0 2.5rem; }
+.saida { display: grid; gap: 0.75rem; align-content: start; padding: 1rem; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
+.saida h2 { font-size: 1.1rem; margin: 0; }
+.opcaoSaida { display: flex; gap: 0.6rem; align-items: flex-start; cursor: pointer; }
+.opcaoSaida input { margin-top: 0.2rem; width: 1.05rem; height: 1.05rem; accent-color: var(--primary); }

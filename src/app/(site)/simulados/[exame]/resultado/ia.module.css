@@ -19,3 +19,7 @@
 @keyframes spin { to { transform: rotate(360deg); } }
 .erro { margin: 0; color: var(--bad); font-weight: 600; }
 .nota { margin: 0; font-size: 0.8rem; color: var(--muted); }
+
+/* a pergunta sobre a consulta de modelos (Gemini): um aviso com as duas respostas */
+.permissao { margin: 0.6rem 0; padding: 0.7rem 0.9rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface-2); font-size: 0.9rem; }
+.permissao p { margin: 0 0 0.5rem; }

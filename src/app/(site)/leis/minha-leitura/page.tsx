@@ -11,7 +11,7 @@ export default function MinhaLeituraPage() {
   return (
     <div className="container section">
       <span className="eyebrow">
-        <Link href="/leis/">Lei seca</Link>
+        <Link href="/leis/">Vade Mecum</Link>
       </span>
       <h1>Minha leitura</h1>
       <p className="lead">

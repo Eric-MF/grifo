@@ -40,7 +40,7 @@ const caixaRevogados = p.getByLabel("Texto revogado e redações anteriores");
 await caixaRevogados.check();
 checar((await p.locator("[data-revogados]").first().getAttribute("data-revogados")) === "1", "opção não mostrou revogados");
 checar((await visiveis('[data-sup="1"]')) > 0, "nenhum revogado visível com a opção marcada");
-await p.waitForFunction(() => [...document.querySelectorAll('[data-sup="1"] [class*="_txt__"]')].some((e) => e.offsetParent !== null && e.textContent.trim().length > 0), null, { timeout: 5000 }).catch(() => falhas.push("texto revogado não carregou ao marcar a opção"));
+await p.waitForFunction(() => [...document.querySelectorAll('[data-sup="1"] [class*="txt"]')].some((e) => e.offsetParent !== null && e.textContent.trim().length > 0), null, { timeout: 5000 }).catch(() => falhas.push("texto revogado não carregou ao marcar a opção"));
 
 // 2. Preferência persiste após recarregar
 await p.reload({ waitUntil: "networkidle" });
@@ -110,7 +110,7 @@ if (selecionado) {
 
 // 5. Compartilhar: link com o texto no fragmento, sem servidor
 await abrirMais();
-await p.getByRole("button", { name: "Compartilhar", exact: true }).click();
+await p.getByRole("button", { name: /^Compartilhar/ }).click();
 const link = await p.getByLabel("Link", { exact: true }).inputValue();
 checar(link.startsWith(LEI), `link compartilhado fora do esperado: ${link.slice(0, 80)}`);
 checar(link.length < 8 * 1024, "link compartilhado acima de 8 KB sem grifos");
@@ -124,7 +124,7 @@ await p.evaluate((lista) => {
 }, grandes);
 await p.reload({ waitUntil: "networkidle" });
 await abrirMais();
-await p.getByRole("button", { name: "Compartilhar", exact: true }).click();
+await p.getByRole("button", { name: /^Compartilhar/ }).click();
 const modal = p.locator('[aria-labelledby="compartilhar-titulo"]');
 const caixa = modal.locator('input[type="checkbox"]');
 if (!(await caixa.isChecked())) await caixa.click();

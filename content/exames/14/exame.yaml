@@ -192,7 +192,7 @@ questoes:
         descricao: "Não foi correta a decisão do Tribunal de Justiça, pois o Tribunal não pode acolher, contra o réu, nulidade não arguida pela acusação em seu recurso (0,85). OU Não foi correta a decisão, nos termos do Verbete 160 ou 713 da Súmula do STF (0,85). OU Não foi correta a decisão, com base no princípio que veda a reformatio in pejus indireta (0,85). Obs.: A justificativa é essencial para a atribuição de pontos."
         valores: [ 0, 0.85 ]
         componentes:
-          - { id: c1, valor: 0.85, alternativas: [ [ nao arguida | nao alegada | nao suscitada ], [ sumula 160 ], [ sumula 713 ], [ reformatio in pejus ] ], rotulo: Tribunal não pode acolher contra o réu nulidade não arguida pela acusação (Súmulas 160/713 do STF; vedação da reformatio in pejus) }
+          - { id: c1, valor: 0.85, dispositivo: [ Súmula 160 STF, Súmula 713 STF ], alternativas: [ [ nao arguida | nao alegada | nao suscitada ], [ reformatio in pejus ] ], rotulo: Tribunal não pode acolher contra o réu nulidade não arguida pela acusação (Súmulas 160/713 do STF; vedação da reformatio in pejus) }
   - n: 2
     enunciado: |-
       Mário foi condenado a 24 (vinte e quatro) anos de reclusão no regime inicialmente fechado, com trânsito em julgado no dia 20/04/2005, pela prática de latrocínio (artigo 157, § 3º, parte final, do Código Penal).

@@ -52,11 +52,29 @@ describe("podar", () => {
 });
 
 describe("eventosDeDispositivos", () => {
-  it("um evento por artigo, sem súmulas", () => {
+  it("um evento por artigo, com súmulas do STF e do STJ", () => {
     const evs = eventosDeDispositivos(["art. 581, XV, CPP", "Súmula 700 STF", "art. 581 CPP", "art. 33, § 4º, Lei 11.343/06"], 0, "quiz", ctx.lex, { t: agora });
-    expect(evs.map((e) => `${e.d}:${e.a}`)).toEqual(["cpp:581", "lei-11343:33"]);
+    expect(evs.map((e) => `${e.d}:${e.a}`)).toEqual(["cpp:581", "sumulas-stf:700", "lei-11343:33"]);
     expect(evs[0].i).toBe("15");
-    expect(evs[1].p).toBe("4");
+    expect(evs[2].p).toBe("4");
+  });
+
+  it("súmula do STF ou do STJ vira evento só com o número, sem p nem i", () => {
+    const evs = eventosDeDispositivos(["Súmula 145 STF", "Súmula 444 do STJ"], 1, "simulado", ctx.lex, { q: "38", t: agora });
+    expect(evs).toEqual([
+      { t: agora, o: "simulado", d: "sumulas-stf", a: "145", r: 1, q: "38" },
+      { t: agora, o: "simulado", d: "sumulas-stj", a: "444", r: 1, q: "38" },
+    ]);
+  });
+
+  it("deixa de fora súmulas vinculantes e súmulas sem tribunal", () => {
+    const evs = eventosDeDispositivos(["Súmula Vinculante 24", "Súmula 711", "art. 121 do CP"], 0, "quiz", ctx.lex, { t: agora });
+    expect(evs.map((e) => `${e.d}:${e.a}`)).toEqual(["cp:121"]);
+  });
+
+  it("súmulas repetidas entram uma vez, junto com o artigo de mesmo número", () => {
+    const evs = eventosDeDispositivos(["Súmula 145 STF", "Súmula 145 do STF", "art. 145 do CP"], 0, "quiz", ctx.lex, { t: agora });
+    expect(evs.map((e) => `${e.d}:${e.a}`)).toEqual(["sumulas-stf:145", "cp:145"]);
   });
 });
 

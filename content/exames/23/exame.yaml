@@ -156,7 +156,7 @@ peca:
       descricao: Reconhecimento do arrependimento posterior OU aplicação da causa de diminuição do Art. 16 do CP (0,05).
       valores: [ 0, 0.05 ]
       componentes:
-        - { id: c1, valor: 0.05, alternativas: [ [ arrependimento posterior ], [ 16 do cp | art 16 ] ] }
+        - { id: c1, valor: 0.05, dispositivo: [ "art. 16, CP" ], alternativas: [ [ arrependimento posterior ] ] }
     - n: "11.4"
       descricao: Substituição da pena privativa de liberdade por restritiva de direitos (0,05)
       valores: [ 0, 0.05 ]
@@ -273,7 +273,7 @@ questoes:
         descricao: Sim, é possível a revogação do benefício, nos termos da Súmula Vinculante 35 do STF OU Sim, pois a decisão que homologa transação penal não faz coisa julgada material (0,65)
         valores: [ 0, 0.65 ]
         componentes:
-          - { id: c1, valor: 0.65, alternativas: [ [ sumula vinculante 35 ], [ coisa julgada ], [ revoga*, transacao ] ] }
+          - { id: c1, valor: 0.65, dispositivo: [ Súmula Vinculante 35 STF ], alternativas: [ [ coisa julgada ], [ revoga*, transacao ] ] }
       - n: B
         descricao: Não é possível a responsabilização penal de Cláudio pelo crime do Art. 154-A do Código Penal, tendo em vista que a lei posterior que de qualquer forma prejudique o acusado não pode retroagir para atingir situação pretérita OU tendo em vista que a lei que tipificou a conduta é posterior à data dos fatos (0,50), com base no Art. 5º, inciso XL, da CRFB/88 OU no Art. 1º do Código Penal (0,10).
         valores: [ 0, 0.5, 0.6 ]

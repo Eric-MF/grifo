@@ -5,7 +5,9 @@
 import leis from "@/content/generated/leis.json";
 import indiceLeitor from "@/content/generated/leis-indice.json";
 import vigenciasDerivadas from "@/content/generated/vigencias.json";
+import sumulasNumeros from "@/content/generated/sumulas-numeros.json";
 import { normalize } from "@/lib/correcao/normalize";
+import { dispositivosDoPrefixo, dispositivosDoSufixo, inicioPrefixo } from "@/lib/leis/prefixo";
 
 interface Diploma {
   nome: string;
@@ -28,7 +30,19 @@ const VIGENCIA_EXCECOES: Record<string, Vigencia> = {
 const VIGENCIA: Record<string, Vigencia> = { ...(vigenciasDerivadas as Record<string, Vigencia>), ...VIGENCIA_EXCECOES };
 
 const CITACAO =
-  /\b[Aa]rt(?:s?\.|igos?)\s*(\d{1,4}(?:-\s?[A-Z])?)\b([^.;\n]{0,80}?)\b(?:do|da|de)\s+(Código Penal|Código de Processo Penal|CRFB|CPP|CP|CF|LEP|CTB|ECA|Lei\s*(?:n[º°.]?\s*)?[\d.]+\s*\/\s*\d{2,4})(?!\w)/g;
+  /\b[Aa]rt(?:s?\.|igos?)\s*(\d{1,4}(?:-\s?[A-Z])?)\b([^.;\n]{0,80}?)\b(?:do|da|de)\s+(Código Penal|Código de Processo Penal|CRFB|CPP|CP|CF|LEP|CTB|ECA|Lei\s*(?:n[º°o.]?\s*)?[\d.]+(?:\s*\/\s*\d{2,4})?)(?!\w)/g;
+
+// A forma da correção do quiz e do simulador (formatarCitacao): "Art. 593, inciso III, alínea b — Código de Processo
+// Penal". O diploma vem pelo nome do cadastro, sem o que está entre parênteses.
+const POR_NOME = new Map(Object.entries(DIPLOMAS).map(([id, d]) => [d.nome.split(" (")[0]!, id] as const));
+const escapar = (t: string) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const CITACAO_FORMATADA = new RegExp(
+  String.raw`\bArt\. (\d{1,4}(?:-[A-Z])?)[º°]?(?![\w-])((?:, [^—;\n]{1,60}?)?) — (${[...POR_NOME.keys()]
+    .sort((a, b) => b.length - a.length)
+    .map(escapar)
+    .join("|")})(?!\w)`,
+  "g",
+);
 
 const SUMULA = /\b[Ss]úmula\s*(?:n[º°.]?\s*)?(\d{1,4})\s+(?:do|da)\s+STF(?!\w)/g;
 
@@ -42,10 +56,15 @@ export interface Citacao {
   /** lei e artigo no leitor, para o pop-up com o texto */
   lei?: string;
   art?: string;
+  /** dispositivos citados dentro do artigo ("inciso I do art. 386", "art. 581, IV") */
+  disps?: string[];
   aviso?: string;
 }
 
 function chaveDiploma(token: string): string | null {
+  // "Lei nº 9.099/1995", "Lei no 5.869, de 1973": o número sem pontos é a chave (o ano e a sigla não entram)
+  const numero = token.match(/^\s*Lei\s*(?:n[º°.o]?\s*)?([\d.]+)/i)?.[1]?.replace(/\./g, "");
+  if (numero) return POR_ALIAS.get(`lei ${numero}`) ?? `lei-${numero}`;
   const chave = normalize(token).trim();
   const id = POR_ALIAS.get(chave);
   if (id) return id;
@@ -75,13 +94,20 @@ function aviso(v: Vigencia | undefined, data?: string): string | undefined {
  */
 export function citacoesEm(texto: string, data?: string): Citacao[] {
   const achados: Citacao[] = [];
-  for (const m of texto.matchAll(CITACAO)) {
-    const [inteiro, bruto, meio, token] = m;
-    const artigo = bruto.replace(/-\s+/, "-");
-    const diploma = chaveDiploma(token);
+  const casos = [
+    ...[...texto.matchAll(CITACAO)].map((m) => ({ m, diploma: chaveDiploma(m[3]!) })),
+    ...[...texto.matchAll(CITACAO_FORMATADA)].map((m) => ({ m, diploma: POR_NOME.get(m[3]!) ?? null })),
+  ].sort((a, b) => (a.m.index ?? 0) - (b.m.index ?? 0));
+  for (const { m, diploma } of casos) {
+    const [inteiro, bruto, meio] = m;
+    // as duas formas não se sobrepõem na prática; se acontecer, vale a primeira
+    if ((m.index ?? 0) < (achados.at(-1)?.fim ?? 0)) continue;
+    const artigo = bruto!.replace(/-\s+/, "-");
     const info = diploma ? DIPLOMAS[diploma] : undefined;
     if (!diploma || !info?.planalto) continue;
-    const inicio = m.index ?? 0;
+    // a subdivisão citada antes do artigo ("inciso I do art. 386") entra na citação
+    const pos = m.index ?? 0;
+    const inicio = inicioPrefixo(texto, pos, achados.at(-1)?.fim);
     const base = `${diploma}:${artigo}`;
     const paragrafo = meio.match(/§\s*(\d+)/)?.[1];
     const unico = !paragrafo && /par[áa]grafo único|§\s*único/i.test(meio);
@@ -90,19 +116,27 @@ export function citacoesEm(texto: string, data?: string): Citacao[] {
     const vigencia = (nivel ? VIGENCIA[base + nivel] : undefined) ?? VIGENCIA[base];
     const planalto = info.planalto + ancora(artigo);
     const art = `art${artigo.toLowerCase()}`;
+    // o dispositivo fica antes do artigo ("inciso I do art. 386") ou depois ("art. 581, IV, do CPP")
+    const disps = NO_LEITOR.has(diploma) ? (inicio < pos ? dispositivosDoPrefixo(texto.slice(inicio, pos), art) : dispositivosDoSufixo(meio, art)) : [];
     achados.push({
       inicio,
-      fim: inicio + inteiro.length,
-      texto: inteiro,
+      fim: pos + inteiro.length,
+      texto: texto.slice(inicio, pos + inteiro.length),
       url: NO_LEITOR.has(diploma) ? `/leis/${diploma}/#${art}` : planalto,
       planalto,
       ...(NO_LEITOR.has(diploma) ? { lei: diploma, art } : {}),
+      ...(disps.length ? { disps } : {}),
       aviso: aviso(vigencia, data),
     });
   }
   for (const m of texto.matchAll(SUMULA)) {
     const inicio = m.index ?? 0;
-    achados.push({ inicio, fim: inicio + m[0].length, texto: m[0], url: sumulaStf(m[1]) });
+    const numero = Number(m[1]);
+    // a súmula que o Vade Mecum tem abre no leitor (com a prévia); a que não tem vai para o STF
+    if (sumulasNumeros.stf.includes(numero)) {
+      const planalto = sumulaStf(m[1]);
+      achados.push({ inicio, fim: inicio + m[0].length, texto: m[0], url: `/leis/sumulas/stf/#s-${numero}`, planalto, lei: "sumulas-stf", art: `s-${numero}` });
+    } else achados.push({ inicio, fim: inicio + m[0].length, texto: m[0], url: sumulaStf(m[1]) });
   }
   return achados.sort((a, b) => a.inicio - b.inicio);
 }

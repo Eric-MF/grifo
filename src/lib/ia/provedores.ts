@@ -3,6 +3,7 @@
 // compatível com o formato "chat completions", uma função em chamar().
 // As chamadas vão DIRETO do navegador para o provedor — o Grifo não tem servidor.
 
+import { SITE } from "@/config/site";
 import type { ProvedorId } from "./types";
 
 interface ProvedorInfo {
@@ -40,7 +41,7 @@ export const PROVEDORES: ProvedorInfo[] = [
   {
     id: "gemini",
     nome: "Google Gemini",
-    modelos: ["gemini-2.5-pro", "gemini-2.5-flash"],
+    modelos: ["gemini-3.1-flash-lite"],
     ondeObterChave: "https://aistudio.google.com/app/apikey",
     formato: "gemini",
   },
@@ -175,7 +176,7 @@ async function chamarChat(p: Pedido, info: ProvedorInfo): Promise<string> {
       : { type: "json_object" };
   const headers: Record<string, string> = { "Content-Type": "application/json", Authorization: `Bearer ${p.chave}` };
   if (info.id === "openrouter") {
-    headers["HTTP-Referer"] = "https://www.grifo.com";
+    headers["HTTP-Referer"] = SITE.url;
     headers["X-Title"] = "Grifo";
   }
   const r = await fetchSeguro(
@@ -202,6 +203,34 @@ async function chamarChat(p: Pedido, info: ProvedorInfo): Promise<string> {
   return texto;
 }
 
+/** Os modelos da conta Gemini que geram texto. A chave vai no cabeçalho, como na correção. */
+export async function listarModelosGemini(chave: string, signal?: AbortSignal): Promise<string[]> {
+  const r = await fetchSeguro(
+    "https://generativelanguage.googleapis.com/v1beta/models?pageSize=1000",
+    { headers: { "x-goog-api-key": chave }, signal },
+    "Gemini",
+  );
+  if (!r.ok) await erroHttp(r, "Gemini");
+  const j = await r.json();
+  return ((j.models ?? []) as { name: string; supportedGenerationMethods?: string[] }[])
+    .filter((m) => m.supportedGenerationMethods?.includes("generateContent"))
+    .map((m) => m.name.replace(/^models\//, ""));
+}
+
+/** O Gemini aceita só um subconjunto do JSON Schema: tira o que ele não entende (additionalProperties, $schema). */
+function paraSchemaGemini(s: unknown): unknown {
+  if (Array.isArray(s)) return s.map(paraSchemaGemini);
+  if (s && typeof s === "object") {
+    const o: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(s)) {
+      if (k === "additionalProperties" || k === "$schema") continue;
+      o[k] = paraSchemaGemini(v);
+    }
+    return o;
+  }
+  return s;
+}
+
 async function chamarGemini(p: Pedido): Promise<string> {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(p.modelo)}:generateContent`;
   const r = await fetchSeguro(
@@ -214,7 +243,8 @@ async function chamarGemini(p: Pedido): Promise<string> {
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: p.sistema }] },
         contents: [{ role: "user", parts: [{ text: p.usuario }] }],
-        generationConfig: { responseMimeType: "application/json" },
+        // o mesmo formato pedido às outras APIs: o Gemini obedece ao esquema quando recebe um subconjunto dele
+        generationConfig: { responseMimeType: "application/json", responseSchema: paraSchemaGemini(p.schema), maxOutputTokens: 16384 },
       }),
     },
     "Gemini",

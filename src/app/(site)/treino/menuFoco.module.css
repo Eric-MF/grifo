@@ -1,0 +1,142 @@
+/* O menu do modo foco: o botão redondo é também o placar do strike (líquido) e do tempo sem perder pontos (anel) */
+.menu { position: relative; flex: none; }
+.botao {
+  position: relative; display: grid; place-items: center; width: 2.9rem; height: 2.9rem; padding: 0; border: 0; border-radius: 50%;
+  background: var(--surface); color: var(--text); cursor: pointer; box-shadow: inset 0 0 0 1px var(--border), 0 2px 8px rgb(3 17 44 / 0.08);
+}
+.botao:focus-visible { outline: none; box-shadow: var(--focus); }
+.sanduiche { position: relative; z-index: 2; width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round;
+  filter: drop-shadow(0 0 2px var(--surface)) drop-shadow(0 0 1px var(--surface)); }
+
+/* o líquido: sobe com o strike, esquenta de cor, ondula e brilha */
+.liquido { position: absolute; inset: 3px; border-radius: 50%; overflow: hidden; isolation: isolate; }
+.nivel {
+  position: absolute; left: 0; right: 0; bottom: 0; height: calc(var(--cheio, 0) * 100%);
+  background: color-mix(in srgb, var(--cor) 75%, #000);
+  transition: height 0.65s cubic-bezier(0.3, 1.5, 0.5, 1), background-color 0.6s;
+}
+/* a superfície: duas manchas enormes, de cantos desiguais, girando em velocidades e sentidos diferentes; só a borda de
+   cima delas aparece, e ela ondula sem padrão. Cada uma num tom da cor atual */
+.nivel::before, .nivel::after {
+  content: ""; position: absolute; left: 50%; top: -5px; width: 260%; aspect-ratio: 1; translate: -50% 0;
+  border-radius: 43% 47% 41% 45% / 45% 41% 47% 43%;
+  background: linear-gradient(170deg, color-mix(in srgb, var(--cor) 55%, #fff), var(--cor) 18%, color-mix(in srgb, var(--cor) 75%, #000) 60%);
+  animation: girar 7s linear infinite; opacity: clamp(0, calc(var(--cheio, 0) * 20), 1);
+}
+.nivel::after {
+  top: -2px; width: 240%; border-radius: 46% 40% 48% 42% / 40% 47% 42% 46%; mix-blend-mode: soft-light;
+  background: linear-gradient(200deg, color-mix(in srgb, var(--cor) 40%, #fff), color-mix(in srgb, var(--cor) 60%, #000));
+  animation-duration: 4.3s; animation-direction: reverse; opacity: calc(clamp(0, calc(var(--cheio, 0) * 20), 1) * 0.8);
+}
+@keyframes girar { to { rotate: 360deg; } }
+.brilho {
+  position: absolute; inset: 0; border-radius: 50%; pointer-events: none; overflow: hidden;
+  background: radial-gradient(ellipse 55% 35% at 34% 22%, rgb(255 255 255 / 0.7), rgb(255 255 255 / 0) 70%);
+  box-shadow: inset 0 -4px 8px rgb(3 17 44 / 0.14), inset 0 3px 6px rgb(255 255 255 / 0.5);
+}
+/* um reflexo que passa de tempos em tempos pelo líquido */
+.brilho::after {
+  content: ""; position: absolute; inset: -20%; background: linear-gradient(115deg, transparent 40%, rgb(255 255 255 / 0.45) 50%, transparent 60%);
+  translate: -120% 0; animation: reflexo 4.5s ease-in-out infinite;
+}
+@keyframes reflexo { 0%, 55% { translate: -120% 0; } 85%, 100% { translate: 120% 0; } }
+.liquido[data-perdeu] { animation: tremer 0.45s ease; }
+.liquido[data-fez] .nivel { animation: piscar 0.5s ease-in-out infinite alternate; }
+@keyframes tremer { 20%, 60% { transform: translateX(-3px); } 40%, 80% { transform: translateX(3px); } }
+@keyframes piscar { to { filter: brightness(1.35) saturate(1.3); } }
+
+/* o anel: o tempo que não tira pontos, do cheio ao vazio; perto do fim fica vermelho; respondida, para */
+.anel { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); pointer-events: none; }
+.anel circle { fill: none; stroke-width: 3; }
+.trilho { stroke: color-mix(in srgb, var(--border) 70%, transparent); }
+.tempo {
+  stroke: var(--primary); stroke-linecap: round; stroke-dasharray: 150.8; stroke-dashoffset: 0;
+  animation: tempo var(--folga, 15s) linear var(--atraso, 0s) forwards;
+}
+.tempo[data-parado] { animation-play-state: paused; }
+@keyframes tempo {
+  0%, 75% { stroke: var(--primary); }
+  100% { stroke-dashoffset: 150.8; stroke: var(--bad); }
+}
+
+/* o painel */
+.painel {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 40; width: min(20rem, calc(100vw - 2rem)); display: grid; gap: 0.25rem;
+  padding: 0.5rem; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); box-shadow: 0 10px 30px rgb(0 0 0 / 0.18);
+  text-transform: none; letter-spacing: normal;
+}
+.painel[hidden] { display: none; }
+.painel hr { border: 0; border-top: 1px solid var(--border); margin: 0.25rem 0.3rem; }
+.item {
+  display: flex; align-items: center; gap: 0.6rem; width: 100%; min-height: 2.6rem; padding: 0.4rem 0.6rem; border: 0; border-radius: 10px;
+  background: none; color: var(--text); font: inherit; font-size: 0.9rem; font-weight: 700; text-align: left; cursor: pointer;
+}
+.item:hover { background: color-mix(in srgb, var(--primary) 9%, transparent); }
+.item:focus-visible { outline: 2px solid var(--primary); outline-offset: -2px; }
+.item svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.item[aria-pressed="true"] svg { color: var(--primary); }
+.som { display: grid; }
+.volume { display: flex; align-items: center; gap: 0.6rem; padding: 0 0.6rem 0.4rem 2.4rem; animation: abrir 0.2s ease; }
+.volume input { flex: 1; accent-color: var(--primary); }
+.volume small { width: 2.6rem; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+@keyframes abrir { from { opacity: 0; transform: translateY(-4px); } }
+.oculto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* a revoada: as bolinhas saem do menu, a nova enche e voltam */
+.revoada { position: fixed; inset: 0; z-index: 55; pointer-events: none; }
+.bolinha {
+  position: absolute; width: 13px; height: 13px; margin: -6.5px 0 0 -6.5px; border-radius: 50%; border: 2px solid var(--cor);
+  background: var(--surface); opacity: 0; animation: revoada var(--duracao, 1.35s) linear forwards;
+  animation-delay: calc(var(--k, 0) * 40ms);
+}
+.bolinha[data-cheia] { background: var(--cor); box-shadow: 0 0 8px var(--cor); }
+.bolinha[data-nova] { animation-name: revoada, encher; }
+/* sai depressa, demora no meio (onde a nova enche) e volta depressa */
+@keyframes revoada {
+  0% { transform: translate(var(--dx), var(--dy)) scale(0.2); opacity: 0; animation-timing-function: cubic-bezier(0.2, 0.8, 0.3, 1); }
+  18% { transform: none; opacity: 1; animation-timing-function: linear; }
+  80% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(0.6, 0, 0.8, 0.3); }
+  100% { transform: translate(var(--dx), var(--dy)) scale(0.2); opacity: 0; }
+}
+@keyframes encher {
+  0%, 32% { background: var(--surface); }
+  48% { background: var(--cor); box-shadow: 0 0 0 5px color-mix(in srgb, var(--cor) 35%, transparent), 0 0 14px var(--cor); scale: 1.5; }
+  64%, 100% { background: var(--cor); box-shadow: 0 0 8px var(--cor); scale: 1; }
+}
+.revoada[data-fez] .bolinha { animation-name: revoada, piscar; }
+
+/* os pontos numa estrela com "xp", e a linha da taxa de acertos */
+.xp { display: inline-grid; gap: 3px; justify-items: stretch; line-height: 1; }
+.xpLinha { display: inline-flex; align-items: center; gap: 0.3rem; }
+.xpLinha strong { font-size: 1.05rem; font-weight: 900; font-variant-numeric: tabular-nums; color: var(--text); }
+.estrela { width: 1.9rem; height: 1.9rem; flex: none; fill: var(--accent); stroke: var(--navy); stroke-width: 1.2; stroke-linejoin: round;
+  filter: drop-shadow(0 1px 2px rgb(214 156 69 / 0.45)); }
+.estrela text { fill: var(--navy); stroke: none; font-family: var(--font-body); font-size: 8px; font-weight: 900; }
+/* a proporção na horizontal: verde até a taxa de acertos, vermelho no resto (a divisa desliza a cada resposta) */
+@property --taxa { syntax: "<number>"; inherits: false; initial-value: 1; }
+.taxa {
+  --p: calc(var(--taxa, 1) * 100%);
+  height: 3px; border-radius: 3px; min-width: 100%;
+  background: linear-gradient(90deg, #2fd38a 0 calc(var(--p) - 2px), #ff4d4d calc(var(--p) + 2px) 100%);
+  box-shadow: 0 0 5px color-mix(in srgb, #2fd38a calc(var(--taxa, 1) * 100%), #ff4d4d);
+  transition: --taxa 0.6s ease; animation: pulsar 2.4s ease-in-out infinite alternate;
+}
+.taxa[data-vazia] { background: var(--border); animation: none; box-shadow: none; }
+@keyframes pulsar { to { filter: brightness(1.3); opacity: 0.75; } }
+
+/* as barrinhas do nível: acertos feitos (acesas) e os que faltam para subir; a cor esquenta com o nível */
+.barras { display: inline-flex; gap: 3px; vertical-align: middle; margin-left: 0.5rem; }
+.barras { --c: #e6b13b; }
+.barras[data-nivel="2"] { --c: #ff8a3d; }
+.barras[data-nivel="3"] { --c: #ff3d4a; }
+.barras span { width: 14px; height: 5px; border-radius: 3px; background: color-mix(in srgb, var(--c) 18%, var(--border)); transition: background 0.3s, box-shadow 0.3s; }
+.barras span[data-cheia] {
+  background: linear-gradient(90deg, var(--c), color-mix(in srgb, var(--c) 55%, #fff)); box-shadow: 0 0 6px var(--c);
+  animation: acender 1.8s ease-in-out infinite alternate; animation-delay: calc(var(--i, 0) * 0.15s);
+}
+@keyframes acender { to { filter: brightness(1.25); box-shadow: 0 0 10px var(--c); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .nivel::before, .nivel::after, .brilho::after, .taxa, .barras span[data-cheia], .liquido[data-fez] .nivel { animation: none; }
+  .bolinha { animation-duration: 0.01ms; }
+}

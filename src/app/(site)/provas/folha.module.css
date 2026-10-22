@@ -1,0 +1,20 @@
+/* Folha de respostas e caderno de caligrafia em /provas */
+.acoes { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.75rem 1rem; margin-top: 1rem; }
+.campo { display: grid; gap: 0.3rem; font-size: 0.85rem; font-weight: 700; }
+.campo select, .campo input[type="number"] {
+  padding: 0.6rem 0.9rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  font: inherit; font-weight: 400; min-width: 200px;
+}
+.campo input[type="number"] { min-width: 0; width: 7rem; }
+.campo input[type="range"] { width: min(18rem, 100%); accent-color: var(--primary); }
+.campo[aria-disabled="true"] { opacity: 0.55; }
+.marcar { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.9rem; padding-bottom: 0.6rem; }
+.marcar input { accent-color: var(--primary); width: 1.05rem; height: 1.05rem; }
+.erro { margin: 0.6rem 0 0; color: var(--bad); font-size: 0.9rem; }
+.caligrafia { margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px dashed var(--border); }
+.caligrafia h3 { margin: 0 0 0.3rem; font-size: 1.15rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.caligrafia p { margin: 0; }
+@media (max-width: 560px) {
+  .campo, .campo select { width: 100%; min-width: 0; }
+  .acoes .btn { width: 100%; justify-content: center; }
+}

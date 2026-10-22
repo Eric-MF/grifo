@@ -26,6 +26,10 @@ export default async function Revisao() {
         como revisado: <code>npm run revisar -- 38 &quot;Seu nome&quot; &quot;observações&quot;</code>.
       </p>
 
+      <p>
+        <Link href="/revisao/folha/">Editar o layout da folha de respostas e do caderno de caligrafia</Link>
+      </p>
+
       <h2 style={{ fontSize: 18 }}>Fila de conferência</h2>
       <p style={{ fontSize: 13, color: "#555" }}>
         Leis com pendência primeiro, depois as que vieram de busca na web; por fim, os exames que ainda não foram revisados.

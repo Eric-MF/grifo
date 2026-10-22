@@ -8,6 +8,10 @@ interface Rascunho {
   questoes: string[];
   /** segundos já decorridos no cronômetro */
   decorrido: number;
+  /** segundos gastos em cada parte ("peca", "q1"…), com o cronômetro correndo */
+  tempos?: Record<string, number>;
+  /** a parte em que o examinando estava ("peca", "q1"…): ao continuar, a prova volta para ela */
+  aba?: string;
   atualizadoEm: number;
 }
 
@@ -17,6 +21,8 @@ export interface Tentativa {
   criadaEm: number;
   duracaoSeg: number;
   respostas: { peca: string; questoes: string[] };
+  /** segundos gastos em cada parte; ausente nas tentativas feitas antes de o tempo por parte existir */
+  tempos?: { peca: number; questoes: number[] };
   resultado: ResultadoExame;
   ia?: ResultadoIA;
   codigo?: string;
@@ -34,10 +40,11 @@ export const apagarRascunho = (exameId: string) => remover(kRascunho(exameId));
 export const listarTentativas = () => lerJSON<Tentativa[]>(K_TENTATIVAS, []);
 const gravarTentativas = (todas: Tentativa[]) => gravarJSON(K_TENTATIVAS, todas.slice(0, MAX));
 
-export function salvarTentativa(t: Tentativa) {
+/** Devolve false se o navegador não tinha espaço para guardar a tentativa. */
+export function salvarTentativa(t: Tentativa): boolean {
   const todas = listarTentativas().filter((x) => x.id !== t.id);
   todas.unshift(t);
-  gravarTentativas(todas);
+  return gravarTentativas(todas);
 }
 export const obterTentativa = (id: string) => listarTentativas().find((t) => t.id === id) ?? null;
 /** Lê a lista uma vez: a tentativa atualizada volta para o início, como em salvarTentativa. */

@@ -3,7 +3,7 @@
 import { fmtNota } from "@/lib/formato";
 import { useEffect, useRef, useState } from "react";
 import type { Exame } from "@/content/schema";
-import { ErroIA, PROVEDORES, provedor, temFallback } from "@/lib/ia/provedores";
+import { ErroIA, PROVEDORES, listarModelosGemini, provedor, temFallback } from "@/lib/ia/provedores";
 import type { ProvedorId } from "@/lib/ia/types";
 import { gravarJSON, lerJSON, remover } from "@/lib/storage";
 import { salvarTentativa, type Tentativa } from "@/lib/tentativas";
@@ -24,6 +24,11 @@ export function CorrecaoIA({ exame, tentativa, onConcluir }: { exame: Exame; ten
   const [inicio, setInicio] = useState(0);
   const [agora, setAgora] = useState(0);
   const abort = useRef<AbortController | null>(null);
+  // Gemini: a lista de modelos vem da própria conta, e só depois de o usuário autorizar a consulta com a chave digitada
+  const [modelosGemini, setModelosGemini] = useState<string[] | null>(null);
+  const [negada, setNegada] = useState(false);
+  const [consultando, setConsultando] = useState(false);
+  const [erroModelos, setErroModelos] = useState("");
 
   useEffect(() => {
     const p = lerPrefs();
@@ -49,6 +54,19 @@ export function CorrecaoIA({ exame, tentativa, onConcluir }: { exame: Exame; ten
     const p = lerPrefs();
     setModelo(p.modelos?.[pv] ?? provedor(pv).modelos[0]);
     setChave(lerChaves()[pv] ?? "");
+  };
+
+  const consultarModelos = async () => {
+    setConsultando(true);
+    setErroModelos("");
+    try {
+      setModelosGemini(await listarModelosGemini(chave.trim()));
+    } catch (e) {
+      setErroModelos(e instanceof ErroIA ? e.message : `Erro inesperado: ${(e as Error).message}`);
+      setNegada(true);
+    } finally {
+      setConsultando(false);
+    }
   };
 
   const apagarChaves = () => {
@@ -91,6 +109,9 @@ export function CorrecaoIA({ exame, tentativa, onConcluir }: { exame: Exame; ten
   };
 
   const info = provedor(prov);
+  // uma chave de API completa tem dezenas de caracteres: só então se pergunta sobre a consulta
+  const pedirPermissao = prov === "gemini" && chave.trim().length >= 30 && modelosGemini === null && !negada;
+  const sugestoes = prov === "gemini" ? (modelosGemini ?? []) : info.modelos;
   return (
     <div className={`card ${styles.box}`}>
       {tentativa.ia && (
@@ -122,7 +143,7 @@ export function CorrecaoIA({ exame, tentativa, onConcluir }: { exame: Exame; ten
           <span>Modelo</span>
           <input list={`modelos-${prov}`} value={modelo} onChange={(e) => setModelo(e.target.value)} disabled={estado === "rodando"} spellCheck={false} />
           <datalist id={`modelos-${prov}`}>
-            {info.modelos.map((m) => (
+            {sugestoes.map((m) => (
               <option key={m} value={m} />
             ))}
           </datalist>
@@ -138,13 +159,40 @@ export function CorrecaoIA({ exame, tentativa, onConcluir }: { exame: Exame; ten
             type="password"
             autoComplete="off"
             value={chave}
-            onChange={(e) => setChave(e.target.value)}
+            onChange={(e) => {
+              setChave(e.target.value);
+              // uma chave nova: a consulta e a recusa anteriores não valem mais
+              setModelosGemini(null);
+              setNegada(false);
+              setErroModelos("");
+            }}
             placeholder="cole aqui a sua chave"
             disabled={estado === "rodando"}
             spellCheck={false}
           />
         </label>
       </div>
+      {pedirPermissao && (
+        <div className={styles.permissao} role="group" aria-label="Consultar modelos disponíveis">
+          <p>
+            Posso usar esta chave para consultar quais modelos estão disponíveis na sua conta do Gemini? Só essa consulta é feita,
+            direto do seu navegador; a chave não sai daqui.
+          </p>
+          <div className={styles.acoes}>
+            <button type="button" className="btn btn-sm btn-gold" onClick={consultarModelos} disabled={consultando}>
+              {consultando ? "Consultando…" : "Sim, consultar modelos"}
+            </button>
+            <button type="button" className="btn btn-ghost btn-sm" onClick={() => setNegada(true)}>
+              Não
+            </button>
+          </div>
+        </div>
+      )}
+      {erroModelos && (
+        <p className={styles.erro} role="alert">
+          {erroModelos}
+        </p>
+      )}
       <label className={styles.lembrar}>
         <input type="checkbox" checked={lembrar} onChange={(e) => setLembrar(e.target.checked)} />
         Lembrar a chave neste navegador (fica salva no armazenamento local; não use em computador compartilhado)

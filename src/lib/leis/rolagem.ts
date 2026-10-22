@@ -43,6 +43,8 @@ export function imantar(k: number, pontos: number[], raio: number): number | nul
 
 const DIVISAO = /^(PARTE|LIVRO|T[ÍI]TULO|CAP[ÍI]TULO|SE[ÇC][ÃA]O|SUBSE[ÇC][ÃA]O)\b/i;
 const NIVEIS = ["PARTE", "LIVRO", "TITULO", "CAPITULO", "SECAO", "SUBSECAO"];
+/** O texto abre uma divisão da lei ("TÍTULO II", "CAPÍTULO I", "Seção III"…). */
+export const ehDivisao = (texto: string) => DIVISAO.test(texto.trim());
 const semAcento = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toUpperCase();
 const rotular = (s: string) => {
   const [p, ...resto] = s.trim().split(/\s+/);
@@ -73,7 +75,7 @@ interface BlocoEstrutura {
  * onde começa cada divisão principal (Parte, Livro, Título) para marcar no trilho, e a lista de
  * divisões com o primeiro artigo de cada uma.
  */
-export function secoesDosArtigos(blocos: BlocoEstrutura[], artigos: [string, ...string[]][]) {
+export function secoesDosArtigos(blocos: BlocoEstrutura[], artigos: [string, ...unknown[]][]) {
   const indice = new Map(artigos.map((a, k) => [a[0], k]));
   const pilha: (Cabecalho | undefined)[] = [];
   let ultimo = -1;

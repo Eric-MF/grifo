@@ -17,6 +17,7 @@ export function linkifica(texto: string, chave = "c", data?: string): ReactNode[
         title={c.aviso}
         data-lei={c.lei}
         data-art={c.art}
+        data-disp={c.disps?.join(" ")}
         data-planalto={c.planalto}
       >
         {c.texto}

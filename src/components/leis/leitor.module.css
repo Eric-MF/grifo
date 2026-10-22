@@ -11,10 +11,15 @@
   position: relative;
   color: var(--leitor-fg);
 }
-.leitor[data-fundo="branco"] { --leitor-bg: #ffffff; --leitor-fg: #111111; --leitor-muted: #5f6368; --leitor-borda: #e2e2e2; --leitor-painel: #ffffff; }
-.leitor[data-fundo="sepia"] { --leitor-bg: #f1e3c6; --leitor-fg: #3b2c18; --leitor-muted: #7a6446; --leitor-borda: #dcc8a0; --leitor-painel: #f8eedb; }
-.leitor[data-fundo="verde"] { --leitor-bg: #e6f0e1; --leitor-fg: #1d2a1a; --leitor-muted: #56664f; --leitor-borda: #c9dbc0; --leitor-painel: #f1f7ee; }
-.leitor[data-fundo="escuro"] {
+/*
+ * A cor do fundo vale também pelo <html data-leitor-fundo>, que o script de pré-pintura (PREFS_BOOT_SCRIPT) define
+ * antes de a página aparecer. O HTML do servidor sai com o fundo padrão (papel): sem essa regra, a folha aparecia
+ * clara por um instante ao abrir a lei escura, até a preferência salva ser lida depois da hidratação.
+ */
+.leitor[data-fundo="branco"], :root[data-leitor-fundo="branco"] .leitor { --leitor-bg: #ffffff; --leitor-fg: #111111; --leitor-muted: #5f6368; --leitor-borda: #e2e2e2; --leitor-painel: #ffffff; }
+.leitor[data-fundo="sepia"], :root[data-leitor-fundo="sepia"] .leitor { --leitor-bg: #f1e3c6; --leitor-fg: #3b2c18; --leitor-muted: #7a6446; --leitor-borda: #dcc8a0; --leitor-painel: #f8eedb; }
+.leitor[data-fundo="verde"], :root[data-leitor-fundo="verde"] .leitor { --leitor-bg: #e6f0e1; --leitor-fg: #1d2a1a; --leitor-muted: #56664f; --leitor-borda: #c9dbc0; --leitor-painel: #f1f7ee; }
+.leitor[data-fundo="escuro"], :root[data-leitor-fundo="escuro"] .leitor {
   --leitor-bg: #17181b; --leitor-fg: #e8e6e1; --leitor-muted: #a3a09a; --leitor-borda: #33353a; --leitor-link: #8fb8ff; --leitor-painel: #212328;
   --grifo-alfa: 48%;
 }
@@ -22,16 +27,58 @@
 .leitor[data-fonte="mono"] { --leitor-fonte: var(--font-mono), ui-monospace, monospace; }
 
 .corpo { background: var(--leitor-bg); color: var(--leitor-fg); border-radius: var(--radius); padding: clamp(0.75rem, 4vw, 3rem); margin-top: 0.75rem; }
-.folha { max-width: 44rem; margin: 0 auto; font-family: var(--leitor-fonte); font-size: var(--leitor-tamanho, 18px); line-height: var(--leitor-entrelinha, 1.7); }
+/* overflow-wrap: as linhas de pontos das leis que alteram outras ("......", sem espaço) quebram em vez de alargar a página */
+.folha { max-width: 44rem; margin: 0 auto; font-family: var(--leitor-fonte); font-size: var(--leitor-tamanho, 18px); line-height: var(--leitor-entrelinha, 1.7); overflow-wrap: anywhere; }
+/* largura livre: o texto ocupa a tela toda, com o espaço lateral escolhido no painel (0 = encostado nas laterais) */
+/* a largura e o recuo do leitor no modo livre são medidos em JS (ver ajustarLargura): a tela sem a barra de rolagem */
+.leitor[data-largura="livre"] { max-width: none; }
+.leitor[data-largura="livre"] .corpo { padding-inline: 0; margin-inline: 0; }
+/* à direita sobra sempre a faixa da barra de controles lateral (~56px): o texto não passa por baixo dela */
+.leitor[data-largura="livre"] .folha { max-width: none; padding-left: var(--leitor-laterais, 0px); padding-right: max(var(--leitor-laterais, 0px), 56px); }
+/* rodapé do editor de sistema: excluir à esquerda; cancelar e salvar à direita, separados do conteúdo */
+.rodape { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1rem; margin-top: 0.3rem; padding-top: 0.9rem; border-top: 1px solid var(--border); }
+.rodapeAcoes { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.btnPerigo { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.9rem; border-radius: 999px; border: 1.5px solid color-mix(in srgb, var(--bad) 45%, transparent); background: transparent; color: var(--bad); font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background-color 0.15s ease; }
+.btnPerigo:hover { background: color-mix(in srgb, var(--bad) 10%, transparent); }
+.btnPerigo:focus-visible { outline: 2px solid var(--bad); outline-offset: 2px; }
 /* Blocos fora da tela não entram no cálculo do layout: trocar o tamanho da letra deixa de travar o texto todo. */
 .folha > [data-i] { content-visibility: auto; contain-intrinsic-size: auto 120px; }
+/* o balão do erro e o da referência não encontrada saem para cima do bloco: a contenção do content-visibility cortaria o balão */
+.folha > [data-i]:has(> .pontosErro),
+.folha > [data-i]:has(.naoEncontrada),
+/* a forma do grifo do parágrafo inteiro sai um pouco da caixa do bloco, para alinhar com o artigo: também sem a contenção */
+.folha > [data-i][data-marca-bloco], .folha > [data-i][data-pronto="destaque"] { content-visibility: visible; }
 .folha a.ref { color: var(--leitor-link); text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+/* "art. N" cujo diploma não foi identificado: sem link; a mensagem aparece ao passar o mouse, dar foco ou tocar */
+.naoEncontrada { position: relative; text-decoration: underline dotted; text-underline-offset: 0.15em; cursor: help; }
+/* rótulo do artigo: passando o mouse (ou tocando), abre o "citado por" */
+.rotulo { cursor: help; text-decoration: underline dotted; text-underline-offset: 0.2em; }
+.rotulo:hover { color: var(--leitor-link); }
+/* "citado por": cartão escuro como os pop-ups do grifo (mesmo visual da HUD dos jogos) */
+.citadoPor {
+  position: fixed; z-index: 46; transform: translateX(-50%); width: min(300px, 88vw); padding: 0.7rem 0.8rem; display: grid; gap: 0.45rem;
+  border-radius: 14px; border: 1px solid rgb(120 180 255 / 0.22);
+  background: linear-gradient(180deg, rgb(10 32 72 / 0.97), rgb(3 17 44 / 0.97)); box-shadow: 0 14px 34px rgb(0 0 0 / 0.35);
+  color: #eef4ff; font-family: var(--font-body), sans-serif; font-size: 0.84rem; line-height: 1.4; overflow-y: auto;
+}
+.citadoPor p { margin: 0; color: rgb(190 210 240 / 0.85); }
+.citadoPor ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+.citadoPor a { display: block; padding: 0.35rem 0.55rem; border-radius: 9px; background: rgb(255 255 255 / 0.06); color: #eef4ff; text-decoration: none; }
+.citadoPor a:hover, .citadoPor a:focus-visible { background: rgb(255 255 255 / 0.16); outline: none; }
+.citadoPor a strong { display: block; font-weight: 700; }
+.citadoPor a span { font-size: 0.78rem; color: rgb(190 210 240 / 0.85); }
+.naoEncontrada:hover::after,
+.naoEncontrada:focus::after {
+  content: attr(data-dica); position: absolute; left: 0; bottom: 1.8em; z-index: 5; width: max-content; max-width: min(22rem, 80vw);
+  white-space: normal; padding: 0.35em 0.6em; border-radius: 8px; background: var(--leitor-painel); color: var(--leitor-fg);
+  border: 1px solid var(--leitor-borda); box-shadow: 0 6px 18px rgb(0 0 0 / 0.18); font: 0.85em/1.4 var(--font-body), sans-serif;
+}
 .carregandoResto { text-align: center; color: var(--leitor-muted); font-size: 0.85rem; margin: 2rem 0 0; }
 
 /* A margem de cada bloco (estrela, barra dos grifos prontos) fica dentro dele: recuo negativo + padding.
    Sem content-visibility: medido no celular, desenhar sob demanda deixava a rolagem rápida 4x mais lenta. */
 .folha { --margem: 1.15em; }
-.b { margin: 0.35em 0 0.35em calc(-1 * var(--margem)); padding-left: var(--margem); scroll-margin-top: 90px; position: relative; }
+.b { margin: 0.35em 0 0.35em calc(-1 * var(--margem)); padding-left: var(--margem); scroll-margin-top: var(--topo-livre, 90px); position: relative; }
 .estrutura { text-align: center; font-size: 1.02em; font-weight: 700; letter-spacing: 0.04em; margin: 1.6em 0 0.6em; font-family: inherit; }
 .rubrica { font-size: 0.95em; font-weight: 700; margin: 1.2em 0 0.2em; font-family: inherit; }
 .artigo { margin-top: 0.9em; }
@@ -40,7 +87,16 @@
 .alinea { padding-left: calc(var(--margem) + 3em); }
 .atos { display: inline; margin-left: 0.4em; font-size: 0.72em; color: var(--leitor-muted); font-family: var(--font-body), sans-serif; }
 .ato { color: var(--leitor-muted); margin-right: 0.35em; }
-.leitor[data-anotacoes="0"] .atos { display: none; }
+/* "Anotações de redação" some sem levar o "Vide" junto: só as notas de redação saem, o "Vide" tem o seu interruptor */
+.leitor[data-anotacoes="0"] .ato:not([data-tipo="vide"]) { display: none; }
+.leitor[data-anotacoes="0"] .atos:not(:has(.ato[data-tipo="vide"])) { display: none; }
+.leitor[data-vide="0"] .ato[data-tipo="vide"] { display: none; }
+/* informações adicionais das súmulas: fora do texto, só quando o leitor pede */
+.info { display: none; margin-top: 0.4em; font-size: 0.86em; color: var(--leitor-muted); font-family: var(--font-body), sans-serif; }
+.leitor[data-informacoes="1"] .info { display: block; }
+.infoLinha { display: block; margin: 0.25em 0; white-space: pre-line; }
+.infoLinha summary { cursor: pointer; font-weight: 700; color: var(--leitor-fg, inherit); }
+.infoLinha details span { display: block; margin: 0.4em 0 0.4em 0.6em; padding-left: 0.6em; border-left: 2px solid var(--leitor-muted); }
 .estrela {
   position: absolute; left: 0; top: 0.1em; background: none; border: 0; cursor: pointer; color: var(--leitor-muted);
   font-size: 0.9em; opacity: 0; transition: opacity 0.15s; padding: 0;
@@ -76,17 +132,46 @@
 @keyframes grifar { from { background-size: 0% 100%; } }
 .marca[data-so-nota="1"] { background: none; border-bottom: 2px dotted currentColor; border-radius: 0; }
 .marca[data-nota="1"]::after { content: "✎"; font-size: 0.62em; vertical-align: super; margin-left: 2px; opacity: 0.75; }
-.b[data-pronto="destaque"] > .txt {
-  background-image: linear-gradient(color-mix(in srgb, var(--pronto) 78%, transparent), color-mix(in srgb, var(--pronto) 78%, transparent));
-  background-repeat: no-repeat; background-size: 100% 0.5em; background-position: 0 100%;
-  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+/* Parágrafo inteiro marcado: um retângulo único no bloco; parágrafos seguidos se encostam e formam uma só marca */
+/* parágrafo inteiro grifado: uma forma só, do começo ao fim do bloco. O texto é inline, então um fundo nele
+   sairia em um retângulo por linha; a forma fica num pseudo-elemento do próprio bloco. */
+.b[data-marca-bloco]:not([data-marca-nota]) { isolation: isolate; }
+.b[data-marca-bloco]:not([data-marca-nota])::before {
+  /* o tamanho do texto da leitura, não o do bloco: títulos têm fonte maior ou menor, e as medidas em em mudariam */
+  content: ""; position: absolute; top: 0; bottom: 0; left: -0.3em; right: -0.3em; z-index: -1; pointer-events: none;
+  font-size: var(--leitor-tamanho, 18px);
+  background: color-mix(in srgb, var(--c, #fde047) var(--grifo-alfa), transparent); border-radius: 0.5em 0.2em 0.55em 0.25em;
 }
-.b[data-pronto]::after {
+/* parágrafo, texto e títulos (estrutura, rubrica) não têm a margem negativa do bloco: o margin deles
+   sobrescreve a margem-esquerda do .b. A forma volta à linha do artigo. */
+.b[data-marca-bloco]:not([data-marca-nota]).paragrafo::before,
+.b[data-marca-bloco]:not([data-marca-nota]).texto::before,
+.b[data-marca-bloco]:not([data-marca-nota]).estrutura::before,
+.b[data-marca-bloco]:not([data-marca-nota]).rubrica::before { left: calc(-0.3em - var(--margem)); }
+.b[data-marca-bloco][data-marca-nota] > .txt { border-bottom: 2px dotted currentColor; }
+/* parágrafos marcados em sequência encostam uns nos outros: a forma do artigo inteiro é uma só */
+.b[data-liga-depois] { margin-bottom: 0; }
+.b[data-liga-depois]::before { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.b[data-liga-antes] { margin-top: 0; }
+.b[data-liga-antes]::before { border-top-left-radius: 0; border-top-right-radius: 0; }
+/* Grifos prontos: os de destaque são só sublinhado; os demais são só a marcação lateral */
+/* destaque: moldura na cor do sublinhado, em volta do parágrafo. Parágrafos seguidos com a mesma regra formam
+   uma moldura só (o artigo inteiro), sem a borda de encontro. Mesmo desenho e recuo dos grifos de texto. */
+.b[data-pronto="destaque"] { isolation: isolate; }
+.b[data-pronto="destaque"]::after {
+  content: ""; position: absolute; top: 0; bottom: 0; left: -0.3em; right: -0.3em; z-index: -1; pointer-events: none;
+  font-size: var(--leitor-tamanho, 18px); border: 2px solid var(--pronto); border-radius: 0.5em 0.2em 0.55em 0.25em;
+}
+.b[data-pronto="destaque"].paragrafo::after,
+.b[data-pronto="destaque"].texto::after,
+.b[data-pronto="destaque"].estrutura::after,
+.b[data-pronto="destaque"].rubrica::after { left: calc(-0.3em - var(--margem)); }
+.b[data-pronto-liga-depois] { margin-bottom: 0; }
+.b[data-pronto-liga-depois]::after { border-bottom: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.b[data-pronto-liga-antes] { margin-top: 0; }
+.b[data-pronto-liga-antes]::after { border-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
+.b[data-pronto]:not([data-pronto="destaque"])::after {
   content: ""; position: absolute; left: calc(var(--margem) - 0.6em); top: 0.3em; bottom: 0.3em; width: 3px; border-radius: 3px; background: color-mix(in srgb, var(--pronto) 70%, transparent);
-}
-.b[data-pronto="destaque"]::after { width: 4px; background: var(--pronto); }
-.leitor[data-fundo="escuro"] .b[data-pronto="destaque"] > .txt {
-  background-image: linear-gradient(color-mix(in srgb, var(--pronto) 45%, transparent), color-mix(in srgb, var(--pronto) 45%, transparent));
 }
 /* No modo marca-texto, a seleção já aparece com a cor de destaque enquanto o dedo passa. */
 .leitor[data-marcador="1"] .folha ::selection { background: color-mix(in srgb, var(--accent) 55%, transparent); }
@@ -115,6 +200,23 @@
 }
 :global(body[data-leitor-oculto]) .nomeLei, :global(body[data-foco]) .nomeLei { top: 0; }
 .nomeLeiVisivel { opacity: 1; transition: opacity 0.12s ease; }
+/* leitura da lei no fundo do nome: a largura é a fração lida; o texto fica por cima (position: relative) */
+.nomeLeiFundo {
+  position: absolute; top: 0; bottom: 0; left: 0; pointer-events: none;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--cor) var(--alfa), transparent), color-mix(in srgb, var(--cor) calc(var(--alfa) + 10%), transparent));
+  transition: width 0.6s ease;
+}
+.nomeLeiTexto { position: relative; }
+/* leitura completa: o mesmo degradê dourado das barras, com brilho, sobre a faixa do nome */
+.nomeLeiFundo.nomeLeiCompleta {
+  background: linear-gradient(90deg, rgb(184 134 11 / 0.35), rgb(255 215 0 / 0.5) 30%, rgb(255 244 176 / 0.6) 50%, rgb(255 215 0 / 0.5) 70%, rgb(184 134 11 / 0.35));
+  background-size: 200% 100%;
+  animation: brilhoNome 2.6s linear infinite;
+}
+@keyframes brilhoNome {
+  from { background-position: 200% 0; }
+  to { background-position: 0 0; }
+}
 
 /* Título, capítulo… do lugar em que o leitor está. Aparece ao rolar e some depois de um tempo parado. */
 .secaoAtual {
@@ -171,6 +273,7 @@
    No toque, só o pino arrasta (touch-action: none); no resto da faixa o dedo continua rolando a página. */
 .trilho {
   position: fixed; z-index: 35; right: 10px; top: 96px; bottom: 110px; width: 40px; touch-action: pan-y; cursor: pointer;
+  user-select: none; -webkit-user-select: none;
   transition: opacity 0.25s ease; opacity: 0.9; -webkit-tap-highlight-color: transparent;
 }
 .trilhoOculto { opacity: 0.55; }
@@ -232,13 +335,15 @@
 .veu { position: fixed; inset: 0; z-index: 46; background: rgb(0 0 0 / 0.28); }
 .folhaPainel {
   position: fixed; z-index: 47; left: 0; right: 0; bottom: 0; max-height: min(78vh, 680px); display: grid; grid-template-rows: auto 1fr;
+  /* a coluna tem a largura do painel: sem o minmax, um título comprido ou uma lista de busca alargava a coluna para fora dele */
+  grid-template-columns: minmax(0, 1fr);
   background: var(--leitor-painel); color: var(--leitor-fg); border-radius: 20px 20px 0 0; box-shadow: 0 -16px 40px rgb(0 0 0 / 0.22);
   padding-bottom: env(safe-area-inset-bottom); animation: subir 0.2s ease-out;
 }
 @keyframes subir { from { transform: translateY(100%); } }
 .folhaTopo { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1.1rem 0.4rem; position: relative; }
 .folhaTopo::before { content: ""; position: absolute; left: 50%; top: 6px; width: 40px; height: 4px; margin-left: -20px; border-radius: 4px; background: var(--leitor-borda); }
-.folhaTopo h2 { font-size: 1.15rem; margin: 0; font-family: var(--font-body), sans-serif; }
+.folhaTopo h2 { font-size: 1.15rem; margin: 0; font-family: var(--font-body), sans-serif; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .fechar { min-width: 44px; min-height: 44px; border: 0; background: none; color: var(--leitor-fg); font-size: 1.1rem; cursor: pointer; border-radius: 50%; }
 .folhaCorpo { overflow: auto; padding: 0.25rem 1.1rem 1.25rem; overscroll-behavior: contain; }
 @media (min-width: 900px) {
@@ -271,6 +376,22 @@
 .chips [data-fundo-amostra="verde"] { background: #e6f0e1; color: #1d2a1a; }
 .chips [data-fundo-amostra="escuro"] { background: #17181b; color: #e8e6e1; }
 .miuda { margin: 0; font-size: 0.8rem; color: var(--leitor-muted); }
+/* a dica do atalho de teclado não serve no toque */
+@media (pointer: coarse) { .dicaTeclado { display: none; } }
+
+/* "Levar a lei": todas as ações são cartões iguais, com ícone, título e uma linha de explicação */
+.levarGrade { display: grid; grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr)); gap: 0.5rem; }
+.levarAcao {
+  display: flex; align-items: center; gap: 0.7rem; min-height: 3.4rem; padding: 0.6rem 0.8rem; border: 1px solid var(--leitor-borda); border-radius: 12px;
+  background: var(--leitor-painel); color: var(--leitor-fg); font: inherit; text-align: left; text-decoration: none; cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.levarAcao:hover { border-color: var(--leitor-muted); background: color-mix(in srgb, var(--leitor-fg) 6%, var(--leitor-painel)); }
+.levarAcao:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.levarIcone { flex: none; width: 1.3rem; height: 1.3rem; fill: none; stroke: var(--primary); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.levarTexto { display: grid; gap: 0.15rem; min-width: 0; }
+.levarTexto strong { font-size: 0.9rem; font-weight: 650; line-height: 1.25; }
+.levarTexto small { font-size: 0.75rem; line-height: 1.3; color: var(--leitor-muted); }
 .subtitulo { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--leitor-muted); margin: 1rem 0 0.4rem; font-family: var(--font-body), sans-serif; }
 .listaLeis, .resultados, .legenda { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.3rem; }
 .listaLeis a, .resultados button, .resultados a {
@@ -282,6 +403,16 @@
 .listaLeis span, .resultados span { color: var(--leitor-muted); font-size: 0.82rem; }
 .resultados mark { background: color-mix(in srgb, var(--accent) 45%, transparent); color: inherit; border-radius: 3px; }
 .busca { display: grid; gap: 0.6rem; }
+/* interruptor "Procurar também nas outras leis": a caixa fica escondida, mas continua focável pelo teclado */
+.alternar { position: relative; display: inline-flex; align-items: center; gap: 0.7rem; min-height: 40px; cursor: pointer; font-size: 0.9rem; color: var(--leitor-fg); user-select: none; justify-self: start; }
+.alternarEntrada { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.alternarTrilho { position: relative; flex: none; width: 40px; height: 24px; border-radius: 999px; background: var(--leitor-borda); transition: background-color 0.2s ease; }
+.alternarBolinha { position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: var(--leitor-painel); box-shadow: 0 1px 3px rgb(0 0 0 / 0.28); transition: transform 0.2s ease; }
+.alternarEntrada:checked + .alternarTrilho { background: var(--leitor-link); }
+.alternarEntrada:checked + .alternarTrilho .alternarBolinha { transform: translateX(16px); }
+.alternarEntrada:focus-visible + .alternarTrilho { outline: 2px solid var(--leitor-link); outline-offset: 3px; }
+.alternar:hover .alternarTrilho { filter: brightness(0.96); }
+@media (prefers-reduced-motion: reduce) { .alternarTrilho, .alternarBolinha { transition: none; } }
 .busca input { width: 100%; font-size: 1rem; }
 .legenda li { display: flex; align-items: center; gap: 0.55rem; font-size: 0.9rem; }
 .amostra { flex: none; width: 22px; height: 14px; border-radius: 5px 3px 6px 3px; background: color-mix(in srgb, var(--c) 80%, transparent); box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.08); }
@@ -289,14 +420,63 @@
 .itemGrifo > button:first-child { display: flex; align-items: center; gap: 0.55rem; }
 
 /* ---------- barra de cores da seleção e balão do grifo ---------- */
-.flutuante, .popover {
+.flutuante {
   position: absolute; z-index: 44; transform: translateX(-50%); background: var(--leitor-painel); color: var(--leitor-fg);
   border: 1px solid var(--leitor-borda); border-radius: 14px; box-shadow: 0 10px 30px rgb(0 0 0 / 0.18);
 }
 .flutuante { display: flex; gap: 0.4rem; padding: 0.45rem; }
 .flutuante .nota { background: var(--leitor-bg); color: var(--leitor-fg); }
-.popover { width: min(320px, 90vw); padding: 0.75rem; display: grid; gap: 0.5rem; }
-.popover textarea { width: 100%; border: 1px solid var(--leitor-borda); border-radius: 10px; padding: 0.45rem; font: inherit; font-size: 0.9rem; background: var(--leitor-bg); color: inherit; }
+/* apagar os grifos da seleção: um botão neutro com a lixeira, separado das cores */
+.flutuante .apagarSelecao { display: grid; place-items: center; background: var(--leitor-bg); color: var(--leitor-fg); box-shadow: inset 0 0 0 1px var(--leitor-borda); }
+.flutuante .apagarSelecao:hover { background: color-mix(in srgb, var(--leitor-fg) 12%, var(--leitor-bg)); }
+.apagarSelecao svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+/* Popover do grifo: painel escuro e translúcido, como a HUD dos jogos (ver src/games/games.module.css) */
+.popover {
+  position: absolute; z-index: 44; transform: translateX(-50%); width: min(324px, 90vw); padding: 0.75rem 0.8rem 0.7rem;
+  display: grid; gap: 0.6rem; border-radius: 14px; border: 1px solid rgb(120 180 255 / 0.22);
+  background: linear-gradient(180deg, rgb(10 32 72 / 0.97), rgb(3 17 44 / 0.97)); box-shadow: 0 14px 34px rgb(0 0 0 / 0.35), inset 0 1px 0 rgb(255 255 255 / 0.06);
+  color: #eef4ff; font-family: var(--font-body), sans-serif; font-size: 0.85rem; line-height: 1.4;
+}
+.popover textarea {
+  width: 100%; resize: vertical; min-height: 2.6rem; padding: 0.45rem 0.55rem; border-radius: 10px; font: inherit; font-size: 0.85rem;
+  border: 1px solid rgb(255 255 255 / 0.14); background: rgb(255 255 255 / 0.06); color: #eef4ff;
+}
+.popover textarea::placeholder { color: rgb(190 210 240 / 0.55); }
+.popover textarea:focus-visible { outline: 2px solid rgb(120 180 255 / 0.55); outline-offset: 1px; }
+.grifoRotulo { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(190 210 240 / 0.85); }
+.grifoCitacao {
+  margin: 0; padding: 0.05rem 0 0.05rem 0.6rem; border-left: 3px solid var(--c, #fde047); color: #d4e2f7; font-size: 0.82rem;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.grifoCores { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+.grifoCores button {
+  width: 1.5rem; height: 1.5rem; border-radius: 50%; border: 0; cursor: pointer; background: var(--c);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.28);
+}
+.grifoCores button[aria-pressed="true"] { box-shadow: 0 0 0 2px #03112c, 0 0 0 4px #eef4ff; }
+.grifoCores button:focus-visible { outline: 2px solid #eef4ff; outline-offset: 3px; }
+.grifoAcoes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.3rem; }
+.grifoAcoes .grifoAcao { min-width: 0; padding: 0 0.3rem; gap: 0.3rem; font-size: 0.7rem; white-space: nowrap; }
+/* faixa de ajuste do tamanho do grifo: fica no alto da tela enquanto a seleção é arrastada */
+.ajusteGrifo {
+  position: fixed; z-index: 46; top: 5rem; left: 50%; transform: translateX(-50%); width: min(340px, 92vw);
+  display: grid; gap: 0.55rem; padding: 0.65rem 0.8rem; border-radius: 14px; border: 1px solid rgb(120 180 255 / 0.22);
+  background: linear-gradient(180deg, rgb(10 32 72 / 0.97), rgb(3 17 44 / 0.97)); box-shadow: 0 14px 34px rgb(0 0 0 / 0.35);
+  color: #eef4ff; font-family: var(--font-body), sans-serif; font-size: 0.82rem; line-height: 1.4; text-align: center;
+}
+.ajusteAcoes { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+.grifoAcao {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; height: 2.1rem; padding: 0 0.5rem; border: 0; border-radius: 999px;
+  background: rgb(255 255 255 / 0.08); color: #eef4ff; font: 800 0.74rem/1 var(--font-body), sans-serif; letter-spacing: 0.03em; cursor: pointer;
+  transition: background 0.15s ease;
+}
+.grifoAcao:hover { background: rgb(255 255 255 / 0.16); }
+.grifoAcao:focus-visible { outline: 2px solid #eef4ff; outline-offset: 2px; }
+.grifoAcao svg { width: 14px; height: 14px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.grifoPrincipal { background: linear-gradient(180deg, #6fb6ff, #2f7fd6); color: #03112c; }
+.grifoPrincipal:hover { background: linear-gradient(180deg, #8cc4ff, #3d8be0); }
+.grifoPerigo { color: #ffb4b4; }
+.grifoPerigo:hover { background: rgb(255 90 90 / 0.2); }
 .regra {
   position: fixed; z-index: 44; width: min(320px, calc(100vw - 16px)); padding: 0.75rem 0.9rem; display: grid; gap: 0.3rem;
   background: var(--leitor-painel); color: var(--leitor-fg); border: 1px solid var(--leitor-borda); border-radius: 14px; box-shadow: 0 10px 30px rgb(0 0 0 / 0.18);
@@ -304,8 +484,6 @@
 }
 .regra strong { font-size: 0.95rem; }
 .regra small { color: var(--leitor-muted); font-size: 0.8rem; }
-.citacao { margin: 0; font-size: 0.85rem; color: var(--leitor-muted); }
-.cores { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .acoes { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
 .modal { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; background: rgb(0 0 0 / 0.45); padding: 1rem; }
 .modalCaixa { width: min(560px, 100%); background: var(--bg); color: var(--text); border-radius: var(--radius); padding: 1.25rem; display: grid; gap: 0.75rem; }
@@ -314,23 +492,64 @@
 .linhaCor { display: flex; gap: 0.5rem; align-items: center; }
 .linhaCor input:not([type="color"]) { flex: 1; padding: 0.4rem 0.6rem; border: 1px solid var(--border); border-radius: 8px; }
 
-/* ---------- vade-mécum e minha leitura ---------- */
-.linksArtigo { margin-left: 0.5em; font-size: 0.7em; font-family: var(--font-body), sans-serif; color: var(--leitor-muted); }
-.linksArtigo a { color: var(--leitor-muted); }
-@media screen { .linksArtigo { display: none; } }
+/* ---------- Vade Mecum e minha leitura ---------- */
+/* links do artigo (Vade Mecum): chips visíveis na tela; a impressão não tem como seguir link, então não os imprime */
+.linksArtigo { display: inline-flex; flex-wrap: wrap; gap: 0.35em; margin-left: 0.6em; vertical-align: 0.1em; font-size: 0.72rem; font-family: var(--font-body), sans-serif; }
+.chipLink {
+  display: inline-flex; align-items: center; gap: 0.25em; padding: 0.12em 0.6em; border: 1px solid var(--leitor-borda); border-radius: 999px;
+  background: var(--leitor-painel); color: var(--leitor-muted); text-decoration: none; line-height: 1.5; white-space: nowrap;
+}
+.chipLink:hover { color: var(--leitor-fg); border-color: var(--leitor-muted); }
+.chipLink:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+/* ● do Vade Mecum: aparece também no papel (é uma marca do próprio aluno, não um link) */
+.erroVade { margin-left: 0.4em; font-size: 0.7em; color: #c0392b; letter-spacing: 0.08em; font-family: var(--font-body), sans-serif; }
+.erroVade[data-nivel="medio"] { color: #b7791f; }
+.erroVade[data-nivel="baixo"] { color: #7a7a7a; }
+/* índices do Vade Mecum: cronológico (antes da primeira lei) e alfabético-remissivo (ao fim de cada lei) */
+.indice { margin: 1.6rem 0 0.6rem; padding-top: 0.8rem; border-top: 1px solid var(--leitor-borda); }
+.indice h2, .indice h3 { font-size: 1.05rem; margin: 0 0 0.5rem; }
+.indiceCronologico { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.2rem; font-size: 0.92em; }
+.indiceCronologico a { color: var(--leitor-fg); text-decoration: none; }
+.indiceCronologico a:hover { text-decoration: underline; }
+.indiceData { display: inline-block; min-width: 6.2em; color: var(--leitor-muted); font-variant-numeric: tabular-nums; }
+.remissivo { margin: 0; font-size: 0.9em; line-height: 1.45; }
+.remissivoItem { break-inside: avoid; margin-bottom: 0.55em; }
+.remissivo dt { font-weight: 700; }
+.remissivo dd { margin: 0 0 0 1em; color: var(--leitor-fg); }
 .sumario { columns: 2 16rem; margin: 1rem 0 2rem; padding-left: 1.2rem; }
 .secao { break-before: page; }
 .secao:first-of-type { break-before: auto; }
 .secao h2 { font-size: 1.5rem; margin: 2rem 0 0.25rem; }
 
 /* ---------- artigos em que mais se erra ---------- */
-.b[data-erro]::before {
-  content: attr(data-pontos); display: inline-block; margin-right: 0.45em; white-space: nowrap; letter-spacing: 0.1em;
-  font: 0.7em/1 var(--font-body), sans-serif; vertical-align: 0.3em; color: var(--bad);
+/* pontos de erro: a contagem aparece ao passar o mouse */
+.pontosErro {
+  position: relative; display: inline-block; margin-right: 0.45em; font: 0.7em/1 var(--font-body), sans-serif; letter-spacing: 0.1em;
+  vertical-align: 0.3em; white-space: nowrap; color: var(--bad); cursor: default;
 }
-.b[data-erro="medio"]::before { color: var(--warn); }
-.b[data-erro="baixo"]::before { color: var(--leitor-muted); }
-.leitor[data-erros="0"] .b[data-erro]::before { display: none; }
+.pontosErro[data-nivel="medio"] { color: var(--warn); }
+.pontosErro[data-nivel="baixo"] { color: var(--leitor-muted); }
+.pontosErro:hover::after {
+  content: attr(data-dica); position: absolute; left: 0; bottom: 1.8em; z-index: 5; white-space: nowrap; padding: 0.35em 0.6em; border-radius: 8px;
+  background: var(--leitor-painel); color: var(--leitor-fg); border: 1px solid var(--leitor-borda); box-shadow: 0 6px 18px rgb(0 0 0 / 0.18);
+  font-size: 1.2em; letter-spacing: 0.02em;
+}
+.leitor[data-erros="0"] .pontosErro { display: none; }
+/* "Mostrar somente grifos" e "Mostrar apenas os erros": o que fica de fora do filtro sai da tela (o efeito marca os blocos) */
+.leitor .b[data-fora-filtro="1"] { display: none; }
+/* opções do painel Leitura: cartões com a caixa (ou o botão de escolha), o título e a explicação do que muda */
+.opcoesCartao { display: grid; gap: 0.45rem; }
+.opcaoCartao {
+  display: grid; grid-template-columns: auto 1fr; gap: 0.7rem; align-items: start; padding: 0.7rem 0.85rem; border: 1px solid var(--leitor-borda);
+  border-radius: 12px; background: var(--leitor-painel); cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease;
+}
+.opcaoCartao:hover { border-color: var(--leitor-muted); }
+.opcaoCartao[data-marcada="1"] { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 8%, var(--leitor-painel)); }
+.opcaoCartao:focus-within { outline: 2px solid var(--primary); outline-offset: 2px; }
+.opcaoCartao input { width: 1.1rem; height: 1.1rem; margin: 0.15rem 0 0; accent-color: var(--primary); }
+.opcaoTexto { display: grid; gap: 0.2rem; min-width: 0; }
+.opcaoTexto strong { font-size: 0.9rem; font-weight: 650; line-height: 1.25; }
+.opcaoTexto small { font-size: 0.76rem; line-height: 1.35; color: var(--leitor-muted); }
 .errados { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.35rem; }
 .errados button {
   display: grid; gap: 0.1rem; width: 100%; text-align: left; padding: 0.55rem 0.75rem; border-radius: 12px; cursor: pointer;
@@ -359,21 +578,129 @@
   .estrela { position: static; opacity: 1; margin-right: 0.3em; font-size: 0.85em; }
   .inciso { padding-left: calc(var(--margem) + 0.8em); }
   .alinea { padding-left: calc(var(--margem) + 1.6em); }
-  .botaoDock { min-width: 54px; padding: 0.3rem 0.35rem; }
+  /* até sete botões (com Desfazer) cabem na tela: cada um divide a largura, e o rótulo fica um pouco menor */
+  .botoes { width: calc(100vw - 12px); }
+  .botaoDock { flex: 1 1 0; min-width: 0; padding: 0.3rem 0.1rem; font-size: 0.62rem; }
   .trilho { top: 72px; bottom: 96px; right: 6px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .nova, .destaque, .folhaPainel { animation: none; }
-  .trilhoPino, .trilhoPino::before, .trilhoBalao, .secaoAtual, .nomeLei { transition: none; }
+  .trilhoPino, .trilhoPino::before, .trilhoBalao, .secaoAtual, .nomeLei, .nomeLeiFundo { transition: none; }
+  .nomeLeiFundo.nomeLeiCompleta { animation: none; }
   .dock { transition: none; }
 }
 
 @media print {
-  .dock, .trilho, .aviso, .flutuante, .popover, .regra, .modal, .estrela, .toast, .folhaPainel, .veu, .carregandoResto, .secaoAtual, .nomeLei { display: none !important; }
-  .b[data-erro]::before { display: none; }
+  .dock, .trilho, .aviso, .flutuante, .popover, .ajusteGrifo, .regra, .modal, .estrela, .toast, .folhaPainel, .veu, .carregandoResto, .secaoAtual, .nomeLei { display: none !important; }
+  .pontosErro { display: none; }
+  .linksArtigo { display: none !important; }
+  .leitor[data-colunas="3"] .corpo, .leitor[data-colunas="3"] .remissivo { columns: 3; column-gap: 1.4rem; }
+  .leitor[data-colunas="3"] .corpo > * { break-inside: avoid-column; }
+  .leitor[data-nova-pagina="1"] .secao { break-before: page; }
+  .leitor[data-nova-pagina="1"] .secao:first-of-type { break-before: auto; }
+  .indice { break-inside: avoid; }
   .corpo { background: #fff; color: #000; padding: 0; margin: 0; }
-  .folha { max-width: none; font-size: 11pt; line-height: 1.45; }
+  /* a barra do grifo pronto e a forma do parágrafo marcado saem um pouco para a esquerda do texto: o recuo
+     mantém tudo dentro da área imprimível (sem ele, a barra ficava na margem da página e não era impressa) */
+  .folha { max-width: none; font-size: 11pt; line-height: 1.45; padding-left: calc(var(--margem) + 0.3em); }
   .estrutura, .rubrica { break-after: avoid; }
-  .marca, .b[data-pronto] > .txt, .b[data-pronto]::after { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .marca, .b[data-pronto] > .txt, .b[data-pronto]::after, .b[data-marca-bloco]::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .sumario a { color: inherit; }
 }
+
+/* menu "Ir para" (toque no botão do slide): abas e listas de títulos e capítulos, grifos, remissivo e erros */
+.navegar { display: grid; gap: 0.75rem; }
+.abasNavegar { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.abaNavegar {
+  min-height: 40px; padding: 0.4rem 0.85rem; border: 1px solid var(--leitor-borda); border-radius: 999px; background: var(--leitor-painel);
+  color: var(--leitor-fg); font: inherit; font-size: 0.86rem; cursor: pointer;
+}
+.abaNavegar[aria-selected="true"] { border-color: var(--primary); color: var(--primary); font-weight: 700; background: color-mix(in srgb, var(--primary) 12%, var(--leitor-painel)); }
+.navegarLista { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.navegarLista button {
+  width: 100%; display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.6rem 0.75rem; border: 1px solid var(--leitor-borda); border-radius: 12px;
+  background: var(--leitor-painel); color: var(--leitor-fg); font: inherit; font-size: 0.9rem; text-align: left; cursor: pointer;
+}
+.navegarLista button:disabled { opacity: 0.5; cursor: default; }
+.navegarLista button > span { display: grid; gap: 0.15rem; min-width: 0; }
+.navegarLista em { font-style: normal; color: var(--leitor-muted); font-size: 0.85em; }
+.navegarLista small { color: var(--leitor-muted); }
+.navegarTexto { color: var(--leitor-muted); font-size: 0.88em; line-height: 1.35; }
+.buscaNavegar { width: 100%; padding: 0.55rem 0.8rem; border: 1px solid var(--leitor-borda); border-radius: 12px; background: var(--leitor-painel); color: var(--leitor-fg); font: inherit; }
+/* a busca acompanha a lista ao rolar; a sombra da cor do painel cobre o que passa por trás dela */
+.buscaNavegar { position: sticky; top: 0; z-index: 2; box-shadow: 0 0 0 0.4rem var(--leitor-painel); }
+.remissivoNavegar { margin: 0; display: grid; gap: 0.6rem; font-size: 0.9rem; }
+.remissivoNavegar dt { font-weight: 700; }
+.remissivoNavegar dd { margin: 0 0 0 1em; line-height: 1.4; }
+.remissivoNavegar dd button { padding: 0; border: 0; background: none; color: var(--leitor-link, var(--primary)); font: inherit; text-decoration: underline; cursor: pointer; }
+/* popup "Ir para": as abas ficam fixas no topo enquanto a lista rola; os slides de títulos e de erros */
+.navegarTopo { position: sticky; top: -0.25rem; z-index: 2; background: var(--leitor-painel); padding: 0.1rem 0 0.6rem; }
+.slide { display: grid; gap: 0.4rem; font-size: 0.9rem; margin-bottom: 0.5rem; }
+.slideRotulo { font-weight: 600; }
+.slideTrilho { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.6rem; color: var(--leitor-muted); font-size: 0.84rem; }
+.slideTrilho input { width: 100%; accent-color: var(--primary); }
+.navegarTopo .slide { margin: 0.5rem 0 0; }
+
+/* popup "Ir para": abas compactas numa faixa só; o slide numa linha, fixo no topo com as abas */
+.abasNavegar { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 0.3rem; scrollbar-width: none; padding-bottom: 0.1rem; }
+.abasNavegar::-webkit-scrollbar { display: none; }
+.abaNavegar { flex: none; min-height: 30px; padding: 0.22rem 0.6rem; font-size: 0.78rem; white-space: nowrap; }
+.navegarTopo { padding: 0.05rem 0 0.4rem; }
+.slide { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 0.6rem; margin: 0.35rem 0 0; font-size: 0.82rem; }
+.slide input { width: 100%; accent-color: var(--primary); }
+.slideRotulo { white-space: nowrap; color: var(--leitor-muted); font-size: 0.8rem; }
+.remissivoNavegar dd a { color: var(--leitor-link, var(--primary)); text-decoration: underline; text-underline-offset: 0.15em; }
+/* a faixa de abas rola sozinha: não pode alargar a coluna do popup (que tem a largura do painel) */
+.navegar, .navegarTopo, .abasNavegar, .remissivoNavegar, .remissivoNavegar > div { min-width: 0; max-width: 100%; }
+.remissivoNavegar dd { overflow-wrap: anywhere; }
+
+/* a barra de progresso acompanha a largura da coluna do texto (a mesma do parágrafo), não a largura do leitor */
+.barraTexto { max-width: 44rem; margin: 0 auto; padding-inline: clamp(0.75rem, 4vw, 3rem); }
+.leitor[data-largura="livre"] .barraTexto { max-width: none; padding-left: var(--leitor-laterais, 0px); padding-right: max(var(--leitor-laterais, 0px), 56px); }
+
+/* o "Ir para": abas em ícones ao lado do fechar; o nome da aba aparece ao passar o mouse (sem rolagem na horizontal) */
+.folhaAcoes { display: flex; align-items: center; gap: 0.45rem; margin-left: auto; margin-right: 0.5rem; }
+.abasIcones { display: flex; align-items: center; gap: 0.2rem; }
+.abaIcone {
+  position: relative; width: 34px; height: 34px; display: grid; place-items: center; padding: 0;
+  border-radius: 10px; border: 1px solid transparent; background: transparent; color: var(--leitor-muted); cursor: pointer;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+}
+.abaIcone > svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.abaIcone > .logoAba { fill: currentColor; stroke: none; }
+.abaIcone:hover { color: var(--leitor-fg); background: color-mix(in srgb, var(--leitor-fg) 7%, transparent); }
+.abaIcone[aria-selected="true"] {
+  color: var(--primary); border-color: color-mix(in srgb, var(--primary) 45%, transparent);
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+}
+.abaIcone:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.abaIcone::after {
+  content: attr(data-tip); position: absolute; top: calc(100% + 6px); left: 50%; z-index: 6;
+  transform: translate(-50%, -3px); white-space: nowrap; padding: 0.3rem 0.6rem; border-radius: 8px;
+  background: var(--leitor-fg); color: var(--leitor-painel); font-size: 0.74rem; font-weight: 600; line-height: 1.2;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.18); opacity: 0; pointer-events: none; transition: opacity 0.15s, transform 0.15s;
+}
+.abaIcone:hover::after,
+.abaIcone:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
+.abaLetra { font-size: 0.7rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+
+/* os grifos agrupados por cor: um bloco por cor, com o nome do sistema de cores */
+.grupoCor { display: grid; gap: 0.35rem; margin-top: 0.3rem; }
+.grupoCorTitulo {
+  display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0 0.1rem; font-family: var(--font-body), sans-serif;
+  font-size: 0.86rem; font-weight: 700;
+}
+/* os artigos de um tipo de grifo pronto, em botões compactos para escolher */
+.artigosDoGrupo { list-style: none; margin: 0 0 0.35rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.artigosDoGrupo button {
+  min-height: 34px; padding: 0.3rem 0.65rem; border: 1px solid var(--leitor-borda); border-radius: 10px; background: var(--leitor-painel);
+  color: var(--leitor-fg); font: inherit; font-size: 0.86rem; white-space: nowrap; cursor: pointer;
+}
+.artigosDoGrupo button:hover { border-color: var(--primary); color: var(--primary); }
+.artigosDoGrupo button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.grupoCorTitulo em { margin-left: auto; font-style: normal; font-weight: 600; font-size: 0.8rem; color: var(--leitor-muted); }
+/* editor do sistema de cores: copiar os grifos de outro sistema, e a linha do significado com o grifo pronto que ela pinta */
+.copiar { display: grid; gap: 0.35rem; }
+.copiar > p { margin: 0; }
+.linhaCorTexto { flex: 1; display: grid; gap: 0.15rem; min-width: 0; }
+.linhaCorTexto input { width: 100%; padding: 0.4rem 0.6rem; border: 1px solid var(--border); border-radius: 8px; }

@@ -94,12 +94,27 @@ function avaliarTermos(norm: string, termos: string[]): { ok: boolean; evid: str
   return { ok: faltou.length === 0, evid, faltou };
 }
 
+/**
+ * Os termos de uma mesma regra (todos têm de aparecer) precisam estar num mesmo parágrafo: "multa" no título de uma parte
+ * e "crime continuado" no de outra não compõem a resposta. Cada Enter separa um parágrafo; a quebra suave não separa.
+ */
+function avaliarNoParagrafo(paragrafos: string[], termos: string[]): ReturnType<typeof avaliarTermos> {
+  let melhor: ReturnType<typeof avaliarTermos> | null = null;
+  for (const p of paragrafos) {
+    const r = avaliarTermos(p, termos);
+    if (r.ok) return r;
+    if (!melhor || r.faltou.length < melhor.faltou.length) melhor = r;
+  }
+  return melhor ?? avaliarTermos("", termos);
+}
+
 function avaliarComponente(
   c: Componente,
   norm: string,
   citacoes: Citacao[],
   tokens: string[],
   ctx: Contexto,
+  paragrafos: string[],
 ): Omit<ResultadoComponente, "bloqueadoPor"> {
   const rotulo = rotuloComponente(c, ctx.leis, ctx.lex);
   const base = { id: c.id, rotulo, valor: c.valor };
@@ -121,7 +136,7 @@ function avaliarComponente(
   const conjuntos = c.alternativas ?? [c.termos ?? []];
   let melhor: ReturnType<typeof avaliarTermos> | null = null;
   for (const conj of conjuntos) {
-    const r = avaliarTermos(norm, conj);
+    const r = avaliarNoParagrafo(paragrafos, conj);
     if (r.ok) return { ...base, obtido: c.valor, evidencias: r.evid, faltou: [] };
     if (!melhor || r.faltou.length < melhor.faltou.length) melhor = r;
   }
@@ -131,11 +146,12 @@ function avaliarComponente(
 export function avaliarItens(itens: Item[], texto: string, ctx: Contexto): ResultadoItem[] {
   const norm = normalize(texto);
   const tokens = norm.trim().split(" ");
+  const paragrafos = texto.split(/(?<!\u200b)\n/).map((p) => normalize(p));
   const citacoes = extrairCitacoes(norm, ctx.lex);
 
   return itens.map((item) => {
     const resultados = new Map<string, ResultadoComponente>();
-    for (const c of item.componentes) resultados.set(c.id, avaliarComponente(c, norm, citacoes, tokens, ctx));
+    for (const c of item.componentes) resultados.set(c.id, avaliarComponente(c, norm, citacoes, tokens, ctx, paragrafos));
     // Regra FGV: dispositivo legal sozinho não pontua.
     for (const c of item.componentes) {
       if (!c.requer) continue;
@@ -155,29 +171,38 @@ export function avaliarItens(itens: Item[], texto: string, ctx: Contexto): Resul
   });
 }
 
-/** Identifica a peça escolhida pelo examinando (aproximação pelo início do texto). */
-export function identificarPeca(texto: string, tipoEsperado: string, extras: string[], ctx: Contexto) {
-  const norm = normalize(texto);
-  const head = norm.slice(0, 1200);
+/**
+ * As peças nomeadas no início do texto, na ordem em que aparecem; uma contida em outra maior não conta ("apelacao"
+ * dentro de "contrarrazoes de apelacao"). `extras` são nomes a mais aceitos para a peça `tipoEsperado`.
+ * `comSiglas` acrescenta a cada peça as siglas do catálogo (`siglas`): só o campo de peça do quiz deve usar, pois no
+ * texto inteiro do simulador siglas curtas dariam falso positivo ("MS" em "Campo Grande/MS", "ré" virando "re").
+ */
+export function pecasNoInicio(texto: string, ctx: Contexto, tipoEsperado = "", extras: string[] = [], comSiglas = false) {
+  const head = normalize(texto).slice(0, 1200);
   const hits: { tipo: string; nome: string; start: number; end: number }[] = [];
   for (const [tipo, p] of Object.entries(ctx.pecas)) {
-    const aliases = [p.nome, ...p.aliases, ...(tipo === tipoEsperado ? extras : [])];
+    const aliases = [p.nome, ...p.aliases, ...(comSiglas ? (p.siglas ?? []) : []), ...(tipo === tipoEsperado ? extras : [])];
     for (const a of aliases) {
       const m = termToRegex(a).exec(head);
       if (m) hits.push({ tipo, nome: p.nome, start: m.index, end: m.index + m[0].length });
     }
   }
-  // Remove acertos contidos em outro maior ("apelacao" dentro de "contrarrazoes de apelacao").
-  const maximal = hits.filter(
-    (h) => !hits.some((o) => o !== h && o.tipo !== h.tipo && o.start <= h.start && o.end >= h.end && o.end - o.start > h.end - h.start),
-  );
+  return hits
+    .filter((h) => !hits.some((o) => o !== h && o.tipo !== h.tipo && o.start <= h.start && o.end >= h.end && o.end - o.start > h.end - h.start))
+    .sort((a, b) => a.start - b.start);
+}
+
+/** Identifica a peça escolhida pelo examinando (aproximação pelo início do texto). */
+export function identificarPeca(texto: string, tipoEsperado: string, extras: string[], ctx: Contexto, comSiglas = false) {
+  const norm = normalize(texto);
+  const maximal = pecasNoInicio(texto, ctx, tipoEsperado, extras, comSiglas);
   if (maximal.some((h) => h.tipo === tipoEsperado)) return { status: "ok" as const };
   if (maximal.length) {
-    const primeira = maximal.sort((a, b) => a.start - b.start)[0];
-    return { status: "inadequada" as const, detectada: primeira.nome };
+    const primeira = maximal[0];
+    return { status: "inadequada" as const, detectada: primeira.nome, tipo: primeira.tipo };
   }
   const esperada = ctx.pecas[tipoEsperado];
-  const todos = [esperada?.nome, ...(esperada?.aliases ?? []), ...extras].filter(Boolean) as string[];
+  const todos = [esperada?.nome, ...(esperada?.aliases ?? []), ...(comSiglas ? (esperada?.siglas ?? []) : []), ...extras].filter(Boolean) as string[];
   if (todos.some((a) => termToRegex(a).test(norm))) return { status: "ok" as const };
   return { status: "nao-identificada" as const };
 }

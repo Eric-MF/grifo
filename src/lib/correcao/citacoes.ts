@@ -18,6 +18,8 @@ interface CitacaoArtigo {
   diploma: string | null;
   /** Índice do token onde a citação começa (para recortar o trecho). */
   pos: number;
+  /** Índice do último token da citação, inclusive (o diploma, quando vem junto: "art. 41 da Lei 11340"). */
+  fim: number;
 }
 interface CitacaoSumula {
   tipo: "sumula";
@@ -25,6 +27,8 @@ interface CitacaoSumula {
   tribunal: string | null;
   vinculante: boolean;
   pos: number;
+  /** Índice do último token da citação, inclusive (o tribunal, quando vem junto: "Súmula 542 do STJ"). */
+  fim: number;
 }
 export type Citacao = CitacaoArtigo | CitacaoSumula;
 
@@ -87,12 +91,15 @@ const romanOrNum = (t: string | undefined): string | null => {
 export function extrairCitacoes(norm: string, lex: Lexico): Citacao[] {
   const tokens = norm.trim().split(" ");
   const out: Citacao[] = [];
-  const diplomaMarks: { pos: number; id: string }[] = [];
+  const diplomaMarks: { pos: number; id: string; fim: number }[] = [];
   let pending: CitacaoArtigo[] = [];
   let lastArtPos = -1;
 
-  const flushWith = (id: string) => {
-    for (const c of pending) c.diploma = id;
+  const flushWith = (id: string, fim: number) => {
+    for (const c of pending) {
+      c.diploma = id;
+      c.fim = Math.max(c.fim, fim);
+    }
     pending = [];
   };
 
@@ -108,25 +115,41 @@ export function extrairCitacoes(norm: string, lex: Lexico): Citacao[] {
         j++;
       }
       let n: string | null = null;
-      if (isNum(tokens[j])) n = tokens[j++];
-      else {
-        // "enunciado 700 da sumula" / "verbete 700 da sumula"
-        for (let b = i - 1; b >= Math.max(0, i - 3); b--) if (isNum(tokens[b])) n = tokens[b];
+      // a citação começa na palavra "sumula", ou no número, quando ele vem antes ("enunciado 700 da sumula")
+      let pos = i;
+      let fim = i;
+      if (isNum(tokens[j])) {
+        n = tokens[j];
+        fim = j;
+        j++;
+      } else {
+        for (let k = i - 1; k >= Math.max(0, i - 3); k--)
+          if (isNum(tokens[k])) {
+            n = tokens[k];
+            pos = k;
+          }
+        // "enunciado 542 da sumula" entra inteiro na citação
+        if (n && pos > 0 && (tokens[pos - 1] === "enunciado" || tokens[pos - 1] === "verbete")) pos--;
       }
-      let tribunal: string | null = vinculante ? "stf" : null;
+      // o tribunal, logo depois do número: a súmula só vale com ele ("do STJ", "da Súmula do STF")
+      let tribunal: string | null = null;
       for (let k = j; k < Math.min(tokens.length, j + 5) && !tribunal; k++) {
         const m = matchAlias(tokens, k, lex.tribunais);
-        if (m) tribunal = m.id;
+        if (m) {
+          tribunal = m.id;
+          fim = Math.max(fim, k + m.len - 1);
+        }
       }
-      if (n) out.push({ tipo: "sumula", n, tribunal, vinculante, pos: i });
+      if (vinculante) tribunal = "stf";
+      if (n) out.push({ tipo: "sumula", n, tribunal, vinculante, pos, fim: Math.max(fim, i) });
       continue;
     }
 
     // --- Diplomas (fecham artigos pendentes) ------------------------------
     const d = matchDiploma(tokens, i, lex);
     if (d) {
-      diplomaMarks.push({ pos: i, id: d.id });
-      if (pending.length && i - lastArtPos <= 30) flushWith(d.id);
+      diplomaMarks.push({ pos: i, id: d.id, fim: i + d.len - 1 });
+      if (pending.length && i - lastArtPos <= 30) flushWith(d.id, i + d.len - 1);
       else pending = [];
       i += d.len - 1;
       continue;
@@ -138,7 +161,7 @@ export function extrairCitacoes(norm: string, lex: Lexico): Citacao[] {
       let cur: CitacaoArtigo | null = null;
       let mode: "art" | "par" | "inc" | "al" = "art";
       const startNew = (num: string, pos: number) => {
-        cur = { tipo: "art", art: num, pars: [], incs: [], als: [], caput: false, diploma: null, pos };
+        cur = { tipo: "art", art: num, pars: [], incs: [], als: [], caput: false, diploma: null, pos, fim: pos };
         out.push(cur);
         pending.push(cur);
         mode = "art";
@@ -148,21 +171,36 @@ export function extrairCitacoes(norm: string, lex: Lexico): Citacao[] {
       for (; j < tokens.length; j++) {
         const w = tokens[j];
         const c = cur as unknown as CitacaoArtigo;
-        if (w === "caput") c.caput = true;
-        else if (w === "paragrafo" || w === "paragrafos") {
+        if (w === "caput") {
+          c.caput = true;
+          c.fim = j;
+        } else if (w === "paragrafo" || w === "paragrafos") {
           mode = "par";
+          c.fim = j;
           if (tokens[j + 1] === "unico") {
             c.pars.push("unico");
             j++;
+            c.fim = j;
           }
-        } else if (w === "inciso" || w === "incisos") mode = "inc";
-        else if (w === "alinea" || w === "alineas") mode = "al";
-        else if (w === "unico" && mode === "par") c.pars.push("unico");
-        else if (/^\d+$/.test(w)) {
+        } else if (w === "inciso" || w === "incisos") {
+          mode = "inc";
+          c.fim = j;
+        } else if (w === "alinea" || w === "alineas") {
+          mode = "al";
+          c.fim = j;
+        } else if (w === "unico" && mode === "par") {
+          c.pars.push("unico");
+          c.fim = j;
+        } else if (/^\d+$/.test(w)) {
           const n = Number(w);
           const last = (arr: string[]) => Number(arr[arr.length - 1] ?? 0);
-          if (mode === "par" && n <= 20 && !(c.pars.length && n > last(c.pars) + 10)) c.pars.push(w);
-          else if (mode === "inc" && n <= 90 && !(c.incs.length && n > last(c.incs) + 15)) c.incs.push(w);
+          if (mode === "par" && n <= 20 && !(c.pars.length && n > last(c.pars) + 10)) {
+            c.pars.push(w);
+            c.fim = j;
+          } else if (mode === "inc" && n <= 90 && !(c.incs.length && n > last(c.incs) + 15)) {
+            c.incs.push(w);
+            c.fim = j;
+          }
           else if (mode === "art" && c.pars.length === 0 && c.incs.length === 0 && n <= 90 && tokens[j - 1] !== "e") {
             // "art 5 65" é improvável; trata número solto logo após o artigo como fim
             break;
@@ -171,8 +209,10 @@ export function extrairCitacoes(norm: string, lex: Lexico): Citacao[] {
         else if ((mode === "art" || mode === "par" || mode === "inc") && /^(?:[ivx][ivxlc]*|l[ivxlc]+)$/.test(w) && romanOrNum(w)) {
           c.incs.push(romanOrNum(w)!);
           mode = "inc";
+          c.fim = j;
         } else if (LETRA_ALINEA.test(w) && (mode === "al" || ((mode === "par" || mode === "inc") && w !== "a" && w !== "e"))) {
           c.als.push(w);
+          c.fim = j;
         } else if (w === "e" || w === "ou" || w === "combinado" || w === "com") {
           /* conectores de enumeração */
         } else if (CONNECTORS.has(w)) {
@@ -207,13 +247,14 @@ const subset = (need: string[], have: string[]) => need.every((x) => have.includ
 
 /** A citação encontrada satisfaz a esperada? (encontrada pode ser mais detalhada) */
 export function citacaoAtende(esperada: Citacao, encontrada: Citacao): boolean {
+  // a súmula vale pelo número e pelo tribunal: "Súmula 700" sem o STF não pontua quando a rubrica pede o STF
   if (esperada.tipo === "sumula" || encontrada.tipo === "sumula") {
     return (
       esperada.tipo === "sumula" &&
       encontrada.tipo === "sumula" &&
       esperada.n === encontrada.n &&
       esperada.vinculante === encontrada.vinculante &&
-      (!esperada.tribunal || !encontrada.tribunal || esperada.tribunal === encontrada.tribunal)
+      (!esperada.tribunal || esperada.tribunal === encontrada.tribunal)
     );
   }
   if (esperada.art !== encontrada.art) return false;

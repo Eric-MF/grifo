@@ -7,6 +7,7 @@ import type { PerguntaFixa } from "@/content/schema";
 import { gravarJSON, lerJSON } from "@/lib/storage";
 import { CATEGORIAS_PADRAO } from "./categorias";
 import { GERADORES } from "./geradores";
+import { comNomes } from "./nomes";
 import { criarRng } from "./rng";
 import type { Categoria, Pergunta, PerguntaItem, PerguntaPeca } from "./types";
 import { nomePeca } from "./verificar";
@@ -36,6 +37,7 @@ const FIXAS: PerguntaPeca[] = (perguntasFixas as PerguntaFixa[]).map((q) => ({
   explicacao: q.explicacao,
   fonte: q.fonte,
   distratores: q.distratores,
+  ...((q as { pessoas?: ("m" | "f")[] }).pessoas ? { pessoas: (q as { pessoas?: ("m" | "f")[] }).pessoas } : {}),
 }));
 
 /** Rascunhos só aparecem no servidor de desenvolvimento, com ?rascunho=1 na URL. */
@@ -59,11 +61,20 @@ function anotar(est: Estado, p: Pergunta): Pergunta {
   return p;
 }
 
+/**
+ * "Peça e fundamento" é pergunta curta e direta: um caso de poucas linhas e "qual a peça e o fundamento". O enunciado
+ * inteiro da peça de um exame (milhares de caracteres) não entra: ele é a prova, não uma questão sobre a peça.
+ */
+export const MAX_CASO_PECA = 700;
+const curta = (p: Pergunta) => p.caso.length <= MAX_CASO_PECA;
+
+/** As perguntas prontas de "Peça e fundamento": casos resumidos de exames e objetivas sobre a peça ou o recurso cabível. */
+export const prontasDePeca = (rascunhos = comRascunhos()): Pergunta[] =>
+  [...FIXAS, ...ACERVO(rascunhos).filter((p) => p.formato !== "peca" && p.categorias.includes("peca"))].filter(curta);
+
 function sortearPeca(est: Estado): Pergunta {
-  // ~20% das vezes, uma pergunta pronta (casos de exames reais e objetivas sobre peça cabível) ainda não vista
-  const prontas = [...FIXAS, ...ACERVO().filter((p) => p.formato !== "peca" && p.categorias.includes("peca"))].filter(
-    (p) => !est.recentes.includes(chaveRecente(p)),
-  );
+  // ~20% das vezes, uma pergunta pronta ainda não vista
+  const prontas = prontasDePeca().filter((p) => !est.recentes.includes(chaveRecente(p)));
   if (prontas.length && Math.random() < 0.2) return anotar(est, prontas[Math.floor(Math.random() * prontas.length)]);
   const pesos = GERADORES.map((g) => {
     const e = est.erros[g.peca] ?? 0;
@@ -81,11 +92,26 @@ function sortearPeca(est: Estado): Pergunta {
   return gerarPergunta(GERADORES[0].id, Date.now() >>> 0);
 }
 
+/** Quanto o item vale na tabela da FGV: a nota máxima de cada item, somada. */
+export function valorDoItem(p: PerguntaItem): number {
+  return p.itens.reduce((s, i) => s + (i.valores?.length ? Math.max(...i.valores) : i.componentes.reduce((t, c) => t + c.valor, 0)), 0);
+}
+
+/**
+ * Em "Por dentro da peça", a chance de cada item é proporcional ao que ele vale na prova: o item de 0,10 aparece
+ * um sexto das vezes do de 0,60. Nas outras categorias, todas têm a mesma chance.
+ */
+export const pesoNoSorteio = (p: Pergunta, c: Categoria) => (c === "peca-detalhe" && p.formato === "item" ? Math.max(0.05, valorDoItem(p)) : 1);
+
 function sortearDoAcervo(est: Estado, c: Categoria): Pergunta {
   const todas = ACERVO().filter((p) => p.categorias.includes(c));
   const novas = todas.filter((p) => !est.recentes.includes(p.id));
   const pool = novas.length ? novas : todas;
-  return anotar(est, pool[Math.floor(Math.random() * pool.length)]);
+  const pesos = pool.map((p) => pesoNoSorteio(p, c));
+  let r = Math.random() * pesos.reduce((s, x) => s + x, 0);
+  let i = 0;
+  while ((r -= pesos[i]!) > 0 && i < pool.length - 1) i++;
+  return anotar(est, pool[i]!);
 }
 
 /** Sorteia a categoria (mais peso para onde o jogador erra) e, dentro dela, a pergunta. */
@@ -101,7 +127,8 @@ export function sortearPergunta({ categorias = CATEGORIAS_PADRAO }: { categorias
   let i = 0;
   while ((r -= pesos[i]) > 0 && i < pesos.length - 1) i++;
   const c = escolhidas[i];
-  return c === "peca" ? sortearPeca(est) : sortearDoAcervo(est, c);
+  // as pessoas da prova ganham nomes da mitologia, novos a cada vez
+  return comNomes(c === "peca" ? sortearPeca(est) : sortearDoAcervo(est, c));
 }
 
 export function registrarResultado(p: Pergunta, acertou: boolean) {

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { LerVademecum } from "./LerVademecum";
 
 export const metadata: Metadata = {
-  title: "Vade-mécum",
-  description: "Leitura e impressão de um vade-mécum montado no Grifo.",
+  title: "Vade Mecum",
+  description: "Leitura e impressão de um Vade Mecum montado no Grifo.",
   robots: { index: false },
 };
 

@@ -244,7 +244,7 @@ questoes:
         descricao: "- O prazo para a interposição do recurso é de 05 (cinco) dias (0,15), conforme previsto na Súmula 700 ou Súmula 699, ambas do STF (0,10)."
         componentes:
           - { id: c1, valor: 0.15, termos: [ 5 dias ] }
-          - { id: c2, valor: 0.1, dispositivo: [ Súmula 700, Súmula 699 STF ], requer: c1 }
+          - { id: c2, valor: 0.1, dispositivo: [ Súmula 700 STF, Súmula 699 STF ], requer: c1 }
       - n: C
         secao: "Obs.: A mera indicação da Súmula não pontua"
         descricao: "- A interposição desse recurso suspende a eficácia da sentença, conforme previsto no Art. 179, da LEP c/c Art. 197, da LEP (0,25)."

@@ -125,7 +125,7 @@ questoes:
         descricao: "Não, por falta de previsão legal (0,85). OU Não, porque o art. 83 do CP não prevê tal possibilidade (0,85). OU Não, com base no Verbete 441 da Súmula do STJ, verbis: “A falta grave não interrompe o prazo para obtenção de livramento condicional” (0,85). OBS.: A mera indicação ou reprodução literal de dispositivo legal ou verbete sumular impede a atribuição de pontos."
         valores: [ 0, 0.85 ]
         componentes:
-          - { id: c1, valor: 0.85, alternativas: [ [ falta de previsao legal | sem previsao legal | nao preve | ausencia de previsao ], [ sumula 441 ], [ nao interrompe, livramento ] ], rotulo: "Não: falta de previsão legal (art. 83 do CP) OU Súmula 441 do STJ" }
+          - { id: c1, valor: 0.85, dispositivo: [ Súmula 441 STJ ], alternativas: [ [ falta de previsao legal | sem previsao legal | nao preve | ausencia de previsao ], [ nao interrompe, livramento ] ], rotulo: "Não: falta de previsão legal (art. 83 do CP) OU Súmula 441 do STJ" }
       - n: A2
         descricao: Admitir tal possibilidade seria ferir o princípio da legalidade (0,40). OU Admitir tal possibilidade seria ferir o princípio do ne bis in idem (0,40). OU Admitir tal possibilidade seria permitir analogia in malam partem, o que é vedado em Direito Penal (0,40).
         valores: [ 0, 0.4 ]
@@ -185,7 +185,7 @@ questoes:
         valores: [ 0, 0.5, 0.75 ]
         componentes:
           - { id: c1, valor: 0.5, termos: [ justica estadual ] }
-          - { id: c2, valor: 0.25, alternativas: [ [ brasil | territorio nacional ], [ nao houve, trafico internacional | transnacional ], [ sumula 522 ], [ "70", 11343 | lei de drogas ] ], requer: c1, rotulo: Cidades no Brasil OU não houve tráfico internacional OU Súmula 522 do STF OU art. 70 da Lei 11.343/06 }
+          - { id: c2, valor: 0.25, dispositivo: [ Súmula 522 STF ], alternativas: [ [ brasil | territorio nacional ], [ nao houve, trafico internacional | transnacional ], [ "70", 11343 | lei de drogas ] ], requer: c1, rotulo: Cidades no Brasil OU não houve tráfico internacional OU Súmula 522 do STF OU art. 70 da Lei 11.343/06 }
       - n: B
         descricao: "Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior (0,50). OBS.1: A justificativa correta é essencial para atribuição de pontos, pois não há intervalo de pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
         valores: [ 0, 0.5 ]

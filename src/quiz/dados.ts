@@ -1,15 +1,9 @@
 // Ingredientes para variar os casos gerados (nomes, crimes, comarcas, datas).
+import nomesMitologia from "@/content/generated/nomes-mitologia.json";
 import type { Rng } from "./types";
 
-const NOMES = [
-  "Ana", "Bruno", "Carla", "Diego", "Eduarda", "Fábio", "Gabriela", "Heitor", "Isabela", "João",
-  "Kátia", "Lucas", "Mariana", "Nelson", "Olívia", "Paulo", "Queila", "Rafael", "Sofia", "Tiago",
-  "Úrsula", "Vinícius", "Wanda", "Xavier", "Yara", "Zeca", "Alice", "Bernardo", "Cecília", "Davi",
-  "Elisa", "Felipe", "Giovana", "Henrique", "Iara", "Júlio", "Lara", "Mateus", "Nina", "Otávio",
-  "Priscila", "Renato", "Sabrina", "Thiago", "Valéria", "Wagner", "Beatriz", "Caio", "Débora", "Enzo",
-  "Fernanda", "Gustavo", "Helena", "Igor", "Joana", "Leonardo", "Marta", "Natan", "Paula", "Roberto",
-  "Sílvia", "Tânia", "Ulisses", "Vera", "Marieta", "Tício", "Mévio", "Caio Túlio", "Rodrigo", "Cláudio",
-] as const;
+// os mesmos nomes da mitologia que substituem as pessoas das provas (content/nomes-mitologia.yaml)
+const NOMES = [...nomesMitologia.masculinos, ...nomesMitologia.femininos];
 
 export const COMARCAS = ["Alfa", "Beta", "Gama", "Delta", "Épsilon", "Zeta", "Ômega", "Campo Belo", "Flores", "Rio Claro", "Serra Alta", "Porto Novo", "Vila Real", "Monte Verde"] as const;
 

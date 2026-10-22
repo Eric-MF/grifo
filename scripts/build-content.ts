@@ -11,6 +11,7 @@
 
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, watch, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { gzipSync } from "node:zlib";
 import { parse } from "yaml";
 import {
   ExameSchema,
@@ -20,6 +21,8 @@ import {
   PerguntasArquivoSchema,
   PerguntasItensArquivoSchema,
   ObjetivasArquivoSchema,
+  NomesPessoasSchema,
+  NomesMitologiaSchema,
   type Exame,
   type PerguntaFixa,
   type Item,
@@ -27,8 +30,12 @@ import {
 import { buildLexico, parseDispositivo, toRoman } from "../src/lib/correcao/citacoes.ts";
 import { aplicarRotulos } from "../src/content/rotulos.ts";
 import { paraSimulado } from "../src/lib/correcao/simulado.ts";
-import { datasComLocal, marcoDeRevogacao, textoAtual, type Bloco, type Datas, type DatasLei } from "../src/lib/leis/linha-do-tempo.ts";
+import { datasComLocal, marcoDeRevogacao, textoAtual, type Bloco, type Datas, type DatasLei, type InfoBloco } from "../src/lib/leis/linha-do-tempo.ts";
 import { vigenciasDaLei, type Vigencia } from "../src/lib/leis/vigencias.ts";
+import { blocosDaSumulas, disponiveisDe, idSumulas, NOME_SUMULAS, remissivoDasSumulas } from "../src/lib/leis/sumulas.ts";
+import { dividirEmPartes } from "../src/lib/leis/partes.ts";
+import { criarLeitor, marcarPessoas, nomesDesconhecidos, type Marcacao } from "../src/lib/nomes/marcar.ts";
+import type { Remissivo, SumulasDoTribunal } from "../src/lib/leis/dados.ts";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const CONTENT = join(ROOT, "content");
@@ -36,6 +43,14 @@ const OUT = join(ROOT, "src/content/generated");
 const DOWNLOADS = join(ROOT, "public/downloads");
 
 const args = new Set(process.argv.slice(2));
+
+/** Uma linha do relatório dos nomes: "id: {p1}=Maria(f, cliente) {p2}=João(m) · de outra prova: Tício→{p2}". */
+function linhaDoRelatorio(id: string, m: Marcacao): string {
+  if (!m.pessoas.length) return "";
+  const pessoas = m.pessoas.map((p, i) => `{p${i + 1}}=${p.chave}(${p.genero}${p.cliente ? ", cliente" : ""})`).join(" ");
+  const alheios = m.alheios.length ? ` · de outra prova: ${m.alheios.map((a) => `${a.chave}→${a.marca}`).join(" ")}` : "";
+  return `${id}: ${pessoas}${alheios}`;
+}
 
 function readYaml(path: string) {
   return parse(readFileSync(path, "utf8"));
@@ -55,6 +70,60 @@ function pendencias(v: unknown, caminho = ""): string[] {
   return [];
 }
 
+/**
+ * Publica o texto de uma lei (ou das súmulas de um tribunal) para o navegador: os blocos, o texto superado
+ * (carregado só quando o leitor precisa) e os artigos vigentes (pop-up, busca e slide). Devolve quantos artigos tem.
+ */
+function publicarTexto(pub: string, base: string, lei: { id: string; nome: string; url: string; coletadoEm: string; blocos: Bloco[] }): number {
+  // as informações adicionais (súmulas) saem do texto: vão comprimidas num arquivo à parte, que o leitor só baixa quando pedido
+  const infos: Record<string, InfoBloco[]> = {};
+  const semInfo = lei.blocos.map((b: Bloco) => {
+    if (!b.info?.length || !b.disp) return b;
+    infos[b.disp] = b.info;
+    const { info: _info, ...resto } = b;
+    return resto as Bloco;
+  });
+  const versoesSuperadas: Record<number, Bloco> = {};
+  const blocosPublicos = semInfo.map((b: Bloco, i: number) => {
+    if (!b.superada) return b;
+    versoesSuperadas[i] = b;
+    return { ...b, texto: marcoDeRevogacao(b) ? b.texto : "" };
+  });
+  // lei acima de 1 MB: o download sai em partes (por LIVRO, ou TÍTULO); o leitor junta as partes na página
+  for (const velha of readdirSync(pub).filter((x) => x.startsWith(`${base}.parte-`) && x.endsWith(".json"))) rmSync(join(pub, velha));
+  const partes = dividirEmPartes(blocosPublicos);
+  if (partes.length) {
+    // os artigos de cada parte: o leitor sabe, só com o arquivo principal, que parte baixar primeiro para chegar a um artigo
+    const arquivos = partes.map((p, k) => ({
+      ...p,
+      arquivo: `${base}.parte-${k + 1}.json`,
+      artigos: [...new Set(blocosPublicos.slice(p.de, p.ate).flatMap((b) => (b.disp ? [b.disp.split(".")[0]!] : [])))],
+    }));
+    arquivos.forEach((p) => writeFileSync(join(pub, p.arquivo), JSON.stringify({ blocos: blocosPublicos.slice(p.de, p.ate) })));
+    writeFileSync(join(pub, `${base}.json`), JSON.stringify({ id: lei.id, nome: lei.nome, url: lei.url, coletadoEm: lei.coletadoEm, blocos: [], total: blocosPublicos.length, partes: arquivos }));
+  } else {
+    writeFileSync(join(pub, `${base}.json`), JSON.stringify({ id: lei.id, nome: lei.nome, url: lei.url, coletadoEm: lei.coletadoEm, blocos: blocosPublicos }));
+  }
+  writeFileSync(join(pub, `${base}.versoes.json`), JSON.stringify(versoesSuperadas));
+  const arquivoInfo = join(pub, `${base}.info.json.gz`);
+  if (Object.keys(infos).length) writeFileSync(arquivoInfo, gzipSync(JSON.stringify(infos), { level: 9 }));
+  else rmSync(arquivoInfo, { force: true });
+  // o dispositivo de cada linha do texto ("p2.i4", relativo ao artigo; "" é o próprio artigo), para a busca dizer onde achou
+  const porArtigo = new Map<string, { rotulo: string; partes: string[]; disps: string[] }>();
+  for (const { bloco } of textoAtual(lei.blocos)) {
+    if (!bloco.disp) continue;
+    const art = bloco.disp.split(".")[0];
+    const a = porArtigo.get(art) ?? { rotulo: "", partes: [], disps: [] };
+    if (bloco.tipo === "artigo" && !a.rotulo) a.rotulo = bloco.rotulo ?? art;
+    a.partes.push(bloco.texto);
+    a.disps.push(bloco.disp === art ? "" : bloco.disp.slice(art.length + 1));
+    porArtigo.set(art, a);
+  }
+  const lista = [...porArtigo].filter(([, a]) => a.rotulo).map(([art, a]) => [art, a.rotulo, a.partes.join("\n"), a.disps]);
+  writeFileSync(join(pub, `${base}.artigos.json`), JSON.stringify({ id: lei.id, nome: lei.nome, artigos: lista }));
+  return lista.length;
+}
+
 function build(): boolean {
   const errors: string[] = [];
   const warnings: string[] = [];
@@ -69,6 +138,13 @@ function build(): boolean {
   if (promos && !promos.success) err("promos.yaml", promos.error.message);
   if (!leis.success || !pecas.success) return report(errors, warnings);
   const lex = buildLexico(leis.data);
+  for (const [tipo, p] of Object.entries(pecas.data)) {
+    if (p.fundamento.length === 0) err("pecas.yaml", `${tipo}: falta o fundamento padrão`);
+    for (const f of p.fundamento) {
+      const c = parseDispositivo(f, lex);
+      if (!c || (c.tipo === "art" && !c.diploma)) err("pecas.yaml", `${tipo}: fundamento "${f}" não reconhecido`);
+    }
+  }
 
   const exames: Exame[] = [];
   const dir = join(CONTENT, "exames");
@@ -113,6 +189,14 @@ function build(): boolean {
             const p = parseDispositivo(d, lex);
             if (!p) err(where, `${parte} item ${it.n}.${c.id}: dispositivo não reconhecido "${d}"`);
             else if (p.tipo === "art" && !p.diploma) err(where, `${parte} item ${it.n}.${c.id}: dispositivo sem diploma "${d}"`);
+            else if (p.tipo === "sumula" && !p.tribunal && !p.vinculante) err(where, `${parte} item ${it.n}.${c.id}: súmula sem tribunal "${d}" (use "Súmula 700 STF")`);
+          }
+          // súmula ou artigo escritos só como palavra (termo "sumula 160") acham qualquer súmula ou artigo: a regra é o dispositivo
+          for (const t of [...(c.termos ?? []), ...(c.alternativas ?? []).flat()]) {
+            const sem = t.normalize("NFD").replace(/[̀-ͯ]/g, "");
+            if (/\b(sumula|enunciado|verbete)\s+(vinculante\s+|sumular\s+|n[º°.]?\s*)?\d/i.test(sem))
+              err(where, `${parte} item ${it.n}.${c.id}: súmula como palavra "${t}" (use dispositivo "Súmula N TRIBUNAL")`);
+            if (/\bart(?:igo)?s?\.?\s*\d/i.test(sem)) err(where, `${parte} item ${it.n}.${c.id}: artigo como palavra "${t}" (use dispositivo "art. N, LEI")`);
           }
         }
       }
@@ -311,11 +395,71 @@ function build(): boolean {
   writeFileSync(join(OUT, "exames-index.json"), JSON.stringify(index, null, 1));
   writeFileSync(join(OUT, "leis.json"), JSON.stringify(leis.data));
   writeFileSync(join(OUT, "pecas.json"), JSON.stringify(pecas.data));
-  writeFileSync(join(OUT, "perguntas.json"), JSON.stringify(perguntas));
-  writeFileSync(join(OUT, "perguntas-itens.json"), JSON.stringify(perguntasItens));
-  writeFileSync(join(OUT, "objetivas.json"), JSON.stringify(objetivas));
+  // As pessoas das questões viram marcas ({p1}…), trocadas na tela por nomes da mitologia (src/quiz/nomes.ts)
+  const nomesPessoas = NomesPessoasSchema.safeParse(readYaml(join(CONTENT, "nomes-pessoas.yaml")));
+  const nomesMitologia = NomesMitologiaSchema.safeParse(readYaml(join(CONTENT, "nomes-mitologia.yaml")));
+  if (!nomesPessoas.success) err("nomes-pessoas.yaml", nomesPessoas.error.message);
+  if (!nomesMitologia.success) err("nomes-mitologia.yaml", nomesMitologia.error.message);
+  if (!nomesPessoas.success || !nomesMitologia.success) return report(errors, warnings);
+  {
+    const { masculinos, femininos } = nomesMitologia.data;
+    const todos = [...masculinos, ...femininos];
+    for (const n of new Set(todos.filter((n, i) => todos.indexOf(n) !== i))) err("nomes-mitologia.yaml", `"${n}" repetido`);
+    const daProva = new Set([...nomesPessoas.data.masculinos, ...nomesPessoas.data.femininos]);
+    for (const n of todos.filter((n) => daProva.has(n))) err("nomes-mitologia.yaml", `"${n}" também é nome de pessoa das provas (nomes-pessoas.yaml)`);
+    const pessoas = [...nomesPessoas.data.masculinos, ...nomesPessoas.data.femininos];
+    for (const n of new Set(pessoas.filter((n, i) => pessoas.indexOf(n) !== i))) err("nomes-pessoas.yaml", `"${n}" repetido (ou nas duas listas)`);
+  }
+  const leitorDePessoas = criarLeitor(nomesPessoas.data);
+  {
+    const textos: string[] = [];
+    const juntar = (v: unknown): void => {
+      if (typeof v === "string") textos.push(v);
+      else if (Array.isArray(v)) v.forEach(juntar);
+      else if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) if (k !== "id" && k !== "fonte" && k !== "termos") juntar(x);
+    };
+    juntar([perguntas, perguntasItens, objetivas]);
+    const novos = nomesDesconhecidos(textos, nomesPessoas.data);
+    if (novos.length) warnings.push(`! nomes-pessoas.yaml: palavras com maiúscula que não estão em nenhuma lista (pessoa nova?): ${novos.join(", ")}`);
+  }
+  const relatorioNomes: string[] = [];
+  const marcar = <T extends Record<string, unknown>>(lista: T[]) =>
+    lista.map((q) => {
+      const { questao, marcacao } = marcarPessoas(q, leitorDePessoas);
+      relatorioNomes.push(linhaDoRelatorio(String(q.id), marcacao));
+      for (const c of marcacao.conflitos) warnings.push(`! nomes: ${String(q.id)}: ${c.join(" / ")} viram a mesma pessoa (o mesmo primeiro nome)`);
+      return questao;
+    });
+  const marcadas = { perguntas: marcar(perguntas as unknown as Record<string, unknown>[]), itens: marcar(perguntasItens), objetivas: marcar(objetivas) };
+  const maxPorGenero = Math.max(
+    ...[...marcadas.perguntas, ...marcadas.itens, ...marcadas.objetivas].flatMap((q) => {
+      const p = (q.pessoas as string[] | undefined) ?? [];
+      return [p.filter((g) => g === "m").length, p.filter((g) => g === "f").length];
+    }),
+  );
+  if (maxPorGenero > Math.min(nomesMitologia.data.masculinos.length, nomesMitologia.data.femininos.length))
+    err("nomes-mitologia.yaml", `uma questão tem ${maxPorGenero} pessoas do mesmo gênero: faltam nomes`);
+  // o relatório fica fora do repositório: quem é quem em cada questão, para conferir a marcação
+  mkdirSync(join(ROOT, ".cache"), { recursive: true });
+  writeFileSync(join(ROOT, ".cache", "nomes-relatorio.txt"), relatorioNomes.filter(Boolean).join("\n") + "\n");
+  writeFileSync(join(OUT, "nomes-mitologia.json"), JSON.stringify(nomesMitologia.data));
+  writeFileSync(join(OUT, "perguntas.json"), JSON.stringify(marcadas.perguntas));
+  writeFileSync(join(OUT, "perguntas-itens.json"), JSON.stringify(marcadas.itens));
+  writeFileSync(join(OUT, "objetivas.json"), JSON.stringify(marcadas.objetivas));
 
-  // Textos das leis do leitor: o navegador baixa sob demanda (linha do tempo, vade-mécum, minha leitura).
+  // Índices alfabético-remissivos (palavra-chave → artigos) dos diplomas do leitor: um arquivo por diploma.
+  const dirRemissivos = join(CONTENT, "remissivos");
+  const pubRemissivos = join(ROOT, "public", "dados", "remissivos");
+  rmSync(pubRemissivos, { recursive: true, force: true });
+  if (existsSync(dirRemissivos)) {
+    mkdirSync(pubRemissivos, { recursive: true });
+    for (const f of readdirSync(dirRemissivos).filter((x) => x.endsWith(".json"))) writeFileSync(join(pubRemissivos, f), readFileSync(join(dirRemissivos, f)));
+  }
+
+  // a cópia antiga das súmulas (public/dados/sumulas) não é mais usada: as súmulas saem como leis, no bloco das leis
+  rmSync(join(ROOT, "public", "dados", "sumulas"), { recursive: true, force: true });
+
+  // Textos das leis do leitor: o navegador baixa sob demanda (linha do tempo, Vade Mecum, minha leitura).
   const dirLeis = join(CONTENT, "leis-texto");
   const pubLeis = join(ROOT, "public", "dados", "leis");
   const indiceLeis: { id: string; nome: string; artigos: number }[] = [];
@@ -328,30 +472,38 @@ function build(): boolean {
     const datasPadrao = datasComLocal(datas);
     for (const f of readdirSync(dirLeis).filter((x) => x.endsWith(".json") && !x.startsWith("_"))) {
       const lei = JSON.parse(readFileSync(join(dirLeis, f), "utf8"));
+      // o texto publicado é o do Planalto ("Art. 1o"); a forma que o Grifo mostra sai na hora de carregar (lib/leis/texto)
       Object.assign(vigencias, vigenciasDaLei(lei.id, lei.blocos as Bloco[], datasPadrao));
-      // o texto superado sai de `<id>.versoes.json`, carregado só quando o leitor precisa dele
-      const versoesSuperadas: Record<number, Bloco> = {};
-      const blocosPublicos = (lei.blocos as Bloco[]).map((b: Bloco, i: number) => {
-        if (!b.superada) return b;
-        versoesSuperadas[i] = b;
-        return { ...b, texto: marcoDeRevogacao(b) ? b.texto : "" };
-      });
-      writeFileSync(join(pubLeis, f), JSON.stringify({ id: lei.id, nome: lei.nome, url: lei.url, coletadoEm: lei.coletadoEm, blocos: blocosPublicos }));
-      writeFileSync(join(pubLeis, f.replace(/\.json$/, ".versoes.json")), JSON.stringify(versoesSuperadas));
-      // texto vigente de cada artigo, para o pop-up, a busca e o slide do leitor
-      const porArtigo = new Map<string, { rotulo: string; partes: string[] }>();
-      for (const { bloco } of textoAtual(lei.blocos as Bloco[])) {
-        if (!bloco.disp) continue;
-        const art = bloco.disp.split(".")[0];
-        const a = porArtigo.get(art) ?? { rotulo: "", partes: [] };
-        if (bloco.tipo === "artigo" && !a.rotulo) a.rotulo = bloco.rotulo ?? art;
-        a.partes.push(bloco.texto);
-        porArtigo.set(art, a);
-      }
-      const lista = [...porArtigo].filter(([, a]) => a.rotulo).map(([art, a]) => [art, a.rotulo, a.partes.join("\n")]);
-      writeFileSync(join(pubLeis, f.replace(/\.json$/, ".artigos.json")), JSON.stringify({ id: lei.id, nome: lei.nome, artigos: lista }));
-      const artigos = lista.length;
+      const artigos = publicarTexto(pubLeis, f.replace(/\.json$/, ""), lei);
       if (artigos) indiceLeis.push({ id: lei.id, nome: lei.nome, artigos });
+    }
+    // as súmulas com texto saem como leis ("sumulas-stf", "sumulas-stj"): o mesmo leitor, fora do índice do Vade Mecum
+    const dirSumulas = join(CONTENT, "sumulas");
+    if (existsSync(join(dirSumulas, "stf.json")) && existsSync(join(dirSumulas, "stj.json"))) {
+      const lidas = {
+        stf: JSON.parse(readFileSync(join(dirSumulas, "stf.json"), "utf8")) as SumulasDoTribunal,
+        stj: JSON.parse(readFileSync(join(dirSumulas, "stj.json"), "utf8")) as SumulasDoTribunal,
+      };
+      const disponiveis = disponiveisDe(lidas.stf, lidas.stj);
+      const vocabulario = existsSync(dirRemissivos)
+        ? readdirSync(dirRemissivos)
+            .filter((x) => x.endsWith(".json"))
+            .flatMap((x) => (JSON.parse(readFileSync(join(dirRemissivos, x), "utf8")) as Remissivo).entradas.map((e) => e.palavra))
+        : [];
+      // as súmulas que o leitor tem (com texto): as citações "Súmula N do STF" viram link para elas
+      writeFileSync(join(OUT, "sumulas-numeros.json"), JSON.stringify({ stf: [...disponiveis.stf].sort((x, y) => x - y), stj: [...disponiveis.stj].sort((x, y) => x - y) }));
+      // o resumo que a página inicial do Vade Mecum mostra: lido sem cache, então acompanha as atualizações
+      const resumo: Record<string, { total: number; baixadas: number; coletadoEm: string; unidades: number }> = {};
+      for (const t of ["stf", "stj"] as const) {
+        const d = lidas[t];
+        const id = idSumulas(t);
+        const blocos = blocosDaSumulas(d, disponiveis);
+        publicarTexto(pubLeis, id, { id, nome: NOME_SUMULAS(t), url: d.fonte, coletadoEm: d.coletadoEm, blocos });
+        resumo[t] = { total: d.total, baixadas: d.baixadas, coletadoEm: d.coletadoEm, unidades: blocos.filter((b) => b.disp && !b.superada).length };
+        // o índice alfabético das súmulas: as palavras-chave dos índices das leis, procuradas nos enunciados
+        if (existsSync(dirRemissivos)) writeFileSync(join(pubRemissivos, `${id}.json`), JSON.stringify(remissivoDasSumulas(d, vocabulario)));
+      }
+      writeFileSync(join(pubLeis, "_sumulas.json"), JSON.stringify(resumo));
     }
     const ordem = Object.keys(leis.data.diplomas);
     indiceLeis.sort((a, b) => ordem.indexOf(a.id) - ordem.indexOf(b.id));
@@ -370,11 +522,32 @@ function build(): boolean {
   const grifos: Record<string, { rotulo: string; lei: string; artigos?: string; dispositivos?: string[]; nota?: string }[]> = existsSync(arqGrifos)
     ? (readYaml(arqGrifos) ?? {})
     : {};
-  for (const [sistema, regras] of Object.entries(grifos))
+  // as súmulas com texto (as regras das súmulas citam o número delas em `artigos`)
+  const arqNumeros = join(OUT, "sumulas-numeros.json");
+  const numerosSumulas: Record<string, number[]> = existsSync(arqNumeros) ? JSON.parse(readFileSync(arqNumeros, "utf8")) : {};
+  const numerosDaFaixa = (t: string) =>
+    t.split(",").flatMap((p) => {
+      const [a, b = a] = p.trim().split("-").map(Number);
+      return Array.from({ length: Math.max(0, b! - a! + 1) }, (_, k) => a! + k);
+    });
+  for (const [sistema, regras] of Object.entries(grifos)) {
+    const jaPintadas = new Map<string, string>();
     for (const r of regras) {
-      if (!indiceLeis.some((l) => l.id === r.lei)) warnings.push(`! grifos.yaml: ${sistema}: lei "${r.lei}" não está no leitor`);
+      const tribunal = r.lei.match(/^sumulas-(stf|stj)$/)?.[1];
+      if (!tribunal && !indiceLeis.some((l) => l.id === r.lei)) warnings.push(`! grifos.yaml: ${sistema}: lei "${r.lei}" não está no leitor`);
       if (!r.artigos && !r.dispositivos?.length) err("grifos.yaml", `${sistema}: regra sem artigos nem dispositivos (${r.lei})`);
+      if (tribunal && r.artigos) {
+        const tem = new Set(numerosSumulas[tribunal] ?? []);
+        for (const n of numerosDaFaixa(r.artigos)) {
+          if (!tem.has(n)) warnings.push(`! grifos.yaml: ${sistema}: a Súmula ${n} do ${tribunal.toUpperCase()} não está no leitor`);
+          // uma súmula em duas regras do mesmo sistema fica só com a primeira: provavelmente um engano
+          const antes = jaPintadas.get(`${r.lei}:${n}`);
+          if (antes) warnings.push(`! grifos.yaml: ${sistema}: a Súmula ${n} do ${tribunal.toUpperCase()} está em “${antes}” e em “${r.rotulo}”`);
+          else jaPintadas.set(`${r.lei}:${n}`, r.rotulo);
+        }
+      }
     }
+  }
   writeFileSync(join(OUT, "grifos.json"), JSON.stringify(grifos));
   writeFileSync(join(OUT, "promos.json"), JSON.stringify(promos?.success ? promos.data : { locais: {}, promos: [] }));
   console.log(

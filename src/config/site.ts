@@ -3,8 +3,8 @@
 
 export const SITE = {
   nome: "Grifo",
-  dominio: "www.grifo.com",
-  url: "https://www.grifo.com",
+  dominio: "grifo.net.br",
+  url: "https://grifo.net.br",
   slogan: "Aprovação na 2ª Fase OAB – Penal",
   descricao:
     "Provas anteriores, gabaritos, simulados com correção automática e jogos para a 2ª fase da OAB em Direito Penal.",
@@ -21,7 +21,7 @@ export const courseHref = () => COURSE_URL || "/#curso";
 export const NAV = [
   { href: "/provas/", label: "Provas" },
   { href: "/simulados/", label: "Simulados" },
-  { href: "/leis/", label: "Lei seca" },
+  { href: "/leis/", label: "Vade Mecum" },
   { href: "/jogos/", label: "Jogos" },
   { href: "/#curso", label: "Curso" },
 ] as const;

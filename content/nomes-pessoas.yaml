@@ -1,0 +1,67 @@
+# Nomes de pessoas que aparecem nas questões tiradas das provas (Peça e fundamento, Por dentro da peça, discursivas
+# e objetivas). No build, cada nome vira uma marca ({p1}, {p2}…) e, na tela, a marca vira um nome de
+# content/nomes-mitologia.yaml, do mesmo gênero. Assim a questão não se responde decorando quem é quem na prova.
+#
+# Como o build reconhece uma pessoa:
+#   - começa por um nome desta lista (masculinos ou femininos), com maiúscula;
+#   - continua com outros nomes ou sobrenomes ("Maria Campos", "João dos Anjos", "Augusto César"): a pessoa inteira
+#     vira uma marca só;
+#   - a mesma pessoa é reconhecida pelo primeiro nome: "Maria Campos" e, depois, "Maria" são a mesma marca;
+#   - o nome logo depois de uma palavra de `antes_de_lugar` é lugar ou coisa, não pessoa ("São Paulo", "Porto Vera
+#     Cruz", "Lei Maria da Penha"), e as `expressoes` nunca são pessoas.
+# Um nome novo numa prova nova: acrescente aqui. O build avisa as palavras com maiúscula que não reconhece (nem aqui,
+# nem em `nao_pessoas`, no fim do arquivo). Quem virou quem em cada questão fica em .cache/nomes-relatorio.txt.
+masculinos: [
+  Abel, Abelardo, Adamastor, Adilson, Adriano, Alan, Alberto, Alfredo, Aluísio, Amauri, Américo, Anderson, André,
+  Andy, Antenor, Antônio, Aquiles, Arnaldo, Aroldo, Arthur, Astolfo, Ataulfo, Ateneu, Augusto, Beto, Bento, Bolívar,
+  Bernardo, Bob, Breno, Bruno, Caim, Caio, Carleto, Carlos, Cauã, Cássio, Célio, César, Cesar, Cláudio, Clovis,
+  Clóvis, Cristiano, Daniel, Davi, David, Denis, Diego, Diogo, Douglas, Eduardo, Elias, Enrico, Enzo, Fabiano,
+  Fabrício, Fábio, Fausto, Felipe, Fernando, Filisteu, Flávio, Flavio, Francisco, Frederico, Gabriel, Geraldo,
+  Gilberto, Gilson, Gonçalo, Gregório, Guilherme, Gustavo, Hamilton, Henrique, Hermegildo, Hermenegildo, Hermes,
+  Hugo, Igor, Inocêncio, Iório, Jacinto, Jairo, João, Joaquim, Joel, Joelerson, John, Jonas, Jorge, José, Jose,
+  Josué, Juan, Juca, Juliano, Júlio, Julio, Júnior, Junior, Lauro, Leandro, Leonardo, Lineu, Luan, Lucas, Luciano,
+  Lúcio, Luís, Luiz, Manoel, Marcelo, Márcio, Marcos, Marcus, Mariano, Mário, Marivaldo, Mateus, Matheus, Maurício,
+  Mauricio, Mendonça, Mévio, Miguel, Moisés, Narcísio, Natan, Nicola, Olinto, Oliver, Orlando, Oscar, Osvaldo,
+  Pablo, Patrício, Patrick, Paulo, Pedro, Peterson, Pierre, Quinho, Rafael, Raimundo, Ralph, Renato, Ricardo,
+  Robson, Roberto, Rodrigo, Rogério, Rômulo, Ronaldo, Ruan, Rubens, Rui, Russo, Samuel, Sandro, Saulo, Scott,
+  Sérgio, Severino, Sílvio, Silvio, Talles, Teobaldo, Tércio, Thiago, Thor, Tiago, Tício, Túlio, Valter, Vicente,
+  Vinícius, Vinicius, Vitor, Waldir, Walter, Wesley, Wiliam, William, Wilson, Xavier, Ygor, Yuri
+]
+femininos: [
+  Adriana, Alessandra, Aline, Amanda, Ana, Anastácia, Andrea, Aparecida, Bárbara, Beatriz, Bianca, Bruna, Camila,
+  Camile, Camille, Carla, Carmen, Carolina, Clara, Cláudia, Cristiane, Débora, Diana, Elena, Elisa, Erika, Eugênia,
+  Fabiana, Fátima, Felícia, Fernanda, Flávia, Flavia, Gabriela, Geminiana, Gisele, Glória, Helena, Izabel, Jane,
+  Janaína, Jaqueline, Jenifer, Jerusa, Jéssica, Joana, Joaquina, Josefa, Julia, Júlia, Juliana, Karen, Karina, Laís, Larissa,
+  Laura, Leda, Leila, Letícia, Lia, Lídia, Lívia, Luana, Lucile, Lúcia, Luciane, Luiza, Luíza, Magda, Manoela,
+  Márcia, Margot, Maria, Mariana, Marieta, Marilda, Marilene, Marisa, Marta, Mary, Mayara, Melinda, Miriam, Mônica,
+  Natália, Nina, Paloma, Paola, Patrícia, Paula, Priscila, Raquel, Renata, Rita, Roberta, Rosa, Ruth, Sara, Sílvia,
+  Sônia, Suelen, Tainá, Talita, Telma, Terezinha, Thaís, Vânia, Vanessa, Vera, Vilma
+]
+# só contam depois de um nome ("Maria Campos"); sozinhos, são lugar ou outra coisa ("cidade de Santos")
+sobrenomes: [
+  Alves, Andrade, Anjos, Barbosa, Cardoso, Campos, Castro, Costa, Cunha, Fidélis, Garcia, Leal, Lopes, Maciel,
+  Moreira, Moura, Ramirez, Santos, Silva, Souza, Toledo
+]
+# a palavra logo antes do nome faz dele um lugar ou uma coisa
+antes_de_lugar: [
+  São, Santa, Santo, San, Porto, Bom, Boa, Rio, Campo, Monte, Vila, Rua, Avenida, Praça, Bairro, Favela, Banco,
+  Supermercado, Lei, Pacto, Colégio, Escola, Hospital, Edifício, Condomínio, Instituto, Fazenda, Fundação
+]
+expressoes: [Maria da Penha]
+# palavras com maiúscula das questões que não são pessoas (lugares, instituições, marcas): o build avisa quando
+# aparece uma palavra com maiúscula que não está aqui nem nas listas de nomes, porque pode ser uma pessoa nova
+nao_pessoas: [
+  Ministério, Código, Alegre, Execuções, Brasil, Juizado, Horizonte, Florianópolis, Sul, Natal, Zebra, Niterói,
+  Maricá, Tribunais, Regional, Alfa, Obs, Espírito, Barnabeu, Goiânia, Minas, Supremo, União, Peixe, Manaus,
+  Fortaleza, Senado, Estatuto, Ceará, Maceió, Araruama, Zona, Leste, Catarina, Juizados, Mato, Grosso, Varas,
+  Repressivo, Juventude, Seguro, Alagoas, Promotores, Apelado, Casais, Rica, República, Icaraí, Especializada,
+  Repressão, Mogi, Cruzes, Foz, Iguaçu, Norte, Vieiras, Brasília, Cuiabá, Paraguai, Estados, Conselho, Ltda,
+  Federativa, Portarias, Súmulas, Turma, Estoril, Seção, Cruz, Paraná, Amotio, Ablatio, Suprema, Arroizinho,
+  Judiciário, Câmara, Promotora, Moema, Sanitária, Law, Convenção, Americana, Humanos, Tigre, Desarmamento, Jesus,
+  Itabapoana, Beta, Unidos, Cascais, Oeiras, Egrégio, Criminalística, Magna, Renda, Receita, Rei, Curitiba,
+  Preconceito, Campinas, Folhas, Whats, Policía, Amazonas, Fórum, Procon, Exatas, Contábeis, Ratzana, Window, Fisco,
+  Campeonato, Conservação, Fartura, Colônia, Algarve, Vigo, Antonésia, Canto, Feliz, Turmas, Salvador, Romã,
+  Distrito, Recife, Leblon, Corregedoria, Paz, Eterna, Guarulhos, Jurisprudências, Coronavírus, América, Córdoba,
+  Distrital, Covid, Bahia, Triagem, Bengal, Porsche, Cayenne, Chefia, Medicante, Vereadores, Espanha, Flórida,
+  Ipanema, Bike, Juízes, Bugatti, Chiron, Sindicato, Sucupira, Penha, Guardião, House
+]

@@ -1,10 +1,15 @@
 import { describe, expect, it } from "vitest";
 import { corrigirExame, identificarPeca } from "../src/lib/correcao/grader.ts";
+import { normalize } from "../src/lib/correcao/normalize.ts";
 import { ctx, exameIds, loadExame } from "./helpers.ts";
 
 // Para cada exame corrigível: o próprio gabarito comentado, usado como resposta,
 // precisa tirar nota alta. Isso pega termos/dispositivos mal transcritos na rubrica.
 // (exames sem gabarito, como o 05 e o 40, não têm o que testar)
+// Este teste confere se os termos da tabela aparecem no texto oficial. A divisão em parágrafos (regra dos termos no
+// mesmo parágrafo) tem testes próprios; aqui o gabarito e as descrições formam um só parágrafo.
+const semQuebras = (t: string) => t.replace(/\s*\n\s*/g, " ");
+
 describe.each(exameIds.filter((id) => loadExame(id).corrigivel))("exame %s", (id) => {
   const ex = loadExame(id);
 
@@ -13,8 +18,8 @@ describe.each(exameIds.filter((id) => loadExame(id).corrigivel))("exame %s", (id
       ex,
       {
         // gabarito comentado + a própria tabela (nem todo gabarito repete tudo o que a tabela pede)
-        peca: `${ex.peca.nome}\n${ex.peca.gabarito_comentado}\n${ex.peca.itens.map((i) => i.descricao).join("\n")}`,
-        questoes: ex.questoes.map((q) => `${q.gabarito_comentado}\n${q.itens.map((i) => i.descricao).join("\n")}`),
+        peca: `${ex.peca.nome}\n${semQuebras(ex.peca.gabarito_comentado)} ${ex.peca.itens.map((i) => i.descricao).join(" ")}`,
+        questoes: ex.questoes.map((q) => `${semQuebras(q.gabarito_comentado)} ${q.itens.map((i) => i.descricao).join(" ")}`),
       },
       ctx,
     );
@@ -53,6 +58,54 @@ describe("identificarPeca", () => {
   it("contrarrazões de apelação não é confundida com apelação", () => {
     const r = identificarPeca("vem apresentar CONTRARRAZÕES DE APELAÇÃO", "apelacao", [], ctx);
     expect(r.status).toBe("inadequada");
+  });
+  it("ED é sigla de embargos de declaração (qualquer caixa), só com comSiglas", () => {
+    expect(identificarPeca("ED", "embargos-declaracao", [], ctx, true).status).toBe("ok");
+    expect(identificarPeca("ed", "embargos-declaracao", [], ctx, true).status).toBe("ok");
+  });
+  it("HC é sigla de habeas corpus com comSiglas; sem comSiglas não é identificada", () => {
+    expect(identificarPeca("HC", "habeas-corpus", [], ctx, true).status).toBe("ok");
+    expect(identificarPeca("hc", "habeas-corpus", [], ctx).status).toBe("nao-identificada");
+  });
+  it("MS em endereço não vira sigla do simulador (sem comSiglas)", () => {
+    const r = identificarPeca("Comarca de Campo Grande/MS ... vem interpor RECURSO DE APELAÇÃO", "apelacao", [], ctx);
+    expect(r.status).toBe("ok");
+  });
+  it("RE é sigla de recurso extraordinário com comSiglas", () => {
+    expect(identificarPeca("RE", "recurso-extraordinario", [], ctx, true).status).toBe("ok");
+  });
+  it("\"ré\" (normaliza para \"re\") no texto não vira recurso extraordinário sem comSiglas", () => {
+    expect(identificarPeca("A ré foi condenada; interpor APELAÇÃO", "apelacao", [], ctx).status).toBe("ok");
+  });
+  it("\"c e d\" das alíneas não vira embargos de declaração", () => {
+    const r = identificarPeca("APELAÇÃO, art. 593, III, alíneas c e d, do CPP", "apelacao", [], ctx);
+    expect(r.status).toBe("ok");
+  });
+  it("texto de apelação não vira embargos de declaração", () => {
+    const r = identificarPeca("vem interpor RECURSO DE APELAÇÃO", "embargos-declaracao", [], ctx);
+    expect(r.status).toBe("inadequada");
+    expect(r).toMatchObject({ tipo: "apelacao" });
+    expect((r as { tipo?: string }).tipo).not.toBe("embargos-declaracao");
+  });
+  it("nenhuma sigla ou alias aparece em duas peças diferentes (normalizado)", () => {
+    const donos = new Map<string, string>();
+    const conflitos: string[] = [];
+    for (const [tipo, p] of Object.entries(ctx.pecas)) {
+      for (const t of [...(p.siglas ?? []), ...p.aliases]) {
+        const k = normalize(t).trim();
+        const outro = donos.get(k);
+        if (outro && outro !== tipo) conflitos.push(`"${k}": ${outro} x ${tipo}`);
+        donos.set(k, tipo);
+      }
+    }
+    expect(conflitos).toEqual([]);
+  });
+  it("CRESE é sigla de contrarrazões de RSE com comSiglas; \"crese\" sem comSiglas não é identificada", () => {
+    expect(identificarPeca("CRESE", "contrarrazoes-rese", [], ctx, true).status).toBe("ok");
+    expect(identificarPeca("crese", "contrarrazoes-rese", [], ctx).status).not.toBe("ok");
+  });
+  it("AP é sigla de apelação com comSiglas", () => {
+    expect(identificarPeca("AP", "apelacao", [], ctx, true).status).toBe("ok");
   });
 });
 

@@ -24,6 +24,8 @@ interface Base {
   /** "gerada" ou exame de origem ("XXXVIII Exame") */
   fonte: string;
   categorias: Categoria[];
+  /** o gênero de cada pessoa marcada no texto ({p1}, {p2}…), que a tela troca por um nome (src/quiz/nomes.ts) */
+  pessoas?: ("m" | "f")[];
 }
 
 /** Qual a peça cabível e o seu fundamento. */
