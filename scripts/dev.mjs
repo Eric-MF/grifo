@@ -15,6 +15,8 @@ const gerar = (args = []) => spawnSync(process.execPath, ["scripts/build-content
 
 if (gerar().status !== 0) process.exit(1);
 spawnSync(process.execPath, ["scripts/gerar-zip-padrao.ts"], { stdio: "inherit", cwd: RAIZ });
+// as prévias de compartilhar (public/c/) ficam prontas enquanto o servidor sobe: só levam tempo quando o desenho muda
+spawn(process.execPath, ["scripts/gerar-previas.ts"], { stdio: "inherit", cwd: RAIZ });
 
 const observador = spawn(process.execPath, ["scripts/build-content.ts", "--watch", "--quiet"], { stdio: "inherit", cwd: RAIZ });
 

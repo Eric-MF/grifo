@@ -1,524 +1,168 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "41"
+introducoes:
+  peca: "Abelardo, empresário, pagou R$ 500.000 a Lineu, servidor municipal, para que deixasse de praticar atos de ofício. Lineu fez colaboração premiada e disse que dividiu o dinheiro com o chefe, Mendonça, e agia sob as ordens dele, mas não apresentou prova disso. Mendonça negou e provou que o imóvel em que mora veio de herança da mãe; aposentou-se durante o processo. Nos memoriais, o juiz deu prazo comum às defesas dos três réus, inclusive à do colaborador, e a defesa de Mendonça protestou. O juiz titular, que presidiu a instrução, ausentou-se por dois dias para um curso, e a sentença foi dada pelo juiz substituto designado só para casos urgentes, sem urgência no processo. Mendonça foi condenado por corrupção passiva com base só na palavra de Lineu; a pena-base de 2 anos subiu um terço duas vezes, só por haver duas causas de aumento da parte especial; e o juiz cassou a aposentadoria dele por analogia e decretou a perda do imóvel, por ser incompatível com os proventos. Você foi intimado da sentença."
+  q1: "Adriano foi condenado no Juizado Especial Criminal por caça em unidade de conservação a 1 ano de detenção, substituída por restritiva de direitos; por erro material, o juiz não aplicou a causa de aumento. Só a defesa apelou, e a Turma Recursal negou o recurso e ainda aplicou a causa de aumento, chegando a 1 ano e 6 meses. O Tribunal concedeu habeas corpus a Adriano, e o Ministério Público interpôs recurso ordinário constitucional."
+  q2: "William entrou à noite na área de descarte de um supermercado, num pátio aberto para a rua, e pegou picanha, iogurte, detergente e refrigerante vencidos, separados para o lixo. Foi preso pelos seguranças ao sair e autuado por furto tentado com o aumento do repouso noturno; o gerente confirmou que tudo seria jogado fora. Você foi nomeado advogado dativo dele logo após a comunicação da prisão."
+  q3: "Luana, sem querer criar o filho Joaquim, de 8 meses, deixou-o num supermercado movimentado, agasalhado e preso numa cadeirinha de bebê; minutos depois, o bebê foi acolhido, sem nenhum risco, e levado às autoridades. Ela foi denunciada por abandono de incapaz. Nas diligências finais, as imagens mostraram que, ao sair, ela pegou um chocolate. O Ministério Público pediu a condenação nos termos da denúncia, e o juiz a condenou por abandono de incapaz e por furto, com base nas imagens."
+  q4: "Jorge foi condenado definitivamente por desacato a 1 ano de detenção, substituída por prestação pecuniária em 12 parcelas. Morreu depois de pagar cinco. A filha, Janaína, herdeira dele, tem novas provas da inocência do pai e quer saber se terá de pagar as parcelas restantes."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["41-peca-1", "41-peca-4", "41-peca-12"]
 perguntas:
-  - id: 41-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
-
-      A denúncia foi distribuída à Vara Criminal da Comarca de Flores, Estado de Campo Belo (CB), local dos fatos.
-
-      Lineu celebrou acordo de colaboração premiada com o Ministério Público, nos termos da Lei nº 12.850/13, devidamente homologado pelo Juízo competente, fornecendo provas de que Abelardo lhe fez pagamentos no valor total de R$ 500.000,00 (quinhentos mil reais), a fim de que não realizasse os atos de ofício que lhe cabiam.
-
-      Asseverou que dividiu essa vantagem patrimonial indevida com Mendonça, seu superior imediato, e que agia sob suas ordens e comando, mas, quanto a este ponto, não apresentou provas de corroboração. A instrução processual ocorreu sem intercorrências, sendo que Mendonça se aposentou no curso do processo. Lineu reafirmou os termos de sua colaboração, Abelardo, por sua vez, fez uso de seu direito ao silêncio, enquanto Mendonça negou os fatos e afirmou que o imóvel onde reside é herança de sua mãe, exibindo os documentos públicos que comprovam a regular transmissão causa mortis.
-
-      O Juízo convolou os debates orais em memoriais e concedeu prazo para o Ministério Público e, em seguida, prazo comum às defesas dos três acusados, o que motivou os protestos da defesa de Mendonça.
-
-      O Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial, razão pela qual a sentença foi prolatada pelo Juiz substituto, designado para atuar apenas em causas urgentes, ainda que nenhuma urgência houvesse neste processo. Assim, Mendonça foi condenado como incurso nas penas do Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, considerando provada a corrupção passiva por meio do interrogatório de Lineu, colaborador, o que foi reputado suficiente para provar materialidade e autoria delitivas. Aplicou a pena-base no mínimo legal de dois anos, majorada em um terço por duas vezes consecutivas, justificada exclusivamente pela existência de duas causas de aumento previstas na parte especial do Código Penal, alcançando a pena de 3 (três)
-
-      anos, 6 (seis) meses e 20 (vinte) dias de reclusão, em regime aberto, e substituiu a pena privativa de liberdade por duas restritivas de direitos. Determinou a cassação da aposentadoria de Mendonça, na forma do Art. 92, inciso I, a, do CP, aplicável por analogia, bem como a perda do imóvel de sua propriedade, uma vez que de valor incompatível com seus proventos, fato suficiente para autorizar o perdimento. O Ministério Público, intimado da sentença, manteve-se inerte. Você, como advogado(a) de Mendonça, é intimado(a) no dia 6 de setembro de 2024, sexta-feira, sendo o dia seguinte e os dias de segunda a sexta-feira úteis em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento: Vara Criminal da Comarca de Flores/CB."
-    opcoes:
-      correta: "Endereçamento: Vara Criminal da Comarca de Flores/CB."
-      erradas:
-        - "Endereçamento correto das razões: Tribunal de Justiça do Estado."
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - "Endereçamento correto: Tribunal de Justiça do Rio de Janeiro."
-        - "Endereçamento: Tribunal Regional Federal da 10ª Região."
-    revisao: &a1
-      status: revisado
-  - id: 41-peca-4
-    categoria: peca-detalhe
-    parte: peca
-    item: "4"
-    secao: enderecamento
-    caso: |-
-      O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
-
-      A denúncia foi distribuída à Vara Criminal da Comarca de Flores, Estado de Campo Belo (CB), local dos fatos.
-
-      Lineu celebrou acordo de colaboração premiada com o Ministério Público, nos termos da Lei nº 12.850/13, devidamente homologado pelo Juízo competente, fornecendo provas de que Abelardo lhe fez pagamentos no valor total de R$ 500.000,00 (quinhentos mil reais), a fim de que não realizasse os atos de ofício que lhe cabiam.
-
-      Asseverou que dividiu essa vantagem patrimonial indevida com Mendonça, seu superior imediato, e que agia sob suas ordens e comando, mas, quanto a este ponto, não apresentou provas de corroboração. A instrução processual ocorreu sem intercorrências, sendo que Mendonça se aposentou no curso do processo. Lineu reafirmou os termos de sua colaboração, Abelardo, por sua vez, fez uso de seu direito ao silêncio, enquanto Mendonça negou os fatos e afirmou que o imóvel onde reside é herança de sua mãe, exibindo os documentos públicos que comprovam a regular transmissão causa mortis.
-
-      O Juízo convolou os debates orais em memoriais e concedeu prazo para o Ministério Público e, em seguida, prazo comum às defesas dos três acusados, o que motivou os protestos da defesa de Mendonça.
-
-      O Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial, razão pela qual a sentença foi prolatada pelo Juiz substituto, designado para atuar apenas em causas urgentes, ainda que nenhuma urgência houvesse neste processo. Assim, Mendonça foi condenado como incurso nas penas do Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, considerando provada a corrupção passiva por meio do interrogatório de Lineu, colaborador, o que foi reputado suficiente para provar materialidade e autoria delitivas. Aplicou a pena-base no mínimo legal de dois anos, majorada em um terço por duas vezes consecutivas, justificada exclusivamente pela existência de duas causas de aumento previstas na parte especial do Código Penal, alcançando a pena de 3 (três)
-
-      anos, 6 (seis) meses e 20 (vinte) dias de reclusão, em regime aberto, e substituiu a pena privativa de liberdade por duas restritivas de direitos. Determinou a cassação da aposentadoria de Mendonça, na forma do Art. 92, inciso I, a, do CP, aplicável por analogia, bem como a perda do imóvel de sua propriedade, uma vez que de valor incompatível com seus proventos, fato suficiente para autorizar o perdimento. O Ministério Público, intimado da sentença, manteve-se inerte. Você, como advogado(a) de Mendonça, é intimado(a) no dia 6 de setembro de 2024, sexta-feira, sendo o dia seguinte e os dias de segunda a sexta-feira úteis em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: A quem devem ser endereçadas as razões?
-    gabarito: "Endereçamento: Tribunal de Justiça de Campo Belo."
-    opcoes:
-      correta: "Endereçamento: Tribunal de Justiça de Campo Belo."
-      erradas:
-        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
-        - "Endereçamento: 1ª Vara Criminal da Comarca de Florianópolis/SC."
-        - "Endereçamento: Juiz da Vara do Tribunal do Júri."
-        - "Endereçamento: Vara Criminal da Comarca de Fortaleza, Ceará"
-        - "Endereçamento: Juízo do Tribunal do Júri da Comarca de Maricá/RJ"
-    revisao: *a1
   - id: 41-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: preliminar
-    caso: |-
-      O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
-
-      A denúncia foi distribuída à Vara Criminal da Comarca de Flores, Estado de Campo Belo (CB), local dos fatos.
-
-      Lineu celebrou acordo de colaboração premiada com o Ministério Público, nos termos da Lei nº 12.850/13, devidamente homologado pelo Juízo competente, fornecendo provas de que Abelardo lhe fez pagamentos no valor total de R$ 500.000,00 (quinhentos mil reais), a fim de que não realizasse os atos de ofício que lhe cabiam.
-
-      Asseverou que dividiu essa vantagem patrimonial indevida com Mendonça, seu superior imediato, e que agia sob suas ordens e comando, mas, quanto a este ponto, não apresentou provas de corroboração. A instrução processual ocorreu sem intercorrências, sendo que Mendonça se aposentou no curso do processo. Lineu reafirmou os termos de sua colaboração, Abelardo, por sua vez, fez uso de seu direito ao silêncio, enquanto Mendonça negou os fatos e afirmou que o imóvel onde reside é herança de sua mãe, exibindo os documentos públicos que comprovam a regular transmissão causa mortis.
-
-      O Juízo convolou os debates orais em memoriais e concedeu prazo para o Ministério Público e, em seguida, prazo comum às defesas dos três acusados, o que motivou os protestos da defesa de Mendonça.
-
-      O Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial, razão pela qual a sentença foi prolatada pelo Juiz substituto, designado para atuar apenas em causas urgentes, ainda que nenhuma urgência houvesse neste processo. Assim, Mendonça foi condenado como incurso nas penas do Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, considerando provada a corrupção passiva por meio do interrogatório de Lineu, colaborador, o que foi reputado suficiente para provar materialidade e autoria delitivas. Aplicou a pena-base no mínimo legal de dois anos, majorada em um terço por duas vezes consecutivas, justificada exclusivamente pela existência de duas causas de aumento previstas na parte especial do Código Penal, alcançando a pena de 3 (três)
-
-      anos, 6 (seis) meses e 20 (vinte) dias de reclusão, em regime aberto, e substituiu a pena privativa de liberdade por duas restritivas de direitos. Determinou a cassação da aposentadoria de Mendonça, na forma do Art. 92, inciso I, a, do CP, aplicável por analogia, bem como a perda do imóvel de sua propriedade, uma vez que de valor incompatível com seus proventos, fato suficiente para autorizar o perdimento. O Ministério Público, intimado da sentença, manteve-se inerte. Você, como advogado(a) de Mendonça, é intimado(a) no dia 6 de setembro de 2024, sexta-feira, sendo o dia seguinte e os dias de segunda a sexta-feira úteis em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    pergunta: "Que preliminar a defesa de Mendonça deve levantar quanto ao prazo dos memoriais?"
+    tese: "Nulidade por cerceamento de defesa: o delatado deve falar depois do colaborador, e não em prazo comum com ele"
+    aceitos: [ "cerceamento | ampla defesa | contraditorio | depois do colaborador | apos o colaborador | prazo sucessivo | prazos sucessivos" ]
+    artigos: [ "art. 4, § 10-A, Lei 12.850", "art. 5, LV, CRFB", "art. 564, IV, CPP" ]
     gabarito: "Preliminar: cerceamento de defesa (ou violação ao contraditório ou ampla defesa, ou ao devido processo legal ou nulidade por omissão de formalidade essencial), porque não poderia ter sido concedido prazo comum ao colaborador e ao corréu delatado, em violação ao Art. 4º, § 10-A, da Lei nº 12.850/2013, ao Art. 5º, inciso LIV ou LV, da CRFB/88, ou ao Art. 564, inciso IV, do CPP."
-    opcoes:
-      correta: "Preliminar: cerceamento de defesa (ou violação ao contraditório ou ampla defesa, ou ao devido processo legal ou nulidade por omissão de formalidade essencial), porque não poderia ter sido concedido prazo comum ao colaborador e ao corréu delatado, em violação ao Art. 4º, § 10-A, da Lei nº 12.850/2013, ao Art. 5º, inciso LIV ou LV, da CRFB/88, ou ao Art. 564, inciso IV, do CPP."
-      erradas:
-        - "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
-        - "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
-        - Violação das regras da mutatio libelli, art. 384 do CPP, c/c art. 411, § 3º, do CPP.
-        - Preliminarmente, deve ser requerido o reconhecimento da nulidade do ato de citação, nos termos do art. 564, inciso III, “e”, do CPP
-        - O crime de lesão corporal leve do Art. 129, § 9º, do CP é de ação penal pública condicionada à representação, nos termos do Art. 88 da Lei nº 9.099/95, e a vítima demonstrou não ter interesse em ver o autor do fato responsabilizado criminalmente
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 41-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: preliminar
-    caso: |-
-      O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
-
-      A denúncia foi distribuída à Vara Criminal da Comarca de Flores, Estado de Campo Belo (CB), local dos fatos.
-
-      Lineu celebrou acordo de colaboração premiada com o Ministério Público, nos termos da Lei nº 12.850/13, devidamente homologado pelo Juízo competente, fornecendo provas de que Abelardo lhe fez pagamentos no valor total de R$ 500.000,00 (quinhentos mil reais), a fim de que não realizasse os atos de ofício que lhe cabiam.
-
-      Asseverou que dividiu essa vantagem patrimonial indevida com Mendonça, seu superior imediato, e que agia sob suas ordens e comando, mas, quanto a este ponto, não apresentou provas de corroboração. A instrução processual ocorreu sem intercorrências, sendo que Mendonça se aposentou no curso do processo. Lineu reafirmou os termos de sua colaboração, Abelardo, por sua vez, fez uso de seu direito ao silêncio, enquanto Mendonça negou os fatos e afirmou que o imóvel onde reside é herança de sua mãe, exibindo os documentos públicos que comprovam a regular transmissão causa mortis.
-
-      O Juízo convolou os debates orais em memoriais e concedeu prazo para o Ministério Público e, em seguida, prazo comum às defesas dos três acusados, o que motivou os protestos da defesa de Mendonça.
-
-      O Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial, razão pela qual a sentença foi prolatada pelo Juiz substituto, designado para atuar apenas em causas urgentes, ainda que nenhuma urgência houvesse neste processo. Assim, Mendonça foi condenado como incurso nas penas do Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, considerando provada a corrupção passiva por meio do interrogatório de Lineu, colaborador, o que foi reputado suficiente para provar materialidade e autoria delitivas. Aplicou a pena-base no mínimo legal de dois anos, majorada em um terço por duas vezes consecutivas, justificada exclusivamente pela existência de duas causas de aumento previstas na parte especial do Código Penal, alcançando a pena de 3 (três)
-
-      anos, 6 (seis) meses e 20 (vinte) dias de reclusão, em regime aberto, e substituiu a pena privativa de liberdade por duas restritivas de direitos. Determinou a cassação da aposentadoria de Mendonça, na forma do Art. 92, inciso I, a, do CP, aplicável por analogia, bem como a perda do imóvel de sua propriedade, uma vez que de valor incompatível com seus proventos, fato suficiente para autorizar o perdimento. O Ministério Público, intimado da sentença, manteve-se inerte. Você, como advogado(a) de Mendonça, é intimado(a) no dia 6 de setembro de 2024, sexta-feira, sendo o dia seguinte e os dias de segunda a sexta-feira úteis em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Nulidade da sentença, ante a violação ao princípio da identidade física do Juiz ou do Juiz Natural, nos termos do Art. 399, § 2º, do CPP ou Art. 5º, LIII, CRFB.
-    opcoes:
-      correta: Nulidade da sentença, ante a violação ao princípio da identidade física do Juiz ou do Juiz Natural, nos termos do Art. 399, § 2º, do CPP ou Art. 5º, LIII, CRFB.
-      erradas:
-        - "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
-        - "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
-        - Violação das regras da mutatio libelli, art. 384 do CPP, c/c art. 411, § 3º, do CPP.
-        - Preliminarmente, deve ser requerido o reconhecimento da nulidade do ato de citação, nos termos do art. 564, inciso III, “e”, do CPP
-        - O crime de lesão corporal leve do Art. 129, § 9º, do CP é de ação penal pública condicionada à representação, nos termos do Art. 88 da Lei nº 9.099/95, e a vítima demonstrou não ter interesse em ver o autor do fato responsabilizado criminalmente
-    revisao: *a1
+    pergunta: "Que preliminar a defesa deve levantar quanto ao juiz que deu a sentença?"
+    tese: "Nulidade da sentença por violação da identidade física do juiz: quem presidiu a instrução devia julgar"
+    aceitos: [ "identidade fisica | juiz natural" ]
+    artigos: [ "art. 399, § 2º, CPP", "art. 5, LIII, CRFB" ]
+    gabarito: "Nulidade da sentença, ante a violação ao princípio da identidade física do Juiz ou do Juiz Natural, nos termos do Art. 399, § 2º, do CPP ou Art. 5º, LIII, CRFB."
+    revisao: { status: revisado }
   - id: 41-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
-
-      A denúncia foi distribuída à Vara Criminal da Comarca de Flores, Estado de Campo Belo (CB), local dos fatos.
-
-      Lineu celebrou acordo de colaboração premiada com o Ministério Público, nos termos da Lei nº 12.850/13, devidamente homologado pelo Juízo competente, fornecendo provas de que Abelardo lhe fez pagamentos no valor total de R$ 500.000,00 (quinhentos mil reais), a fim de que não realizasse os atos de ofício que lhe cabiam.
-
-      Asseverou que dividiu essa vantagem patrimonial indevida com Mendonça, seu superior imediato, e que agia sob suas ordens e comando, mas, quanto a este ponto, não apresentou provas de corroboração. A instrução processual ocorreu sem intercorrências, sendo que Mendonça se aposentou no curso do processo. Lineu reafirmou os termos de sua colaboração, Abelardo, por sua vez, fez uso de seu direito ao silêncio, enquanto Mendonça negou os fatos e afirmou que o imóvel onde reside é herança de sua mãe, exibindo os documentos públicos que comprovam a regular transmissão causa mortis.
-
-      O Juízo convolou os debates orais em memoriais e concedeu prazo para o Ministério Público e, em seguida, prazo comum às defesas dos três acusados, o que motivou os protestos da defesa de Mendonça.
-
-      O Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial, razão pela qual a sentença foi prolatada pelo Juiz substituto, designado para atuar apenas em causas urgentes, ainda que nenhuma urgência houvesse neste processo. Assim, Mendonça foi condenado como incurso nas penas do Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, considerando provada a corrupção passiva por meio do interrogatório de Lineu, colaborador, o que foi reputado suficiente para provar materialidade e autoria delitivas. Aplicou a pena-base no mínimo legal de dois anos, majorada em um terço por duas vezes consecutivas, justificada exclusivamente pela existência de duas causas de aumento previstas na parte especial do Código Penal, alcançando a pena de 3 (três)
-
-      anos, 6 (seis) meses e 20 (vinte) dias de reclusão, em regime aberto, e substituiu a pena privativa de liberdade por duas restritivas de direitos. Determinou a cassação da aposentadoria de Mendonça, na forma do Art. 92, inciso I, a, do CP, aplicável por analogia, bem como a perda do imóvel de sua propriedade, uma vez que de valor incompatível com seus proventos, fato suficiente para autorizar o perdimento. O Ministério Público, intimado da sentença, manteve-se inerte. Você, como advogado(a) de Mendonça, é intimado(a) no dia 6 de setembro de 2024, sexta-feira, sendo o dia seguinte e os dias de segunda a sexta-feira úteis em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: No mérito, deve ser defendida a absolvição de Mendonça, diante da ausência de provas suficientes para a condenação, na forma do Art. 386, inciso II, ou V, ou VII, do CPP.
-    opcoes:
-      correta: No mérito, deve ser defendida a absolvição de Mendonça, diante da ausência de provas suficientes para a condenação, na forma do Art. 386, inciso II, ou V, ou VII, do CPP.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
-        - Da tese da incidência da atenuante da menoridade penal relativa
-        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
+    pergunta: "No mérito, qual é o pedido principal da defesa de Mendonça?"
+    tese: "Absolvição por insuficiência de provas"
+    aceitos: [ "absolvi* | absolver" ]
+    artigos: [ "art. 386, VII, CPP", "art. 386, V, CPP" ]
+    gabarito: "No mérito, deve ser defendida a absolvição de Mendonça, diante da ausência de provas suficientes para a condenação, na forma do Art. 386, inciso II, ou V, ou VII, do CPP."
+    revisao: { status: revisado }
   - id: 41-peca-8
     categoria: peca-detalhe
     parte: peca
     item: "8"
     secao: merito
-    caso: |-
-      O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
-
-      A denúncia foi distribuída à Vara Criminal da Comarca de Flores, Estado de Campo Belo (CB), local dos fatos.
-
-      Lineu celebrou acordo de colaboração premiada com o Ministério Público, nos termos da Lei nº 12.850/13, devidamente homologado pelo Juízo competente, fornecendo provas de que Abelardo lhe fez pagamentos no valor total de R$ 500.000,00 (quinhentos mil reais), a fim de que não realizasse os atos de ofício que lhe cabiam.
-
-      Asseverou que dividiu essa vantagem patrimonial indevida com Mendonça, seu superior imediato, e que agia sob suas ordens e comando, mas, quanto a este ponto, não apresentou provas de corroboração. A instrução processual ocorreu sem intercorrências, sendo que Mendonça se aposentou no curso do processo. Lineu reafirmou os termos de sua colaboração, Abelardo, por sua vez, fez uso de seu direito ao silêncio, enquanto Mendonça negou os fatos e afirmou que o imóvel onde reside é herança de sua mãe, exibindo os documentos públicos que comprovam a regular transmissão causa mortis.
-
-      O Juízo convolou os debates orais em memoriais e concedeu prazo para o Ministério Público e, em seguida, prazo comum às defesas dos três acusados, o que motivou os protestos da defesa de Mendonça.
-
-      O Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial, razão pela qual a sentença foi prolatada pelo Juiz substituto, designado para atuar apenas em causas urgentes, ainda que nenhuma urgência houvesse neste processo. Assim, Mendonça foi condenado como incurso nas penas do Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, considerando provada a corrupção passiva por meio do interrogatório de Lineu, colaborador, o que foi reputado suficiente para provar materialidade e autoria delitivas. Aplicou a pena-base no mínimo legal de dois anos, majorada em um terço por duas vezes consecutivas, justificada exclusivamente pela existência de duas causas de aumento previstas na parte especial do Código Penal, alcançando a pena de 3 (três)
-
-      anos, 6 (seis) meses e 20 (vinte) dias de reclusão, em regime aberto, e substituiu a pena privativa de liberdade por duas restritivas de direitos. Determinou a cassação da aposentadoria de Mendonça, na forma do Art. 92, inciso I, a, do CP, aplicável por analogia, bem como a perda do imóvel de sua propriedade, uma vez que de valor incompatível com seus proventos, fato suficiente para autorizar o perdimento. O Ministério Público, intimado da sentença, manteve-se inerte. Você, como advogado(a) de Mendonça, é intimado(a) no dia 6 de setembro de 2024, sexta-feira, sendo o dia seguinte e os dias de segunda a sexta-feira úteis em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Tendo em vista que a palavra do colaborador, sem provas de corroboração, não pode ensejar a condenação do corréu delatado, na forma do Art. 4º, § 16, inciso III, da Lei nº 12.850/13.
-    opcoes:
-      correta: Tendo em vista que a palavra do colaborador, sem provas de corroboração, não pode ensejar a condenação do corréu delatado, na forma do Art. 4º, § 16, inciso III, da Lei nº 12.850/13.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
-        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
-    revisao: *a1
+    pergunta: "Por que a palavra de Lineu não basta para condenar Mendonça?"
+    tese: "A palavra do colaborador, sem provas de corroboração, não basta para condenar o delatado"
+    aceitos: [ "corrobora* | palavra do colaborador sozinha | so a palavra | apenas a palavra | exclusivamente" ]
+    artigos: [ "art. 4, § 16, III, Lei 12.850" ]
+    gabarito: "Tendo em vista que a palavra do colaborador, sem provas de corroboração, não pode ensejar a condenação do corréu delatado, na forma do Art. 4º, § 16, inciso III, da Lei nº 12.850/13."
+    revisao: { status: revisado }
   - id: 41-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: merito
-    caso: |-
-      O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
-
-      A denúncia foi distribuída à Vara Criminal da Comarca de Flores, Estado de Campo Belo (CB), local dos fatos.
-
-      Lineu celebrou acordo de colaboração premiada com o Ministério Público, nos termos da Lei nº 12.850/13, devidamente homologado pelo Juízo competente, fornecendo provas de que Abelardo lhe fez pagamentos no valor total de R$ 500.000,00 (quinhentos mil reais), a fim de que não realizasse os atos de ofício que lhe cabiam.
-
-      Asseverou que dividiu essa vantagem patrimonial indevida com Mendonça, seu superior imediato, e que agia sob suas ordens e comando, mas, quanto a este ponto, não apresentou provas de corroboração. A instrução processual ocorreu sem intercorrências, sendo que Mendonça se aposentou no curso do processo. Lineu reafirmou os termos de sua colaboração, Abelardo, por sua vez, fez uso de seu direito ao silêncio, enquanto Mendonça negou os fatos e afirmou que o imóvel onde reside é herança de sua mãe, exibindo os documentos públicos que comprovam a regular transmissão causa mortis.
-
-      O Juízo convolou os debates orais em memoriais e concedeu prazo para o Ministério Público e, em seguida, prazo comum às defesas dos três acusados, o que motivou os protestos da defesa de Mendonça.
-
-      O Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial, razão pela qual a sentença foi prolatada pelo Juiz substituto, designado para atuar apenas em causas urgentes, ainda que nenhuma urgência houvesse neste processo. Assim, Mendonça foi condenado como incurso nas penas do Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, considerando provada a corrupção passiva por meio do interrogatório de Lineu, colaborador, o que foi reputado suficiente para provar materialidade e autoria delitivas. Aplicou a pena-base no mínimo legal de dois anos, majorada em um terço por duas vezes consecutivas, justificada exclusivamente pela existência de duas causas de aumento previstas na parte especial do Código Penal, alcançando a pena de 3 (três)
-
-      anos, 6 (seis) meses e 20 (vinte) dias de reclusão, em regime aberto, e substituiu a pena privativa de liberdade por duas restritivas de direitos. Determinou a cassação da aposentadoria de Mendonça, na forma do Art. 92, inciso I, a, do CP, aplicável por analogia, bem como a perda do imóvel de sua propriedade, uma vez que de valor incompatível com seus proventos, fato suficiente para autorizar o perdimento. O Ministério Público, intimado da sentença, manteve-se inerte. Você, como advogado(a) de Mendonça, é intimado(a) no dia 6 de setembro de 2024, sexta-feira, sendo o dia seguinte e os dias de segunda a sexta-feira úteis em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Subsidiariamente, deve ser requerido o afastamento da duplicidade de causas de aumento previstas na parte especial, com aplicação do Art. 68, parágrafo único, do CP.
-    opcoes:
-      correta: Subsidiariamente, deve ser requerido o afastamento da duplicidade de causas de aumento previstas na parte especial, com aplicação do Art. 68, parágrafo único, do CP.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
-        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
-    revisao: *a1
+    pergunta: "Que tese a defesa deve sustentar quanto aos dois aumentos de um terço?"
+    tese: "Com duas causas de aumento da parte especial, o juiz pode aplicar só um aumento, o maior: deve ser afastada a duplicidade"
+    aceitos: [ [ "um so aumento | uma so causa | apenas um aumento | apenas uma causa | so uma causa | so um aumento" ], [ "afast* | exclu* | decot*", "duplicidade | dois aumentos | duas causas" ] ]
+    artigos: [ "art. 68, parágrafo único, CP" ]
+    gabarito: "Subsidiariamente, deve ser requerido o afastamento da duplicidade de causas de aumento previstas na parte especial, com aplicação do Art. 68, parágrafo único, do CP."
+    revisao: { status: revisado }
   - id: 41-peca-10
     categoria: peca-detalhe
     parte: peca
     item: "10"
     secao: merito
-    caso: |-
-      O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
-
-      A denúncia foi distribuída à Vara Criminal da Comarca de Flores, Estado de Campo Belo (CB), local dos fatos.
-
-      Lineu celebrou acordo de colaboração premiada com o Ministério Público, nos termos da Lei nº 12.850/13, devidamente homologado pelo Juízo competente, fornecendo provas de que Abelardo lhe fez pagamentos no valor total de R$ 500.000,00 (quinhentos mil reais), a fim de que não realizasse os atos de ofício que lhe cabiam.
-
-      Asseverou que dividiu essa vantagem patrimonial indevida com Mendonça, seu superior imediato, e que agia sob suas ordens e comando, mas, quanto a este ponto, não apresentou provas de corroboração. A instrução processual ocorreu sem intercorrências, sendo que Mendonça se aposentou no curso do processo. Lineu reafirmou os termos de sua colaboração, Abelardo, por sua vez, fez uso de seu direito ao silêncio, enquanto Mendonça negou os fatos e afirmou que o imóvel onde reside é herança de sua mãe, exibindo os documentos públicos que comprovam a regular transmissão causa mortis.
-
-      O Juízo convolou os debates orais em memoriais e concedeu prazo para o Ministério Público e, em seguida, prazo comum às defesas dos três acusados, o que motivou os protestos da defesa de Mendonça.
-
-      O Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial, razão pela qual a sentença foi prolatada pelo Juiz substituto, designado para atuar apenas em causas urgentes, ainda que nenhuma urgência houvesse neste processo. Assim, Mendonça foi condenado como incurso nas penas do Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, considerando provada a corrupção passiva por meio do interrogatório de Lineu, colaborador, o que foi reputado suficiente para provar materialidade e autoria delitivas. Aplicou a pena-base no mínimo legal de dois anos, majorada em um terço por duas vezes consecutivas, justificada exclusivamente pela existência de duas causas de aumento previstas na parte especial do Código Penal, alcançando a pena de 3 (três)
-
-      anos, 6 (seis) meses e 20 (vinte) dias de reclusão, em regime aberto, e substituiu a pena privativa de liberdade por duas restritivas de direitos. Determinou a cassação da aposentadoria de Mendonça, na forma do Art. 92, inciso I, a, do CP, aplicável por analogia, bem como a perda do imóvel de sua propriedade, uma vez que de valor incompatível com seus proventos, fato suficiente para autorizar o perdimento. O Ministério Público, intimado da sentença, manteve-se inerte. Você, como advogado(a) de Mendonça, é intimado(a) no dia 6 de setembro de 2024, sexta-feira, sendo o dia seguinte e os dias de segunda a sexta-feira úteis em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Afastamento da cassação da aposentadoria, sendo inadmissível a analogia prejudicial ao réu ou por ausência de previsão legal.
-    opcoes:
-      correta: Afastamento da cassação da aposentadoria, sendo inadmissível a analogia prejudicial ao réu ou por ausência de previsão legal.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
-        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
-    revisao: *a1
+    pergunta: "Que tese a defesa deve sustentar quanto à aposentadoria de Mendonça?"
+    tese: "Afastamento da cassação da aposentadoria: não há previsão legal, e a analogia in malam partem é proibida"
+    aceitos: [ [ "cassacao", "afast* | nao cabe | inadmiss* | incab* | descab* | nao ha previsao" ], [ "analogia in malam partem | analogia prejudicial | analogia contra o reu | sem previsao legal" ] ]
+    artigos: [ "art. 92, I, CP", "art. 1, CP" ]
+    gabarito: "Afastamento da cassação da aposentadoria, sendo inadmissível a analogia prejudicial ao réu ou por ausência de previsão legal."
+    revisao: { status: revisado }
   - id: 41-peca-11
     categoria: peca-detalhe
     parte: peca
     item: "11"
     secao: merito
-    caso: |-
-      O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
-
-      A denúncia foi distribuída à Vara Criminal da Comarca de Flores, Estado de Campo Belo (CB), local dos fatos.
-
-      Lineu celebrou acordo de colaboração premiada com o Ministério Público, nos termos da Lei nº 12.850/13, devidamente homologado pelo Juízo competente, fornecendo provas de que Abelardo lhe fez pagamentos no valor total de R$ 500.000,00 (quinhentos mil reais), a fim de que não realizasse os atos de ofício que lhe cabiam.
-
-      Asseverou que dividiu essa vantagem patrimonial indevida com Mendonça, seu superior imediato, e que agia sob suas ordens e comando, mas, quanto a este ponto, não apresentou provas de corroboração. A instrução processual ocorreu sem intercorrências, sendo que Mendonça se aposentou no curso do processo. Lineu reafirmou os termos de sua colaboração, Abelardo, por sua vez, fez uso de seu direito ao silêncio, enquanto Mendonça negou os fatos e afirmou que o imóvel onde reside é herança de sua mãe, exibindo os documentos públicos que comprovam a regular transmissão causa mortis.
-
-      O Juízo convolou os debates orais em memoriais e concedeu prazo para o Ministério Público e, em seguida, prazo comum às defesas dos três acusados, o que motivou os protestos da defesa de Mendonça.
-
-      O Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial, razão pela qual a sentença foi prolatada pelo Juiz substituto, designado para atuar apenas em causas urgentes, ainda que nenhuma urgência houvesse neste processo. Assim, Mendonça foi condenado como incurso nas penas do Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, considerando provada a corrupção passiva por meio do interrogatório de Lineu, colaborador, o que foi reputado suficiente para provar materialidade e autoria delitivas. Aplicou a pena-base no mínimo legal de dois anos, majorada em um terço por duas vezes consecutivas, justificada exclusivamente pela existência de duas causas de aumento previstas na parte especial do Código Penal, alcançando a pena de 3 (três)
-
-      anos, 6 (seis) meses e 20 (vinte) dias de reclusão, em regime aberto, e substituiu a pena privativa de liberdade por duas restritivas de direitos. Determinou a cassação da aposentadoria de Mendonça, na forma do Art. 92, inciso I, a, do CP, aplicável por analogia, bem como a perda do imóvel de sua propriedade, uma vez que de valor incompatível com seus proventos, fato suficiente para autorizar o perdimento. O Ministério Público, intimado da sentença, manteve-se inerte. Você, como advogado(a) de Mendonça, é intimado(a) no dia 6 de setembro de 2024, sexta-feira, sendo o dia seguinte e os dias de segunda a sexta-feira úteis em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Afastamento do perdimento do imóvel, pois a herança configura meio lícito de aquisição de propriedade ou porque não constitui proveito ou produto de crime, forma do Art. 91, II, b ou 91-A, § 2º do CP.
-    opcoes:
-      correta: Afastamento do perdimento do imóvel, pois a herança configura meio lícito de aquisição de propriedade ou porque não constitui proveito ou produto de crime, forma do Art. 91, II, b ou 91-A, § 2º do CP.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Breno não agiu com dolo nem culpa OU sua conduta foi atípica em relação ao crime de corrupção de menores.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - O reconhecimento do erro de tipo tem como consequência a exclusão do dolo ou atipicidade da conduta.
-        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
-    revisao: *a1
-  - id: 41-peca-12
-    categoria: peca-detalhe
-    parte: peca
-    item: "12"
-    secao: pedido
-    caso: |-
-      O Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido vantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos municipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo único, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita no Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, pois provas documentais corroboraram que Lineu deixou de praticar os atos de ofício que lhe competiam, e que Mendonça ocupava a função de direção do órgão público.
-
-      A denúncia foi distribuída à Vara Criminal da Comarca de Flores, Estado de Campo Belo (CB), local dos fatos.
-
-      Lineu celebrou acordo de colaboração premiada com o Ministério Público, nos termos da Lei nº 12.850/13, devidamente homologado pelo Juízo competente, fornecendo provas de que Abelardo lhe fez pagamentos no valor total de R$ 500.000,00 (quinhentos mil reais), a fim de que não realizasse os atos de ofício que lhe cabiam.
-
-      Asseverou que dividiu essa vantagem patrimonial indevida com Mendonça, seu superior imediato, e que agia sob suas ordens e comando, mas, quanto a este ponto, não apresentou provas de corroboração. A instrução processual ocorreu sem intercorrências, sendo que Mendonça se aposentou no curso do processo. Lineu reafirmou os termos de sua colaboração, Abelardo, por sua vez, fez uso de seu direito ao silêncio, enquanto Mendonça negou os fatos e afirmou que o imóvel onde reside é herança de sua mãe, exibindo os documentos públicos que comprovam a regular transmissão causa mortis.
-
-      O Juízo convolou os debates orais em memoriais e concedeu prazo para o Ministério Público e, em seguida, prazo comum às defesas dos três acusados, o que motivou os protestos da defesa de Mendonça.
-
-      O Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial, razão pela qual a sentença foi prolatada pelo Juiz substituto, designado para atuar apenas em causas urgentes, ainda que nenhuma urgência houvesse neste processo. Assim, Mendonça foi condenado como incurso nas penas do Art. 317, § 1º, c/c o Art. 327, § 2º, ambos do CP, considerando provada a corrupção passiva por meio do interrogatório de Lineu, colaborador, o que foi reputado suficiente para provar materialidade e autoria delitivas. Aplicou a pena-base no mínimo legal de dois anos, majorada em um terço por duas vezes consecutivas, justificada exclusivamente pela existência de duas causas de aumento previstas na parte especial do Código Penal, alcançando a pena de 3 (três)
-
-      anos, 6 (seis) meses e 20 (vinte) dias de reclusão, em regime aberto, e substituiu a pena privativa de liberdade por duas restritivas de direitos. Determinou a cassação da aposentadoria de Mendonça, na forma do Art. 92, inciso I, a, do CP, aplicável por analogia, bem como a perda do imóvel de sua propriedade, uma vez que de valor incompatível com seus proventos, fato suficiente para autorizar o perdimento. O Ministério Público, intimado da sentença, manteve-se inerte. Você, como advogado(a) de Mendonça, é intimado(a) no dia 6 de setembro de 2024, sexta-feira, sendo o dia seguinte e os dias de segunda a sexta-feira úteis em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Mendonça, redija a peça jurídica cabível, diferente de habeas corpus, e considerando que a sentença não padece de vício de contradição, obscuridade, ambiguidade ou omissão, apresente todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Conhecimento e provimento do recurso.
-    opcoes:
-      correta: Conhecimento e provimento do recurso.
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Requerimento de aplicação do furto privilegiado, pleiteando a adoção de alguma das medidas previstas em lei (ou substituição da reclusão por detenção ou causa de diminuição de pena ou aplicação exclusivamente da pena de multa), na forma do Art. 155, §2º, do CP.
-        - Pedido de retratação pelo juízo a quo.
-        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
-    revisao: *a1
+    pergunta: "Que tese a defesa deve sustentar quanto ao imóvel de Mendonça?"
+    tese: "Afastamento da perda do imóvel, recebido por herança: a origem lícita do bem impede o confisco"
+    aceitos: [ [ "perdimento | perda", "afast* | nao cabe | descab* | incab*" ], [ "origem licita | licitude | aquisicao licita | meio licito" ] ]
+    artigos: [ "art. 91-A, § 2º, CP", "art. 91, II, b, CP" ]
+    gabarito: "Afastamento do perdimento do imóvel, pois a herança configura meio lícito de aquisição de propriedade ou porque não constitui proveito ou produto de crime, forma do Art. 91, II, b ou 91-A, § 2º do CP."
+    revisao: { status: revisado }
   - id: 41-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Adriano foi autuado em flagrante delito pela prática de caça em Unidade de Conservação (Art. 29, § 4º, inciso V, da Lei nº 9605/98) e foi condenado pelo Juizado Especial Criminal competente a uma pena de um ano de detenção, em regime aberto, substituída a pena privativa de liberdade por uma pena restritiva de direito. A sentença exasperou a pena-base em seis meses com base na culpabilidade acentuada de Adriano, que se valeu de espingarda para a prática de caça.
-
-      O Ministério Público não recorreu da sentença. Adriano, por meio de sua defesa técnica, interpôs recurso de apelação, aduzindo que a valoração da culpabilidade se valeu de argumento genérico e inerente ao tipo penal, devendo ser afastada a exasperação da pena-base. O apelo foi julgado e foi negado provimento, mantendo a pena-base em um ano de detenção. Além disso, a Turma Recursal considerou a existência de error in judicando e reformou a sentença, reconhecendo a incidência da causa de aumento (Art. 29, § 4º, inciso V, da Lei nº 9605/98), que deixou de ser aplicada pelo Juízo a quo por mero erro material. Assim, fixou a pena final em um ano e seis meses de detenção.
-
-      A defesa de Adriano impetrou habeas corpus em favor do acusado, perante o Tribunal ao qual está vinculado o Juizado onde correu a ação penal, tendo sido concedida a ordem. O Ministério Público interpôs recurso ordinário constitucional em face dessa decisão.
-
-      Na qualidade de advogado(a) de Adriano, responda às questões a seguir.
-    comando: Qual questão preliminar deve ser arguida em contrarrazões recursais? Justifique.
-    gabarito: Na condição de advogado(a) de Adriano, deve ser alegado o descabimento do recurso ordinário constitucional, uma vez que a decisão recorrida foi concessiva de habeas corpus. O recurso só é cabível em face de decisão denegatória, na forma do Art. 105, inciso II, alínea a, da CRFB/88 ou Art. 30, da Lei nº 8.038/90.
-    opcoes:
-      correta: O descabimento de recurso ordinário constitucional em face de decisão concessiva de habeas corpus, na forma do Art. 105, inciso II, alínea a, da CRFB/88 ou Art. 30, da Lei nº 8.038/90.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Atipicidade objetiva da conduta, pois a figura delitiva da perseguição (Art. 147-A do CP); adota verbo nuclear no infinitivo (“perseguir”), o que denota crime habitual, a exigir reiteração do comportamento para a caracterização da tipicidade objetiva
-        - Não, nos termos do verbete 453 da Súmula do STF. OU Não, pois nesse caso haveria supressão de instância.
-        - Não há vedação legal, tendo em vista que Andy ostenta condenação pela prática de contravenção penal e não de crime, sem violação ao Art. 89 da Lei nº 9.099/95.
-        - Sim, o argumento de que ocorreu extinção da punibilidade diante da reparação do dano pelo réu, pagamento esse que precedeu sentença irrecorrível, nos termos do Art. 312, § 3º, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que preliminar a defesa de Adriano deve arguir nas contrarrazões ao recurso do Ministério Público?"
+    tese: "Não cabe recurso ordinário constitucional contra decisão que concede habeas corpus, só contra a que denega"
+    aceitos: [ "nao cabe | descabi* | incabi* | inadmiss* | nao e cabivel | so contra a que denega | denegatoria" ]
+    artigos: [ "art. 105, II, a, CRFB", "art. 30, Lei 8.038" ]
+    gabarito: "Na condição de advogado(a) de Adriano, deve ser alegado o descabimento do recurso ordinário constitucional, uma vez que a decisão recorrida foi concessiva de habeas corpus. O recurso só é cabível em face de decisão denegatória, na forma do Art. 105, inciso II, alínea a, da CRFB/88 ou Art. 30, da Lei nº 8.038/90."
+    revisao: { status: revisado }
   - id: 41-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Adriano foi autuado em flagrante delito pela prática de caça em Unidade de Conservação (Art. 29, § 4º, inciso V, da Lei nº 9605/98) e foi condenado pelo Juizado Especial Criminal competente a uma pena de um ano de detenção, em regime aberto, substituída a pena privativa de liberdade por uma pena restritiva de direito. A sentença exasperou a pena-base em seis meses com base na culpabilidade acentuada de Adriano, que se valeu de espingarda para a prática de caça.
-
-      O Ministério Público não recorreu da sentença. Adriano, por meio de sua defesa técnica, interpôs recurso de apelação, aduzindo que a valoração da culpabilidade se valeu de argumento genérico e inerente ao tipo penal, devendo ser afastada a exasperação da pena-base. O apelo foi julgado e foi negado provimento, mantendo a pena-base em um ano de detenção. Além disso, a Turma Recursal considerou a existência de error in judicando e reformou a sentença, reconhecendo a incidência da causa de aumento (Art. 29, § 4º, inciso V, da Lei nº 9605/98), que deixou de ser aplicada pelo Juízo a quo por mero erro material. Assim, fixou a pena final em um ano e seis meses de detenção.
-
-      A defesa de Adriano impetrou habeas corpus em favor do acusado, perante o Tribunal ao qual está vinculado o Juizado onde correu a ação penal, tendo sido concedida a ordem. O Ministério Público interpôs recurso ordinário constitucional em face dessa decisão.
-
-      Na qualidade de advogado(a) de Adriano, responda às questões a seguir.
-    comando: Qual a tese processual cabível a ser defendida, a fim de garantir o afastamento da causa de aumento aplicada a Adriano? Fundamente.
-    gabarito: A tese defensiva deduzida em favor de Adriano é a vedação à reformatio in pejus em recurso exclusivo da defesa, consoante o Art. 617 do CPP ou a Súmula 160 do STF.
-    opcoes:
-      correta: A tese defensiva é a impossibilidade de promover reformatio in pejus, na forma do Art. 617 do CPP ou da Súmula 160 do STF.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese processual afasta a causa de aumento aplicada pela Turma Recursal?"
+    tese: "Vedação da reformatio in pejus: em recurso só da defesa, o tribunal não pode piorar a pena"
+    aceitos: [ "reformatio | reforma para pior | reforma em prejuizo" ]
+    artigos: [ "art. 617, CPP", "Súmula 160 STF" ]
+    gabarito: "A tese defensiva deduzida em favor de Adriano é a vedação à reformatio in pejus em recurso exclusivo da defesa, consoante o Art. 617 do CPP ou a Súmula 160 do STF."
+    revisao: { status: revisado }
   - id: 41-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      No Supermercado Boa Fartura, há uma área de descarte de mercadorias violadas, vencidas ou que, de qualquer forma, estejam sem condições de venda. William, aproveitando-se da baixa luminosidade do período noturno e do reduzido fluxo de pessoas, ingressou nesta área, localizada em pátio externo com acesso à via pública (por onde passa o caminhão de coleta de descartes) e subtraiu, para si, 20 (vinte) quilos de picanha, 2 (dois) litros de iogurte, 10 (dez) litros de detergente e 5 (cinco) litros de refrigerante, todos com data de validade ultrapassada.
-
-      Enquanto se afastava da área designada em direção à via pública, foi flagranteado pelos seguranças e levado à autoridade policial competente que autuou William por furto majorado pelo horário de repouso noturno, na forma tentada (Art. 155, caput c/c Art. 155, § 1º, na forma do Art. 14, inciso II, todos do Código Penal).
-
-      O gerente do supermercado, ouvido em conjunto com os agentes de segurança que realizaram o flagrante, confirmou à autoridade policial que as mercadorias subtraídas eram destinadas ao descarte, por não poderem ser comercializadas.
-
-      Durante a lavratura do flagrante, William informou ao delegado que não possui advogado, e não há defensoria pública instalada na comarca, o que levou você a ser designado como advogado(a) dativo(a) de William pelo Juízo, tão logo o acusado recebeu a comunicação de prisão em flagrante. Aceitado o encargo, e considerando apenas as informações constantes do enunciado, responda às perguntas a seguir.
-    comando: Como advogado(a) constituído(a) no momento processual indicado nos autos, qual será a oportunidade mais próxima para defender oralmente, perante o Juiz, a liberdade de Wiliam? Justifique.
-    gabarito: A pergunta inicial exige do examinando a identificação de que na audiência de custódia haverá a primeira oportunidade em que, formalmente, há participação obrigatória da defesa. Assim, na forma do Art. 310, caput, do CPP, a primeira oportunidade da defesa técnica de postular a liberdade é na audiência de custódia.
-    opcoes:
-      correta: Na audiência de custódia, na forma do Art. 310, caput, do CPP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "A"
+    pergunta: "Qual é a oportunidade mais próxima para defender oralmente a liberdade de William diante do juiz?"
+    tese: "Audiência de custódia, logo depois da prisão em flagrante"
+    aceitos: [ "audiencia de custodia" ]
+    artigos: [ "art. 310, CPP" ]
+    gabarito: "A pergunta inicial exige do examinando a identificação de que na audiência de custódia haverá a primeira oportunidade em que, formalmente, há participação obrigatória da defesa. Assim, na forma do Art. 310, caput, do CPP, a primeira oportunidade da defesa técnica de postular a liberdade é na audiência de custódia."
+    revisao: { status: revisado }
   - id: 41-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      No Supermercado Boa Fartura, há uma área de descarte de mercadorias violadas, vencidas ou que, de qualquer forma, estejam sem condições de venda. William, aproveitando-se da baixa luminosidade do período noturno e do reduzido fluxo de pessoas, ingressou nesta área, localizada em pátio externo com acesso à via pública (por onde passa o caminhão de coleta de descartes) e subtraiu, para si, 20 (vinte) quilos de picanha, 2 (dois) litros de iogurte, 10 (dez) litros de detergente e 5 (cinco) litros de refrigerante, todos com data de validade ultrapassada.
-
-      Enquanto se afastava da área designada em direção à via pública, foi flagranteado pelos seguranças e levado à autoridade policial competente que autuou William por furto majorado pelo horário de repouso noturno, na forma tentada (Art. 155, caput c/c Art. 155, § 1º, na forma do Art. 14, inciso II, todos do Código Penal).
-
-      O gerente do supermercado, ouvido em conjunto com os agentes de segurança que realizaram o flagrante, confirmou à autoridade policial que as mercadorias subtraídas eram destinadas ao descarte, por não poderem ser comercializadas.
-
-      Durante a lavratura do flagrante, William informou ao delegado que não possui advogado, e não há defensoria pública instalada na comarca, o que levou você a ser designado como advogado(a) dativo(a) de William pelo Juízo, tão logo o acusado recebeu a comunicação de prisão em flagrante. Aceitado o encargo, e considerando apenas as informações constantes do enunciado, responda às perguntas a seguir.
-    comando: Qual a tese de direito material a ser sustentada na defesa de William a fim de evitar a sua responsabilização penal pelo fato? Justifique.
-    gabarito: Quanto ao direito material, nota-se que William subtraiu bens sem valor econômico e que estavam destinados a descarte. Há atipicidade formal da conduta, pois os bens foram abandonados pelo proprietário (res derelictae), não configurando coisa alheia. Com efeito, o tipo penal de furto exige que se proceda a uma subtração de patrimônio alheio. Ao subtrair bens sem valor econômico, a conduta é formal e materialmente atípica. É igualmente aceito que se manifeste pela inexistência de tipicidade material, ante a incidência do princípio da insignificância, pois os bens não possuem valor econômico significativo.
-    opcoes:
-      correta: Atipicidade formal ou material da conduta, pois os bens foram descartados pelo proprietário ou não possuem valor econômico significativo, ensejando insignificância.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese de direito material evita a responsabilização de William?"
+    tese: "Atipicidade: as mercadorias descartadas são coisa abandonada, não coisa alheia, e não têm valor econômico relevante"
+    aceitos: [ "atipic* | coisa abandonada | res derelicta | abandonad* | nao e coisa alheia | insignifican*" ]
+    artigos: [ "art. 155, CP" ]
+    gabarito: "Quanto ao direito material, nota-se que William subtraiu bens sem valor econômico e que estavam destinados a descarte. Há atipicidade formal da conduta, pois os bens foram abandonados pelo proprietário (res derelictae), não configurando coisa alheia. Com efeito, o tipo penal de furto exige que se proceda a uma subtração de patrimônio alheio. Ao subtrair bens sem valor econômico, a conduta é formal e materialmente atípica. É igualmente aceito que se manifeste pela inexistência de tipicidade material, ante a incidência do princípio da insignificância, pois os bens não possuem valor econômico significativo."
+    revisao: { status: revisado }
   - id: 41-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Luana, sem querer criar seu filho Joaquim, de 8 meses de idade, decidiu abandoná-lo em um movimentado supermercado da cidade, deixando-o agasalhado e acomodado em uma cadeira própria para bebês, com o cinto de segurança afivelado. Poucos minutos após ser abandonado, Joaquim foi acolhido por pessoas que estavam no supermercado e levado, sem qualquer risco ou lesão, às autoridades competentes.
-
-      Luana foi denunciada por abandono de incapaz (Art. 133, § 3º, inciso II, do CP). Em diligências finais, vieram aos autos as imagens da câmera de vigilância, demonstrando que, ao sair do supermercado, Luana subtraiu um chocolate. O Ministério Público, em alegações finais, pediu a condenação de Luana nos termos da denúncia, ao passo que a defesa técnica postulou sua absolvição.
-
-      O Juízo proferiu sentença e condenou Luana pelos delitos de abandono de incapaz e furto simples, em concurso material (Art. 133, § 3º, inciso II, e Art. 155, caput, na forma do Art. 69, todos do CP), com base nos elementos factuais surgidos no curso do processo (notadamente, as imagens da câmera de vigilância do mercado). Na qualidade de advogado de Luana, responda às questões a seguir.
-    comando: A fim de impugnar a condenação de Luana pelo delito de abandono de incapaz, qual a tese de Direito Penal a ser sustentada? Justifique.
-    gabarito: Quanto ao aspecto material, deveria o examinando defender a atipicidade da conduta. O crime de abandono de incapaz é de perigo concreto, exige que a integridade física da vítima seja efetivamente colocada em risco iminente. A descrição das condições de abandono, em que a criança foi cautelosamente colocada em cadeira própria e afivelada, deixada em local de grande circulação de pessoas, não configura o tipo penal, por não ensejar risco concreto à segurança do infante.
-    opcoes:
-      correta: Atipicidade da conduta, diante da inexistência de perigo concreto à integridade física do menor.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese de direito penal contesta a condenação de Luana por abandono de incapaz?"
+    tese: "Atipicidade do abandono de incapaz, crime de perigo concreto: o bebê nunca correu perigo"
+    aceitos: [ "perigo concreto | atipic* | sem perigo | nenhum perigo | nao houve perigo | nunca correu perigo" ]
+    artigos: [ "art. 133, CP" ]
+    gabarito: "Quanto ao aspecto material, deveria o examinando defender a atipicidade da conduta. O crime de abandono de incapaz é de perigo concreto, exige que a integridade física da vítima seja efetivamente colocada em risco iminente. A descrição das condições de abandono, em que a criança foi cautelosamente colocada em cadeira própria e afivelada, deixada em local de grande circulação de pessoas, não configura o tipo penal, por não ensejar risco concreto à segurança do infante."
+    revisao: { status: revisado }
   - id: 41-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Luana, sem querer criar seu filho Joaquim, de 8 meses de idade, decidiu abandoná-lo em um movimentado supermercado da cidade, deixando-o agasalhado e acomodado em uma cadeira própria para bebês, com o cinto de segurança afivelado. Poucos minutos após ser abandonado, Joaquim foi acolhido por pessoas que estavam no supermercado e levado, sem qualquer risco ou lesão, às autoridades competentes.
-
-      Luana foi denunciada por abandono de incapaz (Art. 133, § 3º, inciso II, do CP). Em diligências finais, vieram aos autos as imagens da câmera de vigilância, demonstrando que, ao sair do supermercado, Luana subtraiu um chocolate. O Ministério Público, em alegações finais, pediu a condenação de Luana nos termos da denúncia, ao passo que a defesa técnica postulou sua absolvição.
-
-      O Juízo proferiu sentença e condenou Luana pelos delitos de abandono de incapaz e furto simples, em concurso material (Art. 133, § 3º, inciso II, e Art. 155, caput, na forma do Art. 69, todos do CP), com base nos elementos factuais surgidos no curso do processo (notadamente, as imagens da câmera de vigilância do mercado). Na qualidade de advogado de Luana, responda às questões a seguir.
-    comando: A fim de impugnar a condenação de Luana pelo delito de furto, qual a tese de Direito Processual Penal a ser sustentada? Justifique.
-    gabarito: Quanto ao direito processual, é de se notar que a sentença violou o princípio da congruência ou da correlação entre a acusação e a sentença, ao deixar de observar o procedimento previsto no Art. 384 do CPP, que determina que o Ministério Público deve aditar a denúncia e reabrir a instrução para que a defesa possa se manifestar sobre os novos fatos.
-    opcoes:
-      correta: Violação ao princípio da congruência ou correlação entre a sentença e a acusação (ou violação ao procedimento da mutatio libelli), em desrespeito ao procedimento do Art. 384 do CPP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese processual contesta a condenação de Luana pelo furto?"
+    tese: "Violação da correlação: o furto não estava na denúncia, e o juiz não podia condenar por ele sem aditamento (mutatio libelli)"
+    aceitos: [ "congruencia | correlacao | mutatio libelli | aditamento" ]
+    artigos: [ "art. 384, CPP" ]
+    gabarito: "Quanto ao direito processual, é de se notar que a sentença violou o princípio da congruência ou da correlação entre a acusação e a sentença, ao deixar de observar o procedimento previsto no Art. 384 do CPP, que determina que o Ministério Público deve aditar a denúncia e reabrir a instrução para que a defesa possa se manifestar sobre os novos fatos."
+    revisao: { status: revisado }
   - id: 41-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      Jorge foi definitivamente condenado à pena de desacato, fixada em um ano de detenção, em regime aberto.
-
-      Presentes os requisitos, a pena de reclusão foi substituída por uma pena de prestação pecuniária. Foi autorizado o parcelamento do cumprimento da pena em 12 (doze) prestações iguais e sucessivas.
-
-      Após o pagamento de cinco parcelas, Jorge faleceu. A filha de Jorge, Janaína, maior e herdeira de bens deixados pelo falecido, procura você, como advogado(a), informando ter obtido novas provas capazes de comprovar a inocência de seu pai, bem como indagando a respeito da sua responsabilidade pessoal pelo pagamento das parcelas da prestação pecuniária que seu pai não quitou em vida.
-
-      Assim, responda às questões a seguir.
-    comando: As parcelas remanescentes da pena de prestação pecuniária poderão ser cobradas de Janaína? Responda, fundamentadamente, indicando o princípio de Direito Penal aplicável.
-    gabarito: Não, diante do princípio da intranscendência da pena ou o da responsabilidade pessoal ou personalidade ou intransmissibilidade da pena, a morte do condenado extingue a punibilidade, na forma do Art. 107, inciso I, do CP, ou do Art. 5º, inciso XLV, da CRFB/88 ou Artigo 5, item 3, da Convenção Americana sobre Direitos Humanos o Pacto de San José da Costa Rica (aprovada pelo Decreto 678/92).
-    opcoes:
-      correta: Não, diante do princípio da intranscendência da pena ou o da responsabilidade pessoal ou personalidade ou intransmissibilidade da pena, a morte do condenado extingue a punibilidade, na forma do Art. 107, inciso I, do CP, ou do Art. 5º, inciso XLV, da CRFB/88 ou Artigo 5, item 3, da Convenção Americana sobre Direitos Humanos o Pacto de San José da Costa Rica (aprovada pelo Decreto 678/92).
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "A"
+    pergunta: "Janaína terá de pagar as parcelas restantes da prestação pecuniária?"
+    tese: "A morte do condenado extingue a punibilidade, e a pena não passa da pessoa dele (intranscendência)"
+    aceitos: [ "intranscendencia | personalidade da pena | nao passa da pessoa | responsabilidade pessoal | intransmissib* | extincao da punibilidade | extingue a punibilidade" ]
+    artigos: [ "art. 107, I, CP", "art. 5, XLV, CRFB" ]
+    gabarito: "Não, diante do princípio da intranscendência da pena ou o da responsabilidade pessoal ou personalidade ou intransmissibilidade da pena, a morte do condenado extingue a punibilidade, na forma do Art. 107, inciso I, do CP, ou do Art. 5º, inciso XLV, da CRFB/88 ou Artigo 5, item 3, da Convenção Americana sobre Direitos Humanos o Pacto de San José da Costa Rica (aprovada pelo Decreto 678/92)."
+    revisao: { status: revisado }
   - id: 41-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Jorge foi definitivamente condenado à pena de desacato, fixada em um ano de detenção, em regime aberto.
-
-      Presentes os requisitos, a pena de reclusão foi substituída por uma pena de prestação pecuniária. Foi autorizado o parcelamento do cumprimento da pena em 12 (doze) prestações iguais e sucessivas.
-
-      Após o pagamento de cinco parcelas, Jorge faleceu. A filha de Jorge, Janaína, maior e herdeira de bens deixados pelo falecido, procura você, como advogado(a), informando ter obtido novas provas capazes de comprovar a inocência de seu pai, bem como indagando a respeito da sua responsabilidade pessoal pelo pagamento das parcelas da prestação pecuniária que seu pai não quitou em vida.
-
-      Assim, responda às questões a seguir.
-    comando: Identifique, de forma justificada, se há meios processuais que legitimem Janaína a comprovar a inocência de Jorge.
-    gabarito: Janaína pode pleitear a revisão criminal em favor de seu pai, na forma do Art. 621, inciso III, ou o Art. 623, ambos do CPP.
-    opcoes:
-      correta: É cabível a revisão criminal mesmo após a morte da pessoa condenada, com base no Art. 621, inciso III, ou o Art. 623, ambos do CPP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que meio processual permite a Janaína provar a inocência do pai?"
+    tese: "Revisão criminal, que cabe mesmo após a morte do condenado e pode ser pedida pela filha"
+    aceitos: [ "revisao criminal" ]
+    artigos: [ "art. 623, CPP", "art. 621, III, CPP" ]
+    gabarito: "Janaína pode pleitear a revisão criminal em favor de seu pai, na forma do Art. 621, inciso III, ou o Art. 623, ambos do CPP."
+    revisao: { status: revisado }

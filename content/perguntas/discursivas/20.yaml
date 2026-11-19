@@ -1,669 +1,158 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "20"
+introducoes:
+  peca: "Astolfo, de 74 anos, morador havia mais de 50 anos de uma favela de Goiânia e sem antecedentes, foi obrigado pelo chefe do tráfico local, armado, a levar 50 g de cocaína a outro traficante, sob pena de ser expulso de casa, e foi preso no caminho. Admitiu o transporte e contou a ameaça. A sua folha de antecedentes só aponta um inquérito por falsificação de documento particular. Denunciado por tráfico, respondeu ao processo em liberdade. O Ministério Público pediu a condenação, e você, advogado de Astolfo, foi intimado para os memoriais em 6/3/2015."
+  q1: "Fausto, de 18 anos, sem habilitação, pegou o carro do pai escondido e, sem respeitar a sinalização, atropelou e matou Lídia e as cinco filhas. Condenado por seis homicídios na direção de veículo, com as causas de aumento, a 4 anos e 6 meses no semiaberto, teve a substituição da pena negada só porque a pena passa de 4 anos. Na sentença, o juiz decretou a prisão dele só porque ele não foi à audiência marcada para o interrogatório."
+  q2: "Lúcio, dono de uma oficina de carros, comprou de um vizinho, por R$ 1.000, um celular que sabia ser produto de crime, para uso próprio. O delegado o indiciou por receptação qualificada, por exercer atividade comercial, e pediu a prisão temporária dele."
+  q3: "Andy, com uma condenação definitiva por contravenção penal, foi à casa de Josefa dizendo que o filho dela pedira para ele buscar o computador. Quando o marido dela trouxe o aparelho, Andy se lembrou do pai falecido e foi embora sem levar nada. Foi condenado por tentativa de estelionato."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["20-peca-1", "20-peca-3-1", "20-peca-11", "20-peca-11-1", "20-peca-11-2", "20-peca-11-3", "20-q4-a", "20-q4-b"]
 perguntas:
-  - id: 20-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento: Vara Criminal da Comarca de Goiânia/GO."
-    opcoes:
-      correta: "Endereçamento: Vara Criminal da Comarca de Goiânia/GO."
-      erradas:
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - "Endereçamento das razões: Tribunal de Justiça do Estado ___."
-        - "Endereçamento: Juízo da Vara de Execuções Penais de Belo Horizonte/MG"
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro."
-        - "Endereçamento: Tribunal Regional Federal da 10ª Região."
-    revisao: &a1
-      status: revisado
   - id: 20-peca-3
     categoria: peca-detalhe
     parte: peca
     item: "3"
     secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "Astolfo levou a droga porque o chefe do tráfico, armado, ameaçou expulsá-lo de casa. Que tese leva à absolvição dele?"
+    tese: "Coação moral irresistível, que exclui a culpabilidade"
+    aceitos: [ "coacao moral irresistivel | coacao irresistivel" ]
+    artigos: [ "art. 22, CP" ]
     gabarito: "No mérito: Absolvição do crime imputado de tráfico de drogas, com fundamento na existência de coação moral irresistível, prevista no Art. 22 do Código Penal"
-    opcoes:
-      correta: "No mérito: Absolvição do crime imputado de tráfico de drogas, com fundamento na existência de coação moral irresistível, prevista no Art. 22 do Código Penal"
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Afastamento da agravante da reincidência OU afastamento da agravante do art. 61, I, do CP, tendo em vista que a condenação anterior se refere à contravenção ou tendo em vista que não ostenta condenação anterior definitiva pela prática de crime
-        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
-        - Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-    revisao: *a1
-  - id: 20-peca-3-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "3.1"
-    secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Ausência de culpabilidade em razão da inexigibilidade de conduta diversa
-    opcoes:
-      correta: Ausência de culpabilidade em razão da inexigibilidade de conduta diversa
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Luiz agiu diante de perigo atual para sua integridade física, utilizando meios disponíveis, não sendo razoável a exigência do sacrifício
-        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
-        - Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
-        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 20-peca-4
     categoria: peca-detalhe
     parte: peca
     item: "4"
     secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "O inquérito por falsificação pode aumentar a pena-base de Astolfo?"
+    tese: "Inquérito em curso não é circunstância judicial desfavorável (presunção de inocência)"
+    aceitos: [ [ "presuncao de inocencia | estado de inocencia" ], [ "nao pode | nao podem | nao serve | nao configura | nao caracteriz*" ] ]
+    artigos: [ "Súmula 444 STJ" ]
     gabarito: "Subsidiariamente, em caso de condenação: fixação da pena base no mínimo legal, pois a existência de inquérito policial não pode configurar circunstância judicial desfavorável, em atenção ao Princípio da presunção de inocência."
-    opcoes:
-      correta: "Subsidiariamente, em caso de condenação: fixação da pena base no mínimo legal, pois a existência de inquérito policial não pode configurar circunstância judicial desfavorável, em atenção ao Princípio da presunção de inocência."
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Afastamento da agravante da reincidência OU afastamento da agravante do art. 61, I, do CP, tendo em vista que a condenação anterior se refere à contravenção ou tendo em vista que não ostenta condenação anterior definitiva pela prática de crime
-        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-        - Patrick utilizou dos meios necessários para repelir injusta agressão atual.
-        - No mérito, pedido de absolvição sumária, diante da manifesta causa de isenção de pena ou excludente de culpabilidade, nos termos do Art. 415, inciso IV, do CPP
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 20-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Reconhecimento de atenuante pelo fato de o réu ser maior de 70 anos na data da sentença, nos termos do Art. 65, inciso I, do CP
-    opcoes:
-      correta: Reconhecimento de atenuante pelo fato de o réu ser maior de 70 anos na data da sentença, nos termos do Art. 65, inciso I, do CP
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Luiz agiu diante de perigo atual para sua integridade física, utilizando meios disponíveis, não sendo razoável a exigência do sacrifício
-        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
-        - Patrick agiu amparado pela legítima defesa, prevista no Art. 25 do CP OU no Art. 23, II, do CP.
-        - No mérito, pedido de absolvição sumária, diante da manifesta causa de isenção de pena ou excludente de culpabilidade, nos termos do Art. 415, inciso IV, do CPP
-    revisao: *a1
+    pergunta: "Que atenuante deve ser reconhecida pela idade de Astolfo?"
+    tese: "Atenuante de ser o réu maior de 70 anos na data da sentença"
+    aceitos: [ "70 anos | setenta anos" ]
+    artigos: [ "art. 65, I, CP" ]
+    gabarito: "Reconhecimento de atenuante pelo fato de o réu ser maior de 70 anos na data da sentença, nos termos do Art. 65, inciso I, do CP"
+    revisao: { status: revisado }
   - id: 20-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Reconhecimento da atenuante da confissão, nos termos do Art. 65, inciso III, alínea d, do CP
-    opcoes:
-      correta: Reconhecimento da atenuante da confissão, nos termos do Art. 65, inciso III, alínea d, do CP
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Luiz agiu diante de perigo atual para sua integridade física, utilizando meios disponíveis, não sendo razoável a exigência do sacrifício
-        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
-        - Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
-        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
-    revisao: *a1
+    pergunta: "Astolfo admitiu o transporte da droga. Que atenuante cabe?"
+    tese: "Atenuante da confissão espontânea"
+    aceitos: [ "confissao" ]
+    artigos: [ "art. 65, III, d, CP" ]
+    gabarito: "Reconhecimento da atenuante da confissão, nos termos do Art. 65, inciso III, alínea d, do CP"
+    revisao: { status: revisado }
   - id: 20-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Reconhecimento da atenuante da coação resistível, na forma do Art. 65, inciso III, alínea c, do CP.
-    opcoes:
-      correta: Reconhecimento da atenuante da coação resistível, na forma do Art. 65, inciso III, alínea c, do CP.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Aplicação da pena base no mínimo legal, já que circunstâncias do art. 59 do CP são favoráveis
-        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
-        - Patrick utilizou dos meios necessários para repelir injusta agressão atual.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
+    pergunta: "Se a coação não for considerada irresistível, que atenuante cabe?"
+    tese: "Atenuante da coação resistível"
+    aceitos: [ "coacao resistivel" ]
+    artigos: [ "art. 65, III, c, CP" ]
+    gabarito: "Reconhecimento da atenuante da coação resistível, na forma do Art. 65, inciso III, alínea c, do CP."
+    revisao: { status: revisado }
   - id: 20-peca-8
     categoria: peca-detalhe
     parte: peca
     item: "8"
     secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343 OU reconhecimento do tráfico privilegiado, pois o réu era primário, de bons antecedentes, não se dedicando a atividade criminosa nem integrando organização criminosa
-    opcoes:
-      correta: Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343 OU reconhecimento do tráfico privilegiado, pois o réu era primário, de bons antecedentes, não se dedicando a atividade criminosa nem integrando organização criminosa
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Aplicação da pena base no mínimo legal, já que circunstâncias do art. 59 do CP são favoráveis
-        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
-        - Patrick agiu amparado pela legítima defesa, prevista no Art. 25 do CP OU no Art. 23, II, do CP.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
+    pergunta: "Astolfo é primário, de bons antecedentes e não se dedica ao crime. Que figura do tráfico a defesa deve pedir?"
+    tese: "Tráfico privilegiado, com a causa de diminuição da pena"
+    aceitos: [ "privilegiado" ]
+    artigos: [ "art. 33, § 4º, Lei 11.343" ]
+    gabarito: "Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343 OU reconhecimento do tráfico privilegiado, pois o réu era primário, de bons antecedentes, não se dedicando a atividade criminosa nem integrando organização criminosa"
+    revisao: { status: revisado }
   - id: 20-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Substituição da pena privativa de liberdade por restritivas de direitos, pois o STF reconheceu a inconstitucionalidade da vedação trazida pelo Art. 33, § 4º, da Lei nº 11.343/06 OU porque a Resolução 05 do Senado Federal suspendeu a eficácia dessa vedação.
-    opcoes:
-      correta: Substituição da pena privativa de liberdade por restritivas de direitos, pois o STF reconheceu a inconstitucionalidade da vedação trazida pelo Art. 33, § 4º, da Lei nº 11.343/06 OU porque a Resolução 05 do Senado Federal suspendeu a eficácia dessa vedação.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Afastamento da agravante da reincidência OU afastamento da agravante do art. 61, I, do CP, tendo em vista que a condenação anterior se refere à contravenção ou tendo em vista que não ostenta condenação anterior definitiva pela prática de crime
-        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-        - Patrick agiu amparado pela legítima defesa, prevista no Art. 25 do CP OU no Art. 23, II, do CP.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
+    pergunta: "Com a diminuição da pena, o que a defesa deve pedir quanto à espécie de pena?"
+    tese: "Substituição por restritivas de direitos: a vedação no tráfico privilegiado foi declarada inconstitucional"
+    aceitos: [ "substitui*" ]
+    artigos: [ "art. 44, CP" ]
+    gabarito: "Substituição da pena privativa de liberdade por restritivas de direitos, pois o STF reconheceu a inconstitucionalidade da vedação trazida pelo Art. 33, § 4º, da Lei nº 11.343/06 OU porque a Resolução 05 do Senado Federal suspendeu a eficácia dessa vedação."
+    revisao: { status: revisado }
   - id: 20-peca-10
     categoria: peca-detalhe
     parte: peca
     item: "10"
     secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Aplicação do regime inicial aberto para cumprimento de pena, pois a fixação do regime inicial fechado obrigatório para crimes hediondos e equiparados trazida pelo Art. 2º, § 1º, da Lei nº 8072 foi considerada inconstitucional pelo STF por violação do princípio da individualização da pena.
-    opcoes:
-      correta: Aplicação do regime inicial aberto para cumprimento de pena, pois a fixação do regime inicial fechado obrigatório para crimes hediondos e equiparados trazida pelo Art. 2º, § 1º, da Lei nº 8072 foi considerada inconstitucional pelo STF por violação do princípio da individualização da pena.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Aplicação da pena base no mínimo legal, já que circunstâncias do art. 59 do CP são favoráveis
-        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
-        - Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-    revisao: *a1
-  - id: 20-peca-11
-    categoria: peca-detalhe
-    parte: peca
-    item: "11"
-    secao: pedido
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: "Pedidos: Absolvição, na forma do Art. 386, inciso VI, do CPP"
-    opcoes:
-      correta: "Pedidos: Absolvição, na forma do Art. 386, inciso VI, do CPP"
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
-        - Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP.
-        - "Pedidos: Conhecimento e provimento do recurso OU concessão da progressão de regime"
-        - "Pedido: Conhecimento e provimento do recurso."
-    revisao: *a1
-  - id: 20-peca-11-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "11.1"
-    secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Subsidiariamente, aplicação da pena base no mínimo
-    opcoes:
-      correta: Subsidiariamente, aplicação da pena base no mínimo
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Fixação do regime aberto para início do cumprimento da pena, considerando a pena a ser aplicada ou considerando que o delito é punido apenas com pena de detenção
-        - Existência de Procuração com poderes especiais de acordo com o artigo 44 do CPP em anexo ou menção acerca de sua existência no corpo da qualificação.
-        - Patrick utilizou dos meios necessários para repelir injusta agressão atual.
-        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
-    revisao: *a1
-  - id: 20-peca-11-2
-    categoria: peca-detalhe
-    parte: peca
-    item: "11.2"
-    secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Reconhecimento das atenuantes do Art. 65, incisos I e III, alíneas “c” e “d” do CP;
-    opcoes:
-      correta: Reconhecimento das atenuantes do Art. 65, incisos I e III, alíneas “c” e “d” do CP;
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Luiz agiu diante de perigo atual para sua integridade física, utilizando meios disponíveis, não sendo razoável a exigência do sacrifício
-        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
-        - Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
-        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
-    revisao: *a1
-  - id: 20-peca-11-3
-    categoria: peca-detalhe
-    parte: peca
-    item: "11.3"
-    secao: merito
-    caso: |-
-      Astolfo, nascido em 15 de março de 1940, sem qualquer envolvimento pretérito com o aparato judicial, no dia 22 de março de 2014, estava em sua casa, um barraco na comunidade conhecida como Favela da Zebra, localizada em Goiânia/GO, quando foi visitado pelo chefe do tráfico da comunidade, conhecido pelo vulgo de Russo.
-
-      Russo, que estava armado, exigiu que Astolfo transportasse 50 g de cocaína para outro traficante, que o aguardaria em um Posto de Gasolina, sob pena de Astolfo ser expulso de sua residência e não mais poder morar na Favela da Zebra. Astolfo, então, se viu obrigado a aceitar a determinação, mas quando estava em seu automóvel, na direção do Posto de Gasolina, foi abordado por policiais militares, sendo a droga encontrada e apreendida. Astolfo foi denunciado perante o juízo competente pela prática do crime previsto no Art. 33, caput, da Lei nº 11.343/06. Em que pese tenha sido preso em flagrante, foi concedida liberdade provisória ao agente, respondendo ele ao processo em liberdade.
-
-      Durante a audiência de instrução e julgamento, após serem observadas todas as formalidades legais, os policiais militares responsáveis pela prisão em flagrante do réu confirmaram os fatos narrados na denúncia, além de destacarem que, de fato, o acusado apresentou a versão de que transportava as drogas por exigência de Russo.
-
-      Asseguraram que não conheciam o acusado antes da data dos fatos. Astolfo, em seu interrogatório, realizado como último ato da instrução por requerimento expresso da defesa do réu, também confirmou que fazia o transporte da droga, mas alegou que somente agiu dessa forma porque foi obrigado pelo chefe do tráfico local a adotar tal conduta, ainda destacando que residia há mais de 50 anos na comunidade da Favela da Zebra e que, se fosse de lá expulso, não teria outro lugar para morar, pois sequer possuía familiares e amigos fora do local. Disse que nunca respondeu a nenhum outro processo, apesar já ter sido indiciado nos autos de um inquérito policial pela suposta prática de um crime de falsificação de documento particular.
-
-      Após a juntada da Folha de Antecedentes Criminais do réu, apenas mencionando aquele inquérito, e do laudo de exame de material, confirmando que, de fato, a substância encontrada no veículo do denunciado era “cloridrato de cocaína”, os autos foram encaminhados para o Ministério Público, que pugnou pela condenação do acusado nos exatos termos da denúncia.
-
-      Em seguida, você, advogado (a) de Astolfo, foi intimado (a) em 06 de março de 2015, uma sexta-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de Habeas Corpus, no último dia do prazo, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-
-      Obs.: O examinando deve indicar todos os fundamentos e dispositivos legais cabíveis. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
-    opcoes:
-      correta: Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Reconhecimento da atenuante prevista no Art. 65, inciso III, alínea b, do CP, pois Luiz procurou reduzir as consequências de seus atos levando Igor para o hospital e pagando por seu tratamento
-        - Incidência da causa de aumento de pena por estar na presença de várias pessoas ou por meio que facilite a divulgação da calúnia, da difamação ou da injúria-, nos termos do Art. 141, III do CP.
-        - A conduta de Patrick visava resguardar direito de terceiro/sua sobrinha.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
+    pergunta: "Que regime inicial a defesa deve pedir?"
+    tese: "Regime inicial aberto: o regime fechado obrigatório para o tráfico é inconstitucional"
+    aceitos: [ "aberto" ]
+    artigos: [ "art. 33, § 2º, c, CP", "art. 5, XLVI, CRFB" ]
+    gabarito: "Aplicação do regime inicial aberto para cumprimento de pena, pois a fixação do regime inicial fechado obrigatório para crimes hediondos e equiparados trazida pelo Art. 2º, § 1º, da Lei nº 8072 foi considerada inconstitucional pelo STF por violação do princípio da individualização da pena."
+    revisao: { status: revisado }
   - id: 20-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Fausto, ao completar 18 anos de idade, mesmo sem ser habilitado legalmente, resolveu sair com o carro do seu genitor sem o conhecimento do mesmo. No cruzamento de uma avenida de intenso movimento, não tendo atentado para a sinalização existente, veio a atropelar Lídia e suas 05 filhas adolescentes, que estavam na calçada, causando-lhes diversas lesões que acarretaram a morte das seis.
-
-      Denunciado pela prática de seis crimes do Art. 302, § 1º, incisos I e II, da Lei nº 9503/97, foi condenado nos termos do pedido inicial, ficando a pena final acomodada em 04 anos e 06 meses de detenção em regime semiaberto, além de ficar impedido de obter habilitação para dirigir veículo pelo prazo de 02 anos.
-
-      A pena privativa de liberdade não foi substituída por restritivas de direitos sob o fundamento exclusivo de que o seu quantum ultrapassava o limite de 04 anos. No momento da sentença, unicamente com o fundamento de que o acusado, devidamente intimado, deixou de comparecer espontaneamente a última audiência designada, que seria exclusivamente para o seu interrogatório, o juiz decretou a prisão cautelar e não permitiu o apelo em liberdade, por força da revelia.
-
-      Apesar de Fausto estar sendo assistido pela Defensoria Pública, seu genitor o procura, para que você, na condição de advogado(a), preste assistência jurídica.
-
-      Diante da situação narrada, como advogado(a), responda aos seguintes questionamentos formulados pela família de Fausto:
-    comando: Mantida a pena aplicada, é possível a substituição da pena privativa de liberdade por restritiva de direitos? Justifique.
-    gabarito: Tratando-se de crime culposo, o fato de a pena ter ficado acomodada em mais de 04 anos, por si só, não impede a substituição da pena privativa de liberdade por restritiva de direitos, sendo certo que o encarceramento deve ser deixado para casos especiais, quando se manifestar extremamente necessário.O Art. 44, inciso I, do Código Penal, afirma expressamente que caberá substituição, independente da pena aplicada, se o crime for culposo. No caso, como o fundamento exclusivo do magistrado foi a pena aplicada, é possível afastá-lo e, consequentemente, buscar a substituição em sede de recurso.
-    opcoes:
-      correta: Sim, é possível a substituição, tendo em vista que os crimes praticados foram culposos, logo é irrelevante a pena final aplicada, nos termos do Art. 44, inciso I, do Código Penal.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "A"
+    pergunta: "Mantida a pena de 4 anos e 6 meses, é possível substituí-la por restritivas de direitos?"
+    tese: "Nos crimes culposos, a substituição por restritivas de direitos cabe qualquer que seja a pena"
+    aceitos: [ "culpos*" ]
+    artigos: [ "art. 44, I, CP" ]
+    gabarito: "Tratando-se de crime culposo, o fato de a pena ter ficado acomodada em mais de 04 anos, por si só, não impede a substituição da pena privativa de liberdade por restritiva de direitos, sendo certo que o encarceramento deve ser deixado para casos especiais, quando se manifestar extremamente necessário.O Art. 44, inciso I, do Código Penal, afirma expressamente que caberá substituição, independente da pena aplicada, se o crime for culposo. No caso, como o fundamento exclusivo do magistrado foi a pena aplicada, é possível afastá-lo e, consequentemente, buscar a substituição em sede de recurso."
+    revisao: { status: revisado }
   - id: 20-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Fausto, ao completar 18 anos de idade, mesmo sem ser habilitado legalmente, resolveu sair com o carro do seu genitor sem o conhecimento do mesmo. No cruzamento de uma avenida de intenso movimento, não tendo atentado para a sinalização existente, veio a atropelar Lídia e suas 05 filhas adolescentes, que estavam na calçada, causando-lhes diversas lesões que acarretaram a morte das seis.
-
-      Denunciado pela prática de seis crimes do Art. 302, § 1º, incisos I e II, da Lei nº 9503/97, foi condenado nos termos do pedido inicial, ficando a pena final acomodada em 04 anos e 06 meses de detenção em regime semiaberto, além de ficar impedido de obter habilitação para dirigir veículo pelo prazo de 02 anos.
-
-      A pena privativa de liberdade não foi substituída por restritivas de direitos sob o fundamento exclusivo de que o seu quantum ultrapassava o limite de 04 anos. No momento da sentença, unicamente com o fundamento de que o acusado, devidamente intimado, deixou de comparecer espontaneamente a última audiência designada, que seria exclusivamente para o seu interrogatório, o juiz decretou a prisão cautelar e não permitiu o apelo em liberdade, por força da revelia.
-
-      Apesar de Fausto estar sendo assistido pela Defensoria Pública, seu genitor o procura, para que você, na condição de advogado(a), preste assistência jurídica.
-
-      Diante da situação narrada, como advogado(a), responda aos seguintes questionamentos formulados pela família de Fausto:
-    comando: Em caso de sua contratação para atuar no processo, o que poderá ser alegado para combater, especificamente, o fundamento da decisão que decretou a prisão cautelar?
-    gabarito: |-
-      O fato de o acusado não ter comparecido ao interrogatório, por si só, não justifica o decreto prisional, devendo ser entendida a sua ausência como extensão do direito ao silêncio. Hoje, o interrogatório é tratado pela doutrina e pela jurisprudência não somente como meio de prova, mas também como meio de defesa. Por sua vez, o direito à ampla defesa inclui a defesa técnica e a autodefesa. No exercício da autodefesa, pode o acusado permanecer em silêncio durante seu interrogatório. Da mesma forma, poderá deixar de comparecer ao ato como extensão desse direito, sendo certo que no caso não haveria qualquer prejuízo para a instrução nesta ausência, já que a audiência seria apenas para interrogatório. A prisão, antes do trânsito em julgado da decisão condenatória, reclama fundamentação concreta da necessidade da medida, não podendo ser aplicada como forma de antecipação de pena.
-
-      A banca examinadora considerou como adequada a alegação do não cabimento da prisão preventiva pelo fato de o crime praticado por Fausto ser culposo, não atendendo, assim, o requisito do art. 313, inc. I, do CPP. A mera alegação, em abstrato, de ausência dos requisitos da prisão preventiva foi considerada insuficiente, bem como a mera citação do dispositivo legal acima destacado.
-    opcoes:
-      correta: Poderá ser alegado que o não comparecimento para interrogatório é extensão do direito ao silêncio ou está no âmbito do exercício de sua autodefesa/ampla defesa OU que não cabe decretação de prisão preventiva em caso de crime culposo.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "B"
+    pergunta: "Como combater o fundamento da prisão de Fausto, a ausência ao interrogatório?"
+    tese: "Não ir ao interrogatório é exercício do direito ao silêncio e da autodefesa"
+    aceitos: [ [ "silencio" ], [ "autodefesa" ] ]
+    artigos: [ "art. 186, CPP", "art. 5, LXIII, CRFB" ]
+    gabarito: "O fato de o acusado não ter comparecido ao interrogatório, por si só, não justifica o decreto prisional, devendo ser entendida a sua ausência como extensão do direito ao silêncio. Hoje, o interrogatório é tratado pela doutrina e pela jurisprudência não somente como meio de prova, mas também como meio de defesa. Por sua vez, o direito à ampla defesa inclui a defesa técnica e a autodefesa. No exercício da autodefesa, pode o acusado permanecer em silêncio durante seu interrogatório. Da mesma forma, poderá deixar de comparecer ao ato como extensão desse direito, sendo certo que no caso não haveria qualquer prejuízo para a instrução nesta ausência, já que a audiência seria apenas para interrogatório. A prisão, antes do trânsito em julgado da decisão condenatória, reclama fundamentação concreta da necessidade da medida, não podendo ser aplicada como forma de antecipação de pena.\n\nA banca examinadora considerou como adequada a alegação do não cabimento da prisão preventiva pelo fato de o crime praticado por Fausto ser culposo, não atendendo, assim, o requisito do art. 313, inc. I, do CPP. A mera alegação, em abstrato, de ausência dos requisitos da prisão preventiva foi considerada insuficiente, bem como a mera citação do dispositivo legal acima destacado."
+    revisao: { status: revisado }
   - id: 20-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Lúcio, com residência fixa e proprietário de uma oficina de carros, adquiriu de seu vizinho, pela quantia de R$1.000,00 (mil reais) um aparelho celular, que sabia ser produto de crime pretérito, passando a usá-lo como próprio. Tomando conhecimento dos fatos, um inimigo de Lúcio comunicou o ocorrido ao Ministério Público, que requisitou a instauração de inquérito policial. A autoridade policial instaurou o procedimento, indiciou Lúcio pela prática do crime de receptação qualificada (Art. 180, § 1º, do Código Penal), já que desenvolvia atividade comercial, e, de imediato, representou pela prisão temporária de Lúcio, existindo parecer favorável do Ministério Público. A família de Lúcio o procura para esclarecimentos.
-
-      Na condição de advogado de Lúcio, esclareça os itens a seguir.
-    comando: "No caso concreto, a autoridade policial poderia ter representado pela prisão temporária de Lúcio? (Valor:"
-    gabarito: No caso concreto, a autoridade policial não poderia ter representado pela prisão temporária de Lúcio. De início, deve ser destacado que o crime de receptação, ainda que em sua modalidade qualificada, não está previsto no rol de delitos estabelecido pelo Art. 1º, inciso III, da Lei nº 7.960/89. Isso, por si só, já afastaria a possibilidade de ser decretada a prisão temporária. Ademais, os outros requisitos trazidos pelos incisos I e II do Art. 1º do mesmo diploma legal também não estão preenchidos, uma vez que Lúcio possui residência fixa e a medida não se mostra imprescindível para as investigações do inquérito policial. Ressalta-se que a prisão temporária não se confunde com a preventiva, de modo que a fundamentação com base nos artigos 312 e 313 do CPP será considerada insuficiente.
-    opcoes:
-      correta: Não poderia a autoridade policial ter representado pela prisão temporária, pois o crime de receptação não está previsto no rol de crimes que admitem essa modalidade de prisão, na forma do Art. 1º, inciso III, da Lei nº 7.960/89.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "A"
+    pergunta: "O delegado podia pedir a prisão temporária de Lúcio?"
+    tese: "Descabimento da prisão temporária: a receptação não está no rol de crimes que a admitem"
+    aceitos: [ "rol" ]
+    artigos: [ "art. 1, III, Lei 7.960" ]
+    gabarito: "No caso concreto, a autoridade policial não poderia ter representado pela prisão temporária de Lúcio. De início, deve ser destacado que o crime de receptação, ainda que em sua modalidade qualificada, não está previsto no rol de delitos estabelecido pelo Art. 1º, inciso III, da Lei nº 7.960/89. Isso, por si só, já afastaria a possibilidade de ser decretada a prisão temporária. Ademais, os outros requisitos trazidos pelos incisos I e II do Art. 1º do mesmo diploma legal também não estão preenchidos, uma vez que Lúcio possui residência fixa e a medida não se mostra imprescindível para as investigações do inquérito policial. Ressalta-se que a prisão temporária não se confunde com a preventiva, de modo que a fundamentação com base nos artigos 312 e 313 do CPP será considerada insuficiente."
+    revisao: { status: revisado }
   - id: 20-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Lúcio, com residência fixa e proprietário de uma oficina de carros, adquiriu de seu vizinho, pela quantia de R$1.000,00 (mil reais) um aparelho celular, que sabia ser produto de crime pretérito, passando a usá-lo como próprio. Tomando conhecimento dos fatos, um inimigo de Lúcio comunicou o ocorrido ao Ministério Público, que requisitou a instauração de inquérito policial. A autoridade policial instaurou o procedimento, indiciou Lúcio pela prática do crime de receptação qualificada (Art. 180, § 1º, do Código Penal), já que desenvolvia atividade comercial, e, de imediato, representou pela prisão temporária de Lúcio, existindo parecer favorável do Ministério Público. A família de Lúcio o procura para esclarecimentos.
-
-      Na condição de advogado de Lúcio, esclareça os itens a seguir.
-    comando: Confirmados os fatos acima narrados, o crime praticado por Lúcio efetivamente foi de receptação qualificada (Art. 180, § 1º, do CP)? Em caso positivo, justifique. Em caso negativo, indique qual seria o delito praticado e justifique.
-    gabarito: |-
-      O crime praticado por Lúcio foi o de receptação simples e não em sua modalidade qualificada. Prevê o Art. 180, § 1º, do Código Penal, que a pena será de 03 a 08 anos, quando o agente “Adquirir, receber, transportar, conduzir, ocultar, ter em depósito, desmontar, montar, remontar, vender, expor à venda, ou de qualquer forma utilizar, em proveito próprio ou alheio, no exercício de atividade comercial ou industrial, coisa que deve saber ser produto de crime”. A ideia do legislador foi punir mais severamente aquele comerciante que se aproveita de sua profissão para ter um acesso facilitado ou maior facilidade na venda de bens produtos de crimes. Assim, para tipificar a modalidade qualificada, é necessária que a receptação tenha sido praticada pelo agente no exercício de atividade comercial ou industrial. Não basta que o autor seja comerciante. No caso concreto, apesar de comerciante, Lúcio não teve acesso ao celular produto de crime em razão de sua atividade comercial, pois o adquiriu de seu vizinho.
-
-      Além disso, essa mesma atividade comercial não facilitaria eventual revenda do bem, já que sua intenção foi ficar com o celular para si. Dessa forma, configurado, apenas, o crime de receptação simples.
-    opcoes:
-      correta: Não, pois o crime praticado foi de receptação simples, tendo em vista que Lúcio não adquiriu o bem no exercício de atividade comercial.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "B"
+    pergunta: "Lúcio comprou o celular para uso próprio. Que crime ele cometeu?"
+    tese: "Receptação simples: ele não agiu no exercício de atividade comercial"
+    aceitos: [ "receptacao simples" ]
+    artigos: [ "art. 180, CP" ]
+    gabarito: "O crime praticado por Lúcio foi o de receptação simples e não em sua modalidade qualificada. Prevê o Art. 180, § 1º, do Código Penal, que a pena será de 03 a 08 anos, quando o agente “Adquirir, receber, transportar, conduzir, ocultar, ter em depósito, desmontar, montar, remontar, vender, expor à venda, ou de qualquer forma utilizar, em proveito próprio ou alheio, no exercício de atividade comercial ou industrial, coisa que deve saber ser produto de crime”. A ideia do legislador foi punir mais severamente aquele comerciante que se aproveita de sua profissão para ter um acesso facilitado ou maior facilidade na venda de bens produtos de crimes. Assim, para tipificar a modalidade qualificada, é necessária que a receptação tenha sido praticada pelo agente no exercício de atividade comercial ou industrial. Não basta que o autor seja comerciante. No caso concreto, apesar de comerciante, Lúcio não teve acesso ao celular produto de crime em razão de sua atividade comercial, pois o adquiriu de seu vizinho.\n\nAlém disso, essa mesma atividade comercial não facilitaria eventual revenda do bem, já que sua intenção foi ficar com o celular para si. Dessa forma, configurado, apenas, o crime de receptação simples."
+    revisao: { status: revisado }
   - id: 20-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Andy, jovem de 25 anos, possui uma condenação definitiva pela prática de contravenção penal. Em momento posterior, resolve praticar um crime de estelionato e, para tanto, decide que irá até o portão da residência de Josefa e, aí, solicitará a entrega de um computador, afirmando que tal requerimento era fruto de um pedido do próprio filho de Josefa, pois tinha conhecimento que este trabalhava no setor de informática de determinada sociedade.
-
-      Ao chegar ao portão da casa, afirma para Josefa que fora à sua residência buscar o computador da casa a pedido do filho dela, com quem trabalhava. Josefa pede para o marido entregar o computador a Andy, que ficara aguardando no portão. Quando o marido de Josefa aparece com o aparelho, Andy se surpreende, pois ele lembrava seu falecido pai. Em razão disso, apesar de já ter empregado a fraude, vai embora sem levar o bem.
-
-      O Ministério Público ofereceu denúncia pela prática de tentativa de estelionato, sendo Andy condenado nos termos da denúncia.
-
-      Como advogado de Andy, com base apenas nas informações narradas, responda aos itens a seguir.
-    comando: Qual tese jurídica de direito material deve ser alegada, em sede de recurso de apelação, para evitar a punição de Andy? Justifique.
-    gabarito: A tese de direito material a ser alegada pelo advogado de Andy é que, no caso, não poderia ele ter sido punido pela tentativa, tendo em vista que houve desistência voluntária. Prevê o Art. 15 do CP que o agente que voluntariamente desiste de prosseguir na execução responde apenas pelos atos já praticados e não pela tentativa do crime inicialmente pretendido. Isso porque o agente opta por não prosseguir quando pode, ao contrário da tentativa, quando o agente não pode prosseguir por razões alheias à sua vontade. No caso, a execução já tinha sido iniciada, quando Andy empregou fraude. O benefício, porém, não foi obtido, sendo certo que o crime não se consumou pela vontade do próprio agente. Assim, sua conduta se torna atípica e deveria ele ser absolvido.
-    opcoes:
-      correta: Deveria ser alegada a ocorrência de desistência voluntária, o que torna a conduta do agente atípica OU o que faz com que responda apenas pelos atos já praticados, na forma do Art. 15, primeira parte, do CP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese evita a punição de Andy na apelação?"
+    tese: "Desistência voluntária: ele parou antes de consumar o crime"
+    aceitos: [ "desistencia voluntaria" ]
+    artigos: [ "art. 15, CP" ]
+    gabarito: "A tese de direito material a ser alegada pelo advogado de Andy é que, no caso, não poderia ele ter sido punido pela tentativa, tendo em vista que houve desistência voluntária. Prevê o Art. 15 do CP que o agente que voluntariamente desiste de prosseguir na execução responde apenas pelos atos já praticados e não pela tentativa do crime inicialmente pretendido. Isso porque o agente opta por não prosseguir quando pode, ao contrário da tentativa, quando o agente não pode prosseguir por razões alheias à sua vontade. No caso, a execução já tinha sido iniciada, quando Andy empregou fraude. O benefício, porém, não foi obtido, sendo certo que o crime não se consumou pela vontade do próprio agente. Assim, sua conduta se torna atípica e deveria ele ser absolvido."
+    revisao: { status: revisado }
   - id: 20-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Andy, jovem de 25 anos, possui uma condenação definitiva pela prática de contravenção penal. Em momento posterior, resolve praticar um crime de estelionato e, para tanto, decide que irá até o portão da residência de Josefa e, aí, solicitará a entrega de um computador, afirmando que tal requerimento era fruto de um pedido do próprio filho de Josefa, pois tinha conhecimento que este trabalhava no setor de informática de determinada sociedade.
-
-      Ao chegar ao portão da casa, afirma para Josefa que fora à sua residência buscar o computador da casa a pedido do filho dela, com quem trabalhava. Josefa pede para o marido entregar o computador a Andy, que ficara aguardando no portão. Quando o marido de Josefa aparece com o aparelho, Andy se surpreende, pois ele lembrava seu falecido pai. Em razão disso, apesar de já ter empregado a fraude, vai embora sem levar o bem.
-
-      O Ministério Público ofereceu denúncia pela prática de tentativa de estelionato, sendo Andy condenado nos termos da denúncia.
-
-      Como advogado de Andy, com base apenas nas informações narradas, responda aos itens a seguir.
-    comando: Há vedação legal expressa à concessão do benefício da suspensão condicional do processo a Andy? Justifique.
-    gabarito: |-
-      Não há vedação legal, podendo Andy fazer jus ao benefício da suspensão condicional do processo. O crime de estelionato possui pena mínima de 01 ano, o que está de acordo com as exigências do Art. 89 da Lei nº 9.099/95.
-
-      Ademais, prevê o dispositivo que não caberá suspensão se o agente já houver sido condenado ou se responder a outro processo pela prática de crime. Todavia, no caso, Andy havia sido condenado pela prática de contravenção penal, logo não há vedação à concessão do benefício.
-    opcoes:
-      correta: Não há vedação legal, tendo em vista que Andy ostenta condenação pela prática de contravenção penal e não de crime, sem violação ao Art. 89 da Lei nº 9.099/95.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
-  - id: 20-q4-a
-    categoria: discursiva
-    parte: q4
-    item: A
-    caso: |-
-      Joana trabalha em uma padaria na cidade de Curitiba. Em um domingo pela manhã, Patrícia, freguesa da padaria, acreditando não estar sendo bem atendida por Joana, após com ela discutir, a chama de “macaca” em razão da cor de sua pele.
-
-      Inconformados com o ocorrido, outros fregueses acionam policiais que efetuam a prisão em flagrante de Patrícia por crime de racismo (Lei nº 7.716/89 – Lei do Preconceito Racial), apesar de Joana dizer que não queria que fosse tomada qualquer providência em desfavor da pessoa detida. A autoridade policial lavra o flagrante respectivo, independente da vontade da ofendida, asseverando que os crimes da Lei nº 7.716/89 são de ação penal pública incondicionada. O Ministério Público opina pela liberdade de Patrícia porque ainda existiam diligências a serem cumpridas em sede policial.
-
-      Patrícia, sete meses após o ocorrido, procura seu advogado para obter esclarecimentos, informando que a vítima foi ouvida em sede policial e confirmou o ocorrido, bem como o desinteresse em ver a autora dos fatos responsabilizada criminalmente.
-
-      Na condição de advogado de Patrícia, esclareça:
-    comando: Agiu corretamente a autoridade policial ao indiciar Patrícia pela prática do crime de racismo? Justifique.
-    gabarito: Não agiu corretamente a autoridade policial ao indiciar Patrícia pela prática do crime de racismo, tendo em vista que o delito praticado foi de injúria racial, previsto no Art. 140, § 3º, do Código Penal. Enquanto a injúria racial consiste em ofender a honra de alguém valendo-se de elementos referentes à raça, cor, etnia, religião ou origem, o crime de racismo atinge uma coletividade indeterminada de indivíduos, discriminando toda a integralidade de uma raça, ainda que a discriminação tenha sido praticada em determinado momento contra apenas uma pessoa. Ao contrário da injúria racial, o crime de racismo é inafiançável e imprescritível. No caso, não houve discriminação de Joana em razão de sua cor. Não foi, em razão de sua cor, Joana proibida de frequentar determinado local ou adotar determinada conduta. Ocorre, por parte de Patrícia, uma ofensa à honra subjetiva de Joana, para tanto valendo-se de elementos referentes à sua cor, de modo que o delito praticado foi de injúria racial.
-    opcoes:
-      correta: Não agiu corretamente a autoridade policial, pois o delito praticado por Patrícia foi de injúria racial e não de racismo, conforme o Art. 140, § 3º, do Código Penal, pois a intenção da agente era ofender a honra de Joana.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
-  - id: 20-q4-b
-    categoria: discursiva
-    parte: q4
-    item: B
-    caso: |-
-      Joana trabalha em uma padaria na cidade de Curitiba. Em um domingo pela manhã, Patrícia, freguesa da padaria, acreditando não estar sendo bem atendida por Joana, após com ela discutir, a chama de “macaca” em razão da cor de sua pele.
-
-      Inconformados com o ocorrido, outros fregueses acionam policiais que efetuam a prisão em flagrante de Patrícia por crime de racismo (Lei nº 7.716/89 – Lei do Preconceito Racial), apesar de Joana dizer que não queria que fosse tomada qualquer providência em desfavor da pessoa detida. A autoridade policial lavra o flagrante respectivo, independente da vontade da ofendida, asseverando que os crimes da Lei nº 7.716/89 são de ação penal pública incondicionada. O Ministério Público opina pela liberdade de Patrícia porque ainda existiam diligências a serem cumpridas em sede policial.
-
-      Patrícia, sete meses após o ocorrido, procura seu advogado para obter esclarecimentos, informando que a vítima foi ouvida em sede policial e confirmou o ocorrido, bem como o desinteresse em ver a autora dos fatos responsabilizada criminalmente.
-
-      Na condição de advogado de Patrícia, esclareça:
-    comando: Existe algum argumento defensivo para garantir, de imediato, o arquivamento do inquérito policial? Justifique.
-    gabarito: O argumento defensivo é que o crime de injúria racial é de ação penal pública condicionada à representação e que, passados mais de 06 meses desde a data do fato e conhecimento da autoria, a vítima não teve interesse em ver a autora criminalizada, de modo que deve ser reconhecida a decadência e, consequentemente, o inquérito ser arquivado.
-    opcoes:
-      correta: Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "B"
+    pergunta: "A condenação anterior de Andy impede a suspensão condicional do processo?"
+    tese: "A condenação anterior por contravenção não impede a suspensão condicional do processo: a lei só fala em crime"
+    aceitos: [ "contraven*" ]
+    artigos: [ "art. 89, Lei 9.099" ]
+    gabarito: "Não há vedação legal, podendo Andy fazer jus ao benefício da suspensão condicional do processo. O crime de estelionato possui pena mínima de 01 ano, o que está de acordo com as exigências do Art. 89 da Lei nº 9.099/95.\n\nAdemais, prevê o dispositivo que não caberá suspensão se o agente já houver sido condenado ou se responder a outro processo pela prática de crime. Todavia, no caso, Andy havia sido condenado pela prática de contravenção penal, logo não há vedação à concessão do benefício."
+    revisao: { status: revisado }

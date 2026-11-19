@@ -72,14 +72,17 @@
   .citante, .alvo { animation: destaqueSome 0.01s linear 2.2s both; }
 }
 
-/* grifos prontos, como no leitor: a barra na margem (tema de prova) e a moldura (destaque) */
-.texto[data-com-prontos] { padding-left: 0.65em; }
-.texto > [data-pronto] { position: relative; }
-.texto > [data-pronto="area"]::before {
-  content: ""; position: absolute; left: -0.6em; top: 0.25em; bottom: 0.25em; width: 3px; border-radius: 3px;
-  background: color-mix(in srgb, var(--pronto) 70%, transparent);
+/* grifos prontos, como no leitor: as palavras-chave em marca-texto (nos Pedidos, sublinhado) e o "vide" */
+.pronto {
+  color: inherit; cursor: pointer; border-radius: 0.2em; padding: 0 0.05em;
+  background: color-mix(in srgb, var(--pronto-fundo, transparent) 70%, transparent);
+  text-decoration: var(--pronto-linha, transparent) underline 2px; text-underline-offset: 0.18em; text-decoration-skip-ink: none;
 }
-.texto > [data-pronto="destaque"] { box-shadow: 0 0 0 2px var(--pronto); border-radius: 0.45em 0.2em 0.5em 0.25em; }
+.pronto[data-pronto="pedido"] { background: none; }
+/* dentro de um grifo do usuário, o dele manda: o pronto fica só como sublinhado na cor dele */
+.marca .pronto { background: none; text-decoration-color: var(--pronto-linha, var(--pronto-fundo)); }
+.prontoVide { display: block; margin-top: 0.15em; font-size: 0.82em; color: var(--muted); }
+.prontoVide a { color: var(--accent-ink, var(--accent)); }
 /* um grifo (do usuário ou pronto) abre o detalhe com o significado da cor e o comentário */
 .texto [data-rotulo] { cursor: pointer; }
 .detalhe {

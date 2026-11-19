@@ -1,0 +1,137 @@
+/* A leitura em voz alta (OuvirLei.tsx): a barra presa embaixo, acima dos controles do leitor, e o "Ler daqui". As cores são as
+   do leitor (--leitor-*), então seguem o fundo escolhido. */
+.barra {
+  position: fixed; z-index: 42; left: 6px; right: 6px; bottom: calc(10px + env(safe-area-inset-bottom));
+  display: grid; gap: 0.1rem; padding: 0.4rem 0.5rem 0.3rem; border-radius: 18px;
+  background: color-mix(in srgb, var(--leitor-painel) 96%, transparent); color: var(--leitor-fg);
+  border: 1px solid var(--leitor-borda); box-shadow: 0 10px 30px rgb(0 0 0 / 0.18); backdrop-filter: blur(8px);
+  font-family: var(--font-body), sans-serif; transition: bottom 0.22s ease;
+}
+/* com os controles do leitor à mostra, a barra fica logo acima deles */
+.barra[data-dock="1"] { bottom: calc(84px + env(safe-area-inset-bottom)); }
+@media (min-width: 641px) {
+  .barra { left: 50%; right: auto; width: min(540px, calc(100vw - 32px)); transform: translateX(-50%); padding: 0.45rem 0.7rem 0.35rem; }
+  .barra[data-dock="1"] { bottom: calc(88px + env(safe-area-inset-bottom)); }
+}
+/* no computador, o painel do leitor abre à direita (400 px): a barra fica no meio do que sobra à esquerda */
+@media (min-width: 900px) {
+  .barra[data-painel="1"] { left: calc((100vw - 432px) / 2); width: min(540px, calc(100vw - 464px)); }
+}
+
+.topo { display: flex; align-items: center; gap: 0.35rem; min-width: 0; }
+.estado {
+  flex: none; display: inline-flex; align-items: center; gap: 0.35rem; padding-left: 0.2rem;
+  font-size: 0.68rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase; color: var(--leitor-muted);
+}
+.estado[data-estado="lendo"] { color: var(--primary); }
+/* os dois toques no fone: o microfone espera um comando */
+.estado[data-estado="comando"] { color: #dc2626; }
+.ondas { display: none; align-items: flex-end; gap: 2px; height: 12px; }
+.estado[data-estado="lendo"] .ondas { display: inline-flex; }
+.ondas i { width: 3px; height: 4px; border-radius: 2px; background: currentColor; }
+.estado[data-estado="lendo"] .ondas i { animation: onda 0.9s ease-in-out infinite; }
+.ondas i:nth-child(2) { animation-delay: 0.15s; }
+.ondas i:nth-child(3) { animation-delay: 0.3s; }
+@keyframes onda { 0%, 100% { height: 4px; } 50% { height: 12px; } }
+.onde {
+  flex: 1 1 auto; min-width: 0; padding: 0.3rem 0.25rem; border: 0; border-radius: 8px; background: none; cursor: pointer;
+  color: var(--leitor-fg); font: inherit; font-size: 0.9rem; font-weight: 650; text-align: left;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.onde:hover { background: color-mix(in srgb, var(--leitor-fg) 6%, transparent); }
+.prazo { flex: none; font-size: 0.7rem; color: var(--leitor-muted); white-space: nowrap; }
+.iconeTopo {
+  flex: none; width: 38px; height: 38px; display: grid; place-items: center; border: 0; border-radius: 50%;
+  background: none; color: var(--leitor-fg); cursor: pointer;
+}
+.iconeTopo:hover { background: color-mix(in srgb, var(--leitor-fg) 7%, transparent); }
+
+.controles { display: flex; align-items: center; gap: 0.1rem; }
+.controle {
+  flex: 1 1 0; min-width: 0; min-height: 50px; padding: 0.2rem 0; display: grid; justify-items: center; align-content: center; gap: 0.1rem;
+  border: 0; border-radius: 14px; background: none; color: var(--leitor-fg); font: inherit; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.controle:hover { background: color-mix(in srgb, var(--leitor-fg) 7%, transparent); }
+.controle:active { transform: scale(0.96); }
+.legenda { font-size: 0.6rem; font-weight: 650; line-height: 1; color: var(--leitor-muted); }
+.icone { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.iconeCheio { width: 22px; height: 22px; fill: currentColor; }
+/* tocar e pausar: o botão principal, redondo, no meio */
+.tocar {
+  flex: 0 0 auto; width: 54px; height: 54px; min-height: 54px; margin: 0 0.15rem; border-radius: 50%;
+  background: var(--primary); color: var(--primary-ink, #fff); box-shadow: 0 4px 14px color-mix(in srgb, var(--primary) 40%, transparent);
+}
+.tocar:hover { background: color-mix(in srgb, var(--primary) 86%, #000); }
+.tocar .iconeCheio { width: 26px; height: 26px; }
+.numero { font-size: 0.8rem; font-weight: 750; line-height: 22px; font-variant-numeric: tabular-nums; }
+.microfone { position: relative; }
+.microfone[aria-pressed="true"] { color: var(--primary); background: color-mix(in srgb, var(--primary) 12%, transparent); }
+/* ouvindo: um ponto vermelho pulsando no microfone */
+.microfone[data-ouvindo="1"]::after {
+  content: ""; position: absolute; top: 7px; left: calc(50% + 7px); width: 8px; height: 8px; border-radius: 50%;
+  background: #dc2626; animation: pulsar 1.4s ease-in-out infinite;
+}
+@keyframes pulsar { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(0.7); } }
+
+/* a tela foi para longe do trecho lido: voltar a ele, ou ler dali */
+.longe { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; padding: 0.1rem 0 0.35rem; }
+.longe button {
+  display: inline-flex; align-items: center; gap: 0.35rem; min-height: 38px; padding: 0.3rem 0.85rem; border-radius: 999px;
+  border: 1px solid var(--leitor-borda); background: var(--leitor-bg); color: var(--leitor-fg); font: inherit; font-size: 0.8rem; font-weight: 650; cursor: pointer;
+}
+.longe .icone, .longe .iconeCheio { width: 16px; height: 16px; }
+.longe .lerDaqui { border-color: var(--primary); color: var(--primary); }
+
+/* "▶ Ler daqui": acima do ponto tocado (o dedo cobre o que está embaixo) */
+.bolha {
+  position: fixed; z-index: 44; display: flex; overflow: hidden; border-radius: 14px; background: var(--leitor-painel); color: var(--leitor-fg);
+  border: 1px solid var(--primary); box-shadow: 0 10px 28px rgb(0 0 0 / 0.22); font-family: var(--font-body), sans-serif;
+  animation: aparecer 0.15s ease-out;
+}
+.bolha > button:first-child {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 0.55rem; padding: 0.5rem 0.65rem; border: 0; background: none;
+  color: inherit; font: inherit; text-align: left; cursor: pointer;
+}
+.bolha > button:first-child > span { min-width: 0; }
+.bolha .iconeCheio { flex: none; width: 32px; height: 32px; padding: 7px; border-radius: 50%; background: var(--primary); color: var(--primary-ink, #fff); }
+.bolha strong { display: block; font-size: 0.9rem; }
+.bolha small { display: block; font-size: 0.74rem; color: var(--leitor-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bolhaFechar { flex: none; width: 40px; border: 0; border-left: 1px solid var(--leitor-borda); background: none; color: var(--leitor-muted); cursor: pointer; }
+@keyframes aparecer { from { opacity: 0; transform: translateY(6px); } }
+
+/* o painel de ajustes */
+.comecar { display: grid; gap: 0.5rem; justify-items: start; }
+.irPara { display: flex; gap: 0.4rem; width: 100%; }
+.irPara input {
+  flex: 1; min-width: 0; padding: 0.6rem 0.8rem; border: 1px solid var(--leitor-borda); border-radius: 12px;
+  background: var(--leitor-bg); color: var(--leitor-fg); font: inherit;
+}
+.alerta { margin: 0; padding: 0.55rem 0.75rem; border-radius: 10px; background: color-mix(in srgb, #dc2626 10%, var(--leitor-painel)); color: var(--leitor-fg); font-size: 0.85rem; }
+.dicas { font-size: 0.82rem; color: var(--leitor-muted); }
+.dicas summary { cursor: pointer; font-weight: 650; color: var(--leitor-fg); }
+.dicas ul { margin: 0.45rem 0 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
+.dicas p { margin: 0.45rem 0 0; }
+.comandos { margin: 0.45rem 0 0; display: grid; font-size: 0.84rem; color: var(--leitor-fg); }
+.comandos div { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0.6rem; padding: 0.35rem 0; border-bottom: 1px dashed var(--leitor-borda); }
+.comandos dt { font-weight: 650; }
+.comandos dd { margin: 0; color: var(--leitor-muted); }
+.microfoneCaixa, .toques { display: grid; gap: 0.45rem; }
+.microfoneCaixa select, .toques select {
+  display: block; width: 100%; margin-top: 0.25rem; padding: 0.5rem 0.6rem; border: 1px solid var(--leitor-borda); border-radius: 10px;
+  background: var(--leitor-bg); color: var(--leitor-fg); font: inherit;
+}
+.nivelCaixa { display: grid; gap: 0.3rem; }
+/* o nível do microfone: a marca no meio é onde a voz normal deve chegar */
+.nivel {
+  position: relative; display: block; height: 10px; border-radius: 999px; overflow: hidden;
+  background: color-mix(in srgb, var(--leitor-fg) 10%, transparent);
+}
+.nivel::after { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--leitor-muted); opacity: 0.6; }
+.nivel > span { display: block; height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, #16a34a, #84cc16 60%, #f59e0b); transition: width 0.08s linear; }
+
+@media (prefers-reduced-motion: reduce) {
+  .barra { transition: none; }
+  .estado[data-estado="lendo"] .ondas i, .microfone[data-ouvindo="1"]::after, .bolha { animation: none; }
+}
+@media print { .barra, .bolha { display: none !important; } }

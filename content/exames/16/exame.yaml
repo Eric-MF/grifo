@@ -148,7 +148,7 @@ questoes:
         valores: [ 0, 0.15, 0.35, 0.45, 0.5, 0.6 ]
         componentes:
           - { id: c1, valor: 0.35, termos: [ inconstitucional*, regime, fechado ] }
-          - { id: c2, valor: 0.1, dispositivo: [ "art. 2, § 1º, Lei 8" ], requer: c1 }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 2, § 1º, Lei 8.072" ], requer: c1 }
           - { id: c3, valor: 0.15, termos: [ individualizacao ] }
       - n: B
         secao: PONTUAÇÃO
@@ -264,3 +264,9 @@ atualizado:
   revisao: { status: rascunho }
   notas:
     - { alvo: q2, lei: "Lei 12.015/2009", texto: "O art. 214 do Código Penal (atentado violento ao pudor) foi revogado pela Lei 12.015/2009, que passou a tratar essas condutas como estupro no art. 213." }
+  nomes:
+    peca: { Gilberto: Procusto, Renata: Ariadne }
+    q1: { Carlos: Ares }   # a arma
+    q2: { Luan: Hades, Carla: Perséfone }
+    q3: { Rubens: Castor, Enrico: Pólux, Eduardo: Hermes }   # a dupla; o chamado de ladrão
+    q4: { Wesley: Faetonte }   # dirigia o carro que não era seu

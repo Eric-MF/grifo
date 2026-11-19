@@ -10,10 +10,10 @@
 .regra { display: block; margin-top: 0.25rem; font-size: 0.8rem; }
 /* leitura completa (100%): degradê dourado com um brilho que passa pela barra */
 .completa .preenchimento {
-  background: linear-gradient(90deg, #b8860b, #ffd700 30%, #fff4b0 50%, #ffd700 70%, #b8860b);
+  background: linear-gradient(90deg, var(--festa-fundo), var(--festa-ouro) 30%, var(--festa-claro) 50%, var(--festa-ouro) 70%, var(--festa-fundo));
   background-size: 200% 100%;
   animation: brilho 2.6s linear infinite;
-  box-shadow: 0 0 10px rgb(255 200 0 / 0.55);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--festa-ouro) 55%, transparent);
 }
 @keyframes brilho {
   from { background-position: 200% 0; }

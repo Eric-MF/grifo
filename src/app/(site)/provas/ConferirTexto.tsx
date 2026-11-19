@@ -4,6 +4,7 @@ import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import type { ExameSimulado } from "@/lib/correcao/simulado";
 import { NOTA_CORTE, type ResultadoExame, type ResultadoParte } from "@/lib/correcao/grader";
 import { fmtNota } from "@/lib/formato";
+import { useMostrarPeca } from "@/components/NomePeca";
 import styles from "./provas.module.css";
 
 type Textos = { peca: string; questoes: string[] };
@@ -18,11 +19,12 @@ function CampoTexto({ rotulo, valor, onChange }: { rotulo: string; valor: string
   );
 }
 
-function Parte({ parte }: { parte: ResultadoParte }) {
+function Parte({ parte, mostrarPeca }: { parte: ResultadoParte; mostrarPeca: boolean }) {
   return (
     <li className={styles.notaParte}>
       <div>
-        <strong>{parte.titulo}</strong>{" "}
+        {/* o nome da peça só com "mostrar a peça" ligado */}
+        <strong>{parte.parte === "peca" && !mostrarPeca ? "Peça" : parte.titulo}</strong>{" "}
         <span>
           {fmtNota(parte.obtido)} / {fmtNota(parte.valor)}
         </span>
@@ -43,6 +45,9 @@ function Parte({ parte }: { parte: ResultadoParte }) {
 }
 
 export function ConferirTexto({ exameId }: { exameId: string }) {
+  const [mostrarPeca] = useMostrarPeca();
+  // no celular a nota fica presa embaixo da tela, só com o total; as partes abrem num toque
+  const [verPartes, setVerPartes] = useState(false);
   const [carga, setCarga] = useState<Carga | null>(null);
   const [falhou, setFalhou] = useState(false);
   const [textos, setTextos] = useState<Textos>({ peca: "", questoes: [] });
@@ -88,9 +93,9 @@ export function ConferirTexto({ exameId }: { exameId: string }) {
     <div className={styles.conferir}>
       <div className={styles.conferirTextos}>
         <p className="muted">
-          Cole o texto de cada parte e veja a nota ao lado. Nada disto é salvo, e o resultado não pode ser compartilhado: serve só para conferir textos.
+          Cole o texto de cada parte e veja a nota na hora. Nada disto é salvo, e o resultado não pode ser compartilhado: serve só para conferir textos.
         </p>
-        <CampoTexto rotulo={`Peça: ${exame.peca.nome}`} valor={textos.peca} onChange={(v) => setTextos((t) => ({ ...t, peca: v }))} />
+        <CampoTexto rotulo={mostrarPeca ? `Peça: ${exame.peca.nome}` : "Peça"} valor={textos.peca} onChange={(v) => setTextos((t) => ({ ...t, peca: v }))} />
         {exame.questoes.map((q, i) => (
           <CampoTexto
             key={q.n}
@@ -120,9 +125,12 @@ export function ConferirTexto({ exameId }: { exameId: string }) {
             <p className={nResultado.aprovado ? styles.aprovado : styles.reprovado}>
               {nResultado.aprovado ? "Acima da nota de corte" : `Abaixo da nota de corte (${fmtNota(NOTA_CORTE)})`}
             </p>
-            <ul className={styles.listaNota}>
+            <button type="button" className={styles.verPartes} aria-expanded={verPartes} onClick={() => setVerPartes((v) => !v)}>
+              {verPartes ? "Esconder as partes ▾" : "Nota de cada parte ▴"}
+            </button>
+            <ul className={styles.listaNota} data-aberta={verPartes || undefined}>
               {nResultado.partes.map((p) => (
-                <Parte key={p.parte} parte={p} />
+                <Parte key={p.parte} parte={p} mostrarPeca={mostrarPeca} />
               ))}
             </ul>
           </>

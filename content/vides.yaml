@@ -1,0 +1,11 @@
+# "Vide" entre dispositivos do leitor (leis e súmulas), além dos que o Planalto e os tribunais já trazem.
+# Em cada grupo, cada membro ganha um "(Vide …)" para cada um dos outros, com link e prévia.
+# lei: id do leitor (content/leis.yaml) ou da lista de súmulas (sumulas-stf, sumulas-stj, sumulas-vinculantes).
+# disp: o dispositivo no leitor (art366, art564.i4, s-455). rotulo: como o "Vide" o chama.
+
+- tema: Produção antecipada de provas
+  membros:
+    - { lei: cpp, disp: art225, rotulo: "art. 225 do CPP" }
+    - { lei: cpp, disp: art366, rotulo: "art. 366 do CPP" }
+    - { lei: cpp, disp: art564.i4, rotulo: "art. 564, IV, do CPP" }
+    - { lei: sumulas-stj, disp: s-455, rotulo: "Súmula 455 do STJ" }

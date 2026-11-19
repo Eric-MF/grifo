@@ -180,6 +180,29 @@ await p.reload({ waitUntil: "networkidle" });
 await abrirMais();
 checar((await p.getByLabel("Vigência da Lei 263/1948", { exact: false }).inputValue()) === "df", "local da Lei 263 não persistiu");
 
+// 9. Enter antes de a outra lei carregar: a busca guarda o Enter e abre o artigo quando ele aparece. O CP chega 2,5 s
+// depois de pedido, e o Enter vai antes disso, no atalho (digitar o número no texto) e no painel Buscar.
+await p.route("**/dados/leis/cp.artigos.json", async (r) => {
+  await new Promise((ok) => setTimeout(ok, 2500));
+  await r.continue();
+});
+await p.goto(`${BASE}/leis/cpp/`, { waitUntil: "networkidle" });
+await p.locator("#art1").first().waitFor();
+await p.keyboard.press("1");
+const atalho = p.getByRole("dialog", { name: "Ir para o artigo" });
+await atalho.getByRole("combobox").pressSequentially("21 cp");
+await atalho.getByRole("combobox").press("Enter");
+checar(await atalho.getByText(/Abre assim que achar/).isVisible().catch(() => false), "o atalho não avisa que abre o artigo quando o CP carregar");
+await p.waitForURL(/\/leis\/cp\/#art121$/, { timeout: 10_000 }).catch(() => checar(false, `o Enter dado antes do CP carregar não abriu o art. 121 (${p.url()})`));
+await p.goto(`${BASE}/leis/cpp/`, { waitUntil: "networkidle" });
+await p.getByRole("button", { name: "Buscar" }).first().click();
+const campoBusca = p.getByRole("searchbox", { name: "Buscar artigo ou texto" });
+await campoBusca.fill("155 cp");
+await campoBusca.press("Enter");
+checar(await p.getByText(/Abre assim que achar/).first().isVisible().catch(() => false), "o painel Buscar não avisa que abre o artigo quando o CP carregar");
+await p.waitForURL(/\/leis\/cp\/#art155$/, { timeout: 10_000 }).catch(() => checar(false, `o Enter do painel Buscar antes do CP carregar não abriu o art. 155 (${p.url()})`));
+await p.unroute("**/dados/leis/cp.artigos.json");
+
 await b.close();
 
 if (erros.length) falhas.push(`erros de página: ${erros.join(" | ")}`);

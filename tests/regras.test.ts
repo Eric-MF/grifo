@@ -49,6 +49,17 @@ describe("regras de desbloqueio", () => {
     expect(avaliarItens(ctx({ itens, comprados: ["fofo", "noir"] })).novos).toEqual(["falcao"]);
   });
 
+  it("todas-compras ignora os estilos dos grupos", () => {
+    const estilos: ItemJogo[] = [
+      { id: "fofo", nome: "F", descricao: "", custo: 40 },
+      { id: "noir", nome: "N", descricao: "", custo: 90 },
+    ];
+    const natal: ItemJogo = { id: "natal", nome: "N", descricao: "", custo: 5669, grupo: "feriados" };
+    const falcao: ItemJogo = { id: "falcao", nome: "X", descricao: "", regras: [{ tipo: "todas-compras" }] };
+    const itens = [...estilos, natal, falcao];
+    expect(avaliarItens(ctx({ itens, comprados: ["fofo", "noir"] })).novos).toEqual(["falcao"]);
+  });
+
   it("itens já comprados não são liberados de novo nem cobrados de novo", () => {
     const drace: ItemJogo = { id: "drace", nome: "D", descricao: "", regras: [{ tipo: "moedas", minimo: 1000, cobra: 1000 }] };
     expect(avaliarItens(ctx({ itens: [drace], moedas: 5000, comprados: ["drace"] }))).toEqual({ novos: [], cobrar: 0, consumiuAusencia: false });

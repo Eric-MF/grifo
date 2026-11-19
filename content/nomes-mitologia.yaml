@@ -150,3 +150,35 @@ femininos:
   - Polixena
   - Clitemnestra
   - Enone
+
+# Como a voz (a leitura em voz alta do treino) deve dizer os nomes que a escrita engana: o "x" que é "cs" (Ájax), o
+# "e" e o "o" abertos sem acento (Apolo, Hefesto, Minerva) e o "ei" aberto que perdeu o acento na reforma ortográfica
+# (Medeia). Só muda a fala: na tela, o nome fica como está acima. Ouviu um nome errado? Escreva-o aqui como se fala.
+pronuncia:
+  Ájax: Ájacs
+  Pólux: Pólucs
+  Polixena: Policséna
+  Medeia: Medéia
+  Galateia: Galatéia
+  Reia: Réia
+  Eneias: Enéias
+  Eros: Éros
+  Hera: Héra
+  Hebe: Hébe
+  Leto: Léto
+  Ceres: Céres
+  Cronos: Crônos
+  Apolo: Apólo
+  Hefesto: Hefésto
+  Laerte: Laérte
+  Diomedes: Diomédes
+  Ganimedes: Ganimédes
+  Castor: Cástor
+  Minerva: Minérva
+  Vesta: Vésta
+  Euterpe: Eutérpe
+  Fedra: Fédra
+  Filomela: Filoméla
+  Electra: Eléctra
+  Clitemnestra: Clitemnéstra
+  Pandora: Pandóra

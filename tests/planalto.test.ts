@@ -63,13 +63,18 @@ describe("citacoesEm — súmulas do STF", () => {
     expect(c.lei).toBeUndefined();
   });
 
+  it("liga a Súmula do STJ ao leitor do STJ", () => {
+    const [c] = citacoesEm("fundamentar seu pedido no teor da Súmula 455 do STJ.");
+    expect(c).toMatchObject({ texto: "Súmula 455 do STJ", url: "/leis/sumulas/stj/#s-455", lei: "sumulas-stj", art: "s-455" });
+  });
+
   it("mantém a ordem quando súmula e artigo aparecem juntos", () => {
     const achados = citacoesEm("Súmula 700 do STF ou art. 586 do CPP");
     expect(achados.map((c) => c.texto)).toEqual(["Súmula 700 do STF", "art. 586 do CPP"]);
   });
 
-  it("não liga súmula vinculante", () => {
-    expect(citacoesEm("Súmula Vinculante 11 do STF")).toEqual([]);
+  it("liga a súmula vinculante ao leitor das vinculantes", () => {
+    expect(citacoesEm("Súmula Vinculante 11 do STF").map((c) => [c.texto, c.url])).toEqual([["Súmula Vinculante 11", "/leis/sumulas/vinculantes/#s-11"]]);
   });
 });
 

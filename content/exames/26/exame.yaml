@@ -345,10 +345,21 @@ questoes:
         componentes:
           - { id: c1, valor: 0.4, termos: [ apelacao ] }
           - { id: c2, valor: 0.15, termos: [ 10 dias ] }
-          - { id: c3, valor: 0.1, dispositivo: [ "art. 82, § 1º, Lei 9" ], requer: c2 }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 82, § 1º, Lei 9.099" ], requer: c2 }
       - n: B
         descricao: O argumento é o de que o início da contagem do prazo decadencial somente ocorreu em 23/10/2017 OU no dia em que o ofendido teve conhecimento sobre a autoria, logo não havia se encerrado quando do oferecimento da queixa-crime (0,50), nos termos do Art. 38 do CPP OU Art. 103 do CP (0,10).
         valores: [ 0, 0.5, 0.6 ]
         componentes:
           - { id: c1, valor: 0.5, termos: [ decaden* | prazo decadencial, conhecimento | autoria | 2017-10-23 ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 38, CPP", "art. 103, CP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q1, tipo: jurisprudencia, lei: "STF, RE 635.659 (Tema 506, 2024)", texto: "O STF decidiu que portar maconha para uso próprio não é crime: é ilícito administrativo, sujeito só a advertência e a medida educativa, sem efeito penal, e presume-se usuário quem tem até 40 g ou seis plantas-fêmeas. Hoje, Gabriel, com 15 g de maconha, não seria processado criminalmente. Para as outras drogas, o art. 28 da Lei 11.343/2006 continua valendo, e o descumprimento das medidas continua sem levar à prisão (§ 6º)." }
+    - { alvo: q3, lei: "Lei 13.968/2019", texto: "O art. 122 do Código Penal foi alterado pela Lei 13.968/2019. Induzir, instigar ou auxiliar alguém a se suicidar passou a ser crime mesmo sem resultado (reclusão de 6 meses a 2 anos). A lesão corporal grave ou gravíssima qualifica o crime (§ 1º, reclusão de 1 a 3 anos), e a morte também (§ 2º, reclusão de 2 a 6 anos). Hoje, Breno responderia pelo crime mesmo com Flávio só arranhado, e a tese da atipicidade não vale mais." }
+  nomes:
+    peca: { Lauro: Apolo, Maria: Dafne, José: Hermes }   # a obsessão; o amigo a quem contou
+    q1: { Gabriel: Dionísio }
+    q2: { Arthur: Aquiles, Adriano: Ájax, Junior: Diomedes, Roberto: Nestor, Pedro: Heitor }   # os torcedores; o que vestia a camisa rival
+    q3: { Flávio: Orfeu, Breno: Tânatos }   # o luto pela namorada; quem incentivou a morte
+    q4: { Larissa: Hera, Renata: Calisto }   # o ciúme da ex

@@ -104,7 +104,7 @@ export function artigoDigitado(consulta: string): string | null {
 
 /** Na lista de súmulas, tira a palavra no começo: "Súmula nº 145" → "145", "sum. 145" → "145", "S. 145" → "145". */
 export function semPalavraSumula(consulta: string): string {
-  return consulta.normalize("NFC").replace(/^\s*(?:s[úu]mulas?|sum\.?|s\.)\s*(?:n\s*[º°o]?\.?\s*)?(?=\d)/i, "");
+  return consulta.normalize("NFC").replace(/^\s*(?:s[úu]mulas?\s*(?:vinculantes?\s*)?|sum\.?|s\.|sv)\s*(?:n\s*[º°o]?\.?\s*)?(?=\d)/i, "");
 }
 
 /** O id completo do dispositivo da linha do texto ("art121.p2.i4"); a linha sem dispositivo próprio dá o artigo. */
@@ -167,11 +167,16 @@ const CONECTOR_INICIO = /^(?:[\s,]+|(?:dos?|das?|de)\s+)+/;
 const ALIAS_DAS_LEIS: [string, string][] = Object.entries(leis.diplomas as Record<string, { aliases: string[]; sigla?: string }>)
   .filter(([id]) => indice.some((l) => l.id === id))
   .flatMap(([id, d]) => [...d.aliases, ...(d.sigla ? [d.sigla] : [])].map((a): [string, string] => [normaliza(a), id]));
-// as súmulas não estão no JSON das leis: o nome do tribunal, sozinho ou com "súmula" ("sumulas do stj")
-const ALIAS_SUMULAS: [string, string][] = (["stf", "stj"] as const).flatMap((t) =>
-  ["", "sumula ", "sumulas ", "sumula do ", "sumulas do "].map((palavra): [string, string] => [`${palavra}${t}`, idSumulas(t)]),
-);
+// as súmulas não estão no JSON das leis: o nome do tribunal, sozinho ou com "súmula" ("sumulas do stj"). As
+// vinculantes ficam de fora: "súmula vinculante 14" digitada no quiz vai para o leitor de citações da correção
+const ALIAS_SUMULAS: [string, string][] = [
+  ...(["stf", "stj"] as const).flatMap((t) =>
+    ["", "sumula ", "sumulas ", "sumula do ", "sumulas do "].map((palavra): [string, string] => [`${palavra}${t}`, idSumulas(t)]),
+  ),
+];
 const ALIAS_LEIS = [...ALIAS_DAS_LEIS, ...ALIAS_SUMULAS].sort((a, b) => b[0].length - a[0].length);
+/** [nome ou sigla normalizado, id da lei], os mais longos primeiro: para achar a lei numa frase ("… do CPP"). */
+export const aliasesDasLeis = (): readonly [string, string][] => ALIAS_LEIS;
 
 /**
  * "100 cp", "art. 100 do CP", "100cp", "5 XI CF", "cp, art. 100", "lei 11.343/06 art 33", "súmula 145 do STF", "S. 145 STJ":

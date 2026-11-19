@@ -1,6 +1,7 @@
 /* ==========================================================================
    Grifo — tokens de design e modos de visualização
    Paleta base (Adobe Color, complementar): #D69C45 #1A6099 #5A9ED6 #807059 #5E7282
+   (o taupe #807059 e o ardósia #5E7282 não viraram variáveis: nenhum estilo os usa)
    Marca: #03112C (azul-marinho do grifo)
    Modos: data-theme = claro | escuro | sepia | contraste  (ausente = segue o sistema)
           data-fonte = p | m | g | gg   data-densidade = compacta   data-leitura = facil
@@ -16,8 +17,6 @@ html {
   --gold: #d69c45;
   --blue: #1a6099;
   --sky: #5a9ed6;
-  --taupe: #807059;
-  --slate: #5e7282;
 
   --bg: #f7f4ee;
   --bg-alt: #efe9dd;
@@ -31,9 +30,11 @@ html {
   --accent: #d69c45;          /* preenchimentos */
   --accent-ink: #8a5a14;      /* texto dourado legível sobre fundo claro */
   --on-accent: #03112c;
-  --ok: #2e7d4f;
-  --warn: #a8620a;
+  /* estado: acerto, aviso e erro, legíveis (4,5:1) sobre o fundo, os cartões e as faixas de cada tema */
+  --ok: #2a7449;
+  --warn: #955706;
   --bad: #b3261e;
+  --on-estado: #ffffff;       /* texto sobre um fundo de estado cheio (faixa, letra da alternativa) */
   --shadow: 0 1px 2px rgb(3 17 44 / 0.06), 0 8px 24px rgb(3 17 44 / 0.08);
   --focus: 0 0 0 3px rgb(90 158 214 / 0.55);
 
@@ -45,6 +46,50 @@ html {
   --font-body: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-title: var(--font-cormorant), Georgia, "Times New Roman", serif;
   --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* correção da peça: o laranja do corte (botão ligado, selo "retirado", borda do trecho cortado), o realce amarelo
+     dos trechos conferidos e a marca do trecho achado */
+  --corte: #b45309;
+  --corte-ink: #ffffff;
+  --corte-texto: #92400e;
+  --realce: #facc15;          /* só em tinta fraca (12% a 22%) */
+  --realce-borda: #ca8a04;
+  --realce-texto: #8a5a08;
+  --marca: #fde047;
+  --marca-ink: #111827;
+  --marca-borda: #a16207;
+
+  /* grupos de leis (/leis/ e o leitor): Códigos, Constituição, Estatutos, Leis e Súmulas */
+  --lei-codigos: #1d4ed8;
+  --lei-constituicao: #b45309;
+  --lei-estatutos: #15803d;
+  --lei-leis: #7c3aed;
+  --lei-sumulas: #be185d;
+
+  /* grupos de peças nas estatísticas (/estatisticas/): texto e traço de cada grupo, legíveis (4,5:1) também sobre o selo
+     tingido do próprio grupo, nos cartões, no fundo e no sépia */
+  --peca-defesa: #15603a;
+  --peca-recurso: #1e46b8;
+  --peca-contrarrazoes: #6222c4;
+  --peca-execucao: #8a4200;
+  --peca-prisao: #0b5d75;
+  --peca-autonoma: #951552;
+  --peca-acusacao: #a3201a;
+  /* a pirâmide das peças mais cobradas: ouro, prata e bronze, com o texto marinho (6 a 10:1) */
+  --podio-ouro: #d69c45;
+  --podio-prata: #b9c3cf;
+  --podio-bronze: #c98250;
+  --podio-ink: #03112c;
+
+  /* ouro festivo: o brilho das conquistas (strike e modo foco do treino, leitura completa, prêmio do vídeo do jogo).
+     O mesmo em todos os temas: vai sempre sobre o próprio fundo (marinho, ou o dourado da barra). */
+  --festa-brilho: #fff6d5;
+  --festa-claro: #ffe9a0;
+  --festa-ouro: #f5c542;
+  --festa-medio: #e0a82e;
+  --festa-escuro: #c98a10;
+  --festa-fundo: #b8780a;
+  --festa-borda: #8a5a14;
 
   color-scheme: light;
 }
@@ -61,6 +106,24 @@ html {
     --primary: #5a9ed6;
     --primary-ink: #03112c;
     --accent-ink: #e5b56b;
+    --ok: #5cc98a;
+    --warn: #f0a84a;
+    --bad: #ff8a80;
+    --on-estado: #03112c;
+    --corte-texto: #fdba74;
+    --realce-texto: #facc15;
+    --lei-codigos: #60a5fa;
+    --lei-constituicao: #f59e0b;
+    --lei-estatutos: #4ade80;
+    --lei-leis: #a78bfa;
+    --lei-sumulas: #f472b6;
+    --peca-defesa: #4ade80;
+    --peca-recurso: #7cb4ff;
+    --peca-contrarrazoes: #b9a2ff;
+    --peca-execucao: #fbbf24;
+    --peca-prisao: #22d3ee;
+    --peca-autonoma: #f78fc4;
+    --peca-acusacao: #ff8a80;
     --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.35);
     color-scheme: dark;
   }
@@ -77,9 +140,68 @@ html {
   --primary: #5a9ed6;
   --primary-ink: #03112c;
   --accent-ink: #e5b56b;
+  --ok: #5cc98a;
+  --warn: #f0a84a;
+  --bad: #ff8a80;
+  --on-estado: #03112c;
+  --corte-texto: #fdba74;
+  --realce-texto: #facc15;
+  --lei-codigos: #60a5fa;
+  --lei-constituicao: #f59e0b;
+  --lei-estatutos: #4ade80;
+  --lei-leis: #a78bfa;
+  --lei-sumulas: #f472b6;
+  --peca-defesa: #4ade80;
+  --peca-recurso: #7cb4ff;
+  --peca-contrarrazoes: #b9a2ff;
+  --peca-execucao: #fbbf24;
+  --peca-prisao: #22d3ee;
+  --peca-autonoma: #f78fc4;
+  --peca-acusacao: #ff8a80;
   --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.35);
   color-scheme: dark;
 }
+
+/* ícones das peças (public/icones/pecas/*.svg): as cores de cada parte. Cada SVG traz as mesmas cores de reserva (para
+   quando é aberto como imagem); dentro da página, valem estas, que seguem o tema escolhido no site. */
+:root {
+  --icone-contorno: #1f2b45; --icone-sombra: rgb(3 17 44 / 0.13); --icone-brilho: rgb(255 255 255 / 0.75);
+  --icone-ouro: #d69c45; --icone-ouro-claro: #f0c97f; --icone-ouro-escuro: #a8742a;
+  --icone-metal: #4d6a8c; --icone-metal-claro: #7f9cbc; --icone-metal-escuro: #34495f;
+  --icone-aco: #aab5c2; --icone-aco-claro: #d5dce4; --icone-aco-escuro: #7d8a99;
+  --icone-papel: #f4e7c5; --icone-papel-sombra: #e0c98f; --icone-tinta: #1f2b45;
+  --icone-madeira: #9a6a3c; --icone-madeira-escura: #6e4626; --icone-cobre: #c7743a; --icone-cobre-escuro: #9a5528;
+  --icone-vermelho: #b3261e; --icone-verde: #2e7d4f; --icone-verde-claro: #4f9a6c; --icone-azul: #1a6099;
+  --icone-rosa: #e8907f; --icone-rosa-escuro: #c96a5a; --icone-vidro: rgb(255 255 255 / 0.55); --icone-luz: #ffcf5c;
+  --icone-fundo-escuro: #1a2540; --icone-claro: #fffaf0;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --icone-contorno: #0b1633; --icone-sombra: rgb(0 0 0 / 0.35); --icone-brilho: rgb(255 255 255 / 0.6);
+    --icone-ouro: #e5b56b; --icone-ouro-claro: #f6d9a0; --icone-ouro-escuro: #b8863a;
+    --icone-metal: #6f8fb4; --icone-metal-claro: #a3bddb; --icone-metal-escuro: #4a6585;
+    --icone-aco: #bcc7d3; --icone-aco-claro: #e3e9ef; --icone-aco-escuro: #8e9bab;
+    --icone-papel: #f1e3bd; --icone-papel-sombra: #d8bf85; --icone-tinta: #e6ecf4;
+    --icone-madeira: #b07d4c; --icone-madeira-escura: #85582f; --icone-cobre: #db8a4f; --icone-cobre-escuro: #b06a37;
+    --icone-vermelho: #e0574d; --icone-verde: #3f9a66; --icone-verde-claro: #67b886; --icone-azul: #5a9ed6;
+    --icone-rosa: #f0a596; --icone-rosa-escuro: #d77f6f; --icone-vidro: rgb(200 220 255 / 0.16); --icone-luz: #ffd977;
+    --icone-fundo-escuro: #0d1833; --icone-claro: #fffaf0;
+  }
+}
+/* o alto contraste usa as cores do escuro: no fundo preto, as claras apagavam a tinta e o contorno */
+:root[data-theme="escuro"], :root[data-theme="contraste"] {
+  --icone-contorno: #0b1633; --icone-sombra: rgb(0 0 0 / 0.35); --icone-brilho: rgb(255 255 255 / 0.6);
+  --icone-ouro: #e5b56b; --icone-ouro-claro: #f6d9a0; --icone-ouro-escuro: #b8863a;
+  --icone-metal: #6f8fb4; --icone-metal-claro: #a3bddb; --icone-metal-escuro: #4a6585;
+  --icone-aco: #bcc7d3; --icone-aco-claro: #e3e9ef; --icone-aco-escuro: #8e9bab;
+  --icone-papel: #f1e3bd; --icone-papel-sombra: #d8bf85; --icone-tinta: #e6ecf4;
+  --icone-madeira: #b07d4c; --icone-madeira-escura: #85582f; --icone-cobre: #db8a4f; --icone-cobre-escuro: #b06a37;
+  --icone-vermelho: #e0574d; --icone-verde: #3f9a66; --icone-verde-claro: #67b886; --icone-azul: #5a9ed6;
+  --icone-rosa: #f0a596; --icone-rosa-escuro: #d77f6f; --icone-vidro: rgb(200 220 255 / 0.16); --icone-luz: #ffd977;
+  --icone-fundo-escuro: #0d1833; --icone-claro: #fffaf0;
+}
+:root[data-theme="contraste"] { --icone-tinta: #ffffff; --icone-luz: #ffd84d; }
+/* fim dos ícones das peças */
 
 :root[data-theme="sepia"] {
   --bg: #f1e6d0;
@@ -91,6 +213,8 @@ html {
   --border: #d8c4a0;
   --primary: #1a5a8f;
   --accent-ink: #875714;
+  --ok: #276b44;
+  --warn: #8a4f07;
 }
 
 :root[data-theme="contraste"] {
@@ -109,6 +233,32 @@ html {
   --ok: #7dff9b;
   --warn: #ffd84d;
   --bad: #ff8a80;
+  --on-estado: #000000;
+  --corte: #ff9f43;
+  --corte-ink: #000000;
+  --corte-texto: #ffb870;
+  --realce: #ffd84d;
+  --realce-borda: #ffd84d;
+  --realce-texto: #ffd84d;
+  --marca: #ffd84d;
+  --marca-ink: #000000;
+  --marca-borda: #ffffff;
+  --lei-codigos: #8fc4ff;
+  --lei-constituicao: #ffb347;
+  --lei-estatutos: #7dff9b;
+  --lei-leis: #c4b5fd;
+  --lei-sumulas: #f9a8d4;
+  --peca-defesa: #7dff9b;
+  --peca-recurso: #8fc4ff;
+  --peca-contrarrazoes: #c4b5fd;
+  --peca-execucao: #ffb347;
+  --peca-prisao: #67e8f9;
+  --peca-autonoma: #f9a8d4;
+  --peca-acusacao: #ff8a80;
+  --podio-ouro: #ffd84d;
+  --podio-prata: #ffffff;
+  --podio-bronze: #ffb347;
+  --podio-ink: #000000;
   --shadow: none;
   --focus: 0 0 0 3px #ffffff;
   color-scheme: dark;
@@ -165,6 +315,8 @@ h3 { font-size: 1.35rem; }
 p { margin: 0 0 1em; }
 button, input, select, textarea { font: inherit; color: inherit; }
 ::selection { background: color-mix(in srgb, var(--accent) 45%, transparent); }
+/* leitura em voz alta no leitor de leis: o trecho que a voz está dizendo (CSS Custom Highlight; ver useOuvir.ts) */
+::highlight(grifo-fala) { background-color: color-mix(in srgb, var(--primary) 24%, transparent); }
 
 .container { width: min(100% - 2rem, var(--maxw)); margin-inline: auto; }
 .section { padding-block: calc(var(--space) * 5); }

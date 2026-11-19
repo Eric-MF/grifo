@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { digitoVerificador, gerarCodigo, verificarCodigo, type DadosSimulado } from "../src/lib/codigo/codigo.ts";
+import { digitoVerificador, gerarCodigo, gerarCodigoV2ParaTeste, verificarCodigo, type DadosSimulado } from "../src/lib/codigo/codigo.ts";
 
 const base: DadosSimulado = {
   tipo: "simulado", exame: 38, variante: 0, atualizado: false, total: 7.35, peca: 3.9,
@@ -21,9 +21,19 @@ describe("código de verificação", () => {
     const d = { tipo: "jogo" as const, jogo: 1, pontos: 12345, nivel: 3, estilo: 5, acertos: 17, perguntas: 20, data: new Date(Date.UTC(2026, 0, 2)), impressao: 1500 };
     expect(await verificarCodigo(await gerarCodigo(d))).toMatchObject({ ok: true, dados: d });
   });
-  it("jogo v2 com categorias: ida e volta", async () => {
+  it("jogo com categorias (v3): ida e volta", async () => {
     const d = { tipo: "jogo" as const, jogo: 1, pontos: 9876, nivel: 2, estilo: 3, categorias: 0b1011, acertos: 9, perguntas: 12, data: new Date(Date.UTC(2026, 9, 10)), impressao: 100 };
     expect(await verificarCodigo(await gerarCodigo(d))).toMatchObject({ ok: true, dados: d });
+  });
+  it("v3: estilo até 127 e pontos até 131.071", async () => {
+    const d = { tipo: "jogo" as const, jogo: 1, pontos: 131071, nivel: 3, estilo: 100, categorias: 0b0110, acertos: 30, perguntas: 31, data: new Date(Date.UTC(2026, 10, 1)), impressao: 77 };
+    expect(await verificarCodigo(await gerarCodigo(d))).toMatchObject({ ok: true, dados: d });
+    const max = { ...d, estilo: 127 };
+    expect(await verificarCodigo(await gerarCodigo(max))).toMatchObject({ ok: true, dados: max });
+  });
+  it("código v2 antigo continua válido", async () => {
+    const d = { tipo: "jogo" as const, jogo: 1, pontos: 500000, nivel: 2, estilo: 9, categorias: 0b1011, acertos: 9, perguntas: 12, data: new Date(Date.UTC(2026, 9, 10)), impressao: 100 };
+    expect(await verificarCodigo(await gerarCodigoV2ParaTeste(d))).toMatchObject({ ok: true, dados: d });
   });
   it("código de jogo v1 continua válido e sem categorias", async () => {
     const d = { tipo: "jogo" as const, jogo: 1, pontos: 50, nivel: 1, estilo: 0, acertos: 1, perguntas: 1, data: new Date(Date.UTC(2025, 5, 1)), impressao: 2000 };

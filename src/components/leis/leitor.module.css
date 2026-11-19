@@ -6,6 +6,9 @@
   --leitor-borda: #e6dcc8;
   --leitor-link: #1d4f91;
   --leitor-painel: #fffdf8;
+  /* erro e aviso sobre o papel do leitor, que não segue o tema do site (o vermelho e o âmbar do tema escuro somem no papel) */
+  --leitor-bad: #b3261e;
+  --leitor-warn: #8a4f07;
   --leitor-fonte: var(--font-body), system-ui, -apple-system, "Segoe UI", sans-serif;
   --grifo-alfa: 72%;
   position: relative;
@@ -21,6 +24,7 @@
 .leitor[data-fundo="verde"], :root[data-leitor-fundo="verde"] .leitor { --leitor-bg: #e6f0e1; --leitor-fg: #1d2a1a; --leitor-muted: #56664f; --leitor-borda: #c9dbc0; --leitor-painel: #f1f7ee; }
 .leitor[data-fundo="escuro"], :root[data-leitor-fundo="escuro"] .leitor {
   --leitor-bg: #17181b; --leitor-fg: #e8e6e1; --leitor-muted: #a3a09a; --leitor-borda: #33353a; --leitor-link: #8fb8ff; --leitor-painel: #212328;
+  --leitor-bad: #ff8a80; --leitor-warn: #f0a84a;
   --grifo-alfa: 48%;
 }
 .leitor[data-fonte="serif"] { --leitor-fonte: var(--font-title), Georgia, "Times New Roman", serif; }
@@ -47,7 +51,7 @@
 .folha > [data-i]:has(> .pontosErro),
 .folha > [data-i]:has(.naoEncontrada),
 /* a forma do grifo do parágrafo inteiro sai um pouco da caixa do bloco, para alinhar com o artigo: também sem a contenção */
-.folha > [data-i][data-marca-bloco], .folha > [data-i][data-pronto="destaque"] { content-visibility: visible; }
+.folha > [data-i][data-marca-bloco] { content-visibility: visible; }
 .folha a.ref { color: var(--leitor-link); text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
 /* "art. N" cujo diploma não foi identificado: sem link; a mensagem aparece ao passar o mouse, dar foco ou tocar */
 .naoEncontrada { position: relative; text-decoration: underline dotted; text-underline-offset: 0.15em; cursor: help; }
@@ -104,6 +108,11 @@
 .b:hover .estrela, .estrela:focus-visible, .estrela[aria-pressed="true"] { opacity: 1; }
 .estrela[aria-pressed="true"] { color: #d4a017; }
 .destaque { animation: destaque 1.6s ease-out; }
+/* leitura em voz alta: o dispositivo que está sendo lido (o trecho exato vai em ::highlight(grifo-fala), em globals.css) */
+.b[data-falando] {
+  background: color-mix(in srgb, var(--primary) 7%, transparent); box-shadow: inset 3px 0 0 color-mix(in srgb, var(--primary) 75%, transparent);
+  border-radius: 4px; transition: background 0.2s ease;
+}
 @keyframes destaque { 0%, 40% { background: color-mix(in srgb, var(--accent) 22%, transparent); } 100% { background: transparent; } }
 
 /* Texto atual: o riscado e o registro de revogação só aparecem com a opção ligada. */
@@ -117,16 +126,21 @@
 .folha[data-tempo="1"] .b[data-aprox="1"] > .txt::before { content: "≈ "; color: var(--leitor-muted); }
 
 /* ---------- grifos ----------
-   Os do usuário imitam a caneta marca-texto: traço com ponta irregular que acompanha cada linha.
-   Os prontos do Grifo são um sublinhado largo e mais leve, para não competir com os do usuário. */
+   Os do usuário imitam a caneta marca-texto: traço com ponta irregular. Num trecho de várias linhas, a faixa de cada
+   linha vai da linha de cima à de baixo (a folga é a diferença entre a entrelinha e a altura da fonte, medida no
+   leitor em --grifo-altura) e o desenho é um só, cortado nas quebras (slice): as linhas encostam e formam uma forma
+   só, com a ponta arredondada só no começo e no fim.
+   Os prontos do Grifo marcam só as palavras-chave de cada tema, num marca-texto mais leve (nos Pedidos, um sublinhado),
+   para não competir com os do usuário. */
 .marca {
-  color: inherit; padding: 0.04em 0.18em; margin: 0 -0.08em; border-radius: 0.5em 0.2em 0.55em 0.25em;
+  color: inherit; padding: max(0.04em, calc((var(--leitor-entrelinha, 1.7) - var(--grifo-altura, 1.2)) * 0.5em)) 0.18em; margin: 0 -0.08em;
+  border-radius: 0.5em 0.2em 0.55em 0.25em;
   background:
     linear-gradient(100deg, transparent 0.12em, color-mix(in srgb, var(--c, #fde047) var(--grifo-alfa), transparent) 0.3em,
       color-mix(in srgb, var(--c, #fde047) calc(var(--grifo-alfa) + 8%), transparent) 60%,
       color-mix(in srgb, var(--c, #fde047) var(--grifo-alfa), transparent) calc(100% - 0.3em), transparent calc(100% - 0.12em));
   background-repeat: no-repeat; background-size: 100% 100%;
-  -webkit-box-decoration-break: clone; box-decoration-break: clone; cursor: pointer;
+  -webkit-box-decoration-break: slice; box-decoration-break: slice; cursor: pointer;
 }
 .nova { animation: grifar 0.35s ease-out; }
 @keyframes grifar { from { background-size: 0% 100%; } }
@@ -149,30 +163,26 @@
 .b[data-marca-bloco]:not([data-marca-nota]).estrutura::before,
 .b[data-marca-bloco]:not([data-marca-nota]).rubrica::before { left: calc(-0.3em - var(--margem)); }
 .b[data-marca-bloco][data-marca-nota] > .txt { border-bottom: 2px dotted currentColor; }
-/* parágrafos marcados em sequência encostam uns nos outros: a forma do artigo inteiro é uma só */
+/* parágrafos marcados em sequência encostam uns nos outros: a forma do artigo inteiro é uma só (o seletor repete o
+   da forma, para valer sobre o arredondado dela) */
 .b[data-liga-depois] { margin-bottom: 0; }
-.b[data-liga-depois]::before { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.b[data-marca-bloco][data-liga-depois]:not([data-marca-nota])::before { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 .b[data-liga-antes] { margin-top: 0; }
-.b[data-liga-antes]::before { border-top-left-radius: 0; border-top-right-radius: 0; }
-/* Grifos prontos: os de destaque são só sublinhado; os demais são só a marcação lateral */
-/* destaque: moldura na cor do sublinhado, em volta do parágrafo. Parágrafos seguidos com a mesma regra formam
-   uma moldura só (o artigo inteiro), sem a borda de encontro. Mesmo desenho e recuo dos grifos de texto. */
-.b[data-pronto="destaque"] { isolation: isolate; }
-.b[data-pronto="destaque"]::after {
-  content: ""; position: absolute; top: 0; bottom: 0; left: -0.3em; right: -0.3em; z-index: -1; pointer-events: none;
-  font-size: var(--leitor-tamanho, 18px); border: 2px solid var(--pronto); border-radius: 0.5em 0.2em 0.55em 0.25em;
+.b[data-marca-bloco][data-liga-antes]:not([data-marca-nota])::before { border-top-left-radius: 0; border-top-right-radius: 0; }
+/* Grifos prontos (content/grifos/*.yaml): as palavras-chave em marca-texto leve, na cor do tipo (Peças, Teses,
+   Súmulas); os Pedidos são um sublinhado vermelho, porque muitos já estão grifados como tese. Um trecho com os dois
+   leva o fundo e o sublinhado. O "vide" fica numa linha pequena depois do texto. */
+.pronto {
+  color: inherit; cursor: pointer; border-radius: 0.25em; padding: 0 0.06em; margin: 0 -0.02em;
+  background: color-mix(in srgb, var(--pronto-fundo, transparent) 62%, transparent);
+  text-decoration: var(--pronto-linha, transparent) underline 2.5px; text-underline-offset: 0.2em; text-decoration-skip-ink: none;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
 }
-.b[data-pronto="destaque"].paragrafo::after,
-.b[data-pronto="destaque"].texto::after,
-.b[data-pronto="destaque"].estrutura::after,
-.b[data-pronto="destaque"].rubrica::after { left: calc(-0.3em - var(--margem)); }
-.b[data-pronto-liga-depois] { margin-bottom: 0; }
-.b[data-pronto-liga-depois]::after { border-bottom: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
-.b[data-pronto-liga-antes] { margin-top: 0; }
-.b[data-pronto-liga-antes]::after { border-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
-.b[data-pronto]:not([data-pronto="destaque"])::after {
-  content: ""; position: absolute; left: calc(var(--margem) - 0.6em); top: 0.3em; bottom: 0.3em; width: 3px; border-radius: 3px; background: color-mix(in srgb, var(--pronto) 70%, transparent);
-}
+.pronto[data-pronto="pedido"] { background: none; }
+/* dentro de um grifo do usuário, o dele manda: o pronto fica só como sublinhado na cor dele */
+.marca .pronto { background: none; text-decoration-color: var(--pronto-linha, var(--pronto-fundo)); }
+.prontoVide { display: block; margin-top: 0.15em; font-size: 0.8em; color: var(--leitor-muted, var(--muted)); }
+.prontoVide a { color: var(--accent-ink, var(--accent)); text-decoration: underline; text-underline-offset: 0.15em; }
 /* No modo marca-texto, a seleção já aparece com a cor de destaque enquanto o dedo passa. */
 .leitor[data-marcador="1"] .folha ::selection { background: color-mix(in srgb, var(--accent) 55%, transparent); }
 
@@ -189,6 +199,9 @@
   font-size: 0.88rem; box-shadow: 0 10px 30px rgb(0 0 0 / 0.25); max-width: calc(100vw - 32px);
 }
 .toast .link { color: inherit; }
+/* com a barra do Ouvir embaixo, o aviso sobe para cima dela */
+.leitor[data-ouvindo="1"] .toast { bottom: calc(200px + env(safe-area-inset-bottom)); }
+.leitor[data-ouvindo="1"] .trilho[data-lado="baixo"] { bottom: calc(200px + env(safe-area-inset-bottom)); }
 
 /* Título da lei no topo quando a página abre numa âncora ou posição salva e o título original fica fora da tela. */
 .nomeLei {
@@ -248,6 +261,7 @@
 .botaoDock:hover { background: color-mix(in srgb, var(--leitor-fg) 7%, transparent); }
 .botaoDock[aria-pressed="true"] { background: color-mix(in srgb, var(--primary) 16%, transparent); color: var(--primary); }
 .icone { font-size: 1.15rem; line-height: 1.1; }
+.iconeSvg { width: 1.15rem; height: 1.15rem; margin: 0.08rem 0; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .previa {
   position: absolute; bottom: calc(100% + 12px); left: 50%; transform: translateX(-50%); z-index: 2; pointer-events: none;
   display: grid; justify-items: center; gap: 0.15rem; padding: 0.45rem 0.85rem; white-space: nowrap;
@@ -283,12 +297,14 @@
   position: absolute; right: 18px; top: 0; bottom: 0; width: 3px; border-radius: 3px;
   background: color-mix(in srgb, var(--leitor-fg) 18%, transparent);
 }
-.trilhoFaixa { position: absolute; left: -1px; right: -1px; border-radius: 3px; background: color-mix(in srgb, var(--c) 75%, transparent); }
-.trilhoMarco { position: absolute; right: 14px; width: 11px; height: 2px; margin-top: -1px; border-radius: 2px; background: color-mix(in srgb, var(--leitor-fg) 35%, transparent); }
+.trilhoFaixa { position: absolute; top: var(--pos); height: var(--tam); left: -1px; right: -1px; border-radius: 3px; background: color-mix(in srgb, var(--c) 75%, transparent); }
+.trilhoMarco { position: absolute; top: var(--pos); right: 14px; width: 11px; height: 2px; margin-top: -1px; border-radius: 2px; background: color-mix(in srgb, var(--leitor-fg) 35%, transparent); }
 .trilhoPonto {
-  position: absolute; right: 25px; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%;
-  background: var(--c, var(--leitor-muted)); box-shadow: 0 0 0 1.5px var(--leitor-bg);
+  position: absolute; top: var(--pos); right: 25px; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%;
+  background: var(--c, var(--leitor-muted)); box-shadow: 0 0 0 1.5px var(--leitor-bg); transition: opacity 0.15s ease;
 }
+/* perto do botão (ele e mais 1/4 acima e abaixo), as marcações quase somem: o clique ali é sempre no botão */
+.trilhoPonto[data-perto], .trilhoMarco[data-perto] { opacity: 0.18; }
 .trilhoPonto[data-tipo="estrela"] { right: 4px; border-radius: 1px; transform: rotate(45deg) scale(0.85); }
 .trilhoPonto[data-tipo="pronto"] { right: 26px; width: 5px; height: 5px; margin-top: -2.5px; box-shadow: none; }
 /* O pino é uma área de toque de 44x56 com o desenho no centro; anda por transform, e desliza quando a página rola. */
@@ -302,6 +318,58 @@
 }
 .trilhoAtivo .trilhoPino { transition: none; cursor: grabbing; }
 .trilhoAtivo .trilhoPino::before { transform: scale(1.18, 1.1); }
+
+/* A barra em outras bordas. Na esquerda, o espelho da direita. No alto e embaixo, deitada: embaixo, acima da barra de
+   controles (que continua inteira à mostra e com todas as funções); no alto, abaixo do nome da lei e da seção atual.
+   As marcações ficam do lado do texto, e o cartão do artigo abre para o lado do texto. */
+.trilho[data-lado="esquerda"] { right: auto; left: 10px; }
+.trilho[data-lado="esquerda"] .trilhoLinha { right: auto; left: 18px; }
+.trilho[data-lado="esquerda"] .trilhoMarco { right: auto; left: 14px; }
+.trilho[data-lado="esquerda"] .trilhoPonto { right: auto; left: 25px; }
+.trilho[data-lado="esquerda"] .trilhoPonto[data-tipo="estrela"] { left: 4px; }
+.trilho[data-lado="esquerda"] .trilhoPonto[data-tipo="pronto"] { left: 26px; }
+.trilho[data-lado="esquerda"] .trilhoPino { right: auto; left: -2px; }
+.trilho[data-lado="esquerda"] .trilhoBalao:not(.trilhoBalaoToque) { right: auto; left: 56px; }
+.trilho[data-lado="cima"], .trilho[data-lado="baixo"] { left: 72px; right: 72px; width: auto; height: 40px; touch-action: pan-y; }
+.trilho[data-lado="cima"] { top: 150px; bottom: auto; }
+.trilho[data-lado="baixo"] { top: auto; bottom: calc(96px + env(safe-area-inset-bottom)); }
+.trilho[data-lado="cima"].trilhoAtivo, .trilho[data-lado="baixo"].trilhoAtivo { cursor: ew-resize; }
+.trilho[data-lado="cima"] .trilhoLinha, .trilho[data-lado="baixo"] .trilhoLinha { left: 0; right: 0; width: auto; height: 3px; }
+.trilho[data-lado="baixo"] .trilhoLinha { top: auto; bottom: 18px; }
+.trilho[data-lado="cima"] .trilhoLinha { top: 18px; bottom: auto; }
+.trilho[data-lado="cima"] .trilhoFaixa, .trilho[data-lado="baixo"] .trilhoFaixa { top: -1px; bottom: -1px; left: var(--pos); width: var(--tam); height: auto; }
+.trilho[data-lado="cima"] .trilhoMarco, .trilho[data-lado="baixo"] .trilhoMarco { top: auto; right: auto; left: var(--pos); width: 2px; height: 11px; margin: 0 0 0 -1px; }
+.trilho[data-lado="baixo"] .trilhoMarco { bottom: 14px; }
+.trilho[data-lado="cima"] .trilhoMarco { top: 14px; }
+.trilho[data-lado="cima"] .trilhoPonto, .trilho[data-lado="baixo"] .trilhoPonto { top: auto; right: auto; left: var(--pos); margin: 0 0 0 -3.5px; }
+.trilho[data-lado="baixo"] .trilhoPonto { bottom: 25px; }
+.trilho[data-lado="baixo"] .trilhoPonto[data-tipo="estrela"] { bottom: 4px; }
+.trilho[data-lado="baixo"] .trilhoPonto[data-tipo="pronto"] { bottom: 26px; margin-left: -2.5px; }
+.trilho[data-lado="cima"] .trilhoPonto { top: 25px; }
+.trilho[data-lado="cima"] .trilhoPonto[data-tipo="estrela"] { top: 4px; }
+.trilho[data-lado="cima"] .trilhoPonto[data-tipo="pronto"] { top: 26px; margin-left: -2.5px; }
+.trilho[data-lado="cima"] .trilhoPino, .trilho[data-lado="baixo"] .trilhoPino { right: auto; left: 0; width: 56px; height: 44px; margin: 0 0 0 -28px; }
+.trilho[data-lado="baixo"] .trilhoPino { top: auto; bottom: -2px; }
+.trilho[data-lado="cima"] .trilhoPino { top: -2px; }
+.trilho[data-lado="cima"] .trilhoPino::before, .trilho[data-lado="baixo"] .trilhoPino::before { left: 8px; top: 15px; width: 40px; height: 14px; }
+.trilho[data-lado="cima"] .trilhoBalao:not(.trilhoBalaoToque), .trilho[data-lado="baixo"] .trilhoBalao:not(.trilhoBalaoToque) { right: auto; transform: translateX(-50%); }
+.trilho[data-lado="baixo"] .trilhoBalao:not(.trilhoBalaoToque) { top: auto; bottom: 52px; }
+.trilho[data-lado="cima"] .trilhoBalao:not(.trilhoBalaoToque) { top: 52px; }
+/* no toque, o cartão fica longe da barra deitada (embaixo, no alto da tela; no alto, embaixo) */
+.trilho[data-lado="baixo"] .trilhoBalaoToque { bottom: auto; top: calc(80px + env(safe-area-inset-top)); }
+.trilho[data-lado="cima"] .trilhoBalaoToque { top: auto; bottom: calc(110px + env(safe-area-inset-bottom)); }
+/* arrastando a barra: as quatro bordas possíveis, a mais perto do ponteiro em destaque */
+.trilhoDestinos { position: fixed; inset: 0; z-index: 54; pointer-events: none; }
+.trilhoDestinos span {
+  position: absolute; border-radius: 14px; border: 2px dashed color-mix(in srgb, var(--accent) 55%, transparent);
+  background: color-mix(in srgb, var(--accent) 7%, transparent); transition: background 0.15s ease, border-color 0.15s ease;
+}
+.trilhoDestinos [data-lado="direita"] { right: 6px; top: 96px; bottom: 110px; width: 48px; }
+.trilhoDestinos [data-lado="esquerda"] { left: 6px; top: 96px; bottom: 110px; width: 48px; }
+.trilhoDestinos [data-lado="cima"] { top: 146px; left: 72px; right: 72px; height: 48px; }
+.trilhoDestinos [data-lado="baixo"] { bottom: calc(92px + env(safe-area-inset-bottom)); left: 72px; right: 72px; height: 48px; }
+.trilhoDestinos [data-alvo] { border-style: solid; border-color: var(--accent); background: color-mix(in srgb, var(--accent) 28%, transparent); }
+.trilho[data-mudando] .trilhoPino::before { transform: scale(1.25); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 35%, transparent), 0 2px 8px rgb(0 0 0 / 0.25); }
 
 /* Cartão do artigo: com mouse, ao lado do cursor; no toque, na metade da tela oposta ao dedo (o dedo cobre o resto). */
 .trilhoBalao {
@@ -342,7 +410,12 @@
 }
 @keyframes subir { from { transform: translateY(100%); } }
 .folhaTopo { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1.1rem 0.4rem; position: relative; }
+/* a barrinha do topo arrasta a folha para baixo (useArrastarParaFechar): o topo não rola a página nem seleciona */
 .folhaTopo::before { content: ""; position: absolute; left: 50%; top: 6px; width: 40px; height: 4px; margin-left: -20px; border-radius: 4px; background: var(--leitor-borda); }
+@media (max-width: 899.98px) {
+  .folhaTopo { touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; }
+  .folhaTopo:active { cursor: grabbing; }
+}
 .folhaTopo h2 { font-size: 1.15rem; margin: 0; font-family: var(--font-body), sans-serif; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .fechar { min-width: 44px; min-height: 44px; border: 0; background: none; color: var(--leitor-fg); font-size: 1.1rem; cursor: pointer; border-radius: 50%; }
 .folhaCorpo { overflow: auto; padding: 0.25rem 1.1rem 1.25rem; overscroll-behavior: contain; }
@@ -367,6 +440,8 @@
   color: var(--leitor-fg); font: inherit; font-size: 0.88rem; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center;
 }
 .chips button[aria-pressed="true"] { outline: 2px solid var(--primary); outline-offset: 1px; }
+/* a cor de cada botão do filtro "só os grifos de uma cor" */
+.amostraCor { display: inline-block; width: 0.8em; height: 0.8em; margin-right: 0.35em; border-radius: 3px; vertical-align: -0.05em; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.15); }
 .chips [data-fonte-amostra="sans"] { font-family: var(--font-body), sans-serif; }
 .chips [data-fonte-amostra="serif"] { font-family: var(--font-title), Georgia, serif; }
 .chips [data-fonte-amostra="mono"] { font-family: var(--font-mono), monospace; }
@@ -502,9 +577,9 @@
 .chipLink:hover { color: var(--leitor-fg); border-color: var(--leitor-muted); }
 .chipLink:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 /* ● do Vade Mecum: aparece também no papel (é uma marca do próprio aluno, não um link) */
-.erroVade { margin-left: 0.4em; font-size: 0.7em; color: #c0392b; letter-spacing: 0.08em; font-family: var(--font-body), sans-serif; }
-.erroVade[data-nivel="medio"] { color: #b7791f; }
-.erroVade[data-nivel="baixo"] { color: #7a7a7a; }
+.erroVade { margin-left: 0.4em; font-size: 0.7em; color: var(--leitor-bad); letter-spacing: 0.08em; font-family: var(--font-body), sans-serif; }
+.erroVade[data-nivel="medio"] { color: var(--leitor-warn); }
+.erroVade[data-nivel="baixo"] { color: var(--leitor-muted); }
 /* índices do Vade Mecum: cronológico (antes da primeira lei) e alfabético-remissivo (ao fim de cada lei) */
 .indice { margin: 1.6rem 0 0.6rem; padding-top: 0.8rem; border-top: 1px solid var(--leitor-borda); }
 .indice h2, .indice h3 { font-size: 1.05rem; margin: 0 0 0.5rem; }
@@ -525,9 +600,9 @@
 /* pontos de erro: a contagem aparece ao passar o mouse */
 .pontosErro {
   position: relative; display: inline-block; margin-right: 0.45em; font: 0.7em/1 var(--font-body), sans-serif; letter-spacing: 0.1em;
-  vertical-align: 0.3em; white-space: nowrap; color: var(--bad); cursor: default;
+  vertical-align: 0.3em; white-space: nowrap; color: var(--leitor-bad); cursor: default;
 }
-.pontosErro[data-nivel="medio"] { color: var(--warn); }
+.pontosErro[data-nivel="medio"] { color: var(--leitor-warn); }
 .pontosErro[data-nivel="baixo"] { color: var(--leitor-muted); }
 .pontosErro:hover::after {
   content: attr(data-dica); position: absolute; left: 0; bottom: 1.8em; z-index: 5; white-space: nowrap; padding: 0.35em 0.6em; border-radius: 8px;
@@ -556,8 +631,8 @@
   border: 1px solid var(--leitor-borda); background: none; color: var(--leitor-fg); font: inherit; font-size: 0.92rem;
 }
 .errados button:hover { background: color-mix(in srgb, var(--leitor-fg) 6%, transparent); }
-.errados li[data-nivel="alto"] button { border-color: var(--bad); }
-.errados li[data-nivel="medio"] button { border-color: var(--warn); }
+.errados li[data-nivel="alto"] button { border-color: var(--leitor-bad); }
+.errados li[data-nivel="medio"] button { border-color: var(--leitor-warn); }
 .errados span { color: var(--leitor-muted); font-size: 0.82rem; }
 .divisoes { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.1rem; }
 .divisoes button {
@@ -578,10 +653,21 @@
   .estrela { position: static; opacity: 1; margin-right: 0.3em; font-size: 0.85em; }
   .inciso { padding-left: calc(var(--margem) + 0.8em); }
   .alinea { padding-left: calc(var(--margem) + 1.6em); }
-  /* até sete botões (com Desfazer) cabem na tela: cada um divide a largura, e o rótulo fica um pouco menor */
-  .botoes { width: calc(100vw - 12px); }
-  .botaoDock { flex: 1 1 0; min-width: 0; padding: 0.3rem 0.1rem; font-size: 0.62rem; }
+  /* até oito botões (com Desfazer e Ouvir) cabem na tela: cada um divide a largura, e o rótulo acompanha a largura da tela */
+  .botoes { width: calc(100vw - 12px); gap: 0; padding: 0.25rem; }
+  .botaoDock { flex: 1 1 0; min-width: 0; padding: 0.3rem 0; font-size: clamp(0.52rem, 2.45vw, 0.62rem); letter-spacing: -0.01em; }
+  .botoes:has(> :nth-child(8)) .botaoDock { font-size: clamp(0.48rem, 2.15vw, 0.58rem); }
+  .botaoDock > span:last-child { max-width: 100%; white-space: nowrap; }
+  /* a barra do Ouvir ocupa a largura toda: o slide de artigos para acima dela */
+  .leitor[data-ouvindo="1"] .trilho { bottom: calc(200px + env(safe-area-inset-bottom)); }
+  .leitor[data-ouvindo="1"] .trilho[data-lado="baixo"] { bottom: calc(200px + env(safe-area-inset-bottom)); }
   .trilho { top: 72px; bottom: 96px; right: 6px; }
+  .trilho[data-lado="esquerda"] { left: 6px; }
+  .trilho[data-lado="cima"] { top: 118px; bottom: auto; left: 16px; right: 16px; }
+  .trilho[data-lado="baixo"] { top: auto; bottom: calc(84px + env(safe-area-inset-bottom)); left: 16px; right: 16px; }
+  .trilhoDestinos [data-lado="direita"], .trilhoDestinos [data-lado="esquerda"] { top: 72px; bottom: 96px; }
+  .trilhoDestinos [data-lado="cima"] { top: 114px; left: 16px; right: 16px; }
+  .trilhoDestinos [data-lado="baixo"] { bottom: calc(80px + env(safe-area-inset-bottom)); left: 16px; right: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .nova, .destaque, .folhaPainel { animation: none; }
@@ -591,6 +677,7 @@
 }
 
 @media print {
+  .b[data-falando] { background: none; box-shadow: none; }
   .dock, .trilho, .aviso, .flutuante, .popover, .ajusteGrifo, .regra, .modal, .estrela, .toast, .folhaPainel, .veu, .carregandoResto, .secaoAtual, .nomeLei { display: none !important; }
   .pontosErro { display: none; }
   .linksArtigo { display: none !important; }
@@ -604,7 +691,7 @@
      mantém tudo dentro da área imprimível (sem ele, a barra ficava na margem da página e não era impressa) */
   .folha { max-width: none; font-size: 11pt; line-height: 1.45; padding-left: calc(var(--margem) + 0.3em); }
   .estrutura, .rubrica { break-after: avoid; }
-  .marca, .b[data-pronto] > .txt, .b[data-pronto]::after, .b[data-marca-bloco]::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .marca, .pronto, .b[data-marca-bloco]::before, .refGrifada, .coresRef span { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .sumario a { color: inherit; }
 }
 
@@ -704,3 +791,16 @@
 .copiar > p { margin: 0; }
 .linhaCorTexto { flex: 1; display: grid; gap: 0.15rem; min-width: 0; }
 .linhaCorTexto input { width: 100%; padding: 0.4rem 0.6rem; border: 1px solid var(--border); border-radius: 8px; }
+
+/* índice remissivo: a referência grifada com a cor do grifo do artigo (forte: do usuário; clara: pronto do Grifo) */
+.remissivoNavegar dd a.refGrifada, .refGrifada {
+  padding: 0.02em 0.28em; margin: 0 -0.06em; border-radius: 0.45em 0.2em 0.5em 0.25em; color: inherit;
+  background: color-mix(in srgb, var(--c, #fde047) 30%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--c, #fde047) 85%, var(--leitor-texto, var(--text)));
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.remissivoNavegar dd a.refGrifada[data-meu="1"], .refGrifada[data-meu="1"] { background: color-mix(in srgb, var(--c, #fde047) 58%, transparent); font-weight: 600; }
+.coresRef { display: inline-flex; gap: 3px; margin-left: 0.35em; vertical-align: 0.05em; }
+.coresRef span { width: 0.62em; height: 0.62em; border-radius: 50%; background: color-mix(in srgb, var(--c) 45%, transparent); border: 1.5px solid var(--c); }
+.coresRef span[data-meu="1"] { background: var(--c); }
+.legendaRemissivo { margin: 0 0 0.7rem; font-size: 0.78rem; color: var(--leitor-muted, var(--muted)); }

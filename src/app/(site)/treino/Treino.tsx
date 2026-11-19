@@ -5,6 +5,9 @@ import { Logo } from "@/components/Logo";
 import { SITE } from "@/config/site";
 import { type CSSProperties, useEffect, useId, useRef, useState } from "react";
 import { lerJSON, gravarJSON } from "@/lib/storage";
+import { palavrasDe } from "@/lib/fala/comandos-voz";
+import { Escuta, escutaDisponivel, type EstadoEscuta, type Sensibilidade } from "@/lib/fala/escuta";
+import { useTelaAcesa } from "@/lib/tela-acesa";
 import {
   ACERTOS_PARA_SUBIR,
   ajustarTipos,
@@ -24,38 +27,38 @@ import {
 } from "@/quiz/automatico";
 import { sortearPergunta, tamanhoAcervo } from "@/quiz/banco";
 import { CATEGORIAS_PADRAO, CHAVE_CATEGORIAS, nomeCategoria } from "@/quiz/categorias";
-import { avancarNoToque, ehToque, focarCampoDaQuestao, PerguntaCorpo, QuestaoRevista, type Revisao } from "@/quiz/PerguntaCorpo";
+import { avancarNoToque, ehToque, focarCampoDaQuestao, PerguntaCorpo, QuestaoRevista, type Revisao, type TratadorVoz } from "@/quiz/PerguntaCorpo";
 import { FOLGA_SEG, folgaSeg, janelaSeg, maximoTreino, NOME_NIVEL, pontuar, TAMANHO_TREINO, TAMANHOS_TREINO } from "@/quiz/pontuacao";
+import {
+  chaveDoModo,
+  gravarSessao,
+  guardarRodada,
+  lerRecordes,
+  linhaDaRodada,
+  type ModoTreino,
+  type Recordes,
+  type Rodada,
+  type Tamanho,
+} from "@/quiz/recordes";
 import { SeletorCategorias } from "@/quiz/SeletorCategorias";
 import { SonsDoTreino } from "@/quiz/sons";
 import { progressoDoStrike, registrarStrike, STRIKE_ZERO, tamanhoDoStrike, type EstadoStrike } from "@/quiz/strike";
 import type { Categoria, Nivel, Pergunta } from "@/quiz/types";
-import { nomePeca, type Correcao } from "@/quiz/verificar";
+import type { Correcao } from "@/quiz/verificar";
+import { artigosParaLer } from "@/quiz/artigosFalados";
+import { correcaoFalada, desbloquearVoz, leituraDisponivel, Locutor, textosDaQuestao, type LeituraDaQuestao, type VozDoOuvir } from "@/quiz/locutor";
+import { comandoDeLeitura, dicaDaVoz, interpretarResposta, pareceEco, type ContextoVoz } from "@/quiz/voz";
 import { BarrasDoNivel, DURACAO_REVOADA, ItemMenu, MenuFoco, RevoadaStrike, SomDoMenu, XpFoco } from "./MenuFoco";
-import { Comemoracao, PlacarStrike } from "./Strike";
+import { fmt, ResultadoTreino } from "./ResultadoTreino";
+import { IconeMicrofone, LinhaDaVoz, OpcaoVoz, type Ouvido } from "./RespostaFalada";
+import { AvisoRecorde, SeuRecorde } from "./SeuRecorde";
+import { Comemoracao, DURACAO_COMEMORACAO, fraseDoStrike, PlacarStrike } from "./Strike";
 import styles from "./treino.module.css";
 
 type Fase = "inicio" | "pergunta" | "resultado";
-/**
- * quantas questões: um número fixo ou "infinito" (uma atrás da outra, até o usuário encerrar). O modo automático (o tipo
- * e o nível escolhidos conforme o aluno acerta: src/quiz/automatico.ts) vale com qualquer um dos dois.
- */
-type Tamanho = number | "infinito";
-interface Rodada {
-  pergunta: Pergunta;
-  /** o nível em que a questão foi respondida (no modo infinito ele pode mudar no meio) */
-  nivel: Nivel;
-  acertou: boolean;
-  segundos: number;
-  pontos: number;
-  /** a questão como ficou depois de respondida, para revê-la no resultado */
-  revisao: Revisao;
-  /** no modo automático, a recapitulação de um tipo já vencido */
-  recapitulacao?: boolean;
-}
-/** recorde por nível e quantidade: "2" é o de 10 questões (como era gravado antes), "2:20" o de 20 */
-type Recordes = Record<string, number>;
-const chaveRecorde = (nivel: Nivel, tamanho: number) => (tamanho === TAMANHO_TREINO ? String(nivel) : `${nivel}:${tamanho}`);
+// quantas questões (Tamanho, em recordes.ts): um número fixo ou "infinito" (uma atrás da outra, até o usuário
+// encerrar). O modo automático (o tipo e o nível escolhidos conforme o aluno acerta: src/quiz/automatico.ts) vale com
+// qualquer um dos dois.
 
 /** Tempo da pergunta. Fica num componente próprio para o intervalo de 250 ms não re-renderizar a pergunta. */
 function Tempo({ inicio, limite, folga, ultima }: { inicio: number; limite: number; folga: number; ultima: Rodada | null }) {
@@ -82,7 +85,7 @@ function Tempo({ inicio, limite, folga, ultima }: { inicio: number; limite: numb
   );
 }
 
-const CHAVE = "grifo:treino";
+// os recordes ficam em grifo:treino e grifo:treino:recordes (src/quiz/recordes.ts)
 const CHAVE_TAMANHO = "grifo:treino:tamanho";
 /** o modo automático continua de onde parou: o tipo, o nível e os últimos resultados */
 const CHAVE_AUTOMATICO = "grifo:treino:automatico";
@@ -92,6 +95,12 @@ const CHAVE_PULAR_ACERTOS = "grifo:treino:pularAcertos";
 /** se o modo automático está ligado (o progresso dele fica em CHAVE_AUTOMATICO, de um treino para o outro) */
 const CHAVE_AUTOMATICO_LIGADO = "grifo:treino:automatico:ligado";
 const CHAVE_SONS = "grifo:treino:sons";
+/** responder falando (o microfone ouve durante as questões) */
+const CHAVE_VOZ = "grifo:treino:voz";
+/** respondendo falando, a questão é lida em voz alta (e a correção, depois da resposta) */
+const CHAVE_VOZ_LER = "grifo:treino:voz:ler";
+/** o microfone e a sensibilidade escolhidos no Ouvir (a leitura em voz alta das leis) valem também aqui */
+const CHAVE_OUVIR = "grifo:leitor:ouvir";
 const CHAVE_VOLUME = "grifo:treino:volume";
 /** o modo foco: o caso ao lado da resposta e a largura do texto (em rem) em cada disposição */
 const CHAVE_FOCO = "grifo:treino:foco";
@@ -107,8 +116,6 @@ const lerPrefsFoco = (g: Partial<PrefsFoco> | null): PrefsFoco => ({
   larguraLado: typeof g?.larguraLado === "number" ? Math.max(LARGURA_MINIMA, g.larguraLado) : PREFS_FOCO.larguraLado,
   larguraColuna: typeof g?.larguraColuna === "number" ? Math.max(LARGURA_MINIMA, g.larguraColuna) : PREFS_FOCO.larguraColuna,
 });
-/** quanto tempo a comemoração do strike fica na tela (o CSS some com ela no mesmo tempo) */
-const DURACAO_COMEMORACAO = 2900;
 /** O aviso de subiu ou desceu de nível aparece e some sozinho. */
 const DURACAO_AVANCO = 3600;
 
@@ -209,43 +216,55 @@ const NIVEIS: { n: Nivel; desc: string }[] = [
   { n: 3, desc: "Resposta completa, com parágrafo, inciso ou alínea. Objetivas com o tempo mais curto" },
 ];
 
-const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
-
-/** Uma questão do resultado: a linha resume (acerto, tempo e pontos) e abre a questão como ficou depois de respondida. */
-function RodadaRevista({ n, rodada, comNivel }: { n: number; rodada: Rodada; comNivel: boolean }) {
-  const [aberta, setAberta] = useState(false);
-  const corpo = useId();
-  const p = rodada.pergunta;
-  // na peça, o nome dela (a resposta); nas outras, de onde a questão saiu ("XL Exame · 1ª fase, questão 57")
-  const titulo = p.formato === "peca" ? nomePeca(p.resposta.peca) : p.fonte;
+/** O ícone de voltar à questão anterior: uma seta curva para trás. */
+function IconeAnterior() {
   return (
-    <li className={styles.rodada} data-acertou={rodada.acertou ? "1" : undefined} data-aberta={aberta ? "1" : undefined}>
-      <button type="button" className={styles.rever} aria-expanded={aberta} aria-controls={corpo} onClick={() => setAberta((a) => !a)}>
-        <span className={styles.rodadaN}>
-          <span className="sr-only">Questão </span>
-          {n}
-        </span>
-        <span className={styles.rodadaTitulo}>
-          <strong>{titulo}</strong>
-          <small>
-            {nomeCategoria(p.categorias[0])}
-            {comNivel ? ` · ${NOME_NIVEL[rodada.nivel]}` : ""}
-          </small>
-        </span>
-        <span className={styles.rodadaNumeros}>
-          <span className={styles.selo}>{rodada.acertou ? "✓ Acerto" : "✗ Erro"}</span>
-          <span>
-            {fmt(rodada.segundos)} · {rodada.pontos} pts
-          </span>
-        </span>
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M9 6l6 6-6 6" />
-        </svg>
-      </button>
-      <div id={corpo} className={styles.rodadaCorpo} hidden={!aberta}>
-        {aberta && <QuestaoRevista pergunta={p} nivel={rodada.nivel} revisao={rodada.revisao} />}
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M9 14L4 9l5-5" />
+      <path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
+    </svg>
+  );
+}
+
+/**
+ * A questão anterior, como ficou depois de respondida, numa janela por cima da atual (o tempo da atual continua). Fecha
+ * no botão, no Esc ou num toque fora; o foco volta para onde estava.
+ */
+function RespostaAnterior({ n, rodada, aoFechar }: { n: number; rodada: Rodada; aoFechar: () => void }) {
+  const janela = useRef<HTMLDialogElement>(null);
+  const titulo = useId();
+  // sem fechar na limpeza: o "close" avisaria aoFechar (em desenvolvimento o efeito roda duas vezes); a janela sai junto
+  // com o componente
+  useEffect(() => {
+    const d = janela.current;
+    if (d && !d.open) d.showModal();
+  }, []);
+  const p = rodada.pergunta;
+  return (
+    <dialog
+      ref={janela}
+      className={styles.anterior}
+      aria-labelledby={titulo}
+      onClose={aoFechar}
+      onClick={(e) => {
+        if (e.target === e.currentTarget) janela.current?.close();
+      }}
+    >
+      <div className={styles.anteriorCorpo}>
+        <header className={styles.anteriorTopo}>
+          <h2 id={titulo}>
+            Q{n} · {rodada.acertou ? "✓ Acerto" : "✗ Erro"}
+            <small>
+              {nomeCategoria(p.categorias[0])} · {NOME_NIVEL[rodada.nivel]} · {rodada.pontos} pts
+            </small>
+          </h2>
+          <button type="button" className="btn" onClick={() => janela.current?.close()} autoFocus>
+            Voltar à Q{n + 1}
+          </button>
+        </header>
+        <QuestaoRevista pergunta={p} nivel={rodada.nivel} revisao={rodada.revisao} />
       </div>
-    </li>
+    </dialog>
   );
 }
 
@@ -266,7 +285,8 @@ function BotoesNivel({ valor, onChange, recordes, tamanho, compacto }: { valor: 
           )}
           {recordes && tamanho && (
             <span className={styles.recorde}>
-              Recorde: {recordes[chaveRecorde(x.n, tamanho)] ?? "—"} de {maximoTreino(x.n, tamanho)}
+              Recorde: {recordes.modos[chaveDoModo({ automatico: false, tamanho, nivel: x.n })]?.pontos.toLocaleString("pt-BR") ?? "—"} de{" "}
+              {maximoTreino(x.n, tamanho).toLocaleString("pt-BR")}
             </span>
           )}
         </button>
@@ -275,39 +295,12 @@ function BotoesNivel({ valor, onChange, recordes, tamanho, compacto }: { valor: 
   );
 }
 
-type Filtro = "todas" | "erros" | "acertos";
-/** Quantas linhas da revisão aparecem de cada vez: com 50 questões (ou um modo infinito longo) a lista não cansa. */
-const POR_VEZ = 20;
-
-/** A maior sequência de acertos seguidos. */
-function melhorSequencia(rodadas: Rodada[]): number {
-  let melhor = 0;
-  let atual = 0;
-  for (const r of rodadas) {
-    atual = r.acertou ? atual + 1 : 0;
-    melhor = Math.max(melhor, atual);
-  }
-  return melhor;
-}
-
-/** Acertos de cada grupo (nível ou tipo de pergunta), na ordem em que aparecem. */
-function porGrupo(rodadas: Rodada[], grupo: (r: Rodada) => string): { nome: string; acertos: number; total: number }[] {
-  const m = new Map<string, { acertos: number; total: number }>();
-  for (const r of rodadas) {
-    const g = m.get(grupo(r)) ?? { acertos: 0, total: 0 };
-    g.total++;
-    if (r.acertou) g.acertos++;
-    m.set(grupo(r), g);
-  }
-  return [...m].map(([nome, g]) => ({ nome, ...g }));
-}
-
 export function Treino() {
   const [fase, setFase] = useState<Fase>("inicio");
   const [nivel, setNivel] = useState<Nivel>(1);
-  const [tamanho, setTamanho] = useState<Tamanho>(TAMANHO_TREINO);
+  const [tamanho, setTamanho] = useState<Tamanho>("infinito");
   const [categorias, setCategorias] = useState<Categoria[]>(CATEGORIAS_PADRAO);
-  const [recordes, setRecordes] = useState<Recordes>({});
+  const [recordes, setRecordes] = useState<Recordes>({ modos: {} });
   const [rodadas, setRodadas] = useState<Rodada[]>([]);
   const [indice, setIndice] = useState(0);
   const [pergunta, setPergunta] = useState<Pergunta | null>(null);
@@ -315,14 +308,15 @@ export function Treino() {
   const [nivelDaQuestao, setNivelDaQuestao] = useState<Nivel>(1);
   const [inicio, setInicio] = useState(0);
   const [respondida, setRespondida] = useState(false);
-  const [novoRecorde, setNovoRecorde] = useState(false);
+  // o que o treino que acabou fez com os recordes; `conta`: valeu para o recorde de pontos (na quantidade fixa, completo)
+  const [novoRecorde, setNovoRecorde] = useState({ pontos: false, sequencia: false, conta: true });
+  // a sessão em andamento: o id (o da página final guardada, se ela fizer recorde), o começo e o modo
+  const [sessao, setSessao] = useState<{ id: string; inicio: number; modo: ModoTreino }>({ id: "", inicio: 0, modo: { automatico: true, tamanho: "infinito", nivel: 1 } });
   const [ajustes, setAjustes] = useState(false);
-  const [filtro, setFiltro] = useState<Filtro>("todas");
-  const [mostradas, setMostradas] = useState(POR_VEZ);
   const vistas = useRef(new Set<string>());
   const infinito = tamanho === "infinito";
-  const [automatico, setAutomatico] = useState(false);
-  // sem número de questões: termina quando o aluno encerra, sem recorde
+  const [automatico, setAutomatico] = useState(true);
+  // sem número de questões: termina quando o aluno encerra (o recorde é gravado a cada resposta)
   const semFim = infinito;
   const [foco, setFoco] = useState(false);
   const [prefsFoco, setPrefsFoco] = useState<PrefsFoco>(PREFS_FOCO);
@@ -333,12 +327,27 @@ export function Treino() {
   const [avanco, setAvanco] = useState<Avanco>(null);
   // descer de nível com 3 erros nas últimas 5 (pode desligar)
   const [descer, setDescer] = useState(true);
-  const [pularAcertos, setPularAcertos] = useState(false);
+  const [pularAcertos, setPularAcertos] = useState(true);
   // o strike: bolinhas por acerto seguido; o erro apaga tudo
   const [strike, setStrike] = useState<EstadoStrike>(STRIKE_ZERO);
   const [perdeuEm, setPerdeuEm] = useState(0);
-  const [comemoracao, setComemoracao] = useState<{ total: number; tamanho: number; proximo: number } | null>(null);
+  const [comemoracao, setComemoracao] = useState<{ total: number; tamanho: number; proximo: number; frase: string; origem: { x: number; y: number } | null } | null>(null);
+  const ultimaFrase = useRef<string | undefined>(undefined);
+  // a questão anterior, respondida, aberta por cima da atual (menu do modo foco ou o caso arrastado para a direita)
+  const [verAnterior, setVerAnterior] = useState(false);
   const [sons, setSons] = useState(true);
+  // responder falando: ligado, o microfone ouve durante as questões; a questão da vez trata cada frase (vozRef)
+  const [voz, setVoz] = useState(false);
+  const [podeFalar, setPodeFalar] = useState(false);
+  const [estadoEscuta, setEstadoEscuta] = useState<EstadoEscuta>("desligada");
+  const [ouvido, setOuvido] = useState<Ouvido | null>(null);
+  const vozRef = useRef<TratadorVoz | null>(null);
+  // a leitura em voz alta da questão: com a voz do Ouvir; a última questão lida fica para o "repetir"
+  const [lerQuestoes, setLerQuestoes] = useState(true);
+  const [podeLer, setPodeLer] = useState(false);
+  const [lendoQuestao, setLendoQuestao] = useState(false);
+  const locutor = useRef<Locutor | null>(null);
+  const leitura = useRef<LeituraDaQuestao | null>(null);
   const [volume, setVolume] = useState(1);
   // a revoada das bolinhas do strike no modo foco, a cada acerto
   const [revoada, setRevoada] = useState<{ id: number; acertos: number; n: number; fez: boolean } | null>(null);
@@ -424,22 +433,177 @@ export function Treino() {
 
   useEffect(() => {
     /* eslint-disable react-hooks/set-state-in-effect -- lê localStorage após montar (site estático) */
-    setRecordes(lerJSON<Recordes>(CHAVE, {}));
+    setRecordes(lerRecordes());
     setCategorias(lerJSON<Categoria[]>(CHAVE_CATEGORIAS, CATEGORIAS_PADRAO));
-    // "automatico" já foi uma quantidade (o modo era sem fim): vira o modo infinito com o automático ligado
-    const t = lerJSON<Tamanho | "automatico">(CHAVE_TAMANHO, TAMANHO_TREINO);
+    // padrão: infinito, com o automático e o pulo do acerto ligados. "automatico" já foi uma quantidade: vira o infinito
+    const t = lerJSON<Tamanho | "automatico">(CHAVE_TAMANHO, "infinito");
     setTamanho(t === "infinito" || t === "automatico" ? "infinito" : (TAMANHOS_TREINO as readonly number[]).includes(t) ? t : TAMANHO_TREINO);
-    setAutomatico(lerJSON<boolean>(CHAVE_AUTOMATICO_LIGADO, t === "automatico"));
+    setAutomatico(lerJSON<boolean>(CHAVE_AUTOMATICO_LIGADO, true));
     setTiposAuto(tiposNaOrdem(lerJSON<Categoria[]>(CHAVE_AUTOMATICO_TIPOS, ORDEM_AUTOMATICO)));
     setAuto(lerAutomatico(lerJSON<unknown>(CHAVE_AUTOMATICO, null)));
     setSons(lerJSON<boolean>(CHAVE_SONS, true));
+    setVoz(lerJSON<boolean>(CHAVE_VOZ, false));
+    setPodeFalar(escutaDisponivel());
+    setLerQuestoes(lerJSON<boolean>(CHAVE_VOZ_LER, true));
+    setPodeLer(leituraDisponivel());
     const v = lerJSON<number>(CHAVE_VOLUME, 1);
     setVolume(typeof v === "number" && v >= 0 && v <= 1 ? v : 1);
     setDescer(lerJSON<boolean>(CHAVE_AUTOMATICO_DESCER, true));
-    setPularAcertos(lerJSON<boolean>(CHAVE_PULAR_ACERTOS, false));
+    setPularAcertos(lerJSON<boolean>(CHAVE_PULAR_ACERTOS, true));
     setPrefsFoco(lerPrefsFoco(lerJSON<Partial<PrefsFoco> | null>(CHAVE_FOCO, null)));
     /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
+
+  // respondendo falando: o microfone ouve durante as questões
+  const falando = voz && podeFalar && fase === "pergunta";
+  const mudarVoz = (v: boolean) => {
+    setVoz(v);
+    setOuvido(null);
+    gravarJSON(CHAVE_VOZ, v);
+    // no toque: no iPhone, a primeira fala precisa sair dentro dele
+    if (v && lerQuestoes) desbloquearVoz();
+    if (!v) locutor.current?.parar();
+    // ligada no meio de uma questão ainda sem resposta: ela é lida
+    if (v && lerQuestoes && podeLer && fase === "pergunta" && !respondida && leitura.current) obterLocutor().ler(textosDaQuestao(leitura.current));
+  };
+  const mudarLer = (v: boolean) => {
+    setLerQuestoes(v);
+    gravarJSON(CHAVE_VOZ_LER, v);
+    if (v) desbloquearVoz();
+    else locutor.current?.parar();
+    if (v && voz && podeFalar && fase === "pergunta" && !respondida && leitura.current) obterLocutor().ler(textosDaQuestao(leitura.current));
+  };
+  /** O locutor da questão, criado na primeira leitura, com a voz, a velocidade e o volume do Ouvir. */
+  const obterLocutor = () => {
+    if (!locutor.current) {
+      locutor.current = new Locutor(setLendoQuestao);
+      locutor.current.configurar(lerJSON<VozDoOuvir>(CHAVE_OUVIR, {}));
+    }
+    return locutor.current;
+  };
+  useEffect(() => () => locutor.current?.fechar(), []);
+  // a questão da vez (para o que foi agendado numa questão não valer na seguinte) e a última fala ouvida
+  const questaoDaVez = useRef(0);
+  const ultimaFala = useRef(0);
+  const esperaDoErro = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const ultimaCorrecao = useRef<{ pergunta: Pergunta; correcao: Correcao } | null>(null);
+  const continuarRef = useRef<() => void>(() => {});
+  const lendoEmVoz = falando && lerQuestoes && podeLer;
+  /** A questão que abre é lida (ao chegar sozinha, pelo "próxima" ou pelo botão). */
+  const lerQuestao = (l: LeituraDaQuestao) => {
+    leitura.current = l;
+    if (lendoEmVoz) obterLocutor().ler(textosDaQuestao(l));
+  };
+  /** Segue para a próxima questão, se a pessoa ainda está na mesma (não foi adiante pelo botão ou pela voz). */
+  const seguirSozinho = (q: number) => {
+    if (questaoDaVez.current === q) continuarRef.current();
+  };
+  /**
+   * Respondida, a correção é dita. No acerto, segue sozinho para a próxima ao terminar. No erro, depois de dizer o
+   * certo e o errado, espera 2 s: sem nada dito, lê o artigo certo e o errado e segue; falando, a pessoa conduz
+   * ("próxima", "ler os artigos").
+   */
+  const falarCorrecao = (p: Pergunta, c: Correcao) => {
+    const q = questaoDaVez.current;
+    ultimaCorrecao.current = { pergunta: p, correcao: c };
+    const loc = obterLocutor();
+    if (c.acertou) return loc.ler([correcaoFalada(p, c)], { aoFim: () => seguirSozinho(q) });
+    loc.ler([correcaoFalada(p, c)], {
+      aoFim: () => {
+        const fim = Date.now();
+        esperaDoErro.current = setTimeout(() => {
+          if (questaoDaVez.current !== q || ultimaFala.current > fim) return;
+          void artigosParaLer(p, c).then((textos) => {
+            if (questaoDaVez.current !== q || ultimaFala.current > fim) return;
+            if (!textos.length) return seguirSozinho(q);
+            obterLocutor().ler(textos, { aoFim: () => seguirSozinho(q) });
+          });
+        }, 2000);
+      },
+    });
+  };
+  // Uma escuta só, de uma questão para a outra (ligar o microfone a cada questão perderia o começo da fala). A frase
+  // final vai para a questão da vez; a parcial só aparece na linha do microfone.
+  useEffect(() => {
+    if (!falando) return;
+    const prefs = lerJSON<{ microfone?: string; sensibilidade?: Sensibilidade }>(CHAVE_OUVIR, {});
+    const tratadas = new Set<string>();
+    // "repetir", "ler as alternativas", "ler os artigos" e "parar": a leitura da questão
+    const comandoDaLeitura = (cmd: NonNullable<ReturnType<typeof comandoDeLeitura>>, texto: string) => {
+      const loc = locutor.current;
+      if (cmd === "parar") {
+        loc?.parar(true);
+        return setOuvido({ texto, final: true, retorno: { entendeu: true, texto: "Leitura parada." } });
+      }
+      if (cmd === "artigos") {
+        const u = ultimaCorrecao.current;
+        if (!u) return setOuvido({ texto, final: true, retorno: { entendeu: true, texto: "Responda primeiro: depois da correção, os artigos são lidos." } });
+        setOuvido({ texto, final: true, retorno: { entendeu: true, texto: "Lendo os artigos." } });
+        void artigosParaLer(u.pergunta, u.correcao).then((textos) => {
+          if (!textos.length) return setOuvido({ texto, final: true, retorno: { entendeu: true, texto: "Não há artigo do Vade Mecum para ler nesta questão." } });
+          if (!locutor.current) {
+            locutor.current = new Locutor(setLendoQuestao);
+            locutor.current.configurar(lerJSON<VozDoOuvir>(CHAVE_OUVIR, {}));
+          }
+          locutor.current.ler(textos);
+        });
+        return;
+      }
+      const l = leitura.current;
+      if (!l) return;
+      const lista = textosDaQuestao(l, cmd === "alternativas" ? "alternativas" : "tudo");
+      if (!lista.length) return setOuvido({ texto, final: true, retorno: { entendeu: true, texto: "Esta questão não tem alternativas: é de digitar." } });
+      if (!locutor.current) {
+        locutor.current = new Locutor(setLendoQuestao);
+        locutor.current.configurar(lerJSON<VozDoOuvir>(CHAVE_OUVIR, {}));
+      }
+      locutor.current.ler(lista);
+      setOuvido({ texto, final: true, retorno: { entendeu: true, texto: cmd === "alternativas" ? "Lendo as alternativas." : "Lendo a questão de novo." } });
+    };
+    const escuta = new Escuta(
+      (alternativas, final, id) => {
+        if (tratadas.has(id)) return;
+        // enquanto a voz lê, o microfone pode estar ouvindo a própria leitura: só os comandos dela valem. Logo depois de
+        // ela parar, o eco do fim ainda pode chegar: o que repete o que ela acabou de ler fica de fora, o resto vale
+        const lendo = !!locutor.current?.lendo;
+        const eco = !!locutor.current?.ocupado && pareceEco(palavrasDe(alternativas[0]!), locutor.current.recentes());
+        if (!final) {
+          if (lendo || eco) return;
+          // a pessoa começou a falar (depois do erro, a leitura dos artigos espera por ela)
+          ultimaFala.current = Date.now();
+          return setOuvido({ texto: alternativas[0]!, final: false });
+        }
+        tratadas.add(id);
+        if (eco) return;
+        ultimaFala.current = Date.now();
+        const cmd = comandoDeLeitura(alternativas);
+        if (cmd) return comandoDaLeitura(cmd, alternativas[0]!);
+        if (lendo) {
+          // lendo a correção, "próxima" segue (a correção não diz "próxima": não há eco dela); e "desligar o microfone" vale sempre
+          const geral = interpretarResposta(alternativas, { tipo: "respondida" })?.tipo;
+          if (geral !== "proxima" && geral !== "desligar") return;
+          locutor.current?.parar(true);
+        }
+        const retorno = vozRef.current?.(alternativas) ?? { entendeu: false, texto: "" };
+        setOuvido({ texto: alternativas[0]!, final: true, retorno });
+        if (retorno.desligar) {
+          setVoz(false);
+          gravarJSON(CHAVE_VOZ, false);
+        }
+      },
+      setEstadoEscuta,
+      { microfone: prefs.microfone ?? "auto", sensibilidade: prefs.sensibilidade ?? "alta" },
+    );
+    escuta.ligar();
+    return () => {
+      escuta.desligar();
+      locutor.current?.parar();
+      if (esperaDoErro.current) clearTimeout(esperaDoErro.current);
+      esperaDoErro.current = null;
+    };
+  }, [falando]);
+  // respondendo falando, a tela do celular não apaga
+  useTelaAcesa(falando);
 
   const mudarCategorias = (c: Categoria[]) => {
     setCategorias(c);
@@ -475,6 +639,10 @@ export function Treino() {
   };
   /** A próxima questão: no modo automático, o tipo e o nível vêm do modo; nos outros, dos tipos marcados e do nível. */
   const abrirQuestao = (estadoAuto: EstadoAutomatico | null) => {
+    // o que estava agendado para a questão anterior (seguir sozinho, ler os artigos) não vale mais
+    questaoDaVez.current++;
+    if (esperaDoErro.current) clearTimeout(esperaDoErro.current);
+    esperaDoErro.current = null;
     if (estadoAuto) {
       const q = proximaDoAutomatico(estadoAuto);
       setQuestaoAuto(q);
@@ -486,17 +654,21 @@ export function Treino() {
     }
     setInicio(performance.now());
     setRespondida(false);
+    setOuvido(null);
   };
 
   const comecar = () => {
     vistas.current = new Set();
     setRodadas([]);
     setIndice(0);
-    setNovoRecorde(false);
+    setNovoRecorde({ pontos: false, sequencia: false, conta: true });
+    setSessao({ id: `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`, inicio: Date.now(), modo: { automatico, tamanho, nivel } });
     setAjustes(false);
     setStrike(STRIKE_ZERO);
     setPerdeuEm(0);
     setAvanco(null);
+    // respondendo falando, a questão é lida: no iPhone, a primeira fala sai dentro do toque em Começar
+    if (voz && lerQuestoes) desbloquearVoz();
     let estadoAuto: EstadoAutomatico | null = null;
     if (automatico) {
       // continua de onde parou, com os tipos marcados agora
@@ -507,8 +679,14 @@ export function Treino() {
     abrirQuestao(estadoAuto);
     setFase("pergunta");
   };
-  // no celular, o toque em começar já abre o teclado para a primeira questão de digitar
-  const comecarDoToque = () => avancarNoToque(comecar);
+  // no celular, o toque em começar já abre o teclado para a primeira questão de digitar (respondendo falando, não)
+  const comecarDoToque = () => (voz && podeFalar ? comecar() : avancarNoToque(comecar));
+  // continuar o modo automático já abre no modo foco (a tela cheia precisa do clique: vai aqui, não num efeito)
+  const continuarNoFoco = () => {
+    void document.documentElement.requestFullscreen?.().catch(() => {});
+    setFoco(true);
+    comecarDoToque();
+  };
   const recomecarAutomatico = () => {
     const e = iniciarAutomatico(tiposComPerguntas(tiposAuto));
     gravarAuto(e);
@@ -530,6 +708,46 @@ export function Treino() {
     gravarJSON(CHAVE_PULAR_ACERTOS, p);
   };
 
+  /** O strike saiu (de `antes` para `depois`): a comemoração, com a explosão saindo do menu no modo foco, e a fanfarra. */
+  const comemorar = (antes: EstadoStrike, depois: EstadoStrike) => {
+    const menu = foco ? document.querySelector("[data-menu-foco]")?.getBoundingClientRect() : null;
+    const frase = fraseDoStrike(ultimaFrase.current);
+    ultimaFrase.current = frase;
+    setComemoracao({
+      total: depois.total,
+      tamanho: tamanhoDoStrike(antes.seguidos),
+      proximo: tamanhoDoStrike(depois.seguidos),
+      frase,
+      origem: menu ? { x: menu.left + menu.width / 2, y: menu.top + menu.height / 2 } : null,
+    });
+    tocar((s) => s.strike());
+  };
+
+  /**
+   * Grava a sessão nos recordes que ela bateu (de pontos no modo e da maior sequência de acertos), com a página final.
+   * Na quantidade fixa, só o treino completo conta para o recorde de pontos.
+   */
+  const guardarNosRecordes = (lista: Rodada[], strikes: number, estadoAuto: EstadoAutomatico | null) => {
+    const { id, inicio: comeco, modo } = sessao;
+    const conta = modo.tamanho === "infinito" || lista.length >= modo.tamanho;
+    const r = gravarSessao(
+      {
+        v: 1,
+        id,
+        chave: chaveDoModo(modo),
+        ...modo,
+        inicio: comeco,
+        fim: Date.now(),
+        ...(modo.automatico && estadoAuto ? { ondeAuto: ondeEsta(estadoAuto) } : {}),
+        strikes,
+        rodadas: lista.map(guardarRodada),
+      },
+      conta,
+    );
+    if (r.pontos || r.sequencia) setRecordes(lerRecordes());
+    return { ...r, conta };
+  };
+
   const aoResponder = (c: Correcao, revisao: Revisao) => {
     if (!pergunta) return;
     const segundos = (performance.now() - inicio) / 1000;
@@ -542,44 +760,31 @@ export function Treino() {
     // o strike
     const r = registrarStrike(strike, c.acertou);
     setStrike(r.estado);
-    // no modo foco, cada acerto faz a revoada (no strike, com todas cheias)
-    if (foco && c.acertou)
-      setRevoada({ id: performance.now(), acertos: r.strike ? tamanhoDoStrike(strike.seguidos) : r.estado.acertos, n: tamanhoDoStrike(strike.seguidos), fez: r.strike });
-    if (r.strike) {
-      setComemoracao({ total: r.estado.total, tamanho: tamanhoDoStrike(strike.seguidos), proximo: tamanhoDoStrike(r.estado.seguidos) });
-      tocar((s) => s.strike());
-    } else if (c.acertou) tocar((s) => s.acerto(progressoDoStrike(r.estado)));
+    // no modo foco, cada acerto faz a revoada; no strike, as bolinhas explodem a partir do menu (na comemoração)
+    if (foco && c.acertou && !r.strike) setRevoada({ id: performance.now(), acertos: r.estado.acertos, n: tamanhoDoStrike(strike.seguidos), fez: false });
+    if (r.strike) comemorar(strike, r.estado);
+    else if (c.acertou) tocar((s) => s.acerto(progressoDoStrike(r.estado)));
     else if (r.perdeu) {
       setPerdeuEm((k) => k + 1);
       tocar((s) => s.perdeu(r.perdeu));
     }
     // o modo automático anda: sobe o nível, passa ao próximo tipo ou chega ao modo final
+    let estadoAuto = auto;
     if (automatico && auto && questaoAuto) {
       const { estado, avanco: a } = registrarNoAutomatico(auto, questaoAuto, c.acertou, { descer });
       gravarAuto(estado);
       setAvanco(a);
+      estadoAuto = estado;
     }
+    // no modo infinito, o recorde vai sendo gravado a cada resposta: fechar a página no meio não o perde
+    if (sessao.modo.tamanho === "infinito") guardarNosRecordes([...rodadas, rodada], r.estado.total, estadoAuto);
+    // respondendo falando, com a leitura: a correção dita, e a próxima questão vem sozinha
+    if (lendoEmVoz) falarCorrecao(pergunta, c);
   };
 
   /** Fim do treino. `lista` é a das respondidas (no modo infinito, a questão em aberto fica de fora). */
   const finalizar = (lista = rodadas) => {
-    const total = lista.reduce((s, r) => s + r.pontos, 0);
-    // o recorde é por nível e quantidade; o modo infinito não tem recorde (o nível muda no meio e não tem fim)
-    let recorde = false;
-    if (typeof tamanho === "number" && !automatico) {
-      const chave = chaveRecorde(nivel, tamanho);
-      recorde = total > (recordes[chave] ?? 0);
-      if (recorde) {
-        const novos = { ...recordes, [chave]: total };
-        setRecordes(novos);
-        gravarJSON(CHAVE, novos);
-      }
-    }
-    const erros = lista.filter((r) => !r.acertou).length;
-    // muitas questões: a revisão abre nos erros, que é o que importa rever
-    setFiltro(lista.length > TAMANHO_TREINO && erros ? "erros" : "todas");
-    setMostradas(POR_VEZ);
-    setNovoRecorde(recorde);
+    setNovoRecorde(guardarNosRecordes(lista, strike.total, auto));
     setFase("resultado");
   };
 
@@ -588,13 +793,19 @@ export function Treino() {
   const aoContinuar = () => {
     if (typeof tamanho === "number" && rodadas.length >= tamanho) return finalizar();
     setIndice((i) => i + 1);
+    setVerAnterior(false);
     abrirQuestao(automatico ? auto : null);
   };
+  // quem segue sozinho (depois da correção dita) usa o de agora: com as respostas e o modo automático atualizados
+  useEffect(() => {
+    continuarRef.current = aoContinuar;
+  });
 
   if (fase === "inicio") {
     const fixo = typeof tamanho === "number" ? tamanho : null;
     const tiposDoAuto = tiposComPerguntas(tiposAuto);
     const ondeComeca = auto ? ajustarTipos(auto, tiposDoAuto) : null;
+    const continua = automatico && !!ondeComeca && (ondeComeca.etapa > 0 || ondeComeca.nivel > 1);
     return (
       <div className={styles.painel}>
         {automatico ? (
@@ -675,14 +886,17 @@ export function Treino() {
           <SeletorCategorias valor={categorias} onChange={mudarCategorias} />
         )}
         <OpcaoPular valor={pularAcertos} onChange={mudarPular} />
+        <OpcaoVoz valor={voz} onChange={mudarVoz} disponivel={podeFalar} ler={lerQuestoes} aoLer={mudarLer} podeLer={podeLer} />
         {/* no celular, o botão sobe para o topo do painel (treino.module.css) */}
-        <button type="button" className={`btn btn-gold ${styles.comecar}`} onClick={comecarDoToque}>
+        <button type="button" className={`btn btn-gold ${styles.comecar}`} onClick={continua ? continuarNoFoco : comecarDoToque}>
           {automatico
-            ? `${ondeComeca && (ondeComeca.etapa > 0 || ondeComeca.nivel > 1) ? "Continuar o modo automático" : "Começar o modo automático"}${fixo ? ` · ${fixo} questões` : ""}`
+            ? `${continua ? "Continuar o modo automático" : "Começar o modo automático"}${fixo ? ` · ${fixo} questões` : ""}`
             : infinito
               ? "Começar o modo infinito"
               : "Começar treino"}
         </button>
+        {/* logo abaixo do botão: o recorde do modo escolhido, com a página final dele */}
+        <SeuRecorde recordes={recordes} chave={chaveDoModo({ automatico, tamanho, nivel })} />
       </div>
     );
   }
@@ -695,7 +909,17 @@ export function Treino() {
     const pontos = rodadas.reduce((s, r) => s + r.pontos, 0);
     const acertos = rodadas.filter((r) => r.acertou).length;
     const ultimaDoTreino = typeof tamanho === "number" && rodadas.length === tamanho;
+    // a questão anterior já respondida (a atual, respondida, já está na tela)
+    const anterior = indice > 0 ? rodadas[indice - 1] : undefined;
     const estadoDoPlacar = comemoracao ? { ...strike, acertos: comemoracao.tamanho, seguidos: Math.max(0, strike.seguidos - 1) } : strike;
+    // o que dizer nesta questão (a linha do microfone)
+    const ctxVoz: ContextoVoz = respondida
+      ? { tipo: "respondida" }
+      : pergunta.formato === "objetiva" || nivelDaQuestao === 1
+        ? { tipo: "alternativas", textos: [], pecas: pergunta.formato === "peca" }
+        : pergunta.formato === "peca"
+          ? { tipo: "peca", peca: "", fundamento: "" }
+          : { tipo: "tese", comArtigo: nivelDaQuestao === 3, tese: "", artigo: "" };
     return (
       <>
         <PerguntaCorpo
@@ -705,8 +929,12 @@ export function Treino() {
           aoResponder={aoResponder}
           rotuloContinuar={ultimaDoTreino ? "Ver resultado" : "Próxima pergunta"}
           continuo
-          pularAcerto={pularAcertos}
+          // respondendo falando, o acerto segue sozinho: com a leitura, depois do "Correto!" (quem segue é o Treino)
+          pularAcerto={falando ? !lendoEmVoz : pularAcertos}
           aoContinuar={aoContinuar}
+          aoDeslizarCaso={anterior ? () => setVerAnterior(true) : undefined}
+          vozRef={falando ? vozRef : undefined}
+          aoLerQuestao={lerQuestao}
           cabecalho={(copiar) => (
             <div className={styles.cabecalho}>
               {/* na comemoração, as bolinhas do strike feito ficam cheias, piscando; no modo foco o strike é o líquido do menu */}
@@ -731,10 +959,18 @@ export function Treino() {
                 <div className={styles.controlesFoco}>
                   {foco ? (
                     <>
-                      <XpFoco pontos={pontos} acertos={acertos} total={rodadas.length} />
+                      <XpFoco pontos={pontos} acertos={acertos} total={rodadas.length} strikes={strike.total} novo={!!comemoracao} />
                       <MenuFoco strike={estadoDoPlacar} fez={!!comemoracao} perdeuEm={perdeuEm} inicio={inicio} folga={folga} respondida={respondida}>
                         {copiar("menu")}
+                        <ItemMenu icone={<IconeAnterior />} onClick={() => setVerAnterior(true)} disabled={!anterior} data-fecha-menu>
+                          {anterior ? `Ver a resposta da Q${n - 1}` : "Ver a resposta anterior"}
+                        </ItemMenu>
                         <SomDoMenu sons={sons} volume={volume} aoSom={alternarSons} aoVolume={mudarVolume} />
+                        {podeFalar && (
+                          <ItemMenu icone={<IconeMicrofone riscado={!voz} />} aria-pressed={voz} onClick={() => mudarVoz(!voz)}>
+                            {voz ? "Responder falando: ligado" : "Responder falando"}
+                          </ItemMenu>
+                        )}
                         <AjustesLargura prefs={prefsFoco} onChange={mudarPrefsFoco} />
                         <hr />
                         <ItemMenu icone={<IconeFoco ligado />} onClick={alternarFoco}>
@@ -790,6 +1026,16 @@ export function Treino() {
                 </p>
               )}
               {!foco && <Tempo key={n} inicio={inicio} limite={janela} folga={folga} ultima={respondida && ultima ? ultima : null} />}
+              {falando && (
+                <LinhaDaVoz
+                  estado={estadoEscuta}
+                  ouvido={ouvido}
+                  dica={dicaDaVoz(ctxVoz)}
+                  depois={respondida ? dicaDaVoz(ctxVoz) : undefined}
+                  lendo={lendoQuestao}
+                  aoDesligar={() => mudarVoz(false)}
+                />
+              )}
             </div>
           )}
         />
@@ -829,8 +1075,18 @@ export function Treino() {
           </section>
         )}
         {comemoracao && <Comemoracao {...comemoracao} />}
+        {verAnterior && anterior && <RespostaAnterior
+            n={n - 1}
+            rodada={anterior}
+            aoFechar={() => {
+              setVerAnterior(false);
+              // de volta à questão da vez, para seguir digitando
+              if (!respondida) requestAnimationFrame(focarCampoDaQuestao);
+            }}
+          />}
         <div className={styles.opcaoQuestao}>
           <OpcaoPular valor={pularAcertos} onChange={mudarPular} />
+          <OpcaoVoz valor={voz} onChange={mudarVoz} disponivel={podeFalar} ler={lerQuestoes} aoLer={mudarLer} podeLer={podeLer} />
         </div>
         <p className={styles.abandonar}>
           {/* sem fim ou no automático (que não tem recorde), dá para parar e ver o resultado; no treino com recorde, só abandonar */}
@@ -859,137 +1115,26 @@ export function Treino() {
     );
   }
 
-  const total = rodadas.reduce((s, r) => s + r.pontos, 0);
-  const acertos = rodadas.filter((r) => r.acertou).length;
-  const erros = rodadas.length - acertos;
-  const media = rodadas.reduce((s, r) => s + r.segundos, 0) / Math.max(1, rodadas.length);
-  const porcentagem = Math.round((100 * acertos) / Math.max(1, rodadas.length));
-  const niveisUsados = porGrupo(rodadas, (r) => NOME_NIVEL[r.nivel]);
-  const tipos = porGrupo(rodadas, (r) => nomeCategoria(r.pergunta.categorias[0]));
-  const filtradas = rodadas.map((r, i) => ({ r, n: i + 1 })).filter(({ r }) => filtro === "todas" || (filtro === "erros" ? !r.acertou : r.acertou));
-  const muitas = rodadas.length > TAMANHO_TREINO;
-  const recapitulacoes = rodadas.filter((r) => r.recapitulacao);
   return (
-    <div className={styles.painel}>
-      <p className={styles.eyebrow}>
-        Resultado ·{" "}
-        {automatico && auto
-          ? `${rodadas.length} ${rodadas.length === 1 ? "questão" : "questões"} · modo automático · agora em ${ondeEsta(auto)}`
-          : infinito
-            ? `modo infinito · ${niveisUsados.map((g) => g.nome).join(", ")}`
-            : `${rodadas.length} questões · nível ${NOME_NIVEL[nivel]}`}
-      </p>
-      <p className={styles.total}>
-        {total} <span>{semFim || automatico ? "pontos" : `de ${maximoTreino(nivel, rodadas.length)} pontos`}</span>
-      </p>
-      {novoRecorde && <p className="badge badge-gold">Novo recorde com {rodadas.length} questões neste nível!</p>}
-      <dl className={styles.numeros}>
-        <div>
-          <dt>Acertos</dt>
-          <dd>
-            {acertos} de {rodadas.length} <small>({porcentagem}%)</small>
-          </dd>
-        </div>
-        <div>
-          <dt>Tempo médio</dt>
-          <dd>{fmt(media)}</dd>
-        </div>
-        <div>
-          <dt>Maior sequência</dt>
-          <dd>
-            {melhorSequencia(rodadas)} {melhorSequencia(rodadas) === 1 ? "acerto" : "acertos"}
-          </dd>
-        </div>
-        <div>
-          <dt>Strikes</dt>
-          <dd>{strike.total ? `★ ${strike.total}` : "nenhum"}</dd>
-        </div>
-        {recapitulacoes.length > 0 && (
-          <div>
-            <dt>Recapitulações</dt>
-            <dd>
-              {recapitulacoes.filter((r) => r.acertou).length} de {recapitulacoes.length} certas
-            </dd>
-          </div>
-        )}
-      </dl>
-      {/* com mais questões, o acerto por tipo (e por nível, se mudou no meio) mostra onde está o ponto fraco */}
-      {(muitas || semFim || automatico) && (tipos.length > 1 || niveisUsados.length > 1) && (
-        <div className={styles.grupos}>
-          {[...(niveisUsados.length > 1 ? [{ titulo: "Por nível", lista: niveisUsados }] : []), ...(tipos.length > 1 ? [{ titulo: "Por tipo de pergunta", lista: tipos }] : [])].map(
-            ({ titulo, lista }) => (
-              <section key={titulo}>
-                <h3>{titulo}</h3>
-                <ul>
-                  {lista.map((g) => (
-                    <li key={g.nome}>
-                      <span>{g.nome}</span>
-                      <span className={styles.barra} style={{ "--p": `${(100 * g.acertos) / g.total}%` } as CSSProperties} aria-hidden />
-                      <span>
-                        {g.acertos} de {g.total}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            ),
-          )}
-        </div>
-      )}
-      <section className={styles.revisao} aria-labelledby="revisao-titulo">
-        <h2 id="revisao-titulo" className={styles.subtitulo}>
-          Reveja as questões
-        </h2>
-        <p className={styles.regras}>Cada uma abre com o enunciado, as alternativas e a correção.</p>
-        {muitas && (
-          <div className={styles.filtros} role="group" aria-label="Quais questões mostrar">
-            {(
-              [
-                ["todas", `Todas (${rodadas.length})`],
-                ["erros", `Erros (${erros})`],
-                ["acertos", `Acertos (${acertos})`],
-              ] as [Filtro, string][]
-            ).map(([id, rotulo]) => (
-              <button
-                key={id}
-                type="button"
-                aria-pressed={filtro === id}
-                onClick={() => {
-                  setFiltro(id);
-                  setMostradas(POR_VEZ);
-                }}
-              >
-                {rotulo}
-              </button>
-            ))}
-          </div>
-        )}
-        {filtradas.length ? (
-          <ol className={styles.rodadas}>
-            {filtradas.slice(0, mostradas).map(({ r, n }) => (
-              <RodadaRevista key={`${n}-${r.pergunta.id}`} n={n} rodada={r} comNivel={niveisUsados.length > 1} />
-            ))}
-          </ol>
-        ) : (
-          <p className={styles.regras}>{filtro === "erros" ? "Nenhum erro. Parabéns!" : "Nenhum acerto desta vez."}</p>
-        )}
-        {filtradas.length > mostradas && (
-          <button type="button" className="btn" onClick={() => setMostradas((m) => m + POR_VEZ)}>
-            Mostrar mais {Math.min(POR_VEZ, filtradas.length - mostradas)} de {filtradas.length - mostradas}
+    <ResultadoTreino
+      linhas={rodadas.map(linhaDaRodada)}
+      modo={sessao.modo}
+      strikes={strike.total}
+      onde={sessao.modo.automatico && auto ? `agora em ${ondeEsta(auto)}` : undefined}
+      aviso={<AvisoRecorde recordes={recordes} chave={chaveDoModo(sessao.modo)} sessao={sessao.id} novo={novoRecorde} conta={novoRecorde.conta} />}
+      acoes={
+        <>
+          <button type="button" className="btn btn-gold" onClick={automatico ? continuarNoFoco : comecarDoToque}>
+            {automatico ? "Continuar o modo automático" : infinito ? "Jogar o modo infinito de novo" : "Treinar de novo"}
           </button>
-        )}
-      </section>
-      <div className={styles.acoes}>
-        <button type="button" className="btn btn-gold" onClick={comecarDoToque}>
-          {automatico ? "Continuar o modo automático" : infinito ? "Jogar o modo infinito de novo" : "Treinar de novo"}
-        </button>
-        <button type="button" className="btn" onClick={() => setFase("inicio")}>
-          Mudar nível ou quantidade
-        </button>
-        <Link href="/jogos/" className="btn">
-          Voltar aos jogos
-        </Link>
-      </div>
-    </div>
+          <button type="button" className="btn" onClick={() => setFase("inicio")}>
+            Mudar nível ou quantidade
+          </button>
+          <Link href="/jogos/" className="btn">
+            Voltar aos jogos
+          </Link>
+        </>
+      }
+    />
   );
 }

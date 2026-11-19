@@ -71,33 +71,48 @@ describe("perguntas fixas (content/perguntas)", async () => {
 
 describe("categorias e formatos novos", async () => {
   const { sortearPergunta, tamanhoAcervo } = await import("../src/quiz/banco.ts");
-  const { corrigirItem, corrigirObjetiva } = await import("../src/quiz/verificar.ts");
+  const { corrigirTese, corrigirObjetiva } = await import("../src/quiz/verificar.ts");
   const { mascaraCategorias, categoriasDaMascara } = await import("../src/quiz/categorias.ts");
   const { limiteSeg } = await import("../src/quiz/pontuacao.ts");
-  const { loadExame } = await import("./helpers.ts");
-  type PerguntaItem = import("../src/quiz/types.ts").PerguntaItem;
+  type PerguntaTese = import("../src/quiz/types.ts").PerguntaTese;
   type PerguntaObjetiva = import("../src/quiz/types.ts").PerguntaObjetiva;
 
-  const ex = loadExame("38");
-  const item = ex.peca.itens.find((i) => i.componentes.some((c) => c.dispositivo?.length))!;
-  const pItem: PerguntaItem = {
-    formato: "item", id: "t-item", categorias: ["peca-detalhe"], caso: ex.peca.enunciado, comando: "?", explicacao: "", fonte: "",
-    itens: [item], dispositivos: [],
-    opcoes: [{ texto: item.descricao, correta: true }, { texto: "x", correta: false }, { texto: "y", correta: false }],
+  const pTese: PerguntaTese = {
+    formato: "tese", id: "t-tese", categorias: ["peca-detalhe"], caso: "Caso.", enunciado: "Caso completo.", comando: "?", explicacao: "", fonte: "",
+    tese: "Desclassificação para furto simples", aceitos: [["furto simples"]], artigos: ["art. 155, CP"], valor: 0.5,
+    erradas: { artigos: ["art. 157, CP", "art. 171, CP", "art. 180, CP"], teses: ["Legítima defesa", "Estado de necessidade", "Crime impossível"] },
   };
   const pObj: PerguntaObjetiva = {
     formato: "objetiva", id: "t-obj", categorias: ["objetiva"], caso: "", comando: "", explicacao: "", fonte: "", dispositivos: [],
     alternativas: { A: "a", B: "b", C: "c", D: "d" }, correta: "C",
   };
 
-  it("item no nível fácil é corrigido pela alternativa", () => {
-    expect(corrigirItem(pItem, 1, { opcao: 0 }).acertou).toBe(true);
-    expect(corrigirItem(pItem, 1, { opcao: 1 }).acertou).toBe(false);
+  it("tese no nível fácil é corrigida pela alternativa", () => {
+    expect(corrigirTese(pTese, 1, { alternativa: { modo: "artigo", texto: "art. 155 do CP", correta: true } })).toMatchObject({
+      acertou: true,
+      acertouArtigo: true,
+      acertouTese: null,
+    });
+    expect(corrigirTese(pTese, 1, { alternativa: { modo: "artigo", texto: "art. 157 do CP", correta: false } }).acertou).toBe(false);
   });
 
-  it("item digitado com a própria tabela tira a nota inteira; em branco, zero", () => {
-    expect(corrigirItem(pItem, 3, { texto: `${item.descricao} ${ex.peca.gabarito_comentado}` })).toMatchObject({ acertou: true, fracao: 1 });
-    expect(corrigirItem(pItem, 2, { texto: "" })).toMatchObject({ acertou: false, fracao: 0 });
+  it("tese no nível médio: basta o ponto central", () => {
+    expect(corrigirTese(pTese, 2, { tese: "cabe a desclassificação para furto simples" })).toMatchObject({
+      acertou: true,
+      acertouTese: true,
+      acertouArtigo: null,
+    });
+    expect(corrigirTese(pTese, 2, { tese: "" }).acertou).toBe(false);
+    expect(corrigirTese(pTese, 2, { tese: "legítima defesa" }).acertou).toBe(false);
+  });
+
+  it("tese no nível difícil: o ponto central e o artigo", () => {
+    expect(corrigirTese(pTese, 3, { tese: "furto simples", artigo: "art. 155 do CP" }).acertou).toBe(true);
+    expect(corrigirTese(pTese, 3, { tese: "furto simples", artigo: "art. 157 do CP" })).toMatchObject({
+      acertou: false,
+      acertouTese: true,
+      acertouArtigo: false,
+    });
   });
 
   it("objetiva compara a letra", () => {
@@ -114,35 +129,59 @@ describe("categorias e formatos novos", async () => {
     expect(categoriasDaMascara(mascaraCategorias(["peca", "objetiva"]))).toEqual(["peca", "objetiva"]);
   });
 
-  it("objetiva tem menos tempo nos níveis altos; item digitado, mais", () => {
+  it("objetiva tem menos tempo nos níveis altos; tese digitada, mais", () => {
     expect(limiteSeg(pObj, 3)).toBeLessThan(limiteSeg(pObj, 1));
-    expect(limiteSeg(pItem, 2)).toBeGreaterThan(limiteSeg(pItem, 1));
+    expect(limiteSeg(pTese, 2)).toBeGreaterThan(limiteSeg(pTese, 1));
   });
 });
 
-describe("opcoesDoItem", async () => {
-  const { opcoesDoItem } = await import("../src/quiz/banco.ts");
-  it("sempre inclui a correta e no máximo 4 opções", () => {
-    const p = {
-      opcoes: [{ texto: "certa", correta: true }, ...Array.from({ length: 6 }, (_, i) => ({ texto: `e${i}`, correta: false }))],
-    } as import("../src/quiz/types.ts").PerguntaItem;
-    for (let i = 0; i < 50; i++) {
-      const o = opcoesDoItem(p);
-      expect(o).toHaveLength(4);
-      expect(o).toContain(0);
-    }
+describe("opcoesDaTese", async () => {
+  const { opcoesDaTese } = await import("../src/quiz/banco.ts");
+  const { artigoLegivel } = await import("../src/quiz/verificar.ts");
+  type PerguntaTese = import("../src/quiz/types.ts").PerguntaTese;
+  const p: PerguntaTese = {
+    formato: "tese", id: "t-tese", categorias: ["peca-detalhe"], caso: "Caso.", enunciado: "Caso completo.", comando: "?", explicacao: "", fonte: "",
+    tese: "Desclassificação para furto simples", aceitos: [["furto simples"]], artigos: ["art. 155, CP"], valor: 0.5,
+    erradas: { artigos: ["art. 157, CP", "art. 171, CP", "art. 180, CP"], teses: ["Legítima defesa", "Estado de necessidade", "Crime impossível"] },
+  };
+
+  it("modo tese: a correta é a tese, com 4 opções", () => {
+    const o = opcoesDaTese(p, () => 0.1);
+    expect(o.modo).toBe("tese");
+    expect(o.opcoes).toHaveLength(4);
+    expect(o.opcoes.filter((x) => x.correta)).toHaveLength(1);
+    expect(o.opcoes.find((x) => x.correta)!.texto).toBe(p.tese);
+  });
+
+  it("modo artigo: a correta é o artigo legível, com 4 opções", () => {
+    const o = opcoesDaTese(p, () => 0.9);
+    expect(o.modo).toBe("artigo");
+    expect(o.opcoes).toHaveLength(4);
+    expect(o.opcoes.filter((x) => x.correta)).toHaveLength(1);
+    expect(o.opcoes.find((x) => x.correta)!.texto).toBe(artigoLegivel("art. 155, CP"));
+  });
+
+  it("o artigo entra na frase do fácil com o artigo definido e a preposição", async () => {
+    const { artigoNaFrase } = await import("../src/quiz/verificar.ts");
+    expect(artigoNaFrase("art. 20, § 3º, CP")).toBe("o art. 20, § 3º, do Código Penal");
+    expect(artigoNaFrase("art. 4, § 10-A, Lei 12.850")).toMatch(/^o art\. 4, § 10-A, da Lei /);
+    expect(artigoNaFrase("Súmula 545 STJ")).toBe("a Súmula 545 do STJ");
+  });
+
+  it("sem teses erradas suficientes, o modo é sempre artigo", () => {
+    const q = { ...p, erradas: { ...p.erradas, teses: ["Legítima defesa", "Estado de necessidade"] } };
+    for (let i = 0; i < 20; i++) expect(opcoesDaTese(q, () => 0.1).modo).toBe("artigo");
   });
 });
 
 describe("perguntas de itens das provas (content/perguntas/discursivas)", async () => {
-  const { corrigirItem } = await import("../src/quiz/verificar.ts");
-  const itens = (await import("../src/content/generated/perguntas-itens.json")).default as unknown as import("../src/quiz/types.ts").PerguntaItem[];
-  // Itens cujos termos dependem de dados do caso que a descrição do item não repete.
-  const EXCECOES = new Set(["02-peca-9" /* exige os nomes das testemunhas */]);
-  it.each(itens.filter((p) => !EXCECOES.has(p.id)).map((p) => [p.id, p]))("%s: o gabarito do item passa no nível médio", (_, p) => {
-    // um só parágrafo: a regra dos termos no mesmo parágrafo tem testes próprios
-    const texto = `${p.itens.map((i) => i.descricao).join(" ")} ${p.explicacao}`;
-    expect(corrigirItem(p, 2, { texto }).acertou).toBe(true);
-    expect(p.opcoes.filter((o) => o.correta)).toHaveLength(1);
+  const { corrigirTese, artigoLegivel } = await import("../src/quiz/verificar.ts");
+  const { opcoesDaTese } = await import("../src/quiz/banco.ts");
+  const teses = (await import("../src/content/generated/perguntas-itens.json")).default as unknown as import("../src/quiz/types.ts").PerguntaTese[];
+  it.each(teses.map((p) => [p.id, p]))("%s: a tese e o artigo esperados passam", (_, p) => {
+    expect(p.artigos.length).toBeGreaterThan(0);
+    expect(corrigirTese(p, 2, { tese: p.tese }).acertou).toBe(true);
+    expect(corrigirTese(p, 3, { tese: p.tese, artigo: artigoLegivel(p.artigos[0]!) }).acertou).toBe(true);
+    expect(opcoesDaTese(p).opcoes.filter((o) => o.correta)).toHaveLength(1);
   });
 });

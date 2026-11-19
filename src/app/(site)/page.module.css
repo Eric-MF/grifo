@@ -60,6 +60,9 @@
   background: var(--navy); color: var(--gold); margin-bottom: 0.8rem; font-variant-numeric: lining-nums;
 }
 :global(:root[data-theme="escuro"]) .stepN { background: var(--gold); color: var(--navy); }
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme])) .stepN { background: var(--gold); color: var(--navy); }
+}
 
 /* ---------- Banner do jogo ---------- */
 .gameBanner { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }

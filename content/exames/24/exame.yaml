@@ -297,4 +297,11 @@ questoes:
 atualizado:
   revisao: { status: rascunho }
   notas:
+    - { alvo: peca, lei: "Lei 13.964/2019 e Lei 14.843/2024", texto: "A Lei 13.964/2019 reescreveu o art. 112 da LEP: a progressão de regime passou a exigir percentuais da pena (16% para o primário em crime sem violência ou grave ameaça, como a associação para o tráfico), no lugar das frações de 1/6, 2/5 e 3/5. A Lei 14.843/2024 passou a exigir o exame criminológico para toda progressão de regime (art. 112, § 1º, da LEP). As teses da fração de 1/6 e do exame criminológico facultativo não valem mais." }
     - { alvo: q2, lei: "Lei 15.280/2025 e Lei 15.353/2026", texto: "O art. 217-A do Código Penal (estupro de vulnerável) foi alterado pela Lei 15.280/2025, que fixou pena de reclusão de 10 a 18 anos (antes, de 8 a 15 anos), e pela Lei 15.353/2026, que acrescentou o § 4º-A (presunção absoluta de vulnerabilidade da vítima)." }
+  nomes:
+    peca: { Lucas: Morfeu }   # o tráfico
+    q1: { Arnaldo: Nestor, Severino: Páris }   # o avô idoso; o suposto pretendente
+    q2: { Maria: Dafne, Túlio: Apolo }
+    q3: { Aroldo: Castor, Bernardo: Pólux, Caio: Orfeu, David: Jasão }   # o grupo
+    q4: { Pablo: Polifemo }

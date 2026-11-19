@@ -3,6 +3,7 @@
 id: "04"
 numero: 4
 numeral: IV
+aplicacao: 2011-08-21
 revisao:
   status: rascunho
   por: ""
@@ -182,3 +183,11 @@ questoes:
         componentes:
           - { id: c1, valor: 0.6, termos: [ vedad* | proib* | nao pode | nao e possivel | nao cabe, prestacao pecuniaria | pecuniaria ] }
 observacoes: "Tabela da FGV com regras de escolha: nos pedidos, bastam 3 de 4 (0,50 cada, máximo 1,50); na questão 3, bastam 2 das 3 teses. O corretor aplica esses tetos."
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Tício: Proteu }   # o reconhecimento de quem pode ser outro
+    q1: { Maria: Pandora, Jorge: Epimeteu, Júlia: Afrodite }   # abriu o que não devia
+    q2: { Caio: Aquiles, Mévio: Heitor }   # a fúria
+    q3: { Armênio: Agamenon, Justino: Menelau, Frederico: Prometeu }   # os poderosos e quem sabia o segredo
+    q4: { João: Zeus, Maria: Hera }   # o casamento em crise

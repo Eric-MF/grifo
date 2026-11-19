@@ -1,610 +1,168 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
-exame: 25-porto-alegre
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
+exame: "25-porto-alegre"
+introducoes:
+  peca: "Breno, de 72 anos, falsificou a assinatura numa folha de cheque e quis pagar com ela R$ 5.000 em compras numa loja. A falsificação era boa, mas o gerente conhecia o correntista, percebeu a fraude e chamou a polícia antes que Breno levasse os produtos. Breno foi condenado por estelionato e falsificação de documento, em concurso material, nas formas consumadas. Ele não foi interrogado: estava doente no dia da audiência, apresentou atestado, e a defesa protestou. Na pena-base do estelionato, o juiz aumentou 2 meses porque Breno agiu com dolo. Na segunda fase, aplicou a reincidência por uma condenação anterior por homicídio culposo no trânsito e não reconheceu nenhuma outra circunstância. Você é o advogado de Breno, e corre o prazo do recurso."
+  q1: "Bruna, nascida em 30/3/1999, e a irmã Júlia, já maior, golpearam Maria na cabeça com pedaços de ferro, em 28/3/2017, para matá-la. Maria ficou internada e morreu cinco dias depois. As duas foram denunciadas por homicídio qualificado, e o Ministério Público pediu a preventiva só de Júlia, que é reincidente e está grávida de 20 semanas."
+  q2: "João tirou Clara, de 11 anos, de casa, trancou-a num quarto sem janelas e exigiu do pai dela R$ 200.000 para soltá-la. O pai pagou, e Clara foi solta. Concluído o inquérito, os autos ficaram 90 dias com o promotor, sem nenhuma providência."
+  q3: "Carlos, primário, foi condenado por roubo a 4 anos no semiaberto. Com 3 anos e 10 dias cumpridos, cometeu falta grave e fugiu, em 10/3/2015, e nunca mais foi encontrado. Ainda em 2015, o juiz da execução reconheceu a falta grave e mandou recomeçar a contagem do prazo do livramento condicional. Por falha do cartório, a defesa só foi intimada em 14/3/2018."
+  q4: "Vitor atirou em José para matá-lo, mas acertou só a perna. José foi levado ao hospital e, enquanto dormia no quarto, foi picado por um escorpião e morreu, só por causa do veneno. Vitor foi denunciado por homicídio consumado. Na audiência da primeira fase do júri, o juiz fez ele mesmo as perguntas às testemunhas, sem deixar as partes complementarem, e depois pronunciou Vitor."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["25-porto-alegre-peca-1", "25-porto-alegre-peca-3", "25-porto-alegre-peca-4", "25-porto-alegre-peca-4-2", "25-porto-alegre-peca-6", "25-porto-alegre-peca-12"]
 perguntas:
-  - id: 25-porto-alegre-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento: Vara Criminal da Comarca de Porto Alegre/RS."
-    opcoes:
-      correta: "Endereçamento: Vara Criminal da Comarca de Porto Alegre/RS."
-      erradas:
-        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro."
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - "Endereçamento: Tribunal de Justiça do Rio de Janeiro"
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro"
-    revisao: &a1
-      status: revisado
-  - id: 25-porto-alegre-peca-3
-    categoria: peca-detalhe
-    parte: peca
-    item: "3"
-    secao: enderecamento
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem devem ser endereçadas as razões?
-    gabarito: "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-    opcoes:
-      correta: "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-      erradas:
-        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
-        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG..
-        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
-    revisao: *a1
-  - id: 25-porto-alegre-peca-4
-    categoria: peca-detalhe
-    parte: peca
-    item: "4"
-    secao: preliminar
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Preliminarmente, nulidade dos atos de instrução ou da sentença
-    opcoes:
-      correta: Preliminarmente, nulidade dos atos de instrução ou da sentença
-      erradas:
-        - Extinção da punibilidade em relação ao crime de lesão corporal, em razão da decadência, nos termos do Art. 107, IV, do CP OU 38 do CPP.
-        - "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
-        - "Dispositivo legal: art. 2º, III, Lei 9.296/96 OU art. 2º, II, Lei 9.296/96."
-        - "Preliminarmente: Não conhecimento do recurso de Apelação, em razão da intempestividade, nos termos do art. 593 do CPP Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
-        - Preliminarmente, extinção da punibilidade do agente OU nulidade em razão da ausência de representação, com reconhecimento da decadência, conforme o Art. 107, inciso IV, do CP OU 564, inciso III, alínea a, ou inciso IV, CPP
-    revisao: *a1
   - id: 25-porto-alegre-peca-4-1
     categoria: peca-detalhe
     parte: peca
     item: "4.1"
     secao: merito
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: porque ocorreu cerceamento de defesa OU porque houve violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB.
-    opcoes:
-      correta: porque ocorreu cerceamento de defesa OU porque houve violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
-        - Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
-        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
-    revisao: *a1
-  - id: 25-porto-alegre-peca-4-2
-    categoria: peca-detalhe
-    parte: peca
-    item: "4.2"
-    secao: merito
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: porque o réu não pode comparecer ao ato justificadamente e não foi realizado interrogatório OU e o réu não estava presente quando da produção das provas
-    opcoes:
-      correta: porque o réu não pode comparecer ao ato justificadamente e não foi realizado interrogatório OU e o réu não estava presente quando da produção das provas
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
-        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
+    pergunta: "Que preliminar a defesa deve levantar quanto à falta do interrogatório de Breno?"
+    tese: "Nulidade por cerceamento de defesa: Breno faltou por motivo justificado e não foi interrogado"
+    aceitos: [ "nulidade | nula | nulo | anula* | cerceamento | ampla defesa | autodefesa" ]
+    artigos: [ "art. 5, LV, CRFB", "art. 564, IV, CPP" ]
+    gabarito: "porque ocorreu cerceamento de defesa OU porque houve violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB."
+    revisao: { status: revisado }
   - id: 25-porto-alegre-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: merito
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "Breno foi condenado pelos dois crimes, em concurso material. Que tese a defesa deve sustentar quanto a isso?"
+    tese: "Absorção da falsificação pelo estelionato (consunção), porque o falso se exauriu no estelionato"
+    aceitos: [ "absor* | consun*" ]
+    artigos: [ "Súmula 17 STJ" ]
     gabarito: "No mérito: Absorção do crime de falsificação de documento pelo de estelionato, nos termos do Enunciado 17 da Súmula de Jurisprudência do STJ."
-    opcoes:
-      correta: "No mérito: Absorção do crime de falsificação de documento pelo de estelionato, nos termos do Enunciado 17 da Súmula de Jurisprudência do STJ."
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
-        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
-  - id: 25-porto-alegre-peca-6
-    categoria: peca-detalhe
-    parte: peca
-    item: "6"
-    secao: merito
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Deverá ser aplicado o princípio da consunção, tendo em vista que se trata do crime meio para a prática do crime patrimonial. 5
-    opcoes:
-      correta: Deverá ser aplicado o princípio da consunção, tendo em vista que se trata do crime meio para a prática do crime patrimonial. 5
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
-        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 25-porto-alegre-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Redução da pena base ao mínimo legal, tendo em vista que o elemento subjetivo dolo já é inerente ao tipo. 5
-    opcoes:
-      correta: Redução da pena base ao mínimo legal, tendo em vista que o elemento subjetivo dolo já é inerente ao tipo. 5
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
-        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
-        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
-    revisao: *a1
+    pergunta: "O que a defesa deve pedir quanto à pena-base do estelionato?"
+    tese: "Pena-base no mínimo: o dolo é inerente ao tipo e não justifica o aumento"
+    aceitos: [ "minimo" ]
+    artigos: [ "art. 59, CP" ]
+    gabarito: "Redução da pena base ao mínimo legal, tendo em vista que o elemento subjetivo dolo já é inerente ao tipo. 5"
+    revisao: { status: revisado }
   - id: 25-porto-alegre-peca-8
     categoria: peca-detalhe
     parte: peca
     item: "8"
     secao: merito
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Reconhecimento de atenuante em razão de o agente ser maior de 70 anos na data da sentença, nos termos do Art. 65, inciso I, do CP.
-    opcoes:
-      correta: Reconhecimento de atenuante em razão de o agente ser maior de 70 anos na data da sentença, nos termos do Art. 65, inciso I, do CP.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - "Subsidiariamente: aplicação da pena base no mínimo legal, tendo em vista que o fato posterior ao crime julgado não pode ser considerado maus antecedentes."
-        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
-        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
-        - Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
-    revisao: *a1
+    pergunta: "Que atenuante o juiz deixou de reconhecer na segunda fase?"
+    tese: "A atenuante de ser o réu maior de 70 anos na data da sentença"
+    aceitos: [ "70 anos | maior de 70 | mais de 70 | setenta anos | septuagenario | idoso" ]
+    artigos: [ "art. 65, I, CP" ]
+    gabarito: "Reconhecimento de atenuante em razão de o agente ser maior de 70 anos na data da sentença, nos termos do Art. 65, inciso I, do CP."
+    revisao: { status: revisado }
   - id: 25-porto-alegre-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: merito
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Reconhecimento da tentativa, tendo em vista que o crime de estelionato é de natureza material e não houve obtenção da vantagem ilícita. 5
-    opcoes:
-      correta: Reconhecimento da tentativa, tendo em vista que o crime de estelionato é de natureza material e não houve obtenção da vantagem ilícita. 5
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
-        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
+    pergunta: "O gerente percebeu a fraude antes que Breno obtivesse a vantagem. Que tese a defesa deve sustentar quanto à consumação do estelionato?"
+    tese: "Tentativa: o estelionato é crime material, e a vantagem não foi obtida"
+    aceitos: [ "tentativa | tentado | tentada | nao se consumou | nao consumado | nao consumou" ]
+    artigos: [ "art. 14, II, CP" ]
+    gabarito: "Reconhecimento da tentativa, tendo em vista que o crime de estelionato é de natureza material e não houve obtenção da vantagem ilícita. 5"
+    revisao: { status: revisado }
   - id: 25-porto-alegre-peca-10
     categoria: peca-detalhe
     parte: peca
     item: "10"
     secao: merito
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Substituição da pena privativa de liberdade por restritiva de direitos, tendo em vista que a condenação anterior foi pela prática de crime culposo, de acordo com o Art. 44, inciso II, do Código Penal. 5/
-    opcoes:
-      correta: Substituição da pena privativa de liberdade por restritiva de direitos, tendo em vista que a condenação anterior foi pela prática de crime culposo, de acordo com o Art. 44, inciso II, do Código Penal. 5/
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
-        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
-        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
-        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    revisao: *a1
+    pergunta: "A condenação anterior de Breno foi por crime culposo. Que pedido isso permite quanto à espécie de pena?"
+    tese: "Substituição da pena privativa de liberdade por restritivas de direitos: só a reincidência em crime doloso a impede"
+    aceitos: [ "substitui*", "restritiva* | direitos" ]
+    artigos: [ "art. 44, II, CP" ]
+    gabarito: "Substituição da pena privativa de liberdade por restritiva de direitos, tendo em vista que a condenação anterior foi pela prática de crime culposo, de acordo com o Art. 44, inciso II, do Código Penal. 5/"
+    revisao: { status: revisado }
   - id: 25-porto-alegre-peca-11
     categoria: peca-detalhe
     parte: peca
     item: "11"
     secao: merito
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
-    opcoes:
-      correta: Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
-        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
-        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
-    revisao: *a1
-  - id: 25-porto-alegre-peca-12
-    categoria: peca-detalhe
-    parte: peca
-    item: "12"
-    secao: pedido
-    caso: |-
-      Breno, nascido em 07 de junho de 1945, na cidade de Porto Alegre, Rio Grande do Sul, falsifica uma assinatura em uma folha de cheque e a apresenta em loja de eletrodomésticos localizada no bairro de sua residência, com a intenção de realizar compras no valor de R$ 5.000,00 (cinco mil reais). Após a apresentação do cheque, apesar de a falsificação não ser grosseira e ser apta a enganar, o gerente do estabelecimento comercial percebe que aquele cheque não fora assinado pelo verdadeiro correntista do banco, já que o nome que constava do título de crédito era de um grande amigo seu. Descoberta a fraude, o referido gerente aciona a polícia, e Breno é preso em flagrante antes de obter a vantagem pretendida.
-
-      Com o recebimento dos autos, o Ministério Público opina pela liberdade de Breno e oferece denúncia pela prática dos crimes do Art. 171, caput, e Art. 297, § 2º, na forma do Art. 69, todos do Código Penal. Após concessão da liberdade provisória e recebimento da denúncia, houve juntada do laudo pericial do cheque, constatando a falsidade e a capacidade para iludir terceiros, bem como da Folha de Antecedentes Criminais, no qual consta uma condenação definitiva pela prática, no ano anterior, do crime de homicídio culposo na direção de veículo automotor, além de uma ação em curso pela suposta prática de crime de furto.
-
-      Durante a instrução, todos os fatos acima descritos são confirmados pelas testemunhas, não tendo sido o réu interrogado, já que, apesar de intimado, apresentou problemas de saúde no dia e não pôde comparecer à audiência. Ainda durante a audiência de instrução e julgamento, após a instrução, as partes apresentaram suas alegações, sendo consignado pela defesa o inconformismo com a ausência do réu, já que foi apresentado atestado médico, e, em seguida, o juiz proferiu sentença condenatória nos termos da denúncia, condenando o agente pela prática dos dois delitos em suas modalidades consumadas. No momento de fixar a pena-base, aumentou o magistrado a pena do estelionato em 02 meses, destacando que o comportamento de Breno não deixa qualquer dúvida de que agiu com dolo. Já a pena do uso de documento falso foi aplicada em seu patamar mínimo. Na segunda fase, não foram reconhecidas atenuantes, mas foi reconhecida a agravante da reincidência, aumentando a pena de cada um dos delitos em mais 02 meses de reclusão. No terceiro momento, não foram reconhecidas causas de aumento ou de diminuição. Assim, foi fixada a pena de 01 ano e 04 meses de reclusão e 14 dias-multa, no que tange ao crime de estelionato, e 02 anos e 02 meses de reclusão e 12 dias-multa para o crime de falsificação de documento equiparado ao público, restando a pena final em 03 anos e 06 meses de reclusão e 26 dias-multa. O regime inicial de cumprimento de pena aplicado pelo magistrado foi o semiaberto e não houve substituição da pena privativa de liberdade por restritiva de direito, tudo fundamentado na reincidência do agente.
-
-      Intimado da decisão, o Ministério Público apenas tomou ciência de seu teor, não apresentando qualquer medida.
-
-      Já a defesa técnica de Breno foi intimada de seu teor em 06 de dezembro de 2017, quarta-feira, sendo quinta-feira dia útil em todo o país.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Breno, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes.
-
-      A peça deverá ser datada no último dia do prazo para interposição. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Conhecimento e provimento do recurso. 0
-    opcoes:
-      correta: Conhecimento e provimento do recurso. 0
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Requerimento de aplicação do furto privilegiado, pleiteando a adoção de alguma das medidas previstas em lei (ou substituição da reclusão por detenção ou causa de diminuição de pena ou aplicação exclusivamente da pena de multa), na forma do Art. 155, §2º, do CP.
-        - Pedido de retratação pelo juízo a quo.
-        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
-    revisao: *a1
+    pergunta: "Se não couber a substituição, que benefício a defesa deve pedir, considerando a pena e a idade de Breno?"
+    tese: "Suspensão condicional da pena (sursis etário), para o maior de 70 anos"
+    aceitos: [ "suspensao condicional da pena | sursis" ]
+    artigos: [ "art. 77, § 2º, CP" ]
+    gabarito: "Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal"
+    revisao: { status: revisado }
   - id: 25-porto-alegre-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Bruna, nascida em 30 de março de 1999, e sua irmã Júlia, nascida em 21 de janeiro de 1998, revoltadas com o comportamento de Maria, que, segundo as irmãs, buscava um relacionamento amoroso com o namorado de Júlia, iniciaram uma discussão com esta, no dia 28 de março de 2017.
-
-      Durante a discussão, descontroladas por Maria ter dito que Júlia não tinha capacidade de manter um namorado, as irmãs pegaram pedaços de ferro que estavam no chão da rua e começaram a agredir Maria com golpes na cabeça, com intenção de matar. Após a fuga de Bruna e Júlia do local, Maria é socorrida e recebe atendimento médico no hospital da região, ficando internada por 05 dias, mas vem a falecer em razão dos golpes sofridos.
-
-      Ao tomar conhecimento dos fatos, o Ministério Público oferece denúncia em face de Bruna e Júlia pela prática do crime do Art. 121, §2º, inciso II, do Código Penal, requerendo a prisão preventiva apenas de Júlia, considerando que a mesma já seria reincidente. Após citação de Bruna e Júlia, a família das rés o(a) procura na condição de advogado(a), informando que Júlia está grávida de 20 semanas e que temem por sua saúde dentro da prisão.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Bruna e Júlia, responda aos itens a seguir.
-    comando: Qual argumento de direito material a ser apresentado em favor de Bruna para evitar o prosseguimento da ação penal em relação a mesma? Justifique.
+    item: "A"
+    pergunta: "Que argumento de direito material impede o prosseguimento da ação penal contra Bruna?"
+    tese: "Inimputabilidade: Bruna tinha 17 anos na data da conduta, e o crime se considera praticado no momento da ação (teoria da atividade)"
+    aceitos: [ [ "inimputav* | inimputabilidade" ], [ "menor de 18 | menor de idade | 17 anos | teoria da atividade | ato infracional | momento da acao | momento da conduta" ] ]
+    artigos: [ "art. 4, CP", "art. 27, CP", "art. 228, CRFB" ]
     gabarito: "O argumento a ser apresentado pela defesa de Bruna é que sua conduta, em tese, poderia configurar ato infracional, mas não crime sob o ponto de vista técnico, já que inimputável na data dos fatos. Inicialmente, importante recordar que, de acordo com a teoria majoritária, três são os elementos do conceito analítico do crime: tipicidade, ilicitude e culpabilidade. Por sua vez, a culpabilidade é formada pelos elementos imputabilidade, exigibilidade de conduta diversa e potencial conhecimento da ilicitude. Prevê o Art. 27 do Código Penal que os menores de 18 anos são penalmente inimputáveis. Diante disso, Bruna, menor de 18 anos na data dos fatos, não pratica crime, mas tão só ato infracional. Isso porque o Art. 4º do Código Penal estabelece que se considera praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado. No momento dos golpes desferidos por Julia e Bruna em Maria, com intenção de matar, Bruna era menor de 18 anos, logo inimputável, ainda que, quando do resultado morte, já fosse maior."
-    opcoes:
-      correta: Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Remessa dos autos ao órgão superior do Ministério Público, a fim de que seja oferecido o Acordo de Não Persecução Penal, nos termos do Art. 28-A, § 14º, do CPP.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 25-porto-alegre-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Bruna, nascida em 30 de março de 1999, e sua irmã Júlia, nascida em 21 de janeiro de 1998, revoltadas com o comportamento de Maria, que, segundo as irmãs, buscava um relacionamento amoroso com o namorado de Júlia, iniciaram uma discussão com esta, no dia 28 de março de 2017.
-
-      Durante a discussão, descontroladas por Maria ter dito que Júlia não tinha capacidade de manter um namorado, as irmãs pegaram pedaços de ferro que estavam no chão da rua e começaram a agredir Maria com golpes na cabeça, com intenção de matar. Após a fuga de Bruna e Júlia do local, Maria é socorrida e recebe atendimento médico no hospital da região, ficando internada por 05 dias, mas vem a falecer em razão dos golpes sofridos.
-
-      Ao tomar conhecimento dos fatos, o Ministério Público oferece denúncia em face de Bruna e Júlia pela prática do crime do Art. 121, §2º, inciso II, do Código Penal, requerendo a prisão preventiva apenas de Júlia, considerando que a mesma já seria reincidente. Após citação de Bruna e Júlia, a família das rés o(a) procura na condição de advogado(a), informando que Júlia está grávida de 20 semanas e que temem por sua saúde dentro da prisão.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Bruna e Júlia, responda aos itens a seguir.
-    comando: Considerando que verdadeiramente estejam presentes os requisitos previstos nos Artigos 312 e 313 do Código de Processo Penal, qual requerimento deveria ser formulado ao juízo para evitar que Julia permaneça no interior do sistema prisional? Justifique.
-    gabarito: O requerimento a ser formulado é de substituição da prisão preventiva por prisão domiciliar, nos termos do Art. 318, inciso IV, do CPP. O Código de Processo Penal prevê, desde a Lei nº 12.403/11, a prisão domiciliar em substituição a prisão provisória, não sendo mais restrita à fase de execução da pena. Já com a Lei nº 13.257/16, passou o CPP a prever, no Art. 318, inciso IV, a possibilidade de requerimento de substituição da prisão preventiva por domiciliar quando a presa for gestante, não mais havendo limitação do período de gestação. Basta a condição de gestante de acordo com a lei. Assim, considerando que Julia estava grávida de 20 semanas, cabível o requerimento. Cabe ressaltar que argumentações no sentido de revogação da prisão pela ausência de fundamentos dos Arts. 312 e 313 do CPP não serão aceitas, tendo em vista que o próprio comando da questão deixa claro o preenchimento dos mesmos.
-    opcoes:
-      correta: O requerimento a ser formulado é de substituição da prisão preventiva por prisão domiciliar, nos termos do Art. 318, inciso IV, do CPP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Remessa dos autos ao órgão superior do Ministério Público, a fim de que seja oferecido o Acordo de Não Persecução Penal, nos termos do Art. 28-A, § 14º, do CPP.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Presentes os requisitos da preventiva, que pedido evita que Júlia fique no sistema prisional?"
+    tese: "A substituição da preventiva por prisão domiciliar, por ser gestante"
+    aceitos: [ "domiciliar" ]
+    artigos: [ "art. 318, IV, CPP" ]
+    gabarito: "O requerimento a ser formulado é de substituição da prisão preventiva por prisão domiciliar, nos termos do Art. 318, inciso IV, do CPP. O Código de Processo Penal prevê, desde a Lei nº 12.403/11, a prisão domiciliar em substituição a prisão provisória, não sendo mais restrita à fase de execução da pena. Já com a Lei nº 13.257/16, passou o CPP a prever, no Art. 318, inciso IV, a possibilidade de requerimento de substituição da prisão preventiva por domiciliar quando a presa for gestante, não mais havendo limitação do período de gestação. Basta a condição de gestante de acordo com a lei. Assim, considerando que Julia estava grávida de 20 semanas, cabível o requerimento. Cabe ressaltar que argumentações no sentido de revogação da prisão pela ausência de fundamentos dos Arts. 312 e 313 do CPP não serão aceitas, tendo em vista que o próprio comando da questão deixa claro o preenchimento dos mesmos."
+    revisao: { status: revisado }
   - id: 25-porto-alegre-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      No dia 06 de abril de 2017, João retirou Clara, criança de 11 anos de idade, do interior da residência em que esta morava, sem autorização de qualquer pessoa, vindo a restringir sua liberdade e mantê-la dentro de um quarto trancado e sem janelas. Logo em seguida, João entrou em contato com o pai de Clara, famoso empresário da cidade, exigindo R$200.000,00 para liberar Clara e devolvê-la à sua residência.
-
-      Após o pai de Clara pagar o valor exigido, Clara é liberada e, de imediato, a família comparece à Delegacia para registrar o fato. Depois das investigações, João é identificado e os autos são encaminhados ao Ministério Público com relatório final de investigação, indiciando João. Após 90 (noventa) dias do recebimento do inquérito, os autos permanecem no gabinete do Promotor de Justiça, sem que qualquer medida tenha sido adotada.
-
-      Considerando as informações narradas, responda, na condição de advogado(a) da família de Clara, aos itens a seguir.
-    comando: "Considerando que o crime é de ação penal pública incondicionada, qual a medida a ser adotada diretamente pela família de Clara e seu advogado em busca da responsabilização criminal de João? Justifique. (Valor:"
-    gabarito: A medida a ser adotada pela família de Clara e seus advogados é a apresentação de queixa substitutiva da denúncia, dando início à ação penal privada subsidiária da pública. Sem dúvida, o crime a ser imputado a João é de ação penal pública incondicionada, de modo que, em princípio, caberia ao Ministério Público oferecer denúncia. Todavia, de acordo com o que consta do enunciado, houve omissão por parte do Ministério Público, tendo em vista que recebido o inquérito com relatório final de indiciamento de João, o Parquet se manteve inerte, não oferecendo denúncia, requerendo o arquivamento ou solicitando diligências. Assim, diante da omissão do Ministério Público, será admitida ação privada subsidiária da pública, nos termos do Art. 29 do Código de Processo Penal e Art. 5º, inciso LIX, da CRFB/88, cabendo ao Ministério Público aditar a queixa, repudiá-la ou oferecer denúncia substitutiva.
-    opcoes:
-      correta: Caberia à família de Clara dar início à ação penal privada subsidiária da pública OU oferecer queixa substitutiva da denúncia, diante da omissão do Ministério Público, nos termos do Art. 29 do CPP OU do Art. 5º, inciso LIX, da CRFB/88.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Remessa dos autos ao órgão superior do Ministério Público, a fim de que seja oferecido o Acordo de Não Persecução Penal, nos termos do Art. 28-A, § 14º, do CPP.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "O crime é de ação pública incondicionada. Que medida a família de Clara pode adotar diretamente?"
+    tese: "A ação penal privada subsidiária da pública (queixa subsidiária), pela inércia do Ministério Público"
+    aceitos: [ "privada subsidiaria | queixa subsidiaria | queixa substitutiva | acao subsidiaria" ]
+    artigos: [ "art. 29, CPP", "art. 5, LIX, CRFB" ]
+    gabarito: "A medida a ser adotada pela família de Clara e seus advogados é a apresentação de queixa substitutiva da denúncia, dando início à ação penal privada subsidiária da pública. Sem dúvida, o crime a ser imputado a João é de ação penal pública incondicionada, de modo que, em princípio, caberia ao Ministério Público oferecer denúncia. Todavia, de acordo com o que consta do enunciado, houve omissão por parte do Ministério Público, tendo em vista que recebido o inquérito com relatório final de indiciamento de João, o Parquet se manteve inerte, não oferecendo denúncia, requerendo o arquivamento ou solicitando diligências. Assim, diante da omissão do Ministério Público, será admitida ação privada subsidiária da pública, nos termos do Art. 29 do Código de Processo Penal e Art. 5º, inciso LIX, da CRFB/88, cabendo ao Ministério Público aditar a queixa, repudiá-la ou oferecer denúncia substitutiva."
+    revisao: { status: revisado }
   - id: 25-porto-alegre-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      No dia 06 de abril de 2017, João retirou Clara, criança de 11 anos de idade, do interior da residência em que esta morava, sem autorização de qualquer pessoa, vindo a restringir sua liberdade e mantê-la dentro de um quarto trancado e sem janelas. Logo em seguida, João entrou em contato com o pai de Clara, famoso empresário da cidade, exigindo R$200.000,00 para liberar Clara e devolvê-la à sua residência.
-
-      Após o pai de Clara pagar o valor exigido, Clara é liberada e, de imediato, a família comparece à Delegacia para registrar o fato. Depois das investigações, João é identificado e os autos são encaminhados ao Ministério Público com relatório final de investigação, indiciando João. Após 90 (noventa) dias do recebimento do inquérito, os autos permanecem no gabinete do Promotor de Justiça, sem que qualquer medida tenha sido adotada.
-
-      Considerando as informações narradas, responda, na condição de advogado(a) da família de Clara, aos itens a seguir.
-    comando: Em caso de inicial acusatória, qual infração penal deve ser imputada a João? Justifique.
-    gabarito: O crime a ser imputado a João é de extorsão mediante sequestro qualificada, nos termos do Art. 159, § 1º, do Código Penal, tendo em vista que João sequestrou Clara, criança de 11 anos, restringindo sua liberdade, com a clara intenção de obter, para si ou para outrem, vantagem econômica indevida como condição para o resgate.
-    opcoes:
-      correta: Extorsão mediante sequestro, presente a qualificadora pelo fato de a vítima ser menor de 18 anos, nos termos do Art. 159, § 1º, do CP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Remessa dos autos ao órgão superior do Ministério Público, a fim de que seja oferecido o Acordo de Não Persecução Penal, nos termos do Art. 28-A, § 14º, do CPP.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que crime deve ser imputado a João?"
+    tese: "Extorsão mediante sequestro, qualificada porque a vítima tem menos de 18 anos"
+    aceitos: [ "extorsao mediante sequestro" ]
+    artigos: [ "art. 159, § 1º, CP" ]
+    gabarito: "O crime a ser imputado a João é de extorsão mediante sequestro qualificada, nos termos do Art. 159, § 1º, do Código Penal, tendo em vista que João sequestrou Clara, criança de 11 anos, restringindo sua liberdade, com a clara intenção de obter, para si ou para outrem, vantagem econômica indevida como condição para o resgate."
+    revisao: { status: revisado }
   - id: 25-porto-alegre-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Carlos, 50 anos, foi condenado, de maneira definitiva, pela prática de crime de roubo, ao cumprimento de pena de 04 anos de reclusão, em regime inicial semiaberto em razão das peculiaridades do caso, apesar de naquele momento ser primário.
-
-      Após o cumprimento de 03 anos e 10 dias da pena aplicada, considerando o período de prisão provisória, Carlos veio a praticar falta grave, em 10/03/2015, dentro do estabelecimento prisional, sendo que, no mesmo dia, empreendeu fuga. Após processo administrativo disciplinar, inclusive com participação da defesa técnica de Carlos, foi reconhecida a prática de falta grave.
-
-      O juiz da execução penal, em procedimento regular, ainda no ano de 2015, confirmou o reconhecimento da prática de falta grave e determinou o reinício do prazo para obtenção do livramento condicional. Por falhas cartorárias, a defesa técnica de Carlos somente foi intimada da decisão em 14/03/2018. Com a intimação, Carlos, que nunca mais foi localizado para cumprimento do restante da pena, apesar do mandado de prisão em aberto, procura seu advogado, indaga sobre as medidas cabíveis, esclarecendo que, de fato, houve prática de falta grave, mas assegurando estar ressocializado e que nunca mais se envolveu com a prática de crimes.
-
-      Considerando apenas as informações narradas, na condição de advogado de Carlos, responda aos itens a seguir.
-    comando: Em sede de Agravo à Execução, qual argumento deverá ser apresentado para combater o mérito da decisão do magistrado? Justifique.
-    gabarito: O argumento a ser apresentado pela defesa técnica de Carlos é no sentido de que a prática de falta grave não gera o reinício do prazo de contagem do livramento condicional. Narra o enunciado que Carlos, quando do cumprimento da sua pena, praticou falta grave no interior do estabelecimento penitenciário. De acordo com o Art. 118, inciso I, da Lei nº 7.210/84, a prática de falta grave enseja à regressão de regime. Todavia, a Lei de Execução Penal não prevê como consequência da prática de falta grave o reinício do prazo para obtenção do livramento condicional, sendo certo que a execução penal também está sujeita ao princípio da legalidade. Dessa forma, equivocada a decisão do magistrado de determinar a interrupção do prazo para obtenção de livramento condicional, nos termos da Súmula 441 do Superior Tribunal de Justiça.
-    opcoes:
-      correta: O argumento a ser apresentado é o de que a prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441/STJ.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Remessa dos autos ao órgão superior do Ministério Público, a fim de que seja oferecido o Acordo de Não Persecução Penal, nos termos do Art. 28-A, § 14º, do CPP.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "No agravo em execução, que argumento combate o mérito da decisão?"
+    tese: "A falta grave não interrompe a contagem do prazo para o livramento condicional"
+    aceitos: [ "nao interrompe | nao reinicia | nao gera reinicio | nao gera o reinicio | nao recomeca | nao zera | sem interrupcao | nao interrupcao" ]
+    artigos: [ "Súmula 441 STJ" ]
+    gabarito: "O argumento a ser apresentado pela defesa técnica de Carlos é no sentido de que a prática de falta grave não gera o reinício do prazo de contagem do livramento condicional. Narra o enunciado que Carlos, quando do cumprimento da sua pena, praticou falta grave no interior do estabelecimento penitenciário. De acordo com o Art. 118, inciso I, da Lei nº 7.210/84, a prática de falta grave enseja à regressão de regime. Todavia, a Lei de Execução Penal não prevê como consequência da prática de falta grave o reinício do prazo para obtenção do livramento condicional, sendo certo que a execução penal também está sujeita ao princípio da legalidade. Dessa forma, equivocada a decisão do magistrado de determinar a interrupção do prazo para obtenção de livramento condicional, nos termos da Súmula 441 do Superior Tribunal de Justiça."
+    revisao: { status: revisado }
   - id: 25-porto-alegre-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Carlos, 50 anos, foi condenado, de maneira definitiva, pela prática de crime de roubo, ao cumprimento de pena de 04 anos de reclusão, em regime inicial semiaberto em razão das peculiaridades do caso, apesar de naquele momento ser primário.
-
-      Após o cumprimento de 03 anos e 10 dias da pena aplicada, considerando o período de prisão provisória, Carlos veio a praticar falta grave, em 10/03/2015, dentro do estabelecimento prisional, sendo que, no mesmo dia, empreendeu fuga. Após processo administrativo disciplinar, inclusive com participação da defesa técnica de Carlos, foi reconhecida a prática de falta grave.
-
-      O juiz da execução penal, em procedimento regular, ainda no ano de 2015, confirmou o reconhecimento da prática de falta grave e determinou o reinício do prazo para obtenção do livramento condicional. Por falhas cartorárias, a defesa técnica de Carlos somente foi intimada da decisão em 14/03/2018. Com a intimação, Carlos, que nunca mais foi localizado para cumprimento do restante da pena, apesar do mandado de prisão em aberto, procura seu advogado, indaga sobre as medidas cabíveis, esclarecendo que, de fato, houve prática de falta grave, mas assegurando estar ressocializado e que nunca mais se envolveu com a prática de crimes.
-
-      Considerando apenas as informações narradas, na condição de advogado de Carlos, responda aos itens a seguir.
-    comando: Por meio de Habeas Corpus, qual argumento de direito material poderá ser apresentado para evitar a execução do restante da pena de Carlos? Justifique.
-    gabarito: |-
-      Sem prejuízo, a defesa técnica de Carlos, de imediato, por meio de Habeas Corpus, poderia buscar o reconhecimento da prescrição da pretensão executória para evitar a execução do restante da pena privativa de liberdade. Isso porque o prazo da prescrição da pretensão executória, quando há início do cumprimento da pena, inicia-se quando da interrupção deste cumprimento, conforme Art. 112, II, CP, que ocorreu em 10/03/2015.
-
-      Ademais, o prazo prescricional deverá ser contado considerando a pena que resta a ser cumprida e não a aplicada, nos termos do Art. 113 do CP. No caso, restava menos de 01 ano de pena a ser cumprida, de modo que, na forma do Art. 109, inciso VI, do CP, o prazo prescricional da pretensão executória seria de 03 anos.
-
-      Ultrapassado o período de 03 anos desde a interrupção do cumprimento da pena, não sendo narrada qualquer causa interruptiva do prazo, deveria a defesa buscar o reconhecimento da perda do Estado do direito de executar o restante da pena imposta.
-    opcoes:
-      correta: O argumento é o de que ocorreu prescrição da pretensão executória, nos termos do Art. 107, inciso IV, do CP OU do Art. 110 do CP, pois entre a interrupção do cumprimento da pena e a data da manifestação do(a) advogado(a) foi ultrapassado o prazo de 03 anos.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - "Sim, resta configurada a prescrição da pretensão punitiva retroativa. Obs.: A indicação de espécie distinta de prescrição macula a integralidade do item “A”."
-        - Não há vedação legal, tendo em vista que Andy ostenta condenação pela prática de contravenção penal e não de crime, sem violação ao Art. 89 da Lei nº 9.099/95.
-        - Sim, o argumento de que ocorreu extinção da punibilidade diante da reparação do dano pelo réu, pagamento esse que precedeu sentença irrecorrível, nos termos do Art. 312, § 3º, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Em habeas corpus, que argumento de direito material evita a execução do restante da pena?"
+    tese: "A prescrição da pretensão executória: o restante da pena, de menos de 1 ano, prescreve em 3 anos, contados da fuga"
+    aceitos: [ "prescricao da pretensao executoria | prescricao executoria | pretensao executoria" ]
+    artigos: [ "art. 113, CP", "art. 110, CP", "art. 109, VI, CP", "art. 112, II, CP", "art. 107, IV, CP" ]
+    gabarito: "Sem prejuízo, a defesa técnica de Carlos, de imediato, por meio de Habeas Corpus, poderia buscar o reconhecimento da prescrição da pretensão executória para evitar a execução do restante da pena privativa de liberdade. Isso porque o prazo da prescrição da pretensão executória, quando há início do cumprimento da pena, inicia-se quando da interrupção deste cumprimento, conforme Art. 112, II, CP, que ocorreu em 10/03/2015.\n\nAdemais, o prazo prescricional deverá ser contado considerando a pena que resta a ser cumprida e não a aplicada, nos termos do Art. 113 do CP. No caso, restava menos de 01 ano de pena a ser cumprida, de modo que, na forma do Art. 109, inciso VI, do CP, o prazo prescricional da pretensão executória seria de 03 anos.\n\nUltrapassado o período de 03 anos desde a interrupção do cumprimento da pena, não sendo narrada qualquer causa interruptiva do prazo, deveria a defesa buscar o reconhecimento da perda do Estado do direito de executar o restante da pena imposta."
+    revisao: { status: revisado }
   - id: 25-porto-alegre-q4-a
     categoria: discursiva
     parte: q4
-    item: A1
-    caso: |-
-      Vitor efetuou disparos de arma de fogo contra José, com a intenção de causar sua morte. Ocorre que, por erro durante a execução, os disparos atingiram a perna de seu inimigo e não o peito, como pretendido. Esgotada a munição disponível, Vitor empreendeu fuga, enquanto José solicitou a ajuda de populares e compareceu, de imediato, ao hospital para atendimento médico.
-
-      Após o atendimento médico, já no quarto com curativos, enquanto dormia, José vem a ser picado por um escorpião, vindo a falecer no dia seguinte em razão do veneno do animal, exclusivamente. Descobertos os fatos, considerando que José somente estava no hospital em razão do comportamento de Vitor, o Ministério Público oferece denúncia em face do autor dos disparos pela prática do crime de homicídio consumado, previsto no Art. 121, caput, do Código Penal.
-
-      Após regular prosseguimento do feito, na audiência de instrução e julgamento da primeira fase do procedimento do Tribunal do Júri, quando da oitiva das testemunhas, o magistrado em atuação optou por iniciar a oitiva das testemunhas formulando diretamente suas perguntas, sem permitir às partes complementação. Após alegações finais orais das partes, o magistrado proferiu decisão de pronúncia. Apesar da impugnação da defesa quanto à formulação das perguntas pelo juiz, o magistrado esclareceu que não importaria quem fez a pergunta, pois as respostas seriam as mesmas.
-
-      Com base apenas nas informações narradas, na condição de advogado(a) de Vitor, responda aos itens a seguir.
-    comando: Qual o recurso cabível da decisão proferida pelo magistrado e qual argumento de direito processual pode ser apresentado em busca da desconstituição de tal decisão? Justifique.
-    gabarito: O recurso cabível da decisão de pronúncia é o Recurso em Sentido Estrito, nos termos do Art. 581, inciso IV, do CPP. Em relação ao argumento de direito processual, deveria o candidato alegar que houve nulidade durante a instrução probatória, tendo em vista que o magistrado formulou diretamente perguntas às testemunhas, sendo que o Código de Processo Penal prevê o sistema de cross examination para oitiva das testemunhas, cabendo as partes formularem as perguntas diretamente para as testemunhas, podendo ser complementados pelo magistrado, na forma do Art. 411 e do Art. 212, ambos do CPP. No caso, o magistrado formulou diretamente as perguntas, não oportunizou às partes a complementação e houve devida impugnação em momento adequado. A conduta do juiz configura cerceamento de defesa, de modo que devem ser anulados todos os atos desde a instrução.
-    opcoes:
-      correta: O recurso cabível da decisão de pronúncia é o Recurso em Sentido Estrito, na forma do Art. 581, inciso IV, do CPP. O argumento de direito processual a ser apresentado é o de que houve nulidade com a formulação de perguntas diretas por parte do magistrado, sem oportunizar complementação das partes, o que viola o princípio da ampla defesa OU o que gera o cerceamento de defesa.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Remessa dos autos ao órgão superior do Ministério Público, a fim de que seja oferecido o Acordo de Não Persecução Penal, nos termos do Art. 28-A, § 14º, do CPP.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    item: "A1"
+    pergunta: "Que recurso cabe contra a pronúncia?"
+    tese: "Recurso em sentido estrito"
+    aceitos: [ "recurso em sentido estrito | rese" ]
+    artigos: [ "art. 581, IV, CPP" ]
+    gabarito: "O recurso cabível da decisão de pronúncia é o Recurso em Sentido Estrito, nos termos do Art. 581, inciso IV, do CPP. Em relação ao argumento de direito processual, deveria o candidato alegar que houve nulidade durante a instrução probatória, tendo em vista que o magistrado formulou diretamente perguntas às testemunhas, sendo que o Código de Processo Penal prevê o sistema de cross examination para oitiva das testemunhas, cabendo as partes formularem as perguntas diretamente para as testemunhas, podendo ser complementados pelo magistrado, na forma do Art. 411 e do Art. 212, ambos do CPP. No caso, o magistrado formulou diretamente as perguntas, não oportunizou às partes a complementação e houve devida impugnação em momento adequado. A conduta do juiz configura cerceamento de defesa, de modo que devem ser anulados todos os atos desde a instrução."
+    revisao: { status: revisado }
   - id: 25-porto-alegre-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Vitor efetuou disparos de arma de fogo contra José, com a intenção de causar sua morte. Ocorre que, por erro durante a execução, os disparos atingiram a perna de seu inimigo e não o peito, como pretendido. Esgotada a munição disponível, Vitor empreendeu fuga, enquanto José solicitou a ajuda de populares e compareceu, de imediato, ao hospital para atendimento médico.
-
-      Após o atendimento médico, já no quarto com curativos, enquanto dormia, José vem a ser picado por um escorpião, vindo a falecer no dia seguinte em razão do veneno do animal, exclusivamente. Descobertos os fatos, considerando que José somente estava no hospital em razão do comportamento de Vitor, o Ministério Público oferece denúncia em face do autor dos disparos pela prática do crime de homicídio consumado, previsto no Art. 121, caput, do Código Penal.
-
-      Após regular prosseguimento do feito, na audiência de instrução e julgamento da primeira fase do procedimento do Tribunal do Júri, quando da oitiva das testemunhas, o magistrado em atuação optou por iniciar a oitiva das testemunhas formulando diretamente suas perguntas, sem permitir às partes complementação. Após alegações finais orais das partes, o magistrado proferiu decisão de pronúncia. Apesar da impugnação da defesa quanto à formulação das perguntas pelo juiz, o magistrado esclareceu que não importaria quem fez a pergunta, pois as respostas seriam as mesmas.
-
-      Com base apenas nas informações narradas, na condição de advogado(a) de Vitor, responda aos itens a seguir.
-    comando: Existe argumento de direito material a ser apresentado, em momento oportuno, para questionar a capitulação jurídica apresentada pelo Ministério Público? Justifique.
-    gabarito: |-
-      Em relação ao argumento de direito material, deveria a defesa de Vitor questionar a capitulação jurídica realizada pelo Ministério Público. De fato, Vitor, ao efetuar disparos de arma de fogo contra José, em direção ao seu peito, tinha a intenção de matá-lo, como o enunciado deixa claro. Todavia, os disparos de Vitor não foram suficientes para causar a morte de seu inimigo por circunstâncias alheias à sua vontade, já que os projéteis atingiram a perna de José. José recebeu atendimento médico e já estava no quarto com curativos.
-
-      Posteriormente, José veio a ser mordido por escorpião, sendo que o veneno do animal causou, exclusivamente, sua morte. Certo é que José só estava no hospital em razão dos disparos de Vitor, mas houve causa superveniente, relativamente independente, que por si só causou a morte de José. Diante disso, o resultado fica afastado, mas responde Vitor pelos atos já praticados, conforme previsão do Art. 13, § 1º, do Código Penal.
-
-      Assim, por mais que José tenha falecido, Vitor deveria responder pelo crime de tentativa de homicídio.
-    opcoes:
-      correta: O argumento de direito material é o de que ocorreu causa superveniente relativamente independente que por si só causou o resultado, devendo Vitor responder por tentativa de homicídio, nos termos do Art. 13, § 1º, do CP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Remessa dos autos ao órgão superior do Ministério Público, a fim de que seja oferecido o Acordo de Não Persecução Penal, nos termos do Art. 28-A, § 14º, do CPP.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que argumento de direito material afasta a imputação de homicídio consumado?"
+    tese: "Causa superveniente relativamente independente: a picada do escorpião causou por si só a morte, e Vitor responde só por tentativa de homicídio"
+    aceitos: [ [ "relativamente independente" ], [ "superveniente" ], [ "tentativa" ] ]
+    artigos: [ "art. 13, § 1º, CP" ]
+    gabarito: "Em relação ao argumento de direito material, deveria a defesa de Vitor questionar a capitulação jurídica realizada pelo Ministério Público. De fato, Vitor, ao efetuar disparos de arma de fogo contra José, em direção ao seu peito, tinha a intenção de matá-lo, como o enunciado deixa claro. Todavia, os disparos de Vitor não foram suficientes para causar a morte de seu inimigo por circunstâncias alheias à sua vontade, já que os projéteis atingiram a perna de José. José recebeu atendimento médico e já estava no quarto com curativos.\n\nPosteriormente, José veio a ser mordido por escorpião, sendo que o veneno do animal causou, exclusivamente, sua morte. Certo é que José só estava no hospital em razão dos disparos de Vitor, mas houve causa superveniente, relativamente independente, que por si só causou a morte de José. Diante disso, o resultado fica afastado, mas responde Vitor pelos atos já praticados, conforme previsão do Art. 13, § 1º, do Código Penal.\n\nAssim, por mais que José tenha falecido, Vitor deveria responder pelo crime de tentativa de homicídio."
+    revisao: { status: revisado }

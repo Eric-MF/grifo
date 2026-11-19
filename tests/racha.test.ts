@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { COMPRIMENTO_MINIMO, coresDaRacha, geometriaRacha, luminancia, sementeRacha} from "@/games/flap-suitcase/racha";
-import { TEMAS } from "@/games/flap-suitcase/themes";
+import { TEMAS } from "@/games/flap-suitcase/catalogo";
 
 const W = 74;
 const E = W / 2;

@@ -1,0 +1,80 @@
+# Grifos do GRIFO (.examples/Marcações GRIFO.md): Peças (marca-texto verde).
+# Cada entrada marca só as palavras-chave do dispositivo (`palavras`), não o artigo inteiro.
+# `tema` igual em lugares diferentes gera o "vide" automático entre eles.
+# Os "extras" da lista (depois do `---`) foram distribuídos nos grupos a que pertencem;
+# as súmulas que estavam nos extras vão com `cor: sumulas`.
+
+# Constituição Federal
+- { cor: pecas, grupo: "Constituição Federal", tema: "Ação penal privada subsidiária da pública", lei: cf, disp: art5.i59, palavras: ["ação privada nos crimes de ação pública", "não for intentada no prazo legal"] }
+- { cor: pecas, grupo: "Constituição Federal", tema: "Relaxamento de prisão", lei: cf, disp: art5.i65, palavras: ["imediatamente relaxada"] }
+- { cor: pecas, grupo: "Constituição Federal", tema: "Liberdade provisória", lei: cf, disp: art5.i66, palavras: ["liberdade provisória", "com ou sem fiança"] }
+- { cor: pecas, grupo: "Constituição Federal", tema: "Habeas corpus", lei: cf, disp: art5.i68, palavras: ['"habeas-corpus"'] }
+- { cor: pecas, grupo: "Constituição Federal", tema: "Mandado de segurança", lei: cf, disp: art5.i69, palavras: ["mandado de segurança", "direito líquido e certo"] }
+- { cor: pecas, grupo: "Constituição Federal", tema: "Recurso ordinário constitucional", lei: cf, disp: art102.i2, palavras: ["em recurso ordinário"], nota: "Recurso ordinário constitucional ao STF" }
+- { cor: pecas, grupo: "Constituição Federal", tema: "Recurso ordinário constitucional", lei: cf, disp: art102.i2.aa, palavras: ["habeas corpus", "mandado de segurança", "se denegatória a decisão"], nota: "Recurso ordinário constitucional ao STF" }
+- { cor: pecas, grupo: "Constituição Federal", tema: "Recurso ordinário constitucional", lei: cf, disp: art105.i2, palavras: ["em recurso ordinário"], nota: "Recurso ordinário constitucional ao STJ" }
+- { cor: pecas, grupo: "Constituição Federal", tema: "Recurso ordinário constitucional", lei: cf, disp: art105.i2.aa, palavras: ["habeas corpus", "quando a decisão for denegatória"], nota: "Recurso ordinário constitucional ao STJ" }
+- { cor: pecas, grupo: "Constituição Federal", tema: "Recurso ordinário constitucional", lei: cf, disp: art105.i2.ab, palavras: ["mandados de segurança", "quando denegatória a decisão"], nota: "Recurso ordinário constitucional ao STJ" }
+- { cor: pecas, grupo: "Constituição Federal", tema: "Recurso extraordinário", lei: cf, disp: art102.i3, palavras: ["recurso extraordinário"] }
+- { cor: pecas, grupo: "Constituição Federal", tema: "Recurso especial", lei: cf, disp: art105.i3, palavras: ["recurso especial"] }
+
+# Código Penal
+- { cor: pecas, grupo: "Código Penal", tema: "Livramento condicional", lei: cp, disp: art83, palavras: ["conceder livramento condicional"] }
+- { cor: pecas, grupo: "Código Penal", tema: "Queixa-crime (ação penal privada)", lei: cp, disp: art100.p2, palavras: ["mediante queixa do ofendido"] }
+- { cor: pecas, grupo: "Código Penal", tema: "Queixa-crime (ação penal privada)", lei: cp, disp: art145, palavras: ["somente se procede mediante queixa"] }
+- { cor: pecas, grupo: "Código Penal", tema: "Ação penal privada subsidiária da pública", lei: cp, disp: art100.p3, palavras: ["pode intentar-se nos crimes de ação pública", "não oferece denúncia no prazo legal"] }
+
+# Código de Processo Penal
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Queixa-crime (ação penal privada)", lei: cpp, disp: art30, palavras: ["caberá intentar a ação privada"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Queixa-crime (ação penal privada)", lei: cpp, disp: art41, palavras: ["queixa conterá"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Ação penal privada subsidiária da pública", lei: cpp, disp: art29, palavras: ["ação privada nos crimes de ação pública", "não for intentada no prazo legal"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Relaxamento de prisão", lei: cpp, disp: art310.i1, palavras: ["relaxar a prisão ilegal"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Liberdade provisória", lei: cpp, disp: art310.i3, palavras: ["conceder liberdade provisória"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Revogação da prisão preventiva", lei: cpp, disp: art316, palavras: ["revogar a prisão preventiva", "falta de motivo para que ela subsista"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Embargos de declaração", lei: cpp, disp: art382, palavras: ["no prazo de 2 (dois) dias", "declare a sentença"], nota: "Embargos de declaração da sentença (decisão de primeiro grau)" }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Embargos de declaração", lei: cpp, disp: art619, palavras: ["Aos acórdãos", "embargos de declaração", "no prazo de dois dias"], nota: "Embargos de declaração do acórdão (decisão colegiada)" }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Resposta à acusação", lei: cpp, disp: art396, palavras: ["responder à acusação, por escrito", "prazo de 10 (dez) dias"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Resposta à acusação", lei: cpp, disp: art396-a, palavras: ["argüir preliminares", "alegar tudo o que interesse à sua defesa", "arrolar testemunhas"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Tribunal do Júri", lei: cpp, disp: art406, palavras: ["responder a acusação, por escrito", "prazo de 10 (dez) dias"], nota: "Resposta à acusação no procedimento do júri" }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Memoriais", lei: cpp, disp: art403.p3, palavras: ["prazo de 5 (cinco) dias sucessivamente", "memoriais"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Memoriais", lei: cpp, disp: art404.pu, palavras: ["prazo sucessivo de 5 (cinco) dias", "alegações finais, por memorial"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Defesa preliminar do funcionário público", lei: cpp, disp: art514, palavras: ["para responder por escrito", "prazo de quinze dias"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Apelação", lei: cpp, disp: art593, palavras: ["Caberá apelação no prazo de 5 (cinco) dias"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "RESE", lei: cpp, disp: art581, palavras: ["Caberá recurso, no sentido estrito"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Embargos infringentes", lei: cpp, disp: art609.pu, palavras: ["não for unânime", "desfavorável ao réu", "embargos infringentes e de nulidade"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Revisão criminal", lei: cpp, disp: art621, palavras: ["revisão dos processos findos"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Carta testemunhável", lei: cpp, disp: art639, palavras: ["carta testemunhável"] }
+# Habeas corpus: a lista o põe sob "Constituição Federal", mas os arts. 647 e 648 são do CPP.
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Habeas corpus", lei: cpp, disp: art647, palavras: ["habeas corpus"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Habeas corpus", lei: cpp, disp: art648, palavras: ["coação considerar-se-á ilegal"] }
+# Extras do CPP
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Representação", lei: cpp, disp: art25, palavras: ["representação será irretratável", "depois de oferecida a denúncia"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Denúncia e queixa", lei: cpp, disp: art41, palavras: ["exposição do fato criminoso", "qualificação do acusado", "classificação do crime"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Assistente de acusação", lei: cpp, disp: art268, palavras: ["como assistente do Ministério Público"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Assistente de acusação", lei: cpp, disp: art598, palavras: ["ainda que não se tenha habilitado como assistente", "poderá interpor apelação"], nota: "Apelação supletiva (o código não usa esse nome)" }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Apelação contra impronúncia", lei: cpp, disp: art416, palavras: ["sentença de impronúncia", "caberá apelação"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Contrarrazões ao RESE", lei: cpp, disp: art588, palavras: ["Dentro de dois dias", "aberta vista ao recorrido por igual prazo"] }
+- { cor: pecas, grupo: "Código de Processo Penal", tema: "Razões e contrarrazões da apelação", lei: cpp, disp: art600, palavras: ["prazo de oito dias cada um para oferecer razões"] }
+
+# Lei de Execução Penal (Lei 7.210/84)
+- { cor: pecas, grupo: "Lei de Execução Penal", tema: "Progressão de regime", lei: lep, disp: art112, palavras: ["executada de forma progressiva", "regime menos rigoroso"] }
+- { cor: pecas, grupo: "Lei de Execução Penal", tema: "Remição de pena", lei: lep, disp: art126, palavras: ["remir, por trabalho ou por estudo"] }
+- { cor: pecas, grupo: "Lei de Execução Penal", tema: "Agravo em execução", lei: lep, disp: art197, palavras: ["caberá recurso de agravo", "sem efeito suspensivo"] }
+
+# Juizados Especiais Criminais (Lei 9.099/95)
+- { cor: pecas, grupo: "Juizados Especiais Criminais", tema: "Memoriais", lei: lei-9099, disp: art81, palavras: ["passando-se imediatamente aos debates orais"] }
+- { cor: pecas, grupo: "Juizados Especiais Criminais", tema: "Apelação", lei: lei-9099, disp: art82, palavras: ["rejeição da denúncia ou queixa", "caberá apelação"] }
+- { cor: pecas, grupo: "Juizados Especiais Criminais", tema: "Embargos de declaração", lei: lei-9099, disp: art83, palavras: ["Cabem embargos de declaração"] }
+
+# Lei de Drogas (Lei 11.343/06)
+- { cor: pecas, grupo: "Lei de Drogas", tema: "Defesa prévia", lei: lei-11343, disp: art55, palavras: ["defesa prévia", "no prazo de 10 (dez) dias"] }
+- { cor: pecas, grupo: "Lei de Drogas", tema: "Memoriais", lei: lei-11343, disp: art57, palavras: ["para sustentação oral"] }
+
+# Código de Trânsito Brasileiro (extra)
+- { cor: pecas, grupo: "Código de Trânsito Brasileiro", tema: "RESE", lei: lei-9503, disp: art294.pu, palavras: ["caberá recurso em sentido estrito"], nota: "RESE no Código de Trânsito" }
+
+# Súmulas
+- { cor: pecas, grupo: "Súmulas", tema: "Agravo em execução", lei: sumulas-stf, disp: s-700, palavras: ["agravo contra decisão do juiz da execução penal"] }
+- { cor: pecas, grupo: "Súmulas", tema: "Defesa preliminar do funcionário público", lei: sumulas-stj, disp: s-330, palavras: ["É desnecessária a resposta preliminar", "instruída por inquérito policial"] }
+
+# Súmulas que estavam nos extras das Peças (Representação): marca-texto azul.

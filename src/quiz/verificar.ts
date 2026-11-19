@@ -4,7 +4,8 @@ import { contextoCorrecao } from "@/lib/correcao/cliente";
 import { avaliarItens, identificarPeca, pecasNoInicio } from "@/lib/correcao/grader";
 import { normalize } from "@/lib/correcao/normalize";
 import { alvosSemLei, referenciasDigitadas, type ReferenciaDigitada } from "@/lib/leis/busca";
-import type { Letra, Nivel, PerguntaItem, PerguntaObjetiva, PerguntaPeca } from "./types";
+import type { Letra, Nivel, PerguntaObjetiva, PerguntaPeca, PerguntaTese } from "./types";
+import { pecasAproximadas } from "./pecaAproximada";
 
 export interface CorrecaoPeca {
   formato: "peca";
@@ -41,12 +42,21 @@ export interface Respondida {
   artigos: ArtigoCitado[];
 }
 
-export interface CorrecaoItem {
-  formato: "item";
+/** No fácil, o que a questão pede: o artigo da tese dada ou a tese do artigo dado. */
+export type ModoFacil = "artigo" | "tese";
+
+export interface CorrecaoTese {
+  formato: "tese";
   acertou: boolean;
-  /** fração da nota do item (null no nível fácil, que é de alternativas) */
-  fracao: number | null;
-  faltou: string[];
+  /** o ponto central (null quando o nível não pede: o fácil de artigo) */
+  acertouTese: boolean | null;
+  /** o artigo (null quando o nível não pede: o médio e o fácil de tese) */
+  acertouArtigo: boolean | null;
+  teseEsperada: string;
+  /** o artigo esperado, legível */
+  artigoEsperado: string;
+  /** o que o aluno marcou (fácil) ou digitou (médio e difícil) */
+  respondida: { alternativa?: string; tese?: string; artigo?: string; artigos: ArtigoCitado[] };
 }
 
 export interface CorrecaoObjetiva {
@@ -56,7 +66,7 @@ export interface CorrecaoObjetiva {
   correta: Letra;
 }
 
-export type Correcao = CorrecaoPeca | CorrecaoItem | CorrecaoObjetiva;
+export type Correcao = CorrecaoPeca | CorrecaoTese | CorrecaoObjetiva;
 
 export function nomePeca(tipo: string) {
   return contextoCorrecao().pecas[tipo]?.nome ?? tipo;
@@ -119,7 +129,29 @@ export function previaDoFundamento(texto: string): { citacoes: string[]; semLei:
 }
 
 /** As peças reconhecidas no que se digitou (nomes, sem repetir), sem olhar qual é a certa. */
-export const previaDaPeca = (texto: string): string[] => (texto.trim() ? [...new Set(pecasNoInicio(texto, contextoCorrecao(), "", [], true).map((h) => h.nome))] : []);
+export function previaDaPeca(texto: string): string[] {
+  if (!texto.trim()) return [];
+  const ctx = contextoCorrecao();
+  const exatas = [...new Set(pecasNoInicio(texto, ctx, "", [], true).map((h) => h.nome))];
+  // sem o nome exato: o aproximado (a correção aceita se for de uma peça só; mais de uma, a prévia mostra todas)
+  return exatas.length ? exatas : pecasAproximadas(texto, ctx.pecas).map((x) => x.nome);
+}
+
+/**
+ * Responder falando: as peças que a frase nomeia, na ordem em que aparecem (a primeira vale); pelo nome aproximado, só
+ * se for de uma peça só ("recurso" é de várias: nenhuma).
+ */
+export function pecasFaladas(texto: string): string[] {
+  if (!texto.trim()) return [];
+  const ctx = contextoCorrecao();
+  const exatas = [...new Set(pecasNoInicio(texto, ctx, "", [], true).map((h) => h.nome))];
+  if (exatas.length) return exatas;
+  const aproximadas = pecasAproximadas(texto, ctx.pecas);
+  return aproximadas.length === 1 ? [aproximadas[0]!.nome] : [];
+}
+
+/** Responder falando: a primeira citação da frase, como a correção a lê ("Art. 593, inciso III, alínea d — Código de Processo Penal"). */
+export const artigoFalado = (texto: string): string | null => (texto.trim() ? (previaDoFundamento(texto).citacoes[0] ?? null) : null);
 
 /** Os artigos reconhecidos na resposta escrita (discursiva), como a correção dos itens os lê. */
 export const previaDaResposta = (texto: string): string[] => {
@@ -140,7 +172,12 @@ export function artigosCitados(texto: string): ArtigoCitado[] {
 /** nivel 1: `peca` é a chave escolhida entre as alternativas; níveis 2 e 3: texto digitado. */
 export function corrigirResposta(p: PerguntaPeca, nivel: Nivel, entrada: { peca: string; fundamento?: string }): CorrecaoPeca {
   const ctx = contextoCorrecao();
-  const achada = nivel === 1 || !entrada.peca.trim() ? null : identificarPeca(entrada.peca, p.resposta.peca, [], ctx, true);
+  let achada = nivel === 1 || !entrada.peca.trim() ? null : identificarPeca(entrada.peca, p.resposta.peca, [], ctx, true);
+  // sem o nome exato nem um apelido: o nome aproximado ("Mem", "Resposta Acusação", "Memorias"), se for de uma peça só
+  if (achada?.status === "nao-identificada") {
+    const [uma, outra] = pecasAproximadas(entrada.peca, ctx.pecas);
+    if (uma && !outra) achada = uma.tipo === p.resposta.peca ? { status: "ok" } : { status: "inadequada", detectada: uma.nome, tipo: uma.tipo };
+  }
   const acertouPeca = nivel === 1 ? entrada.peca === p.resposta.peca : achada?.status === "ok";
   // a peça que o aluno deu: a alternativa escolhida ou a reconhecida no texto digitado
   const tipo = nivel === 1 ? entrada.peca : acertouPeca ? p.resposta.peca : achada?.status === "inadequada" ? achada.tipo : null;
@@ -173,15 +210,71 @@ export function corrigirResposta(p: PerguntaPeca, nivel: Nivel, entrada: { peca:
   };
 }
 
-/** Nível 1: índice da alternativa. Médio: metade da nota do item. Difícil: o item inteiro. */
-export function corrigirItem(p: PerguntaItem, nivel: Nivel, entrada: { opcao?: number; texto?: string }): CorrecaoItem {
-  if (nivel === 1) return { formato: "item", acertou: !!p.opcoes[entrada.opcao ?? -1]?.correta, fracao: null, faltou: [] };
-  const resultado = avaliarItens(p.itens, entrada.texto ?? "", contextoCorrecao());
-  const valor = resultado.reduce((s, i) => s + i.valor, 0);
-  const obtido = resultado.reduce((s, i) => s + i.obtido, 0);
-  const fracao = valor ? obtido / valor : 0;
-  const faltou = resultado.flatMap((i) => i.componentes.filter((c) => c.obtido < c.valor).flatMap((c) => c.faltou));
-  return { formato: "item", acertou: fracao >= (nivel === 2 ? 0.5 : 0.999), fracao, faltou };
+/** O ponto central digitado tem um dos grupos de termos aceitos (a mesma leitura da correção do simulado). */
+export function atendeTese(p: Pick<PerguntaTese, "tese" | "aceitos">, texto: string): boolean {
+  if (!texto.trim()) return false;
+  const [r] = avaliarItens([{ n: "tese", descricao: p.tese, componentes: [{ id: "c1", valor: 1, alternativas: p.aceitos }] }], texto, contextoCorrecao());
+  return !!r && r.obtido > 0;
+}
+
+/** O artigo digitado é um dos aceitos, com o parágrafo, o inciso e a alínea. */
+export function atendeArtigo(p: Pick<PerguntaTese, "artigos">, texto: string): boolean {
+  const ctx = contextoCorrecao();
+  const achadas = citacoesDoFundamento(texto);
+  return p.artigos.some((spec) => {
+    const esp = parseDispositivo(spec, ctx.lex);
+    return !!esp && achadas.some((a) => citacaoAtende(esp, a));
+  });
+}
+
+/** O artigo, legível ("art. 65, III, d, do CP"). */
+export const artigoLegivel = (spec: string) => legivel(spec);
+
+/**
+ * O artigo no meio de uma frase, com o artigo definido: "o art. 20, § 3º, do Código Penal", "a Súmula 545 do STJ",
+ * "o art. 4, § 10-A, da Lei de Organizações Criminosas".
+ */
+export function artigoNaFrase(spec: string): string {
+  const texto = legivel(spec);
+  if (/^S[úu]mula/.test(texto)) return `a ${texto}`;
+  const [ref, nome] = texto.split(" — ");
+  const de = nome ? `, ${/^(Lei|Constitui|Consolida)/.test(nome) ? "da" : "do"} ${nome}` : "";
+  return `o ${ref!.replace(/^Art\./, "art.")}${de}`;
+}
+
+/**
+ * Fácil: a alternativa marcada (o artigo ou a tese). Médio: o ponto central digitado. Difícil: o ponto central e o
+ * artigo, os dois certos.
+ */
+export function corrigirTese(
+  p: PerguntaTese,
+  nivel: Nivel,
+  entrada: { alternativa?: { modo: ModoFacil; texto: string; correta: boolean }; tese?: string; artigo?: string },
+): CorrecaoTese {
+  const base = { formato: "tese" as const, teseEsperada: p.tese, artigoEsperado: legivel(p.artigos[0]!) };
+  if (nivel === 1) {
+    const a = entrada.alternativa;
+    const certa = !!a?.correta;
+    return {
+      ...base,
+      acertou: certa,
+      acertouTese: a?.modo === "tese" ? certa : null,
+      acertouArtigo: a?.modo === "artigo" ? certa : null,
+      respondida: { alternativa: a?.texto, artigos: [] },
+    };
+  }
+  const tese = (entrada.tese ?? "").trim();
+  const acertouTese = atendeTese(p, tese);
+  if (nivel === 2) return { ...base, acertou: acertouTese, acertouTese, acertouArtigo: null, respondida: { tese, artigos: [] } };
+  const artigo = (entrada.artigo ?? "").trim();
+  const acertouArtigo = atendeArtigo(p, artigo);
+  return {
+    ...base,
+    acertou: acertouTese && acertouArtigo,
+    acertouTese,
+    acertouArtigo,
+    respondida: { tese, artigo, artigos: artigosCitados(artigo) },
+  };
 }
 
 export function corrigirObjetiva(p: PerguntaObjetiva, escolhida: Letra): CorrecaoObjetiva {

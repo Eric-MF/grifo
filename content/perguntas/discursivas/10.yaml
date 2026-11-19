@@ -1,232 +1,51 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "10"
+introducoes:
+  peca: "Em 18/10/2010, em Cuiabá, Jane levou o carro de Gabriela, deixado aberto com a chave na ignição, para revendê-lo no Paraguai, e foi presa no dia seguinte, quando ia cruzar a fronteira para negociar a venda; o carro ficou escondido no Brasil. Reincidente específica e com maus antecedentes, foi condenada a 5 anos, no regime fechado, como se o veículo tivesse sido levado ao exterior, e a condenação transitou em julgado. Agora você descobre um fato que nunca apareceu no processo: em 27/10/2010, antes de a denúncia ser recebida (30/10/2010), Jane indicou ao filho da vítima onde estava o carro, e ele o pegou de volta intacto. Você defende Jane."
+  q3: "José, conhecido por vender drogas, foi preso pela Polícia Militar em Foz do Iguaçu (PR) levando 500 g de cocaína e 50 ampolas de cloreto de etila. No flagrante, disse que levaria a droga para Porto Vera Cruz (RS) e mostrou a passagem de avião já comprada."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["10-peca-1", "10-peca-3-2", "10-peca-6", "10-q3-b"]
 perguntas:
-  - id: 10-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Jane, no dia 18 de outubro de 2010, na cidade de Cuiabá – MT, subtraiu veículo automotor de propriedade de Gabriela. Tal subtração ocorreu no momento em que a vítima saltou do carro para buscar um pertence que havia esquecido em casa, deixando-o aberto e com a chave na ignição. Jane, ao ver tal situação, aproveitou-se e subtraiu o bem, com o intuito de revendê-lo no Paraguai. Imediatamente, a vítima chamou a polícia e esta empreendeu perseguição ininterrupta, tendo prendido Jane em flagrante somente no dia seguinte, exatamente quando esta tentava cruzar a fronteira para negociar a venda do bem, que estava guardado em local não revelado.
-
-      Em 30 de outubro de 2010, a denúncia foi recebida. No curso do processo, as testemunhas arroladas afirmaram que a ré estava, realmente, negociando a venda do bem no país vizinho e que havia um comprador, terceiro de boa-fé arrolado como testemunha, o qual, em suas declarações, ratificou os fatos. Também ficou apurado que Jane possuía maus antecedentes e reincidente específica nesse tipo de crime, bem como que Gabriela havia morrido no dia seguinte à subtração, vítima de enfarte sofrido logo após os fatos, já que o veículo era essencial à sua subsistência. A ré confessou o crime em seu interrogatório.
-
-      Ao cabo da instrução criminal, a ré foi condenada a cinco anos de reclusão no regime inicial fechado para cumprimento da pena privativa de liberdade, tendo sido levada em consideração a confissão, a reincidência específica, os maus antecedentes e as consequências do crime, quais sejam, a morte da vítima e os danos decorrentes da subtração de bem essencial à sua subsistência.
-
-      A condenação transitou definitivamente em julgado, e a ré iniciou o cumprimento da pena em 10 de novembro de 2012. No dia 5 de março de 2013, você, já na condição de advogado(a) de Jane, recebe em seu escritório a mãe de Jane, acompanhada de Gabriel, único parente vivo da vítima, que se identificou como sendo filho desta.
-
-      Ele informou que, no dia 27 de outubro de 2010, Jane, acolhendo os conselhos maternos, lhe telefonou, indicando o local onde o veículo estava escondido. O filho da vítima, nunca mencionado no processo, informou que no mesmo dia do telefonema, foi ao local e pegou o veículo de volta, sem nenhum embaraço, bem como que tal veículo estava em seu poder desde então.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento correto: Tribunal de Justiça do Estado de Mato Grosso."
-    opcoes:
-      correta: "Endereçamento correto: Tribunal de Justiça do Estado de Mato Grosso."
-      erradas:
-        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
-        - "Endereçamento correto: Interposição para o Juiz da XX Vara Criminal de Vitória, Estado do Espírito Santo."
-        - "Endereçamento correto: Juízo da 1ª Vara Criminal da Comarca de Belo Horizonte-MG."
-        - "Endereçamento: 3ª Vara Criminal da Comarca de São Gonçalo/RJ."
-        - "Endereçamento: Tribunal Regional Federal da 10ª Região."
-    revisao: &a1
-      status: revisado
   - id: 10-peca-3-1
     categoria: peca-detalhe
     parte: peca
     item: "3.1"
     secao: merito
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Jane, no dia 18 de outubro de 2010, na cidade de Cuiabá – MT, subtraiu veículo automotor de propriedade de Gabriela. Tal subtração ocorreu no momento em que a vítima saltou do carro para buscar um pertence que havia esquecido em casa, deixando-o aberto e com a chave na ignição. Jane, ao ver tal situação, aproveitou-se e subtraiu o bem, com o intuito de revendê-lo no Paraguai. Imediatamente, a vítima chamou a polícia e esta empreendeu perseguição ininterrupta, tendo prendido Jane em flagrante somente no dia seguinte, exatamente quando esta tentava cruzar a fronteira para negociar a venda do bem, que estava guardado em local não revelado.
-
-      Em 30 de outubro de 2010, a denúncia foi recebida. No curso do processo, as testemunhas arroladas afirmaram que a ré estava, realmente, negociando a venda do bem no país vizinho e que havia um comprador, terceiro de boa-fé arrolado como testemunha, o qual, em suas declarações, ratificou os fatos. Também ficou apurado que Jane possuía maus antecedentes e reincidente específica nesse tipo de crime, bem como que Gabriela havia morrido no dia seguinte à subtração, vítima de enfarte sofrido logo após os fatos, já que o veículo era essencial à sua subsistência. A ré confessou o crime em seu interrogatório.
-
-      Ao cabo da instrução criminal, a ré foi condenada a cinco anos de reclusão no regime inicial fechado para cumprimento da pena privativa de liberdade, tendo sido levada em consideração a confissão, a reincidência específica, os maus antecedentes e as consequências do crime, quais sejam, a morte da vítima e os danos decorrentes da subtração de bem essencial à sua subsistência.
-
-      A condenação transitou definitivamente em julgado, e a ré iniciou o cumprimento da pena em 10 de novembro de 2012. No dia 5 de março de 2013, você, já na condição de advogado(a) de Jane, recebe em seu escritório a mãe de Jane, acompanhada de Gabriel, único parente vivo da vítima, que se identificou como sendo filho desta.
-
-      Ele informou que, no dia 27 de outubro de 2010, Jane, acolhendo os conselhos maternos, lhe telefonou, indicando o local onde o veículo estava escondido. O filho da vítima, nunca mencionado no processo, informou que no mesmo dia do telefonema, foi ao local e pegou o veículo de volta, sem nenhum embaraço, bem como que tal veículo estava em seu poder desde então.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "Jane indicou onde estava o carro, e ele foi devolvido inteiro antes do recebimento da denúncia. Que causa de diminuição de pena isso configura?"
+    tese: "Arrependimento posterior, que diminui a pena"
+    aceitos: [ "arrependimento posterior" ]
+    artigos: [ "art. 16, CP" ]
     gabarito: "Da tese do arrependimento posterior: incide o instituto do arrependimento posterior, nos termos do Art. 16 do CP."
-    opcoes:
-      correta: "Da tese do arrependimento posterior: incide o instituto do arrependimento posterior, nos termos do Art. 16 do CP."
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - "Dos Pedidos: Conhecimento e provimento do recurso OU concessão do livramento condicional; com a consequente expedição do alvará de soltura"
-        - No mérito, absolvição de Roberta.
-        - Afastamento do pedido de aplicação do regime inicial fechado, pois o crime de tráfico privilegiado não é considerando hediondo pelo STF OU porque é inconstitucional a previsão do Art. 2º, § 1º, da Lei nº 8.072/90 de aplicação obrigatória do regime inicial fechado aos crimes hediondos.
-        - Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
-    revisao: *a1
-  - id: 10-peca-3-2
-    categoria: peca-detalhe
-    parte: peca
-    item: "3.2"
-    secao: merito
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Jane, no dia 18 de outubro de 2010, na cidade de Cuiabá – MT, subtraiu veículo automotor de propriedade de Gabriela. Tal subtração ocorreu no momento em que a vítima saltou do carro para buscar um pertence que havia esquecido em casa, deixando-o aberto e com a chave na ignição. Jane, ao ver tal situação, aproveitou-se e subtraiu o bem, com o intuito de revendê-lo no Paraguai. Imediatamente, a vítima chamou a polícia e esta empreendeu perseguição ininterrupta, tendo prendido Jane em flagrante somente no dia seguinte, exatamente quando esta tentava cruzar a fronteira para negociar a venda do bem, que estava guardado em local não revelado.
-
-      Em 30 de outubro de 2010, a denúncia foi recebida. No curso do processo, as testemunhas arroladas afirmaram que a ré estava, realmente, negociando a venda do bem no país vizinho e que havia um comprador, terceiro de boa-fé arrolado como testemunha, o qual, em suas declarações, ratificou os fatos. Também ficou apurado que Jane possuía maus antecedentes e reincidente específica nesse tipo de crime, bem como que Gabriela havia morrido no dia seguinte à subtração, vítima de enfarte sofrido logo após os fatos, já que o veículo era essencial à sua subsistência. A ré confessou o crime em seu interrogatório.
-
-      Ao cabo da instrução criminal, a ré foi condenada a cinco anos de reclusão no regime inicial fechado para cumprimento da pena privativa de liberdade, tendo sido levada em consideração a confissão, a reincidência específica, os maus antecedentes e as consequências do crime, quais sejam, a morte da vítima e os danos decorrentes da subtração de bem essencial à sua subsistência.
-
-      A condenação transitou definitivamente em julgado, e a ré iniciou o cumprimento da pena em 10 de novembro de 2012. No dia 5 de março de 2013, você, já na condição de advogado(a) de Jane, recebe em seu escritório a mãe de Jane, acompanhada de Gabriel, único parente vivo da vítima, que se identificou como sendo filho desta.
-
-      Ele informou que, no dia 27 de outubro de 2010, Jane, acolhendo os conselhos maternos, lhe telefonou, indicando o local onde o veículo estava escondido. O filho da vítima, nunca mencionado no processo, informou que no mesmo dia do telefonema, foi ao local e pegou o veículo de volta, sem nenhum embaraço, bem como que tal veículo estava em seu poder desde então.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A restituição do bem ocorreu antes do recebimento da denúncia e foi integral, razão pela qual a revisionanda faz jus à diminuição da pena.
-    opcoes:
-      correta: A restituição do bem ocorreu antes do recebimento da denúncia e foi integral, razão pela qual a revisionanda faz jus à diminuição da pena.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - "Dos Pedidos: Conhecimento e provimento do recurso OU concessão do livramento condicional; com a consequente expedição do alvará de soltura"
-        - Aplicação do regime inicial semiaberto ou aberto do cumprimento de pena, pois a gravidade em abstrato não justifica regime de pena mais severo OU a fixação de regime de cumprimento mais severo exige motivação concreta, nos termos da Súmula 718/STF OU 719/STF OU 440/STJ.
-        - Manutenção do reconhecimento da atenuante da confissão espontânea, considerando que foi a confissão utilizada como argumento/para formação da convicção do juiz, nos termos da Súmula 545 do STJ.
-        - "Subsidiariamente: aplicação da pena base no mínimo legal, tendo em vista que o fato posterior ao crime julgado não pode ser considerado maus antecedentes."
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 10-peca-4
     categoria: peca-detalhe
     parte: peca
     item: "4"
     secao: merito
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Jane, no dia 18 de outubro de 2010, na cidade de Cuiabá – MT, subtraiu veículo automotor de propriedade de Gabriela. Tal subtração ocorreu no momento em que a vítima saltou do carro para buscar um pertence que havia esquecido em casa, deixando-o aberto e com a chave na ignição. Jane, ao ver tal situação, aproveitou-se e subtraiu o bem, com o intuito de revendê-lo no Paraguai. Imediatamente, a vítima chamou a polícia e esta empreendeu perseguição ininterrupta, tendo prendido Jane em flagrante somente no dia seguinte, exatamente quando esta tentava cruzar a fronteira para negociar a venda do bem, que estava guardado em local não revelado.
-
-      Em 30 de outubro de 2010, a denúncia foi recebida. No curso do processo, as testemunhas arroladas afirmaram que a ré estava, realmente, negociando a venda do bem no país vizinho e que havia um comprador, terceiro de boa-fé arrolado como testemunha, o qual, em suas declarações, ratificou os fatos. Também ficou apurado que Jane possuía maus antecedentes e reincidente específica nesse tipo de crime, bem como que Gabriela havia morrido no dia seguinte à subtração, vítima de enfarte sofrido logo após os fatos, já que o veículo era essencial à sua subsistência. A ré confessou o crime em seu interrogatório.
-
-      Ao cabo da instrução criminal, a ré foi condenada a cinco anos de reclusão no regime inicial fechado para cumprimento da pena privativa de liberdade, tendo sido levada em consideração a confissão, a reincidência específica, os maus antecedentes e as consequências do crime, quais sejam, a morte da vítima e os danos decorrentes da subtração de bem essencial à sua subsistência.
-
-      A condenação transitou definitivamente em julgado, e a ré iniciou o cumprimento da pena em 10 de novembro de 2012. No dia 5 de março de 2013, você, já na condição de advogado(a) de Jane, recebe em seu escritório a mãe de Jane, acompanhada de Gabriel, único parente vivo da vítima, que se identificou como sendo filho desta.
-
-      Ele informou que, no dia 27 de outubro de 2010, Jane, acolhendo os conselhos maternos, lhe telefonou, indicando o local onde o veículo estava escondido. O filho da vítima, nunca mencionado no processo, informou que no mesmo dia do telefonema, foi ao local e pegou o veículo de volta, sem nenhum embaraço, bem como que tal veículo estava em seu poder desde então.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Desclassificação para furto simples, pois não houve efetivo deslocamento do bem para o exterior, restando o crime do Art. 155, caput, do CP.
-    opcoes:
-      correta: Desclassificação para furto simples, pois não houve efetivo deslocamento do bem para o exterior, restando o crime do Art. 155, caput, do CP.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - "Dos Pedidos: Conhecimento e provimento do recurso OU concessão do livramento condicional; com a consequente expedição do alvará de soltura"
-        - No mérito, absolvição de Roberta.
-        - Afastamento do pedido de aplicação do regime inicial fechado, pois o crime de tráfico privilegiado não é considerando hediondo pelo STF OU porque é inconstitucional a previsão do Art. 2º, § 1º, da Lei nº 8.072/90 de aplicação obrigatória do regime inicial fechado aos crimes hediondos.
-        - Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
-    revisao: *a1
+    pergunta: "O carro nunca saiu do país. Para que crime a defesa deve pedir a desclassificação?"
+    tese: "Desclassificação para furto simples: o carro nunca saiu do país"
+    aceitos: [ "furto simples" ]
+    artigos: [ "art. 155, CP" ]
+    gabarito: "Desclassificação para furto simples, pois não houve efetivo deslocamento do bem para o exterior, restando o crime do Art. 155, caput, do CP."
+    revisao: { status: revisado }
   - id: 10-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: merito
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Jane, no dia 18 de outubro de 2010, na cidade de Cuiabá – MT, subtraiu veículo automotor de propriedade de Gabriela. Tal subtração ocorreu no momento em que a vítima saltou do carro para buscar um pertence que havia esquecido em casa, deixando-o aberto e com a chave na ignição. Jane, ao ver tal situação, aproveitou-se e subtraiu o bem, com o intuito de revendê-lo no Paraguai. Imediatamente, a vítima chamou a polícia e esta empreendeu perseguição ininterrupta, tendo prendido Jane em flagrante somente no dia seguinte, exatamente quando esta tentava cruzar a fronteira para negociar a venda do bem, que estava guardado em local não revelado.
-
-      Em 30 de outubro de 2010, a denúncia foi recebida. No curso do processo, as testemunhas arroladas afirmaram que a ré estava, realmente, negociando a venda do bem no país vizinho e que havia um comprador, terceiro de boa-fé arrolado como testemunha, o qual, em suas declarações, ratificou os fatos. Também ficou apurado que Jane possuía maus antecedentes e reincidente específica nesse tipo de crime, bem como que Gabriela havia morrido no dia seguinte à subtração, vítima de enfarte sofrido logo após os fatos, já que o veículo era essencial à sua subsistência. A ré confessou o crime em seu interrogatório.
-
-      Ao cabo da instrução criminal, a ré foi condenada a cinco anos de reclusão no regime inicial fechado para cumprimento da pena privativa de liberdade, tendo sido levada em consideração a confissão, a reincidência específica, os maus antecedentes e as consequências do crime, quais sejam, a morte da vítima e os danos decorrentes da subtração de bem essencial à sua subsistência.
-
-      A condenação transitou definitivamente em julgado, e a ré iniciou o cumprimento da pena em 10 de novembro de 2012. No dia 5 de março de 2013, você, já na condição de advogado(a) de Jane, recebe em seu escritório a mãe de Jane, acompanhada de Gabriel, único parente vivo da vítima, que se identificou como sendo filho desta.
-
-      Ele informou que, no dia 27 de outubro de 2010, Jane, acolhendo os conselhos maternos, lhe telefonou, indicando o local onde o veículo estava escondido. O filho da vítima, nunca mencionado no processo, informou que no mesmo dia do telefonema, foi ao local e pegou o veículo de volta, sem nenhum embaraço, bem como que tal veículo estava em seu poder desde então.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Consequente modificação do regime para o semiaberto, conforme a Súmula 269 do STJ.
-    opcoes:
-      correta: Consequente modificação do regime para o semiaberto, conforme a Súmula 269 do STJ.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - "Dos Pedidos: Conhecimento e provimento do recurso OU concessão do livramento condicional; com a consequente expedição do alvará de soltura"
-        - No mérito, absolvição de Roberta.
-        - Afastamento do pedido de aplicação do regime inicial fechado, pois o crime de tráfico privilegiado não é considerando hediondo pelo STF OU porque é inconstitucional a previsão do Art. 2º, § 1º, da Lei nº 8.072/90 de aplicação obrigatória do regime inicial fechado aos crimes hediondos.
-        - Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
-    revisao: *a1
-  - id: 10-peca-6
-    categoria: peca-detalhe
-    parte: peca
-    item: "6"
-    secao: pedido
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Jane, no dia 18 de outubro de 2010, na cidade de Cuiabá – MT, subtraiu veículo automotor de propriedade de Gabriela. Tal subtração ocorreu no momento em que a vítima saltou do carro para buscar um pertence que havia esquecido em casa, deixando-o aberto e com a chave na ignição. Jane, ao ver tal situação, aproveitou-se e subtraiu o bem, com o intuito de revendê-lo no Paraguai. Imediatamente, a vítima chamou a polícia e esta empreendeu perseguição ininterrupta, tendo prendido Jane em flagrante somente no dia seguinte, exatamente quando esta tentava cruzar a fronteira para negociar a venda do bem, que estava guardado em local não revelado.
-
-      Em 30 de outubro de 2010, a denúncia foi recebida. No curso do processo, as testemunhas arroladas afirmaram que a ré estava, realmente, negociando a venda do bem no país vizinho e que havia um comprador, terceiro de boa-fé arrolado como testemunha, o qual, em suas declarações, ratificou os fatos. Também ficou apurado que Jane possuía maus antecedentes e reincidente específica nesse tipo de crime, bem como que Gabriela havia morrido no dia seguinte à subtração, vítima de enfarte sofrido logo após os fatos, já que o veículo era essencial à sua subsistência. A ré confessou o crime em seu interrogatório.
-
-      Ao cabo da instrução criminal, a ré foi condenada a cinco anos de reclusão no regime inicial fechado para cumprimento da pena privativa de liberdade, tendo sido levada em consideração a confissão, a reincidência específica, os maus antecedentes e as consequências do crime, quais sejam, a morte da vítima e os danos decorrentes da subtração de bem essencial à sua subsistência.
-
-      A condenação transitou definitivamente em julgado, e a ré iniciou o cumprimento da pena em 10 de novembro de 2012. No dia 5 de março de 2013, você, já na condição de advogado(a) de Jane, recebe em seu escritório a mãe de Jane, acompanhada de Gabriel, único parente vivo da vítima, que se identificou como sendo filho desta.
-
-      Ele informou que, no dia 27 de outubro de 2010, Jane, acolhendo os conselhos maternos, lhe telefonou, indicando o local onde o veículo estava escondido. O filho da vítima, nunca mencionado no processo, informou que no mesmo dia do telefonema, foi ao local e pegou o veículo de volta, sem nenhum embaraço, bem como que tal veículo estava em seu poder desde então.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de Habeas Corpus, sustentando, para tanto, as teses jurídicas pertinentes.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: "Pedidos, com fundamento no art. 626 do CPP: desclassificação para furto simples; diminuição da pena; fixação do regime semiaberto."
-    opcoes:
-      correta: "Pedidos, com fundamento no art. 626 do CPP: desclassificação para furto simples; diminuição da pena; fixação do regime semiaberto."
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - Absolvição do crime de violação de domicílio OU absolvição nos termos do art. 386, III, do CPP.
-        - "Pedidos: Conhecimento e provimento do recurso OU concessão da progressão de regime"
-        - Pedido de desclassificação para afastar o reconhecimento de crime doloso contra a vida, nos termos do Art. 419 do CPP
-        - Conhecimento e provimento do recurso.
-    revisao: *a1
+    pergunta: "Com a pena reduzida, que regime inicial a defesa deve pedir, apesar da reincidência?"
+    tese: "Regime inicial semiaberto para o reincidente com pena de até 4 anos"
+    aceitos: [ "semiaberto | semi-aberto | semi aberto" ]
+    artigos: [ "Súmula 269 STJ" ]
+    gabarito: "Consequente modificação do regime para o semiaberto, conforme a Súmula 269 do STJ."
+    revisao: { status: revisado }
   - id: 10-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      José, conhecido em seu bairro por vender entorpecentes, resolve viajar para Foz do Iguaçu (PR). Em sua bagagem, José transporta 500g de cocaína e 50 ampolas de cloreto de etila. Em Foz do Iguaçu, José foi preso em flagrante pela Polícia Militar em virtude do transporte das substâncias entorpecentes. Na lavratura do flagrante, José afirma que seu objetivo era transportar a droga até a cidade de Porto Vera Cruz (RS), mencionando inclusive a passagem de avião que já havia comprado.
-
-      Você é contratado para efetuar um pedido de liberdade provisória e o que mais entender de Direito em favor de José.
-
-      Atento somente ao que foi narrado na hipótese acima, responda aos itens a seguir.
-    comando: O órgão competente para julgamento é a Justiça Estadual ou a Justiça Federal? Justifique.
-    gabarito: |-
-      A. O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil (Porto Vera Cruz é município do Rio Grande do Sul e Foz do Iguaçu é município do Paraná) e que não há qualquer menção à transposição de fronteira nacional. A competência somente poderia ser atribuída à Justiça Federal se José tivesse cometido o crime de tráfico internacional de entorpecentes (objetivo de traficar para o exterior), na forma do disposto no art. 70, caput, da Lei 11.343/2006 e do verbete 522 da Súmula do STF.
-
-      B. Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior.
-    opcoes:
-      correta: "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Como não houve eficácia no arrependimento OU como não houve atendimento à exigência do Art. 15, CP, Wilson deverá responder pelo resultado morte OU deverá responder pelo crime de homicídio doloso consumado.
-        - Vanessa não foi corretamente condenada por peculato porque não tinha conhecimento da condição de funcionário público de João, dependendo a comunicação da elementar desse elemento subjetivo OU porque não pode ser aplicado o Art. 30 do CP pela ausência de elemento subjetivo.
-        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
-  - id: 10-q3-b
-    categoria: discursiva
-    parte: q3
-    item: B
-    caso: |-
-      José, conhecido em seu bairro por vender entorpecentes, resolve viajar para Foz do Iguaçu (PR). Em sua bagagem, José transporta 500g de cocaína e 50 ampolas de cloreto de etila. Em Foz do Iguaçu, José foi preso em flagrante pela Polícia Militar em virtude do transporte das substâncias entorpecentes. Na lavratura do flagrante, José afirma que seu objetivo era transportar a droga até a cidade de Porto Vera Cruz (RS), mencionando inclusive a passagem de avião que já havia comprado.
-
-      Você é contratado para efetuar um pedido de liberdade provisória e o que mais entender de Direito em favor de José.
-
-      Atento somente ao que foi narrado na hipótese acima, responda aos itens a seguir.
-    comando: Se José objetivasse apenas traficar drogas em Foz do Iguaçu, o órgão competente seria o mesmo da situação acima? Justifique.
-    gabarito: |-
-      A. O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil (Porto Vera Cruz é município do Rio Grande do Sul e Foz do Iguaçu é município do Paraná) e que não há qualquer menção à transposição de fronteira nacional. A competência somente poderia ser atribuída à Justiça Federal se José tivesse cometido o crime de tráfico internacional de entorpecentes (objetivo de traficar para o exterior), na forma do disposto no art. 70, caput, da Lei 11.343/2006 e do verbete 522 da Súmula do STF.
-
-      B. Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior.
-    opcoes:
-      correta: "Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior. OBS.1: A justificativa correta é essencial para atribuição de pontos, pois não há intervalo de pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Como não houve eficácia no arrependimento OU como não houve atendimento à exigência do Art. 15, CP, Wilson deverá responder pelo resultado morte OU deverá responder pelo crime de homicídio doloso consumado.
-        - Não é possível a condenação exclusivamente com base nas declarações do agente colaborador, segundo o Art. 4º, § 16º, da Lei nº 12.850/13, devendo ser corroborada por outros elementos de prova.
-        - O argumento é o de que o início da contagem do prazo decadencial somente ocorreu em 23/10/2017 OU no dia em que o ofendido teve conhecimento sobre a autoria, logo não havia se encerrado quando do oferecimento da queixa-crime, nos termos do Art. 38 do CPP OU Art. 103 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "A"
+    pergunta: "O destino da droga era outra cidade brasileira. A que Justiça cabe julgar José?"
+    tese: "Competência da Justiça Estadual: não houve tráfico para o exterior"
+    aceitos: [ "justica estadual | estadual" ]
+    artigos: [ "Súmula 522 STF", "art. 70, Lei 11.343" ]
+    gabarito: "A. O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil (Porto Vera Cruz é município do Rio Grande do Sul e Foz do Iguaçu é município do Paraná) e que não há qualquer menção à transposição de fronteira nacional. A competência somente poderia ser atribuída à Justiça Federal se José tivesse cometido o crime de tráfico internacional de entorpecentes (objetivo de traficar para o exterior), na forma do disposto no art. 70, caput, da Lei 11.343/2006 e do verbete 522 da Súmula do STF.\n\nB. Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior."
+    revisao: { status: revisado }

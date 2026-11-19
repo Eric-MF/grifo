@@ -2,6 +2,7 @@
 // Um jogo novo implementa GameModule; a plataforma fornece os serviços comuns
 // (perguntas, anúncios, recordes, compartilhamento) e a interface ao redor.
 import type { Categoria } from "@/quiz/types";
+import type { DataFesta } from "./calendario";
 import type { FormatoContador } from "./contadores";
 
 interface PoderHud {
@@ -80,6 +81,14 @@ export interface ItemJogo {
   requisito?: string;
   /** secreto: não aparece no seletor enquanto está bloqueado; ao ser liberado aparece sem indicação */
   secreto?: boolean;
+  /** só aparece no seletor quando todos os itens anteriores da lista estão liberados; antes disso, nem o "???" aparece */
+  sequencial?: boolean;
+  /** grupo do estilo no menu (feriados, estados…); os grupos só aparecem quando todos os estilos sem grupo estão liberados */
+  grupo?: string;
+  /** estilo datado: fora da semana do evento fica escondido, a não ser que já tenha sido comprado */
+  janela?: DataFesta;
+  /** fundo CSS da amostra de cor no seletor de estilos */
+  amostra?: string;
   /** resumo de como foi conseguido (dica do personagem) */
   comoObter?: string;
   /** moedas para comprar; só vale para itens que não dependem de XP */
@@ -88,6 +97,39 @@ export interface ItemJogo {
   desenhar?: (c: CanvasRenderingContext2D, estilo: string) => void;
   /** poder que o item traz; mostrado ao passar o mouse, só quando o item está liberado */
   poder?: { nome: string; descricao: string; icone: string; duracao: number };
+}
+
+/** Uma trilha de melhoria de um poder (ver flap-suitcase/melhorias.ts): textos do nível 0 ao máximo e o preço de cada nível. */
+export interface TrilhaMelhoria {
+  /** "duracao" | "forca" | "recarga" | "frequencia" | "efeito" | "visual" */
+  id: string;
+  nome: string;
+  /** do nível 0 (sem melhoria) ao máximo: o que a trilha dá e o contrapeso ("" quando não há) */
+  niveis: { ganho: string; contrapeso: string }[];
+  /** preço do 1º nível em diante */
+  precos: number[];
+}
+/** Poder que pode ser melhorado com moedas, como o menu mostra. */
+export interface PoderMelhoravel {
+  id: string;
+  nome: string;
+  descricao: string;
+  icone: string;
+  cor: string;
+  /** dono do poder: só aparece no menu depois que esse personagem for liberado */
+  personagem?: string;
+  trilhas: TrilhaMelhoria[];
+}
+/**
+ * Cores do estilo escolhido para o painel dos poderes combinar com ele: o tom do fundo, a borda, o destaque, o texto
+ * sobre o destaque e o céu da prévia (de cima para baixo).
+ */
+export interface CoresMenu {
+  fundo: string;
+  borda: string;
+  acento: string;
+  texto: string;
+  ceu: [string, string];
 }
 
 export interface GameHostApi {
@@ -122,6 +164,10 @@ export interface GameOptions {
   personagem?: string;
   /** tipos de pergunta que entram no quiz do jogo */
   categorias?: Categoria[];
+  /** modo automático das perguntas (o mesmo do treino): os tipos e os níveis sobem conforme o jogador acerta */
+  automatico?: boolean;
+  /** níveis das melhorias de poder compradas, por `"<poder>:<trilha>"` (vêm do progresso) */
+  melhorias?: Record<string, number>;
 }
 
 export interface GameInstance {
@@ -129,6 +175,8 @@ export interface GameInstance {
   pausar(): void;
   continuar(): void;
   usarPoderProprio(): void;
+  /** moedas e XP ganhos fora do voo (o vídeo da pergunta): entram na partida, não no total */
+  ganharMoedas?(moedas: number, xp?: number): void;
   configurar(o: Partial<GameOptions>): void;
   destruir(): void;
 }
@@ -147,13 +195,20 @@ export interface IconesHud {
 export interface GameModule {
   criar(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: GameOptions): GameInstance;
   estilos: ItemJogo[];
+  /** grupos de estilos, na ordem do menu (ver ItemJogo.grupo) */
+  gruposEstilos?: { id: string; nome: string }[];
   personagens?: ItemJogo[];
-  /** "Como jogar" do menu: texto e, opcionalmente, a lista de poderes/itens. */
-  comoJogar?: {
-    texto: string;
-    /** `personagem`: id do dono do poder; o item só aparece depois que ele for liberado */
-    itens?: { icone?: string; texto: string; personagem?: string }[];
-  };
+  /** "Como jogar": o texto que o botão de informações do menu abre (os poderes ficam na seção Poderes). */
+  comoJogar?: { texto: string };
   /** Ícones do HUD por estilo (o tema Pixel usa a arte 8-bit). Sem isso, o HUD usa emojis. */
   iconesHud?: (estilo: string) => IconesHud | null;
+  /** poderes que podem ser melhorados com moedas, na ordem do menu */
+  poderes?: PoderMelhoravel[];
+  /** cores do menu no estilo escolhido (o painel dos poderes usa) */
+  coresMenu?: (estilo: string) => CoresMenu;
+  /**
+   * Prévia do poder no menu: o personagem no estilo escolhido, com o poder ligado e a aura no nível visual `nivelVisual`.
+   * `t` é o tempo em segundos, para animar.
+   */
+  desenharPoder?: (c: CanvasRenderingContext2D, poder: string, nivelVisual: number, estilo: string, personagem: string, t: number) => void;
 }

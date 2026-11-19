@@ -1,13 +1,17 @@
-// Súmulas do STF e do STJ lidas como as leis: cada súmula com texto é um dispositivo (id "s-154") de uma "lei"
-// própria ("sumulas-stj"). Assim o leitor é o mesmo: barra de leitura, grifos, slide, "Vide" com prévia e "Leis".
+// Súmulas do STF, do STJ e as vinculantes (só o STF as tem) lidas como as leis: cada súmula com texto é um dispositivo
+// (id "s-154") de uma "lei" própria ("sumulas-stj", "sumulas-vinculantes"). Assim o leitor é o mesmo: barra de leitura, grifos, slide, "Vide" com prévia e "Leis".
 // O que muda fica aqui: a fonte, o rótulo "Súmula N", o status e as informações adicionais.
 // Pura (sem arquivos): a página e o build usam a mesma conversão.
 import type { Remissivo, RemissivoEntrada, SumulaDados, SumulasDoTribunal } from "./dados";
 import type { Ato, Bloco, InfoBloco } from "./linha-do-tempo";
 
-export type Tribunal = "stf" | "stj";
-export const TRIBUNAIS: Record<Tribunal, string> = { stf: "STF", stj: "STJ" };
-export const NOME_SUMULAS = (t: Tribunal) => `Súmulas do ${TRIBUNAIS[t]}`;
+/** As listas de súmulas: as do STF, as vinculantes (também do STF) e as do STJ. A ordem é a do Vade Mecum. */
+export type Tribunal = "vinculantes" | "stf" | "stj";
+/** O tribunal de cada lista (para "Ver no site do STF"). */
+export const TRIBUNAIS: Record<Tribunal, string> = { vinculantes: "STF", stf: "STF", stj: "STJ" };
+export const NOME_SUMULAS = (t: Tribunal) => (t === "vinculantes" ? "Súmulas Vinculantes" : `Súmulas do ${TRIBUNAIS[t]}`);
+/** "Súmula 145", "Súmula Vinculante 11". */
+export const rotuloSumula = (t: Tribunal, numero: number | string) => `Súmula ${t === "vinculantes" ? "Vinculante " : ""}${numero}`;
 
 /** Id da "lei" das súmulas de um tribunal: guarda grifos, leitura e posição como a de uma lei. */
 export const idSumulas = (t: Tribunal) => `sumulas-${t}`;
@@ -20,11 +24,12 @@ export function rotaDaLei(id: string): string {
   return ehSumulas(id) ? `/leis/sumulas/${id.slice("sumulas-".length)}/` : `/leis/${id}/`;
 }
 
-/** A cor das súmulas (no Vade Mecum e no leitor): diferente das cores dos tipos de lei (Códigos, Constituição, Estatutos, Leis). */
-export const COR_SUMULAS = "#be185d";
+/** A cor das súmulas (no Vade Mecum e no leitor): diferente das cores dos tipos de lei (Códigos, Constituição, Estatutos, Leis).
+ * A variável segue o tema (globals.css). */
+export const COR_SUMULAS = "var(--lei-sumulas)";
 
 /** As listas de súmulas que aparecem no painel "Leis" do leitor, depois das leis. */
-export const LISTAS_SUMULAS: { id: string; nome: string }[] = (["stf", "stj"] as Tribunal[]).map((t) => ({ id: idSumulas(t), nome: NOME_SUMULAS(t) }));
+export const LISTAS_SUMULAS: { id: string; nome: string }[] = (Object.keys(TRIBUNAIS) as Tribunal[]).map((t) => ({ id: idSumulas(t), nome: NOME_SUMULAS(t) }));
 
 const STATUS: Record<Exclude<SumulaDados["status"], "vigente">, string> = { superada: "Superada", cancelada: "Cancelada" };
 
@@ -36,6 +41,13 @@ export function infoDaSumula(s: SumulaDados): InfoBloco[] {
   if (e.julgamento) linhas.push({ rotulo: "Julgamento", texto: e.julgamento });
   if (e.fonte) linhas.push({ rotulo: "Fonte", texto: e.fonte });
   if (e.dataAprovacao) linhas.push({ rotulo: "Aprovação", texto: e.dataAprovacao });
+  if (e.dataPublicacao) linhas.push({ rotulo: "Publicação", texto: e.dataPublicacao });
+  if (e.teses?.length) linhas.push({ rotulo: e.teses.length === 1 ? "Tese de repercussão geral" : "Teses de repercussão geral", texto: e.teses.join("\n") });
+  if (e.precedentesRepresentativos?.length)
+    linhas.push({
+      rotulo: e.precedentesRepresentativos.length === 1 ? "Precedente representativo" : "Precedentes representativos",
+      texto: e.precedentesRepresentativos.map((j) => [j.titulo, j.ementa, j.referencia ? `[${j.referencia}]` : ""].filter(Boolean).join(" ")).join("\n"),
+    });
   if (e.jurisprudencia?.length)
     linhas.push({
       rotulo: "Jurisprudência selecionada",
@@ -52,17 +64,21 @@ export function infoDaSumula(s: SumulaDados): InfoBloco[] {
   return linhas;
 }
 
-/** A data de aprovação da súmula (AAAA-MM-DD): "Sessão Plenária de 13-12-1963" (STF), "julgado em 25/04/1990" (STJ). */
+/**
+ * A data de aprovação da súmula (AAAA-MM-DD): "Sessão Plenária de 13-12-1963" (STF), "julgado em 25/04/1990" (STJ);
+ * nas vinculantes, a de publicação ("DJE de 6-6-2007").
+ */
 export function dataDaSumula(s: SumulaDados): string | undefined {
-  const m = `${s.extras.dataAprovacao ?? ""} ${s.extras.julgamento ?? ""}`.match(/(\d{1,2})[-/.](\d{1,2})[-/.](\d{4})/);
+  const m = `${s.extras.dataAprovacao ?? ""} ${s.extras.julgamento ?? ""} ${s.extras.dataPublicacao ?? ""}`.match(/(\d{1,2})[-/.](\d{1,2})[-/.](\d{4})/);
   return m ? `${m[3]}-${m[2]!.padStart(2, "0")}-${m[1]!.padStart(2, "0")}` : undefined;
 }
 
 /**
  * Os dispositivos de leitura das súmulas de um tribunal: só as que têm texto (as da lista sem texto ainda não
- * entram no leitor). O "Vide" vira link quando a súmula citada também tem texto, em qualquer dos dois tribunais.
+ * entram no leitor). O "Vide" vira link quando a súmula citada também tem texto, em qualquer das listas; um "Vide
+ * Súmula Vinculante N" sem alvo (das súmulas do STF coletadas antes das vinculantes) ganha o alvo pelo texto.
  */
-export function blocosDaSumulas(dados: SumulasDoTribunal, disponiveis: Record<Tribunal, ReadonlySet<number>>): Bloco[] {
+export function blocosDaSumulas(dados: SumulasDoTribunal, disponiveis: Partial<Record<Tribunal, ReadonlySet<number>>>): Bloco[] {
   return dados.sumulas
     .filter((s) => s.baixada)
     .sort((a, b) => a.numero - b.numero)
@@ -71,8 +87,19 @@ export function blocosDaSumulas(dados: SumulasDoTribunal, disponiveis: Record<Tr
       const atos: Ato[] = [];
       if (s.status !== "vigente") atos.push({ tipo: "outro", bruto: `(${STATUS[s.status]})` });
       for (const v of s.vide) {
-        const alvo = v.alvo && disponiveis[v.alvo.tribunal].has(v.alvo.numero) ? v.alvo : null;
+        const n = !v.alvo && v.texto.match(/Súmula\s+Vinculante\s+(?:n[º°.]?\s*)?(\d+)/i)?.[1];
+        const pedido = v.alvo ?? (n ? { tribunal: "vinculantes" as const, numero: Number(n) } : undefined);
+        const alvo = pedido && disponiveis[pedido.tribunal]?.has(pedido.numero) ? pedido : null;
         atos.push({ tipo: "vide", bruto: `(${v.texto.replace(/\.$/, "")})`, ...(alvo ? { lei: idSumulas(alvo.tribunal), art: idSumula(alvo.numero) } : {}) });
+      }
+      // nas súmulas do STF, a observação "Veja Súmula Vinculante 37." é um Vide para a vinculante
+      for (const o of s.extras.observacoes ?? []) {
+        if (!/^Vej[ao]\b/i.test(o)) continue;
+        for (const m of o.matchAll(/Súmula\s+Vinculante\s+(?:n[º°.]?\s*)?(\d+)/gi)) {
+          const numero = Number(m[1]);
+          if (!disponiveis.vinculantes?.has(numero)) continue;
+          atos.push({ tipo: "vide", bruto: `(Vide Súmula Vinculante ${numero})`, lei: idSumulas("vinculantes"), art: idSumula(numero) });
+        }
       }
       const info = infoDaSumula(s);
       const data = dataDaSumula(s);
@@ -80,9 +107,9 @@ export function blocosDaSumulas(dados: SumulasDoTribunal, disponiveis: Record<Tr
         tipo: "artigo",
         disp: id,
         ancora: id,
-        rotulo: `Súmula ${s.numero}`,
+        rotulo: rotuloSumula(dados.tribunal, s.numero),
         // o rótulo entra no texto, como o "Art. N" das leis: o leitor separa e destaca quando alguém cita a súmula
-        texto: `Súmula ${s.numero} ${s.enunciado}`,
+        texto: `${rotuloSumula(dados.tribunal, s.numero)} ${s.enunciado}`,
         superada: s.status !== "vigente",
         atos,
         ...(data ? { data } : {}),
@@ -91,10 +118,10 @@ export function blocosDaSumulas(dados: SumulasDoTribunal, disponiveis: Record<Tr
     });
 }
 
-/** Os números das súmulas com texto de cada tribunal (para o "Vide" saber o que tem link). */
-export function disponiveisDe(stf: SumulasDoTribunal, stj: SumulasDoTribunal): Record<Tribunal, Set<number>> {
-  const com = (d: SumulasDoTribunal) => new Set(d.sumulas.filter((s) => s.baixada).map((s) => s.numero));
-  return { stf: com(stf), stj: com(stj) };
+/** Os números das súmulas com texto de cada lista (para o "Vide" saber o que tem link). Lista que falta: nenhuma. */
+export function disponiveisDe(listas: Partial<Record<Tribunal, SumulasDoTribunal>>): Record<Tribunal, Set<number>> {
+  const com = (d?: SumulasDoTribunal) => new Set(d?.sumulas.filter((s) => s.baixada).map((s) => s.numero) ?? []);
+  return { vinculantes: com(listas.vinculantes), stf: com(listas.stf), stj: com(listas.stj) };
 }
 
 const normalizar = (t: string) =>
@@ -147,7 +174,7 @@ export function remissivoDasSumulas(dados: SumulasDoTribunal, vocabulario: strin
         .map((n) => {
           const s = porNumero.get(n)!;
           const texto = s.enunciado.length > 110 ? `${s.enunciado.slice(0, 109).replace(/\s+\S*$/, "")}…` : s.enunciado;
-          return { texto: s.status === "vigente" ? texto : `(${STATUS[s.status]}) ${texto}`, ref: `Súmula ${n}` };
+          return { texto: s.status === "vigente" ? texto : `(${STATUS[s.status]}) ${texto}`, ref: rotuloSumula(dados.tribunal, n) };
         }),
     }))
     .sort((a, b) => normalizar(a.palavra).localeCompare(normalizar(b.palavra)));

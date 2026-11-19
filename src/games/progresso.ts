@@ -1,10 +1,13 @@
 // Progresso do jogador por jogo: XP e moedas somam entre partidas e liberam itens.
+import { janelaAtual } from "./calendario";
 import type { ItemJogo } from "./types";
 
 export interface Progresso {
   xp: number;
   moedas: number;
   comprados: string[];
+  /** níveis das melhorias de poder compradas, por `"<poder>:<trilha>"` (os saves antigos não têm) */
+  melhorias?: Record<string, number>;
 }
 
 export const PROGRESSO_INICIAL: Progresso = { xp: 0, moedas: 0, comprados: [] };
@@ -13,7 +16,7 @@ export const PROGRESSO_INICIAL: Progresso = { xp: 0, moedas: 0, comprados: [] };
  * Arquivo local `.env.development.local` com NEXT_PUBLIC_GRIFO_DESBLOQUEAR_TUDO=1 libera
  * tudo em `next dev`. O arquivo fica fora do git (`.env*` no .gitignore) e não entra no build.
  */
-const TUDO_LIBERADO =
+export const TUDO_LIBERADO =
   process.env.NODE_ENV !== "production" && process.env.NEXT_PUBLIC_GRIFO_DESBLOQUEAR_TUDO === "1";
 
 export function desbloqueado(item: ItemJogo, p: Progresso): boolean {
@@ -40,7 +43,24 @@ export function ordenarPersonagens(personagens: ItemJogo[], p: Progresso): ItemJ
 }
 
 /**
- * Itens do "Como jogar" que o jogador pode ver: os sem personagem dono e os poderes de personagens já liberados.
+ * Itens que aparecem no seletor. Um item `sequencial` fica escondido enquanto algum item anterior da lista estiver bloqueado;
+ * os de um `grupo` só aparecem quando todos os itens sem grupo estão liberados; e um datado (`janela`) bloqueado só aparece
+ * na semana do evento.
+ */
+export function itensVisiveis(itens: ItemJogo[], p: Progresso, agora: Date = new Date()): ItemJogo[] {
+  const principaisLiberados = itens.filter((i) => !i.grupo).every((i) => desbloqueado(i, p));
+  return itens.filter((item, i) => {
+    if (item.grupo && !principaisLiberados) return false;
+    if (item.janela && !desbloqueado(item, p) && !janelaAtual(item.janela, agora)) return false;
+    return !item.sequencial || itens.slice(0, i).every((anterior) => desbloqueado(anterior, p));
+  });
+}
+
+/** Um item datado só pode ser comprado na semana do evento; os outros, sempre. */
+export const aVendaAgora = (item: ItemJogo, agora: Date = new Date()) => !item.janela || janelaAtual(item.janela, agora) !== null;
+
+/**
+ * Itens que o jogador pode ver (os poderes do menu): os sem personagem dono e os de personagens já liberados.
  * O poder de um personagem bloqueado some junto, sem revelar que ele existe.
  */
 export function itensComoJogar<T extends { personagem?: string }>(itens: T[], personagens: ItemJogo[], p: Progresso): T[] {
@@ -49,4 +69,17 @@ export function itensComoJogar<T extends { personagem?: string }>(itens: T[], pe
     const dono = personagens.find((q) => q.id === it.personagem);
     return dono !== undefined && desbloqueado(dono, p);
   });
+}
+
+/** Nível comprado de uma trilha de melhoria de poder (0 se nunca comprou). */
+export const nivelMelhoria = (p: Progresso, poder: string, trilha: string) => p.melhorias?.[`${poder}:${trilha}`] ?? 0;
+
+/**
+ * Compra o próximo nível de uma trilha de melhoria: desconta o custo e sobe o nível.
+ * Devolve null se não houver moedas ou se a trilha já estiver no nível máximo (`maximo`).
+ */
+export function comprarMelhoria(p: Progresso, poder: string, trilha: string, custo: number, maximo: number): Progresso | null {
+  const nivel = nivelMelhoria(p, poder, trilha);
+  if (nivel >= maximo || p.moedas < custo) return null;
+  return { ...p, moedas: p.moedas - custo, melhorias: { ...p.melhorias, [`${poder}:${trilha}`]: nivel + 1 } };
 }

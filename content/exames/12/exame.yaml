@@ -3,6 +3,7 @@
 id: "12"
 numero: 12
 numeral: XII
+aplicacao: 2014-02-09
 revisao:
   status: rascunho
   por: ""
@@ -251,3 +252,11 @@ questoes:
         valores: [ 0, 0.25 ]
         componentes:
           - { id: c1, valor: 0.25, termos: [ suspen* | efeito suspensivo | nao suspende ] }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Rita: Hécuba }   # a senhora de 60 anos
+    q1: { Carolina: Dânae }   # o cheque sem fundos
+    q2: { Ricardo: Hermes, Wilson: Argos }   # o ladrão sem rastros e o vigia que o persegue
+    q3: { Félix: Apolo, Paola: Dafne }   # perseguiu e desistiu
+    q4: { Marcos: Orestes }   # a inimputabilidade

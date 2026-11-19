@@ -13,7 +13,11 @@ const erros = [];
 p.on("pageerror", (e) => erros.push(e.message));
 
 await p.goto(`${BASE}/treino/`, { waitUntil: "networkidle" });
-await p.evaluate(() => localStorage.clear());
+// o padrão é o modo automático (com os tipos na ordem dele): o seletor testado aqui é o do "Eu escolho"
+await p.evaluate(() => {
+  localStorage.clear();
+  localStorage.setItem("grifo:treino:automatico:ligado", "false");
+});
 await p.reload({ waitUntil: "networkidle" });
 
 const grupo = p.getByRole("group", { name: "Tipos de pergunta" });
@@ -27,7 +31,7 @@ checar(await grupo.getByLabel("Peça e fundamento").isChecked(), "'Peça e funda
 checar(!(await grupo.getByLabel("Objetivas da 1ª fase").isChecked()), "'Objetivas da 1ª fase' marcada por padrão");
 
 // dica: aparece ao passar o mouse e ao focar pelo teclado
-const dica = grupo.locator('[role="tooltip"]', { hasText: "Leia o caso" });
+const dica = grupo.locator('[role="tooltip"]', { hasText: "Um caso curto" });
 checar((await dica.count()) === 1, "dica da peça e fundamento ausente");
 await grupo.getByText("Peça e fundamento", { exact: true }).hover();
 checar(await dica.isVisible(), "dica não aparece ao passar o mouse");

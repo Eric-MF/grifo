@@ -5,7 +5,7 @@ import { ctx, exameIds, loadExame } from "./helpers.ts";
 
 // Para cada exame corrigível: o próprio gabarito comentado, usado como resposta,
 // precisa tirar nota alta. Isso pega termos/dispositivos mal transcritos na rubrica.
-// (exames sem gabarito, como o 05 e o 40, não têm o que testar)
+// (exames sem gabarito, como o 39, não têm o que testar)
 // Este teste confere se os termos da tabela aparecem no texto oficial. A divisão em parágrafos (regra dos termos no
 // mesmo parágrafo) tem testes próprios; aqui o gabarito e as descrições formam um só parágrafo.
 const semQuebras = (t: string) => t.replace(/\s*\n\s*/g, " ");

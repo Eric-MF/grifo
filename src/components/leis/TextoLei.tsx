@@ -2,10 +2,18 @@
 // anotações do Planalto. O que é riscado ou revogado vai no HTML, marcado com data-sup / data-marco:
 // o leitor esconde ou mostra só com CSS. Serve ao leitor (servidor) e ao Vade Mecum (cliente).
 import { Fragment, type CSSProperties, type ReactNode } from "react";
+import type { FaixaVisivel, VideGrifo } from "@/lib/leis/grifos";
 import { marcoDeRevogacao, type Bloco } from "@/lib/leis/linha-do-tempo";
 import { trechos, type Trecho } from "@/lib/leis/referencias";
+import { rotaDaLei } from "@/lib/leis/sumulas";
 import { corrigido, fatiar, type MarcaTexto } from "@/lib/leis/texto";
 import styles from "./leitor.module.css";
+
+/** Os grifos prontos de um bloco, já com a aparência no sistema da lei: as palavras grifadas e o "vide" (ver grifos.ts). */
+export interface ProntosDoBloco {
+  faixas: FaixaVisivel[];
+  vide: VideGrifo[];
+}
 
 interface Props {
   id: string;
@@ -22,8 +30,8 @@ interface Props {
   estrelas?: boolean;
   /** grifos do usuário por bloco (índice em `blocos`), para destacar o trecho dentro do texto */
   marcas?: Map<number, MarcaTexto[]>;
-  /** grifos automáticos (temas de prova do Grifo) por bloco: "area" (a barra na margem) ou "destaque" (grifado) */
-  prontos?: Map<number, { tipo: "area" | "destaque"; rotulo: string; cor: string; nota?: string }>;
+  /** grifos prontos do Grifo por bloco: as palavras-chave grifadas dentro do texto e o "vide" depois dele */
+  prontos?: Map<number, ProntosDoBloco>;
 }
 
 export function TextoLei({ id, url, blocos, itens, prefixo = "", resolver, aposArtigo, estrelas = true, marcas, prontos }: Props) {
@@ -63,14 +71,12 @@ export function TextoLei({ id, url, blocos, itens, prefixo = "", resolver, aposA
           "data-disp": b.disp,
           "data-sup": b.superada ? 1 : 0,
           "data-marco": marcoDeRevogacao(b) ? 1 : 0,
-          // o grifo automático pinta como no leitor: a cor vem do sistema ativo, e a área é uma barra na margem
-          "data-pronto": pronto?.tipo,
-          "data-regra": pronto?.rotulo,
+          "data-com-pronto": pronto ? 1 : undefined,
           "data-marca-bloco": inteiro ? 1 : undefined,
           "data-marca-nota": inteiro?.nota ? 1 : undefined,
           "data-liga-antes": ligaAntes.has(i) ? 1 : undefined,
           "data-liga-depois": ligaDepois.has(i) ? 1 : undefined,
-          style: pronto || (inteiro && !inteiro.nota) ? ({ ...(pronto ? { "--pronto": pronto.cor } : {}), ...(inteiro && !inteiro.nota ? { "--c": inteiro.cor } : {}) } as CSSProperties) : undefined,
+          style: inteiro && !inteiro.nota ? ({ "--c": inteiro.cor } as CSSProperties) : undefined,
           id: b.disp && ancoraEm.get(b.disp) === i ? prefixo + b.disp : undefined,
           className: `${styles.b} ${styles[b.tipo]}`,
         };
@@ -87,6 +93,7 @@ export function TextoLei({ id, url, blocos, itens, prefixo = "", resolver, aposA
                 trechos(corrigido(b.texto), id, b.rotulo).map((bruto) => (resolver && bruto.href ? resolver(bruto) : bruto)),
                 // com o parágrafo inteiro grifado, a forma é a do bloco: os trechos não são grifados de novo
                 inteiros.has(i) ? [] : (marcas?.get(i) ?? []),
+                pronto?.faixas ?? [],
               )}
             </span>
             {b.atos.length > 0 && (
@@ -105,6 +112,7 @@ export function TextoLei({ id, url, blocos, itens, prefixo = "", resolver, aposA
                 })}
               </span>
             )}
+            {pronto && pronto.vide.length > 0 && <Vide vides={pronto.vide} lei={id} resolver={resolver} />}
             {aposArtigo && b.tipo === "artigo" && !b.superada && aposArtigo(b)}
           </>
         );
@@ -116,18 +124,65 @@ export function TextoLei({ id, url, blocos, itens, prefixo = "", resolver, aposA
   );
 }
 
+/** O "vide" do grifo pronto: o outro dispositivo do mesmo tema, com o link resolvido como as referências do texto. */
+function Vide({ vides, lei, resolver }: { vides: VideGrifo[]; lei: string; resolver?: (t: Trecho) => Trecho }) {
+  return (
+    <span className={styles.prontoVide} data-pronto-vide="1">
+      vide{" "}
+      {vides.map((v, k) => {
+        const art = v.disp.split(".")[0]!;
+        const bruto: Trecho = { texto: v.rotulo, href: v.lei === lei ? `#${art}` : `${rotaDaLei(v.lei)}#${art}`, lei: v.lei, art };
+        const t = resolver ? resolver(bruto) : bruto;
+        return (
+          <Fragment key={k}>
+            {k > 0 && "; "}
+            <a href={t.href} data-lei={v.lei} data-art={art} data-disp={v.disp !== art ? v.disp : undefined}>
+              {v.rotulo}
+            </a>
+          </Fragment>
+        );
+      })}
+    </span>
+  );
+}
+
+/** As palavras do grifo pronto num pedaço de texto (que começa na posição `ini` do bloco), como no leitor. */
+function comProntos(texto: string, ini: number, faixas: FaixaVisivel[]): ReactNode {
+  if (!faixas.length) return texto;
+  return fatiar(texto, ini, faixas).map((p, j) =>
+    p.marca ? (
+      <mark
+        key={j}
+        className={styles.pronto}
+        data-pronto={p.marca.linha && !p.marca.fundo ? "pedido" : "1"}
+        data-essencial={p.marca.essencial ? "1" : undefined}
+        title={[...p.marca.titulos, ...p.marca.notas].join("\n")}
+        style={{ ...(p.marca.fundo ? { "--pronto-fundo": p.marca.fundo } : {}), ...(p.marca.linha ? { "--pronto-linha": p.marca.linha } : {}) } as CSSProperties}
+      >
+        {p.texto}
+      </mark>
+    ) : (
+      <Fragment key={j}>{p.texto}</Fragment>
+    ),
+  );
+}
+
 /**
  * Os trechos de texto (com as referências em link) e, por cima, os grifos do usuário: cada pedaço grifado vai numa
- * <mark> com a cor do grifo; a anotação sem cor só ganha o sublinhado pontilhado (como no leitor).
+ * <mark> com a cor do grifo; a anotação sem cor só ganha o sublinhado pontilhado (como no leitor). As palavras dos
+ * grifos prontos ficam dentro, como no leitor (dentro de um grifo do usuário, só o sublinhado delas aparece).
  */
-function comGrifos(pecas: Trecho[], marcas: MarcaTexto[]): ReactNode[] {
+function comGrifos(pecas: Trecho[], marcas: MarcaTexto[], prontos: FaixaVisivel[]): ReactNode[] {
   let pos = 0;
   return pecas.map((t, k) => {
     const ini = pos;
     pos += t.texto.length;
     const partes = marcas.length ? fatiar(t.texto, ini, marcas) : [{ texto: t.texto }];
-    const nos = partes.map((p, j) =>
-      p.marca ? (
+    let em = ini;
+    const nos = partes.map((p, j) => {
+      const comeco = em;
+      em += p.texto.length;
+      return p.marca ? (
         <mark
           key={j}
           className={styles.marca}
@@ -135,12 +190,12 @@ function comGrifos(pecas: Trecho[], marcas: MarcaTexto[]): ReactNode[] {
           data-nota={p.marca.nota ? "1" : "0"}
           style={p.marca.cor === "nota" ? undefined : ({ "--c": p.marca.cor } as CSSProperties)}
         >
-          {p.texto}
+          {comProntos(p.texto, comeco, prontos)}
         </mark>
       ) : (
-        <Fragment key={j}>{p.texto}</Fragment>
-      ),
-    );
+        <Fragment key={j}>{comProntos(p.texto, comeco, prontos)}</Fragment>
+      );
+    });
     return t.href ? (
       <a key={k} className={styles.ref} href={t.href} data-grifo={t.href} data-planalto={t.planalto}>
         {nos}

@@ -1,292 +1,84 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "02"
+introducoes:
+  peca: "A polícia gaúcha investigava Maria por mandar crianças ao exterior com passaportes irregulares. Logo de início, pediu a interceptação dos telefones dela, justificando só com a gravidade e a dificuldade de investigar, e a escuta pegou Maria perguntando a Antônio, servidor do setor de passaportes da Polícia Federal, se os passaportes estavam prontos. A quebra de sigilo achou um depósito de R$ 100 mil na conta dele. O juiz deferiu a busca e apreensão 'diante da gravidade dos fatos'. Nada se achou no apartamento 201 de Antônio, indicado no mandado, mas os policiais entraram no 202, também dele, e apreenderam US$ 50 mil. A denúncia, recebida pela 15ª Vara Criminal de Porto Alegre, imputa a Antônio o crime do ECA de enviar criança ao exterior e corrupção passiva, sem descrever o que cada réu fez. Você defende Antônio na resposta à acusação."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["02-peca-8", "02-peca-9"]
 perguntas:
   - id: 02-peca-1
     categoria: peca-detalhe
     parte: peca
     item: "1"
     secao: preliminar
-    caso: |-
-      A Polícia Civil do Estado do Rio Grande do Sul recebe notícia crime identificada, imputando a Maria Campos a prática de crime, eis que mandaria crianças brasileiras para o estrangeiro com documentos falsos. Diante da notícia crime, a autoridade policial instaura inquérito policial e, como primeira providência, representa pela decretação da interceptação das comunicações telefônicas de Maria Campos, “dada a gravidade dos fatos noticiados e a notória dificuldade de apurar crime de tráfico de menores para o exterior por outros meios, pois o ‘modus operandi’ envolve sempre atos ocultos e exige estrutura organizacional sofisticada, o que indica a existência de uma organização criminosa integrada pela investigada Maria”. O Ministério Público opina favoravelmente e o juiz defere a medida, limitando-se a adotar, como razão de decidir, “os fundamentos explicitados na representação policial”.
-
-      No curso do monitoramento, foram identificadas pessoas que contratavam os serviços de Maria Campos para providenciar expedição de passaporte para viabilizar viagens de crianças para o exterior. Foi gravada conversa telefônica de Maria com um funcionário do setor de passaportes da Polícia Federal, Antônio Lopes, em que Maria consultava Antônio sobre os passaportes que ela havia solicitado, se já estavam prontos, e se poderiam ser enviados a ela. A pedido da autoridade policial, o juiz deferiu a interceptação das linhas telefônicas utilizadas por Antônio Lopes, mas nenhum diálogo relevante foi interceptado.
-
-      O juiz, também com prévia representação da autoridade policial e manifestação favorável do Ministério Público, deferiu a quebra de sigilo bancário e fiscal dos investigados, tendo sido identificado um depósito de dinheiro em espécie na conta de Antônio, efetuado naquele mesmo ano, no valor de R$ 100.000,00 (cem mil reais). O monitoramento telefônico foi mantido pelo período de quinze dias, após o que foi deferida medida de busca e apreensão nos endereços de Maria e Antônio. A decisão foi proferida nos seguintes termos: “diante da gravidade dos fatos e da real possibilidade de serem encontrados objetos relevantes para investigação, defiro requerimento de busca e apreensão nos endereços de Maria (Rua dos Casais, 213) e de Antônio (Rua Castro, 170, apartamento 201)”. No endereço de Maria Campos, foi encontrada apenas uma relação de nomes que, na visão da autoridade policial, seriam clientes que teriam requerido a expedição de passaportes com os nomes de crianças que teriam viajado para o exterior. No endereço indicado no mandado de Antônio Lopes, nada foi encontrado. Entretanto, os policiais que cumpriram a ordem judicial perceberam que o apartamento 202 do mesmo prédio também pertencia ao investigado, motivo pelo qual nele ingressaram, encontrando e apreendendo a quantia de cinquenta mil dólares em espécie. Nenhuma outra diligência foi realizada.
-
-      Relatado o inquérito policial, os autos foram remetidos ao Ministério Público, que ofereceu a denúncia nos seguintes termos: “o Ministério Público vem oferecer denúncia contra Maria Campos e Antônio Lopes, pelos fatos a seguir descritos: Maria Campos, com o auxílio do agente da polícia federal Antônio Lopes, expediu diversos passaportes para crianças e adolescentes, sem observância das formalidades legais.
-
-      Maria tinha a finalidade de viabilizar a saída dos menores do país. A partir da quantia de dinheiro apreendida na casa de Antônio Lopes, bem como o depósito identificado em sua conta bancária, evidente que ele recebia vantagem indevida para efetuar a liberação dos passaportes. Assim agindo, a denunciada Maria Campos está incursa nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente), e nas penas do artigo 333, parágrafo único, c/c o artigo 69, ambos do Código Penal. Já o denunciado Antônio Lopes está incurso nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente) e nas penas do artigo 317, § 1º, c/c artigo 69, ambos do Código Penal”.
-
-      O juiz da 15ª Vara Criminal de Porto Alegre, RS, recebeu a denúncia, nos seguintes termos:
-
-      “compulsando os autos, verifico que há prova indiciária suficiente da ocorrência dos fatos descritos na denúncia e do envolvimento dos denunciados. Há justa causa para a ação penal, pelo que recebo a denúncia. Citem-se os réus, na forma da lei”. Antônio foi citado pessoalmente em 27.10.2010 (quarta-feira) e o respectivo mandado foi acostado aos autos dia 01.11.2010 (segunda-feira). Antônio contratou você como Advogado, repassando-lhe nomes de pessoas (Carlos de Tal, residente na Rua 1, n. 10, nesta capital; João de Tal, residente na Rua 4, n. 310, nesta capital; Roberta de Tal, residente na Rua 4, n. 310, nesta capital) que prestariam relevantes informações para corroborar com sua versão.
-
-      Nessa condição, redija a peça processual cabível desenvolvendo TODAS AS TESES DEFENSIVAS que podem ser extraídas do enunciado com indicação de respectivos dispositivos legais. Apresente a peça no último dia do prazo.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    pergunta: "Antônio é servidor federal e os fatos envolvem passaportes da Polícia Federal e a saída de crianças do país. Que preliminar cabe quanto ao juízo da 15ª Vara Criminal de Porto Alegre?"
+    tese: "Incompetência da Justiça Estadual: o caso é da Justiça Federal"
+    aceitos: [ [ "incompet*" ], [ "justica federal" ] ]
+    artigos: [ "art. 109, V, CRFB", "art. 109, IV, CRFB" ]
     gabarito: "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
-    opcoes:
-      correta: "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
-      erradas:
-        - Prescrição em razão de entre a data do recebimento da denúncia e a manifestação do advogado ter sido ultrapassado o prazo prescricional de 04 anos, já que Gabriela era menor de 21 anos na data dos fatos, devendo o prazo ser computado pela metade. Citação do art. 109, IV E do art. 115 do CP
-        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
-        - "Preliminarmente: Extinção da punibilidade, em razão da prescrição da pretensão punitiva pela pena em abstrato, pois ultrapassados 4 anos desde o recebimento da denúncia, considerando a redução do prazo pela menoridade relativa, com fulcro no Art. 107, IV, do CP OU no Art. 109, IV, c/c Art. 115, ambos do CP."
-        - Preliminarmente, nulidade da decisão de pronúncia:.
-        - Nulidade decorrente do não oferecimento de proposta de suspensão condicional do processo, tendo em vista que o crime não foi praticado no contexto da violência doméstica e familiar contra mulher ou tendo em vista não ser aplicável a previsão do Art. 41 da Lei nº 11.340 pelo fato de a vítima ser homem.
-    revisao: &a1
-      status: revisado
+    revisao: { status: revisado }
   - id: 02-peca-2
     categoria: peca-detalhe
     parte: peca
     item: "2"
     secao: preliminar
-    caso: |-
-      A Polícia Civil do Estado do Rio Grande do Sul recebe notícia crime identificada, imputando a Maria Campos a prática de crime, eis que mandaria crianças brasileiras para o estrangeiro com documentos falsos. Diante da notícia crime, a autoridade policial instaura inquérito policial e, como primeira providência, representa pela decretação da interceptação das comunicações telefônicas de Maria Campos, “dada a gravidade dos fatos noticiados e a notória dificuldade de apurar crime de tráfico de menores para o exterior por outros meios, pois o ‘modus operandi’ envolve sempre atos ocultos e exige estrutura organizacional sofisticada, o que indica a existência de uma organização criminosa integrada pela investigada Maria”. O Ministério Público opina favoravelmente e o juiz defere a medida, limitando-se a adotar, como razão de decidir, “os fundamentos explicitados na representação policial”.
-
-      No curso do monitoramento, foram identificadas pessoas que contratavam os serviços de Maria Campos para providenciar expedição de passaporte para viabilizar viagens de crianças para o exterior. Foi gravada conversa telefônica de Maria com um funcionário do setor de passaportes da Polícia Federal, Antônio Lopes, em que Maria consultava Antônio sobre os passaportes que ela havia solicitado, se já estavam prontos, e se poderiam ser enviados a ela. A pedido da autoridade policial, o juiz deferiu a interceptação das linhas telefônicas utilizadas por Antônio Lopes, mas nenhum diálogo relevante foi interceptado.
-
-      O juiz, também com prévia representação da autoridade policial e manifestação favorável do Ministério Público, deferiu a quebra de sigilo bancário e fiscal dos investigados, tendo sido identificado um depósito de dinheiro em espécie na conta de Antônio, efetuado naquele mesmo ano, no valor de R$ 100.000,00 (cem mil reais). O monitoramento telefônico foi mantido pelo período de quinze dias, após o que foi deferida medida de busca e apreensão nos endereços de Maria e Antônio. A decisão foi proferida nos seguintes termos: “diante da gravidade dos fatos e da real possibilidade de serem encontrados objetos relevantes para investigação, defiro requerimento de busca e apreensão nos endereços de Maria (Rua dos Casais, 213) e de Antônio (Rua Castro, 170, apartamento 201)”. No endereço de Maria Campos, foi encontrada apenas uma relação de nomes que, na visão da autoridade policial, seriam clientes que teriam requerido a expedição de passaportes com os nomes de crianças que teriam viajado para o exterior. No endereço indicado no mandado de Antônio Lopes, nada foi encontrado. Entretanto, os policiais que cumpriram a ordem judicial perceberam que o apartamento 202 do mesmo prédio também pertencia ao investigado, motivo pelo qual nele ingressaram, encontrando e apreendendo a quantia de cinquenta mil dólares em espécie. Nenhuma outra diligência foi realizada.
-
-      Relatado o inquérito policial, os autos foram remetidos ao Ministério Público, que ofereceu a denúncia nos seguintes termos: “o Ministério Público vem oferecer denúncia contra Maria Campos e Antônio Lopes, pelos fatos a seguir descritos: Maria Campos, com o auxílio do agente da polícia federal Antônio Lopes, expediu diversos passaportes para crianças e adolescentes, sem observância das formalidades legais.
-
-      Maria tinha a finalidade de viabilizar a saída dos menores do país. A partir da quantia de dinheiro apreendida na casa de Antônio Lopes, bem como o depósito identificado em sua conta bancária, evidente que ele recebia vantagem indevida para efetuar a liberação dos passaportes. Assim agindo, a denunciada Maria Campos está incursa nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente), e nas penas do artigo 333, parágrafo único, c/c o artigo 69, ambos do Código Penal. Já o denunciado Antônio Lopes está incurso nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente) e nas penas do artigo 317, § 1º, c/c artigo 69, ambos do Código Penal”.
-
-      O juiz da 15ª Vara Criminal de Porto Alegre, RS, recebeu a denúncia, nos seguintes termos:
-
-      “compulsando os autos, verifico que há prova indiciária suficiente da ocorrência dos fatos descritos na denúncia e do envolvimento dos denunciados. Há justa causa para a ação penal, pelo que recebo a denúncia. Citem-se os réus, na forma da lei”. Antônio foi citado pessoalmente em 27.10.2010 (quarta-feira) e o respectivo mandado foi acostado aos autos dia 01.11.2010 (segunda-feira). Antônio contratou você como Advogado, repassando-lhe nomes de pessoas (Carlos de Tal, residente na Rua 1, n. 10, nesta capital; João de Tal, residente na Rua 4, n. 310, nesta capital; Roberta de Tal, residente na Rua 4, n. 310, nesta capital) que prestariam relevantes informações para corroborar com sua versão.
-
-      Nessa condição, redija a peça processual cabível desenvolvendo TODAS AS TESES DEFENSIVAS que podem ser extraídas do enunciado com indicação de respectivos dispositivos legais. Apresente a peça no último dia do prazo.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Nulidade da interceptação telefônica decretada como primeira medida investigatória (art. 2º, II, Lei 9.296/96) e sem fundamentação adequada (art. 5º da Lei 9.296/96 ou art. 93, IX, CF).
-    opcoes:
-      correta: Nulidade da interceptação telefônica decretada como primeira medida investigatória (art. 2º, II, Lei 9.296/96) e sem fundamentação adequada (art. 5º da Lei 9.296/96 ou art. 93, IX, CF).
-      erradas:
-        - Prescrição em razão de entre a data do recebimento da denúncia e a manifestação do advogado ter sido ultrapassado o prazo prescricional de 04 anos, já que Gabriela era menor de 21 anos na data dos fatos, devendo o prazo ser computado pela metade. Citação do art. 109, IV E do art. 115 do CP
-        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
-        - "Preliminarmente: Extinção da punibilidade, em razão da prescrição da pretensão punitiva pela pena em abstrato, pois ultrapassados 4 anos desde o recebimento da denúncia, considerando a redução do prazo pela menoridade relativa, com fulcro no Art. 107, IV, do CP OU no Art. 109, IV, c/c Art. 115, ambos do CP."
-        - Preliminarmente, nulidade da decisão de pronúncia:.
-        - Nulidade decorrente do não oferecimento de proposta de suspensão condicional do processo, tendo em vista que o crime não foi praticado no contexto da violência doméstica e familiar contra mulher ou tendo em vista não ser aplicável a previsão do Art. 41 da Lei nº 11.340 pelo fato de a vítima ser homem.
-    revisao: *a1
+    pergunta: "A interceptação foi a primeira medida da investigação, pedida só pela gravidade do caso. Que vício a defesa deve apontar nessa prova?"
+    tese: "Nulidade da interceptação, decretada como primeira medida e sem fundamentação adequada"
+    aceitos: [ "nulidade | nula | nulo | ilicit*" ]
+    artigos: [ "art. 2, II, Lei 9.296", "art. 5, Lei 9.296" ]
+    gabarito: "Nulidade da interceptação telefônica decretada como primeira medida investigatória (art. 2º, II, Lei 9.296/96) e sem fundamentação adequada (art. 5º da Lei 9.296/96 ou art. 93, IX, CF)."
+    revisao: { status: revisado }
   - id: 02-peca-3
     categoria: peca-detalhe
     parte: peca
     item: "3"
     secao: preliminar
-    caso: |-
-      A Polícia Civil do Estado do Rio Grande do Sul recebe notícia crime identificada, imputando a Maria Campos a prática de crime, eis que mandaria crianças brasileiras para o estrangeiro com documentos falsos. Diante da notícia crime, a autoridade policial instaura inquérito policial e, como primeira providência, representa pela decretação da interceptação das comunicações telefônicas de Maria Campos, “dada a gravidade dos fatos noticiados e a notória dificuldade de apurar crime de tráfico de menores para o exterior por outros meios, pois o ‘modus operandi’ envolve sempre atos ocultos e exige estrutura organizacional sofisticada, o que indica a existência de uma organização criminosa integrada pela investigada Maria”. O Ministério Público opina favoravelmente e o juiz defere a medida, limitando-se a adotar, como razão de decidir, “os fundamentos explicitados na representação policial”.
-
-      No curso do monitoramento, foram identificadas pessoas que contratavam os serviços de Maria Campos para providenciar expedição de passaporte para viabilizar viagens de crianças para o exterior. Foi gravada conversa telefônica de Maria com um funcionário do setor de passaportes da Polícia Federal, Antônio Lopes, em que Maria consultava Antônio sobre os passaportes que ela havia solicitado, se já estavam prontos, e se poderiam ser enviados a ela. A pedido da autoridade policial, o juiz deferiu a interceptação das linhas telefônicas utilizadas por Antônio Lopes, mas nenhum diálogo relevante foi interceptado.
-
-      O juiz, também com prévia representação da autoridade policial e manifestação favorável do Ministério Público, deferiu a quebra de sigilo bancário e fiscal dos investigados, tendo sido identificado um depósito de dinheiro em espécie na conta de Antônio, efetuado naquele mesmo ano, no valor de R$ 100.000,00 (cem mil reais). O monitoramento telefônico foi mantido pelo período de quinze dias, após o que foi deferida medida de busca e apreensão nos endereços de Maria e Antônio. A decisão foi proferida nos seguintes termos: “diante da gravidade dos fatos e da real possibilidade de serem encontrados objetos relevantes para investigação, defiro requerimento de busca e apreensão nos endereços de Maria (Rua dos Casais, 213) e de Antônio (Rua Castro, 170, apartamento 201)”. No endereço de Maria Campos, foi encontrada apenas uma relação de nomes que, na visão da autoridade policial, seriam clientes que teriam requerido a expedição de passaportes com os nomes de crianças que teriam viajado para o exterior. No endereço indicado no mandado de Antônio Lopes, nada foi encontrado. Entretanto, os policiais que cumpriram a ordem judicial perceberam que o apartamento 202 do mesmo prédio também pertencia ao investigado, motivo pelo qual nele ingressaram, encontrando e apreendendo a quantia de cinquenta mil dólares em espécie. Nenhuma outra diligência foi realizada.
-
-      Relatado o inquérito policial, os autos foram remetidos ao Ministério Público, que ofereceu a denúncia nos seguintes termos: “o Ministério Público vem oferecer denúncia contra Maria Campos e Antônio Lopes, pelos fatos a seguir descritos: Maria Campos, com o auxílio do agente da polícia federal Antônio Lopes, expediu diversos passaportes para crianças e adolescentes, sem observância das formalidades legais.
-
-      Maria tinha a finalidade de viabilizar a saída dos menores do país. A partir da quantia de dinheiro apreendida na casa de Antônio Lopes, bem como o depósito identificado em sua conta bancária, evidente que ele recebia vantagem indevida para efetuar a liberação dos passaportes. Assim agindo, a denunciada Maria Campos está incursa nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente), e nas penas do artigo 333, parágrafo único, c/c o artigo 69, ambos do Código Penal. Já o denunciado Antônio Lopes está incurso nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente) e nas penas do artigo 317, § 1º, c/c artigo 69, ambos do Código Penal”.
-
-      O juiz da 15ª Vara Criminal de Porto Alegre, RS, recebeu a denúncia, nos seguintes termos:
-
-      “compulsando os autos, verifico que há prova indiciária suficiente da ocorrência dos fatos descritos na denúncia e do envolvimento dos denunciados. Há justa causa para a ação penal, pelo que recebo a denúncia. Citem-se os réus, na forma da lei”. Antônio foi citado pessoalmente em 27.10.2010 (quarta-feira) e o respectivo mandado foi acostado aos autos dia 01.11.2010 (segunda-feira). Antônio contratou você como Advogado, repassando-lhe nomes de pessoas (Carlos de Tal, residente na Rua 1, n. 10, nesta capital; João de Tal, residente na Rua 4, n. 310, nesta capital; Roberta de Tal, residente na Rua 4, n. 310, nesta capital) que prestariam relevantes informações para corroborar com sua versão.
-
-      Nessa condição, redija a peça processual cabível desenvolvendo TODAS AS TESES DEFENSIVAS que podem ser extraídas do enunciado com indicação de respectivos dispositivos legais. Apresente a peça no último dia do prazo.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Nulidade da busca e apreensão genérica e sem fundamentação, art. 93, IX, CF.
-    opcoes:
-      correta: Nulidade da busca e apreensão genérica e sem fundamentação, art. 93, IX, CF.
-      erradas:
-        - Prescrição em razão de entre a data do recebimento da denúncia e a manifestação do advogado ter sido ultrapassado o prazo prescricional de 04 anos, já que Gabriela era menor de 21 anos na data dos fatos, devendo o prazo ser computado pela metade. Citação do art. 109, IV E do art. 115 do CP
-        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
-        - "Preliminarmente: Extinção da punibilidade, em razão da prescrição da pretensão punitiva pela pena em abstrato, pois ultrapassados 4 anos desde o recebimento da denúncia, considerando a redução do prazo pela menoridade relativa, com fulcro no Art. 107, IV, do CP OU no Art. 109, IV, c/c Art. 115, ambos do CP."
-        - Preliminarmente, nulidade da decisão de pronúncia:.
-        - Nulidade decorrente do não oferecimento de proposta de suspensão condicional do processo, tendo em vista que o crime não foi praticado no contexto da violência doméstica e familiar contra mulher ou tendo em vista não ser aplicável a previsão do Art. 41 da Lei nº 11.340 pelo fato de a vítima ser homem.
-    revisao: *a1
+    pergunta: "Que vício tem a decisão que deferiu a busca e apreensão só 'diante da gravidade dos fatos'?"
+    tese: "Nulidade da decisão de busca e apreensão, genérica e sem fundamentação"
+    aceitos: [ "fundamenta* | generic* | motiva*" ]
+    artigos: [ "art. 93, IX, CRFB" ]
+    gabarito: "Nulidade da busca e apreensão genérica e sem fundamentação, art. 93, IX, CF."
+    revisao: { status: revisado }
   - id: 02-peca-4
     categoria: peca-detalhe
     parte: peca
     item: "4"
     secao: preliminar
-    caso: |-
-      A Polícia Civil do Estado do Rio Grande do Sul recebe notícia crime identificada, imputando a Maria Campos a prática de crime, eis que mandaria crianças brasileiras para o estrangeiro com documentos falsos. Diante da notícia crime, a autoridade policial instaura inquérito policial e, como primeira providência, representa pela decretação da interceptação das comunicações telefônicas de Maria Campos, “dada a gravidade dos fatos noticiados e a notória dificuldade de apurar crime de tráfico de menores para o exterior por outros meios, pois o ‘modus operandi’ envolve sempre atos ocultos e exige estrutura organizacional sofisticada, o que indica a existência de uma organização criminosa integrada pela investigada Maria”. O Ministério Público opina favoravelmente e o juiz defere a medida, limitando-se a adotar, como razão de decidir, “os fundamentos explicitados na representação policial”.
-
-      No curso do monitoramento, foram identificadas pessoas que contratavam os serviços de Maria Campos para providenciar expedição de passaporte para viabilizar viagens de crianças para o exterior. Foi gravada conversa telefônica de Maria com um funcionário do setor de passaportes da Polícia Federal, Antônio Lopes, em que Maria consultava Antônio sobre os passaportes que ela havia solicitado, se já estavam prontos, e se poderiam ser enviados a ela. A pedido da autoridade policial, o juiz deferiu a interceptação das linhas telefônicas utilizadas por Antônio Lopes, mas nenhum diálogo relevante foi interceptado.
-
-      O juiz, também com prévia representação da autoridade policial e manifestação favorável do Ministério Público, deferiu a quebra de sigilo bancário e fiscal dos investigados, tendo sido identificado um depósito de dinheiro em espécie na conta de Antônio, efetuado naquele mesmo ano, no valor de R$ 100.000,00 (cem mil reais). O monitoramento telefônico foi mantido pelo período de quinze dias, após o que foi deferida medida de busca e apreensão nos endereços de Maria e Antônio. A decisão foi proferida nos seguintes termos: “diante da gravidade dos fatos e da real possibilidade de serem encontrados objetos relevantes para investigação, defiro requerimento de busca e apreensão nos endereços de Maria (Rua dos Casais, 213) e de Antônio (Rua Castro, 170, apartamento 201)”. No endereço de Maria Campos, foi encontrada apenas uma relação de nomes que, na visão da autoridade policial, seriam clientes que teriam requerido a expedição de passaportes com os nomes de crianças que teriam viajado para o exterior. No endereço indicado no mandado de Antônio Lopes, nada foi encontrado. Entretanto, os policiais que cumpriram a ordem judicial perceberam que o apartamento 202 do mesmo prédio também pertencia ao investigado, motivo pelo qual nele ingressaram, encontrando e apreendendo a quantia de cinquenta mil dólares em espécie. Nenhuma outra diligência foi realizada.
-
-      Relatado o inquérito policial, os autos foram remetidos ao Ministério Público, que ofereceu a denúncia nos seguintes termos: “o Ministério Público vem oferecer denúncia contra Maria Campos e Antônio Lopes, pelos fatos a seguir descritos: Maria Campos, com o auxílio do agente da polícia federal Antônio Lopes, expediu diversos passaportes para crianças e adolescentes, sem observância das formalidades legais.
-
-      Maria tinha a finalidade de viabilizar a saída dos menores do país. A partir da quantia de dinheiro apreendida na casa de Antônio Lopes, bem como o depósito identificado em sua conta bancária, evidente que ele recebia vantagem indevida para efetuar a liberação dos passaportes. Assim agindo, a denunciada Maria Campos está incursa nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente), e nas penas do artigo 333, parágrafo único, c/c o artigo 69, ambos do Código Penal. Já o denunciado Antônio Lopes está incurso nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente) e nas penas do artigo 317, § 1º, c/c artigo 69, ambos do Código Penal”.
-
-      O juiz da 15ª Vara Criminal de Porto Alegre, RS, recebeu a denúncia, nos seguintes termos:
-
-      “compulsando os autos, verifico que há prova indiciária suficiente da ocorrência dos fatos descritos na denúncia e do envolvimento dos denunciados. Há justa causa para a ação penal, pelo que recebo a denúncia. Citem-se os réus, na forma da lei”. Antônio foi citado pessoalmente em 27.10.2010 (quarta-feira) e o respectivo mandado foi acostado aos autos dia 01.11.2010 (segunda-feira). Antônio contratou você como Advogado, repassando-lhe nomes de pessoas (Carlos de Tal, residente na Rua 1, n. 10, nesta capital; João de Tal, residente na Rua 4, n. 310, nesta capital; Roberta de Tal, residente na Rua 4, n. 310, nesta capital) que prestariam relevantes informações para corroborar com sua versão.
-
-      Nessa condição, redija a peça processual cabível desenvolvendo TODAS AS TESES DEFENSIVAS que podem ser extraídas do enunciado com indicação de respectivos dispositivos legais. Apresente a peça no último dia do prazo.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Nulidade da apreensão dos cinquenta mil dólares em endereço sem autorização judicial (prova ilícita).
-    opcoes:
-      correta: Nulidade da apreensão dos cinquenta mil dólares em endereço sem autorização judicial (prova ilícita).
-      erradas:
-        - Prescrição em razão de entre a data do recebimento da denúncia e a manifestação do advogado ter sido ultrapassado o prazo prescricional de 04 anos, já que Gabriela era menor de 21 anos na data dos fatos, devendo o prazo ser computado pela metade. Citação do art. 109, IV E do art. 115 do CP
-        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
-        - "Preliminarmente: Extinção da punibilidade, em razão da prescrição da pretensão punitiva pela pena em abstrato, pois ultrapassados 4 anos desde o recebimento da denúncia, considerando a redução do prazo pela menoridade relativa, com fulcro no Art. 107, IV, do CP OU no Art. 109, IV, c/c Art. 115, ambos do CP."
-        - Preliminarmente, nulidade da decisão de pronúncia:.
-        - Nulidade decorrente do não oferecimento de proposta de suspensão condicional do processo, tendo em vista que o crime não foi praticado no contexto da violência doméstica e familiar contra mulher ou tendo em vista não ser aplicável a previsão do Art. 41 da Lei nº 11.340 pelo fato de a vítima ser homem.
-    revisao: *a1
+    pergunta: "O mandado era para o apartamento 201, mas os dólares foram apreendidos no 202. Como a defesa deve tratar essa prova?"
+    tese: "Prova ilícita, colhida em domicílio sem ordem judicial, que deve ser desentranhada"
+    aceitos: [ "ilicit* | inadmiss* | desentranha* | nulidade | nula" ]
+    artigos: [ "art. 157, CPP", "art. 5, XI, CRFB" ]
+    gabarito: "Nulidade da apreensão dos cinquenta mil dólares em endereço sem autorização judicial (prova ilícita)."
+    revisao: { status: revisado }
   - id: 02-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: preliminar
-    caso: |-
-      A Polícia Civil do Estado do Rio Grande do Sul recebe notícia crime identificada, imputando a Maria Campos a prática de crime, eis que mandaria crianças brasileiras para o estrangeiro com documentos falsos. Diante da notícia crime, a autoridade policial instaura inquérito policial e, como primeira providência, representa pela decretação da interceptação das comunicações telefônicas de Maria Campos, “dada a gravidade dos fatos noticiados e a notória dificuldade de apurar crime de tráfico de menores para o exterior por outros meios, pois o ‘modus operandi’ envolve sempre atos ocultos e exige estrutura organizacional sofisticada, o que indica a existência de uma organização criminosa integrada pela investigada Maria”. O Ministério Público opina favoravelmente e o juiz defere a medida, limitando-se a adotar, como razão de decidir, “os fundamentos explicitados na representação policial”.
-
-      No curso do monitoramento, foram identificadas pessoas que contratavam os serviços de Maria Campos para providenciar expedição de passaporte para viabilizar viagens de crianças para o exterior. Foi gravada conversa telefônica de Maria com um funcionário do setor de passaportes da Polícia Federal, Antônio Lopes, em que Maria consultava Antônio sobre os passaportes que ela havia solicitado, se já estavam prontos, e se poderiam ser enviados a ela. A pedido da autoridade policial, o juiz deferiu a interceptação das linhas telefônicas utilizadas por Antônio Lopes, mas nenhum diálogo relevante foi interceptado.
-
-      O juiz, também com prévia representação da autoridade policial e manifestação favorável do Ministério Público, deferiu a quebra de sigilo bancário e fiscal dos investigados, tendo sido identificado um depósito de dinheiro em espécie na conta de Antônio, efetuado naquele mesmo ano, no valor de R$ 100.000,00 (cem mil reais). O monitoramento telefônico foi mantido pelo período de quinze dias, após o que foi deferida medida de busca e apreensão nos endereços de Maria e Antônio. A decisão foi proferida nos seguintes termos: “diante da gravidade dos fatos e da real possibilidade de serem encontrados objetos relevantes para investigação, defiro requerimento de busca e apreensão nos endereços de Maria (Rua dos Casais, 213) e de Antônio (Rua Castro, 170, apartamento 201)”. No endereço de Maria Campos, foi encontrada apenas uma relação de nomes que, na visão da autoridade policial, seriam clientes que teriam requerido a expedição de passaportes com os nomes de crianças que teriam viajado para o exterior. No endereço indicado no mandado de Antônio Lopes, nada foi encontrado. Entretanto, os policiais que cumpriram a ordem judicial perceberam que o apartamento 202 do mesmo prédio também pertencia ao investigado, motivo pelo qual nele ingressaram, encontrando e apreendendo a quantia de cinquenta mil dólares em espécie. Nenhuma outra diligência foi realizada.
-
-      Relatado o inquérito policial, os autos foram remetidos ao Ministério Público, que ofereceu a denúncia nos seguintes termos: “o Ministério Público vem oferecer denúncia contra Maria Campos e Antônio Lopes, pelos fatos a seguir descritos: Maria Campos, com o auxílio do agente da polícia federal Antônio Lopes, expediu diversos passaportes para crianças e adolescentes, sem observância das formalidades legais.
-
-      Maria tinha a finalidade de viabilizar a saída dos menores do país. A partir da quantia de dinheiro apreendida na casa de Antônio Lopes, bem como o depósito identificado em sua conta bancária, evidente que ele recebia vantagem indevida para efetuar a liberação dos passaportes. Assim agindo, a denunciada Maria Campos está incursa nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente), e nas penas do artigo 333, parágrafo único, c/c o artigo 69, ambos do Código Penal. Já o denunciado Antônio Lopes está incurso nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente) e nas penas do artigo 317, § 1º, c/c artigo 69, ambos do Código Penal”.
-
-      O juiz da 15ª Vara Criminal de Porto Alegre, RS, recebeu a denúncia, nos seguintes termos:
-
-      “compulsando os autos, verifico que há prova indiciária suficiente da ocorrência dos fatos descritos na denúncia e do envolvimento dos denunciados. Há justa causa para a ação penal, pelo que recebo a denúncia. Citem-se os réus, na forma da lei”. Antônio foi citado pessoalmente em 27.10.2010 (quarta-feira) e o respectivo mandado foi acostado aos autos dia 01.11.2010 (segunda-feira). Antônio contratou você como Advogado, repassando-lhe nomes de pessoas (Carlos de Tal, residente na Rua 1, n. 10, nesta capital; João de Tal, residente na Rua 4, n. 310, nesta capital; Roberta de Tal, residente na Rua 4, n. 310, nesta capital) que prestariam relevantes informações para corroborar com sua versão.
-
-      Nessa condição, redija a peça processual cabível desenvolvendo TODAS AS TESES DEFENSIVAS que podem ser extraídas do enunciado com indicação de respectivos dispositivos legais. Apresente a peça no último dia do prazo.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Inépcia da denúncia genérica (art. 8º, 2, ‘b’, do Decreto 678/92; art. 5º, LV, CF; art. 41 do CPP).
-    opcoes:
-      correta: Inépcia da denúncia genérica (art. 8º, 2, ‘b’, do Decreto 678/92; art. 5º, LV, CF; art. 41 do CPP).
-      erradas:
-        - Prescrição em razão de entre a data do recebimento da denúncia e a manifestação do advogado ter sido ultrapassado o prazo prescricional de 04 anos, já que Gabriela era menor de 21 anos na data dos fatos, devendo o prazo ser computado pela metade. Citação do art. 109, IV E do art. 115 do CP
-        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
-        - "Preliminarmente: Extinção da punibilidade, em razão da prescrição da pretensão punitiva pela pena em abstrato, pois ultrapassados 4 anos desde o recebimento da denúncia, considerando a redução do prazo pela menoridade relativa, com fulcro no Art. 107, IV, do CP OU no Art. 109, IV, c/c Art. 115, ambos do CP."
-        - Preliminarmente, nulidade da decisão de pronúncia:.
-        - Nulidade decorrente do não oferecimento de proposta de suspensão condicional do processo, tendo em vista que o crime não foi praticado no contexto da violência doméstica e familiar contra mulher ou tendo em vista não ser aplicável a previsão do Art. 41 da Lei nº 11.340 pelo fato de a vítima ser homem.
-    revisao: *a1
+    pergunta: "A denúncia não descreve o que cada réu fez. Que preliminar cabe contra ela?"
+    tese: "Inépcia da denúncia genérica"
+    aceitos: [ "inepcia | inepta" ]
+    artigos: [ "art. 41, CPP", "art. 5, LV, CRFB" ]
+    gabarito: "Inépcia da denúncia genérica (art. 8º, 2, ‘b’, do Decreto 678/92; art. 5º, LV, CF; art. 41 do CPP)."
+    revisao: { status: revisado }
   - id: 02-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      A Polícia Civil do Estado do Rio Grande do Sul recebe notícia crime identificada, imputando a Maria Campos a prática de crime, eis que mandaria crianças brasileiras para o estrangeiro com documentos falsos. Diante da notícia crime, a autoridade policial instaura inquérito policial e, como primeira providência, representa pela decretação da interceptação das comunicações telefônicas de Maria Campos, “dada a gravidade dos fatos noticiados e a notória dificuldade de apurar crime de tráfico de menores para o exterior por outros meios, pois o ‘modus operandi’ envolve sempre atos ocultos e exige estrutura organizacional sofisticada, o que indica a existência de uma organização criminosa integrada pela investigada Maria”. O Ministério Público opina favoravelmente e o juiz defere a medida, limitando-se a adotar, como razão de decidir, “os fundamentos explicitados na representação policial”.
-
-      No curso do monitoramento, foram identificadas pessoas que contratavam os serviços de Maria Campos para providenciar expedição de passaporte para viabilizar viagens de crianças para o exterior. Foi gravada conversa telefônica de Maria com um funcionário do setor de passaportes da Polícia Federal, Antônio Lopes, em que Maria consultava Antônio sobre os passaportes que ela havia solicitado, se já estavam prontos, e se poderiam ser enviados a ela. A pedido da autoridade policial, o juiz deferiu a interceptação das linhas telefônicas utilizadas por Antônio Lopes, mas nenhum diálogo relevante foi interceptado.
-
-      O juiz, também com prévia representação da autoridade policial e manifestação favorável do Ministério Público, deferiu a quebra de sigilo bancário e fiscal dos investigados, tendo sido identificado um depósito de dinheiro em espécie na conta de Antônio, efetuado naquele mesmo ano, no valor de R$ 100.000,00 (cem mil reais). O monitoramento telefônico foi mantido pelo período de quinze dias, após o que foi deferida medida de busca e apreensão nos endereços de Maria e Antônio. A decisão foi proferida nos seguintes termos: “diante da gravidade dos fatos e da real possibilidade de serem encontrados objetos relevantes para investigação, defiro requerimento de busca e apreensão nos endereços de Maria (Rua dos Casais, 213) e de Antônio (Rua Castro, 170, apartamento 201)”. No endereço de Maria Campos, foi encontrada apenas uma relação de nomes que, na visão da autoridade policial, seriam clientes que teriam requerido a expedição de passaportes com os nomes de crianças que teriam viajado para o exterior. No endereço indicado no mandado de Antônio Lopes, nada foi encontrado. Entretanto, os policiais que cumpriram a ordem judicial perceberam que o apartamento 202 do mesmo prédio também pertencia ao investigado, motivo pelo qual nele ingressaram, encontrando e apreendendo a quantia de cinquenta mil dólares em espécie. Nenhuma outra diligência foi realizada.
-
-      Relatado o inquérito policial, os autos foram remetidos ao Ministério Público, que ofereceu a denúncia nos seguintes termos: “o Ministério Público vem oferecer denúncia contra Maria Campos e Antônio Lopes, pelos fatos a seguir descritos: Maria Campos, com o auxílio do agente da polícia federal Antônio Lopes, expediu diversos passaportes para crianças e adolescentes, sem observância das formalidades legais.
-
-      Maria tinha a finalidade de viabilizar a saída dos menores do país. A partir da quantia de dinheiro apreendida na casa de Antônio Lopes, bem como o depósito identificado em sua conta bancária, evidente que ele recebia vantagem indevida para efetuar a liberação dos passaportes. Assim agindo, a denunciada Maria Campos está incursa nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente), e nas penas do artigo 333, parágrafo único, c/c o artigo 69, ambos do Código Penal. Já o denunciado Antônio Lopes está incurso nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente) e nas penas do artigo 317, § 1º, c/c artigo 69, ambos do Código Penal”.
-
-      O juiz da 15ª Vara Criminal de Porto Alegre, RS, recebeu a denúncia, nos seguintes termos:
-
-      “compulsando os autos, verifico que há prova indiciária suficiente da ocorrência dos fatos descritos na denúncia e do envolvimento dos denunciados. Há justa causa para a ação penal, pelo que recebo a denúncia. Citem-se os réus, na forma da lei”. Antônio foi citado pessoalmente em 27.10.2010 (quarta-feira) e o respectivo mandado foi acostado aos autos dia 01.11.2010 (segunda-feira). Antônio contratou você como Advogado, repassando-lhe nomes de pessoas (Carlos de Tal, residente na Rua 1, n. 10, nesta capital; João de Tal, residente na Rua 4, n. 310, nesta capital; Roberta de Tal, residente na Rua 4, n. 310, nesta capital) que prestariam relevantes informações para corroborar com sua versão.
-
-      Nessa condição, redija a peça processual cabível desenvolvendo TODAS AS TESES DEFENSIVAS que podem ser extraídas do enunciado com indicação de respectivos dispositivos legais. Apresente a peça no último dia do prazo.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-    opcoes:
-      correta: Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-      erradas:
-        - A conduta de extorsão seria atípica por ausência da elementar “vantagem indevida”.
-        - Possibilidade de substituição da pena privativa de liberdade por restritiva de direitos, conforme Art. 44 do CP OU possibilidade de aplicação da pena de multa, conforme art. 155, § 2º, do CP.
-        - Aplicação do regime inicial aberto para cumprimento de pena, pois a fixação do regime inicial fechado obrigatório para crimes hediondos e equiparados trazida pelo Art. 2º, § 1º, da Lei nº 8072 foi considerada inconstitucional pelo STF por violação do princípio da individualização da pena.
-        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
+    pergunta: "No mérito, por que não há o crime do ECA imputado a Antônio?"
+    tese: "Atipicidade, por ausência de dolo"
+    aceitos: [ "dolo" ]
+    artigos: [ "art. 239, parágrafo único, Lei 8.069" ]
+    gabarito: "Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo."
+    revisao: { status: revisado }
   - id: 02-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      A Polícia Civil do Estado do Rio Grande do Sul recebe notícia crime identificada, imputando a Maria Campos a prática de crime, eis que mandaria crianças brasileiras para o estrangeiro com documentos falsos. Diante da notícia crime, a autoridade policial instaura inquérito policial e, como primeira providência, representa pela decretação da interceptação das comunicações telefônicas de Maria Campos, “dada a gravidade dos fatos noticiados e a notória dificuldade de apurar crime de tráfico de menores para o exterior por outros meios, pois o ‘modus operandi’ envolve sempre atos ocultos e exige estrutura organizacional sofisticada, o que indica a existência de uma organização criminosa integrada pela investigada Maria”. O Ministério Público opina favoravelmente e o juiz defere a medida, limitando-se a adotar, como razão de decidir, “os fundamentos explicitados na representação policial”.
-
-      No curso do monitoramento, foram identificadas pessoas que contratavam os serviços de Maria Campos para providenciar expedição de passaporte para viabilizar viagens de crianças para o exterior. Foi gravada conversa telefônica de Maria com um funcionário do setor de passaportes da Polícia Federal, Antônio Lopes, em que Maria consultava Antônio sobre os passaportes que ela havia solicitado, se já estavam prontos, e se poderiam ser enviados a ela. A pedido da autoridade policial, o juiz deferiu a interceptação das linhas telefônicas utilizadas por Antônio Lopes, mas nenhum diálogo relevante foi interceptado.
-
-      O juiz, também com prévia representação da autoridade policial e manifestação favorável do Ministério Público, deferiu a quebra de sigilo bancário e fiscal dos investigados, tendo sido identificado um depósito de dinheiro em espécie na conta de Antônio, efetuado naquele mesmo ano, no valor de R$ 100.000,00 (cem mil reais). O monitoramento telefônico foi mantido pelo período de quinze dias, após o que foi deferida medida de busca e apreensão nos endereços de Maria e Antônio. A decisão foi proferida nos seguintes termos: “diante da gravidade dos fatos e da real possibilidade de serem encontrados objetos relevantes para investigação, defiro requerimento de busca e apreensão nos endereços de Maria (Rua dos Casais, 213) e de Antônio (Rua Castro, 170, apartamento 201)”. No endereço de Maria Campos, foi encontrada apenas uma relação de nomes que, na visão da autoridade policial, seriam clientes que teriam requerido a expedição de passaportes com os nomes de crianças que teriam viajado para o exterior. No endereço indicado no mandado de Antônio Lopes, nada foi encontrado. Entretanto, os policiais que cumpriram a ordem judicial perceberam que o apartamento 202 do mesmo prédio também pertencia ao investigado, motivo pelo qual nele ingressaram, encontrando e apreendendo a quantia de cinquenta mil dólares em espécie. Nenhuma outra diligência foi realizada.
-
-      Relatado o inquérito policial, os autos foram remetidos ao Ministério Público, que ofereceu a denúncia nos seguintes termos: “o Ministério Público vem oferecer denúncia contra Maria Campos e Antônio Lopes, pelos fatos a seguir descritos: Maria Campos, com o auxílio do agente da polícia federal Antônio Lopes, expediu diversos passaportes para crianças e adolescentes, sem observância das formalidades legais.
-
-      Maria tinha a finalidade de viabilizar a saída dos menores do país. A partir da quantia de dinheiro apreendida na casa de Antônio Lopes, bem como o depósito identificado em sua conta bancária, evidente que ele recebia vantagem indevida para efetuar a liberação dos passaportes. Assim agindo, a denunciada Maria Campos está incursa nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente), e nas penas do artigo 333, parágrafo único, c/c o artigo 69, ambos do Código Penal. Já o denunciado Antônio Lopes está incurso nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente) e nas penas do artigo 317, § 1º, c/c artigo 69, ambos do Código Penal”.
-
-      O juiz da 15ª Vara Criminal de Porto Alegre, RS, recebeu a denúncia, nos seguintes termos:
-
-      “compulsando os autos, verifico que há prova indiciária suficiente da ocorrência dos fatos descritos na denúncia e do envolvimento dos denunciados. Há justa causa para a ação penal, pelo que recebo a denúncia. Citem-se os réus, na forma da lei”. Antônio foi citado pessoalmente em 27.10.2010 (quarta-feira) e o respectivo mandado foi acostado aos autos dia 01.11.2010 (segunda-feira). Antônio contratou você como Advogado, repassando-lhe nomes de pessoas (Carlos de Tal, residente na Rua 1, n. 10, nesta capital; João de Tal, residente na Rua 4, n. 310, nesta capital; Roberta de Tal, residente na Rua 4, n. 310, nesta capital) que prestariam relevantes informações para corroborar com sua versão.
-
-      Nessa condição, redija a peça processual cabível desenvolvendo TODAS AS TESES DEFENSIVAS que podem ser extraídas do enunciado com indicação de respectivos dispositivos legais. Apresente a peça no último dia do prazo.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Falta de justa causa quanto à corrupção passiva (art. 317, § 1º, CP), com cotejo entre o tipo e os fatos.
-    opcoes:
-      correta: Falta de justa causa quanto à corrupção passiva (art. 317, § 1º, CP), com cotejo entre o tipo e os fatos.
-      erradas:
-        - A conduta de extorsão seria atípica por ausência da elementar “vantagem indevida”.
-        - Possibilidade de substituição da pena privativa de liberdade por restritiva de direitos, conforme Art. 44 do CP OU possibilidade de aplicação da pena de multa, conforme art. 155, § 2º, do CP.
-        - Aplicação do regime inicial aberto para cumprimento de pena, pois a fixação do regime inicial fechado obrigatório para crimes hediondos e equiparados trazida pelo Art. 2º, § 1º, da Lei nº 8072 foi considerada inconstitucional pelo STF por violação do princípio da individualização da pena.
-        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
-  - id: 02-peca-8
-    categoria: peca-detalhe
-    parte: peca
-    item: "8"
-    secao: pedido
-    caso: |-
-      A Polícia Civil do Estado do Rio Grande do Sul recebe notícia crime identificada, imputando a Maria Campos a prática de crime, eis que mandaria crianças brasileiras para o estrangeiro com documentos falsos. Diante da notícia crime, a autoridade policial instaura inquérito policial e, como primeira providência, representa pela decretação da interceptação das comunicações telefônicas de Maria Campos, “dada a gravidade dos fatos noticiados e a notória dificuldade de apurar crime de tráfico de menores para o exterior por outros meios, pois o ‘modus operandi’ envolve sempre atos ocultos e exige estrutura organizacional sofisticada, o que indica a existência de uma organização criminosa integrada pela investigada Maria”. O Ministério Público opina favoravelmente e o juiz defere a medida, limitando-se a adotar, como razão de decidir, “os fundamentos explicitados na representação policial”.
-
-      No curso do monitoramento, foram identificadas pessoas que contratavam os serviços de Maria Campos para providenciar expedição de passaporte para viabilizar viagens de crianças para o exterior. Foi gravada conversa telefônica de Maria com um funcionário do setor de passaportes da Polícia Federal, Antônio Lopes, em que Maria consultava Antônio sobre os passaportes que ela havia solicitado, se já estavam prontos, e se poderiam ser enviados a ela. A pedido da autoridade policial, o juiz deferiu a interceptação das linhas telefônicas utilizadas por Antônio Lopes, mas nenhum diálogo relevante foi interceptado.
-
-      O juiz, também com prévia representação da autoridade policial e manifestação favorável do Ministério Público, deferiu a quebra de sigilo bancário e fiscal dos investigados, tendo sido identificado um depósito de dinheiro em espécie na conta de Antônio, efetuado naquele mesmo ano, no valor de R$ 100.000,00 (cem mil reais). O monitoramento telefônico foi mantido pelo período de quinze dias, após o que foi deferida medida de busca e apreensão nos endereços de Maria e Antônio. A decisão foi proferida nos seguintes termos: “diante da gravidade dos fatos e da real possibilidade de serem encontrados objetos relevantes para investigação, defiro requerimento de busca e apreensão nos endereços de Maria (Rua dos Casais, 213) e de Antônio (Rua Castro, 170, apartamento 201)”. No endereço de Maria Campos, foi encontrada apenas uma relação de nomes que, na visão da autoridade policial, seriam clientes que teriam requerido a expedição de passaportes com os nomes de crianças que teriam viajado para o exterior. No endereço indicado no mandado de Antônio Lopes, nada foi encontrado. Entretanto, os policiais que cumpriram a ordem judicial perceberam que o apartamento 202 do mesmo prédio também pertencia ao investigado, motivo pelo qual nele ingressaram, encontrando e apreendendo a quantia de cinquenta mil dólares em espécie. Nenhuma outra diligência foi realizada.
-
-      Relatado o inquérito policial, os autos foram remetidos ao Ministério Público, que ofereceu a denúncia nos seguintes termos: “o Ministério Público vem oferecer denúncia contra Maria Campos e Antônio Lopes, pelos fatos a seguir descritos: Maria Campos, com o auxílio do agente da polícia federal Antônio Lopes, expediu diversos passaportes para crianças e adolescentes, sem observância das formalidades legais.
-
-      Maria tinha a finalidade de viabilizar a saída dos menores do país. A partir da quantia de dinheiro apreendida na casa de Antônio Lopes, bem como o depósito identificado em sua conta bancária, evidente que ele recebia vantagem indevida para efetuar a liberação dos passaportes. Assim agindo, a denunciada Maria Campos está incursa nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente), e nas penas do artigo 333, parágrafo único, c/c o artigo 69, ambos do Código Penal. Já o denunciado Antônio Lopes está incurso nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente) e nas penas do artigo 317, § 1º, c/c artigo 69, ambos do Código Penal”.
-
-      O juiz da 15ª Vara Criminal de Porto Alegre, RS, recebeu a denúncia, nos seguintes termos:
-
-      “compulsando os autos, verifico que há prova indiciária suficiente da ocorrência dos fatos descritos na denúncia e do envolvimento dos denunciados. Há justa causa para a ação penal, pelo que recebo a denúncia. Citem-se os réus, na forma da lei”. Antônio foi citado pessoalmente em 27.10.2010 (quarta-feira) e o respectivo mandado foi acostado aos autos dia 01.11.2010 (segunda-feira). Antônio contratou você como Advogado, repassando-lhe nomes de pessoas (Carlos de Tal, residente na Rua 1, n. 10, nesta capital; João de Tal, residente na Rua 4, n. 310, nesta capital; Roberta de Tal, residente na Rua 4, n. 310, nesta capital) que prestariam relevantes informações para corroborar com sua versão.
-
-      Nessa condição, redija a peça processual cabível desenvolvendo TODAS AS TESES DEFENSIVAS que podem ser extraídas do enunciado com indicação de respectivos dispositivos legais. Apresente a peça no último dia do prazo.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-    opcoes:
-      correta: Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-      erradas:
-        - Absolvição sumária com fundamento no art. 397, III, do CPP e art. 397, IV, do CPP; produção de prova testemunhal ou rol de testemunhas.
-        - "Pedidos principais (0,20 cada): desentranhamento da prova ilícita; impronúncia por ausência de indícios de autoria; impronúncia por ausência de prova da materialidade; absolvição sumária OU nulidade da pronúncia pela mutatio libelli."
-        - Substituição da pena privativa de liberdade por restritiva de direitos.
-        - Afastamento da agravante do Art. 61, II, ´f´, do CP.
-        - Requerimento do juízo de retratação ou exercício do efeito regressivo, nos termos do Art. 589 do CPP
-    revisao: *a1
-  - id: 02-peca-9
-    categoria: peca-detalhe
-    parte: peca
-    item: "9"
-    secao: pedido
-    caso: |-
-      A Polícia Civil do Estado do Rio Grande do Sul recebe notícia crime identificada, imputando a Maria Campos a prática de crime, eis que mandaria crianças brasileiras para o estrangeiro com documentos falsos. Diante da notícia crime, a autoridade policial instaura inquérito policial e, como primeira providência, representa pela decretação da interceptação das comunicações telefônicas de Maria Campos, “dada a gravidade dos fatos noticiados e a notória dificuldade de apurar crime de tráfico de menores para o exterior por outros meios, pois o ‘modus operandi’ envolve sempre atos ocultos e exige estrutura organizacional sofisticada, o que indica a existência de uma organização criminosa integrada pela investigada Maria”. O Ministério Público opina favoravelmente e o juiz defere a medida, limitando-se a adotar, como razão de decidir, “os fundamentos explicitados na representação policial”.
-
-      No curso do monitoramento, foram identificadas pessoas que contratavam os serviços de Maria Campos para providenciar expedição de passaporte para viabilizar viagens de crianças para o exterior. Foi gravada conversa telefônica de Maria com um funcionário do setor de passaportes da Polícia Federal, Antônio Lopes, em que Maria consultava Antônio sobre os passaportes que ela havia solicitado, se já estavam prontos, e se poderiam ser enviados a ela. A pedido da autoridade policial, o juiz deferiu a interceptação das linhas telefônicas utilizadas por Antônio Lopes, mas nenhum diálogo relevante foi interceptado.
-
-      O juiz, também com prévia representação da autoridade policial e manifestação favorável do Ministério Público, deferiu a quebra de sigilo bancário e fiscal dos investigados, tendo sido identificado um depósito de dinheiro em espécie na conta de Antônio, efetuado naquele mesmo ano, no valor de R$ 100.000,00 (cem mil reais). O monitoramento telefônico foi mantido pelo período de quinze dias, após o que foi deferida medida de busca e apreensão nos endereços de Maria e Antônio. A decisão foi proferida nos seguintes termos: “diante da gravidade dos fatos e da real possibilidade de serem encontrados objetos relevantes para investigação, defiro requerimento de busca e apreensão nos endereços de Maria (Rua dos Casais, 213) e de Antônio (Rua Castro, 170, apartamento 201)”. No endereço de Maria Campos, foi encontrada apenas uma relação de nomes que, na visão da autoridade policial, seriam clientes que teriam requerido a expedição de passaportes com os nomes de crianças que teriam viajado para o exterior. No endereço indicado no mandado de Antônio Lopes, nada foi encontrado. Entretanto, os policiais que cumpriram a ordem judicial perceberam que o apartamento 202 do mesmo prédio também pertencia ao investigado, motivo pelo qual nele ingressaram, encontrando e apreendendo a quantia de cinquenta mil dólares em espécie. Nenhuma outra diligência foi realizada.
-
-      Relatado o inquérito policial, os autos foram remetidos ao Ministério Público, que ofereceu a denúncia nos seguintes termos: “o Ministério Público vem oferecer denúncia contra Maria Campos e Antônio Lopes, pelos fatos a seguir descritos: Maria Campos, com o auxílio do agente da polícia federal Antônio Lopes, expediu diversos passaportes para crianças e adolescentes, sem observância das formalidades legais.
-
-      Maria tinha a finalidade de viabilizar a saída dos menores do país. A partir da quantia de dinheiro apreendida na casa de Antônio Lopes, bem como o depósito identificado em sua conta bancária, evidente que ele recebia vantagem indevida para efetuar a liberação dos passaportes. Assim agindo, a denunciada Maria Campos está incursa nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente), e nas penas do artigo 333, parágrafo único, c/c o artigo 69, ambos do Código Penal. Já o denunciado Antônio Lopes está incurso nas penas do artigo 239, parágrafo único, da Lei n. 8069/90 (Estatuto da Criança e do Adolescente) e nas penas do artigo 317, § 1º, c/c artigo 69, ambos do Código Penal”.
-
-      O juiz da 15ª Vara Criminal de Porto Alegre, RS, recebeu a denúncia, nos seguintes termos:
-
-      “compulsando os autos, verifico que há prova indiciária suficiente da ocorrência dos fatos descritos na denúncia e do envolvimento dos denunciados. Há justa causa para a ação penal, pelo que recebo a denúncia. Citem-se os réus, na forma da lei”. Antônio foi citado pessoalmente em 27.10.2010 (quarta-feira) e o respectivo mandado foi acostado aos autos dia 01.11.2010 (segunda-feira). Antônio contratou você como Advogado, repassando-lhe nomes de pessoas (Carlos de Tal, residente na Rua 1, n. 10, nesta capital; João de Tal, residente na Rua 4, n. 310, nesta capital; Roberta de Tal, residente na Rua 4, n. 310, nesta capital) que prestariam relevantes informações para corroborar com sua versão.
-
-      Nessa condição, redija a peça processual cabível desenvolvendo TODAS AS TESES DEFENSIVAS que podem ser extraídas do enunciado com indicação de respectivos dispositivos legais. Apresente a peça no último dia do prazo.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Apresentação de rol de testemunhas.
-    opcoes:
-      correta: Apresentação de rol de testemunhas.
-      erradas:
-        - Absolvição sumária com fundamento no art. 397, III, do CPP e art. 397, IV, do CPP; produção de prova testemunhal ou rol de testemunhas.
-        - Absolvição, com argumento e base legal.
-        - Substituição da pena privativa de liberdade por restritiva de direitos.
-        - Aplicação da pena base no mínimo legal ou reconhecimento da atenuante da confissão.
-        - Fixação do regime aberto OU concessão de suspensão condicional da pena
-    revisao: *a1
+    pergunta: "Quanto à corrupção passiva, o que falta para a ação penal contra Antônio, acusado só por um depósito e pelo dinheiro achado?"
+    tese: "Falta de justa causa para a ação penal"
+    aceitos: [ "justa causa" ]
+    artigos: [ "art. 395, III, CPP", "art. 317, § 1º, CP" ]
+    gabarito: "Falta de justa causa quanto à corrupção passiva (art. 317, § 1º, CP), com cotejo entre o tipo e os fatos."
+    revisao: { status: revisado }

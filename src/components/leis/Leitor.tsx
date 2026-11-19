@@ -16,17 +16,19 @@ import { useLeitura } from "./useLeitura";
 import { codificar, decodificar, LIMITE_LINK, pareceCompartilhado, type Compartilhado } from "@/lib/leis/compartilhar";
 import { carregarArtigos, carregarCitacoes, carregarDatas, carregarInfoSumulas, carregarLei, carregarManifesto, carregarParte, carregarRemissivo, carregarVersoes, type CitacoesGerais, type ParteLei, type Remissivo, type RemissivoSubitem } from "@/lib/leis/dados";
 import { agregar, lerEventos, maisErrados, type Agregado } from "@/lib/erros";
-import { grifoDe, type GrifosProntos } from "@/lib/leis/grifos";
+import { blocosComProntos, CORES_GRIFO, grifosDoJson, noArtigo, ROTULO_DA_COR } from "@/lib/leis/grifos";
+import { desmarcarProntos, pintarProntos } from "./prontos-dom";
 import { contextoDaLei, htmlComContexto, htmlInfo, type ContextoLei } from "@/lib/leis/html";
 import { corrigirBlocos } from "@/lib/leis/texto";
 import {
   copiarSistema,
-  corDoPronto,
+  corDoGrifo,
   corUnicas,
   gravarLegendas,
-  idDosProntos,
   lerLegendas,
   novaCorPara,
+  prontosNoSistema,
+  rotuloDoGrifo,
   SISTEMAS_PRONTOS,
   sistemaDoLeitor,
   todosSistemas,
@@ -51,8 +53,13 @@ import {
 import { CLASSES } from "./classes";
 import styles from "./leitor.module.css";
 import { DiagSelecao } from "./DiagSelecao";
+import { OpcaoCartao } from "./OpcaoCartao";
+import { useOuvir } from "./useOuvir";
+import { AjustesOuvir, BarraOuvir, BolhaLerDaqui } from "./OuvirLei";
 import { copiarTexto } from "@/lib/copiar";
 import { CORES_TEXTO, type CorTexto } from "@/lib/leis/opcoes";
+import { ordemNoRemissivo, tituloTemTermo } from "@/lib/leis/remissivo-busca";
+import { artigoDaRef, coresPorArtigo } from "@/lib/leis/remissivo-cores";
 
 /** "tudo": o texto inteiro; "grifos": só os parágrafos grifados pelo usuário; "erros": só os artigos em que ele errou */
 export type FiltroTexto = "tudo" | "grifos" | "erros" | "automaticos";
@@ -88,12 +95,17 @@ export interface PrefsLeitor {
   erros: boolean;
   /** o que mostrar no texto: tudo, só os grifos ou só os artigos em que o usuário errou (um por vez) */
   filtro: FiltroTexto;
+  /** nos filtros de grifos (meus ou automáticos), só os das cores escolhidas do sistema ativo (vazio = todas) */
+  filtroCores: string[];
   destino: "grifo" | "planalto";
   /** grifos prontos do Grifo (content/grifos.yaml) */
   prontos: boolean;
   /** local escolhido para leis com vigência por região, por id da alteradora */
   locais: Record<string, string>;
+  /** onde fica o slide de artigos: na borda direita (padrão), na esquerda, no alto ou embaixo */
+  trilhoLado: LadoTrilho;
 }
+export type LadoTrilho = "direita" | "esquerda" | "cima" | "baixo";
 export const PREFS_PADRAO: PrefsLeitor = {
   original: false,
   fonte: "sans",
@@ -110,9 +122,11 @@ export const PREFS_PADRAO: PrefsLeitor = {
   corTexto: "padrao",
   erros: true,
   filtro: "tudo",
+  filtroCores: [],
   destino: "grifo",
   prontos: true,
   locais: {},
+  trilhoLado: "direita",
 };
 const K_PREFS = "grifo:leitor";
 const K_IMPORTANTES = "grifo:leis:importantes";
@@ -125,12 +139,12 @@ const FUNDOS: { id: PrefsLeitor["fundo"]; nome: string }[] = [
   { id: "verde", nome: "Verde" },
   { id: "escuro", nome: "Escuro" },
 ];
-const PRONTOS = prontosJson as GrifosProntos;
+const PRONTOS = grifosDoJson(prontosJson);
 const LOTE = 200;
 // prévia do artigo (PopupArtigos, no body): o mouse pode ir do "citado por" até ela sem fechar o cartão
 const PREVIA = '[role="dialog"][aria-label="Texto do artigo"]';
 
-type Painel = "leis" | "buscar" | "grifos" | "aa" | "mais" | "navegar";
+type Painel = "leis" | "buscar" | "grifos" | "aa" | "mais" | "navegar" | "ouvir";
 /** abas do menu "Ir para", aberto pelo botão do slide */
 type AbaNavegar = "divisoes" | "prontos" | "grifos" | "remissivo" | "erros";
 // as abas do "Ir para": nas súmulas, a primeira é a lista das súmulas (não há títulos nem capítulos)
@@ -202,6 +216,16 @@ function trocarNoLugar(raiz: HTMLElement, indices: Iterable<number>, html: (i: n
   }
 }
 const txtDe = (el: HTMLElement) => el.querySelector<HTMLElement>(`:scope > .${CLASSES.txt}`);
+/**
+ * A faixa da tela em que um cartão flutuante (as cores da seleção, o cartão do grifo) aparece inteiro: abaixo do que
+ * fica fixo no alto (cabeçalho e barras da leitura, --topo-livre) e acima da barra de baixo (o dock), em px da janela.
+ */
+function faixaVisivel(): { topo: number; fundo: number } {
+  const topo = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--topo-livre")) || 90;
+  const dock = document.querySelector<HTMLElement>(`.${styles.dock}`)?.getBoundingClientRect();
+  const fundo = dock && dock.height && dock.top < window.innerHeight ? dock.top - 8 : window.innerHeight - 8;
+  return { topo, fundo };
+}
 const proximoQuadro = () => new Promise<void>((r) => requestAnimationFrame(() => setTimeout(r, 0)));
 
 // grifos apagados que ainda podem voltar: as três últimas apagadas (menu Desfazer; Ctrl+Z só logo depois)
@@ -272,14 +296,33 @@ function pintarBloco(b: HTMLElement, m: Marcacao) {
   else b.style.setProperty("--c", m.cor);
 }
 
-/** Parágrafos marcados em sequência, com a mesma cor, encostam uns nos outros: a marca vira uma forma só. */
+/** Bloco que não tem texto a grifar (só a nota "(Incluído pela Lei…)", ou vazio) ou que não aparece (oculto). */
+const semTextoAGrifar = (b: HTMLElement) => !txtDe(b)?.textContent?.trim() || !b.getClientRects().length;
+
+/**
+ * Parágrafos marcados em sequência, com a mesma cor, encostam uns nos outros: a marca vira uma forma só. Olha para o
+ * marcado anterior, não só para o vizinho: um bloco sem texto a grifar entre os dois (a nota "(Incluído pela Lei…)"
+ * entre a alínea d e a e, um revogado oculto) vira ponte, pintado com a mesma cor, e a forma não se parte nele.
+ */
 function ligarBlocos(bs: HTMLElement[]) {
-  for (let k = 0; k + 1 < bs.length; k++) {
-    const a = bs[k]!;
-    const b = bs[k + 1]!;
-    if (a.dataset.marcaBloco && b.dataset.marcaBloco && a.style.getPropertyValue("--c") === b.style.getPropertyValue("--c") && (a.dataset.marcaNota ?? "") === (b.dataset.marcaNota ?? "")) {
-      a.dataset.ligaDepois = "1";
-      b.dataset.ligaAntes = "1";
+  let anterior = -1;
+  for (let k = 0; k < bs.length; k++) {
+    const b = bs[k]!;
+    if (!b.dataset.marcaBloco) continue;
+    const a = anterior >= 0 ? bs[anterior]! : null;
+    anterior = k;
+    if (!a || a.style.getPropertyValue("--c") !== b.style.getPropertyValue("--c") || (a.dataset.marcaNota ?? "") !== (b.dataset.marcaNota ?? "")) continue;
+    const meio = bs.slice(bs.indexOf(a) + 1, k);
+    if (!meio.every(semTextoAGrifar)) continue;
+    for (const p of meio) {
+      p.dataset.marcaBloco = "ponte";
+      if (a.dataset.marcaId) p.dataset.marcaId = a.dataset.marcaId;
+      if (a.dataset.marcaNota) p.dataset.marcaNota = "1";
+      else p.style.setProperty("--c", a.style.getPropertyValue("--c"));
+    }
+    for (const [x, y] of [a, ...meio, b].slice(1).map((y, j, l) => [j ? l[j - 1]! : a, y] as const)) {
+      x.dataset.ligaDepois = "1";
+      y.dataset.ligaAntes = "1";
     }
   }
 }
@@ -441,7 +484,8 @@ export function Leitor({
   const [confirmacao, setConfirmacao] = useState<{ titulo: string; texto: string; rotulo: string; fazer: () => void } | null>(null);
   const [legendas, setLegendas] = useState(() => ({ ativo: "materias", meus: [] as Sistema[], porLei: {} as Record<string, string> }));
   const [marcador, setMarcador] = useState<{ ativo: boolean; cor: string }>({ ativo: false, cor: "" });
-  const [selecao, setSelecao] = useState<{ x: number; y: number; fundo: number; acima: boolean; toque: boolean; segmentos: Segmento[] } | null>(null);
+  // `topo`: onde a barra de cores fica (px do contêiner), já dentro da parte visível da tela
+  const [selecao, setSelecao] = useState<{ x: number; y: number; fundo: number; topo: number; toque: boolean; segmentos: Segmento[] } | null>(null);
   const [errados, setErrados] = useState<Agregado[]>([]);
   const [secaoVisivel, setSecaoVisivel] = useState(false);
   // seleção feita por toque: enquanto ela existir, os controles, o cabeçalho e as barras de título saem da frente
@@ -456,7 +500,7 @@ export function Leitor({
   const ajusteRef = useRef<string | null>(null);
   const [estrelas, setEstrelas] = useState<string[]>([]);
   const [mapa, setMapa] = useState<ReturnType<typeof secoesDosArtigos>>({ secoes: [], marcos: [], divisoes: [] });
-  const [regra, setRegra] = useState<{ x: number; y: number; rotulo: string; nota?: string; destaque: boolean } | null>(null);
+  const [regra, setRegra] = useState<{ x: number; y: number; rotulo: string; nota?: string; essencial: boolean } | null>(null);
   const [compartilhar, setCompartilhar] = useState<{ comMarcas: boolean; link: string; carga?: Compartilhado } | null>(null);
   const [recebido, setRecebido] = useState<Compartilhado | null>(null);
   const [vendoRecebido, setVendoRecebido] = useState(false);
@@ -469,6 +513,14 @@ export function Leitor({
   const versoesPedidas = useRef<Promise<void> | null>(null);
   // âncoras, caputs e alterações da lei inteira (ver contextoDaLei): calculado uma vez, quando a lei chega inteira
   const contextoRef = useRef<ContextoLei | null>(null);
+  // a leitura em voz alta ("Ouvir"): lê o que está à mostra, do ponto da tela ou do parágrafo tocado
+  const avisarOuvir = useCallback((texto: string, acao?: { rotulo: string; fazer: () => void }) => setAviso({ texto, acao }), []);
+  const trocarDeLeiPelaVoz = useCallback((id: string) => router.push(rotaDaLei(id)), [router]);
+  const ouvir = useOuvir({ lei, folha, blocos, artigos, sumula, avisar: avisarOuvir, pronto, trocarDeLei: trocarDeLeiPelaVoz });
+  const ouvirRef = useRef(ouvir);
+  useEffect(() => {
+    ouvirRef.current = ouvir;
+  });
   const novaMarca = useRef<string | null>(null);
   const antesDoSalto = useRef<number | null>(null);
   const barraFixa = useRef(0);
@@ -487,7 +539,7 @@ export function Leitor({
     /* eslint-disable react-hooks/set-state-in-effect -- lê localStorage e o link após montar (site estático) */
     // preferências antigas tinham o interruptor soErros: quem o tinha ligado passa a ver "Mostrar apenas os erros"
     const salvo = lerJSON<Partial<PrefsLeitor> & { soErros?: boolean }>(K_PREFS, {});
-    setPrefs({ ...PREFS_PADRAO, ...salvo, filtro: salvo.filtro ?? (salvo.soErros ? "erros" : "tudo") });
+    setPrefs({ ...PREFS_PADRAO, ...salvo, filtro: salvo.filtro ?? (salvo.soErros ? "erros" : "tudo"), filtroCores: Array.isArray(salvo.filtroCores) ? salvo.filtroCores : [] });
     setMarcas(lerMarcacoes(lei));
     setLegendas(lerLegendas());
     setPosicoes(lerJSON<Posicoes>(K_POSICOES, {}));
@@ -583,10 +635,15 @@ export function Leitor({
     window.setTimeout(alinhar, 800);
   }, []);
 
-  // Âncora do endereço ou volta para onde o leitor parou
-  const irParaArtigo = useCallback((art: string) => {
+  // o salto a um artigo que o filtro do texto esconde avisa e oferece mostrar o texto todo (preenchido mais abaixo,
+  // onde a lista de artigos já existe)
+  const avisarForaDoFiltro = useRef<(alvo: HTMLElement) => boolean>(() => false);
+  // Âncora do endereço ou volta para onde o leitor parou; "avisar" nos saltos pedidos pelo usuário
+  const irParaArtigo = useCallback((art: string, avisar = false) => {
     const alvo = document.getElementById(art);
     if (!alvo) return false;
+    // escondido, não há para onde rolar: fica o aviso
+    if (avisar && avisarForaDoFiltro.current(alvo)) return true;
     alinharAoArtigo(alvo);
     alvo.classList.add(styles.destaque);
     setTimeout(() => alvo.classList.remove(styles.destaque), 1600);
@@ -893,46 +950,23 @@ export function Leitor({
     return () => el.removeEventListener("click", clique);
   }, [lei, pronto, versaoTextos]);
 
-  // Grifos prontos do sistema de cores ativo
+  // Grifos prontos do sistema de cores ativo: as palavras-chave de cada entrada dentro do texto do dispositivo (marca-texto;
+  // nos Pedidos, sublinhado) e o "vide" para o mesmo tema em outro dispositivo (ver src/lib/leis/grifos.ts)
   useEffect(() => {
     const el = folha.current;
     if (!el || !pronto) return;
-    const regra = grifoDe(PRONTOS, idDosProntos(sistema), lei);
-    const cor = (rotulo: string) => corDoPronto(sistema, rotulo);
-    for (const b of blocosDe(el)) {
-      const g = prefs.prontos && b.dataset.disp && b.dataset.sup === "0" ? regra(b.dataset.disp) : null;
-      const c = g ? cor(g.regra.rotulo) : undefined;
-      if (g && c) {
-        b.dataset.pronto = g.destaque ? "destaque" : "area";
-        b.style.setProperty("--pronto", c);
-        b.dataset.regra = g.regra.rotulo;
-        if (g.regra.nota) b.dataset.regraNota = g.regra.nota;
-        else delete b.dataset.regraNota;
-      } else if (b.dataset.pronto) {
-        delete b.dataset.pronto;
-        delete b.dataset.regra;
-        delete b.dataset.regraNota;
-        b.style.removeProperty("--pronto");
-      }
-    }
-    // destaques seguidos, com a mesma regra e a mesma cor, formam uma moldura só (o artigo inteiro)
-    let anterior: HTMLElement | null = null;
-    for (const b of blocosDe(el)) {
-      const junta =
-        !!anterior &&
-        b.dataset.pronto === "destaque" &&
-        anterior.dataset.pronto === "destaque" &&
-        anterior.dataset.regra === b.dataset.regra &&
-        anterior.style.getPropertyValue("--pronto") === b.style.getPropertyValue("--pronto");
-      if (junta) {
-        anterior!.dataset.prontoLigaDepois = "1";
-        b.dataset.prontoLigaAntes = "1";
-      } else {
-        delete b.dataset.prontoLigaAntes;
-        if (anterior) delete anterior.dataset.prontoLigaDepois;
-      }
-      anterior = b;
-    }
+    desmarcarProntos(el);
+    if (!prefs.prontos) return;
+    pintarProntos(
+      blocosDe(el),
+      txtDe,
+      prontosNoSistema(PRONTOS, sistema, lei),
+      (g) => corDoGrifo(sistema, g),
+      (g) => rotuloDoGrifo(sistema, g),
+      lei,
+      { marca: styles.pronto, vide: styles.prontoVide },
+      (b) => blocos.current?.[Number(b.dataset.i)]?.tipo,
+    );
   }, [pronto, prefs.prontos, sistema, lei, versaoTextos]);
 
   // Marcações do usuário
@@ -941,6 +975,23 @@ export function Leitor({
     (cor: string) => (cor === "nota" ? "Anotação" : ([sistema, ...todosSistemas(legendas)].flatMap((s) => s.cores).find((c) => c.cor === cor)?.rotulo ?? "")),
     [legendas, sistema],
   );
+  // A altura da faixa de um grifo de trecho é a da fonte (não a da linha); com a folga certa em cima e embaixo, as
+  // linhas de um grifo que passa de uma linha encostam umas nas outras e formam uma forma só. A altura da fonte, em
+  // "em", é medida num grifo de teste, para cada fonte.
+  useEffect(() => {
+    const el = folha.current;
+    const raiz = raizRef.current;
+    if (!el || !raiz || !pronto) return;
+    const teste = document.createElement("mark");
+    teste.className = styles.marca;
+    teste.style.padding = "0";
+    teste.textContent = "Ág";
+    el.append(teste);
+    const tamanho = parseFloat(getComputedStyle(teste).fontSize);
+    const altura = teste.getBoundingClientRect().height;
+    teste.remove();
+    if (tamanho > 0 && altura > 0) raiz.style.setProperty("--grifo-altura", (altura / tamanho).toFixed(3));
+  }, [pronto, prefs.fonte]);
   const exibidas = useMemo<Marcacao[]>(
     () => (vendoRecebido && recebido ? recebido.m.map((m, k) => ({ ...m, id: `r${k}`, em: 0 })) : marcas),
     [vendoRecebido, recebido, marcas],
@@ -1180,11 +1231,20 @@ export function Leitor({
       const ret = r.getBoundingClientRect();
       const base = el.offsetParent?.getBoundingClientRect();
       const toque = matchMedia("(pointer: coarse)").matches;
+      // a barra vai acima da seleção (no toque, abaixo, se em cima não couber o menu do sistema); numa seleção maior
+      // que a tela, o começo ou o fim ficam fora dela: a barra fica na borda visível mais perto (embaixo, onde a
+      // seleção terminou, quando o começo sumiu lá em cima)
+      const ALTURA = toque ? 108 : 58;
+      const vis = faixaVisivel();
+      const acima = !toque || ret.top > 170;
+      let topo = acima ? ret.top - ALTURA : ret.bottom + 64;
+      if (topo < vis.topo) topo = ret.bottom + 12 <= vis.fundo - 50 ? ret.bottom + 12 : vis.fundo - 50;
+      topo = Math.max(vis.topo, Math.min(topo, vis.fundo - 50));
       setSelecao({
         x: ret.left + ret.width / 2 - (base?.left ?? 0),
         y: ret.top - (base?.top ?? 0),
         fundo: ret.bottom - (base?.top ?? 0),
-        acima: !toque || ret.top > 170,
+        topo: topo - (base?.top ?? 0),
         toque,
         segmentos,
       });
@@ -1230,6 +1290,7 @@ export function Leitor({
     if (!alvo) return;
     setOculto(false);
     barraFixa.current = Date.now() + 2000;
+    if (avisarForaDoFiltro.current(alvo)) return;
     alinharAoArtigo(alvo);
     // o artigo de destino fica destacado por um instante, para ficar claro para onde o leitor foi levado
     alvo.classList.add(styles.destaque);
@@ -1598,10 +1659,10 @@ export function Leitor({
       const alvo = e.target as HTMLElement;
       if (getSelection()?.toString()) return;
       setRegra(null);
-      const bloco = alvo.closest<HTMLElement>("[data-regra]");
-      if (bloco && alvo === bloco && !marcadorRef.current.ativo) {
-        const ret = bloco.getBoundingClientRect();
-        setRegra({ x: ret.left, y: ret.bottom, rotulo: bloco.dataset.regra!, nota: bloco.dataset.regraNota, destaque: bloco.dataset.pronto === "destaque" });
+      const doPronto = alvo.closest<HTMLElement>("mark[data-pronto]");
+      if (doPronto && !alvo.closest("mark[data-m]") && !marcadorRef.current.ativo) {
+        const ret = doPronto.getBoundingClientRect();
+        setRegra({ x: ret.left, y: ret.bottom, rotulo: doPronto.dataset.regra ?? "", nota: doPronto.dataset.regraNota, essencial: doPronto.dataset.essencial === "1" });
         return;
       }
       const mark = alvo.closest<HTMLElement>("mark[data-m]");
@@ -1618,10 +1679,15 @@ export function Leitor({
         const ancora = mark ?? (paragrafo && (txtDe(paragrafo) ?? paragrafo));
         const ret = (ancora || alvo).getBoundingClientRect();
         const base = el.offsetParent?.getBoundingClientRect();
-        setAberta({ id, x: ret.left + ret.width / 2 - (base?.left ?? 0), y: ret.bottom - (base?.top ?? 0) });
+        // o cartão abre embaixo do grifo; num grifo maior que a tela, fica na parte visível (até 240 px do fim)
+        const vis = faixaVisivel();
+        const y = Math.max(vis.topo, Math.min(ret.bottom, vis.fundo - 240));
+        setAberta({ id, x: ret.left + ret.width / 2 - (base?.left ?? 0), y: y - (base?.top ?? 0) });
         return;
       }
       if (alvo.closest("a, button, [data-rotulo-art]")) return;
+      // com a leitura em voz alta aberta, o parágrafo tocado ganha o "▶ Ler daqui"
+      ouvirRef.current.tocouNoTexto(alvo, e.clientX, e.clientY);
       setOculto((o) => !o);
     };
     el.addEventListener("click", clique);
@@ -1643,6 +1709,51 @@ export function Leitor({
       document.removeEventListener("click", fora);
     };
   }, [aberta]);
+  // o pop-up do grifo fica inteiro na tela: centrado no grifo, mas empurrado para dentro quando o grifo está perto da
+  // borda (no celular ele saía pela esquerda ou pela direita). Medido depois de pintado, com a largura real do cartão.
+  const popoverAberto = !!(aberta && marcaAberta);
+  useLayoutEffect(() => {
+    const c = popoverRef.current;
+    if (!c || !popoverAberto) return;
+    const ajustar = () => {
+      const r = c.getBoundingClientRect();
+      const meia = r.width / 2;
+      const centro = r.left + meia;
+      const alvo = Math.min(Math.max(centro, meia + 8), window.innerWidth - meia - 8);
+      if (Math.abs(alvo - centro) > 0.5) c.style.left = `${parseFloat(c.style.left) + (alvo - centro)}px`;
+    };
+    ajustar();
+    // o cartão muda de largura (ex.: o campo de anotação cresce): reajusta; e a janela pode mudar de tamanho
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(ajustar) : null;
+    ro?.observe(c);
+    window.addEventListener("resize", ajustar);
+    return () => {
+      ro?.disconnect();
+      window.removeEventListener("resize", ajustar);
+    };
+  }, [aberta, popoverAberto]);
+  // a barra da seleção (cores, lixeira e anotação) segue o mesmo critério: inteira na tela, mesmo com o trecho na borda
+  const flutuanteRef = useRef<HTMLDivElement>(null);
+  const barraAberta = !!(selecao && !marcador.ativo);
+  useLayoutEffect(() => {
+    const c = flutuanteRef.current;
+    if (!c || !barraAberta) return;
+    const ajustar = () => {
+      const r = c.getBoundingClientRect();
+      const meia = r.width / 2;
+      const centro = r.left + meia;
+      const alvo = Math.min(Math.max(centro, meia + 8), window.innerWidth - meia - 8);
+      if (Math.abs(alvo - centro) > 0.5) c.style.left = `${parseFloat(c.style.left) + (alvo - centro)}px`;
+    };
+    ajustar();
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(ajustar) : null;
+    ro?.observe(c);
+    window.addEventListener("resize", ajustar);
+    return () => {
+      ro?.disconnect();
+      window.removeEventListener("resize", ajustar);
+    };
+  }, [selecao, barraAberta]);
   // texto do grifo inteiro: as partes de uma seleção que atravessa parágrafos, na ordem do texto
   const textoDoGrifo = (m: Marcacao) => {
     const grupo = m.grupo ?? m.id;
@@ -1855,6 +1966,20 @@ export function Leitor({
     setPainel("navegar");
     setSelecao(null);
   };
+  // pelo comando ("/remissivo", "/indice"), o painel abre com o cursor no campo de busca dele; o índice remissivo
+  // chega depois (é carregado quando a aba abre), por isso o efeito espera o campo aparecer
+  const focarBusca = useRef(false);
+  useEffect(() => {
+    if (!focarBusca.current) return;
+    if (painel !== "navegar" || (abaNavegar === "remissivo" && remissivo === "sem")) {
+      focarBusca.current = false;
+      return;
+    }
+    const campo = document.querySelector<HTMLInputElement>(`.${styles.folhaPainel} input[type="search"]`);
+    if (!campo) return;
+    focarBusca.current = false;
+    campo.focus();
+  });
   // o índice remissivo da lei é carregado só quando a aba é aberta (e uma vez)
   useEffect(() => {
     if (painel !== "navegar" || abaNavegar !== "remissivo" || remissivo) return;
@@ -1988,8 +2113,10 @@ export function Leitor({
       case "leis":
         return setPainel("leis");
       case "indice":
+        focarBusca.current = true;
         return abrirNavegar("divisoes");
       case "remissivo":
+        focarBusca.current = true;
         return abrirNavegar("remissivo");
       case "leitura":
         return setPainel("aa");
@@ -2005,6 +2132,8 @@ export function Leitor({
         return void gerarLink(false);
       case "imprimir":
         return void setTimeout(() => window.print(), 100);
+      case "ouvir":
+        return ouvir.ativo ? setPainel("ouvir") : ouvir.iniciar();
       case "comandos":
         return;
     }
@@ -2015,7 +2144,7 @@ export function Leitor({
       const a = artigosRef.current[k];
       if (!a) return;
       if (marcar) {
-        irParaArtigo(a[0]);
+        irParaArtigo(a[0], true);
         setAtual(k);
       } else {
         medirTopo();
@@ -2042,13 +2171,13 @@ export function Leitor({
   );
   const faixasTrilho = useMemo<FaixaTrilho[]>(() => {
     if (!prefs.prontos) return [];
-    const regraDe = grifoDe(PRONTOS, idDosProntos(sistema), lei);
+    const grifos = prontosNoSistema(PRONTOS, sistema, lei);
     const faixas: FaixaTrilho[] = [];
     artigos.forEach(([id], k) => {
-      const g = regraDe(id);
-      const cor = g && corDoPronto(sistema, g.regra.rotulo);
+      const g = grifos.filter((x) => noArtigo(x, id)).sort((a, b) => CORES_GRIFO.indexOf(a.cor) - CORES_GRIFO.indexOf(b.cor))[0];
+      const cor = g && corDoGrifo(sistema, g);
       if (!g || !cor) return;
-      const rotulo = g.regra.rotulo;
+      const rotulo = ROTULO_DA_COR[g.cor];
       const ult = faixas.at(-1);
       if (ult && ult.cor === cor && ult.rotulo === rotulo && ult.ate === k - 1) ult.ate = k;
       else faixas.push({ de: k, ate: k, cor, rotulo });
@@ -2146,8 +2275,22 @@ export function Leitor({
 
   // Filtro do texto. "Somente grifos": os parágrafos grifados, cada um com o caput do seu artigo. "Apenas os erros":
   // os artigos em que o usuário errou. Sem grifos ou sem erros, o texto aparece inteiro (o painel explica).
-  const blocosComGrifo = useMemo(() => new Set(marcas.map((m) => m.i)), [marcas]);
-  const artigosComGrifo = useMemo(() => new Set(marcas.flatMap((m) => (m.disp ? [m.disp.split(".")[0]!] : []))), [marcas]);
+  // as cores escolhidas nos filtros de grifos ("só peças e teses"): valem as que têm grifo no filtro; nenhuma = todas
+  const prontosDaLei = useMemo(() => prontosNoSistema(PRONTOS, sistema, lei), [sistema, lei]);
+  const coresDoFiltro = useMemo(() => {
+    const usadas = new Set(prefs.filtro === "grifos" ? marcas.map((m) => m.cor) : prefs.filtro === "automaticos" ? prontosDaLei.map((g) => corDoGrifo(sistema, g)) : []);
+    return sistema.cores.filter((c, i, cs) => usadas.has(c.cor) && cs.findIndex((x) => x.cor === c.cor) === i);
+  }, [prefs.filtro, marcas, prontosDaLei, sistema]);
+  const coresEscolhidas = useMemo(() => prefs.filtroCores.filter((c) => coresDoFiltro.some((x) => x.cor === c)), [prefs.filtroCores, coresDoFiltro]);
+  // todas marcadas filtram o mesmo que nenhuma
+  const corFiltro = coresEscolhidas.length > 0 && coresEscolhidas.length < coresDoFiltro.length;
+  const naCorDoFiltro = useCallback((cor: string | undefined) => !corFiltro || (cor !== undefined && coresEscolhidas.includes(cor)), [corFiltro, coresEscolhidas]);
+  const alternarCorFiltro = (cor: string) =>
+    mudarPrefs({ filtroCores: coresEscolhidas.includes(cor) ? coresEscolhidas.filter((c) => c !== cor) : [...coresEscolhidas, cor] });
+  const marcasDoFiltro = useMemo(() => (corFiltro ? marcas.filter((m) => naCorDoFiltro(m.cor)) : marcas), [marcas, corFiltro, naCorDoFiltro]);
+  const prontosDoFiltro = useMemo(() => (corFiltro ? prontosDaLei.filter((g) => naCorDoFiltro(corDoGrifo(sistema, g))) : prontosDaLei), [prontosDaLei, corFiltro, naCorDoFiltro, sistema]);
+  const blocosComGrifo = useMemo(() => new Set(marcasDoFiltro.map((m) => m.i)), [marcasDoFiltro]);
+  const artigosComGrifo = useMemo(() => new Set(marcasDoFiltro.flatMap((m) => (m.disp ? [m.disp.split(".")[0]!] : []))), [marcasDoFiltro]);
   const filtroEfetivo: FiltroTexto =
     prefs.filtro === "grifos" && marcas.length
       ? "grifos"
@@ -2159,26 +2302,45 @@ export function Leitor({
   useEffect(() => {
     const el = folha.current;
     if (!el || !pronto) return;
-    // o grifo automático do bloco: a regra de grifos prontos com uma cor no sistema ativo (o mesmo que o leitor pinta)
-    const regraDoBloco = grifoDe(PRONTOS, idDosProntos(sistema), lei);
-    const comPronto = (b: HTMLElement) => {
-      const d = b.dataset.disp;
-      if (!d || b.dataset.sup !== "0") return false;
-      const g = regraDoBloco(d);
-      return !!g && !!corDoPronto(sistema, g.regra.rotulo);
-    };
+    // os blocos com grifo automático: o dispositivo de cada grifo pronto com cor no sistema ativo (o que o leitor pinta)
     const blocos = blocosDe(el);
-    const artigosComPronto = new Set(blocos.filter(comPronto).map((b) => b.dataset.disp!.split(".")[0]));
-    for (const b of blocos) {
+    const doPronto = blocosComProntos(
+      blocos.map((b) => ({ disp: b.dataset.disp, superada: b.dataset.sup !== "0" })),
+      prontosDoFiltro,
+    );
+    const artigosComPronto = new Set([...doPronto].map((i) => blocos[i]!.dataset.disp!.split(".")[0]));
+    for (const [i, b] of blocos.entries()) {
+      const comPronto = doPronto.has(i);
       const artigo = b.dataset.disp?.split(".")[0];
       let fora = false;
       if (filtroEfetivo === "grifos") fora = !blocosComGrifo.has(Number(b.dataset.i)) && !(artigo !== undefined && b.dataset.disp === artigo && artigosComGrifo.has(artigo));
       if (filtroEfetivo === "erros") fora = !(artigo !== undefined && porArtigo.has(artigo));
-      if (filtroEfetivo === "automaticos") fora = !comPronto(b) && !(artigo !== undefined && b.dataset.disp === artigo && artigosComPronto.has(artigo));
+      if (filtroEfetivo === "automaticos") fora = !comPronto && !(artigo !== undefined && b.dataset.disp === artigo && artigosComPronto.has(artigo));
       if (fora) b.dataset.foraFiltro = "1";
       else delete b.dataset.foraFiltro;
     }
-  }, [filtroEfetivo, blocosComGrifo, artigosComGrifo, porArtigo, pronto, sistema, lei]);
+  }, [filtroEfetivo, blocosComGrifo, artigosComGrifo, porArtigo, pronto, prontosDoFiltro]);
+
+  useEffect(() => {
+    avisarForaDoFiltro.current = (alvo) => {
+      if (!alvo.closest("[data-fora-filtro]")) return false;
+      const base = alvo.id.split(".")[0]!;
+      const rotulo = artigosRef.current.find((a) => a[0] === base)?.[1] ?? "Esse artigo";
+      const nome = FILTROS.find((f) => f.id === filtroEfetivo)?.titulo ?? "do texto";
+      setAviso({
+        texto: `${rotulo} não aparece com o filtro “${nome}”${corFiltro ? " nas cores escolhidas" : ""}.`,
+        acao: {
+          rotulo: "Mostrar tudo",
+          fazer: () => {
+            mudarPrefs({ filtro: "tudo" });
+            // o filtro sai no próximo desenho; aí o artigo já tem onde estar
+            window.setTimeout(() => irParaArtigo(alvo.id), 80);
+          },
+        },
+      });
+      return true;
+    };
+  });
 
   // o popup "Ir para": as divisões mostradas (só títulos ou tudo) e os erros a partir do mínimo escolhido
   // nas súmulas, a primeira aba lista as súmulas (cada uma é um dispositivo), no lugar dos títulos e capítulos
@@ -2192,13 +2354,15 @@ export function Leitor({
       if (filtroEfetivo === "grifos" && artigosComGrifo.has(id)) idx.add(k);
       if (filtroEfetivo === "erros" && porArtigo.has(id)) idx.add(k);
     });
-    if (filtroEfetivo === "automaticos") for (const f of faixasTrilho) for (let k = f.de; k <= f.ate; k++) idx.add(k);
+    if (filtroEfetivo === "automaticos" && !corFiltro) for (const f of faixasTrilho) for (let k = f.de; k <= f.ate; k++) idx.add(k);
+    // com cores escolhidas, os artigos que têm um grifo pronto dela (a faixa do trilho mostra só a primeira cor do artigo)
+    if (filtroEfetivo === "automaticos" && corFiltro) artigos.forEach(([id], k) => prontosDoFiltro.some((g) => noArtigo(g, id)) && idx.add(k));
     return [...idx].sort((a, b) => a - b);
-  }, [filtroEfetivo, artigos, artigosComGrifo, porArtigo, faixasTrilho]);
+  }, [filtroEfetivo, artigos, artigosComGrifo, porArtigo, faixasTrilho, corFiltro, prontosDoFiltro]);
   const pontosVisiveis = useMemo<PontoTrilho[]>(() => {
     const tipo: PontoTrilho["tipo"] | null = filtroEfetivo === "grifos" ? "marca" : filtroEfetivo === "erros" ? "erro" : filtroEfetivo === "automaticos" ? "pronto" : null;
-    return tipo ? pontosTrilho.filter((p) => p.tipo === tipo) : pontosTrilho;
-  }, [filtroEfetivo, pontosTrilho]);
+    return tipo ? pontosTrilho.filter((p) => p.tipo === tipo && (tipo === "erro" || naCorDoFiltro(p.cor))) : pontosTrilho;
+  }, [filtroEfetivo, pontosTrilho, naCorDoFiltro]);
   // o "Buscar" passa só pelos artigos à mostra no filtro
   const proximoVisivel = (de: number, passo: -1 | 1): number => {
     if (!alvosTrilho) return de + passo;
@@ -2227,17 +2391,34 @@ export function Leitor({
   const remissivoFiltrado = useMemo(() => {
     if (!remissivo || remissivo === "sem") return [];
     const termo = semAcentoBusca(buscaRemissivo.trim());
-    const itens: { palavra: string; subitens: RemissivoSubitem[] }[] = [];
+    const itens: { palavra: string; subitens: RemissivoSubitem[]; ordem: number }[] = [];
     for (const e of remissivo.entradas) {
-      if (!termo || semAcentoBusca(e.palavra).includes(termo)) {
-        itens.push({ palavra: e.palavra, subitens: e.subitens });
+      const palavra = semAcentoBusca(e.palavra);
+      if (!termo || tituloTemTermo(palavra, termo)) {
+        itens.push({ palavra: e.palavra, subitens: e.subitens, ordem: termo ? ordemNoRemissivo(palavra, termo) : 0 });
         continue;
       }
       const subitens = e.subitens.filter((s) => semAcentoBusca(s.texto).includes(termo) || semAcentoBusca(s.ref).includes(termo));
-      if (subitens.length) itens.push({ palavra: e.palavra, subitens });
+      if (subitens.length) itens.push({ palavra: e.palavra, subitens, ordem: 3 });
     }
-    return itens;
+    // o título que é o termo buscado vem primeiro ("prova" ou "provas" → "PROVA(S)"); a ordem alfabética fica dentro de cada grupo
+    return itens.sort((a, b) => a.ordem - b.ordem);
   }, [remissivo, buscaRemissivo]);
+  // a referência do índice remissivo grifada com a cor dos grifos do artigo: os do usuário e os prontos (quando ligados)
+  const coresDoRemissivo = useMemo(
+    () =>
+      painel === "navegar" && abaNavegar === "remissivo"
+        ? coresPorArtigo({
+            marcas,
+            prontos: prefs.prontos ? prontosDaLei : [],
+            corDoPronto: (g) => corDoGrifo(sistema, g),
+            rotuloDoPronto: (g) => rotuloDoGrifo(sistema, g),
+            rotuloDaMarca: (cor) => rotuloDaCor(cor) || "Grifo",
+            ordem: (cor) => ordemDaCor(sistema, cor),
+          })
+        : null,
+    [painel, abaNavegar, marcas, prefs.prontos, prontosDaLei, sistema, rotuloDaCor],
+  );
   // as abas do "Ir para", em ícones (o nome aparece ao passar o mouse), ao lado do botão de fechar
   const abasIcones = (
     <div className={styles.abasIcones} role="tablist" aria-label="Ir para">
@@ -2272,6 +2453,7 @@ export function Leitor({
       data-erros={prefs.erros ? "1" : "0"}
       data-marcador={marcador.ativo ? "1" : "0"}
       data-largura={prefs.largura}
+      data-ouvindo={ouvir.ativo ? "1" : undefined}
       style={{ "--leitor-tamanho": `${prefs.tamanho}px`, "--leitor-entrelinha": prefs.entrelinha, "--leitor-laterais": `${prefs.laterais}px`, ...(CORES_TEXTO[prefs.corTexto].cor ? { "--leitor-fg": CORES_TEXTO[prefs.corTexto].cor } : {}) } as CSSProperties}
     >
       <DiagSelecao />
@@ -2350,12 +2532,14 @@ export function Leitor({
           aoIr={irPorIndice}
           aoSoltar={voltarDoSlide}
           pontos={pontosVisiveis}
-          faixas={filtroEfetivo === "tudo" || filtroEfetivo === "automaticos" ? faixasTrilho : []}
+          faixas={filtroEfetivo === "tudo" ? faixasTrilho : filtroEfetivo === "automaticos" ? faixasTrilho.filter((f) => naCorDoFiltro(f.cor)) : []}
           alvos={alvosTrilho}
           secoes={mapa.secoes}
           marcos={mapa.marcos}
           detalhes={detalhesTrilho}
           aoMenu={() => abrirNavegar("divisoes")}
+          lado={prefs.trilhoLado}
+          aoMudarLado={(trilhoLado) => mudarPrefs({ trilhoLado })}
         />
       )}
 
@@ -2478,6 +2662,22 @@ export function Leitor({
             }}
           />
           <BotaoDock
+            icone={
+              // fones de ouvido, no traço dos outros ícones (o emoji 🎧 sai colorido)
+              <svg viewBox="0 0 24 24" className={styles.iconeSvg} aria-hidden>
+                <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+                <rect x="3" y="14" width="4.5" height="7" rx="1.6" />
+                <rect x="16.5" y="14" width="4.5" height="7" rx="1.6" />
+              </svg>
+            }
+            rotulo={ouvir.ativo ? "Ouvindo" : "Ouvir"}
+            ativo={ouvir.ativo || painel === "ouvir"}
+            // a primeira vez lê do ponto da tela; com a leitura aberta, abre os ajustes dela
+            onClick={() => (ouvir.ativo ? abrir("ouvir") : ouvir.iniciar())}
+            aoDeslizar={(sentido) => ouvir.mudarVelocidade(sentido === "direita" ? 0.1 : -0.1)}
+            aoSegurar={() => abrir("ouvir")}
+          />
+          <BotaoDock
             icone="⛶"
             rotulo="Tela cheia"
             ativo={telaCheia}
@@ -2503,6 +2703,9 @@ export function Leitor({
           />
         </div>
       </nav>
+
+      <BarraOuvir ouvir={ouvir} dockVisivel={!escondido} painelAberto={!!painel} abrirAjustes={() => abrir("ouvir")} />
+      <BolhaLerDaqui ouvir={ouvir} />
 
       {atalho !== null && (
         <IrParaArtigo
@@ -2542,12 +2745,13 @@ export function Leitor({
           titulo={
             painel === "navegar"
               ? ((sumula ? ABAS_SUMULAS : ABAS_LEIS).find(([id]) => id === abaNavegar)?.[1] ?? "")
-              : { leis: "Leis", buscar: "Buscar", grifos: "Grifos", aa: "Leitura", mais: "Mais", navegar: "" }[painel]
+              : { leis: "Leis", buscar: "Buscar", grifos: "Grifos", aa: "Leitura", mais: "Mais", navegar: "", ouvir: "Ouvir em voz alta" }[painel]
           }
           acoes={painel === "navegar" ? abasIcones : undefined}
           onFechar={fecharPainel}
         >
           {painel === "leis" && <PainelLeis atual={lei} posicoes={posicoes} />}
+          {painel === "ouvir" && <AjustesOuvir ouvir={ouvir} sumula={sumula} fecharPainel={fecharPainel} />}
           {painel === "buscar" && (
             <PainelBusca
               lei={lei}
@@ -2685,6 +2889,18 @@ export function Leitor({
                       value={buscaRemissivo}
                       onChange={(e) => setBuscaRemissivo(e.target.value)}
                     />
+                    {coresDoRemissivo && coresDoRemissivo.size > 0 && (
+                      <p className={styles.legendaRemissivo}>
+                        <span className={styles.refGrifada} data-meu="1" style={{ "--c": sistema.cores[0]?.cor } as CSSProperties}>
+                          art. 1
+                        </span>{" "}
+                        seu grifo ·{" "}
+                        <span className={styles.refGrifada} style={{ "--c": sistema.cores[0]?.cor } as CSSProperties}>
+                          art. 1
+                        </span>{" "}
+                        grifo pronto · a cor é a do grifo no artigo
+                      </p>
+                    )}
                     {remissivoFiltrado.length === 0 && buscaRemissivo.trim() ? (
                       <p className={styles.miuda}>Nada com “{buscaRemissivo.trim()}” no índice.</p>
                     ) : (
@@ -2695,17 +2911,37 @@ export function Leitor({
                               {e.subitens.map((sub, n) => {
                                 const id = artigoDaRef(sub.ref, idsDosArtigos);
                                 const k = id ? artigos.findIndex((a) => a[0] === id) : -1;
+                                const cores = (id && coresDoRemissivo?.get(id)) || [];
+                                const principal = cores.find((c) => c.meu) ?? cores[0];
+                                const nomesDasCores = cores.map((c) => `${c.rotulo} (${c.meu ? "seu grifo" : "grifo pronto"})`).join(", ");
                                 return (
                                   <dd key={n}>
                                     {/* nas súmulas, o número vem antes do começo do enunciado */}
                                     {!sumula && sub.texto ? `${sub.texto}: ` : ""}
                                     {k >= 0 ? (
                                       // a prévia do artigo é o pop-up de link de artigo (data-lei/data-art), em qualquer página
-                                      <a href={`#${artigos[k]![0]}`} data-lei={lei} data-art={artigos[k]![0]} onClick={(e) => { e.preventDefault(); irNavegar(k); }}>
+                                      <a
+                                        href={`#${artigos[k]![0]}`}
+                                        data-lei={lei}
+                                        data-art={artigos[k]![0]}
+                                        className={principal ? styles.refGrifada : undefined}
+                                        data-meu={principal?.meu ? "1" : undefined}
+                                        style={principal ? ({ "--c": principal.cor } as CSSProperties) : undefined}
+                                        aria-label={principal ? `${sub.ref} — grifado: ${nomesDasCores}` : undefined}
+                                        onClick={(e) => { e.preventDefault(); irNavegar(k); }}
+                                      >
                                         {sub.ref}
                                       </a>
                                     ) : (
                                       sub.ref
+                                    )}
+                                    {/* mais de uma cor no artigo: as outras em bolinhas, com o nome ao passar o mouse */}
+                                    {cores.length > 1 && (
+                                      <span className={styles.coresRef} aria-hidden>
+                                        {cores.map((c) => (
+                                          <span key={c.cor} data-meu={c.meu ? "1" : undefined} style={{ "--c": c.cor } as CSSProperties} title={`${c.rotulo} (${c.meu ? "seu grifo" : "grifo pronto"})`} />
+                                        ))}
+                                      </span>
                                     )}
                                     {sumula && sub.texto ? ` — ${sub.texto}` : ""}
                                   </dd>
@@ -2849,6 +3085,19 @@ export function Leitor({
                     <OpcaoCartao key={f.id} tipo="radio" nome="filtro-texto" marcada={prefs.filtro === f.id} titulo={f.titulo} dica={f.dica} onChange={() => mudarPrefs({ filtro: f.id })} />
                   ))}
                 </div>
+                {(filtroEfetivo === "grifos" || filtroEfetivo === "automaticos") && coresDoFiltro.length > 1 && (
+                  <div className={styles.chips} role="group" aria-label="Só os grifos das cores escolhidas">
+                    <button type="button" aria-pressed={!corFiltro} onClick={() => mudarPrefs({ filtroCores: [] })}>
+                      Todas as cores
+                    </button>
+                    {coresDoFiltro.map((c) => (
+                      <button key={c.cor} type="button" aria-pressed={coresEscolhidas.includes(c.cor)} onClick={() => alternarCorFiltro(c.cor)}>
+                        <span className={styles.amostraCor} style={{ background: c.cor }} aria-hidden />
+                        {c.rotulo}
+                      </button>
+                    ))}
+                  </div>
+                )}
                 {prefs.filtro === "grifos" && !marcas.length && <p className={styles.miuda}>Você ainda não grifou nada nesta lei: o texto aparece inteiro.</p>}
                 {prefs.filtro === "erros" && !porArtigo.size && <p className={styles.miuda}>Nenhum erro nesta lei ainda: o texto aparece inteiro.</p>}
                 {prefs.filtro === "automaticos" && !prefs.prontos && (
@@ -2961,6 +3210,15 @@ export function Leitor({
                 />
               </fieldset>
               <fieldset>
+                <legend>Slide de artigos</legend>
+                <div className={styles.opcoesCartao}>
+                  {LADOS_TRILHO.map(([l, titulo, dica]) => (
+                    <OpcaoCartao key={l} tipo="radio" nome="lado-trilho" marcada={prefs.trilhoLado === l} titulo={titulo} dica={dica} onChange={() => mudarPrefs({ trilhoLado: l })} />
+                  ))}
+                </div>
+                <p className={styles.miuda}>Também dá para arrastar: o botão do slide com o clique direito (no celular, segure o botão) e solte perto da borda.</p>
+              </fieldset>
+              <fieldset>
                 <legend>Grifos e cores</legend>
                 <button type="button" className="btn btn-sm btn-gold" onClick={() => setPainel("grifos")}>
                   Meus grifos e sistemas de cores
@@ -3070,7 +3328,7 @@ export function Leitor({
                             type="button"
                             onClick={() => {
                               setPainel(null);
-                              setTimeout(() => irParaArtigo(id), 50);
+                              setTimeout(() => irParaArtigo(id, true), 50);
                             }}
                           >
                             <strong>{rotulo}</strong>
@@ -3096,8 +3354,9 @@ export function Leitor({
 
       {selecao && !marcador.ativo && (
         <div
+          ref={flutuanteRef}
           className={styles.flutuante}
-          style={{ left: selecao.x, top: selecao.acima ? selecao.y - (selecao.toque ? 108 : 58) : selecao.fundo + 64 }}
+          style={{ left: selecao.x, top: selecao.topo }}
           role="toolbar"
           aria-label="Grifar trecho"
         >
@@ -3150,13 +3409,11 @@ export function Leitor({
           role="dialog"
           aria-label={`Grifo pronto: ${regra.rotulo}`}
         >
-          <strong>{regra.rotulo}</strong>
+          {regra.rotulo.split("\n").map((r) => (
+            <strong key={r}>{r}</strong>
+          ))}
           {regra.nota && <span>{regra.nota}</span>}
-          <small>
-            {regra.destaque
-              ? "Destaque: citado em pelo menos 5 questões de Penal."
-              : "Tema de prova. O grifo mais forte marca o que mais cai."}
-          </small>
+          <small>{regra.essencial ? "Essencial: este dispositivo já caiu em prova." : "Geral: ainda não caiu em prova."}</small>
         </div>
       )}
 
@@ -3409,7 +3666,7 @@ export function BotaoDock({
   aoSegurar,
   previa,
 }: {
-  icone: string;
+  icone: React.ReactNode;
   rotulo: string;
   ativo: boolean;
   destaque?: boolean;
@@ -3497,33 +3754,6 @@ export function BotaoDock({
   );
 }
 
-/** Opção de "Mostrar no texto" e "Marcações": cartão com a caixa (ou o botão de escolha), o título e o que muda. */
-export function OpcaoCartao({
-  tipo,
-  nome,
-  marcada,
-  titulo,
-  dica,
-  onChange,
-}: {
-  tipo: "radio" | "checkbox";
-  nome?: string;
-  marcada: boolean;
-  titulo: string;
-  dica: string;
-  onChange: (marcada: boolean) => void;
-}) {
-  return (
-    <label className={styles.opcaoCartao} data-marcada={marcada ? "1" : "0"}>
-      <input type={tipo} name={nome} checked={marcada} onChange={(e) => onChange(e.target.checked)} />
-      <span className={styles.opcaoTexto}>
-        <strong>{titulo}</strong>
-        <small>{dica}</small>
-      </span>
-    </label>
-  );
-}
-
 /** Conteúdo de uma ação de "Levar a lei": ícone, título e uma linha dizendo o que ela faz. */
 function ConteudoAcao({ titulo, dica, children }: { titulo: string; dica: string; children: React.ReactNode }) {
   return (
@@ -3545,11 +3775,12 @@ export function Folha({ titulo, onFechar, acoes, children }: { titulo: string; o
     document.addEventListener("keydown", tecla);
     return () => document.removeEventListener("keydown", tecla);
   }, [onFechar]);
+  const { folha, veu, alca } = useArrastarParaFechar(onFechar);
   return (
     <>
-      <div className={styles.veu} onClick={onFechar} aria-hidden />
-      <section className={styles.folhaPainel} role="dialog" aria-label={titulo || "Navegação"}>
-        <header className={styles.folhaTopo}>
+      <div ref={veu} className={styles.veu} onClick={onFechar} aria-hidden />
+      <section ref={folha} className={styles.folhaPainel} role="dialog" aria-label={titulo || "Navegação"}>
+        <header className={styles.folhaTopo} {...alca}>
           {titulo && <h2>{titulo}</h2>}
           {acoes && <div className={styles.folhaAcoes}>{acoes}</div>}
           <button type="button" className={styles.fechar} onClick={onFechar} aria-label="Fechar">
@@ -3560,6 +3791,57 @@ export function Folha({ titulo, onFechar, acoes, children }: { titulo: string; o
       </section>
     </>
   );
+}
+
+/**
+ * No celular, a barrinha do topo da folha (e o topo todo, fora os botões) arrasta a folha para baixo: solta além de
+ * um quarto da altura, ou num puxão rápido, a folha desce e fecha; antes disso, volta ao lugar. No computador a folha
+ * fica ao lado, sem a barrinha, e o arrasto não vale.
+ */
+function useArrastarParaFechar(fechar: () => void) {
+  const folha = useRef<HTMLElement>(null);
+  const veu = useRef<HTMLDivElement>(null);
+  const toque = useRef<{ id: number; y: number; t: number; dy: number } | null>(null);
+  const mover = (dy: number, animar: boolean) => {
+    const f = folha.current;
+    if (!f) return;
+    f.style.transition = animar ? "transform 0.18s ease-out" : "none";
+    f.style.transform = dy ? `translateY(${dy}px)` : "";
+    if (veu.current) {
+      veu.current.style.transition = animar ? "opacity 0.18s ease-out" : "none";
+      veu.current.style.opacity = dy ? String(Math.max(0, 1 - dy / f.offsetHeight)) : "";
+    }
+  };
+  const alca = {
+    onPointerDown: (e: React.PointerEvent<HTMLElement>) => {
+      if (window.matchMedia("(min-width: 900px)").matches || (e.pointerType === "mouse" && e.button !== 0)) return;
+      if ((e.target as Element).closest("button, a, input, select, textarea, [role='tab']")) return;
+      toque.current = { id: e.pointerId, y: e.clientY, t: performance.now(), dy: 0 };
+      e.currentTarget.setPointerCapture(e.pointerId);
+    },
+    onPointerMove: (e: React.PointerEvent<HTMLElement>) => {
+      const t = toque.current;
+      if (!t || t.id !== e.pointerId) return;
+      t.dy = Math.max(0, e.clientY - t.y);
+      mover(t.dy, false);
+    },
+    onPointerUp: (e: React.PointerEvent<HTMLElement>) => {
+      const t = toque.current;
+      if (!t || t.id !== e.pointerId) return;
+      toque.current = null;
+      const altura = folha.current?.offsetHeight ?? 1;
+      const velocidade = t.dy / Math.max(1, performance.now() - t.t);
+      if (t.dy > altura / 4 || (t.dy > 30 && velocidade > 0.6)) {
+        mover(altura, true);
+        window.setTimeout(fechar, 180);
+      } else mover(0, true);
+    },
+    onPointerCancel: () => {
+      toque.current = null;
+      mover(0, true);
+    },
+  };
+  return { folha, veu, alca };
 }
 
 interface PontoTrilho {
@@ -3626,17 +3908,6 @@ function GrupoCorGrifos({
 }
 
 const semAcentoBusca = (t: string) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-/** "art. 200, parágrafo único" → "art200"; "art. 154-A" → "art154-a": o id do artigo no leitor, se a lei tiver o artigo */
-function artigoDaRef(ref: string, ids: Set<string>): string | null {
-  // no índice das súmulas a referência é a súmula ("Súmula 145" → "s-145")
-  const s = ref.match(/^s[úu]mula\s+(\d+)/i);
-  if (s) return ids.has(`s-${s[1]}`) ? `s-${s[1]}` : null;
-  const m = ref.match(/\bart(?:igo)?s?\.?\s*(\d{1,4})(?:\s*-\s*([A-Za-z]{1,2})\b)?/i);
-  if (!m) return null;
-  const com = m[2] ? `art${m[1]}-${m[2].toLowerCase()}` : null;
-  if (com && ids.has(com)) return com;
-  return ids.has(`art${m[1]}`) ? `art${m[1]}` : null;
-}
 /** Os grifos do usuário por grupo: uma seleção que atravessa parágrafos é um grifo só, com o texto das partes. */
 function agruparGrifos(ms: Marcacao[]): { primeiro: Marcacao; texto: string; partes: number }[] {
   const grupos = new Map<string, Marcacao[]>();
@@ -3651,10 +3922,36 @@ const ordemDaCor = (s: { cores: { cor: string }[] }, cor: string) => {
 };
 const semRotulo = (texto: string) => texto.replace(/^(Art\.\s*\S+|Parágrafo único\.?)\s*[-–.:]?\s*/i, "");
 
+/** o botão do slide: o tamanho da área de toque ao longo da barra (CSS .trilhoPino) */
+const TAMANHO_PINO = 56;
+/** acima e abaixo do botão, uma faixa de 1/4 dele fica sem marcações que peguem o clique: ali o clique é no botão */
+const FOLGA_PINO = 0.25;
+/** o escorregão do dedo ao tocar no botão que ainda conta como toque (px ao longo da barra): no toque e com o mouse */
+const LIMIAR_TOQUE = 14;
+const LIMIAR_MOUSE = 4;
+/** quanto tempo o dedo fica parado no botão para soltar a barra do lugar (no celular) */
+const SEGURAR_MS = 500;
+const LADOS: LadoTrilho[] = ["cima", "baixo", "esquerda", "direita"];
+const LADOS_TRILHO: [LadoTrilho, string, string][] = [
+  ["direita", "Na direita", "Em pé, na borda direita da tela (o padrão)."],
+  ["esquerda", "Na esquerda", "Em pé, na borda esquerda."],
+  ["cima", "No alto", "Deitado, abaixo do nome da lei."],
+  ["baixo", "Embaixo", "Deitado, logo acima da barra de controles."],
+];
+/** A borda da tela mais perto do ponto: para onde a barra vai quando é solta. */
+function ladoMaisPerto(x: number, y: number): LadoTrilho {
+  const d: Record<LadoTrilho, number> = { direita: window.innerWidth - x, esquerda: x, cima: y, baixo: window.innerHeight - y };
+  return LADOS.reduce((a, b) => (d[b] < d[a] ? b : a));
+}
+
 /**
- * Slide lateral de artigos. O terço da tela onde está o dedo escolhe o modo: esquerda, só grifos;
- * meio, artigo a artigo; direita, o pino acompanha o dedo. No toque, só o pino arrasta: no resto da
- * faixa o dedo rola a página, e um toque curto leva ao ponto.
+ * Slide de artigos. A distância do dedo até a barra escolhe o modo: perto, o pino acompanha o dedo; no meio, artigo a
+ * artigo; longe, só grifos (na barra da direita, são os terços da tela da direita para a esquerda). No toque, só o
+ * pino arrasta: no resto da faixa o dedo rola a página, e um toque curto leva ao ponto.
+ * A barra fica na borda direita (padrão), na esquerda, no alto ou embaixo (acima da barra de controles): o botão com o
+ * clique direito, ou segurado meio segundo no celular, arrasta a barra, que vai para a borda mais perto ao soltar.
+ * As marcações bem perto do botão (a altura dele e mais 1/4 acima e abaixo) ficam apagadas e não pegam o clique.
+ * Com o mouse, passar sobre uma marcação mostra a prévia do artigo, sem precisar clicar.
  */
 export function Trilho({
   artigos,
@@ -3670,6 +3967,8 @@ export function Trilho({
   detalhes,
   aoMenu,
   alvos,
+  lado = "direita",
+  aoMudarLado,
 }: {
   artigos: ArtigoTexto[];
   atual: number;
@@ -3687,12 +3986,22 @@ export function Trilho({
   aoMenu: () => void;
   /** os artigos que estão à mostra no filtro (ausente = todos): o deslizar encaixa neles */
   alvos?: number[];
+  lado?: LadoTrilho;
+  aoMudarLado?: (lado: LadoTrilho) => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const pino = useRef<HTMLSpanElement>(null);
-  const [altura, setAltura] = useState(0);
-  const [info, setInfo] = useState<{ k: number; y: number; modo: Modo; toque: boolean; emCima: boolean } | null>(null);
+  const deitado = lado === "cima" || lado === "baixo";
+  // o comprimento da barra: a altura em pé, a largura deitada
+  const [comprimento, setComprimento] = useState(0);
+  // `pos`: onde o cartão fica ao longo da barra (px); `previa`: aberto pelo mouse sobre uma marcação, sem arrastar
+  const [info, setInfo] = useState<{ k: number; pos: number; modo: Modo; toque: boolean; emCima: boolean; previa?: boolean } | null>(null);
   const [ativo, setAtivo] = useState(false);
+  // arrastando a barra para outra borda: a borda em que ela vai ficar
+  const [mudando, setMudando] = useState<LadoTrilho | null>(null);
+  const movendoBarra = useRef(false);
+  const menuNoToque = useRef(false);
+  const segurar = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const estado = useRef<{
     y: number;
     k: number;
@@ -3705,16 +4014,34 @@ export function Trilho({
     noPino: boolean;
     movido: boolean;
     t0: number;
+    /** as marcações que estavam bem perto do botão quando o dedo o pegou: não atraem nem param o pino até o dedo sair dali */
+    bloqueados: Set<number>;
   } | null>(null);
   const toqueNaFaixa = useRef<{ y: number; t: number } | null>(null);
   const quadro = useRef(0);
   const pendente = useRef(-1);
   const total = artigos.length;
   const ks = useMemo(() => [...new Set(pontos.map((p) => p.k))], [pontos]);
-  const mostrar = ativo && info ? info.k : atual;
+  const mostrar = ativo && info && !info.previa ? info.k : atual;
   // o pino: enquanto se arrasta, na posição do dedo; fora disso, na posição contínua da leitura
   const posicao = ativo && info ? info.k : progresso;
   const pct = (k: number) => `${(k / Math.max(1, total - 1)) * 100}%`;
+  const px = (k: number) => (k / Math.max(1, total - 1)) * comprimento;
+  const pinoPx = px(posicao);
+  // a faixa do botão: ele e mais 1/4 dele de cada lado
+  const raioPino = TAMANHO_PINO * (0.5 + FOLGA_PINO);
+  const pertoDoPino = (k: number) => Math.abs(px(k) - pinoPx) <= raioPino;
+  // o eixo da barra: a posição do ponteiro ao longo dela
+  const eixo = (e: { clientX: number; clientY: number }) => (deitado ? e.clientX : e.clientY);
+  const inicioDe = (r: DOMRect) => (deitado ? r.left : r.top);
+  const tamanhoDe = (r: DOMRect) => (deitado ? r.width : r.height);
+  // o modo pela distância do ponteiro até a barra (na barra da direita, os terços da tela)
+  const modoDe = (e: { clientX: number; clientY: number }) => {
+    const L = window.innerWidth;
+    const A = window.innerHeight;
+    const f = lado === "direita" ? e.clientX / L : lado === "esquerda" ? 1 - e.clientX / L : lado === "baixo" ? e.clientY / A : 1 - e.clientY / A;
+    return modoPorPosicao(f * L, L, ks.length > 0);
+  };
   // com um filtro, o deslizar só para nos artigos que estão à mostra (o mais próximo do ponto tocado)
   const encaixar = (k: number) => {
     if (!alvos?.length) return k;
@@ -3726,11 +4053,17 @@ export function Trilho({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const ro = new ResizeObserver(([e]) => setAltura(e.contentRect.height));
+    const ro = new ResizeObserver(([e]) => setComprimento(deitado ? e.contentRect.width : e.contentRect.height));
     ro.observe(el);
     return () => ro.disconnect();
-  }, []);
-  useEffect(() => () => cancelAnimationFrame(quadro.current), []);
+  }, [deitado]);
+  useEffect(
+    () => () => {
+      cancelAnimationFrame(quadro.current);
+      clearTimeout(segurar.current);
+    },
+    [],
+  );
 
   // no máximo um salto de página por quadro
   const ir = (k: number) => {
@@ -3740,18 +4073,36 @@ export function Trilho({
       aoIr(pendente.current, false);
     });
   };
-  const mostrarInfo = (k: number, clientY: number, modo: Modo, toque: boolean) => {
+  const mostrarInfo = (k: number, e: { clientX: number; clientY: number }, modo: Modo, toque: boolean) => {
     const r = ref.current!.getBoundingClientRect();
-    setInfo({ k, y: Math.max(0, Math.min(r.height, clientY - r.top)), modo, toque, emCima: clientY < window.innerHeight / 2 });
+    setInfo({ k, pos: Math.max(0, Math.min(tamanhoDe(r), eixo(e) - inicioDe(r))), modo, toque, emCima: e.clientY < window.innerHeight / 2 });
+  };
+  // a barra sai do lugar: o ponteiro leva até a borda em que ela vai ficar
+  const comecarMudanca = (x: number, y: number) => {
+    movendoBarra.current = true;
+    estado.current = null;
+    setAtivo(false);
+    setInfo(null);
+    setMudando(ladoMaisPerto(x, y));
+    vibrar();
   };
 
   const iniciar = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (e.button > 0) return;
     const r = e.currentTarget.getBoundingClientRect();
-    const noPino = !!pino.current?.contains(e.target as Node);
+    // no botão: no desenho dele, ou a até 1/4 dele acima ou abaixo (ali as marcações não pegam o clique)
+    const noPino = !!pino.current?.contains(e.target as Node) || Math.abs(eixo(e) - inicioDe(r) - pinoPx) <= raioPino;
     const toque = e.pointerType !== "mouse";
+    // o clique direito no botão arrasta a barra para outra borda
+    if (e.button === 2) {
+      if (!noPino) return;
+      e.preventDefault();
+      e.currentTarget.setPointerCapture(e.pointerId);
+      comecarMudanca(e.clientX, e.clientY);
+      return;
+    }
+    if (e.button > 0) return;
     if (toque && !noPino) {
-      toqueNaFaixa.current = { y: e.clientY, t: e.timeStamp };
+      toqueNaFaixa.current = { y: eixo(e), t: e.timeStamp };
       return;
     }
     // com o mouse, o arraste não pode começar uma seleção de texto embaixo do slide
@@ -3760,19 +4111,67 @@ export function Trilho({
       window.getSelection()?.removeAllRanges();
     }
     e.currentTarget.setPointerCapture(e.pointerId);
-    const k = noPino ? atual : encaixar(indicePorPosicao(e.clientY - r.top, r.height, total));
+    const k = noPino ? atual : encaixar(indicePorPosicao(eixo(e) - inicioDe(r), tamanhoDe(r), total));
     if (!noPino) ir(k);
-    estado.current = { y: e.clientY, k, mostrado: k, acc: 0, modo: "rapido", toque, inicio: atual, inicioY: e.clientY, noPino, movido: false, t0: e.timeStamp };
-    mostrarInfo(k, e.clientY, "rapido", toque);
+    const bloqueados = new Set(noPino ? ks.filter(pertoDoPino) : []);
+    estado.current = { y: eixo(e), k, mostrado: k, acc: 0, modo: "rapido", toque, inicio: atual, inicioY: eixo(e), noPino, movido: false, t0: e.timeStamp, bloqueados };
+    mostrarInfo(k, e, "rapido", toque);
     setAtivo(true);
+    // no celular, o botão segurado parado solta a barra do lugar
+    if (toque && noPino) {
+      const { clientX, clientY } = e;
+      clearTimeout(segurar.current);
+      segurar.current = setTimeout(() => {
+        if (estado.current && !estado.current.movido) comecarMudanca(clientX, clientY);
+      }, SEGURAR_MS);
+    }
+  };
+  // com o mouse, sem arrastar: a prévia do artigo de uma marcação perto do ponteiro (fora da faixa do botão)
+  const previaNoMouse = (e: React.PointerEvent<HTMLDivElement>) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    const ao = eixo(e) - inicioDe(r);
+    let k = -1;
+    let dist = 7;
+    for (const p of ks) {
+      const d = Math.abs(px(p) - ao);
+      if (d < dist && !pertoDoPino(p)) {
+        dist = d;
+        k = p;
+      }
+    }
+    if (k < 0) for (const f of faixas) if (ao >= px(f.de) - 4 && ao <= px(f.ate) + 4 && !pertoDoPino(f.de)) k = f.de;
+    if (k < 0) {
+      if (info?.previa) setInfo(null);
+      return;
+    }
+    if (info?.previa && info.k === k) return;
+    setInfo({ k, pos: px(k), modo: "rapido", toque: false, emCima: e.clientY < window.innerHeight / 2, previa: true });
   };
   const mover = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (movendoBarra.current) {
+      setMudando(ladoMaisPerto(e.clientX, e.clientY));
+      return;
+    }
     const s = estado.current;
-    if (!s) return;
-    const dy = e.clientY - s.y;
-    s.y = e.clientY;
-    if (Math.abs(e.clientY - s.inicioY) > 6) s.movido = true;
-    const modo = modoPorPosicao(e.clientX, window.innerWidth, ks.length > 0);
+    if (!s) {
+      if (e.pointerType === "mouse" && !e.buttons) previaNoMouse(e);
+      return;
+    }
+    // o dedo sempre escorrega um pouco ao tocar no botão: até o limiar, o toque é só um toque (abre o "Ir para") e o
+    // pino não sai do lugar; passado o limiar, o arraste conta a partir dele, sem salto
+    const desde = eixo(e) - s.inicioY;
+    if (!s.movido) {
+      const limiar = s.toque ? LIMIAR_TOQUE : LIMIAR_MOUSE;
+      if (Math.abs(desde) <= limiar) return;
+      s.movido = true;
+      s.y = s.inicioY + Math.sign(desde) * limiar;
+      clearTimeout(segurar.current);
+    }
+    const dy = eixo(e) - s.y;
+    s.y = eixo(e);
+    // perto de onde o botão estava, as marcações dali não contam (nem atraem o pino, nem são paradas do modo Grifos)
+    const livres = s.bloqueados.size && Math.abs(desde) < raioPino ? ks.filter((p) => !s.bloqueados.has(p)) : ks;
+    const modo = modoDe(e);
     if (modo !== s.modo) {
       s.modo = modo;
       s.acc = 0;
@@ -3784,30 +4183,38 @@ export function Trilho({
       s.acc += dy;
       while (Math.abs(s.acc) >= PX_POR_MARCA) {
         const dir = Math.sign(s.acc);
-        s.k = proximoPonto(ks, Math.round(s.k), dir);
+        s.k = proximoPonto(livres, Math.round(s.k), dir);
         s.acc -= dir * PX_POR_MARCA;
       }
       k = Math.round(s.k);
     } else {
-      const h = e.currentTarget.getBoundingClientRect().height;
+      const h = tamanhoDe(e.currentTarget.getBoundingClientRect());
       s.k = moverIndice(s.k, dy, modo, total, h);
       // no rápido, os grifos atraem o pino a até 6 px
-      k = encaixar(Math.round((modo === "rapido" ? imantar(s.k, ks, (6 * (total - 1)) / Math.max(1, h)) : null) ?? s.k));
+      k = encaixar(Math.round((modo === "rapido" ? imantar(s.k, livres, (6 * (total - 1)) / Math.max(1, h)) : null) ?? s.k));
     }
     if (k !== s.mostrado) {
       s.mostrado = k;
       ir(k);
-      if (ks.includes(k)) vibrar();
+      if (livres.includes(k)) vibrar();
     }
-    mostrarInfo(k, e.clientY, modo, s.toque);
+    mostrarInfo(k, e, modo, s.toque);
   };
   const soltar = (e: React.PointerEvent<HTMLDivElement>) => {
+    clearTimeout(segurar.current);
+    if (movendoBarra.current) {
+      movendoBarra.current = false;
+      setMudando(null);
+      const novo = ladoMaisPerto(e.clientX, e.clientY);
+      if (e.type === "pointerup" && novo !== lado) aoMudarLado?.(novo);
+      return;
+    }
     const t = toqueNaFaixa.current;
     toqueNaFaixa.current = null;
     if (t) {
-      if (e.type === "pointerup" && Math.abs(e.clientY - t.y) < 10 && e.timeStamp - t.t < 500) {
+      if (e.type === "pointerup" && Math.abs(eixo(e) - t.y) < 10 && e.timeStamp - t.t < 500) {
         const r = e.currentTarget.getBoundingClientRect();
-        const k = encaixar(indicePorPosicao(e.clientY - r.top, r.height, total));
+        const k = encaixar(indicePorPosicao(eixo(e) - inicioDe(r), tamanhoDe(r), total));
         aoIr(k);
         aoSoltar(atual, k);
       }
@@ -3822,101 +4229,136 @@ export function Trilho({
     aoIr(s.mostrado);
     aoSoltar(s.inicio, s.mostrado);
     // um toque no botão, sem arrastar, abre o menu "Ir para"
-    if (!s.movido && s.noPino && e.type === "pointerup" && e.timeStamp - s.t0 < 600) aoMenu();
+    if (!s.movido && s.noPino && e.type === "pointerup" && e.timeStamp - s.t0 < 600) {
+      menuNoToque.current = s.toque;
+      aoMenu();
+    }
+  };
+  // no toque, o celular manda um clique depois de soltar o dedo, no ponto do toque: ali já está o véu do menu que
+  // acabou de abrir, e o clique o fecharia. Cancelado o fim do toque, o clique não vem.
+  const fimDoToque = (e: React.TouchEvent) => {
+    if (!menuNoToque.current) return;
+    menuNoToque.current = false;
+    e.preventDefault();
   };
   const tecla = (e: React.KeyboardEvent) => {
-    const passos: Record<string, number> = { ArrowDown: 1, ArrowUp: -1, PageDown: 10, PageUp: -10, Home: -total, End: total };
+    const passos: Record<string, number> = { ArrowDown: 1, ArrowUp: -1, ArrowRight: 1, ArrowLeft: -1, PageDown: 10, PageUp: -10, Home: -total, End: total };
     if (!(e.key in passos)) return;
     e.preventDefault();
     // as setas andam de artigo à mostra em artigo à mostra; as demais teclas usam a posição
-    const alvo = alvos?.length && (e.key === "ArrowDown" || e.key === "ArrowUp")
-      ? e.key === "ArrowDown" ? alvos.find((a) => a > atual) : [...alvos].reverse().find((a) => a < atual)
-      : undefined;
-    aoIr(alvo ?? encaixar(Math.max(0, Math.min(total - 1, atual + passos[e.key]))));
+    const passo = passos[e.key]!;
+    const seta = /^Arrow/.test(e.key);
+    const alvo = alvos?.length && seta ? (passo > 0 ? alvos.find((a) => a > atual) : [...alvos].reverse().find((a) => a < atual)) : undefined;
+    aoIr(alvo ?? encaixar(Math.max(0, Math.min(total - 1, atual + passo))));
   };
 
   const a = info ? artigos[info.k] : undefined;
   const nPonto = info ? ks.indexOf(info.k) : -1;
   const det = info ? (detalhes.get(info.k) ?? []) : [];
+  // o cartão, com o mouse, ao lado do ponteiro; deitada a barra, sem passar das bordas da tela
+  const posCartao = info ? (deitado ? Math.max(Math.min(180, comprimento / 2), Math.min(comprimento - 180, info.pos)) : info.pos) : 0;
+  const visivel = ativo || !!info?.previa;
   return (
-    <div
-      ref={ref}
-      className={`${styles.trilho} ${oculto && !ativo ? styles.trilhoOculto : ""} ${ativo ? styles.trilhoAtivo : ""}`}
-      role="slider"
-      tabIndex={0}
-      aria-label="Ir para o artigo"
-      aria-valuemin={0}
-      aria-valuemax={total - 1}
-      aria-valuenow={mostrar}
-      aria-valuetext={[artigos[mostrar]?.[1], secoes[mostrar]].filter(Boolean).join(", ")}
-      onPointerDown={iniciar}
-      onPointerMove={mover}
-      onPointerUp={soltar}
-      onPointerCancel={soltar}
-      onDragStart={(e) => e.preventDefault()}
-      onKeyDown={tecla}
-    >
-      <span className={styles.trilhoLinha} aria-hidden>
-        {faixas.map((f) => (
-          <span key={f.de} className={styles.trilhoFaixa} style={{ top: pct(f.de), height: `max(3px, ${pct(f.ate - f.de)})`, "--c": f.cor } as CSSProperties} />
+    <>
+      <div
+        ref={ref}
+        className={`${styles.trilho} ${oculto && !visivel && !mudando ? styles.trilhoOculto : ""} ${ativo || mudando ? styles.trilhoAtivo : ""}`}
+        data-lado={lado}
+        data-mudando={mudando ? "1" : undefined}
+        role="slider"
+        tabIndex={0}
+        aria-label="Ir para o artigo"
+        aria-orientation={deitado ? "horizontal" : "vertical"}
+        aria-valuemin={0}
+        aria-valuemax={total - 1}
+        aria-valuenow={mostrar}
+        aria-valuetext={[artigos[mostrar]?.[1], secoes[mostrar]].filter(Boolean).join(", ")}
+        title="Clique com o botão direito no botão (ou segure-o, no celular) e arraste para mudar a barra de lugar"
+        onPointerDown={iniciar}
+        onPointerMove={mover}
+        onPointerUp={soltar}
+        onPointerCancel={soltar}
+        onTouchEnd={fimDoToque}
+        onPointerLeave={() => info?.previa && !estado.current && setInfo(null)}
+        onContextMenu={(e) => e.preventDefault()}
+        onDragStart={(e) => e.preventDefault()}
+        onKeyDown={tecla}
+      >
+        <span className={styles.trilhoLinha} aria-hidden>
+          {faixas.map((f) => (
+            <span key={f.de} className={styles.trilhoFaixa} style={{ "--pos": pct(f.de), "--tam": `max(3px, ${pct(f.ate - f.de)})`, "--c": f.cor } as CSSProperties} />
+          ))}
+        </span>
+        {marcos.map((m) => (
+          <span key={m.k} className={styles.trilhoMarco} data-perto={pertoDoPino(m.k) ? "1" : undefined} style={{ "--pos": pct(m.k) } as CSSProperties} aria-hidden />
         ))}
-      </span>
-      {marcos.map((m) => (
-        <span key={m.k} className={styles.trilhoMarco} style={{ top: pct(m.k) }} aria-hidden />
-      ))}
-      {pontos.map((p) => (
-        <span
-          key={`${p.tipo}${p.k}`}
-          className={styles.trilhoPonto}
-          data-tipo={p.tipo}
-          style={{ top: pct(p.k), ...(p.cor ? { "--c": p.cor } : {}) } as CSSProperties}
-          aria-hidden
-        />
-      ))}
-      <span ref={pino} className={styles.trilhoPino} style={{ transform: `translateY(${(posicao / Math.max(1, total - 1)) * altura}px)` }} aria-hidden />
-      {info && a && (
-        <div
-          className={`${styles.trilhoBalao} ${ativo ? styles.trilhoBalaoVisivel : ""} ${info.toque ? styles.trilhoBalaoToque : ""}`}
-          data-em-cima={info.emCima ? "1" : "0"}
-          style={info.toque ? undefined : { top: info.y }}
-          aria-hidden
-        >
-          <strong className={styles.trilhoArtigo}>{a[1]}</strong>
-          {secoes[info.k] && <span className={styles.trilhoSecao}>{secoes[info.k]}</span>}
-          {det.length > 0 && (
-            <span className={styles.trilhoDetalhes}>
-              {det.slice(0, 3).map((d, n) => (
-                <span key={n} className={styles.trilhoDetalhe} style={d.cor ? ({ "--c": d.cor } as CSSProperties) : undefined}>
-                  {d.texto}
-                </span>
-              ))}
-              {det.length > 3 && <span className={styles.trilhoDetalhe}>e mais {det.length - 3}</span>}
-            </span>
-          )}
-          <span className={styles.trilhoPrevia}>{semRotulo(a[2])}</span>
-          <span className={styles.trilhoModos}>
-            {ORDEM_MODOS.map((m) => (
-              <span key={m} data-on={info.modo === m ? "1" : "0"} data-off={m === "marcas" && !ks.length ? "1" : "0"}>
-                {NOMES_MODO[m]}
+        {pontos.map((p) => (
+          <span
+            key={`${p.tipo}${p.k}`}
+            className={styles.trilhoPonto}
+            data-tipo={p.tipo}
+            data-perto={pertoDoPino(p.k) ? "1" : undefined}
+            style={{ "--pos": pct(p.k), ...(p.cor ? { "--c": p.cor } : {}) } as CSSProperties}
+            aria-hidden
+          />
+        ))}
+        <span ref={pino} className={styles.trilhoPino} style={{ transform: deitado ? `translateX(${pinoPx}px)` : `translateY(${pinoPx}px)` }} aria-hidden />
+        {info && a && (
+          <div
+            className={`${styles.trilhoBalao} ${visivel ? styles.trilhoBalaoVisivel : ""} ${info.toque ? styles.trilhoBalaoToque : ""}`}
+            data-em-cima={info.emCima ? "1" : "0"}
+            style={info.toque ? undefined : deitado ? { left: posCartao } : { top: posCartao }}
+            aria-hidden
+          >
+            <strong className={styles.trilhoArtigo}>{a[1]}</strong>
+            {secoes[info.k] && <span className={styles.trilhoSecao}>{secoes[info.k]}</span>}
+            {det.length > 0 && (
+              <span className={styles.trilhoDetalhes}>
+                {det.slice(0, 3).map((d, n) => (
+                  <span key={n} className={styles.trilhoDetalhe} style={d.cor ? ({ "--c": d.cor } as CSSProperties) : undefined}>
+                    {d.texto}
+                  </span>
+                ))}
+                {det.length > 3 && <span className={styles.trilhoDetalhe}>e mais {det.length - 3}</span>}
               </span>
-            ))}
-          </span>
-          <span className={styles.trilhoDica}>
-            {info.modo === "marcas"
-              ? nPonto >= 0
-                ? `Grifo ${nPonto + 1} de ${ks.length}`
-                : `${ks.length} grifos`
-              : info.modo === "fino"
-                ? ks.length
-                  ? "Esquerda: só os grifos · direita: rápido"
-                  : "Direita: rápido"
-                : ks.length
-                  ? "Meio: artigo a artigo · Esquerda: só os grifos"
-                  : "Esquerda: artigo a artigo"}
-          </span>
+            )}
+            <span className={styles.trilhoPrevia}>{semRotulo(a[2])}</span>
+            {!info.previa && (
+              <>
+                <span className={styles.trilhoModos}>
+                  {ORDEM_MODOS.map((m) => (
+                    <span key={m} data-on={info.modo === m ? "1" : "0"} data-off={m === "marcas" && !ks.length ? "1" : "0"}>
+                      {NOMES_MODO[m]}
+                    </span>
+                  ))}
+                </span>
+                <span className={styles.trilhoDica}>
+                  {info.modo === "marcas"
+                    ? nPonto >= 0
+                      ? `Grifo ${nPonto + 1} de ${ks.length}`
+                      : `${ks.length} grifos`
+                    : info.modo === "fino"
+                      ? ks.length
+                        ? "Longe da barra: só os grifos · perto: rápido"
+                        : "Perto da barra: rápido"
+                      : ks.length
+                        ? "Mais longe: artigo a artigo · bem longe: só os grifos"
+                        : "Longe da barra: artigo a artigo"}
+                </span>
+              </>
+            )}
+          </div>
+        )}
+      </div>
+      {/* mudando a barra de lugar: as quatro bordas, com a que vai receber a barra em destaque */}
+      {mudando && (
+        <div className={styles.trilhoDestinos} aria-hidden>
+          {LADOS.map((l) => (
+            <span key={l} data-lado={l} data-alvo={mudando === l ? "1" : undefined} />
+          ))}
         </div>
       )}
-    </div>
+    </>
   );
 }
 
@@ -4007,6 +4449,21 @@ function PainelBusca({ lei, artigos, original, inicial = "", aoIr }: { lei: stri
   const achados = !porNumero && palavras.trim().length >= 3 && base ? buscarTexto(palavras, base) : [];
   const router = useRouter();
   const ir = (art: string) => (outraLei ? router.push(`${rotaDaLei(outraLei)}#${art}`) : aoIr(art));
+  // para onde o Enter leva: o número exato vai direto ao artigo, e ao inciso ou parágrafo digitado ("5 XI", "121 § 2º");
+  // senão, o primeiro artigo sugerido ou o primeiro texto achado
+  const alvoExato = idSumulaDigitada ? null : alvoDigitado(referencia);
+  const destino =
+    alvoExato && sugestoes[0]?.[0] === alvoExato.art
+      ? (alvoExato.disp ?? alvoExato.art)
+      : (sugestoes[0]?.[0] ?? (achados[0] ? (achados[0].disp ?? achados[0].art) : null));
+  // o Enter dado enquanto a outra lei ainda carrega fica valendo: com ela carregada, abre o resultado (se a consulta
+  // não mudou)
+  const [esperando, setEsperando] = useState<string | null>(null);
+  const aguardando = !!outraLei && !base && esperando === consulta;
+  const destinoEsperado = outraLei && base && esperando === consulta ? destino : null;
+  useEffect(() => {
+    if (outraLei && destinoEsperado) router.push(`${rotaDaLei(outraLei)}#${destinoEsperado}`);
+  }, [destinoEsperado]); // eslint-disable-line react-hooks/exhaustive-deps -- só a chegada do resultado conta
   // número de artigo ("98") ou texto com pelo menos três letras; com a lei digitada, só ela
   const buscaOutras = todas && !citada && (porNumero !== null || consulta.trim().length >= 3);
 
@@ -4047,11 +4504,8 @@ function PainelBusca({ lei, artigos, original, inicial = "", aoIr }: { lei: stri
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          // o número exato vai direto ao artigo, e ao inciso ou parágrafo digitado ("5 XI", "121 § 2º")
-          const alvo = idSumulaDigitada ? null : alvoDigitado(referencia);
-          if (alvo && sugestoes[0]?.[0] === alvo.art) ir(alvo.disp ?? alvo.art);
-          else if (sugestoes[0]) ir(sugestoes[0][0]);
-          else if (achados[0]) ir(achados[0].disp ?? achados[0].art);
+          if (destino) ir(destino);
+          else if (outraLei && !base) setEsperando(consulta);
         }}
       >
         <input
@@ -4059,7 +4513,10 @@ function PainelBusca({ lei, artigos, original, inicial = "", aoIr }: { lei: stri
           type="search"
           enterKeyHint="search"
           value={consulta}
-          onChange={(e) => setConsulta(e.target.value)}
+          onChange={(e) => {
+            setConsulta(e.target.value);
+            setEsperando(null);
+          }}
           placeholder="Artigo (121, 5 XI, 100 CP) ou palavras"
           aria-label="Buscar artigo ou texto"
         />
@@ -4096,7 +4553,7 @@ function PainelBusca({ lei, artigos, original, inicial = "", aoIr }: { lei: stri
               );
             })
           ) : (
-            <li className={styles.miuda}>{outraLei && !base ? `Carregando ${nomeOutra}…` : `Nenhum artigo com esse número ${nomeOutra ? `em ${nomeOutra}` : "nesta lei"}.`}</li>
+            <li className={styles.miuda}>{outraLei && !base ? `Carregando ${nomeOutra}…${aguardando ? " Abre assim que achar." : ""}` : `Nenhum artigo com esse número ${nomeOutra ? `em ${nomeOutra}` : "nesta lei"}.`}</li>
           )}
         </ul>
       )}
@@ -4104,7 +4561,7 @@ function PainelBusca({ lei, artigos, original, inicial = "", aoIr }: { lei: stri
         <>
           <p className={styles.miuda}>
             {outraLei && !base
-              ? `Carregando ${nomeOutra}…`
+              ? `Carregando ${nomeOutra}…${aguardando ? " Abre assim que achar." : ""}`
               : achados.length
                 ? `${achados.length}${achados.length >= 60 ? "+" : ""} artigo(s) ${nomeOutra ? `em ${nomeOutra}` : "nesta lei"}.`
                 : `Nada ${nomeOutra ? `em ${nomeOutra}` : "nesta lei"}.`}{" "}

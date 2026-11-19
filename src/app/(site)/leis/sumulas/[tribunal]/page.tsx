@@ -1,13 +1,11 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CLASSES } from "@/components/leis/classes";
 import { Leitor } from "@/components/leis/Leitor";
-import type { SumulasDoTribunal } from "@/lib/leis/dados";
+import { blocosDeSumulas, listaDeSumulas } from "@/content/leis";
 import { htmlBlocos, mapaAncoras } from "@/lib/leis/html";
 import { unidadesDeLeitura } from "@/lib/leis/leitura";
-import { blocosDaSumulas, COR_SUMULAS, disponiveisDe, idSumulas, NOME_SUMULAS, TRIBUNAIS, type Tribunal } from "@/lib/leis/sumulas";
+import { COR_SUMULAS, idSumulas, NOME_SUMULAS, TRIBUNAIS, type Tribunal } from "@/lib/leis/sumulas";
 import styles from "../../[diploma]/cabecalho.module.css";
 
 export const dynamicParams = false;
@@ -16,26 +14,22 @@ export function generateStaticParams() {
   return (Object.keys(TRIBUNAIS) as Tribunal[]).map((tribunal) => ({ tribunal }));
 }
 
-/** A lista de um tribunal (content/sumulas, gerado por scripts/sumulas/baixar.ts). */
-function listaDo(t: Tribunal): SumulasDoTribunal {
-  return JSON.parse(readFileSync(join(process.cwd(), "content", "sumulas", `${t}.json`), "utf8")) as SumulasDoTribunal;
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ tribunal: string }> }): Promise<Metadata> {
   const { tribunal } = await params;
   const t = tribunal as Tribunal;
   return {
     title: NOME_SUMULAS(t),
-    description: `${NOME_SUMULAS(t)} para leitura, com os Vide entre elas e as informações adicionais de cada uma.`,
+    description: `${NOME_SUMULAS(t)}${t === "vinculantes" ? " do STF" : ""} para leitura, com os Vide entre elas e as informações adicionais de cada uma.`,
   };
 }
 
 export default async function SumulasPage({ params }: { params: Promise<{ tribunal: string }> }) {
   const { tribunal } = await params;
   const t = tribunal as Tribunal;
-  const d = listaDo(t);
-  // as súmulas saem como uma lei: a mesma leitura, com o Vide que liga as súmulas dos dois tribunais
-  const blocos = blocosDaSumulas(d, disponiveisDe(listaDo("stf"), listaDo("stj")));
+  const d = listaDeSumulas(t);
+  // as súmulas saem como uma lei: a mesma leitura, com o Vide que liga as súmulas das três listas
+  const blocos = blocosDeSumulas(t);
   const id = idSumulas(t);
   // as informações adicionais não vão no HTML da página: o leitor as baixa (comprimidas) quando o aluno as pede
   const semInfo = blocos.map((b) => ({ ...b, info: undefined }));

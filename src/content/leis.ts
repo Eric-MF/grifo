@@ -6,6 +6,9 @@ import { parse } from "yaml";
 import type { Bloco, Datas, DatasLei } from "@/lib/leis/linha-do-tempo";
 import { type TipoLei, unidadesDeLeitura } from "@/lib/leis/leitura";
 import { corrigirBlocos } from "@/lib/leis/texto";
+import type { SumulasDoTribunal } from "@/lib/leis/dados";
+import { blocosDaSumulas, disponiveisDe, idSumulas, TRIBUNAIS, type Tribunal } from "@/lib/leis/sumulas";
+import { aplicarVides, type GrupoVide } from "@/lib/leis/vides";
 
 export interface LeiTexto {
   id: string;
@@ -17,6 +20,12 @@ export interface LeiTexto {
 
 const DIR = join(process.cwd(), "content", "leis-texto");
 const YAML = join(process.cwd(), "content", "leis.yaml");
+const VIDES = join(process.cwd(), "content", "vides.yaml");
+
+/** Os "Vide" do Grifo entre dispositivos (content/vides.yaml). */
+export function videsDoGrifo(): GrupoVide[] {
+  return existsSync(VIDES) ? (parse(readFileSync(VIDES, "utf8")) ?? []) : [];
+}
 
 export interface ResumoLei {
   id: string;
@@ -40,9 +49,9 @@ const caches = ((globalThis as { __grifoLeis?: unknown }).__grifoLeis ??= {
   diplomas: { mtime: number; dados: Record<string, { ler?: boolean; tipo?: TipoLei }> } | null;
 };
 
-// o texto guardado depende também do código que o corrige e conta (um cache que sobrevive à recompilação não pode
+// o texto guardado depende também do código que o corrige e conta, e dos "Vide" do Grifo (um cache que sobrevive à recompilação não pode
 // servir o texto da regra antiga depois de uma edição nesses arquivos)
-const CODIGO = ["src/lib/leis/texto.ts", "src/lib/leis/leitura.ts"].map((f) => join(process.cwd(), f));
+const CODIGO = ["src/lib/leis/texto.ts", "src/lib/leis/leitura.ts", "src/lib/leis/vides.ts", "content/vides.yaml"].map((f) => join(process.cwd(), f));
 const versaoDe = (arquivo: string) =>
   [arquivo, ...CODIGO].map((f) => (existsSync(f) ? statSync(f).mtimeMs : 0)).join("|");
 
@@ -53,7 +62,7 @@ export function carregarLei(id: string): LeiTexto {
   if (c?.versao === versao) return c.lei;
   // o texto sai como o Grifo o mostra (ordinal e trema corrigidos); o arquivo guarda a redação do Planalto
   const bruta: LeiTexto = JSON.parse(readFileSync(arquivo, "utf8"));
-  const lei: LeiTexto = { ...bruta, blocos: corrigirBlocos(bruta.blocos) };
+  const lei: LeiTexto = { ...bruta, blocos: aplicarVides(corrigirBlocos(bruta.blocos), id, videsDoGrifo()) };
   caches.leis.set(id, { versao, lei });
   return lei;
 }
@@ -94,4 +103,15 @@ export function datasAlteradoras(): Datas {
   return Object.fromEntries(
     Object.entries(bruto).map(([k, v]) => [k, { nome: v?.nome, vigencia: v?.vigencia, publicacao: v?.publicacao, aproximada: v?.aproximada, padrao: v?.padrao, locais: v?.locais, marcos: v?.marcos }]),
   );
+}
+
+/** A lista de súmulas de um tribunal (content/sumulas, gerado por scripts/sumulas/baixar.ts). */
+export function listaDeSumulas(t: Tribunal): SumulasDoTribunal {
+  return JSON.parse(readFileSync(join(process.cwd(), "content", "sumulas", `${t}.json`), "utf8")) as SumulasDoTribunal;
+}
+
+/** As súmulas de um tribunal como os blocos de uma lei, com o "Vide" entre as listas e os "Vide" do Grifo. */
+export function blocosDeSumulas(t: Tribunal): Bloco[] {
+  const todas = Object.fromEntries((Object.keys(TRIBUNAIS) as Tribunal[]).map((x) => [x, listaDeSumulas(x)]));
+  return aplicarVides(blocosDaSumulas(todas[t]!, disponiveisDe(todas)), idSumulas(t), videsDoGrifo());
 }

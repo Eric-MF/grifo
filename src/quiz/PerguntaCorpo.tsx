@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useId, useMemo, useRef, useState, type KeyboardEvent, type ReactNode, type Ref, type TextareaHTMLAttributes } from "react";
+import { useEffect, useId, useMemo, useRef, useState, type KeyboardEvent, type ReactNode, type Ref, type RefObject, type TextareaHTMLAttributes } from "react";
 import { flushSync } from "react-dom";
 import { Citado } from "@/components/Citacoes";
 import { linkContato } from "@/config/site";
 import { contextoCorrecao } from "@/lib/correcao/cliente";
+import { registrarAtividade } from "@/lib/atividade";
 import { atualizarConquistas, registrarArtigo, registrarResposta } from "@/lib/conquistas";
 import { eventosDeDispositivos, registrar as registrarErros } from "@/lib/erros";
 import { toRoman } from "@/lib/correcao/citacoes";
@@ -12,24 +13,42 @@ import { artigoParaPrevia } from "@/lib/leis/artigo-previa";
 import { ajustarAlvo, temDispositivo, type ArtigoTexto } from "@/lib/leis/busca";
 import type { Classes } from "@/lib/leis/html";
 import type { Bloco } from "@/lib/leis/linha-do-tempo";
-import { alternativas, opcoesDoItem, registrarResultado } from "./banco";
+import { alternativas, opcoesDaTese, registrarResultado, type OpcoesFacil } from "./banco";
 import { nomeCategoria } from "./categorias";
 import { copiarTexto, textoParaCopiar, textoResposta } from "./copiar";
-import { LETRAS, type Letra, type Nivel, type Pergunta, type PerguntaItem, type PerguntaObjetiva, type PerguntaPeca } from "./types";
+import { LETRAS, type Letra, type Nivel, type Pergunta, type PerguntaObjetiva, type PerguntaPeca, type PerguntaTese } from "./types";
 import {
-  corrigirItem,
+  artigoNaFrase,
   corrigirObjetiva,
   corrigirResposta,
+  corrigirTese,
+  artigoFalado,
   nomePeca,
+  pecasFaladas,
   previaDaPeca,
-  previaDaResposta,
   previaDoFundamento,
   type ArtigoCitado,
   type Correcao,
   type CorrecaoPeca,
+  type CorrecaoTese,
   type Respondida,
 } from "./verificar";
+import type { LeituraDaQuestao } from "./locutor";
+import { interpretarResposta } from "./voz";
 import styles from "./quiz.module.css";
+
+/** O que a questão fez com a frase dita (responder falando): o texto vai para a linha do microfone. */
+export interface RetornoVoz {
+  entendeu: boolean;
+  texto: string;
+  /** a pessoa pediu para desligar o microfone */
+  desligar?: boolean;
+}
+/** Quem trata a frase dita na questão da vez (o treino a entrega aqui). */
+export type TratadorVoz = (falas: string[]) => RetornoVoz;
+type TratadorCorpo = (falas: string[]) => RetornoVoz | null;
+/** a peça e o artigo reconhecidos na fala, como a correção os lê */
+const RECONHECER = { peca: pecasFaladas, artigo: artigoFalado };
 
 interface Props {
   pergunta: Pergunta;
@@ -50,6 +69,15 @@ interface Props {
   continuo?: boolean;
   /** no treino, acertou: vai sozinho para a próxima questão, sem esperar o botão */
   pularAcerto?: boolean;
+  /** no celular, o caso arrastado para a direita (no treino, abre a resposta da questão anterior) */
+  aoDeslizarCaso?: () => void;
+  /**
+   * Responder falando (o treino): a questão põe aqui quem trata cada frase dita (src/quiz/voz.ts). Com ele, no celular, o
+   * teclado não abre sozinho: a resposta vem pela voz.
+   */
+  vozRef?: RefObject<TratadorVoz | null>;
+  /** o que ler da questão em voz alta (responder falando), quando ela abre */
+  aoLerQuestao?: (l: LeituraDaQuestao) => void;
 }
 
 /** Onde fica o copiar: no canto do caso, no topo da questão (celular) ou como item de menu (modo foco do treino). */
@@ -117,8 +145,9 @@ function mostrarAcimaDoTeclado(campo: HTMLElement) {
     const topo = (vv?.offsetTop ?? 0) + 110;
     // folga a mais embaixo: a barra de sugestões do teclado (senha, cartão, endereço) pode cobrir o fim da tela visível
     const fundo = (vv ? vv.offsetTop + vv.height : window.innerHeight) - 110;
-    if (caixa.bottom > fundo) window.scrollBy({ top: Math.min(caixa.bottom - fundo, caixa.top - topo) });
-    else if (caixa.top < topo) window.scrollBy({ top: caixa.top - topo });
+    // só desce, e só o que falta: subir dependeria de onde a página estava, e cada questão abriria num lugar
+    const falta = Math.min(caixa.bottom - fundo, caixa.top - topo);
+    if (falta > 0) window.scrollBy({ top: falta });
   };
   for (const ms of [60, 320, 650, 1000]) setTimeout(conferir, ms);
   window.visualViewport?.addEventListener("resize", conferir);
@@ -177,6 +206,27 @@ function diag(msg: string) {
  * campo de digitar dela recebe o foco ainda no toque, que é quando o celular aceita abrir o teclado. Questão de
  * alternativas não tem campo: fica no topo. Fora do celular, só avança (a questão nova cuida do foco).
  */
+/**
+ * Celular: um campo de digitar da questão ficou com o foco. A página ganha o espaço da barra de notificações (e o menu
+ * do modo foco desce) e o campo sobe acima do teclado. Chamado no foco e também por quem dá o foco por código: o
+ * React descarta o evento de foco que acontece enquanto ele monta a questão nova.
+ */
+function aoDigitar(campo: HTMLElement) {
+  document.body.setAttribute("data-digitando", "");
+  mostrarAcimaDoTeclado(campo);
+}
+
+/**
+ * Celular: foca o campo de digitar da questão nova sempre do mesmo ponto, o topo da página, sem o navegador centralizar
+ * o campo; depois, com o teclado aberto, a página só desce o que falta (o rodapé do modo foco dá o espaço embaixo).
+ * Assim a questão abre igual da primeira vez e das seguintes, qualquer que fosse a rolagem da anterior.
+ */
+function focarDoTopo(campo: HTMLElement) {
+  window.scrollTo({ top: 0, behavior: "instant" });
+  campo.focus({ preventScroll: true });
+  if (document.activeElement === campo) aoDigitar(campo);
+}
+
 export function avancarNoToque(avancar: () => void) {
   if (!toque()) {
     diag("toque: não é celular, só avança");
@@ -186,8 +236,7 @@ export function avancarNoToque(avancar: () => void) {
   flushSync(avancar);
   const campo = campoDaQuestao(document.querySelector("[data-questao]"));
   if (campo) {
-    campo.focus();
-    campo.scrollIntoView({ block: "center" });
+    focarDoTopo(campo);
   }
   diag(`toque: ${campo ? "campo focado" : "sem campo"}`);
   setTimeout(soltarTeclado);
@@ -224,8 +273,11 @@ function registrarArtigos(p: Pergunta, c: Correcao) {
   if (p.formato === "peca" && c.formato === "peca") {
     const acertouArtigo = (c.acertouFundamento ?? c.acertouPeca) ? 1 : 0;
     registrarErros(eventosDeDispositivos(p.resposta.fundamentos, acertouArtigo, "quiz", lex, { q: p.id }));
-  } else if (p.formato !== "peca") {
-    registrarErros(eventosDeDispositivos(p.dispositivos, c.acertou ? 1 : 0, p.formato === "objetiva" ? "objetiva" : "discursiva", lex, { q: p.id }));
+  } else if (p.formato === "tese" && c.formato === "tese") {
+    // o artigo conta pelo que o nível pediu dele; sem ele (médio, fácil de tese), pelo acerto da questão
+    registrarErros(eventosDeDispositivos(p.artigos.slice(0, 1), (c.acertouArtigo ?? c.acertou) ? 1 : 0, "discursiva", lex, { q: p.id }));
+  } else if (p.formato === "objetiva") {
+    registrarErros(eventosDeDispositivos(p.dispositivos, c.acertou ? 1 : 0, "objetiva", lex, { q: p.id }));
   }
 }
 
@@ -373,14 +425,14 @@ function alternativasVistas(
   pergunta: Pergunta,
   nivel: Nivel,
   alts: { tipo: string; nome: string }[],
-  ordem: number[],
+  facil: OpcoesFacil | null,
   marcada: number | null,
   res: Correcao | null,
 ): AlternativaVista[] {
   if (pergunta.formato === "peca" && nivel === 1)
     return alts.map((a, i) => ({ letra: LETRAS[i]!, texto: a.nome, correta: a.tipo === pergunta.resposta.peca, escolhida: marcada === i }));
-  if (pergunta.formato === "item" && nivel === 1)
-    return ordem.map((idx, i) => ({ letra: LETRAS[i]!, texto: pergunta.opcoes[idx]!.texto, correta: !!pergunta.opcoes[idx]!.correta, escolhida: marcada === i }));
+  if (pergunta.formato === "tese" && nivel === 1 && facil)
+    return facil.opcoes.map((o, i) => ({ letra: LETRAS[i]!, texto: o.texto, correta: o.correta, escolhida: marcada === i }));
   if (pergunta.formato === "objetiva")
     return LETRAS.map((l) => ({ letra: l, texto: pergunta.alternativas[l], correta: l === pergunta.correta, escolhida: res?.formato === "objetiva" && res.escolhida === l }));
   return [];
@@ -418,8 +470,74 @@ function RevisarAlternativas({ itens, abertaDeInicio = false }: { itens: Alterna
   );
 }
 
+/** Quanto o caso precisa ser arrastado para a direita para valer (o toque curto ou a rolagem não contam). */
+const ARRASTE_CASO = 90;
+
+/**
+ * O caso arrastado para a direita com o dedo: acompanha o dedo (com resistência) e, passado o limite, chama `aoDeslizar`.
+ * Só gesto quase horizontal: a rolagem da página e a seleção do texto seguem normais.
+ */
+function deslizarCaso(aoDeslizar?: () => void) {
+  if (!aoDeslizar) return {};
+  let x0 = 0;
+  let y0 = 0;
+  let arrastando = false;
+  let desistiu = false;
+  const soltar = (el: HTMLElement) => {
+    el.style.transition = "transform 0.2s ease";
+    el.style.transform = "";
+    el.removeAttribute("data-deslizando");
+  };
+  return {
+    onTouchStart: (e: React.TouchEvent<HTMLElement>) => {
+      if (e.touches.length !== 1) return;
+      x0 = e.touches[0]!.clientX;
+      y0 = e.touches[0]!.clientY;
+      arrastando = false;
+      desistiu = false;
+    },
+    onTouchMove: (e: React.TouchEvent<HTMLElement>) => {
+      if (desistiu || e.touches.length !== 1) return;
+      const dx = e.touches[0]!.clientX - x0;
+      const dy = e.touches[0]!.clientY - y0;
+      if (!arrastando) {
+        if (Math.abs(dy) > 10 && Math.abs(dy) > Math.abs(dx)) desistiu = true;
+        else if (dx > 14 && dx > Math.abs(dy) * 1.5) arrastando = true;
+        return;
+      }
+      const el = e.currentTarget;
+      el.style.transition = "none";
+      el.style.transform = `translateX(${Math.max(0, dx) * 0.55}px)`;
+      el.toggleAttribute("data-deslizando", dx >= ARRASTE_CASO);
+    },
+    onTouchEnd: (e: React.TouchEvent<HTMLElement>) => {
+      if (!arrastando) return;
+      const dx = e.changedTouches[0]!.clientX - x0;
+      soltar(e.currentTarget);
+      arrastando = false;
+      if (dx >= ARRASTE_CASO) aoDeslizar();
+    },
+    onTouchCancel: (e: React.TouchEvent<HTMLElement>) => {
+      arrastando = false;
+      soltar(e.currentTarget);
+    },
+  };
+}
+
 /** Etiqueta (fora das de peça) e o enunciado com o ícone de copiar no canto. */
-function Caso({ pergunta, copia, etiqueta = true, copiarFora = false }: { pergunta: Pergunta; copia: string; etiqueta?: boolean; copiarFora?: boolean }) {
+function Caso({
+  pergunta,
+  copia,
+  etiqueta = true,
+  copiarFora = false,
+  aoDeslizar,
+}: {
+  pergunta: Pergunta;
+  copia: string;
+  etiqueta?: boolean;
+  copiarFora?: boolean;
+  aoDeslizar?: () => void;
+}) {
   return (
     <>
       {etiqueta && pergunta.formato !== "peca" && (
@@ -428,10 +546,17 @@ function Caso({ pergunta, copia, etiqueta = true, copiarFora = false }: { pergun
         </p>
       )}
       {/* copiarFora: no celular, o copiar fica no topo da questão (o do cartão some) */}
-      <div className={styles.enunciado} data-copiar-fora={copiarFora ? "" : undefined}>
+      <div className={styles.enunciado} data-copiar-fora={copiarFora ? "" : undefined} data-desliza={aoDeslizar ? "" : undefined} {...deslizarCaso(aoDeslizar)}>
         <p className={styles.caso}>{pergunta.caso}</p>
         <CopiarQuestao texto={copia} />
       </div>
+      {/* a tese traz só a introdução curta; o caso inteiro da prova fica a um toque, para quem quiser os detalhes */}
+      {pergunta.formato === "tese" && pergunta.enunciado && (
+        <details className={styles.casoCompleto}>
+          <summary>Ler o caso completo da prova</summary>
+          <p>{pergunta.enunciado}</p>
+        </details>
+      )}
     </>
   );
 }
@@ -481,7 +606,20 @@ export function QuestaoRevista({ pergunta, nivel, revisao }: { pergunta: Pergunt
 }
 
 /** Caso, comando, resposta (alternativas ou digitada) e feedback. Serve ao jogo e ao treino. */
-export function PerguntaCorpo({ pergunta, nivel, cabecalho, aoResponder, rotuloContinuar, aoContinuar, liberadaEm, continuo = false, pularAcerto = false }: Props) {
+export function PerguntaCorpo({
+  pergunta,
+  nivel,
+  cabecalho,
+  aoResponder,
+  rotuloContinuar,
+  aoContinuar,
+  liberadaEm,
+  continuo = false,
+  pularAcerto = false,
+  aoDeslizarCaso,
+  vozRef,
+  aoLerQuestao,
+}: Props) {
   const [res, setRes] = useState<Correcao | null>(null);
   // a alternativa marcada (posição na tela), para mostrar de novo as alternativas depois da correção
   const [escolha, setEscolha] = useState<number | null>(null);
@@ -508,10 +646,10 @@ export function PerguntaCorpo({ pergunta, nivel, cabecalho, aoResponder, rotuloC
   // "Próxima pergunta", "Começar" ou pelo pulo do acerto); sem campo (alternativas), fica no topo, para ler o caso.
   useEffect(() => {
     if (continuo && toque()) {
-      const digitar = campoDaQuestao(caixa.current);
+      // respondendo falando, o teclado não abre: a questão fica no topo, para ler o caso
+      const digitar = vozRef ? null : campoDaQuestao(caixa.current);
       if (digitar) {
-        digitar.focus();
-        digitar.scrollIntoView({ block: "center" });
+        focarDoTopo(digitar);
       } else {
         // alternativas: a questão volta para o topo, para ler o caso
         caixa.current?.focus({ preventScroll: true });
@@ -532,13 +670,12 @@ export function PerguntaCorpo({ pergunta, nivel, cabecalho, aoResponder, rotuloC
   // Celular: se o campo de digitar não ficou com o foco (o navegador recusou, ou o foco saiu), tenta de novo 5 s depois
   // de a questão aparecer, se ela ainda não foi respondida e nada está sendo digitado.
   useEffect(() => {
-    if (!continuo || !toque()) return;
+    if (!continuo || !toque() || vozRef) return;
     const t = setTimeout(() => {
       const digitar = campoDaQuestao(caixa.current);
       // respondida, o campo já saiu da tela
       if (!digitar || document.activeElement?.matches("input, textarea, select")) return diag("5 s: nada a fazer");
-      digitar.focus();
-      digitar.scrollIntoView({ block: "center" });
+      focarDoTopo(digitar);
       diag("5 s: focou de novo");
     }, 5000);
     return () => clearTimeout(t);
@@ -612,29 +749,76 @@ export function PerguntaCorpo({ pergunta, nivel, cabecalho, aoResponder, rotuloC
     return () => clearTimeout(t);
   }, [pula, res]);
 
-  const comando =
-    pergunta.formato === "peca" && nivel === 1 ? pergunta.comando.replace(/ e o seu fundamento.*\?$/, "?") : pergunta.comando;
-
   // Ordem das alternativas sorteada uma vez por pergunta: a tela e a cópia mostram a mesma ordem.
   const alts = useMemo(() => (pergunta.formato === "peca" && nivel === 1 ? alternativas(pergunta) : []), [pergunta, nivel]);
-  const ordem = useMemo(() => (pergunta.formato === "item" && nivel === 1 ? opcoesDoItem(pergunta) : []), [pergunta, nivel]);
+  // a tese no fácil: o artigo da tese dada ou a tese do artigo dado, sorteado uma vez por pergunta
+  const facil = useMemo(() => (pergunta.formato === "tese" && nivel === 1 ? opcoesDaTese(pergunta) : null), [pergunta, nivel]);
+  const comando =
+    pergunta.formato === "peca" && nivel === 1
+      ? pergunta.comando.replace(/ e o seu fundamento.*\?$/, "?")
+      : pergunta.formato === "tese" && facil
+        ? facil.modo === "artigo"
+          ? `Em que dispositivo se apoia esta tese: “${pergunta.tese}”?`
+          : `Que tese ${artigoNaFrase(pergunta.artigos[0]!)} fundamenta neste caso?`
+        : pergunta.comando;
   // antes de responder, copia a questão; depois, a questão com a resposta no fim
-  const copia = (r: Correcao | null) => textoParaCopiar(pergunta, nivel, comando, alts, ordem, r ? textoResposta(pergunta, r) : undefined);
+  const copia = (r: Correcao | null) => textoParaCopiar(pergunta, nivel, comando, alts, facil?.opcoes ?? [], r ? textoResposta(pergunta, r) : undefined);
 
   const concluir = (r: Correcao, marcada?: number) => {
     const tempoMs = performance.now() - inicio.current;
     registrarResultado(pergunta, r.acertou);
     registrarArtigos(pergunta, r);
     atualizarConquistas((c) => registrarResposta(c, { acertou: r.acertou, categorias: pergunta.categorias, tempoMs }));
+    registrarAtividade({ acertou: r.acertou, categorias: pergunta.categorias, peca: pergunta.formato === "peca" ? pergunta.resposta.peca : undefined, tempoMs });
     setEscolha(marcada ?? null);
     // vai pular: no celular, se o teclado está aberto, segura ele para a próxima questão
     if (r.acertou && continuo && pularAcerto && document.activeElement?.matches("input, textarea")) segurarTeclado();
     setRes(r);
-    aoResponder?.(r, { comando, alternativas: alternativasVistas(pergunta, nivel, alts, ordem, marcada ?? null, r), copia: copia(r), correcao: r });
+    aoResponder?.(r, { comando, alternativas: alternativasVistas(pergunta, nivel, alts, facil, marcada ?? null, r), copia: copia(r), correcao: r });
   };
 
   // as alternativas como estavam na tela, para rever depois de responder
-  const vistas = alternativasVistas(pergunta, nivel, alts, ordem, escolha, res);
+  const vistas = alternativasVistas(pergunta, nivel, alts, facil, escolha, res);
+
+  // Responder falando: a frase dita escolhe a alternativa (o mesmo botão do clique e da tecla), preenche os campos de
+  // digitar (quem trata é o corpo da questão: CorpoPeca, CorpoTese) ou, depois da correção, segue para a próxima
+  const corpoVoz = useRef<TratadorCorpo | null>(null);
+  const textosDasAlternativas =
+    pergunta.formato === "peca" && nivel === 1
+      ? alts.map((a) => a.nome)
+      : pergunta.formato === "tese" && facil
+        ? facil.opcoes.map((o) => o.texto)
+        : pergunta.formato === "objetiva"
+          ? LETRAS.map((l) => pergunta.alternativas[l])
+          : null;
+  useEffect(() => {
+    if (!vozRef) return;
+    vozRef.current = (falas) => {
+      const geral = interpretarResposta(falas, { tipo: "respondida" });
+      if (geral?.tipo === "desligar") return { entendeu: true, texto: "Microfone desligado.", desligar: true };
+      if (res) return geral?.tipo === "proxima" ? (aoContinuar(res), { entendeu: true, texto: "Próxima questão." }) : { entendeu: false, texto: "" };
+      if (textosDasAlternativas) {
+        const a = interpretarResposta(falas, { tipo: "alternativas", textos: textosDasAlternativas, pecas: pergunta.formato === "peca" }, RECONHECER);
+        if (a?.tipo !== "alternativa") return { entendeu: false, texto: "" };
+        const botao = caixa.current?.querySelectorAll<HTMLButtonElement>("[data-alt]")[a.indice];
+        if (!botao || botao.disabled) return { entendeu: false, texto: "" };
+        botao.click();
+        return { entendeu: true, texto: `Letra ${LETRAS[a.indice] ?? a.indice + 1}: ${textosDasAlternativas[a.indice]}` };
+      }
+      return corpoVoz.current?.(falas) ?? { entendeu: false, texto: "" };
+    };
+    return () => {
+      vozRef.current = null;
+    };
+  });
+  // a leitura em voz alta da questão, quando ela abre (o caso, o comando e as alternativas como estão na tela)
+  const lerQuestao = useRef(aoLerQuestao);
+  useEffect(() => {
+    lerQuestao.current = aoLerQuestao;
+  });
+  useEffect(() => {
+    lerQuestao.current?.({ caso: pergunta.caso, comando, alternativas: textosDasAlternativas ?? [] });
+  }, [pergunta]); // eslint-disable-line react-hooks/exhaustive-deps -- só ao trocar de questão
 
   return (
     <div
@@ -644,23 +828,27 @@ export function PerguntaCorpo({ pergunta, nivel, cabecalho, aoResponder, rotuloC
       tabIndex={-1}
       onFocus={(e) => {
         if (!toque() || !e.target.matches("input:not([type=checkbox]), textarea")) return;
-        document.body.setAttribute("data-digitando", "");
-        mostrarAcimaDoTeclado(e.target);
+        aoDigitar(e.target);
       }}
       onBlur={(e) => {
-        if (e.target.matches("input, textarea")) document.body.removeAttribute("data-digitando");
+        if (!e.target.matches("input, textarea")) return;
+        // depois do toque, não na hora: digitando, a página desce (o espaço da barra de notificações); se subisse já no
+        // toque que tira o foco do campo (em "Responder"), o botão fugiria do dedo e o toque cairia no formulário
+        setTimeout(() => {
+          if (!document.activeElement?.matches("input:not([type=checkbox]), textarea")) document.body.removeAttribute("data-digitando");
+        }, 400);
       }}
     >
       {typeof cabecalho === "function" ? cabecalho((onde) => <CopiarQuestao texto={copia(res)} onde={onde} />) : cabecalho}
       {/* no modo foco do treino, em tela larga, o caso fica à esquerda (fixo) e o resto à direita; fora dele, um embaixo do outro */}
       <div className={styles.miolo}>
         <div className={styles.ladoCaso}>
-          <Caso pergunta={pergunta} copia={copia(res)} copiarFora={typeof cabecalho === "function"} />
+          <Caso pergunta={pergunta} copia={copia(res)} copiarFora={typeof cabecalho === "function"} aoDeslizar={aoDeslizarCaso} />
         </div>
         <div className={styles.ladoResposta} data-resposta>
           <p className={styles.comando}>{comando}</p>
-          {!res && pergunta.formato === "peca" && <CorpoPeca pergunta={pergunta} nivel={nivel} alts={alts} concluir={concluir} bloqueada={bloqueada} />}
-          {!res && pergunta.formato === "item" && <CorpoItem pergunta={pergunta} nivel={nivel} ordem={ordem} concluir={concluir} bloqueada={bloqueada} />}
+          {!res && pergunta.formato === "peca" && <CorpoPeca pergunta={pergunta} nivel={nivel} alts={alts} concluir={concluir} bloqueada={bloqueada} vozRef={corpoVoz} falando={!!vozRef} />}
+          {!res && pergunta.formato === "tese" && <CorpoTese pergunta={pergunta} nivel={nivel} facil={facil} concluir={concluir} bloqueada={bloqueada} vozRef={corpoVoz} falando={!!vozRef} />}
           {!res && pergunta.formato === "objetiva" && <CorpoObjetiva pergunta={pergunta} concluir={concluir} bloqueada={bloqueada} />}
           {res && vistas.length > 0 && <RevisarAlternativas itens={vistas} />}
 
@@ -670,7 +858,8 @@ export function PerguntaCorpo({ pergunta, nivel, cabecalho, aoResponder, rotuloC
                 ref={continuar}
                 type="button"
                 className="btn btn-primary"
-                onClick={() => (continuo ? avancarNoToque(() => aoContinuar(res)) : aoContinuar(res))}
+                // respondendo falando, o toque só segue (o teclado não abre para a próxima)
+                onClick={() => (continuo && !vozRef ? avancarNoToque(() => aoContinuar(res)) : aoContinuar(res))}
               >
                 {rotuloContinuar}
               </button>
@@ -691,18 +880,48 @@ function Previa({ id, vazio, erro = false, children }: { id: string; vazio: bool
   );
 }
 
+/**
+ * Respondendo falando, no lugar das caixas de digitar: a resposta dita, uma só. Cada frase muda só o que traz de
+ * válido (a peça reconhecida, o artigo reconhecido); "responder" (ou o botão) envia.
+ */
+function RespostaDita({ linhas, pronta, responder }: { linhas: { rotulo: string; valor: string; falta: string; aviso?: string }[]; pronta: boolean; responder: () => void }) {
+  return (
+    <div className={styles.respostaDita} data-resposta-dita>
+      <dl>
+        {linhas.map((l) => (
+          <div key={l.rotulo} data-vazia={l.valor ? undefined : "1"}>
+            <dt>{l.rotulo}</dt>
+            <dd>
+              {l.valor || <span>{l.falta}</span>}
+              {l.valor && l.aviso && <small> · {l.aviso}</small>}
+            </dd>
+          </div>
+        ))}
+      </dl>
+      <button type="button" className="btn btn-gold" disabled={!pronta} onClick={responder}>
+        Responder
+      </button>
+    </div>
+  );
+}
+
 function CorpoPeca({
   pergunta,
   nivel,
   alts,
   concluir,
   bloqueada,
+  vozRef,
+  falando,
 }: {
   pergunta: PerguntaPeca;
   nivel: Nivel;
   alts: { tipo: string; nome: string }[];
   concluir: (c: Correcao, marcada?: number) => void;
   bloqueada: boolean;
+  vozRef: RefObject<TratadorCorpo | null>;
+  /** respondendo falando: sem as caixas de digitar, a resposta dita (uma só: a peça e o fundamento) */
+  falando: boolean;
 }) {
   const [peca, setPeca] = useState("");
   const [fund, setFund] = useState("");
@@ -711,6 +930,34 @@ function CorpoPeca({
   const responder = (escolhida?: string, marcada?: number) => concluir(corrigirResposta(pergunta, nivel, { peca: escolhida ?? peca, fundamento: fund }), marcada);
   const pecas = useMemo(() => (nivel > 1 ? previaDaPeca(peca) : []), [peca, nivel]);
   const fundamento = useMemo(() => (nivel > 1 ? previaDoFundamento(fund) : null), [fund, nivel]);
+  // responder falando: a fala preenche a peça e o fundamento; "responder" envia com o que acabou de ser dito
+  useEffect(() => {
+    if (nivel === 1) return;
+    vozRef.current = (falas) => {
+      const a = interpretarResposta(falas, { tipo: "peca", peca, fundamento: fund }, RECONHECER);
+      if (!a) return null;
+      if (a.tipo === "apagar") {
+        if (a.campo !== "fundamento") setPeca("");
+        if (a.campo !== "peca") setFund("");
+        return { entendeu: true, texto: a.campo === "peca" ? "Peça apagada." : a.campo === "fundamento" ? "Fundamento apagado." : "Resposta apagada." };
+      }
+      if (a.tipo !== "preencher" && a.tipo !== "enviar") return null;
+      const novaPeca = a.tipo === "preencher" ? (a.campos.peca ?? peca) : peca;
+      const novoFund = a.tipo === "preencher" ? (a.campos.fundamento ?? fund) : fund;
+      setPeca(novaPeca);
+      setFund(novoFund);
+      if (a.tipo === "enviar" || a.enviar) {
+        if (!novaPeca.trim()) return { entendeu: true, texto: "Falta a peça: diga o nome dela." };
+        if (!novoFund.trim()) return { entendeu: true, texto: "Falta o fundamento: diga o artigo." };
+        concluir(corrigirResposta(pergunta, nivel, { peca: novaPeca, fundamento: novoFund }));
+        return { entendeu: true, texto: "Resposta enviada." };
+      }
+      return { entendeu: true, texto: `Peça: ${novaPeca || "—"} · Fundamento: ${novoFund || "—"}. Diga “responder” para enviar.` };
+    };
+    return () => {
+      vozRef.current = null;
+    };
+  });
 
   if (nivel === 1) {
     return (
@@ -724,6 +971,22 @@ function CorpoPeca({
       </div>
     );
   }
+  if (falando)
+    return (
+      <RespostaDita
+        linhas={[
+          { rotulo: "Peça", valor: peca, falta: "diga o nome da peça" },
+          {
+            rotulo: nivel === 3 ? "Fundamento (com parágrafo, inciso ou alínea)" : "Fundamento (artigo e lei)",
+            valor: fund,
+            falta: "diga o artigo e a lei",
+            aviso: fundamento?.semLei ? "falta a lei (diga, por exemplo, “do CPP”)" : undefined,
+          },
+        ]}
+        pronta={!!peca.trim() && !!fund.trim()}
+        responder={() => responder()}
+      />
+    );
   return (
     <form
       className={styles.form}
@@ -794,58 +1057,152 @@ function CorpoPeca({
   );
 }
 
-function CorpoItem({
+function CorpoTese({
   pergunta,
   nivel,
-  ordem,
+  facil,
   concluir,
   bloqueada,
+  vozRef,
+  falando,
 }: {
-  pergunta: PerguntaItem;
+  pergunta: PerguntaTese;
   nivel: Nivel;
-  ordem: number[];
+  facil: OpcoesFacil | null;
   concluir: (c: Correcao, marcada?: number) => void;
   bloqueada: boolean;
+  vozRef: RefObject<TratadorCorpo | null>;
+  /** respondendo falando: sem as caixas de digitar, a resposta dita (o ponto central e, no difícil, o artigo) */
+  falando: boolean;
 }) {
-  const [texto, setTexto] = useState("");
+  const [tese, setTese] = useState("");
+  const [artigo, setArtigo] = useState("");
+  const campoArtigo = useRef<HTMLTextAreaElement>(null);
   const id = useId();
-  const artigos = useMemo(() => (nivel > 1 ? previaDaResposta(texto) : []), [texto, nivel]);
+  const fundamento = useMemo(() => (nivel === 3 ? previaDoFundamento(artigo) : null), [artigo, nivel]);
+  const responder = () => concluir(corrigirTese(pergunta, nivel, { tese, artigo }));
+  // responder falando: a fala preenche o ponto central (e, no difícil, o artigo); "responder" envia
+  useEffect(() => {
+    if (nivel === 1 && facil) return;
+    vozRef.current = (falas) => {
+      const a = interpretarResposta(falas, { tipo: "tese", comArtigo: nivel === 3, tese, artigo }, RECONHECER);
+      if (!a) return null;
+      if (a.tipo === "apagar") {
+        if (a.campo !== "artigo") setTese("");
+        if (a.campo !== "tese") setArtigo("");
+        return { entendeu: true, texto: a.campo === "tese" ? "Ponto central apagado." : a.campo === "artigo" ? "Artigo apagado." : "Resposta apagada." };
+      }
+      if (a.tipo !== "preencher" && a.tipo !== "enviar") return null;
+      const novaTese = a.tipo === "preencher" ? (a.campos.tese ?? tese) : tese;
+      const novoArtigo = a.tipo === "preencher" ? (a.campos.artigo ?? artigo) : artigo;
+      setTese(novaTese);
+      setArtigo(novoArtigo);
+      if (a.tipo === "enviar" || a.enviar) {
+        if (!novaTese.trim()) return { entendeu: true, texto: "Falta o ponto central: diga a tese." };
+        if (nivel === 3 && !novoArtigo.trim()) return { entendeu: true, texto: "Falta o artigo: diga o dispositivo." };
+        concluir(corrigirTese(pergunta, nivel, { tese: novaTese, artigo: novoArtigo }));
+        return { entendeu: true, texto: "Resposta enviada." };
+      }
+      return {
+        entendeu: true,
+        texto: `Ponto central: ${novaTese || "—"}${nivel === 3 ? ` · Artigo: ${novoArtigo || "—"}` : ""}. Diga “responder” para enviar.`,
+      };
+    };
+    return () => {
+      vozRef.current = null;
+    };
+  });
 
-  if (nivel === 1) {
+  if (nivel === 1 && facil) {
     return (
       <div className={styles.alts}>
-        {ordem.map((idx, i) => (
-          <button key={idx} type="button" className={styles.alt} data-alt disabled={bloqueada} {...alternativa(() => concluir(corrigirItem(pergunta, nivel, { opcao: idx }), i))}>
+        {facil.opcoes.map((o, i) => (
+          <button
+            key={o.texto}
+            type="button"
+            className={styles.alt}
+            data-alt
+            disabled={bloqueada}
+            {...alternativa(() => concluir(corrigirTese(pergunta, nivel, { alternativa: { modo: facil.modo, ...o } }), i))}
+          >
             <span className={styles.altLetra}>{"ABCD"[i]}</span>
-            {pergunta.opcoes[idx].texto}
+            {o.texto}
           </button>
         ))}
       </div>
     );
   }
+  if (falando)
+    return (
+      <RespostaDita
+        linhas={[
+          { rotulo: "Ponto central", valor: tese, falta: "diga a tese em poucas palavras" },
+          ...(nivel === 3
+            ? [
+                {
+                  rotulo: "Artigo (com parágrafo, inciso ou alínea)",
+                  valor: artigo,
+                  falta: "diga o artigo e a lei",
+                  aviso: fundamento?.semLei ? "falta a lei (diga, por exemplo, “do CP”)" : undefined,
+                },
+              ]
+            : []),
+        ]}
+        pronta={!!tese.trim() && (nivel === 2 || !!artigo.trim())}
+        responder={responder}
+      />
+    );
   return (
     <form
       className={styles.form}
       onSubmit={(e) => {
         e.preventDefault();
-        concluir(corrigirItem(pergunta, nivel, { texto }));
+        responder();
       }}
     >
       <div className={styles.campo} data-campo>
         <label>
-          <span>Sua resposta {nivel === 3 ? "(tese completa, com o dispositivo legal)" : "(tese e dispositivo legal)"}</span>
-          <textarea value={texto} onChange={(e) => setTexto(e.target.value)} rows={4} autoComplete="off" name="grifo-resposta" required aria-describedby={`${id}-artigos`} />
+          <span>O ponto central da resposta</span>
+          <CampoLinha
+            value={tese}
+            onChange={setTese}
+            placeholder="em poucas palavras"
+            name="grifo-tese"
+            enterKeyHint={nivel === 3 ? "next" : "send"}
+            // no difícil, o Enter na tese vai para o artigo (sem ele, a resposta não vai)
+            aoEnter={(campo) => (nivel === 2 || artigo.trim() ? campo.form?.requestSubmit() : campoArtigo.current?.focus())}
+            required
+          />
         </label>
-        <Previa id={`${id}-artigos`} vazio={!texto.trim()}>
-          {artigos.length ? (
-            <>
-              Artigos reconhecidos: <strong>{artigos.join("; ")}</strong>
-            </>
-          ) : texto.trim() ? (
-            "Nenhum artigo reconhecido ainda (ex.: art. 155, § 4º, I, do CP)."
-          ) : null}
-        </Previa>
       </div>
+      {nivel === 3 && (
+        <div className={styles.campo} data-campo>
+          <label>
+            <span>Artigo (com parágrafo, inciso ou alínea)</span>
+            <CampoLinha
+              value={artigo}
+              onChange={setArtigo}
+              placeholder="ex.: art. 121, § 3º, do CP"
+              ref={campoArtigo}
+              name="grifo-artigo"
+              enterKeyHint="send"
+              aoEnter={(campo) => campo.form?.requestSubmit()}
+              required
+              aria-describedby={`${id}-artigo`}
+            />
+          </label>
+          <Previa id={`${id}-artigo`} vazio={!artigo.trim()} erro={!!artigo.trim() && (!fundamento?.citacoes.length || fundamento.semLei)}>
+            {fundamento?.citacoes.length ? (
+              <>
+                Será considerado: <strong>{fundamento.citacoes.join("; ")}</strong>
+                {fundamento.semLei && " · falta a lei (ex.: CPP, CP, Lei 11.343)"}
+              </>
+            ) : artigo.trim() ? (
+              "Nenhum artigo reconhecido. Ex.: 121, § 3º, CP"
+            ) : null}
+          </Previa>
+        </div>
+      )}
       <button type="submit" className="btn btn-gold">
         Responder
       </button>
@@ -1035,18 +1392,57 @@ function Retorno({ pergunta, res, nivel }: { pergunta: Pergunta; res: Correcao; 
       </>
     );
   }
-  if (res.formato !== "item") return null;
+  if (res.formato !== "tese") return null;
   return (
     <>
-      {res.fracao !== null && (
-        <p className={styles.fbDetalhe}>
-          Nota no item: {Math.round(res.fracao * 100)}%{res.faltou.length ? ` · faltou: ${res.faltou.slice(0, 4).join("; ")}` : ""}
-        </p>
-      )}
+      {!res.acertou && <p className={styles.fbRotulo}>Resposta correta</p>}
+      <p>
+        <strong>{res.teseEsperada}</strong> — <Citado texto={res.artigoEsperado} />
+      </p>
+      {!res.acertou && nivel > 1 && <SuaTese res={res} nivel={nivel} />}
       <p className={styles.fbExp}>
         <strong>Padrão de respostas: </strong>
         <Citado texto={pergunta.explicacao} />
       </p>
     </>
+  );
+}
+
+/** O ponto central e o artigo que o aluno digitou, cada um com o certo ou o errado; o artigo errado, com o texto dele. */
+function SuaTese({ res, nivel }: { res: CorrecaoTese; nivel: Nivel }) {
+  const r = res.respondida;
+  return (
+    <div className={styles.suaResposta}>
+      <p className={styles.fbRotulo}>Sua resposta</p>
+      <p data-certo={res.acertouTese ? "1" : "0"}>
+        <span className={styles.marca} aria-label={res.acertouTese ? "ponto central certo" : "ponto central errado"}>
+          {res.acertouTese ? "✓" : "✗"}
+        </span>{" "}
+        “{r.tese}”
+      </p>
+      {nivel === 3 && r.artigo !== undefined && (
+        <div data-certo={res.acertouArtigo ? "1" : "0"}>
+          <p>
+            <span className={styles.marca} aria-label={res.acertouArtigo ? "artigo certo" : "artigo errado"}>
+              {res.acertouArtigo ? "✓" : "✗"}
+            </span>{" "}
+            Artigo que você digitou:{" "}
+            {r.artigos.length ? (
+              r.artigos.map((a, i) => (
+                <span key={i}>
+                  {i > 0 && "; "}
+                  <Citado texto={a.texto} />
+                </span>
+              ))
+            ) : (
+              <>
+                “{r.artigo}” <span className={styles.fbDetalhe}>(não reconhecemos nenhum artigo)</span>
+              </>
+            )}
+          </p>
+          {!res.acertouArtigo && r.artigos.slice(0, 3).map((a, i) => <TextoDoArtigo key={i} artigo={a} />)}
+        </div>
+      )}
+    </div>
   );
 }

@@ -302,3 +302,14 @@ questoes:
         componentes:
           - { id: c1, valor: 0.5, termos: [ perempc* | perempta ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 60, III, CPP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q2, lei: "Lei 14.994/2024", texto: "A Lei 14.994/2024 incluiu os §§ 1º e 2º no art. 147 do Código Penal: a ameaça contra a mulher por razões da condição do sexo feminino, o que inclui a violência doméstica e familiar, tem a pena em dobro e passou a ser de ação penal pública incondicionada. A lei também elevou a pena do art. 129, § 13, para reclusão de 2 a 5 anos. Hoje, Bárbara não poderia se retratar de nenhum dos dois crimes, e a tese do item A não vale mais." }
+  nomes:
+    peca: { Marieta: Hécate, Joana: Dânae, Luíza: Hebe, Anastácia: Leto }   # a servidora; as beneficiárias
+    q1: { Alberto: Midas }   # o peculato
+    q2: { Bárbara: Afrodite, Rodrigo: Ares }   # as ameaças
+    q3: { Rodrigo: Dionísio }   # o carnaval
+    q4: { Elisa: Éris, Cláudio: Ares }   # os vizinhos brigados
+    empresas: { Banco Nacional: Banco Midas }   # o dinheiro de fantasia

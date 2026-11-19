@@ -1,5 +1,5 @@
 // Baixa de oab.fgv.br os cadernos e padrões de resposta de cada Exame de Ordem.
-// Uso: node scripts/baixar-fgv.mjs [--keys=643,642]
+// Uso: node scripts/baixar-fgv.mjs [--keys=643,642] [--desde=47]
 // Proxy: se o acesso direto falhar, usa PJE_PROXY de ../.env (raiz acima do projeto).
 import { chromium } from "playwright";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
@@ -186,8 +186,18 @@ async function processarExame(context, page, key, texto, numero) {
   const pasta = join(OUT, String(numero).padStart(2, "0"));
   const arquivos = await listarArquivos(page, key);
   const temProva = arquivos.some(({ titulo, href }) => classificar(titulo, decodeURIComponent(href.split("/").pop())));
-  if (!temProva) return { pulado: true, arquivos: arquivos.length };
-  const manifesto = { key, exame: texto, numero, baixados: [], naoClassificados: [] };
+  if (!temProva) {
+    // sem prova para baixar, fica ao menos o endereço da página do exame (o site de provas leva até ela)
+    if (!existsSync(join(pasta, "manifesto.json")) && arquivos.length) {
+      mkdirSync(pasta, { recursive: true });
+      const pagina = `${page.url()}#ContentPlaceHolder1_lbTitulo_arquivo`;
+      writeFileSync(join(pasta, "manifesto.json"), JSON.stringify({ key, exame: texto, numero, pagina, baixados: [], naoClassificados: [] }, null, 2) + "\n");
+    }
+    return { pulado: true, arquivos: arquivos.length };
+  }
+  // a página do exame já na lista de arquivos (o endereço que a FGV abre depois de escolher a seccional): o site de
+  // provas leva até ela, na parte dos documentos
+  const manifesto = { key, exame: texto, numero, pagina: `${page.url()}#ContentPlaceHolder1_lbTitulo_arquivo`, baixados: [], naoClassificados: [] };
   const padroesPraticos = new Map();
 
   for (const { titulo, href } of arquivos) {
@@ -222,8 +232,11 @@ async function processarExame(context, page, key, texto, numero) {
     const dir = join(pasta, "pratica", slug(area));
     const definitivo = join(dir, "padrao-definitivo.pdf");
     const preliminar = join(dir, "padrao-preliminar.pdf");
+    // sem o definitivo (ainda não publicado), o preliminar é o padrão que há: fica guardado até o definitivo sair
     if (!existsSync(definitivo)) {
-      manifesto.naoClassificados.push({ titulo, area, motivo: "padrão preliminar sem definitivo correspondente" });
+      const status = await baixar(context, href, preliminar);
+      manifesto.baixados.push({ tipo: "pratica-padrao-preliminar", area, arquivo: "padrao-preliminar.pdf", status: `${status}; sem definitivo publicado`, titulo });
+      await pausa(PAUSA_MS);
       continue;
     }
     const tmp = join(dir, "_tmp-preliminar.pdf");
@@ -258,7 +271,10 @@ async function main() {
   const context = await browser.newContext({ acceptDownloads: true });
   const page = await context.newPage();
   const exames = await listarExames(page);
-  const escolhidos = [...exames].filter(([key]) => !argKeys || argKeys.includes(key));
+  // --desde=47: só os exames a partir desse número (os recentes, que ainda podem ganhar o gabarito definitivo)
+  const desde = Number(process.argv.find((a) => a.startsWith("--desde="))?.slice("--desde=".length)) || 0;
+  const numeroNovo = (texto) => (/^\d+$/.test(numeroDoExame(texto) ?? "") ? Number(numeroDoExame(texto)) : 0); // "2010.2" é dos antigos
+  const escolhidos = [...exames].filter(([key, texto]) => (!argKeys || argKeys.includes(key)) && (!desde || numeroNovo(texto) >= desde));
   mkdirSync(OUT, { recursive: true });
   for (const [key, texto] of escolhidos) {
     const numero = numeroDoExame(texto) ?? `key-${key}`;

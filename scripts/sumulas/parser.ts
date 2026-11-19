@@ -30,14 +30,15 @@ function linhas(n: No): string[] {
   andar(n);
   return bruto
     .split("\n")
-    .map((l) => l.replace(/\s+/g, " ").trim())
+    // o portal põe espaços invisíveis no meio das palavras ("cance\u200blada")
+    .map((l) => l.replace(/[\u200b-\u200d\ufeff]/g, "").replace(/\s+/g, " ").trim())
     .filter(Boolean);
 }
 const limpo = (s: string) => s.replace(/\s+/g, " ").trim();
 const textoDe = (n: No) => limpo(linhas(n).join(" "));
 const doc = (html: string) => parse(html) as unknown as No;
 
-// ---------- STF: lista (base=30) ----------
+// ---------- STF: lista (base=30, súmulas; base=26, súmulas vinculantes) ----------
 
 export interface SumulaSTFLista {
   numero: number;
@@ -46,7 +47,7 @@ export interface SumulaSTFLista {
   id: string;
 }
 
-/** A lista de súmulas do STF: um link por súmula, com "(superada)" ou "(cancelada)" quando for o caso. */
+/** A lista de súmulas do STF (ou das vinculantes): um link por súmula, com "(superada)" ou "(cancelada)" quando for o caso. */
 export function listaSTF(html: string): SumulaSTFLista[] {
   const saida: SumulaSTFLista[] = [];
   const vistos = new Set<number>();
@@ -54,7 +55,7 @@ export function listaSTF(html: string): SumulaSTFLista[] {
     const a = todos(item, (n) => n.nodeName === "a")[0];
     if (!a) continue;
     const nome = textoDe(a);
-    const numero = Number(nome.match(/Súmula\s+(\d+)/i)?.[1]);
+    const numero = Number(nome.match(/Súmula\s+(?:Vinculante\s+)?(\d+)/i)?.[1]);
     const id = attr(a, "href").match(/sumula=(\d+)/)?.[1];
     if (!numero || !id || vistos.has(numero)) continue;
     vistos.add(numero);
@@ -87,9 +88,18 @@ export interface DetalheSTF {
   jurisprudencia: JurisprudenciaSTF[];
   observacoes: ObservacaoSTF[];
   dataAprovacao?: string;
+  /** vinculantes: "DJE de 6-6-2007" (a data de publicação do enunciado) */
+  dataPublicacao?: string;
+  /** vinculantes: os precedentes representativos (como a jurisprudência: trecho e referência) */
+  precedentesRepresentativos: JurisprudenciaSTF[];
+  /** vinculantes: as teses de repercussão geral ligadas à súmula */
+  teses: string[];
 }
 
-/** Lê a seção de uma súmula: enunciado, jurisprudência selecionada e observações (com os "Vide"). */
+/**
+ * Lê a seção de uma súmula: enunciado, jurisprudência selecionada e observações (com os "Vide"). Nas vinculantes, também
+ * os precedentes representativos, as teses de repercussão geral e a data de publicação.
+ */
 export function detalheSTF(html: string): DetalheSTF {
   const raiz = doc(html);
   const conteudo = todos(raiz, (n) => tem(n, "conteudo"))[0] ?? raiz;
@@ -107,10 +117,16 @@ export function detalheSTF(html: string): DetalheSTF {
   andar(conteudo);
 
   const do_ = (nome: RegExp) => blocos.filter((b) => nome.test(b.secao)).map((b) => b.conteudo);
-  const enunciado = do_(/^Súmula\s+\d+/i).map(textoDe).join(" ").trim();
+  const enunciado = do_(/^Súmula\s+(?:Vinculante\s+)?\d+/i).map(textoDe).join(" ").trim();
   const jurisprudencia = do_(/Jurisprudência selecionada/i).flatMap(entradasDeJurisprudencia);
+  const precedentesRepresentativos = do_(/^Precedentes? Representativos?/i).flatMap(entradasDeJurisprudencia);
+  const teses = do_(/^Teses? de Repercussão Geral/i)
+    .flatMap(linhas)
+    .map((l) => l.replace(/^●\s*/, "").trim())
+    .filter(Boolean);
   const observacoes: ObservacaoSTF[] = [];
   let dataAprovacao: string | undefined;
+  let dataPublicacao: string | undefined;
   for (const nodo of do_(/^Observação/i)) {
     for (const l of linhas(nodo)) {
       const sem = l.replace(/^●\s*/, "").trim();
@@ -119,12 +135,17 @@ export function detalheSTF(html: string): DetalheSTF {
         dataAprovacao = data[1].replace(/\.$/, "");
         continue;
       }
+      const publicacao = sem.match(/^Data de publicação do enunciado:\s*(.+)$/i);
+      if (publicacao) {
+        dataPublicacao = publicacao[1].replace(/\.$/, "");
+        continue;
+      }
       if (/^Para (informações|pesquisar)/i.test(sem)) continue;
       if (!sem) continue;
       observacoes.push(lerObservacao(l, nodo));
     }
   }
-  return { enunciado, jurisprudencia, observacoes, ...(dataAprovacao ? { dataAprovacao } : {}) };
+  return { enunciado, jurisprudencia, observacoes, precedentesRepresentativos, teses, ...(dataAprovacao ? { dataAprovacao } : {}), ...(dataPublicacao ? { dataPublicacao } : {}) };
 }
 
 /** As entradas da jurisprudência: cada uma é um título opcional, a ementa e a referência entre colchetes. */

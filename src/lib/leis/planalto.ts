@@ -44,7 +44,10 @@ const CITACAO_FORMATADA = new RegExp(
   "g",
 );
 
-const SUMULA = /\b[Ss]úmula\s*(?:n[º°.]?\s*)?(\d{1,4})\s+(?:do|da)\s+STF(?!\w)/g;
+const SUMULA = /\b[Ss]úmula\s*(?:n[º°.]?\s*)?(\d{1,4})\s+(?:do|da)\s+(STF|STJ)(?!\w)/g;
+// "Súmula Vinculante 11", "Súmula Vinculante nº 14" (só o STF as tem: o tribunal não precisa vir escrito)
+const SUMULA_VINCULANTE = /\b[Ss]úmula\s+[Vv]inculante\s*(?:n[º°.]?\s*)?(\d{1,3})(?!\d)/g;
+const LISTA_VINCULANTES = "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26";
 
 export interface Citacao {
   inicio: number;
@@ -76,6 +79,9 @@ function sumulaStf(numero: string): string {
   return `https://jurisprudencia.stf.jus.br/pages/search/seq-sumula${Number(numero)}/false`;
 }
 
+// o STJ não tem página por súmula: a lista oficial
+const LISTA_STJ = "https://scon.stj.jus.br/SCON/sumstj/";
+
 function ancora(artigo: string): string {
   return `#art${artigo.replace("-", "").toLowerCase()}`;
 }
@@ -89,7 +95,7 @@ function aviso(v: Vigencia | undefined, data?: string): string | undefined {
 }
 
 /**
- * Lista as citações de artigos e súmulas do STF de um texto que tenham link conhecido.
+ * Lista as citações de artigos e súmulas (STF, STJ e vinculantes) de um texto que tenham link conhecido.
  * `data` é a data da prova (AAAA-MM-DD), usada só para decidir o aviso de artigo alterado.
  */
 export function citacoesEm(texto: string, data?: string): Citacao[] {
@@ -132,11 +138,19 @@ export function citacoesEm(texto: string, data?: string): Citacao[] {
   for (const m of texto.matchAll(SUMULA)) {
     const inicio = m.index ?? 0;
     const numero = Number(m[1]);
-    // a súmula que o Vade Mecum tem abre no leitor (com a prévia); a que não tem vai para o STF
-    if (sumulasNumeros.stf.includes(numero)) {
-      const planalto = sumulaStf(m[1]);
-      achados.push({ inicio, fim: inicio + m[0].length, texto: m[0], url: `/leis/sumulas/stf/#s-${numero}`, planalto, lei: "sumulas-stf", art: `s-${numero}` });
-    } else achados.push({ inicio, fim: inicio + m[0].length, texto: m[0], url: sumulaStf(m[1]) });
+    const tribunal = m[2]!.toLowerCase() as "stf" | "stj";
+    const fora = tribunal === "stf" ? sumulaStf(m[1]!) : LISTA_STJ;
+    // a súmula que o Vade Mecum tem abre no leitor (com a prévia); a que não tem vai para o tribunal
+    if (sumulasNumeros[tribunal].includes(numero))
+      achados.push({ inicio, fim: inicio + m[0].length, texto: m[0], url: `/leis/sumulas/${tribunal}/#s-${numero}`, planalto: fora, lei: `sumulas-${tribunal}`, art: `s-${numero}` });
+    else achados.push({ inicio, fim: inicio + m[0].length, texto: m[0], url: fora });
+  }
+  for (const m of texto.matchAll(SUMULA_VINCULANTE)) {
+    const inicio = m.index ?? 0;
+    const numero = Number(m[1]);
+    if (sumulasNumeros.vinculantes?.includes(numero))
+      achados.push({ inicio, fim: inicio + m[0].length, texto: m[0], url: `/leis/sumulas/vinculantes/#s-${numero}`, planalto: LISTA_VINCULANTES, lei: "sumulas-vinculantes", art: `s-${numero}` });
+    else achados.push({ inicio, fim: inicio + m[0].length, texto: m[0], url: LISTA_VINCULANTES });
   }
   return achados.sort((a, b) => a.inicio - b.inicio);
 }

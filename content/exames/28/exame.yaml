@@ -111,7 +111,7 @@ peca:
       valores: [ 0, 0.15, 0.25, 0.3, 0.4, 0.45, 0.55 ]
       componentes:
         - { id: c1, valor: 0.3, termos: [ suspensao condicional do processo | sursis processual ] }
-        - { id: c2, valor: 0.1, dispositivo: [ "art. 89, Lei 9" ], requer: c1 }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 89, Lei 9.099" ], requer: c1 }
         - { id: c3, valor: 0.15, termos: [ pena minima, 1 ano ] }
     - n: "7.2"
       secao: Razões de Recurso
@@ -299,3 +299,12 @@ questoes:
         valores: [ 0, 0.6 ]
         componentes:
           - { id: c1, valor: 0.6, termos: [ causa de aumento | majorante, tempo | restricao da liberdade ] }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q3, lei: "Lei 13.964/2019 e Lei 14.843/2024", texto: "A Lei 13.964/2019 trocou as frações de progressão do art. 112 da LEP por percentuais: para o primário em crime com violência à pessoa, como a lesão corporal seguida de morte, são 25% da pena (inciso III). A fração de 1/6 do gabarito só vale para crimes anteriores à lei, que não retroage para prejudicar. A Lei 14.843/2024 passou a exigir o exame criminológico para a progressão (art. 112, § 1º)." }
+  nomes:
+    peca: { Túlio: Eros, Joaquina: Psiquê, João: Narciso }
+    q1: { Matheus: Faetonte }   # a alta velocidade
+    q2: { Hugo: Tântalo }
+    q4: { Talles: Hermes, Joana: Ariadne }

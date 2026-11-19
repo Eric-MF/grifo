@@ -42,7 +42,8 @@ function cumprida(r: Regra, item: ItemJogo, c: Contexto): boolean {
     case "tentativa-compra":
       return k.tentativasCompra > 0;
     case "todas-compras":
-      return c.itens.filter((i) => i.id !== item.id && i.custo !== undefined).every((i) => c.comprados.includes(i.id));
+      // os estilos dos grupos ficam de fora: os datados só ficam à venda uma semana por ano
+      return c.itens.filter((i) => i.id !== item.id && i.custo !== undefined && !i.grupo).every((i) => c.comprados.includes(i.id));
     case "horario": {
       const h = c.agora.getHours();
       return r.de <= r.ate ? h >= r.de && h < r.ate : h >= r.de || h < r.ate;

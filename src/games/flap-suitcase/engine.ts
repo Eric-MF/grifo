@@ -1,12 +1,14 @@
 // Engine do Flap Suitcase: física com passo fixo, canvas 2D, pool de partículas.
-// Coordenadas lógicas: altura fixa H = 640; largura acompanha a proporção da tela.
+// Coordenadas lógicas: com a tela deitada, altura 640 e a largura acompanha a proporção da tela; em pé (tela estreita),
+// a largura fica em 500 e a altura cresce.
 
 import type { GameHostApi, GameInstance, GameOptions, Hud } from "../types";
 import { Som } from "./audio";
-import { PODERES, poderPorId, type Efeitos, type Poder } from "./powers";
+import { PODERES, poderPorId, type Efeitos, type IdPoder, type Poder } from "./powers";
 import { tirarAntisserrilhado } from "./pixel";
 import { CHANCE_RACHADA, MULTIPLICADOR_XP, PENALIDADES, PERSONAGENS, type Personagem } from "./progressao";
-import { ciclo, colunaGrega, temaPorId, type Clima, type Ctx, type Tema } from "./themes";
+import { ciclo, colunaGrega, type Clima, type Ctx, type Tema } from "./themes";
+import { temaPorId } from "./catalogo";
 import { desenharAsaSolta, desenharPersonagem } from "./personagens";
 import { colunasDoPulso, PODERES_COM_PULSO } from "./pulso";
 import { coresDaRacha, desenharColunaRachada, sementeRacha } from "./racha";
@@ -17,8 +19,42 @@ import { EFEITO, MOEDA, desenharQuadro, iconePoder, imagemPoder, pronta } from "
 import { avancarVoo, criarVoo, posicaoVoo, type VooMoeda } from "./sucao";
 import { atingiuBatidas, registrarBatida } from "./teto";
 import { desenharAvisoRecorde, desenharMarcaRecorde, DURACAO_AVISO, marcarRecorde, quebrouRecorde } from "./recorde";
+import { passoSurpresa, progressoSurpresa, SURPRESA_INICIAL, type EstadoSurpresa } from "./surpresa";
+import { auraAtras, auraFrente, coresAura } from "./aura";
+import { desenharMecanica, desenharMomento, type Camada, type CenaMomento, type DadosMecanica, type Momento } from "./momentos";
+import { TEXTOS_MOMENTO } from "./momentos-textos";
+import { desenharMotivo, motivoDe, type Forma, type Motivo } from "./motivos";
+import {
+  balancoOrbe,
+  chanceRachadaExtra,
+  CHANCE_RENASCER,
+  chancesLiberdade,
+  empurraoPterossauro,
+  chanceVidaNaRachada,
+  duracaoPoder,
+  fatorGravidade,
+  fatorImpulso,
+  fatorMundo,
+  fatorXp,
+  nivel as nivelDe,
+  nivelVidasFrageis,
+  pesoNoOrbe,
+  PROTECAO_ESCUDO,
+  protecaoVida,
+  ressacaDe,
+  segundosCarga,
+  valorContra,
+  valorEfeito,
+  valorForca,
+  valorMoedaInquerito,
+  type IdTrilha,
+  type Niveis,
+} from "./melhorias";
 
-const H = 640;
+/** A altura lógica com a tela deitada, e a mínima. */
+const ALTURA = 640;
+/** A largura lógica mínima: com a tela em pé, ela fica nesta e a altura cresce (o mundo fica mais alto, não mais estreito). */
+const LARGURA_MIN = 500;
 const CHAO = 40;
 const PASSO = 1 / 120;
 const GRAVIDADE = 1450;
@@ -46,6 +82,8 @@ interface Pilar {
   quebradaCima: boolean;
   quebradaBaixo: boolean;
   mov: number; // amplitude do movimento vertical (0 = parado)
+  /** centro do vão quando a coluna surgiu (os Vãos alinhados do Equilíbrio puxam o vão para o meio e depois o devolvem) */
+  vao0: number;
   fase: number;
   passou: boolean;
   /** coluna rachada: passagem mais estreita; bater nela aplica uma penalidade, sem perder a partida */
@@ -53,6 +91,8 @@ interface Pilar {
   penalizada: boolean;
   /** arquivada pelo poder: existe só para manter o espaçamento; não pontua, não colide e não aparece */
   arquivado?: boolean;
+  /** as Garras pediram esta coluna antes de ela aparecer: quebra quando entra na tela */
+  garras?: boolean;
   /** quanto a coluna está recolhida (0 inteira, 1 fora da tela e sem colisão), ver recolher.ts */
   recolhido: number;
   /** velocidade do recolhimento do galope (a mola de recolher.ts) */
@@ -66,9 +106,11 @@ interface Pilar {
   alvoTopo: number;
   alvoBase: number;
 }
-interface Moeda { x: number; y: number; pega: boolean; fase: number }
-interface Orbe { x: number; y: number; poder: Poder; pego: boolean }
-interface Part { x: number; y: number; vx: number; vy: number; vida: number; max: number; cor: string; tam: number; tipo: 0 | 1 | 2 }
+interface Moeda { x: number; y: number; pega: boolean; fase: number; vista?: boolean }
+/** `amp`: balanço do orbe em px (a Frequência das melhorias faz o orbe balançar mais), em volta de `y0` */
+interface Orbe { x: number; y: number; y0: number; amp: number; fase: number; poder: Poder; pego: boolean }
+/** `motivo`: partícula desenhada com o símbolo do poder (o rastro e a explosão do Visual das melhorias, ver motivos.ts) */
+interface Part { x: number; y: number; vx: number; vy: number; vida: number; max: number; cor: string; tam: number; tipo: 0 | 1 | 2; motivo?: Forma; detalhe?: string }
 interface Gota { x: number; y: number; v: number; s: number; r: number }
 
 const artes = new Map<string, HTMLImageElement>();
@@ -83,9 +125,6 @@ function arteDoPoder(id: string): HTMLImageElement {
 }
 
 const achaPersonagem = (id?: string) => PERSONAGENS.find((p) => p.id === id) ?? PERSONAGENS[0];
-/** Pontos que cada coluna passada rende, com os poderes ativos (Foco, Concurso Material, Dosimetria). */
-const pontosDaColuna = (e: Efeitos) => (e.foco ? 3 : e.dobro ? 2 : 1) * (e.dosimetria ? 3 : 1);
-const CARGA_SEG = 15;
 
 /** Coluna rachada: a pedra fratura perto da passagem (racha.ts); a semente vem de dados fixos do pilar. */
 function desenharRacha(c: Ctx, desenhar: () => void, len: number, q: Pilar, metade: "cima" | "baixo", tema: Tema) {
@@ -109,6 +148,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
 
   // ---------------- estado ----------------
   let W = 800;
+  let H = ALTURA;
   let escala = 1;
   let estado: "pronto" | "jogando" | "pergunta" | "pausado" | "morrendo" | "fim" = "pronto";
   let estadoAntesPausa: "pronto" | "jogando" = "pronto";
@@ -122,6 +162,33 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   const gotas: Gota[] = [];
   const estrelas: [number, number, number][] = [];
   let ativos = new Map<string, number>();
+  // melhorias de poder compradas (melhorias.ts) e o que elas ligam fora de `ativos`, sem aparecer no HUD:
+  // `temporarios` (Qualificadora, Das cinzas, Penhora on-line, o lento da Praga) e as `ressacas`, os contrapesos que
+  // vêm depois que o poder acaba
+  let melhorias: Niveis = opcoes.melhorias ?? {};
+  let temporarios = new Map<string, number>();
+  let ressacas = new Map<string, { valor: number; resto: number }>();
+  let colunasArquivar = 0;
+  // quantas das próximas colunas a surgir as Garras ainda vão quebrar (as que não estavam na tela quando o poder veio)
+  let colunasGarras = 0;
+  // só para os testes (window.__flap.estado): quantas colunas os poderes quebraram na partida
+  let nQuebradas = 0;
+  let semRachadasAte = 0;
+  let atrasoColuna = 0;
+  let proximaRachada = 0;
+  let proximaMovel = 0;
+  let rastroT = 0;
+  // momentos do Visual (momentos.ts): o que aparece no instante que marca cada poder. `alvo`: a coluna que ele acompanha
+  // (com `vao`, também o centro e a abertura do vão); `mundo`: fica no lugar, e o mundo corre; `seguir`: acompanha a
+  // altura do personagem
+  let momentos: (Momento & { alvo?: Pilar; vao?: boolean; mundo?: boolean; seguir?: boolean })[] = [];
+  // os poderes que já tiveram um momento desde que foram usados: a aparição do nível 5 vem só no primeiro
+  let comMomento = new Set<string>();
+  let ecoT = 0;
+  // de quem é o ímã ligado: do Vade Mecum ou do Tesouro (o Visual de cada um desenha as linhas dele)
+  let imaDe: IdPoder = "ima";
+  // as colunas que já tiveram o momento de cada tipo (atravessada, arquivada, recolhida pelo galope)
+  let colunasComMomento = new WeakMap<Pilar, Set<string>>();
   let carga = 0;
   let vidas = 0;
   let pontos = 0;
@@ -157,6 +224,8 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   // Ícaro Liminar: instantes (segundos de jogo) das batidas de cabeça no teto, e se as asas já se soltaram
   let batidasTeto: number[] = [];
   let relogioJogo = 0;
+  // surpresa (easter egg) do estilo: quando aparece e por quanto tempo (ver surpresa.ts)
+  let surpresa: EstadoSurpresa = SURPRESA_INICIAL;
   let semAsas = false;
   // asas soltas do Ícaro: caem à metade da velocidade do pássaro (ver morrerPeloSol)
   let asasSoltas: { x: number; y: number; vy: number; ang: number; va: number; esc: number; atras: boolean }[] = [];
@@ -169,6 +238,8 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   let raf = 0;
   let ultimo = 0;
   let acum = 0;
+  // só em ?debug=1: para o mundo (o desenho continua), para capturas de tela
+  let paradoDebug = false;
   let destruido = false;
 
   const efeitos = (): Efeitos => ({
@@ -191,6 +262,84 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     agravo: ativos.has("agravo"),
   });
 
+  // ---------------- melhorias ----------------
+  const nv = (id: string, trilha: IdTrilha) => nivelDe(melhorias, id, trilha);
+  const ef = (id: string) => valorEfeito(melhorias, id);
+  const fo = (id: string) => valorForca(melhorias, id);
+  const contra = (id: string, tipo: Parameters<typeof valorContra>[1]) => valorContra(id, tipo, melhorias);
+  const ressaca = (tipo: string) => ressacas.get(tipo)?.valor ?? 0;
+  /** Poderes ligados para os contrapesos "enquanto dura": os de `ativos` e a Tipificação durante a Qualificadora. */
+  const ligados = () => (temporarios.has("qualificadora") ? [...ativos.keys(), "tipificacao"] : [...ativos.keys()]);
+  /** O contrapeso que vem depois que o poder acaba (ressaca), se a melhoria tiver um. */
+  function aplicarRessaca(id: string) {
+    const r = ressacaDe(id, melhorias);
+    if (r) ressacas.set(r.tipo, { valor: r.valor, resto: r.segundos });
+  }
+  /** Atravessa as colunas: Absolvição Sumária, ou Das cinzas (Renascer) logo depois de perder uma vida. */
+  const atravessa = (e: Efeitos) => e.fantasma || temporarios.has("cinzas");
+  /** Poder ligado com a aura (trilha Visual) mais alta; no empate, o do personagem. */
+  function auraAtiva(): { id: string; nivel: number; cores: string[]; motivo: Motivo } | null {
+    const proprio = poderDoPersonagem()?.id;
+    let melhor: { id: string; nivel: number } | null = null;
+    // os poderes ligados e os instantâneos usados há pouco (a aura deles fica uns segundos, ver ativar)
+    const comAura = [...ativos.keys(), ...[...temporarios.keys()].filter((k) => k.startsWith("aura:")).map((k) => k.slice(5))];
+    for (const id of comAura) {
+      const n = nv(id, "visual");
+      if (n > 0 && (!melhor || n > melhor.nivel || (n === melhor.nivel && id === proprio))) melhor = { id, nivel: n };
+    }
+    if (!melhor) return null;
+    const motivo = motivoDe(melhor.id);
+    return { ...melhor, cores: coresAura(motivo.cores[0], tema), motivo };
+  }
+  /** Cria o momento do poder `id` em (x, y), se o Visual dele estiver comprado (e o movimento não estiver reduzido). */
+  function momento(id: IdPoder, x: number, y: number, extra: Partial<(typeof momentos)[number]> = {}) {
+    const nivel = nv(id, "visual");
+    if (nivel < 1 || reduzido) return;
+    if (momentos.length > 40) momentos.shift();
+    const principal = !comMomento.has(id);
+    comMomento.add(id);
+    // os do personagem acompanham a altura dele; as ondas do grito e do sonar e o raio do chifre ficam onde saíram
+    const seguir = TEXTOS_MOMENTO[id].ancora === "jogador" && id !== "voo" && id !== "eco" && id !== "chifre";
+    momentos.push({ id, x, y, idade: 0, nivel, principal, semente: Math.random() * 1000, seguir, ...extra });
+  }
+  /** O momento que acompanha a coluna `q`, no centro do vão dela. */
+  const momentoNaColuna = (id: IdPoder, q: Pilar) => momento(id, q.x, q.vao, { alvo: q, vao: true, ab: q.abertura / 2, variante: q.variante });
+  /** O momento da coluna `q` que o poder tira da tela: fica onde ela estava, e o mundo corre. */
+  function momentoDaColunaRemovida(id: IdPoder, q: Pilar, extra: Partial<(typeof momentos)[number]> = {}) {
+    const { topo, base } = bordasDaColuna(q);
+    momento(id, q.x, (topo + base) / 2, { mundo: true, ab: (base - topo) / 2, variante: q.variante, ...extra });
+  }
+  /** A coluna ainda não teve o momento `tipo`? (e passa a ter) */
+  function primeiraVez(q: Pilar, tipo: string) {
+    const feitos = colunasComMomento.get(q) ?? new Set<string>();
+    if (feitos.has(tipo)) return false;
+    feitos.add(tipo);
+    colunasComMomento.set(q, feitos);
+    return true;
+  }
+  /**
+   * Pontos que a coluna `p` rende ao ser passada, com os poderes ativos (Foco, Concurso Material, Dosimetria) e as
+   * melhorias: Foco total, Agravante (rachada na Dosimetria), Bônus da dúvida (rachada na Presunção) e Qualificadora.
+   */
+  function pontosDaColuna(e: Efeitos, p: Pilar) {
+    const base = (e.foco ? 3 + ef("foco") : e.dobro ? 2 : 1) * (e.dosimetria ? (p.rachada ? 3 + ef("dosimetria") : 3) : 1);
+    const bonus = p.rachada && e.presuncao ? ef("presuncao") : 0;
+    return Math.round(base * (temporarios.has("qualificadora") ? 2 : 1)) + bonus;
+  }
+  /** Recolhe as moedas da tela, cada uma com a chance dada (Despojos da Prescrição). */
+  function recolherMoedasDaTela(chance: number) {
+    if (chance <= 0) return;
+    let i = 0;
+    for (const m of moedas) {
+      if (m.pega || m.x < 0 || m.x > W || Math.random() >= chance) continue;
+      m.pega = true;
+      nMoedas++;
+      pontos++;
+      sugarMoeda(m.x, m.y, i++ * 0.04);
+      explosao(m.x, m.y, 6, [tema.paleta.moeda[0], "#ffffff"], 120);
+    }
+  }
+
   // ---------------- tamanho ----------------
   let redesenhar = true;
   function redimensionar() {
@@ -200,11 +349,34 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     const ch = canvas.clientHeight || 640;
     canvas.width = Math.round(cw * dpr);
     canvas.height = Math.round(ch * dpr);
-    escala = canvas.height / H;
-    W = Math.max(360, canvas.width / escala);
-    jog.x = Math.min(W * 0.3, 260);
+    // deitada, a altura lógica é 640; em pé, a largura não fica abaixo de 500 e a altura cresce para caber
+    escala = Math.min(canvas.height / ALTURA, canvas.width / LARGURA_MIN);
+    const alturaAntes = H;
+    W = canvas.width / escala;
+    H = canvas.height / escala;
+    // em pé, o pássaro fica mais à esquerda, para ver mais do que vem
+    jog.x = Math.min(W * (H > ALTURA ? 0.24 : 0.3), 260);
+    if (H < alturaAntes) caberNaAltura();
     if (tema.escala) prepararLow();
     if (!estrelas.length) for (let i = 0; i < 70; i++) estrelas.push([Math.random(), Math.random() * 0.6, Math.random()]);
+  }
+  /**
+   * A tela ficou mais baixa (o celular deitou no meio da partida): os vãos, as moedas, os orbes e o pássaro que
+   * ficaram fora da altura nova voltam para dentro dela.
+   */
+  function caberNaAltura() {
+    const dentro = (y: number, m: number) => Math.max(m, Math.min(H - CHAO - m, y));
+    for (const q of pilares) {
+      const d = dentro(q.vao0, 70 + q.abertura / 2) - q.vao0;
+      q.vao0 += d;
+      q.vao += d;
+    }
+    for (const m of moedas) m.y = dentro(m.y, 20);
+    for (const o of orbes) {
+      o.y0 = dentro(o.y0, 30);
+      o.y = dentro(o.y, 30);
+    }
+    jog.y = dentro(jog.y, RAIO);
   }
   function prepararLow() {
     low ??= document.createElement("canvas");
@@ -215,26 +387,55 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   }
 
   // ---------------- mundo ----------------
-  // Vidas extras aceleram o mundo, só em quem tem o esquema de vidas (Fênixame e Harpia Corpus), para equilibrar
+  // Vidas extras aceleram o mundo, só em quem tem o esquema de vidas (Fênixame e Harpia Corpus), para equilibrar; o
+  // Efeito especial deles faz cada vida acelerar mais. Os contrapesos "mundo" e as ressacas também entram aqui.
+  const fatorVidas = () =>
+    personagem.vidasAceleram ? 1 + (fatorVelocidadeVidas(vidas) - 1) * (1 + contra(poderDoPersonagem()?.id ?? "", "vidas-aceleram")) : 1;
   const velocidade = () =>
     (165 + Math.min(nPilares, 60) * 2) *
-    (ativos.has("lento") ? 0.6 : 1) *
-    (personagem.vidasAceleram ? fatorVelocidadeVidas(vidas) : 1) *
-    (ativos.has("eco") ? 0.85 : 1);
+    (ativos.has("lento") ? 0.6 - ef("lento") : 1) *
+    fatorVidas() *
+    (ativos.has("eco") ? 0.85 - ef("eco") : 1) *
+    fatorMundo(ligados(), melhorias) *
+    (1 + ressaca("ressaca-mundo"));
   const aberturaBase = () => Math.max(132, 178 - nPilares * 1.1) + (nivel === 1 ? 8 : 0);
 
   function novoPilar(x: number) {
     const ab = aberturaBase();
     const margem = 70 + ab / 2;
-    const vao = margem + Math.random() * (H - CHAO - 2 * margem);
-    const movel = nPilares > 12 && Math.random() < Math.min(0.5, (nPilares - 12) * 0.02);
-    const rachada = nPilares >= 4 && Math.random() < CHANCE_RACHADA[nivel];
-    // Arquivamento: a primeira coluna que surgir durante o efeito é arquivada e o efeito termina
-    const arquivado = ativos.has("arquivamento");
-    if (arquivado) ativos.delete("arquivamento");
+    // quanto o vão varia com a tela deitada (e a altura dela)
+    const faixa = ALTURA - CHAO - 2 * margem;
+    let vao = margem + Math.random() * (H - CHAO - 2 * margem);
+    if (H > ALTURA) {
+      // em pé, a tela é mais alta: o vão anda a partir do anterior, no máximo uma vez e meia a faixa de deitado, para
+      // dar tempo de subir ou descer até ele; nas bordas, volta para dentro
+      const anterior = pilares.length ? pilares[pilares.length - 1].vao0 : (H - CHAO) / 2;
+      const [min, max] = [margem, H - CHAO - margem];
+      vao = anterior + (Math.random() - 0.5) * 1.5 * faixa;
+      if (vao < min) vao = 2 * min - vao;
+      if (vao > max) vao = 2 * max - vao;
+      vao = Math.max(min, Math.min(max, vao));
+    }
+    // contrapesos das melhorias: a próxima coluna pode vir móvel (Denúncia premiada) ou rachada (Prescrição, Arquivamento)
+    const movel = (nPilares > 12 && Math.random() < Math.min(0.5, (nPilares - 12) * 0.02)) || Math.random() < proximaMovel;
+    proximaMovel = 0;
+    const chance = CHANCE_RACHADA[nivel] + chanceRachadaExtra(ligados(), melhorias, poderDoPersonagem()?.id, ressaca("ressaca-rachadas"));
+    // a Força da Denúncia segura as rachadas novas por um tempo
+    const rachada = nPilares >= 4 && relogioJogo >= semRachadasAte && (Math.random() < chance || Math.random() < proximaRachada);
+    proximaRachada = 0;
+    // Arquivamento: as primeiras colunas que surgirem durante o efeito são arquivadas (1, e mais uma por nível de Força)
+    const arquivado = ativos.has("arquivamento") && colunasArquivar > 0;
+    // as Garras que sobraram (mais colunas pedidas do que havia na tela) ficam com as próximas que surgem
+    const garras = !arquivado && colunasGarras > 0;
+    if (garras) colunasGarras--;
+    if (arquivado && --colunasArquivar <= 0) {
+      ativos.delete("arquivamento");
+      proximaRachada = contra("arquivamento", "seguinte-rachada");
+    }
     const p: Pilar = {
       x,
       vao,
+      vao0: vao,
       abertura: rachada ? ab * (2 / 3) : ab,
       rachada,
       penalizada: false,
@@ -245,6 +446,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       fase: Math.random() * Math.PI * 2,
       passou: arquivado,
       arquivado,
+      garras,
       recolhido: 0,
       velRecolhido: 0,
       deslocTopo: 0,
@@ -255,16 +457,38 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       alvoBase: 0,
     };
     pilares.push(p);
-    if (arquivado) return;
+    if (arquivado) {
+      // Arquivo com moedas: parte das moedas da coluna arquivada vem até você
+      if (Math.random() < 0.45)
+        for (let i = 0; i < 3; i++)
+          if (Math.random() < ef("arquivamento")) {
+            nMoedas++;
+            sugarMoeda(Math.min(x, W - 20), vao, i * 0.05);
+          }
+      return;
+    }
     // moedas em arco no vão
     if (Math.random() < 0.45) for (let i = -1; i <= 1; i++) moedas.push({ x: x + i * 26, y: vao - Math.abs(i) * 10, pega: false, fase: Math.random() * 6 });
     // orbe de poder, a cada 6–11 pilares
     if (orbesLigados && --proxOrbe <= 0) {
       proxOrbe = 6 + Math.floor(Math.random() * 6);
-      const geral = PODERES.filter((q) => !q.personagem && !(q.id === "revisao" && vidas >= 2));
+      // a Força da Revisão Criminal sobe o limite de vidas com que ela ainda aparece
+      const geral = PODERES.filter((q) => !q.personagem && !(q.id === "revisao" && vidas >= 2 + fo("revisao")));
       const proprio = PODERES.filter((q) => q.personagem === personagem.id);
       const pool = [...geral, ...proprio, ...proprio];
-      orbes.push({ x: x + ESPACO / 2, y: opcoes.debug ? 320 : vao + (Math.random() - 0.5) * 60, poder: pool[Math.floor(Math.random() * pool.length)], pego: false });
+      // a Frequência das melhorias pesa no sorteio, e o orbe desse poder balança mais
+      const pesos = pool.map((q) => pesoNoOrbe(q.id, melhorias));
+      let r = Math.random() * pesos.reduce((a, b) => a + b, 0);
+      let poder = pool[pool.length - 1];
+      for (let i = 0; i < pool.length; i++) {
+        r -= pesos[i];
+        if (r <= 0) {
+          poder = pool[i];
+          break;
+        }
+      }
+      const y = opcoes.debug ? 320 : vao + (Math.random() - 0.5) * 60;
+      orbes.push({ x: x + ESPACO / 2, y, y0: y, amp: balancoOrbe(poder.id, melhorias), fase: Math.random() * 6, poder, pego: false });
     }
   }
 
@@ -274,6 +498,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     voos = [];
     batidasTeto = [];
     relogioJogo = 0;
+    surpresa = SURPRESA_INICIAL;
     recordeAtual = host.recorde?.() ?? 0;
     marcaRecordeX = null;
     avisoRecordeT = 0;
@@ -283,6 +508,13 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     parts.length = 0;
     efeitos8 = [];
     ativos = new Map();
+    temporarios = new Map();
+    ressacas = new Map();
+    colunasArquivar = semRachadasAte = atrasoColuna = proximaRachada = proximaMovel = colunasGarras = nQuebradas = 0;
+    momentos = [];
+    comMomento = new Set();
+    colunasComMomento = new WeakMap();
+    ecoT = 0;
     carga = 0;
     vidas = 0;
     pontos = nPilares = nMoedas = nPerguntas = nAcertos = 0;
@@ -325,13 +557,21 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       jog.graca = Math.max(jog.graca, 0.6);
     }
     if (estado !== "jogando") return;
-    jog.vy = IMPULSO * (ativos.has("pterossauro") ? 1.3 : 1);
+    jog.vy = IMPULSO * (ativos.has("pterossauro") ? 1.3 + ef("pterossauro") : 1) * fatorImpulso(ligados(), melhorias);
     jog.fase += 1.4;
     som.flap();
     // Asas de cera e pterossauro: a batida empurra para fora do círculo em volta do pássaro as partes das colunas que
     // ele toca; o recuo fica no novo lugar
     if (ativos.has("asas-de-cera") || ativos.has("pterossauro")) {
-      for (const q of pilares) if (!q.passou && !q.arquivado) empurrarPeloCirculo(q);
+      // o pterossauro afasta mais as colunas perto dele, e o empurrão continua um tempo depois da batida (ver atualizar)
+      const extra = ativos.has("pterossauro") ? empurraoPterossauro(nv("pterossauro", "efeito")).extra : 0;
+      for (const q of pilares) if (!q.passou && !q.arquivado) empurrarPeloCirculo(q, extra);
+      if (ativos.has("pterossauro")) temporarios.set("empurrao", empurraoPterossauro(nv("pterossauro", "efeito")).segundos);
+      // o momento mostra o círculo da batida, com o raio de verdade (o Empurrão das asas de cera o aumenta), inclinado
+      // como o personagem
+      const inclina = Math.max(-0.45, Math.min(1.1, jog.vy / 650));
+      if (ativos.has("asas-de-cera")) momento("asas-de-cera", jog.x, jog.y, { ab: RAIO_BATIDA * (1 + ef("asas-de-cera")), ang: inclina });
+      if (ativos.has("pterossauro")) momento("pterossauro", jog.x, jog.y, { ab: RAIO_BATIDA, ang: inclina });
     }
     if (!reduzido) {
       // personagens com moedas no desenho soltam mini moedas da cor do estilo, no lugar das partículas comuns
@@ -376,57 +616,116 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
 
   function ativar(p: Poder) {
     som.poder();
-    explosao(jog.x, jog.y, 26, [p.cor, "#ffffff", tema.paleta.moeda[0]], 260);
+    comMomento.delete(p.id);
+    // a explosão sai nas cores da aura (trilha Visual); do nível 4 em diante, maior e com o motivo do poder voando
+    const visual = nv(p.id, "visual");
+    const motivo = motivoDe(p.id);
+    const cores = visual ? [...coresAura(motivo.cores[0], tema), "#ffffff"] : [p.cor, "#ffffff", tema.paleta.moeda[0]];
+    explosao(jog.x, jog.y, visual >= 4 ? 34 : 26, cores, visual >= 4 ? 320 : 260);
+    // um poder instantâneo não fica ligado: a aura dele aparece por 3 s depois de usado
+    if (p.duracao === 0 && visual > 0) temporarios.set(`aura:${p.id}`, 3);
+    if (visual >= 4 && !reduzido)
+      for (let i = 0; i < 10; i++) {
+        if (parts.length > 320) parts.shift();
+        const a = (i / 10) * Math.PI * 2 + Math.random() * 0.4;
+        const v = 160 + Math.random() * 120;
+        parts.push({ x: jog.x, y: jog.y, vx: Math.cos(a) * v, vy: Math.sin(a) * v, vida: 0, max: 0.9, cor: motivo.cores[0], detalhe: motivo.cores[1], tam: 7, tipo: 0, motivo: motivo.forma });
+      }
+    // as quantidades da Força e os Efeitos especiais vêm das melhorias (melhorias.ts); no nível 0 são as de sempre
     if (p.id === "prescricao") {
       for (const q of pilares) if (q.x > jog.x - 60 && q.x < W + 40) {
+        if (!q.passou && !q.arquivado) momentoDaColunaRemovida("prescricao", q);
         explosao(q.x, q.vao - q.abertura / 2 - 40, 14, [tema.paleta.coluna.corpo, tema.paleta.coluna.sombra], 200);
         explosao(q.x, q.vao + q.abertura / 2 + 40, 14, [tema.paleta.coluna.corpo, tema.paleta.coluna.sombra], 200);
         remover(q);
       }
+      atrasoColuna = fo("prescricao");
+      proximaRachada = contra("prescricao", "seguinte-rachada");
+      recolherMoedasDaTela(ef("prescricao"));
+      aplicarRessaca("prescricao");
       return;
     }
     if (p.id === "revisao") {
-      vidas++;
+      const ganho = Math.random() < ef("revisao") ? 2 : 1;
+      vidas += ganho;
+      momento("revisao", jog.x, jog.y, { n: ganho });
       return;
     }
     if (p.id === "denuncia") {
-      for (const q of pilares) if (q.rachada && q.x > -LARG_COL && q.x < W + 40) remover(q);
+      let removidas = 0;
+      for (const q of pilares)
+        if (q.rachada && q.x > -LARG_COL && q.x < W + 40) {
+          momentoDaColunaRemovida("denuncia", q, { dx: jog.x - q.x, dy: jog.y - (bordasDaColuna(q).topo + bordasDaColuna(q).base) / 2 });
+          remover(q);
+          removidas++;
+        }
+      pontos += removidas * ef("denuncia");
+      semRachadasAte = relogioJogo + fo("denuncia");
+      proximaMovel = contra("denuncia", "proxima-movel");
       return;
     }
     if (p.id === "tipificacao") {
-      pontos += 20;
-      nMoedas += 5;
+      pontos += 20 + 4 * fo("tipificacao");
+      momento("tipificacao", jog.x, jog.y);
+      nMoedas += 5 + fo("tipificacao");
+      if (ef("tipificacao") > 0) temporarios.set("qualificadora", ef("tipificacao"));
       return;
     }
     if (p.id === "voo") {
-      ativos.set("voo", p.duracao);
-      ativos.set("escudo", p.duracao);
-      ativos.set("leve", p.duracao);
+      const d = duracaoPoder(p, melhorias);
+      ativos.set("voo", d);
+      ativos.set("escudo", d);
+      ativos.set("leve", d);
       return;
     }
-    const ordenadas = () => colunasDoPulso(pilares, jog.x).sort((a, b) => a.x - b.x);
     if (p.id === "garras") {
-      quebrar(ordenadas().slice(0, 2));
+      // as próximas colunas à frente, até onde a tela mostra; as que faltarem quebram quando surgirem (garrasNaColuna)
+      const n = 2 + fo("garras");
+      const alvo = proximasColunas(n);
+      for (const q of alvo) garrasNaColuna(q);
+      colunasGarras += n - alvo.length;
+      aplicarRessaca("garras");
       return;
     }
     if (p.id === "renascer") {
-      vidas += 2;
+      // a fênix renasce com uma chance, que sobe com a Força das melhorias
+      if (Math.random() < CHANCE_RENASCER + fo("renascer")) {
+        vidas++;
+        momento("renascer", jog.x, jog.y);
+      } else {
+        momento("renascer", jog.x, jog.y, { falhou: true });
+        aviso = { titulo: "Renascer", texto: "Desta vez a fênix não renasceu." };
+        avisoAte = performance.now() + 2500;
+      }
       return;
     }
     if (p.id === "tesouro") {
-      nMoedas += 20;
-      for (let i = 0; i < 20; i++) sugarMoeda(jog.x, jog.y, i * 0.04);
-      ativos.set("ima", 6);
+      const n = 20 + fo("tesouro");
+      nMoedas += n;
+      for (let i = 0; i < n; i++) sugarMoeda(jog.x, jog.y, i * 0.04);
+      momento("tesouro", jog.x, jog.y);
+      ativos.set("ima", 6 + ef("tesouro"));
+      imaDe = "tesouro";
       return;
     }
     if (p.id === "liberdade") {
-      vidas += 2;
-      ativos.set("escudo", 5);
+      // uma vida com uma chance, e às vezes mais uma, que sobem com a Força das melhorias (ver chancesLiberdade)
+      const { uma, outra } = chancesLiberdade(nv("liberdade", "forca"));
+      const ganho = Math.random() < uma ? (Math.random() < outra ? 2 : 1) : 0;
+      vidas += ganho;
+      momento("liberdade", jog.x, jog.y, { n: ganho });
+      if (!ganho) {
+        aviso = { titulo: "Liberdade", texto: "Desta vez a harpia não trouxe vida." };
+        avisoAte = performance.now() + 2500;
+      }
+      ativos.set("escudo", 5 + ef("liberdade"));
       return;
     }
     if (p.id === "chifre") {
-      pontos += 5;
-      quebrar(ordenadas().slice(0, 1));
+      pontos += 5 + fo("chifre");
+      const alvo = proximasColunas(Math.random() < ef("chifre") ? 2 : 1);
+      if (alvo[0]) momento("chifre", jog.x, jog.y, { dx: alvo[0].x - jog.x, dy: alvo[0].vao - jog.y });
+      quebrar(alvo);
       return;
     }
     if (p.id === "penhora") {
@@ -435,20 +734,35 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
         if (m.pega || m.x < 0 || m.x > W) continue;
         m.pega = true;
         nMoedas++;
-        pontos += 2;
+        pontos += 2 + fo("penhora");
+        momento("penhora", m.x, m.y);
         sugarMoeda(m.x, m.y, i++ * 0.04);
         explosao(m.x, m.y, 6, [tema.paleta.moeda[0], "#ffffff"], 120);
       }
+      // Penhora on-line: continua recolhendo as moedas que surgirem por um tempo
+      if (ef("penhora") > 0) temporarios.set("penhora", ef("penhora"));
       return;
     }
     if (p.id === "praga") {
-      nMoedas += 10;
-      for (let i = 0; i < 10; i++) sugarMoeda(jog.x, jog.y, i * 0.04);
-      ativos.set("lento", 6);
+      const n = 10 + fo("praga");
+      nMoedas += n;
+      momento("praga", jog.x, jog.y);
+      for (let i = 0; i < n; i++) sugarMoeda(jog.x, jog.y, i * 0.04);
+      const d = 6 + ef("praga");
+      ativos.set("lento", d);
+      // o contrapeso da Nuvem vem quando o lento da Praga acaba
+      temporarios.set("praga", d);
       return;
     }
-    if (p.id === "escudo") ativos.set("escudo", p.duracao);
-    else ativos.set(p.id, p.duracao);
+    if (p.id === "arquivamento") colunasArquivar = 1 + fo("arquivamento");
+    // os momentos de quando o poder começa: o relógio do Prazo em Dobro, as bolhas da Insignificância e, em cada coluna
+    // na tela, a geada do Trânsito em Julgado e o travessão do Equilíbrio
+    if (p.id === "lento" || p.id === "mini") momento(p.id, jog.x, jog.y);
+    if (p.id === "congelar" || p.id === "equilibrio")
+      for (const q of pilares) if (!q.arquivado && !q.passou && q.x > jog.x - 40 && q.x < W + 40) momentoNaColuna(p.id, q);
+    if (p.id === "eco") ecoT = 0;
+    if (p.id === "ima") imaDe = "ima";
+    ativos.set(p.id, duracaoPoder(p, melhorias));
   }
 
   function perguntar(tipo: "poder" | "reviver", poder?: Poder) {
@@ -460,7 +774,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
         poderNome: poder?.nome,
         poderIcone: poder && (tema.id === "pixel" ? iconePoder(poder.id) : poder.icone),
         poderDescricao: poder?.descricao,
-        poderDuracao: poder?.duracao,
+        poderDuracao: poder && duracaoPoder(poder, melhorias),
         carrega: poder?.personagem === personagem.id,
       })
       .then((ok) => {
@@ -493,13 +807,17 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     mudarEstado("pronto");
   }
 
-  function colidiu() {
+  /** Batida numa coluna (`q`) ou no chão. */
+  function colidiu(q?: Pilar) {
     if (opcoes.debug && invulneravel) return;
     const e = efeitos();
-    if (jog.graca > 0 || e.fantasma) return;
+    if (jog.graca > 0 || atravessa(e)) return;
     if (e.escudo) {
       ativos.delete("escudo");
-      jog.graca = 1.2;
+      momento("escudo", jog.x, jog.y);
+      // Habeas Corpus com o Efeito especial: pode quebrar a coluna, e a proteção depois da batida encurta
+      jog.graca = PROTECAO_ESCUDO - contra("escudo", "protecao-escudo");
+      if (q && Math.random() < ef("escudo")) quebrar([q]);
       explosao(jog.x, jog.y, 20, ["#5a9ed6", "#ffffff"], 220);
       som.batida();
       tremor = 4;
@@ -511,8 +829,12 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     if (vidas > 0) {
       vidas--;
       pilares = pilares.filter((q) => Math.abs(q.x - jog.x) > 160);
-      jog.graca = 1.5;
+      // vidas frágeis: com as melhorias de vidas, a proteção depois de perder uma vida encurta
+      jog.graca = protecaoVida(nivelVidasFrageis(melhorias, poderDoPersonagem()?.id));
       jog.vy = IMPULSO * 0.6;
+      pontos = Math.max(0, pontos - contra("revisao", "perde-pontos-vida"));
+      // Das cinzas (Renascer): renasce atravessando as colunas por um tempo
+      if (poderDoPersonagem()?.id === "renascer" && ef("renascer") > 0) temporarios.set("cinzas", ef("renascer"));
       return;
     }
     if (!reviverOferecido) {
@@ -534,7 +856,9 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     if (!alvo) return;
     const centro = alvo.vao + (alvo.mov ? Math.sin(alvo.fase) * alvo.mov : 0);
     const erro = centro - jog.y;
-    const forca = Math.max(-GUIA_FORCA, Math.min(GUIA_FORCA, erro * GUIA_RIGIDEZ));
+    // Guia mais forte (Asas de Ouro)
+    const mais = 1 + ef("leve");
+    const forca = Math.max(-GUIA_FORCA * mais, Math.min(GUIA_FORCA * mais, erro * GUIA_RIGIDEZ * mais));
     jog.vy += (forca - jog.vy * GUIA_AMORTECIMENTO) * dt;
   }
 
@@ -543,9 +867,34 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     q.passou = true;
   }
 
+  /**
+   * As `n` próximas colunas à frente do pássaro, ainda por passar, em qualquer lugar da tela (e logo depois da borda,
+   * onde elas surgem), fora as que as Garras já marcaram. As Garras e o Chifre de súmula miram nelas; o pulso das Asas de
+   * Ouro só pega as de perto.
+   */
+  function proximasColunas(n: number): Pilar[] {
+    return pilares
+      .filter((q) => !q.passou && !q.arquivado && !q.garras && q.x >= jog.x - LARG_COL / 2 && q.x < W + ESPACO)
+      .sort((a, b) => a.x - b.x)
+      .slice(0, n);
+  }
+  /** As Garras numa coluna: o momento, a quebra e as moedas dos Despojos. */
+  function garrasNaColuna(q: Pilar) {
+    q.garras = false;
+    const [x, y] = [q.x, q.vao];
+    momentoDaColunaRemovida("garras", q);
+    quebrar([q]);
+    for (let i = 0; i < ef("garras"); i++) {
+      nMoedas++;
+      sugarMoeda(Math.min(x, W - 20), y, i * 0.05);
+      explosao(x, y, 4, [tema.paleta.moeda[0], "#ffffff"], 120);
+    }
+  }
+
   /** Quebra colunas: somem da tela sem pontuar, com o estouro nas duas bordas do vão. */
   function quebrar(alvo: Pilar[]) {
     for (const q of alvo) {
+      nQuebradas++;
       const topo = q.vao - q.abertura / 2;
       const base = q.vao + q.abertura / 2;
       remover(q);
@@ -556,8 +905,12 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     }
   }
 
-  /** Pulso do fim de Asas de Ouro e de Voo do Grifo: quebra as colunas à frente, sem pontuar. Com o Grifo, sai um grito. */
-  function soltarPulso() {
+  /**
+   * Pulso do fim de Asas de Ouro e de Voo do Grifo (`fim`: os que acabaram): quebra as colunas à frente, sem pontuar.
+   * Com o Grifo, sai um grito; o momento do Visual é o do Voo, se ele acabou, senão o das Asas de Ouro.
+   */
+  function soltarPulso(fim: string[]) {
+    momento(fim.includes("voo") ? "voo" : "leve", jog.x, jog.y);
     quebrar(colunasDoPulso(pilares, jog.x));
     som.pulso();
     if (personagem.id === "grifo") som.grito();
@@ -569,6 +922,9 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   function agravo(texto: string): boolean {
     if (!ativos.has("agravo")) return false;
     ativos.delete("agravo");
+    momento("agravo", jog.x, jog.y);
+    // Agravo provido: a penalidade absorvida vira pontos
+    pontos += ef("agravo");
     som.poder();
     explosao(jog.x, jog.y, 12, ["#c9a64a", "#ffffff"], 160);
     aviso = { titulo: "Agravo", texto };
@@ -579,7 +935,10 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   function penalizar() {
     if (agravo("O recurso suspendeu a penalidade.")) return;
     nPenalidades++;
-    const pen = PENALIDADES[Math.floor(Math.random() * PENALIDADES.length)];
+    const proprioId = poderDoPersonagem()?.id ?? "";
+    // vidas frágeis: com vidas extras, a rachada pode tirar uma vida no lugar da penalidade sorteada
+    const tiraVida = vidas > 0 && Math.random() < chanceVidaNaRachada(nivelVidasFrageis(melhorias, proprioId));
+    const pen = tiraVida ? PENALIDADES.find((x) => x.efeito === "vida")! : PENALIDADES[Math.floor(Math.random() * PENALIDADES.length)];
     som.batida();
     tremor = reduzido ? 0 : 4;
     explosao(jog.x, jog.y, 14, [tema.paleta.coluna.sombra, "#ffffff"], 160);
@@ -587,6 +946,13 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     else if (pen.efeito === "pontos") pontos = Math.max(0, pontos - pen.valor);
     else if (pen.efeito === "vida") vidas = Math.max(0, vidas - pen.valor);
     else nMoedas = Math.max(0, nMoedas - pen.valor);
+    // contrapesos das melhorias: Concurso Material (pontos), Tesouro e Penhora (moedas) e o Agravante da Dosimetria
+    if (ativos.has("dobro")) pontos = Math.max(0, pontos - contra("dobro", "penalidade-pontos"));
+    nMoedas = Math.max(0, nMoedas - contra(proprioId, "rachada-moedas"));
+    if (ativos.has("dosimetria") && nv("dosimetria", "efeito") > 0) {
+      ativos.delete("dosimetria");
+      pontos = Math.max(0, pontos - contra("dosimetria", "rachada-encerra"));
+    }
     aviso = { titulo: "Coluna rachada", texto: pen.texto };
     avisoAte = performance.now() + 4000;
   }
@@ -602,7 +968,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     tremor = reduzido ? 0 : 5;
     // as duas asas se soltam na posição em que estavam; caem à metade da velocidade do pássaro (ver o estado morrendo)
     const bate = Math.sin(jog.fase) * 0.22;
-    const esc = efeitos().mini ? 0.6 : 1;
+    const esc = efeitos().mini ? 0.6 - ef("mini") : 1;
     asasSoltas = [
       { x: jog.x, y: jog.y, vy: 0, ang: bate * 0.85 - 0.22, va: -2.2, esc, atras: true },
       { x: jog.x, y: jog.y, vy: 0, ang: bate, va: 2.6, esc, atras: false },
@@ -630,19 +996,23 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
    * Batida de asas: as partes da coluna que tocam o círculo em volta do pássaro (raio RAIO_BATIDA)
    * recuam para fora dele. O recuo fica no novo lugar, e a mola o leva até lá com um quique.
    */
-  function empurrarPeloCirculo(q: Pilar): void {
-    const R = RAIO_BATIDA;
+  function empurrarPeloCirculo(q: Pilar, extra = 0): void {
+    // Empurrão (Asas de cera): o círculo cresce
+    const R = RAIO_BATIDA * (ativos.has("asas-de-cera") ? 1 + ef("asas-de-cera") : 1);
     const cx = jog.x;
     const cy = jog.y;
     const { topo, base } = bordasDaColuna(q);
     const x = q.x - LARG_COL / 2 + 4;
+    // com `extra` (o pterossauro), a coluna recua além do círculo, mais quanto mais perto ela está do pássaro
+    const perto = extra ? Math.max(0, 1 - Math.abs(q.x - cx) / (R + LARG_COL / 2)) : 0;
+    const folga = 2 + extra * perto;
     // a parte de cima acaba em `topo`: se o círculo a toca, ela recua para cima dele
     if (topo > -50 && intersectaCirculo(cx, cy, R, x, -50, LARG_COL - 8, topo + 50)) {
-      q.alvoTopo = Math.max(q.alvoTopo, q.deslocTopo + (topo - (cy - R - 2)));
+      q.alvoTopo = Math.max(q.alvoTopo, q.deslocTopo + (topo - (cy - R - folga)));
     }
     // a parte de baixo começa em `base`: se o círculo a toca, ela recua para baixo dele
     if (base < H && intersectaCirculo(cx, cy, R, x, base, LARG_COL - 8, H - base)) {
-      q.alvoBase = Math.max(q.alvoBase, q.deslocBase + (cy + R + 2 - base));
+      q.alvoBase = Math.max(q.alvoBase, q.deslocBase + (cy + R + folga - base));
     }
   }
 
@@ -673,6 +1043,23 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       p.vy += 400 * dt * (p.tipo ? 1 : 0.4);
       p.x += p.vx * dt;
       p.y += p.vy * dt;
+    }
+    // momentos do Visual: envelhecem e acompanham a coluna, o mundo ou o personagem
+    if (momentos.length) {
+      const corre = estado === "jogando" ? velocidade() * dt : 0;
+      for (const m of momentos) {
+        m.idade += dt;
+        if (m.alvo && m.alvo.x > -500) {
+          m.x = m.alvo.x;
+          if (m.vao) {
+            const { topo, base } = bordasDaColuna(m.alvo);
+            m.y = (topo + base) / 2;
+            m.ab = (base - topo) / 2;
+          }
+        } else if (m.alvo || m.mundo) m.x -= corre;
+        if (m.seguir) m.y = jog.y;
+      }
+      momentos = momentos.filter((m) => m.idade < TEXTOS_MOMENTO[m.id].dur);
     }
 
     if (estado === "pronto") {
@@ -711,30 +1098,62 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     if (estado !== "jogando") return;
 
     // poderes
-    let pulsar = false;
+    const pulsos: string[] = [];
     for (const [id, rest] of ativos) {
       const r = rest - dt;
       if (r <= 0) {
         ativos.delete(id);
-        if (PODERES_COM_PULSO.includes(id)) pulsar = true;
+        if (PODERES_COM_PULSO.includes(id)) pulsos.push(id);
+        // melhorias: o contrapeso que vem depois do poder, e a Saída protegida da Absolvição Sumária
+        aplicarRessaca(id);
+        if (id === "fantasma" && ef("fantasma") > 0) ativos.set("escudo", ef("fantasma"));
       } else ativos.set(id, r);
     }
-    if (pulsar) soltarPulso();
+    for (const [id, rest] of temporarios) {
+      if (rest - dt > 0) temporarios.set(id, rest - dt);
+      else {
+        temporarios.delete(id);
+        if (id === "praga") aplicarRessaca("praga");
+      }
+    }
+    for (const [tipo, r] of ressacas) {
+      r.resto -= dt;
+      if (r.resto <= 0) ressacas.delete(tipo);
+    }
+    if (atrasoColuna > 0) atrasoColuna -= dt;
+    if (pulsos.length) soltarPulso(pulsos);
     const proprio = poderDoPersonagem();
     if (proprio && !ativos.has(proprio.id) && carga < 1) {
-      carga = Math.min(1, carga + dt / CARGA_SEG);
+      carga = Math.min(1, carga + dt / segundosCarga(proprio.id, melhorias));
       if (carga >= 1) hudT = 0;
     }
     if (autoPoder && proprio) usarPoder();
+    // Eco: o sonar pulsa enquanto dura (o momento do Visual)
+    if (ativos.has("eco") && (ecoT -= dt) <= 0) {
+      ecoT = 0.9;
+      // as moedas à frente que o sonar vai achar
+      const achadas = moedas.filter((m) => !m.pega && m.x > jog.x - 20 && Math.hypot(m.x - jog.x, m.y - jog.y) < 200).map((m) => [m.x - jog.x, m.y - jog.y] as [number, number]);
+      momento("eco", jog.x, jog.y, { alvos: achadas });
+    }
     if (jog.graca > 0) jog.graca -= dt;
 
     // jogador
     relogioJogo += dt;
-    jog.vy = Math.min(e.leve ? QUEDA_LEVE : 720, jog.vy + GRAVIDADE * dt);
+    surpresa = passoSurpresa(surpresa, relogioJogo, pontos);
+    const gravidade = GRAVIDADE * fatorGravidade(ligados(), melhorias) * (1 + ressaca("ressaca-gravidade"));
+    jog.vy = Math.min(e.leve ? QUEDA_LEVE : 720, jog.vy + gravidade * dt);
     if (e.leve) guiar(dt);
     jog.y += jog.vy * dt;
     jog.fase += dt * (jog.vy < 0 ? 22 : 8);
-    const raio = RAIO * (e.mini ? 0.6 : 1);
+    const raio = RAIO * (e.mini ? 0.6 - ef("mini") : 1);
+    // Visual das melhorias (nível 3): o rastro do poder ligado fica para trás, nas cores do estilo
+    const aura = auraAtiva();
+    if (aura && aura.nivel >= 3 && !reduzido && (rastroT -= dt) <= 0) {
+      rastroT = 0.06;
+      if (parts.length > 320) parts.shift();
+      const m = aura.motivo;
+      parts.push({ x: jog.x - 14, y: jog.y - 4 + (Math.random() - 0.5) * 18, vx: -velocidade() * 0.6, vy: (Math.random() - 0.5) * 20 - 30, vida: 0, max: 0.6, cor: m.cores[0], detalhe: m.cores[1], tam: 5 + Math.random() * 2, tipo: 0, motivo: m.forma });
+    }
     if (jog.y < raio) {
       // bater a cabeça no teto é subir e ser barrado pelo teto
       const batida = jog.vy < 0;
@@ -752,10 +1171,16 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     }
     if (jog.y > H - CHAO - raio) {
       jog.y = H - CHAO - raio;
-      if (jog.graca <= 0 && !e.fantasma) {
+      if (jog.graca <= 0 && !atravessa(e)) {
         colidiu();
         if (estado === "jogando") jog.vy = IMPULSO * 0.7;
       } else jog.vy = IMPULSO * 0.7;
+    }
+
+    // Prescritodáctilo: o empurrão da última batida continua por um tempo, nas colunas que o círculo tocar
+    if (ativos.has("pterossauro") && temporarios.has("empurrao")) {
+      const { extra } = empurraoPterossauro(nv("pterossauro", "efeito"));
+      for (const q of pilares) if (!q.passou && !q.arquivado) empurrarPeloCirculo(q, extra);
     }
 
     // mundo
@@ -764,15 +1189,38 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     if (marcaRecordeX !== null) marcaRecordeX -= v * dt;
     for (const p of pilares) {
       p.x -= v * dt;
-      if (p.arquivado) continue;
-      if (p.mov && !e.congelar) p.fase += dt * 1.6;
-      const alvoAb = (p.rachada ? aberturaBase() * (2 / 3) : aberturaBase()) + (e.congelar ? 34 : 0) + (e.equilibrio ? 36 : 0);
+      if (p.garras && p.x < W - 40) {
+        p.garras = false;
+        garrasNaColuna(p);
+        continue;
+      }
+      if (p.arquivado) {
+        // a coluna arquivada não aparece: o momento do Arquivamento mostra onde ela estaria
+        if (p.x < W * 0.72 && primeiraVez(p, "arquivo")) momentoNaColuna("arquivamento", p);
+        continue;
+      }
+      if (p.mov && !e.congelar) p.fase += dt * 1.6 * (1 + ressaca("ressaca-moveis"));
+      // as melhorias mexem no vão: Mais aberto (Trânsito em Julgado), rachadas mais estreitas (Presunção) e a ressaca
+      // do Equilíbrio
+      const alvoAb =
+        (p.rachada ? aberturaBase() * (2 / 3) - (e.presuncao ? contra("presuncao", "rachada-estreita") : 0) : aberturaBase()) +
+        (e.congelar ? 34 + ef("congelar") : 0) +
+        (e.equilibrio ? 36 : 0) -
+        ressaca("ressaca-vaos");
       p.abertura += (alvoAb - p.abertura) * Math.min(1, dt * 3);
+      // Vãos alinhados (Equilíbrio): o vão se aproxima do meio enquanto dura, e depois volta
+      const alvoVao = e.equilibrio ? p.vao0 + ((H - CHAO) / 2 - p.vao0) * ef("equilibrio") : p.vao0;
+      p.vao += (alvoVao - p.vao) * Math.min(1, dt * 3);
       if (!p.passou && p.x < jog.x - LARG_COL / 2) {
         p.passou = true;
         nPilares++;
-        xpRun += MULTIPLICADOR_XP[nivel] * (ativos.has("sabedoria") ? 2 : 1);
-        pontos += pontosDaColuna(e);
+        xpRun += MULTIPLICADOR_XP[nivel] * (ativos.has("sabedoria") ? 2 + ef("sabedoria") : 1) * fatorXp(ligados(), melhorias);
+        pontos += pontosDaColuna(e, p);
+        // os momentos do Visual de cada coluna passada
+        if (e.dobro) momentoNaColuna("dobro", p);
+        if (e.dosimetria) momentoNaColuna("dosimetria", p);
+        if (e.foco) momentoNaColuna("foco", p);
+        if (e.sabedoria) momentoNaColuna("sabedoria", p);
         const antesMarca = marcaRecordeX;
         marcaRecordeX = marcarRecorde(marcaRecordeX, pontos, recordeAtual, p.x);
         if (antesMarca === null && marcaRecordeX !== null) celebrarRecorde();
@@ -781,7 +1229,9 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       // galope: a coluna que ainda não passou se recolhe à medida que chega; a batida de asas empurra as partes dela
       // para fora do círculo (ver empurrarPeloCirculo), e elas assentam no novo lugar com um quique
       if (!p.passou) {
-        const mola = molaRecolhimento(p.recolhido, p.velRecolhido, alvoRecolhimento(p.x - jog.x, e.galope), dt);
+        // Passada longa (Galope): as colunas começam a se recolher mais longe
+        const distancia = (p.x - jog.x) / (e.galope ? 1 + ef("galope") : 1);
+        const mola = molaRecolhimento(p.recolhido, p.velRecolhido, alvoRecolhimento(distancia, e.galope), dt);
         p.recolhido = mola.x;
         p.velRecolhido = mola.v;
         const cima = passoMola(p.deslocTopo, p.velTopo, p.alvoTopo, dt, 0, RECUO_MAX);
@@ -790,6 +1240,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
         const baixo = passoMola(p.deslocBase, p.velBase, p.alvoBase, dt, 0, RECUO_MAX);
         p.deslocBase = baixo.x;
         p.velBase = baixo.v;
+        if (e.galope && p.recolhido > 0.25 && primeiraVez(p, "galope")) momentoNaColuna("galope", p);
       }
       const { topo, base } = bordasDaColuna(p);
       const hx = p.x - LARG_COL / 2 + 4;
@@ -802,16 +1253,20 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
             p.penalizada = true;
             efeito8("destroco", p.x, jog.y);
             if (!e.presuncao) penalizar();
+            else momento("presuncao", p.x, jog.y, { alvo: p });
           }
         } else {
-          colidiu();
+          if (atravessa(e) && ativos.has("fantasma") && primeiraVez(p, "fantasma")) momento("fantasma", p.x, jog.y, { alvo: p });
+          colidiu(p);
           if (estado !== "jogando") return;
         }
       }
     }
     pilares = pilares.filter((p) => p.x > -LARG_COL);
-    const ultimoX = pilares.length ? pilares[pilares.length - 1].x : W;
-    if (ultimoX < W + 40 - ESPACO + LARG_COL) novoPilar(Math.max(W + 60, ultimoX + ESPACO));
+    // sem nenhuma coluna (as Garras podem quebrar todas de uma vez), a próxima surge logo na borda
+    const ultimoX = pilares.length ? pilares[pilares.length - 1].x : -Infinity;
+    // a Força da Prescrição atrasa a próxima coluna
+    if (atrasoColuna <= 0 && ultimoX < W + 40 - ESPACO + LARG_COL) novoPilar(Math.max(W + 60, ultimoX + ESPACO));
 
     for (const m of moedas) {
       m.x -= v * dt;
@@ -820,17 +1275,45 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       const dx = jog.x - m.x;
       const dy = jog.y - m.y;
       const d2 = dx * dx + dy * dy;
-      if (e.ima && d2 < 170 * 170) {
+      // Galope (contrapeso): a moeda que entra na tela pode sumir
+      if (!m.vista && m.x <= W) {
+        m.vista = true;
+        if (e.galope && Math.random() < contra("galope", "moedas-somem")) {
+          m.pega = true;
+          explosao(m.x, m.y, 5, ["#ffffff"], 80);
+          continue;
+        }
+      }
+      // Alcance (Vade Mecum): o ímã puxa de mais longe
+      const raioIma = 170 * (ativos.has("ima") ? 1 + ef("ima") : 1);
+      if (e.ima && d2 < raioIma * raioIma) {
         const d = Math.sqrt(d2) || 1;
         m.x += (dx / d) * 420 * dt;
         m.y += (dy / d) * 420 * dt;
       }
-      // Inquérito: toda moeda que entra na tela é recolhida (+3 pontos)
-      const inquerito = ativos.has("inquerito") && m.x >= 0 && m.x <= W;
-      if (inquerito || d2 < (raio + 10) ** 2) {
+      // Inquérito e Penhora on-line: toda moeda que entra na tela é recolhida; Garras de ouro (Voo do Grifo) pegam de longe
+      const naTela = m.x >= 0 && m.x <= W;
+      const inquerito = ativos.has("inquerito") && naTela;
+      const penhora = temporarios.has("penhora") && naTela;
+      const alcance = raio + 10 + (ativos.has("voo") ? ef("voo") : 0);
+      if (inquerito || penhora || d2 < alcance ** 2) {
         m.pega = true;
-        nMoedas++;
-        pontos += inquerito || e.foco ? 3 : e.dobro ? 2 : 1;
+        // Moedas em dobro (Concurso Material)
+        nMoedas += e.dobro && Math.random() < ef("dobro") ? 2 : 1;
+        pontos += inquerito
+          ? valorMoedaInquerito(nv("inquerito", "efeito"))
+          : penhora
+            ? 2 + fo("penhora")
+            : e.foco
+              ? Math.round(3 + ef("foco"))
+              : e.dobro
+                ? 2
+                : 1;
+        // Indiciamento (Inquérito): cada moeda recolhida rende XP
+        if (inquerito) xpRun += ef("inquerito");
+        if (inquerito) momento("inquerito", m.x, m.y);
+        else if (penhora) momento("penhora", m.x, m.y);
+        else if (ativos.has("ima")) momento("ima", m.x, m.y);
         som.moeda();
         efeito8("faisca", m.x, m.y);
         explosao(m.x, m.y, 8, [tema.paleta.moeda[0], "#ffffff"], 140);
@@ -843,6 +1326,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
 
     for (const o of orbes) {
       o.x -= v * dt;
+      if (o.amp) o.y = o.y0 + Math.sin(tempo * 3 + o.fase) * o.amp;
       if (!o.pego && (jog.x - o.x) ** 2 + (jog.y - o.y) ** 2 < (raio + 16) ** 2) {
         o.pego = true;
         explosao(o.x, o.y, 16, [o.poder.cor, "#ffffff"], 180);
@@ -921,7 +1405,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     let proxima: Pilar | null = null;
     for (const q of pilares) if (!q.passou && !q.arquivado && (proxima === null || q.x < proxima.x)) proxima = q;
     if (proxima === null) return null;
-    return quebrouRecorde(pontos + pontosDaColuna(efeitos()), recordeAtual) ? proxima.x : null;
+    return quebrouRecorde(pontos + pontosDaColuna(efeitos(), proxima), recordeAtual) ? proxima.x : null;
   }
 
   /** Recorde quebrado: aviso no alto da tela e um estouro de partículas nas duas pontas da linha. */
@@ -952,14 +1436,14 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
         .filter(([id]) => id !== proprio?.id)
         .map(([id, r]) => {
           const p = poderPorId(id);
-          return { id, nome: p.nome, icone: tema.id === "pixel" ? iconePoder(id) : p.icone, restante: Math.max(0, r / p.duracao) };
+          return { id, nome: p.nome, icone: tema.id === "pixel" ? iconePoder(id) : p.icone, restante: Math.min(1, Math.max(0, r / duracaoPoder(p, melhorias))) };
         }),
       poderProprio: proprio && {
         nome: proprio.nome,
         icone: tema.id === "pixel" ? iconePoder(proprio.id) : proprio.icone,
         cor: proprio.cor,
         estado: ativos.has(proprio.id) ? "ativo" : carga >= 1 ? "pronto" : "carregando",
-        barra: ativos.has(proprio.id) ? (ativos.get(proprio.id) ?? 0) / proprio.duracao : carga,
+        barra: ativos.has(proprio.id) ? Math.min(1, (ativos.get(proprio.id) ?? 0) / duracaoPoder(proprio, melhorias)) : carga,
         segundos: Math.ceil(ativos.get(proprio.id) ?? 0),
       },
       aviso: aviso && performance.now() < avisoAte ? aviso : undefined,
@@ -968,6 +1452,58 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
   }
 
   // ---------------- desenho ----------------
+  /** A coluna do estilo, para os momentos que a desenham de novo (a que é arquivada, a que vira pó…). */
+  const colunaDoEstilo = (cx: Ctx, len: number, v: number) =>
+    tema.coluna ? tema.coluna(cx, LARG_COL, len, v, false, tema, tempo) : colunaGrega(cx, LARG_COL, len, v, false, tema);
+  /** O que os momentos e as mecânicas do poder `id` precisam saber da cena. */
+  function cenaDe(id: IdPoder): CenaMomento {
+    const motivo = motivoDe(id);
+    return { tema, cores: coresAura(motivo.cores[0], tema), motivo, dono: poderPorId(id).personagem, jogador: personagem.id, icone: arteDoPoder(id), t: tempo, altura: H, largura: W, coluna: colunaDoEstilo };
+  }
+  /**
+   * O que os poderes ligados fazem, desenhado enquanto duram (trilha Visual): o caminho da guia das Asas de Ouro e do
+   * Voo do Grifo até os próximos vãos, as linhas do ímã até as moedas, a lupa do Inquérito e a geada das colunas paradas.
+   */
+  function desenharMecanicas(c: Ctx) {
+    if (reduzido || estado !== "jogando") return;
+    const lista: [IdPoder, DadosMecanica][] = [];
+    const guiaDe: IdPoder | null = ativos.has("voo") ? "voo" : ativos.has("leve") ? "leve" : null;
+    if (guiaDe && nv(guiaDe, "visual") > 0) {
+      const proximas = pilares.filter((q) => !q.passou && !q.arquivado && q.x > jog.x && q.x < W + 120).sort((a, b) => a.x - b.x).slice(0, 2);
+      lista.push([guiaDe, { x: jog.x, y: jog.y, alvos: proximas.map((q) => { const { topo, base } = bordasDaColuna(q); return [q.x, (topo + base) / 2, (base - topo) / 2]; }) }]);
+    }
+    const imaLigado: IdPoder | null = ativos.has("eco") ? "eco" : ativos.has("ima") ? imaDe : null;
+    if (imaLigado && nv(imaLigado, "visual") > 0) {
+      const raio = 170 * (ativos.has("ima") ? 1 + ef("ima") : 1);
+      const perto = moedas.filter((m) => !m.pega && (m.x - jog.x) ** 2 + (m.y - jog.y) ** 2 < raio * raio);
+      lista.push([imaLigado, { x: jog.x, y: jog.y, raio, alvos: perto.map((m) => [m.x, m.y, 0]) }]);
+    }
+    if (ativos.has("inquerito") && nv("inquerito", "visual") > 0)
+      lista.push(["inquerito", { x: jog.x, y: jog.y, alvos: [[W - 70, (H - CHAO) * (0.5 + 0.32 * Math.sin(tempo * 1.3)), 0]] }]);
+    // a geada fica depois que a do momento (ao ativar) cresceu
+    const congelar = ativos.get("congelar");
+    if (congelar !== undefined && nv("congelar", "visual") > 0 && duracaoPoder(poderPorId("congelar"), melhorias) - congelar > 0.45) {
+      const naTela = pilares.filter((q) => !q.arquivado && q.x > -LARG_COL && q.x < W + LARG_COL);
+      lista.push(["congelar", { x: jog.x, y: jog.y, alvos: naTela.map((q) => { const { topo, base } = bordasDaColuna(q); return [q.x, (topo + base) / 2, (base - topo) / 2]; }) }]);
+    }
+    // as colunas arquivadas que ainda não foram para a pasta (o poder já pode ter acabado)
+    if (nv("arquivamento", "visual") > 0) {
+      const esperando = pilares.filter((q) => q.arquivado && q.x > -LARG_COL && q.x < W + LARG_COL && !colunasComMomento.get(q)?.has("arquivo"));
+      if (esperando.length)
+        lista.push(["arquivamento", { x: jog.x, y: jog.y, alvos: esperando.map((q) => { const { topo, base } = bordasDaColuna(q); return [q.x, (topo + base) / 2, (base - topo) / 2, q.variante]; }) }]);
+    }
+    for (const [id, d] of lista) desenharMecanica(c, id, nv(id, "visual"), d, cenaDe(id));
+  }
+  /** Os momentos do Visual na camada pedida: a aparição atrás do personagem, o resto na frente. */
+  function desenharMomentos(c: Ctx, camada: Camada) {
+    for (const m of momentos) {
+      const cena = cenaDe(m.id);
+      // os do personagem e das moedas um pouco maiores que o desenho dele; os de coluna, na medida da coluna (e o raio do
+      // chifre, que vai até ela)
+      desenharMomento(c, m, cena, camada, TEXTOS_MOMENTO[m.id].ancora === "coluna" || m.id === "chifre" ? 1 : 1.2);
+    }
+  }
+
   function desenhar() {
     const alvo = tema.escala && lowCtx ? lowCtx : ctx;
     if (tema.escala && lowCtx && low) {
@@ -1001,7 +1537,22 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       c.globalAlpha = 1;
     }
 
-    tema.decor?.(c, W, H, off, t, tempo, tema);
+    // a surpresa do estilo, no fundo (atrás das colunas); com movimento reduzido, não aparece. O cenário pode
+    // desenhá-la entre as camadas dele; se não desenhar, ela sai logo depois do cenário
+    const fs = reduzido ? null : progressoSurpresa(surpresa, relogioJogo);
+    let surpresaFeita = false;
+    const desenharSurpresa =
+      fs !== null && tema.surpresa
+        ? () => {
+            if (surpresaFeita) return;
+            surpresaFeita = true;
+            c.save();
+            tema.surpresa?.(c, W, H, fs, tempo, tema);
+            c.restore();
+          }
+        : undefined;
+    tema.decor?.(c, W, H, off, t, tempo, tema, desenharSurpresa);
+    desenharSurpresa?.();
 
     // colunas
     for (const q of pilares) {
@@ -1037,6 +1588,12 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       c.fillStyle = p.chaoLinha;
       c.fillRect(0, yChao, W, 4);
       for (let x = -(off % 48); x < W; x += 48) c.fillRect(x, yChao + 12, 24, 3);
+    }
+    // os letreiros da surpresa, na frente das colunas
+    if (fs !== null && tema.surpresaFrente) {
+      c.save();
+      tema.surpresaFrente(c, W, H, fs, tempo, tema);
+      c.restore();
     }
 
     // linha do recorde: de cima a baixo, já na coluna que vai quebrar o recorde (antes de ser passada)
@@ -1084,6 +1641,8 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       if (arte.complete && arte.naturalWidth) c.drawImage(arte, o.x - 16, o.y - 16, 32, 32);
     }
 
+    desenharMecanicas(c);
+    desenharMomentos(c, "atras");
     // jogador
     const e = efeitos();
     // asas soltas do Ícaro: no mundo, sem a inclinação do corpo
@@ -1097,8 +1656,10 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     c.save();
     c.translate(jog.x, jog.y);
     c.rotate(Math.max(-0.45, Math.min(1.1, jog.vy / 650)));
-    const s = e.mini ? 0.6 : 1;
+    const s = e.mini ? 0.6 - ef("mini") : 1;
     c.scale(s, s);
+    // a aura do poder ligado (trilha Visual das melhorias), nas cores do estilo
+    const aura = auraAtiva();
     if (e.fantasma) c.globalAlpha = 0.45;
     if (jog.graca > 0 && Math.floor(jog.graca * 12) % 2 === 0) c.globalAlpha *= 0.4;
     if (e.leve) {
@@ -1107,8 +1668,10 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       c.arc(0, -6, 34, 0, Math.PI * 2);
       c.fill();
     }
+    if (aura) auraAtras(c, aura.nivel, aura.cores, tempo);
     desenharPersonagem(c, personagem.id, tema, jog.fase, tempo, sb, e.sabedoria, semAsas);
     c.globalAlpha = 1;
+    if (aura) auraFrente(c, aura.nivel, aura.cores, tempo, aura.motivo, arteDoPoder(aura.id));
     if (e.escudo) {
       c.strokeStyle = "rgba(90,158,214,0.9)";
       c.lineWidth = 3;
@@ -1123,6 +1686,10 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     // partículas
     for (const q of parts) {
       c.globalAlpha = 1 - q.vida / q.max;
+      if (q.motivo) {
+        desenharMotivo(c, q.motivo, q.x, q.y, q.tam / 6, q.cor, q.detalhe ?? q.cor, Math.sin(q.vida * 6 + q.tam) * 0.35);
+        continue;
+      }
       c.fillStyle = q.cor;
       if (q.tipo === 2) {
         // mini moeda de ouro: gira em torno do eixo vertical, com a largura pulsando
@@ -1132,6 +1699,7 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       } else c.fillRect(q.x, q.y, q.tam, q.tam * (q.tipo ? 1.8 : 1));
     }
     c.globalAlpha = 1;
+    desenharMomentos(c, "frente");
     // efeitos em quadros (tema Pixel)
     for (const f of efeitos8) {
       const ef = EFEITO[f.tipo];
@@ -1162,17 +1730,20 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
           c.save();
           c.translate(d.x, d.y);
           c.rotate(d.r);
-          c.fillStyle = tema.id === "papiro" ? "rgba(59,42,26,0.55)" : "rgba(255,250,235,0.85)";
-          c.fillRect(-5, -3.5, 10, 7);
-          c.fillStyle = "rgba(0,0,0,0.25)";
-          c.fillRect(-3.5, -1.5, 7, 0.8);
-          c.fillRect(-3.5, 0.5, 5, 0.8);
+          if (tema.folha) tema.folha(c, d.s);
+          else {
+            c.fillStyle = tema.id === "papiro" ? "rgba(59,42,26,0.55)" : "rgba(255,250,235,0.85)";
+            c.fillRect(-5, -3.5, 10, 7);
+            c.fillStyle = "rgba(0,0,0,0.25)";
+            c.fillRect(-3.5, -1.5, 7, 0.8);
+            c.fillRect(-3.5, 0.5, 5, 0.8);
+          }
           c.restore();
         }
       }
     }
     if (clima === "neblina") {
-      c.fillStyle = "rgba(255,255,255,0.18)";
+      c.fillStyle = p.neblina ?? "rgba(255,255,255,0.18)";
       c.fillRect(0, 0, W, H);
     }
     if (flash > 0) {
@@ -1198,7 +1769,8 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
     raf = requestAnimationFrame(quadro);
     const dt = Math.min(0.1, (agora - (ultimo || agora)) / 1000);
     ultimo = agora;
-    if (estado !== "pausado" && estado !== "pergunta" && estado !== "fim") {
+    if (paradoDebug) acum = 0;
+    else if (estado !== "pausado" && estado !== "pergunta" && estado !== "fim") {
       acum += dt;
       while (acum >= PASSO) {
         atualizar(PASSO);
@@ -1256,6 +1828,13 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       if (o.som !== undefined) som.ligado = o.som;
       if (o.movimentoReduzido !== undefined) reduzido = o.movimentoReduzido;
       if (o.autoPoder !== undefined) autoPoder = o.autoPoder;
+      if (o.melhorias) melhorias = o.melhorias;
+    },
+    ganharMoedas(n, xp = 0) {
+      nMoedas += n;
+      xpRun += xp;
+      // o contador do HUD mostra na hora (o jogo pode estar pausado, com o quiz aberto)
+      enviarHud();
     },
     usarPoderProprio() {
       usarPoder();
@@ -1280,6 +1859,9 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
       set invulneravel(v: boolean) {
         invulneravel = v;
       },
+      parar: (v: boolean) => {
+        paradoDebug = v;
+      },
       get orbesLigados() {
         return orbesLigados;
       },
@@ -1289,9 +1871,35 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
         if (!v) orbes = [];
       },
       ativar: (id: string) => ativar(poderPorId(id)),
+      // mostra agora o momento do Visual de um poder, no nível comprado (para capturas): na próxima coluna à frente, se
+      // for de coluna
+      momento: (id: string) => {
+        const pid = id as IdPoder;
+        const ancora = TEXTOS_MOMENTO[pid]?.ancora;
+        if (!ancora) return;
+        comMomento.delete(pid);
+        const q = pilares.filter((x) => !x.passou && !x.arquivado && x.x > jog.x + 60 && x.x < W - 40).sort((a, b) => a.x - b.x)[0];
+        if (ancora === "coluna" && q) momentoNaColuna(pid, q);
+        else if (pid === "chifre" && q) momento(pid, jog.x, jog.y, { dx: q.x - jog.x, dy: q.vao - jog.y });
+        else if (ancora === "moeda") momento(pid, jog.x + 24, jog.y - 6);
+        else momento(pid, jog.x, jog.y, { n: 1 });
+      },
+      // hora do dia (0 amanhecer, 1 dia, 2 entardecer, 3 noite), para capturas sem esperar o ciclo
+      hora: (h: number) => {
+        tod = todAlvo = h;
+      },
+      // mostra a surpresa do estilo agora (para capturas de tela)
+      surpresa: () => {
+        surpresa = { ...surpresa, inicio: relogioJogo };
+      },
+      // liga níveis de melhoria de poder, como `{ "renascer:forca": 5 }` (para testes)
+      melhorias: (m: Niveis) => {
+        melhorias = { ...melhorias, ...m };
+      },
       estado: () => ({
         estado,
         W,
+        H,
         passagens: nPilares,
         pontos,
         vidas,
@@ -1302,6 +1910,8 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
         avisoRecorde: avisoRecordeT,
         previsaoRecorde: previsaoRecordeX(),
         penalidades: nPenalidades,
+        quebradas: nQuebradas,
+        garrasPendentes: colunasGarras,
         aviso: aviso?.titulo ?? null,
         ativos: Object.fromEntries(ativos),
         carga,
@@ -1309,7 +1919,9 @@ export function criarJogo(canvas: HTMLCanvasElement, host: GameHostApi, opcoes: 
         velocidade: velocidade(),
         velocidadeBase: 165 + Math.min(nPilares, 60) * 2,
         gravidade: GRAVIDADE,
-        raio: RAIO * (efeitos().mini ? 0.6 : 1),
+        raio: RAIO * (efeitos().mini ? 0.6 - ef("mini") : 1),
+        graca: jog.graca,
+        segundosCarga: poderDoPersonagem() ? segundosCarga(poderDoPersonagem()!.id, melhorias) : null,
         aberturaBase: aberturaBase(),
         pilares: pilares.map((q) => ({
           x: q.x,

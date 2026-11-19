@@ -114,9 +114,11 @@ Há duas formas de trabalhar:
 4. Revisão jurídica e `npm run revisar -- 41 "Seu nome" "observações"`.
 5. `npm run build:completo` gera o caderno e o gabarito atualizados em PDF.
 
-### Notas de atualização legislativa
+### O que muda nos PDFs atualizados
 
-Aparecem no caderno e no padrão de resposta atualizados, ao final de cada parte:
+Tudo fica em `atualizado`, no fim do YAML do exame. O padrão de resposta traz as notas ao fim de cada parte e fecha com a
+página "Diferenças em relação à prova original", que lista tudo (`src/components/print/Diferencas.tsx`). O caderno não
+tem essa página nem os links dos artigos, porque em regra é impresso.
 
 ```yaml
 atualizado:
@@ -126,7 +128,35 @@ atualizado:
       item: "6.1"         # opcional
       lei: Lei 14.994/2024
       texto: O feminicídio passou a ser crime autônomo (art. 121-A do CP)…
+    - alvo: q5
+      tipo: jurisprudencia   # o STF ou o STJ mudou a leitura da lei (o padrão é "lei")
+      lei: "STF, HC 111.840 (2012) e ARE 1.052.700 (Tema 972, 2017)"
+      texto: O regime inicialmente fechado do caso vinha do art. 2º, § 1º, da Lei 8.072/1990…
+  nomes:                  # as pessoas com nomes da mitologia, ligados ao papel no caso
+    peca: { Júlio: Prometeu }          # o primeiro nome da pessoa na prova → o nome novo, do mesmo gênero
+    q1: { Pedro: Hermes, Luiza: Dafne }
+    q2: { José: José }                 # o mesmo nome: fica como está (um autor citado no gabarito)
+    empresas: { Banco Peixe: Banco Hefesto }   # a prova toda, tal e qual
+  correcoes:              # erro material da prova: a versão atualizada fica como se ela tivesse saído certa
+    - alvo: peca
+      trocas:              # cada trecho exato (com os nomes da prova) muda no enunciado, no gabarito e nos itens da parte
+        - { de: "inciso II, alínea b, do Código Penal", para: "inciso II, alínea d, do Código Penal" }
+        - { de: "alínea d (ou b), do CP", para: "alínea d, do CP" }
+      motivo: Na prova original, o juiz…   # o único registro do erro: fim do padrão de resposta, "Erro material corrigido"
+  diferencas:             # o resto (a tabela de pontos estimada…)
+    - { texto: "A FGV não publicou a distribuição dos pontos deste exame…" }
 ```
+
+- **Notas:** a de lei segue a regra de sempre. A revogação vale para qualquer exame. A alteração só vale quando a prova
+  é anterior a ela. A de jurisprudência só entra quando a prova é anterior à decisão e o caso depende dela.
+- **Nomes:** quem é pessoa sai de `content/nomes-pessoas.yaml`. O build avisa a pessoa sem nome novo e o nome que não
+  aparece no texto. É erro dar o mesmo nome a duas pessoas da mesma parte, dar o nome de outra pessoa da parte ou
+  trocar o gênero (quando o nome está em `nomes-mitologia.yaml`). Grafias da mesma pessoa ("Júnior" e "Junior")
+  levam o mesmo nome. O comentário depois de cada linha diz o porquê da escolha.
+- **Correções:** só para erro material claro da banca. Corrija tudo como se a prova tivesse saído certa (enunciado,
+  gabarito comentado e itens, inclusive o que o padrão aceitava só por causa do erro); o erro original aparece só no
+  `motivo`. O build dá erro quando o trecho `de` de uma troca não está em nenhum texto da parte. O `motivo` não usa os
+  nomes das pessoas (eles mudam no PDF).
 
 ---
 
@@ -168,6 +198,46 @@ Cria `src/quiz/geradores/carta-testemunhavel.ts`, já registrado. Para variar os
 `rng.pick([...])` e os dados prontos de `src/quiz/dados.ts`: nomes, crimes com artigo, varas e
 datas. `npm test` cobre todo gerador registrado. Ele exige casos variados, peça e fundamentos
 reconhecidos, nenhum `TODO`, distratores, e que a resposta esperada seja aceita no nível difícil.
+
+### Teses das provas ("Por dentro da peça" e "Questões discursivas")
+
+Cada item da tabela de pontos que tem artigo vira uma pergunta, em `content/perguntas/discursivas/<exame>.yaml`.
+`node scripts/gerar-perguntas-exames.ts` cria os rascunhos e preserva o que já está revisado, as introduções e a lista
+`fora`.
+
+```yaml
+exame: "40"
+introducoes:               # o caso de cada parte em poucas linhas, sem a resposta
+  peca: "Gustavo, entregador por aplicativo, entrou por sete dias seguidos num depósito…"
+fora: ["40-peca-1", "40-peca-3"]   # itens deixados de fora de propósito: o gerador não os recria
+perguntas:
+  - id: 40-peca-6
+    categoria: peca-detalhe   # ou discursiva
+    parte: peca               # ou q1..q4
+    item: "6"
+    secao: pedido
+    pergunta: "No oitavo dia, Gustavo entrou pela porta aberta. Que pedido a defesa deve fazer quanto a esse fato?"
+    tese: "Desclassificação do oitavo fato para furto simples: Gustavo entrou pela porta, sem escalada"
+    aceitos: [ [ "desclassific* | afast*", "simples | escalada | qualificadora" ], [ "furto simples" ] ]
+    artigos: [ "art. 155, CP" ]
+    gabarito: "…o padrão de respostas da FGV…"
+    revisao: { status: revisado }
+```
+
+Os níveis do jogo:
+1. **Fácil:** a tese e quatro artigos, ou o artigo e quatro teses. O artigo aparece só pelo número, sem o texto.
+2. **Médio:** digitar o ponto central (a tese).
+3. **Difícil:** o ponto central e o artigo, com o parágrafo, o inciso ou a alínea.
+
+- **Tese:** começa pelo instituto e se lê sem a pergunta, porque o fácil mostra só ela: "Desclassificação para furto
+  simples", não "Para furto simples"; nada de "Sim:" ou "Não:" soltos. Não cita o artigo.
+- **Aceitos:** grupos de termos na sintaxe da correção (`|` separa alternativas, `*` completa a palavra). Basta um grupo
+  inteiro, e a tese precisa conter um deles (o build confere).
+- **Introdução e pergunta:** sem os termos aceitos (o build avisa) e sem citar artigos.
+- **Fora do jogo:** endereçamento, prazo, pedidos genéricos, rol de testemunhas e todo item sem artigo. Sai também o
+  item cuja resposta a lei nova superou, com a nota em `atualizado.notas` do exame.
+- **Alternativas erradas do fácil:** o build as tira das teses e dos artigos das outras perguntas, das mais parecidas
+  para as outras.
 
 ### Peças e leis
 

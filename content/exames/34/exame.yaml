@@ -310,3 +310,11 @@ questoes:
         componentes:
           - { id: c1, valor: 0.5, termos: [ absolvi* | absolver | atipic* | erro de tipo ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 386, III, CPP", "art. 386, IV, CPP", "art. 386, V, CPP", "art. 20, CP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Rodrigo: Héracles, João: Jacinto }   # o golpe; a morte que não se queria
+    q1: { Geraldo: Midas, Eugênia: Ariadne }   # a extorsão
+    q2: { Flávio: Tântalo, João: Hermes }   # o investigado; o advogado
+    q3: { Carla: Aracne }   # o documento
+    q4: { Renato: Asclépio, Abel: Quíron }   # a farmácia

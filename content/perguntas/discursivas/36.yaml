@@ -1,551 +1,147 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "36"
+introducoes:
+  peca: "Matheus, nascido em 10/2/2000, tem intolerância ao álcool e só bebia água tônica numa festa de Ano Novo, mas o funcionário do bar lhe entregou por engano um gim-tônica, e um gole o deixou completamente embriagado. Na saída, Caio, seu rival no futebol, riu dele, e Matheus lhe deu uma garrafada na cabeça. Caio disse que levou 15 pontos e ficaria 45 dias sem trabalhar, mas nenhum laudo nem boletim médico sobre as lesões foi juntado. Só com as declarações de Caio, Matheus foi denunciado por lesão corporal grave, e o Ministério Público não ofereceu a suspensão condicional do processo, por causa da pena máxima de 5 anos e de uma condenação definitiva por contravenção penal. Um exame feito na noite do fato atestou a embriaguez completa e a incapacidade total de Matheus. Ele foi citado, e você deve apresentar a defesa."
+  q1: "Em julho de 2020, Ana Beatriz falsificou um bilhete de loteria premiado e o vendeu a Rita, de 21 anos e plenamente capaz, pela metade do suposto prêmio. Envergonhada, Rita nunca procurou as autoridades. Em dezembro de 2020, Ana Beatriz foi denunciada por falsificação de documento particular e estelionato, em concurso material."
+  q2: "David foi denunciado por descaminho, por ter importado tecidos sem pagar R$ 750 de imposto. O Ministério Público Federal não ofereceu a suspensão condicional do processo porque ele tinha uma condenação definitiva, só à pena de multa, por ameaça."
+  q3: "Marcelo, condenado no semiaberto, cumpre prisão domiciliar porque não há vagas no regime e trabalha com autorização do juiz da execução, sob supervisão do empregador. O juiz negou a remição pelo trabalho, por analogia com o regime aberto. A defesa interpôs agravo em execução, mas o juiz não o admitiu, por estar sem as razões."
+  q4: "Bruno, Leila, Valter e Vinícius cometeram juntos um crime em 2016. Bruno aceitou a suspensão condicional do processo em 2017; Leila foi condenada definitivamente em 2018 e terminou de cumprir a pena em 2020; Valter foi condenado, mas o acórdão só transitou em julgado em 2022; e Vinícius não foi encontrado, e o processo dele ficou suspenso. Em 2021, os quatro cometeram outro crime, sem violência nem grave ameaça."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["36-peca-1", "36-peca-4-2", "36-peca-6-1", "36-peca-7", "36-peca-8-1", "36-peca-9", "36-q1-b"]
 perguntas:
-  - id: 36-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
-    opcoes:
-      correta: A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
-      erradas:
-        - "Endereçamento correto: juízo da 5ª Vara Criminal."
-        - "Endereçamento: Juiz da Vara do Tribunal do Júri."
-        - "Endereçamento correto: 1ª Vara Criminal da Comarca de Natal/RN"
-        - "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
-        - "Endereçamento: Juízo do Tribunal do Júri da Comarca de São Paulo/SP"
-    revisao: &a1
-      status: revisado
   - id: 36-peca-4-1
     categoria: peca-detalhe
     parte: peca
     item: "4.1"
     secao: pedido
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Pedido de nulidade do recebimento da denúncia ou rejeição da denúncia por ausência de justa causa, nos termos do Art. 395, inciso III, do CPP ou Art. 564, inciso III, alínea b, do CPP.
-    opcoes:
-      correta: Pedido de nulidade do recebimento da denúncia ou rejeição da denúncia por ausência de justa causa, nos termos do Art. 395, inciso III, do CPP ou Art. 564, inciso III, alínea b, do CPP.
-      erradas:
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Reforma da sentença de absolvição sumária;
-        - Pedido de retratação.
-        - Não provimento do recurso OU manutenção da sentença.
-        - "Pedido: Conhecimento e provimento do recurso."
-    revisao: *a1
-  - id: 36-peca-4-2
-    categoria: peca-detalhe
-    parte: peca
-    item: "4.2"
-    secao: merito
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A infração penal imputada deixa vestígios e não consta do procedimento qualquer prova pericial ou boletim de atendimento médico.
-    opcoes:
-      correta: A infração penal imputada deixa vestígios e não consta do procedimento qualquer prova pericial ou boletim de atendimento médico.
-      erradas:
-        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Subsidiariamente, aplicação da pena base no mínimo
-        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
-        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
-    revisao: *a1
+    pergunta: "A denúncia se apoiou só nas declarações de Caio. Que pedido a defesa deve fazer quanto a ela?"
+    tese: "Rejeição da denúncia por falta de justa causa"
+    aceitos: [ "justa causa" ]
+    artigos: [ "art. 395, III, CPP", "art. 564, III, b, CPP" ]
+    gabarito: "Pedido de nulidade do recebimento da denúncia ou rejeição da denúncia por ausência de justa causa, nos termos do Art. 395, inciso III, do CPP ou Art. 564, inciso III, alínea b, do CPP."
+    revisao: { status: revisado }
   - id: 36-peca-4-3
     categoria: peca-detalhe
     parte: peca
     item: "4.3"
     secao: preliminar
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Nulidade em razão da ausência de exame de corpo de delito, direto ou indireto, nos termos do Art. 158 do CPP.
-    opcoes:
-      correta: Nulidade em razão da ausência de exame de corpo de delito, direto ou indireto, nos termos do Art. 158 do CPP.
-      erradas:
-        - "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
-        - Inépcia da denúncia pois deixou de descrever todas as circunstâncias elementares do crime de lavagem de dinheiro, notadamente, a infração penal antecedente, nos termos do Art. 41 do CPP ou Art. 2º, § 1º, da Lei nº 9.613/98.
-        - Extinção da punibilidade pela decadência do direito de representação.
-        - Nulidade dos atos da instrução.
-        - Nulidade decorrente do não oferecimento de proposta de suspensão condicional do processo, tendo em vista que o crime não foi praticado no contexto da violência doméstica e familiar contra mulher ou tendo em vista não ser aplicável a previsão do Art. 41 da Lei nº 11.340 pelo fato de a vítima ser homem.
-    revisao: *a1
+    pergunta: "Por que faltava justa causa para a denúncia por lesão corporal grave?"
+    tese: "Nulidade pela falta de exame de corpo de delito, direto ou indireto: o crime deixa vestígios"
+    aceitos: [ "exame de corpo de delito | corpo de delito | pericia | vestigio* | materialidade" ]
+    artigos: [ "art. 158, CPP" ]
+    gabarito: "Nulidade em razão da ausência de exame de corpo de delito, direto ou indireto, nos termos do Art. 158 do CPP."
+    revisao: { status: revisado }
   - id: 36-peca-5-2
     categoria: peca-detalhe
     parte: peca
     item: "5.2"
     secao: merito
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: O sursis processual é admitido mesmo a infração não sendo de menor potencial ofensivo ou relevante é que a pena mínima seja fixada em até 01 ano e não a pena máxima.
-    opcoes:
-      correta: O sursis processual é admitido mesmo a infração não sendo de menor potencial ofensivo ou relevante é que a pena mínima seja fixada em até 01 ano e não a pena máxima.
-      erradas:
-        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Subsidiariamente, aplicação da pena base no mínimo
-        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
-        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
-    revisao: *a1
+    pergunta: "O Ministério Público negou a suspensão do processo pela pena máxima de 5 anos. Que tese a defesa deve opor?"
+    tese: "Cabimento da suspensão condicional do processo: basta a pena mínima de até 1 ano, ainda que o crime não seja de menor potencial ofensivo"
+    aceitos: [ "pena minima" ]
+    artigos: [ "art. 89, Lei 9.099" ]
+    gabarito: "O sursis processual é admitido mesmo a infração não sendo de menor potencial ofensivo ou relevante é que a pena mínima seja fixada em até 01 ano e não a pena máxima."
+    revisao: { status: revisado }
   - id: 36-peca-5-3
     categoria: peca-detalhe
     parte: peca
     item: "5.3"
     secao: merito
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A condenação anterior por contravenção penal não impede a concessão do benefício ou a lei somente proíbe a proposta quando houver condenação por crime.
-    opcoes:
-      correta: A condenação anterior por contravenção penal não impede a concessão do benefício ou a lei somente proíbe a proposta quando houver condenação por crime.
-      erradas:
-        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Subsidiariamente, aplicação da pena base no mínimo
-        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
-        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
-    revisao: *a1
-  - id: 36-peca-6-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "6.1"
-    secao: merito
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A conduta do agente não configura crime, em razão da ausência de culpabilidade.
-    opcoes:
-      correta: A conduta do agente não configura crime, em razão da ausência de culpabilidade.
-      erradas:
-        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Reconhecimento das atenuantes do Art. 65, incisos I e III, alíneas “c” e “d” do CP;
-        - Subsidiariamente, afastar a qualificadora pois não há prova nos autos da idade da vítima, nos termos do Art. 213, §1º do CP
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
+    pergunta: "A condenação anterior de Matheus impede a suspensão condicional do processo?"
+    tese: "A condenação anterior por contravenção não impede a suspensão condicional do processo: a lei só fala em crime"
+    aceitos: [ "nao impede | so fala em crime | so impede por crime | condenacao por crime" ]
+    artigos: [ "art. 89, Lei 9.099" ]
+    gabarito: "A condenação anterior por contravenção penal não impede a concessão do benefício ou a lei somente proíbe a proposta quando houver condenação por crime."
+    revisao: { status: revisado }
   - id: 36-peca-6-2
     categoria: peca-detalhe
     parte: peca
     item: "6.2"
     secao: merito
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A embriaguez de Matheus era completa e decorrente de caso fortuito ou força maior, nos termos do Art. 28, §1º, do CP.
-    opcoes:
-      correta: A embriaguez de Matheus era completa e decorrente de caso fortuito ou força maior, nos termos do Art. 28, §1º, do CP.
-      erradas:
-        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Subsidiariamente, aplicação da pena base no mínimo
-        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
-        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
-    revisao: *a1
-  - id: 36-peca-7
-    categoria: peca-detalhe
-    parte: peca
-    item: "7"
-    secao: pedido
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Pedido de acolhimento das alegações para reconhecer a nulidade no ato de recebimento da denúncia ou rejeição da denúncia pela ausência de justa causa.
-    opcoes:
-      correta: Pedido de acolhimento das alegações para reconhecer a nulidade no ato de recebimento da denúncia ou rejeição da denúncia pela ausência de justa causa.
-      erradas:
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Pedido de habilitação, na interposição, do pai da vítima como assistente de acusação.
-        - a) designação de audiência preliminar ou de conciliação b) a citação da querelada; c) recebimento da queixa d) a oitiva das testemunhas arroladas; e) a condenação da querelada pelo crime de injúria (Art. 140 do CP) e pelo crime de difamação (Art. 139 do CP) com a causa de aumento de pena (Art. 141, III do CP) em concurso formal de delitos (Art. 70 do CP) f) a fixação de valor mínimo de indenização, nos termos do Art. 387, IV, do CPP. OBS:. A mera indicação de dispositivo legal não pontua.
-        - Aplicação de regime inicial aberto ou semiaberto.
-        - Conhecimento e provimento do recurso
-    revisao: *a1
-  - id: 36-peca-8-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "8.1"
-    secao: pedido
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Oferecimento de proposta de suspensão condicional do processo.
-    opcoes:
-      correta: Oferecimento de proposta de suspensão condicional do processo.
-      erradas:
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - "Pedidos (0,50 cada, no mínimo 3, máximo 1,50): redução da pena; mudança de regime; nulidade da prova; afastamento da agravante/causa de aumento."
-        - Absolvição do réu, com base no art. 386, III ou VI, do CPP, OU Absolvição do réu por ausência de tipicidade;.
-        - Redução do máximo em razão da tentativa.
-        - Requerimento do juízo de retratação ou exercício do efeito regressivo, nos termos do Art. 589 do CPP
-    revisao: *a1
+    pergunta: "Por que Matheus é isento de pena?"
+    tese: "Inimputabilidade pela embriaguez completa proveniente de caso fortuito, que isenta de pena"
+    aceitos: [ "caso fortuito | forca maior | fortuita | involuntaria" ]
+    artigos: [ "art. 28, § 1º, CP" ]
+    gabarito: "A embriaguez de Matheus era completa e decorrente de caso fortuito ou força maior, nos termos do Art. 28, §1º, do CP."
+    revisao: { status: revisado }
   - id: 36-peca-8-2
     categoria: peca-detalhe
     parte: peca
     item: "8.2"
     secao: pedido
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Absolvição sumária, nos termos do Art. 397, inciso II, do CPP.
-    opcoes:
-      correta: Absolvição sumária, nos termos do Art. 397, inciso II, do CPP.
-      erradas:
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Pronúncia da ré nos exatos termos da denúncia OU pronúncia por homicídio triplamente qualificado OU pronúncia da ré por infanticídio
-        - Pedido de retratação.
-        - Não provimento do recurso OU manutenção da sentença.
-        - Conhecimento e provimento do recurso
-    revisao: *a1
-  - id: 36-peca-9
-    categoria: peca-detalhe
-    parte: peca
-    item: "9"
-    secao: pedido
-    caso: |-
-      No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano Novo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Matheus ingeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica, pois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria em situação de embriaguez. Ocorre que, em determinado momento, solicitou água tônica ao funcionário do bar, que, contudo, em erro, entregou a Matheus o drink “gin tônica”, que é feito com uma dose de gin misturada com água tônica. Matheus, com sede, deu um grande gole na bebida, vindo a ficar completamente embriagado, em razão da intolerância ao álcool.
-
-      Sentindo-se mal, quando deixava o local dos fatos, Matheus é surpreendido com a presença de Caio, 25 anos, com quem já discutira em diversas oportunidades em jogos de futebol. Caio, ao verificar a situação de completa embriaguez de seu rival, começa a rir, momento em que Matheus usa a garrafa de refrigerante, de vidro, que estava em suas mãos, para desferir um golpe na cabeça de Caio.
-
-      Caio é imediatamente encaminhado para o hospital e, após atendimento médico, comparece à Delegacia, narra o ocorrido e informa que teve de levar 15 pontos na cabeça, razão pela qual ficaria incapacitado de trabalhar por 45 dias. Em razão da dor que sentia na cabeça, deixou de comparecer, naquele momento, para a realização de exame de corpo de delito, informando, ainda, que não teve acesso ao Boletim de Atendimento Médico (BAM) no hospital, não sabendo se ele foi, efetivamente, realizado.
-
-      Concluído o procedimento, o inquérito foi encaminhado ao Ministério Público, que, com base apenas nas declarações de Caio, ofereceu denúncia em face de Matheus, perante a 2ª Vara Criminal de Vitória/ES, imputando-lhe a prática do crime do Art. 129, § 1º, inciso I, do Código Penal. Informou o Parquet que deixou de oferecer proposta de suspensão condicional do processo, em razão da significativa pena máxima prevista para o delito (05 anos de reclusão), bem como diante da Folha de Antecedentes Criminais, que registrava apenas uma condenação anterior de Matheus, com trânsito em julgado no ano de 2018, pela prática da infração prevista no Art. 42 do Decreto-lei n o 3.688/41. Como documentação, o Ministério Público apresentou apenas imagens da câmera de segurança do local da festa e a Folha de Antecedentes Criminais.
-
-      Após recebimento da denúncia, Matheus foi pessoalmente citado e intimado para adoção das medidas cabíveis, em 16 de novembro de 2022, quarta-feira, data em que os mandados foram juntados aos autos, vindo a procurar seu advogado para assistência técnica. Informou ao patrono que, na data dos fatos, realizou exame de alcoolemia e atendimento médico, que constatou que ele se encontrava completamente embriagado em razão da ingestão de bebida alcóolica (gin) e sua intolerância, bem como, que era inteiramente incapaz de determinar-se sobre o caráter ilícito do fato. Forneceu, ainda, o nome do funcionário do bar que teria lhe atendido (Carlos) e dos seus amigos José e Antônio, que teriam presenciado os fatos. Confirmou, todavia, que desferiu o golpe de garrafa na cabeça de Caio, que deixou o local com sangramento.
-
-      Considerando a situação narrada, apresente, na qualidade de advogado de Matheus, a peça jurídica cabível diferente de habeas corpus e embargos de declaração, expondo todas as teses jurídicas de direito material e direito processual pertinentes. A peça deverá ser datada no último dia do prazo, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Apresentação de rol de testemunhas.
-    opcoes:
-      correta: Apresentação de rol de testemunhas.
-      erradas:
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Pedido de habilitação, na interposição, do pai da vítima como assistente de acusação.
-        - a) designação de audiência preliminar ou de conciliação b) a citação da querelada; c) recebimento da queixa d) a oitiva das testemunhas arroladas; e) a condenação da querelada pelo crime de injúria (Art. 140 do CP) e pelo crime de difamação (Art. 139 do CP) com a causa de aumento de pena (Art. 141, III do CP) em concurso formal de delitos (Art. 70 do CP) f) a fixação de valor mínimo de indenização, nos termos do Art. 387, IV, do CPP. OBS:. A mera indicação de dispositivo legal não pontua.
-        - Aplicação de regime inicial aberto ou semiaberto.
-        - Conhecimento e provimento do recurso
-    revisao: *a1
+    pergunta: "No mérito, que decisão a defesa deve pedir ao juiz?"
+    tese: "Absolvição sumária pela causa de isenção de pena"
+    aceitos: [ "absolvicao sumaria | absolvido sumariamente | absolver sumariamente | absolvicao* sumaria*" ]
+    artigos: [ "art. 397, II, CPP" ]
+    gabarito: "Absolvição sumária, nos termos do Art. 397, inciso II, do CPP."
+    revisao: { status: revisado }
   - id: 36-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Ana Beatriz foi denunciada pelo Ministério Público pela prática dos crimes de falsificação de documento particular (Art. 298 do CP) e estelionato (Art. 171 do CP), em concurso material (Art. 69 do CP), por ter obtido vantagem patrimonial ilícita às custas da vítima Rita (pessoa civilmente capaz e mentalmente sã, à época com 21 anos de idade), induzindo-a e mantendo-a em erro, mediante meio fraudulento.
-
-      Segundo narra a denúncia, em julho de 2020 Ana Beatriz falsificou bilhete de loteria premiado e o vendeu para Rita por metade do valor do suposto prêmio, alegando urgência em receber valor em espécie para poder custear cirugia da sua filha. Rita, envergonhada, não procurou as autoridades públicas para solicitar a apuração dos fatos.
-
-      A denúncia foi oferecida ao Juízo competente em dezembro de 2020.
-
-      Sobre a hipótese, responda aos itens a seguir.
-    comando: Qual é a tese jurídica de mérito que pode ser invocada pela defesa técnica de Ana Beatriz? Justifique.
-    gabarito: A tese jurídica de mérito é a ocorrência de consunção, pois o crime-meio de falsificação de documento particular é absorvido pelo crime-fim de estelionato, nos termos da Súmula nº 17 do STJ (“Quando o falso se exaure no estelionato, sem mais potencialidade lesiva, é por este absorvido.”)
-    opcoes:
-      correta: A tese jurídica de mérito é a ocorrência de consunção, pois o crime-meio de falsificação de documento particular é absorvido pelo crime-fim de estelionato, nos termos da Súmula nº 17 do STJ.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
-  - id: 36-q1-b
-    categoria: discursiva
-    parte: q1
-    item: B
-    caso: |-
-      Ana Beatriz foi denunciada pelo Ministério Público pela prática dos crimes de falsificação de documento particular (Art. 298 do CP) e estelionato (Art. 171 do CP), em concurso material (Art. 69 do CP), por ter obtido vantagem patrimonial ilícita às custas da vítima Rita (pessoa civilmente capaz e mentalmente sã, à época com 21 anos de idade), induzindo-a e mantendo-a em erro, mediante meio fraudulento.
-
-      Segundo narra a denúncia, em julho de 2020 Ana Beatriz falsificou bilhete de loteria premiado e o vendeu para Rita por metade do valor do suposto prêmio, alegando urgência em receber valor em espécie para poder custear cirugia da sua filha. Rita, envergonhada, não procurou as autoridades públicas para solicitar a apuração dos fatos.
-
-      A denúncia foi oferecida ao Juízo competente em dezembro de 2020.
-
-      Sobre a hipótese, responda aos itens a seguir.
-    comando: Qual é a tese jurídica processual que pode ser invocada pela defesa técnica de Ana Beatriz? Justifique.
-    gabarito: A tese jurídica processual que pode ser invocada pela defesa técnica de Ana Beatriz é a necessidade de rejeição da denúncia por falta representação da vítima, pois, a partir da Lei nº 13.964/19, o crime de estelionato, em regra, comporta ação penal de iniciativa pública condicionada à representação (Art. 171, § 5º, do CP).
-    opcoes:
-      correta: A tese jurídica processual é a necessidade de rejeição da denúncia por falta de representação da vítima, pois, a partir da Lei nº 13.964/19, o crime de estelionato, em regra, comporta ação penal de iniciativa pública condicionada à representação, segundo o Art. 171, § 5º, do CP.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese de mérito a defesa de Ana Beatriz pode invocar?"
+    tese: "Consunção: a falsificação, crime-meio, é absorvida pelo estelionato"
+    aceitos: [ "consun* | absorcao | absorvid* | absorve" ]
+    artigos: [ "Súmula 17 STJ" ]
+    gabarito: "A tese jurídica de mérito é a ocorrência de consunção, pois o crime-meio de falsificação de documento particular é absorvido pelo crime-fim de estelionato, nos termos da Súmula nº 17 do STJ (“Quando o falso se exaure no estelionato, sem mais potencialidade lesiva, é por este absorvido.”)"
+    revisao: { status: revisado }
   - id: 36-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      David foi denunciado pela prática do crime de descaminho (Art. 334 do Código Penal), por supostamente ter importado contêiner contendo 1 tonelada de materiais têxteis de procedência estrangeira sem a quitação do imposto de importação devido à União, que soma R$ 750,00 (setecentos e cinquenta reais).
-
-      Na cota que acompanha a denúncia, o Ministério Público Federal se manifestou pelo não oferecimento de proposta de suspensão condicional do processo a David, pois o acusado possui anotação na sua Folha de Antecedentes Criminais (FAC), relativa à condenação definitiva à pena de multa pelo crime de ameaça (Art. 147 do Código Penal).
-
-      Sobre a hipótese apresentada, responda aos itens a seguir.
-    comando: Qual é a tese de mérito que pode ser invocada pelo Defensor técnico de David no caso concreto? Justifique.
-    gabarito: A tese de mérito a ser invocada pelo defensor técnico de David é a da atipicidade por insignificância da conduta, pois a União está dispensada de ajuizar ações de cobrança de tributos cujo valor esteja aquém do patamar de R$ 20.000.00 (vinte mil reais), com as atualizações efetivadas pelas Portarias nº 75 e 130, ambas do Ministério da Fazenda. Note-se que o valor de R$ 1.000,00 (mil reais) segue insignificante, se considerarmos o valor previsto no Art. 20, § 2º, da Lei nº 10.522/02.
-    opcoes:
-      correta: A tese de mérito é a da atipicidade por insignificância da conduta, pois a União está dispensada de ajuizar ações de cobrança de tributos cujo valor esteja aquém do patamar de R$ 20.000.00 (vinte mil reais), com as atualizações efetivadas pelas Portarias nº 75 e 130, ambas do Ministério da Fazenda ou R$ 1.000,00 (mil reais) nos termos do Art. 20, § 2º, da Lei nº 10.522/02.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese de mérito a defesa de David pode invocar?"
+    tese: "Atipicidade material pela insignificância: o tributo iludido fica muito abaixo do limite de cobrança da Fazenda"
+    aceitos: [ "insignifican* | bagatela | atipicidade material" ]
+    artigos: [ "art. 20, Lei 10.522" ]
+    gabarito: "A tese de mérito a ser invocada pelo defensor técnico de David é a da atipicidade por insignificância da conduta, pois a União está dispensada de ajuizar ações de cobrança de tributos cujo valor esteja aquém do patamar de R$ 20.000.00 (vinte mil reais), com as atualizações efetivadas pelas Portarias nº 75 e 130, ambas do Ministério da Fazenda. Note-se que o valor de R$ 1.000,00 (mil reais) segue insignificante, se considerarmos o valor previsto no Art. 20, § 2º, da Lei nº 10.522/02."
+    revisao: { status: revisado }
   - id: 36-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      David foi denunciado pela prática do crime de descaminho (Art. 334 do Código Penal), por supostamente ter importado contêiner contendo 1 tonelada de materiais têxteis de procedência estrangeira sem a quitação do imposto de importação devido à União, que soma R$ 750,00 (setecentos e cinquenta reais).
-
-      Na cota que acompanha a denúncia, o Ministério Público Federal se manifestou pelo não oferecimento de proposta de suspensão condicional do processo a David, pois o acusado possui anotação na sua Folha de Antecedentes Criminais (FAC), relativa à condenação definitiva à pena de multa pelo crime de ameaça (Art. 147 do Código Penal).
-
-      Sobre a hipótese apresentada, responda aos itens a seguir.
-    comando: Qual é a questão preliminar ao mérito que pode ser invocada pelo Defensor técnico de David no caso concreto? Justifique.
-    gabarito: A questão preliminar ao mérito a ser invocada pelo defensor técnico de David é a da necessidade de remessa dos autos à autoridade superior do Ministério Público Federal nos termos da Súmula nº 696 do STF, pois a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do Código Penal.
-    opcoes:
-      correta: A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
-        - "Não foi correta a decisão do Tribunal de Justiça, pois o Tribunal não pode acolher, contra o réu, nulidade não arguida pela acusação em seu recurso. OU Não foi correta a decisão, nos termos do Verbete 160 ou 713 da Súmula do STF. OU Não foi correta a decisão, com base no princípio que veda a reformatio in pejus indireta. Obs.: A justificativa é essencial para a atribuição de pontos."
-        - Não é possível a responsabilização penal de Cláudio pelo crime do Art. 154-A do Código Penal, tendo em vista que a lei posterior que de qualquer forma prejudique o acusado não pode retroagir para atingir situação pretérita OU tendo em vista que a lei que tipificou a conduta é posterior à data dos fatos, com base no Art. 5º, inciso XL, da CRFB/88 OU no Art. 1º do Código Penal.
-        - Sim. Maria poderá se habilitar como assistente de acusação ou assistente do Ministério Público, na forma do Art. 268 do CPP OU do Art. 271 do CPP
-    revisao: *a1
+    item: "B"
+    pergunta: "Que questão preliminar a defesa de David pode invocar?"
+    tese: "A condenação anterior só à pena de multa não impede a suspensão condicional do processo, e a recusa deve ir ao órgão superior do Ministério Público"
+    aceitos: [ "orgao superior | procurador-geral | procurador geral | camara de coordenacao | nao impede" ]
+    artigos: [ "Súmula 696 STF", "art. 77, § 1º, CP", "art. 89, Lei 9.099" ]
+    gabarito: "A questão preliminar ao mérito a ser invocada pelo defensor técnico de David é a da necessidade de remessa dos autos à autoridade superior do Ministério Público Federal nos termos da Súmula nº 696 do STF, pois a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do Código Penal."
+    revisao: { status: revisado }
   - id: 36-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Marcelo, condenado em regime semiaberto, formulou, por meio de sua defesa técnica, pedido de remição de penas em razão de trabalho realizado no curso da execução, o qual é executado mediante supervisão de seu empregador e com autorização do Juiz da Vara de Execuções Penais.
-
-      O Juízo, contudo, indeferiu o pedido, sob o argumento de que Marcelo está em prisão domiciliar, ante a ausência de vagas do regime semiaberto do Estado. Assim, por analogia com o regime aberto, Marcelo não pode usufruir da remição por trabalho, indeferindo o pedido.
-
-      A defesa interpôs Agravo em Execução no prazo de cinco dias da intimação da decisão, o qual foi inadmitido, sob o fundamento de não estar acompanhado das razões respectivas.
-
-      Na qualidade de advogado de Marcelo, responda às perguntas a seguir.
-    comando: Qual o recurso cabível contra a decisão do Juiz que inadmitiu o recurso interposto? Justifique.
-    gabarito: |-
-      A questão envolve conhecimentos de execução penal e de recursos. Nesse sentido, A) Nota-se que a decisão que inadmite o Agravo em Execução desafia Carta Testemunhável, na forma do Art. 639, inciso I, do CPP.
-
-      B) Quanto ao direito material, apenas o regime aberto inadmite a remição de penas por trabalho, sendo inviável, em direito penal, a aplicação de analogia prejudicial ao réu. Assim, conclui-se que há expressa previsão legal de admissibilidade da remissão por trabalho no regime semiaberto, na forma do Art. 126, caput, da LEP, a qual deve ser admitida.
-    opcoes:
-      correta: Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que recurso cabe contra a decisão que não admitiu o agravo em execução?"
+    tese: "Carta testemunhável contra a decisão que não admitiu o recurso"
+    aceitos: [ "carta testemunhavel" ]
+    artigos: [ "art. 639, I, CPP" ]
+    gabarito: "A questão envolve conhecimentos de execução penal e de recursos. Nesse sentido, A) Nota-se que a decisão que inadmite o Agravo em Execução desafia Carta Testemunhável, na forma do Art. 639, inciso I, do CPP.\n\nB) Quanto ao direito material, apenas o regime aberto inadmite a remição de penas por trabalho, sendo inviável, em direito penal, a aplicação de analogia prejudicial ao réu. Assim, conclui-se que há expressa previsão legal de admissibilidade da remissão por trabalho no regime semiaberto, na forma do Art. 126, caput, da LEP, a qual deve ser admitida."
+    revisao: { status: revisado }
   - id: 36-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Marcelo, condenado em regime semiaberto, formulou, por meio de sua defesa técnica, pedido de remição de penas em razão de trabalho realizado no curso da execução, o qual é executado mediante supervisão de seu empregador e com autorização do Juiz da Vara de Execuções Penais.
-
-      O Juízo, contudo, indeferiu o pedido, sob o argumento de que Marcelo está em prisão domiciliar, ante a ausência de vagas do regime semiaberto do Estado. Assim, por analogia com o regime aberto, Marcelo não pode usufruir da remição por trabalho, indeferindo o pedido.
-
-      A defesa interpôs Agravo em Execução no prazo de cinco dias da intimação da decisão, o qual foi inadmitido, sob o fundamento de não estar acompanhado das razões respectivas.
-
-      Na qualidade de advogado de Marcelo, responda às perguntas a seguir.
-    comando: Qual o direito material a ser pleiteado por Marcelo? Justifique.
-    gabarito: Quanto ao direito material, apenas o regime aberto inadmite a remição de penas por trabalho, sendo inviável, em direito penal, a aplicação de analogia prejudicial ao réu. Assim, conclui-se que há expressa previsão legal de admissibilidade da remissão por trabalho no regime semiaberto, na forma do Art. 126, caput, da LEP, a qual deve ser admitida.
-    opcoes:
-      correta: O regime semiaberto de cumprimento de pena admite a remição de penas por trabalho, na forma do Art. 126, caput, da LEP, sendo incabível, no Direito Penal, a analogia prejudicial ao réu.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que direito material Marcelo deve pleitear?"
+    tese: "Direito à remição pelo trabalho no semiaberto, mesmo em prisão domiciliar: a analogia in malam partem é proibida"
+    aceitos: [ "direito a remicao | direito de remir | pode remir | in malam partem | analogia prejudicial | analogia contra o reu" ]
+    artigos: [ "art. 126, § 9º, LEP", "art. 126, LEP" ]
+    gabarito: "Quanto ao direito material, apenas o regime aberto inadmite a remição de penas por trabalho, sendo inviável, em direito penal, a aplicação de analogia prejudicial ao réu. Assim, conclui-se que há expressa previsão legal de admissibilidade da remissão por trabalho no regime semiaberto, na forma do Art. 126, caput, da LEP, a qual deve ser admitida."
+    revisao: { status: revisado }
   - id: 36-q4-a
     categoria: discursiva
     parte: q4
-    item: A1
-    caso: |-
-      Juntos, Bruno, Leila, Valter e Vinícius cometeram determinado ilícito em 2016.
-
-      O processo veio a ser desmembrado, de forma que Bruno aceitou a suspensão condicional do processo, em 2017;
-
-      Leila foi condenada, definitivamente, em 2018, tendo terminado de cumprir a sua condenação em 2020; Valter foi condenado em primeira instância, porém, interpôs recurso, vindo a transitar em julgado o acórdão condenatório em 2022; e Vinícius, por sua vez, não foi encontrado para ser citado, tendo o processo sido suspenso, assim como o prazo prescricional, na forma do Art. 366 do CPP.
-
-      Em 2021, os amigos se reúnem e praticam novo ilícito penal, sem violência ou grave ameaça à pessoa.
-
-      Na qualidade de advogado de todos eles, responda às questões a seguir.
-    comando: À vista dos antecedentes criminais mencionados, e considerando preenchidos todos os demais requisitos legais, há algum acusado(s) impedido(s) de se beneficiar, em tese, de oferta de acordo de não persecução penal? justifique.
-    gabarito: Assim, em vista de tais informações, certo é que apenas Leila e Bruno estão impedidos de se beneficiar de Acordo de Não Persecução Penal, devendo ser mencionado o Art. 28-A, § 2º, incisos II e III, respectivamente, do CPP.
-    opcoes:
-      correta: Bruno, em razão de ter celebrado suspensão condicional do processo no quinquênio antecedente, na forma do Art. 28-A, § 2º, inciso III, do CPP. Leila, por ser tecnicamente reincidente na forma do Art. 28-A, § 2º, inciso II, do CPP.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "A1"
+    pergunta: "Por que Bruno não pode receber o acordo de não persecução penal pelo novo crime?"
+    tese: "Vedação do acordo de não persecução penal para quem recebeu a suspensão condicional do processo nos 5 anos anteriores"
+    aceitos: [ "5 anos | cinco anos | quinquenio | ultimos 5 anos" ]
+    artigos: [ "art. 28-A, § 2º, III, CPP" ]
+    gabarito: "Assim, em vista de tais informações, certo é que apenas Leila e Bruno estão impedidos de se beneficiar de Acordo de Não Persecução Penal, devendo ser mencionado o Art. 28-A, § 2º, incisos II e III, respectivamente, do CPP."
+    revisao: { status: revisado }
   - id: 36-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Juntos, Bruno, Leila, Valter e Vinícius cometeram determinado ilícito em 2016.
-
-      O processo veio a ser desmembrado, de forma que Bruno aceitou a suspensão condicional do processo, em 2017;
-
-      Leila foi condenada, definitivamente, em 2018, tendo terminado de cumprir a sua condenação em 2020; Valter foi condenado em primeira instância, porém, interpôs recurso, vindo a transitar em julgado o acórdão condenatório em 2022; e Vinícius, por sua vez, não foi encontrado para ser citado, tendo o processo sido suspenso, assim como o prazo prescricional, na forma do Art. 366 do CPP.
-
-      Em 2021, os amigos se reúnem e praticam novo ilícito penal, sem violência ou grave ameaça à pessoa.
-
-      Na qualidade de advogado de todos eles, responda às questões a seguir.
-    comando: Caso condenado(s) pelo novo fato, se fixada pena abaixo de quatro anos, qual(is) acusado(s) poderá(ão) se beneficiar do regime aberto? justifique.
-    gabarito: Quanto a questão material, apenas Leila é reincidente, incidindo na obrigatoriedade de regime inicial, ao menos, semiaberto. Todos os demais podem, em tese, serem beneficiados com o regime aberto, pois considerados primários. Art. 33, § 2º, alínea c, do CP.
-    opcoes:
-      correta: Bruno, Valter e Vinícius podem iniciar o cumprimento da pena em regime aberto, pois não são reincidentes, na forma do Art. 33, § 2º, c, do CP.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Valter foi condenado definitivamente só em 2022. Isso impede o regime aberto pelo novo crime?"
+    tese: "Valter não é reincidente: o trânsito em julgado veio depois do novo crime, e cabe o regime aberto"
+    aceitos: [ "nao e reincidente | nao reincidente | nao ha reincidencia | primario" ]
+    artigos: [ "art. 33, § 2º, c, CP", "art. 63, CP" ]
+    gabarito: "Quanto a questão material, apenas Leila é reincidente, incidindo na obrigatoriedade de regime inicial, ao menos, semiaberto. Todos os demais podem, em tese, serem beneficiados com o regime aberto, pois considerados primários. Art. 33, § 2º, alínea c, do CP."
+    revisao: { status: revisado }

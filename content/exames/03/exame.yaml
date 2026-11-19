@@ -3,6 +3,7 @@
 id: "03"
 numero: 3
 numeral: III
+aplicacao: 2011-03-27
 revisao:
   status: rascunho
   por: ""
@@ -13,6 +14,12 @@ peca:
   tipo: rese
   aliases: []
   enunciado: |-
+    No dia 17 de junho de 2010, uma criança recém-nascida é vista boiando em um córrego e, ao ser resgatada, não possuía mais vida. Helena, a mãe da criança, foi localizada e negou que houvesse jogado a vítima no córrego. Sua filha teria sido, segundo ela, sequestrada por um desconhecido. Durante a fase de inquérito, testemunhas afirmaram que a mãe apresentava quadro de profunda depressão no momento e logo após o parto. Além disso, foi realizado exame médico legal, o qual constatou que Helena, quando do fato, estava sob influência de estado puerperal. À míngua de provas que confirmassem a autoria, mas desconfiado de que a mãe da criança pudesse estar envolvida no fato, a autoridade policial representou pela decretação de interceptação telefônica da linha de telefone móvel usado pela mãe, medida que foi decretada pelo juiz competente. A prova constatou que a mãe efetivamente praticara o fato, pois, em conversa telefônica com uma conhecida, de nome Lia, ela afirmara ter atirado a criança ao córrego, por desespero, mas que estava arrependida. O delegado intimou Lia para ser ouvida, tendo ela confirmado, em sede policial, que Helena de fato havia atirado a criança, logo após o parto, no córrego. Em razão das aludidas provas, a mãe da criança foi então denunciada pela prática do crime descrito no art. 123 do Código Penal perante a 1ª Vara Criminal (Tribunal do Júri). Durante a ação penal, é juntado aos autos o laudo de necropsia realizada no corpo da criança. A prova técnica concluiu que a criança já nascera morta.
+
+    Na audiência de instrução, realizada no dia 12 de agosto de 2010, Lia é novamente inquirida, ocasião em que confirmou ter a denunciada, em conversa telefônica, admitido ter jogado o corpo da criança no córrego. A mesma testemunha, no entanto, trouxe nova informação, que não mencionara quando ouvida na fase inquisitorial. Disse que, em outras conversas que tivera com a mãe da criança, Helena contara que tomara substância abortiva, pois não poderia, de jeito nenhum, criar o filho. Interrogada, a denunciada negou todos os fatos. Finda a instrução, o Ministério Público manifestou-se pela pronúncia, nos termos da denúncia, e a defesa, pela impronúncia, com base no interrogatório da acusada, que negara todos os fatos. O magistrado, na mesma audiência, prolatou sentença de pronúncia, não nos termos da denúncia, e sim pela prática do crime descrito no art. 124 do Código Penal, punido menos severamente do que aquele previsto no art. 123 do mesmo código, intimando as partes no referido ato.
+
+    **Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, na condição de advogado(a) de Helena, redija a peça cabível à impugnação da mencionada decisão, acompanhada das razões pertinentes, as quais devem apontar os argumentos para o provimento do recurso, mesmo que em caráter sucessivo.**
+  gabarito_comentado: |-
     O recurso cabível é o recurso em sentido estrito, na forma do art. 581, IV, do Código de Processo Penal, dirigido ao Juiz da 1ª Vara Criminal (Tribunal do Júri).
 
     Em primeiro lugar, deverá o examinando requerer, em preliminar, o desentranhamento das provas ilícitas.
@@ -28,7 +35,6 @@ peca:
     Finalmente, deveria requerer, em caráter sucessivo, a impronúncia da acusada, uma vez que, retiradas as provas ilícitas dos autos, nenhuma prova de autoria existiria contra a denunciada.
 
     Em relação aos itens da correção, assim ficaram divididos:
-  gabarito_comentado: ""
   itens:
     - n: "1"
       descricao: "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) (0,35) e indicação da norma: art. 581, IV, CPP (0,35)."
@@ -80,6 +86,16 @@ peca:
 questoes:
   - n: 1
     enunciado: |-
+      Caio, na qualidade de diretor financeiro de uma conhecida empresa de fornecimento de material de informática, se apropriou das contribuições previdenciárias devidas dos empregados da empresa e por esta descontadas, utilizando o dinheiro para financiar um automóvel de luxo. A partir de comunicação feita por Adolfo, empregado da referida empresa, tal fato chegou ao conhecimento da Polícia Federal, dando ensejo à instauração de inquérito para apurar o crime previsto no artigo 168-A do Código Penal. No curso do aludido procedimento investigatório, a autoridade policial apurou que Caio também havia praticado o crime de sonegação fiscal, uma vez que deixara de recolher ICMS relativamente às operações da mesma empresa. Ao final do inquérito policial, os fatos ficaram comprovados, também pela confissão de Caio em sede policial. Nessa ocasião, ele afirmou estar arrependido e apresentou comprovante de pagamento exclusivamente das contribuições previdenciárias devidas ao INSS, pagamento realizado após a instauração da investigação, ficando não paga a dívida relativa ao ICMS. Assim, o delegado encaminhou os autos ao Ministério Público Federal, que denunciou Caio pelos crimes previstos nos artigos 168-A do Código Penal e 1º, I, da Lei 8.137/90, tendo a inicial acusatória sido recebida pelo juiz da vara federal da localidade. Após analisar a resposta à acusação apresentada pelo advogado de Caio, o aludido magistrado entendeu não ser o caso de absolvição sumária, tendo designado audiência de instrução e julgamento.
+
+      **Com base nos fatos narrados no enunciado, responda aos itens a seguir, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.**
+
+      **a) Qual é o meio de impugnação cabível à decisão do Magistrado que não o absolvera sumariamente? (Valor: 0,2)**
+
+      **b) A quem a impugnação deve ser endereçada? (Valor: 0,2)**
+
+      **c) Quais fundamentos devem ser utilizados? (Valor: 0,6)**
+    gabarito_comentado: |-
       a) Habeas Corpus, uma vez que não há previsão de recurso contra a decisão que não absolvera sumariamente o acusado, sendo cabível a ação mandamental, conforme estabelecem os artigos 647 e seguintes do CPP. No caso, não seria admissível o recurso em sentido estrito, uma vez que o enunciado não traz qualquer informação acerca da fundamentação utilizada pelo magistrado para deixar de absolver sumariamente o réu, não podendo o candidato deduzir que teria sido realizado e indeferido pedido expresso de reconhecimento de extinção da punibilidade.
 
       b) Ao Tribunal Regional Federal.
@@ -87,7 +103,6 @@ questoes:
       c) Extinção da punibilidade pelo pagamento do débito quanto ao delito previsto no artigo 168-A, do CP, e, após, restando apenas acusação pertinente à sonegação de tributo de natureza estadual, incompetência absoluta – em razão da matéria – do juízo federal para processar e julgar a matéria. Quanto à Súmula Vinculante nº 24, o enunciado não traz qualquer informação no sentido de que a via administrativa ainda não teria se esgotado, não podendo o candidato deduzir tal fato.
 
       Em relação à correção, levou-se em conta o seguinte critério de pontuação:
-    gabarito_comentado: ""
     itens:
       - n: A
         descricao: "Habeas corpus (0,20): não há recurso contra a decisão que não absolveu sumariamente."
@@ -106,6 +121,16 @@ questoes:
     valor: 1
   - n: 2
     enunciado: |-
+      Caio, residente no município de São Paulo, é convidado por seu pai, morador da cidade de Belo Horizonte, para visitá-lo. Ao dirigir-se até Minas Gerais em seu carro, Caio dá carona a Maria, jovem belíssima que conhecera na estrada e que, ao saber do destino de Caio, o convence a subtrair pertences da casa do genitor do rapaz, chegando a sugerir que ele aguardasse o repouso noturno de seu pai para efetuar a subtração. Ao chegar ao local, Caio janta com o pai e o espera adormecer, quando então subtrai da residência uma televisão de plasma, um aparelho de som e dois mil reais. Após encontrar-se com Maria no veículo, ambos se evadem do local e são presos quando chegavam ao município de São Paulo.
+
+      **Com base no relatado acima, responda aos itens a seguir, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.**
+
+      **a) Caio pode ser punido pela conduta praticada e provada? (Valor: 0,4)**
+
+      **b) Maria pode ser punida pela referida conduta? (Valor: 0,4)**
+
+      **c) Em caso de oferecimento de denúncia, qual será o juízo competente para processamento da ação penal? (Valor: 0,2)**
+    gabarito_comentado: |-
       a) Não, uma vez que incide sobre o caso a escusa absolutória prevista no artigo 181, II, do CP.
 
       b) Sim, uma vez que a circunstância relativa a Caio é de caráter pessoal, não se comunicando a ela (artigo 30 do CP). Assim, poderá ser punida pela prática do crime de furto qualificado pelo repouso noturno.
@@ -113,7 +138,6 @@ questoes:
       c) Belo Horizonte, local em que delito se consumou, conforme artigos 69, I, do CPP e 6º do CP.
 
       Em relação à correção, levou-se em conta o seguinte critério de pontuação:
-    gabarito_comentado: ""
     itens:
       - n: A
         descricao: "Não: incide a escusa absolutória (0,20) do art. 181, II, do CP (0,20)."
@@ -133,6 +157,10 @@ questoes:
     valor: 1
   - n: 3
     enunciado: |-
+      Jeremias é preso em flagrante pelo crime de latrocínio, praticado contra uma idosa que acabara de sacar o valor relativo à sua aposentadoria dentro de uma agência da Caixa Econômica Federal e presenciado por duas funcionárias da referida instituição, as quais prestaram depoimento em sede policial e confirmaram a prática do delito. Ao oferecer denúncia perante o Tribunal do Júri da Justiça Federal da localidade, o Ministério Público Federal requereu a decretação da prisão preventiva de Jeremias para a garantia da ordem pública, por ser o crime gravíssimo e por conveniência da instrução criminal, uma vez que as testemunhas seriam mulheres e poderiam se sentir amedrontadas caso o réu fosse posto em liberdade antes da colheita de seus depoimentos judiciais. Ao receber a inicial, o magistrado decretou a prisão preventiva de Jeremias, utilizando-se dos argumentos apontados pelo Parquet.
+
+      **Com base no caso acima, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso, indique os argumentos defensivos para atacar a decisão judicial que recebeu a denúncia e decretou a prisão preventiva.**
+    gabarito_comentado: |-
       a) Não, pois a competência para processamento e julgamento é de uma vara comum da justiça estadual, por se tratar de crime patrimonial e que não ofende bens, serviços ou interesses da União ou de suas entidades autárquicas.
 
       b) Não, pois a jurisprudência é pacífica no sentido de que considerações genéricas e presunções de que em liberdade as testemunhas possam sentir-se amedrontadas não são argumentos válidos para a decretação da prisão antes do trânsito em julgado de decisão condenatória, pois tal providência possui natureza estritamente cautelar, de modo que somente poderá ser determinada quando calcada em elementos concretos que demonstrem a existência de risco efetivo à eficácia da prestação jurisdicional.
@@ -140,7 +168,6 @@ questoes:
       c) Tribunal Regional Federal, pois a autoridade coatora é juiz de direito federal.
 
       Em relação à correção, levou-se em conta o seguinte critério de pontuação:
-    gabarito_comentado: ""
     itens:
       - n: A
         descricao: Incompetência da Justiça Federal (0,15), por não se enquadrar no art. 109 da CRFB (0,15).
@@ -160,6 +187,16 @@ questoes:
     valor: 1
   - n: 4
     enunciado: |-
+      Caio, professor do curso de segurança no trânsito, motorista extremamente qualificado, guiava seu automóvel tendo Madalena, sua namorada, no banco do carona. Durante o trajeto, o casal começa a discutir asperamente, o que faz com que Caio empreenda altíssima velocidade ao automóvel. Muito assustada, Madalena pede insistentemente para Caio reduzir a marcha do veículo, pois àquela velocidade não seria possível controlar o automóvel. Caio, entretanto, respondeu aos pedidos dizendo ser perito em direção e refutando qualquer possibilidade de perder o controle do carro. Todavia, o automóvel atinge um buraco e, em razão da velocidade empreendida, acaba se desgovernando, vindo a atropelar três pessoas que estavam na calçada, vitimando-as fatalmente. Realizada perícia de local, que constatou o excesso de velocidade, e ouvidos Caio e Madalena, que relataram à autoridade policial o diálogo travado entre o casal, Caio foi denunciado pelo Ministério Público pela prática do crime de homicídio na modalidade de dolo eventual, três vezes em concurso formal. Recebida a denúncia pelo magistrado da vara criminal vinculada ao Tribunal do Júri da localidade e colhida a prova, o Ministério Público pugnou pela pronúncia de Caio, nos exatos termos da inicial.
+
+      **Na qualidade de advogado de Caio, chamado aos debates orais, responda aos itens a seguir, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.**
+
+      **a) Qual(is) argumento(s) poderia(m) ser deduzidos em favor de seu constituinte? (Valor: 0,4)**
+
+      **b) Qual pedido deveria ser realizado? (Valor: 0,3)**
+
+      **c) Caso Caio fosse pronunciado, qual recurso poderia ser interposto e a quem a peça de interposição deveria ser dirigida? (Valor: 0,3)**
+    gabarito_comentado: |-
       a) Incompetência do juízo, uma vez que Caio praticou homicídio culposo, pois agiu com culpa consciente, na medida em que, embora tenha previsto o resultado, acreditou que o evento não fosse ocorrer em razão de sua perícia.
 
       b) Desclassificação da imputação para homicídio culposo e declínio de competência, conforme previsão do artigo 419 do CPP.
@@ -167,7 +204,6 @@ questoes:
       c) Recurso em sentido estrito, conforme previsão do artigo 581, IV, do CPP. A peça de interposição deveria ser dirigida ao juiz de direito da vara criminal vinculada ao tribunal do júri, prolator da decisão atacada.
 
       Em relação à correção, levou-se em conta o seguinte critério de pontuação:
-    gabarito_comentado: ""
     itens:
       - n: A
         descricao: "Incompetência do juízo: Caio praticou homicídio culposo (0,20), pois agiu com culpa consciente, acreditando que o resultado não ocorreria (0,20)."
@@ -187,12 +223,19 @@ questoes:
     valor: 1
   - n: 5
     enunciado: |-
+      Em 22 de julho de 2008, Caio foi condenado à pena de 10 (dez) anos de reclusão, a ser cumprida em regime inicialmente fechado, pela prática, no dia 10 de novembro de 2006, do crime de tráfico de drogas, previsto no artigo 33 da Lei 11.343/2006. Iniciada a execução da sua pena em 7 de janeiro de 2009, a Defensoria Pública, em 10 de fevereiro de 2011, requereu a progressão do cumprimento da sua pena para o regime semiaberto, tendo o pedido sido indeferido pelo juízo de execuções penais ao argumento de que, para tanto, seria necessário o cumprimento de 2/5 da pena.
+
+      **Considerando ter sido procurado pela família de Caio para advogar em sua defesa, responda aos itens a seguir, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.**
+
+      **a) Qual(is) o(s) meio(s) de impugnação da decisão que indeferiu o pedido da Defensoria Pública? (Valor: 0,3)**
+
+      **b) Qual(is) argumento(s) jurídico(s) poderia(m) ser usado(s) em defesa da progressão de regime de Caio? (Valor: 0,7)**
+    gabarito_comentado: |-
       a) Habeas Corpus e agravo em execução penal.
 
       b) Tendo em vista que a norma que alterou as regras relativas à progressão de regime possui natureza penal e é mais gravosa ao réu, não pode retroagir de modo a abarcar fatos que lhe são anteriores. No caso, o delito foi praticado antes da edição da lei, devendo, em consequência, ser aplicada a fração de 1/6 para a progressão de regime.
 
       Em relação à correção, levou-se em conta o seguinte critério de pontuação:
-    gabarito_comentado: ""
     itens:
       - n: A
         descricao: Habeas corpus e agravo em execução penal (0,15 cada).
@@ -207,3 +250,14 @@ questoes:
           - { id: c3, valor: 0.2, termos: [ 1/6 ] }
     valor: 1
 observacoes: "Exame de 2010: peça (5,00) e cinco questões de 1,00 cada."
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q5, lei: "Lei 13.964/2019", texto: "A Lei 13.964/2019 (Pacote Anticrime) reescreveu o art. 112 da LEP, com percentuais de 16% a 70% no lugar das frações, e revogou o § 2º do art. 2º da Lei 8.072/1990 (os 2/5 e 3/5 citados na questão). A tese da questão continua valendo: a lei posterior mais grave não retroage, e o crime de 2006 segue a fração de 1/6 da redação antiga do art. 112 da LEP (Súmula Vinculante 26 e Súmula 471 do STJ)." }
+  nomes:
+    peca: { Helena: Medeia, Lia: Cassandra }   # a mãe acusada de matar o recém-nascido; a testemunha
+    q1: { Caio: Midas, Adolfo: Argos }   # o desvio das contribuições para o carro de luxo; o empregado que avisou a polícia
+    q2: { Caio: Ícaro, Maria: Circe }   # o filho que furta o pai; a que o convenceu
+    q3: { Jeremias: Procusto }   # o latrocínio
+    q4: { Caio: Faetonte, Madalena: Cassandra }   # o perito que correu demais; a namorada que avisou e não foi ouvida
+    q5: { Caio: Sísifo }   # a execução da pena

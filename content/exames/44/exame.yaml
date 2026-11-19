@@ -290,3 +290,12 @@ questoes:
         componentes:
           - { id: c1, valor: 0.5, termos: [ falsidade documental | incidente de falsidade | falsidade ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 145, CPP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Aluísio: Héracles, Aluisio: Héracles, Manoel: Pigmaleão }   # golpeou o "monstro"; o dono da estátua
+    q1: { Carlos: Midas }   # a fraude contra a União
+    q2: { Manoela: Éris, Alessandra: Ariadne }   # a briga na escola
+    q3: { Karina: Báucis, Daniel: Filemon, César: Plutão }   # o casal; o locador
+    q4: { Vitor: Príamo }   # o pai do refém (Banco Hades)
+    empresas: { Banco Beta: Banco Hades }   # o sequestro, como o de Perséfone

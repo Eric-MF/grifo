@@ -1,18 +1,221 @@
-.list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); }
-.item { display: flex; align-items: center; gap: 1rem; text-decoration: none; color: inherit; padding: 1rem 1.2rem; }
-.item:hover { border-color: var(--accent); text-decoration: none; }
-.num {
-  flex: none; min-width: 64px; height: 56px; padding-inline: 0.4rem; border-radius: 12px; display: grid; place-items: center;
-  background: var(--navy); color: var(--gold); font-family: var(--font-title); font-weight: 700; font-size: 1.15rem;
-}
-:global(:root[data-theme="escuro"]) .num { background: var(--surface-2); }
-.info { display: flex; flex-direction: column; gap: 0.1rem; min-width: 0; flex: 1; }
-.info .muted { font-size: 0.9rem; }
-.badges { display: flex; flex-direction: column; gap: 0.3rem; align-items: flex-end; }
-.hist { margin-top: 2rem; }
-.hist h2 { font-size: 1.4rem; }
-.histList { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
-.histItem { display: flex; gap: 0.6rem; align-items: center; padding: 0.5rem 0.8rem; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); text-decoration: none; color: inherit; font-size: 0.9rem; }
-.histItem strong { font-variant-numeric: tabular-nums; }
+/* A aba de Simulados: o painel do andamento, a barra de busca e filtros, os exames feitos e os que faltam. */
 .ok { color: var(--ok); }
 .bad { color: var(--bad); }
+.rotulo { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.rotulo small { margin-left: 0.3rem; font-size: inherit; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.chaveCorte::before {
+  content: ""; display: inline-block; width: 16px; margin: 0 0.3rem 0 0.4rem; vertical-align: 0.25em; border-top: 2px dashed var(--accent);
+}
+
+/* ---- Painel do andamento ---- */
+.painel {
+  margin-top: 1.75rem; display: grid; gap: 1.1rem 1.6rem; padding: 1.25rem 1.4rem;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr) minmax(0, 0.9fr);
+  grid-template-areas: "progresso evolucao atalhos" "mapa mapa mapa";
+  border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow);
+}
+@media (max-width: 1020px) {
+  .painel { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "progresso atalhos" "evolucao evolucao" "mapa mapa"; }
+}
+@media (max-width: 640px) {
+  .painel { grid-template-columns: minmax(0, 1fr); grid-template-areas: "progresso" "atalhos" "evolucao" "mapa"; padding: 1rem; }
+}
+
+/* o anel dos exames feitos e os três números ao lado */
+.progressoGeral { grid-area: progresso; display: flex; align-items: center; gap: 1rem; }
+.anelGrande { position: relative; flex: none; width: 108px; height: 108px; }
+.anelGrande svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.anelGrande circle { fill: none; stroke-width: 10; stroke: var(--surface-2); }
+.anelGrande circle + circle { stroke: var(--primary); stroke-linecap: round; transition: stroke-dasharray 0.6s ease; }
+.anelGrande > span { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; line-height: 1; }
+.anelGrande b { font-size: 2rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.anelGrande small { margin-top: 0.2rem; font-size: 0.75rem; color: var(--muted); }
+.resumo { margin: 0; display: grid; gap: 0.45rem; min-width: 0; flex: 1; }
+.resumo div { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; padding-bottom: 0.35rem; border-bottom: 1px dashed var(--border); }
+.resumo div:last-child { border-bottom: 0; padding-bottom: 0; }
+.resumo dt { font-size: 0.82rem; color: var(--muted); }
+.resumo dd { margin: 0; font-size: 1.15rem; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.resumo dd[data-estado="ok"] { color: var(--ok); }
+.resumo dd[data-estado="bad"] { color: var(--bad); }
+
+/* a evolução das notas: cada ponto é o link da correção */
+.evolucao { grid-area: evolucao; display: grid; gap: 0.35rem; align-content: start; min-width: 0; }
+.grafico { width: 100%; height: auto; overflow: visible; }
+.grade { stroke: var(--border); stroke-width: 1; }
+.eixo { fill: var(--muted); font-size: 10px; font-family: var(--font-body); }
+.corte { stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.linha { fill: none; stroke: var(--primary); stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+.ponto { cursor: pointer; outline: none; }
+.alvo { fill: transparent; }
+.ponto circle[data-estado] { stroke: var(--surface); stroke-width: 2; transition: r 0.12s; }
+.ponto circle[data-estado="ok"] { fill: var(--ok); }
+.ponto circle[data-estado="bad"] { fill: var(--bad); }
+.ponto:hover circle[data-estado], .ponto:focus-visible circle[data-estado] { r: 6.5; }
+.ponto:focus-visible .alvo { stroke: var(--accent); stroke-width: 1.5; }
+.semDados {
+  margin: 0; padding: 1.2rem 1rem; border: 1px dashed var(--border); border-radius: 12px; color: var(--muted); font-size: 0.9rem; text-align: center;
+}
+
+/* o próximo passo: a prova em andamento e o próximo sugerido */
+.atalhos { grid-area: atalhos; display: grid; gap: 0.6rem; align-content: start; }
+.atalho {
+  display: grid; gap: 0.1rem; padding: 0.75rem 0.95rem; border-radius: 12px; border: 1px solid var(--border); text-decoration: none; color: inherit;
+  background: color-mix(in srgb, var(--primary) 6%, var(--surface));
+}
+.atalho:hover { border-color: var(--primary); text-decoration: none; }
+.atalho strong { font-size: 1.1rem; }
+.atalho > span:last-child { font-size: 0.88rem; color: var(--primary); font-weight: 600; }
+.atalhoAndamento { background: color-mix(in srgb, var(--accent) 14%, var(--surface)); border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
+
+/* o mapa: um quadrado por exame, na ordem da prova, com a cor do resultado */
+.mapa { grid-area: mapa; display: grid; gap: 0.45rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.quadros { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px; }
+@media (max-width: 640px) { .quadros { grid-template-columns: repeat(auto-fill, minmax(26px, 1fr)); gap: 3px; } .quadros a { font-size: 0.66rem; } }
+.quadros a {
+  display: grid; place-items: center; aspect-ratio: 1; border-radius: 6px; font-size: 0.72rem; font-weight: 700; font-variant-numeric: tabular-nums;
+  text-decoration: none; color: var(--muted); background: var(--surface-2); border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  transition: transform 0.1s;
+}
+.quadros a:hover, .quadros a:focus-visible { transform: scale(1.15); border-color: var(--text); text-decoration: none; }
+.quadros a[data-estado="ok"] { background: var(--ok); border-color: transparent; color: var(--on-estado); }
+.quadros a[data-estado="bad"] { background: var(--bad); border-color: transparent; color: var(--on-estado); }
+.quadros a[data-estado="andamento"] { background: var(--accent); border-color: transparent; color: var(--navy); }
+.quadros a[data-estado="sem"] { opacity: 0.45; }
+.legenda { display: flex; flex-wrap: wrap; gap: 0.3rem 0.9rem; font-size: 0.75rem; color: var(--muted); }
+.legenda span::before {
+  content: ""; display: inline-block; width: 10px; height: 10px; margin-right: 0.35rem; border-radius: 3px; vertical-align: -1px;
+  background: var(--surface-2); border: 1px solid var(--border);
+}
+.legenda span[data-estado="ok"]::before { background: var(--ok); border-color: transparent; }
+.legenda span[data-estado="bad"]::before { background: var(--bad); border-color: transparent; }
+.legenda span[data-estado="andamento"]::before { background: var(--accent); border-color: transparent; }
+
+/* ---- Busca, filtros e ordem ---- */
+.barra { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.9rem; margin: 1.75rem 0 0; }
+.busca {
+  flex: 1 1 240px; min-width: 0; padding: 0.6rem 0.9rem; border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+  color: var(--text); font: inherit;
+}
+.busca:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+.filtros { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.filtros button, .ordem {
+  display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; border: 1px solid var(--border); border-radius: 999px;
+  background: var(--surface); color: var(--text); font: inherit; font-size: 0.88rem; font-weight: 600; cursor: pointer;
+}
+.filtros button span { font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.filtros button[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: var(--primary-ink); }
+.filtros button[aria-pressed="true"] span { color: inherit; opacity: 0.8; }
+.filtros button:disabled { opacity: 0.5; cursor: default; }
+.barraFim { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.6rem; }
+.ordem { background: none; border-color: transparent; color: var(--muted); }
+.ordem:hover { color: var(--text); }
+.nenhum { margin: 1rem 0 2rem; color: var(--muted); }
+
+/* ---- As duas listas ---- */
+.secao { margin-top: 1.9rem; }
+.secao h2 { display: flex; align-items: baseline; gap: 0.5rem; margin: 0 0 0.85rem; font-size: 1.45rem; }
+.secao h2 span {
+  padding: 0.05rem 0.55rem; border-radius: 999px; background: var(--surface-2); font-family: var(--font-body); font-size: 0.8rem; font-weight: 700;
+  color: var(--muted); font-variant-numeric: tabular-nums;
+}
+.list, .listaFeitos { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
+.list { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+.listaFeitos { grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); }
+/* no celular, os 10 primeiros e o botão; "Mostrar todos" abre o resto */
+.mostrarTodos { display: none; }
+@media (max-width: 640px) {
+  .list:not([data-todos]) > li[data-alem], .listaFeitos:not([data-todos]) > li[data-alem] { display: none; }
+  .mostrarTodos {
+    display: block; width: 100%; margin-top: 0.75rem; padding: 0.7rem 1rem; border: 1px dashed var(--border); border-radius: var(--radius);
+    background: var(--surface); color: var(--primary); font: inherit; font-weight: 700; cursor: pointer;
+  }
+}
+
+/* o exame que falta: compacto */
+.item {
+  display: flex; align-items: center; gap: 1rem; height: 100%; text-decoration: none; color: inherit; padding: 0.85rem 1rem; border-left-width: 4px;
+}
+.item:hover { border-color: var(--accent); text-decoration: none; }
+.item[data-estado="andamento"] { border-left-color: var(--accent); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+.num {
+  flex: none; min-width: 60px; height: 52px; padding-inline: 0.4rem; border-radius: 12px; display: grid; place-items: center;
+  background: var(--navy); color: var(--gold); font-family: var(--font-title); font-weight: 700; font-size: 1.1rem;
+}
+:global(:root[data-theme="escuro"]) .num { background: var(--surface-2); }
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme])) .num { background: var(--surface-2); }
+}
+.info { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; flex: 1; }
+.info strong { font-size: 1.02rem; }
+.info .muted { font-size: 0.86rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.etiquetas { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+.etiquetas:empty { display: none; }
+.etiquetas span {
+  padding: 0.05rem 0.45rem; border-radius: 999px; border: 1px solid var(--border); font-size: 0.68rem; font-weight: 700; color: var(--muted);
+  background: var(--surface-2);
+}
+.situacao { flex: none; display: grid; justify-items: end; gap: 0.05rem; text-align: right; }
+.situacao small { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; }
+.situacao b { font-size: 1.2rem; font-variant-numeric: tabular-nums; }
+.fazer { font-size: 0.88rem; font-weight: 700; color: var(--primary); }
+
+/* o exame feito: o anel da melhor nota, as barras das partes, as tentativas e as ações */
+.feito {
+  position: relative; display: grid; gap: 0.7rem; height: 100%; padding: 1rem 1.1rem; border-top-width: 4px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--estado, var(--primary)) 7%, var(--surface)), var(--surface) 55%);
+}
+.feito[data-estado="ok"] { --estado: var(--ok); border-top-color: var(--ok); }
+.feito[data-estado="bad"] { --estado: var(--bad); border-top-color: var(--bad); }
+.feito:hover { border-color: var(--accent); border-top-color: var(--estado); }
+.feitoTopo { display: flex; align-items: center; gap: 0.9rem; }
+/* o título é o link da correção, esticado sobre o cartão; as ações ficam por cima */
+.esticado { color: inherit; text-decoration: none; }
+.esticado::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.esticado:focus-visible { outline: none; }
+.esticado:focus-visible::after { outline: 2px solid var(--primary); outline-offset: 2px; }
+.anelNota { position: relative; flex: none; width: 64px; height: 64px; }
+.anelNota svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.anelNota circle { fill: none; stroke-width: 6; stroke: var(--surface-2); }
+.anelNota circle + circle { stroke: var(--estado, var(--primary)); stroke-linecap: round; }
+.anelNota[data-estado="ok"] { --estado: var(--ok); }
+.anelNota[data-estado="bad"] { --estado: var(--bad); }
+.anelNota b { position: absolute; inset: 0; display: grid; place-items: center; font-size: 1rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--estado); }
+.partes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.45rem 0.8rem; }
+/* cada questão: o rótulo e a nota numa linha, a barra embaixo, na largura toda */
+.partes li { display: grid; grid-template-columns: auto auto; justify-content: space-between; align-items: baseline; gap: 0.2rem 0.4rem; font-size: 0.78rem; }
+.partes li .barraParte { grid-column: 1 / -1; grid-row: 2; }
+.partes li[data-peca] { grid-column: 1 / -1; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 0.5rem; font-size: 0.85rem; }
+.partes li[data-peca] .barraParte { grid-column: auto; grid-row: auto; }
+.partes li > span:first-child { color: var(--muted); font-weight: 600; }
+.partes b { font-variant-numeric: tabular-nums; font-size: 0.78rem; }
+.partes li[data-peca] b { font-size: 0.88rem; }
+.barraParte { height: 7px; border-radius: 4px; background: var(--surface-2); overflow: hidden; }
+.partes li[data-peca] .barraParte { height: 9px; }
+.barraParte span { display: block; height: 100%; border-radius: inherit; background: var(--primary); }
+.barraParte span[data-nivel="alto"] { background: var(--ok); }
+.barraParte span[data-nivel="medio"] { background: var(--accent); }
+.barraParte span[data-nivel="baixo"] { background: var(--bad); }
+@media (max-width: 420px) {
+  .partes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.feitoRodape { margin: 0; font-size: 0.8rem; color: var(--muted); }
+.feitoRodape [data-estado="ok"] { color: var(--ok); font-weight: 700; }
+.feitoRodape [data-estado="bad"] { color: var(--bad); font-weight: 700; }
+.feitoAndamento { margin: -0.3rem 0 0; font-size: 0.8rem; font-weight: 600; color: color-mix(in srgb, var(--accent) 70%, var(--text)); }
+.feitoAcoes { position: relative; z-index: 1; display: flex; gap: 0.5rem; justify-content: flex-end; }
+@media (prefers-reduced-motion: reduce) {
+  .quadros a, .anelGrande circle + circle { transition: none; }
+  .quadros a:hover { transform: none; }
+}
+
+/* o próximo simulado sugerido (a mesma regra das Estatísticas), com a explicação fechada: ela pode dizer a peça */
+.sugestao {
+  display: grid; gap: 0.3rem; justify-items: start; padding: 0.8rem 0.95rem; border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, var(--border)); background: color-mix(in srgb, var(--primary) 7%, var(--surface));
+}
+.sugestao strong { font-size: 1.1rem; }
+.sugestao strong small { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+.sugestaoMotivo { margin: 0; font-size: 0.86rem; line-height: 1.45; }
+.sugestaoMotivo span { color: var(--muted); font-size: 0.8rem; }
+.linkBotao { padding: 0; border: 0; background: none; color: var(--primary); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
+.sugestao .btn { margin-top: 0.25rem; }

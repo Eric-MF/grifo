@@ -1,382 +1,72 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "07"
+introducoes:
+  peca: "Logo depois do parto, Ana, sob influência do estado puerperal atestada em laudo, bateu repetidas vezes a cabeça do filho recém-nascido na parede, matando-o. Foi denunciada no Tribunal do Júri por homicídio triplamente qualificado. Nas alegações finais, a defesa sustentou que Ana não praticou o fato e, só alternativamente, que seria inimputável. O juiz absolveu Ana sumariamente por inimputabilidade, por causa do estado puerperal. O Ministério Público, intimado em 11/1/2011, não recorreu. Em 20/1/2011, o pai da vítima procura você para recorrer como assistente da acusação."
+  q3: "Maria, deprimida, falava em se matar. João, querendo a morte dela, passou a visitá-la todos os dias para incentivá-la a pular da janela. Um dia, Maria pulou e, por sorte, sofreu só arranhões."
+  q4: "Na véspera do aniversário de 18 anos da namorada, Joana, Maurício trocou com a própria mãe um cheque de R$ 20 mil que sabia não ter fundos e gastou R$ 18 mil em três dias de luxo com Joana, num hotel. Todos os pagamentos foram feitos por ele, em dinheiro."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["07-peca-3", "07-peca-4", "07-peca-5", "07-peca-8-1", "07-peca-8-2", "07-q3-a"]
 perguntas:
-  - id: 07-peca-3
-    categoria: peca-detalhe
-    parte: peca
-    item: "3"
-    secao: enderecamento
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Grávida de nove meses, Ana entra em trabalho de parto, vindo dar à luz um menino saudável, o qual é imediatamente colocado em seu colo. Ao ter o recém-nascido em suas mãos, Ana é tomada por extremo furor, bradando aos gritos que seu filho era um “monstro horrível que não saiu de mim” e bate por seguidas vezes a cabeça da criança na parede do quarto do hospital, vitimando-a fatalmente. Após ser dominada pelos funcionários do hospital, Ana é presa em flagrante delito.
-
-      Durante a fase de inquérito policial, foi realizado exame médico-legal, o qual atestou que Ana agira sob influência de estado puerperal. Posteriormente, foi denunciada, com base nas provas colhidas na fase inquisitorial, sobretudo o laudo do expert, perante a 1ª Vara Criminal/Tribunal do Júri pela prática do crime de homicídio triplamente qualificado, haja vista ter sustentado o Parquet que Ana fora movida por motivo fútil, empregara meio cruel para a consecução do ato criminoso, além de se utilizar de recurso que tornou impossível a defesa da vítima. Em sede de Alegações Finais Orais, o Promotor de Justiça reiterou os argumentos da denúncia, sustentando que Ana teria agido impelida por motivo fútil ao decidir matar seu filho em razão de tê-lo achado feio e teria empregado meio cruel ao bater a cabeça do bebê repetidas vezes contra a parede, além de impossibilitar a defesa da vítima, incapaz, em razão da idade, de defender-se.
-
-      A Defensoria Pública, por sua vez, alegou que a ré não teria praticado o fato e, alternativamente, se o tivesse feito, não possuiria plena capacidade de autodeterminação, sendo inimputável. Ao proferir a sentença, o magistrado competente entendeu por bem absolver sumariamente a ré em razão de inimputabilidade, pois, ao tempo da ação, não seria ela inteiramente capaz de se autodeterminar em consequência da influência do estado puerperal. Tendo sido intimado o Ministério Público da decisão, em 11 de janeiro de 2011, o prazo recursal transcorreu in albis sem manifestação do Parquet.
-
-      Em relação ao caso acima, você, na condição de advogado(a), é procurado pelo pai da vítima, em 20 de janeiro de 2011, para habilitar-se como assistente da acusação e impugnar a decisão.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, sustentando, para tanto, as teses jurídicas pertinentes, datando do último dia do prazo.
-
-      (valor: 5,00)
-    comando: A quem deve ser endereçada a peça?
-    gabarito: Endereçamento correto da interposição (1ª Vara Criminal/Tribunal do Júri)
-    opcoes:
-      correta: Endereçamento correto da interposição (1ª Vara Criminal/Tribunal do Júri)
-      erradas:
-        - "Endereçamento correto das razões: Tribunal de Justiça do Estado."
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-        - Endereçamento correto – Juiz de Direito da XX Vara Criminal da Comarca...
-        - "Endereçamento: Juízo da Vara de Execuções Penais de Belo Horizonte/MG"
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro"
-    revisao: &a1
-      status: revisado
-  - id: 07-peca-4
-    categoria: peca-detalhe
-    parte: peca
-    item: "4"
-    secao: enderecamento
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Grávida de nove meses, Ana entra em trabalho de parto, vindo dar à luz um menino saudável, o qual é imediatamente colocado em seu colo. Ao ter o recém-nascido em suas mãos, Ana é tomada por extremo furor, bradando aos gritos que seu filho era um “monstro horrível que não saiu de mim” e bate por seguidas vezes a cabeça da criança na parede do quarto do hospital, vitimando-a fatalmente. Após ser dominada pelos funcionários do hospital, Ana é presa em flagrante delito.
-
-      Durante a fase de inquérito policial, foi realizado exame médico-legal, o qual atestou que Ana agira sob influência de estado puerperal. Posteriormente, foi denunciada, com base nas provas colhidas na fase inquisitorial, sobretudo o laudo do expert, perante a 1ª Vara Criminal/Tribunal do Júri pela prática do crime de homicídio triplamente qualificado, haja vista ter sustentado o Parquet que Ana fora movida por motivo fútil, empregara meio cruel para a consecução do ato criminoso, além de se utilizar de recurso que tornou impossível a defesa da vítima. Em sede de Alegações Finais Orais, o Promotor de Justiça reiterou os argumentos da denúncia, sustentando que Ana teria agido impelida por motivo fútil ao decidir matar seu filho em razão de tê-lo achado feio e teria empregado meio cruel ao bater a cabeça do bebê repetidas vezes contra a parede, além de impossibilitar a defesa da vítima, incapaz, em razão da idade, de defender-se.
-
-      A Defensoria Pública, por sua vez, alegou que a ré não teria praticado o fato e, alternativamente, se o tivesse feito, não possuiria plena capacidade de autodeterminação, sendo inimputável. Ao proferir a sentença, o magistrado competente entendeu por bem absolver sumariamente a ré em razão de inimputabilidade, pois, ao tempo da ação, não seria ela inteiramente capaz de se autodeterminar em consequência da influência do estado puerperal. Tendo sido intimado o Ministério Público da decisão, em 11 de janeiro de 2011, o prazo recursal transcorreu in albis sem manifestação do Parquet.
-
-      Em relação ao caso acima, você, na condição de advogado(a), é procurado pelo pai da vítima, em 20 de janeiro de 2011, para habilitar-se como assistente da acusação e impugnar a decisão.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, sustentando, para tanto, as teses jurídicas pertinentes, datando do último dia do prazo.
-
-      (valor: 5,00)
-    comando: A quem deve ser endereçada a peça?
-    gabarito: Endereçamento correto das razões (Tribunal de Justiça).
-    opcoes:
-      correta: Endereçamento correto das razões (Tribunal de Justiça).
-      erradas:
-        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
-        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
-        - "Endereçamento: Juiz da Vara do Tribunal do Júri."
-        - "Endereçamento: Vara Criminal da Comarca de Fortaleza, Ceará"
-        - "Endereçamento: Juízo do Tribunal do Júri da Comarca de Maricá/RJ"
-    revisao: *a1
-  - id: 07-peca-5
-    categoria: peca-detalhe
-    parte: peca
-    item: "5"
-    secao: pedido
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Grávida de nove meses, Ana entra em trabalho de parto, vindo dar à luz um menino saudável, o qual é imediatamente colocado em seu colo. Ao ter o recém-nascido em suas mãos, Ana é tomada por extremo furor, bradando aos gritos que seu filho era um “monstro horrível que não saiu de mim” e bate por seguidas vezes a cabeça da criança na parede do quarto do hospital, vitimando-a fatalmente. Após ser dominada pelos funcionários do hospital, Ana é presa em flagrante delito.
-
-      Durante a fase de inquérito policial, foi realizado exame médico-legal, o qual atestou que Ana agira sob influência de estado puerperal. Posteriormente, foi denunciada, com base nas provas colhidas na fase inquisitorial, sobretudo o laudo do expert, perante a 1ª Vara Criminal/Tribunal do Júri pela prática do crime de homicídio triplamente qualificado, haja vista ter sustentado o Parquet que Ana fora movida por motivo fútil, empregara meio cruel para a consecução do ato criminoso, além de se utilizar de recurso que tornou impossível a defesa da vítima. Em sede de Alegações Finais Orais, o Promotor de Justiça reiterou os argumentos da denúncia, sustentando que Ana teria agido impelida por motivo fútil ao decidir matar seu filho em razão de tê-lo achado feio e teria empregado meio cruel ao bater a cabeça do bebê repetidas vezes contra a parede, além de impossibilitar a defesa da vítima, incapaz, em razão da idade, de defender-se.
-
-      A Defensoria Pública, por sua vez, alegou que a ré não teria praticado o fato e, alternativamente, se o tivesse feito, não possuiria plena capacidade de autodeterminação, sendo inimputável. Ao proferir a sentença, o magistrado competente entendeu por bem absolver sumariamente a ré em razão de inimputabilidade, pois, ao tempo da ação, não seria ela inteiramente capaz de se autodeterminar em consequência da influência do estado puerperal. Tendo sido intimado o Ministério Público da decisão, em 11 de janeiro de 2011, o prazo recursal transcorreu in albis sem manifestação do Parquet.
-
-      Em relação ao caso acima, você, na condição de advogado(a), é procurado pelo pai da vítima, em 20 de janeiro de 2011, para habilitar-se como assistente da acusação e impugnar a decisão.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, sustentando, para tanto, as teses jurídicas pertinentes, datando do último dia do prazo.
-
-      (valor: 5,00)
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Pedido de habilitação, na interposição, do pai da vítima como assistente de acusação.
-    opcoes:
-      correta: Pedido de habilitação, na interposição, do pai da vítima como assistente de acusação.
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Conhecimento e provimento do recurso.
-        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
-        - Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
-        - Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
-    revisao: *a1
   - id: 07-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Grávida de nove meses, Ana entra em trabalho de parto, vindo dar à luz um menino saudável, o qual é imediatamente colocado em seu colo. Ao ter o recém-nascido em suas mãos, Ana é tomada por extremo furor, bradando aos gritos que seu filho era um “monstro horrível que não saiu de mim” e bate por seguidas vezes a cabeça da criança na parede do quarto do hospital, vitimando-a fatalmente. Após ser dominada pelos funcionários do hospital, Ana é presa em flagrante delito.
-
-      Durante a fase de inquérito policial, foi realizado exame médico-legal, o qual atestou que Ana agira sob influência de estado puerperal. Posteriormente, foi denunciada, com base nas provas colhidas na fase inquisitorial, sobretudo o laudo do expert, perante a 1ª Vara Criminal/Tribunal do Júri pela prática do crime de homicídio triplamente qualificado, haja vista ter sustentado o Parquet que Ana fora movida por motivo fútil, empregara meio cruel para a consecução do ato criminoso, além de se utilizar de recurso que tornou impossível a defesa da vítima. Em sede de Alegações Finais Orais, o Promotor de Justiça reiterou os argumentos da denúncia, sustentando que Ana teria agido impelida por motivo fútil ao decidir matar seu filho em razão de tê-lo achado feio e teria empregado meio cruel ao bater a cabeça do bebê repetidas vezes contra a parede, além de impossibilitar a defesa da vítima, incapaz, em razão da idade, de defender-se.
-
-      A Defensoria Pública, por sua vez, alegou que a ré não teria praticado o fato e, alternativamente, se o tivesse feito, não possuiria plena capacidade de autodeterminação, sendo inimputável. Ao proferir a sentença, o magistrado competente entendeu por bem absolver sumariamente a ré em razão de inimputabilidade, pois, ao tempo da ação, não seria ela inteiramente capaz de se autodeterminar em consequência da influência do estado puerperal. Tendo sido intimado o Ministério Público da decisão, em 11 de janeiro de 2011, o prazo recursal transcorreu in albis sem manifestação do Parquet.
-
-      Em relação ao caso acima, você, na condição de advogado(a), é procurado pelo pai da vítima, em 20 de janeiro de 2011, para habilitar-se como assistente da acusação e impugnar a decisão.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, sustentando, para tanto, as teses jurídicas pertinentes, datando do último dia do prazo.
-
-      (valor: 5,00)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "A defesa alegou que Ana não praticou o fato e, só alternativamente, a inimputabilidade. Por que o juiz não podia absolvê-la sumariamente pela inimputabilidade?"
+    tese: "Vedação da absolvição sumária por inimputabilidade quando ela não é a única tese defensiva"
+    aceitos: [ "unica tese | unica tese defensiva | nao era a unica | outra tese | outras teses" ]
+    artigos: [ "art. 415, parágrafo único, CPP" ]
     gabarito: "Desenvolvimento jurídico acerca da impossibilidade de se absolver sumariamente pela inimputabilidade por não ser a única tese defensiva alegada na primeira fase do júri e consequente violação ao art. 415, parágrafo único, do CPP. Obs.: a mera indicação do artigo não pontua."
-    opcoes:
-      correta: "Desenvolvimento jurídico acerca da impossibilidade de se absolver sumariamente pela inimputabilidade por não ser a única tese defensiva alegada na primeira fase do júri e consequente violação ao art. 415, parágrafo único, do CPP. Obs.: a mera indicação do artigo não pontua."
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
-        - Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 07-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Grávida de nove meses, Ana entra em trabalho de parto, vindo dar à luz um menino saudável, o qual é imediatamente colocado em seu colo. Ao ter o recém-nascido em suas mãos, Ana é tomada por extremo furor, bradando aos gritos que seu filho era um “monstro horrível que não saiu de mim” e bate por seguidas vezes a cabeça da criança na parede do quarto do hospital, vitimando-a fatalmente. Após ser dominada pelos funcionários do hospital, Ana é presa em flagrante delito.
-
-      Durante a fase de inquérito policial, foi realizado exame médico-legal, o qual atestou que Ana agira sob influência de estado puerperal. Posteriormente, foi denunciada, com base nas provas colhidas na fase inquisitorial, sobretudo o laudo do expert, perante a 1ª Vara Criminal/Tribunal do Júri pela prática do crime de homicídio triplamente qualificado, haja vista ter sustentado o Parquet que Ana fora movida por motivo fútil, empregara meio cruel para a consecução do ato criminoso, além de se utilizar de recurso que tornou impossível a defesa da vítima. Em sede de Alegações Finais Orais, o Promotor de Justiça reiterou os argumentos da denúncia, sustentando que Ana teria agido impelida por motivo fútil ao decidir matar seu filho em razão de tê-lo achado feio e teria empregado meio cruel ao bater a cabeça do bebê repetidas vezes contra a parede, além de impossibilitar a defesa da vítima, incapaz, em razão da idade, de defender-se.
-
-      A Defensoria Pública, por sua vez, alegou que a ré não teria praticado o fato e, alternativamente, se o tivesse feito, não possuiria plena capacidade de autodeterminação, sendo inimputável. Ao proferir a sentença, o magistrado competente entendeu por bem absolver sumariamente a ré em razão de inimputabilidade, pois, ao tempo da ação, não seria ela inteiramente capaz de se autodeterminar em consequência da influência do estado puerperal. Tendo sido intimado o Ministério Público da decisão, em 11 de janeiro de 2011, o prazo recursal transcorreu in albis sem manifestação do Parquet.
-
-      Em relação ao caso acima, você, na condição de advogado(a), é procurado pelo pai da vítima, em 20 de janeiro de 2011, para habilitar-se como assistente da acusação e impugnar a decisão.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, sustentando, para tanto, as teses jurídicas pertinentes, datando do último dia do prazo.
-
-      (valor: 5,00)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "O juiz tratou o estado puerperal como causa de inimputabilidade. Que erro jurídico há nisso?"
+    tese: "O estado puerperal é elementar do infanticídio, não causa de inimputabilidade"
+    aceitos: [ [ "elementar | elemento" ], [ "infanticidio" ] ]
+    artigos: [ "art. 123, CP" ]
     gabarito: "Desenvolvimento jurídico acerca da impossibilidade de se absolver sumariamente pela inimputabilidade por não ser o estado puerperal considerado como tal, já que é elemento do tipo no art. 123 do CP.. Obs.: a mera indicação do artigo não pontua."
-    opcoes:
-      correta: "Desenvolvimento jurídico acerca da impossibilidade de se absolver sumariamente pela inimputabilidade por não ser o estado puerperal considerado como tal, já que é elemento do tipo no art. 123 do CP.. Obs.: a mera indicação do artigo não pontua."
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
-        - Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
-    revisao: *a1
-  - id: 07-peca-8-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "8.1"
-    secao: pedido
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Grávida de nove meses, Ana entra em trabalho de parto, vindo dar à luz um menino saudável, o qual é imediatamente colocado em seu colo. Ao ter o recém-nascido em suas mãos, Ana é tomada por extremo furor, bradando aos gritos que seu filho era um “monstro horrível que não saiu de mim” e bate por seguidas vezes a cabeça da criança na parede do quarto do hospital, vitimando-a fatalmente. Após ser dominada pelos funcionários do hospital, Ana é presa em flagrante delito.
-
-      Durante a fase de inquérito policial, foi realizado exame médico-legal, o qual atestou que Ana agira sob influência de estado puerperal. Posteriormente, foi denunciada, com base nas provas colhidas na fase inquisitorial, sobretudo o laudo do expert, perante a 1ª Vara Criminal/Tribunal do Júri pela prática do crime de homicídio triplamente qualificado, haja vista ter sustentado o Parquet que Ana fora movida por motivo fútil, empregara meio cruel para a consecução do ato criminoso, além de se utilizar de recurso que tornou impossível a defesa da vítima. Em sede de Alegações Finais Orais, o Promotor de Justiça reiterou os argumentos da denúncia, sustentando que Ana teria agido impelida por motivo fútil ao decidir matar seu filho em razão de tê-lo achado feio e teria empregado meio cruel ao bater a cabeça do bebê repetidas vezes contra a parede, além de impossibilitar a defesa da vítima, incapaz, em razão da idade, de defender-se.
-
-      A Defensoria Pública, por sua vez, alegou que a ré não teria praticado o fato e, alternativamente, se o tivesse feito, não possuiria plena capacidade de autodeterminação, sendo inimputável. Ao proferir a sentença, o magistrado competente entendeu por bem absolver sumariamente a ré em razão de inimputabilidade, pois, ao tempo da ação, não seria ela inteiramente capaz de se autodeterminar em consequência da influência do estado puerperal. Tendo sido intimado o Ministério Público da decisão, em 11 de janeiro de 2011, o prazo recursal transcorreu in albis sem manifestação do Parquet.
-
-      Em relação ao caso acima, você, na condição de advogado(a), é procurado pelo pai da vítima, em 20 de janeiro de 2011, para habilitar-se como assistente da acusação e impugnar a decisão.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, sustentando, para tanto, as teses jurídicas pertinentes, datando do último dia do prazo.
-
-      (valor: 5,00)
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Reforma da sentença de absolvição sumária;
-    opcoes:
-      correta: Reforma da sentença de absolvição sumária;
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Conhecimento e provimento do recurso.
-        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
-        - Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
-        - Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
-    revisao: *a1
-  - id: 07-peca-8-2
-    categoria: peca-detalhe
-    parte: peca
-    item: "8.2"
-    secao: pedido
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Grávida de nove meses, Ana entra em trabalho de parto, vindo dar à luz um menino saudável, o qual é imediatamente colocado em seu colo. Ao ter o recém-nascido em suas mãos, Ana é tomada por extremo furor, bradando aos gritos que seu filho era um “monstro horrível que não saiu de mim” e bate por seguidas vezes a cabeça da criança na parede do quarto do hospital, vitimando-a fatalmente. Após ser dominada pelos funcionários do hospital, Ana é presa em flagrante delito.
-
-      Durante a fase de inquérito policial, foi realizado exame médico-legal, o qual atestou que Ana agira sob influência de estado puerperal. Posteriormente, foi denunciada, com base nas provas colhidas na fase inquisitorial, sobretudo o laudo do expert, perante a 1ª Vara Criminal/Tribunal do Júri pela prática do crime de homicídio triplamente qualificado, haja vista ter sustentado o Parquet que Ana fora movida por motivo fútil, empregara meio cruel para a consecução do ato criminoso, além de se utilizar de recurso que tornou impossível a defesa da vítima. Em sede de Alegações Finais Orais, o Promotor de Justiça reiterou os argumentos da denúncia, sustentando que Ana teria agido impelida por motivo fútil ao decidir matar seu filho em razão de tê-lo achado feio e teria empregado meio cruel ao bater a cabeça do bebê repetidas vezes contra a parede, além de impossibilitar a defesa da vítima, incapaz, em razão da idade, de defender-se.
-
-      A Defensoria Pública, por sua vez, alegou que a ré não teria praticado o fato e, alternativamente, se o tivesse feito, não possuiria plena capacidade de autodeterminação, sendo inimputável. Ao proferir a sentença, o magistrado competente entendeu por bem absolver sumariamente a ré em razão de inimputabilidade, pois, ao tempo da ação, não seria ela inteiramente capaz de se autodeterminar em consequência da influência do estado puerperal. Tendo sido intimado o Ministério Público da decisão, em 11 de janeiro de 2011, o prazo recursal transcorreu in albis sem manifestação do Parquet.
-
-      Em relação ao caso acima, você, na condição de advogado(a), é procurado pelo pai da vítima, em 20 de janeiro de 2011, para habilitar-se como assistente da acusação e impugnar a decisão.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, sustentando, para tanto, as teses jurídicas pertinentes, datando do último dia do prazo.
-
-      (valor: 5,00)
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Pronúncia da ré nos exatos termos da denúncia OU pronúncia por homicídio triplamente qualificado OU pronúncia da ré por infanticídio
-    opcoes:
-      correta: Pronúncia da ré nos exatos termos da denúncia OU pronúncia por homicídio triplamente qualificado OU pronúncia da ré por infanticídio
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Conhecimento e provimento do recurso.
-        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
-        - Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
-        - Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 07-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: merito
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Grávida de nove meses, Ana entra em trabalho de parto, vindo dar à luz um menino saudável, o qual é imediatamente colocado em seu colo. Ao ter o recém-nascido em suas mãos, Ana é tomada por extremo furor, bradando aos gritos que seu filho era um “monstro horrível que não saiu de mim” e bate por seguidas vezes a cabeça da criança na parede do quarto do hospital, vitimando-a fatalmente. Após ser dominada pelos funcionários do hospital, Ana é presa em flagrante delito.
-
-      Durante a fase de inquérito policial, foi realizado exame médico-legal, o qual atestou que Ana agira sob influência de estado puerperal. Posteriormente, foi denunciada, com base nas provas colhidas na fase inquisitorial, sobretudo o laudo do expert, perante a 1ª Vara Criminal/Tribunal do Júri pela prática do crime de homicídio triplamente qualificado, haja vista ter sustentado o Parquet que Ana fora movida por motivo fútil, empregara meio cruel para a consecução do ato criminoso, além de se utilizar de recurso que tornou impossível a defesa da vítima. Em sede de Alegações Finais Orais, o Promotor de Justiça reiterou os argumentos da denúncia, sustentando que Ana teria agido impelida por motivo fútil ao decidir matar seu filho em razão de tê-lo achado feio e teria empregado meio cruel ao bater a cabeça do bebê repetidas vezes contra a parede, além de impossibilitar a defesa da vítima, incapaz, em razão da idade, de defender-se.
-
-      A Defensoria Pública, por sua vez, alegou que a ré não teria praticado o fato e, alternativamente, se o tivesse feito, não possuiria plena capacidade de autodeterminação, sendo inimputável. Ao proferir a sentença, o magistrado competente entendeu por bem absolver sumariamente a ré em razão de inimputabilidade, pois, ao tempo da ação, não seria ela inteiramente capaz de se autodeterminar em consequência da influência do estado puerperal. Tendo sido intimado o Ministério Público da decisão, em 11 de janeiro de 2011, o prazo recursal transcorreu in albis sem manifestação do Parquet.
-
-      Em relação ao caso acima, você, na condição de advogado(a), é procurado pelo pai da vítima, em 20 de janeiro de 2011, para habilitar-se como assistente da acusação e impugnar a decisão.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, sustentando, para tanto, as teses jurídicas pertinentes, datando do último dia do prazo.
-
-      (valor: 5,00)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Indicação do prazo (art. 598, parágrafo único, do CPP).
-    opcoes:
-      correta: Indicação do prazo (art. 598, parágrafo único, do CPP).
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
-        - Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
-    revisao: *a1
-  - id: 07-q3-a
-    categoria: discursiva
-    parte: q3
-    item: A
-    caso: |-
-      Há muito tempo Maria encontra-se deprimida, nutrindo desejos de acabar com a própria vida. João, sabedor dessa condição, e querendo a morte de Maria, resolve instigá-la a se matar. Pondo seu plano em prática, João visita Maria todos os dias e, quando ela toca no assunto de não tem mais razão para viver, que deseja se matar, pois a vida não faz mais sentido, João a estimula e a encoraja a pular pela janela.
-
-      Um belo dia, logo após ser instigada por João, Maria salta pela janela de seu apartamento e, por pura sorte, sofre apenas alguns arranhões, não sofrendo qualquer ferimento grave. Considerando apenas os fatos apresentados, responda, de forma justificada, aos seguintes questionamentos:
-    comando: João cometeu algum crime?
-    gabarito: |-
-      O examinando deve responder, no item ‘A’, que João não cometeu qualquer crime, pois o delito descrito no art. 122 do CP, o qual prevê a conduta de instigação, auxílio ou induzimento ao suicídio, não admite a forma tentada (art. 14, II do CP), sendo certo que tal delito somente se consuma com a ocorrência de lesões corporais graves ou morte. Nesse sentido, como Maria teve apenas alguns arranhões, não houve crime.
-
-      Todavia, com o fim de privilegiar a demonstração de conhecimento doutrinário, será aceita como resposta correta ao item ‘A’, a indicação de que haveria crime, mas que o fato não seria punível por faltar condição objetiva de punibilidade. Nesse caso específico, o examinando deverá demonstrar conhecimento sobre o conceito analítico de crime (fato típico, antijurídico e culpável), indicando que a punibilidade não o integra.
-
-      Ainda quanto ao item ‘A’, é indispensável a indicação do dispositivo em análise. Portanto, afirmações vagas e genéricas não são passíveis de pontuação.
-
-      Já no item ‘B’, o examinando deveria responder que ante a ocorrência de lesões corporais de natureza grave em Maria, a condição jurídica de João seria alterada, passando ele a responder pelo delito previsto no art. 122 do CP na modalidade consumada.
-
-      Ressalte-se que levando em consideração a natureza do Exame de Ordem, não será atribuída pontuação para respostas com teses contraditórias, ou mesmo sugestiva de delito na modalidade tentada. Ademais, considera-se errada a resposta indicativa de configuração de concurso de crimes ou a fundamentação isolada.
-
-      Pelo mesmo motivo exposto no item ‘A’ (impossibilidade de consideração de afirmações vagas ou genéricas), também não é passível de pontuação a resposta, no item ‘B’, que não indique, de maneira expressa, o artigo legal a que se refere a questão. Desse modo, a mera referência à pena de reclusão de 1 a 3 anos, ou seja, a mera indicação do preceito secundário do tipo, dissociada da tipificação da conduta, também não é pontuada.
-
-      Por fim, também não será pontuada a simples transcrição do artigo, dissociada da demonstração de conhecimento doutrinário.
-    opcoes:
-      correta: "João não cometeu qualquer crime, pois o delito descrito no artigo 122 do CP só se consuma com a ocorrência de morte ou de lesão corporal grave OU há crime, mas o fato não é punível por faltar a condição objetiva de punibilidade Obs.: respostas incompletas não são pontuadas."
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Tendo em vista que o delito de tráfico privilegiado não é crime equiparado a hediondo, aplica-se a progressão pelo percentual de 16%, nos termos do Art. 112, § 5º ou Art. 112, inciso I, da LEP.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - O crime do Art. 306, do CTB deve ser absorvido pelo crime do Art. 303, § 2º, do CTB, em razão da aplicação do princípio da consunção OU já que a capacidade psicomotora alterada em razão de álcool é elementar do crime de lesão corporal.
-    revisao: *a1
+    pergunta: "O Ministério Público não recorreu. Qual o prazo para o pai da vítima, ainda não habilitado como assistente, apelar?"
+    tese: "Apelação do ofendido não habilitado como assistente em 15 dias, contados do fim do prazo do Ministério Público"
+    aceitos: [ "15 dias | quinze dias" ]
+    artigos: [ "art. 598, parágrafo único, CPP" ]
+    gabarito: "Indicação do prazo (art. 598, parágrafo único, do CPP)."
+    revisao: { status: revisado }
   - id: 07-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Há muito tempo Maria encontra-se deprimida, nutrindo desejos de acabar com a própria vida. João, sabedor dessa condição, e querendo a morte de Maria, resolve instigá-la a se matar. Pondo seu plano em prática, João visita Maria todos os dias e, quando ela toca no assunto de não tem mais razão para viver, que deseja se matar, pois a vida não faz mais sentido, João a estimula e a encoraja a pular pela janela.
-
-      Um belo dia, logo após ser instigada por João, Maria salta pela janela de seu apartamento e, por pura sorte, sofre apenas alguns arranhões, não sofrendo qualquer ferimento grave. Considerando apenas os fatos apresentados, responda, de forma justificada, aos seguintes questionamentos:
-    comando: Caso Maria viesse a sofrer lesões corporais de natureza grave em decorrência da queda, a condição jurídica de João seria alterada?
-    gabarito: |-
-      O examinando deve responder, no item ‘A’, que João não cometeu qualquer crime, pois o delito descrito no art. 122 do CP, o qual prevê a conduta de instigação, auxílio ou induzimento ao suicídio, não admite a forma tentada (art. 14, II do CP), sendo certo que tal delito somente se consuma com a ocorrência de lesões corporais graves ou morte. Nesse sentido, como Maria teve apenas alguns arranhões, não houve crime.
-
-      Todavia, com o fim de privilegiar a demonstração de conhecimento doutrinário, será aceita como resposta correta ao item ‘A’, a indicação de que haveria crime, mas que o fato não seria punível por faltar condição objetiva de punibilidade. Nesse caso específico, o examinando deverá demonstrar conhecimento sobre o conceito analítico de crime (fato típico, antijurídico e culpável), indicando que a punibilidade não o integra.
-
-      Ainda quanto ao item ‘A’, é indispensável a indicação do dispositivo em análise. Portanto, afirmações vagas e genéricas não são passíveis de pontuação.
-
-      Já no item ‘B’, o examinando deveria responder que ante a ocorrência de lesões corporais de natureza grave em Maria, a condição jurídica de João seria alterada, passando ele a responder pelo delito previsto no art. 122 do CP na modalidade consumada.
-
-      Ressalte-se que levando em consideração a natureza do Exame de Ordem, não será atribuída pontuação para respostas com teses contraditórias, ou mesmo sugestiva de delito na modalidade tentada. Ademais, considera-se errada a resposta indicativa de configuração de concurso de crimes ou a fundamentação isolada.
-
-      Pelo mesmo motivo exposto no item ‘A’ (impossibilidade de consideração de afirmações vagas ou genéricas), também não é passível de pontuação a resposta, no item ‘B’, que não indique, de maneira expressa, o artigo legal a que se refere a questão. Desse modo, a mera referência à pena de reclusão de 1 a 3 anos, ou seja, a mera indicação do preceito secundário do tipo, dissociada da tipificação da conduta, também não é pontuada.
-
-      Por fim, também não será pontuada a simples transcrição do artigo, dissociada da demonstração de conhecimento doutrinário.
-    opcoes:
-      correta: "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Tendo em vista que o delito de tráfico privilegiado não é crime equiparado a hediondo, aplica-se a progressão pelo percentual de 16%, nos termos do Art. 112, § 5º ou Art. 112, inciso I, da LEP.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Se Maria tivesse sofrido lesão corporal grave na queda, por que crime João responderia?"
+    tese: "Induzimento, instigação ou auxílio ao suicídio, com resultado lesão corporal grave"
+    aceitos: [ "induzimento | instigacao | auxilio ao suicidio | 122" ]
+    artigos: [ "art. 122, § 1º, CP", "art. 122, CP" ]
+    gabarito: "O examinando deve responder, no item ‘A’, que João não cometeu qualquer crime, pois o delito descrito no art. 122 do CP, o qual prevê a conduta de instigação, auxílio ou induzimento ao suicídio, não admite a forma tentada (art. 14, II do CP), sendo certo que tal delito somente se consuma com a ocorrência de lesões corporais graves ou morte. Nesse sentido, como Maria teve apenas alguns arranhões, não houve crime.\n\nTodavia, com o fim de privilegiar a demonstração de conhecimento doutrinário, será aceita como resposta correta ao item ‘A’, a indicação de que haveria crime, mas que o fato não seria punível por faltar condição objetiva de punibilidade. Nesse caso específico, o examinando deverá demonstrar conhecimento sobre o conceito analítico de crime (fato típico, antijurídico e culpável), indicando que a punibilidade não o integra.\n\nAinda quanto ao item ‘A’, é indispensável a indicação do dispositivo em análise. Portanto, afirmações vagas e genéricas não são passíveis de pontuação.\n\nJá no item ‘B’, o examinando deveria responder que ante a ocorrência de lesões corporais de natureza grave em Maria, a condição jurídica de João seria alterada, passando ele a responder pelo delito previsto no art. 122 do CP na modalidade consumada.\n\nRessalte-se que levando em consideração a natureza do Exame de Ordem, não será atribuída pontuação para respostas com teses contraditórias, ou mesmo sugestiva de delito na modalidade tentada. Ademais, considera-se errada a resposta indicativa de configuração de concurso de crimes ou a fundamentação isolada.\n\nPelo mesmo motivo exposto no item ‘A’ (impossibilidade de consideração de afirmações vagas ou genéricas), também não é passível de pontuação a resposta, no item ‘B’, que não indique, de maneira expressa, o artigo legal a que se refere a questão. Desse modo, a mera referência à pena de reclusão de 1 a 3 anos, ou seja, a mera indicação do preceito secundário do tipo, dissociada da tipificação da conduta, também não é pontuada.\n\nPor fim, também não será pontuada a simples transcrição do artigo, dissociada da demonstração de conhecimento doutrinário."
+    revisao: { status: revisado }
   - id: 07-q4-a
     categoria: discursiva
     parte: q4
-    item: A.1
-    caso: Maurício, jovem de classe alta, rebelde e sem escrúpulos, começa a namorar Joana, menina de boa família, de classe menos favorecida e moradora de área de risco em uma das maiores comunidades do Brasil. No dia do aniversário de 18 anos de Joana, Maurício resolve convidá-la para jantar num dos restaurantes mais caros da cidade e, posteriormente, leva-a para conhecer a suíte presidencial de um hotel considerado um dos mais luxuosos do mundo, onde passa a noite com ela. Na manhã seguinte, Maurício e Joana resolvem permanecer por mais dois dias. Ao final da estada, Mauricio contabiliza os gastos daqueles dias de prodigalidade, apurando o total de R$ 18.000,00 (dezoito mil reais). Todos os pagamentos foram realizados em espécie, haja vista que, na noite anterior, Maurício havia trocado com sua mãe um cheque de R$20.000,00 (vinte mil reais) por dinheiro em espécie, cheque que Maurício sabia, de antemão, não possuir fundos. Considerando apenas os fatos descritos, responda, de forma justificada, os questionamentos a seguir.
-    comando: Maurício e Joana cometeram algum crime? Justifique sua resposta e, caso seja positiva, tipifique as condutas atribuídas a cada um dos personagens, desenvolvendo a tese de defesa.
-    gabarito: |-
-      Para garantir pontuação, o examinando deveria, no item ‘A’, deixar expresso que Joana não cometeu qualquer crime porque não houve sequer conduta de sua parte. Cabe ressaltar que somente será aceita, como fundamento para essa hipótese, a ausência de conduta, levando em consideração o conhecimento teórico exigido no Exame de Ordem.
-
-      Assim, descabe analisar a existência de elemento subjetivo (dolo ou culpa), ilicitude ou culpabilidade, pois tais somente seriam apreciados quando houvesse conduta. Consequentemente, a resposta que trouxer apenas tal análise (sem mencionar a conduta) não será pontuada no item respectivo.
-
-      Ainda no tocante ao item ‘A’, o examinando deverá indicar que Maurício, diferentemente de Joana, cometeu crime, qual seja, estelionato (OU que teria praticado a conduta descrita no art. 171 caput do CP), mas que poderia alegar em sua defesa a escusa absolutória prevista no art. 181, II do CP.
-
-      Sobre esse ponto, não será passível de pontuação a mera indicação do dispositivo legal, dissociada da argumentação exigida.
-
-      De igual modo, não será pontuada nenhuma outra modalidade de estelionato senão aquela descrita no caput do art. 171 do CP. Ressalte-se que dados não descritos no enunciado não podem ser presumidos pelos examinandos.
-
-      Também não será passível de pontuação a indicação genérica do art. 181 do CP, sem a especificação do inciso adequado ou de argumentação pertinente ao inciso.
-
-      Ademais, aplicação da escusa absolutória não conduz à atipicidade da conduta. A conduta continua típica, ilícita e culpável, havendo apenas opção legislativa pela não imposição de sanção de natureza penal, embora a sentença possa produzir efeitos civis.
-
-      Em relação ao item ‘B’, a atribuição de pontos estaria condicionada à expressa argumentação no sentido de que a condição jurídica de Maurício seria alterada na medida em que a isenção de pena prevista no Código Penal não se aplica aos crimes de roubo (OU à prática da conduta descrita no art. 157 caput do CP), nos termos do art.183, I do CP. Portanto, Maurício seria processado e apenado pelo crime cometido.
-
-      Cumpre salientar que a mera indicação de artigo legal, dissociada da correta argumentação (em qualquer um dos itens), não pode ser pontuada. De igual modo, a mera indicação, no item ‘B’, de que não haveria isenção de pena (ou de que não se aplicaria o art. 181, II do CP por força do disposto no artigo 183, I, do CP), sem a correta tipificação da conduta, não é passível de pontuação.
-
-      Além disso, levando em conta que o delito de roubo não se confunde com a extorsão, não será admitida fungibilidade entre as condutas de forma a se considerar qualquer das duas como a prática empreendida por Maurício.
-
-      Por fim, não poderá ser considerada correta a resposta que imponha a causa de aumento de pena prevista no parágrafo segundo, inciso I, do artigo 157 do CP. Isso porque a controvérsia acerca da incidência da referida causa de aumento quanto ao uso de arma de brinquedo foi suficientemente solucionada no âmbito do Superior Tribunal de Justiça, que, em 2001, cancelou o verbete sumular n. 174, no julgamento do RESP 213.054-SP.
-    opcoes:
-      correta: "Joana não cometeu crime algum, pois não houve conduta de sua parte. Maurício cometeu crime de estelionato OU praticou a conduta descrita no art. 171 caput do CP Obs.: a mera indicação de artigo não pontua. Poderia alegar em sua defesa a escusa absolutória prevista no art. 181, II do CP. Obs.: a mera indicação de artigo não pontua."
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Tendo em vista que o delito de tráfico privilegiado não é crime equiparado a hediondo, aplica-se a progressão pelo percentual de 16%, nos termos do Art. 112, § 5º ou Art. 112, inciso I, da LEP.
-        - Favorecimento real OU praticou o delito descrito no Art. 349, do CP.
-        - Deveria ser alegada a impossibilidade de condenação na imputação originária, pois o juiz está adstrito aos termos do aditamento (Art. 384, §4º, do CPP) OU porque não foram observados os princípios da ampla defesa e do contraditório OU houve violação ao princípio da correlação.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    item: "A.3"
+    pergunta: "Maurício enganou a própria mãe com o cheque sem fundos. Que tese de defesa impede que ele seja punido por esse estelionato?"
+    tese: "A escusa absolutória do crime patrimonial contra ascendente (isenção de pena)"
+    aceitos: [ "escusa absolutoria | isencao de pena | isento de pena | imunidade" ]
+    artigos: [ "art. 181, II, CP" ]
+    gabarito: "Para garantir pontuação, o examinando deveria, no item ‘A’, deixar expresso que Joana não cometeu qualquer crime porque não houve sequer conduta de sua parte. Cabe ressaltar que somente será aceita, como fundamento para essa hipótese, a ausência de conduta, levando em consideração o conhecimento teórico exigido no Exame de Ordem.\n\nAssim, descabe analisar a existência de elemento subjetivo (dolo ou culpa), ilicitude ou culpabilidade, pois tais somente seriam apreciados quando houvesse conduta. Consequentemente, a resposta que trouxer apenas tal análise (sem mencionar a conduta) não será pontuada no item respectivo.\n\nAinda no tocante ao item ‘A’, o examinando deverá indicar que Maurício, diferentemente de Joana, cometeu crime, qual seja, estelionato (OU que teria praticado a conduta descrita no art. 171 caput do CP), mas que poderia alegar em sua defesa a escusa absolutória prevista no art. 181, II do CP.\n\nSobre esse ponto, não será passível de pontuação a mera indicação do dispositivo legal, dissociada da argumentação exigida.\n\nDe igual modo, não será pontuada nenhuma outra modalidade de estelionato senão aquela descrita no caput do art. 171 do CP. Ressalte-se que dados não descritos no enunciado não podem ser presumidos pelos examinandos.\n\nTambém não será passível de pontuação a indicação genérica do art. 181 do CP, sem a especificação do inciso adequado ou de argumentação pertinente ao inciso.\n\nAdemais, aplicação da escusa absolutória não conduz à atipicidade da conduta. A conduta continua típica, ilícita e culpável, havendo apenas opção legislativa pela não imposição de sanção de natureza penal, embora a sentença possa produzir efeitos civis.\n\nEm relação ao item ‘B’, a atribuição de pontos estaria condicionada à expressa argumentação no sentido de que a condição jurídica de Maurício seria alterada na medida em que a isenção de pena prevista no Código Penal não se aplica aos crimes de roubo (OU à prática da conduta descrita no art. 157 caput do CP), nos termos do art.183, I do CP. Portanto, Maurício seria processado e apenado pelo crime cometido.\n\nCumpre salientar que a mera indicação de artigo legal, dissociada da correta argumentação (em qualquer um dos itens), não pode ser pontuada. De igual modo, a mera indicação, no item ‘B’, de que não haveria isenção de pena (ou de que não se aplicaria o art. 181, II do CP por força do disposto no artigo 183, I, do CP), sem a correta tipificação da conduta, não é passível de pontuação.\n\nAlém disso, levando em conta que o delito de roubo não se confunde com a extorsão, não será admitida fungibilidade entre as condutas de forma a se considerar qualquer das duas como a prática empreendida por Maurício.\n\nPor fim, não poderá ser considerada correta a resposta que imponha a causa de aumento de pena prevista no parágrafo segundo, inciso I, do artigo 157 do CP. Isso porque a controvérsia acerca da incidência da referida causa de aumento quanto ao uso de arma de brinquedo foi suficientemente solucionada no âmbito do Superior Tribunal de Justiça, que, em 2001, cancelou o verbete sumular n. 174, no julgamento do RESP 213.054-SP."
+    revisao: { status: revisado }
   - id: 07-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: Maurício, jovem de classe alta, rebelde e sem escrúpulos, começa a namorar Joana, menina de boa família, de classe menos favorecida e moradora de área de risco em uma das maiores comunidades do Brasil. No dia do aniversário de 18 anos de Joana, Maurício resolve convidá-la para jantar num dos restaurantes mais caros da cidade e, posteriormente, leva-a para conhecer a suíte presidencial de um hotel considerado um dos mais luxuosos do mundo, onde passa a noite com ela. Na manhã seguinte, Maurício e Joana resolvem permanecer por mais dois dias. Ao final da estada, Mauricio contabiliza os gastos daqueles dias de prodigalidade, apurando o total de R$ 18.000,00 (dezoito mil reais). Todos os pagamentos foram realizados em espécie, haja vista que, na noite anterior, Maurício havia trocado com sua mãe um cheque de R$20.000,00 (vinte mil reais) por dinheiro em espécie, cheque que Maurício sabia, de antemão, não possuir fundos. Considerando apenas os fatos descritos, responda, de forma justificada, os questionamentos a seguir.
-    comando: "Caso Maurício tivesse invadido a casa de sua mãe com uma pistola de brinquedo e a ameaçado, a fim de conseguir a quantia de R$ 20.000,00 (vinte mil reais), sua situação jurídica seria diferente? Justifique. (valor:"
-    gabarito: |-
-      Para garantir pontuação, o examinando deveria, no item ‘A’, deixar expresso que Joana não cometeu qualquer crime porque não houve sequer conduta de sua parte. Cabe ressaltar que somente será aceita, como fundamento para essa hipótese, a ausência de conduta, levando em consideração o conhecimento teórico exigido no Exame de Ordem.
-
-      Assim, descabe analisar a existência de elemento subjetivo (dolo ou culpa), ilicitude ou culpabilidade, pois tais somente seriam apreciados quando houvesse conduta. Consequentemente, a resposta que trouxer apenas tal análise (sem mencionar a conduta) não será pontuada no item respectivo.
-
-      Ainda no tocante ao item ‘A’, o examinando deverá indicar que Maurício, diferentemente de Joana, cometeu crime, qual seja, estelionato (OU que teria praticado a conduta descrita no art. 171 caput do CP), mas que poderia alegar em sua defesa a escusa absolutória prevista no art. 181, II do CP.
-
-      Sobre esse ponto, não será passível de pontuação a mera indicação do dispositivo legal, dissociada da argumentação exigida.
-
-      De igual modo, não será pontuada nenhuma outra modalidade de estelionato senão aquela descrita no caput do art. 171 do CP. Ressalte-se que dados não descritos no enunciado não podem ser presumidos pelos examinandos.
-
-      Também não será passível de pontuação a indicação genérica do art. 181 do CP, sem a especificação do inciso adequado ou de argumentação pertinente ao inciso.
-
-      Ademais, aplicação da escusa absolutória não conduz à atipicidade da conduta. A conduta continua típica, ilícita e culpável, havendo apenas opção legislativa pela não imposição de sanção de natureza penal, embora a sentença possa produzir efeitos civis.
-
-      Em relação ao item ‘B’, a atribuição de pontos estaria condicionada à expressa argumentação no sentido de que a condição jurídica de Maurício seria alterada na medida em que a isenção de pena prevista no Código Penal não se aplica aos crimes de roubo (OU à prática da conduta descrita no art. 157 caput do CP), nos termos do art.183, I do CP. Portanto, Maurício seria processado e apenado pelo crime cometido.
-
-      Cumpre salientar que a mera indicação de artigo legal, dissociada da correta argumentação (em qualquer um dos itens), não pode ser pontuada. De igual modo, a mera indicação, no item ‘B’, de que não haveria isenção de pena (ou de que não se aplicaria o art. 181, II do CP por força do disposto no artigo 183, I, do CP), sem a correta tipificação da conduta, não é passível de pontuação.
-
-      Além disso, levando em conta que o delito de roubo não se confunde com a extorsão, não será admitida fungibilidade entre as condutas de forma a se considerar qualquer das duas como a prática empreendida por Maurício.
-
-      Por fim, não poderá ser considerada correta a resposta que imponha a causa de aumento de pena prevista no parágrafo segundo, inciso I, do artigo 157 do CP. Isso porque a controvérsia acerca da incidência da referida causa de aumento quanto ao uso de arma de brinquedo foi suficientemente solucionada no âmbito do Superior Tribunal de Justiça, que, em 2001, cancelou o verbete sumular n. 174, no julgamento do RESP 213.054-SP.
-    opcoes:
-      correta: "Sim, pois passaria a responder por crime de roubo OU pela conduta descrita no art. 157 caput do CP, na medida em que a isenção de pena prevista no Código Penal (art. 181, II do CP) não se aplica ao crime de roubo, conforme art. 183, I do CP Obs.1: a mera justificativa não deve ser pontuada. Obs.2: a mera indicação de artigos não é pontuada."
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - Tendo em vista que o delito de tráfico privilegiado não é crime equiparado a hediondo, aplica-se a progressão pelo percentual de 16%, nos termos do Art. 112, § 5º ou Art. 112, inciso I, da LEP.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - O crime do Art. 306, do CTB deve ser absorvido pelo crime do Art. 303, § 2º, do CTB, em razão da aplicação do princípio da consunção OU já que a capacidade psicomotora alterada em razão de álcool é elementar do crime de lesão corporal.
-    revisao: *a1
+    item: "B"
+    pergunta: "E se Maurício tivesse ameaçado a mãe com uma pistola de brinquedo para conseguir os R$ 20 mil, ainda seria isento de pena?"
+    tese: "Sem isenção de pena: seria roubo, e a escusa absolutória não vale para crime com grave ameaça"
+    aceitos: [ "roubo" ]
+    artigos: [ "art. 183, I, CP", "art. 157, CP" ]
+    gabarito: "Para garantir pontuação, o examinando deveria, no item ‘A’, deixar expresso que Joana não cometeu qualquer crime porque não houve sequer conduta de sua parte. Cabe ressaltar que somente será aceita, como fundamento para essa hipótese, a ausência de conduta, levando em consideração o conhecimento teórico exigido no Exame de Ordem.\n\nAssim, descabe analisar a existência de elemento subjetivo (dolo ou culpa), ilicitude ou culpabilidade, pois tais somente seriam apreciados quando houvesse conduta. Consequentemente, a resposta que trouxer apenas tal análise (sem mencionar a conduta) não será pontuada no item respectivo.\n\nAinda no tocante ao item ‘A’, o examinando deverá indicar que Maurício, diferentemente de Joana, cometeu crime, qual seja, estelionato (OU que teria praticado a conduta descrita no art. 171 caput do CP), mas que poderia alegar em sua defesa a escusa absolutória prevista no art. 181, II do CP.\n\nSobre esse ponto, não será passível de pontuação a mera indicação do dispositivo legal, dissociada da argumentação exigida.\n\nDe igual modo, não será pontuada nenhuma outra modalidade de estelionato senão aquela descrita no caput do art. 171 do CP. Ressalte-se que dados não descritos no enunciado não podem ser presumidos pelos examinandos.\n\nTambém não será passível de pontuação a indicação genérica do art. 181 do CP, sem a especificação do inciso adequado ou de argumentação pertinente ao inciso.\n\nAdemais, aplicação da escusa absolutória não conduz à atipicidade da conduta. A conduta continua típica, ilícita e culpável, havendo apenas opção legislativa pela não imposição de sanção de natureza penal, embora a sentença possa produzir efeitos civis.\n\nEm relação ao item ‘B’, a atribuição de pontos estaria condicionada à expressa argumentação no sentido de que a condição jurídica de Maurício seria alterada na medida em que a isenção de pena prevista no Código Penal não se aplica aos crimes de roubo (OU à prática da conduta descrita no art. 157 caput do CP), nos termos do art.183, I do CP. Portanto, Maurício seria processado e apenado pelo crime cometido.\n\nCumpre salientar que a mera indicação de artigo legal, dissociada da correta argumentação (em qualquer um dos itens), não pode ser pontuada. De igual modo, a mera indicação, no item ‘B’, de que não haveria isenção de pena (ou de que não se aplicaria o art. 181, II do CP por força do disposto no artigo 183, I, do CP), sem a correta tipificação da conduta, não é passível de pontuação.\n\nAlém disso, levando em conta que o delito de roubo não se confunde com a extorsão, não será admitida fungibilidade entre as condutas de forma a se considerar qualquer das duas como a prática empreendida por Maurício.\n\nPor fim, não poderá ser considerada correta a resposta que imponha a causa de aumento de pena prevista no parágrafo segundo, inciso I, do artigo 157 do CP. Isso porque a controvérsia acerca da incidência da referida causa de aumento quanto ao uso de arma de brinquedo foi suficientemente solucionada no âmbito do Superior Tribunal de Justiça, que, em 2001, cancelou o verbete sumular n. 174, no julgamento do RESP 213.054-SP."
+    revisao: { status: revisado }

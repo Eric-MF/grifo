@@ -10,6 +10,11 @@ import styles from "./menuFoco.module.css";
 export const DURACAO_REVOADA = 1350;
 /** Bolinhas por camada da revoada: com mais, o strike se divide em anéis, um por fora do outro. */
 const POR_CAMADA = 10;
+/** No strike, o líquido fica dourado durante a comemoração e depois escorre neste tempo (o CSS usa o mesmo). */
+const OURO = "var(--festa-ouro)";
+const DURACAO_ESCORRER = 2200;
+/** uma estrela de pontas largas e cheias: lê bem pequena, com "xp" dentro */
+const ESTRELA = "M12 1.8l3.05 6.2 6.85 1-4.95 4.8 1.17 6.8L12 17.4l-6.12 3.2 1.17-6.8L2.1 9l6.85-1z";
 
 /**
  * O menu do modo foco (copiar, sons, largura, sair). O botão é também o placar:
@@ -47,9 +52,22 @@ export function MenuFoco({
   }, [aberto]);
   // o anel começa já descontado do tempo passado (o menu remonta a cada questão, mas a questão pode ter começado antes)
   const [atraso] = useState(() => -Math.max(0, (performance.now() - inicio) / 1000));
+  // acabada a comemoração, o ouro escorre devagar até o nível do strike novo
+  const [fezAntes, setFezAntes] = useState(fez);
+  const [escorrendo, setEscorrendo] = useState(false);
+  if (fez !== fezAntes) {
+    setFezAntes(fez);
+    setEscorrendo(!fez);
+  }
+  useEffect(() => {
+    if (!escorrendo) return;
+    const t = setTimeout(() => setEscorrendo(false), DURACAO_ESCORRER);
+    return () => clearTimeout(t);
+  }, [escorrendo]);
   const n = tamanhoDoStrike(strike.seguidos);
   const cheio = fez ? 1 : strike.acertos / n;
-  const corLiquido = cor(Math.max(0, (fez ? n : strike.acertos) - 1), n);
+  // dourado também enquanto escorre: só depois de vazio volta à cor do placar
+  const corLiquido = fez || escorrendo ? OURO : cor(Math.max(0, strike.acertos - 1), n);
   return (
     <div
       ref={caixa}
@@ -69,10 +87,18 @@ export function MenuFoco({
         aria-expanded={aberto}
         aria-controls={painel}
         aria-label={`Opções do modo foco · strike: ${strike.acertos} de ${n}`}
+        data-fez={fez ? "1" : undefined}
         onClick={() => setAberto((a) => !a)}
         style={{ "--cheio": cheio, "--cor": corLiquido, "--folga": `${folga}s`, "--atraso": `${atraso}s` } as CSSProperties}
       >
-        <span key={perdeuEm} className={styles.liquido} data-perdeu={perdeuEm && !fez ? "1" : undefined} data-fez={fez ? "1" : undefined} aria-hidden>
+        <span
+          key={perdeuEm}
+          className={styles.liquido}
+          data-perdeu={perdeuEm && !fez ? "1" : undefined}
+          data-fez={fez ? "1" : undefined}
+          data-escorrendo={escorrendo ? "1" : undefined}
+          aria-hidden
+        >
           <span className={styles.nivel} />
           <span className={styles.brilho} />
         </span>
@@ -84,7 +110,17 @@ export function MenuFoco({
           <path d="M5 7h14M5 12h14M5 17h14" />
         </svg>
       </button>
-      <div id={painel} className={styles.painel} hidden={!aberto} role="group" aria-label="Opções do modo foco">
+      <div
+        id={painel}
+        className={styles.painel}
+        hidden={!aberto}
+        role="group"
+        aria-label="Opções do modo foco"
+        // os itens que abrem outra coisa por cima (a resposta anterior) fecham o menu
+        onClick={(e) => {
+          if ((e.target as Element).closest("[data-fecha-menu]")) setAberto(false);
+        }}
+      >
         {children}
       </div>
     </div>
@@ -184,21 +220,42 @@ export function RevoadaStrike({ acertos, n, fez }: { acertos: number; n: number;
   );
 }
 
-/** Os pontos do treino numa estrela com "xp" e, embaixo, uma linha fina dividida: verde nos acertos, vermelho nos erros. */
-export function XpFoco({ pontos, acertos, total }: { pontos: number; acertos: number; total: number }) {
+/**
+ * Os pontos do treino numa estrela com "xp" e, embaixo, uma linha fina dividida: verde nos acertos, vermelho nos erros.
+ * A estrela é também a conta dos strikes: começa lisa e ganha um enfeite a cada strike (ouro, brilho, reflexo, raios,
+ * faíscas em órbita e um halo), com o número no canto. No strike recém-feito (`novo`), ela pula e reluz.
+ */
+export function XpFoco({ pontos, acertos, total, strikes, novo }: { pontos: number; acertos: number; total: number; strikes: number; novo: boolean }) {
   const taxa = total ? acertos / total : 1;
+  const ouro = useId();
+  const enfeite = Math.min(strikes, 6);
+  const rotuloStrikes = strikes ? ` · ${strikes} ${strikes === 1 ? "strike" : "strikes"}` : "";
   return (
-    <span className={styles.xp} title={`${pontos} pontos · ${acertos} de ${total} acertos`}>
+    <span className={styles.xp} title={`${pontos} pontos · ${acertos} de ${total} acertos${rotuloStrikes}`}>
       <span className={styles.xpLinha}>
-        <svg className={styles.estrela} viewBox="0 0 24 24" aria-hidden>
-          <path d="M12 2.5L15.53 7.65 21.51 9.41 17.71 14.35 17.88 20.59 12 18.5 6.12 20.59 6.29 14.35 2.49 9.41 8.47 7.65z" />
-          <text x="12" y="14" textAnchor="middle">
-            xp
-          </text>
-        </svg>
+        <span className={styles.estrelaCaixa} data-enfeite={enfeite} data-novo={novo ? "1" : undefined}>
+          <svg className={styles.estrela} viewBox="0 0 24 24" aria-hidden>
+            <defs>
+              <linearGradient id={ouro} x1="0" y1="0" x2="0.4" y2="1">
+                <stop offset="0" style={{ stopColor: "var(--festa-brilho)" }} />
+                <stop offset="0.45" style={{ stopColor: "var(--festa-ouro)" }} />
+                <stop offset="1" style={{ stopColor: "var(--festa-escuro)" }} />
+              </linearGradient>
+            </defs>
+            <path d={ESTRELA} fill={enfeite ? `url(#${ouro})` : undefined} />
+            <text x="12" y="15.2" textAnchor="middle">
+              xp
+            </text>
+          </svg>
+          {strikes > 0 && (
+            <span className={styles.contaStrikes} aria-hidden>
+              {strikes}
+            </span>
+          )}
+        </span>
         <strong>{pontos}</strong>
         <span className={styles.oculto}>
-          pontos · {acertos} de {total} acertos
+          pontos · {acertos} de {total} acertos{rotuloStrikes}
         </span>
       </span>
       <span className={styles.taxa} data-vazia={total ? undefined : "1"} style={{ "--taxa": taxa } as CSSProperties} aria-hidden />

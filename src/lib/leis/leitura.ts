@@ -9,12 +9,12 @@ export const TEMPO_LEITURA_MS = 2000;
 
 export type TipoLei = "codigo" | "constituicao" | "estatuto" | "lei";
 
-/** Grupos da aba Vade Mecum, na ordem em que aparecem, com a cor de cada tipo. */
+/** Grupos da aba Vade Mecum, na ordem em que aparecem, com a cor de cada tipo (as variáveis seguem o tema, em globals.css). */
 export const GRUPOS_LEIS: { tipo: TipoLei; titulo: string; cor: string }[] = [
-  { tipo: "codigo", titulo: "Códigos", cor: "#1d4ed8" },
-  { tipo: "constituicao", titulo: "Constituição", cor: "#b45309" },
-  { tipo: "estatuto", titulo: "Estatutos", cor: "#15803d" },
-  { tipo: "lei", titulo: "Leis", cor: "#7c3aed" },
+  { tipo: "codigo", titulo: "Códigos", cor: "var(--lei-codigos)" },
+  { tipo: "constituicao", titulo: "Constituição", cor: "var(--lei-constituicao)" },
+  { tipo: "estatuto", titulo: "Estatutos", cor: "var(--lei-estatutos)" },
+  { tipo: "lei", titulo: "Leis", cor: "var(--lei-leis)" },
 ];
 
 export interface Unidades {

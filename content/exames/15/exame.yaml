@@ -96,7 +96,7 @@ peca:
     - n: "4"
       secao: "Item 4.1- a exposição dos fatos criminosos:"
       descricao: Descrição do delito de injúria (0,50) e sua classificação típica (Art. 140 do CP) (0,10) Item 4.2- Descrição do delito de difamação (0,50) e sua classificação típica (Art. 139 do CP) (0,10)
-      valores: [ 0, 0.1, 0.5, 0.6, 0, 0.1, 0.5, 0.6 ]
+      teto: 1.2  # 4.1 e 4.2, cada um 0,00/0,10/0,50/0,60 no padrão da FGV
       componentes:
         - { id: c1, valor: 0.5, termos: [ injuria ] }
         - { id: c2, valor: 0.1, dispositivo: [ "art. 140, CP" ], requer: c1 }
@@ -119,7 +119,7 @@ peca:
     - n: "5"
       secao: "Item 5. Dos pedidos:"
       descricao: a) designação de audiência preliminar ou de conciliação (0,20) b) a citação da querelada (0,20); c) recebimento da queixa (0,20) d) a oitiva das testemunhas arroladas (0,20); e) a condenação da querelada (0,50) pelo crime de injúria (Art. 140 do CP) (0,10) e pelo crime de difamação (Art. 139 do CP) (0,10) com a causa de aumento de pena (Art. 141, III do CP) (0,10) em concurso formal de delitos (Art. 70 do CP) (0,10) f) a fixação de valor mínimo de indenização (0,30), nos termos do Art. 387, IV, do CPP (0,10). OBS:. A mera indicação de dispositivo legal não pontua.
-      valores: [ 0, 0.2, 0, 0.3, 0.4 ]
+      teto: 2.1  # a–d 0,00/0,20; e 0,00/0,50/0,60/0,70/0,80/0,90; f 0,00/0,30/0,40
       componentes:
         - { id: c1, valor: 0.2, termos: [ audiencia preliminar | audiencia de conciliacao | conciliacao ] }
         - { id: c2, valor: 0.2, termos: [ cita* ] }
@@ -294,3 +294,12 @@ questoes:
         componentes:
           - { id: c1, valor: 0.4, termos: [ extin* da punibilidade ] }
           - { id: c2, valor: 0.1, termos: [ efeitos ] }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: peca, item: "4.3", lei: "Lei 13.964/2019", texto: "A Lei 13.964/2019 incluiu o § 2º no art. 141 do Código Penal: o crime contra a honra cometido ou divulgado em redes sociais tem a pena aplicada em triplo. Hoje, a causa de aumento dos comentários publicados na rede social é a desse parágrafo." }
+  nomes:
+    peca: { Enrico: Hefesto, Helena: Afrodite, Carlos: Castor, Miguel: Pólux, Ramirez: Jasão }   # o engenheiro e a ex; as testemunhas
+    q1: { Miguel: Polifemo }   # manteve a vítima presa (art. 157, § 2º, V)
+    q3: { Raquel: Calipso }   # a que esconde (a renda)
+    q4: { Júlia: Hebe, Julia: Hebe, Ricardo: Endimião }   # a deusa da juventude (menor de 21); o distraído

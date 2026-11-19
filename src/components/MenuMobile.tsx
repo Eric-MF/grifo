@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import { NAV } from "@/config/site";
+import { RotuloComIndicador } from "./IndicadorNavegacao";
 import styles from "./MenuMobile.module.css";
 
 /** Menu hambúrguer do cabeçalho. Só aparece no modo "Celular", abaixo de 640px (ver MenuMobile.module.css). */
@@ -70,9 +71,11 @@ export function MenuMobile() {
               ref={i === 0 ? primeiroLink : undefined}
               href={item.href}
               className={styles.link}
-              onClick={() => setAberto(false)}
+              // o menu fica aberto, com a barrinha no item tocado, até a página nova chegar (ele fecha quando a rota
+              // muda); o link da própria página (o "/#curso" na página inicial) fecha na hora
+              onClick={() => new URL(item.href, location.href).pathname === pathname && setAberto(false)}
             >
-              {item.label}
+              <RotuloComIndicador>{item.label}</RotuloComIndicador>
             </Link>
           ))}
         </nav>

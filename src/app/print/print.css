@@ -67,6 +67,9 @@ html:has(.print-root), body:has(.print-root) { background: #8a8a8a; color: #000;
 .tabela td { border: 0.6pt solid #993300; padding: 1mm 2mm; vertical-align: middle; }
 .tabela tr.sec td { background: #d9d9d9; font-weight: 700; }
 .tabela .v { color: #e00000; }
+.diferencas p { margin: 0 0 2mm; }
+.dif-nomes { margin: 0 0 2mm; padding-left: 5mm; }
+.dif-nomes li { margin: 0 0 1mm; }
 .nota-atual { border-left: 2.5pt solid #d69c45; background: #fbf5e8; padding: 2mm 3mm; margin: 2mm 0; font-size: 9.2pt; }
 .fluxo { width: 210mm; margin: 0 auto 8mm; padding: 14mm; background: #fff; }
 @media print { .fluxo { margin: 0; } .quebra { break-before: page; } }

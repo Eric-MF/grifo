@@ -35,6 +35,18 @@ export function comNomes<T extends Pergunta>(p: T, aleatorio: () => number = Mat
     f: embaralhar(nomes.femininos.filter((n) => !palavras.has(semAcento(n))), aleatorio),
   };
   const escolhidos = pessoas.map((g) => livres[g].pop() ?? (g === "m" ? "Fulano" : "Fulana"));
-  // os nomes não têm aspas nem barras: a troca no JSON é segura
-  return JSON.parse(json.replace(MARCA, (m, i: string) => escolhidos[Number(i) - 1] ?? m)) as T;
+  return aplicarNomes(p, escolhidos);
+}
+
+/**
+ * A questão com estes nomes no lugar das marcas ({p1} é o primeiro), e com eles guardados em `nomes`: assim a mesma
+ * questão, com os mesmos nomes, pode ser refeita depois (o resultado guardado de um recorde do treino).
+ */
+export function aplicarNomes<T extends Pergunta>(p: T, escolhidos: readonly string[]): T {
+  // escapado como texto de JSON: a troca é segura mesmo com um nome lido do navegador
+  const json = JSON.stringify(p).replace(MARCA, (m, i: string) => {
+    const nome = escolhidos[Number(i) - 1];
+    return typeof nome === "string" ? JSON.stringify(nome).slice(1, -1) : m;
+  });
+  return { ...(JSON.parse(json) as T), nomes: [...escolhidos] };
 }

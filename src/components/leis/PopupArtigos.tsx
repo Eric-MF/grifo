@@ -4,11 +4,12 @@ import { type CSSProperties, useCallback, useEffect, useLayoutEffect, useRef, us
 import { createPortal } from "react-dom";
 import prontosJson from "@/content/generated/grifos.json";
 import { artigoParaPrevia, type ArtigoPrevia } from "@/lib/leis/artigo-previa";
-import { prontosDosBlocos, type GrifosProntos } from "@/lib/leis/grifos";
+import { grifosDoJson } from "@/lib/leis/grifos";
 import type { Classes } from "@/lib/leis/html";
-import { corDoPronto, idDosProntos, lerLegendas, sistemaDoLeitor, todosSistemas } from "@/lib/leis/legendas";
+import { corDoGrifo, lerLegendas, prontosNoSistema, rotuloDoGrifo, sistemaDoLeitor, todosSistemas } from "@/lib/leis/legendas";
 import { lerMarcacoes, localizar, type Marcacao } from "@/lib/leis/marcacoes";
 import { rotaDaLei } from "@/lib/leis/sumulas";
+import { pintarProntos } from "./prontos-dom";
 import { lerJSON } from "@/lib/storage";
 import styles from "./popup.module.css";
 
@@ -34,6 +35,8 @@ interface Aberto {
   fixa: boolean;
   /** de que lado entra o texto novo, na troca */
   dir?: "voltar" | "avancar";
+  /** o link estava num <dialog> modal: a prévia vai para dentro dele (fora, ficaria atrás e sem clique) */
+  dialogo?: Element | null;
 }
 
 // Classes do HTML dos blocos (src/lib/leis/html.ts) na prévia: o mesmo texto e os mesmos links do leitor, sem estrela,
@@ -61,7 +64,7 @@ const CLASSES: Classes = {
 };
 
 const PREVIA = '[role="dialog"][aria-label="Texto do artigo"]';
-const PRONTOS = prontosJson as GrifosProntos;
+const PRONTOS = grifosDoJson(prontosJson);
 
 /** O grifo tocado na prévia: o significado da cor e o comentário (a anotação do grifo, ou a nota do grifo pronto). */
 interface Detalhe {
@@ -157,19 +160,20 @@ function prepararTexto(cont: HTMLElement, lei: string, dados: ArtigoPrevia) {
   const els = Array.from(cont.children) as HTMLElement[];
   const legendas = lerLegendas();
   const sistema = sistemaDoLeitor(legendas, lei, PRONTOS);
-  // grifos prontos: a barra na margem (tema de prova) ou a moldura (destaque), com a nota do Grifo como comentário
+  // grifos prontos: as palavras-chave de cada entrada no texto (marca-texto; nos Pedidos, sublinhado) e o "vide", como no leitor
   if (prefs.prontos !== false) {
-    const prontos = prontosDosBlocos(dados.blocos, PRONTOS, idDosProntos(sistema), lei, (rotulo) => corDoPronto(sistema, rotulo));
-    for (const [i, g] of prontos) {
-      const el = els[i];
-      if (!el) continue;
-      el.dataset.pronto = g.tipo;
-      el.style.setProperty("--pronto", g.cor);
-      el.dataset.rotulo = g.rotulo;
-      if (g.nota) el.dataset.comentario = g.nota;
-      el.title = g.nota ? `${g.rotulo}: ${g.nota}` : g.rotulo;
-    }
-    if (prontos.size) cont.dataset.comProntos = "1";
+    const grifos = prontosNoSistema(PRONTOS, sistema, lei);
+    const n = pintarProntos(
+      els,
+      (b) => b.querySelector<HTMLElement>(`.${styles.txt}`),
+      grifos,
+      (g) => corDoGrifo(sistema, g),
+      (g) => rotuloDoGrifo(sistema, g),
+      lei,
+      { marca: styles.pronto, vide: styles.prontoVide },
+      (b) => dados.blocos[els.indexOf(b)]?.tipo,
+    );
+    if (n) cont.dataset.comProntos = "1";
   }
   const art = dados.blocos[0]?.disp?.split(".")[0];
   const marcas = lerMarcacoes(lei).filter((m) => m.disp?.split(".")[0] === art);
@@ -261,6 +265,7 @@ export function PopupArtigos() {
         ret: comoPainel ? null : { left: r.left + r.width / 2, top: r.top, bottom: r.bottom },
         lado: cartao ? aoLado(cartao, r.top) : undefined,
         fixa: false,
+        dialogo: a.closest("dialog[open]"),
       });
     };
     // link aberto de dentro da prévia: o artigo dele entra no lugar, e o anterior fica para o Ctrl+Z
@@ -338,6 +343,8 @@ export function PopupArtigos() {
       if (!abertoRef.current) return;
       if (e.key === "Escape") {
         e.stopPropagation();
+        // dentro de um <dialog>, o Esc fecha só a prévia; o seguinte fecha o diálogo
+        if (abertoRef.current.dialogo) e.preventDefault();
         setAberto(null);
         return;
       }
@@ -482,14 +489,15 @@ export function PopupArtigos() {
                 // tocar num grifo mostra o que a cor significa e o comentário dele; os links seguem o caminho deles
                 const alvo = e.target as Element;
                 if (alvo.closest("a")) return;
-                const g = alvo.closest<HTMLElement>("[data-rotulo]");
+                // o grifo do usuário (data-rotulo) vem antes do pronto em que ele está (data-pronto: o tema do Grifo)
+                const g = alvo.closest<HTMLElement>("[data-rotulo]") ?? alvo.closest<HTMLElement>("mark[data-pronto]");
                 setDetalhe(
                   g
                     ? {
                         chave: chaveTexto,
-                        cor: g.style.getPropertyValue("--c") || g.style.getPropertyValue("--pronto"),
-                        rotulo: g.dataset.rotulo!,
-                        nota: g.dataset.comentario,
+                        cor: g.style.getPropertyValue("--c") || g.style.getPropertyValue("--pronto-fundo") || g.style.getPropertyValue("--pronto-linha"),
+                        rotulo: (g.dataset.rotulo ?? g.dataset.regra ?? "").split("\n").join(" · "),
+                        nota: g.dataset.comentario ?? g.dataset.regraNota,
                         pronto: !!g.dataset.pronto,
                       }
                     : null,
@@ -519,6 +527,6 @@ export function PopupArtigos() {
         </div>
       </div>
     </>,
-    telaCheia ?? document.body,
+    telaCheia ?? aberto.dialogo ?? document.body,
   );
 }

@@ -291,3 +291,14 @@ questoes:
           - { id: c1, valor: 0.35, termos: [ retrata*, antes da sentenca ] }
           - { id: c2, valor: 0.15, termos: [ deixa de ser punivel | nao e punivel | extin* da punibilidade | extin* ] }
           - { id: c3, valor: 0.1, dispositivo: [ "art. 342, § 2º, CP" ], requer: c2 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: peca, tipo: jurisprudencia, lei: "STF, RE 972.598 (Tema 941, 2020)", texto: "O STF decidiu que a oitiva do condenado pelo juiz da execução, em audiência de justificação com o defensor e o Ministério Público, dispensa o procedimento administrativo disciplinar prévio e supre falhas de defesa nele. Como Guilherme nunca foi ouvido, nem no presídio nem em juízo, a tese da Súmula 533 do STJ continua valendo neste caso." }
+    - { alvo: peca, lei: "Lei 13.964/2019", texto: "O art. 83, III, b, do CP passou a exigir, para o livramento condicional, que o condenado não tenha cometido falta grave nos últimos 12 meses. A falta grave continua sem interromper a contagem do prazo (Súmula 441 do STJ), mas adia o livramento por 12 meses." }
+  nomes:
+    peca: { Guilherme: Héracles }   # o golpe que matou
+    q1: { Caio: Castor, Bruno: Pólux }   # os irmãos
+    q2: { Caio: Ares }   # o militar reformado e os disparos
+    q3: { Wesley: Morfeu }
+    q4: { Antônio: Ares, Pablo: Sísifo }   # a milícia; a testemunha que mentiu

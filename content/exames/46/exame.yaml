@@ -282,3 +282,11 @@ questoes:
         componentes:
           - { id: c1, valor: 0.55, termos: [ suspensao condicional | sursis ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 77, CP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Jorge: Caronte, Adilson: Hades }   # o chefe da milícia e quem trabalha para ele
+    q1: { Rafael: Íxion, Fernanda: Psiquê }
+    q2: { Clovis: Apolo, Fábio: Ares, Yuri: Jacinto }   # o tiro errado que matou a criança
+    q3: { Luana: Perséfone }   # metade do tempo fora (o semiaberto)
+    q4: { Oscar: Zeus, Adriana: Hera }

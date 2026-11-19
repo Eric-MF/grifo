@@ -300,3 +300,15 @@ questoes:
           - { id: c1, valor: 0.15, termos: [ voluntaria | culposa ] }
           - { id: c2, valor: 0.35, termos: [ nao exclui | nao afasta, imputabilidade ] }
           - { id: c3, valor: 0.1, dispositivo: [ "art. 28, II, CP" ], requer: c2 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: peca, lei: "Lei 15.397/2026", texto: "A Lei 15.397/2026 elevou a pena do furto simples (art. 155, caput, do CP) para reclusão de 1 a 6 anos (antes, de 1 a 4). Para o fato de 2010 vale a pena antiga, porque a lei mais grave não retroage, e a prescrição do gabarito continua correta. Para um furto simples cometido hoje, o prazo prescricional seria de 12 anos (art. 109, III), reduzido à metade para o menor de 21 anos." }
+    - { alvo: q2, lei: "Lei 14.994/2024", texto: "A Lei 14.994/2024 alterou o art. 147 do Código Penal: a ameaça contra a mulher por razões da condição do sexo feminino tem a pena aplicada em dobro (§ 1º) e se processa sem representação (§ 2º). Hoje, a ameaça de Jorge a Glória, no contexto de violência doméstica, é de ação penal pública incondicionada, e a retratação de Glória não impede a ação." }
+    - { alvo: q3, lei: "Lei 13.654/2018 e Lei 13.964/2019", texto: "O inciso I do § 2º do art. 157 do Código Penal (emprego de arma) foi revogado pela Lei 13.654/2018, que criou o § 2º-A, I, para a arma de fogo. A Lei 13.964/2019 incluiu o inciso VII no § 2º, para a violência ou grave ameaça exercida com emprego de arma branca. A tese da questão continua: a faca na cintura, sem uso, não aumenta a pena." }
+  nomes:
+    peca: { Daniel: Hermes, Rita: Maia }   # o furto na casa dos patrões; a mãe de Hermes
+    q1: { Rodrigo: Prometeu }
+    q2: { Glória: Hera, Jorge: Zeus }   # o ciúme
+    q3: { Ruth: Leto, Antônio: Procusto, Thiago: Teseu }   # a vítima; o assaltante; quem foi atrás dele
+    q4: { Paulo: Ares, Roberta: Afrodite, Flávio: Hefesto, Flavio: Hefesto }   # o ciumento; a namorada; o ex

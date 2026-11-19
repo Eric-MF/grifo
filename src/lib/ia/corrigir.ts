@@ -53,9 +53,14 @@ function montarPedido(exame: Exame, respostas: { peca: string; questoes: string[
         `## ${p.titulo} (parte "${p.parte}")\n\n### Enunciado\n${p.enunciado}\n\n### Gabarito comentado da FGV\n${p.gabarito}\n\n### Tabela de pontos\n${JSON.stringify(p.itens, null, 1)}\n\n### Resposta do examinando\n<<<\n${p.resposta.trim() || "(em branco)"}\n>>>`,
     )
     .join("\n\n---\n\n");
-  return { sistema: SISTEMA, usuario: `${exame.numeral} Exame de Ordem — Direito Penal.\n\n${usuario}` };
+  const codigos = partes.map((p) => `"${p.parte}"`).join(", ");
+  return {
+    sistema: SISTEMA,
+    usuario: `${exame.numeral} Exame de Ordem — Direito Penal.\n\nNo JSON, o campo "parte" de cada item é o código da parte (${codigos}), nunca o nome da seção ("Razões de Apelação"); o campo "n" é o número do item na tabela.\n\n${usuario}`,
+  };
 }
 
+// o esquema da resposta; o campo "parte" ganha a lista dos códigos do exame (schemaDoExame)
 const SCHEMA = {
   type: "object",
   additionalProperties: false,
@@ -69,8 +74,8 @@ const SCHEMA = {
         additionalProperties: false,
         required: ["parte", "n", "componentes"],
         properties: {
-          parte: { type: "string" },
-          n: { type: "string" },
+          parte: { type: "string", description: 'Código da parte: "peca", "q1", "q2"…' },
+          n: { type: "string", description: 'Número do item na tabela de pontos ("1", "8.2", "A")' },
           componentes: {
             type: "array",
             items: {
@@ -106,6 +111,25 @@ const RespostaSchema = z.object({
   comentario_geral: z.string().default(""),
 });
 
+function schemaDoExame(codigos: string[]) {
+  const s = structuredClone(SCHEMA) as unknown as { properties: { itens: { items: { properties: { parte: Record<string, unknown> } } } } };
+  s.properties.itens.items.properties.parte.enum = codigos;
+  return s as unknown as Record<string, unknown>;
+}
+
+const semAcento = (t: string) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+/**
+ * O código da parte que a IA indicou. Alguns modelos (o Gemini, por exemplo) devolvem o nome da seção ("Petição de
+ * Interposição", "Razões de Apelação") ou "Questão 2" no lugar do código: a seção é da peça; "Questão 2" é "q2".
+ */
+export function parteDaIA(parte: string, codigos: string[]): string {
+  const s = semAcento(parte);
+  if (codigos.includes(s)) return s;
+  const q = s.match(/^q\s*(\d+)\b/) ?? s.match(/quest\w*\s*(\d+)/);
+  if (q && codigos.includes(`q${q[1]}`)) return `q${q[1]}`;
+  return "peca";
+}
+
 function extrairJSON(texto: string): unknown {
   const t = texto.trim().replace(/^```(?:json)?\s*/i, "").replace(/```\s*$/, "");
   try {
@@ -125,10 +149,16 @@ export async function corrigirComIA(
   cfg: { provedor: ProvedorId; modelo: string; chave: string; signal?: AbortSignal },
 ): Promise<ResultadoIA> {
   const { sistema, usuario } = montarPedido(exame, respostas);
-  const texto = await chamar({ ...cfg, sistema, usuario, schema: SCHEMA as unknown as Record<string, unknown> });
+  const codigos = ["peca", ...exame.questoes.map((q) => `q${q.n}`)];
+  const texto = await chamar({ ...cfg, sistema, usuario, schema: schemaDoExame(codigos) });
   const parsed = RespostaSchema.safeParse(extrairJSON(texto));
   if (!parsed.success) throw new ErroIA("A resposta da IA não seguiu o formato esperado.", "resposta");
   const r = parsed.data;
+  for (const it of r.itens) it.parte = parteDaIA(it.parte, codigos);
+  // itens que não casam com nenhum da tabela dariam zero em silêncio (e um comentário que elogia a nota zero)
+  const daTabela = new Set([...exame.peca.itens.map((it) => `peca|${it.n}`), ...exame.questoes.flatMap((q) => q.itens.map((it) => `q${q.n}|${it.n}`))]);
+  if (r.itens.length && !r.itens.some((it) => daTabela.has(`${it.parte}|${it.n}`)))
+    throw new ErroIA("A IA respondeu sem indicar os itens da tabela de pontos. Tente de novo ou use outro modelo.", "resposta");
 
   // Recalcula a nota a partir da tabela: só valores oficiais, regra do "requer".
   const partesDef = [

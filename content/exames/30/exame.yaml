@@ -99,7 +99,7 @@ peca:
       componentes:
         - { id: c1, valor: 0.2, termos: [ representacao ] }
         - { id: c2, valor: 0.15, alternativas: [ [ condicionada ], [ indispensavel | imprescindivel | necessaria | exige* ] ] }
-        - { id: c3, valor: 0.1, dispositivo: [ "art. 291, § 1º, Lei 9503", "art. 88, Lei 9" ], requer: c2 }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 291, § 1º, Lei 9503", "art. 88, Lei 9.099" ], requer: c2 }
     - n: "5"
       secao: Razões de recurso de apelação
       descricao: Absolvição de Carlos em relação aos crimes de homicídio culposo (0,30), já que comprovado que não houve imprudência e nem excesso de velocidade (0,20).
@@ -316,3 +316,11 @@ questoes:
         componentes:
           - { id: c1, valor: 0.25, termos: [ atipic* | tipicidade material ] }
           - { id: c2, valor: 0.4, termos: [ insignificancia | bagatela ] }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Carlos: Faetonte, Júlio: Eneias, Mário: Ascânio, Pedro: Belerofonte }   # a velocidade; o pai e o filho mortos; o ciclista que caiu
+    q1: { Beto: Sileno, Juca: Dionísio }   # as drogas
+    q2: { Carleto: Ares, Mário: Heitor }   # os disparos contra o vizinho
+    q3: { Eduardo: Procusto, Pedro: Hermes }   # o assaltante; o advogado
+    q4: { Maria: Calipso }   # o imposto escondido (descaminho)

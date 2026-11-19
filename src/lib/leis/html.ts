@@ -294,9 +294,13 @@ export function htmlBloco(
   const atos = b.atos.length
     ? `<span class="${c.atos}">${b.atos
         .map((a) => {
-          // o "Vide" que aponta para outro dispositivo do leitor (outra súmula): link interno, com a prévia do pop-up
-          if (a.lei && a.art)
-            return `<a href="${esc(rotaDaLei(a.lei))}#${esc(a.art)}" class="${c.ato}" data-tipo="${a.tipo}" data-lei="${esc(a.lei)}" data-art="${esc(a.art)}">${esc(a.bruto)}</a>`;
+          // o "Vide" que aponta para outro dispositivo do leitor (outra súmula, um inciso): link interno, com a prévia
+          // do pop-up, que abre o artigo e destaca o inciso ou o parágrafo
+          if (a.lei && a.art) {
+            const artigo = a.art.split(".")[0]!;
+            const disp = artigo !== a.art ? ` data-disp="${esc(a.art)}"` : "";
+            return `<a href="${esc(rotaDaLei(a.lei))}#${esc(a.art)}" class="${c.ato}" data-tipo="${a.tipo}" data-lei="${esc(a.lei)}" data-art="${esc(artigo)}"${disp}>${esc(a.bruto)}</a>`;
+          }
           const href = a.href ? new URL(a.href, url).href : null;
           return href ? `<a href="${esc(href)}" class="${c.ato}" data-tipo="${a.tipo}" rel="noopener" target="_blank">${esc(a.bruto)}</a>` : `<span class="${c.ato}" data-tipo="${a.tipo}">${esc(a.bruto)}</span>`;
         })

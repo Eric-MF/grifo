@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { textoParaCopiar } from "@/quiz/copiar";
-import type { PerguntaItem, PerguntaObjetiva, PerguntaPeca } from "@/quiz/types";
+import type { PerguntaObjetiva, PerguntaPeca, PerguntaTese } from "@/quiz/types";
 
 const enunciado = { caso: "Caso de teste.", comando: "Qual a peça?", explicacao: "", fonte: "gerada" };
 
@@ -31,21 +31,22 @@ describe("texto da questão para copiar", () => {
     );
   });
 
-  it("item no nível fácil: a ordem vem de `ordem`, não da lista de opções", () => {
-    const p: PerguntaItem = {
+  it("tese no nível fácil: as alternativas saem na ordem recebida (a mesma da tela)", () => {
+    const p: PerguntaTese = {
       ...enunciado,
-      id: "item-1",
-      formato: "item",
+      id: "tese-1",
+      formato: "tese",
       categorias: ["peca-detalhe"],
-      itens: [],
-      opcoes: [
-        { texto: "um", correta: true },
-        { texto: "dois", correta: false },
-        { texto: "três", correta: false },
-      ],
-      dispositivos: [],
+      enunciado: "Caso completo.",
+      tese: "Desclassificação para furto simples",
+      aceitos: [["furto simples"]],
+      artigos: ["art. 155, CP"],
+      valor: 0.5,
+      erradas: { artigos: [], teses: [] },
     };
-    expect(textoParaCopiar(p, 1, p.comando, [], [2, 0])).toBe("Questão: item-1\n\nCaso de teste.\n\nQual a peça?\n\nA) três\nB) um");
+    expect(textoParaCopiar(p, 1, p.comando, [], [{ texto: "três" }, { texto: "um" }])).toBe(
+      "Questão: tese-1\n\nCaso de teste.\n\nQual a peça?\n\nA) três\nB) um",
+    );
   });
 
   it("nível difícil: resposta digitada, sem alternativas", () => {

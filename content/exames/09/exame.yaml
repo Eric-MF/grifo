@@ -120,13 +120,10 @@ questoes:
       **A) Raimundo e Henrique agiram em concurso de agentes? (Valor: 0,75)**
 
       **B) Qual o delito praticado por Henrique? (Valor: 0,50)**
-
-      Gabarito sugerido A. Não há concurso de agentes, pois o auxílio foi proposto após a consumação do crime de furto. Assim, não estão presentes os requisitos necessários à configuração do concurso de agentes, mormente liame subjetivo e identidade da infração penal.
+    gabarito_comentado: |-
+      A. Não há concurso de agentes, pois o auxílio foi proposto após a consumação do crime de furto. Assim, não estão presentes os requisitos necessários à configuração do concurso de agentes, mormente liame subjetivo e identidade da infração penal.
 
       B. Favorecimento real (Art. 349, do CP).
-
-      *Obs.: Respostas contraditórias não serão pontuadas.*
-    gabarito_comentado: ""
     itens:
       - n: A
         descricao: Não, pois o auxílio foi proposto após a consumação do crime de furto (0,75) OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos (0,75).
@@ -245,3 +242,11 @@ questoes:
         valores: [ 0, 0.5 ]
         componentes:
           - { id: c1, valor: 0.5, termos: [ duplo grau ], rotulo: Não terá direito ao duplo grau de jurisdição }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Gisele: Hera, Amanda: Sêmele, Carolina: Leto }   # o ciúme; o alvo; a grávida atingida
+    q1: { Raimundo: Hermes, Henrique: Polifemo }   # o ladrão que escondeu o roubo; a caverna (a garagem)
+    q2: { Wilson: Dionísio, Junior: Orfeu, Júnior: Orfeu }   # a embriaguez; a vítima
+    q3: { Mário: Cronos, Luciano: Zeus }   # quis matar e falhou
+    q4: { Laura: Dânae, Lucas: Midas }   # a chuva de ouro (a propina); a ganância

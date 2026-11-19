@@ -7,10 +7,10 @@ import type { PerguntaFixa } from "@/content/schema";
 import { gravarJSON, lerJSON } from "@/lib/storage";
 import { CATEGORIAS_PADRAO } from "./categorias";
 import { GERADORES } from "./geradores";
-import { comNomes } from "./nomes";
+import { aplicarNomes, comNomes } from "./nomes";
 import { criarRng } from "./rng";
-import type { Categoria, Pergunta, PerguntaItem, PerguntaPeca } from "./types";
-import { nomePeca } from "./verificar";
+import type { Categoria, Pergunta, PerguntaPeca, PerguntaTese } from "./types";
+import { artigoLegivel, nomePeca, type ModoFacil } from "./verificar";
 
 const K = "grifo:quiz";
 interface Estado {
@@ -92,16 +92,11 @@ function sortearPeca(est: Estado): Pergunta {
   return gerarPergunta(GERADORES[0].id, Date.now() >>> 0);
 }
 
-/** Quanto o item vale na tabela da FGV: a nota máxima de cada item, somada. */
-export function valorDoItem(p: PerguntaItem): number {
-  return p.itens.reduce((s, i) => s + (i.valores?.length ? Math.max(...i.valores) : i.componentes.reduce((t, c) => t + c.valor, 0)), 0);
-}
-
 /**
- * Em "Por dentro da peça", a chance de cada item é proporcional ao que ele vale na prova: o item de 0,10 aparece
- * um sexto das vezes do de 0,60. Nas outras categorias, todas têm a mesma chance.
+ * Em "Por dentro da peça", a chance de cada tese é proporcional ao que o item dela vale na prova: o item de 0,10
+ * aparece um sexto das vezes do de 0,60. Nas outras categorias, todas têm a mesma chance.
  */
-export const pesoNoSorteio = (p: Pergunta, c: Categoria) => (c === "peca-detalhe" && p.formato === "item" ? Math.max(0.05, valorDoItem(p)) : 1);
+export const pesoNoSorteio = (p: Pergunta, c: Categoria) => (c === "peca-detalhe" && p.formato === "tese" ? Math.max(0.05, p.valor) : 1);
 
 function sortearDoAcervo(est: Estado, c: Categoria): Pergunta {
   const todas = ACERVO().filter((p) => p.categorias.includes(c));
@@ -131,6 +126,21 @@ export function sortearPergunta({ categorias = CATEGORIAS_PADRAO }: { categorias
   return comNomes(c === "peca" ? sortearPeca(est) : sortearDoAcervo(est, c));
 }
 
+let porId: Map<string, Pergunta> | null = null;
+/**
+ * A questão de um id, como saiu no sorteio: do acervo (os rascunhos também, que podem ter sido respondidos no
+ * servidor de desenvolvimento) ou de um gerador ("apelacao:12345", o gerador e a semente), com os nomes sorteados
+ * daquela vez. null quando ela não existe mais (saiu do acervo).
+ */
+export function perguntaPorId(id: string, nomes?: readonly string[]): Pergunta | null {
+  porId ??= new Map<string, Pergunta>([...FIXAS, ...TODAS].map((p) => [p.id, p]));
+  let p = porId.get(id) ?? null;
+  const gerada = p ? null : /^(.+):(\d+)$/.exec(id);
+  if (gerada && GERADORES.some((g) => g.id === gerada[1])) p = gerarPergunta(gerada[1]!, Number(gerada[2]));
+  if (!p) return null;
+  return p.pessoas?.length && nomes?.length ? aplicarNomes(p, nomes) : p;
+}
+
 export function registrarResultado(p: Pergunta, acertou: boolean) {
   const est = ler();
   if (p.formato === "peca") {
@@ -149,12 +159,31 @@ export function registrarResultado(p: Pergunta, acertou: boolean) {
   gravarJSON(K, est);
 }
 
-/** Índices das alternativas de um item (nível fácil): a correta + até 3 erradas, embaralhadas. */
-export function opcoesDoItem(p: PerguntaItem): number[] {
-  const idx = p.opcoes.map((_, i) => i);
-  const corretas = idx.filter((i) => p.opcoes[i].correta);
-  const erradas = idx.filter((i) => !p.opcoes[i].correta).sort(() => Math.random() - 0.5).slice(0, 3);
-  return [...corretas.slice(0, 1), ...erradas].sort(() => Math.random() - 0.5);
+export interface OpcoesFacil {
+  /** "artigo": a tese é dada e se escolhe o artigo; "tese": o artigo é dado e se escolhe a tese */
+  modo: ModoFacil;
+  opcoes: { texto: string; correta: boolean }[];
+}
+
+/**
+ * As alternativas do fácil: metade das vezes o artigo da tese, metade a tese do artigo (quando há teses erradas
+ * bastantes). A certa e 3 erradas, das mais parecidas, embaralhadas. Os artigos aparecem só pelo número, sem o texto.
+ */
+export function opcoesDaTese(p: PerguntaTese, aleatorio: () => number = Math.random): OpcoesFacil {
+  const { artigos, teses } = p.erradas;
+  const podeTese = teses.length >= 3;
+  const modo: ModoFacil = podeTese && (artigos.length < 3 || aleatorio() < 0.5) ? "tese" : "artigo";
+  // as erradas: uma das duas mais parecidas e duas das outras, para não ficar sempre as mesmas
+  const escolher = (xs: string[]) => {
+    const primeiras = xs.slice(0, 2).sort(() => aleatorio() - 0.5).slice(0, 1);
+    const resto = xs.filter((x) => !primeiras.includes(x)).sort(() => aleatorio() - 0.5);
+    return [...primeiras, ...resto].slice(0, 3);
+  };
+  const opcoes =
+    modo === "tese"
+      ? [{ texto: p.tese, correta: true }, ...escolher(teses).map((texto) => ({ texto, correta: false }))]
+      : [{ texto: artigoLegivel(p.artigos[0]!), correta: true }, ...escolher(artigos).map((a) => ({ texto: artigoLegivel(a), correta: false }))];
+  return { modo, opcoes: opcoes.sort(() => aleatorio() - 0.5) };
 }
 
 /** 4 alternativas (nível fácil): a correta + 3 distratores plausíveis, embaralhadas. */

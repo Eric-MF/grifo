@@ -67,9 +67,9 @@ describe("eventosDeDispositivos", () => {
     ]);
   });
 
-  it("deixa de fora súmulas vinculantes e súmulas sem tribunal", () => {
+  it("conta as súmulas vinculantes e deixa de fora as súmulas sem tribunal", () => {
     const evs = eventosDeDispositivos(["Súmula Vinculante 24", "Súmula 711", "art. 121 do CP"], 0, "quiz", ctx.lex, { t: agora });
-    expect(evs.map((e) => `${e.d}:${e.a}`)).toEqual(["cp:121"]);
+    expect(evs.map((e) => `${e.d}:${e.a}`)).toEqual(["sumulas-vinculantes:24", "cp:121"]);
   });
 
   it("súmulas repetidas entram uma vez, junto com o artigo de mesmo número", () => {

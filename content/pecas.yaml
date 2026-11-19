@@ -9,98 +9,158 @@ resposta-acusacao:
   aliases: [resposta a acusacao, resposta escrita a acusacao, defesa previa, resposta escrita, defesa escrita]
   siglas: [ra]
   fundamento: [art. 396-A CPP]
+  grupo: defesa
+  prazo: "10 dias, contados da citação (art. 396 do CPP)"
+  cabimento: "A primeira defesa escrita, depois de recebida a denúncia ou a queixa e feita a citação (arts. 396 e 396-A do CPP)."
 memoriais:
   nome: Memoriais
   aliases: [memoriais, alegacoes finais por memoriais, alegacoes finais escritas, alegacoes finais, alegacoes finais orais convertidas em memoriais]
   siglas: [af, afm]
   fundamento: ["art. 403, § 3º, CPP"]
+  grupo: defesa
+  prazo: "5 dias (art. 403, § 3º, do CPP)"
+  cabimento: "As alegações finais por escrito, no lugar dos debates orais, quando o caso é complexo, há muitos réus ou houve diligências (arts. 403, § 3º, e 404, parágrafo único, do CPP)."
 apelacao:
   nome: Apelação
   aliases: [apelacao, recurso de apelacao, razoes de apelacao]
   siglas: [ap, apel]
   fundamento: [art. 593 CPP]
+  grupo: recurso
+  prazo: "5 dias para interpor (art. 593) e 8 dias para as razões (art. 600 do CPP)"
+  cabimento: "Contra a sentença de condenação ou de absolvição e contra as decisões do júri (art. 593 do CPP)."
 contrarrazoes-apelacao:
   nome: Contrarrazões de Apelação
   aliases: [contrarrazoes de apelacao, contrarrazoes a apelacao, contrarrazoes ao recurso de apelacao, contrarrazoes em apelacao]
   siglas: [ca, capel, crap]
   fundamento: [art. 600 CPP]
+  grupo: contrarrazoes
+  prazo: "8 dias (art. 600 do CPP)"
+  cabimento: "A resposta à apelação da outra parte, para manter a decisão (art. 600 do CPP)."
 rese:
   nome: Recurso em Sentido Estrito
   aliases: [recurso em sentido estrito, rese, recurso no sentido estrito, recurso estrito]
   siglas: [rse]
   fundamento: [art. 581 CPP]
+  grupo: recurso
+  prazo: "5 dias para interpor (art. 586) e 2 dias para as razões (art. 588 do CPP)"
+  cabimento: "Contra as decisões listadas no art. 581 do CPP, como a que não recebe a denúncia ou a que pronuncia o réu."
 contrarrazoes-rese:
   nome: Contrarrazões de Recurso em Sentido Estrito
   aliases: [contrarrazoes de recurso em sentido estrito, contrarrazoes ao recurso em sentido estrito, contrarrazoes ao rese, contrarrazoes de rese, contrarrazoes ao rse, contrarrazoes de rse]
   siglas: [crese, crse]
   fundamento: [art. 588 CPP]
+  grupo: contrarrazoes
+  prazo: "2 dias (art. 588 do CPP)"
+  cabimento: "A resposta ao recurso em sentido estrito da outra parte (art. 588 do CPP)."
 agravo-execucao:
   nome: Agravo em Execução
   aliases: [agravo em execucao, agravo de execucao, agravo em execucao penal, agravo de execucao penal]
   siglas: [agravo, agepe, agexec, ae, aep]
   fundamento: [art. 197 LEP]
+  grupo: execucao
+  prazo: "5 dias (Súmula 700 do STF)"
+  cabimento: "Contra as decisões do juiz da execução penal (art. 197 da LEP)."
 revisao-criminal:
   nome: Revisão Criminal
   aliases: [revisao criminal]
   siglas: [rc, rvc]
   fundamento: [art. 621 CPP]
+  grupo: autonoma
+  prazo: "a qualquer tempo, antes ou depois de extinta a pena (art. 622 do CPP)"
+  cabimento: "Contra a condenação já transitada em julgado, nos casos do art. 621 do CPP, como a prova nova de inocência."
 relaxamento-prisao:
   nome: Relaxamento de Prisão
   aliases: [relaxamento de prisao, relaxamento da prisao, pedido de relaxamento, relaxamento da prisao em flagrante, relaxamento do flagrante]
   siglas: [relaxamento, rp, rpf]
   fundamento: ["art. 5º, LXV, CF", "art. 310, I, CPP"]
+  grupo: prisao
+  prazo: "não tem prazo"
+  cabimento: "Contra a prisão ilegal, como o flagrante sem os requisitos da lei (art. 5º, LXV, da CF e art. 310, I, do CPP)."
 liberdade-provisoria:
   nome: Liberdade Provisória
   aliases: [liberdade provisoria, pedido de liberdade provisoria]
   siglas: [lp]
   fundamento: ["art. 321 CPP", "art. 310, III, CPP"]
+  grupo: prisao
+  prazo: "não tem prazo"
+  cabimento: "Para o preso em flagrante legal responder em liberdade, quando não cabe a prisão preventiva (arts. 310, III, e 321 do CPP)."
 revogacao-preventiva:
   nome: Revogação da Prisão Preventiva
   aliases: [revogacao da prisao preventiva, revogacao de prisao preventiva, revogacao da preventiva, pedido de revogacao da prisao preventiva, revogacao da prisao]
   siglas: [revogacao, rpp]
   fundamento: [art. 316 CPP]
+  grupo: prisao
+  prazo: "não tem prazo"
+  cabimento: "Contra a prisão preventiva quando faltam ou deixam de existir os motivos dela (art. 316 do CPP)."
 queixa-crime:
   nome: Queixa-Crime
   aliases: [queixa-crime, queixa crime, queixa]
   siglas: [qc]
   fundamento: [art. 30 CPP, art. 41 CPP]
+  grupo: acusacao
+  prazo: "6 meses, contados do dia em que o ofendido soube quem é o autor (art. 38 do CPP)"
+  cabimento: "A petição inicial da ação penal privada, apresentada pelo ofendido (arts. 30 e 41 do CPP)."
 habeas-corpus:
   nome: Habeas Corpus
   aliases: [habeas corpus]
   siglas: [hc, habeas]
   fundamento: ["art. 647 CPP", "art. 5º, LXVIII, CF"]
+  grupo: autonoma
+  prazo: "não tem prazo"
+  cabimento: "Contra a violência ou a coação ilegal na liberdade de locomoção, ou a ameaça dela (art. 5º, LXVIII, da CF e art. 647 do CPP)."
 embargos-declaracao:
   nome: Embargos de Declaração
   aliases: [embargos de declaracao, embargos declaratorios]
   siglas: [ed, edcl, embargos declaratorios]
   fundamento: [art. 382 CPP, art. 619 CPP]
+  grupo: recurso
+  prazo: "2 dias (arts. 382 e 619 do CPP)"
+  cabimento: "Para esclarecer obscuridade, ambiguidade, contradição ou omissão da sentença ou do acórdão (arts. 382 e 619 do CPP)."
 embargos-infringentes:
   nome: Embargos Infringentes e de Nulidade
   aliases: [embargos infringentes, embargos infringentes e de nulidade, embargos de nulidade]
   siglas: [infringentes, ein, ei]
   fundamento: ["art. 609, parágrafo único, CPP"]
+  grupo: recurso
+  prazo: "10 dias (art. 609, parágrafo único, do CPP)"
+  cabimento: "Contra o acórdão de segunda instância não unânime e desfavorável ao réu (art. 609, parágrafo único, do CPP)."
 carta-testemunhavel:
   nome: Carta Testemunhável
   aliases: [carta testemunhavel]
   siglas: [ct]
   fundamento: [art. 639 CPP]
+  grupo: recurso
+  prazo: "48 horas (art. 640 do CPP)"
+  cabimento: "Contra a decisão que não recebe o recurso ou que impede o seu seguimento (art. 639 do CPP)."
 recurso-especial:
   nome: Recurso Especial
   aliases: [recurso especial, resp]
   siglas: [resp]
   fundamento: ["art. 105, III, CF"]
+  grupo: recurso
+  prazo: "15 dias (art. 1.003, § 5º, do CPC)"
+  cabimento: "Ao STJ, contra o acórdão que contraria lei federal ou nega a ela vigência, entre outros casos (art. 105, III, da CF)."
 recurso-extraordinario:
   nome: Recurso Extraordinário
   aliases: [recurso extraordinario]
   siglas: [re, rext, rex]
   fundamento: ["art. 102, III, CF"]
+  grupo: recurso
+  prazo: "15 dias (art. 1.003, § 5º, do CPC)"
+  cabimento: "Ao STF, contra a decisão de única ou última instância que contraria a Constituição (art. 102, III, da CF)."
 recurso-ordinario-constitucional:
   nome: Recurso Ordinário Constitucional
   aliases: [recurso ordinario constitucional, recurso ordinario em habeas corpus, roc, rhc, recurso ordinario]
   siglas: [rhc, roc, ro]
   fundamento: ["art. 105, II, CF", "art. 102, II, CF"]
+  grupo: recurso
+  prazo: "5 dias (art. 30 da Lei 8.038/1990)"
+  cabimento: "Contra a decisão de tribunal que nega o habeas corpus (art. 105, II, a, e art. 102, II, a, da CF)."
 mandado-seguranca:
   nome: Mandado de Segurança
   aliases: [mandado de seguranca]
   siglas: [ms, mandado de seguranca criminal]
   fundamento: ["art. 5º, LXIX, CF"]
+  grupo: autonoma
+  prazo: "120 dias, contados da ciência do ato (art. 23 da Lei 12.016/2009)"
+  cabimento: "Contra ato ilegal de autoridade que fere direito líquido e certo, quando não cabe habeas corpus (art. 5º, LXIX, da CF)."

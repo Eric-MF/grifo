@@ -16,7 +16,7 @@ const sumula = (o: Partial<Sumula> & { numero: number }): Sumula => ({
   extras: {},
   ...o,
 });
-const lista = (tribunal: "stf" | "stj", sumulas: Sumula[]): SumulasDoTribunal => ({
+const lista = (tribunal: "stf" | "stj" | "vinculantes", sumulas: Sumula[]): SumulasDoTribunal => ({
   tribunal,
   fonte: "https://fonte.example/",
   coletadoEm: "2026-10-17",
@@ -71,9 +71,23 @@ describe("súmulas como leitura de lei", () => {
   });
 
   it("disponiveisDe lista os números com texto de cada tribunal", () => {
-    const disponiveis = disponiveisDe(lista("stf", [sumula({ numero: 1, tribunal: "stf" }), sumula({ numero: 2, baixada: false })]), lista("stj", [sumula({ numero: 9 })]));
+    const disponiveis = disponiveisDe({ stf: lista("stf", [sumula({ numero: 1, tribunal: "stf" }), sumula({ numero: 2, baixada: false })]), stj: lista("stj", [sumula({ numero: 9 })]) });
     expect([...disponiveis.stf]).toEqual([1]);
     expect([...disponiveis.stj]).toEqual([9]);
+    expect([...disponiveis.vinculantes]).toEqual([]);
+  });
+
+  it("as vinculantes saem como \"Súmula Vinculante N\", e o Vide de uma súmula do STF aponta para elas pelo texto", () => {
+    const sv = lista("vinculantes", [sumula({ numero: 11, tribunal: "vinculantes", enunciado: "Só é lícito o uso de algemas…" })]);
+    const [b] = blocosDaSumulas(sv, {});
+    expect(b!.rotulo).toBe("Súmula Vinculante 11");
+    expect(b!.texto).toBe("Súmula Vinculante 11 Só é lícito o uso de algemas…");
+    const stf = lista("stf", [sumula({ numero: 1, tribunal: "stf", vide: [{ texto: "Vide Súmula Vinculante 11." }, { texto: "Vide Súmula Vinculante 99." }] })]);
+    const [s1] = blocosDaSumulas(stf, disponiveisDe({ stf, vinculantes: sv }));
+    expect(s1!.atos!.filter((a) => a.tipo === "vide").map((a) => [a.lei, a.art])).toEqual([
+      ["sumulas-vinculantes", "s-11"],
+      [undefined, undefined],
+    ]);
   });
 
   it("rota e id: as súmulas têm o seu caminho e os seus dispositivos", () => {

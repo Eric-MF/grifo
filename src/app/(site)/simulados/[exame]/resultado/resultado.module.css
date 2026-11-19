@@ -75,3 +75,23 @@
   :global(:root[data-layout="celular"]) .barras li .barraTempo { grid-column: 2; grid-row: 1; }
   :global(:root[data-layout="celular"]) .barras li strong { grid-column: 3; grid-row: 1; }
 }
+
+/* enquanto a tentativa é lida do navegador: a mesma roda da entrega */
+.carregando { min-height: 60vh; display: grid; place-content: center; justify-items: center; gap: 0.8rem; color: var(--muted); }
+.carregando p { margin: 0; font-weight: 600; }
+.carregador {
+  width: 54px; height: 54px; border-radius: 50%; border: 5px solid var(--surface-2); border-top-color: var(--primary);
+  animation: girar 0.8s linear infinite;
+}
+@keyframes girar { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .carregador { animation-duration: 2.4s; }
+}
+
+/* a versão atualizada: o erro material corrigido e os avisos de lei nova */
+.versaoAtual {
+  margin: 1rem 0 0; padding: 1rem 1.2rem; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius);
+  background: var(--surface); display: grid; gap: 0.7rem; font-size: 0.93rem;
+}
+.versaoAtual h2 { margin: 0; font-size: 1.15rem; }
+.versaoAtual b { display: block; margin-bottom: 0.2rem; }

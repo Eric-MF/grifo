@@ -1,0 +1,129 @@
+# Histórico das peças da 2ª fase de Penal para as estatísticas (/estatisticas/).
+# exames_antigos: os exames da OAB/SP anteriores ao I Exame Unificado (sem prova no site), do levantamento do Grifo.
+#   numero = a numeração da OAB/SP; banca = vunesp (até o 128º), vunesp-cespe (129º a 137º, provas só de SP) ou
+#   cespe (138º a 140º: os Exames Unificados 2009.1 a 2009.3, a mesma prova das outras seccionais).
+#   pecas = chaves de content/pecas.yaml ou de pecas_extras, na ordem do levantamento (repetida quando caiu duas vezes).
+#   ano = o ano da 2ª fase. Do 110º ao 124º, "estimado: true": o ano sai da sequência de três exames por ano (o
+#   terceiro do ano com a 2ª fase em fevereiro do ano seguinte), que todas as datas confirmadas do 125º ao 140º seguem.
+#   data = a 2ª fase, como as notícias da época a deram (ConJur, Migalhas, OAB/RS; algumas foram dadas antes da prova,
+#   como a data marcada). O 140º (2009.3) teve a 2ª fase de 28/2/2010 anulada e refeita em 18/4/2010.
+#   O 141º de SP (2010.1) é o I Exame Unificado: ele está no site (content/exames/01) e não entra aqui.
+# linha_do_tempo: os marcos da unificação, na aba "Linha do tempo".
+
+pecas_extras:
+  progressao-regime:
+    nome: Pedido de Progressão de Regime
+    grupo: execucao
+    fundamento: [art. 112 LEP]
+    prazo: não tem prazo
+    cabimento: "Para o condenado passar a um regime mais brando, cumpridos o tempo e o bom comportamento exigidos (art. 112 da LEP)."
+  sequestro-bens:
+    nome: Requerimento de Sequestro de Bens
+    grupo: acusacao
+    fundamento: [art. 125 CPP]
+    cabimento: "Medida assecuratória sobre os bens comprados com o proveito do crime (arts. 125 a 127 do CPP)."
+
+exames_antigos:
+  - { numero: 110, banca: vunesp, ano: 2000, estimado: true, pecas: [revisao-criminal, recurso-ordinario-constitucional, contrarrazoes-rese] }
+  - { numero: 111, banca: vunesp, ano: 2000, estimado: true, pecas: [embargos-infringentes, rese, contrarrazoes-apelacao] }
+  - { numero: 112, banca: vunesp, ano: 2000, estimado: true, pecas: [habeas-corpus, contrarrazoes-rese, agravo-execucao] }
+  - { numero: 113, banca: vunesp, ano: 2001, estimado: true, pecas: [rese, habeas-corpus, apelacao] }
+  - { numero: 114, banca: vunesp, ano: 2001, estimado: true, pecas: [recurso-ordinario-constitucional, agravo-execucao, apelacao] }
+  - { numero: 115, banca: vunesp, ano: 2001, estimado: true, pecas: [revisao-criminal, agravo-execucao, rese] }
+  - { numero: 116, banca: vunesp, ano: 2002, estimado: true, pecas: [habeas-corpus, apelacao, memoriais] }
+  - { numero: 117, banca: vunesp, ano: 2002, estimado: true, pecas: [rese, habeas-corpus, queixa-crime] }
+  - { numero: 118, banca: vunesp, ano: 2002, estimado: true, pecas: [apelacao, memoriais, habeas-corpus] }
+  - { numero: 119, banca: vunesp, ano: 2003, estimado: true, pecas: [sequestro-bens, mandado-seguranca, agravo-execucao] }
+  - { numero: 120, banca: vunesp, ano: 2003, estimado: true, pecas: [agravo-execucao, habeas-corpus, embargos-infringentes] }
+  - { numero: 121, banca: vunesp, ano: 2003, estimado: true, pecas: [recurso-ordinario-constitucional, revisao-criminal, apelacao] }
+  - { numero: 122, banca: vunesp, ano: 2004, estimado: true, pecas: [revisao-criminal, habeas-corpus, apelacao] }
+  - { numero: 123, banca: vunesp, ano: 2004, estimado: true, pecas: [rese, apelacao, mandado-seguranca, agravo-execucao] }
+  - { numero: 124, banca: vunesp, ano: 2004, estimado: true, pecas: [apelacao, habeas-corpus, embargos-declaracao] }
+  - { numero: 125, banca: vunesp, ano: 2005, data: 2005-02-20, pecas: [habeas-corpus, rese, habeas-corpus] }
+  - { numero: 126, banca: vunesp, ano: 2005, data: 2005-05-22, pecas: [apelacao, habeas-corpus] }
+  - { numero: 127, banca: vunesp, ano: 2005, data: 2005-09-18, pecas: [habeas-corpus, agravo-execucao, rese] }
+  - { numero: 128, banca: vunesp, ano: 2006, pecas: [apelacao, revisao-criminal, habeas-corpus] }
+  - { numero: 129, banca: vunesp-cespe, ano: 2006, data: 2006-05-28, pecas: [habeas-corpus, apelacao, habeas-corpus] }
+  - { numero: 130, banca: vunesp-cespe, ano: 2006, pecas: [apelacao, agravo-execucao, embargos-infringentes] }
+  - { numero: 131, banca: vunesp-cespe, ano: 2007, data: 2007-02-25, pecas: [apelacao, rese, queixa-crime] }
+  - { numero: 132, banca: vunesp-cespe, ano: 2007, pecas: [rese, revisao-criminal, progressao-regime] }
+  - { numero: 133, banca: vunesp-cespe, ano: 2007, pecas: [memoriais, habeas-corpus, rese] }
+  - { numero: 134, banca: vunesp-cespe, ano: 2008, data: 2008-03-09, pecas: [rese, apelacao, memoriais] }
+  - { numero: 135, banca: vunesp-cespe, ano: 2008, data: 2008-06-15, pecas: [apelacao, liberdade-provisoria, agravo-execucao] }
+  - { numero: 136, banca: vunesp-cespe, ano: 2008, data: 2008-10-19, pecas: [recurso-ordinario-constitucional, relaxamento-prisao, apelacao] }
+  - { numero: 137, banca: vunesp-cespe, ano: 2009, data: 2009-02-15, pecas: [revogacao-preventiva, queixa-crime, rese] }
+  - { numero: 138, banca: cespe, rotulo: "2009.1", ano: 2009, data: 2009-06-28, pecas: [rese] }
+  - { numero: 139, banca: cespe, rotulo: "2009.2", ano: 2009, data: 2009-10-25, pecas: [memoriais] }
+  - { numero: 140, banca: cespe, rotulo: "2009.3", ano: 2010, data: 2010-04-18, pecas: [queixa-crime] }
+
+# Os marcos da unificação. "era" dá a cor; "de" e "ate" (AAAA ou AAAA-MM) põem o marco no eixo do tempo;
+# "exame" (id do site) vira o link do marco.
+linha_do_tempo:
+  - quando: Até 2006
+    de: "2000"
+    ate: "2006"
+    rotulo: Bancas estaduais
+    era: vunesp
+    titulo: Cada seccional, a sua prova
+    texto: "Cada seccional da OAB aplicava o próprio Exame de Ordem. Em São Paulo, a VUNESP organizava as provas, numeradas em sequência (110º, 111º…), com alto grau de dificuldade e particularidades regionais."
+  - quando: 2007 a 2009
+    de: "2007"
+    ate: "2009-04"
+    rotulo: Começo da unificação
+    era: vunesp-cespe
+    titulo: As adesões ao CESPE
+    texto: "O CESPE/UnB passa a aplicar uma prova comum às seccionais que aderem ao projeto de unificação. São Paulo ainda faz a sua própria prova, que o CESPE também passa a organizar. Em 2009, o Provimento 136 do Conselho Federal da OAB fixa as regras do Exame de Ordem Unificado, para todo o país."
+  - quando: Mai. e jun. de 2009
+    de: "2009-05"
+    ate: "2009-06"
+    rotulo: SP na prova única
+    era: cespe
+    titulo: São Paulo entra no Exame Unificado
+    texto: "O 138º Exame de São Paulo é o Exame Unificado 2009.1, do CESPE: pela primeira vez, a OAB/SP aplica a mesma prova das outras seccionais (1ª fase em 17/5/2009 e 2ª fase em 28/6/2009). O 137º, com a 2ª fase em 15/2/2009, foi a última prova só de São Paulo."
+    destaque: "Peça: Recurso em Sentido Estrito"
+  - quando: Fev. a abr. de 2010
+    de: "2010-02"
+    ate: "2010-04"
+    rotulo: Prova anulada
+    era: cespe
+    titulo: A prova de Penal que fez o país refazer a 2ª fase
+    texto: "A 2ª fase do Exame 2009.3 (o 140º de São Paulo) foi aplicada em 28/2/2010. Uma fraude na prova de Direito Penal, descoberta em Osasco (SP) e investigada pela Polícia Federal, levou a OAB a anular a 2ª fase em todo o país. Os cerca de 18,5 mil candidatos refizeram as provas em 18/4/2010, sem custo."
+  - quando: Jul. de 2010
+    de: "2010-07"
+    rotulo: I Exame Unificado
+    era: cespe
+    titulo: O CESPE em todo o país
+    texto: "Em 25/7/2010, o CESPE aplica a 2ª fase do Exame 2010.1 em todo o Brasil, a mesma prova para todas as seccionais: é o I Exame de Ordem Unificado (o 141º de São Paulo). A banca não publicou a distribuição dos pontos."
+    exame: "01"
+    destaque: "Peça: Memoriais"
+  - quando: "2010.2"
+    de: "2010-11"
+    rotulo: Era FGV
+    era: fgv
+    titulo: A FGV assume
+    texto: "A Fundação Getulio Vargas aplica o II Exame Unificado (2010.2), com a 2ª fase em novembro de 2010, e segue como banca até hoje. Ela passa a publicar o padrão de resposta com a pontuação de cada item, a tabela que o simulado do Grifo usa para corrigir."
+    exame: "02"
+    destaque: "Peça: Resposta à Acusação"
+  - quando: "2011"
+    de: "2011-08"
+    rotulo: Formato atual
+    era: fgv
+    titulo: Quatro questões de 1,25
+    texto: "Do I ao III Exame, a prova trazia a peça (5,00) e cinco questões de 1,00. Do IV Exame em diante, são a peça e quatro questões de 1,25."
+    exame: "04"
+  - quando: 2016 e 2018
+    de: "2016-10"
+    ate: "2018-06"
+    rotulo: Reaplicações
+    era: fgv
+    titulo: Provas refeitas em Porto Velho e Porto Alegre
+    texto: "A 2ª fase do XX Exame teve uma reaplicação em Porto Velho (9/10/2016), e a do XXV, em Porto Alegre (24/6/2018), com provas diferentes da nacional. No XXV, a peça mudou: Resposta à Acusação na prova nacional e Apelação em Porto Alegre."
+    exame: 25-porto-alegre
+  - quando: "2020"
+    de: "2020-03"
+    ate: "2020-12"
+    rotulo: Pandemia
+    era: fgv
+    titulo: O XXXI Exame adiado
+    texto: "A 2ª fase do XXXI Exame, adiada pela pandemia de covid-19, só foi aplicada em 6/12/2020, um ano depois da 2ª fase do XXX (1/12/2019)."
+    exame: "31"

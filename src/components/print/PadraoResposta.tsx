@@ -3,6 +3,7 @@ import { fmtNota } from "@/lib/formato";
 import { RichText } from "@/components/RichText";
 import type { Exame, Item } from "@/content/schema";
 import { MarcaGrifo } from "./Caderno";
+import { Diferencas } from "./Diferencas";
 
 // Padrão de resposta no layout da FGV (barras "Enunciado"/"Gabarito Comentado" e
 // tabela "Distribuição dos Pontos"), com marca Grifo e notas de atualização.
@@ -71,7 +72,7 @@ function Cabecalho({ exame, titulo }: { exame: Exame; titulo: string }) {
   return (
     <>
       <div className="pr-cab">
-        <img src="/img/logo-grifo-em-progresso.svg" alt="Grifo em Progresso · grifo.net" />
+        <img src="/img/logo-grifo-em-progresso.svg" alt="Grifo em Progresso · grifo.net.br" />
         <div className="tit">
           <b>ORDEM DOS ADVOGADOS DO BRASIL</b>
           <span>{exame.numeral} Exame de Ordem Unificado</span>
@@ -137,7 +138,13 @@ export function PadraoResposta({ exame }: { exame: Exame }) {
           )}
           {notasDe(p.alvo).length > 0 && (
             <>
-              <div className="barra laranja">Atualização legislativa</div>
+              <div className="barra laranja">
+                {notasDe(p.alvo).every((n) => n.tipo === "jurisprudencia")
+                  ? "Jurisprudência posterior à prova"
+                  : notasDe(p.alvo).some((n) => n.tipo === "jurisprudencia")
+                    ? "Atualização legislativa e jurisprudência"
+                    : "Atualização legislativa"}
+              </div>
               {notasDe(p.alvo).map((n, k) => (
                 <div key={k} className="nota-atual">
                   <b>
@@ -151,6 +158,12 @@ export function PadraoResposta({ exame }: { exame: Exame }) {
           )}
         </article>
       ))}
+      <article className="fluxo quebra">
+        <Cabecalho exame={exame} titulo="DIFERENÇAS EM RELAÇÃO À PROVA ORIGINAL" />
+        <div className="texto">
+          <Diferencas exame={exame} Titulo={({ children }) => <div className="barra laranja">{children}</div>} />
+        </div>
+      </article>
     </>
   );
 }

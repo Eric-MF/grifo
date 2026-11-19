@@ -19,7 +19,8 @@
   "gabarito": "gabarito-02.pdf",
   "objetivaCaderno": "objetiva-caderno-02.pdf",
   "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=2Ebhp67LzJY=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "03",
@@ -73,8 +74,10 @@
   "caderno": "caderno-07.pdf",
   "gabarito": "gabarito-07.pdf",
   "objetivaCaderno": "objetiva-caderno-07.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-07.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=UkJ8MA7MAISLwY=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "08",
@@ -118,7 +121,8 @@
   "gabarito": "gabarito-11.pdf",
   "objetivaCaderno": null,
   "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=SFMla8h8pAI=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "12",
@@ -129,7 +133,8 @@
   "gabarito": "gabarito-12.pdf",
   "objetivaCaderno": null,
   "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=FoBF6NDMAISMAISQQ=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "13",
@@ -140,7 +145,8 @@
   "gabarito": "gabarito-13.pdf",
   "objetivaCaderno": null,
   "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=PbCbMAISjuMAISjMQ=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "14",
@@ -151,7 +157,8 @@
   "gabarito": "gabarito-14.pdf",
   "objetivaCaderno": null,
   "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=kTmPE/dPTnA=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "15",
@@ -162,7 +169,8 @@
   "gabarito": "gabarito-15.pdf",
   "objetivaCaderno": null,
   "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=SyiapuPKIuM=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "16",
@@ -173,7 +181,8 @@
   "gabarito": "gabarito-16.pdf",
   "objetivaCaderno": "objetiva-caderno-16.pdf",
   "objetivaGabarito": "objetiva-gabarito-16.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=31pi5pjiqHU=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "17",
@@ -184,7 +193,8 @@
   "gabarito": "gabarito-17.pdf",
   "objetivaCaderno": "objetiva-caderno-17.pdf",
   "objetivaGabarito": "objetiva-gabarito-17.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=OgfMAISOUpj4/0=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "18",
@@ -194,8 +204,10 @@
   "caderno": "caderno-18.pdf",
   "gabarito": "gabarito-18.pdf",
   "objetivaCaderno": "objetiva-caderno-18.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-18.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=IUs1KSpaAVc=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "19",
@@ -205,8 +217,10 @@
   "caderno": "caderno-19.pdf",
   "gabarito": "gabarito-19.pdf",
   "objetivaCaderno": "objetiva-caderno-19.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-19.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=4WEoth9y5S4=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "20",
@@ -216,8 +230,10 @@
   "caderno": "caderno-20.pdf",
   "gabarito": "gabarito-20.pdf",
   "objetivaCaderno": "objetiva-caderno-20.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-20.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=KFmA0uYUv3c=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "20-porto-velho",
@@ -228,7 +244,8 @@
   "gabarito": "gabarito-20-porto-velho.pdf",
   "objetivaCaderno": null,
   "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=KFmA0uYUv3c=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "21",
@@ -238,8 +255,10 @@
   "caderno": "caderno-21.pdf",
   "gabarito": "gabarito-21.pdf",
   "objetivaCaderno": "objetiva-caderno-21.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-21.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=KKHv75PmMAISCI=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "22",
@@ -249,8 +268,10 @@
   "caderno": "caderno-22.pdf",
   "gabarito": "gabarito-22.pdf",
   "objetivaCaderno": "objetiva-caderno-22.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-22.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=4wnSwkinNuM=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "23",
@@ -260,8 +281,10 @@
   "caderno": "caderno-23.pdf",
   "gabarito": "gabarito-23.pdf",
   "objetivaCaderno": "objetiva-caderno-23.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-23.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=VNURVq3Hznw=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "24",
@@ -271,8 +294,10 @@
   "caderno": "caderno-24.pdf",
   "gabarito": "gabarito-24.pdf",
   "objetivaCaderno": "objetiva-caderno-24.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-24.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=bneFoqf4wEg=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "25",
@@ -282,8 +307,10 @@
   "caderno": "caderno-25.pdf",
   "gabarito": "gabarito-25.pdf",
   "objetivaCaderno": "objetiva-caderno-25.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-25.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=BMKjo2uW38w=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "25-porto-alegre",
@@ -294,7 +321,8 @@
   "gabarito": "gabarito-25-porto-alegre.pdf",
   "objetivaCaderno": null,
   "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=BMKjo2uW38w=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "26",
@@ -304,8 +332,10 @@
   "caderno": "caderno-26.pdf",
   "gabarito": "gabarito-26.pdf",
   "objetivaCaderno": "objetiva-caderno-26.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-26.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=ZQZn4PX1Ep8=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "27",
@@ -315,8 +345,10 @@
   "caderno": "caderno-27.pdf",
   "gabarito": "gabarito-27.pdf",
   "objetivaCaderno": "objetiva-caderno-27.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-27.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=bKfcdOn6HAg=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "28",
@@ -326,8 +358,10 @@
   "caderno": "caderno-28.pdf",
   "gabarito": "gabarito-28.pdf",
   "objetivaCaderno": "objetiva-caderno-28.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-28.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=8waFSGkkAf4=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "29",
@@ -337,8 +371,10 @@
   "caderno": "caderno-29.pdf",
   "gabarito": "gabarito-29.pdf",
   "objetivaCaderno": "objetiva-caderno-29.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-29.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=txqGoYVZMAISpc=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "30",
@@ -348,8 +384,10 @@
   "caderno": "caderno-30.pdf",
   "gabarito": "gabarito-30.pdf",
   "objetivaCaderno": "objetiva-caderno-30.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-30.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=nSzmVn92vwg=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "31",
@@ -359,8 +397,10 @@
   "caderno": "caderno-31.pdf",
   "gabarito": "gabarito-31.pdf",
   "objetivaCaderno": "objetiva-caderno-31.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-31.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=dtQUs3awMxc=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "32",
@@ -370,8 +410,10 @@
   "caderno": "caderno-32.pdf",
   "gabarito": "gabarito-32.pdf",
   "objetivaCaderno": "objetiva-caderno-32.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-32.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=DcC8EvS8DR8=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "33",
@@ -381,8 +423,10 @@
   "caderno": "caderno-33.pdf",
   "gabarito": "gabarito-33.pdf",
   "objetivaCaderno": "objetiva-caderno-33.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-33.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=ZFguMblfv2o=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "34",
@@ -392,8 +436,10 @@
   "caderno": "caderno-34.pdf",
   "gabarito": "gabarito-34.pdf",
   "objetivaCaderno": "objetiva-caderno-34.pdf",
-  "objetivaGabarito": null,
-  "fase2": "aplicada"
+  "objetivaGabarito": "objetiva-gabarito-34.pdf",
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=qlYcAehmijY=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "objetivaGabaritoPreliminar": true
  },
  {
   "id": "35",
@@ -404,7 +450,8 @@
   "gabarito": "gabarito-35.pdf",
   "objetivaCaderno": "objetiva-caderno-35.pdf",
   "objetivaGabarito": "objetiva-gabarito-35.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=ctsIA9IdVA4=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "36",
@@ -415,7 +462,8 @@
   "gabarito": "gabarito-36.pdf",
   "objetivaCaderno": "objetiva-caderno-36.pdf",
   "objetivaGabarito": "objetiva-gabarito-36.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=L7X80yWJsR4=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "37",
@@ -426,7 +474,8 @@
   "gabarito": "gabarito-37.pdf",
   "objetivaCaderno": "objetiva-caderno-37.pdf",
   "objetivaGabarito": "objetiva-gabarito-37.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=yXg6g7T8xXI=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "38",
@@ -437,7 +486,8 @@
   "gabarito": "gabarito-38.pdf",
   "objetivaCaderno": "objetiva-caderno-38.pdf",
   "objetivaGabarito": "objetiva-gabarito-38.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=OHQToPe4ePg=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "39",
@@ -448,7 +498,8 @@
   "gabarito": "gabarito-39.pdf",
   "objetivaCaderno": "objetiva-caderno-39.pdf",
   "objetivaGabarito": "objetiva-gabarito-39.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=GcRdC7fsbUI=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "40",
@@ -459,7 +510,8 @@
   "gabarito": "gabarito-40.pdf",
   "objetivaCaderno": "objetiva-caderno-40.pdf",
   "objetivaGabarito": "objetiva-gabarito-40.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=WyFzkVeklxI=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "41",
@@ -470,7 +522,8 @@
   "gabarito": "gabarito-41.pdf",
   "objetivaCaderno": "objetiva-caderno-41.pdf",
   "objetivaGabarito": "objetiva-gabarito-41.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=/OESCjmyOuY=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "42",
@@ -481,7 +534,8 @@
   "gabarito": "gabarito-42.pdf",
   "objetivaCaderno": "objetiva-caderno-42.pdf",
   "objetivaGabarito": "objetiva-gabarito-42.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=SWeK97bH3Oc=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "43",
@@ -492,7 +546,8 @@
   "gabarito": "gabarito-43.pdf",
   "objetivaCaderno": "objetiva-caderno-43.pdf",
   "objetivaGabarito": "objetiva-gabarito-43.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=jyMaUzWUnzQ=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "44",
@@ -503,7 +558,8 @@
   "gabarito": "gabarito-44.pdf",
   "objetivaCaderno": "objetiva-caderno-44.pdf",
   "objetivaGabarito": "objetiva-gabarito-44.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=l1F2R7SdiEk=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "45",
@@ -514,7 +570,8 @@
   "gabarito": "gabarito-45.pdf",
   "objetivaCaderno": "objetiva-caderno-45.pdf",
   "objetivaGabarito": "objetiva-gabarito-45.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=5cmxTPp7FC0=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "46",
@@ -525,17 +582,20 @@
   "gabarito": "gabarito-46.pdf",
   "objetivaCaderno": "objetiva-caderno-46.pdf",
   "objetivaGabarito": "objetiva-gabarito-46.pdf",
-  "fase2": "aplicada"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=OR4zDmS/uHY=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo"
  },
  {
   "id": "47",
   "numero": 47,
   "variante": null,
   "peca": null,
-  "caderno": null,
-  "gabarito": null,
+  "caderno": "caderno-47.pdf",
+  "gabarito": "gabarito-47.pdf",
   "objetivaCaderno": "objetiva-caderno-47.pdf",
   "objetivaGabarito": "objetiva-gabarito-47.pdf",
-  "fase2": "em-breve"
+  "fase2": "aplicada",
+  "fgv": "https://oab.fgv.br/NovoSec.aspx?key=fAkbe2AuFtU=&codSec=5149#ContentPlaceHolder1_lbTitulo_arquivo",
+  "gabaritoPreliminar": true
  }
 ]

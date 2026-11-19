@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { listarExames } from "@/content/load";
-import { tituloSimulado } from "@/content/titulo";
-import { ToggleNomePeca, LinhaDeExame } from "@/components/NomePeca";
-import { HistoricoSimulados } from "./HistoricoSimulados";
-import styles from "./simulados.module.css";
+import pecas from "@/content/generated/pecas.json";
+import { ListaSimulados, type ExameDaLista } from "./ListaSimulados";
 
 export const metadata: Metadata = {
   title: "Simulados da 2ª fase de Penal",
@@ -12,38 +9,37 @@ export const metadata: Metadata = {
 };
 
 export default function SimuladosPage() {
-  const exames = listarExames().filter((e) => e.transcrito).reverse();
+  // do mais recente ao mais antigo; "ordem" é a posição cronológica (0 = o mais antigo), como nas Estatísticas
+  const exames: ExameDaLista[] = listarExames()
+    .filter((e) => e.transcrito)
+    .map((e, ordem) => ({
+      id: e.id,
+      numero: e.numero,
+      numeral: e.numeral,
+      variante: e.variante,
+      aplicacao: e.aplicacao,
+      peca: e.peca,
+      corrigivel: e.corrigivel,
+      revisado: e.revisado,
+      leiNova: e.temAtualizacao,
+      preliminar: !!e.preliminar?.gabarito,
+      pecaTipo: e.pecaTipo,
+      era: e.numero === 1 ? ("cespe" as const) : ("fgv" as const),
+      ordem,
+    }))
+    .reverse();
+  // o nome de cada tipo de peça (para a explicação da sugestão)
+  const catalogo = pecas as Record<string, { nome: string }>;
+  const nomesPecas = Object.fromEntries([...new Set(exames.map((e) => e.pecaTipo))].map((t) => [t, catalogo[t]?.nome ?? t]));
   return (
     <div className="container section">
       <span className="eyebrow">Simulados</span>
       <h1>Faça a prova e receba sua nota</h1>
       <p className="lead">
-        Escolha um exame, escreva a peça e as quatro questões como no caderno de textos definitivos e veja, item a item,
-        o que pontuou pela tabela oficial da FGV.
+        Escolha um exame, na versão original ou na atualizada, escreva a peça e as quatro questões como no caderno de
+        textos definitivos e veja, item a item, o que pontuou pela tabela oficial da FGV.
       </p>
-      <HistoricoSimulados />
-      <div style={{ margin: "1.5rem 0 0.5rem" }}>
-        <ToggleNomePeca />
-      </div>
-      <ul className={styles.list}>
-        {exames.map((e) => (
-          <li key={e.id}>
-            <Link href={e.corrigivel ? `/simulados/${e.id}/` : `/provas/#exame-${e.id}`} className={`card ${styles.item}`}>
-              <span className={styles.num}>{e.numeral}</span>
-              <span className={styles.info}>
-                <strong>{tituloSimulado(e)}</strong>
-                <span className="muted">
-                  <LinhaDeExame nome={e.peca} ano={e.aplicacao ? String(new Date(e.aplicacao + "T12:00:00").getFullYear()) : undefined} />
-                </span>
-              </span>
-              <span className={styles.badges}>
-                {e.corrigivel ? <span className="badge badge-gold">Correção automática</span> : <span className="badge">Gabarito em breve</span>}
-                {!e.revisado && <span className="badge" title="Transcrição ainda não revisada">Beta</span>}
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <ListaSimulados exames={exames} nomesPecas={nomesPecas} />
     </div>
   );
 }

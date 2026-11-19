@@ -1,0 +1,31 @@
+// Estados e o Distrito Federal, em ordem alfabética do nome.
+import type { Tema } from "../../themes";
+import { AC } from "./ac";
+import { AL } from "./al";
+import { AM } from "./am";
+import { AP } from "./ap";
+import { BA } from "./ba";
+import { CE } from "./ce";
+import { DF } from "./df";
+import { ES } from "./es";
+import { GO } from "./go";
+import { MA } from "./ma";
+import { MG } from "./mg";
+import { MS } from "./ms";
+import { MT } from "./mt";
+import { PA } from "./pa";
+import { PB } from "./pb";
+import { PE } from "./pe";
+import { PIAUI } from "./pi";
+import { PR } from "./pr";
+import { RJ } from "./rj";
+import { RN } from "./rn";
+import { RO } from "./ro";
+import { RR } from "./rr";
+import { RS } from "./rs";
+import { SC } from "./sc";
+import { SE } from "./se";
+import { SP } from "./sp";
+import { TO } from "./to";
+
+export const ESTADOS: Tema[] = [AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA, PB, PR, PE, PIAUI, RJ, RN, RS, RO, RR, SC, SP, SE, TO];

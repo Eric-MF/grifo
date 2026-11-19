@@ -1,462 +1,136 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "09"
+introducoes:
+  peca: "Em 1/4/2009, Gisele, então com 19 anos, quis chutar Amanda, mas, por confusão, chutou Carolina, que estava grávida e só teve ferimentos leves. Carolina só representou contra Gisele em 18/10/2009, e o exame de corpo de delito não foi feito porque os ferimentos já tinham sarado. O processo, de lesão corporal leve com a agravante de crime contra mulher grávida, não seguiu o rito da Lei 9.099/95: a denúncia foi recebida em 31/10/2010, antes de qualquer resposta da defesa. A única testemunha, Amanda, não viu os fatos. O promotor pediu ainda a agravante da reincidência, porque Gisele aceitou a suspensão condicional do processo em outro caso. Você defende Gisele nos memoriais."
+  q1: "Raimundo, já com um carro furtado de uma concessionária, pediu ao amigo Henrique que deixasse guardar o carro na garagem dele por uma noite, antes de entregá-lo ao comprador. Henrique, sabendo de tudo, aceitou."
+  q2: "Wilson, muito bêbado, deu quinze facadas no amigo Junior, querendo matá-lo. Ao vê-lo sangrando, desesperou-se, levou Junior de táxi ao hospital, e o socorro o salvou."
+  q3: "Mário injetou uma substância venenosa em Luciano para matá-lo e foi processado por tentativa de homicídio. A perícia mostrou que, pelo modo como estava guardada, a substância não tinha como produzir efeito. O Ministério Público pediu a pronúncia mesmo assim."
+  q4: "Laura, empresária, foi denunciada diretamente no Tribunal de Justiça por corrupção ativa, na mesma denúncia em que o promotor de justiça Lucas responde por corrupção passiva. Num habeas corpus, a defesa dela alega violação do juiz natural, do devido processo legal e da ampla defesa, e supressão de instância."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["09-peca-1", "09-peca-8b", "09-peca-8c", "09-peca-8d", "09-q4-b"]
 perguntas:
-  - id: 09-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Gisele foi denunciada, com recebimento ocorrido em 31/10/2010, pela prática do delito de lesão corporal leve, com a presença da circunstância agravante, de ter o crime sido cometido contra mulher grávida. Isso porque, segundo narrou a inicial acusatória, Gisele, no dia 01/04/2009, então com 19 anos, objetivando provocar lesão corporal leve em Amanda, deu um chute nas costas de Carolina, por confundi-la com aquela, ocasião em que Carolina (que estava grávida) caiu de joelhos no chão, lesionando-se.
-
-      A vítima, muito atordoada com o acontecido, ficou por um tempo sem saber o que fazer, mas foi convencida por Amanda (sua amiga e pessoa a quem Gisele realmente queria lesionar) a noticiar o fato na delegacia. Sendo assim, tão logo voltou de um intercâmbio, mais precisamente no dia 18/10/2009, Carolina compareceu à delegacia e noticiou o fato, representando contra Gisele. Por orientação do delegado, Carolina foi instruída a fazer exame de corpo de delito, o que não ocorreu, porque os ferimentos, muito leves, já haviam sarado. O Ministério Público, na denúncia, arrolou Amanda como testemunha.
-
-      Em seu depoimento, feito em sede judicial, Amanda disse que não viu Gisele bater em Carolina e nem viu os ferimentos, mas disse que poderia afirmar com convicção que os fatos noticiados realmente ocorreram, pois estava na casa da vítima quando esta chegou chorando muito e narrando a história. Não foi ouvida mais nenhuma testemunha e Gisele, em seu interrogatório, exerceu o direito ao silêncio. Cumpre destacar que a primeira e única audiência ocorreu apenas em 20/03/2012, mas que, anteriormente, três outras audiências foram marcadas;
-
-      apenas não se realizaram porque, na primeira, o magistrado não pôde comparecer, na segunda o Ministério Público não compareceu e a terceira não se realizou porque, no dia marcado, foi dado ponto facultativo pelo governador do Estado, razão pela qual todas as audiências foram redesignadas. Assim, somente na quarta data agendada é que a audiência efetivamente aconteceu. Também merece destaque o fato de que na referida audiência o parquet não ofereceu proposta de suspensão condicional do processo, pois, conforme documentos comprobatórios juntados aos autos, em 30/03/2009, Gisele, em processo criminal onde se apuravam outros fatos, aceitou o benefício proposto.
-
-      Assim, segundo o promotor de justiça, afigurava-se impossível formulação de nova proposta de suspensão condicional do processo, ou de qualquer outro benefício anterior não destacado, e, além disso, tal dado deveria figurar na condenação ora pleiteada para Gisele como outra circunstância agravante, qual seja, reincidência.
-
-      Nesse sentido, considere que o magistrado encerrou a audiência e abriu prazo, intimando as partes, para o oferecimento da peça processual cabível.
-
-      Como advogado de Gisele, levando em conta tão somente os dados contidos no enunciado, elabore a peça cabível. (Valor: 5,0)
-    comando: A quem deve ser endereçada a peça?
-    gabarito: A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-    opcoes:
-      correta: A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-      erradas:
-        - "Endereçamento correto: Interposição para o Juiz da XX Vara Criminal de Vitória, Estado do Espírito Santo."
-        - Endereçamento correto da interposição (1ª Vara Criminal/Tribunal do Júri)
-        - "Endereçamento correto: 1ª Vara Criminal da Comarca de Natal/RN"
-        - "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
-        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
-    revisao: &a1
-      status: revisado
   - id: 09-peca-4
     categoria: peca-detalhe
     parte: peca
     item: "4"
     secao: preliminar
-    caso: |-
-      Gisele foi denunciada, com recebimento ocorrido em 31/10/2010, pela prática do delito de lesão corporal leve, com a presença da circunstância agravante, de ter o crime sido cometido contra mulher grávida. Isso porque, segundo narrou a inicial acusatória, Gisele, no dia 01/04/2009, então com 19 anos, objetivando provocar lesão corporal leve em Amanda, deu um chute nas costas de Carolina, por confundi-la com aquela, ocasião em que Carolina (que estava grávida) caiu de joelhos no chão, lesionando-se.
-
-      A vítima, muito atordoada com o acontecido, ficou por um tempo sem saber o que fazer, mas foi convencida por Amanda (sua amiga e pessoa a quem Gisele realmente queria lesionar) a noticiar o fato na delegacia. Sendo assim, tão logo voltou de um intercâmbio, mais precisamente no dia 18/10/2009, Carolina compareceu à delegacia e noticiou o fato, representando contra Gisele. Por orientação do delegado, Carolina foi instruída a fazer exame de corpo de delito, o que não ocorreu, porque os ferimentos, muito leves, já haviam sarado. O Ministério Público, na denúncia, arrolou Amanda como testemunha.
-
-      Em seu depoimento, feito em sede judicial, Amanda disse que não viu Gisele bater em Carolina e nem viu os ferimentos, mas disse que poderia afirmar com convicção que os fatos noticiados realmente ocorreram, pois estava na casa da vítima quando esta chegou chorando muito e narrando a história. Não foi ouvida mais nenhuma testemunha e Gisele, em seu interrogatório, exerceu o direito ao silêncio. Cumpre destacar que a primeira e única audiência ocorreu apenas em 20/03/2012, mas que, anteriormente, três outras audiências foram marcadas;
-
-      apenas não se realizaram porque, na primeira, o magistrado não pôde comparecer, na segunda o Ministério Público não compareceu e a terceira não se realizou porque, no dia marcado, foi dado ponto facultativo pelo governador do Estado, razão pela qual todas as audiências foram redesignadas. Assim, somente na quarta data agendada é que a audiência efetivamente aconteceu. Também merece destaque o fato de que na referida audiência o parquet não ofereceu proposta de suspensão condicional do processo, pois, conforme documentos comprobatórios juntados aos autos, em 30/03/2009, Gisele, em processo criminal onde se apuravam outros fatos, aceitou o benefício proposto.
-
-      Assim, segundo o promotor de justiça, afigurava-se impossível formulação de nova proposta de suspensão condicional do processo, ou de qualquer outro benefício anterior não destacado, e, além disso, tal dado deveria figurar na condenação ora pleiteada para Gisele como outra circunstância agravante, qual seja, reincidência.
-
-      Nesse sentido, considere que o magistrado encerrou a audiência e abriu prazo, intimando as partes, para o oferecimento da peça processual cabível.
-
-      Como advogado de Gisele, levando em conta tão somente os dados contidos no enunciado, elabore a peça cabível. (Valor: 5,0)
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Nulidade do processo pela inobservância do rito da Lei 9.099/95, anulando-se o recebimento da denúncia, com a consequente prescrição da pretensão punitiva.
-    opcoes:
-      correta: Nulidade do processo pela inobservância do rito da Lei 9.099/95, anulando-se o recebimento da denúncia, com a consequente prescrição da pretensão punitiva.
-      erradas:
-        - "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
-        - Preliminar de nulidade do processo OU reconhecimento da extinção da punibilidade OU decadência OU oferecimento de proposta de suspensão condicional do processo
-        - Ilicitude por derivação da prova testemunhal, com fundamento no art. 157, § 1º, CPP.
-        - Nulidade em razão do não oferecimento de proposta de suspensão condicional do processo, nos termos do Art. 89 da Lei 9.099, já que a pena mínima do delito imputado é de 1 ano.
-        - "Preliminar: cerceamento de defesa (ou violação ao contraditório ou ampla defesa, ou ao devido processo legal ou nulidade por omissão de formalidade essencial), porque não poderia ter sido concedido prazo comum ao colaborador e ao corréu delatado, em violação ao Art. 4º, § 10-A, da Lei nº 12.850/2013, ao Art. 5º, inciso LIV ou LV, da CRFB/88, ou ao Art. 564, inciso IV, do CPP."
-    revisao: *a1
+    pergunta: "A denúncia foi recebida antes da resposta da defesa, fora do rito dos Juizados. Que preliminar cabe?"
+    tese: "Nulidade do processo pela inobservância do rito da Lei 9.099/95"
+    aceitos: [ "nulidade | nulo | nula | anula*" ]
+    artigos: [ "art. 81, Lei 9.099" ]
+    gabarito: "Nulidade do processo pela inobservância do rito da Lei 9.099/95, anulando-se o recebimento da denúncia, com a consequente prescrição da pretensão punitiva."
+    revisao: { status: revisado }
   - id: 09-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: merito
-    caso: |-
-      Gisele foi denunciada, com recebimento ocorrido em 31/10/2010, pela prática do delito de lesão corporal leve, com a presença da circunstância agravante, de ter o crime sido cometido contra mulher grávida. Isso porque, segundo narrou a inicial acusatória, Gisele, no dia 01/04/2009, então com 19 anos, objetivando provocar lesão corporal leve em Amanda, deu um chute nas costas de Carolina, por confundi-la com aquela, ocasião em que Carolina (que estava grávida) caiu de joelhos no chão, lesionando-se.
-
-      A vítima, muito atordoada com o acontecido, ficou por um tempo sem saber o que fazer, mas foi convencida por Amanda (sua amiga e pessoa a quem Gisele realmente queria lesionar) a noticiar o fato na delegacia. Sendo assim, tão logo voltou de um intercâmbio, mais precisamente no dia 18/10/2009, Carolina compareceu à delegacia e noticiou o fato, representando contra Gisele. Por orientação do delegado, Carolina foi instruída a fazer exame de corpo de delito, o que não ocorreu, porque os ferimentos, muito leves, já haviam sarado. O Ministério Público, na denúncia, arrolou Amanda como testemunha.
-
-      Em seu depoimento, feito em sede judicial, Amanda disse que não viu Gisele bater em Carolina e nem viu os ferimentos, mas disse que poderia afirmar com convicção que os fatos noticiados realmente ocorreram, pois estava na casa da vítima quando esta chegou chorando muito e narrando a história. Não foi ouvida mais nenhuma testemunha e Gisele, em seu interrogatório, exerceu o direito ao silêncio. Cumpre destacar que a primeira e única audiência ocorreu apenas em 20/03/2012, mas que, anteriormente, três outras audiências foram marcadas;
-
-      apenas não se realizaram porque, na primeira, o magistrado não pôde comparecer, na segunda o Ministério Público não compareceu e a terceira não se realizou porque, no dia marcado, foi dado ponto facultativo pelo governador do Estado, razão pela qual todas as audiências foram redesignadas. Assim, somente na quarta data agendada é que a audiência efetivamente aconteceu. Também merece destaque o fato de que na referida audiência o parquet não ofereceu proposta de suspensão condicional do processo, pois, conforme documentos comprobatórios juntados aos autos, em 30/03/2009, Gisele, em processo criminal onde se apuravam outros fatos, aceitou o benefício proposto.
-
-      Assim, segundo o promotor de justiça, afigurava-se impossível formulação de nova proposta de suspensão condicional do processo, ou de qualquer outro benefício anterior não destacado, e, além disso, tal dado deveria figurar na condenação ora pleiteada para Gisele como outra circunstância agravante, qual seja, reincidência.
-
-      Nesse sentido, considere que o magistrado encerrou a audiência e abriu prazo, intimando as partes, para o oferecimento da peça processual cabível.
-
-      Como advogado de Gisele, levando em conta tão somente os dados contidos no enunciado, elabore a peça cabível. (Valor: 5,0)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Absolvição por falta de prova e ausência de materialidade do delito.
-    opcoes:
-      correta: Absolvição por falta de prova e ausência de materialidade do delito.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Subsidiariamente, afastar a qualificadora pois não há prova nos autos da idade da vítima, nos termos do Art. 213, §1º do CP
-        - Possibilidade de substituição da pena privativa de liberdade por restritiva de direitos, conforme Art. 44 do CP OU possibilidade de aplicação da pena de multa, conforme art. 155, § 2º, do CP.
-        - Absolvição sumária, tendo em vista que a conduta narrada evidentemente não constitui crime.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-    revisao: *a1
+    pergunta: "Sem exame de corpo de delito e com uma testemunha que não viu os fatos, que tese de mérito a defesa deve sustentar?"
+    tese: "Absolvição, por falta de prova da materialidade"
+    aceitos: [ [ "absolvi*" ], [ "materialidade" ] ]
+    artigos: [ "art. 386, II, CPP", "art. 386, VII, CPP", "art. 158, CPP" ]
+    gabarito: "Absolvição por falta de prova e ausência de materialidade do delito."
+    revisao: { status: revisado }
   - id: 09-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Gisele foi denunciada, com recebimento ocorrido em 31/10/2010, pela prática do delito de lesão corporal leve, com a presença da circunstância agravante, de ter o crime sido cometido contra mulher grávida. Isso porque, segundo narrou a inicial acusatória, Gisele, no dia 01/04/2009, então com 19 anos, objetivando provocar lesão corporal leve em Amanda, deu um chute nas costas de Carolina, por confundi-la com aquela, ocasião em que Carolina (que estava grávida) caiu de joelhos no chão, lesionando-se.
-
-      A vítima, muito atordoada com o acontecido, ficou por um tempo sem saber o que fazer, mas foi convencida por Amanda (sua amiga e pessoa a quem Gisele realmente queria lesionar) a noticiar o fato na delegacia. Sendo assim, tão logo voltou de um intercâmbio, mais precisamente no dia 18/10/2009, Carolina compareceu à delegacia e noticiou o fato, representando contra Gisele. Por orientação do delegado, Carolina foi instruída a fazer exame de corpo de delito, o que não ocorreu, porque os ferimentos, muito leves, já haviam sarado. O Ministério Público, na denúncia, arrolou Amanda como testemunha.
-
-      Em seu depoimento, feito em sede judicial, Amanda disse que não viu Gisele bater em Carolina e nem viu os ferimentos, mas disse que poderia afirmar com convicção que os fatos noticiados realmente ocorreram, pois estava na casa da vítima quando esta chegou chorando muito e narrando a história. Não foi ouvida mais nenhuma testemunha e Gisele, em seu interrogatório, exerceu o direito ao silêncio. Cumpre destacar que a primeira e única audiência ocorreu apenas em 20/03/2012, mas que, anteriormente, três outras audiências foram marcadas;
-
-      apenas não se realizaram porque, na primeira, o magistrado não pôde comparecer, na segunda o Ministério Público não compareceu e a terceira não se realizou porque, no dia marcado, foi dado ponto facultativo pelo governador do Estado, razão pela qual todas as audiências foram redesignadas. Assim, somente na quarta data agendada é que a audiência efetivamente aconteceu. Também merece destaque o fato de que na referida audiência o parquet não ofereceu proposta de suspensão condicional do processo, pois, conforme documentos comprobatórios juntados aos autos, em 30/03/2009, Gisele, em processo criminal onde se apuravam outros fatos, aceitou o benefício proposto.
-
-      Assim, segundo o promotor de justiça, afigurava-se impossível formulação de nova proposta de suspensão condicional do processo, ou de qualquer outro benefício anterior não destacado, e, além disso, tal dado deveria figurar na condenação ora pleiteada para Gisele como outra circunstância agravante, qual seja, reincidência.
-
-      Nesse sentido, considere que o magistrado encerrou a audiência e abriu prazo, intimando as partes, para o oferecimento da peça processual cabível.
-
-      Como advogado de Gisele, levando em conta tão somente os dados contidos no enunciado, elabore a peça cabível. (Valor: 5,0)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Não incidência da agravante de crime contra mulher grávida, pois a hipótese é de erro quanto à pessoa, na forma do Art. 20, § 3º, do CP.
-    opcoes:
-      correta: Não incidência da agravante de crime contra mulher grávida, pois a hipótese é de erro quanto à pessoa, na forma do Art. 20, § 3º, do CP.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Subsidiariamente, afastar a qualificadora pois não há prova nos autos da idade da vítima, nos termos do Art. 213, §1º do CP
-        - Possibilidade de substituição da pena privativa de liberdade por restritiva de direitos, conforme Art. 44 do CP OU possibilidade de aplicação da pena de multa, conforme art. 155, § 2º, do CP.
-        - Absolvição sumária, tendo em vista que a conduta narrada evidentemente não constitui crime.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-    revisao: *a1
+    pergunta: "Por que não incide a agravante de crime contra mulher grávida?"
+    tese: "Erro sobre a pessoa: consideram-se as condições da vítima que Gisele queria atingir"
+    aceitos: [ "erro sobre a pessoa | erro quanto a pessoa | error in persona" ]
+    artigos: [ "art. 20, § 3º, CP" ]
+    gabarito: "Não incidência da agravante de crime contra mulher grávida, pois a hipótese é de erro quanto à pessoa, na forma do Art. 20, § 3º, do CP."
+    revisao: { status: revisado }
   - id: 09-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      Gisele foi denunciada, com recebimento ocorrido em 31/10/2010, pela prática do delito de lesão corporal leve, com a presença da circunstância agravante, de ter o crime sido cometido contra mulher grávida. Isso porque, segundo narrou a inicial acusatória, Gisele, no dia 01/04/2009, então com 19 anos, objetivando provocar lesão corporal leve em Amanda, deu um chute nas costas de Carolina, por confundi-la com aquela, ocasião em que Carolina (que estava grávida) caiu de joelhos no chão, lesionando-se.
-
-      A vítima, muito atordoada com o acontecido, ficou por um tempo sem saber o que fazer, mas foi convencida por Amanda (sua amiga e pessoa a quem Gisele realmente queria lesionar) a noticiar o fato na delegacia. Sendo assim, tão logo voltou de um intercâmbio, mais precisamente no dia 18/10/2009, Carolina compareceu à delegacia e noticiou o fato, representando contra Gisele. Por orientação do delegado, Carolina foi instruída a fazer exame de corpo de delito, o que não ocorreu, porque os ferimentos, muito leves, já haviam sarado. O Ministério Público, na denúncia, arrolou Amanda como testemunha.
-
-      Em seu depoimento, feito em sede judicial, Amanda disse que não viu Gisele bater em Carolina e nem viu os ferimentos, mas disse que poderia afirmar com convicção que os fatos noticiados realmente ocorreram, pois estava na casa da vítima quando esta chegou chorando muito e narrando a história. Não foi ouvida mais nenhuma testemunha e Gisele, em seu interrogatório, exerceu o direito ao silêncio. Cumpre destacar que a primeira e única audiência ocorreu apenas em 20/03/2012, mas que, anteriormente, três outras audiências foram marcadas;
-
-      apenas não se realizaram porque, na primeira, o magistrado não pôde comparecer, na segunda o Ministério Público não compareceu e a terceira não se realizou porque, no dia marcado, foi dado ponto facultativo pelo governador do Estado, razão pela qual todas as audiências foram redesignadas. Assim, somente na quarta data agendada é que a audiência efetivamente aconteceu. Também merece destaque o fato de que na referida audiência o parquet não ofereceu proposta de suspensão condicional do processo, pois, conforme documentos comprobatórios juntados aos autos, em 30/03/2009, Gisele, em processo criminal onde se apuravam outros fatos, aceitou o benefício proposto.
-
-      Assim, segundo o promotor de justiça, afigurava-se impossível formulação de nova proposta de suspensão condicional do processo, ou de qualquer outro benefício anterior não destacado, e, além disso, tal dado deveria figurar na condenação ora pleiteada para Gisele como outra circunstância agravante, qual seja, reincidência.
-
-      Nesse sentido, considere que o magistrado encerrou a audiência e abriu prazo, intimando as partes, para o oferecimento da peça processual cabível.
-
-      Como advogado de Gisele, levando em conta tão somente os dados contidos no enunciado, elabore a peça cabível. (Valor: 5,0)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Não incidência da agravante da reincidência.
-    opcoes:
-      correta: Não incidência da agravante da reincidência.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
-        - Possibilidade de substituição da pena privativa de liberdade por restritiva de direitos, conforme Art. 44 do CP OU possibilidade de aplicação da pena de multa, conforme art. 155, § 2º, do CP.
-        - Patrick não estava se ocultando para ser citado e o oficial de justiça somente compareceu em uma oportunidade, não preenchendo os requisitos do Art. 362 do CPP.
-        - Reconhecimento da atenuante da menoridade relativa, já que o réu era menor de 21 anos na data dos fatos, nos termos do Art. 65, inciso I, do CP.
-    revisao: *a1
+    pergunta: "Por que não cabe a agravante da reincidência pedida pelo promotor?"
+    tese: "Afastamento da reincidência: não há condenação anterior transitada em julgado, e aceitar a suspensão do processo não a gera"
+    aceitos: [ [ "condenacao" ], [ "transit* em julgado" ] ]
+    artigos: [ "art. 63, CP" ]
+    gabarito: "Não incidência da agravante da reincidência."
+    revisao: { status: revisado }
   - id: 09-peca-8a
     categoria: peca-detalhe
     parte: peca
-    item: 8a
+    item: "8a"
     secao: preliminar
-    caso: |-
-      Gisele foi denunciada, com recebimento ocorrido em 31/10/2010, pela prática do delito de lesão corporal leve, com a presença da circunstância agravante, de ter o crime sido cometido contra mulher grávida. Isso porque, segundo narrou a inicial acusatória, Gisele, no dia 01/04/2009, então com 19 anos, objetivando provocar lesão corporal leve em Amanda, deu um chute nas costas de Carolina, por confundi-la com aquela, ocasião em que Carolina (que estava grávida) caiu de joelhos no chão, lesionando-se.
-
-      A vítima, muito atordoada com o acontecido, ficou por um tempo sem saber o que fazer, mas foi convencida por Amanda (sua amiga e pessoa a quem Gisele realmente queria lesionar) a noticiar o fato na delegacia. Sendo assim, tão logo voltou de um intercâmbio, mais precisamente no dia 18/10/2009, Carolina compareceu à delegacia e noticiou o fato, representando contra Gisele. Por orientação do delegado, Carolina foi instruída a fazer exame de corpo de delito, o que não ocorreu, porque os ferimentos, muito leves, já haviam sarado. O Ministério Público, na denúncia, arrolou Amanda como testemunha.
-
-      Em seu depoimento, feito em sede judicial, Amanda disse que não viu Gisele bater em Carolina e nem viu os ferimentos, mas disse que poderia afirmar com convicção que os fatos noticiados realmente ocorreram, pois estava na casa da vítima quando esta chegou chorando muito e narrando a história. Não foi ouvida mais nenhuma testemunha e Gisele, em seu interrogatório, exerceu o direito ao silêncio. Cumpre destacar que a primeira e única audiência ocorreu apenas em 20/03/2012, mas que, anteriormente, três outras audiências foram marcadas;
-
-      apenas não se realizaram porque, na primeira, o magistrado não pôde comparecer, na segunda o Ministério Público não compareceu e a terceira não se realizou porque, no dia marcado, foi dado ponto facultativo pelo governador do Estado, razão pela qual todas as audiências foram redesignadas. Assim, somente na quarta data agendada é que a audiência efetivamente aconteceu. Também merece destaque o fato de que na referida audiência o parquet não ofereceu proposta de suspensão condicional do processo, pois, conforme documentos comprobatórios juntados aos autos, em 30/03/2009, Gisele, em processo criminal onde se apuravam outros fatos, aceitou o benefício proposto.
-
-      Assim, segundo o promotor de justiça, afigurava-se impossível formulação de nova proposta de suspensão condicional do processo, ou de qualquer outro benefício anterior não destacado, e, além disso, tal dado deveria figurar na condenação ora pleiteada para Gisele como outra circunstância agravante, qual seja, reincidência.
-
-      Nesse sentido, considere que o magistrado encerrou a audiência e abriu prazo, intimando as partes, para o oferecimento da peça processual cabível.
-
-      Como advogado de Gisele, levando em conta tão somente os dados contidos no enunciado, elabore a peça cabível. (Valor: 5,0)
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Extinção da punibilidade pela decadência do direito de representação.
-    opcoes:
-      correta: Extinção da punibilidade pela decadência do direito de representação.
-      erradas:
-        - "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
-        - "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
-        - Violação das regras da mutatio libelli, art. 384 do CPP, c/c art. 411, § 3º, do CPP.
-        - Nulidade em razão do cerceamento de defesa OU violação ao princípio da ampla defesa OU violação ao princípio do contraditório, já que o juiz proferiu decisão após juntada de documentação, sem dar vista às partes.
-        - Nulidade da sentença, ante a violação ao princípio da identidade física do Juiz ou do Juiz Natural, nos termos do Art. 399, § 2º, do CPP ou Art. 5º, LIII, CRFB.
-    revisao: *a1
-  - id: 09-peca-8b
-    categoria: peca-detalhe
-    parte: peca
-    item: 8b
-    secao: preliminar
-    caso: |-
-      Gisele foi denunciada, com recebimento ocorrido em 31/10/2010, pela prática do delito de lesão corporal leve, com a presença da circunstância agravante, de ter o crime sido cometido contra mulher grávida. Isso porque, segundo narrou a inicial acusatória, Gisele, no dia 01/04/2009, então com 19 anos, objetivando provocar lesão corporal leve em Amanda, deu um chute nas costas de Carolina, por confundi-la com aquela, ocasião em que Carolina (que estava grávida) caiu de joelhos no chão, lesionando-se.
-
-      A vítima, muito atordoada com o acontecido, ficou por um tempo sem saber o que fazer, mas foi convencida por Amanda (sua amiga e pessoa a quem Gisele realmente queria lesionar) a noticiar o fato na delegacia. Sendo assim, tão logo voltou de um intercâmbio, mais precisamente no dia 18/10/2009, Carolina compareceu à delegacia e noticiou o fato, representando contra Gisele. Por orientação do delegado, Carolina foi instruída a fazer exame de corpo de delito, o que não ocorreu, porque os ferimentos, muito leves, já haviam sarado. O Ministério Público, na denúncia, arrolou Amanda como testemunha.
-
-      Em seu depoimento, feito em sede judicial, Amanda disse que não viu Gisele bater em Carolina e nem viu os ferimentos, mas disse que poderia afirmar com convicção que os fatos noticiados realmente ocorreram, pois estava na casa da vítima quando esta chegou chorando muito e narrando a história. Não foi ouvida mais nenhuma testemunha e Gisele, em seu interrogatório, exerceu o direito ao silêncio. Cumpre destacar que a primeira e única audiência ocorreu apenas em 20/03/2012, mas que, anteriormente, três outras audiências foram marcadas;
-
-      apenas não se realizaram porque, na primeira, o magistrado não pôde comparecer, na segunda o Ministério Público não compareceu e a terceira não se realizou porque, no dia marcado, foi dado ponto facultativo pelo governador do Estado, razão pela qual todas as audiências foram redesignadas. Assim, somente na quarta data agendada é que a audiência efetivamente aconteceu. Também merece destaque o fato de que na referida audiência o parquet não ofereceu proposta de suspensão condicional do processo, pois, conforme documentos comprobatórios juntados aos autos, em 30/03/2009, Gisele, em processo criminal onde se apuravam outros fatos, aceitou o benefício proposto.
-
-      Assim, segundo o promotor de justiça, afigurava-se impossível formulação de nova proposta de suspensão condicional do processo, ou de qualquer outro benefício anterior não destacado, e, além disso, tal dado deveria figurar na condenação ora pleiteada para Gisele como outra circunstância agravante, qual seja, reincidência.
-
-      Nesse sentido, considere que o magistrado encerrou a audiência e abriu prazo, intimando as partes, para o oferecimento da peça processual cabível.
-
-      Como advogado de Gisele, levando em conta tão somente os dados contidos no enunciado, elabore a peça cabível. (Valor: 5,0)
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Nulidade do processo, com a consequente extinção da punibilidade pela prescrição.
-    opcoes:
-      correta: Nulidade do processo, com a consequente extinção da punibilidade pela prescrição.
-      erradas:
-        - "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
-        - Preliminar de nulidade do processo OU reconhecimento da extinção da punibilidade OU decadência OU oferecimento de proposta de suspensão condicional do processo
-        - Ilicitude por derivação da prova testemunhal, com fundamento no art. 157, § 1º, CPP.
-        - Nulidade em razão do não oferecimento de proposta de suspensão condicional do processo, nos termos do Art. 89 da Lei 9.099, já que a pena mínima do delito imputado é de 1 ano.
-        - "Preliminar: cerceamento de defesa (ou violação ao contraditório ou ampla defesa, ou ao devido processo legal ou nulidade por omissão de formalidade essencial), porque não poderia ter sido concedido prazo comum ao colaborador e ao corréu delatado, em violação ao Art. 4º, § 10-A, da Lei nº 12.850/2013, ao Art. 5º, inciso LIV ou LV, da CRFB/88, ou ao Art. 564, inciso IV, do CPP."
-    revisao: *a1
-  - id: 09-peca-8c
-    categoria: peca-detalhe
-    parte: peca
-    item: 8c
-    secao: pedido
-    caso: |-
-      Gisele foi denunciada, com recebimento ocorrido em 31/10/2010, pela prática do delito de lesão corporal leve, com a presença da circunstância agravante, de ter o crime sido cometido contra mulher grávida. Isso porque, segundo narrou a inicial acusatória, Gisele, no dia 01/04/2009, então com 19 anos, objetivando provocar lesão corporal leve em Amanda, deu um chute nas costas de Carolina, por confundi-la com aquela, ocasião em que Carolina (que estava grávida) caiu de joelhos no chão, lesionando-se.
-
-      A vítima, muito atordoada com o acontecido, ficou por um tempo sem saber o que fazer, mas foi convencida por Amanda (sua amiga e pessoa a quem Gisele realmente queria lesionar) a noticiar o fato na delegacia. Sendo assim, tão logo voltou de um intercâmbio, mais precisamente no dia 18/10/2009, Carolina compareceu à delegacia e noticiou o fato, representando contra Gisele. Por orientação do delegado, Carolina foi instruída a fazer exame de corpo de delito, o que não ocorreu, porque os ferimentos, muito leves, já haviam sarado. O Ministério Público, na denúncia, arrolou Amanda como testemunha.
-
-      Em seu depoimento, feito em sede judicial, Amanda disse que não viu Gisele bater em Carolina e nem viu os ferimentos, mas disse que poderia afirmar com convicção que os fatos noticiados realmente ocorreram, pois estava na casa da vítima quando esta chegou chorando muito e narrando a história. Não foi ouvida mais nenhuma testemunha e Gisele, em seu interrogatório, exerceu o direito ao silêncio. Cumpre destacar que a primeira e única audiência ocorreu apenas em 20/03/2012, mas que, anteriormente, três outras audiências foram marcadas;
-
-      apenas não se realizaram porque, na primeira, o magistrado não pôde comparecer, na segunda o Ministério Público não compareceu e a terceira não se realizou porque, no dia marcado, foi dado ponto facultativo pelo governador do Estado, razão pela qual todas as audiências foram redesignadas. Assim, somente na quarta data agendada é que a audiência efetivamente aconteceu. Também merece destaque o fato de que na referida audiência o parquet não ofereceu proposta de suspensão condicional do processo, pois, conforme documentos comprobatórios juntados aos autos, em 30/03/2009, Gisele, em processo criminal onde se apuravam outros fatos, aceitou o benefício proposto.
-
-      Assim, segundo o promotor de justiça, afigurava-se impossível formulação de nova proposta de suspensão condicional do processo, ou de qualquer outro benefício anterior não destacado, e, além disso, tal dado deveria figurar na condenação ora pleiteada para Gisele como outra circunstância agravante, qual seja, reincidência.
-
-      Nesse sentido, considere que o magistrado encerrou a audiência e abriu prazo, intimando as partes, para o oferecimento da peça processual cabível.
-
-      Como advogado de Gisele, levando em conta tão somente os dados contidos no enunciado, elabore a peça cabível. (Valor: 5,0)
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Absolvição por falta de provas OU por não haver prova da existência do fato.
-    opcoes:
-      correta: Absolvição por falta de provas OU por não haver prova da existência do fato.
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - Absolvição, na forma do Art. 386, inciso III, do CPP.
-        - Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP.
-        - Absolvição sumária, com fundamento no Art. 397, inciso I, do CPP e no Art. 397, inciso III, do CPP.
-        - Pedido de acolhimento das alegações para reconhecer a nulidade no ato de recebimento da denúncia ou rejeição da denúncia pela ausência de justa causa.
-    revisao: *a1
-  - id: 09-peca-8d
-    categoria: peca-detalhe
-    parte: peca
-    item: 8d
-    secao: pedido
-    caso: |-
-      Gisele foi denunciada, com recebimento ocorrido em 31/10/2010, pela prática do delito de lesão corporal leve, com a presença da circunstância agravante, de ter o crime sido cometido contra mulher grávida. Isso porque, segundo narrou a inicial acusatória, Gisele, no dia 01/04/2009, então com 19 anos, objetivando provocar lesão corporal leve em Amanda, deu um chute nas costas de Carolina, por confundi-la com aquela, ocasião em que Carolina (que estava grávida) caiu de joelhos no chão, lesionando-se.
-
-      A vítima, muito atordoada com o acontecido, ficou por um tempo sem saber o que fazer, mas foi convencida por Amanda (sua amiga e pessoa a quem Gisele realmente queria lesionar) a noticiar o fato na delegacia. Sendo assim, tão logo voltou de um intercâmbio, mais precisamente no dia 18/10/2009, Carolina compareceu à delegacia e noticiou o fato, representando contra Gisele. Por orientação do delegado, Carolina foi instruída a fazer exame de corpo de delito, o que não ocorreu, porque os ferimentos, muito leves, já haviam sarado. O Ministério Público, na denúncia, arrolou Amanda como testemunha.
-
-      Em seu depoimento, feito em sede judicial, Amanda disse que não viu Gisele bater em Carolina e nem viu os ferimentos, mas disse que poderia afirmar com convicção que os fatos noticiados realmente ocorreram, pois estava na casa da vítima quando esta chegou chorando muito e narrando a história. Não foi ouvida mais nenhuma testemunha e Gisele, em seu interrogatório, exerceu o direito ao silêncio. Cumpre destacar que a primeira e única audiência ocorreu apenas em 20/03/2012, mas que, anteriormente, três outras audiências foram marcadas;
-
-      apenas não se realizaram porque, na primeira, o magistrado não pôde comparecer, na segunda o Ministério Público não compareceu e a terceira não se realizou porque, no dia marcado, foi dado ponto facultativo pelo governador do Estado, razão pela qual todas as audiências foram redesignadas. Assim, somente na quarta data agendada é que a audiência efetivamente aconteceu. Também merece destaque o fato de que na referida audiência o parquet não ofereceu proposta de suspensão condicional do processo, pois, conforme documentos comprobatórios juntados aos autos, em 30/03/2009, Gisele, em processo criminal onde se apuravam outros fatos, aceitou o benefício proposto.
-
-      Assim, segundo o promotor de justiça, afigurava-se impossível formulação de nova proposta de suspensão condicional do processo, ou de qualquer outro benefício anterior não destacado, e, além disso, tal dado deveria figurar na condenação ora pleiteada para Gisele como outra circunstância agravante, qual seja, reincidência.
-
-      Nesse sentido, considere que o magistrado encerrou a audiência e abriu prazo, intimando as partes, para o oferecimento da peça processual cabível.
-
-      Como advogado de Gisele, levando em conta tão somente os dados contidos no enunciado, elabore a peça cabível. (Valor: 5,0)
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: "Subsidiariamente: não incidência da agravante de crime contra mulher grávida; não incidência da reincidência; atenuante da menoridade relativa."
-    opcoes:
-      correta: "Subsidiariamente: não incidência da agravante de crime contra mulher grávida; não incidência da reincidência; atenuante da menoridade relativa."
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - Absolvição, na forma do Art. 386, inciso III, do CPP.
-        - Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP.
-        - Absolvição sumária, com fundamento no Art. 397, inciso I, do CPP e no Art. 397, inciso III, do CPP.
-        - Pedido de acolhimento das alegações para reconhecer a nulidade no ato de recebimento da denúncia ou rejeição da denúncia pela ausência de justa causa.
-    revisao: *a1
+    pergunta: "O fato foi em 1/4/2009, e Carolina só representou em 18/10/2009. Que causa extingue a punibilidade?"
+    tese: "Extinção da punibilidade pela decadência do direito de representação"
+    aceitos: [ "decaden*" ]
+    artigos: [ "art. 38, CPP", "art. 103, CP", "art. 107, IV, CP" ]
+    gabarito: "Extinção da punibilidade pela decadência do direito de representação."
+    revisao: { status: revisado }
   - id: 09-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Raimundo, já de posse de veículo automotor furtado de concessionária, percebe que não tem onde guardá-lo antes de vendê-lo para a pessoa que o encomendara. Assim, resolve ligar para um grande amigo seu, Henrique, e após contar toda sua empreitada, pede-lhe que ceda a garagem de sua casa para que possa guardar o veículo, ao menos por aquela noite. Como Henrique aceita ajudá-lo, Raimundo estaciona o carro na casa do amigo. Ao raiar do dia, Raimundo parte com o veículo, que seria levado para o comprador.
-
-      Considerando as informações contidas no texto responda, justificadamente, aos itens a seguir.
-    comando: Raimundo e Henrique agiram em concurso de agentes?
+    item: "A"
+    pergunta: "Raimundo e Henrique agiram em concurso de agentes?"
+    tese: "Não há concurso de agentes: o auxílio veio depois da consumação do furto, sem liame subjetivo com ele"
+    aceitos: [ [ "apos a consumacao | depois da consumacao | posterior a consumacao | ja consumado | ja estava consumado" ], [ "liame subjetivo | vinculo subjetivo" ] ]
+    artigos: [ "art. 29, CP" ]
     gabarito: ""
-    opcoes:
-      correta: Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Resultado diverso do pretendido (ou) atraindo a ocorrência de concurso formal perfeito entre as condutas imputadas, na forma do Art. 70 ou do Art. 74, ambos do CP.
-        - Wilson, por ser agente garantidor, responde pelo delito de homicídio praticado via omissão imprópria.
-        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 09-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Raimundo, já de posse de veículo automotor furtado de concessionária, percebe que não tem onde guardá-lo antes de vendê-lo para a pessoa que o encomendara. Assim, resolve ligar para um grande amigo seu, Henrique, e após contar toda sua empreitada, pede-lhe que ceda a garagem de sua casa para que possa guardar o veículo, ao menos por aquela noite. Como Henrique aceita ajudá-lo, Raimundo estaciona o carro na casa do amigo. Ao raiar do dia, Raimundo parte com o veículo, que seria levado para o comprador.
-
-      Considerando as informações contidas no texto responda, justificadamente, aos itens a seguir.
-    comando: Qual o delito praticado por Henrique?
+    item: "B"
+    pergunta: "Que crime Henrique cometeu ao guardar o carro?"
+    tese: "Favorecimento real"
+    aceitos: [ "favorecimento real" ]
+    artigos: [ "art. 349, CP" ]
     gabarito: ""
-    opcoes:
-      correta: Favorecimento real OU praticou o delito descrito no Art. 349, do CP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Resultado diverso do pretendido (ou) atraindo a ocorrência de concurso formal perfeito entre as condutas imputadas, na forma do Art. 70 ou do Art. 74, ambos do CP.
-        - Wilson, por ser agente garantidor, responde pelo delito de homicídio praticado via omissão imprópria.
-        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 09-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Wilson, extremamente embriagado, discute com seu amigo Junior na calçada de um bar já vazio pelo avançado da hora. A discussão torna-se acalorada e, com intenção de matar, Wilson desfere quinze facadas em Junior, todas na altura do abdômen. Todavia, ao ver o amigo gritando de dor e esvaindo-se em sangue, Wilson, desesperado, pega um taxi para levar Junior ao hospital. Lá chegando, o socorro é eficiente e Junior consegue recuperar-se das graves lesões sofridas.
-
-      Analise o caso narrado e, com base apenas nas informações dadas, responda, fundamentadamente, aos itens a seguir.
-    comando: É cabível responsabilizar Wilson por tentativa de homicídio?
-    gabarito: |-
-      A. Não, pois Wilson será beneficiado pelo instituto do arrependimento eficaz, previsto na parte final do Art. 15 do Código Penal. Assim, somente responderá pelos atos praticados, no caso, as lesões corporais graves sofridas por Júnior.
-
-      Obs.: A mera indicação de artigo legal não garante atribuição de pontos. Também não serão pontuadas respostas contraditórias.
-
-      B. Nesse caso, como não houve eficácia no arrependimento, o que é exigido pelo Art. 15, do Código Penal, Wilson deverá responder pelo resultado morte, ou seja, deverá responder pelo delito de homicídio doloso consumado.
-    opcoes:
-      correta: Não, pois Wilson será beneficiado pelo instituto do arrependimento eficaz, de modo que somente responderá pelos atos praticados OU somente responderá por lesões corporais graves.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Resultado diverso do pretendido (ou) atraindo a ocorrência de concurso formal perfeito entre as condutas imputadas, na forma do Art. 70 ou do Art. 74, ambos do CP.
-        - Wilson, por ser agente garantidor, responde pelo delito de homicídio praticado via omissão imprópria.
-        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "A"
+    pergunta: "Wilson pode responder por tentativa de homicídio?"
+    tese: "Arrependimento eficaz: o agente responde só pelas lesões causadas, não por tentativa de homicídio"
+    aceitos: [ "arrependimento eficaz" ]
+    artigos: [ "art. 15, CP" ]
+    gabarito: "A. Não, pois Wilson será beneficiado pelo instituto do arrependimento eficaz, previsto na parte final do Art. 15 do Código Penal. Assim, somente responderá pelos atos praticados, no caso, as lesões corporais graves sofridas por Júnior.\n\nObs.: A mera indicação de artigo legal não garante atribuição de pontos. Também não serão pontuadas respostas contraditórias.\n\nB. Nesse caso, como não houve eficácia no arrependimento, o que é exigido pelo Art. 15, do Código Penal, Wilson deverá responder pelo resultado morte, ou seja, deverá responder pelo delito de homicídio doloso consumado."
+    revisao: { status: revisado }
   - id: 09-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Wilson, extremamente embriagado, discute com seu amigo Junior na calçada de um bar já vazio pelo avançado da hora. A discussão torna-se acalorada e, com intenção de matar, Wilson desfere quinze facadas em Junior, todas na altura do abdômen. Todavia, ao ver o amigo gritando de dor e esvaindo-se em sangue, Wilson, desesperado, pega um taxi para levar Junior ao hospital. Lá chegando, o socorro é eficiente e Junior consegue recuperar-se das graves lesões sofridas.
-
-      Analise o caso narrado e, com base apenas nas informações dadas, responda, fundamentadamente, aos itens a seguir.
-    comando: Caso Junior, mesmo tendo sido socorrido, não se recuperasse das lesões e viesse a falecer no dia seguinte aos fatos, qual seria a responsabilidade jurídico-penal de Wilson?
-    gabarito: |-
-      A. Não, pois Wilson será beneficiado pelo instituto do arrependimento eficaz, previsto na parte final do Art. 15 do Código Penal. Assim, somente responderá pelos atos praticados, no caso, as lesões corporais graves sofridas por Júnior.
-
-      Obs.: A mera indicação de artigo legal não garante atribuição de pontos. Também não serão pontuadas respostas contraditórias.
-
-      B. Nesse caso, como não houve eficácia no arrependimento, o que é exigido pelo Art. 15, do Código Penal, Wilson deverá responder pelo resultado morte, ou seja, deverá responder pelo delito de homicídio doloso consumado.
-    opcoes:
-      correta: Como não houve eficácia no arrependimento OU como não houve atendimento à exigência do Art. 15, CP, Wilson deverá responder pelo resultado morte OU deverá responder pelo crime de homicídio doloso consumado.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Resultado diverso do pretendido (ou) atraindo a ocorrência de concurso formal perfeito entre as condutas imputadas, na forma do Art. 70 ou do Art. 74, ambos do CP.
-        - Wilson, por ser agente garantidor, responde pelo delito de homicídio praticado via omissão imprópria.
-        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "B"
+    pergunta: "E se Junior, mesmo socorrido, morresse no dia seguinte, por que crime Wilson responderia?"
+    tese: "Homicídio doloso consumado: com a morte da vítima, o arrependimento não foi eficaz"
+    aceitos: [ "homicidio doloso | homicidio consumado | homicidio simples | resultado morte | pela morte" ]
+    artigos: [ "art. 15, CP", "art. 121, CP" ]
+    gabarito: "A. Não, pois Wilson será beneficiado pelo instituto do arrependimento eficaz, previsto na parte final do Art. 15 do Código Penal. Assim, somente responderá pelos atos praticados, no caso, as lesões corporais graves sofridas por Júnior.\n\nObs.: A mera indicação de artigo legal não garante atribuição de pontos. Também não serão pontuadas respostas contraditórias.\n\nB. Nesse caso, como não houve eficácia no arrependimento, o que é exigido pelo Art. 15, do Código Penal, Wilson deverá responder pelo resultado morte, ou seja, deverá responder pelo delito de homicídio doloso consumado."
+    revisao: { status: revisado }
   - id: 09-q3-a
     categoria: discursiva
     parte: q3
-    item: A1
-    caso: |-
-      Mário está sendo processado por tentativa de homicídio uma vez que injetou substância venenosa em Luciano, com o objetivo de matá-lo. No curso do processo, uma amostra da referida substância foi recolhida para análise e enviada ao Instituto de Criminalística, ficando comprovado que, pelas condições de armazenamento e acondicionamento, a substância não fora hábil para produzir os efeitos a que estava destinada. Mesmo assim, arguindo que o magistrado não estava adstrito ao laudo, o Ministério Público pugnou pela pronúncia de Mário nos exatos termos da denúncia.
-
-      Com base apenas nos fatos apresentados, responda justificadamente.
-    comando: O magistrado deveria pronunciar Mário, impronunciá-lo ou absolvê-lo sumariamente?
-    gabarito: Deveria absolvê-lo sumariamente, por força do Art. 415, III, do CPP. O caso narrado não constitui crime, sendo hipótese de crime impossível.
-    opcoes:
-      correta: "Deveria absolvê-lo sumariamente, por força do Art. 415, III, do CPP. Obs.: a mera indicação de artigo não pontua. A hipótese é de crime impossível."
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Ilegitimidade do Ministério Público (ou ausência de condição da ação), tendo em vista que o delito de dano é de ação penal privada, na forma do Art. 167 do CP, ou do Art. 95, inciso IV, ou do Art. 564, inciso II, ou do Art. 395, II, todos do CPP.
-        - Erika responde como partícipe de tal homicídio.
-        - A medida judicial cabível é da revisão criminal, com fundamento no Art. 621, inciso II OU III, do Código de Processo Penal, tendo em vista que a condenação foi baseada em documento comprovadamente falso OU em razão do surgimento de prova nova, após a sentença, apta a demonstrar a inocência do acusado.
-        - Não foi válida a citação de Carla, já que ela não estava em local incerto e não sabido ou que não estava se ocultando para não ser citada, já que Carla possuía endereço fixo e conhecido, conforme Art. 361 ou 362 ambos do CPP
-    revisao: *a1
+    item: "A1"
+    pergunta: "Diante do laudo, que decisão o juiz deve tomar ao fim da primeira fase do júri?"
+    tese: "Absolvição sumária: o fato não constitui crime (crime impossível)"
+    aceitos: [ "absolv*", "sumari*" ]
+    artigos: [ "art. 415, III, CPP", "art. 17, CP" ]
+    gabarito: "Deveria absolvê-lo sumariamente, por força do Art. 415, III, do CPP. O caso narrado não constitui crime, sendo hipótese de crime impossível."
+    revisao: { status: revisado }
   - id: 09-q3-b
     categoria: discursiva
     parte: q3
-    item: B1
-    caso: |-
-      Mário está sendo processado por tentativa de homicídio uma vez que injetou substância venenosa em Luciano, com o objetivo de matá-lo. No curso do processo, uma amostra da referida substância foi recolhida para análise e enviada ao Instituto de Criminalística, ficando comprovado que, pelas condições de armazenamento e acondicionamento, a substância não fora hábil para produzir os efeitos a que estava destinada. Mesmo assim, arguindo que o magistrado não estava adstrito ao laudo, o Ministério Público pugnou pela pronúncia de Mário nos exatos termos da denúncia.
-
-      Com base apenas nos fatos apresentados, responda justificadamente.
-    comando: Caso Mário fosse pronunciado, qual seria o recurso cabível, o prazo de interposição e a quem deveria ser endereçado?
-    gabarito: É cabível recurso em sentido estrito (Art. 581, IV, do CPP); deve ser interposto no prazo de cinco dias (Art. 586 CPP); a petição de interposição deve ser endereçada ao juiz a quo e as razões deverão ser endereçadas ao Tribunal de Justiça.
-    opcoes:
-      correta: Recurso em sentido estrito (Art. 581, IV do CPP); deve ser interposto em 5 dias (Art. 586, do CPP); a petição de interposição deve ser endereçada ao juiz a quo e as razões deverão ser endereçadas ao Tribunal de Justiça.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Resultado diverso do pretendido (ou) atraindo a ocorrência de concurso formal perfeito entre as condutas imputadas, na forma do Art. 70 ou do Art. 74, ambos do CP.
-        - Agravo em execução, com fundamento no Art. 197 da LEP.
-        - O argumento é de que a conduta de Túlio era atípica, tendo em vista que, objetivamente, Maria era maior de 14 anos na data dos fatos e houve consentimento na prática dos atos sexuais.
-        - O argumento é o de que o crime praticado por Carla foi de falsidade ideológica, com inserção de conteúdo falseado, e não falsificação de documento particular, tendo em vista que inseriu informação falsa em documento verdadeiro quanto à sua forma, nos termos do Art. 299 do CP.
-    revisao: *a1
+    item: "B1"
+    pergunta: "Se Mário fosse pronunciado, que recurso caberia?"
+    tese: "Recurso em sentido estrito"
+    aceitos: [ "recurso em sentido estrito | rese" ]
+    artigos: [ "art. 581, IV, CPP" ]
+    gabarito: "É cabível recurso em sentido estrito (Art. 581, IV, do CPP); deve ser interposto no prazo de cinco dias (Art. 586 CPP); a petição de interposição deve ser endereçada ao juiz a quo e as razões deverão ser endereçadas ao Tribunal de Justiça."
+    revisao: { status: revisado }
   - id: 09-q4-a
     categoria: discursiva
     parte: q4
-    item: A1
-    caso: |-
-      Laura, empresária do ramo de festas e eventos, foi denunciada diretamente no Tribunal de Justiça do Estado “X”, pela prática do delito descrito no Art. 333 do CP (corrupção ativa). Na mesma inicial acusatória, o Procurador Geral de Justiça imputou a Lucas, Promotor de Justiça estadual, a prática da conduta descrita no Art. 317 do CP (corrupção passiva).
-
-      A defesa de Laura, então, impetrou habeas corpus ao argumento de que estariam sendo violados os princípios do juiz natural, do devido processo legal, do contraditório e da ampla defesa; arguiu, ainda, que estaria ocorrendo supressão de instância, o que não se poderia permitir.
-
-      Nesse sentido, considerando apenas os dados fornecidos, responda, fundamentadamente, aos itens a seguir.
-    comando: Os argumentos da defesa de Laura procedem?
-    gabarito: |-
-      A. Não procedem os argumentos da defesa de Laura, com base no Verbete 704, da Súmula do STF. O fato de Laura ser julgada diretamente pelo Tribunal de Justiça não lhe tira a possibilidade de manejar outros recursos.
-
-      Assim, não há qualquer ferimento ao devido processo legal, nem ao contraditório e muito menos à ampla defesa.
-
-      Por fim, também não há que se falar em desrespeito ao princípio do juiz natural, já que a atração por conexão ou continência não configura criação de tribunal de exceção, sendo certo que não se pode confundir “juiz natural”
-
-      com “juízo de primeiro grau”.
-
-      B. Laura não possui direito ao duplo grau de jurisdição. O princípio do duplo grau assegura o julgamento da causa em primeira instância e a revisão da sentença por órgão diverso. O recurso que traduz por excelência o princípio do duplo grau é a apelação, a qual devolve ao Tribunal, para nova análise, toda a matéria de fato e de direito. Como Laura será julgada diretamente pelo Tribunal de Justiça, não terá direito ao duplo grau de jurisdição, mas isso não a impede de exercer o contraditório e nem a ampla defesa, estando-lhe assegurado, assim, o devido processo legal.
-
-      Obs.: Não serão pontuadas respostas contraditórias.
-    opcoes:
-      correta: Não, com base no Verbete 704, da Súmula do STF. O fato de Laura ser julgada diretamente pelo Tribunal de Justiça não lhe tira a possibilidade de manejar outros recursos OU não há que se falar em desrespeito ao princípio do juiz natural, já que a atração por conexão ou continência não configura criação de tribunal de exceção.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Resultado diverso do pretendido (ou) atraindo a ocorrência de concurso formal perfeito entre as condutas imputadas, na forma do Art. 70 ou do Art. 74, ambos do CP.
-        - Wilson, por ser agente garantidor, responde pelo delito de homicídio praticado via omissão imprópria.
-        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
-  - id: 09-q4-b
-    categoria: discursiva
-    parte: q4
-    item: B
-    caso: |-
-      Laura, empresária do ramo de festas e eventos, foi denunciada diretamente no Tribunal de Justiça do Estado “X”, pela prática do delito descrito no Art. 333 do CP (corrupção ativa). Na mesma inicial acusatória, o Procurador Geral de Justiça imputou a Lucas, Promotor de Justiça estadual, a prática da conduta descrita no Art. 317 do CP (corrupção passiva).
-
-      A defesa de Laura, então, impetrou habeas corpus ao argumento de que estariam sendo violados os princípios do juiz natural, do devido processo legal, do contraditório e da ampla defesa; arguiu, ainda, que estaria ocorrendo supressão de instância, o que não se poderia permitir.
-
-      Nesse sentido, considerando apenas os dados fornecidos, responda, fundamentadamente, aos itens a seguir.
-    comando: Laura possui direito ao duplo grau de jurisdição?
-    gabarito: |-
-      A. Não procedem os argumentos da defesa de Laura, com base no Verbete 704, da Súmula do STF. O fato de Laura ser julgada diretamente pelo Tribunal de Justiça não lhe tira a possibilidade de manejar outros recursos.
-
-      Assim, não há qualquer ferimento ao devido processo legal, nem ao contraditório e muito menos à ampla defesa.
-
-      Por fim, também não há que se falar em desrespeito ao princípio do juiz natural, já que a atração por conexão ou continência não configura criação de tribunal de exceção, sendo certo que não se pode confundir “juiz natural”
-
-      com “juízo de primeiro grau”.
-
-      B. Laura não possui direito ao duplo grau de jurisdição. O princípio do duplo grau assegura o julgamento da causa em primeira instância e a revisão da sentença por órgão diverso. O recurso que traduz por excelência o princípio do duplo grau é a apelação, a qual devolve ao Tribunal, para nova análise, toda a matéria de fato e de direito. Como Laura será julgada diretamente pelo Tribunal de Justiça, não terá direito ao duplo grau de jurisdição, mas isso não a impede de exercer o contraditório e nem a ampla defesa, estando-lhe assegurado, assim, o devido processo legal.
-
-      Obs.: Não serão pontuadas respostas contraditórias.
-    opcoes:
-      correta: Não, como Laura será julgada diretamente pelo Tribunal de Justiça, não terá direito ao duplo grau de jurisdição OU não terá direito ao duplo grau de jurisdição porque, no caso de Laura, eventual recurso interposto aos Tribunais Superiores não avaliará matéria fática.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Resultado diverso do pretendido (ou) atraindo a ocorrência de concurso formal perfeito entre as condutas imputadas, na forma do Art. 70 ou do Art. 74, ambos do CP.
-        - Wilson, por ser agente garantidor, responde pelo delito de homicídio praticado via omissão imprópria.
-        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "A1"
+    pergunta: "Por que os argumentos da defesa de Laura não procedem?"
+    tese: "Competência do tribunal do foro por prerrogativa de função, pela continência com o crime do promotor"
+    aceitos: [ [ "conexao | continencia" ], [ "prerrogativa" ] ]
+    artigos: [ "Súmula 704 STF" ]
+    gabarito: "A. Não procedem os argumentos da defesa de Laura, com base no Verbete 704, da Súmula do STF. O fato de Laura ser julgada diretamente pelo Tribunal de Justiça não lhe tira a possibilidade de manejar outros recursos.\n\nAssim, não há qualquer ferimento ao devido processo legal, nem ao contraditório e muito menos à ampla defesa.\n\nPor fim, também não há que se falar em desrespeito ao princípio do juiz natural, já que a atração por conexão ou continência não configura criação de tribunal de exceção, sendo certo que não se pode confundir “juiz natural”\n\ncom “juízo de primeiro grau”.\n\nB. Laura não possui direito ao duplo grau de jurisdição. O princípio do duplo grau assegura o julgamento da causa em primeira instância e a revisão da sentença por órgão diverso. O recurso que traduz por excelência o princípio do duplo grau é a apelação, a qual devolve ao Tribunal, para nova análise, toda a matéria de fato e de direito. Como Laura será julgada diretamente pelo Tribunal de Justiça, não terá direito ao duplo grau de jurisdição, mas isso não a impede de exercer o contraditório e nem a ampla defesa, estando-lhe assegurado, assim, o devido processo legal.\n\nObs.: Não serão pontuadas respostas contraditórias."
+    revisao: { status: revisado }

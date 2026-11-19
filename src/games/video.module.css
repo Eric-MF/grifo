@@ -1,0 +1,57 @@
+/* o vídeo sorteado ao lado da pergunta do jogo: o banner (capa, título, botões) e o tocador com a conta das moedas */
+.banner, .tocador {
+  display: grid; gap: 0.55rem; width: 100%; max-width: 320px; padding: 0.7rem; border-radius: var(--radius); border: 1px solid var(--border);
+  background: var(--surface); box-shadow: var(--shadow);
+}
+.capa { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-sm); }
+.texto { display: grid; gap: 0.2rem; font-size: 0.85rem; }
+.texto strong { line-height: 1.25; }
+.texto span { color: var(--muted); font-size: 0.78rem; }
+.botoes { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.quadro { width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-sm); overflow: hidden; background: #000; }
+.quadro > * { width: 100%; height: 100%; display: block; border: 0; }
+.conta { margin: 0; font-size: 0.85rem; }
+.conta strong { color: var(--accent-ink); }
+/* assistindo: o vídeo em tela cheia (pela API de tela cheia, ou ocupando a janela onde ela não existe, como no iPhone) */
+.tocador[data-cheia] {
+  position: fixed; inset: 0; z-index: 80; max-width: none; border-radius: 0; border: 0; padding: 0; gap: 0;
+  grid-template-rows: minmax(0, 1fr) auto; background: #000; color: #fff;
+}
+.tocador[data-cheia] .quadro { aspect-ratio: auto; height: 100%; border-radius: 0; }
+/* fora da tela cheia: uma janela grande no meio da tela, sobre o jogo escurecido (dá para ler o que aparece no vídeo) */
+.tocador[data-janela] {
+  position: fixed; left: 50%; top: 50%; z-index: 80; transform: translate(-50%, -50%); width: min(94vw, 1100px, calc((100dvh - 7rem) * 16 / 9));
+  max-width: none; padding: 0; gap: 0; overflow: hidden; background: #000; color: #fff; border: 0;
+  box-shadow: 0 0 0 100vmax rgb(3 17 44 / 0.78), 0 20px 60px rgb(0 0 0 / 0.5);
+}
+.tocador[data-janela] .quadro { border-radius: 0; }
+.tocador[data-janela] .conta strong { color: var(--festa-ouro); }
+.rodape :global(.btn-ghost) { color: #fff; border-color: rgb(255 255 255 / 0.35); }
+.rodape { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; justify-content: space-between; padding: 0.6rem 1rem calc(0.6rem + env(safe-area-inset-bottom)); background: rgb(3 17 44 / 0.92); }
+.tocador[data-cheia] .conta strong { color: var(--festa-ouro); }
+.esgotado { color: var(--festa-ouro); opacity: 0.85; }
+/* ao fechar: as moedas ganhas, numa chuva de moedas que sobe e some */
+.ganhou {
+  position: relative; display: flex; align-items: baseline; gap: 0.35rem; justify-content: center; padding: 0.9rem 1.2rem; border-radius: 999px;
+  background: rgb(3 17 44 / 0.92); color: var(--festa-claro); font-weight: 800; font-size: 1.1rem; box-shadow: 0 10px 30px rgb(0 0 0 / 0.3);
+  animation: ganhou 2.6s ease both;
+}
+.ganhou strong { font-size: 1.8rem; color: var(--festa-ouro); }
+.chuva { position: absolute; inset: 0; pointer-events: none; }
+.moeda {
+  position: absolute; left: calc(10% + var(--k) * 7%); bottom: 40%; width: 18px; height: 18px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--festa-brilho), var(--festa-ouro) 45%, var(--festa-fundo)); box-shadow: 0 0 0 1.5px var(--festa-borda) inset;
+  animation: moedaSobe 1.6s cubic-bezier(0.2, 0.7, 0.3, 1) calc(var(--k) * 0.06s) both;
+}
+@keyframes ganhou { 0% { opacity: 0; transform: scale(0.6); } 12% { opacity: 1; transform: scale(1.08); } 20%, 80% { transform: scale(1); opacity: 1; } 100% { opacity: 0; transform: translateY(-14px); } }
+@keyframes moedaSobe { 0% { transform: translateY(20px) scale(0.4); opacity: 0; } 25% { opacity: 1; } 100% { transform: translateY(-90px) rotate(200deg) scale(1); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .ganhou { animation-name: ganhouFade; } .moeda { display: none; } @keyframes ganhouFade { 0%, 85% { opacity: 1; } 100% { opacity: 0; } } }
+
+/* o botão de sair, sempre por cima do vídeo (também em tela cheia) */
+.sair {
+  position: absolute; top: calc(0.6rem + env(safe-area-inset-top)); right: 0.6rem; z-index: 2; padding: 0.45rem 0.85rem; border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.5); background: rgb(3 17 44 / 0.75); color: #fff; font: inherit; font-weight: 700; font-size: 0.9rem; cursor: pointer;
+}
+.tocador { position: fixed; }
+.tocador:not([data-cheia]):not([data-janela]) { position: relative; }
+.ganhou span + span { margin-left: 0.6rem; }

@@ -1,11 +1,11 @@
 "use client";
 
 import { useMemo } from "react";
-import { PromoSlot } from "@/components/PromoSlot";
 import { sortearPergunta } from "@/quiz/banco";
 import { PerguntaCorpo } from "@/quiz/PerguntaCorpo";
 import type { Categoria, Nivel, Pergunta } from "@/quiz/types";
 import styles from "@/quiz/quiz.module.css";
+import { VideoDaPergunta } from "./VideoDaPergunta";
 
 interface Props {
   nivel: Nivel;
@@ -17,10 +17,12 @@ interface Props {
   seed: number;
   /** instante a partir do qual as alternativas respondem (ver src/games/toques.ts) */
   liberadaEm?: () => number;
+  /** moedas e XP ganhos assistindo ao vídeo sorteado ao lado da pergunta */
+  aoGanharMoedas?: (ganho: { moedas: number; xp: number }) => void;
 }
 
-/** Pergunta de 2ª fase com espaço promocional discreto ao lado. Serve a qualquer jogo. */
-export function QuizModal({ nivel, categorias, titulo, subtitulo, poder, onFim, seed, liberadaEm }: Props) {
+/** Pergunta de 2ª fase; ao lado, às vezes (uma em 10), um vídeo do canal que dá moedas. Serve a qualquer jogo. */
+export function QuizModal({ nivel, categorias, titulo, subtitulo, poder, onFim, seed, liberadaEm, aoGanharMoedas }: Props) {
   const pergunta = useMemo<Pergunta>(() => sortearPergunta({ categorias }), [seed]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -48,7 +50,7 @@ export function QuizModal({ nivel, categorias, titulo, subtitulo, poder, onFim, 
           }
         />
         <div className={styles.quizAd}>
-          <PromoSlot local="quiz-lateral" seed={seed} variant="card" />
+          <VideoDaPergunta seed={seed} aoGanharMoedas={(g) => aoGanharMoedas?.(g)} />
         </div>
       </div>
     </div>

@@ -2,11 +2,12 @@
 
 import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import { carregarRemissivo, carregarVersoes, type Remissivo } from "@/lib/leis/dados";
+import { artigoDaRef, coresPorArtigo, type CorDaRef } from "@/lib/leis/remissivo-cores";
 import type { Bloco } from "@/lib/leis/linha-do-tempo";
 import { CORES_TEXTO, opcoesTexto, type Filtro, type OpcoesTexto } from "@/lib/leis/opcoes";
 import prontosJson from "@/content/generated/grifos.json";
-import { prontosDosBlocos, type GrifosProntos } from "@/lib/leis/grifos";
-import { corDoPronto, idDosProntos, lerLegendas, sistemaAtivo, type Sistema } from "@/lib/leis/legendas";
+import { blocosComProntos, faixasVisiveis, grifosDoJson, prontosDosBlocos } from "@/lib/leis/grifos";
+import { corDoGrifo, lerLegendas, prontosNoSistema, rotuloDoGrifo, sistemaDoLeitor, type Estado } from "@/lib/leis/legendas";
 import {
   artigoDe,
   blocosDoItem,
@@ -20,10 +21,10 @@ import {
   type OpcoesVade,
 } from "@/lib/leis/vademecum";
 import type { Trecho } from "@/lib/leis/referencias";
-import type { MarcaTexto } from "@/lib/leis/texto";
+import { corrigido, type MarcaTexto } from "@/lib/leis/texto";
 import { lerJSON } from "@/lib/storage";
 import { LinksArtigo, resolverNaPagina, useLeis } from "./SecaoLei";
-import { TextoLei } from "./TextoLei";
+import { TextoLei, type ProntosDoBloco } from "./TextoLei";
 import styles from "./leitor.module.css";
 
 export interface SecaoPedida {
@@ -59,7 +60,25 @@ function useVersoes(ids: string[]) {
   return versoes;
 }
 
-const PRONTOS = prontosJson as GrifosProntos;
+const PRONTOS = grifosDoJson(prontosJson);
+
+/**
+ * Os grifos prontos da lei no sistema com que ela abre no leitor (o mesmo que o leitor mostra): as palavras de cada bloco
+ * e o "vide", e os blocos que o filtro "grifos automáticos" mostra.
+ */
+function prontosDaLei(blocos: Bloco[], lei: string, legendas: Estado | null) {
+  if (!legendas) return { prontos: new Map<number, ProntosDoBloco>(), automaticos: new Set<number>() };
+  const sistema = sistemaDoLeitor(legendas, lei, PRONTOS);
+  const grifos = prontosNoSistema(PRONTOS, sistema, lei);
+  // as posições valem no texto como ele aparece ("Art. 1º"), que tem o mesmo tamanho do original
+  const doGrifo = blocos.map((b) => ({ disp: b.disp, superada: b.superada, texto: corrigido(b.texto), tipo: b.tipo }));
+  const prontos = new Map<number, ProntosDoBloco>();
+  for (const [i, p] of prontosDosBlocos(doGrifo, grifos)) {
+    const faixas = faixasVisiveis(p, grifos, (g) => corDoGrifo(sistema, g), (g) => rotuloDoGrifo(sistema, g));
+    if (faixas.length || p.vide.length) prontos.set(i, { faixas, vide: p.vide });
+  }
+  return { prontos, automaticos: blocosComProntos(doGrifo, grifos) };
+}
 
 function itensDaSecao(blocos: Bloco[], s: SecaoPedida, revogados: boolean, automaticos: Set<number>) {
   if (s.filtro === "grifos" || s.filtro === "erros" || s.filtro === "automaticos") {
@@ -103,8 +122,32 @@ function IndiceCronologico({ itens }: { itens: { k: number; nome: string; data: 
   );
 }
 
-/** Índice alfabético-remissivo de uma lei, do content/remissivos/ (palavra-chave → artigos). */
-function IndiceRemissivo({ lei, nome }: { lei: string; nome: string }) {
+/**
+ * As cores do índice remissivo da lei: por artigo, as dos grifos do usuário (se a página os mostra) e as dos grifos
+ * prontos (idem), no sistema com que a lei abre no leitor.
+ */
+function coresDoRemissivo(lei: string, marcas: readonly { disp?: string; cor: string }[], comProntos: boolean, legendas: Estado | null) {
+  if (!legendas) return new Map<string, CorDaRef[]>();
+  const sistema = sistemaDoLeitor(legendas, lei, PRONTOS);
+  const ordem = (cor: string) => {
+    const k = sistema.cores.findIndex((c) => c.cor.toLowerCase() === cor.toLowerCase());
+    return k < 0 ? sistema.cores.length : k;
+  };
+  return coresPorArtigo({
+    marcas,
+    prontos: comProntos ? prontosNoSistema(PRONTOS, sistema, lei) : [],
+    corDoPronto: (g) => corDoGrifo(sistema, g),
+    rotuloDoPronto: (g) => rotuloDoGrifo(sistema, g),
+    rotuloDaMarca: (cor) => sistema.cores.find((c) => c.cor.toLowerCase() === cor.toLowerCase())?.rotulo ?? "Grifo",
+    ordem,
+  });
+}
+
+/**
+ * Índice alfabético-remissivo de uma lei, do content/remissivos/ (palavra-chave → artigos). A referência do artigo
+ * grifado aparece com a cor do grifo, como no texto (forte: do usuário; clara: pronto do Grifo).
+ */
+function IndiceRemissivo({ lei, nome, cores, ids }: { lei: string; nome: string; cores: Map<string, CorDaRef[]>; ids: Set<string> }) {
   const [dados, setDados] = useState<Remissivo | "sem" | null>(null);
   useEffect(() => {
     let vivo = true;
@@ -124,12 +167,35 @@ function IndiceRemissivo({ lei, nome }: { lei: string; nome: string }) {
         {dados.entradas.map((e) => (
           <div key={e.palavra} className={styles.remissivoItem}>
             <dt>{e.palavra}</dt>
-            {e.subitens.map((s, k) => (
-              <dd key={k}>
-                {s.texto ? `${s.texto}: ` : ""}
-                {s.ref}
-              </dd>
-            ))}
+            {e.subitens.map((s, k) => {
+              const id = artigoDaRef(s.ref, ids);
+              const lista = (id && cores.get(id)) || [];
+              const principal = lista.find((c) => c.meu) ?? lista[0];
+              return (
+                <dd key={k}>
+                  {s.texto ? `${s.texto}: ` : ""}
+                  {principal ? (
+                    <span
+                      className={styles.refGrifada}
+                      data-meu={principal.meu ? "1" : undefined}
+                      style={{ "--c": principal.cor } as CSSProperties}
+                      title={lista.map((c) => `${c.rotulo} (${c.meu ? "seu grifo" : "grifo pronto"})`).join(", ")}
+                    >
+                      {s.ref}
+                    </span>
+                  ) : (
+                    s.ref
+                  )}
+                  {lista.length > 1 && (
+                    <span className={styles.coresRef} aria-hidden>
+                      {lista.map((c) => (
+                        <span key={c.cor} data-meu={c.meu ? "1" : undefined} style={{ "--c": c.cor } as CSSProperties} />
+                      ))}
+                    </span>
+                  )}
+                </dd>
+              );
+            })}
           </div>
         ))}
       </dl>
@@ -162,11 +228,11 @@ export function PaginaLeis({ secoes, titulo, opcoes: pedidas }: { secoes: SecaoP
   const texto = opcoes.texto;
   const cor = CORES_TEXTO[texto.corTexto].cor;
 
-  // o sistema de cores do usuário (o ativo) dá a cor dos grifos automáticos; sem ele, o padrão do Grifo
-  const [sistema, setSistema] = useState<Sistema | null>(null);
+  // os sistemas de cores do usuário dão os grifos prontos e as cores deles, lei a lei, como no leitor
+  const [legendas, setLegendas] = useState<Estado | null>(null);
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- lê localStorage após montar (site estático)
-    setSistema(sistemaAtivo(lerLegendas()));
+    setLegendas(lerLegendas());
   }, []);
   const ids = useMemo(() => [...new Set(secoes.map((s) => s.lei))], [secoes]);
   const { leis, erro } = useLeis(ids);
@@ -179,14 +245,14 @@ export function PaginaLeis({ secoes, titulo, opcoes: pedidas }: { secoes: SecaoP
         if (!l) return [];
         const v = texto.revogados ? versoes[s.lei] : undefined;
         const blocos = v ? l.blocos.map((b, i) => v[i] ?? b) : l.blocos;
-        const prontos = sistema
-          ? prontosDosBlocos(blocos, PRONTOS, idDosProntos(sistema), l.id, (rotulo) => corDoPronto(sistema, rotulo))
-          : new Map<number, { tipo: "area" | "destaque"; rotulo: string; cor: string; nota?: string }>();
-        const itens = itensDaSecao(blocos, s, texto.revogados, new Set(prontos.keys()));
+        const { prontos, automaticos } = prontosDaLei(blocos, l.id, legendas);
+        const itens = itensDaSecao(blocos, s, texto.revogados, automaticos);
         const marcas: Map<number, MarcaTexto[]> = texto.grifos || s.filtro === "grifos" ? marcasPorBloco(blocos, s.grifos ?? []) : new Map();
-        return [{ s, l, blocos, itens, marcas, prontos, data: dataDaLei(l.blocos) }];
+        const cores = opcoes.indices.remissivo ? coresDoRemissivo(l.id, texto.grifos ? (s.grifos ?? []) : [], texto.prontos, legendas) : new Map<string, CorDaRef[]>();
+        const ids = new Set(blocos.flatMap((b) => (b.disp ? [artigoDe(b.disp)] : [])));
+        return [{ s, l, blocos, itens, marcas, prontos, cores, ids, data: dataDaLei(l.blocos) }];
       }),
-    [secoes, leis, versoes, sistema, texto.revogados, texto.grifos],
+    [secoes, leis, versoes, legendas, texto.revogados, texto.grifos, texto.prontos, opcoes.indices.remissivo],
   );
 
   // o que está na página: lei → artigos (para as âncoras internas entre as leis)
@@ -256,7 +322,7 @@ export function PaginaLeis({ secoes, titulo, opcoes: pedidas }: { secoes: SecaoP
           ))}
         </ol>
       )}
-      {montadas.map(({ s, l, blocos, itens, marcas, prontos }, k) => {
+      {montadas.map(({ s, l, blocos, itens, marcas, prontos, cores, ids }, k) => {
         const base = resolverNaPagina(l.id, presente);
         const resolver = (t: Trecho): Trecho => {
           const r = base(t);
@@ -288,7 +354,7 @@ export function PaginaLeis({ secoes, titulo, opcoes: pedidas }: { secoes: SecaoP
                 <p className="muted">{mensagemVazia(s)}</p>
               )}
             </div>
-            {opcoes.indices.remissivo && <IndiceRemissivo lei={l.id} nome={l.nome} />}
+            {opcoes.indices.remissivo && <IndiceRemissivo lei={l.id} nome={l.nome} cores={cores} ids={ids} />}
           </section>
         );
       })}

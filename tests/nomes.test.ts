@@ -87,11 +87,11 @@ describe("os nomes na tela", () => {
 });
 
 describe("Por dentro da peça: o sorteio segue o valor do item", async () => {
-  const { pesoNoSorteio, valorDoItem } = await import("../src/quiz/banco.ts");
+  const { pesoNoSorteio } = await import("../src/quiz/banco.ts");
   it("o item que vale mais pesa mais", () => {
-    const de = (v: number) => ({ formato: "item", categorias: ["peca-detalhe"], itens: [{ componentes: [{ valor: v }] }] }) as never;
-    expect(valorDoItem(de(0.6))).toBeCloseTo(0.6);
+    const de = (v: number) => ({ formato: "tese", categorias: ["peca-detalhe"], valor: v }) as never;
     expect(pesoNoSorteio(de(0.6), "peca-detalhe") / pesoNoSorteio(de(0.1), "peca-detalhe")).toBeCloseTo(6);
     expect(pesoNoSorteio(de(0.6), "discursiva")).toBe(1);
+    expect(pesoNoSorteio(de(0.01), "peca-detalhe")).toBe(0.05);
   });
 });

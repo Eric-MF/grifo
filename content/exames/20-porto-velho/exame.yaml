@@ -301,3 +301,13 @@ questoes:
         componentes:
           - { id: c1, valor: 0.25, termos: [ habeas corpus ] }
           - { id: c2, valor: 0.35, alternativas: [ [ alteracao fatica | fato novo | contemporaneidade ], [ comocao social, idone* | nao justifica ], [ regime aberto | mais gravos* ] ] }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q1, lei: "Lei 15.438/2026", texto: "A Lei 15.438/2026 ampliou para 12 meses o prazo de decadência nos crimes cometidos em violência doméstica e familiar contra a mulher (art. 103, parágrafo único, do CP, e art. 38, § 2º, do CPP), o que pode alcançar o furto contra a tia com quem o agente mora (violência patrimonial, art. 7º, IV, da Lei 11.340/2006). Como Marta nunca representou e mais de um ano se passou, a decadência continua." }
+  nomes:
+    peca: { Bruno: Hermes, Bernardo: Argos }   # o furto; o dono com o policial
+    q1: { Jorge: Orestes, Marta: Electra }   # morar com a família
+    q2: { Lívia: Ariadne }   # ajudou o namorado
+    q3: { João: Hermes, Pedro: Íxion }   # o advogado eloquente; o acusado de estupro
+    q4: { Maria: Selene }   # a motorista (a carruagem da Lua)

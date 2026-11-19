@@ -119,7 +119,7 @@ function letraOuro(id, d) {
   </g></g>`;
 }
 
-// ---------- GRIFO.NET embaixo, no lugar de NACIONAL: condensada, traço único e cantos levemente arredondados ----------
+// ---------- GRIFO.NET.BR embaixo, no lugar de NACIONAL: condensada, traço único e cantos levemente arredondados ----------
 const T = 12; // espessura do traço
 const H = 62; // altura das letras
 const W = 34; // largura das letras
@@ -135,6 +135,8 @@ const CARACTERES = {
   N: [W, `M0 ${H}V0h${T}v${H}zM${W - T} ${H}V0h${T}v${H}zM0 0h${T + 0.4}L${W} ${H - 1}V${H}h-${T + 0.4}L0 1z`, true],
   E: [W - 3, `M${W - 3} ${m}H${m}V${H - m}H${W - 3}M${m} ${H / 2}H${W - 7}`],
   T: [W, `M0 ${m}H${W}M${W / 2} ${m}V${H}`],
+  // B: o R sem a perna, com a barriga de baixo um pouco maior que a de cima
+  B: [W, `M${m} ${H - m}V${m}H${W - m - q - 2}Q${W - m - 2} ${m} ${W - m - 2} ${m + q}V${H / 2 - q - 1}Q${W - m - 2} ${H / 2 - 1} ${W - m - q - 2} ${H / 2 - 1}H${m}M${W - m - q - 2} ${H / 2 - 1}H${W - m - q}Q${W - m} ${H / 2 - 1} ${W - m} ${H / 2 - 1 + q}V${H - m - q}Q${W - m} ${H - m} ${W - m - q} ${H - m}H${m}`],
 };
 function textoEmbaixo(texto, cx, base, espaco) {
   const total = [...texto].reduce((s, c) => s + CARACTERES[c][0], 0) + espaco * (texto.length - 1);
@@ -151,7 +153,7 @@ function textoEmbaixo(texto, cx, base, espaco) {
 }
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 472" width="900" height="472" role="img" aria-labelledby="titulo">
-<title id="titulo">Grifo em Progresso · grifo.net</title>
+<title id="titulo">Grifo em Progresso · grifo.net.br</title>
 <defs>
   ${defsLetras}
   ${estrela}
@@ -184,7 +186,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 472" width
   <g fill="#fff">${ESTRELAS.map(([x, y, s]) => `<use href="#estrela" transform="translate(${x} ${y}) scale(${s})"/>`).join("")}</g>
 </g>
 ${letraOuro("GN", GN)}
-<g fill="${NAVY}" stroke="${NAVY}" stroke-width="${T}" stroke-linejoin="miter">${textoEmbaixo("GRIFO.NET", 450, 467, 9)}</g>
+<g fill="${NAVY}" stroke="${NAVY}" stroke-width="${T}" stroke-linejoin="miter">${textoEmbaixo("GRIFO.NET.BR", 450, 467, 9)}</g>
 </svg>
 `.replace(' clip-path="url(#discoFaixa)"', "");
 

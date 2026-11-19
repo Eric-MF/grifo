@@ -14,7 +14,7 @@ import { contarLinhas, corrigirExame } from "@/lib/correcao/grader";
 import { eventosDoSimulado, migrarTentativas, registrar as registrarErros } from "@/lib/erros";
 import type { ExameSimulado } from "@/lib/correcao/simulado";
 import { gravarJSON, lerJSON } from "@/lib/storage";
-import { apagarRascunho, lerRascunho, salvarRascunho, salvarTentativa } from "@/lib/tentativas";
+import { apagarRascunho, lerRascunho, salvarRascunho, salvarTentativa, type VersaoSimulado } from "@/lib/tentativas";
 import styles from "./simulador.module.css";
 
 const DURACAO = 5 * 60 * 60; // 5 horas, como na prova
@@ -29,9 +29,21 @@ function valorDe(a: Aba, peca: string, questoes: string[]) {
   return a === "peca" ? peca : questoes[Number(a.slice(1)) - 1] ?? "";
 }
 
-export function Simulador({ exame }: { exame: ExameSimulado }) {
+/** O que muda na versão atualizada deste exame, para a escolha antes de começar (montado no servidor). */
+export interface MudancasAtualizada {
+  nomes: boolean;
+  correcoes: number;
+  /** as partes com aviso de lei nova ("Peça", "Questão 4") */
+  avisos: string[];
+}
+
+export function Simulador({ original, atualizado, mudancas }: { original: ExameSimulado; atualizado: ExameSimulado; mudancas: MudancasAtualizada }) {
   const router = useRouter();
-  const [fase, setFase] = useState<"inicio" | "prova">("inicio");
+  // a versão é escolhida antes de começar (a atualizada, se nada disser outra); com a prova correndo, ela não muda
+  const [versao, setVersao] = useState<VersaoSimulado>("atualizada");
+  const exame = versao === "atualizada" ? atualizado : original;
+  // "entregando": a correção já foi gravada e a página do resultado está abrindo (a tela de início não volta a aparecer)
+  const [fase, setFase] = useState<"inicio" | "prova" | "entregando">("inicio");
   const [temRascunho, setTemRascunho] = useState(false);
   const [comTempo, setComTempo] = useState(true);
   const [aba, setAba] = useState<Aba>("peca");
@@ -67,17 +79,24 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
     setTempos((t) => ({ ...t, [parte]: (t[parte] ?? 0) + delta }));
   }, []);
 
-  // Preferências de layout lembradas
+  // O layout lembrado; a versão vem do rascunho ou do endereço ("?versao=original"), senão fica a atualizada
   useEffect(() => {
     const p = lerJSON<{ layout?: Layout }>("grifo:simulador", {});
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- lê localStorage após montar (site estático)
+    const rascunho = lerRascunho(original.id);
+    const doEndereco = new URLSearchParams(location.search).get("versao");
+    /* eslint-disable react-hooks/set-state-in-effect -- lê localStorage e o endereço após montar (site estático) */
     if (p.layout) setLayout(p.layout);
-    setTemRascunho(!!lerRascunho(exame.id));
-  }, [exame.id]);
+    setTemRascunho(!!rascunho);
+    // o rascunho antigo (sem versão) é da original
+    const escolhida = rascunho ? (rascunho.versao ?? "original") : doEndereco === "original" ? "original" : "atualizada";
+    setVersao(escolhida);
+    /* eslint-enable react-hooks/set-state-in-effect */
+  }, [original.id]);
   useEffect(() => {
     // grava o layout sem apagar a prévia (que tem a sua própria preferência)
     gravarJSON("grifo:simulador", { ...lerJSON<Record<string, unknown>>("grifo:simulador", {}), layout });
   }, [layout]);
+  const escolherVersao = (v: VersaoSimulado) => setVersao(v);
 
   // A altura real da barra de controles: a folha e o enunciado grudam logo abaixo dela, sem vão
   useEffect(() => {
@@ -143,8 +162,8 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
     vivo.current = { peca, questoes, decorrido, tempos, aba };
   }, [peca, questoes, decorrido, tempos, aba]);
   const salvarAgora = useCallback(() => {
-    setSemEspaco(!salvarRascunho(exame.id, { ...vivo.current, atualizadoEm: Date.now() }));
-  }, [exame.id]);
+    setSemEspaco(!salvarRascunho(exame.id, { ...vivo.current, versao: exame.versao, atualizadoEm: Date.now() }));
+  }, [exame.id, exame.versao]);
 
   // 600 ms depois de cada mudança no texto
   useEffect(() => {
@@ -181,6 +200,8 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
     if (continuar) {
       const r = lerRascunho(exame.id);
       if (r) {
+        // o rascunho continua na versão em que foi escrito
+        setVersao(r.versao ?? "original");
         setPeca(r.peca);
         setQuestoes(exame.questoes.map((_, i) => r.questoes[i] ?? ""));
         setDecorrido(r.decorrido);
@@ -257,6 +278,7 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
       },
       respostas,
       resultado,
+      ...(exame.versao === "atualizada" ? { versao: "atualizada" as const } : {}),
     });
     // sem espaço, a nota não pode ser guardada: fica na prova, com o texto, para o aluno liberar espaço
     if (!gravou) {
@@ -264,7 +286,9 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
       return;
     }
     apagarRascunho(exame.id);
-    setFase("inicio");
+    setConfirmar(false);
+    setFase("entregando");
+    window.scrollTo({ top: 0 });
     router.push(`/simulados/${exame.id}/resultado/?t=${id}`);
   };
 
@@ -293,6 +317,8 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
     [partes, peca, questoes],
   );
 
+  if (fase === "entregando") return <TelaCorrigindo />;
+
   if (fase === "inicio") {
     return (
       <div className={`container section ${styles.inicio}`}>
@@ -305,6 +331,35 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
           textos definitivos.
         </p>
         {exame.observacoes && <p className={styles.obs}>ℹ️ {exame.observacoes}</p>}
+        <fieldset className={styles.versoes} disabled={temRascunho}>
+          <legend>Qual versão da prova?</legend>
+          <label className={styles.versao} data-marcada={versao === "atualizada" || undefined}>
+            <input type="radio" name="versao" checked={versao === "atualizada"} onChange={() => escolherVersao("atualizada")} />
+            <span>
+              <strong>
+                Atualizada <span className={styles.recomendada}>recomendada</span>
+              </strong>
+              <small>
+                {[
+                  mudancas.nomes && "as pessoas ganham nomes novos (da mitologia), para quem já conhece o caso",
+                  mudancas.correcoes > 0 && `${mudancas.correcoes === 1 ? "um erro material da prova corrigido" : `${mudancas.correcoes} erros materiais da prova corrigidos`} (explicado na correção)`,
+                  mudancas.avisos.length > 0 && `aviso de lei nova em: ${mudancas.avisos.join(", ")}`,
+                ]
+                  .filter(Boolean)
+                  .join("; ")
+                  .replace(/^./, (c) => c.toUpperCase()) || "Igual à original."}
+              </small>
+            </span>
+          </label>
+          <label className={styles.versao} data-marcada={versao === "original" || undefined}>
+            <input type="radio" name="versao" checked={versao === "original"} onChange={() => escolherVersao("original")} />
+            <span>
+              <strong>Original</strong>
+              <small>A prova como a FGV aplicou{exame.aplicacao ? ` em ${new Date(exame.aplicacao + "T12:00:00").toLocaleDateString("pt-BR")}` : ""}, com o gabarito oficial.</small>
+            </span>
+          </label>
+          {temRascunho && <p className={styles.versaoNota}>O rascunho salvo é da versão {versao}. Para trocar de versão, recomece do zero.</p>}
+        </fieldset>
         <div className={`card ${styles.regras}`}>
           <h2>Antes de começar</h2>
           <ul>
@@ -323,8 +378,20 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
                 Continuar de onde parei
               </button>
             )}
-            <button type="button" className={`btn ${temRascunho ? "btn-ghost" : "btn-gold"}`} onClick={() => iniciar(false)}>
-              {temRascunho ? "Recomeçar do zero" : "Começar a prova"}
+            <button
+              type="button"
+              className={`btn ${temRascunho ? "btn-ghost" : "btn-gold"}`}
+              onClick={() => {
+                // recomeçar libera a escolha da versão
+                if (temRascunho) {
+                  apagarRascunho(exame.id);
+                  setTemRascunho(false);
+                  return;
+                }
+                iniciar(false);
+              }}
+            >
+              {temRascunho ? "Recomeçar do zero" : `Começar a prova ${versao === "atualizada" ? "atualizada" : "original"}`}
             </button>
           </div>
         </div>
@@ -405,6 +472,17 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
           <h2>{atual.titulo === "Peça" ? "Peça Prático-Profissional" : atual.titulo}</h2>
           {/* com a prévia desligada, as citações são só texto: nem link nem pop-up */}
           <EnunciadoMemo text={atual.enunciado} className={styles.enunciadoTexto} data={exame.aplicacao} citacoes={previa} />
+          {/* na versão atualizada, os avisos de lei nova desta parte, depois do enunciado */}
+          {(exame.notas ?? [])
+            .filter((n) => n.alvo === atual.aba)
+            .map((n, i) => (
+              <aside key={i} className={styles.notaLei}>
+                <b>
+                  Atualização{n.item ? ` (item ${n.item})` : ""} — {n.lei}
+                </b>
+                <RichText text={n.texto} data={exame.aplicacao} citacoes={previa} />
+              </aside>
+            ))}
         </section>
         <section className={styles.folha}>
           <FolhaMemo
@@ -461,6 +539,17 @@ export function Simulador({ exame }: { exame: ExameSimulado }) {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+/** Entre a entrega e a página do resultado: a correção já foi feita e gravada, e o resultado está abrindo. */
+function TelaCorrigindo() {
+  return (
+    <div className={`container section ${styles.corrigindo}`} role="status" aria-live="polite">
+      <span className={styles.carregador} aria-hidden />
+      <h1>Corrigindo a sua prova…</h1>
+      <p className="muted">Conferindo cada item da tabela oficial da FGV. O resultado abre em seguida.</p>
     </div>
   );
 }

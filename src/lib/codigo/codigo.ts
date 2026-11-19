@@ -9,7 +9,10 @@
 //                   acertos(8) perguntas(8) dia(15) impressão(11)             = 78 bits
 //   carga jogo v2:  … estilo(4) categorias(4) acertos(8) perguntas(8) dia(15)
 //                   impressão(7)                                              = 78 bits
-//   (v2 guarda os tipos de pergunta escolhidos; os códigos v1 continuam válidos)
+//   carga jogo v3:  versão(4) tipo(2) jogo(4) pontos(17) nível(2) estilo(7)
+//                   categorias(4) acertos(8) perguntas(8) dia(15) impressão(7) = 78 bits
+//   (v3 abre espaço para até 128 estilos; os pontos ficam limitados a 131.071)
+//   (v2 guarda os tipos de pergunta escolhidos; os códigos v1 e v2 continuam válidos)
 //
 // "impressão" = SHA-256 truncado sobre tudo o que não cabe na carga (texto das
 // respostas, notas de cada questão, provedor de IA…); a página de resultado mostra
@@ -25,6 +28,7 @@ import { hmacSha256, sha256 } from "./sha256.ts";
 const ALFABETO = "0123456789ABCDEFGHJKMNPQRSTVWXYZ"; // Crockford base32
 const VERSAO = 1;
 const VERSAO_JOGO_CATEGORIAS = 2;
+const VERSAO_JOGO_ESTILOS = 3;
 /** bits de impressão do código de jogo v2 (com categorias) */
 export const BITS_IMPRESSAO_JOGO = 7;
 const BITS_CARGA = 78;
@@ -46,7 +50,7 @@ export interface DadosSimulado {
   duracaoMin: number;
   impressao: number; // 16 bits
 }
-interface DadosJogo {
+export interface DadosJogo {
   tipo: "jogo";
   jogo: number;
   pontos: number;
@@ -55,8 +59,8 @@ interface DadosJogo {
   acertos: number;
   perguntas: number;
   data: Date;
-  impressao: number; // 11 bits (v1) ou 7 bits (v2)
-  /** máscara de 4 bits das categorias de pergunta; presente = código v2 */
+  impressao: number; // 11 bits (v1) ou 7 bits (v2 e v3)
+  /** máscara de 4 bits das categorias de pergunta; presente = código v3 (v2 nos códigos antigos) */
   categorias?: number;
 }
 type DadosCodigo = DadosSimulado | DadosJogo;
@@ -89,14 +93,14 @@ const diaDe = (d: Date) => Math.floor((d.getTime() - EPOCH) / 86_400_000);
 const dataDe = (dia: number) => new Date(EPOCH + dia * 86_400_000);
 
 function carga(d: DadosCodigo): Bits {
-  const v2 = d.tipo === "jogo" && d.categorias !== undefined;
-  const b = new Bits().push(v2 ? VERSAO_JOGO_CATEGORIAS : VERSAO, 4);
+  const v3 = d.tipo === "jogo" && d.categorias !== undefined;
+  const b = new Bits().push(v3 ? VERSAO_JOGO_ESTILOS : VERSAO, 4);
   if (d.tipo === "simulado") {
     b.push(0, 2).push(d.exame, 7).push(d.variante, 2).push(d.atualizado ? 1 : 0, 1)
       .push(d.total * 100, 10).push(d.peca * 100, 9).push(MODOS.indexOf(d.modo), 3)
       .push(diaDe(d.data), 15).push(d.duracaoMin, 9).push(d.impressao, 16);
-  } else if (v2) {
-    b.push(1, 2).push(d.jogo, 4).push(d.pontos, 20).push(d.nivel, 2).push(d.estilo, 4).push(d.categorias!, 4)
+  } else if (v3) {
+    b.push(1, 2).push(d.jogo, 4).push(d.pontos, 17).push(d.nivel, 2).push(d.estilo, 7).push(d.categorias!, 4)
       .push(d.acertos, 8).push(d.perguntas, 8).push(diaDe(d.data), 15).push(d.impressao, BITS_IMPRESSAO_JOGO);
   } else {
     b.push(1, 2).push(d.jogo, 4).push(d.pontos, 20).push(d.nivel, 2).push(d.estilo, 4)
@@ -161,12 +165,22 @@ function formatar(codigo: string) {
   return codigo.match(/.{1,4}/g)!.join("-");
 }
 
-export async function gerarCodigo(d: DadosCodigo): Promise<string> {
-  const b = carga(d);
+async function finalizar(b: Bits): Promise<string> {
   const m = await mac(b.value);
   const all = (b.value << BigInt(BITS_MAC)) | BigInt(m);
   const corpo = base32(all, BITS_CARGA + BITS_MAC);
   return formatar(corpo + digitoVerificador(corpo));
+}
+
+export async function gerarCodigo(d: DadosCodigo): Promise<string> {
+  return finalizar(carga(d));
+}
+
+/** Gera um código no formato v2 antigo (só para os testes de compatibilidade). */
+export async function gerarCodigoV2ParaTeste(d: DadosJogo & { categorias: number }): Promise<string> {
+  const b = new Bits().push(2, 4).push(1, 2).push(d.jogo, 4).push(d.pontos, 20).push(d.nivel, 2).push(d.estilo, 4).push(d.categorias, 4)
+    .push(d.acertos, 8).push(d.perguntas, 8).push(diaDe(d.data), 15).push(d.impressao, BITS_IMPRESSAO_JOGO);
+  return finalizar(b);
 }
 
 export type Verificacao =
@@ -186,7 +200,7 @@ export async function verificarCodigo(input: string): Promise<Verificacao> {
 
   const r = reader(payload, BITS_CARGA);
   const versao = r(4);
-  if (versao !== VERSAO && versao !== VERSAO_JOGO_CATEGORIAS) return { ok: false, motivo: "versao" };
+  if (versao !== VERSAO && versao !== VERSAO_JOGO_CATEGORIAS && versao !== VERSAO_JOGO_ESTILOS) return { ok: false, motivo: "versao" };
   const tipo = r(2);
   if (tipo === 0 && versao !== VERSAO) return { ok: false, motivo: "versao" };
   if (tipo === 0) {
@@ -207,10 +221,10 @@ export async function verificarCodigo(input: string): Promise<Verificacao> {
     };
   }
   const jogo = r(4);
-  const pontos = r(20);
+  const pontos = r(versao === VERSAO_JOGO_ESTILOS ? 17 : 20);
   const nivel = r(2);
-  const estilo = r(4);
-  const categorias = versao === VERSAO_JOGO_CATEGORIAS ? r(4) : undefined;
+  const estilo = r(versao === VERSAO_JOGO_ESTILOS ? 7 : 4);
+  const categorias = versao === VERSAO ? undefined : r(4);
   return {
     ok: true,
     dados: {

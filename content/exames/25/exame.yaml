@@ -206,7 +206,7 @@ questoes:
         valores: [ 0, 0.5, 0.6 ]
         componentes:
           - { id: c1, valor: 0.5, termos: [ transacao, multa ] }
-          - { id: c2, valor: 0.1, dispositivo: [ "art. 76, § 2º, I, Lei 9" ], requer: c1 }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 76, § 2º, I, Lei 9.099" ], requer: c1 }
       - n: B
         descricao: O argumento é de que Rodrigo agiu em erro sobre a elementar do tipo “sem risco pessoal” (0,40), nos termos do Art. 20 do Código Penal (0,10), logo sua conduta é atípica (0,15).
         valores: [ 0, 0.15, 0.25, 0.4, 0.5, 0.55, 0.65 ]
@@ -282,7 +282,7 @@ questoes:
         valores: [ 0, 0.5, 0.6 ]
         componentes:
           - { id: c1, valor: 0.5, termos: [ suspensao condicional do processo | sursis processual, parcial procedencia | desclassifica* | procedencia parcial ] }
-          - { id: c2, valor: 0.1, dispositivo: [ Súmula 337 STJ, "art. 89, Lei 9" ], requer: c1 }
+          - { id: c2, valor: 0.1, dispositivo: [ Súmula 337 STJ, "art. 89, Lei 9.099" ], requer: c1 }
       - n: B
         descricao: Aplicação da escusa absolutória OU presente causa de isenção de pena (0,40), tendo em vista que o réu era pai da vítima (0,15), nos termos do Art. 181, inciso II, do Código Penal (0,10).
         valores: [ 0, 0.15, 0.25, 0.4, 0.5, 0.55, 0.65 ]
@@ -290,3 +290,12 @@ questoes:
           - { id: c1, valor: 0.4, termos: [ escusa absolutoria | isencao de pena | isento de pena ] }
           - { id: c2, valor: 0.15, termos: [ pai | ascendente | descendente | filh* ] }
           - { id: c3, valor: 0.1, dispositivo: [ "art. 181, II, CP" ], requer: c2 }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Patrick: Perseu, Natália: Andrômeda, Lauro: Ares, Maria: Báucis, José: Filemon }   # o tio que salva a sobrinha; o agressor; o casal de vizinhos
+    q1: { Lucas: Sísifo }
+    q2: { Rodrigo: Caronte, Marcus: Orfeu }   # a lagoa; quem foi buscar a criança
+    q3: { João: Hades, Maria: Perséfone, Eduardo: Orfeu, Natan: Cérbero }   # os donos; quem quis entrar; o segurança da porta
+    q4: { Vitor: Ícaro, Francisco: Dédalo }   # o filho e o pai
+    empresas: { Noite Cheia: Dionísio }   # a boate

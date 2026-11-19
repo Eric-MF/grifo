@@ -1,10 +1,10 @@
 // Modo "Celular" (visualização adicional ao padrão): node tests/e2e/mobile.mjs http://100.80.118.27:3100
 // Cobre: chip no ViewModeMenu e persistência, rolagem lateral nas páginas, menu hambúrguer,
-// contagem da folha igual em 360px e 1280px, largura fixa com rolagem, e o aviso de girar no jogo.
+// contagem da folha igual em 360px e 1280px, largura fixa com rolagem, e o jogo em pé (girar no meio pausa).
 import { chromium, devices } from "playwright";
 
 const BASE = process.argv[2] ?? "http://localhost:3000";
-const PAGINAS = ["/", "/provas/", "/simulados/", "/simulados/32/", "/treino/", "/jogos/", "/jogos/flap-suitcase/", "/verificar/"];
+const PAGINAS = ["/", "/provas/", "/simulados/", "/simulados/32/", "/treino/", "/jogos/", "/jogos/flap-suitcase/", "/verificar/", "/estatisticas/", "/estatisticas/#desempenho", "/estatisticas/#linha"];
 const TEXTO = Array.from({ length: 14 }, (_, i) => `Parágrafo ${i + 1}: o examinando deve fundamentar a tese com a jurisprudência do STJ e com o dispositivo legal aplicável ao caso concreto.`).join("\n");
 
 const b = await chromium.launch();
@@ -40,7 +40,6 @@ const comecarProva = async (p) => {
   }
 };
 
-const AVISO_GIRAR = (p) => p.getByRole("status").filter({ hasText: "Gire o celular" });
 
 for (const dispositivo of ["Pixel 7", "iPhone 13"]) {
   console.log(`\n== ${dispositivo} ==`);
@@ -126,18 +125,51 @@ for (const dispositivo of ["Pixel 7", "iPhone 13"]) {
     await ctx.close();
   }
 
-  // 6) Jogo: em retrato, aviso para girar e Jogar bloqueado; em paisagem, libera
+  // 6) Jogo em pé: joga normalmente, com o mundo mais alto (a largura lógica fica em 500); girar no meio da partida
+  // pausa, e deitado o mundo volta à altura de 640
   {
     const ctx = await contexto(dispositivo, { layout: "celular", largura: 360, altura: 760 });
     const p = await ctx.newPage();
-    await p.goto(`${BASE}/jogos/flap-suitcase/`, { waitUntil: "networkidle" });
+    await p.goto(`${BASE}/jogos/flap-suitcase/?debug=1`, { waitUntil: "networkidle" });
     await p.waitForTimeout(600);
-    ok(await AVISO_GIRAR(p).isVisible(), "jogo retrato: aviso 'Gire o celular' visível");
-    ok(await p.getByRole("button", { name: /Jogar/ }).first().isDisabled(), "jogo retrato: Jogar desabilitado");
+    ok(!(await p.getByText("Gire o celular").isVisible().catch(() => false)), "jogo em pé: sem aviso para girar");
+    const jogar = p.getByRole("button", { name: /Jogar/ }).first();
+    ok(await jogar.isEnabled(), "jogo em pé: Jogar habilitado");
+    await jogar.click();
+    // o resto mexe no jogo pelo window.__flap (?debug=1), que só existe fora de produção: no site publicado (o
+    // npm run e2e), fica para o next dev
+    const comDepuracao = await p
+      .waitForFunction(() => window.__flap !== undefined, null, { timeout: 5000 })
+      .then(() => true)
+      .catch(() => false);
+    if (!comDepuracao) {
+      console.log("--   jogo em pé: o resto precisa do next dev (window.__flap); pulado no site publicado");
+      await ctx.close();
+      continue;
+    }
+    await p.evaluate(() => {
+      window.__flap.orbesLigados = false;
+      window.__flap.invulneravel = true;
+    });
+    const caixa = await p.locator("canvas").first().boundingBox();
+    const tocar = () => p.touchscreen.tap(caixa.x + caixa.width / 2, caixa.y + caixa.height / 2);
+    await tocar();
+    const inicio = Date.now();
+    let e = await p.evaluate(() => window.__flap.estado());
+    while (Date.now() - inicio < 2500) {
+      if (e.jogador.y > e.H * 0.55) await tocar();
+      await p.waitForTimeout(60);
+      e = await p.evaluate(() => window.__flap.estado());
+    }
+    ok(e.estado === "jogando", `jogo em pé: a partida corre (${e.estado})`);
+    ok(Math.round(e.W) === 500 && e.H > 640, `jogo em pé: mundo alto (${Math.round(e.W)} x ${Math.round(e.H)})`);
+    ok(e.pilares.every((q) => q.vao > 0 && q.vao < e.H - 40), "jogo em pé: os vãos ficam dentro da tela");
     await p.setViewportSize({ width: 760, height: 360 });
-    await p.waitForTimeout(400);
-    ok(!(await AVISO_GIRAR(p).isVisible()), "jogo paisagem: aviso some");
-    ok(await p.getByRole("button", { name: /Jogar/ }).first().isEnabled(), "jogo paisagem: Jogar habilitado");
+    await p.waitForTimeout(500);
+    e = await p.evaluate(() => window.__flap.estado());
+    ok(e.estado === "pausado", `girar no meio da partida pausa (${e.estado})`);
+    ok(Math.round(e.H) === 640, `deitado: altura lógica 640 (${Math.round(e.H)})`);
+    ok(e.pilares.every((q) => q.vao - q.abertura / 2 > 0 && q.vao + q.abertura / 2 < e.H - 40), "deitado: os vãos voltam para dentro da tela");
     await ctx.close();
   }
 }

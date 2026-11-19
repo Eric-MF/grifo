@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { listarExames } from "@/content/load";
-import { courseHref } from "@/config/site";
+import { courseHref, CURSO_ITENS } from "@/config/site";
 import { optionalImage } from "@/lib/images";
 import styles from "./page.module.css";
 
@@ -166,10 +166,9 @@ export default function Home() {
             <span className={styles.heroEyebrow}>Curso Completo OAB – Penal</span>
             <h2>Preparação guiada até a aprovação</h2>
             <ul className={styles.courseList}>
-              <li>Estrutura de todas as peças cobradas pela FGV</li>
-              <li>Teses recorrentes de Direito Penal e Processo Penal</li>
-              <li>Correção individual das suas peças</li>
-              <li>Cronograma até o dia da prova</li>
+              {CURSO_ITENS.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
             <a href={courseHref()} className="btn btn-gold">
               Quero conhecer o curso

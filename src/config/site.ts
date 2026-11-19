@@ -10,6 +10,9 @@ export const SITE = {
     "Provas anteriores, gabaritos, simulados com correção automática e jogos para a 2ª fase da OAB em Direito Penal.",
 } as const;
 
+/** A imagem da prévia dos links do site nas redes (1200 x 630, em public/). */
+export const IMAGEM_COMPARTILHAR = "/compartilhar-1200x630.jpg";
+
 /**
  * Link do Curso Completo OAB – Penal.
  * TODO: preencher quando o curso tiver página própria. Enquanto vazio, os anúncios
@@ -18,9 +21,18 @@ export const SITE = {
 export const COURSE_URL = "";
 export const courseHref = () => COURSE_URL || "/#curso";
 
+/** O que o curso oferece: a seção da página inicial e o resumo do link "Curso" do cabeçalho. */
+export const CURSO_ITENS = [
+  "Estrutura de todas as peças cobradas pela FGV",
+  "Teses recorrentes de Direito Penal e Processo Penal",
+  "Correção individual das suas peças",
+  "Cronograma até o dia da prova",
+] as const;
+
 export const NAV = [
   { href: "/provas/", label: "Provas" },
   { href: "/simulados/", label: "Simulados" },
+  { href: "/estatisticas/", label: "Estatísticas" },
   { href: "/leis/", label: "Vade Mecum" },
   { href: "/jogos/", label: "Jogos" },
   { href: "/#curso", label: "Curso" },
@@ -53,3 +65,10 @@ export const ADS = {
   provider: "none" as "none" | "adsense",
   client: "",
 };
+
+/**
+ * O canal do YouTube dos vídeos que aparecem nas perguntas dos jogos (e que dão moedas): o canal do Grifo. Sem vídeos,
+ * o banner não aparece. Quando o canal publicar, rodar `node scripts/videos-youtube.ts` para refazer a lista
+ * (content/videos-youtube.json).
+ */
+export const CANAL_VIDEOS = { nome: "Grifo", id: "UCjUg50FbIlF7tXXFzLVz7gw", url: "https://www.youtube.com/@grifo-net-br" } as const;

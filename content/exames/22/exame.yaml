@@ -321,4 +321,11 @@ questoes:
 atualizado:
   revisao: { status: rascunho }
   notas:
+    - { alvo: peca, item: "9", lei: "Lei 13.654/2018", texto: "O inciso I do § 2º do art. 157 do Código Penal (emprego de arma) foi revogado pela Lei 13.654/2018, que criou o § 2º-A, I, para a arma de fogo. A arma simulada continua sem aumentar a pena: o simulacro não é arma de fogo." }
     - { alvo: q2, lei: "Lei 15.280/2025 e Lei 15.353/2026", texto: "O art. 217-A do Código Penal (estupro de vulnerável) foi alterado pela Lei 15.280/2025, que fixou pena de reclusão de 10 a 18 anos (antes, de 8 a 15 anos), e pela Lei 15.353/2026, que acrescentou o § 4º-A (presunção absoluta de vulnerabilidade da vítima)." }
+  nomes:
+    peca: { Leonardo: Ícaro, Roberto: Dédalo }   # o jovem ambicioso; o vizinho que não quis
+    q1: { Cássio: Dionísio, Pedro: Castor, Paulo: Pólux }   # a festa de aniversário
+    q2: { Antônio: Hades, Joana: Perséfone, Carla: Têmis }   # a promotora (a suspeição)
+    q3: { Maurício: Hermes }
+    q4: { Diego: Castor, Júlio: Pólux, Julio: Pólux, Marcos: Procusto }   # as vítimas; o assaltante

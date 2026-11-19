@@ -1,26 +1,117 @@
-.filtros { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin: 2rem 0 1rem; }
-.filtros input:not([type="checkbox"]), .filtros select {
-  padding: 0.6rem 0.9rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); min-width: 220px;
+/* A página de Provas: o topo (números e atalhos), a busca, a tabela dos exames e o visualizador. */
+.ok { color: var(--ok); }
+.bad { color: var(--bad); }
+
+/* ---- Topo: os números do acervo e os atalhos de leitura ---- */
+.topo { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem 1.5rem; align-items: stretch; margin-top: 1.75rem; }
+@media (max-width: 900px) { .topo { grid-template-columns: minmax(0, 1fr); } }
+.numeros {
+  margin: 0; display: grid; grid-template-columns: repeat(3, auto); gap: 0; padding: 0.4rem; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow);
 }
-.situacao { display: block; font-size: 0.8rem; color: var(--muted); }
-.scroll { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
-.tabela { width: 100%; border-collapse: collapse; font-size: 0.94rem; }
-.tabela th, .tabela td { padding: 0.75rem 0.6rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: middle; }
-.tabela thead th { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); background: var(--surface-2); position: sticky; top: 4rem; z-index: 1; }
-.tabela tbody tr:hover { background: var(--surface-2); }
-.tabela tbody tr:target { background: color-mix(in srgb, var(--accent) 16%, transparent); }
+.numeros div { display: grid; align-content: center; padding: 0.55rem 1rem; }
+.numeros div + div { border-left: 1px solid var(--border); }
+.numeros dd { order: -1; margin: 0; font-family: var(--font-title); font-size: 1.7rem; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.numeros dt { font-size: 0.78rem; color: var(--muted); }
+.atalhos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 0.6rem; }
+.atalho {
+  display: flex; align-items: center; gap: 0.7rem; padding: 0.75rem 0.9rem; border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--surface); color: inherit; text-decoration: none; transition: border-color 0.15s, transform 0.15s;
+}
+.atalho:hover { border-color: var(--primary); text-decoration: none; transform: translateY(-1px); }
+.atalho > span:first-child { flex: none; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 10px; background: var(--surface-2); font-size: 1.2rem; }
+.atalho strong { display: block; font-size: 0.95rem; }
+.atalho small { display: block; font-size: 0.78rem; color: var(--muted); line-height: 1.3; }
+
+/* ---- Busca e filtros ---- */
+.filtros { display: flex; flex-wrap: wrap; gap: 0.6rem 0.75rem; align-items: center; margin: 1.75rem 0 1rem; }
+.filtros input:not([type="checkbox"]), .filtros select {
+  width: 100%; padding: 0.6rem 0.9rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit;
+}
+.busca { flex: 1 1 260px; }
+.filtros label:has(select) { flex: 0 1 240px; }
+.contagem { margin-left: auto; font-size: 0.88rem; font-weight: 600; color: var(--muted); }
+
+/* ---- A tabela ---- */
+.scroll { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+.tabela { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.tabela th, .tabela td { padding: 0.65rem 0.45rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: middle; }
+.tabela th:first-child { padding-left: 0.8rem; }
+.tabela th:last-child, .tabela td:last-child { padding-right: 0.8rem; }
+.tabela thead th {
+  font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); background: var(--surface-2);
+  position: sticky; top: 4rem; z-index: 1;
+}
+.tabela thead th:first-child { border-top-left-radius: var(--radius); }
+.tabela thead th:last-child { border-top-right-radius: var(--radius); }
+.tabela thead th small { display: block; margin-top: 0.15rem; font-size: 0.68rem; letter-spacing: 0; text-transform: none; font-weight: 500; }
+.tabela thead th[data-grupo="atualizada"] { color: var(--accent-ink); background: color-mix(in srgb, var(--accent) 14%, var(--surface-2)); }
+.tabela td[data-grupo="atualizada"] { background: color-mix(in srgb, var(--accent) 5%, transparent); }
+.linha:hover { background: color-mix(in srgb, var(--primary) 4%, transparent); }
+.linha:target { background: color-mix(in srgb, var(--accent) 16%, transparent); }
 .c { text-align: center !important; }
-.num { display: block; font-family: var(--font-title); font-size: 1.2rem; font-weight: 700; }
-.sub { font-size: 0.8rem; color: var(--muted); font-weight: 400; }
-.dl { display: inline-block; padding: 0.3rem 0.65rem; border-radius: 999px; border: 1px solid var(--border); text-decoration: none; font-weight: 700; font-size: 0.82rem; white-space: nowrap; }
+/* o ano separa os exames */
+.ano th {
+  padding: 0.45rem 0.9rem !important; background: var(--bg); font-family: var(--font-title); font-size: 1rem; font-weight: 700; color: var(--muted);
+  letter-spacing: 0.02em;
+}
+/* a coluna do exame: o número romano, o número, a data, as etiquetas e o "Visualizar" */
+.exame { min-width: 300px; }
+.exameCel { display: flex; align-items: center; gap: 0.7rem; }
+.num {
+  flex: none; display: grid; place-items: center; min-width: 58px; height: 48px; padding-inline: 0.35rem; border-radius: 11px;
+  background: var(--navy); color: var(--gold); font-family: var(--font-title); font-size: 1.05rem; font-weight: 700;
+}
+:global(:root[data-theme="escuro"]) .num { background: var(--surface-2); }
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme])) .num { background: var(--surface-2); }
+}
+.exameInfo { display: grid; gap: 0.1rem; min-width: 0; flex: 1; }
+.exameInfo strong { font-size: 0.98rem; }
+.sub { font-size: 0.8rem; color: var(--muted); font-weight: 400; white-space: nowrap; }
+.fgv { font-weight: 600; color: var(--muted); white-space: nowrap; }
+.fgv:hover { color: var(--primary); }
+.etiquetas { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+.etiquetas:empty { display: none; }
+.etiquetas span {
+  padding: 0.02rem 0.45rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-2); font-size: 0.68rem; font-weight: 700;
+  color: var(--muted); white-space: nowrap;
+}
+.peca { font-size: 0.88rem; }
+.ver {
+  flex: none; display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.38rem 0.7rem; border-radius: 999px; border: 1px solid var(--primary);
+  background: color-mix(in srgb, var(--primary) 8%, var(--surface)); color: var(--primary); font: inherit; font-weight: 700; font-size: 0.82rem;
+  cursor: pointer; white-space: nowrap;
+}
+.ver:hover { background: var(--primary); color: var(--primary-ink); }
+/* os grupos de PDFs: o caderno e o gabarito lado a lado */
+.rotuloGrupo { display: none; }
+.par { display: inline-flex; gap: 0.3rem; flex-wrap: nowrap; justify-content: center; }
+.dl, .na {
+  display: inline-flex; align-items: center; gap: 0.2rem; padding: 0.28rem 0.5rem; border-radius: 999px; border: 1px solid var(--border);
+  text-decoration: none; font-weight: 700; font-size: 0.76rem; white-space: nowrap;
+}
 .dl:hover { border-color: var(--primary); text-decoration: none; }
-.dlGold { background: color-mix(in srgb, var(--accent) 20%, transparent); border-color: transparent; color: var(--accent-ink); }
-.rotuloBotao { display: none; }
-.sim { font-weight: 700; }
-.na { color: var(--muted); }
-.par { display: inline-flex; gap: 0.35rem; flex-wrap: wrap; justify-content: center; }
-.ver { padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); font-weight: 700; font-size: 0.8rem; cursor: pointer; font-family: inherit; white-space: nowrap; }
-.ver:hover { border-color: var(--primary); }
+.dlGold { background: color-mix(in srgb, var(--accent) 22%, transparent); border-color: transparent; color: var(--accent-ink); }
+.dlGold:hover { border-color: var(--accent); }
+.icone { font-size: 0.72rem; opacity: 0.75; }
+.na { color: var(--muted); opacity: 0.55; border-style: dashed; font-weight: 600; }
+/* gabarito preliminar (a FGV ainda não publicou o definitivo): um selinho dentro do botão */
+.preliminar {
+  margin-left: 0.1em; padding: 0.05em 0.35em; border-radius: 999px; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.02em;
+  background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn);
+}
+.sim { font-weight: 700; white-space: nowrap; }
+.nota {
+  padding: 0.2rem 0.55rem; border-radius: 999px; font-weight: 800; font-variant-numeric: tabular-nums; text-decoration: none;
+}
+.nota.ok { background: color-mix(in srgb, var(--ok) 15%, transparent); }
+.nota.bad { background: color-mix(in srgb, var(--bad) 13%, transparent); }
+.simulado .par { align-items: center; gap: 0.5rem; }
+.mostrarTodos { display: none; }
+.folhas { margin-top: 2.5rem; }
+.folhas h2 { font-size: 1.5rem; }
+
 .lote { margin: 0 0 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
 .resumoLote { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem 1rem; padding: 0.9rem 1.1rem; cursor: pointer; list-style: none; }
 .resumoLote::-webkit-details-marker { display: none; }
@@ -38,22 +129,125 @@
 .grupo { border: 1px solid var(--border); border-radius: var(--radius); padding: 0.5rem 0.8rem 0.6rem; display: grid; gap: 0.3rem; }
 .grupo legend { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); padding: 0 0.3rem; }
 .acao { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-top: 0.85rem; }
-.dialogo { width: min(1100px, 96vw); height: min(90vh, 920px); max-height: 90vh; padding: 0; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: inherit; display: flex; flex-direction: column; }
-.dialogo::backdrop { background: rgb(0 0 0 / 0.55); }
+/* ---- O visualizador (pop) ---- */
+.dialogo {
+  width: min(1180px, 96vw); height: min(92vh, 960px); max-height: 92vh; padding: 0; border: 1px solid var(--border); border-radius: 18px;
+  background: var(--surface); color: inherit; display: flex; flex-direction: column; box-shadow: 0 24px 70px rgb(0 0 0 / 0.35); overflow: hidden;
+}
+.dialogo:focus { outline: none; }
+.dialogo::backdrop { background: rgb(8 14 30 / 0.6); backdrop-filter: blur(3px); }
 .telaCheia { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; background: var(--surface); }
 .telaCheia:fullscreen { width: 100vw; height: 100vh; }
-.dialogoAcoes { display: flex; gap: 0.5rem; }
-.dialogoTopo { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.8rem 1rem; border-bottom: 1px solid var(--border); }
-.dialogoTopo h2 { font-size: 1.15rem; margin: 0; }
-.abas { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0.6rem 1rem; border-bottom: 1px solid var(--border); }
-.abas button, .barraPdf a { padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-2); font: inherit; font-size: 0.85rem; cursor: pointer; }
-.abas button[aria-pressed="true"] { border-color: var(--primary); font-weight: 700; }
-.barraPdf { display: flex; gap: 0.75rem; padding: 0.5rem 1rem 0; font-size: 0.88rem; }
-.visor { flex: 1 1 auto; width: 100%; min-height: 0; border: 0; }
-.corpo { padding: 1rem; overflow: auto; flex: 1 1 auto; }
-.pontos h3 { font-size: 1rem; margin: 1.2rem 0 0.4rem; }
-.tabelaPontos { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-.tabelaPontos th, .tabelaPontos td { border-bottom: 1px solid var(--border); padding: 0.4rem 0.5rem; text-align: left; vertical-align: top; }
+.dialogoTopo {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.75rem 1rem; border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--primary) 5%, var(--surface)), var(--surface));
+}
+/* as setas para o exame anterior e o próximo, dos lados do título (no celular, o dedo de lado faz o mesmo) */
+.dialogoTitulo { display: flex; align-items: center; gap: 0.6rem; min-width: 0; }
+.dialogoTitulo .num { min-width: 52px; height: 42px; font-size: 0.95rem; }
+.dialogoNome { min-width: 0; }
+.dialogoNome h2 { margin: 0; font-size: 1.15rem; line-height: 1.2; }
+.dialogoNome p { margin: 0.1rem 0 0; font-size: 0.8rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.seta {
+  display: inline-flex; align-items: center; gap: 0.3rem; flex: none; min-height: 2.25rem; padding: 0.25rem 0.65rem; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer;
+}
+.seta > span[aria-hidden] { font-size: 1.35rem; line-height: 1; }
+.seta:hover:not(:disabled) { border-color: var(--primary); color: var(--primary); }
+.seta:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.seta:disabled { opacity: 0.35; cursor: default; }
+.dialogoAcoes { display: flex; gap: 0.4rem; flex: none; }
+.botaoIcone {
+  display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); font: inherit; font-size: 1.05rem; cursor: pointer;
+}
+.botaoIcone:hover { border-color: var(--primary); color: var(--primary); }
+.botaoIcone:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.dialogoConteudo { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+.dialogoConteudo[data-entra="proximo"] { animation: entraProximo 0.22s ease-out; }
+.dialogoConteudo[data-entra="anterior"] { animation: entraAnterior 0.22s ease-out; }
+@keyframes entraProximo { from { opacity: 0.2; transform: translateX(28px); } }
+@keyframes entraAnterior { from { opacity: 0.2; transform: translateX(-28px); } }
+@media (prefers-reduced-motion: reduce) {
+  .dialogoConteudo[data-entra] { animation: none; }
+}
+/* as abas, em grupos: cada grupo com o nome e os seus botões; no celular, uma faixa só, que rola de lado */
+.abas { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.1rem; padding: 0.6rem 1rem; border-bottom: 1px solid var(--border); }
+.grupoAbas { display: flex; align-items: center; gap: 0.3rem; }
+.grupoAbas[data-ferramentas] { margin-left: auto; }
+.grupoNome { margin-right: 0.2rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.abas button {
+  padding: 0.32rem 0.75rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-2); color: var(--text); font: inherit;
+  font-size: 0.84rem; font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.abas button:hover { border-color: var(--primary); }
+.abas button[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: var(--primary-ink); }
+.barraPdf { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.9rem; padding: 0.45rem 1rem; font-size: 0.84rem; background: var(--surface-2); border-bottom: 1px solid var(--border); }
+.barraPdf span { margin-right: auto; font-weight: 600; color: var(--muted); }
+.barraPdf a { font-weight: 700; text-decoration: none; }
+.barraPdf a:hover { text-decoration: underline; }
+.baixarPdf { padding: 0.2rem 0.7rem; border-radius: 999px; background: color-mix(in srgb, var(--accent) 22%, transparent); color: var(--accent-ink); }
+.visor { flex: 1 1 auto; width: 100%; min-height: 0; border: 0; background: var(--surface-2); }
+.corpo { padding: 1rem 1.2rem; overflow: auto; flex: 1 1 auto; }
+/* no visor próprio (celular e tablet) o "Baixar" fica na barra de baixo, junto do zoom */
+.barraPdf[data-visor-proprio] { display: none; }
+/* o seletor do celular: o grupo em segmentos e, embaixo, os documentos dele */
+.abasCelular { display: none; }
+@media (max-width: 640px) {
+  .dialogo { inset: 0; width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+  .dialogoTopo { gap: 0.4rem; padding: calc(0.5rem + env(safe-area-inset-top)) 0.6rem 0.5rem; }
+  .dialogoTitulo { flex: 1 1 auto; gap: 0.35rem; }
+  .dialogoTitulo .num { display: none; }
+  .dialogoNome { flex: 1 1 auto; text-align: center; }
+  .dialogoNome h2 { font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .setaNumeral { display: none; }
+  .seta { justify-content: center; width: 2.6rem; height: 2.6rem; min-height: 0; padding: 0; border-radius: 50%; }
+  .botaoIcone { width: 2.6rem; height: 2.6rem; }
+  .abas { display: none; }
+  .abasCelular { display: grid; gap: 0.45rem; padding: 0.55rem 0.6rem 0.6rem; border-bottom: 1px solid var(--border); }
+  .segmentos { display: grid; grid-auto-columns: minmax(0, 1fr); grid-auto-flow: column; padding: 3px; border-radius: 12px; background: var(--surface-2); }
+  .segmentos button {
+    min-height: 2.35rem; padding: 0.2rem 0.3rem; border: 0; border-radius: 9px; background: none; color: var(--muted); font: inherit;
+    font-size: 0.8rem; font-weight: 700; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .segmentos button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgb(0 0 0 / 0.16); }
+  .documentos { display: grid; grid-auto-columns: minmax(0, 1fr); grid-auto-flow: column; gap: 0.45rem; }
+  .documentos button {
+    min-height: 2.6rem; padding: 0.3rem 0.6rem; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    font: inherit; font-size: 0.92rem; font-weight: 700; cursor: pointer;
+  }
+  .documentos button[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: var(--primary-ink); }
+  .barraPdf { flex-wrap: nowrap; padding: 0.4rem 0.6rem; }
+  .barraPdf span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .corpo { padding: 0.8rem 0.8rem calc(0.8rem + env(safe-area-inset-bottom)); }
+}
+
+/* a pontuação: os atalhos das partes e, em cada parte, os itens com o valor */
+.partesPontos { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.6rem 0 0.2rem; }
+.partesPontos a {
+  padding: 0.25rem 0.65rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-2); font-size: 0.82rem; color: inherit;
+  text-decoration: none;
+}
+.partesPontos a:hover { border-color: var(--primary); }
+.partesPontos b { font-variant-numeric: tabular-nums; color: var(--primary); }
+.partePontos { margin-top: 1.1rem; scroll-margin-top: 0.5rem; }
+.partePontos h3 { display: flex; align-items: baseline; gap: 0.5rem; margin: 0 0 0.4rem; font-size: 1.1rem; }
+.partePontos h3 span { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; color: var(--muted); }
+.itensPontos { list-style: none; margin: 0; padding: 0; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.itensPontos > li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 0.75rem; padding: 0.6rem 0.8rem; font-size: 0.9rem; }
+.itensPontos > li + li { border-top: 1px solid var(--border); }
+.itensPontos > li:nth-child(even) { background: color-mix(in srgb, var(--surface-2) 55%, transparent); }
+.itensPontos p { margin: 0; line-height: 1.45; }
+.nItem {
+  display: grid; place-items: center; min-width: 2rem; height: 1.6rem; padding-inline: 0.3rem; border-radius: 8px; background: var(--surface-2);
+  font-size: 0.78rem; font-weight: 800; font-variant-numeric: tabular-nums;
+}
+.valorItem { font-weight: 800; font-variant-numeric: tabular-nums; color: var(--primary); }
+.faixas { margin-top: 0.2rem !important; font-size: 0.78rem; color: var(--muted); }
+.criterios { margin-top: 0.3rem; font-size: 0.8rem; color: var(--muted); }
+.criterios summary { cursor: pointer; font-weight: 600; }
+.criterios ul { margin: 0.3rem 0 0; padding-left: 1.1rem; display: grid; gap: 0.15rem; }
+.criterios b { font-variant-numeric: tabular-nums; color: var(--text); }
 .conferir { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 1.25rem; align-items: start; }
 .conferirTextos { display: grid; gap: 0.9rem; min-width: 0; }
 .conferirTextos > p { margin: 0; font-size: 0.9rem; }
@@ -74,54 +268,119 @@
 .itensNota { margin: 0.4rem 0 0; padding-left: 1.1rem; font-size: 0.85rem; display: grid; gap: 0.2rem; }
 .itensNota span { font-variant-numeric: tabular-nums; white-space: nowrap; }
 
-/* Abaixo de 980px a tabela vira cartões: cada botão traz o próprio nome, então nada depende de cabeçalho. */
+/* Abaixo de 1200px (e no modo celular) a tabela vira cartões compactos: o exame e o "Visualizar" no alto, e cada grupo
+   de PDFs numa linha, com o nome do grupo à esquerda. No celular, os 10 mais recentes e o "Mostrar todos". */
+/* numa coluna, a nota do "Conferir texto" fica presa embaixo, só com o total; as partes abrem num toque */
+.verPartes { display: none; }
 @media (max-width: 980px) {
-  .filtros input:not([type="checkbox"]), .filtros select { min-width: 0; width: 100%; }
-  .filtros label:has(input:not([type="checkbox"])), .filtros label:has(select) { flex: 1 1 100%; }
   .conferir { grid-template-columns: 1fr; }
-  .conferirNota { position: static; }
-  .scroll { overflow: visible; border: 0; background: none; }
+  .conferirNota {
+    position: sticky; top: auto; bottom: -1rem; z-index: 2; gap: 0.35rem; max-height: 60vh; overflow: auto; margin: 0 -0.2rem;
+    padding: 0.7rem 0.9rem; box-shadow: 0 -8px 24px rgb(0 0 0 / 0.14);
+  }
+  .conferirNota { display: flex; flex-wrap: wrap; align-items: center; column-gap: 0.9rem; }
+  .notaTotal { align-items: baseline; }
+  .notaTotal > span:first-child { width: auto; }
+  .notaTotal strong { font-size: 1.7rem; }
+  .conferirNota .aprovado, .conferirNota .reprovado { flex: 1 1 8rem; font-size: 0.85rem; }
+  .listaNota { flex-basis: 100%; }
+  .listaNota:not([data-aberta]) { display: none; }
+  .verPartes {
+    display: block; justify-self: start; padding: 0.35rem 0.8rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--primary); font: inherit; font-size: 0.84rem; font-weight: 700; cursor: pointer;
+  }
+  .campoTexto textarea { height: 8.5rem; }
+}
+@media (max-width: 1199.98px) {
+  .scroll { overflow: visible; border: 0; background: none; box-shadow: none; }
   .tabela { display: block; }
   .tabela thead { display: none; }
-  .tabela tbody { display: grid; gap: 0.75rem; }
-  .tabela tbody tr {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; padding: 0.9rem;
-    border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface);
+  .tabela tbody { display: grid; gap: 0.6rem; }
+  .ano th { display: block; padding: 0.6rem 0.2rem 0 !important; background: none; font-size: 1.05rem; }
+  .linha {
+    display: grid; grid-template-columns: minmax(0, 1fr); padding: 0.75rem 0.85rem 0.55rem; border: 1px solid var(--border);
+    border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow);
   }
-  .tabela th, .tabela td { border: 0; padding: 0; text-align: left !important; min-width: 0; }
-  .tabela th[scope="row"] { grid-column: 1 / -1; }
-  .tabela td { display: flex; align-items: center; }
-  .tabela .larga { grid-column: 1 / -1; }
-  .tabela .larga .par { display: grid; grid-template-columns: 1fr 1fr; width: 100%; gap: 0.5rem; }
-  .ver { width: 100%; min-height: 44px; font-size: 0.95rem; }
-  .dl, .sim {
-    display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 0.1rem;
-    width: 100%; min-height: 44px; box-sizing: border-box; padding: 0.45rem 0.7rem; border-radius: var(--radius-sm); font-size: 0.95rem; white-space: normal;
-  }
-  .rotuloBotao { display: block; font-size: 0.74rem; font-weight: 400; color: var(--muted); letter-spacing: 0.02em; }
-  .situacao { margin-top: 0.2rem; }
-  .tabela .na { font-size: 0.9rem; }
+  .tabela th, .tabela td { border: 0 !important; padding: 0; text-align: left !important; min-width: 0; }
+  .tabela th:first-child { padding-left: 0; }
+  .tabela th.exame { min-width: 0; padding-bottom: 0.55rem; }
+  .exameCel { flex-wrap: wrap; }
+  .tabela td[data-grupo="atualizada"] { background: none; }
+  .peca { padding: 0 0 0.4rem !important; }
+  .grupoPdf, .simulado { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; padding: 0.4rem 0 !important; border-top: 1px dashed var(--border) !important; }
+  .rotuloGrupo { display: block; font-size: 0.8rem; font-weight: 600; color: var(--muted); }
+  .grupoPdf[data-grupo="atualizada"] .rotuloGrupo { color: var(--accent-ink); }
+  .dl, .na { min-height: 36px; padding: 0.35rem 0.75rem; font-size: 0.84rem; }
+  .ver { min-height: 38px; }
+  .sim { display: inline-flex; align-items: center; min-height: 36px; }
 }
-
-/* Modo celular escolhido nas preferências: mesmo layout de cartões, em qualquer largura. */
-:global(:root[data-layout="celular"]) .scroll { overflow: visible; border: 0; background: none; }
+/* entre o celular e o computador, os cartões em duas colunas; o ano ocupa a linha inteira */
+@media (min-width: 700px) and (max-width: 1199.98px) {
+  .tabela tbody { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ano { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .tabela:not([data-todos]) tr[data-alem] { display: none; }
+  .mostrarTodos {
+    display: block; width: 100%; margin-top: 0.75rem; padding: 0.75rem 1rem; border: 1px dashed var(--border); border-radius: var(--radius);
+    background: var(--surface); color: var(--primary); font: inherit; font-weight: 700; cursor: pointer;
+  }
+  .numeros { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .numeros div { padding: 0.45rem 0.6rem; }
+  .numeros dd { font-size: 1.35rem; }
+  .contagem { margin-left: 0; }
+}
+@media (max-width: 380px) {
+  .grupoPdf { flex-wrap: wrap; }
+}
+:global(:root[data-layout="celular"]) .scroll { overflow: visible; border: 0; background: none; box-shadow: none; }
 :global(:root[data-layout="celular"]) .tabela { display: block; }
 :global(:root[data-layout="celular"]) .tabela thead { display: none; }
-:global(:root[data-layout="celular"]) .tabela tbody { display: grid; gap: 0.75rem; }
-:global(:root[data-layout="celular"]) .tabela tbody tr {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; padding: 0.9rem;
-  border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface);
+:global(:root[data-layout="celular"]) .tabela tbody { display: grid; gap: 0.6rem; }
+:global(:root[data-layout="celular"]) .ano th { display: block; padding: 0.6rem 0.2rem 0 !important; background: none; }
+:global(:root[data-layout="celular"]) .linha {
+  display: grid; grid-template-columns: minmax(0, 1fr); padding: 0.75rem 0.85rem 0.55rem; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--surface);
 }
-:global(:root[data-layout="celular"]) .tabela th, :global(:root[data-layout="celular"]) .tabela td { border: 0; padding: 0; text-align: left !important; min-width: 0; }
-:global(:root[data-layout="celular"]) .tabela th[scope="row"] { grid-column: 1 / -1; }
-:global(:root[data-layout="celular"]) .tabela td { display: flex; align-items: center; }
-:global(:root[data-layout="celular"]) .tabela .larga { grid-column: 1 / -1; }
-:global(:root[data-layout="celular"]) .tabela .larga .par { display: grid; grid-template-columns: 1fr 1fr; width: 100%; gap: 0.5rem; }
-:global(:root[data-layout="celular"]) .ver { width: 100%; min-height: 44px; font-size: 0.95rem; }
-:global(:root[data-layout="celular"]) .dl, :global(:root[data-layout="celular"]) .sim {
-  display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 0.1rem;
-  width: 100%; min-height: 44px; box-sizing: border-box; padding: 0.45rem 0.7rem; border-radius: var(--radius-sm); font-size: 0.95rem; white-space: normal;
+:global(:root[data-layout="celular"]) .tabela th, :global(:root[data-layout="celular"]) .tabela td { border: 0 !important; padding: 0; text-align: left !important; min-width: 0; }
+:global(:root[data-layout="celular"]) .tabela th.exame { min-width: 0; padding-bottom: 0.55rem; }
+:global(:root[data-layout="celular"]) .tabela th:first-child { padding-left: 0; }
+:global(:root[data-layout="celular"]) .grupoPdf, :global(:root[data-layout="celular"]) .simulado {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; padding: 0.4rem 0 !important; border-top: 1px dashed var(--border) !important;
 }
-:global(:root[data-layout="celular"]) .rotuloBotao { display: block; font-size: 0.74rem; font-weight: 400; color: var(--muted); letter-spacing: 0.02em; }
-:global(:root[data-layout="celular"]) .situacao { margin-top: 0.2rem; }
-:global(:root[data-layout="celular"]) .tabela .na { font-size: 0.9rem; }
+:global(:root[data-layout="celular"]) .rotuloGrupo { display: block; font-size: 0.8rem; font-weight: 600; color: var(--muted); }
+.pontos > p:first-child { margin: 0; }
+
+/* o visor próprio (pdf.js), para o celular: as páginas uma embaixo da outra, e embaixo a página atual e o zoom */
+.visorProprio { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; background: var(--surface-2); }
+/* com zoom, a página fica maior que o visor e começa na esquerda (as margens automáticas centralizam só a menor) */
+.paginasPdf {
+  flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 0.6rem; display: flex; flex-direction: column;
+  align-items: flex-start; gap: 0.6rem; outline: none;
+}
+.paginaPdf { flex: none; margin-inline: auto; max-width: none; background: #fff; box-shadow: 0 1px 6px rgb(0 0 0 / 0.18); border-radius: 2px; overflow: hidden; }
+.paginaPdf img { display: block; width: 100%; height: 100%; user-select: none; -webkit-user-select: none; }
+.carregandoPdf { margin: 2rem auto; color: var(--muted); font-weight: 600; }
+.controlesPdf {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; padding: 0.45rem 0.75rem calc(0.45rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--border); background: var(--surface); font-size: 0.84rem; font-weight: 600; color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.zoomPdf { display: inline-flex; align-items: center; gap: 0.4rem; }
+.zoomPdf span { min-width: 3.2rem; text-align: center; }
+.zoomPdf button {
+  display: grid; place-items: center; width: 2.3rem; height: 2.3rem; border-radius: 50%; border: 1px solid var(--border); background: var(--surface-2);
+  color: var(--text); font: inherit; font-size: 1.2rem; font-weight: 700; cursor: pointer;
+}
+.zoomPdf button:disabled { opacity: 0.4; cursor: default; }
+.baixarVisor {
+  display: inline-flex; align-items: center; gap: 0.3rem; min-height: 2.3rem; padding: 0 0.85rem; border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 22%, transparent); color: var(--accent-ink); font-weight: 700; text-decoration: none; white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .controlesPdf { font-size: 0.8rem; }
+  .zoomPdf { gap: 0.25rem; }
+  .zoomPdf span { min-width: 2.8rem; }
+  .zoomPdf button { width: 2.5rem; height: 2.5rem; }
+  .baixarVisor { min-height: 2.5rem; padding: 0 0.75rem; }
+}

@@ -114,6 +114,9 @@ interface Props {
 export function IrParaArtigo({ inicial, lei, artigos, original, sumula, aoComando, aoPrever, aoIr, aoIrLei, aoFechar, aoBuscarTudo }: Props) {
   const [consulta, setConsulta] = useState(inicial);
   const [escolhida, setEscolhida] = useState(0);
+  // o Enter dado enquanto a outra lei ainda carrega: a consulta de então, que abre o primeiro resultado assim que ele
+  // aparece (se a consulta não mudou)
+  const [esperando, setEsperando] = useState<string | null>(null);
   // artigos da outra lei digitada; null em `artigos` se não foi possível baixar
   const [daOutra, setDaOutra] = useState<{ lei: string; original: boolean; artigos: ArtigoTexto[] | null } | null>(null);
   const caixa = useRef<HTMLDivElement>(null);
@@ -190,6 +193,12 @@ export function IrParaArtigo({ inicial, lei, artigos, original, sumula, aoComand
     else aoIr(o.destino);
   };
 
+  // o Enter que esperou a outra lei: com ela carregada, abre a lei no primeiro resultado (sem resultado, fica a mensagem)
+  const destinoEsperado = outra && esperando !== null && esperando === consulta && carregada ? (opcoes[0]?.destino ?? null) : null;
+  useEffect(() => {
+    if (outra && destinoEsperado) aoIrLei(outra, destinoEsperado);
+  }, [destinoEsperado]); // eslint-disable-line react-hooks/exhaustive-deps -- só a chegada do resultado conta
+
   // o número leva a leitura até o artigo enquanto se digita (um instante depois da última tecla); na outra lei, não
   const destinoDireto = destinoExato && !outra ? destinoExato : null;
   useEffect(() => {
@@ -232,11 +241,20 @@ export function IrParaArtigo({ inicial, lei, artigos, original, sumula, aoComand
       e.preventDefault();
       const o = opcoes[sel];
       if (o) ir(o);
+      // a outra lei ainda carrega: o Enter fica valendo para quando o resultado aparecer
+      else if (outra && !carregada) setEsperando(consulta);
     }
   };
 
   const digitado = numeroDaSumula.trim().replace(/^art(?:igo)?s?\.?\s*/i, "");
-  const naOutra = (falta: string) => (!carregada ? `Carregando ${nomeOutra}…` : carregada.artigos ? falta : `Não foi possível abrir ${nomeOutra}. Tente de novo.`);
+  const naOutra = (falta: string) =>
+    !carregada
+      ? esperando === consulta
+        ? `Carregando ${nomeOutra}… Abre assim que achar.`
+        : `Carregando ${nomeOutra}…`
+      : carregada.artigos
+        ? falta
+        : `Não foi possível abrir ${nomeOutra}. Tente de novo.`;
   const vazio = comando
     ? `Nenhum comando “${texto}”. Digite só / para ver todos.`
     : alvo
@@ -273,6 +291,7 @@ export function IrParaArtigo({ inicial, lei, artigos, original, sumula, aoComand
           onChange={(e) => {
             setConsulta(e.target.value);
             setEscolhida(0);
+            setEsperando(null);
           }}
           onKeyDown={tecla}
           placeholder={`${sumula ? "Súmula" : "Artigo"}${faixa ? ` (${faixa})` : ""}, palavras ou /comando`}

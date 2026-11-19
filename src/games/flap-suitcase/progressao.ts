@@ -150,15 +150,39 @@ export const PERSONAGENS: Personagem[] = [
   },
 ];
 
-/** Moedas para comprar cada estilo. O clássico é grátis. */
+/**
+ * Moedas para comprar cada estilo, na ordem do menu. O clássico é grátis. O primeiro pago custa 50 e cada um seguinte
+ * custa 2,2 vezes o anterior: round(50 · 2,2ⁿ), com n a partir de 0 no Fofo. O pixel não aparece no menu, então não entra na sequência.
+ */
 export const CUSTO_ESTILOS: Record<string, number> = {
-  fofo: 40,
-  retro: 60,
-  steampunk: 60,
+  fofo: 50,
+  retro: 110,
+  steampunk: 242,
+  noir: 532,
+  papiro: 1171,
+  recesso: 2577,
+  gotico: 5669,
   pixel: 80,
-  noir: 90,
-  papiro: 50,
 };
+
+/** Estilos que só aparecem no menu depois que todos os anteriores estão liberados (nem o "???" aparece antes). */
+export const ESTILOS_EM_SEQUENCIA = ["recesso", "gotico"];
+
+/** Preço de cada estilo dos grupos: o teto da sequência principal (o Gótico). */
+export const CUSTO_TETO = CUSTO_ESTILOS.gotico;
+
+/**
+ * Grupos de estilos, na ordem do menu e do catálogo. Só aparecem depois que a lista principal está toda liberada;
+ * os datados (feriados, datas do Direito, festas) só ficam à venda na semana do evento.
+ */
+export const GRUPOS_ESTILOS: { id: string; nome: string }[] = [
+  { id: "feriados", nome: "Feriados nacionais" },
+  { id: "estados", nome: "Estados" },
+  { id: "biomas", nome: "Biomas" },
+  { id: "constituicoes", nome: "Constituições" },
+  { id: "datas-direito", nome: "Datas do Direito" },
+  { id: "festas", nome: "Festas populares" },
+];
 
 /** XP por coluna passada, conforme o nível: níveis mais difíceis rendem mais. */
 export const MULTIPLICADOR_XP: Record<1 | 2 | 3, number> = { 1: 1, 2: 1.5, 3: 2 };

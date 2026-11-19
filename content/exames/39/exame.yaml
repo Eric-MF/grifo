@@ -1,15 +1,14 @@
-# XXXIX Exame de Ordem Unificado — Direito Penal (sem tabela de correção no acervo)
+# XXXIX Exame de Ordem Unificado — Direito Penal
+# Fonte: caderno e padrão de resposta definitivo da FGV (com a distribuição dos pontos).
 id: "39"
 numero: 39
 numeral: XXXIX
 aplicacao: 2024-01-21
-corrigivel: false
 revisao:
   status: rascunho
   por: ""
   em: ""
-  notas: Enunciados e gabaritos extraídos do caderno e do padrão de resposta; o padrão não traz a tabela de pontos.
-observacoes: O padrão de resposta deste exame não traz valores de pontuação por item, então a correção automática não é possível. A correção será liberada quando a tabela da FGV for incluída.
+  notas: Tabela transcrita do padrão de resposta definitivo (o arquivo anterior do acervo não trazia a distribuição dos pontos).
 peca:
   nome: Apelação
   tipo: apelacao
@@ -64,7 +63,105 @@ peca:
       No fechamento, deveria ser mencionado local, data, advogado e OAB.
 
       BRASIL
-  itens: []
+  itens:
+    - n: "1"
+      secao: Petição de interposição
+      descricao: "Endereçamento: 1º Juizado de Violência Doméstica e Familiar contra a Mulher de Flores (0,10)."
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ "juizado de violencia domestica | violencia domestica e familiar" ] }
+    - n: "2"
+      secao: Petição de interposição
+      descricao: "Fundamento legal: Art. 593, inciso I, do CPP (0,10)."
+      componentes:
+        - { id: c1, valor: 0.1, dispositivo: [ "art. 593, I, CPP" ] }
+    - n: "3"
+      secao: Petição de interposição
+      descricao: "Tempestividade: 5 dias (0,10), na forma do Art. 593, caput, do CPP (0,10)."
+      valores: [ 0, 0.1, 0.2 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ "5 dias | cinco dias" ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 593, CPP" ] }
+    - n: "4"
+      secao: Razões recursais
+      descricao: "Endereçamento: Tribunal de Justiça do Estado de Campo Belo (0,10)."
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ "tribunal de justica | tj" ] }
+    - n: "5.1"
+      secao: Razões recursais
+      descricao: "Preliminar: incompetência absoluta da Justiça Estadual (0,35) tendo em vista a ocorrência do delito a bordo de navio (0,30), na forma do Art. 109, inciso IX, da CRFB/88 (0,10)."
+      valores: [ 0, 0.3, 0.35, 0.4, 0.45, 0.65, 0.75 ]
+      componentes:
+        - { id: c1, valor: 0.35, termos: [ incompeten*, "justica estadual | justica federal" ] }
+        - { id: c2, valor: 0.3, termos: [ "navio | bordo | embarcacao" ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 109, IX, CF" ], requer: c1 }
+    - n: "5.2"
+      secao: Razões recursais
+      descricao: "Em consequência da incompetência absoluta, a nulidade do processo ou de todos os atos decisórios (0,30), na forma do Art. 564, I ou 567 do CPP (0,10)."
+      valores: [ 0, 0.3, 0.4 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ "nulidade | nulo | nulos | anula*", "processo | atos decisorios | decisorios" ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 564, I, CPP", "art. 567, CPP" ], requer: c1 }
+    - n: "6"
+      secao: Razões recursais
+      descricao: "Subsidiariamente, aplicação da pena-base no mínimo legal (0,30), ante a inadmissibilidade da pena base no termo médio (0,20)."
+      valores: [ 0, 0.2, 0.3, 0.5 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ "pena-base | pena base", "minimo legal | minimo" ] }
+        - { id: c2, valor: 0.2, termos: [ "termo medio | media" ] }
+    - n: "7"
+      secao: Razões recursais
+      descricao: "Afastamento da agravante da violência doméstica (0,15), ante a ocorrência de bis in idem (0,20) ou compensação com a atenuante (0,35)."
+      valores: [ 0, 0.15, 0.2, 0.35 ]
+      componentes:
+        - { id: c1, valor: 0.15, termos: [ agravante, "afast* | exclu* | decot*" ] }
+        - { id: c2, valor: 0.2, alternativas: [ [ bis in idem ], [ compensa* ] ] }
+    - n: "8"
+      secao: Razões recursais
+      descricao: "Reconhecimento da atenuante da menoridade relativa (0,35), prevista no Art. 65, inciso I, do CP (0,10)."
+      valores: [ 0, 0.35, 0.45 ]
+      componentes:
+        - { id: c1, valor: 0.35, termos: [ "menoridade | menor de 21 | vinte e um anos | 21 anos" ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 65, I, CP" ], requer: c1 }
+    - n: "9"
+      secao: Razões recursais
+      descricao: "Reconhecimento da atenuante da confissão espontânea (0,35), prevista no Art. 65, inciso III, alínea d, do CP (0,10)."
+      valores: [ 0, 0.35, 0.45 ]
+      componentes:
+        - { id: c1, valor: 0.35, termos: [ confissao ] }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 65, III, CP" ], requer: c1 }
+    - n: "10"
+      secao: Razões recursais
+      descricao: "A fixação do regime inicial aberto (0,30) pois a opinião do julgador sobre a gravidade abstrata do delito não autoriza a fixação de regime inicial mais gravoso que o permitido pela pena aplicada (0,25), na forma do Art. 33, § 2º, alínea c, do CP ou Súmula 718 e 719, do STF e 440, do STJ (0,10)."
+      valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ regime, aberto ] }
+        - { id: c2, valor: 0.25, termos: [ "gravidade abstrata | opiniao do julgador | gravidade em abstrato" ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 33, § 2º, CP", "Súmula 718 STF", "Súmula 719 STF", "Súmula 440 STJ" ], requer: c1 }
+    - n: "11"
+      secao: Razões recursais
+      descricao: "Afastamento da pena acessória de perda do cargo público (0,20), ante a ausência de pressupostos legais (violação de dever ou pena superior a quatro anos) (0,15), nos termos do Art. 92, inciso I, alíneas a e b, do CP (0,10)."
+      valores: [ 0, 0.15, 0.2, 0.25, 0.3, 0.35, 0.45 ]
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ "perda do cargo | perda da funcao | cargo publico" ] }
+        - { id: c2, valor: 0.15, termos: [ "violacao de dever | abuso de poder | quatro anos | 4 anos" ] }
+        - { id: c3, valor: 0.1, dispositivo: [ "art. 92, I, CP" ], requer: c1 }
+    - n: "12"
+      secao: Pedido
+      descricao: "Conhecimento (0,10) e provimento do recurso (0,20)."
+      valores: [ 0, 0.1, 0.2, 0.3 ]
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ conhec* ] }
+        - { id: c2, valor: 0.2, termos: [ "provimento | provido" ] }
+    - n: "13"
+      secao: Prazo e fechamento
+      descricao: "Data: 15 de dezembro de 2023 (0,10)."
+      componentes:
+        - { id: c1, valor: 0.1, alternativas: [ [ 15/12/2023 ], [ 15 de dezembro ] ] }
+    - n: "14"
+      secao: Prazo e fechamento
+      descricao: "Local, data, advogado, OAB (0,10)."
+      componentes:
+        - { id: c1, valor: 0.1, termos: [ local, "advogad* | oab" ] }
 questoes:
   - n: 1
     enunciado: |-
@@ -87,7 +184,20 @@ questoes:
       B) A infiltração do agente policial por ordem direta do Delegado de Polícia encontra óbice no Art. 10, caput e 10-A, § 4º, da Lei nº 12.850/13, uma vez que somente a Autoridade Judicial pode autorizar a infiltração de agente policial, ainda que virtualmente. Sendo assim, deve-se concluir que a prova foi obtida por meio ilícito, na forma do Art. 157, do CPP e Art. 5º, LVI, CF.
 
       BRASIL
-    itens: []
+    itens:
+      - n: "A"
+        descricao: "Atipicidade da conduta de Guilherme ou desclassificação para explosão (0,30), diante da declarada motivação política ou ausência de especial fim de agir (0,25), nos termos do Art. 2º, caput ou § 2º, da Lei nº 13.260/2016 (0,10)."
+        valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.3, alternativas: [ [ atipic* ], [ desclassifica*, explosao ] ] }
+          - { id: c2, valor: 0.25, termos: [ "motivacao politica | politica | especial fim de agir" ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 2º, Lei 13260" ], requer: c1 }
+      - n: "B"
+        descricao: "Violação à reserva de jurisdição na autorização de infiltração virtual do agente policial, concluindo-se que a prova foi obtida por meio ilícito (0,50), conforme o Art. 10, caput, ou 10-A, § 4º, da Lei nº 12.850/13 ou Art. 157 do CPP ou Art. 5º, LVI, CF (0,10)."
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ "reserva de jurisdicao | autorizacao judicial | juiz | autoridade judicial", ilicit* ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 10, Lei 12850", "art. 10-A, Lei 12850", "art. 157, CPP", "art. 5º, LVI, CF" ], requer: c1 }
   - n: 2
     enunciado: |-
       Manoela foi denunciada por desacato, dano qualificado e lesão corporal leve, em concurso material (Art. 331, Art. 163, inciso III, e Art. 129, caput, na forma do Art. 69, todos do Código Penal), porque, no dia e hora indicados na denúncia, teria desacatado funcionários públicos municipais do Centro de Atenção Psicossocial (CAPs), onde fazia tratamento regular, além de ter danificado bem público e lesionado a funcionária do local.
@@ -109,7 +219,19 @@ questoes:
       B) Quanto à medida penal cabível, em se constatando a inimputabilidade, Manoela ficaria isenta de pena, afastando-se a sua culpabilidade, nos termos do Art. 26, do CP. Assim, seria cabível a aplicação de medida de segurança de tratamento ambulatorial ou de internação, na forma do Art. 97 do CP.
 
       BRASIL
-    itens: []
+    itens:
+      - n: "A"
+        descricao: "Incidente de insanidade mental da acusada (0,50), nos termos do Art. 149 do CPP (0,10)."
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ insanidade mental ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 149, CPP" ], requer: c1 }
+      - n: "B"
+        descricao: "Aplicação de medida de segurança (tratamento ambulatorial ou internação) ou afastamento da culpabilidade, isentando a acusada de pena (0,55), na forma do Art. 97 OU Art. 26 do CP (0,10)."
+        valores: [ 0, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.55, alternativas: [ [ medida de seguranca ], [ isent*, pena ], [ culpabilidade ] ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 97, CP", "art. 26, CP" ], requer: c1 }
   - n: 3
     enunciado: |-
       Aníbal foi sentenciado pela prática de roubo circunstanciado pelo emprego de arma de fogo, arma branca e pela participação de agentes em concurso formal com corrupção de menores (Art. 157, § 2º, incisos II e VII, e § 2º-A, inciso II, do CP e Art. 244-B, § 2º, da Lei nº 8.069/90, n/f do Art. 70, do CP). Consta que Aníbal, na companhia de Bruno, pessoa apontada por testemunhas como sendo menor de 18 (dezoito) anos, mediante grave ameaça exercida pela pluralidade numérica e por emprego de arma de fogo e arma branca, subtraiu o telefone celular da vítima Sr. Firmo. Bruno foi identificado apenas por testemunhas que o descreveram como pessoa menor de idade, não tendo sido possível precisar a sua identificação civil, ou mesmo confirmar seus dados qualificativos.
@@ -131,7 +253,19 @@ questoes:
       B) Quanto à questão processual, deveria o examinando observar a ausência de prova da materialidade delitiva do delito de corrupção de menores, ante a ausência de prova documental idônea, nos termos do enunciado nº 74 da Súmula da Jurisprudência do Superior Tribunal de Justiça ou Art. 155, parágrafo único, do Código de Processo Penal.
 
       BRASIL
-    itens: []
+    itens:
+      - n: "A"
+        descricao: "A pluralidade de causas de aumento não autoriza a exasperação da pena em fração máxima ou, havendo concurso de causas de aumento previstas na parte especial, poderia o juiz optar por uma só majoração (0,50), na forma da Súmula nº 443 do STJ ou do Art. 68, parágrafo único, do CP (0,10)."
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, alternativas: [ [ "numero de majorantes | pluralidade | quantidade de majorantes | fundamentacao concreta" ], [ "uma so | apenas uma | um so aumento | uma unica" ] ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "Súmula 443 STJ", "art. 68, parágrafo único, CP" ], requer: c1 }
+      - n: "B"
+        descricao: "Ausência de prova documental da menoridade de Bruno, ensejando falta de prova da materialidade delitiva (0,55), Súmula nº 74 do STJ ou Art. 155, parágrafo único, do CPP (0,10)."
+        valores: [ 0, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.55, termos: [ "documento | documental | identificacao civil | certidao", "menor* | idade" ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "Súmula 74 STJ", "art. 155, parágrafo único, CPP" ], requer: c1 }
   - n: 4
     enunciado: |-
       Carlos, dirigindo de forma imprudente e alcoolizado, atropelou Thales na via pública, que se feriu gravemente. Thales foi socorrido por Carlos e levado ao hospital. Porém, no hospital, Thales foi atingido por um projétil de arma de fogo de procedência ignorada (“bala perdida”), que causou sua morte.
@@ -151,4 +285,25 @@ questoes:
       A) Quebra do nexo de causalidade entre a conduta de Carlos e a morte de Thales, pois a causa da morte foi o projétil de arma de fogo, causa superveniente relativamente independente que, por si só, produziu o resultado. Por isso, nos termos do Art. 13, § 1º, do CP, Carlos não pode responder pelo resultado morte. Assim, Carlos deve responder apenas pelos atos já praticados, ou seja, lesão corporal culposa de trânsito.
 
       B) Caso o acusado se oculte por duas vezes para não ser citado, cabe ao oficial de justiça realizar a citação por hora certa, na forma do Art. 362 do CPP, observando o procedimento do Art. 252 do CPC. Por isso, inadmissível a citação por edital no caso narrado, pois Carlos não estava em local incerto e não sabido, nos termos do Art. 361, do CPP.
-    itens: []
+    itens:
+      - n: "A"
+        descricao: "Houve ruptura do nexo de causalidade entre a ação de Carlos e o resultado morte (ou Carlos só responde pelos atos já praticados, no caso, lesão corporal culposa de trânsito) (0,30), diante da superveniência de causa que, por si só, produziu o resultado (0,25), na forma do Art. 13, § 1º, do CP (0,10)."
+        valores: [ 0, 0.25, 0.3, 0.35, 0.4, 0.55, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.3, alternativas: [ [ nexo ], [ lesao corporal culposa ], [ atos ja praticados ] ] }
+          - { id: c2, valor: 0.25, termos: [ "superveniente | superveniencia", por si so ] }
+          - { id: c3, valor: 0.1, dispositivo: [ "art. 13, § 1º, CP" ], requer: c1 }
+      - n: "B"
+        descricao: "Carlos deveria ter sido citado por hora certa caso se ocultasse em nova oportunidade ou Carlos não estava em local incerto e não sabido (0,50), na forma dos Arts. 361 ou 362 do CPP ou do Art. 252 do CPC (0,10)."
+        valores: [ 0, 0.5, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.5, alternativas: [ [ hora certa ], [ local incerto ] ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 361, CPP", "art. 362, CPP", "art. 252, CPC" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Luíza: Penélope, Alfredo: Odisseu }   # a viagem por mar
+    q1: { Guilherme: Ájax }   # perdeu a disputa
+    q2: { Manoela: Éris }
+    q3: { Aníbal: Ares, Bruno: Ascânio }   # o roubo com o adolescente
+    q4: { Carlos: Baco, Thales: Heitor }

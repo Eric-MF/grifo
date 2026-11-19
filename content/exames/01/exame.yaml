@@ -312,3 +312,12 @@ questoes:
     valor: 1
 aplicacao: 2010-07-25
 observacoes: "Exame de 2010 (banca CESPE/UnB): peça de 5,00 e cinco questões de 1,00. A banca não publicou a distribuição de pontos; a tabela é uma estimativa do Grifo a partir do padrão de resposta. Pela observação da banca, vale o conteúdo do dispositivo mesmo sem o número do artigo."
+atualizado:
+  revisao: { status: rascunho }
+  diferencas:
+    - { texto: "A banca da época (CESPE/UnB) não publicou a distribuição dos pontos deste exame. A tabela de pontos do padrão de resposta é uma estimativa do Grifo, montada a partir do padrão de resposta e dos valores de cada parte." }
+  nomes:
+    peca: { Leila: Perséfone, Joel: Hades, Fátima: Medeia }   # a menina e o homem mais velho; a amiga das poções
+    q1: { Lucas: Faetonte, Almir: Hipólito }   # o carro do Sol desgovernado; morto pelo carro
+    q2: { José: José }   # José Henrique Pierangeli, autor
+    q4: { Fernando: Fernando }   # Fernando Capez, autor

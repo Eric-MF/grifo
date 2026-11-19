@@ -1,5 +1,5 @@
 import { PadraoResposta } from "@/components/print/PadraoResposta";
-import { carregarExame, listarExames } from "@/content/load";
+import { carregarExameAtualizado, listarExames } from "@/content/load";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -10,5 +10,5 @@ export function generateStaticParams() {
 
 export default async function Page({ params }: { params: Promise<{ exame: string }> }) {
   const { exame } = await params;
-  return <PadraoResposta exame={carregarExame(exame)} />;
+  return <PadraoResposta exame={carregarExameAtualizado(exame)} />;
 }

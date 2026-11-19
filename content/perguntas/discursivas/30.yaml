@@ -1,584 +1,179 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "30"
+introducoes:
+  peca: "Carlos, primário e de bons antecedentes, foi denunciado por dois homicídios culposos e uma lesão corporal culposa na direção de veículo, em concurso material. Segundo a denúncia, ele dirigia com imprudência, em excesso de velocidade, quando bateu no carro em que estavam Júlio e Mário, de 9 anos, que morreram, e feriu Pedro, que passava de bicicleta. Pedro saiu do hospital sem ser notado e nunca foi à polícia. A perícia concluiu que não houve excesso de velocidade, que havia um buraco na pista e que talvez houvesse imperícia de Carlos. O juiz o condenou por causa da imperícia, aplicou a agravante de crime contra criança quanto a Mário e somou as penas: 4 anos e 9 meses de detenção, no regime fechado, sem substituição, por causa da quantidade da pena. Você foi intimado da sentença."
+  q1: "Beto e Juca, vizinhos, passaram a morar em quartos vizinhos de um hotel depois que o prédio deles pegou fogo. Policiais viram Juca entrar no quarto com uma sacola, fugindo deles; entraram e apreenderam 100 g de maconha na sacola e 50 g de cocaína guardadas no quarto, que Juca disse serem para venda. Depois, entraram também no quarto de Beto e apreenderam documentos que levaram a um estelionato. Juca foi denunciado por dois crimes de tráfico, em concurso, e Beto, só por causa dos documentos, por estelionato."
+  q2: "Carleto foi denunciado por homicídio simples, por ter matado o vizinho a tiros numa discussão. O exame de insanidade concluiu que ele era inimputável. Nas alegações finais da primeira fase do júri, a defesa sustentou a legítima defesa. O juiz absolveu Carleto sumariamente pela inimputabilidade e aplicou medida de segurança de internação por, no mínimo, 1 ano."
+  q3: "Eduardo foi preso em flagrante num roubo simples em Moema, e outras quatro vítimas contaram que ele as roubou no mesmo dia e bairro, com intervalos de cerca de 30 minutos, sempre simulando estar armado e fugindo de bicicleta. Ele confessou que queria roubar seis pessoas para comprar uma moto. Quando o advogado dele morreu, o juiz mandou a Defensoria Pública apresentar as alegações finais, sem avisar Eduardo, que foi condenado por cinco roubos em concurso material, a 20 anos no regime fechado."
+  q4: "Maria foi condenada por descaminho de R$ 500 em impostos, apurados em lançamento definitivo, à pena mínima, no regime aberto, substituída por restritiva de direitos. Ela estava presa por outro processo, por roubo, mas foi intimada da sentença por edital, porque não a encontraram no endereço do processo."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["30-peca-1", "30-peca-3", "30-peca-7-1", "30-peca-10"]
 perguntas:
-  - id: 30-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento: 3ª Vara Criminal da Comarca de São Gonçalo/RJ."
-    opcoes:
-      correta: "Endereçamento: 3ª Vara Criminal da Comarca de São Gonçalo/RJ."
-      erradas:
-        - "Endereçamento correto das razões: Tribunal de Justiça do Estado."
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-        - "Endereçamento: Turma Recursal do Estado de Campo Belo."
-        - "Endereçamento correto: Juízo da Vara de Execuções Penais do Rio de Janeiro/RJ."
-        - "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS."
-    revisao: &a1
-      status: revisado
-  - id: 30-peca-3
-    categoria: peca-detalhe
-    parte: peca
-    item: "3"
-    secao: enderecamento
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem devem ser endereçadas as razões?
-    gabarito: "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro."
-    opcoes:
-      correta: "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro."
-      erradas:
-        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
-        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG..
-        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
-    revisao: *a1
   - id: 30-peca-4
     categoria: peca-detalhe
     parte: peca
     item: "4"
     secao: preliminar
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Extinção da punibilidade em relação ao crime de lesão corporal, em razão da decadência, nos termos do Art. 107, IV, do CP OU 38 do CPP.
-    opcoes:
-      correta: Extinção da punibilidade em relação ao crime de lesão corporal, em razão da decadência, nos termos do Art. 107, IV, do CP OU 38 do CPP.
-      erradas:
-        - "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
-        - "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
-        - Ilicitude por derivação da prova testemunhal, com fundamento no art. 157, § 1º, CPP.
-        - Preliminarmente, reconhecimento da nulidade dos atos da instrução OU requerimento de aplicação, por analogia, do art. 28 do CPP, diante do não oferecimento de proposta de suspensão condicional do processo, pois preenchidos os requisitos do Art. 89 da Lei 9099/95 OU pois irrelevante o fato do delito imputado não ser infração de menor potencial ofensivo.
-        - Preliminarmente, extinção da punibilidade do agente OU nulidade em razão da ausência de representação, com reconhecimento da decadência, conforme o Art. 107, inciso IV, do CP OU 564, inciso III, alínea a, ou inciso IV, CPP
-    revisao: *a1
+    pergunta: "Pedro nunca procurou a polícia nem a Justiça. Que causa extingue a punibilidade quanto à lesão corporal?"
+    tese: "Extinção da punibilidade pela decadência quanto à lesão corporal culposa, porque a vítima nunca representou"
+    aceitos: [ "decaden*" ]
+    artigos: [ "art. 107, IV, CP", "art. 38, CPP" ]
+    gabarito: "Extinção da punibilidade em relação ao crime de lesão corporal, em razão da decadência, nos termos do Art. 107, IV, do CP OU 38 do CPP."
+    revisao: { status: revisado }
   - id: 30-peca-4-1
     categoria: peca-detalhe
     parte: peca
     item: "4.1"
     secao: merito
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Não houve representação do ofendido, sendo que essa seria indispensável OU e o crime era de ação penal pública condicionada à representação, nos termos do Art. 291, §1º, do CTB OU do Art. 88 da Lei 9.099/95.
-    opcoes:
-      correta: Não houve representação do ofendido, sendo que essa seria indispensável OU e o crime era de ação penal pública condicionada à representação, nos termos do Art. 291, §1º, do CTB OU do Art. 88 da Lei 9.099/95.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
-        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
-        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    revisao: *a1
+    pergunta: "Por que a vontade de Pedro era indispensável para processar Carlos pela lesão corporal?"
+    tese: "A lesão corporal culposa no trânsito é crime de ação pública condicionada à representação, que não houve"
+    aceitos: [ "representacao | condicionada" ]
+    artigos: [ "art. 291, § 1º, Lei 9.503", "art. 88, Lei 9.099" ]
+    gabarito: "Não houve representação do ofendido, sendo que essa seria indispensável OU e o crime era de ação penal pública condicionada à representação, nos termos do Art. 291, §1º, do CTB OU do Art. 88 da Lei 9.099/95."
+    revisao: { status: revisado }
   - id: 30-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: merito
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Absolvição de Carlos em relação aos crimes de homicídio culposo, já que comprovado que não houve imprudência e nem excesso de velocidade.
-    opcoes:
-      correta: Absolvição de Carlos em relação aos crimes de homicídio culposo, já que comprovado que não houve imprudência e nem excesso de velocidade.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
-        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
-        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    revisao: *a1
+    pergunta: "A perícia afastou o excesso de velocidade. Que pedido a defesa deve fazer quanto às duas mortes?"
+    tese: "Absolvição pelos homicídios culposos: ficou provado que não houve imprudência nem excesso de velocidade"
+    aceitos: [ "absolvi* | absolver" ]
+    artigos: [ "art. 386, III, CPP" ]
+    gabarito: "Absolvição de Carlos em relação aos crimes de homicídio culposo, já que comprovado que não houve imprudência e nem excesso de velocidade."
+    revisao: { status: revisado }
   - id: 30-peca-5-1
     categoria: peca-detalhe
     parte: peca
     item: "5.1"
     secao: merito
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Não poderia o magistrado ter condenado em razão de imperícia, já que esta não foi narrada na denúncia OU em razão da violação ao princípio da correlação.
-    opcoes:
-      correta: Não poderia o magistrado ter condenado em razão de imperícia, já que esta não foi narrada na denúncia OU em razão da violação ao princípio da correlação.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
-        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
-        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    revisao: *a1
+    pergunta: "O juiz condenou Carlos por imperícia. Por que isso não era possível?"
+    tese: "Violação da correlação: o juiz condenou por imperícia, modalidade de culpa não narrada na denúncia, sem aditamento"
+    aceitos: [ "correlacao | congruencia | aditamento | mutatio libelli | nao narrada | nao descrita" ]
+    artigos: [ "art. 384, CPP" ]
+    gabarito: "Não poderia o magistrado ter condenado em razão de imperícia, já que esta não foi narrada na denúncia OU em razão da violação ao princípio da correlação."
+    revisao: { status: revisado }
   - id: 30-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Afastamento da agravante em razão da idade da vítima, já que tal agravante somente pode ser aplicada aos crimes dolosos OU não pode ser aplicada aos crimes culposos OU sob pena de configuração de responsabilidade penal objetiva.
-    opcoes:
-      correta: Afastamento da agravante em razão da idade da vítima, já que tal agravante somente pode ser aplicada aos crimes dolosos OU não pode ser aplicada aos crimes culposos OU sob pena de configuração de responsabilidade penal objetiva.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
-        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
-        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    revisao: *a1
+    pergunta: "Por que a agravante de crime contra criança não podia ser aplicada?"
+    tese: "Afastamento da agravante da vítima criança, que não se aplica aos crimes culposos, só aos dolosos"
+    aceitos: [ [ "afast* | nao incid* | inaplicab* | nao se aplica | nao pode", "agravante" ], [ "so aos dolosos | so dolos* | apenas dolos* | somente dolos* | crimes dolosos | crime doloso" ] ]
+    artigos: [ "art. 61, II, h, CP" ]
+    gabarito: "Afastamento da agravante em razão da idade da vítima, já que tal agravante somente pode ser aplicada aos crimes dolosos OU não pode ser aplicada aos crimes culposos OU sob pena de configuração de responsabilidade penal objetiva."
+    revisao: { status: revisado }
   - id: 30-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Afastamento do concurso material de crimes, devendo ser reconhecido o concurso formal de delitos, nos termos do Art. 70 do CP.
-    opcoes:
-      correta: Afastamento do concurso material de crimes, devendo ser reconhecido o concurso formal de delitos, nos termos do Art. 70 do CP.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
-  - id: 30-peca-7-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "7.1"
-    secao: merito
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Com uma única ação o réu causou mais de um resultado.
-    opcoes:
-      correta: Com uma única ação o réu causou mais de um resultado.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
-        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
-        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    revisao: *a1
+    pergunta: "Com uma só colisão, Carlos causou as mortes e a lesão. Que concurso de crimes deve ser reconhecido?"
+    tese: "Concurso formal: com uma só ação, o réu causou mais de um resultado"
+    aceitos: [ "concurso formal" ]
+    artigos: [ "art. 70, CP" ]
+    gabarito: "Afastamento do concurso material de crimes, devendo ser reconhecido o concurso formal de delitos, nos termos do Art. 70 do CP."
+    revisao: { status: revisado }
   - id: 30-peca-8
     categoria: peca-detalhe
     parte: peca
     item: "8"
     secao: merito
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Afastamento do regime inicial fechado, tendo em vista que tal regime inicial não pode ser fixado aos crimes punidos exclusivamente com pena de detenção OU considerando a pena aplicada, nos termos do Art. 33 do CP.
-    opcoes:
-      correta: Afastamento do regime inicial fechado, tendo em vista que tal regime inicial não pode ser fixado aos crimes punidos exclusivamente com pena de detenção OU considerando a pena aplicada, nos termos do Art. 33 do CP.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
-        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
-        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    revisao: *a1
+    pergunta: "Por que o regime inicial fechado deve ser afastado?"
+    tese: "Afastamento do regime fechado: a pena de detenção começa no semiaberto ou no aberto"
+    aceitos: [ "semiaberto | aberto | nao admite regime fechado | nao admite o regime fechado" ]
+    artigos: [ "art. 33, CP" ]
+    gabarito: "Afastamento do regime inicial fechado, tendo em vista que tal regime inicial não pode ser fixado aos crimes punidos exclusivamente com pena de detenção OU considerando a pena aplicada, nos termos do Art. 33 do CP."
+    revisao: { status: revisado }
   - id: 30-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: merito
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Possível a substituição da pena privativa de liberdade por restritiva de direitos, pois o limite do quantum de pena do Art. 44, I, do CP é aplicável exclusivamente aos crimes dolosos OU porque não existe limite de pena quando o crime for de natureza culposa.
-    opcoes:
-      correta: Possível a substituição da pena privativa de liberdade por restritiva de direitos, pois o limite do quantum de pena do Art. 44, I, do CP é aplicável exclusivamente aos crimes dolosos OU porque não existe limite de pena quando o crime for de natureza culposa.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
-        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
-        - Incabível o reinício da contagem dos prazos do indulto e livramento condicional em razão do princípio da legalidade, que também é aplicável na execução penal.
-    revisao: *a1
-  - id: 30-peca-10
-    categoria: peca-detalhe
-    parte: peca
-    item: "10"
-    secao: pedido
-    caso: |-
-      Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos 302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque, de acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo automotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e Mário, este com 9 anos, causando lesões que foram a causa eficiente da morte de ambos”. Consta, ainda, da inicial acusatória que, “em decorrência da mesma colisão, ficou lesionado Pedro, que passava pelo local com sua bicicleta e foi atingido pelo veículo em alta velocidade de Carlos”.
-
-      As mortes de Júlio e Mário foram atestadas por auto de exame cadavérico, enquanto Pedro foi atendido em hospital público, de onde se retirou, sem ser notado, razão pela qual foi elaborado laudo indireto de corpo de delito com base no boletim de atendimento médico. Pedro nunca compareceu em sede policial para narrar o ocorrido e nem ao Instituto Médico Legal, apesar de testemunhas presenciais confirmarem as lesões sofridas.
-
-      No curso da instrução, foram ouvidas testemunhas presenciais, não sendo Pedro localizado. Em seu interrogatório, Carlos negou estar em excesso de velocidade, esclarecendo que perdeu o controle do carro em razão de um buraco existente na pista. Foi acostado exame pericial realizado nos automóveis e no local, concluindo que, realmente, não houve excesso de velocidade por parte de Carlos e que havia o buraco mencionado na pista. O exame pericial, todavia, apontou que possivelmente haveria imperícia de Carlos na condução do automóvel, o que poderia ter contribuído para o resultado.
-
-      Após manifestação das partes, o juiz em atuação perante a 3ª Vara Criminal da Comarca de São Gonçalo/RJ, em 10 de julho de 2019, julgou totalmente procedente a pretensão punitiva do Estado e, apesar de afastar o excesso de velocidade, afirmou ser necessária a condenação de Carlos em razão da imperícia do réu, conforme mencionado no exame pericial.
-
-      No momento da dosimetria, fixou a pena base de cada um dos crimes no mínimo legal e, com relação à vítima Mário, na segunda fase, reconheceu a agravante prevista no Art. 61, inciso II, alínea h, do CP, pelo fato de ser criança, aumentando a pena base em 3 meses. Não havendo causas de aumento ou diminuição, reconhecido o concurso material, a pena final ficou acomodada em 04 anos e 09 meses de detenção. Não houve substituição da pena privativa de liberdade por restritiva de direitos em razão do quantum final, nos termos do Art. 44, inciso I, do CP, sendo fixado regime inicial fechado de cumprimento da pena, com fundamento na gravidade em concreto da conduta. O Ministério Público foi intimado e manteve-se inerte.
-
-      A defesa técnica de Carlos foi intimada em 18 de setembro de 2019, quarta-feira, para adoção das medidas cabíveis.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Carlos, redija a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todos os locais do país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Conhecimento e provimento do recurso.
-    opcoes:
-      correta: Conhecimento e provimento do recurso.
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Requerimento de aplicação do furto privilegiado, pleiteando a adoção de alguma das medidas previstas em lei (ou substituição da reclusão por detenção ou causa de diminuição de pena ou aplicação exclusivamente da pena de multa), na forma do Art. 155, §2º, do CP.
-        - Pedido de retratação pelo juízo a quo.
-        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
-    revisao: *a1
+    pergunta: "A pena passou de 4 anos. Por que ainda cabe a substituição por restritivas de direitos?"
+    tese: "Substituição por restritivas de direitos: nos crimes culposos, ela cabe qualquer que seja a pena"
+    aceitos: [ "qualquer que seja a pena | sem limite de pena | nao ha limite | nao tem limite | independentemente da pena | qualquer pena" ]
+    artigos: [ "art. 44, I, CP" ]
+    gabarito: "Possível a substituição da pena privativa de liberdade por restritiva de direitos, pois o limite do quantum de pena do Art. 44, I, do CP é aplicável exclusivamente aos crimes dolosos OU porque não existe limite de pena quando o crime for de natureza culposa."
+    revisao: { status: revisado }
   - id: 30-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Beto e Juca eram vizinhos em um prédio que veio a ser atingido por incêndio. Em razão das longas obras que seriam necessárias para recuperar os apartamentos, decidem se hospedar em quarto de hotel por 06 meses, novamente sendo vizinhos de quarto.
-
-      Em determinada data, policiais militares surpreenderam Juca entrando com uma sacola preta no seu quarto do hotel, ficando claro que ele estava fugindo ao avistar os agentes da lei. Diante disso, ingressaram no quarto e apreenderam 100g de maconha, que estavam na sacola que Juca trazia consigo, e mais 50g de cocaína que estavam sendo guardadas no cômodo, sendo confirmado por Juca que o material seria destinado à venda. Em seguida, os policiais optaram por fazer diligência também no quarto vizinho, que era de Beto, apreendendo uma série de documentos que, após investigação, foi verificado que estavam relacionados a um crime de estelionato.
-
-      O Ministério Público ofereceu denúncia em face de Juca pela prática de dois crimes de tráfico em concurso, tendo em vista que guardava cocaína e trazia consigo maconha. Já Beto, exclusivamente em razão da documentação apreendida, foi denunciado pelo crime de estelionato.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) dos denunciados, responda aos itens a seguir.
-    comando: Qual argumento deve ser apresentado pela defesa técnica, em busca da absolvição de Beto? Justifique.
-    gabarito: Em busca da absolvição de Beto, a defesa técnica deve alegar que as provas obtidas foram ilícitas, tendo em vista que os policiais apreenderam documentos em local amparado pela inviolabilidade de domicílio. O Art. 5º, inciso XI, da CRFB/88, garante a todos a inviolabilidade de domicílio, prevendo exceção no caso de cumprimento de ordem judicial ou flagrante delito, o que não restou configurado no caso. Ademais, o próprio Art. 150, § 4º do CP e o Art. 246 do CPP dizem que a expressão “casa” compreende aposento ocupado de habitação coletiva, sendo pacífico o entendimento dos Tribunais Superiores no sentido de que quarto de hotel, em especial quando habitado com certa permanência, está abrangido pela inviolabilidade de domicílio. Em sendo os documentos apreendidos com violação deste direito fundamental as únicas provas, impossível a condenação.
-    opcoes:
-      correta: O argumento é a ilicitude do meio de obtenção das provas na apreensão dos documentos, tendo em vista que o quarto de hotel está amparado pela inviolabilidade de domicílio e não havia situação de flagrante delito ou mandado de busca e apreensão, na forma do Art. 5º, inciso XI, da CRFB/88 OU do Art. 150, § 4º, do CP OU do Art. 246 do CPP OU Art. 157 do CPP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que argumento leva à absolvição de Beto?"
+    tese: "Ilicitude da prova: o quarto de hotel é protegido como domicílio, e não havia flagrante nem mandado"
+    aceitos: [ "ilicit* | domicilio | inviolabilidade" ]
+    artigos: [ "art. 5, XI, CRFB", "art. 150, § 4º, CP", "art. 157, CPP", "art. 246, CPP" ]
+    gabarito: "Em busca da absolvição de Beto, a defesa técnica deve alegar que as provas obtidas foram ilícitas, tendo em vista que os policiais apreenderam documentos em local amparado pela inviolabilidade de domicílio. O Art. 5º, inciso XI, da CRFB/88, garante a todos a inviolabilidade de domicílio, prevendo exceção no caso de cumprimento de ordem judicial ou flagrante delito, o que não restou configurado no caso. Ademais, o próprio Art. 150, § 4º do CP e o Art. 246 do CPP dizem que a expressão “casa” compreende aposento ocupado de habitação coletiva, sendo pacífico o entendimento dos Tribunais Superiores no sentido de que quarto de hotel, em especial quando habitado com certa permanência, está abrangido pela inviolabilidade de domicílio. Em sendo os documentos apreendidos com violação deste direito fundamental as únicas provas, impossível a condenação."
+    revisao: { status: revisado }
   - id: 30-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Beto e Juca eram vizinhos em um prédio que veio a ser atingido por incêndio. Em razão das longas obras que seriam necessárias para recuperar os apartamentos, decidem se hospedar em quarto de hotel por 06 meses, novamente sendo vizinhos de quarto.
-
-      Em determinada data, policiais militares surpreenderam Juca entrando com uma sacola preta no seu quarto do hotel, ficando claro que ele estava fugindo ao avistar os agentes da lei. Diante disso, ingressaram no quarto e apreenderam 100g de maconha, que estavam na sacola que Juca trazia consigo, e mais 50g de cocaína que estavam sendo guardadas no cômodo, sendo confirmado por Juca que o material seria destinado à venda. Em seguida, os policiais optaram por fazer diligência também no quarto vizinho, que era de Beto, apreendendo uma série de documentos que, após investigação, foi verificado que estavam relacionados a um crime de estelionato.
-
-      O Ministério Público ofereceu denúncia em face de Juca pela prática de dois crimes de tráfico em concurso, tendo em vista que guardava cocaína e trazia consigo maconha. Já Beto, exclusivamente em razão da documentação apreendida, foi denunciado pelo crime de estelionato.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) dos denunciados, responda aos itens a seguir.
-    comando: Qual argumento a ser apresentado pela defesa técnica para questionar a capitulação jurídica constante na denúncia em face de Juca? Justifique.
-    gabarito: Para questionar a capitulação jurídica formulada pelo Ministério Público na denúncia, a defesa técnica deveria esclarecer que não houve concurso de crimes, mas sim crime único de tráfico, tendo em vista que os verbos núcleos do tipo “guardar” e “trazer” estavam sendo praticados em um único contexto. De fato, a apreensão de drogas destinadas à venda configura crime de tráfico, sendo certo que a diligência foi válida porque havia situação de flagrante delito a justificar o ingresso dos policiais no quarto do hotel. O crime de tráfico de drogas é tipo misto alternativo, de modo que a prática de mais de um verbo em um mesmo contexto configura crime único, em respeito ao princípio da alternatividade. Apenas quando os verbos são praticados em contextos diversos é possível a imputação de delitos autônomos ao mesmo agente, o que não ocorreu na situação narrada.
-    opcoes:
-      correta: O argumento a ser apresentado é que houve crime único, pois os dois verbos núcleos do tipo foram praticados em um mesmo contexto OU diante do princípio da alternatividade OU pelo fato de o crime de tráfico ser misto alternativo OU houve uma única violação ao bem jurídico protegido.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que argumento contesta a denúncia de Juca por dois crimes de tráfico?"
+    tese: "Crime único de tráfico: guardar e trazer consigo, no mesmo contexto, são verbos de um tipo misto alternativo"
+    aceitos: [ "crime unico | delito unico | um unico crime | um so crime | misto alternativo" ]
+    artigos: [ "art. 33, Lei 11.343" ]
+    gabarito: "Para questionar a capitulação jurídica formulada pelo Ministério Público na denúncia, a defesa técnica deveria esclarecer que não houve concurso de crimes, mas sim crime único de tráfico, tendo em vista que os verbos núcleos do tipo “guardar” e “trazer” estavam sendo praticados em um único contexto. De fato, a apreensão de drogas destinadas à venda configura crime de tráfico, sendo certo que a diligência foi válida porque havia situação de flagrante delito a justificar o ingresso dos policiais no quarto do hotel. O crime de tráfico de drogas é tipo misto alternativo, de modo que a prática de mais de um verbo em um mesmo contexto configura crime único, em respeito ao princípio da alternatividade. Apenas quando os verbos são praticados em contextos diversos é possível a imputação de delitos autônomos ao mesmo agente, o que não ocorreu na situação narrada."
+    revisao: { status: revisado }
   - id: 30-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Carleto foi denunciado pela prática do injusto de homicídio simples porque teria desferido disparos, com sua arma regular, contra seu vizinho Mário durante uma discussão, causando-lhe as lesões que foram a causa da morte da vítima. Logo que recebida a denúncia, Carleto foi submetido à exame de insanidade mental, tendo o laudo concluído que ele se encontrava nas condições do Art. 26, caput, do Código Penal.
-
-      Finda a primeira etapa probatória do procedimento dos crimes dolosos contra a vida, no momento das alegações finais, a defesa técnica de Carleto, escorada em uma das vertentes da prova produzida, alegou que o réu atuou em legítima defesa.
-
-      O juiz, ao final da primeira fase do procedimento, absolveu sumariamente o acusado em razão da inimputabilidade reconhecida, aplicando a medida de segurança de internação pelo prazo mínimo de 01 ano.
-
-      A família de Carleto, insatisfeita com a medida de segurança aplicada, procura você, como advogado(a), para a adoção das medidas cabíveis.
-
-      Considerando o caso narrado, responda, na condição de advogado(a) de Carleto, aos itens a seguir.
-    comando: Qual o recurso cabível para a defesa combater aquela decisão? Justifique.
-    gabarito: Considerando que a decisão do magistrado foi de absolvição sumária, nos termos do Art. 416 do CPP, caberá à defesa apresentar recurso de apelação.
-    opcoes:
-      correta: Recurso de apelação, nos termos do Art. 416 do CPP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Porque deve obediência aos princípios da imparcialidade e inércia da jurisdição OU Porque tal conduta feriria o sistema/princípio acusatório. OU Porque tal conduta feriria o princípio da correlação/congruência entre acusação e sentença.
-        - Deveria ser alegada a ocorrência de desistência voluntária, o que torna a conduta do agente atípica OU o que faz com que responda apenas pelos atos já praticados, na forma do Art. 15, primeira parte, do CP.
-        - Houve retratação antes da sentença ser proferida no processo de Antônio, deixando o fato de ser punível, nos termos do Art. 342, § 2º, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que recurso a defesa deve usar contra a decisão do juiz?"
+    tese: "Apelação contra a absolvição sumária"
+    aceitos: [ "apelacao" ]
+    artigos: [ "art. 416, CPP" ]
+    gabarito: "Considerando que a decisão do magistrado foi de absolvição sumária, nos termos do Art. 416 do CPP, caberá à defesa apresentar recurso de apelação."
+    revisao: { status: revisado }
   - id: 30-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Carleto foi denunciado pela prática do injusto de homicídio simples porque teria desferido disparos, com sua arma regular, contra seu vizinho Mário durante uma discussão, causando-lhe as lesões que foram a causa da morte da vítima. Logo que recebida a denúncia, Carleto foi submetido à exame de insanidade mental, tendo o laudo concluído que ele se encontrava nas condições do Art. 26, caput, do Código Penal.
-
-      Finda a primeira etapa probatória do procedimento dos crimes dolosos contra a vida, no momento das alegações finais, a defesa técnica de Carleto, escorada em uma das vertentes da prova produzida, alegou que o réu atuou em legítima defesa.
-
-      O juiz, ao final da primeira fase do procedimento, absolveu sumariamente o acusado em razão da inimputabilidade reconhecida, aplicando a medida de segurança de internação pelo prazo mínimo de 01 ano.
-
-      A família de Carleto, insatisfeita com a medida de segurança aplicada, procura você, como advogado(a), para a adoção das medidas cabíveis.
-
-      Considerando o caso narrado, responda, na condição de advogado(a) de Carleto, aos itens a seguir.
-    comando: Qual a tese jurídica de direito processual que a defesa de Carleto poderá alegar para combater a decisão respectiva? Justifique.
-    gabarito: Não poderia o magistrado ter absolvido Carleto, com aplicação de medida de segurança, em razão da inimputabilidade, tendo em vista que esta não era a única tese apresentada pela defesa. Pelo contrário, a defesa de Carleto defendeu que o fato sequer seria ilícito, em razão de legítima defesa, tese que, se acolhida pelos jurados, nem mesmo levaria à análise da culpabilidade do agente. Sendo a absolvição própria pela legítima defesa, não seria cabível a aplicação de medida de segurança. Para que esta seja aplicada, em razão da reconhecida inimputabilidade do agente devido à doença mental, exige-se que o mesmo tenha praticado um fato típico e ilícito. Em se tratando de crime doloso contra a vida, a competência para o julgamento respectivo é do Tribunal do Júri, cabendo aos jurados a decisão se o acusado atuou sob a escora de excludente de ilicitude, no caso a da legítima defesa, que encontrava amparo em uma das vertentes dos autos. O Art. 415, parágrafo único, do CPP, autoriza a absolvição sumária em razão da inimputabilidade do agente, quando esta for a única tese defensiva. Na hipótese, a tese principal é a de excludente de ilicitude.
-    opcoes:
-      correta: O agente não poderia ter sido absolvido sumariamente em razão da inimputabilidade porque essa não era a única tese defensiva, somente podendo o magistrado absolver sumariamente com reconhecimento da legítima defesa e sem aplicação de medida de segurança OU devendo o magistrado submetê-lo a julgamento perante o Tribunal do Júri para análise da excludente de ilicitude, nos termos do Art. 415, parágrafo único, do CPP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese processual a defesa pode opor à absolvição sumária pela inimputabilidade?"
+    tese: "Vedação da absolvição sumária por inimputabilidade quando ela não é a única tese defensiva: a legítima defesa deve ir ao júri"
+    aceitos: [ "unica tese | nao era a unica | nao e a unica | unica tese defensiva" ]
+    artigos: [ "art. 415, parágrafo único, CPP" ]
+    gabarito: "Não poderia o magistrado ter absolvido Carleto, com aplicação de medida de segurança, em razão da inimputabilidade, tendo em vista que esta não era a única tese apresentada pela defesa. Pelo contrário, a defesa de Carleto defendeu que o fato sequer seria ilícito, em razão de legítima defesa, tese que, se acolhida pelos jurados, nem mesmo levaria à análise da culpabilidade do agente. Sendo a absolvição própria pela legítima defesa, não seria cabível a aplicação de medida de segurança. Para que esta seja aplicada, em razão da reconhecida inimputabilidade do agente devido à doença mental, exige-se que o mesmo tenha praticado um fato típico e ilícito. Em se tratando de crime doloso contra a vida, a competência para o julgamento respectivo é do Tribunal do Júri, cabendo aos jurados a decisão se o acusado atuou sob a escora de excludente de ilicitude, no caso a da legítima defesa, que encontrava amparo em uma das vertentes dos autos. O Art. 415, parágrafo único, do CPP, autoriza a absolvição sumária em razão da inimputabilidade do agente, quando esta for a única tese defensiva. Na hipótese, a tese principal é a de excludente de ilicitude."
+    revisao: { status: revisado }
   - id: 30-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Eduardo foi preso em flagrante no momento em que praticava um crime de roubo simples, no bairro de Moema.
-
-      Ainda na unidade policial, compareceram quatro outras vítimas, todas narrando que tiveram seus patrimônios lesados por Eduardo naquela mesma data, com intervalo de cerca de 30 minutos entre cada fato, no bairro de Moema, São Paulo.
-
-      As cinco vítimas descreveram que Eduardo, simulando portar arma de fogo, anunciava o assalto e subtraía os bens, empreendendo fuga em uma bicicleta. Eduardo foi denunciado pela prática do crime do Art. 157, caput, por cinco vezes, na forma do Art. 69, ambos do Código Penal, e, em sede de audiência, as vítimas confirmaram a versão fornecida em sede policial.
-
-      Assistido por seu advogado Pedro, Eduardo confessou os crimes, esclarecendo que pretendia subtrair bens de seis vítimas para conseguir dinheiro suficiente para comprar uma motocicleta. Disse, ainda, que apenas simulou portar arma de fogo, mas não utilizou efetivamente material bélico ou simulacro de arma. O juiz, no momento da sentença, condenou o réu nos termos da denúncia, sendo aplicada a pena mínima de 04 anos para cada um dos delitos, totalizando 20 anos de pena privativa de liberdade a ser cumprida em regime inicial fechado, além da multa. Ao ser intimado do teor da sentença, pessoalmente, já que se encontrava preso, Eduardo tomou conhecimento que Pedro havia falecido, mas que foram apresentadas alegações finais pela Defensoria Pública por determinação do magistrado logo em seguida à informação do falecimento do patrono. A família de Eduardo, então, procura você, na condição de advogado(a), para defendê-lo.
-
-      Considerando apenas as informações narradas, responda, na condição de advogado(a) de Eduardo, constituído para apresentação de apelação, aos itens a seguir.
-    comando: Existe argumento de direito processual, em sede de recurso, a ser apresentado para desconstituir a sentença condenatória? Justifique.
-    gabarito: O argumento a ser apresentado, em sede de recurso, para desconstituir a sentença condenatória, é o de que haveria violação ao princípio da ampla defesa, em sua vertente de defesa técnica, tendo em vista que as alegações finais foram apresentadas pela Defensoria Pública, não sendo o acusado intimado para, querendo, constituir novo patrono. De acordo com o que consta do enunciado, durante a instrução processual, Eduardo foi assistido por Pedro, advogado por ele constituído. Ocorre que, ao tomar conhecimento de que Pedro teria falecido, de imediato o magistrado encaminhou os autos à Defensoria Pública para apresentação de alegações finais, o que foi incorreto, já que o réu deveria ter sido intimado pessoalmente, pois estava preso, para esclarecer se teria interesse em ser assistido pela Defensoria ou se pretendia constituir novo advogado. Ao retirar esse direito do réu, o magistrado violou direito do acusado e o princípio da ampla defesa.
-    opcoes:
-      correta: Sim. Tendo em vista que Eduardo deveria ter sido intimado para manifestar seu interesse em constituir novo advogado ou ser assistido pela Defensoria Pública, para oferecimento das alegações finais, em razão do falecimento do antigo patrono, houve violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB,
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que argumento processual permite anular a sentença de Eduardo?"
+    tese: "Nulidade por violação da ampla defesa: morto o advogado, o réu devia ser chamado para constituir outro antes das alegações finais"
+    aceitos: [ "ampla defesa | nulidade | nula | nulo | constituir outro | constituir novo" ]
+    artigos: [ "art. 5, LV, CRFB", "art. 564, IV, CPP" ]
+    gabarito: "O argumento a ser apresentado, em sede de recurso, para desconstituir a sentença condenatória, é o de que haveria violação ao princípio da ampla defesa, em sua vertente de defesa técnica, tendo em vista que as alegações finais foram apresentadas pela Defensoria Pública, não sendo o acusado intimado para, querendo, constituir novo patrono. De acordo com o que consta do enunciado, durante a instrução processual, Eduardo foi assistido por Pedro, advogado por ele constituído. Ocorre que, ao tomar conhecimento de que Pedro teria falecido, de imediato o magistrado encaminhou os autos à Defensoria Pública para apresentação de alegações finais, o que foi incorreto, já que o réu deveria ter sido intimado pessoalmente, pois estava preso, para esclarecer se teria interesse em ser assistido pela Defensoria ou se pretendia constituir novo advogado. Ao retirar esse direito do réu, o magistrado violou direito do acusado e o princípio da ampla defesa."
+    revisao: { status: revisado }
   - id: 30-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Eduardo foi preso em flagrante no momento em que praticava um crime de roubo simples, no bairro de Moema.
-
-      Ainda na unidade policial, compareceram quatro outras vítimas, todas narrando que tiveram seus patrimônios lesados por Eduardo naquela mesma data, com intervalo de cerca de 30 minutos entre cada fato, no bairro de Moema, São Paulo.
-
-      As cinco vítimas descreveram que Eduardo, simulando portar arma de fogo, anunciava o assalto e subtraía os bens, empreendendo fuga em uma bicicleta. Eduardo foi denunciado pela prática do crime do Art. 157, caput, por cinco vezes, na forma do Art. 69, ambos do Código Penal, e, em sede de audiência, as vítimas confirmaram a versão fornecida em sede policial.
-
-      Assistido por seu advogado Pedro, Eduardo confessou os crimes, esclarecendo que pretendia subtrair bens de seis vítimas para conseguir dinheiro suficiente para comprar uma motocicleta. Disse, ainda, que apenas simulou portar arma de fogo, mas não utilizou efetivamente material bélico ou simulacro de arma. O juiz, no momento da sentença, condenou o réu nos termos da denúncia, sendo aplicada a pena mínima de 04 anos para cada um dos delitos, totalizando 20 anos de pena privativa de liberdade a ser cumprida em regime inicial fechado, além da multa. Ao ser intimado do teor da sentença, pessoalmente, já que se encontrava preso, Eduardo tomou conhecimento que Pedro havia falecido, mas que foram apresentadas alegações finais pela Defensoria Pública por determinação do magistrado logo em seguida à informação do falecimento do patrono. A família de Eduardo, então, procura você, na condição de advogado(a), para defendê-lo.
-
-      Considerando apenas as informações narradas, responda, na condição de advogado(a) de Eduardo, constituído para apresentação de apelação, aos itens a seguir.
-    comando: Diante da confirmação dos fatos pelo réu, qual argumento de direito material poderá ser apresentado, em sede de apelação, em busca da redução da sanção penal aplicada? Justifique.
-    gabarito: Em sede de apelação, poderia ser buscado o reconhecimento da continuidade delitiva, o que geraria redução da sanção penal aplicada. De acordo com o que consta do enunciado, de fato foram praticados cinco crimes de roubo. Mesmo sem emprego de arma de fogo ou simulacro de arma de fogo, houve grave ameaça na subtração dos bens de cinco vítimas diferentes, logo cinco patrimônios foram atingidos e cinco crimes autônomos foram praticados. Ainda que Eduardo tenha confessado os fatos, a pena mínima foi aplicada, não cabendo redução com fundamento na atenuante do Art. 65, III, d, do CP, nos termos da Súmula 231 do STJ. Todavia, o magistrado reconheceu o concurso material de crimes e somou a pena aplicada para cada um dos delitos. De acordo com o Art. 71 do CP, a pena de apenas um dos crimes será aplicada e aumentada de 1/6 a 2/3 quando o agente, mediante mais de uma ação, pratica dois ou mais crimes da mesma espécie, nas mesmas condições de tempo, lugar, maneira de execução, sendo os subsequentes continuação do primeiro. Todas as exigências legais foram preenchidas. Os delitos foram praticados no mesmo bairro, com intervalo de 30 minutos entre eles, sempre com o mesmo modo de execução. A intenção do agente sempre foi praticar vários crimes, um em continuidade do outro, para obter dinheiro suficiente para comprar uma motocicleta. Assim, ao invés do cúmulo material, deveria o magistrado ter aumentado a pena de um dos delitos (04 anos) em 1/6 a 2/3, ou, até mesmo, aplicar a previsão do Art. 71, parágrafo único, do CP.
-    opcoes:
-      correta: Reconhecimento da continuidade delitiva, na forma do Art. 71 do CP, já que os crimes são da mesma espécie e foram praticados nas mesmas condições de tempo, local e modo de execução
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Diante da confissão, que argumento de direito material reduz a pena de Eduardo?"
+    tese: "Crime continuado: os roubos foram da mesma espécie, nas mesmas condições de tempo, lugar e modo de execução"
+    aceitos: [ "continuidade delitiva | crime continuado | continuidade" ]
+    artigos: [ "art. 71, CP" ]
+    gabarito: "Em sede de apelação, poderia ser buscado o reconhecimento da continuidade delitiva, o que geraria redução da sanção penal aplicada. De acordo com o que consta do enunciado, de fato foram praticados cinco crimes de roubo. Mesmo sem emprego de arma de fogo ou simulacro de arma de fogo, houve grave ameaça na subtração dos bens de cinco vítimas diferentes, logo cinco patrimônios foram atingidos e cinco crimes autônomos foram praticados. Ainda que Eduardo tenha confessado os fatos, a pena mínima foi aplicada, não cabendo redução com fundamento na atenuante do Art. 65, III, d, do CP, nos termos da Súmula 231 do STJ. Todavia, o magistrado reconheceu o concurso material de crimes e somou a pena aplicada para cada um dos delitos. De acordo com o Art. 71 do CP, a pena de apenas um dos crimes será aplicada e aumentada de 1/6 a 2/3 quando o agente, mediante mais de uma ação, pratica dois ou mais crimes da mesma espécie, nas mesmas condições de tempo, lugar, maneira de execução, sendo os subsequentes continuação do primeiro. Todas as exigências legais foram preenchidas. Os delitos foram praticados no mesmo bairro, com intervalo de 30 minutos entre eles, sempre com o mesmo modo de execução. A intenção do agente sempre foi praticar vários crimes, um em continuidade do outro, para obter dinheiro suficiente para comprar uma motocicleta. Assim, ao invés do cúmulo material, deveria o magistrado ter aumentado a pena de um dos delitos (04 anos) em 1/6 a 2/3, ou, até mesmo, aplicar a previsão do Art. 71, parágrafo único, do CP."
+    revisao: { status: revisado }
   - id: 30-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      Maria foi denunciada pela suposta prática do crime de descaminho, tendo em vista que teria deixado de recolher impostos que totalizavam R$ 500,00 (quinhentos reais) pela saída de mercadoria, fato constatado graças ao lançamento definitivo realizado pela Administração Pública.
-
-      Considerando que constava da Folha de Antecedentes Criminais de Maria outro processo pela suposta prática de crime de roubo, inclusive estando Maria atualmente presa em razão dessa outra ação penal, o Ministério Público deixou de oferecer proposta de suspensão condicional do processo.
-
-      Após a instrução criminal em que foram observadas as formalidades legais, sendo Maria assistida pela Defensoria Pública, foi a ré condenada nos termos da denúncia. A pena aplicada foi a mínima prevista para o delito, a ser cumprida em regime inicial aberto, substituída por restritiva de direitos. Maria foi intimada da sentença através de edital, pois não localizada no endereço constante do processo.
-
-      A família de Maria, ao tomar conhecimento do teor da sentença, procura você, na condição de advogado(a) para prestar esclarecimentos técnicos. Informa estar preocupada com o prazo recursal, já que Maria ainda não tinha conhecimento da condenação, pois permanecia presa.
-
-      Na condição de advogado(a), esclareça os seguintes questionamentos formulados pela família da ré.
-    comando: Existe argumento de direito processual para questionar a intimação de Maria do teor da sentença condenatória? Justifique.
-    gabarito: O advogado, ao ser procurado pela família de Maria, deveria esclarecer que a intimação de Maria do teor da sentença condenatória não foi correta, tendo em vista que ela encontrava-se presa por outro crime, fato do conhecimento do Ministério Público. De acordo com o Art. 392 do CPP, a intimação da sentença deverá ser pessoal se o réu estiver preso, ainda que a prisão seja decorrente de outro processo. A intimação por edital deve ocorrer quando o réu estiver em local incerto e não sabido, quando não for possível sua localização, ou em alguma das situações previstas no Art. 392, incisos IV, V e V, do CPP, o que não foi o caso. A intimação por edital, como forma de intimação ficta, prejudicou Maria, que ainda não tinha conhecimento do teor da sentença condenatória.
-    opcoes:
-      correta: Sim. Existe, tendo em vista que Maria deveria ter sido intimada pessoalmente por estar presa, na forma do Art. 392, inciso I, do CPP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que argumento processual contesta a intimação de Maria?"
+    tese: "Nulidade da intimação da sentença por edital: a ré presa devia ser intimada pessoalmente"
+    aceitos: [ "pessoal* | nulidade | nula | nulo" ]
+    artigos: [ "art. 392, I, CPP" ]
+    gabarito: "O advogado, ao ser procurado pela família de Maria, deveria esclarecer que a intimação de Maria do teor da sentença condenatória não foi correta, tendo em vista que ela encontrava-se presa por outro crime, fato do conhecimento do Ministério Público. De acordo com o Art. 392 do CPP, a intimação da sentença deverá ser pessoal se o réu estiver preso, ainda que a prisão seja decorrente de outro processo. A intimação por edital deve ocorrer quando o réu estiver em local incerto e não sabido, quando não for possível sua localização, ou em alguma das situações previstas no Art. 392, incisos IV, V e V, do CPP, o que não foi o caso. A intimação por edital, como forma de intimação ficta, prejudicou Maria, que ainda não tinha conhecimento do teor da sentença condenatória."
+    revisao: { status: revisado }
   - id: 30-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Maria foi denunciada pela suposta prática do crime de descaminho, tendo em vista que teria deixado de recolher impostos que totalizavam R$ 500,00 (quinhentos reais) pela saída de mercadoria, fato constatado graças ao lançamento definitivo realizado pela Administração Pública.
-
-      Considerando que constava da Folha de Antecedentes Criminais de Maria outro processo pela suposta prática de crime de roubo, inclusive estando Maria atualmente presa em razão dessa outra ação penal, o Ministério Público deixou de oferecer proposta de suspensão condicional do processo.
-
-      Após a instrução criminal em que foram observadas as formalidades legais, sendo Maria assistida pela Defensoria Pública, foi a ré condenada nos termos da denúncia. A pena aplicada foi a mínima prevista para o delito, a ser cumprida em regime inicial aberto, substituída por restritiva de direitos. Maria foi intimada da sentença através de edital, pois não localizada no endereço constante do processo.
-
-      A família de Maria, ao tomar conhecimento do teor da sentença, procura você, na condição de advogado(a) para prestar esclarecimentos técnicos. Informa estar preocupada com o prazo recursal, já que Maria ainda não tinha conhecimento da condenação, pois permanecia presa.
-
-      Na condição de advogado(a), esclareça os seguintes questionamentos formulados pela família da ré.
-    comando: Qual argumento de direito material poderá ser apresentado, em eventual recurso, em busca da absolvição de Maria? Justifique.
-    gabarito: O argumento seria de que a conduta praticada por Maria é atípica em razão da aplicação do princípio da insignificância. O conceito de crime envolve um fato típico, ilícito e culpável. Dentro da tipicidade, está a tipicidade material, que é a lesão relevante ao bem jurídico protegido. Em relação aos crimes tributários, a jurisprudência é tranquila no sentido de que haveria atipicidade material sempre que o valor do imposto sonegado não ultrapassar aquele que a Fazenda Pública considera baixo o suficiente para não justificar uma cobrança através de execução fiscal. Ainda que exista controvérsia se tal valor seria de R$ 10.000,00 ou R$ 20.000,00, fato é que, na presente hipótese, considerando que o valor do tributo não ultrapassaria R$ 500,00, o princípio da insignificância deveria ser aplicado. A lesão constatada não é grave o suficiente para justificar a intervenção do Direito Penal, diante de sua característica de subsidiariedade/última ratio.
-    opcoes:
-      correta: Atipicidade material da conduta, em razão do reconhecimento do princípio da insignificância/bagatela.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que argumento de direito material leva à absolvição de Maria?"
+    tese: "Atipicidade material pela insignificância: o tributo iludido fica muito abaixo do limite de cobrança da Fazenda"
+    aceitos: [ "insignifican* | bagatela | atipicidade material" ]
+    artigos: [ "art. 20, Lei 10.522" ]
+    gabarito: "O argumento seria de que a conduta praticada por Maria é atípica em razão da aplicação do princípio da insignificância. O conceito de crime envolve um fato típico, ilícito e culpável. Dentro da tipicidade, está a tipicidade material, que é a lesão relevante ao bem jurídico protegido. Em relação aos crimes tributários, a jurisprudência é tranquila no sentido de que haveria atipicidade material sempre que o valor do imposto sonegado não ultrapassar aquele que a Fazenda Pública considera baixo o suficiente para não justificar uma cobrança através de execução fiscal. Ainda que exista controvérsia se tal valor seria de R$ 10.000,00 ou R$ 20.000,00, fato é que, na presente hipótese, considerando que o valor do tributo não ultrapassaria R$ 500,00, o princípio da insignificância deveria ser aplicado. A lesão constatada não é grave o suficiente para justificar a intervenção do Direito Penal, diante de sua característica de subsidiariedade/última ratio."
+    revisao: { status: revisado }

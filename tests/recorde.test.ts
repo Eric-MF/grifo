@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { marcarRecorde, quebrouRecorde } from "@/games/flap-suitcase/recorde";
-import { TEMAS } from "@/games/flap-suitcase/themes";
+import { TEMAS } from "@/games/flap-suitcase/catalogo";
 
 describe("linha do recorde", () => {
   it("quebra quando a pontuação passa do recorde guardado, com a mesma regra do 'Novo recorde!' do fim", () => {

@@ -1,6 +1,6 @@
 // Sistemas de cores das marcações: cada cor tem um significado. Dois prontos e os do usuário.
 import { gravarJSON, lerJSON } from "@/lib/storage";
-import type { GrifosProntos } from "./grifos";
+import { grifosDoSistema, ROTULO_DA_COR, SISTEMA_ESSENCIAIS, SISTEMA_GERAL, type GrifoPronto } from "./grifos";
 
 export interface CorLegenda {
   cor: string;
@@ -12,7 +12,7 @@ export interface Sistema {
   id: string;
   nome: string;
   cores: CorLegenda[];
-  /** o sistema pronto ("materias" ou "teses") cujos grifos prontos este sistema mostra, quando foi copiado dele */
+  /** o sistema pronto ("essenciais" ou "geral") cujos grifos prontos este sistema mostra, quando foi copiado dele */
   base?: string;
 }
 
@@ -50,29 +50,57 @@ export function novaCorPara(usadas: string[]): string {
   }
 }
 
-export const SISTEMAS_PRONTOS: Sistema[] = [
-  {
-    id: "materias",
-    nome: "Matérias",
-    cores: [
-      { cor: AMARELO, rotulo: "Competência" },
-      { cor: VERDE, rotulo: "Recursos" },
-      { cor: AZUL, rotulo: "Procedimentos" },
-      { cor: ROSA, rotulo: "Direitos fundamentais" },
-    ],
-  },
-  {
-    id: "teses",
-    nome: "Teses da peça",
-    cores: [
-      { cor: AZUL, rotulo: "Competência" },
-      { cor: VERDE, rotulo: "Teses preliminares" },
-      { cor: AMARELO, rotulo: "Teses principais" },
-      { cor: VERMELHO, rotulo: "Teses subsidiárias" },
-      { cor: ROXO, rotulo: "Pedidos acessórios" },
-    ],
-  },
+/** As cores dos grifos prontos (as do .examples/Marcações GRIFO.md), as mesmas nos dois sistemas prontos. */
+const coresProntas = (): CorLegenda[] => [
+  { cor: VERDE, rotulo: ROTULO_DA_COR.pecas },
+  { cor: AMARELO, rotulo: ROTULO_DA_COR.teses },
+  { cor: AZUL, rotulo: ROTULO_DA_COR.sumulas },
+  { cor: VERMELHO, rotulo: ROTULO_DA_COR.pedidos },
 ];
+/**
+ * Os sistemas prontos: "Essenciais" (o padrão) grifa só o que já caiu em prova; "Geral", todos os grifos do Grifo.
+ * Cada cor é um tipo de grifo: Peças, Teses e Súmulas são marca-texto; Pedidos, um sublinhado.
+ */
+export const SISTEMAS_PRONTOS: Sistema[] = [
+  { id: SISTEMA_ESSENCIAIS, nome: "Essenciais", cores: coresProntas() },
+  { id: SISTEMA_GERAL, nome: "Geral", cores: coresProntas() },
+];
+/** O sistema que vale sem escolha do usuário. */
+export const SISTEMA_PADRAO = SISTEMA_ESSENCIAIS;
+
+// Os sistemas prontos antigos ("Matérias" e "Teses da peça") deram lugar aos de agora: quem os usava passa ao "Essenciais",
+// e as cores copiadas deles passam a pintar o tipo de grifo novo que corresponde ao significado antigo (as que não têm
+// correspondente ficam sem grifos prontos).
+const PRONTOS_ANTIGOS = new Set(["materias", "teses"]);
+const ROTULOS_ANTIGOS: Record<string, string> = {
+  "Teses preliminares": ROTULO_DA_COR.teses,
+  "Teses principais": ROTULO_DA_COR.teses,
+  "Teses subsidiárias": ROTULO_DA_COR.teses,
+  "Pedidos acessórios": ROTULO_DA_COR.pedidos,
+  Recursos: ROTULO_DA_COR.pecas,
+};
+const idNovo = (id: string) => (PRONTOS_ANTIGOS.has(id) ? SISTEMA_PADRAO : id);
+/** Um sistema do usuário copiado de um pronto antigo: a base nova e as origens traduzidas. Os outros ficam como estão. */
+export function migrarSistema(s: Sistema): Sistema {
+  if (!s.base || !PRONTOS_ANTIGOS.has(s.base)) return s;
+  return {
+    ...s,
+    base: SISTEMA_PADRAO,
+    cores: s.cores.map((c) => {
+      const antigo = c.origem ?? c.rotulo;
+      return { ...c, origem: ROTULOS_ANTIGOS[antigo] ?? antigo };
+    }),
+  };
+}
+/** O estado salvo com os ids dos prontos antigos trocados pelos de agora (sistema ativo, escolha de cada lei, bases). */
+export function migrarLegendas(e: Estado): Estado {
+  return {
+    ...e,
+    ativo: idNovo(e.ativo),
+    porLei: Object.fromEntries(Object.entries(e.porLei ?? {}).map(([lei, id]) => [lei, idNovo(id)])),
+    meus: e.meus.map(migrarSistema),
+  };
+}
 
 export interface Estado {
   ativo: string;
@@ -96,10 +124,11 @@ export function corUnicas(cores: CorLegenda[]): CorLegenda[] {
   });
 }
 
-// Sistemas salvos antes de a repetição ser proibida podem ter cores repetidas: corrigidas ao carregar.
+// Sistemas salvos antes de a repetição ser proibida podem ter cores repetidas: corrigidas ao carregar. Os ids dos
+// prontos antigos também são trocados ao carregar (ver migrarLegendas).
 export const lerLegendas = (): Estado => {
-  const e = lerJSON<Estado>(K, { ativo: "materias", meus: [], porLei: {} });
-  return { ...e, porLei: e.porLei ?? {}, meus: e.meus.map((s) => ({ ...s, cores: corUnicas(s.cores) })) };
+  const e = migrarLegendas(lerJSON<Estado>(K, { ativo: SISTEMA_PADRAO, meus: [], porLei: {} }));
+  return { ...e, meus: e.meus.map((s) => ({ ...s, cores: corUnicas(s.cores) })) };
 };
 export const gravarLegendas = (e: Estado) => gravarJSON(K, e);
 export const todosSistemas = (e: Estado) => [...SISTEMAS_PRONTOS, ...e.meus];
@@ -110,11 +139,11 @@ export function sistemaDaLei(e: Estado, lei: string, padrao: string): Sistema {
   return todos.find((s) => s.id === e.porLei[lei]) ?? todos.find((s) => s.id === padrao) ?? SISTEMAS_PRONTOS[0]!;
 }
 /**
- * O sistema com que a lei abre no leitor e na prévia dos artigos: a escolha do usuário nela; sem escolha, "Teses da peça"
- * se a lei tem grifos prontos nele, senão o sistema ativo.
+ * O sistema com que a lei abre no leitor e na prévia dos artigos: a escolha do usuário nela; sem escolha, "Essenciais"
+ * se a lei tem grifos prontos, senão o sistema ativo.
  */
-export function sistemaDoLeitor(e: Estado, lei: string, prontos: GrifosProntos): Sistema {
-  return sistemaDaLei(e, lei, prontos.teses?.some((r) => r.lei === lei) ? "teses" : e.ativo);
+export function sistemaDoLeitor(e: Estado, lei: string, prontos: readonly Pick<GrifoPronto, "lei">[]): Sistema {
+  return sistemaDaLei(e, lei, prontos.some((g) => g.lei === lei) ? SISTEMA_PADRAO : e.ativo);
 }
 /** O id a usar em grifos.json: o do pronto de onde o sistema foi copiado, senão o próprio id. */
 export function idDosProntos(s: Sistema): string {
@@ -124,6 +153,14 @@ export function idDosProntos(s: Sistema): string {
 export function corDoPronto(s: Sistema, rotulo: string): string | undefined {
   return s.cores.find((c) => (c.origem ?? c.rotulo) === rotulo)?.cor;
 }
+/** A cor de um grifo pronto neste sistema (a do tipo dele: Peças, Teses, Súmulas ou Pedidos); sem a cor, ele não aparece. */
+export const corDoGrifo = (s: Sistema, g: Pick<GrifoPronto, "cor">) => corDoPronto(s, ROTULO_DA_COR[g.cor]);
+/** O nome da cor do grifo pronto neste sistema: num sistema copiado, o que o usuário deu à cor ("Peças" → "Recursos"). */
+export const rotuloDoGrifo = (s: Sistema, g: Pick<GrifoPronto, "cor">) =>
+  s.cores.find((c) => (c.origem ?? c.rotulo) === ROTULO_DA_COR[g.cor])?.rotulo ?? ROTULO_DA_COR[g.cor];
+/** Os grifos prontos que o sistema mostra na lei: os do pronto de onde ele vem, só os tipos que têm cor nele. */
+export const prontosNoSistema = (grifos: readonly GrifoPronto[], s: Sistema, lei: string): GrifoPronto[] =>
+  grifosDoSistema(grifos, idDosProntos(s), lei).filter((g) => corDoGrifo(s, g));
 /** Um sistema novo, com o id e o nome de `alvo` e as cores de `origem`. Copiado de um pronto ou de um que já tem base, mantém os grifos prontos. */
 export function copiarSistema(origem: Sistema, alvo: { id: string; nome: string }): Sistema {
   const pronto = SISTEMAS_PRONTOS.some((p) => p.id === origem.id);

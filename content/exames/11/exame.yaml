@@ -242,3 +242,12 @@ questoes:
           - { id: c1, valor: 0.4, termos: [ tipicidade material ] }
           - { id: c2, valor: 0.2, termos: [ lesao | ameaca de lesao | ofensividade | insignifican*, bem juridico ] }
 observacoes: A FGV não publicou a distribuição de pontos deste exame. A tabela de pontos é uma estimativa do Grifo, montada a partir do padrão de resposta e dos valores de cada questão.
+atualizado:
+  revisao: { status: rascunho }
+  diferencas:
+    - { texto: "A FGV não publicou a distribuição dos pontos deste exame. A tabela de pontos do padrão de resposta é uma estimativa do Grifo, montada a partir do padrão de resposta e dos valores de cada parte." }
+  nomes:
+    peca: { Jerusa: Atalanta, Diogo: Faetonte }   # a pressa; a moto em alta velocidade
+    q2: { Daniel: Tântalo }   # quase conseguiu (a tentativa)
+    q3: { Ricardo: Sísifo }   # a reincidência
+    q4: { Lucile: Circe }

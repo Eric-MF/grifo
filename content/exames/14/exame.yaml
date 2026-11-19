@@ -3,6 +3,7 @@
 id: "14"
 numero: 14
 numeral: XIV
+aplicacao: 2014-09-14
 revisao:
   status: rascunho
   por: ""
@@ -140,7 +141,7 @@ peca:
     - n: "4.2"
       secao: "Dos pedidos:"
       descricao: "Diante da condenação, de forma subsidiária: a) Afastamento do concurso material de crimes, ou reconhecimento de crime único. (0,20). b) Incidência da atenuante da menoridade penal relativa. (0,20). c) Afastamento da agravante da embriaguez preordenada. (0,20). d) Fixação da pena-base no mínimo legal ou diminuição da pena (0,20) e) Fixação de regime semiaberto (0,20)."
-      valores: [ 0, 0.2 ]
+      teto: 1  # cinco subitens de 0,20 (a–e), cada um 0,00/0,20 no padrão da FGV
       componentes:
         - { id: c1, valor: 0.2, alternativas: [ [ concurso material ], [ crime unico ] ] }
         - { id: c2, valor: 0.2, termos: [ menoridade ] }
@@ -295,4 +296,12 @@ questoes:
 atualizado:
   revisao: { status: rascunho }
   notas:
+    - { alvo: peca, lei: "Lei 15.160/2025", texto: "A Lei 15.160/2025 alterou os arts. 65, I, e 115 do Código Penal: a atenuante da menoridade relativa e a redução do prazo prescricional pela metade não valem mais quando o crime envolve violência sexual contra a mulher. Para um estupro de vulnerável contra uma menina cometido hoje, Felipe não teria a atenuante." }
+    - { alvo: peca, lei: "Lei 15.280/2025 e Lei 15.353/2026", texto: "O art. 217-A do Código Penal (estupro de vulnerável) foi alterado pela Lei 15.280/2025, que fixou pena de reclusão de 10 a 18 anos (antes, de 8 a 15 anos), e pela Lei 15.353/2026, que acrescentou o § 4º-A (presunção absoluta de vulnerabilidade da vítima). Com a pena mínima de 10 anos, o regime inicial deixa de ser o semiaberto (art. 33, § 2º, a, do CP)." }
     - { alvo: q2, lei: "Lei 13.964/2019", texto: "O § 2º do art. 2º da Lei 8.072/1990, que tratava da apelação em liberdade, foi revogado pela Lei 13.964/2019 (art. 19)." }
+  nomes:
+    peca: { Felipe: Eros, Ana: Psiquê }
+    q1: { Gustavo: Ares }
+    q2: { Mário: Prometeu }   # a pena longa
+    q3: { Daniel: Heitor, Ana: Andrômaca, Leonardo: Páris, Mariana: Cassandra, Carolina: Helena, Roberta: Clitemnestra, Cristiano: Aquiles, Juliana: Electra, Flavia: Ifigênia, Ralph: Ájax }   # as duas quadrilhas: troianos e gregos
+    q4: { Cristiano: Odisseu }   # o estelionato

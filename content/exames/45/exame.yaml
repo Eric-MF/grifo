@@ -248,7 +248,7 @@ questoes:
           - { id: c2, valor: 0.1, dispositivo: [ Súmula 707 STF, "art. 263, CPP", "art. 5, LV, CRFB" ], requer: c1 }
       - n: B
         descricao: Deve ser sustentada a atipicidade ou a desclassificação da conduta, pois a obtenção de empréstimo fraudulento se amolda, em tese, ao delito de estelionato (0,35), uma vez que é inadmissível a analogia em prejuízo do acusado (0,25).
-        valores: [ 0, 0.25, 0.35 ]
+        valores: [ 0, 0.25, 0.35, 0.6 ]
         componentes:
           - { id: c1, valor: 0.35, termos: [ atipic* | desclassific*, estelionato ] }
           - { id: c2, valor: 0.25, termos: [ analogia, prejuizo | in malam partem | desfavor* | prejudic* ] }
@@ -314,3 +314,15 @@ questoes:
         componentes:
           - { id: c1, valor: 0.5, termos: [ peticao | requerimento | simples, execucao ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 66, III, b, LEP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: peca, lei: "Lei 15.397/2026", texto: "Depois desta prova, a Lei 15.397/2026 elevou a pena do roubo (art. 157, caput, do CP) para reclusão de 6 a 10 anos (antes, de 4 a 10). Para o fato de 2025 vale a pena antiga, que não retroage em prejuízo. Pela lei nova, mesmo com a redução máxima da tentativa (2/3), a pena mínima ficaria em 2 anos, ainda dentro do limite da suspensão condicional da pena." }
+    - { alvo: q4, lei: "Lei 15.358/2026 e Lei 15.402/2026", texto: "A Lei 15.358/2026 elevou para 70% da pena o percentual de progressão do primário condenado por crime hediondo ou equiparado (art. 112, V, da LEP), como o roubo com emprego de arma de fogo, e a Lei 15.402/2026 reescreveu os incisos I a III do art. 112. Os 40% do gabarito valem para crimes anteriores a 25/3/2026, como o de Antenor, de 2020; a progressão também depende do exame criminológico (§ 1º, Lei 14.843/2024)." }
+  nomes:
+    peca: { Gabriel: Procusto, Andrea: Eurídice, Fabiano: Orfeu }   # o assaltante; o casal
+    q1: { Nina: Éris, Maria: Galateia }   # a pedra no ônibus
+    q2: { Cristiano: Tântalo }   # as apostas
+    q3: { Amauri: Héracles, Joana: Mégara }   # matou a esposa
+    q4: { Antenor: Ares }
+    empresas: { Banco Tigre: Banco Fortuna }   # a deusa da sorte (as apostas)

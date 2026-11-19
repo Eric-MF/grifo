@@ -3,6 +3,7 @@
 id: "02"
 numero: 2
 numeral: II
+aplicacao: 2010-11-14  # a data provável do edital; nenhuma notícia confirmou o dia
 revisao:
   status: rascunho
   por: ""
@@ -238,3 +239,15 @@ questoes:
           - { id: c2, valor: 0.2, termos: [ 1/6 ], dispositivo: [ art. 112 LEP ], requer: c1, rotulo: Progressão com 1/6 (art. 112 da LEP) }
     valor: 1
 observacoes: "Exame de 2010: peça (5,00) e cinco questões de 1,00. Na peça, a FGV exigia a indicação dos arts. 396 e/ou 396-A do CPP para aceitar a resposta à acusação."
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q5, tipo: jurisprudencia, lei: "STF, HC 111.840 (2012) e ARE 1.052.700 (Tema 972, 2017)", texto: "O regime inicialmente fechado do caso vinha do art. 2º, § 1º, da Lei 8.072/1990 (redação da Lei 11.464/2007), que o impunha a todo crime hediondo ou equiparado, como o tráfico. O STF declarou esse parágrafo inconstitucional no HC 111.840 (Plenário, 27/06/2012), por violar a individualização da pena, e fixou em repercussão geral que é inconstitucional a fixação ex lege do regime inicial fechado com base nele: o juiz deve seguir o art. 33 do CP (Tema 972). Hoje, o regime fechado imposto só pela natureza do crime seria ilegal." }
+    - { alvo: q5, lei: "Lei 13.964/2019", texto: "A Lei 13.964/2019 (Pacote Anticrime) reescreveu o art. 112 da LEP, com percentuais de 16% a 70% no lugar das frações, e revogou o § 2º do art. 2º da Lei 8.072/1990 (os 2/5 e 3/5 citados na questão). A tese da questão continua valendo: a lei posterior mais grave não retroage, e o crime de 2006 segue a fração de 1/6 da redação antiga do art. 112 da LEP (Súmula Vinculante 26 e Súmula 471 do STJ)." }
+  nomes:
+    peca: { Maria: Medeia, Antônio: Hermes, Carlos: Argos, João: Hélio, Roberta: Cassandra }   # crianças levadas para fora; o deus das fronteiras (passaportes); testemunhas que veem tudo
+    q1: { José: Dionísio }   # drogas
+    q2: { Caio: Midas }   # concussão
+    q3: { Pedro: Páris, José: Aquiles }   # atirou; a vítima
+    q4: { Aurélio: Teseu, Berilo: Procusto, Cornélio: Jacinto }   # defendeu-se do bandido; morto por um golpe que não era para ele
+    q5: { Lucas: Sísifo }   # a execução da pena

@@ -12,30 +12,32 @@
 # Um nome novo numa prova nova: acrescente aqui. O build avisa as palavras com maiúscula que não reconhece (nem aqui,
 # nem em `nao_pessoas`, no fim do arquivo). Quem virou quem em cada questão fica em .cache/nomes-relatorio.txt.
 masculinos: [
-  Abel, Abelardo, Adamastor, Adilson, Adriano, Alan, Alberto, Alfredo, Aluísio, Amauri, Américo, Anderson, André,
-  Andy, Antenor, Antônio, Aquiles, Arnaldo, Aroldo, Arthur, Astolfo, Ataulfo, Ateneu, Augusto, Beto, Bento, Bolívar,
-  Bernardo, Bob, Breno, Bruno, Caim, Caio, Carleto, Carlos, Cauã, Cássio, Célio, César, Cesar, Cláudio, Clovis,
-  Clóvis, Cristiano, Daniel, Davi, David, Denis, Diego, Diogo, Douglas, Eduardo, Elias, Enrico, Enzo, Fabiano,
-  Fabrício, Fábio, Fausto, Felipe, Fernando, Filisteu, Flávio, Flavio, Francisco, Frederico, Gabriel, Geraldo,
-  Gilberto, Gilson, Gonçalo, Gregório, Guilherme, Gustavo, Hamilton, Henrique, Hermegildo, Hermenegildo, Hermes,
-  Hugo, Igor, Inocêncio, Iório, Jacinto, Jairo, João, Joaquim, Joel, Joelerson, John, Jonas, Jorge, José, Jose,
-  Josué, Juan, Juca, Juliano, Júlio, Julio, Júnior, Junior, Lauro, Leandro, Leonardo, Lineu, Luan, Lucas, Luciano,
-  Lúcio, Luís, Luiz, Manoel, Marcelo, Márcio, Marcos, Marcus, Mariano, Mário, Marivaldo, Mateus, Matheus, Maurício,
-  Mauricio, Mendonça, Mévio, Miguel, Moisés, Narcísio, Natan, Nicola, Olinto, Oliver, Orlando, Oscar, Osvaldo,
-  Pablo, Patrício, Patrick, Paulo, Pedro, Peterson, Pierre, Quinho, Rafael, Raimundo, Ralph, Renato, Ricardo,
-  Robson, Roberto, Rodrigo, Rogério, Rômulo, Ronaldo, Ruan, Rubens, Rui, Russo, Samuel, Sandro, Saulo, Scott,
-  Sérgio, Severino, Sílvio, Silvio, Talles, Teobaldo, Tércio, Thiago, Thor, Tiago, Tício, Túlio, Valter, Vicente,
-  Vinícius, Vinicius, Vitor, Waldir, Walter, Wesley, Wiliam, William, Wilson, Xavier, Ygor, Yuri
+  Abel, Abelardo, Adaílton, Adamastor, Adilson, Adolfo, Adriano, Alan, Alberto, Alfredo, Almir, Aluisio, Aluísio, Amauri,
+  Américo, Anderson, André, Andy, Aníbal, Antenor, Antônio, Aquiles, Armênio, Arnaldo, Aroldo, Arthur, Astolfo,
+  Ataulfo, Ateneu, Augusto, Aurélio, Bento, Berilo, Bernardo, Beto, Bob, Bolívar, Breno, Bruno, Caim, Caio, Carleto,
+  Carlos, Cássio, Cauã, Célio, Cesar, César, Cláudio, Clovis, Clóvis, Cornélio, Cristiano, Daniel, Davi, David,
+  Denis, Diego, Diogo, Douglas, Eduardo, Elias, Enrico, Enzo, Fabiano, Fábio, Fabrício, Fausto, Felipe, Félix,
+  Fernando, Filisteu, Flávio, Flavio, Francisco, Frederico, Gabriel, Geraldo, Gilberto, Gilson, Gonçalo, Gregório,
+  Guilherme, Gustavo, Hamilton, Henrique, Hermegildo, Hermenegildo, Hermes, Hugo, Igor, Inocêncio, Iório, Jacinto,
+  Jaime, Jairo, Jeremias, João, Joaquim, Joel, Joelerson, John, Jonas, Jorge, Jose, José, Josué, Juan, Juca, Juliano,
+  Julio, Júlio, Junior, Júnior, Justino, Lauro, Leandro, Leonardo, Lineu, Luan, Lucas, Luciano, Lúcio, Luís, Luiz,
+  Manoel, Marcelo, Márcio, Marcos, Marcus, Mariano, Mário, Marivaldo, Mateus, Matheus, Maurício, Mauricio, Mendonça,
+  Mévio, Miguel, Moisés, Narcísio, Natan, Nicola, Olinto, Oliver, Orlando, Oscar, Osvaldo, Pablo, Patrício, Patrick,
+  Paulo, Pedro, Peterson, Pierre, Quinho, Rafael, Raimundo, Ralph, Ramirez, Renato, Ricardo, Roberto, Robson, Rodrigo,
+  Rogério, Rômulo, Ronaldo, Ruan, Rubens, Rui, Russo, Samuel, Sandro, Saulo, Scott, Sérgio, Severino, Sílvio, Silvio,
+  Talles, Teobaldo, Tércio, Thales, Thiago, Thor, Tiago, Tício, Túlio, Valter, Vicente, Vinícius, Vinicius, Vitor,
+  Waldir, Walter, Wesley, Wiliam, William, Wilson, Xavier, Ygor, Yuri
 ]
 femininos: [
   Adriana, Alessandra, Aline, Amanda, Ana, Anastácia, Andrea, Aparecida, Bárbara, Beatriz, Bianca, Bruna, Camila,
-  Camile, Camille, Carla, Carmen, Carolina, Clara, Cláudia, Cristiane, Débora, Diana, Elena, Elisa, Erika, Eugênia,
-  Fabiana, Fátima, Felícia, Fernanda, Flávia, Flavia, Gabriela, Geminiana, Gisele, Glória, Helena, Izabel, Jane,
-  Janaína, Jaqueline, Jenifer, Jerusa, Jéssica, Joana, Joaquina, Josefa, Julia, Júlia, Juliana, Karen, Karina, Laís, Larissa,
-  Laura, Leda, Leila, Letícia, Lia, Lídia, Lívia, Luana, Lucile, Lúcia, Luciane, Luiza, Luíza, Magda, Manoela,
-  Márcia, Margot, Maria, Mariana, Marieta, Marilda, Marilene, Marisa, Marta, Mary, Mayara, Melinda, Miriam, Mônica,
-  Natália, Nina, Paloma, Paola, Patrícia, Paula, Priscila, Raquel, Renata, Rita, Roberta, Rosa, Ruth, Sara, Sílvia,
-  Sônia, Suelen, Tainá, Talita, Telma, Terezinha, Thaís, Vânia, Vanessa, Vera, Vilma
+  Camile, Camille, Carla, Carmen, Carolina, Clara, Claudia, Cláudia, Cristiane, Débora, Diana, Elena, Eliete, Elisa,
+  Elizângela, Erika, Esmeralda, Eugênia, Fabiana, Fátima, Felícia, Fernanda, Flávia, Flavia, Gabriela, Geminiana,
+  Gisele, Glória, Helena, Inês, Izabel, Janaína, Jane, Jaqueline, Jenifer, Jerusa, Jéssica, Joana, Joaquina, Josefa,
+  Julia, Júlia, Juliana, Karen, Karina, Laís, Lara, Larissa, Laura, Leda, Leila, Letícia, Lia, Lídia, Lívia, Luana,
+  Lúcia, Luciane, Lucile, Luiza, Luíza, Madalena, Magda, Manoela, Márcia, Margot, Maria, Mariana, Marieta, Marilda, Marilene,
+  Marisa, Marta, Mary, Mayara, Melinda, Miriam, Mônica, Natália, Nina, Paloma, Paola, Patrícia, Paula, Priscila,
+  Raquel, Renata, Rita, Roberta, Rosa, Ruth, Sara, Sílvia, Sônia, Suelen, Tainá, Talita, Telma, Terezinha, Thaís,
+  Vanessa, Vânia, Vera, Vilma
 ]
 # só contam depois de um nome ("Maria Campos"); sozinhos, são lugar ou outra coisa ("cidade de Santos")
 sobrenomes: [

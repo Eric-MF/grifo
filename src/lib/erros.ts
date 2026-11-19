@@ -14,7 +14,7 @@ export interface Evento {
   /** instante, em ms */
   t: number;
   o: Origem;
-  /** diploma (id de content/leis.yaml), ou "sumulas-stf" / "sumulas-stj" para súmulas */
+  /** diploma (id de content/leis.yaml), ou "sumulas-stf" / "sumulas-stj" / "sumulas-vinculantes" para súmulas */
   d: string;
   /** artigo, normalizado ("154-a") */
   a: string;
@@ -93,8 +93,8 @@ export function maisErrados(agregados: Map<string, Agregado>, minimo: NivelErro)
 }
 
 /**
- * Eventos dos dispositivos citados: um por artigo de lei (com diploma) e um por súmula não vinculante
- * do STF ou do STJ ("sumulas-stf" / "sumulas-stj", pelo número). Súmulas vinculantes e as sem tribunal ficam de fora.
+ * Eventos dos dispositivos citados: um por artigo de lei (com diploma) e um por súmula do STF, do STJ ou vinculante
+ * ("sumulas-stf" / "sumulas-stj" / "sumulas-vinculantes", pelo número). As súmulas sem tribunal ficam de fora.
  */
 export function eventosDeDispositivos(
   specs: string[],
@@ -115,7 +115,10 @@ export function eventosDeDispositivos(
       d = c.diploma;
       a = c.art;
       extra = { ...(c.pars[0] ? { p: c.pars[0] } : {}), ...(c.incs[0] ? { i: c.incs[0] } : {}) };
-    } else if (c.tipo === "sumula" && !c.vinculante && (c.tribunal === "stf" || c.tribunal === "stj")) {
+    } else if (c.tipo === "sumula" && c.vinculante) {
+      d = "sumulas-vinculantes";
+      a = c.n;
+    } else if (c.tipo === "sumula" && (c.tribunal === "stf" || c.tribunal === "stj")) {
       d = `sumulas-${c.tribunal}`;
       a = c.n;
     } else continue;

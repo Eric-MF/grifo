@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { textoParaCopiar, textoResposta } from "@/quiz/copiar";
 import type { Correcao } from "@/quiz/verificar";
-import type { PerguntaItem, PerguntaObjetiva, PerguntaPeca } from "@/quiz/types";
+import type { PerguntaObjetiva, PerguntaPeca, PerguntaTese } from "@/quiz/types";
 
 const enunciado = { caso: "Caso de teste.", comando: "Qual a peça?", explicacao: "A tese principal, com o dispositivo.", fonte: "gerada" };
 
@@ -33,18 +33,31 @@ describe("resposta na cópia da questão", () => {
     expect(textoResposta(p, res)).toBe("Resposta: Recurso em Sentido Estrito — art. 581, IV, do CPP");
   });
 
-  it("discursiva: o padrão de respostas", () => {
-    const p: PerguntaItem = {
+  it("tese: a tese, o artigo e o padrão de respostas", () => {
+    const p: PerguntaTese = {
       ...enunciado,
-      id: "item-1",
-      formato: "item",
+      id: "tese-1",
+      formato: "tese",
       categorias: ["peca-detalhe"],
-      itens: [],
-      opcoes: [{ texto: "um", correta: true }],
-      dispositivos: [],
+      enunciado: "Caso completo.",
+      tese: "Desclassificação para furto simples",
+      aceitos: [["furto simples"]],
+      artigos: ["art. 155, CP"],
+      valor: 0.5,
+      erradas: { artigos: [], teses: [] },
     };
-    const res = { formato: "item", acertou: true, fracao: 1, faltou: [] } as Correcao;
-    expect(textoResposta(p, res)).toBe("Resposta: A tese principal, com o dispositivo.");
+    const res = {
+      formato: "tese",
+      acertou: true,
+      acertouTese: true,
+      acertouArtigo: true,
+      teseEsperada: "Desclassificação para furto simples",
+      artigoEsperado: "art. 155 do CP",
+      respondida: { artigos: [] },
+    } as Correcao;
+    expect(textoResposta(p, res)).toBe(
+      "Resposta: Desclassificação para furto simples — art. 155 do CP\n\nPadrão de respostas: A tese principal, com o dispositivo.",
+    );
   });
 
   it("a resposta entra depois das alternativas, com uma linha em branco", () => {

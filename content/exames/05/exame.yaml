@@ -1,15 +1,15 @@
-# V Exame de Ordem Unificado — Direito Penal (sem gabarito no acervo)
+# V Exame de Ordem Unificado — Direito Penal
+# Fonte: caderno (enunciados) e padrão de resposta da FGV (tabela de pontos, gabarito 1: apelação).
 id: "05"
 numero: 5
 numeral: V
 aplicacao: 2011-12-04
-corrigivel: false
 revisao:
   status: rascunho
   por: ""
   em: ""
-  notas: Sem gabarito no acervo; enunciados extraídos do caderno.
-observacoes: O arquivo de gabarito do V Exame no acervo é, na verdade, uma cópia do gabarito do IV Exame. A correção automática será liberada quando o padrão de resposta correto for incluído.
+  notas: Tabela transcrita do padrão de resposta do V Exame (o arquivo antigo do acervo era cópia do IV); termos a revisar.
+observacoes: "A FGV aceitou duas peças neste exame: Apelação (gabarito 1, a tabela usada aqui) ou Embargos de Declaração (gabarito 2: art. 382 do CPP, prazo de 2 dias, obscuridades e contradição da sentença), com tabela própria. O corretor automático avalia pela tabela da Apelação."
 peca:
   nome: Apelação
   tipo: apelacao
@@ -20,8 +20,85 @@ peca:
     A denúncia foi recebida em 12 de janeiro de 2007, e, após a instrução criminal, foi proferida, em 10 de dezembro de 2009, sentença penal julgando procedente a pretensão acusatória para condenar Eliete à pena final de dois anos de reclusão, em razão da prática do crime previsto no artigo 155, §2º, inciso IV, do Código Penal. Após a interposição de recurso de apelação exclusivo da defesa, o Tribunal de Justiça entendeu por bem anular toda a instrução criminal, ante a ocorrência de cerceamento de defesa em razão do indeferimento injustificado de uma pergunta formulada a uma testemunha. Novamente realizada a instrução criminal, ficou comprovado que, à época dos fatos, Eliete havia sido contratada por Cláudio havia uma semana e só tinha a obrigação de trabalhar às segundas, quartas e sextas-feiras, de modo que o suposto fato criminoso teria ocorrido no terceiro dia de trabalho da doméstica. Ademais, foi juntada aos autos a comprovação dos rendimentos da vítima, que giravam em torno de R$ 50.000,00 (cinquenta mil reais) mensais. Após a apresentação de memoriais pelas partes, em 9 de fevereiro de 2011, foi proferida nova sentença penal condenando Eliete à pena final de 2 (dois) anos e 6 (seis) meses de reclusão. Em suas razões de decidir, assentou o magistrado que a ré possuía circunstâncias judiciais desfavoráveis, uma vez que se reveste de enorme gravidade a prática de crimes em que se abusa da confiança depositada no agente, motivo pelo qual a pena deveria ser distanciada do mínimo. Ao final, converteu a pena privativa de liberdade em restritiva de direitos, consubstanciada na prestação de 8 (oito) horas semanais de serviços comunitários, durante o período de 2 (dois) anos e 6 (seis) meses em instituição a ser definida pelo juízo de execuções penais. Novamente não houve recurso do Ministério Público, e a sentença foi publicada no Diário Eletrônico em 16 de fevereiro de 2011.
 
     Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija, na qualidade de advogado de Eliete, com data para o último dia do prazo legal, o recurso cabível à hipótese, invocando todas as questões de direito pertinentes, mesmo que em caráter eventual. (Valor: 5,0)
-  gabarito_comentado: ""
-  itens: []
+  gabarito_comentado: |-
+    O candidato deverá redigir uma apelação, com fundamento no artigo 593, I, do CPP, a ser endereçada ao juiz de direito, com razões inclusas endereçadas ao Tribunal de Justiça. Nas razões recursais, o candidato deverá argumentar que a segunda sentença violou a proibição à reformatio in pejus – configurando-se caso de reformatio in pejus indireta –, contida no artigo 617 do CPP, de modo que, em razão do trânsito em julgado para a acusação, a pena não poderia exceder dois anos de reclusão, estando prescrita a pretensão punitiva estatal, na forma do artigo 109, V, do Código Penal, uma vez que, entre o recebimento da denúncia (12/01/2007) e a prolação de sentença válida (09/02/2011), transcorreu lapso superior a quatro anos.
+
+    Superada a questão, o candidato deverá argumentar que inexistia relação de confiança a justificar a incidência da qualificadora (Eliete trabalhava para Cláudio fazia uma semana) e que a quantia subtraída era insignificante, sobretudo tomando-se como referência o patrimônio concreto da vítima. Em razão disso, o candidato deverá requerer a reforma da sentença, de modo a se absolver a ré por atipicidade material de sua conduta, ante a incidência do princípio da insignificância/bagatela.
+
+    O candidato deve argumentar, ainda, que, na hipótese de não se reformar a sentença para se absolver a ré, ao menos deveria ser reduzida a pena em razão do furto privilegiado, substituindo-se a sanção por multa.
+
+    Em razão de tais pedidos, considerando-se a redução de pena, o candidato deveria requerer a substituição da pena privativa de liberdade por multa, bem como a aplicação da suspensão condicional da pena e/ou suspensão condicional do processo.
+
+    Deveria ainda o candidato argumentar sobre a impossibilidade do aumento da pena base realizado pelo magistrado sob o fundamento da enorme gravidade nos crimes em que se abusa da confiança depositada, pois tal motivo já foi levado em consideração para qualificar o delito, não podendo a apelante sofrer dupla punição pelo mesmo fato – bis in idem.
+
+    Por fim, o candidato deveria requerer um dos pedidos possíveis para a questão apresentada, tais como: 1- absolvição; 2- reconhecimento da reformatio in pejus, com a aplicação da pena em no máximo 2 anos e a consequente prescrição; 3- atipicidade da conduta, tendo em vista a aplicação do princípio da bagatela; 4- não incidência da qualificadora do abuso da confiança, com a consequente desclassificação para furto simples; 5- aplicação da Suspensão Condicional do Processo; 6- não sendo afastada a qualificadora, a incidência do parágrafo 2º do artigo 155 do CP; 7- a redução da pena pelo reconhecimento do bis in idem e a consequente prescrição; 8- aplicação de sursis; 9- inadequação da pena restritiva aplicada, tendo em vista o que dispõe o artigo 46, §3º, do CP.
+
+    Alternativamente, o candidato poderá elaborar embargos de declaração, abordando os pontos indicados no gabarito 2.
+  itens:
+    - n: "1"
+      descricao: "Estrutura correta (divisão das partes / indicação de local, data, assinatura) (0,25)."
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ local, "advogad* | assinatura | oab" ] }
+    - n: "2"
+      descricao: "Indicação correta dos dispositivos legais que dão ensejo à apelação: art. 593, I, do CPP (0,50)."
+      componentes:
+        - { id: c1, valor: 0.5, dispositivo: [ "art. 593, I, CPP" ] }
+    - n: "3"
+      descricao: "Endereçamento correto da interposição: juiz de direito da vara criminal (0,25)."
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ "vara criminal | juiz de direito | juizo de direito" ] }
+    - n: "4"
+      descricao: "Endereçamento correto das razões: Tribunal de Justiça (0,25)."
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ "tribunal de justica | tj" ] }
+    - n: "5"
+      secao: Razões
+      descricao: "Indicação de reformatio in pejus (0,20)."
+      componentes:
+        - { id: c1, valor: 0.2, termos: [ "reformatio in pejus | reformatio" ] }
+    - n: "6"
+      secao: Razões
+      descricao: "Desenvolvimento jurídico acerca da ocorrência de reformatio in pejus (0,40). Art. 617 do CPP (0,15)."
+      valores: [ 0, 0.15, 0.4, 0.55 ]
+      componentes:
+        - { id: c1, valor: 0.4, termos: [ "reformatio | reforma para pior | agrava*", "indireta | anula* | nulidade | recurso exclusivo | exclusiv* da defesa | transit*" ] }
+        - { id: c2, valor: 0.15, dispositivo: [ "art. 617, CPP" ] }
+    - n: "7"
+      secao: Razões
+      descricao: "Incidência da prescrição da pretensão punitiva (0,30). Desenvolvimento jurídico (0,45): pena limitada a 2 anos, prescrição em 4 anos (art. 109, V, do CP), transcorridos entre o recebimento da denúncia e a sentença válida."
+      valores: [ 0, 0.3, 0.45, 0.75 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ prescri*, "pretensao punitiva | punibilidade" ] }
+        - { id: c2, valor: 0.45, termos: [ prescri*, "quatro anos | 4 anos | 109 | dois anos | 2 anos" ] }
+    - n: "8"
+      secao: Razões
+      descricao: "Não incidência da qualificadora de abuso de confiança OU desclassificação para furto simples (0,30). Desenvolvimento jurídico (0,45): Eliete trabalhava para Cláudio havia uma semana."
+      valores: [ 0, 0.3, 0.45, 0.75 ]
+      componentes:
+        - { id: c1, valor: 0.3, alternativas: [ [ qualificadora, "afast* | nao incid* | inexist* | ausencia | nao se aplica | inaplic*" ], [ desclassifica*, furto simples ] ] }
+        - { id: c2, valor: 0.45, termos: [ confianca, "semana | recem | pouco tempo | terceiro dia | 3 dia | 3o dia" ] }
+    - n: "9"
+      secao: Razões
+      descricao: "Atipicidade material da conduta OU princípio da bagatela (0,30). Desenvolvimento jurídico (0,45): quantia insignificante diante do patrimônio da vítima."
+      valores: [ 0, 0.3, 0.45, 0.75 ]
+      componentes:
+        - { id: c1, valor: 0.3, termos: [ "atipic* | bagatela | insignificancia" ] }
+        - { id: c2, valor: 0.45, termos: [ "insignifica* | bagatela | atipic*", "patrimonio | rendimento* | renda | 50.000 | cinquenta mil | 50,00 | cinquenta reais" ] }
+    - n: "10"
+      secao: Razões
+      descricao: "Desenvolvimento jurídico acerca da incidência, em caráter eventual, da figura do furto privilegiado (0,25)."
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ privilegi* ], dispositivo: [ "art. 155, § 2º, CP" ] }
+    - n: "11"
+      secao: Razões
+      descricao: "Desenvolvimento jurídico acerca da substituição da pena privativa de liberdade por multa OU suspensão condicional da pena (sursis) e do processo OU diminuição da pena por bis in idem (0,25)."
+      componentes:
+        - { id: c1, valor: 0.25, alternativas: [ [ substitu*, multa ], [ sursis ], [ suspensao condicional ], [ bis in idem ] ] }
+    - n: "12"
+      secao: Pedidos
+      descricao: "Pedido correto, contemplando as teses desenvolvidas (0,25)."
+      componentes:
+        - { id: c1, valor: 0.25, termos: [ "requer* | pede | pedido*", "provimento | reforma* | absolvi* | absolver" ] }
 questoes:
   - n: 1
     enunciado: |-
@@ -34,8 +111,31 @@ questoes:
       **b) Antônio faz jus a algum benefício da Lei 9.099/95? Em caso afirmativo, qual(is)? (Valor: 0,30)**
 
       **c) Antônio praticou crime? Em caso afirmativo, qual? Em caso negativo, por que razão? (Valor: 0,65)**
-    gabarito_comentado: ""
-    itens: []
+    gabarito_comentado: |-
+      a) Não, pois, de acordo com o artigo 141, II, do CP, quando a ofensa for praticada contra funcionário público em razão de suas funções, a pena será aumentada de um terço, o que faz com que a sanção máxima abstratamente cominada seja superior a dois anos.
+
+      b) Sim, suspensão condicional do processo, nos termos do art. 89 da Lei 9.099/95.
+
+      c) Não. Antônio agiu em erro de tipo vencível/inescusável. Conforme previsão do artigo 20 do CP, nessa hipótese, o agente somente responderá pelo crime se for admitida a punição a título culposo, o que não é o caso, pois o crime em comento não admite a modalidade culposa. Vale lembrar que não houve dolo na conduta de Antônio.
+    itens:
+      - n: "A"
+        descricao: "Não, pois, de acordo com o artigo 141, II, do CP (0,10), quando a ofensa for praticada contra funcionário público em razão de suas funções, a pena será aumentada de um terço, o que faz com que a sanção máxima abstratamente cominada seja superior a dois anos (0,20)."
+        valores: [ 0, 0.1, 0.2, 0.3 ]
+        componentes:
+          - { id: c1, valor: 0.1, dispositivo: [ "art. 141, II, CP" ] }
+          - { id: c2, valor: 0.2, termos: [ "nao | incompet*", "um terco | 1/3 | aument*" ] }
+      - n: "B"
+        descricao: "Sim, suspensão condicional do processo (0,20). Art. 89 da Lei 9.099/95 (0,10)."
+        valores: [ 0, 0.1, 0.2, 0.3 ]
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ "suspensao condicional do processo | sursis processual" ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 89, Lei 9099" ] }
+      - n: "C"
+        descricao: "Não. Antônio agiu em erro de tipo OU ausência de dolo (0,50), nos termos do art. 20 (não existe modalidade culposa) (0,15)."
+        valores: [ 0, 0.5, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.5, termos: [ "erro de tipo | ausencia de dolo | sem dolo | nao houve dolo | nao agiu com dolo" ] }
+          - { id: c2, valor: 0.15, termos: [ culpos* ], dispositivo: [ "art. 20, CP" ], requer: c1 }
   - n: 2
     enunciado: |-
       Joaquina, ao chegar à casa de sua filha, Esmeralda, deparou-se com seu genro, Adaílton, mantendo relações sexuais com sua neta, a menor F.M., de 12 anos de idade, fato ocorrido no dia 2 de janeiro de 2011. Transtornada com a situação, Joaquina foi à delegacia de polícia, onde registrou ocorrência do fato criminoso. Ao término do Inquérito Policial instaurado para apurar os fatos narrados, descobriu-se que Adaílton vinha mantendo relações sexuais com a referida menor desde novembro de 2010. Apurou-se, ainda, que Esmeralda, mãe de F.M., sabia de toda a situação e, apesar de ficar enojada, não comunicava o fato à polícia com receio de perder o marido que muito amava.
@@ -47,8 +147,31 @@ questoes:
       **b) Esmeralda praticou crime? Em caso afirmativo, qual? (Valor: 0,5)**
 
       **c) Considerando que o Inquérito Policial já foi finalizado, deve a avó da menor oferecer queixa-crime? (Valor: 0,45)**
-    gabarito_comentado: ""
-    itens: []
+    gabarito_comentado: |-
+      a) Sim. Estupro de vulnerável, conduta descrita no art. 217-A do CP.
+
+      b) Sim. Esmeralda também praticou estupro de vulnerável (artigo 217-A do CP c/c artigo 13, §2º, “a”, do CP), uma vez que tinha a obrigação legal de impedir o resultado, sendo garantidora da menor.
+
+      c) Não, pois se trata de ação penal pública incondicionada, nos termos do art. 225, parágrafo único, do CP.
+    itens:
+      - n: "A"
+        descricao: "Sim. Estupro de vulnerável (0,20) – art. 217-A do CP (0,10)."
+        valores: [ 0, 0.1, 0.2, 0.3 ]
+        componentes:
+          - { id: c1, valor: 0.2, termos: [ estupro de vulneravel ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 217-A, CP" ] }
+      - n: "B"
+        descricao: "Sim. Estupro de vulnerável (0,30) – artigo 217-A do CP c/c artigo 13, §2º, “a”, do CP OU era garantidora (0,20). Não pontua só artigo ou fundamento isolados."
+        valores: [ 0, 0.3, 0.5 ]
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ estupro de vulneravel ] }
+          - { id: c2, valor: 0.2, termos: [ "garant* | dever de agir | obrigacao legal | impedir o resultado" ], dispositivo: [ "art. 13, § 2º, CP" ], requer: c1 }
+      - n: "C"
+        descricao: "Não, por se tratar de ação penal pública incondicionada (0,35). Art. 225, parágrafo único, do CP (0,10)."
+        valores: [ 0, 0.35, 0.45 ]
+        componentes:
+          - { id: c1, valor: 0.35, termos: [ incondicionada ] }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 225, parágrafo único, CP" ], requer: c1 }
   - n: 3
     enunciado: |-
       Jaime, brasileiro, solteiro, nascido em 10/11/1982, praticou, no dia 30/11/2000, delito de furto qualificado pelo abuso de confiança (art. 155, parágrafo 4º, II, do CP). Devidamente denunciado e processado, Jaime foi condenado à pena de 4 (quatro) anos e 2 (dois) meses de reclusão. A sentença transitou definitivamente em julgado no dia 15/01/2002, e o término do cumprimento da pena se deu em 20/03/2006. No dia 24/03/2006, Jaime subtraiu um aparelho de telefone celular que havia sido esquecido por Lara em cima do balcão de uma lanchonete. Todavia, sua conduta fora filmada pelas câmeras do estabelecimento, o que motivou o oferecimento de denúncia, por parte do Ministério Público, pela prática de furto simples (art. 155, caput, do CP). A denúncia foi recebida em 14/04/2006, e, em 18/10/2006, Jaime foi condenado à pena de 1 (um) ano de reclusão e 10 (dez) dias-multa. Foi fixado o regime inicial aberto para o cumprimento da pena privativa de liberdade, com sentença publicada no mesmo dia.
@@ -58,8 +181,23 @@ questoes:
       **a) Suponha que a acusação tenha se conformado com a sentença, tendo o trânsito em julgado para esta ocorrido em 24/10/2006. A defesa, por sua vez, interpôs apelação no prazo legal. Todavia, em virtude de sucessivas greves, adiamentos e até mesmo perda dos autos, até a data de 20/10/2010, o recurso da defesa não tinha sido julgado. Nesse sentido, o que você, como advogado, deve fazer? (Valor: 0,60)**
 
       **b) A situação seria diferente se ambas as partes tivessem se conformado com o decreto condenatório, de modo que o trânsito em julgado definitivo teria ocorrido em 24/10/2006, mas Jaime, temeroso de ficar mais uma vez preso, tivesse se evadido tão logo teve ciência do conteúdo da sentença, somente tendo sido capturado em 25/10/2010? (Valor: 0,65)**
-    gabarito_comentado: ""
-    itens: []
+    gabarito_comentado: |-
+      a) Ingressar com habeas corpus com fulcro no art. 648, VII, do CPP (extinção de punibilidade – art.107, IV, do CP), ou com mera petição diretamente dirigida ao relator do processo, considerando-se que a prescrição é matéria de ordem pública e pode até ser conhecida de ofício. O argumento a ser utilizado é a ocorrência de prescrição da pretensão punitiva superveniente/intercorrente/subsequente (causa extintiva de punibilidade), pois, já ciente do máximo de pena in concreto possível, qual seja, 1 ano e 10 dias-multa, o Estado teria até o dia 17/10/2010 para julgar definitivamente o recurso da defesa, o que não ocorreu, nos termos dos arts. 109, V; 110, §1º; e 117, I e IV, todos do CP. Vale lembrar que a prescrição da pretensão punitiva superveniente pressupõe o trânsito em julgado para a acusação (tal como ocorreu na espécie) e é contada a partir da publicação da sentença penal condenatória, último marco interruptivo da prescrição relacionado na questão. Vale ressaltar que não basta o candidato mencionar que houve prescrição. Tem que ser específico, dizendo ao menos que se trata de prescrição da pretensão punitiva.
+
+      b) Sim, a situação seria diferente, pois neste caso não haveria prescrição da pretensão executória nem outra modalidade qualquer. Como Jaime é reincidente, já que o 2º furto foi cometido após o trânsito em julgado definitivo de sentença que lhe condenou pelo 1º furto (art. 63 do CP), a prescrição da pretensão executória tem seu prazo acrescido de 1/3, de acordo com o artigo 110 do CP. Assim, o Estado teria até 23/02/2012 para capturar Jaime, nos termos dos arts. 110 caput e 112, I, do CP.
+    itens:
+      - n: "A"
+        descricao: "Habeas Corpus OU petição dirigida ao relator (0,30). Justificativa: prescrição da pretensão punitiva superveniente (0,30)."
+        valores: [ 0, 0.3, 0.6 ]
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ "habeas corpus | hc | peticao | relator" ] }
+          - { id: c2, valor: 0.3, termos: [ prescri*, "pretensao punitiva | superveniente | intercorrente | subsequente" ] }
+      - n: "B"
+        descricao: "Não haveria prescrição (0,30). Jaime é reincidente (0,35). OBS.: A justificativa isolada não pontua."
+        valores: [ 0, 0.3, 0.65 ]
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ "nao haveria prescricao | nao ha prescricao | nao ocorre* | nao ocorreria | inocorr* | nao estaria prescrit* | nao prescrev*" ] }
+          - { id: c2, valor: 0.35, termos: [ reincident* ], requer: c1 }
   - n: 4
     enunciado: |-
       João e Maria iniciaram uma paquera no Bar X na noite de 17 de janeiro de 2011. No dia 19 de janeiro do corrente ano, o casal teve uma séria discussão, e Maria, nitidamente enciumada, investiu contra o carro de João, que já não se encontrava em bom estado de conservação, com três exercícios de IPVA inadimplentes, a saber: 2008, 2009 e 2010. Além disso, Maria proferiu diversos insultos contra João no dia de sua festa de formatura, perante seu amigo Paulo, afirmando ser ele “covarde”, “corno” e “frouxo”. A requerimento de João, os fatos foram registrados perante a Delegacia Policial, onde a testemunha foi ouvida. João comparece ao seu escritório e contrata seus serviços profissionais, a fim de serem tomadas as medidas legais cabíveis. Você, como profissional diligente, após verificar não ter passado o prazo decadencial, interpõe Queixa-Crime ao juízo competente no dia 18/7/11.
@@ -75,5 +213,36 @@ questoes:
       **c) A quem deve ser endereçado o recurso? (0,30)**
 
       **d) Qual é a tese defendida? (0,35)**
-    gabarito_comentado: ""
-    itens: []
+    gabarito_comentado: |-
+      a) Como se trata de crime de menor potencial ofensivo, o recurso cabível é Apelação, de acordo com o artigo 82 da Lei 9099/95. Vale lembrar que a qualificadora do art. 163, parágrafo único, IV, do CP, relativa ao motivo egoístico do crime de dano, caracteriza-se apenas quando o agente pretende obter satisfação econômica ou moral. Assim, a conduta de Maria, motivada por ciúme, não se enquadra na hipótese e configura a modalidade simples do delito de dano (art. 163, caput). Cabe ainda destacar que não houve prejuízo considerável a João, já que o carro danificado estava em mau estado de conservação, o que afasta definitivamente a qualificadora tipificada no art. 163, parágrafo único, IV, do CP. Assim, o concurso material entre o crime patrimonial e a injúria não ultrapassa o patamar máximo e 2 anos, que define os crimes de menor potencial ofensivo e a competência dos Juizados Especiais Criminais, sendo cabível, portanto, apelação (art. 82 da Lei 9.099/95).
+
+      b) 10 dias, de acordo com o §1º do artigo 82 da Lei 9099/95;
+
+      c) Turma Recursal, consoante art. 82 da Lei 9099/95;
+
+      d) O prazo para interposição da queixa-crime é de seis meses a contar da data do fato, conforme previu o artigo 38 do CPP. Trata-se de prazo decadencial, isto é, prazo de natureza material, devendo ser contado de acordo com o disposto no artigo 10 do CP – inclui-se o primeiro dia e exclui-se o último.
+    itens:
+      - n: "A"
+        descricao: "Apelação (0,30)."
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ apelacao ] }
+      - n: "B"
+        descricao: "10 dias (0,30)."
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ "10 dias | dez dias" ] }
+      - n: "C"
+        descricao: "Turma Recursal (0,30)."
+        componentes:
+          - { id: c1, valor: 0.3, termos: [ turma recursal ] }
+      - n: "D"
+        descricao: "O juiz contou de forma equivocada o prazo decadencial (0,35): prazo material, contado pelo art. 10 do CP (inclui-se o primeiro dia)."
+        componentes:
+          - { id: c1, valor: 0.35, alternativas: [ [ decaden*, "equivoc* | errad* | incorret* | indevid* | nao ocorreu | nao houve | tempestiv*" ], [ primeiro dia ], [ "prazo material | natureza material" ] ] }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Eliete: Hebe, Cláudio: Plutão }   # a serviçal dos deuses; o deus da riqueza
+    q1: { Antônio: Príamo, Jorge: Midas }   # o pai que pede pelo filho; a ganância
+    q2: { Joaquina: Deméter, Esmeralda: Jocasta, Adaílton: Hades }   # a avó; a mãe; quem levou a menina
+    q3: { Jaime: Hermes, Lara: Ariadne }   # o furto
+    q4: { João: Hefesto, Maria: Afrodite, Paulo: Hermes }   # "corno": Hefesto, Afrodite e o deus que viu e riu

@@ -1,0 +1,122 @@
+# Grifos do GRIFO (.examples/Marcações GRIFO.md): Súmulas (marca-texto azul).
+# Uma entrada por súmula: `grupo` é o assunto em que ela se encaixa; `tema` liga, por "vide",
+# as entradas do mesmo assunto em outros lugares (mesmo texto = mesmo tema).
+# `palavras` são os trechos grifados do enunciado (cópia exata), não a súmula inteira.
+
+# ── Do STF: Competência ──
+- { cor: sumulas, grupo: "Competência", tema: "Competência: Júri x foro por prerrogativa de função", lei: sumulas-vinculantes, disp: s-45, palavras: ["Tribunal do Júri prevalece", "exclusivamente pela Constituição Estadual"] }
+- { cor: sumulas, grupo: "Competência", tema: "Mutatio libelli", lei: sumulas-stf, disp: s-453, palavras: ["Não se aplicam à segunda instância o art. 384", "circunstância elementar não contida"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: tráfico para o exterior", lei: sumulas-stf, disp: s-522, palavras: ["tráfico para o Exterior", "competência será da Justiça Federal"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: latrocínio", lei: sumulas-stf, disp: s-603, palavras: ["latrocínio é do Juiz singular", "não do Tribunal do Júri"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: prefeitos", lei: sumulas-stf, disp: s-702, palavras: ["Tribunal de Justiça para julgar prefeitos", "crimes de competência da Justiça comum estadual", "tribunal de segundo grau"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: foro por prerrogativa de função", lei: sumulas-stf, disp: s-704, palavras: ["Não viola as garantias do juiz natural", "atração por continência ou conexão"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: Júri x foro por prerrogativa de função", lei: sumulas-stf, disp: s-721, palavras: ["Tribunal do Júri prevalece", "exclusivamente pela Constituição estadual"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: crimes de responsabilidade", lei: sumulas-stf, disp: s-722, palavras: ["competência legislativa da União", "crimes de responsabilidade"] }
+
+# ── Do STF: Nulidades ──
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: falta de intimação da expedição de precatória", lei: sumulas-stf, disp: s-155, palavras: ["É relativa a nulidade", "falta de intimação da expedição de precatória"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: falta de quesito obrigatório no júri", lei: sumulas-stf, disp: s-156, palavras: ["É absoluta a nulidade", "falta de quesito obrigatório"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: não arguida no recurso da acusação", lei: sumulas-stf, disp: s-160, palavras: ["contra o réu, nulidade não argüida no recurso da acusação", "ressalvados os casos de recurso de ofício"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: ordem dos quesitos da defesa no júri", lei: sumulas-stf, disp: s-162, palavras: ["É absoluta a nulidade", "quesitos da defesa não precedem aos das circunstâncias agravantes"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: jurado que atuou em julgamento anterior", lei: sumulas-stf, disp: s-206, palavras: ["É nulo o julgamento ulterior", "jurado que funcionou em julgamento anterior"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: citação por edital do réu preso", lei: sumulas-stf, disp: s-351, palavras: ["É nula a citação por edital de réu prêso", "mesma unidade da Federação"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: citação por edital sem transcrição da denúncia", lei: sumulas-stf, disp: s-366, palavras: ["Não é nula a citação por edital", "indica o dispositivo da lei penal", "não transcreva a denúncia ou queixa"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: julgamento de recurso sem intimação ou pauta", lei: sumulas-stf, disp: s-431, palavras: ["sem prévia intimação, ou publicação da pauta", "salvo em habeas corpus"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: inobservância da prevenção", lei: sumulas-stf, disp: s-706, palavras: ["É relativa a nulidade", "competência penal por prevenção"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: falta de intimação para contrarrazões", lei: sumulas-stf, disp: s-707, palavras: ["falta de intimação do denunciado para oferecer contra-razões", "não a suprindo a nomeação de defensor dativo"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: renúncia do único defensor", lei: sumulas-stf, disp: s-708, palavras: ["renúncia do único defensor", "não foi previamente intimado para constituir outro"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: acórdão que recebe a denúncia rejeitada", lei: sumulas-stf, disp: s-709, palavras: ["Salvo quando nula a decisão de primeiro grau", "vale, desde logo, pelo recebimento dela"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: desaforamento sem ouvir a defesa", lei: sumulas-stf, disp: s-712, palavras: ["É nula a decisão que determina o desaforamento", "sem audiência da defesa"] }
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: falta e deficiência de defesa", lei: sumulas-stf, disp: s-523, palavras: ["falta da defesa constitui nulidade absoluta", "deficiência só o anulará se houver prova de prejuízo"] }
+
+# ── Do STJ: Competência ──
+- { cor: sumulas, grupo: "Competência", tema: "Competência: incompetência relativa", lei: sumulas-stj, disp: s-33, palavras: ["não pode ser declarada de ofício"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: contravenção penal", lei: sumulas-stj, disp: s-38, palavras: ["Justiça Estadual Comum", "contravenção penal", "ainda que praticada em detrimento"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: sociedade de economia mista", lei: sumulas-stj, disp: s-42, palavras: ["Justiça Comum Estadual", "sociedade de economia mista e os crimes praticados em seu detrimento"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: falsa anotação na carteira de trabalho", lei: sumulas-stj, disp: s-62, palavras: ["Compete à Justiça Estadual", "falsa anotação na carteira de trabalho", "empresa privada"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: moeda grosseiramente falsificada", lei: sumulas-stj, disp: s-73, palavras: ["grosseiramente falsificado", "estelionato, da competência da Justiça Estadual"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: documento falso", lei: sumulas-stj, disp: s-104, palavras: ["Compete à Justiça Estadual", "estabelecimento particular de ensino"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: estelionato com guias previdenciárias", lei: sumulas-stj, disp: s-107, palavras: ["Compete à Justiça Comum Estadual", "falsificação das guias de recolhimento", "não ocorrente lesão a autarquia federal"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: conexão", lei: sumulas-stj, disp: s-122, palavras: ["Justiça Federal o processo e julgamento unificado", "crimes conexos de competência federal e estadual"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: indígena", lei: sumulas-stj, disp: s-140, palavras: ["Compete à Justiça Comum Estadual", "indígena figure como autor ou vítima"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: crime contra funcionário público federal", lei: sumulas-stj, disp: s-147, palavras: ["Compete à Justiça Federal", "contra funcionário público federal", "relacionados com o exercício da função"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: contrabando e descaminho", lei: sumulas-stj, disp: s-151, palavras: ["contrabando ou descaminho", "prevenção do juízo federal do lugar da apreensão dos bens"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: falso testemunho na Justiça do Trabalho", lei: sumulas-stj, disp: s-165, palavras: ["Compete à Justiça Federal", "falso testemunho cometido no processo trabalhista"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: uso de passaporte falso", lei: sumulas-stj, disp: s-200, palavras: ["passaporte falso", "lugar onde o delito se consumou"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: prefeitos", lei: sumulas-stj, disp: s-209, palavras: ["Compete à Justiça Estadual", "verba transferida e incorporada ao patrimônio municipal"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: conexão", lei: sumulas-stj, disp: s-235, palavras: ["conexão não determina a reunião dos processos", "já foi julgado"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: documento falso", lei: sumulas-stj, disp: s-546, palavras: ["entidade ou órgão ao qual foi apresentado o documento", "não importando a qualificação do órgão expedidor"] }
+
+# ── Do STJ: Nulidades ──
+- { cor: sumulas, grupo: "Nulidades", tema: "Nulidade: prazo entre a pauta e o julgamento", lei: sumulas-stj, disp: s-117, palavras: ["prazo de 48 horas", "acarreta nulidade"] }
+
+# ── Extras do STF ──
+- { cor: sumulas, grupo: "Teoria do crime", tema: "Crime impossível", lei: sumulas-stf, disp: s-145, palavras: ["Não há crime", "torna impossível a sua consumação"] }
+- { cor: sumulas, grupo: "Prescrição", tema: "Prescrição", lei: sumulas-stf, disp: s-146, palavras: ["pena concretizada na sentença", "quando não há recurso da acusação"], nota: "Prescrição pela pena em concreto" }
+- { cor: sumulas, grupo: "Prescrição", tema: "Prescrição", lei: sumulas-stf, disp: s-604, palavras: ["prescrição pela pena em concreto", "somente da pretensão executória"], nota: "Prescrição pela pena em concreto" }
+- { cor: sumulas, grupo: "Crimes em espécie", tema: "Cheque sem fundos", lei: sumulas-stf, disp: s-246, palavras: ["não ter havido fraude", "não se configura o crime"] }
+- { cor: sumulas, grupo: "Crimes em espécie", tema: "Cheque sem fundos", lei: sumulas-stf, disp: s-554, palavras: ["após o recebimento da denúncia", "não obsta ao prosseguimento da ação penal"] }
+- { cor: sumulas, grupo: "Prazos e recursos", tema: "Prazos", lei: sumulas-stf, disp: s-310, palavras: ["intimação tiver lugar na sexta-feira", "terá início na segunda-feira imediata"] }
+- { cor: sumulas, grupo: "Prazos e recursos", tema: "Agravo em execução", lei: sumulas-stf, disp: s-700, palavras: ["É de cinco dias o prazo"] }
+- { cor: sumulas, grupo: "Prazos e recursos", tema: "Prazos", lei: sumulas-stf, disp: s-710, palavras: ["contam-se os prazos da data da intimação", "não da juntada aos autos"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: foro por prerrogativa de função", lei: sumulas-stf, disp: s-396, palavras: ["exceção da verdade", "prevalece a competência especial por prerrogativa de função", "ainda que já tenha cessado o exercício funcional"], nota: "Crimes contra a honra" }
+- { cor: sumulas, grupo: "Prazos e recursos", tema: "Prazo para o assistente da acusação", lei: sumulas-stf, disp: s-448, palavras: ["assistente recorrer, supletivamente", "imediatamente após o transcurso do prazo do Ministério Público"] }
+- { cor: sumulas, grupo: "Ação penal", tema: "Arquivamento do inquérito", lei: sumulas-stf, disp: s-524, palavras: ["Arquivado o inquérito policial", "sem novas provas"] }
+- { cor: sumulas, grupo: "Prescrição", tema: "Prescrição", lei: sumulas-stf, disp: s-592, palavras: ["crimes falimentares", "causas interruptivas da prescrição"], nota: "Crimes falimentares" }
+- { cor: sumulas, grupo: "Ação penal", tema: "Representação", lei: sumulas-stf, disp: s-594, palavras: ["exercidos, independentemente", "pelo ofendido ou por seu representante legal"], nota: "Direito de queixa ou representação" }
+- { cor: sumulas, grupo: "Concurso de crimes", tema: "Crime continuado", lei: sumulas-stf, disp: s-605, palavras: ["Não se admite continuidade delitiva"], nota: "Superada pelo art. 71, parágrafo único, do CP (reforma de 1984)" }
+- { cor: sumulas, grupo: "Concurso de crimes", tema: "Crime continuado", lei: sumulas-stf, disp: s-711, palavras: ["lei penal mais grave aplica-se ao crime continuado", "vigência é anterior à cessação da continuidade"] }
+- { cor: sumulas, grupo: "Ação penal", tema: "Estupro", lei: sumulas-stf, disp: s-608, palavras: ["violência real", "pública incondicionada"], nota: "Desde a Lei 13.718/2018, a ação nos crimes sexuais é sempre pública incondicionada (art. 225, CP)" }
+- { cor: sumulas, grupo: "Crimes em espécie", tema: "Latrocínio", lei: sumulas-stf, disp: s-610, palavras: ["quando o homicídio se consuma", "ainda que não realize o agente a subtração"] }
+- { cor: sumulas, grupo: "Lei penal no tempo", tema: "Lei mais benigna após o trânsito em julgado", lei: sumulas-stf, disp: s-611, palavras: ["Transitada em julgado a sentença condenatória", "Juízo das execuções", "lei mais benigna"] }
+- { cor: sumulas, grupo: "Prazos e recursos", tema: "Renúncia ao direito de apelação", lei: sumulas-stf, disp: s-705, palavras: ["sem a assistência do defensor", "não impede o conhecimento da apelação"] }
+- { cor: sumulas, grupo: "Ação penal", tema: "Representação", lei: sumulas-stf, disp: s-714, palavras: ["É concorrente a legitimidade", "mediante queixa", "condicionada à representação do ofendido"], nota: "Crime contra a honra de servidor público" }
+- { cor: sumulas, grupo: "Execução penal", tema: "Progressão de regime", lei: sumulas-stf, disp: s-716, palavras: ["Admite-se a progressão de regime", "antes do trânsito em julgado"] }
+- { cor: sumulas, grupo: "Execução penal", tema: "Progressão de regime", lei: sumulas-stf, disp: s-717, palavras: ["Não impede a progressão de regime", "prisão especial"] }
+- { cor: sumulas, grupo: "Dosimetria e regime", tema: "Fundamentação na fixação do regime", lei: sumulas-stf, disp: s-718, palavras: ["gravidade em abstrato do crime não constitui motivação idônea"] }
+- { cor: sumulas, grupo: "Dosimetria e regime", tema: "Fundamentação na fixação do regime", lei: sumulas-stf, disp: s-719, palavras: ["regime de cumprimento mais severo", "exige motivação idônea"] }
+- { cor: sumulas, grupo: "Transação penal e sursis processual", tema: "Suspensão condicional do processo", lei: sumulas-stf, disp: s-723, palavras: ["Não se admite a suspensão condicional do processo por crime continuado", "aumento mínimo de um sexto for superior a um ano"] }
+
+# ── Extras: Vinculantes ──
+- { cor: sumulas, grupo: "Prisão", tema: "Algemas", lei: sumulas-vinculantes, disp: s-11, palavras: ["Só é lícito o uso de algemas", "justificada a excepcionalidade por escrito", "nulidade da prisão ou do ato processual"] }
+- { cor: sumulas, grupo: "Provas", tema: "Acesso às provas", lei: sumulas-vinculantes, disp: s-14, palavras: ["É direito do defensor", "acesso amplo aos elementos de prova", "já documentados"] }
+- { cor: sumulas, grupo: "Crimes em espécie", tema: "Crime contra a ordem tributária", lei: sumulas-vinculantes, disp: s-24, palavras: ["Não se tipifica crime material contra a ordem tributária", "antes do lançamento definitivo do tributo"] }
+- { cor: sumulas, grupo: "Execução penal", tema: "Progressão de regime", lei: sumulas-vinculantes, disp: s-26, palavras: ["observará a inconstitucionalidade do art. 2º da Lei 8.072", "de modo fundamentado, a realização de exame criminológico"] }
+- { cor: sumulas, grupo: "Transação penal e sursis processual", tema: "Transação penal", lei: sumulas-vinculantes, disp: s-35, palavras: ["não faz coisa julgada material", "retoma-se a situação anterior"] }
+- { cor: sumulas, grupo: "Execução penal", tema: "Regime prisional", lei: sumulas-vinculantes, disp: s-56, palavras: ["falta de estabelecimento penal adequado", "não autoriza a manutenção do condenado em regime prisional mais gravoso"] }
+
+# ── Extras do STJ ──
+- { cor: sumulas, grupo: "Teoria do crime", tema: "Princípio da consunção", lei: sumulas-stj, disp: s-17, palavras: ["falso se exaure no estelionato", "é por este absorvido"] }
+- { cor: sumulas, grupo: "Crimes em espécie", tema: "Extorsão", lei: sumulas-stj, disp: s-96, palavras: ["consuma-se independentemente da obtenção da vantagem indevida"] }
+- { cor: sumulas, grupo: "Ato infracional", tema: "Medidas socioeducativas", lei: sumulas-stj, disp: s-108, palavras: ["competência exclusiva do juiz"] }
+- { cor: sumulas, grupo: "Ato infracional", tema: "Medidas socioeducativas", lei: sumulas-stj, disp: s-492, palavras: ["ato infracional análogo ao tráfico de drogas", "não conduz obrigatoriamente à imposição de medida socioeducativa de internação"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: abuso de autoridade por militar", lei: sumulas-stj, disp: s-172, palavras: ["Justiça Comum", "abuso de autoridade", "ainda que praticado em serviço"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: execução penal", lei: sumulas-stj, disp: s-192, palavras: ["juízo das execuções penais do Estado", "estabelecimentos sujeitos a administração estadual"] }
+- { cor: sumulas, grupo: "Competência", tema: "Competência: prefeitos", lei: sumulas-stj, disp: s-208, palavras: ["Compete à Justiça Federal", "verba sujeita a prestação de contas perante órgão federal"] }
+- { cor: sumulas, grupo: "Dosimetria e regime", tema: "Reincidência", lei: sumulas-stj, disp: s-241, palavras: ["não pode ser considerada", "agravante e, simultaneamente, como circunstância judicial"] }
+- { cor: sumulas, grupo: "Dosimetria e regime", tema: "Reincidência", lei: sumulas-stj, disp: s-444, palavras: ["inquéritos policiais e ações penais em curso", "agravar a pena-base"] }
+- { cor: sumulas, grupo: "Transação penal e sursis processual", tema: "Suspensão condicional do processo", lei: sumulas-stj, disp: s-243, palavras: ["não é aplicável", "concurso material, concurso formal ou continuidade delitiva", "ultrapassar o limite de um (01) ano"] }
+- { cor: sumulas, grupo: "Dosimetria e regime", tema: "Regime prisional", lei: sumulas-stj, disp: s-269, palavras: ["regime prisional semi-aberto aos reincidentes", "igual ou inferior a quatro anos", "favoráveis as circunstâncias judiciais"] }
+- { cor: sumulas, grupo: "Dosimetria e regime", tema: "Regime prisional", lei: sumulas-stj, disp: s-440, palavras: ["pena-base no mínimo legal", "vedado o estabelecimento de regime prisional mais gravoso", "gravidade abstrata do delito"] }
+- { cor: sumulas, grupo: "Execução penal", tema: "Progressão de regime", lei: sumulas-stj, disp: s-491, palavras: ["inadmissível a chamada progressão per saltum"] }
+- { cor: sumulas, grupo: "Dosimetria e regime", tema: "Regime prisional", lei: sumulas-stj, disp: s-493, palavras: ["inadmissível a fixação de pena substitutiva", "condição especial ao regime aberto"] }
+- { cor: sumulas, grupo: "Prescrição", tema: "Prescrição", lei: sumulas-stj, disp: s-415, palavras: ["suspensão do prazo prescricional", "máximo da pena cominada"], nota: "Suspensão da prescrição (art. 366 do CPP)" }
+- { cor: sumulas, grupo: "Prescrição", tema: "Prescrição", lei: sumulas-stj, disp: s-438, palavras: ["inadmissível a extinção da punibilidade pela prescrição", "pena hipotética"], nota: "Prescrição virtual" }
+- { cor: sumulas, grupo: "Execução penal", tema: "Exame criminológico", lei: sumulas-stj, disp: s-439, palavras: ["peculiaridades do caso", "decisão motivada"] }
+- { cor: sumulas, grupo: "Crimes em espécie", tema: "Corrupção de menores", lei: sumulas-stj, disp: s-500, palavras: ["independe da prova da efetiva corrupção do menor", "delito formal"] }
+- { cor: sumulas, grupo: "Lei penal no tempo", tema: "Retroatividade da lei", lei: sumulas-stj, disp: s-501, palavras: ["aplicação retroativa da Lei n. 11.343/2006", "vedada a combinação de leis"] }
+- { cor: sumulas, grupo: "Crimes em espécie", tema: "CDs e DVDs piratas", lei: sumulas-stj, disp: s-502, palavras: ["afigura-se típica", "expor à venda CDs e DVDs piratas"] }
+- { cor: sumulas, grupo: "Crimes em espécie", tema: "Furto privilegiado", lei: sumulas-stj, disp: s-511, palavras: ["reconhecimento do privilégio", "furto qualificado", "qualificadora for de ordem objetiva"] }
+- { cor: sumulas, grupo: "Execução penal", tema: "Falta grave", lei: sumulas-stj, disp: s-526, palavras: ["falta grave", "prescinde do trânsito em julgado"] }
+- { cor: sumulas, grupo: "Execução penal", tema: "Falta grave", lei: sumulas-stj, disp: s-534, palavras: ["interrompe a contagem do prazo para a progressão de regime", "reinicia a partir do cometimento"] }
+- { cor: sumulas, grupo: "Execução penal", tema: "Falta grave", lei: sumulas-stj, disp: s-535, palavras: ["não interrompe o prazo", "comutação de pena ou indulto"] }
+- { cor: sumulas, grupo: "Transação penal e sursis processual", tema: "Suspensão condicional do processo", lei: sumulas-stj, disp: s-536, palavras: ["não se aplicam", "rito da Lei Maria da Penha"], nota: "Nem a suspensão do processo nem a transação penal" }
+- { cor: sumulas, grupo: "Violência doméstica", tema: "Violência doméstica", lei: sumulas-stj, disp: s-542, palavras: ["lesão corporal resultante de violência doméstica", "pública incondicionada"] }
+- { cor: sumulas, grupo: "Violência doméstica", tema: "Violência doméstica", lei: sumulas-stj, disp: s-588, palavras: ["impossibilita a substituição", "restritiva de direitos"] }
+- { cor: sumulas, grupo: "Violência doméstica", tema: "Princípio da insignificância", lei: sumulas-stj, disp: s-589, palavras: ["inaplicável o princípio da insignificância", "âmbito das relações domésticas"] }
+- { cor: sumulas, grupo: "Violência doméstica", tema: "Violência doméstica", lei: sumulas-stj, disp: s-600, palavras: ["não se exige a coabitação"] }
+- { cor: sumulas, grupo: "Dosimetria e regime", tema: "Atenuantes", lei: sumulas-stj, disp: s-545, palavras: ["confissão do autor possibilita a atenuação da pena", "independentemente de ser utilizada na formação do convencimento"], nota: "Confissão espontânea (art. 65, III, d, do CP)" }
+- { cor: sumulas, grupo: "Crimes em espécie", tema: "Consumação do roubo", lei: sumulas-stj, disp: s-582, palavras: ["inversão da posse do bem", "ainda que por breve tempo", "prescindível a posse mansa e pacífica"] }
+- { cor: sumulas, grupo: "Crimes em espécie", tema: "Tráfico interestadual", lei: sumulas-stj, disp: s-587, palavras: ["desnecessária a efetiva transposição de fronteiras", "intenção de realizar o tráfico interestadual"] }
+- { cor: sumulas, grupo: "Crimes em espécie", tema: "Estupro de vulnerável", lei: sumulas-stj, disp: s-593, palavras: ["menor de 14 anos", "irrelevante eventual consentimento da vítima"] }
+- { cor: sumulas, grupo: "Teoria do crime", tema: "Princípio da insignificância", lei: sumulas-stj, disp: s-599, palavras: ["insignificância é inaplicável", "crimes contra a administração pública"] }

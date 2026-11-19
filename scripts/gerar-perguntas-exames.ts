@@ -4,15 +4,23 @@
 //                                                e precisa ser resumido à mão: o quiz só usa casos de até 700
 //                                                caracteres, ver MAX_CASO_PECA em src/quiz/banco.ts)
 //   content/perguntas/discursivas/<exame>.yaml   "Por dentro da peça" (um item da tabela por pergunta)
-//                                                e "Questões discursivas" (um subitem A/B por pergunta)
+//                                                e "Questões discursivas" (um subitem A/B por pergunta), no formato
+//                                                de teses (PerguntaTese em src/quiz/types.ts)
 //
-// Tudo sai como rascunho. Ao rodar de novo, o que já estiver com revisao.status: revisado é preservado.
+// Só vira pergunta o item que tem artigo (o fácil pergunta o artigo da tese, e o difícil pede os dois): endereçamento,
+// prazo e os itens sem dispositivo ficam de fora. A pergunta, a tese e a introdução de cada parte saem como rascunho
+// e precisam ser escritas à mão (ver docs/COMO-ADICIONAR.md): a tese nomeia o instituto e se lê sem a pergunta.
+//
+// Ao rodar de novo, o que já estiver com revisao.status: revisado é preservado, assim como as introduções escritas e a
+// lista `fora` (itens deixados de fora de propósito, que não são recriados).
 //
 // Uso: node scripts/gerar-perguntas-exames.ts
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { parse, stringify } from "yaml";
-import { ExameSchema, type Exame, type Item } from "../src/content/schema.ts";
+import { ExameSchema, type Exame, type Item, type Leis } from "../src/content/schema.ts";
+import { buildLexico, extrairCitacoes, type Citacao } from "../src/lib/correcao/citacoes.ts";
+import { normalize } from "../src/lib/correcao/normalize.ts";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const CONTENT = join(ROOT, "content");
@@ -89,52 +97,58 @@ const frequencia = new Map<string, number>();
 for (const e of exames) frequencia.set(e.peca.tipo, (frequencia.get(e.peca.tipo) ?? 0) + 1);
 const pecasComuns = [...frequencia.entries()].sort((a, b) => b[1] - a[1]).map(([t]) => t);
 
-// Banco de descrições por tipo de item, para as alternativas erradas do nível fácil.
-const banco = new Map<string, { exame: string; pecaTipo: string; texto: string }[]>();
-for (const e of exames) {
-  for (const i of e.peca.itens) {
-    const t = tipoDoItem(i);
-    if (!banco.has(t)) banco.set(t, []);
-    banco.get(t)!.push({ exame: e.id, pecaTipo: e.peca.tipo, texto: semPontos(i.descricao) });
-  }
-  e.questoes.forEach((q) =>
-    q.itens.forEach((i) => {
-      if (!banco.has("questao")) banco.set("questao", []);
-      banco.get("questao")!.push({ exame: e.id, pecaTipo: e.peca.tipo, texto: semPontos(i.descricao) });
-    }),
-  );
+// Os artigos de um item: os dispositivos da rubrica ou, sem eles, os citados na descrição ou no padrão de respostas.
+const leis = JSON.parse(readFileSync(join(ROOT, "src", "content", "generated", "leis.json"), "utf8")) as Leis;
+const lexico = buildLexico(leis);
+const ROMANOS = [[1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], [100, "C"], [90, "XC"], [50, "L"], [40, "XL"], [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]] as const;
+const romano = (n: number) => ROMANOS.reduce((s, [v, r]) => { for (; n >= v; n -= v) s += r; return s; }, "");
+const SIGLAS: Record<string, string> = { cp: "CP", cpp: "CPP", lep: "LEP", cf: "CRFB", lcp: "LCP" };
+const sigla = (d: string) => SIGLAS[d] ?? (leis.diplomas[d]?.numero ? `Lei ${leis.diplomas[d].numero}` : d);
+/** Uma citação vira uma spec por combinação: "art. 386, III ou VI" são duas alternativas. */
+function specs(c: Citacao): string[] {
+  if (c.tipo === "sumula") return [`Súmula ${c.vinculante ? "Vinculante " : ""}${c.n} ${c.tribunal?.toUpperCase() ?? ""}`.trim()];
+  if (!c.diploma) return [];
+  const out: string[] = [];
+  for (const p of c.pars.length ? c.pars : [""])
+    for (const i of c.incs.length ? c.incs : [""])
+      for (const a of c.als.length ? c.als : [""])
+        out.push([`art. ${c.art}`, p && (p === "unico" ? "parágrafo único" : `§ ${p}º`), i && romano(Number(i)), a, sigla(c.diploma)].filter(Boolean).join(", "));
+  return out;
 }
-const palavras = (t: string) =>
-  new Set(
-    t
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .split(/[^a-z0-9]+/)
-      .filter((w) => w.length >= 4),
-  );
-/** Alternativas erradas não podem dizer quase o mesmo que a certa. */
-function parecida(a: string, b: string) {
-  const x = palavras(a);
-  const y = palavras(b);
-  const comum = [...x].filter((w) => y.has(w)).length;
-  return comum / Math.max(1, Math.min(x.size, y.size)) >= 0.6;
+const citados = (texto: string) => [...new Set(extrairCitacoes(normalize(texto), lexico).flatMap(specs))];
+function artigosDo(item: Item, gabarito: string): string[] {
+  const daRubrica = dispositivosDe([item]);
+  if (daRubrica.length) return daRubrica;
+  const daDescricao = citados(item.descricao);
+  return daDescricao.length ? daDescricao : citados(gabarito);
 }
-function erradas(tipo: string, exame: string, pecaTipo: string, correta: string, n = 5): string[] {
-  const pool = (banco.get(tipo) ?? []).filter((x) => x.exame !== exame && x.texto.length > 15 && !parecida(x.texto, correta));
-  const mesmaPeca = pool.filter((x) => x.pecaTipo === pecaTipo);
-  const ordem = [...mesmaPeca, ...pool.filter((x) => x.pecaTipo !== pecaTipo)];
-  // determinístico: espalha pela lista em vez de sortear, para a regeração não mudar à toa
-  const passo = Math.max(1, Math.floor(ordem.length / n));
-  return [...new Set(ordem.filter((_, k) => k % passo === 0).map((x) => x.texto))].slice(0, n);
+/** O componente do ponto central (o que não é o dispositivo) dá a tese e os termos aceitos. */
+function pontoCentral(item: Item) {
+  const c = item.componentes.find((x) => !x.dispositivo && (x.termos || x.alternativas)) ?? item.componentes.find((x) => x.termos || x.alternativas);
+  return {
+    tese: semPontos(c?.rotulo ?? item.descricao).replace(/\.$/, ""),
+    aceitos: c ? (c.alternativas ?? [c.termos!]) : [["TODO"]],
+  };
 }
 
-function preservarRevisadas<T extends { id: string; revisao?: { status?: string } }>(arquivo: string, chave: string, novas: T[]): T[] {
-  if (!existsSync(arquivo)) return novas;
-  const antigas: T[] = parse(readFileSync(arquivo, "utf8"))?.[chave] ?? [];
+/**
+ * As revisadas substituem as geradas de mesmo id, e as que o gerador não produziria (um artigo posto à mão, por
+ * exemplo) continuam no arquivo, logo depois da pergunta que as precedia.
+ */
+function preservarRevisadas<T extends { id: string; revisao?: { status?: string } }>(antigas: T[], novas: T[]): T[] {
   const revisadas = new Map(antigas.filter((p) => p.revisao?.status === "revisado").map((p) => [p.id, p]));
-  return novas.map((p) => revisadas.get(p.id) ?? p);
+  const final = novas.map((p) => revisadas.get(p.id) ?? p);
+  const ids = new Set(final.map((p) => p.id));
+  antigas.forEach((p, k) => {
+    if (ids.has(p.id) || p.revisao?.status !== "revisado") return;
+    const anterior = antigas.slice(0, k).reverse().find((a) => ids.has(a.id));
+    final.splice(anterior ? final.findIndex((f) => f.id === anterior.id) + 1 : 0, 0, p);
+    ids.add(p.id);
+  });
+  return final;
 }
+const lerYaml = (arquivo: string) => (existsSync(arquivo) ? parse(readFileSync(arquivo, "utf8")) : null) ?? {};
+const resumoRascunho = (enunciado: string) => `RASCUNHO: ${semMarkdown(enunciado).replace(/\s+/g, " ").slice(0, 300)}`;
 
 mkdirSync(DIR_DISC, { recursive: true });
 const reais: Record<string, unknown>[] = [];
@@ -161,63 +175,75 @@ for (const e of exames) {
     });
   }
 
+  const arquivo = join(DIR_DISC, `${e.id}.yaml`);
+  const antigo = lerYaml(arquivo);
+  const fora = new Set<string>(antigo.fora ?? []);
+  const introducoes: Record<string, string> = { ...(antigo.introducoes ?? {}) };
   const perguntas: Record<string, unknown>[] = [];
+  const nova = (p: Record<string, unknown>, enunciado: string) => {
+    if (fora.has(p.id as string)) return;
+    introducoes[p.parte as string] ??= resumoRascunho(enunciado);
+    perguntas.push(p);
+  };
   // Por dentro da peça
   for (const i of e.peca.itens) {
     const tipo = tipoDoItem(i);
-    if (tipo === "fundamento" || tipo === "fechamento" || !i.componentes.length) continue;
-    const correta = semPontos(i.descricao);
-    const opcoesErradas = erradas(tipo, e.id, e.peca.tipo, correta);
-    if (opcoesErradas.length < 2) continue;
-    perguntas.push({
-      id: `${idSeguro(e.id)}-peca-${idSeguro(String(i.n))}`,
-      categoria: "peca-detalhe",
-      parte: "peca",
-      item: String(i.n),
-      secao: tipo,
-      caso: casoPeca,
-      comando: COMANDO[tipo](/raz/i.test(i.secao ?? "")),
-      gabarito: correta,
-      opcoes: { correta, erradas: opcoesErradas },
-      revisao: RASCUNHO,
-    });
+    if (tipo === "fundamento" || tipo === "fechamento" || tipo === "enderecamento" || tipo === "prazo" || !i.componentes.length) continue;
+    const artigos = artigosDo(i, i.descricao);
+    if (!artigos.length) continue;
+    nova(
+      {
+        id: `${idSeguro(e.id)}-peca-${idSeguro(String(i.n))}`,
+        categoria: "peca-detalhe",
+        parte: "peca",
+        item: String(i.n),
+        secao: tipo,
+        pergunta: `RASCUNHO: ${COMANDO[tipo](/raz/i.test(i.secao ?? ""))}`,
+        ...pontoCentral(i),
+        artigos,
+        gabarito: semPontos(i.descricao),
+        revisao: RASCUNHO,
+      },
+      e.peca.enunciado,
+    );
   }
   // Questões discursivas
   e.questoes.forEach((q, k) => {
-    const { caso, partes } = subitens(q.enunciado);
+    const { partes } = subitens(q.enunciado);
     for (const { letra, comando } of partes) {
-      const itens = q.itens.filter((i) => String(i.n).replace(/[.\d]+$/, "") === letra);
-      if (!itens.length || !itens.some((i) => i.componentes.length)) continue;
-      const correta = itens.map((i) => semPontos(i.descricao)).join(" ");
-      const opcoesErradas = erradas("questao", e.id, e.peca.tipo, correta);
-      if (opcoesErradas.length < 2) continue;
       // a pergunta usa o item do subitem; com vários (A1, A2), o primeiro com componentes
-      const item = itens.find((i) => i.componentes.length)!;
-      perguntas.push({
-        id: `${idSeguro(e.id)}-q${k + 1}-${letra.toLowerCase()}`,
-        categoria: "discursiva",
-        parte: `q${k + 1}`,
-        item: String(item.n),
-        caso,
-        comando,
-        gabarito: trechoGabarito(q.gabarito_comentado, letra),
-        opcoes: { correta, erradas: opcoesErradas },
-        revisao: RASCUNHO,
-      });
+      const item = q.itens.find((i) => String(i.n).replace(/[.\d]+$/, "") === letra && i.componentes.length);
+      if (!item) continue;
+      const gabarito = trechoGabarito(q.gabarito_comentado, letra);
+      const artigos = artigosDo(item, gabarito);
+      if (!artigos.length) continue;
+      nova(
+        {
+          id: `${idSeguro(e.id)}-q${k + 1}-${letra.toLowerCase()}`,
+          categoria: "discursiva",
+          parte: `q${k + 1}`,
+          item: String(item.n),
+          pergunta: `RASCUNHO: ${comando}`,
+          ...pontoCentral(item),
+          artigos,
+          gabarito,
+          revisao: RASCUNHO,
+        },
+        q.enunciado,
+      );
     }
   });
 
-  const arquivo = join(DIR_DISC, `${e.id}.yaml`);
-  const finais = preservarRevisadas(arquivo, "perguntas", perguntas as { id: string }[]);
+  const finais = preservarRevisadas((antigo.perguntas ?? []) as { id: string }[], perguntas as { id: string }[]);
   totalItens += finais.length;
   writeFileSync(
     arquivo,
-    `# Gerado por scripts/gerar-perguntas-exames.ts.\n` +
-      stringify({ exame: e.id, perguntas: finais }, { lineWidth: 0 }),
+    `# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).\n` +
+      stringify({ exame: e.id, introducoes, ...(fora.size ? { fora: [...fora] } : {}), perguntas: finais }, { lineWidth: 0 }),
   );
 }
 
-const finaisReais = preservarRevisadas(ARQ_REAIS, "perguntas", reais as { id: string }[]);
+const finaisReais = preservarRevisadas((lerYaml(ARQ_REAIS).perguntas ?? []) as { id: string }[], reais as { id: string }[]);
 writeFileSync(
   ARQ_REAIS,
   `# Gerado por scripts/gerar-perguntas-exames.ts: "Peça e fundamento" com o enunciado real de cada exame.\n` +

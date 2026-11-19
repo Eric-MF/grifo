@@ -294,3 +294,16 @@ questoes:
         componentes:
           - { id: c1, valor: 0.5, termos: [ desclassific* ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 418, CPP", "art. 419, CPP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q3, lei: "Lei 15.402/2026", texto: "A Lei 15.402/2026 reescreveu o art. 112 da LEP: a regra geral voltou a ser de 1/6 da pena, com 25% para o primário em crime com violência ou grave ameaça, 30% para o reincidente nesses crimes e 20% para o reincidente nos demais. O tráfico privilegiado continua sem ser hediondo (§ 5º), e Júlia, primária e sem violência, progrediria hoje com 1/6. Os 16% do gabarito valem para crimes anteriores a 8/5/2026." }
+    - { alvo: peca, lei: "Lei 15.397/2026", texto: "A Lei 15.397/2026 elevou a pena do furto simples (art. 155, caput, do CP) para reclusão de 1 a 6 anos (antes, de 1 a 4); a do furto qualificado (§ 4º) continua de 2 a 8 anos. Para o fato de 2023 vale a pena antiga, que não retroage em prejuízo, e as teses da peça continuam valendo." }
+    - { alvo: q2, lei: "Lei 14.994/2024 e Lei 15.383/2026", texto: "Depois desta prova, a Lei 14.994/2024 elevou a pena do descumprimento de medida protetiva (art. 24-A da Lei 11.340/2006) para reclusão de 2 a 5 anos, e multa (antes, detenção de 3 meses a 2 anos), e a da lesão corporal do art. 129, § 13, do CP para reclusão de 2 a 5 anos. A Lei 15.383/2026 incluiu o § 4º no art. 24-A, com aumento de 1/3 até a metade quando o descumprimento envolve as áreas de exclusão monitoradas ou a remoção da tornozeleira. Só o juiz continua podendo conceder fiança (§ 2º)." }
+  nomes:
+    peca: { Gustavo: Hermes }   # o entregador
+    q1: { Bruno: Castor, Márcia: Têmis, Camile: Atena }   # os sócios da Têmis Law
+    q2: { Márcia: Afrodite, Fábio: Ares }   # a agressão
+    q3: { Júlia: Ariadne }   # levava a droga escondida
+    q4: { Helena: Pandora, Bob: Cérbero }   # quem soltou a desgraça; o cachorro do clube
+    empresas: { Window Law: Têmis Law }   # a deusa da lei

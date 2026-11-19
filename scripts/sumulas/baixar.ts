@@ -31,6 +31,9 @@ const pastaImportar = posImportar >= 0 ? process.argv[posImportar + 1] : undefin
 // as páginas que o usuário indicou
 export const URL_STF_LISTA = "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=3345y";
 export const URL_STF_SUMULA = (id: string) => `https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=${id}`;
+// as súmulas vinculantes (só o STF as tem): a mesma página do portal, na base 26
+export const URL_SV_LISTA = "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26";
+export const URL_SV_SUMULA = (id: string) => `https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=${id}`;
 export const URL_STJ = (pagina: number) =>
   `https://scon.stj.jus.br/SCON/sumstj/toc.jsp?documentosSelecionadosParaPDF=&numDocsPagina=100&tipo_visualizacao=&data=&p=false&b=SUMU&h=true&i=${pagina}&l=10&ordenacao=-%40NUM%2C-%40DOCN`;
 export const URL_STJ_PAGINA_MAX = 20;
@@ -41,10 +44,11 @@ const arquivoCache = (...partes: string[]) => join(CACHE, ...partes);
 /** Tipo de uma súmula no conteúdo do site: o que o Vade Mecum mostra, com os extras à parte. */
 export interface VideSumula {
   texto: string;
-  alvo?: { tribunal: "stf" | "stj"; numero: number };
+  alvo?: { tribunal: "stf" | "stj" | "vinculantes"; numero: number };
 }
 export interface SumulaConteudo {
-  tribunal: "stf" | "stj";
+  /** a lista: as súmulas do STF, as do STJ ou as vinculantes (do STF) */
+  tribunal: "stf" | "stj" | "vinculantes";
   numero: number;
   status: "vigente" | "superada" | "cancelada";
   /** false quando só a lista foi baixada: o enunciado ainda não existe no Grifo */
@@ -61,6 +65,9 @@ export interface SumulaConteudo {
     julgamento?: string;
     fonte?: string;
     dataAprovacao?: string;
+    dataPublicacao?: string;
+    precedentesRepresentativos?: JurisprudenciaSTF[];
+    teses?: string[];
     jurisprudencia?: JurisprudenciaSTF[];
     observacoes?: string[];
     referenciaLegislativa?: NormaSTJ[];
@@ -126,13 +133,15 @@ async function obterPagina(arquivo: string, url: string, pronta: (html: string) 
 
 export const ehListaSTF = (html: string) => /sumula-item/.test(html);
 export const ehDetalheSTF = (html: string) => /Súmula\s+\d+/.test(html) && /parCOM/.test(html);
+export const ehDetalheSV = (html: string) => /class="titulo">\s*Súmula\s+Vinculante/.test(html) && /parCOM/.test(html);
 export const ehListaSTJ = (html: string) => /gridSumula/.test(html);
 
-/** O alvo de um "Vide": só o que o Grifo tem (STF e STJ, por número). Vinculantes e outros tribunais ficam só no texto. */
-function alvoDoVide(v: ObservacaoSTF["vide"]): VideSumula["alvo"] {
+/** O alvo de um "Vide": só o que o Grifo tem (STF, vinculantes e STJ, por número). Outros tribunais ficam só no texto. */
+export function alvoDoVide(v: ObservacaoSTF["vide"]): VideSumula["alvo"] {
   if (!v) return undefined;
   if (v.tribunal === "stf") return { tribunal: "stf", numero: v.numero };
   if (v.tribunal === "stj") return { tribunal: "stj", numero: v.numero };
+  if (v.tribunal === "stf-vinculante") return { tribunal: "vinculantes", numero: v.numero };
   return undefined;
 }
 

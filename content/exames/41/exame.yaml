@@ -118,7 +118,7 @@ peca:
     - n: "10"
       secao: Razões de apelação
       descricao: Afastamento da cassação da aposentadoria (0,30), sendo inadmissível a analogia prejudicial ao réu ou por ausência de previsão legal (0,25).
-      valores: [ 0, 0.25, 0.3 ]
+      valores: [ 0, 0.25, 0.3, 0.55 ]
       componentes:
         - { id: c1, valor: 0.3, termos: [ cassacao da aposentadoria | cassacao, afast* | nao ha | inadmiss* | incab* | descab* ] }
         - { id: c2, valor: 0.25, termos: [ analogia, desfavor* | prejudic* | previst* | expressa* | previsao ] }
@@ -177,7 +177,7 @@ questoes:
         valores: [ 0, 0.5, 0.6 ]
         componentes:
           - { id: c1, valor: 0.5, termos: [ recurso ordinario constitucional | recurso ordinario, descabi* | incabi* | inadmiss* | nao cabe | nao e cabivel ] }
-          - { id: c2, valor: 0.1, dispositivo: [ "art. 105, II, a, CRFB", "art. 30, Lei 8" ], requer: c1 }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 105, II, a, CRFB", "art. 30, Lei 8.038" ], requer: c1 }
       - n: B
         descricao: A tese defensiva é a impossibilidade de promover reformatio in pejus (0,55), na forma do Art. 617 do CPP ou da Súmula 160 do STF (0,10).
         valores: [ 0, 0.55, 0.65 ]
@@ -285,3 +285,12 @@ questoes:
         componentes:
           - { id: c1, valor: 0.5, termos: [ revisao criminal, morte | falecid* | falecimento | post mortem | pai ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 621, III, CPP", "art. 623, CPP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Abelardo: Midas, Lineu: Argos, Mendonça: Hermes }   # o empresário; o fiscal; o intermediário
+    q1: { Adriano: Órion }   # o caçador
+    q2: { William: Tântalo, Wiliam: Tântalo }   # a comida ao alcance (o descarte do Supermercado Cornucópia)
+    q3: { Luana: Jocasta, Joaquim: Édipo }   # o bebê abandonado
+    q4: { Jorge: Agamenon, Janaína: Electra }   # o pai e a filha
+    empresas: { Supermercado Boa Fartura: Supermercado Cornucópia }   # o chifre da fartura

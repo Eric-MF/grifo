@@ -1,0 +1,11 @@
+# Grifos do GRIFO (.examples/Marcações GRIFO.md): Pedidos (sublinhado vermelho).
+# Alguns destes dispositivos também estão nas Teses; aqui as palavras marcadas mostram o que deve ser PEDIDO.
+# `tema` igual em lugares diferentes gera o "vide" automático entre eles.
+
+- { cor: pedidos, grupo: "Código de Processo Penal", tema: "Decadência", lei: cpp, disp: art38, palavras: ["decairá no direito de queixa ou de representação"] }
+- { cor: pedidos, grupo: "Código Penal", tema: "Decadência", lei: cp, disp: art107.i4, palavras: ["decadência"], nota: "Causa extintiva da punibilidade" }
+- { cor: pedidos, grupo: "Código de Processo Penal", tema: "Absolvição", lei: cpp, disp: art386, palavras: ["absolverá o réu"] }
+- { cor: pedidos, grupo: "Código de Processo Penal", tema: "Reparação dos danos", lei: cpp, disp: art387.i4, palavras: ["reparação dos danos causados pela infração"], nota: "Pedido da queixa-crime" }
+- { cor: pedidos, grupo: "Código de Processo Penal", tema: "Absolvição sumária", lei: cpp, disp: art397, palavras: ["absolver sumariamente o acusado"] }
+- { cor: pedidos, grupo: "Código de Processo Penal", tema: "Absolvição sumária", lei: cpp, disp: art415, palavras: ["absolverá desde logo o acusado"], nota: "Absolvição no júri" }
+- { cor: pedidos, grupo: "Código de Processo Penal", tema: "Impronúncia", lei: cpp, disp: art414, palavras: ["impronunciará o acusado"] }

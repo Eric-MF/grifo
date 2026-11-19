@@ -57,3 +57,15 @@ next-env.d.ts
 
 # gerado no build (scripts/gerar-zip-padrao.ts)
 /public/downloads/grupos/
+
+# arquivos de apoio do pdf.js, copiados de node_modules pelo build-content
+/public/pdfjs/
+
+# prévias de compartilhar geradas (scripts/gerar-previas.ts): uma página e uma imagem por nota e por pontuação
+/public/c/
+
+# permissões locais do Claude Code (de cada máquina, não do projeto)
+/.claude
+/.claude/settings.local.json
+AGENTS.md
+CLAUDE.md

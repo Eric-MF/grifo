@@ -260,7 +260,7 @@ questoes:
         valores: [ 0, 0.5, 0.6 ]
         componentes:
           - { id: c1, valor: 0.5, termos: [ nao cabe | inadmiss* | nao e cabivel | erro grosseiro, juizado* ] }
-          - { id: c2, valor: 0.1, dispositivo: [ "art. 82, Lei 9" ], requer: c1 }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 82, Lei 9.099" ], requer: c1 }
   - n: 4
     enunciado: |-
       Hugo, José e Luiz, servidores públicos, foram denunciados por cobrarem vantagens indevidas a fim de praticarem ou deixarem de praticar atos de ofício, constituindo, assim, entre os três, uma organização criminosa. Foi demonstrado, objetivamente, haver entre os denunciados uma organização estruturalmente ordenada e com divisão de tarefas com o objetivo de praticar crimes de corrupção passiva (Art. 317 do CP).
@@ -296,3 +296,11 @@ questoes:
           - { id: c1, valor: 0.35, termos: [ atipic* ] }
           - { id: c2, valor: 0.15, termos: [ quatro pessoas | 4 pessoas | quatro integrantes | quatro ou mais | pelo menos quatro | ao menos quatro ] }
           - { id: c3, valor: 0.1, dispositivo: [ "art. 1, § 1º, Lei 12850" ], requer: c2 }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Arthur: Ares, Aline: Penélope }   # a violência depois da derrota
+    q1: { Sílvio: Teseu, Sônia: Ariadne }   # deixou a esposa dormindo, esperando o pior
+    q2: { André: Baco }   # a bebida no semiaberto
+    q3: { Lucas: Dédalo, Enzo: Ícaro, Maria: Ártemis }   # o pai e o filho; quem salvou a criança
+    q4: { Hugo: Midas, José: Plutão, Luiz: Tântalo }   # a concussão

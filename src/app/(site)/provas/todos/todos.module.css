@@ -1,0 +1,60 @@
+/* barra fixa no alto: o tipo (gabaritos ou cadernos), a versão e o índice */
+.barra {
+  position: sticky; top: 4.25rem; z-index: 3; display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center;
+  margin: 1.5rem 0 1.25rem; padding: 0.6rem 0.8rem; border: 1px solid var(--border); border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(8px); box-shadow: var(--shadow);
+}
+.grupo { display: inline-flex; flex-wrap: wrap; gap: 0.3rem; padding: 0.2rem; border-radius: 999px; background: var(--surface-2); }
+.grupo button {
+  padding: 0.35rem 0.85rem; border: 0; border-radius: 999px; background: transparent; color: var(--text); font: inherit; font-size: 0.88rem;
+  font-weight: 600; cursor: pointer;
+}
+.grupo button[aria-checked="true"] { background: var(--primary); color: var(--primary-ink); }
+.grupo button:focus-visible { outline: none; box-shadow: var(--focus); }
+.busca { flex: 1 1 18rem; }
+.busca input { width: 100%; padding: 0.45rem 0.9rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; }
+/* os achados da busca, logo abaixo da barra: cada um leva à página do PDF, com as palavras destacadas */
+.resultados {
+  margin: -0.5rem 0 1.5rem; padding: 0.75rem 0.9rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface);
+  max-height: 45vh; overflow: auto;
+}
+.resultados p { margin: 0 0 0.5rem; }
+.resumoBusca { font-weight: 600; }
+.listaAchados { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.2rem; }
+.listaAchados button {
+  display: grid; gap: 0.1rem; width: 100%; text-align: left; padding: 0.45rem 0.6rem; border: 0; border-radius: var(--radius-sm); background: transparent;
+  color: var(--text); font: inherit; font-size: 0.9rem; cursor: pointer;
+}
+.listaAchados button:hover, .listaAchados button:focus-visible { background: var(--surface-2); outline: none; }
+.listaAchados span { color: var(--muted); }
+.listaAchados mark { background: color-mix(in srgb, var(--accent) 45%, transparent); color: var(--text); border-radius: 3px; padding: 0 0.1em; }
+.ir select { padding: 0.45rem 0.8rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; }
+
+.documentos { display: grid; gap: 2.5rem; }
+.documento, .pagina { scroll-margin-top: 9.5rem; }
+.cabeca { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.9rem; margin-bottom: 0.75rem; }
+.cabeca h2 { margin: 0; font-size: 1.45rem; }
+.qual { color: var(--muted); font-size: 0.9rem; }
+.preliminar {
+  margin-left: 0.4em; padding: 0.05em 0.45em; border-radius: 999px; font-size: 0.72rem; font-weight: 700;
+  background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn);
+}
+.baixar { margin-left: auto; padding: 0.3rem 0.8rem; border-radius: 999px; border: 1px solid var(--border); font-weight: 700; font-size: 0.85rem; text-decoration: none; }
+.baixar:hover { border-color: var(--primary); text-decoration: none; }
+
+/* as páginas: folhas brancas (o PDF é branco também no tema escuro), uma embaixo da outra */
+.paginas { display: grid; gap: 0.9rem; max-width: 860px; margin: 0 auto; }
+.pagina { position: relative; width: 100%; background: #fff; border-radius: 4px; box-shadow: 0 1px 3px rgb(3 17 44 / 0.12), 0 6px 18px rgb(3 17 44 / 0.08); overflow: hidden; }
+.pagina img { display: block; width: 100%; height: 100%; }
+/* a palavra buscada, sobre a imagem da página: um marca-texto dourado */
+.destaque { position: absolute; background: color-mix(in srgb, var(--festa-ouro) 45%, transparent); mix-blend-mode: multiply; border-radius: 2px; pointer-events: none; }
+.carregando { color: var(--muted); text-align: center; padding: 2rem 0; }
+/* no celular, a barra não fica presa no alto (ocuparia a tela): o índice "Ir para" está nela, no começo da página */
+@media (max-width: 640px) {
+  .barra { position: static; gap: 0.45rem; padding: 0.5rem; }
+  .grupo button { padding: 0.3rem 0.7rem; font-size: 0.84rem; }
+  .ir { flex: 1 1 100%; }
+  .ir select { width: 100%; }
+  .documento, .pagina { scroll-margin-top: 4.5rem; }
+  .baixar { margin-left: 0; }
+}

@@ -100,7 +100,7 @@ peca:
       valores: [ 0, 0.15, 0.2, 0.25, 0.3, 0.35, 0.45 ]
       componentes:
         - { id: c1, valor: 0.2, termos: [ condicionada, representacao ] }
-        - { id: c2, valor: 0.1, dispositivo: [ "art. 88, Lei 9" ], requer: c1 }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 88, Lei 9.099" ], requer: c1 }
         - { id: c3, valor: 0.15, termos: [ interesse | desinteresse | nao desejava | nao quer | nao queria | nao manifestou ] }
     - n: "4"
       secao: Preliminares
@@ -358,3 +358,14 @@ questoes:
         componentes:
           - { id: c1, valor: 0.5, termos: [ assistente ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 268, CPP", "art. 271, CPP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: peca, lei: "Lei 14.994/2024 e Lei 15.455/2026", texto: "A Lei 14.994/2024 mudou a pena do art. 129, § 9º, do CP para reclusão de 2 a 5 anos (antes, detenção de 3 meses a 3 anos), e a Lei 15.455/2026 incluiu na descrição a relação de trabalho doméstico. Com a pena mínima de 2 anos, não cabe mais a suspensão condicional do processo, e o crime deixou de ser punido só com detenção. A lei mais grave não retroage ao fato de 2020, mas essas duas teses não valem para os fatos de hoje. A lesão continua leve, e a ação penal, sendo a vítima homem, continua dependendo de representação (art. 88 da Lei 9.099/1995)." }
+    - { alvo: q4, lei: "Lei 14.994/2024", texto: "A pena do art. 129, § 9º, do CP passou a ser de reclusão de 2 a 5 anos, e a lesão contra a mulher por razões da condição do sexo feminino, que inclui a violência doméstica e familiar, está no § 13, com a mesma pena. O acordo de não persecução penal continua vedado (art. 28-A, § 2º, IV, do CPP)." }
+  nomes:
+    peca: { Luiz: Anquises, Igor: Eneias }   # o velho que sai da casa em chamas (Troia)
+    q1: { Gabriel: Asclépio, Jorge: Prometeu }   # o estudante de farmácia; o tio doente do fígado
+    q2: { Luiz: Procusto, Henrique: Príamo, José: Hermes }   # o assaltante; o dono da casa; quem deu o horário
+    q3: { Fabrício: Sísifo }
+    q4: { Maria: Penélope, Francisco: Tântalo }   # a violência por causa da refeição

@@ -37,7 +37,7 @@ export interface MarcaTexto {
  * Parte um pedaço de texto (que começa na posição `ini` do bloco) nos cortes das marcas que o atravessam.
  * Cada parte sai com a marca que a cobre (a primeira, se duas se sobrepõem) ou sem marca.
  */
-export function fatiar(texto: string, ini: number, marcas: MarcaTexto[]): { texto: string; marca?: MarcaTexto }[] {
+export function fatiar<M extends Pick<MarcaTexto, "ini" | "fim"> = MarcaTexto>(texto: string, ini: number, marcas: readonly M[]): { texto: string; marca?: M }[] {
   const fim = ini + texto.length;
   const cortes = new Set([ini, fim]);
   for (const m of marcas) {
@@ -47,7 +47,7 @@ export function fatiar(texto: string, ini: number, marcas: MarcaTexto[]): { text
     }
   }
   const ordem = [...cortes].sort((a, b) => a - b);
-  const saida: { texto: string; marca?: MarcaTexto }[] = [];
+  const saida: { texto: string; marca?: M }[] = [];
   for (let k = 0; k < ordem.length - 1; k++) {
     const a = ordem[k]!;
     const b = ordem[k + 1]!;

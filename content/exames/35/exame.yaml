@@ -18,7 +18,7 @@ peca:
 
     Júlio foi localizado, confessou a prática delitiva e, realizado exame de alcoolemia, foi constatado que se encontrava completamente embriagado, sem capacidade de determinação do caráter ilícito do fato, em razão de situação não esperada, já que ele solicitou uma água com gás e limão em determinado bar, mas o proprietário, sem que Júlio soubesse, misturou cachaça na bebida, que ingerida junto com o remédio que vinha tomando para combater a dependência química, causou sua embriaguez. Foi, ainda, realizado exame de local, constando da conclusão que o imóvel foi destruído, havendo prejuízo considerável aos proprietários, mas que não havia ninguém no local no momento do crime e nem outras pessoas ou bens de terceiros a serem atingidos.
 
-    **Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.**
+    Com base em todos os elementos informativos produzidos, o Ministério Público ofereceu denúncia em face de Júlio, perante a 2ª Vara Criminal da Comarca de Florianópolis/SC, juízo competente, imputando-lhe a prática do crime do Art. 250 do Código Penal. Foi concedida liberdade provisória. Após citação e apresentação de defesa, entendeu o magistrado por realizar produção antecipada de provas, ouvindo as vítimas antes da audiência de instrução e julgamento, motivando sua decisão no risco de esquecimento, já que a pauta de audiência de processos de réu solto estava para data longínqua, tendo a defesa questionado a decisão. Após oitiva das vítimas, foi agendada audiência de instrução e julgamento, que foi realizada em 05 de março de 2021, ocasião em que os fatos acima narrados foram confirmados. Em seu interrogatório, o réu confirmou a autoria delitiva, destacando que pouco, porém, se recordava sobre o ocorrido.
 
     Após apresentação da manifestação cabível pelas partes, o juiz proferiu sentença condenando o réu nos termos da denúncia. No momento de aplicar a pena base, reconheceu a existência de maus antecedentes, aumentando a pena em 03 meses, tendo em vista que, na Folha de Antecedentes Criminais, acostada ao procedimento, constava uma condenação de Júlio pela prática do crime de tráfico, por fato ocorrido em 20 de abril de 2019, cujo trânsito em julgado ocorreu em 10 de março de 2020. Na segunda fase, reconheceu a presença da agravante do Art. 61, inciso II, alínea b, do Código Penal, aumentando a pena em 05 meses, já que o meio empregado por Júlio poderia resultar perigo comum. Não foram reconhecidas atenuantes da pena. Na terceira fase, não foram aplicadas causas de aumento ou de diminuição de pena, sendo mantida a pena de 03 anos e 8 meses de reclusão e multa de 15 dias, a ser cumprida em regime semiaberto, não sendo substituída a privativa de liberdade por restritiva de direitos com base no Art. 44, III, do CP. Intimado da sentença, o Ministério Público se manteve inerte, sendo a defesa técnica de Júlio intimada em 11 de julho de 2022, segunda-feira.
 
@@ -106,7 +106,7 @@ peca:
     - n: "7"
       secao: Razões de Apelação
       descricao: Atipicidade da conduta ou desclassificação para crime de dano qualificado (0,25), tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas (0,15) e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto (0,35).
-      valores: [ 0, 0.15, 0.25, 0.35, 0.4 ]
+      valores: [ 0, 0.15, 0.25, 0.35, 0.4, 0.5, 0.6, 0.75 ]
       componentes:
         - { id: c1, valor: 0.25, alternativas: [ [ atipic* ], [ desclassifica*, dano ] ] }
         - { id: c2, valor: 0.15, termos: [ numero indeterminado | perigo a pessoas | perigo comum | nao gerou perigo ] }
@@ -233,7 +233,7 @@ questoes:
     itens:
       - n: A
         descricao: Atipicidade objetiva da conduta (0,20), pois a figura delitiva da perseguição (Art. 147-A do CP); adota verbo nuclear no infinitivo (“perseguir”), o que denota crime habitual, a exigir reiteração do comportamento para a caracterização da tipicidade objetiva (0,40)
-        valores: [ 0, 0.2, 0.4 ]
+        valores: [ 0, 0.2, 0.4, 0.6 ]
         componentes:
           - { id: c1, valor: 0.2, termos: [ atipic* ] }
           - { id: c2, valor: 0.4, termos: [ habitual | reiteracao | reiterada* ] }
@@ -321,3 +321,27 @@ atualizado:
   revisao: { status: rascunho }
   notas:
     - { alvo: q4, lei: "Lei 15.280/2025 e Lei 15.353/2026", texto: "O art. 217-A do Código Penal (estupro de vulnerável) foi alterado pela Lei 15.280/2025, que fixou pena de reclusão de 10 a 18 anos (antes, de 8 a 15 anos), e pela Lei 15.353/2026, que acrescentou o § 4º-A (presunção absoluta de vulnerabilidade da vítima)." }
+  correcoes:
+    # a versão atualizada fica como se a prova tivesse saído com a alínea d: a alínea b só aparece no motivo
+    - alvo: peca
+      trocas:
+        - { de: "agravante do Art. 61, inciso II, alínea b, do Código Penal", para: "agravante do Art. 61, inciso II, alínea d, do Código Penal" }
+        - { de: " Alternativamente, aceita-se o pedido de afastamento da agravante por não haver a ocultação ou vantagem de outro ilícito.", para: "" }
+        - { de: "alínea d (ou b), do CP", para: "alínea d, do CP" }
+        - { de: " ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime", para: " ou por configurar bis in idem" }
+      motivo: >-
+        Na prova original, o juiz reconhece a agravante do Art. 61, inciso II, alínea b, do Código Penal, mas a justifica
+        pelo meio empregado, que poderia resultar perigo comum. A alínea b trata do crime cometido para facilitar ou
+        assegurar a execução, a ocultação, a impunidade ou vantagem de outro crime; o perigo comum é a alínea d. Tudo
+        indica um erro material da banca, que o padrão de resposta procura encobrir: o item da agravante passa a
+        indicar "alínea d (ou b)" e aceita, como alternativa, o afastamento por não haver a intenção de ocultação,
+        vantagem ou impunidade de outro crime, tese que só faz sentido para a alínea b. Como sustentar essa leitura exige
+        uma argumentação mais complexa, sem relação com o caso narrado, esta versão foi escrita como se a banca não
+        tivesse errado: o enunciado indica a alínea d, e o gabarito e os itens tratam só dela.
+  nomes:
+    peca: { Júlio: Prometeu }   # o fogo
+    q1: { Pedro: Hermes, Luiza: Dafne }
+    q2: { Roberto: Apolo, Fábio: Jacinto }   # a perseguição
+    q3: { Paulo: Ájax, Fábio: Odisseu }   # o lutador e o síndico
+    q4: { Arnaldo: Castor, Fábio: Pólux, Mônica: Hebe, Elena: Éris }   # os gêmeos; a menina de 14; a amiga ciumenta
+    empresas: { Ruan S/A: Olimpo S/A }

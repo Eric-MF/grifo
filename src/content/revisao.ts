@@ -11,6 +11,7 @@ import type { Dispositivo, LeiTexto } from "@/lib/revisao/tipos";
 import {
   AlteradorasArquivoSchema,
   ExameSchema,
+  HistoricoSchema,
   LeisSchema,
   ObjetivasArquivoSchema,
   PecasCatalogoSchema,
@@ -95,6 +96,7 @@ const ESQUEMAS: [RegExp, ZodType][] = [
   [/^content\/leis\.yaml$/, LeisSchema],
   [/^content\/leis-alteradoras\.yaml$/, AlteradorasArquivoSchema],
   [/^content\/pecas\.yaml$/, PecasCatalogoSchema],
+  [/^content\/historico\.yaml$/, HistoricoSchema],
   [/^content\/perguntas\/exames(-reais)?\.yaml$/, PerguntasArquivoSchema],
   [/^content\/perguntas\/discursivas\/[^/]+\.yaml$/, PerguntasItensArquivoSchema],
   [/^content\/objetivas\/[^/]+\.yaml$/, ObjetivasArquivoSchema],
@@ -103,7 +105,7 @@ const ESQUEMAS: [RegExp, ZodType][] = [
 
 /** YAML que o editor de revisão abre e grava, relativos à raiz do projeto. */
 export function arquivosEditaveis(): string[] {
-  const fixos = ["leis.yaml", "leis-alteradoras.yaml", "pecas.yaml", "perguntas/exames.yaml", "perguntas/exames-reais.yaml"].map((f) => `content/${f}`);
+  const fixos = ["leis.yaml", "leis-alteradoras.yaml", "pecas.yaml", "historico.yaml", "perguntas/exames.yaml", "perguntas/exames-reais.yaml"].map((f) => `content/${f}`);
   const pasta = (p: string) => readdirSync(join(DIR, p)).filter((f) => f.endsWith(".yaml")).map((f) => `content/${p}/${f}`);
   const exames = idsExames().map((id) => `content/exames/${id}/exame.yaml`);
   return [...fixos, ...pasta("objetivas"), ...pasta("perguntas/discursivas"), ...exames].filter((f) => existsSync(join(RAIZ, f)));

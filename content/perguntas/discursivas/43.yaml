@@ -1,552 +1,168 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "43"
+introducoes:
+  peca: "Arthur, primário, chegou bêbado em casa depois da derrota do seu time e deu um chute na esposa, Aline. As lesões foram descritas no laudo assinado pelo médico do hospital particular que a atendeu. Ele foi condenado por lesão corporal contra a mulher a 2 anos, com suspensão condicional da pena, e a pagar R$ 1.000 a Aline pelas despesas médicas, como pedira a denúncia. Só Arthur apelou, dizendo que faltou representação da vítima; que houve cerceamento de defesa, porque o juiz vetou perguntas sobre a vida sexual de Aline; que não houve exame de corpo de delito; que estava completamente embriagado, por ter bebido o dia todo com os amigos; que cabiam duas prestações pecuniárias no lugar da prisão; e que a indenização devia ser discutida no juízo cível. Você, advogado de Aline, assistente de acusação, foi intimado para se manifestar."
+  q1: "Sílvio queria que a esposa, Sônia, morresse e a convenceu a descansar debaixo de um coqueiro, torcendo para que um coco lhe caísse na cabeça. Caiu, e ela morreu; acidentes assim são raríssimos e absolutamente improváveis. A denúncia por feminicídio foi rejeitada, o Ministério Público recorreu, e, sem que Sílvio fosse citado ou chamado ao processo, o tribunal nomeou um defensor dativo, deu provimento ao recurso e recebeu a denúncia."
+  q2: "André, no semiaberto, foi acusado de ter e consumir bebida alcoólica no presídio, conduta que um decreto estadual define como falta grave. Em processo administrativo regular, com defesa, o diretor do presídio reconheceu a falta grave e determinou a regressão de André ao regime fechado."
+  q3: "Lucas esqueceu o filho Enzo, de 1 ano, dormindo no carro fechado sob sol forte, com sério risco de morte por desidratação. Maria, que passava, quebrou o vidro e salvou o bebê. Lucas ofereceu queixa-crime contra ela por dano, crime de menor potencial ofensivo; a queixa foi rejeitada, e Lucas interpôs recurso em sentido estrito."
+  q4: "Hugo, José e Luiz, servidores públicos, foram denunciados por corrupção passiva e por formarem, os três, uma organização criminosa estruturada, com divisão de tarefas. A única prova é a palavra de Hugo, que fez colaboração premiada homologada."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["43-peca-1", "43-peca-3", "43-peca-4", "43-peca-12"]
 perguntas:
-  - id: 43-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
-
-      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
-
-      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
-
-      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
-
-      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
-
-      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
-
-      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: A quem deve ser endereçada a peça?
-    gabarito: A petição de juntada deve ser endereçada ao Juizado de Violência Doméstica e Familiar contra a Mulher.
-    opcoes:
-      correta: A petição de juntada deve ser endereçada ao Juizado de Violência Doméstica e Familiar contra a Mulher.
-      erradas:
-        - "Endereçamento: Vara Criminal da Comarca do Rio de Janeiro"
-        - "Endereçamento: Juiz da Vara do Tribunal do Júri."
-        - "Endereçamento: Vara Criminal da Comarca de Goiânia/GO."
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-        - "Endereçamento: Tribunal de Justiça do Estado de Santa Catarina."
-    revisao: &a1
-      status: revisado
-  - id: 43-peca-3
-    categoria: peca-detalhe
-    parte: peca
-    item: "3"
-    secao: prazo
-    caso: |-
-      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
-
-      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
-
-      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
-
-      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
-
-      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
-
-      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
-
-      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Qual o prazo da peça e o seu fundamento?
-    gabarito: Prazo de 3 (três) dias, na forma do Art. 600, §1º, do CPP.
-    opcoes:
-      correta: Prazo de 3 (três) dias, na forma do Art. 600, §1º, do CPP.
-      erradas:
-        - "Prazo: 1º de setembro de 2023."
-        - "Tempestividade: 5 dias, na forma do Art. 593, caput, do CPP."
-        - "Tempestividade: prazo de cinco dias."
-    revisao: *a1
-  - id: 43-peca-4
-    categoria: peca-detalhe
-    parte: peca
-    item: "4"
-    secao: enderecamento
-    caso: |-
-      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
-
-      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
-
-      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
-
-      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
-
-      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
-
-      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
-
-      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: A quem devem ser endereçadas as razões?
-    gabarito: "Endereçamento: Tribunal de Justiça de Campo Belo."
-    opcoes:
-      correta: "Endereçamento: Tribunal de Justiça de Campo Belo."
-      erradas:
-        - "Endereçamento: Vara Criminal da Comarca do Rio de Janeiro"
-        - "Endereçamento: Juiz da Vara do Tribunal do Júri."
-        - "Endereçamento: Vara Criminal da Comarca de Goiânia/GO."
-        - Vara Criminal da Comarca de Campos/RJ.
-        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
-    revisao: *a1
   - id: 43-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: preliminar
-    caso: |-
-      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
-
-      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
-
-      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
-
-      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
-
-      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
-
-      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
-
-      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: A ação penal é pública incondicionada, por se tratar de violência doméstica e familiar contra a mulher, consoante Súmula 542 do STJ, ou Art. 41 da Lei nº 11.340/2006 ou ADI 4.424.
-    opcoes:
-      correta: A ação penal é pública incondicionada, por se tratar de violência doméstica e familiar contra a mulher, consoante Súmula 542 do STJ, ou Art. 41 da Lei nº 11.340/2006 ou ADI 4.424.
-      erradas:
-        - "Preliminarmente: Não conhecimento do recurso de Apelação, em razão da intempestividade, nos termos do art. 593 do CPP Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
-        - "Dispositivo legal: art. 2º, III, Lei 9.296/96 OU art. 2º, II, Lei 9.296/96."
-        - "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
-        - Nulidade em razão do cerceamento de defesa OU violação ao princípio da ampla defesa OU violação ao princípio do contraditório, já que o juiz proferiu decisão após juntada de documentação, sem dar vista às partes.
-        - Preliminarmente, nulidade da pronúncia ou nulidade da instrução, por violação ao princípio da ampla defesa e contraditório ou devido processo legal, nos termos do Art. 5º, inciso LIV ou LV, da CRFB/88 ou do Art. 564, inciso IV, do CPP
-    revisao: *a1
+    pergunta: "Que tese a assistente deve opor à alegação de falta de representação?"
+    tese: "Ação pública incondicionada: na lesão corporal em violência doméstica contra a mulher, não se exige representação"
+    aceitos: [ "incondicionada" ]
+    artigos: [ "Súmula 542 STJ", "art. 41, Lei 11.340" ]
+    gabarito: "A ação penal é pública incondicionada, por se tratar de violência doméstica e familiar contra a mulher, consoante Súmula 542 do STJ, ou Art. 41 da Lei nº 11.340/2006 ou ADI 4.424."
+    revisao: { status: revisado }
   - id: 43-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: preliminar
-    caso: |-
-      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
-
-      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
-
-      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
-
-      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
-
-      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
-
-      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
-
-      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Deve ser afastada a alegação de cerceamento de defesa, em razão da inadmissibilidade da utilização de circunstâncias ou elementos alheios aos fatos objeto de apuração, nos termos do Art. 400, § 1º, ou 400-A, inciso I, ou Art. 212, todos do CPP ou ADPF 1107.
-    opcoes:
-      correta: Deve ser afastada a alegação de cerceamento de defesa, em razão da inadmissibilidade da utilização de circunstâncias ou elementos alheios aos fatos objeto de apuração, nos termos do Art. 400, § 1º, ou 400-A, inciso I, ou Art. 212, todos do CPP ou ADPF 1107.
-      erradas:
-        - "Preliminarmente: Não conhecimento do recurso de Apelação, em razão da intempestividade, nos termos do art. 593 do CPP Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
-        - "Dispositivo legal: art. 2º, III, Lei 9.296/96 OU art. 2º, II, Lei 9.296/96."
-        - "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
-        - Nulidade em razão do cerceamento de defesa OU violação ao princípio da ampla defesa OU violação ao princípio do contraditório, já que o juiz proferiu decisão após juntada de documentação, sem dar vista às partes.
-        - Preliminarmente, nulidade da pronúncia ou nulidade da instrução, por violação ao princípio da ampla defesa e contraditório ou devido processo legal, nos termos do Art. 5º, inciso LIV ou LV, da CRFB/88 ou do Art. 564, inciso IV, do CPP
-    revisao: *a1
+    pergunta: "Que tese a assistente deve opor à alegação de cerceamento de defesa?"
+    tese: "É proibido perguntar sobre a vida sexual da vítima, fato alheio ao processo: o veto do juiz não cerceou a defesa"
+    aceitos: [ "proibid* | vedad* | alheio aos fatos | alheios aos fatos | estranh* aos fatos | dignidade da vitima | revitimiza*" ]
+    artigos: [ "art. 400-A, I, CPP", "art. 212, CPP" ]
+    gabarito: "Deve ser afastada a alegação de cerceamento de defesa, em razão da inadmissibilidade da utilização de circunstâncias ou elementos alheios aos fatos objeto de apuração, nos termos do Art. 400, § 1º, ou 400-A, inciso I, ou Art. 212, todos do CPP ou ADPF 1107."
+    revisao: { status: revisado }
   - id: 43-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
-
-      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
-
-      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
-
-      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
-
-      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
-
-      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
-
-      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Há prova suficiente da materialidade delitiva, diante do laudo médico fornecido pelo hospital onde Aline recebeu atendimento, nos termos do Art. 12, § 3º, da Lei nº 11.340/2006.
-    opcoes:
-      correta: Há prova suficiente da materialidade delitiva, diante do laudo médico fornecido pelo hospital onde Aline recebeu atendimento, nos termos do Art. 12, § 3º, da Lei nº 11.340/2006.
-      erradas:
-        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
-        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
-        - Aplicação do regime aberto para início do cumprimento da pena, na forma do Art. 33, §2º, alínea c, do Código Penal.
-        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
-        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
-    revisao: *a1
+    pergunta: "Que tese a assistente deve opor à falta de exame de corpo de delito?"
+    tese: "A materialidade está provada pelo laudo médico do hospital, que vale como prova na violência doméstica"
+    aceitos: [ "laudo medico | prontuario | boletim medico | laudos medicos" ]
+    artigos: [ "art. 12, § 3º, Lei 11.340" ]
+    gabarito: "Há prova suficiente da materialidade delitiva, diante do laudo médico fornecido pelo hospital onde Aline recebeu atendimento, nos termos do Art. 12, § 3º, da Lei nº 11.340/2006."
+    revisao: { status: revisado }
   - id: 43-peca-8
     categoria: peca-detalhe
     parte: peca
     item: "8"
     secao: merito
-    caso: |-
-      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
-
-      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
-
-      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
-
-      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
-
-      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
-
-      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
-
-      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A embriaguez voluntária ou culposa apresentada por Arthur não exclui a imputabilidade penal, na forma do Art. 28, inciso II, do CP.
-    opcoes:
-      correta: A embriaguez voluntária ou culposa apresentada por Arthur não exclui a imputabilidade penal, na forma do Art. 28, inciso II, do CP.
-      erradas:
-        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
-        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
-        - Aplicação do regime aberto para início do cumprimento da pena, na forma do Art. 33, §2º, alínea c, do Código Penal.
-        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
-        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
-    revisao: *a1
+    pergunta: "Que tese a assistente deve opor à alegação de embriaguez?"
+    tese: "A embriaguez voluntária não exclui a imputabilidade"
+    aceitos: [ "voluntaria | nao exclui a imputabilidade | nao exclui" ]
+    artigos: [ "art. 28, II, CP" ]
+    gabarito: "A embriaguez voluntária ou culposa apresentada por Arthur não exclui a imputabilidade penal, na forma do Art. 28, inciso II, do CP."
+    revisao: { status: revisado }
   - id: 43-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: merito
-    caso: |-
-      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
-
-      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
-
-      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
-
-      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
-
-      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
-
-      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
-
-      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Não estão presentes os requisitos para a substituição da pena privativa de liberdade por restritiva de direitos, por se tratar de crime praticado mediante violência, nos termos do Art. 44, inciso I, do CP ou súmula 588 do STJ.
-    opcoes:
-      correta: Não estão presentes os requisitos para a substituição da pena privativa de liberdade por restritiva de direitos, por se tratar de crime praticado mediante violência, nos termos do Art. 44, inciso I, do CP ou súmula 588 do STJ.
-      erradas:
-        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
-        - Absolvição pelo erro de tipo essencial, instituto descrito no artigo 20, caput, do CP que gera a atipicidade da conduta.
-        - Reconhecimento da causa de extinção da punibilidade, em razão da ocorrência de prescrição da pretensão punitiva estatal. Citação do art. 107, IV, do CP
-        - Subsidiariamente, afastar a qualificadora pois não há prova nos autos da idade da vítima, nos termos do Art. 213, §1º do CP
-        - Atipicidade da conduta ou desclassificação para crime de dano qualificado, tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto.
-    revisao: *a1
+    pergunta: "Que tese a assistente deve opor ao pedido de substituição da pena?"
+    tese: "Não cabe substituição por restritivas de direitos em crime com violência contra a mulher"
+    aceitos: [ [ "violencia", "nao cabe | vedad* | incabivel | impede" ] ]
+    artigos: [ "art. 44, I, CP", "Súmula 588 STJ" ]
+    gabarito: "Não estão presentes os requisitos para a substituição da pena privativa de liberdade por restritiva de direitos, por se tratar de crime praticado mediante violência, nos termos do Art. 44, inciso I, do CP ou súmula 588 do STJ."
+    revisao: { status: revisado }
   - id: 43-peca-10
     categoria: peca-detalhe
     parte: peca
     item: "10"
     secao: merito
-    caso: |-
-      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
-
-      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
-
-      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
-
-      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
-
-      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
-
-      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
-
-      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Não é cabível a aplicação isolada de pena pecuniária nos casos de violência doméstica e familiar contra a mulher, nos termos do Art. 17 da Lei nº 11.340/2006.
-    opcoes:
-      correta: Não é cabível a aplicação isolada de pena pecuniária nos casos de violência doméstica e familiar contra a mulher, nos termos do Art. 17 da Lei nº 11.340/2006.
-      erradas:
-        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
-        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
-        - Aplicação do regime aberto para início do cumprimento da pena, na forma do Art. 33, §2º, alínea c, do Código Penal.
-        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
-        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
-    revisao: *a1
+    pergunta: "Que tese a assistente deve opor ao pedido de duas prestações pecuniárias?"
+    tese: "É vedada a pena só pecuniária na violência doméstica e familiar contra a mulher"
+    aceitos: [ "isolad* | so pecuniaria | vedad*" ]
+    artigos: [ "art. 17, Lei 11.340" ]
+    gabarito: "Não é cabível a aplicação isolada de pena pecuniária nos casos de violência doméstica e familiar contra a mulher, nos termos do Art. 17 da Lei nº 11.340/2006."
+    revisao: { status: revisado }
   - id: 43-peca-11
     categoria: peca-detalhe
     parte: peca
     item: "11"
     secao: merito
-    caso: |-
-      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
-
-      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
-
-      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
-
-      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
-
-      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
-
-      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
-
-      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Correta a sentença ao estipular valor mínimo de indenização, pois houve regular comprovação dos valores, devidamente submetidos ao contraditório acerca do tema, nos termos do Art. 387, inciso IV, do CPP.
-    opcoes:
-      correta: Correta a sentença ao estipular valor mínimo de indenização, pois houve regular comprovação dos valores, devidamente submetidos ao contraditório acerca do tema, nos termos do Art. 387, inciso IV, do CPP.
-      erradas:
-        - "No mérito: manter a pena-base no mínimo legal, pois a existência de ações penais em curso sem trânsito em julgado ou inquéritos policiais não justificam o reconhecimento de circunstâncias judiciais prejudiciais, sob pena de violação do princípio da presunção de inocência (art. 5º, inciso LVII, da CF/88) OU na forma do Enunciado 444 da Súmula do STJ. Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
-        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
-        - Aplicação do regime aberto para início do cumprimento da pena, na forma do Art. 33, §2º, alínea c, do Código Penal.
-        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
-        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
-    revisao: *a1
-  - id: 43-peca-12
-    categoria: peca-detalhe
-    parte: peca
-    item: "12"
-    secao: pedido
-    caso: |-
-      Arthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da Comarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua então esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu um chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital particular onde Aline foi atendida.
-
-      Aline se habilitou como assistente de acusação e apresentou os comprovantes de pagamento de despesas médicas no valor de R$ 1.000,00 (mil reais), sendo certo que, na denúncia, o Ministério Público (MP) requereu a condenação de Arthur a pagar a indenização à vítima pelo valor correspondente.
-
-      Em autodefesa, Arthur se limitou a relatar que, no dia da suposta agressão, estava em estado de embriaguez completa, pois havia passado o dia ingerindo bebidas alcóolicas com seus amigos enquanto assistiam uma partida de futebol.
-
-      Após regular processo, foi prolatada a sentença que condenou Arthur, nos termos da denúncia, a uma pena de dois anos de reclusão, em regime aberto, concedendo a suspensão condicional da pena de dois anos com a condição de prestação de serviços à comunidade durante o primeiro ano de suspensão da pena. Condenou, ainda, Arthur ao pagamento de indenização à vítima Aline, no valor de R$ 1.000,00 (mil reais) relativo aos gastos dela com despesas médicas em razão da lesão sofrida.
-
-      As partes foram intimadas da sentença, sendo que o MP e o assistente de acusação não recorreram, ao passo que Arthur interpôs tempestiva apelação, arguindo, inicialmente, a nulidade do processo pela ausência de representação da ofendida, nos termos do Art. 88 da Lei nº 9.099/1995. Ainda em preliminar, sustentou cerceamento de defesa, ante o indeferimento de perguntas sobre a vida sexual da vítima. No mérito, requereu a sua absolvição, por ausência de prova da materialidade delitiva, pois, tratando-se de delito que deixa vestígios, era obrigatório ter sido realizado exame de corpo de delito. Além disso, alegou ausência de imputabilidade penal no momento dos fatos, pois havia ingerido grande quantidade de bebida alcóolica.
-
-      Subsidiariamente, postulou a substituição da pena privativa de liberdade por restritiva de direitos, defendendo o cabimento de duas penas de prestação pecuniária. Por fim, pleiteou o afastamento da condenação a indenizar Aline, pois a matéria deveria ser resolvida pelo Juízo cível.
-
-      Após a oitiva do MP, o(a) advogado(a) constituído(a) por Aline foi intimado(a) no dia 30 de maio de 2025 (sexta-feira), por determinação do Juízo, a fim de se manifestar conforme o direito.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Aline, a peça jurídica cabível, expondo todas as teses pertinentes de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo considerar os dias de segunda a sexta-feira úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Desprovimento do recurso, com a manutenção da sentença condenatória.
-    opcoes:
-      correta: Desprovimento do recurso, com a manutenção da sentença condenatória.
-      erradas:
-        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
-        - Absolvição com base na atipicidade da conduta ou art. 386, inciso III, do CPP.
-        - "Pedidos: Nulidade dos atos da instrução em razão do não oferecimento de proposta de suspensão condicional do processo OU encaminhamento dos autos ao Ministério Público para oferecimento de proposta de suspensão condicional do processo."
-        - Pedido de extinção da punibilidade do agente em relação ao delito imputado na denúncia, em razão da prescrição da pretensão punitiva estatal pela pena em abstrato do crime de homicídio, nos termos do Art. 107, inciso IV, do CP OU 109, inciso I, c/c Art. 115, ambos do CP
-        - Pedido de retratação, na forma do Art. 589 do CPP.
-    revisao: *a1
+    pergunta: "Que tese a assistente deve opor ao pedido de afastar a indenização?"
+    tese: "O valor mínimo de indenização pode ser fixado na sentença, se pedido e submetido ao contraditório"
+    aceitos: [ "valor minimo | contradit*" ]
+    artigos: [ "art. 387, IV, CPP" ]
+    gabarito: "Correta a sentença ao estipular valor mínimo de indenização, pois houve regular comprovação dos valores, devidamente submetidos ao contraditório acerca do tema, nos termos do Art. 387, inciso IV, do CPP."
+    revisao: { status: revisado }
   - id: 43-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      O casamento de Sílvio estava desgastado e ele desejava que Sônia, sua esposa, morresse. Assim, ele a convenceu a repousar embaixo de um coqueiro, na esperança de que um coco atingisse a sua cabeça. De fato, um coco caiu do coqueiro e atingiu a cabeça de Sônia, que veio a falecer.
-
-      Comprovou-se nos autos que Sílvio possuía o desejo de ver Sônia morta e que os acidentes fatais com coco são raríssimos e absolutamente improváveis. Sílvio foi denunciado pelo feminicídio de Sônia, mas a denúncia foi rejeitada.
-
-      Assim, o Ministério Público interpôs o competente recurso, sendo nomeado defensor dativo em favor de Sílvio, que até o momento, não foi citado nem intimado. O Tribunal deu provimento ao recurso e recebeu a inicial acusatória.
-
-      Como advogado(a) de Sílvio, responda às questões a seguir.
-    comando: A fim de afastar a imputação de feminicídio, qual a tese de Direito Penal a ser sustentada? Justifique.
-    gabarito: Atipicidade do fato, pois o resultado não decorre de qualquer conduta de Sílvio ou porque Não há nexo de causalidade entre a conduta de Sílvio e o resultado, nos termos do Art. 13 do CP.
-    opcoes:
-      correta: Atipicidade do fato, pois o resultado não decorre de qualquer conduta de Sílvio ou porque não há nexo de causalidade entre a conduta de Sílvio e o resultado, nos termos do Art. 13 do CP.
-      erradas:
-        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
-        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
-        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
-        - Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese de direito penal afasta a imputação de feminicídio?"
+    tese: "Atipicidade: não há nexo causal entre a conduta de Sílvio e a morte, um acaso imprevisível"
+    aceitos: [ "nexo | atipic* | causalidade" ]
+    artigos: [ "art. 13, CP" ]
+    gabarito: "Atipicidade do fato, pois o resultado não decorre de qualquer conduta de Sílvio ou porque Não há nexo de causalidade entre a conduta de Sílvio e o resultado, nos termos do Art. 13 do CP."
+    revisao: { status: revisado }
   - id: 43-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      O casamento de Sílvio estava desgastado e ele desejava que Sônia, sua esposa, morresse. Assim, ele a convenceu a repousar embaixo de um coqueiro, na esperança de que um coco atingisse a sua cabeça. De fato, um coco caiu do coqueiro e atingiu a cabeça de Sônia, que veio a falecer.
-
-      Comprovou-se nos autos que Sílvio possuía o desejo de ver Sônia morta e que os acidentes fatais com coco são raríssimos e absolutamente improváveis. Sílvio foi denunciado pelo feminicídio de Sônia, mas a denúncia foi rejeitada.
-
-      Assim, o Ministério Público interpôs o competente recurso, sendo nomeado defensor dativo em favor de Sílvio, que até o momento, não foi citado nem intimado. O Tribunal deu provimento ao recurso e recebeu a inicial acusatória.
-
-      Como advogado(a) de Sílvio, responda às questões a seguir.
-    comando: Independentemente do instrumento processual usado para impugnar o recebimento da denúncia, a fim de arguir a nulidade da decisão do Tribunal, indique a tese de Direito Processual Penal que deve ser apresentada. Fundamente.
-    gabarito: Constitui nulidade a falta de intimação do denunciado para a constituição de defensor e o oferecimento de contrarrazões ao recurso interposto contra a decisão de rejeição da denúncia, não a suprindo a nomeação de defensor dativo, nos termos do enunciado 707 da Súmula da Jurisprudência do Supremo Tribunal Federal.
-    opcoes:
-      correta: Constitui nulidade a falta de intimação do denunciado para a constituição de defensor e o oferecimento de contrarrazões ao recurso interposto contra a decisão de rejeição da denúncia, não a suprindo a nomeação de defensor dativo, nos termos do enunciado 707 da Súmula da Jurisprudência do Supremo Tribunal Federal ou Art. 263, caput, do CPP..
-      erradas:
-        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
-        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
-        - Não, pois viola o princípio da vedação da reformatio in pejus, tendo em vista que geraria prejuízo na aplicação do regime OU na prescrição OU na execução da pena
-        - O argumento é que a vantagem foi oferecida para particular e não para funcionário público, logo não configurado crime contra a Administração Pública.
-        - A condenação anterior à pena de multa não impede a concessão da suspensão condicional da pena, de acordo com o Art. 77, § 1º, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese processual permite anular a decisão do tribunal?"
+    tese: "Nulidade: o denunciado devia ser chamado a constituir defensor e contra-arrazoar o recurso, e o defensor dativo não supre essa falta"
+    aceitos: [ "nulidade | nula | nulo | contrarrazo* | contra-arrazo* | constituir defensor | constituir advogado" ]
+    artigos: [ "Súmula 707 STF", "art. 263, CPP" ]
+    gabarito: "Constitui nulidade a falta de intimação do denunciado para a constituição de defensor e o oferecimento de contrarrazões ao recurso interposto contra a decisão de rejeição da denúncia, não a suprindo a nomeação de defensor dativo, nos termos do enunciado 707 da Súmula da Jurisprudência do Supremo Tribunal Federal."
+    revisao: { status: revisado }
   - id: 43-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      André está cumprindo pena em regime semiaberto na Colônia Penal do Estado Alfa e foi acusado de portar e consumir bebida alcóolica dentro da unidade prisional. O regulamento carcerário local, aprovado por Decreto estadual, estabelece que a posse e o consumo de bebida alcóolica dentro do sistema penitenciário constitui falta grave.
-
-      Após tramitação de regular processo administrativo, ouvido o acusado, na presença de defesa técnica, e comprovados os fatos, o Diretor da unidade prisional aplicou a André as sanções pela prática da falta grave, e determinou a regressão ao regime fechado.
-
-      Como advogado(a) de André, responda às questões a seguir.
-    comando: Qual a tese de Direito Penal a ser sustentada pela defesa de André, a fim de afastar a natureza grave da falta imputada? Fundamente, indicando o princípio constitucional aplicável.
-    gabarito: Houve a violação ao princípio da legalidade penal, insculpido no Art. 5º, inciso XXXIX, da CRFB/88, ou no Art. 1º do CP, pois apenas por Lei Federal pode ser criada falta disciplinar de natureza grave, conforme o Art. 22, inciso I, da CRFB/88 ou Art. 49, da LEP.
-    opcoes:
-      correta: Violação ao princípio da legalidade penal, pois apenas por Lei Federal pode ser criada falta grave, nos termos do Art. 1º do CP, ou do Art. 5º, inciso XXXIX, ou do Art. 22, inciso I, ambos da CRFB/88 ou Art. 49, da LEP.
-      erradas:
-        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
-        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
-        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
-        - Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese afasta a natureza grave da falta imputada a André?"
+    tese: "Legalidade: só lei federal pode definir falta grave, não um decreto estadual"
+    aceitos: [ "legalidade | reserva legal | lei federal" ]
+    artigos: [ "art. 49, LEP", "art. 5, XXXIX, CRFB", "art. 22, I, CRFB", "art. 1, CP" ]
+    gabarito: "Houve a violação ao princípio da legalidade penal, insculpido no Art. 5º, inciso XXXIX, da CRFB/88, ou no Art. 1º do CP, pois apenas por Lei Federal pode ser criada falta disciplinar de natureza grave, conforme o Art. 22, inciso I, da CRFB/88 ou Art. 49, da LEP."
+    revisao: { status: revisado }
   - id: 43-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      André está cumprindo pena em regime semiaberto na Colônia Penal do Estado Alfa e foi acusado de portar e consumir bebida alcóolica dentro da unidade prisional. O regulamento carcerário local, aprovado por Decreto estadual, estabelece que a posse e o consumo de bebida alcóolica dentro do sistema penitenciário constitui falta grave.
-
-      Após tramitação de regular processo administrativo, ouvido o acusado, na presença de defesa técnica, e comprovados os fatos, o Diretor da unidade prisional aplicou a André as sanções pela prática da falta grave, e determinou a regressão ao regime fechado.
-
-      Como advogado(a) de André, responda às questões a seguir.
-    comando: Ainda que eventualmente se considerasse ocorrida a prática de falta grave, qual a tese a ser defendida pela defesa a fim de sustentar a nulidade da determinação de regressão ao regime imposta pelo Diretor da unidade prisional? Fundamente.
-    gabarito: Compete somente ao Juiz da Execução Penal decidir sobre a regressão de regime, nos termos do Art. 48, parágrafo único, ou Art. 54, ou 66, inciso III, alínea b, da Lei nº 7.210/1984.
-    opcoes:
-      correta: Compete somente ao Juiz da Execução Penal decidir sobre a regressão de regime, nos termos do Art. 48, parágrafo único, ou Art. 54, ou 66, inciso III, alínea b, da Lei nº 7.210/1984.
-      erradas:
-        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
-        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
-        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
-        - Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Ainda que houvesse falta grave, por que a regressão determinada pelo diretor é nula?"
+    tese: "Só o juiz da execução pode decidir a regressão de regime, não o diretor do presídio"
+    aceitos: [ "juiz da execucao | juizo da execucao | so o juiz | competencia do juiz" ]
+    artigos: [ "art. 66, III, b, LEP", "art. 48, parágrafo único, LEP", "art. 118, LEP" ]
+    gabarito: "Compete somente ao Juiz da Execução Penal decidir sobre a regressão de regime, nos termos do Art. 48, parágrafo único, ou Art. 54, ou 66, inciso III, alínea b, da Lei nº 7.210/1984."
+    revisao: { status: revisado }
   - id: 43-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Lucas, pai de Enzo, de 1 (um) ano de idade, esqueceu o filho dormindo no carro, deixando de entregá-lo na creche, e foi para o trabalho. Neste dia, a temperatura da cidade estava muito alta, e, como Enzo foi deixado no carro estacionado sob forte sol, havia sério risco de falecer por desidratação em pouco tempo.
-
-      Entretanto, por sorte, Maria passava pelo local e resgatou o infante, sem lesão, após quebrar o vidro do veículo.
-
-      Em razão de tais fatos, Lucas ofereceu queixa-crime em face de Maria pelo delito de dano (Art. 163 do CP), perante o Juízo ordinariamente competente. Rejeitada a queixa-crime, o querelante interpôs recurso em sentido estrito, na forma do Art. 581, inciso I, do CPP.
-
-      Como advogado(a) de Maria, responda às questões a seguir.
-    comando: Qual a tese de Direito Penal você deve apresentar em favor de Maria? Justifique.
-    gabarito: Excludente de ilicitude, em razão do estado de necessidade, na forma do Art. 23, inciso I, ou do Art. 24, ambos do CP.
-    opcoes:
-      correta: Excludente de ilicitude, em razão do estado de necessidade, na forma forma do Art. 23, inciso I, ou do Art. 24, ambos do CP.
-      erradas:
-        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
-        - "João não cometeu qualquer crime, pois o delito descrito no artigo 122 do CP só se consuma com a ocorrência de morte ou de lesão corporal grave OU há crime, mas o fato não é punível por faltar a condição objetiva de punibilidade Obs.: respostas incompletas não são pontuadas."
-        - "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O argumento é que a vantagem foi oferecida para particular e não para funcionário público, logo não configurado crime contra a Administração Pública.
-        - A condenação anterior à pena de multa não impede a concessão da suspensão condicional da pena, de acordo com o Art. 77, § 1º, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese de direito penal favorece Maria?"
+    tese: "Estado de necessidade de terceiro, que exclui a ilicitude"
+    aceitos: [ "estado de necessidade | excludente de ilicitude | exclui a ilicitude" ]
+    artigos: [ "art. 24, CP", "art. 23, I, CP" ]
+    gabarito: "Excludente de ilicitude, em razão do estado de necessidade, na forma do Art. 23, inciso I, ou do Art. 24, ambos do CP."
+    revisao: { status: revisado }
   - id: 43-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Lucas, pai de Enzo, de 1 (um) ano de idade, esqueceu o filho dormindo no carro, deixando de entregá-lo na creche, e foi para o trabalho. Neste dia, a temperatura da cidade estava muito alta, e, como Enzo foi deixado no carro estacionado sob forte sol, havia sério risco de falecer por desidratação em pouco tempo.
-
-      Entretanto, por sorte, Maria passava pelo local e resgatou o infante, sem lesão, após quebrar o vidro do veículo.
-
-      Em razão de tais fatos, Lucas ofereceu queixa-crime em face de Maria pelo delito de dano (Art. 163 do CP), perante o Juízo ordinariamente competente. Rejeitada a queixa-crime, o querelante interpôs recurso em sentido estrito, na forma do Art. 581, inciso I, do CPP.
-
-      Como advogado(a) de Maria, responda às questões a seguir.
-    comando: Em face do recurso interposto pelo querelante, qual a tese preliminar de Direito Processual Penal você deve adotar? Fundamente.
-    gabarito: O recurso interposto é inadmissível, configurando erro grosseiro, pois não cabe recurso em sentido estrito no rito dos Juizados Especiais Criminais, nos termos do Art. 82 da Lei nº 9.099/1995.
-    opcoes:
-      correta: O recurso interposto é inadmissível, configurando erro grosseiro, pois não cabe recurso em sentido estrito no rito dos Juizados Especiais Criminais, na forma do Art. 82 da Lei nº 9.099/1995.
-      erradas:
-        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
-        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
-        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
-        - O argumento é que, diante da parcial procedência do pedido, deveria ter sido analisada a possibilidade de oferecimento de proposta de suspensão condicional do processo, nos termos da Súmula 337 do STJ OU art. 89 da Lei 9.099/95.
-        - A condenação anterior à pena de multa não impede a concessão da suspensão condicional da pena, de acordo com o Art. 77, § 1º, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que preliminar a defesa de Maria deve opor ao recurso de Lucas?"
+    tese: "Inadmissibilidade do recurso em sentido estrito no Juizado: contra a rejeição da queixa cabe apelação, e o erro é grosseiro"
+    aceitos: [ "inadmiss* | nao cabe | erro grosseiro | apelacao" ]
+    artigos: [ "art. 82, Lei 9.099" ]
+    gabarito: "O recurso interposto é inadmissível, configurando erro grosseiro, pois não cabe recurso em sentido estrito no rito dos Juizados Especiais Criminais, nos termos do Art. 82 da Lei nº 9.099/1995."
+    revisao: { status: revisado }
   - id: 43-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      Hugo, José e Luiz, servidores públicos, foram denunciados por cobrarem vantagens indevidas a fim de praticarem ou deixarem de praticar atos de ofício, constituindo, assim, entre os três, uma organização criminosa. Foi demonstrado, objetivamente, haver entre os denunciados uma organização estruturalmente ordenada e com divisão de tarefas com o objetivo de praticar crimes de corrupção passiva (Art. 317 do CP).
-
-      Com base em tais fatos, foram dados como incursos nas penas do Art. 317 do CP e do Art. 2º da Lei nº 12.850/2013, em concurso material. A prova das acusações foi respaldada, exclusivamente, na palavra de Hugo, que celebrou acordo de colaboração premiada com o Ministério Público, devidamente homologado pela autoridade judiciária competente.
-
-      Na qualidade de advogado(a) constituído pelos acusados José e Luiz, responda às questões a seguir.
-    comando: Qual é a tese de Direito Processual Penal apta a sustentar a rejeição da denúncia em relação a todos os delitos por ausência de justa causa? Fundamente.
-    gabarito: Quanto à tese processual, deve ser lembrado que a palavra do colaborador, sem provas de corroboração, é insuficiente para respaldar o recebimento da denúncia, na forma do Art. 4º, § 16, inciso II, da Lei nº 12.850/2013.
-    opcoes:
-      correta: A palavra do colaborador, sem provas de corroboração, é insuficiente para respaldar o recebimento da denúncia, na forma do Art. 4º, § 16, inciso II, da Lei nº 12.850/2013.
-      erradas:
-        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
-        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
-        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
-        - Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese processual leva à rejeição da denúncia, por falta de justa causa, quanto a todos os crimes?"
+    tese: "A palavra do colaborador, sem provas de corroboração, não basta para receber a denúncia"
+    aceitos: [ "corrobor* | so a palavra | apenas a palavra" ]
+    artigos: [ "art. 4, § 16, II, Lei 12.850" ]
+    gabarito: "Quanto à tese processual, deve ser lembrado que a palavra do colaborador, sem provas de corroboração, é insuficiente para respaldar o recebimento da denúncia, na forma do Art. 4º, § 16, inciso II, da Lei nº 12.850/2013."
+    revisao: { status: revisado }
   - id: 43-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Hugo, José e Luiz, servidores públicos, foram denunciados por cobrarem vantagens indevidas a fim de praticarem ou deixarem de praticar atos de ofício, constituindo, assim, entre os três, uma organização criminosa. Foi demonstrado, objetivamente, haver entre os denunciados uma organização estruturalmente ordenada e com divisão de tarefas com o objetivo de praticar crimes de corrupção passiva (Art. 317 do CP).
-
-      Com base em tais fatos, foram dados como incursos nas penas do Art. 317 do CP e do Art. 2º da Lei nº 12.850/2013, em concurso material. A prova das acusações foi respaldada, exclusivamente, na palavra de Hugo, que celebrou acordo de colaboração premiada com o Ministério Público, devidamente homologado pela autoridade judiciária competente.
-
-      Na qualidade de advogado(a) constituído pelos acusados José e Luiz, responda às questões a seguir.
-    comando: Em relação ao delito de organização criminosa, qual é a tese de Direito Penal apta a sustentar a absolvição sumária? Fundamente.
-    gabarito: Quanto à tese de direito material, deve ser sustentada a atipicidade da conduta, ante a inexistência de quatro pessoas na composição da organização criminosa, conforme previsto pelo Art. 1º, § 1º, da Lei nº 12.850/2013.
-    opcoes:
-      correta: Atipicidade da conduta, ante a inexistência de quatro pessoas na composição da organização criminosa, conforme exigido pelo Art. 1º, § 1º, da Lei nº 12.850/2013.
-      erradas:
-        - O recurso cabível da sentença do magistrado é a Apelação, cujo fundamento legal é previsto no Art. 593, inciso I, do CPP, com prazo de interposição de 05 dias.
-        - "A condição jurídica de João se alteraria, na medida em que o resultado de lesões corporais de natureza grave consuma o crime de instigação, auxílio e induzimento ao suicídio, devendo João responder pelo crime previsto no artigo 122 do CP da forma consumada. Obs.1: respostas incompletas não são pontuadas. Obs.2: a mera indicação da sanção penal não é pontuada. Obs.3: a mera transcrição do artigo não é pontuada."
-        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
-        - Aplicação da escusa absolutória OU presente causa de isenção de pena, tendo em vista que o réu era pai da vítima, nos termos do Art. 181, inciso II, do Código Penal.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese de direito penal leva à absolvição sumária pela organização criminosa?"
+    tese: "Atipicidade da organização criminosa, que exige pelo menos quatro pessoas"
+    aceitos: [ "quatro pessoas | 4 pessoas | quatro ou mais | 4 ou mais | atipic*" ]
+    artigos: [ "art. 1, § 1º, Lei 12.850" ]
+    gabarito: "Quanto à tese de direito material, deve ser sustentada a atipicidade da conduta, ante a inexistência de quatro pessoas na composição da organização criminosa, conforme previsto pelo Art. 1º, § 1º, da Lei nº 12.850/2013."
+    revisao: { status: revisado }

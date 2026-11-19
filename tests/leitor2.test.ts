@@ -1,14 +1,9 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import { describe, expect, it, vi } from "vitest";
-import { parse } from "yaml";
 
 vi.mock("@/lib/storage", () => ({ lerJSON: (_: string, d: unknown) => d, gravarJSON: () => true }));
 const { htmlBloco, mapaAncoras } = await import("../src/lib/leis/html.ts");
 const { artigoDigitado, buscarTexto, sugerirArtigos } = await import("../src/lib/leis/busca.ts");
 const { imantar, indicePorPosicao, modoPorPosicao, mover, proximoPonto, secoesDosArtigos } = await import("../src/lib/leis/rolagem.ts");
-const { grifoDe } = await import("../src/lib/leis/grifos.ts");
-const { SISTEMAS_PRONTOS } = await import("../src/lib/leis/legendas.ts");
 
 const C = { b: "b", txt: "txt", ref: "ref", atos: "atos", ato: "ato", info: "inf", infoLinha: "infl", estrela: "est", naoEncontrada: "nao", rotulo: "rot", tipos:{ estrutura: "e", rubrica: "r", artigo: "a", paragrafo: "p", inciso: "i", alinea: "al", texto: "t" } };
 const bloco = (o: Record<string, unknown>) => ({ superada: false, atos: [], ...o }) as never;
@@ -114,29 +109,5 @@ describe("slide lateral", () => {
       { k: 0, rotulo: "Título II" },
       { k: 2, rotulo: "Título III" },
     ]);
-  });
-});
-
-describe("grifos prontos (content/grifos.yaml)", () => {
-  const prontos = parse(readFileSync(join(import.meta.dirname, "..", "content", "grifos.yaml"), "utf8"));
-  it("cada regra usa uma cor do seu sistema", () => {
-    for (const [sistema, regras] of Object.entries(prontos) as [string, { rotulo: string }[]][]) {
-      const cores = SISTEMAS_PRONTOS.find((s) => s.id === sistema)!.cores.map((c) => c.rotulo);
-      for (const r of regras) expect(cores, `${sistema}: ${r.rotulo}`).toContain(r.rotulo);
-    }
-  });
-  it("área leva a cor; destaque é grifado", () => {
-    const g = grifoDe(prontos, "materias", "cpp");
-    expect(g("art581.i4")).toMatchObject({ regra: { rotulo: "Recursos" }, destaque: true });
-    expect(g("art580")).toMatchObject({ regra: { rotulo: "Recursos" }, destaque: false });
-    expect(g("art70")).toMatchObject({ regra: { rotulo: "Competência" }, destaque: false });
-    expect(g("art1")).toBeNull();
-    const t = grifoDe(prontos, "teses", "cpp");
-    expect(t("art387.p1")?.regra.rotulo).toBe("Pedidos acessórios");
-    expect(t("art387")).toBeNull();
-    const cf = grifoDe(prontos, "materias", "cf");
-    expect(cf("art5.i57")).toMatchObject({ regra: { rotulo: "Direitos fundamentais" }, destaque: true });
-    expect(cf("art5.i1")).toMatchObject({ destaque: false });
-    expect(cf("art102.i1.a-a")?.regra.rotulo).toBe("Competência");
   });
 });

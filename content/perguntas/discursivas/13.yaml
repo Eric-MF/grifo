@@ -1,548 +1,114 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "13"
+introducoes:
+  peca: "Diogo pulou o muro de três metros de uma casa e levou joias, celulares, um notebook e dinheiro, R$ 9 mil no total. Foi condenado por violação de domicílio em concurso material com furto qualificado pela escalada, a 4 anos e 40 dias no semiaberto, sem nenhum benefício. O juiz aplicou a agravante da reincidência por causa de uma condenação por estelionato proferida uma semana antes, ainda sem trânsito em julgado, por um fato posterior ao furto. Você defende Diogo na apelação."
+  q1: "Parado numa blitz com o carro todo irregular, Gustavo cochichou à esposa, na fila: 'Vou oferecer cem reais pra ele liberar a gente.' Um policial atrás dele ouviu e o prendeu em flagrante por tentativa de corrupção ativa."
+  q2: "Antônio, faxineiro de uma empresa, entrou com uma chave falsa na sala do chefe e levou na bolsa uma escultura de R$ 250. Foi preso por policiais 400 metros depois de sair do prédio. Primário, foi condenado por furto qualificado pelo uso de chave falsa, consumado, a 2 anos."
+  q4: "Pedro foi condenado por tráfico privilegiado, com a redução máxima da pena. O juiz fixou o regime inicial fechado só porque a lei dos crimes hediondos o determina e negou a substituição da pena porque a Lei de Drogas a veda nesse crime."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["13-peca-1", "13-peca-4", "13-peca-5-2b", "13-peca-5-3", "13-peca-6a", "13-peca-6b", "13-peca-6c", "13-peca-6d", "13-peca-6e"]
 perguntas:
-  - id: 13-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento da petição de interposição: Juiz de Direito da ___ Vara Criminal da Comarca ___."
-    opcoes:
-      correta: "Endereçamento da petição de interposição: Juiz de Direito da ___ Vara Criminal da Comarca ___."
-      erradas:
-        - "Endereçamento correto das razões: Tribunal de Justiça do Estado."
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro."
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - "Endereçamento: Tribunal de Justiça do Estado de Minas Gerais"
-        - "Endereçamento: Juízo do Tribunal do Júri da Comarca de São Paulo/SP"
-    revisao: &a1
-      status: revisado
-  - id: 13-peca-4
-    categoria: peca-detalhe
-    parte: peca
-    item: "4"
-    secao: enderecamento
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: A quem devem ser endereçadas as razões?
-    gabarito: "Endereçamento das razões: Tribunal de Justiça do Estado ___."
-    opcoes:
-      correta: "Endereçamento das razões: Tribunal de Justiça do Estado ___."
-      erradas:
-        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
-        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG..
-        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
-    revisao: *a1
   - id: 13-peca-5-1
     categoria: peca-detalhe
     parte: peca
     item: "5.1"
     secao: merito
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "Diogo entrou na casa só para furtar. O que deve acontecer com a condenação por violação de domicílio?"
+    tese: "Consunção: a violação de domicílio foi meio para o furto e é absorvida por ele"
+    aceitos: [ "consun* | absorc* | absorvid* | absorve" ]
+    artigos: [ "art. 386, III, CPP", "art. 150, CP" ]
     gabarito: "Da aplicação do princípio da consunção ou absorção: o crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou crime-meio, essencial à execução do crime-fim; deve ser excluída a condenação pela violação de domicílio."
-    opcoes:
-      correta: "Da aplicação do princípio da consunção ou absorção: o crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou crime-meio, essencial à execução do crime-fim; deve ser excluída a condenação pela violação de domicílio."
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
-        - Da tese da incidência da atenuante da menoridade penal relativa
-        - Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
-        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 13-peca-5-2a
     categoria: peca-detalhe
     parte: peca
-    item: 5.2a
+    item: "5.2a"
     secao: merito
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "Diogo pode ser considerado reincidente por causa da condenação por estelionato?"
+    tese: "Não há reincidência: a condenação não transitou em julgado e o fato é posterior ao furto"
+    aceitos: [ "nao e reincidente | nao ha reincidencia | nao reincidente | sem reincidencia | nao pode | primario" ]
+    artigos: [ "art. 63, CP" ]
     gabarito: "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-    opcoes:
-      correta: "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
-        - Da tese da incidência da atenuante da menoridade penal relativa
-        - Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
-        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
-    revisao: *a1
-  - id: 13-peca-5-2b
-    categoria: peca-detalhe
-    parte: peca
-    item: 5.2b
-    secao: merito
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: O delito não foi praticado após o trânsito em julgado de condenação anterior; sentença condenatória recorrível não gera reincidência.
-    opcoes:
-      correta: O delito não foi praticado após o trânsito em julgado de condenação anterior; sentença condenatória recorrível não gera reincidência.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
-        - Da tese da incidência da atenuante da menoridade penal relativa
-        - Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
-        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
-    revisao: *a1
-  - id: 13-peca-5-3
-    categoria: peca-detalhe
-    parte: peca
-    item: "5.3"
-    secao: merito
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Da consequente diminuição de pena.
-    opcoes:
-      correta: Da consequente diminuição de pena.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
-        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
-        - Reconhecimento da atenuante da menoridade relativa, já que menor de 21 anos na data dos fatos, conforme Art. 65, inciso I, do Código Penal.
-        - A prática de falta grave não gera o reinício da contagem do prazo de indulto, nos termos da Súmula 535 do STJ.
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 13-peca-5-4
     categoria: peca-detalhe
     parte: peca
     item: "5.4"
     secao: merito
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
-    opcoes:
-      correta: Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Atipicidade da conduta ou desclassificação para crime de dano qualificado, tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou perigo a número indeterminado de pessoas e o crime de incêndio é crime de perigo comum, exigindo prova de perigo concreto.
-        - Em consequência da pena base no mínimo legal deve ser fixado o regime semiaberto, pois a imposição obrigatória do regime inicial fechado é inconstitucional.
-        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
-        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    revisao: *a1
+    pergunta: "Afastada a reincidência, que regime inicial a defesa deve pedir?"
+    tese: "Regime inicial aberto"
+    aceitos: [ "aberto" ]
+    artigos: [ "art. 33, § 2º, c, CP" ]
+    gabarito: "Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP."
+    revisao: { status: revisado }
   - id: 13-peca-5-5
     categoria: peca-detalhe
     parte: peca
     item: "5.5"
     secao: merito
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
-    opcoes:
-      correta: Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
-        - Da tese da incidência da atenuante da menoridade penal relativa
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
-  - id: 13-peca-6a
-    categoria: peca-detalhe
-    parte: peca
-    item: 6a
-    secao: pedido
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Absolvição do crime de violação de domicílio OU absolvição nos termos do art. 386, III, do CPP.
-    opcoes:
-      correta: Absolvição do crime de violação de domicílio OU absolvição nos termos do art. 386, III, do CPP.
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Conhecimento e provimento do recurso.
-        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
-        - Requerimento do exercício do juízo de retratação, nos termos do Art. 589 do CPP.
-        - Absolvição sumária, nos termos do Art. 397, inciso II, do CPP.
-    revisao: *a1
-  - id: 13-peca-6b
-    categoria: peca-detalhe
-    parte: peca
-    item: 6b
-    secao: pedido
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Afastamento da circunstância agravante da reincidência.
-    opcoes:
-      correta: Afastamento da circunstância agravante da reincidência.
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Conhecimento e provimento do recurso.
-        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
-        - Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
-        - Apresentação de rol de testemunhas.
-    revisao: *a1
-  - id: 13-peca-6c
-    categoria: peca-detalhe
-    parte: peca
-    item: 6c
-    secao: pedido
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Consequente diminuição da pena.
-    opcoes:
-      correta: Consequente diminuição da pena.
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Conhecimento e provimento do recurso.
-        - "Pedidos: Absolvição, na forma do Art. 386, inciso VI, do CPP"
-        - Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
-        - Absolvição sumária, nos termos do Art. 397, inciso II, do CPP.
-    revisao: *a1
-  - id: 13-peca-6d
-    categoria: peca-detalhe
-    parte: peca
-    item: 6d
-    secao: pedido
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Consequente fixação do regime aberto.
-    opcoes:
-      correta: Consequente fixação do regime aberto.
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - "Pedidos: Absolvição, na forma do Art. 386, inciso VI, do CPP"
-        - Conhecimento e provimento do recurso.
-        - Absolvição, na forma do Art. 386, inciso III, do CPP.
-    revisao: *a1
-  - id: 13-peca-6e
-    categoria: peca-detalhe
-    parte: peca
-    item: 6e
-    secao: pedido
-    caso: |-
-      Diogo está sendo regularmente processado pela prática dos crimes de violação de domicílio (artigo 150, do CP) em concurso material com o crime de furto qualificado pela escalada (artigo 155, § 4º, II, do CP). Isso porque, segundo narrou a inicial acusatória, no dia 10/11/2012 (sábado), Diogo pulou o muro de cerca de três metros que guarnecia a casa da vítima e, então, após ingressar clandestinamente na residência, subtraiu diversos pertences e valores, a saber: três anéis de ouro, dois relógios de ouro, dois aparelhos de telefone celular, um notebook e quinhentos reais em espécie, totalizando R$9.000,00 (nove mil reais).
-
-      Na audiência de instrução e julgamento, realizada em 29/08/2013 (quinta-feira), foram ouvidas duas testemunhas de acusação que, cada uma a seu turno, disseram ter visto Diogo pular o muro da residência da vítima e dali sair, cerca de vinte minutos após, levando uma mochila cheia. A defesa, por sua vez, não apresentou testemunhas. Também na audiência de instrução e julgamento foi exibido um DVD contendo as imagens gravadas pelas câmeras de segurança presentes na casa da vítima, sendo certo que à defesa foi assegurado o acesso ao conteúdo do DVD, mas essa se manifestou no sentido de que nada havia a impugnar.
-
-      Nas imagens exibidas em audiência ficou constatado (dada a nitidez das mesmas) que fora Diogo quem realmente pulou o muro da residência e realizou a subtração dos bens. Em seu interrogatório o réu exerceu o direito ao silêncio.
-
-      Em alegações finais orais, o Ministério Público exibiu cópia de sentença prolatada cerca de uma semana antes (ainda sem trânsito em julgado definitivo, portanto), onde se condenou o réu pela prática, em 25/12/2012 (terça-feira), do crime de estelionato. A defesa, em alegações finais, limitou-se a falar do princípio do estado de inocência, bem como que eventual silêncio do réu não poderia importar-lhe em prejuízo. O Juiz, então, proferiu sentença em audiência condenando Diogo pela prática do crime de violação de domicílio em concurso material com o crime de furto qualificado pela escalada. Para a dosimetria da pena o magistrado ponderou o fato de que nenhum dos bens subtraídos fora recuperado.
-
-      Além disso, fez incidir a circunstância agravante da reincidência, pois considerou que a condenação de Diogo pelo crime de estelionato o faria reincidente. O total da condenação foi de 4 anos e 40 dias de reclusão em regime inicial semi-aberto e multa à proporção de um trigésimo do salário mínimo. Por fim, o magistrado, na sentença, deixou claro que Diogo não fazia jus a nenhum outro benefício legal, haja vista o fato de não preencher os requisitos para tanto. A sentença foi lida em audiência.
-
-      O advogado(a) de Diogo, atento(a) tão somente às informações descritas no texto, deve apresentar o recurso cabível à impugnação da decisão, respeitando as formalidades legais e desenvolvendo, de maneira fundamentada, as teses defensivas pertinentes. O recurso deve ser datado com o último dia cabível para a interposição. (Valor: 5,0)
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Substituição da pena privativa de liberdade por restritiva de direitos.
-    opcoes:
-      correta: Substituição da pena privativa de liberdade por restritiva de direitos.
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - "Pedidos: Absolvição, na forma do Art. 386, inciso VI, do CPP"
-        - Conhecimento e provimento do recurso.
-        - Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
-    revisao: *a1
+    pergunta: "Além do regime, o que a defesa deve pedir quanto à espécie de pena?"
+    tese: "A substituição da pena privativa de liberdade por restritivas de direitos"
+    aceitos: [ "substitui*" ]
+    artigos: [ "art. 44, CP" ]
+    gabarito: "Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP."
+    revisao: { status: revisado }
   - id: 13-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Gustavo, retornando para casa após ir a uma festa com sua esposa, é parado em uma blitz de rotina. Ele fica bastante nervoso, pois sabe que seu carro está com a documentação totalmente irregular (IPVA atrasado, multas vencidas e vistoria não realizada) e, muito provavelmente, o veículo será rebocado para o depósito. Após determinar a parada do veículo, o policial solicita que Gustavo saia do carro e exiba os documentos. Como havia diversos outros carros parados na fiscalização, forma-se uma fila de motoristas.
-
-      Gustavo, então, em pé, na fila, aguardando sua vez para exibir a documentação, fala baixinho à sua esposa:
-
-      “Vou ver se tem jogo. Vou oferecer cem reais pra ele liberar a gente. O que você acha? Será que dá?”. O que Gustavo não sabia, entretanto, é que exatamente atrás dele estava um policial que tudo escutara e, tão logo acaba de proferir as palavras à sua esposa, Gustavo é preso em flagrante. Atordoado, ele pergunta: “O que eu fiz?”, momento em que o policial que efetuava o flagrante responde: “Tentativa de corrupção ativa!”.
-
-      Atento(a) ao caso narrado e tendo como base apenas as informações descritas no enunciado, responda justificadamente, aos itens a seguir.
-    comando: É correto afirmar que Gustavo deve responder por tentativa de corrupção ativa?
-    gabarito: |-
-      A questão objetiva extrair do examinando conhecimento acerca do iter criminis e dos crimes praticados por particular contra a administração pública.
-
-      Nesse sentido, relativamente à alternativa “A”, o examinando deve lastrear sua resposta no sentido de que o delito de corrupção ativa (artigo 333 do CP) é crime formal que não admite, via de regra, a modalidade tentada (exceto, como exemplo recorrente na doutrina, se o crime for praticado via escritos). Além disso, levando em conta a narrativa do enunciado, percebe-se que o delito em análise sequer teve o início da execução e, muito menos, atingiu a consumação. Isso porque a corrupção ativa somente se consuma com o efetivo oferecimento ou promessa de vantagem indevida, o que não ocorreu no caso narrado.
-
-      Consequentemente, a conduta levada a efeito por Gustavo é atípica.
-
-      No que se refere a alternativa “B”, por sua vez, o examinando deve indicar que caso Gustavo pagasse a quantia solicitada pelo policial ele não responderia por corrupção ativa pelo simples fato de que tal conduta sequer está descrita no tipo penal do artigo 333 do CP, configurando, portanto, fato atípico.
-    opcoes:
-      correta: Não, pois o delito de corrupção ativa, da maneira como foi narrado, não admite a modalidade tentada. / Ademais, como sequer houve a prática de qualquer das condutas descritas no tipo penal, o fato é atípico. OU Não, pois o agente não iniciou a execução do delito objetivado. / Inclusive, como sequer houve a prática de qualquer das condutas descritas no tipo penal, o fato é atípico.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "A"
+    pergunta: "Gustavo deve responder por tentativa de corrupção ativa?"
+    tese: "Não há tentativa de corrupção ativa: houve só cogitação, sem início da execução"
+    aceitos: [ [ "cogitacao" ], [ "inicio da execucao | iniciou a execucao | iniciada a execucao" ], [ "ato preparatorio | atos preparatorios" ] ]
+    artigos: [ "art. 14, II, CP", "art. 333, CP" ]
+    gabarito: "A questão objetiva extrair do examinando conhecimento acerca do iter criminis e dos crimes praticados por particular contra a administração pública.\n\nNesse sentido, relativamente à alternativa “A”, o examinando deve lastrear sua resposta no sentido de que o delito de corrupção ativa (artigo 333 do CP) é crime formal que não admite, via de regra, a modalidade tentada (exceto, como exemplo recorrente na doutrina, se o crime for praticado via escritos). Além disso, levando em conta a narrativa do enunciado, percebe-se que o delito em análise sequer teve o início da execução e, muito menos, atingiu a consumação. Isso porque a corrupção ativa somente se consuma com o efetivo oferecimento ou promessa de vantagem indevida, o que não ocorreu no caso narrado.\n\nConsequentemente, a conduta levada a efeito por Gustavo é atípica.\n\nNo que se refere a alternativa “B”, por sua vez, o examinando deve indicar que caso Gustavo pagasse a quantia solicitada pelo policial ele não responderia por corrupção ativa pelo simples fato de que tal conduta sequer está descrita no tipo penal do artigo 333 do CP, configurando, portanto, fato atípico."
+    revisao: { status: revisado }
   - id: 13-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Gustavo, retornando para casa após ir a uma festa com sua esposa, é parado em uma blitz de rotina. Ele fica bastante nervoso, pois sabe que seu carro está com a documentação totalmente irregular (IPVA atrasado, multas vencidas e vistoria não realizada) e, muito provavelmente, o veículo será rebocado para o depósito. Após determinar a parada do veículo, o policial solicita que Gustavo saia do carro e exiba os documentos. Como havia diversos outros carros parados na fiscalização, forma-se uma fila de motoristas.
-
-      Gustavo, então, em pé, na fila, aguardando sua vez para exibir a documentação, fala baixinho à sua esposa:
-
-      “Vou ver se tem jogo. Vou oferecer cem reais pra ele liberar a gente. O que você acha? Será que dá?”. O que Gustavo não sabia, entretanto, é que exatamente atrás dele estava um policial que tudo escutara e, tão logo acaba de proferir as palavras à sua esposa, Gustavo é preso em flagrante. Atordoado, ele pergunta: “O que eu fiz?”, momento em que o policial que efetuava o flagrante responde: “Tentativa de corrupção ativa!”.
-
-      Atento(a) ao caso narrado e tendo como base apenas as informações descritas no enunciado, responda justificadamente, aos itens a seguir.
-    comando: Caso o policial responsável por fiscalizar os documentos, observando a situação irregular de Gustavo, solicitasse quantia em dinheiro para liberá-lo e, Gustavo, por medo, pagasse tal quantia, ele (Gustavo)
-    gabarito: |-
-      A questão objetiva extrair do examinando conhecimento acerca do iter criminis e dos crimes praticados por particular contra a administração pública.
-
-      Nesse sentido, relativamente à alternativa “A”, o examinando deve lastrear sua resposta no sentido de que o delito de corrupção ativa (artigo 333 do CP) é crime formal que não admite, via de regra, a modalidade tentada (exceto, como exemplo recorrente na doutrina, se o crime for praticado via escritos). Além disso, levando em conta a narrativa do enunciado, percebe-se que o delito em análise sequer teve o início da execução e, muito menos, atingiu a consumação. Isso porque a corrupção ativa somente se consuma com o efetivo oferecimento ou promessa de vantagem indevida, o que não ocorreu no caso narrado.
-
-      Consequentemente, a conduta levada a efeito por Gustavo é atípica.
-
-      No que se refere a alternativa “B”, por sua vez, o examinando deve indicar que caso Gustavo pagasse a quantia solicitada pelo policial ele não responderia por corrupção ativa pelo simples fato de que tal conduta sequer está descrita no tipo penal do artigo 333 do CP, configurando, portanto, fato atípico.
-    opcoes:
-      correta: Não, pois nessa hipótese a conduta não está prevista no tipo penal. OU Não, pois nessa hipótese a conduta é atípica.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - À autoridade judiciária, na forma do Art. 24-A, §2º, da Lei nº 11.340/2006.
-        - "Sim, resta configurada a prescrição da pretensão punitiva retroativa. Obs.: A indicação de espécie distinta de prescrição macula a integralidade do item “A”."
-        - Não agiu corretamente a autoridade policial, pois o delito praticado por Patrícia foi de injúria racial e não de racismo, conforme o Art. 140, § 3º, do Código Penal, pois a intenção da agente era ofender a honra de Joana.
-        - O crime do Art. 306, do CTB deve ser absorvido pelo crime do Art. 303, § 2º, do CTB, em razão da aplicação do princípio da consunção OU já que a capacidade psicomotora alterada em razão de álcool é elementar do crime de lesão corporal.
-    revisao: *a1
+    item: "B"
+    pergunta: "E se o policial tivesse exigido o dinheiro e Gustavo, com medo, pagasse, ele responderia por corrupção ativa?"
+    tese: "Quem paga a vantagem exigida pelo policial não comete corrupção ativa: o policial é que comete concussão"
+    aceitos: [ [ "concussao" ], [ "atipic*" ], [ "nao esta prevista | nao prevista" ] ]
+    artigos: [ "art. 316, CP", "art. 333, CP" ]
+    gabarito: "A questão objetiva extrair do examinando conhecimento acerca do iter criminis e dos crimes praticados por particular contra a administração pública.\n\nNesse sentido, relativamente à alternativa “A”, o examinando deve lastrear sua resposta no sentido de que o delito de corrupção ativa (artigo 333 do CP) é crime formal que não admite, via de regra, a modalidade tentada (exceto, como exemplo recorrente na doutrina, se o crime for praticado via escritos). Além disso, levando em conta a narrativa do enunciado, percebe-se que o delito em análise sequer teve o início da execução e, muito menos, atingiu a consumação. Isso porque a corrupção ativa somente se consuma com o efetivo oferecimento ou promessa de vantagem indevida, o que não ocorreu no caso narrado.\n\nConsequentemente, a conduta levada a efeito por Gustavo é atípica.\n\nNo que se refere a alternativa “B”, por sua vez, o examinando deve indicar que caso Gustavo pagasse a quantia solicitada pelo policial ele não responderia por corrupção ativa pelo simples fato de que tal conduta sequer está descrita no tipo penal do artigo 333 do CP, configurando, portanto, fato atípico."
+    revisao: { status: revisado }
   - id: 13-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Antônio, auxiliar de serviços gerais de uma multinacional, nos dias de limpeza, passa a observar uma escultura colocada na mesa de seu chefe. Com o tempo, o desejo de ter aquele objeto fica incontrolável, razão pela qual ele decide subtraí-lo.
-
-      Como Antônio não tem acesso livre à sala onde a escultura fica exposta, utiliza-se de uma chave adaptável a qualquer fechadura, adquirida por meio de um amigo chaveiro, que nada sabia sobre suas intenções.
-
-      Com ela, Antônio ingressa na sala do chefe, após o expediente de trabalho, e subtrai a escultura pretendida, colocando-a em sua bolsa.
-
-      Após subtrair o objeto e sair do edifício onde fica localizada a empresa, Antônio caminha tranquilamente cerca de 400 metros. Apenas nesse momento é que os seguranças da portaria suspeitam do ocorrido. Eles acham estranha a saída de Antônio do local após o expediente (já que não era comum a realização de horas extras), razão pela qual acionam policiais militares que estavam próximos do local, apontando Antônio como suspeito. Os policiais conseguem alcançá-lo e decidem revistá-lo, encontrando a escultura da sala do chefe na sua bolsa. Preso em flagrante, Antônio é conduzido até a Delegacia de Polícia.
-
-      Antônio, então, é denunciado e regularmente processado. Ocorre que, durante a instrução processual, verifica-se que a escultura subtraída, apesar de bela, foi construída com material barato, avaliada em R$ 250,00 (duzentos e cinquenta reais), sendo, portanto, de pequeno valor. A FAC (folha de antecedentes criminais) aponta que Antônio é réu primário.
-
-      Ao final da instrução, em que foram respeitadas todas as exigências legais, o juiz, em decisão fundamentada, condena Antônio a 2 (dois) anos de reclusão pela prática do crime de furto qualificado pela utilização de chave falsa, consumado, com base no artigo 155, § 4º, III, do CP.
-
-      Nesse sentido, levando em conta apenas os dados contidos no enunciado, responda aos itens a seguir.
-    comando: "É correto afirmar que o crime de furto praticado por Antônio atingiu a consumação? Justifique. (Valor:"
-    gabarito: |-
-      A questão trata do crime de furto e busca extrair do examinando conhecimento específico sobre dois pontos importantes acerca do tema: o momento consumativo do delito e a incidência do privilégio. A primeira indagação tem cunho eminentemente teórico, enquanto a segunda é de caráter prático, pois exige que o examinando saiba interpretar informações dadas no enunciado e, a partir delas, identificar a incidência do privilégio, o que será capaz de reduzir significativamente a resposta penal a ser dada ao personagem da questão. Nesse sentido, para fazer jus aos pontos relativos ao item “A” o examinando deve responder afirmativamente, indicando que o furto atingiu a consumação. Com efeito, diversas teorias existem sobre o momento consumativo do crime de furto, sendo certo que a predominante, tanto na doutrina quanto na jurisprudência dos Tribunais Superiores, é a Teoria da Amotio, segundo a qual a consumação ocorre quando a coisa subtraída passa para o poder do agente, mesmo que num curto espaço de tempo – tal como ocorreu no caso narrado -, independentemente de deslocamento ou posse mansa e pacífica da coisa. Também merece destaque, embora não seja o entendimento majoritário, reflexão sobre o momento consumativo do crime de furto narrado no enunciado com a adoção da Teoria da Ablatio.
-
-      Perceba-se que ainda assim a resposta seria a mesma: o furto foi consumado. Isso porque, para aqueles que adotam a Teoria da Ablatio, o furto consuma-se quando o agente, depois de apoderar-se da coisa, consegue deslocá-la de um lugar para o outro – fato que, da mesma forma, foi narrado no enunciado. Cabe ressaltar que a Banca Examinadora, com o intuito de privilegiar a demonstração de conhecimento jurídico, aceitará como justificativa correta ambas as fundamentações acima expostas, sem perder de vista que os Tribunais Superiores adotam a Teoria da Amotio. Pelo mesmo motivo, entretanto, não será pontuada a resposta que traga apenas a afirmativa “sim”, desprovida de qualquer justificativa ou mesmo com justificativa equivocada.
-
-      No tocante ao item “B”, para que receba a pontuação respectiva, o examinando deve indicar que de acordo com a questão, desconsiderando a argumentação no sentido de aplicação do princípio da insignificância (que pelo próprio enunciado afigura-se como inaplicável), a principal tese defensiva deve ser o reconhecimento do furto qualificado e privilegiado (artigo 155, § 2º, c/c artigo 155, § 4º, III, ambos do CP).
-
-      Isso porque a qualificadora da utilização de chave falsa possui natureza objetiva, sendo compatível com o furto privilegiado, que é de ordem subjetiva. O reconhecimento do furto privilegiado ou mínimo deve ser o argumento defensivo em sede de apelação por trazer vários benefícios a Antônio como a substituição da pena de reclusão pela pena de detenção, a diminuição da pena de um a dois terços ou aplicação da pena de multa. Cabe destacar que há muito tempo a controvérsia sobre a possibilidade de furto privilegiado e qualificado foi superada, existindo diversos julgados tanto no STF quanto no STJ sobre o tema. Inclusive, o próprio STF, no Informativo 580, manifestou-se sobre a possibilidade de tal combinação, sendo, portanto, a melhor tese defensiva.
-    opcoes:
-      correta: Sim, porque a subtração foi completa, já que a res furtiva foi encontrada na bolsa de Antônio, havendo perda da disponibilidade por parte do proprietário do bem subtraído.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - À autoridade judiciária, na forma do Art. 24-A, §2º, da Lei nº 11.340/2006.
-        - "Sim, resta configurada a prescrição da pretensão punitiva retroativa. Obs.: A indicação de espécie distinta de prescrição macula a integralidade do item “A”."
-        - Não agiu corretamente a autoridade policial, pois o delito praticado por Patrícia foi de injúria racial e não de racismo, conforme o Art. 140, § 3º, do Código Penal, pois a intenção da agente era ofender a honra de Joana.
-        - O crime do Art. 306, do CTB deve ser absorvido pelo crime do Art. 303, § 2º, do CTB, em razão da aplicação do princípio da consunção OU já que a capacidade psicomotora alterada em razão de álcool é elementar do crime de lesão corporal.
-    revisao: *a1
+    item: "A"
+    pergunta: "Por que o furto de Antônio se consumou, mesmo com a prisão a 400 metros do prédio?"
+    tese: "Consumação do furto pela inversão da posse: a escultura saiu da esfera de vigilância da vítima"
+    aceitos: [ [ "inversao da posse" ], [ "amotio" ], [ "disponibilidade" ], [ "esfera de vigilancia | esfera de disponibilidade" ] ]
+    artigos: [ "art. 155, CP" ]
+    gabarito: "A questão trata do crime de furto e busca extrair do examinando conhecimento específico sobre dois pontos importantes acerca do tema: o momento consumativo do delito e a incidência do privilégio. A primeira indagação tem cunho eminentemente teórico, enquanto a segunda é de caráter prático, pois exige que o examinando saiba interpretar informações dadas no enunciado e, a partir delas, identificar a incidência do privilégio, o que será capaz de reduzir significativamente a resposta penal a ser dada ao personagem da questão. Nesse sentido, para fazer jus aos pontos relativos ao item “A” o examinando deve responder afirmativamente, indicando que o furto atingiu a consumação. Com efeito, diversas teorias existem sobre o momento consumativo do crime de furto, sendo certo que a predominante, tanto na doutrina quanto na jurisprudência dos Tribunais Superiores, é a Teoria da Amotio, segundo a qual a consumação ocorre quando a coisa subtraída passa para o poder do agente, mesmo que num curto espaço de tempo – tal como ocorreu no caso narrado -, independentemente de deslocamento ou posse mansa e pacífica da coisa. Também merece destaque, embora não seja o entendimento majoritário, reflexão sobre o momento consumativo do crime de furto narrado no enunciado com a adoção da Teoria da Ablatio.\n\nPerceba-se que ainda assim a resposta seria a mesma: o furto foi consumado. Isso porque, para aqueles que adotam a Teoria da Ablatio, o furto consuma-se quando o agente, depois de apoderar-se da coisa, consegue deslocá-la de um lugar para o outro – fato que, da mesma forma, foi narrado no enunciado. Cabe ressaltar que a Banca Examinadora, com o intuito de privilegiar a demonstração de conhecimento jurídico, aceitará como justificativa correta ambas as fundamentações acima expostas, sem perder de vista que os Tribunais Superiores adotam a Teoria da Amotio. Pelo mesmo motivo, entretanto, não será pontuada a resposta que traga apenas a afirmativa “sim”, desprovida de qualquer justificativa ou mesmo com justificativa equivocada.\n\nNo tocante ao item “B”, para que receba a pontuação respectiva, o examinando deve indicar que de acordo com a questão, desconsiderando a argumentação no sentido de aplicação do princípio da insignificância (que pelo próprio enunciado afigura-se como inaplicável), a principal tese defensiva deve ser o reconhecimento do furto qualificado e privilegiado (artigo 155, § 2º, c/c artigo 155, § 4º, III, ambos do CP).\n\nIsso porque a qualificadora da utilização de chave falsa possui natureza objetiva, sendo compatível com o furto privilegiado, que é de ordem subjetiva. O reconhecimento do furto privilegiado ou mínimo deve ser o argumento defensivo em sede de apelação por trazer vários benefícios a Antônio como a substituição da pena de reclusão pela pena de detenção, a diminuição da pena de um a dois terços ou aplicação da pena de multa. Cabe destacar que há muito tempo a controvérsia sobre a possibilidade de furto privilegiado e qualificado foi superada, existindo diversos julgados tanto no STF quanto no STJ sobre o tema. Inclusive, o próprio STF, no Informativo 580, manifestou-se sobre a possibilidade de tal combinação, sendo, portanto, a melhor tese defensiva."
+    revisao: { status: revisado }
   - id: 13-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Antônio, auxiliar de serviços gerais de uma multinacional, nos dias de limpeza, passa a observar uma escultura colocada na mesa de seu chefe. Com o tempo, o desejo de ter aquele objeto fica incontrolável, razão pela qual ele decide subtraí-lo.
-
-      Como Antônio não tem acesso livre à sala onde a escultura fica exposta, utiliza-se de uma chave adaptável a qualquer fechadura, adquirida por meio de um amigo chaveiro, que nada sabia sobre suas intenções.
-
-      Com ela, Antônio ingressa na sala do chefe, após o expediente de trabalho, e subtrai a escultura pretendida, colocando-a em sua bolsa.
-
-      Após subtrair o objeto e sair do edifício onde fica localizada a empresa, Antônio caminha tranquilamente cerca de 400 metros. Apenas nesse momento é que os seguranças da portaria suspeitam do ocorrido. Eles acham estranha a saída de Antônio do local após o expediente (já que não era comum a realização de horas extras), razão pela qual acionam policiais militares que estavam próximos do local, apontando Antônio como suspeito. Os policiais conseguem alcançá-lo e decidem revistá-lo, encontrando a escultura da sala do chefe na sua bolsa. Preso em flagrante, Antônio é conduzido até a Delegacia de Polícia.
-
-      Antônio, então, é denunciado e regularmente processado. Ocorre que, durante a instrução processual, verifica-se que a escultura subtraída, apesar de bela, foi construída com material barato, avaliada em R$ 250,00 (duzentos e cinquenta reais), sendo, portanto, de pequeno valor. A FAC (folha de antecedentes criminais) aponta que Antônio é réu primário.
-
-      Ao final da instrução, em que foram respeitadas todas as exigências legais, o juiz, em decisão fundamentada, condena Antônio a 2 (dois) anos de reclusão pela prática do crime de furto qualificado pela utilização de chave falsa, consumado, com base no artigo 155, § 4º, III, do CP.
-
-      Nesse sentido, levando em conta apenas os dados contidos no enunciado, responda aos itens a seguir.
-    comando: Considerando que Antônio não preenche os requisitos elencados pelo STF e STJ para aplicação do princípio da insignificância, qual seria a principal tese defensiva a ser utilizada em sede de apelação? Justifique.
-    gabarito: |-
-      A questão trata do crime de furto e busca extrair do examinando conhecimento específico sobre dois pontos importantes acerca do tema: o momento consumativo do delito e a incidência do privilégio. A primeira indagação tem cunho eminentemente teórico, enquanto a segunda é de caráter prático, pois exige que o examinando saiba interpretar informações dadas no enunciado e, a partir delas, identificar a incidência do privilégio, o que será capaz de reduzir significativamente a resposta penal a ser dada ao personagem da questão. Nesse sentido, para fazer jus aos pontos relativos ao item “A” o examinando deve responder afirmativamente, indicando que o furto atingiu a consumação. Com efeito, diversas teorias existem sobre o momento consumativo do crime de furto, sendo certo que a predominante, tanto na doutrina quanto na jurisprudência dos Tribunais Superiores, é a Teoria da Amotio, segundo a qual a consumação ocorre quando a coisa subtraída passa para o poder do agente, mesmo que num curto espaço de tempo – tal como ocorreu no caso narrado -, independentemente de deslocamento ou posse mansa e pacífica da coisa. Também merece destaque, embora não seja o entendimento majoritário, reflexão sobre o momento consumativo do crime de furto narrado no enunciado com a adoção da Teoria da Ablatio.
-
-      Perceba-se que ainda assim a resposta seria a mesma: o furto foi consumado. Isso porque, para aqueles que adotam a Teoria da Ablatio, o furto consuma-se quando o agente, depois de apoderar-se da coisa, consegue deslocá-la de um lugar para o outro – fato que, da mesma forma, foi narrado no enunciado. Cabe ressaltar que a Banca Examinadora, com o intuito de privilegiar a demonstração de conhecimento jurídico, aceitará como justificativa correta ambas as fundamentações acima expostas, sem perder de vista que os Tribunais Superiores adotam a Teoria da Amotio. Pelo mesmo motivo, entretanto, não será pontuada a resposta que traga apenas a afirmativa “sim”, desprovida de qualquer justificativa ou mesmo com justificativa equivocada.
-
-      No tocante ao item “B”, para que receba a pontuação respectiva, o examinando deve indicar que de acordo com a questão, desconsiderando a argumentação no sentido de aplicação do princípio da insignificância (que pelo próprio enunciado afigura-se como inaplicável), a principal tese defensiva deve ser o reconhecimento do furto qualificado e privilegiado (artigo 155, § 2º, c/c artigo 155, § 4º, III, ambos do CP).
-
-      Isso porque a qualificadora da utilização de chave falsa possui natureza objetiva, sendo compatível com o furto privilegiado, que é de ordem subjetiva. O reconhecimento do furto privilegiado ou mínimo deve ser o argumento defensivo em sede de apelação por trazer vários benefícios a Antônio como a substituição da pena de reclusão pela pena de detenção, a diminuição da pena de um a dois terços ou aplicação da pena de multa. Cabe destacar que há muito tempo a controvérsia sobre a possibilidade de furto privilegiado e qualificado foi superada, existindo diversos julgados tanto no STF quanto no STJ sobre o tema. Inclusive, o próprio STF, no Informativo 580, manifestou-se sobre a possibilidade de tal combinação, sendo, portanto, a melhor tese defensiva.
-    opcoes:
-      correta: "Antônio tem direito ao reconhecimento do furto privilegiado, conforme o artigo 155, § 2º do CP. Obs.: A simples menção do dispositivo legal não pontua."
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - À autoridade judiciária, na forma do Art. 24-A, §2º, da Lei nº 11.340/2006.
-        - "Sim, resta configurada a prescrição da pretensão punitiva retroativa. Obs.: A indicação de espécie distinta de prescrição macula a integralidade do item “A”."
-        - Não agiu corretamente a autoridade policial, pois o delito praticado por Patrícia foi de injúria racial e não de racismo, conforme o Art. 140, § 3º, do Código Penal, pois a intenção da agente era ofender a honra de Joana.
-        - O crime do Art. 306, do CTB deve ser absorvido pelo crime do Art. 303, § 2º, do CTB, em razão da aplicação do princípio da consunção OU já que a capacidade psicomotora alterada em razão de álcool é elementar do crime de lesão corporal.
-    revisao: *a1
+    item: "B"
+    pergunta: "Sem a insignificância, qual a principal tese defensiva na apelação de Antônio?"
+    tese: "O furto privilegiado, compatível com a qualificadora"
+    aceitos: [ "privilegi*" ]
+    artigos: [ "art. 155, § 2º, CP", "Súmula 511 STJ" ]
+    gabarito: "A questão trata do crime de furto e busca extrair do examinando conhecimento específico sobre dois pontos importantes acerca do tema: o momento consumativo do delito e a incidência do privilégio. A primeira indagação tem cunho eminentemente teórico, enquanto a segunda é de caráter prático, pois exige que o examinando saiba interpretar informações dadas no enunciado e, a partir delas, identificar a incidência do privilégio, o que será capaz de reduzir significativamente a resposta penal a ser dada ao personagem da questão. Nesse sentido, para fazer jus aos pontos relativos ao item “A” o examinando deve responder afirmativamente, indicando que o furto atingiu a consumação. Com efeito, diversas teorias existem sobre o momento consumativo do crime de furto, sendo certo que a predominante, tanto na doutrina quanto na jurisprudência dos Tribunais Superiores, é a Teoria da Amotio, segundo a qual a consumação ocorre quando a coisa subtraída passa para o poder do agente, mesmo que num curto espaço de tempo – tal como ocorreu no caso narrado -, independentemente de deslocamento ou posse mansa e pacífica da coisa. Também merece destaque, embora não seja o entendimento majoritário, reflexão sobre o momento consumativo do crime de furto narrado no enunciado com a adoção da Teoria da Ablatio.\n\nPerceba-se que ainda assim a resposta seria a mesma: o furto foi consumado. Isso porque, para aqueles que adotam a Teoria da Ablatio, o furto consuma-se quando o agente, depois de apoderar-se da coisa, consegue deslocá-la de um lugar para o outro – fato que, da mesma forma, foi narrado no enunciado. Cabe ressaltar que a Banca Examinadora, com o intuito de privilegiar a demonstração de conhecimento jurídico, aceitará como justificativa correta ambas as fundamentações acima expostas, sem perder de vista que os Tribunais Superiores adotam a Teoria da Amotio. Pelo mesmo motivo, entretanto, não será pontuada a resposta que traga apenas a afirmativa “sim”, desprovida de qualquer justificativa ou mesmo com justificativa equivocada.\n\nNo tocante ao item “B”, para que receba a pontuação respectiva, o examinando deve indicar que de acordo com a questão, desconsiderando a argumentação no sentido de aplicação do princípio da insignificância (que pelo próprio enunciado afigura-se como inaplicável), a principal tese defensiva deve ser o reconhecimento do furto qualificado e privilegiado (artigo 155, § 2º, c/c artigo 155, § 4º, III, ambos do CP).\n\nIsso porque a qualificadora da utilização de chave falsa possui natureza objetiva, sendo compatível com o furto privilegiado, que é de ordem subjetiva. O reconhecimento do furto privilegiado ou mínimo deve ser o argumento defensivo em sede de apelação por trazer vários benefícios a Antônio como a substituição da pena de reclusão pela pena de detenção, a diminuição da pena de um a dois terços ou aplicação da pena de multa. Cabe destacar que há muito tempo a controvérsia sobre a possibilidade de furto privilegiado e qualificado foi superada, existindo diversos julgados tanto no STF quanto no STJ sobre o tema. Inclusive, o próprio STF, no Informativo 580, manifestou-se sobre a possibilidade de tal combinação, sendo, portanto, a melhor tese defensiva."
+    revisao: { status: revisado }
   - id: 13-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      Pedro foi preso em flagrante por tráfico de drogas. Após a instrução probatória, o juiz ficou convencido de que o réu, por preencher os requisitos do artigo 33, § 4º, da lei 11.343/2006, merecia a redução máxima da pena. Na sentença penal condenatória, fixou o regime inicialmente fechado ao argumento de que o artigo 2º, § 1º, da lei 8.072/90, assim determina, vedando a conversão da pena privativa de liberdade em pena restritiva de direitos, com base no próprio artigo 33, § 4º, da lei 11.343/2006. O advogado de Pedro é intimado da sentença.
-
-      À luz da jurisprudência do STF, responda aos itens a seguir.
-    comando: Cabe ao advogado de defesa a impugnação da fixação do regime inicial fechado, fixado exclusivamente com base no artigo 2º, § 1º, da Lei nº 8.072/90?
-    gabarito: |-
-      A questão objetiva extrair do examinando conhecimento atualizado acerca da jurisprudência do STF.
-
-      Nesse sentido, relativamente ao item A, a resposta deve ser lastreada no sentido de que cabe, sim, impugnação ao regime inicial fechado, fixado exclusivamente com base no artigo 2º, § 1º, da Lei nº 8.072/90. Isso porque o STF, no HC 111.840/ES, declarou inconstitucional a previsão, na Lei dos Crimes Hediondos, da exigência da fixação do regime inicial fechado. Na oportunidade a Corte se manifestou no sentido de que a definição do regime deveria sempre ser analisada independentemente da natureza da infração. A CRFB/88 contemplaria as restrições aplicadas à Lei nº 8.072/90, dentre as quais não estaria a obrigatoriedade de imposição de regime extremo para início de cumprimento de pena. Tal posicionamento vem sendo reiterado pela Suprema Corte, sendo certo que a fixação do regime inicialmente fechado deve conter uma fundamentação em concreto, sob pena de ofensa à individualização da pena.
-
-      No tocante ao item B, devemos observar que o STF, no HC 97.256/RS, decidiu que o artigo 33, § 4º, da Lei nº 11.343/2006 é inconstitucional ao vedar a conversão da pena privativa de liberdade em pena restritiva de direitos. Após a reiteração do entendimento pela Suprema Corte foi editada a resolução nº 5 do Senado com o seguinte teor: “artigo 1º - É suspensa a execução da expressão "vedada a conversão em penas restritivas de direitos" do § 4º do artigo 33, da Lei nº 11.343, de 23 de agosto de 2006, declarada inconstitucional por decisão definitiva do Supremo Tribunal Federal nos autos do Habeas Corpus nº 97.256/RS.” Desta forma, é possível a conversão da pena privativa de liberdade em pena restritiva de direitos, desde que o réu preencha os requisitos do artigo 44, do CP.
-    opcoes:
-      correta: "Cabe impugnação ao regime fechado, pois o STF reconheceu a inconstitucionalidade da norma. Obs.: A justificativa é essencial para a atribuição de pontos."
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - À autoridade judiciária, na forma do Art. 24-A, §2º, da Lei nº 11.340/2006.
-        - "Sim, resta configurada a prescrição da pretensão punitiva retroativa. Obs.: A indicação de espécie distinta de prescrição macula a integralidade do item “A”."
-        - Não agiu corretamente a autoridade policial, pois o delito praticado por Patrícia foi de injúria racial e não de racismo, conforme o Art. 140, § 3º, do Código Penal, pois a intenção da agente era ofender a honra de Joana.
-        - O crime do Art. 306, do CTB deve ser absorvido pelo crime do Art. 303, § 2º, do CTB, em razão da aplicação do princípio da consunção OU já que a capacidade psicomotora alterada em razão de álcool é elementar do crime de lesão corporal.
-    revisao: *a1
+    item: "A"
+    pergunta: "A defesa pode impugnar o regime fechado fixado só com base na lei dos crimes hediondos?"
+    tese: "Inconstitucionalidade do regime inicial fechado obrigatório dos crimes hediondos: o regime segue as regras gerais"
+    aceitos: [ "inconstitucional*" ]
+    artigos: [ "art. 33, § 2º, CP", "art. 5, XLVI, CRFB" ]
+    gabarito: "A questão objetiva extrair do examinando conhecimento atualizado acerca da jurisprudência do STF.\n\nNesse sentido, relativamente ao item A, a resposta deve ser lastreada no sentido de que cabe, sim, impugnação ao regime inicial fechado, fixado exclusivamente com base no artigo 2º, § 1º, da Lei nº 8.072/90. Isso porque o STF, no HC 111.840/ES, declarou inconstitucional a previsão, na Lei dos Crimes Hediondos, da exigência da fixação do regime inicial fechado. Na oportunidade a Corte se manifestou no sentido de que a definição do regime deveria sempre ser analisada independentemente da natureza da infração. A CRFB/88 contemplaria as restrições aplicadas à Lei nº 8.072/90, dentre as quais não estaria a obrigatoriedade de imposição de regime extremo para início de cumprimento de pena. Tal posicionamento vem sendo reiterado pela Suprema Corte, sendo certo que a fixação do regime inicialmente fechado deve conter uma fundamentação em concreto, sob pena de ofensa à individualização da pena.\n\nNo tocante ao item B, devemos observar que o STF, no HC 97.256/RS, decidiu que o artigo 33, § 4º, da Lei nº 11.343/2006 é inconstitucional ao vedar a conversão da pena privativa de liberdade em pena restritiva de direitos. Após a reiteração do entendimento pela Suprema Corte foi editada a resolução nº 5 do Senado com o seguinte teor: “artigo 1º - É suspensa a execução da expressão \"vedada a conversão em penas restritivas de direitos\" do § 4º do artigo 33, da Lei nº 11.343, de 23 de agosto de 2006, declarada inconstitucional por decisão definitiva do Supremo Tribunal Federal nos autos do Habeas Corpus nº 97.256/RS.” Desta forma, é possível a conversão da pena privativa de liberdade em pena restritiva de direitos, desde que o réu preencha os requisitos do artigo 44, do CP."
+    revisao: { status: revisado }
   - id: 13-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Pedro foi preso em flagrante por tráfico de drogas. Após a instrução probatória, o juiz ficou convencido de que o réu, por preencher os requisitos do artigo 33, § 4º, da lei 11.343/2006, merecia a redução máxima da pena. Na sentença penal condenatória, fixou o regime inicialmente fechado ao argumento de que o artigo 2º, § 1º, da lei 8.072/90, assim determina, vedando a conversão da pena privativa de liberdade em pena restritiva de direitos, com base no próprio artigo 33, § 4º, da lei 11.343/2006. O advogado de Pedro é intimado da sentença.
-
-      À luz da jurisprudência do STF, responda aos itens a seguir.
-    comando: Com relação ao tráfico-privilegiado, previsto na Lei nº 11.343/06, artigo 33, § 4º, é possível a conversão da pena privativa de liberdade em pena restritiva de direitos?
-    gabarito: |-
-      A questão objetiva extrair do examinando conhecimento atualizado acerca da jurisprudência do STF.
-
-      Nesse sentido, relativamente ao item A, a resposta deve ser lastreada no sentido de que cabe, sim, impugnação ao regime inicial fechado, fixado exclusivamente com base no artigo 2º, § 1º, da Lei nº 8.072/90. Isso porque o STF, no HC 111.840/ES, declarou inconstitucional a previsão, na Lei dos Crimes Hediondos, da exigência da fixação do regime inicial fechado. Na oportunidade a Corte se manifestou no sentido de que a definição do regime deveria sempre ser analisada independentemente da natureza da infração. A CRFB/88 contemplaria as restrições aplicadas à Lei nº 8.072/90, dentre as quais não estaria a obrigatoriedade de imposição de regime extremo para início de cumprimento de pena. Tal posicionamento vem sendo reiterado pela Suprema Corte, sendo certo que a fixação do regime inicialmente fechado deve conter uma fundamentação em concreto, sob pena de ofensa à individualização da pena.
-
-      No tocante ao item B, devemos observar que o STF, no HC 97.256/RS, decidiu que o artigo 33, § 4º, da Lei nº 11.343/2006 é inconstitucional ao vedar a conversão da pena privativa de liberdade em pena restritiva de direitos. Após a reiteração do entendimento pela Suprema Corte foi editada a resolução nº 5 do Senado com o seguinte teor: “artigo 1º - É suspensa a execução da expressão "vedada a conversão em penas restritivas de direitos" do § 4º do artigo 33, da Lei nº 11.343, de 23 de agosto de 2006, declarada inconstitucional por decisão definitiva do Supremo Tribunal Federal nos autos do Habeas Corpus nº 97.256/RS.” Desta forma, é possível a conversão da pena privativa de liberdade em pena restritiva de direitos, desde que o réu preencha os requisitos do artigo 44, do CP.
-    opcoes:
-      correta: "É possível a conversão da pena privativa de liberdade em pena restritiva de direitos no tráfico-privilegiado, pois o STF reconheceu a inconstitucionalidade da norma., desde que o réu preencha os requisitos do artigo 44 do CP. Obs.: A justificativa é essencial para a atribuição de pontos."
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - À autoridade judiciária, na forma do Art. 24-A, §2º, da Lei nº 11.340/2006.
-        - "Sim, resta configurada a prescrição da pretensão punitiva retroativa. Obs.: A indicação de espécie distinta de prescrição macula a integralidade do item “A”."
-        - Não agiu corretamente a autoridade policial, pois o delito praticado por Patrícia foi de injúria racial e não de racismo, conforme o Art. 140, § 3º, do Código Penal, pois a intenção da agente era ofender a honra de Joana.
-        - O crime do Art. 306, do CTB deve ser absorvido pelo crime do Art. 303, § 2º, do CTB, em razão da aplicação do princípio da consunção OU já que a capacidade psicomotora alterada em razão de álcool é elementar do crime de lesão corporal.
-    revisao: *a1
+    item: "B"
+    pergunta: "No tráfico privilegiado, a pena pode ser substituída por restritivas de direitos?"
+    tese: "Cabe a substituição por restritivas de direitos no tráfico privilegiado: a vedação foi declarada inconstitucional"
+    aceitos: [ [ "inconstitucional*" ], [ "requisitos" ] ]
+    artigos: [ "art. 44, CP" ]
+    gabarito: "A questão objetiva extrair do examinando conhecimento atualizado acerca da jurisprudência do STF.\n\nNesse sentido, relativamente ao item A, a resposta deve ser lastreada no sentido de que cabe, sim, impugnação ao regime inicial fechado, fixado exclusivamente com base no artigo 2º, § 1º, da Lei nº 8.072/90. Isso porque o STF, no HC 111.840/ES, declarou inconstitucional a previsão, na Lei dos Crimes Hediondos, da exigência da fixação do regime inicial fechado. Na oportunidade a Corte se manifestou no sentido de que a definição do regime deveria sempre ser analisada independentemente da natureza da infração. A CRFB/88 contemplaria as restrições aplicadas à Lei nº 8.072/90, dentre as quais não estaria a obrigatoriedade de imposição de regime extremo para início de cumprimento de pena. Tal posicionamento vem sendo reiterado pela Suprema Corte, sendo certo que a fixação do regime inicialmente fechado deve conter uma fundamentação em concreto, sob pena de ofensa à individualização da pena.\n\nNo tocante ao item B, devemos observar que o STF, no HC 97.256/RS, decidiu que o artigo 33, § 4º, da Lei nº 11.343/2006 é inconstitucional ao vedar a conversão da pena privativa de liberdade em pena restritiva de direitos. Após a reiteração do entendimento pela Suprema Corte foi editada a resolução nº 5 do Senado com o seguinte teor: “artigo 1º - É suspensa a execução da expressão \"vedada a conversão em penas restritivas de direitos\" do § 4º do artigo 33, da Lei nº 11.343, de 23 de agosto de 2006, declarada inconstitucional por decisão definitiva do Supremo Tribunal Federal nos autos do Habeas Corpus nº 97.256/RS.” Desta forma, é possível a conversão da pena privativa de liberdade em pena restritiva de direitos, desde que o réu preencha os requisitos do artigo 44, do CP."
+    revisao: { status: revisado }

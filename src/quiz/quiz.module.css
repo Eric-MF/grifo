@@ -2,6 +2,9 @@
 /* O palco do jogo tem user-select: none (games.module.css); aqui o enunciado volta a poder ser copiado. */
 .quizOverlay { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center; padding: 0.75rem; background: rgb(3 17 44 / 0.55); overflow: auto; user-select: text; -webkit-user-select: text; -webkit-touch-callout: default; }
 .quizLayout { width: min(100%, 980px); display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 1rem; align-items: start; }
+/* sem o vídeo ao lado, a pergunta usa a largura toda (até um limite confortável de leitura) */
+.quizLayout:not(:has(.quizAd > *)) { grid-template-columns: minmax(0, 1fr); width: min(100%, 860px); }
+.quizAd:empty { display: none; }
 .quizBox { background: var(--bg); color: var(--text); border-radius: 20px; padding: 1.3rem 1.4rem; box-shadow: 0 24px 60px rgb(0 0 0 / 0.35); max-height: calc(100dvh - 3rem); overflow: auto; }
 .quizAd { opacity: 0.92; }
 /* a questão que volta para o topo no treino não fica embaixo do cabeçalho fixo do site */
@@ -18,7 +21,26 @@
 .etiqueta { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.4rem; }
 .caso { white-space: pre-line; }
 /* No jogo, caso longo (enunciado real da prova) rola sozinho: as alternativas ficam à vista. */
-.quizOverlay .caso { max-height: 13rem; overflow: auto; overscroll-behavior: contain; }
+/* o caso rola dentro da caixa só no computador; chegando ao fim, a rolagem passa para a pergunta (sem prender o dedo
+   ou a roda do mouse no enunciado) */
+.quizOverlay .caso { max-height: 13rem; overflow: auto; }
+/* a tese: o caso completo da prova, fechado embaixo da introdução curta */
+.casoCompleto { margin: 0.35rem 0 0; font-size: 0.88rem; }
+.casoCompleto > summary {
+  display: inline-flex; align-items: center; gap: 0.35rem; cursor: pointer; color: var(--primary); font-weight: 600;
+  list-style: none; padding: 0.15rem 0;
+}
+.casoCompleto > summary::-webkit-details-marker { display: none; }
+.casoCompleto > summary::before { content: "▸"; transition: transform 0.15s; }
+.casoCompleto[open] > summary::before { transform: rotate(90deg); }
+.casoCompleto > summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+.casoCompleto > p {
+  margin: 0.4rem 0 0; padding: 0.7rem 0.9rem; max-height: 18rem; overflow: auto; white-space: pre-line; line-height: 1.5;
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .casoCompleto > summary::before { transition: none; }
+}
 .alts { display: grid; gap: 0.45rem; }
 .alt {
   display: flex; align-items: center; gap: 0.7rem; text-align: left; padding: 0.7rem 0.9rem; border-radius: 12px;
@@ -106,7 +128,7 @@
 }
 .copiarAviso:empty { padding: 0; }
 .copiarAviso[data-estado="copiada"], .copiarAviso[data-estado="falhou"] { opacity: 1; transform: none; }
-.copiarAviso[data-estado="falhou"] { background: var(--bad); color: #fff; }
+.copiarAviso[data-estado="falhou"] { background: var(--bad); color: var(--on-estado); }
 @keyframes copiarPulso {
   0% { transform: scale(0.9); }
   55% { transform: scale(1.08); }
@@ -137,10 +159,10 @@
 .revisaoTexto { min-width: 0; }
 .revisaoSelo { grid-column: 2; justify-self: start; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
 .revisaoItem[data-correta] { color: var(--text); border-color: var(--ok); background: color-mix(in srgb, var(--ok) 10%, var(--surface)); }
-.revisaoItem[data-correta] .altLetra { background: var(--ok); color: #fff; }
+.revisaoItem[data-correta] .altLetra { background: var(--ok); color: var(--on-estado); }
 .revisaoItem[data-correta] .revisaoSelo { color: var(--ok); }
 .revisaoItem[data-errada] { color: var(--text); border-color: var(--bad); background: color-mix(in srgb, var(--bad) 8%, var(--surface)); }
-.revisaoItem[data-errada] .altLetra { background: var(--bad); color: #fff; }
+.revisaoItem[data-errada] .altLetra { background: var(--bad); color: var(--on-estado); }
 .revisaoItem[data-errada] .revisaoSelo { color: var(--bad); }
 @keyframes revisaoAbre {
   from { opacity: 0; transform: translateY(-4px); }
@@ -225,3 +247,28 @@
 @media (pointer: coarse) {
   .alts::after { content: "Arraste uma alternativa para o lado para riscá-la."; font-size: 0.75rem; color: var(--muted); text-align: center; }
 }
+/* o caso arrastado para a direita (celular, no treino): passado o limite, aparece o que acontece ao soltar */
+.enunciado[data-desliza] { touch-action: pan-y pinch-zoom; }
+.enunciado[data-deslizando]::before {
+  content: "↩ Resposta anterior"; position: absolute; top: 50%; left: 0; translate: calc(-100% - 0.4rem) -50%; white-space: nowrap;
+  padding: 0.3rem 0.6rem; border-radius: 999px; background: var(--primary); color: var(--primary-ink); font-size: 0.75rem; font-weight: 800;
+}
+
+/* no celular (em pé ou deitado, como no jogo), uma rolagem só, a da tela da pergunta: o caso e a caixa crescem com o
+   texto, e arrastar em qualquer lugar (no enunciado também) leva às alternativas */
+@media (max-width: 760px), (pointer: coarse) and (max-height: 620px) {
+  .quizOverlay { place-items: start center; padding: 0.5rem; overscroll-behavior: contain; }
+  .quizOverlay .caso { max-height: none; overflow: visible; }
+  .quizBox { max-height: none; overflow: visible; padding: 1rem 1rem 1.1rem; }
+}
+
+/* responder falando: a resposta dita, uma só, no lugar das caixas de digitar (RespostaDita, em PerguntaCorpo.tsx) */
+.respostaDita { display: grid; gap: 0.8rem; margin-top: 0.4rem; }
+.respostaDita dl { margin: 0; display: grid; gap: 0.5rem; }
+.respostaDita dl > div { padding: 0.65rem 0.85rem; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); }
+.respostaDita dl > div[data-vazia] { border-style: dashed; background: transparent; }
+.respostaDita dt { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.respostaDita dd { margin: 0.15rem 0 0; font-size: 1.02rem; font-weight: 700; overflow-wrap: anywhere; }
+.respostaDita dd span { font-weight: 400; font-style: italic; color: var(--muted); }
+.respostaDita dd small { font-weight: 500; color: var(--warn); }
+.respostaDita .btn { justify-self: start; }

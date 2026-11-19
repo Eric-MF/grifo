@@ -1,426 +1,125 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "11"
+introducoes:
+  peca: "Jerusa, atrasada mas dentro do limite de velocidade, ultrapassou um carro numa via de mão dupla sem ligar a seta e atingiu Diogo, motociclista que vinha em alta velocidade no sentido contrário; ela mesma chamou o socorro, mas ele morreu. O Ministério Público a denunciou por homicídio doloso, com dolo eventual, sustentando que ela não previu o resultado, e o juiz a pronunciou. Você é o advogado de Jerusa, intimado da pronúncia em 2/8/2013."
+  q1: "O juiz da execução converteu a pena restritiva de direitos em privativa de liberdade no regime aberto, sem outras condições. O Ministério Público recorreu, e o tribunal fixou, como condição especial do regime aberto, a prestação de serviços à comunidade durante toda a pena."
+  q2: "Daniel foi condenado por roubo tentado a 2 anos, com suspensão condicional da pena, mas a sentença não fixou as condições. Só a defesa apelou, e o Tribunal de Justiça negou os pedidos e fixou, ele mesmo, as condições do sursis."
+  q3: "Ricardo cometeu um roubo em 10/11/2007 (condenação transitada em julgado em 15/5/2010), uma extorsão em 10/9/2009 (transitada em 7/4/2011) e um estelionato em 12/3/2010 (transitado em 27/7/2013)."
+  q4: "Lucile foi denunciada por furto por levar de um grande supermercado, sem violência, dois litros de leite e uma sacola de verduras, R$ 10 no total. Depois da resposta à acusação, o juiz se convenceu de que o fato é atípico."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["11-peca-1", "11-peca-4", "11-peca-8", "11-q3-c", "11-q4-b"]
 perguntas:
-  - id: 11-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Jerusa, atrasada para importante compromisso profissional, dirige seu carro bastante preocupada, mas respeitando os limites de velocidade. Em uma via de mão dupla, Jerusa decide ultrapassar o carro à sua frente, o qual estava abaixo da velocidade permitida. Para realizar a referida manobra, entretanto, Jerusa não liga a respectiva seta luminosa sinalizadora do veículo e, no momento da ultrapassagem, vem a atingir Diogo, motociclista que, em alta velocidade, conduzia sua moto no sentido oposto da via. Não obstante a presteza no socorro que veio após o chamado da própria Jerusa e das demais testemunhas, Diogo falece em razão dos ferimentos sofridos pela colisão.
-
-      Instaurado o respectivo inquérito policial, após o curso das investigações, o Ministério Público decide oferecer denúncia contra Jerusa, imputando-lhe a prática do delito de homicídio doloso simples, na modalidade dolo eventual (Art. 121 c/c Art. 18, I parte final, ambos do CP).
-
-      Argumentou o ilustre membro do Parquet a imprevisão de Jerusa acerca do resultado que poderia causar ao não ligar a seta do veículo para realizar a ultrapassagem, além de não atentar para o trânsito em sentido contrário. A denúncia foi recebida pelo juiz competente e todos os atos processuais exigidos em lei foram regularmente praticados. Finda a instrução probatória, o juiz competente, em decisão devidamente fundamentada, decidiu pronunciar Jerusa pelo crime apontado na inicial acusatória. O advogado de Jerusa é intimado da referida decisão em 02 de agosto de 2013 (sexta-feira).
-
-      Atento ao caso apresentado e tendo como base apenas os elementos fornecidos, elabore o recurso cabível e date-o com o último dia do prazo para a interposição.
-
-      A simples menção ou transcrição do dispositivo legal não pontua.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento: Juiz da Vara do Tribunal do Júri."
-    opcoes:
-      correta: "Endereçamento: Juiz da Vara do Tribunal do Júri."
-      erradas:
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-        - "Endereçamento correto: Juizado Especial Criminal de Niterói."
-        - "Endereçamento correto: Juízo da 1ª Vara Criminal da Comarca de Belo Horizonte-MG."
-        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
-        - "Endereçamento: Juízo Federal da Vara Federal Criminal de Alfa."
-    revisao: &a1
-      status: revisado
   - id: 11-peca-3
     categoria: peca-detalhe
     parte: peca
     item: "3"
     secao: pedido
-    caso: |-
-      Jerusa, atrasada para importante compromisso profissional, dirige seu carro bastante preocupada, mas respeitando os limites de velocidade. Em uma via de mão dupla, Jerusa decide ultrapassar o carro à sua frente, o qual estava abaixo da velocidade permitida. Para realizar a referida manobra, entretanto, Jerusa não liga a respectiva seta luminosa sinalizadora do veículo e, no momento da ultrapassagem, vem a atingir Diogo, motociclista que, em alta velocidade, conduzia sua moto no sentido oposto da via. Não obstante a presteza no socorro que veio após o chamado da própria Jerusa e das demais testemunhas, Diogo falece em razão dos ferimentos sofridos pela colisão.
-
-      Instaurado o respectivo inquérito policial, após o curso das investigações, o Ministério Público decide oferecer denúncia contra Jerusa, imputando-lhe a prática do delito de homicídio doloso simples, na modalidade dolo eventual (Art. 121 c/c Art. 18, I parte final, ambos do CP).
-
-      Argumentou o ilustre membro do Parquet a imprevisão de Jerusa acerca do resultado que poderia causar ao não ligar a seta do veículo para realizar a ultrapassagem, além de não atentar para o trânsito em sentido contrário. A denúncia foi recebida pelo juiz competente e todos os atos processuais exigidos em lei foram regularmente praticados. Finda a instrução probatória, o juiz competente, em decisão devidamente fundamentada, decidiu pronunciar Jerusa pelo crime apontado na inicial acusatória. O advogado de Jerusa é intimado da referida decisão em 02 de agosto de 2013 (sexta-feira).
-
-      Atento ao caso apresentado e tendo como base apenas os elementos fornecidos, elabore o recurso cabível e date-o com o último dia do prazo para a interposição.
-
-      A simples menção ou transcrição do dispositivo legal não pontua.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP.
-    opcoes:
-      correta: Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP.
-      erradas:
-        - "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
-        - Pronúncia da ré nos exatos termos da denúncia OU pronúncia por homicídio triplamente qualificado OU pronúncia da ré por infanticídio
-        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
-        - Aplicação de regime inicial aberto ou semiaberto.
-        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
-    revisao: *a1
-  - id: 11-peca-4
-    categoria: peca-detalhe
-    parte: peca
-    item: "4"
-    secao: enderecamento
-    caso: |-
-      Jerusa, atrasada para importante compromisso profissional, dirige seu carro bastante preocupada, mas respeitando os limites de velocidade. Em uma via de mão dupla, Jerusa decide ultrapassar o carro à sua frente, o qual estava abaixo da velocidade permitida. Para realizar a referida manobra, entretanto, Jerusa não liga a respectiva seta luminosa sinalizadora do veículo e, no momento da ultrapassagem, vem a atingir Diogo, motociclista que, em alta velocidade, conduzia sua moto no sentido oposto da via. Não obstante a presteza no socorro que veio após o chamado da própria Jerusa e das demais testemunhas, Diogo falece em razão dos ferimentos sofridos pela colisão.
-
-      Instaurado o respectivo inquérito policial, após o curso das investigações, o Ministério Público decide oferecer denúncia contra Jerusa, imputando-lhe a prática do delito de homicídio doloso simples, na modalidade dolo eventual (Art. 121 c/c Art. 18, I parte final, ambos do CP).
-
-      Argumentou o ilustre membro do Parquet a imprevisão de Jerusa acerca do resultado que poderia causar ao não ligar a seta do veículo para realizar a ultrapassagem, além de não atentar para o trânsito em sentido contrário. A denúncia foi recebida pelo juiz competente e todos os atos processuais exigidos em lei foram regularmente praticados. Finda a instrução probatória, o juiz competente, em decisão devidamente fundamentada, decidiu pronunciar Jerusa pelo crime apontado na inicial acusatória. O advogado de Jerusa é intimado da referida decisão em 02 de agosto de 2013 (sexta-feira).
-
-      Atento ao caso apresentado e tendo como base apenas os elementos fornecidos, elabore o recurso cabível e date-o com o último dia do prazo para a interposição.
-
-      A simples menção ou transcrição do dispositivo legal não pontua.
-    comando: A quem devem ser endereçadas as razões?
-    gabarito: "Endereçamento das razões: Tribunal de Justiça."
-    opcoes:
-      correta: "Endereçamento das razões: Tribunal de Justiça."
-      erradas:
-        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - "Endereçamento: Vara Criminal da Comarca do Rio de Janeiro"
-        - "Endereçamento: Vara Criminal da Comarca de Porto Alegre/RS."
-        - A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
-    revisao: *a1
+    pergunta: "Ao interpor o recurso contra a pronúncia, o que a defesa deve pedir ao próprio juiz?"
+    tese: "Juízo de retratação da pronúncia (efeito regressivo do recurso em sentido estrito)"
+    aceitos: [ "retrata* | efeito regressivo | iterativo | reconsidera*" ]
+    artigos: [ "art. 589, CPP" ]
+    gabarito: "Pedido de retratação ou efeito regressivo, com fundamento no Art. 589 do CPP."
+    revisao: { status: revisado }
   - id: 11-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: merito
-    caso: |-
-      Jerusa, atrasada para importante compromisso profissional, dirige seu carro bastante preocupada, mas respeitando os limites de velocidade. Em uma via de mão dupla, Jerusa decide ultrapassar o carro à sua frente, o qual estava abaixo da velocidade permitida. Para realizar a referida manobra, entretanto, Jerusa não liga a respectiva seta luminosa sinalizadora do veículo e, no momento da ultrapassagem, vem a atingir Diogo, motociclista que, em alta velocidade, conduzia sua moto no sentido oposto da via. Não obstante a presteza no socorro que veio após o chamado da própria Jerusa e das demais testemunhas, Diogo falece em razão dos ferimentos sofridos pela colisão.
-
-      Instaurado o respectivo inquérito policial, após o curso das investigações, o Ministério Público decide oferecer denúncia contra Jerusa, imputando-lhe a prática do delito de homicídio doloso simples, na modalidade dolo eventual (Art. 121 c/c Art. 18, I parte final, ambos do CP).
-
-      Argumentou o ilustre membro do Parquet a imprevisão de Jerusa acerca do resultado que poderia causar ao não ligar a seta do veículo para realizar a ultrapassagem, além de não atentar para o trânsito em sentido contrário. A denúncia foi recebida pelo juiz competente e todos os atos processuais exigidos em lei foram regularmente praticados. Finda a instrução probatória, o juiz competente, em decisão devidamente fundamentada, decidiu pronunciar Jerusa pelo crime apontado na inicial acusatória. O advogado de Jerusa é intimado da referida decisão em 02 de agosto de 2013 (sexta-feira).
-
-      Atento ao caso apresentado e tendo como base apenas os elementos fornecidos, elabore o recurso cabível e date-o com o último dia do prazo para a interposição.
-
-      A simples menção ou transcrição do dispositivo legal não pontua.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "Por que Jerusa não agiu com dolo eventual?"
+    tese: "Ausência de dolo eventual: ela não assumiu o risco de produzir o resultado"
+    aceitos: [ [ "assum* o risco | assumir o risco" ], [ "consentimento | consentiu" ] ]
+    artigos: [ "art. 18, I, CP" ]
     gabarito: "Ausência de dolo eventual: além da previsão do resultado, o dolo eventual exige que o agente assuma o risco de produzi-lo, nos termos do Art. 18, I, parte final, do CP (teoria do consentimento)."
-    opcoes:
-      correta: "Ausência de dolo eventual: além da previsão do resultado, o dolo eventual exige que o agente assuma o risco de produzi-lo, nos termos do Art. 18, I, parte final, do CP (teoria do consentimento)."
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese da prática de crime único, pois o delito de estupro de vulnerável é um tipo misto alternativo (de conteúdo múltiplo ou variado).
-        - Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
-        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
-        - Reconhecimento da atenuante da confissão espontânea, na forma do Art. 65, inciso III, alínea d, do CP.
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 11-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Jerusa, atrasada para importante compromisso profissional, dirige seu carro bastante preocupada, mas respeitando os limites de velocidade. Em uma via de mão dupla, Jerusa decide ultrapassar o carro à sua frente, o qual estava abaixo da velocidade permitida. Para realizar a referida manobra, entretanto, Jerusa não liga a respectiva seta luminosa sinalizadora do veículo e, no momento da ultrapassagem, vem a atingir Diogo, motociclista que, em alta velocidade, conduzia sua moto no sentido oposto da via. Não obstante a presteza no socorro que veio após o chamado da própria Jerusa e das demais testemunhas, Diogo falece em razão dos ferimentos sofridos pela colisão.
-
-      Instaurado o respectivo inquérito policial, após o curso das investigações, o Ministério Público decide oferecer denúncia contra Jerusa, imputando-lhe a prática do delito de homicídio doloso simples, na modalidade dolo eventual (Art. 121 c/c Art. 18, I parte final, ambos do CP).
-
-      Argumentou o ilustre membro do Parquet a imprevisão de Jerusa acerca do resultado que poderia causar ao não ligar a seta do veículo para realizar a ultrapassagem, além de não atentar para o trânsito em sentido contrário. A denúncia foi recebida pelo juiz competente e todos os atos processuais exigidos em lei foram regularmente praticados. Finda a instrução probatória, o juiz competente, em decisão devidamente fundamentada, decidiu pronunciar Jerusa pelo crime apontado na inicial acusatória. O advogado de Jerusa é intimado da referida decisão em 02 de agosto de 2013 (sexta-feira).
-
-      Atento ao caso apresentado e tendo como base apenas os elementos fornecidos, elabore o recurso cabível e date-o com o último dia do prazo para a interposição.
-
-      A simples menção ou transcrição do dispositivo legal não pontua.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A conduta de Jerusa é culposa e se amolda ao homicídio culposo na direção de veículo automotor, previsto no Art. 302 do CTB.
-    opcoes:
-      correta: A conduta de Jerusa é culposa e se amolda ao homicídio culposo na direção de veículo automotor, previsto no Art. 302 do CTB.
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese da prática de crime único, pois o delito de estupro de vulnerável é um tipo misto alternativo (de conteúdo múltiplo ou variado).
-        - Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
-        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
-        - Reconhecimento da atenuante da confissão espontânea, na forma do Art. 65, inciso III, alínea d, do CP.
-    revisao: *a1
+    pergunta: "Afastado o dolo, em que crime se encaixa a conduta de Jerusa?"
+    tese: "Desclassificação para homicídio culposo na direção de veículo automotor"
+    aceitos: [ "homicidio culposo" ]
+    artigos: [ "art. 302, CTB" ]
+    gabarito: "A conduta de Jerusa é culposa e se amolda ao homicídio culposo na direção de veículo automotor, previsto no Art. 302 do CTB."
+    revisao: { status: revisado }
   - id: 11-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      Jerusa, atrasada para importante compromisso profissional, dirige seu carro bastante preocupada, mas respeitando os limites de velocidade. Em uma via de mão dupla, Jerusa decide ultrapassar o carro à sua frente, o qual estava abaixo da velocidade permitida. Para realizar a referida manobra, entretanto, Jerusa não liga a respectiva seta luminosa sinalizadora do veículo e, no momento da ultrapassagem, vem a atingir Diogo, motociclista que, em alta velocidade, conduzia sua moto no sentido oposto da via. Não obstante a presteza no socorro que veio após o chamado da própria Jerusa e das demais testemunhas, Diogo falece em razão dos ferimentos sofridos pela colisão.
-
-      Instaurado o respectivo inquérito policial, após o curso das investigações, o Ministério Público decide oferecer denúncia contra Jerusa, imputando-lhe a prática do delito de homicídio doloso simples, na modalidade dolo eventual (Art. 121 c/c Art. 18, I parte final, ambos do CP).
-
-      Argumentou o ilustre membro do Parquet a imprevisão de Jerusa acerca do resultado que poderia causar ao não ligar a seta do veículo para realizar a ultrapassagem, além de não atentar para o trânsito em sentido contrário. A denúncia foi recebida pelo juiz competente e todos os atos processuais exigidos em lei foram regularmente praticados. Finda a instrução probatória, o juiz competente, em decisão devidamente fundamentada, decidiu pronunciar Jerusa pelo crime apontado na inicial acusatória. O advogado de Jerusa é intimado da referida decisão em 02 de agosto de 2013 (sexta-feira).
-
-      Atento ao caso apresentado e tendo como base apenas os elementos fornecidos, elabore o recurso cabível e date-o com o último dia do prazo para a interposição.
-
-      A simples menção ou transcrição do dispositivo legal não pontua.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Não havendo crime doloso contra a vida, o Tribunal do Júri é incompetente, devendo ocorrer a desclassificação, nos termos do Art. 419 do CPP.
-    opcoes:
-      correta: Não havendo crime doloso contra a vida, o Tribunal do Júri é incompetente, devendo ocorrer a desclassificação, nos termos do Art. 419 do CPP.
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese da prática de crime único, pois o delito de estupro de vulnerável é um tipo misto alternativo (de conteúdo múltiplo ou variado).
-        - Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
-        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
-        - Reconhecimento da atenuante da confissão espontânea, na forma do Art. 65, inciso III, alínea d, do CP.
-    revisao: *a1
-  - id: 11-peca-8
-    categoria: peca-detalhe
-    parte: peca
-    item: "8"
-    secao: pedido
-    caso: |-
-      Jerusa, atrasada para importante compromisso profissional, dirige seu carro bastante preocupada, mas respeitando os limites de velocidade. Em uma via de mão dupla, Jerusa decide ultrapassar o carro à sua frente, o qual estava abaixo da velocidade permitida. Para realizar a referida manobra, entretanto, Jerusa não liga a respectiva seta luminosa sinalizadora do veículo e, no momento da ultrapassagem, vem a atingir Diogo, motociclista que, em alta velocidade, conduzia sua moto no sentido oposto da via. Não obstante a presteza no socorro que veio após o chamado da própria Jerusa e das demais testemunhas, Diogo falece em razão dos ferimentos sofridos pela colisão.
-
-      Instaurado o respectivo inquérito policial, após o curso das investigações, o Ministério Público decide oferecer denúncia contra Jerusa, imputando-lhe a prática do delito de homicídio doloso simples, na modalidade dolo eventual (Art. 121 c/c Art. 18, I parte final, ambos do CP).
-
-      Argumentou o ilustre membro do Parquet a imprevisão de Jerusa acerca do resultado que poderia causar ao não ligar a seta do veículo para realizar a ultrapassagem, além de não atentar para o trânsito em sentido contrário. A denúncia foi recebida pelo juiz competente e todos os atos processuais exigidos em lei foram regularmente praticados. Finda a instrução probatória, o juiz competente, em decisão devidamente fundamentada, decidiu pronunciar Jerusa pelo crime apontado na inicial acusatória. O advogado de Jerusa é intimado da referida decisão em 02 de agosto de 2013 (sexta-feira).
-
-      Atento ao caso apresentado e tendo como base apenas os elementos fornecidos, elabore o recurso cabível e date-o com o último dia do prazo para a interposição.
-
-      A simples menção ou transcrição do dispositivo legal não pontua.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Conhecimento e provimento do recurso, com a desclassificação para homicídio culposo na direção de veículo automotor.
-    opcoes:
-      correta: Conhecimento e provimento do recurso, com a desclassificação para homicídio culposo na direção de veículo automotor.
-      erradas:
-        - "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
-        - Pronúncia da ré nos exatos termos da denúncia OU pronúncia por homicídio triplamente qualificado OU pronúncia da ré por infanticídio
-        - Pedido de retratação.
-        - Aplicação da pena base no mínimo legal ou reconhecimento da atenuante da confissão.
-        - Absolvição, na forma do Art. 386, inciso III, do CPP.
-    revisao: *a1
+    pergunta: "Sem crime doloso contra a vida, que decisão deve ser tomada quanto ao caso de Jerusa no júri?"
+    tese: "Desclassificação, com a remessa dos autos ao juízo singular competente, porque o júri é incompetente"
+    aceitos: [ "desclassifica*" ]
+    artigos: [ "art. 419, CPP" ]
+    gabarito: "Não havendo crime doloso contra a vida, o Tribunal do Júri é incompetente, devendo ocorrer a desclassificação, nos termos do Art. 419 do CPP."
+    revisao: { status: revisado }
   - id: 11-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      O Juiz da Vara de Execuções Penais da Comarca “Y” converteu a medida restritiva de direitos (que fora imposta em substituição à pena privativa de liberdade) em cumprimento de pena privativa de liberdade imposta no regime inicial aberto, sem fixar quaisquer outras condições.
-
-      O Ministério Público, inconformado, interpôs recurso alegando, em síntese, que a decisão do referido Juiz da Vara de Execuções Penais acarretava o abrandamento da pena, estimulando o descumprimento das penas alternativas ao cárcere.
-
-      O recurso, devidamente contra-arrazoado, foi submetido a julgamento pela Corte Estadual, a qual, de forma unânime, resolveu lhe dar provimento. A referida Corte fixou como condição especial ao cumprimento de pena no regime aberto, com base no Art. 115 da LEP, a prestação de serviços à comunidade, o que deveria perdurar por todo o tempo da pena a ser cumprida no regime menos gravoso.
-
-      Atento ao caso narrado e considerando apenas os dados contidos no enunciado, responda fundamentadamente, aos itens a seguir.
-    comando: Qual foi o recurso interposto pelo Ministério Público contra a decisão do Juiz da Vara de Execuções Penais?
-    gabarito: |-
-      A. Agravo em Execução (Art. 197 da LEP).
-
-      B. Não, pois de acordo com o verbete 493 da Súmula do STJ, é inadmissível a fixação de pena substitutiva (Art. 44 do CP) como condição especial ao regime aberto.
-
-      Ademais, embora ao Juiz seja lícito estabelecer condições especiais para a concessão do regime aberto, em complementação daquelas previstas na LEP (Art. 115 da LEP), não poderá adotar a esse título nenhum efeito já classificado como pena substitutiva (Art. 44 do CPB), porque aí ocorreria o indesejável bis in idem, importando na aplicação de dúplice sanção.
-
-      Ademais, o Art. 44 do Código Penal é claro ao afirmar a natureza autônoma das penas restritivas de direitos que, por sua vez, visam substituir a sanção corporal imposta àqueles condenados por infrações penais mais leves. Diante do caráter substitutivo das sanções restritivas, vedada está sua cumulatividade com a pena privativa de liberdade, salvo expressa previsão legal, o que não é o caso.
-
-      Precedente: STJ - Habeas Corpus n. 218.352 - SP (2011/0218345-1)
-    opcoes:
-      correta: Agravo em execução, com fundamento no Art. 197 da LEP.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - "O crime é de injúria, pois apenas foi atribuída qualidade negativa e não houve narração de um fato delitivo, conforme o Art. 140 do CP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - Sim. O argumento é que não há vedação legal para oferecimento de transação porque a condenação anterior de Rodrigo foi apenas ao cumprimento de pena de multa e não de pena privativa de liberdade, nos termos do Art. 76, §2º, inciso I, da Lei 9.099/95
-        - A tese de mérito é a da atipicidade por insignificância da conduta, pois a União está dispensada de ajuizar ações de cobrança de tributos cujo valor esteja aquém do patamar de R$ 20.000.00 (vinte mil reais), com as atualizações efetivadas pelas Portarias nº 75 e 130, ambas do Ministério da Fazenda ou R$ 1.000,00 (mil reais) nos termos do Art. 20, § 2º, da Lei nº 10.522/02.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que recurso o Ministério Público usou contra a decisão do juiz da execução?"
+    tese: "Agravo em execução"
+    aceitos: [ "agravo" ]
+    artigos: [ "art. 197, LEP" ]
+    gabarito: "A. Agravo em Execução (Art. 197 da LEP).\n\nB. Não, pois de acordo com o verbete 493 da Súmula do STJ, é inadmissível a fixação de pena substitutiva (Art. 44 do CP) como condição especial ao regime aberto.\n\nAdemais, embora ao Juiz seja lícito estabelecer condições especiais para a concessão do regime aberto, em complementação daquelas previstas na LEP (Art. 115 da LEP), não poderá adotar a esse título nenhum efeito já classificado como pena substitutiva (Art. 44 do CPB), porque aí ocorreria o indesejável bis in idem, importando na aplicação de dúplice sanção.\n\nAdemais, o Art. 44 do Código Penal é claro ao afirmar a natureza autônoma das penas restritivas de direitos que, por sua vez, visam substituir a sanção corporal imposta àqueles condenados por infrações penais mais leves. Diante do caráter substitutivo das sanções restritivas, vedada está sua cumulatividade com a pena privativa de liberdade, salvo expressa previsão legal, o que não é o caso.\n\nPrecedente: STJ - Habeas Corpus n. 218.352 - SP (2011/0218345-1)"
+    revisao: { status: revisado }
   - id: 11-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      O Juiz da Vara de Execuções Penais da Comarca “Y” converteu a medida restritiva de direitos (que fora imposta em substituição à pena privativa de liberdade) em cumprimento de pena privativa de liberdade imposta no regime inicial aberto, sem fixar quaisquer outras condições.
-
-      O Ministério Público, inconformado, interpôs recurso alegando, em síntese, que a decisão do referido Juiz da Vara de Execuções Penais acarretava o abrandamento da pena, estimulando o descumprimento das penas alternativas ao cárcere.
-
-      O recurso, devidamente contra-arrazoado, foi submetido a julgamento pela Corte Estadual, a qual, de forma unânime, resolveu lhe dar provimento. A referida Corte fixou como condição especial ao cumprimento de pena no regime aberto, com base no Art. 115 da LEP, a prestação de serviços à comunidade, o que deveria perdurar por todo o tempo da pena a ser cumprida no regime menos gravoso.
-
-      Atento ao caso narrado e considerando apenas os dados contidos no enunciado, responda fundamentadamente, aos itens a seguir.
-    comando: Está correta a decisão da Corte Estadual, levando-se em conta entendimento jurisprudencial sumulado?
-    gabarito: |-
-      A. Agravo em Execução (Art. 197 da LEP).
-
-      B. Não, pois de acordo com o verbete 493 da Súmula do STJ, é inadmissível a fixação de pena substitutiva (Art. 44 do CP) como condição especial ao regime aberto.
-
-      Ademais, embora ao Juiz seja lícito estabelecer condições especiais para a concessão do regime aberto, em complementação daquelas previstas na LEP (Art. 115 da LEP), não poderá adotar a esse título nenhum efeito já classificado como pena substitutiva (Art. 44 do CPB), porque aí ocorreria o indesejável bis in idem, importando na aplicação de dúplice sanção.
-
-      Ademais, o Art. 44 do Código Penal é claro ao afirmar a natureza autônoma das penas restritivas de direitos que, por sua vez, visam substituir a sanção corporal imposta àqueles condenados por infrações penais mais leves. Diante do caráter substitutivo das sanções restritivas, vedada está sua cumulatividade com a pena privativa de liberdade, salvo expressa previsão legal, o que não é o caso.
-
-      Precedente: STJ - Habeas Corpus n. 218.352 - SP (2011/0218345-1)
-    opcoes:
-      correta: "Não: é inadmissível fixar pena substitutiva como condição especial do regime aberto, sob pena de bis in idem/dúplice sanção, conforme a Súmula 493 do STJ."
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
-        - O argumento a ser apresentado é o de que o tempo de prisão provisória deve ser computado no momento da determinação do regime inicial de cumprimento de pena, nos termos do Art. 387, § 2º do Código de Processo Penal.
-        - A tese jurídica processual é a necessidade de rejeição da denúncia por falta de representação da vítima, pois, a partir da Lei nº 13.964/19, o crime de estelionato, em regra, comporta ação penal de iniciativa pública condicionada à representação, segundo o Art. 171, § 5º, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "O tribunal podia fixar a prestação de serviços à comunidade como condição especial do regime aberto?"
+    tese: "A pena substitutiva não pode ser condição especial do regime aberto (bis in idem)"
+    aceitos: [ "inadmissivel | nao pode | nao podia | nao poderia | vedad* | bis in idem | incorreta" ]
+    artigos: [ "Súmula 493 STJ" ]
+    gabarito: "A. Agravo em Execução (Art. 197 da LEP).\n\nB. Não, pois de acordo com o verbete 493 da Súmula do STJ, é inadmissível a fixação de pena substitutiva (Art. 44 do CP) como condição especial ao regime aberto.\n\nAdemais, embora ao Juiz seja lícito estabelecer condições especiais para a concessão do regime aberto, em complementação daquelas previstas na LEP (Art. 115 da LEP), não poderá adotar a esse título nenhum efeito já classificado como pena substitutiva (Art. 44 do CPB), porque aí ocorreria o indesejável bis in idem, importando na aplicação de dúplice sanção.\n\nAdemais, o Art. 44 do Código Penal é claro ao afirmar a natureza autônoma das penas restritivas de direitos que, por sua vez, visam substituir a sanção corporal imposta àqueles condenados por infrações penais mais leves. Diante do caráter substitutivo das sanções restritivas, vedada está sua cumulatividade com a pena privativa de liberdade, salvo expressa previsão legal, o que não é o caso.\n\nPrecedente: STJ - Habeas Corpus n. 218.352 - SP (2011/0218345-1)"
+    revisao: { status: revisado }
   - id: 11-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Daniel foi denunciado, processado e condenado pela prática do delito de roubo simples em sua modalidade tentada. A pena fixada pelo magistrado foi de dois anos de reclusão em regime aberto. Todavia, atento às particularidades do caso concreto, o referido magistrado concedeu-lhe o beneficio da suspensão condicional da execução da pena, sendo certo que, na sentença, não fixou nenhuma condição. Somente a defesa interpôs recurso de apelação, pleiteando a absolvição de Daniel com base na tese de negativa de autoria e, subsidiariamente, a substituição do beneficio concedido por uma pena restritiva de direitos. O Tribunal de Justiça, por sua vez, no julgamento da apelação, de forma unânime, negou provimento aos dois pedidos da defesa e, no acórdão, fixou as condições do sursis, haja vista o fato de que o magistrado a quo deixou de fazê-lo na sentença condenatória.
-
-      Nesse sentido, atento apenas às informações contidas no texto, responda, fundamentadamente, aos itens a seguir.
-    comando: Qual o recurso cabível contra a decisão do Tribunal de Justiça?
-    gabarito: Cabível a interposição de recurso especial, com fulcro no Art. 105, III, a, da CRFB/88.
-    opcoes:
-      correta: Recurso especial, com fulcro no Art. 105, III, a, da CRFB/88.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - "O crime é de injúria, pois apenas foi atribuída qualidade negativa e não houve narração de um fato delitivo, conforme o Art. 140 do CP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - Sim. O argumento é que não há vedação legal para oferecimento de transação porque a condenação anterior de Rodrigo foi apenas ao cumprimento de pena de multa e não de pena privativa de liberdade, nos termos do Art. 76, §2º, inciso I, da Lei 9.099/95
-        - Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que recurso cabe contra o acórdão do Tribunal de Justiça?"
+    tese: "Recurso especial"
+    aceitos: [ "recurso especial" ]
+    artigos: [ "art. 105, III, a, CF" ]
+    gabarito: "Cabível a interposição de recurso especial, com fulcro no Art. 105, III, a, da CRFB/88."
+    revisao: { status: revisado }
   - id: 11-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Daniel foi denunciado, processado e condenado pela prática do delito de roubo simples em sua modalidade tentada. A pena fixada pelo magistrado foi de dois anos de reclusão em regime aberto. Todavia, atento às particularidades do caso concreto, o referido magistrado concedeu-lhe o beneficio da suspensão condicional da execução da pena, sendo certo que, na sentença, não fixou nenhuma condição. Somente a defesa interpôs recurso de apelação, pleiteando a absolvição de Daniel com base na tese de negativa de autoria e, subsidiariamente, a substituição do beneficio concedido por uma pena restritiva de direitos. O Tribunal de Justiça, por sua vez, no julgamento da apelação, de forma unânime, negou provimento aos dois pedidos da defesa e, no acórdão, fixou as condições do sursis, haja vista o fato de que o magistrado a quo deixou de fazê-lo na sentença condenatória.
-
-      Nesse sentido, atento apenas às informações contidas no texto, responda, fundamentadamente, aos itens a seguir.
-    comando: Qual deve ser a principal linha de argumentação no recurso?
-    gabarito: Deve ser salientado que não agiu corretamente o Tribunal de Justiça ao fixar as condições do sursis, pois tal tarefa cabia ao juiz a quo e, como ele não o fez, bem como não houve impugnação por parte do Ministério Público acerca de tal omissão, a atitude do Tribunal configura verdadeira reformatio in pejus, vedada pelo Art. 617, do CPP.
-    opcoes:
-      correta: O Tribunal não poderia fixar as condições do sursis em recurso exclusivo da defesa, configurando reformatio in pejus, vedada pelo Art. 617 do CPP.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - "O crime é de injúria, pois apenas foi atribuída qualidade negativa e não houve narração de um fato delitivo, conforme o Art. 140 do CP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - Sim. O argumento é que não há vedação legal para oferecimento de transação porque a condenação anterior de Rodrigo foi apenas ao cumprimento de pena de multa e não de pena privativa de liberdade, nos termos do Art. 76, §2º, inciso I, da Lei 9.099/95
-        - Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Qual a principal linha de argumentação desse recurso?"
+    tese: "Reformatio in pejus: o Tribunal piorou a situação do réu em recurso só da defesa"
+    aceitos: [ "reformatio in pejus | reforma para pior" ]
+    artigos: [ "art. 617, CPP" ]
+    gabarito: "Deve ser salientado que não agiu corretamente o Tribunal de Justiça ao fixar as condições do sursis, pois tal tarefa cabia ao juiz a quo e, como ele não o fez, bem como não houve impugnação por parte do Ministério Público acerca de tal omissão, a atitude do Tribunal configura verdadeira reformatio in pejus, vedada pelo Art. 617, do CPP."
+    revisao: { status: revisado }
   - id: 11-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Ricardo cometeu um delito de roubo no dia 10/11/2007, pelo qual foi condenado no dia 29/08/2009, sendo certo que o trânsito em julgado definitivo de referida sentença apenas ocorreu em 15/05/2010. Ricardo também cometeu, no dia 10/09/2009, um delito de extorsão.
-
-      A sentença condenatória relativa ao delito de extorsão foi prolatada em 18/10/2010, tendo transitado definitivamente em julgado no dia 07/04/2011. Ricardo também praticou, no dia 12/03/2010, um delito de estelionato, tendo sido condenado em 25/05/2011. Tal sentença apenas transitou em julgado no dia 27/07/2013.
-
-      Nesse sentido, tendo por base apenas as informações contidas no enunciado, responda aos itens a seguir.
-    comando: O juiz, na sentença relativa ao crime de roubo, deve considerar Ricardo portador de bons ou maus antecedentes?
-    gabarito: |-
-      A questão objetiva busca extrair do examinando conhecimento de institutos relativos à dosimetria da pena, em especial no tocante à circunstância judicial dos maus antecedentes e à agravante da reincidência. Munido de tal conhecimento, o examinando deve ser capaz de identificar os institutos e também diferenciá-los quando diante de um caso concreto.
-
-      Nesse sentido, relativamente ao item ‘A’, percebe-se que Ricardo possui bons antecedentes.
-
-      Eventual sentença condenatória ainda não transitada em julgado não tem o condão de implicar- lhe maus antecedentes, pois isso significaria acréscimo de tempo em sua pena e contrariaria, assim, o princípio do estado de inocência, constitucionalmente previsto.
-
-      No item ‘B’, atendendo-se ao comando da questão, o examinando deve indicar que Ricardo é primário. Isso porque a extorsão foi cometida em 10/09/09, antes, portanto, do trânsito em julgado da sentença que o condenou pelo roubo (ocorrido em 15/05/2010), tal como manda o Art. 63 do CP. Não obstante a primariedade de Ricardo, ele é portador de maus antecedentes, pois na data da sentença relativa ao delito de extorsão (18/10/2010) já havia ocorrido o trânsito em julgado da sentença do crime de roubo.
-
-      Por fim, em relação ao item ‘C’, o examinando deve indicar que ainda permanece a primariedade de Ricardo, pois o delito de estelionato foi cometido antes do trânsito em julgado de qualquer outro delito. Perceba-se que um indivíduo somente pode ser considerado reincidente se o crime pelo qual está sendo julgado tiver sido cometido após o trânsito em julgado de sentença que lhe haja condenado por delito anterior, nos termos do Art. 63, do CP.
-
-      Todavia, Ricardo é portador de maus antecedentes, pois na data da sentença relativa ao estelionato já havia ocorrido o trânsito em julgado de duas outras sentenças condenatórias.
-    opcoes:
-      correta: Na sentença do roubo, Ricardo deve ser considerado portador de bons antecedentes.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - "O crime é de injúria, pois apenas foi atribuída qualidade negativa e não houve narração de um fato delitivo, conforme o Art. 140 do CP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - Sim. O argumento é que não há vedação legal para oferecimento de transação porque a condenação anterior de Rodrigo foi apenas ao cumprimento de pena de multa e não de pena privativa de liberdade, nos termos do Art. 76, §2º, inciso I, da Lei 9.099/95
-        - Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Na sentença do roubo, Ricardo deve ser considerado de bons ou de maus antecedentes?"
+    tese: "Bons antecedentes: na sentença do roubo, as condenações por fatos posteriores não contam como maus antecedentes"
+    aceitos: [ "bons antecedentes" ]
+    artigos: [ "art. 59, CP" ]
+    gabarito: "A questão objetiva busca extrair do examinando conhecimento de institutos relativos à dosimetria da pena, em especial no tocante à circunstância judicial dos maus antecedentes e à agravante da reincidência. Munido de tal conhecimento, o examinando deve ser capaz de identificar os institutos e também diferenciá-los quando diante de um caso concreto.\n\nNesse sentido, relativamente ao item ‘A’, percebe-se que Ricardo possui bons antecedentes.\n\nEventual sentença condenatória ainda não transitada em julgado não tem o condão de implicar- lhe maus antecedentes, pois isso significaria acréscimo de tempo em sua pena e contrariaria, assim, o princípio do estado de inocência, constitucionalmente previsto.\n\nNo item ‘B’, atendendo-se ao comando da questão, o examinando deve indicar que Ricardo é primário. Isso porque a extorsão foi cometida em 10/09/09, antes, portanto, do trânsito em julgado da sentença que o condenou pelo roubo (ocorrido em 15/05/2010), tal como manda o Art. 63 do CP. Não obstante a primariedade de Ricardo, ele é portador de maus antecedentes, pois na data da sentença relativa ao delito de extorsão (18/10/2010) já havia ocorrido o trânsito em julgado da sentença do crime de roubo.\n\nPor fim, em relação ao item ‘C’, o examinando deve indicar que ainda permanece a primariedade de Ricardo, pois o delito de estelionato foi cometido antes do trânsito em julgado de qualquer outro delito. Perceba-se que um indivíduo somente pode ser considerado reincidente se o crime pelo qual está sendo julgado tiver sido cometido após o trânsito em julgado de sentença que lhe haja condenado por delito anterior, nos termos do Art. 63, do CP.\n\nTodavia, Ricardo é portador de maus antecedentes, pois na data da sentença relativa ao estelionato já havia ocorrido o trânsito em julgado de duas outras sentenças condenatórias."
+    revisao: { status: revisado }
   - id: 11-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Ricardo cometeu um delito de roubo no dia 10/11/2007, pelo qual foi condenado no dia 29/08/2009, sendo certo que o trânsito em julgado definitivo de referida sentença apenas ocorreu em 15/05/2010. Ricardo também cometeu, no dia 10/09/2009, um delito de extorsão.
-
-      A sentença condenatória relativa ao delito de extorsão foi prolatada em 18/10/2010, tendo transitado definitivamente em julgado no dia 07/04/2011. Ricardo também praticou, no dia 12/03/2010, um delito de estelionato, tendo sido condenado em 25/05/2011. Tal sentença apenas transitou em julgado no dia 27/07/2013.
-
-      Nesse sentido, tendo por base apenas as informações contidas no enunciado, responda aos itens a seguir.
-    comando: O juiz, na sentença relativa ao crime de extorsão, deve considerar Ricardo portador de bons ou maus antecedentes? Na hipótese, incide a circunstância agravante da reincidência ou Ricardo ainda pode ser considerado réu primário?
-    gabarito: |-
-      A questão objetiva busca extrair do examinando conhecimento de institutos relativos à dosimetria da pena, em especial no tocante à circunstância judicial dos maus antecedentes e à agravante da reincidência. Munido de tal conhecimento, o examinando deve ser capaz de identificar os institutos e também diferenciá-los quando diante de um caso concreto.
-
-      Nesse sentido, relativamente ao item ‘A’, percebe-se que Ricardo possui bons antecedentes.
-
-      Eventual sentença condenatória ainda não transitada em julgado não tem o condão de implicar- lhe maus antecedentes, pois isso significaria acréscimo de tempo em sua pena e contrariaria, assim, o princípio do estado de inocência, constitucionalmente previsto.
-
-      No item ‘B’, atendendo-se ao comando da questão, o examinando deve indicar que Ricardo é primário. Isso porque a extorsão foi cometida em 10/09/09, antes, portanto, do trânsito em julgado da sentença que o condenou pelo roubo (ocorrido em 15/05/2010), tal como manda o Art. 63 do CP. Não obstante a primariedade de Ricardo, ele é portador de maus antecedentes, pois na data da sentença relativa ao delito de extorsão (18/10/2010) já havia ocorrido o trânsito em julgado da sentença do crime de roubo.
-
-      Por fim, em relação ao item ‘C’, o examinando deve indicar que ainda permanece a primariedade de Ricardo, pois o delito de estelionato foi cometido antes do trânsito em julgado de qualquer outro delito. Perceba-se que um indivíduo somente pode ser considerado reincidente se o crime pelo qual está sendo julgado tiver sido cometido após o trânsito em julgado de sentença que lhe haja condenado por delito anterior, nos termos do Art. 63, do CP.
-
-      Todavia, Ricardo é portador de maus antecedentes, pois na data da sentença relativa ao estelionato já havia ocorrido o trânsito em julgado de duas outras sentenças condenatórias.
-    opcoes:
-      correta: "Na sentença da extorsão: maus antecedentes, mas réu primário, sem reincidência, pois a extorsão foi cometida antes do trânsito em julgado do roubo, nos termos do Art. 63 do CP."
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - "O crime é de injúria, pois apenas foi atribuída qualidade negativa e não houve narração de um fato delitivo, conforme o Art. 140 do CP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - Sim. O argumento é que não há vedação legal para oferecimento de transação porque a condenação anterior de Rodrigo foi apenas ao cumprimento de pena de multa e não de pena privativa de liberdade, nos termos do Art. 76, §2º, inciso I, da Lei 9.099/95
-        - Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-    revisao: *a1
-  - id: 11-q3-c
-    categoria: discursiva
-    parte: q3
-    item: C
-    caso: |-
-      Ricardo cometeu um delito de roubo no dia 10/11/2007, pelo qual foi condenado no dia 29/08/2009, sendo certo que o trânsito em julgado definitivo de referida sentença apenas ocorreu em 15/05/2010. Ricardo também cometeu, no dia 10/09/2009, um delito de extorsão.
-
-      A sentença condenatória relativa ao delito de extorsão foi prolatada em 18/10/2010, tendo transitado definitivamente em julgado no dia 07/04/2011. Ricardo também praticou, no dia 12/03/2010, um delito de estelionato, tendo sido condenado em 25/05/2011. Tal sentença apenas transitou em julgado no dia 27/07/2013.
-
-      Nesse sentido, tendo por base apenas as informações contidas no enunciado, responda aos itens a seguir.
-    comando: O juiz, na sentença relativa ao crime de estelionato, deve considerar Ricardo portador de bons ou maus antecedentes? Na hipótese, incide a circunstância agravante da reincidência ou Ricardo ainda pode ser considerado réu primário?
-    gabarito: |-
-      A questão objetiva busca extrair do examinando conhecimento de institutos relativos à dosimetria da pena, em especial no tocante à circunstância judicial dos maus antecedentes e à agravante da reincidência. Munido de tal conhecimento, o examinando deve ser capaz de identificar os institutos e também diferenciá-los quando diante de um caso concreto.
-
-      Nesse sentido, relativamente ao item ‘A’, percebe-se que Ricardo possui bons antecedentes.
-
-      Eventual sentença condenatória ainda não transitada em julgado não tem o condão de implicar- lhe maus antecedentes, pois isso significaria acréscimo de tempo em sua pena e contrariaria, assim, o princípio do estado de inocência, constitucionalmente previsto.
-
-      No item ‘B’, atendendo-se ao comando da questão, o examinando deve indicar que Ricardo é primário. Isso porque a extorsão foi cometida em 10/09/09, antes, portanto, do trânsito em julgado da sentença que o condenou pelo roubo (ocorrido em 15/05/2010), tal como manda o Art. 63 do CP. Não obstante a primariedade de Ricardo, ele é portador de maus antecedentes, pois na data da sentença relativa ao delito de extorsão (18/10/2010) já havia ocorrido o trânsito em julgado da sentença do crime de roubo.
-
-      Por fim, em relação ao item ‘C’, o examinando deve indicar que ainda permanece a primariedade de Ricardo, pois o delito de estelionato foi cometido antes do trânsito em julgado de qualquer outro delito. Perceba-se que um indivíduo somente pode ser considerado reincidente se o crime pelo qual está sendo julgado tiver sido cometido após o trânsito em julgado de sentença que lhe haja condenado por delito anterior, nos termos do Art. 63, do CP.
-
-      Todavia, Ricardo é portador de maus antecedentes, pois na data da sentença relativa ao estelionato já havia ocorrido o trânsito em julgado de duas outras sentenças condenatórias.
-    opcoes:
-      correta: "Na sentença do estelionato: maus antecedentes, mas réu primário, pois o estelionato foi cometido antes do trânsito em julgado de qualquer outra condenação, nos termos do Art. 63 do CP."
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - "O crime é de injúria, pois apenas foi atribuída qualidade negativa e não houve narração de um fato delitivo, conforme o Art. 140 do CP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - Sim. O argumento é que não há vedação legal para oferecimento de transação porque a condenação anterior de Rodrigo foi apenas ao cumprimento de pena de multa e não de pena privativa de liberdade, nos termos do Art. 76, §2º, inciso I, da Lei 9.099/95
-        - Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Na sentença da extorsão, incide a agravante da reincidência?"
+    tese: "Réu primário na extorsão, cometida antes do trânsito em julgado da condenação pelo roubo: não incide a reincidência"
+    aceitos: [ [ "primario" ], [ "nao incide | nao ha reincidencia | nao e reincidente | nao reincidente | sem reincidencia" ] ]
+    artigos: [ "art. 63, CP" ]
+    gabarito: "A questão objetiva busca extrair do examinando conhecimento de institutos relativos à dosimetria da pena, em especial no tocante à circunstância judicial dos maus antecedentes e à agravante da reincidência. Munido de tal conhecimento, o examinando deve ser capaz de identificar os institutos e também diferenciá-los quando diante de um caso concreto.\n\nNesse sentido, relativamente ao item ‘A’, percebe-se que Ricardo possui bons antecedentes.\n\nEventual sentença condenatória ainda não transitada em julgado não tem o condão de implicar- lhe maus antecedentes, pois isso significaria acréscimo de tempo em sua pena e contrariaria, assim, o princípio do estado de inocência, constitucionalmente previsto.\n\nNo item ‘B’, atendendo-se ao comando da questão, o examinando deve indicar que Ricardo é primário. Isso porque a extorsão foi cometida em 10/09/09, antes, portanto, do trânsito em julgado da sentença que o condenou pelo roubo (ocorrido em 15/05/2010), tal como manda o Art. 63 do CP. Não obstante a primariedade de Ricardo, ele é portador de maus antecedentes, pois na data da sentença relativa ao delito de extorsão (18/10/2010) já havia ocorrido o trânsito em julgado da sentença do crime de roubo.\n\nPor fim, em relação ao item ‘C’, o examinando deve indicar que ainda permanece a primariedade de Ricardo, pois o delito de estelionato foi cometido antes do trânsito em julgado de qualquer outro delito. Perceba-se que um indivíduo somente pode ser considerado reincidente se o crime pelo qual está sendo julgado tiver sido cometido após o trânsito em julgado de sentença que lhe haja condenado por delito anterior, nos termos do Art. 63, do CP.\n\nTodavia, Ricardo é portador de maus antecedentes, pois na data da sentença relativa ao estelionato já havia ocorrido o trânsito em julgado de duas outras sentenças condenatórias."
+    revisao: { status: revisado }
   - id: 11-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      O Ministério Público ofereceu denúncia contra Lucile, imputando-lhe a prática da conduta descrita no Art. 155, caput, do CP. Narrou, a inicial acusatória, que no dia 18/10/2012 Lucile subtraiu, sem violência ou grave ameaça, de um grande estabelecimento comercial do ramo de venda de alimentos, dois litros de leite e uma sacola de verduras, o que totalizou a quantia de R$10,00 (dez reais). Todas as exigências legais foram satisfeitas: a denúncia foi recebida, foi oferecida suspensão condicional do processo e foi apresentada resposta à acusação.
-
-      O magistrado, entretanto, após convencer-se pelas razões invocadas na referida resposta à acusação, entende que a fato é atípico.
-
-      Nesse sentido, tendo como base apenas as informações contidas no enunciado, responda, justificadamente, aos itens a seguir.
-    comando: O que o magistrado deve fazer? Após indicar a solução, dê o correto fundamento legal.
-    gabarito: O juiz deve absolver sumariamente a ré, devendo fundamentar sua decisão no Art. 397, III do CPP.
-    opcoes:
-      correta: O juiz deve absolver sumariamente a ré, com fundamento no Art. 397, III, do CPP.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - "O crime é de injúria, pois apenas foi atribuída qualidade negativa e não houve narração de um fato delitivo, conforme o Art. 140 do CP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - Sim. O argumento é que não há vedação legal para oferecimento de transação porque a condenação anterior de Rodrigo foi apenas ao cumprimento de pena de multa e não de pena privativa de liberdade, nos termos do Art. 76, §2º, inciso I, da Lei 9.099/95
-        - Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-    revisao: *a1
-  - id: 11-q4-b
-    categoria: discursiva
-    parte: q4
-    item: B
-    caso: |-
-      O Ministério Público ofereceu denúncia contra Lucile, imputando-lhe a prática da conduta descrita no Art. 155, caput, do CP. Narrou, a inicial acusatória, que no dia 18/10/2012 Lucile subtraiu, sem violência ou grave ameaça, de um grande estabelecimento comercial do ramo de venda de alimentos, dois litros de leite e uma sacola de verduras, o que totalizou a quantia de R$10,00 (dez reais). Todas as exigências legais foram satisfeitas: a denúncia foi recebida, foi oferecida suspensão condicional do processo e foi apresentada resposta à acusação.
-
-      O magistrado, entretanto, após convencer-se pelas razões invocadas na referida resposta à acusação, entende que a fato é atípico.
-
-      Nesse sentido, tendo como base apenas as informações contidas no enunciado, responda, justificadamente, aos itens a seguir.
-    comando: Qual é o elemento ausente que justifica a alegada atipicidade?
-    gabarito: Está ausente a tipicidade material. Isso porque, pela moderna doutrina, somente haverá tipicidade se, além da tipicidade formal (subsunção do fato à norma), estiver presente, também, a tipicidade material, assim entendida como efetiva lesão relevante ou ameaça de lesão ao bem jurídico tutelado.
-    opcoes:
-      correta: "Está ausente a tipicidade material: não houve lesão ou ameaça de lesão relevante ao bem jurídico tutelado."
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - "O crime é de injúria, pois apenas foi atribuída qualidade negativa e não houve narração de um fato delitivo, conforme o Art. 140 do CP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - Sim. O argumento é que não há vedação legal para oferecimento de transação porque a condenação anterior de Rodrigo foi apenas ao cumprimento de pena de multa e não de pena privativa de liberdade, nos termos do Art. 76, §2º, inciso I, da Lei 9.099/95
-        - Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Convencido de que o fato é atípico, o que o juiz deve fazer depois da resposta à acusação?"
+    tese: "Absolvição sumária da ré, porque o fato é atípico"
+    aceitos: [ "absolv*", "sumari*" ]
+    artigos: [ "art. 397, III, CPP" ]
+    gabarito: "O juiz deve absolver sumariamente a ré, devendo fundamentar sua decisão no Art. 397, III do CPP."
+    revisao: { status: revisado }

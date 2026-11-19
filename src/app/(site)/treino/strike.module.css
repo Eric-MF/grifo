@@ -26,49 +26,99 @@
 .som[aria-pressed="true"] { color: var(--primary); }
 .som:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 
-/* A comemoração: por cima de tudo, sem bloquear o clique */
-.comemoracao { position: fixed; inset: 0; z-index: 60; pointer-events: none; display: grid; place-items: center; overflow: hidden; animation: sumir 2.9s ease forwards; }
-@keyframes sumir { 0%, 82% { opacity: 1; } 100% { opacity: 0; } }
-.clarao { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, rgb(255 214 102 / 0.55), rgb(255 107 74 / 0.18) 35%, transparent 65%); animation: clarao 0.9s ease-out forwards; }
-@keyframes clarao { from { opacity: 0; transform: scale(0.6); } 25% { opacity: 1; } to { opacity: 0.35; transform: scale(1.15); } }
-.aneis { position: absolute; left: 50%; top: 45%; width: 0; height: 0; }
-.aneis span {
-  position: absolute; left: -9rem; top: -9rem; width: 18rem; height: 18rem; border-radius: 50%;
-  border: 6px solid #f5b82e; opacity: 0; animation: anel 1.3s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+/* A comemoração: por cima de tudo, sem bloquear o clique. O centro da explosão é o menu no modo foco (--ox/--oy) ou o
+   meio da tela; a duração vem do Treino (--duracao) */
+.comemoracao {
+  --ox: 50vw; --oy: 45vh;
+  position: fixed; inset: 0; z-index: 60; pointer-events: none; display: grid; place-items: center; overflow: hidden;
+  animation: sumir var(--duracao, 5.8s) ease forwards;
 }
-.aneis span:nth-child(2) { border-color: #ff3d7f; animation-delay: 0.15s; }
-.aneis span:nth-child(3) { border-color: #2fb7ff; animation-delay: 0.3s; }
-@keyframes anel { from { opacity: 0.9; transform: scale(0.1); } to { opacity: 0; transform: scale(2.6); border-width: 1px; } }
-.letreiro { position: relative; display: grid; justify-items: center; gap: 0.4rem; text-align: center; padding: 0 1rem; margin-top: -6vh; }
-.strike { display: flex; font-size: clamp(3.2rem, 14vw, 7.5rem); font-weight: 900; line-height: 1; letter-spacing: 0.02em; }
-.strike span {
-  display: inline-block; background: linear-gradient(180deg, #ffe066 0%, #f5b82e 40%, #ff6b4a 75%, #ff3d7f 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  filter: drop-shadow(0 4px 0 rgb(120 40 0 / 0.55)) drop-shadow(0 10px 24px rgb(255 107 74 / 0.45));
-  animation: saltar 0.7s cubic-bezier(0.3, 1.9, 0.45, 1) both; animation-delay: calc(var(--i) * 0.05s + 0.1s);
+@keyframes sumir { 0%, 88% { opacity: 1; } 100% { opacity: 0; } }
+/* um clarão dourado que nasce na explosão e fica, mais fraco, atrás da frase */
+.clarao {
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at var(--ox) var(--oy), color-mix(in srgb, var(--festa-claro) 75%, transparent), color-mix(in srgb, var(--festa-ouro) 32%, transparent) 22%, transparent 55%),
+    radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--festa-ouro) 40%, transparent), color-mix(in srgb, var(--festa-escuro) 12%, transparent) 35%, transparent 62%);
+  animation: clarao 1.4s ease-out forwards;
 }
-@keyframes saltar { from { opacity: 0; transform: translateY(40px) scale(0.3) rotate(-12deg); } 70% { opacity: 1; } }
+@keyframes clarao { from { opacity: 0; } 18% { opacity: 1; } to { opacity: 0.55; } }
+/* raios de ouro girando devagar atrás da frase */
+.raios {
+  position: absolute; left: 50%; top: 45%; width: 150vmax; height: 150vmax; margin: -75vmax 0 0 -75vmax; border-radius: 50%;
+  background: repeating-conic-gradient(from 0deg, color-mix(in srgb, var(--festa-claro) 28%, transparent) 0deg 5deg, transparent 5deg 18deg);
+  mask: radial-gradient(circle, #000 0, rgb(0 0 0 / 0.6) 18%, transparent 45%);
+  animation: raios var(--duracao, 5.8s) linear forwards, raiosEntrar 1.2s 0.15s ease-out both;
+}
+@keyframes raios { to { rotate: 40deg; } }
+@keyframes raiosEntrar { from { opacity: 0; scale: 0.3; } }
+/* a explosão: as bolinhas do strike voam do centro e estouram em faíscas, com uma onda de choque dourada */
+.explosao { position: absolute; left: var(--ox); top: var(--oy); width: 0; height: 0; }
+.onda {
+  position: absolute; left: -6rem; top: -6rem; width: 12rem; height: 12rem; border-radius: 50%;
+  border: 5px solid var(--festa-ouro); box-shadow: 0 0 24px var(--festa-ouro), inset 0 0 24px color-mix(in srgb, var(--festa-claro) 80%, transparent);
+  animation: onda 1.1s cubic-bezier(0.15, 0.7, 0.3, 1) forwards;
+}
+@keyframes onda { from { opacity: 1; transform: scale(0.05); } to { opacity: 0; transform: scale(3.2); border-width: 1px; } }
+.estilhaco {
+  position: absolute; left: -8px; top: -8px; width: 16px; height: 16px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff 0 18%, var(--cor) 45%); box-shadow: 0 0 10px var(--cor), 0 0 3px #fff;
+  opacity: 0; animation: voar 1.05s var(--atraso, 0s) cubic-bezier(0.12, 0.75, 0.3, 1) forwards;
+}
+/* as faíscas do estouro: dois anéis de pontos (box-shadow) que se abrem no fim do voo */
+.estilhaco::before, .estilhaco::after {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 4px; height: 4px; margin: -2px; border-radius: 50%; background: var(--festa-claro);
+  box-shadow: 14px 0 var(--festa-claro), -14px 0 var(--festa-ouro), 0 14px var(--festa-brilho), 0 -14px var(--festa-ouro), 10px 10px var(--cor), -10px -10px var(--cor), 10px -10px var(--festa-claro), -10px 10px var(--festa-brilho);
+  opacity: 0; animation: faisca 0.6s calc(var(--atraso, 0s) + 0.72s) ease-out forwards;
+}
+.estilhaco::after { rotate: 22deg; animation-delay: calc(var(--atraso, 0s) + 0.8s); }
+@keyframes voar {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.3); }
+  8% { opacity: 1; }
+  68% { opacity: 1; transform: translate(var(--x), var(--y)) scale(1.15); }
+  80% { opacity: 1; transform: translate(var(--x), var(--y)) scale(1.9); filter: brightness(1.6); }
+  100% { opacity: 0; transform: translate(var(--x), var(--y)) scale(0.2); }
+}
+@keyframes faisca { 0% { opacity: 1; scale: 0.2; } 100% { opacity: 0; scale: 2.4; } }
+/* a frase: palavra por palavra, em ouro, com um brilho que passa por ela de tempos em tempos */
+.letreiro { position: relative; display: grid; justify-items: center; gap: 0.5rem; text-align: center; padding: 0 1rem; margin-top: -6vh; }
+.frase {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0 0.28em; max-width: 14em;
+  font-size: clamp(2.2rem, 9vw, 5rem); font-weight: 900; line-height: 1.05; letter-spacing: 0.01em;
+}
+.frase span {
+  display: inline-block;
+  background: linear-gradient(100deg, var(--festa-fundo) 0%, var(--festa-ouro) 22%, var(--festa-brilho) 34%, var(--festa-ouro) 46%, var(--festa-escuro) 62%, var(--festa-claro) 80%, var(--festa-fundo) 100%);
+  background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 3px 0 rgb(110 60 0 / 0.6)) drop-shadow(0 0 18px color-mix(in srgb, var(--festa-ouro) 55%, transparent));
+  animation: saltar 0.75s cubic-bezier(0.3, 1.8, 0.45, 1) both, brilhoOuro 2.2s 0.9s linear infinite;
+  animation-delay: calc(var(--i) * 0.11s + 0.2s), calc(var(--i) * 0.08s + 0.9s);
+}
+@keyframes saltar { from { opacity: 0; transform: translateY(36px) scale(0.3) rotate(-8deg); } 70% { opacity: 1; } }
+@keyframes brilhoOuro { from { background-position: 100% 0; } to { background-position: -200% 0; } }
 .detalhe, .proximo {
-  font-weight: 800; font-size: clamp(0.95rem, 3vw, 1.2rem); padding: 0.35rem 0.9rem; border-radius: 999px;
-  background: rgb(20 20 30 / 0.78); color: #fff; animation: subir 0.5s 0.55s ease-out both;
+  font-weight: 800; font-size: clamp(0.95rem, 3vw, 1.2rem); padding: 0.35rem 0.95rem; border-radius: 999px;
+  background: rgb(30 22 6 / 0.82); color: var(--festa-claro); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--festa-ouro) 55%, transparent), 0 0 16px color-mix(in srgb, var(--festa-ouro) 30%, transparent);
+  animation: subir 0.5s 0.9s ease-out both;
 }
-.proximo { font-size: clamp(0.8rem, 2.6vw, 0.95rem); font-weight: 700; background: rgb(124 92 255 / 0.85); animation-delay: 0.8s; }
+.proximo { font-size: clamp(0.8rem, 2.6vw, 0.95rem); font-weight: 700; color: var(--festa-brilho); animation-delay: 1.2s; }
 @keyframes subir { from { opacity: 0; transform: translateY(12px); } }
+/* o pó dourado: cai devagar, girando, e cintila */
 .confetes { position: absolute; inset: 0; }
 .confetes span {
-  position: absolute; top: -4vh; left: var(--x); width: 10px; height: 14px; background: var(--cor); border-radius: 2px;
-  animation: cair var(--duracao) var(--atraso) cubic-bezier(0.25, 0.6, 0.45, 1) forwards; opacity: 0;
+  position: absolute; top: -4vh; left: var(--x); width: 7px; height: 7px; background: var(--cor); border-radius: 50%; box-shadow: 0 0 6px var(--cor);
+  animation: cair var(--duracao) var(--atraso) cubic-bezier(0.3, 0.5, 0.6, 1) forwards, cintilar 0.5s var(--atraso) ease-in-out infinite alternate; opacity: 0;
 }
-.confetes span[data-forma="1"] { width: 8px; height: 8px; border-radius: 50%; }
-.confetes span[data-forma="2"] { width: 14px; height: 6px; }
+.confetes span[data-forma="1"] { width: 9px; height: 9px; border-radius: 1px; rotate: 45deg; }
+.confetes span[data-forma="2"] { width: 12px; height: 12px; border-radius: 0; clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); box-shadow: none; }
 @keyframes cair {
   0% { opacity: 1; transform: translate(0, 0) rotate(0); }
-  100% { opacity: 0.9; transform: translate(var(--deriva), 110vh) rotate(var(--giro)); }
+  100% { opacity: 0.85; transform: translate(var(--deriva), 108vh) rotate(var(--giro)); }
 }
+@keyframes cintilar { to { filter: brightness(1.7); } }
 @media (prefers-reduced-motion: reduce) {
   .bolinha[data-ultima], .bolinhas[data-perdeu], .bolinhas[data-fez] .bolinha { animation: none; }
-  .clarao, .aneis, .confetes { display: none; }
-  .strike span, .detalhe, .proximo { animation: none; }
+  .clarao, .raios, .explosao, .confetes { display: none; }
+  .frase span, .detalhe, .proximo { animation: none; }
 }
 /* modo foco: as bolinhas e a legenda numa linha só, no topo */
 :global(body[data-foco]) .placar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.7rem; margin: 0; }

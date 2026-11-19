@@ -12,6 +12,8 @@
 import { createHash } from "node:crypto";
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { PDFArray, PDFDict, PDFDocument, PDFName } from "pdf-lib";
+import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const SRC = join(ROOT, ".examples");
@@ -31,6 +33,11 @@ interface Entrada {
   gabarito: string | null;
   objetivaCaderno: string | null;
   objetivaGabarito: string | null;
+  /** o gabarito é o preliminar: a FGV ainda não publicou o definitivo */
+  gabaritoPreliminar?: boolean;
+  objetivaGabaritoPreliminar?: boolean;
+  /** a página do exame no site da FGV, na lista de documentos */
+  fgv?: string;
   fase2: "aplicada" | "em-breve";
 }
 const exames = new Map<string, Entrada>();
@@ -52,6 +59,34 @@ const duplicado = (full: string, nome: string) => {
   return false;
 };
 
+// As marcações de estudo (realce, sublinhado, tachado, caneta, notas) que alguém fez no PDF: saem da cópia do site,
+// que fica igual ao original. Caixas de texto (FreeText) ficam: a FGV usa (ex.: "REAPLICAÇÃO PORTO VELHO").
+const MARCACOES = new Set(["/Highlight", "/Underline", "/StrikeOut", "/Squiggly", "/Ink", "/Text", "/Caret", "/Popup"]);
+async function copiarSemMarcacoes(origem: string, destino: string) {
+  const bytes = readFileSync(origem);
+  let doc: PDFDocument;
+  try {
+    doc = await PDFDocument.load(bytes, { ignoreEncryption: true, updateMetadata: false });
+  } catch {
+    return copyFileSync(origem, destino);
+  }
+  let tiradas = 0;
+  for (const pagina of doc.getPages()) {
+    const annots = pagina.node.lookup(PDFName.of("Annots"));
+    if (!(annots instanceof PDFArray)) continue;
+    const ficam = annots.asArray().filter((ref) => {
+      const a = doc.context.lookup(ref);
+      const marcacao = a instanceof PDFDict && MARCACOES.has(String(a.get(PDFName.of("Subtype"))));
+      if (marcacao) tiradas++;
+      return !marcacao;
+    });
+    if (ficam.length !== annots.size()) pagina.node.set(PDFName.of("Annots"), doc.context.obj(ficam));
+  }
+  if (!tiradas) return copyFileSync(origem, destino);
+  writeFileSync(destino, await doc.save());
+  console.warn(`! ${origem.slice(SRC.length + 1)}: ${tiradas} marcação(ões) de estudo tirada(s) da cópia do site`);
+}
+
 // Gabaritos: "Exame da Ordem 38º - Agravo em Execução (Porto Alegre).pdf" ou "Exame da Ordem 41º.pdf"
 const dirGab = join(SRC, "PDF's Gabaritos");
 for (const f of readdirSync(dirGab).sort()) {
@@ -62,8 +97,24 @@ for (const f of readdirSync(dirGab).sort()) {
   const e = entrada(Number(m[1]), m[3] ?? null);
   e.peca = m[2] ?? null;
   e.gabarito = `gabarito-${e.id}.pdf`;
-  copyFileSync(full, join(OUT, e.gabarito));
+  await copiarSemMarcacoes(full, join(OUT, e.gabarito));
 }
+
+/** O começo do texto do PDF (as duas primeiras páginas), para reconhecer o que ele é. */
+async function comecoDoTexto(arquivo: string): Promise<string> {
+  try {
+    const doc = await getDocument({ data: new Uint8Array(readFileSync(arquivo)), verbosity: 0 }).promise;
+    let texto = "";
+    for (let i = 1; i <= Math.min(2, doc.numPages); i++) texto += (await (await doc.getPage(i)).getTextContent()).items.map((it) => ("str" in it ? it.str : "")).join(" ");
+    await doc.loadingTask.destroy();
+    return texto;
+  } catch (erro) {
+    console.warn(`! não li o texto de ${arquivo}: ${(erro as Error).message}`);
+    return "";
+  }
+}
+// um "caderno" que na verdade é o padrão de resposta (já aconteceu: o padrão preliminar salvo com o nome do caderno)
+const ehPadraoDeResposta = async (arquivo: string) => /PADR[ÃA]O DE RESPOSTA/i.test(await comecoDoTexto(arquivo));
 
 // Cadernos: "OAB 25º [ Penal ] - Caderno de Provas (Porto Alegre).pdf"
 const dirCad = join(SRC, "Caderno de Provas");
@@ -75,8 +126,12 @@ for (const full of cadernos.sort()) {
   if (!m) continue;
   const e = entrada(Number(m[1]), m[2] ?? null);
   if (e.caderno) continue;
+  if (await ehPadraoDeResposta(full)) {
+    console.warn(`! ${f} é um padrão de resposta, não o caderno — ignorado (o caderno vem da FGV, se houver)`);
+    continue;
+  }
   e.caderno = `caderno-${e.id}.pdf`;
-  copyFileSync(full, join(OUT, e.caderno));
+  await copiarSemMarcacoes(full, join(OUT, e.caderno));
 }
 
 // Material baixado da FGV: completa o que faltou e traz a 1ª fase (Tipo 1).
@@ -99,12 +154,16 @@ if (existsSync(FGV)) {
     const temPratica = (manifesto?.baixados ?? []).some((b: { tipo: string }) => b.tipo.startsWith("pratica-"));
     const penal = join(dir, "pratica", "direito-penal");
     const e = entrada(numero, null);
+    if (manifesto?.pagina) for (const x of exames.values()) if (x.numero === numero) x.fgv = manifesto.pagina;
     e.caderno ??= copiar(join(penal, "caderno.pdf"), `caderno-${e.id}.pdf`);
-    e.gabarito ??=
-      copiar(join(penal, "padrao-definitivo.pdf"), `gabarito-${e.id}.pdf`) ??
-      copiar(join(penal, "padrao-preliminar.pdf"), `gabarito-${e.id}.pdf`);
+    // sem o definitivo, vale o preliminar (marcado como tal na página de provas)
+    if (!e.gabarito) {
+      e.gabarito = copiar(join(penal, "padrao-definitivo.pdf"), `gabarito-${e.id}.pdf`);
+      if (!e.gabarito && (e.gabarito = copiar(join(penal, "padrao-preliminar.pdf"), `gabarito-${e.id}.pdf`))) e.gabaritoPreliminar = true;
+    }
     e.objetivaCaderno = copiar(join(dir, "objetiva", "caderno-tipo1.pdf"), `objetiva-caderno-${e.id}.pdf`);
     e.objetivaGabarito = copiar(join(dir, "objetiva", "gabarito-definitivo.pdf"), `objetiva-gabarito-${e.id}.pdf`);
+    if (!e.objetivaGabarito && (e.objetivaGabarito = copiar(join(dir, "objetiva", "gabarito-preliminar.pdf"), `objetiva-gabarito-${e.id}.pdf`))) e.objetivaGabaritoPreliminar = true;
     if (!temPratica && !e.caderno && !e.gabarito) e.fase2 = "em-breve";
   }
 }

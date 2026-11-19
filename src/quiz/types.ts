@@ -1,8 +1,6 @@
 // Tipos do banco de perguntas (compartilhado por todos os jogos).
 
-import type { Item } from "@/content/schema";
-
-export type Nivel = 1 | 2 | 3; // 1 fácil (alternativas, só a peça) · 2 médio (digita peça + artigo) · 3 difícil (+ parágrafo/inciso/alínea)
+export type Nivel = 1 | 2 | 3; // 1 fácil (alternativas) · 2 médio (digita a resposta) · 3 difícil (+ artigo com parágrafo/inciso/alínea)
 
 /** O que a pergunta cobra; o usuário escolhe quais entram no jogo e no treino. */
 export type Categoria = "peca" | "peca-detalhe" | "discursiva" | "objetiva";
@@ -26,6 +24,8 @@ interface Base {
   categorias: Categoria[];
   /** o gênero de cada pessoa marcada no texto ({p1}, {p2}…), que a tela troca por um nome (src/quiz/nomes.ts) */
   pessoas?: ("m" | "f")[];
+  /** os nomes sorteados para essas pessoas, na ordem: guardados para refazer a questão igual (o resultado guardado) */
+  nomes?: string[];
 }
 
 /** Qual a peça cabível e o seu fundamento. */
@@ -36,13 +36,28 @@ export interface PerguntaPeca extends Base {
   distratores?: string[];
 }
 
-/** Um item da tabela de pontos da FGV: alternativas no nível fácil, resposta digitada nos outros. */
-export interface PerguntaItem extends Base {
-  formato: "item";
+/**
+ * Uma tese da tabela de pontos da FGV (da peça ou de uma questão discursiva), com o artigo em que ela se apoia. O `caso`
+ * é a introdução curta (sem a resposta); o caso inteiro da prova fica em `enunciado`, para quem quiser ler.
+ *   - Fácil: alternativas. Ou o artigo da tese dada, ou a tese do artigo dado (o texto do artigo não aparece).
+ *   - Médio: digitar o ponto central (`comando` pergunta; `aceitos` corrige), como "homicídio culposo".
+ *   - Difícil: o ponto central e o artigo, com parágrafo, inciso ou alínea.
+ */
+export interface PerguntaTese extends Base {
+  formato: "tese";
   secao?: string;
-  itens: Item[];
-  opcoes: { texto: string; correta: boolean }[];
-  dispositivos: string[];
+  /** o caso completo, como está na prova */
+  enunciado: string;
+  /** o ponto central, como aparece na correção ("Desclassificação para homicídio culposo") */
+  tese: string;
+  /** o que o ponto central digitado precisa ter: grupos de termos (basta um grupo inteiro), na sintaxe da correção */
+  aceitos: string[][];
+  /** os dispositivos aceitos, do esperado para os alternativos */
+  artigos: string[];
+  /** quanto o item vale na tabela da FGV (o peso dele no sorteio de "Por dentro da peça") */
+  valor: number;
+  /** alternativas erradas do nível fácil: outros artigos e outras teses, das mais parecidas para as outras */
+  erradas: { artigos: string[]; teses: string[] };
 }
 
 export type Letra = "A" | "B" | "C" | "D";
@@ -56,7 +71,7 @@ export interface PerguntaObjetiva extends Base {
   dispositivos: string[];
 }
 
-export type Pergunta = PerguntaPeca | PerguntaItem | PerguntaObjetiva;
+export type Pergunta = PerguntaPeca | PerguntaTese | PerguntaObjetiva;
 
 export interface Rng {
   (): number;

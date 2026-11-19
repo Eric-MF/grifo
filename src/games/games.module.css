@@ -7,7 +7,6 @@
 }
 .full { position: fixed; inset: 0; height: 100dvh; border-radius: 0; z-index: 90; overscroll-behavior: contain; }
 .canvas { display: block; width: 100%; height: 100%; outline: none; cursor: pointer; touch-action: none; }
-.girarAtivo .canvas { pointer-events: none; }
 
 /* ---------- HUD ---------- */
 .hud { position: absolute; inset: 0 0 auto 0; display: grid; grid-template-columns: 1fr auto; align-items: start; padding: 0.7rem 0.9rem; pointer-events: none; }
@@ -26,7 +25,7 @@
   /* a caixa é menor que a da estrela; o anel de fora (0,07em de cada lado) completa o tamanho visível dela */
   width: 0.56em; height: 0.56em; border-radius: 50%; flex: none;
   /* cores da moeda do estilo (variáveis que o GameHost define); sem elas, o dourado padrão */
-  background: radial-gradient(circle at 35% 35%, #fff 0 15%, var(--moeda-ouro, #f0c77e) 40%, var(--moeda-borda, #8a5a2b) 100%);
+  background: radial-gradient(circle at 35% 35%, #fff 0 15%, var(--moeda-ouro, #f0c97f) 40%, var(--moeda-borda, #8a5a2b) 100%);
   box-shadow: 0 0 0 0.07em var(--moeda-borda, #8a5a2b);
 }
 .poderes { grid-column: 1; grid-row: 1; display: flex; flex-wrap: wrap; gap: 0.35rem; }
@@ -74,18 +73,50 @@
 .menuPixel { border-radius: 0; border: 0; padding: 1.1rem 1.4rem; border-image: var(--moldura) 3 fill / 12px stretch; image-rendering: pixelated; box-shadow: none; }
 .menuBox {
   width: min(100%, 560px); display: flex; flex-direction: column; gap: 0.9rem; align-items: stretch; text-align: center;
-  background: var(--bg); color: var(--text); border-radius: 22px; padding: 1.5rem; --menu-pad-y: 1.5rem;
+  /* o padding sai das variáveis: a barra do Jogar usa as mesmas para ir de borda a borda sem passar da caixa */
+  --menu-pad-y: 1.5rem; --menu-pad-x: 1.5rem;
+  background: var(--bg); color: var(--text); border-radius: 22px; padding: var(--menu-pad-y) var(--menu-pad-x);
   box-shadow: 0 24px 60px rgb(0 0 0 / 0.35); max-height: calc(100% - 1rem); overflow: auto;
 }
-.menuTitulo { margin: 0; font-size: clamp(2rem, 5vw, 2.8rem); }
-.menuDesc { margin: 0; color: var(--muted); }
+.menuTitulo { margin: 0; font-size: clamp(1.45rem, 5vw, 2.5rem); line-height: 1.1; min-width: 0; }
+/* o topo do menu: informações à esquerda, o título no meio e, à direita, som, efeitos e poder automático */
+.topoMenu { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 0.5rem; }
+.toggles { display: flex; gap: 0.3rem; }
+/* contêiner de ícone (dentro de botões e da ficha) e o botão redondo só de ícone */
+.icone { display: inline-grid; place-items: center; flex: none; }
+.icone svg, .botaoIcone svg, .botaoRotulo svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.botaoIcone {
+  display: inline-grid; place-items: center; width: 38px; height: 38px; padding: 0; border-radius: 50%; flex: none; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--muted);
+}
+.botaoIcone svg { width: 20px; height: 20px; }
+.botaoIcone[aria-pressed="true"] { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 12%, var(--surface)); color: var(--primary); }
+.botaoIcone:focus-visible, .botaoRotulo:focus-visible, .segmento:focus-visible, .quadro:focus-visible, .fichaPoder:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* o "como jogar", aberto pelo botão de informações */
+.infoJogo {
+  display: grid; gap: 0.4rem; text-align: left; font-size: 0.86rem; line-height: 1.45; padding: 0.7rem 0.9rem; border-radius: 12px;
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface)); border: 1px solid var(--border); animation: surgirMenu 0.18s ease-out;
+}
+.infoJogo p { margin: 0; }
+.legenda { list-style: none; margin: 0.2rem 0 0; padding: 0.5rem 0 0; display: grid; gap: 0.35rem; border-top: 1px solid var(--border); }
+.legenda li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 0.5rem; align-items: start; }
+.legenda .icone { color: var(--primary); padding-top: 1px; }
+@keyframes surgirMenu { from { opacity: 0; transform: translateY(-4px); } }
+/* botão com ícone e nome (recorde, último jogo): borda e fundo de botão, não só o ícone */
+.botaoRotulo {
+  display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.4rem 0.85rem; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; font-size: 0.85rem; font-weight: 700;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.08);
+}
+.botaoRotulo:hover, .segmento:hover, .fichaPoder:hover { border-color: var(--primary); }
+.botaoRotulo svg { width: 16px; height: 16px; color: var(--accent-ink, var(--primary)); }
 .jogar { font-size: 1.15rem; padding: 0.9rem 1.5rem; }
 /* barra do Jogar: fica sempre visível ao rolar o menu. Ela começa na borda de cima da caixa e termina 1px abaixo do
    botão. Do topo até o botão o fundo é sólido (cobre o texto que passa por cima dele); depois degrada até transparente
    no fim da barra, para o texto que passa por trás dos lados do botão ir sumindo */
 .jogarBarra {
   position: sticky; top: calc(-1 * var(--menu-pad-y)); z-index: 3; display: flex; justify-content: center;
-  margin: 0 -1.5rem; padding: var(--menu-pad-y) 1.5rem 1px;
+  margin: 0 calc(-1 * var(--menu-pad-x)); padding: var(--menu-pad-y) var(--menu-pad-x) 1px;
   background: linear-gradient(to bottom, var(--bg) 0, var(--bg) var(--menu-pad-y), transparent 100%);
 }
 .jogar:disabled { opacity: 0.5; cursor: not-allowed; }
@@ -93,10 +124,7 @@
 /* resumo do menu: recorde, XP e moedas (com os mesmos ícones da HUD) e o último jogo, numa linha só */
 .barraStats { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem 1.1rem; }
 .barraStats .contador { font-size: 1.3rem; color: var(--text); -webkit-text-stroke: 0; text-shadow: none; }
-.atalho { display: inline-grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; cursor: pointer;
-  background: rgb(3 17 44 / 0.55); color: #fff; }
-.atalho:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.atalho svg, .chip svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.chip svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .avisoMenu { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.45rem; }
 .chip { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.7rem 0.2rem 0.2rem; border-radius: 999px;
   background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--text); font-size: 0.9rem; }
@@ -104,14 +132,37 @@
 .chip svg { width: 14px; height: 14px; }
 .grupo { border: 0; margin: 0; padding: 0; text-align: left; }
 .grupo legend { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
-.niveis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
-.niveis button, .estilos button {
+/* as perguntas: modo, dificuldade e tipos em botões pequenos com ícone; a explicação abre ao tocar */
+.perguntas { display: grid; gap: 0.4rem; }
+.linhaOpcoes { display: grid; grid-template-columns: 6.4rem minmax(0, 1fr); align-items: center; gap: 0.5rem; }
+.rotuloLinha { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+/* tela estreita (celular em pé): o rótulo vai em cima, e os botões ganham a largura toda */
+@media (max-width: 520px) {
+  .linhaOpcoes { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+  .menuTitulo { font-size: clamp(1.05rem, 5.2vw, 1.3rem); }
+}
+.segmentos { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.segmento {
+  display: inline-flex; align-items: center; gap: 0.35rem; min-height: 36px; padding: 0.3rem 0.7rem 0.3rem 0.5rem; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; font-size: 0.84rem; font-weight: 700;
+}
+.segmento .icone { color: var(--muted); }
+.segmento[aria-pressed="true"] { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 13%, var(--surface)); box-shadow: inset 0 0 0 1px var(--primary); }
+.segmento[aria-pressed="true"] .icone { color: var(--primary); }
+.segmento[aria-disabled="true"]:not([aria-pressed="true"]) { opacity: 0.55; }
+.iconeNivel svg rect { fill: currentColor; stroke: none; opacity: 0.28; }
+.iconeNivel svg rect[data-cheio] { opacity: 1; }
+.explica {
+  margin: 0.1rem 0 0; padding: 0.5rem 0.7rem; border-radius: 10px; border-left: 3px solid var(--primary); text-align: left;
+  background: color-mix(in srgb, var(--primary) 7%, var(--surface)); font-size: 0.82rem; line-height: 1.4; animation: surgirMenu 0.18s ease-out;
+}
+.explicaStatus { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.6rem; margin-top: 0.3rem; font-weight: 700; color: var(--accent-ink, var(--primary)); }
+.explicaAcao { border: 0; background: none; padding: 0; color: var(--primary); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
+.estilos button {
   display: flex; flex-direction: column; gap: 0.1rem; padding: 0.55rem; border-radius: 12px; border: 1px solid var(--border);
   background: var(--surface); cursor: pointer; text-align: left; color: var(--text);
 }
-.niveis button[aria-pressed="true"], .estilos button[aria-pressed="true"] { border-color: var(--primary); box-shadow: inset 0 0 0 1.5px var(--primary); }
-.niveis small { color: var(--muted); font-size: 0.75rem; line-height: 1.25; }
-.rec { color: var(--accent-ink) !important; font-weight: 700; }
+.estilos button[aria-pressed="true"] { border-color: var(--primary); box-shadow: inset 0 0 0 1.5px var(--primary); }
 .estilos { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.4rem; }
 .estilos button { flex-direction: row; align-items: center; gap: 0.45rem; font-size: 0.88rem; font-weight: 600; min-width: 0; }
 .estiloNome { min-width: 0; overflow-wrap: anywhere; line-height: 1.2; }
@@ -126,6 +177,9 @@
   pointer-events: none;
 }
 .estiloDesc { font-size: 0.82rem; color: var(--muted); margin: 0.4rem 0 0; }
+.grupoEstilos { margin-top: 0.6rem; }
+.grupoEstilos > summary { cursor: pointer; font-size: 0.88rem; font-weight: 700; padding: 0.25rem 0; }
+.grupoEstilos > .estilos { margin-top: 0.4rem; }
 .swatch { width: 18px; height: 18px; border-radius: 6px; flex: none; }
 .swatch[data-estilo="classico"] { background: linear-gradient(135deg, #4f9fe0 50%, #efe6d6 50%); }
 .swatch[data-estilo="fofo"] { background: linear-gradient(135deg, #ffc6d9 50%, #b8f0cf 50%); }
@@ -134,53 +188,77 @@
 .swatch[data-estilo="pixel"] { background: conic-gradient(#5c94fc 25%, #c84c0c 0 50%, #5c94fc 0 75%, #c84c0c 0); }
 .swatch[data-estilo="noir"] { background: linear-gradient(135deg, #111 50%, #bbb 50%); }
 .swatch[data-estilo="papiro"] { background: linear-gradient(135deg, #f1e4c6 50%, #3b2a1a 50%); }
-.toggles { display: flex; gap: 1.25rem; justify-content: center; font-size: 0.92rem; }
-.toggles input { accent-color: var(--primary); }
-.como { text-align: left; font-size: 0.9rem; }
-.como summary { cursor: pointer; font-weight: 700; color: var(--primary); }
-.como ul { padding-left: 0; margin: 0.4rem 0 0; display: grid; gap: 0.3rem; list-style: none; }
-.como li { display: flex; align-items: center; gap: 0.45rem; }
-
-@media (max-width: 760px) {
-  .niveis { grid-template-columns: 1fr; }
+.swatch[data-estilo="recesso"] { background: linear-gradient(135deg, #9cc3ea 50%, #f4f8fd 50%); }
+.swatch[data-estilo="gotico"] { background: linear-gradient(135deg, #1a1028 50%, #b04cff 50%); }
+/* ---------- Personagens: só o desenho em quadrados, e a ficha fixa do atual (ou do que está sob o dedo) ---------- */
+.personagens { position: relative; display: grid; grid-template-columns: repeat(auto-fill, minmax(54px, 1fr)); gap: 0.35rem; -webkit-user-select: none; user-select: none; }
+/* o balão acima do dedo, ao deslizar pelos personagens ou pelos poderes (o dedo cobre a ficha e o painel) */
+.balao {
+  position: absolute; z-index: 5; transform: translate(-50%, -100%); width: min(260px, 92%); display: grid; gap: 0.15rem; pointer-events: none;
+  padding: 0.5rem 0.7rem; border-radius: 12px; background: rgb(3 17 44 / 0.94); color: #fff; font-size: 0.8rem; line-height: 1.3; text-align: left;
+  box-shadow: 0 10px 28px rgb(0 0 0 / 0.35);
 }
-
-/* ---------- Balão do poder (passar o mouse sobre personagem liberado) ---------- */
-.dicaPoder {
-  position: absolute; z-index: 40; pointer-events: none; display: flex; align-items: center; gap: 0.5rem; width: min(260px, calc(100% - 16px));
-  padding: 0.5rem 0.7rem; border-radius: 12px; background: rgb(3 17 44 / 0.92); color: #fff; font-size: 0.82rem; line-height: 1.3;
-  text-align: left; box-shadow: 0 10px 30px rgb(0 0 0 / 0.35);
+.balao strong { font-size: 0.92rem; }
+.balao::after { content: ""; position: absolute; left: 50%; bottom: -6px; width: 12px; height: 12px; background: inherit; transform: translateX(-50%) rotate(45deg); }
+.quadro {
+  position: relative; aspect-ratio: 1; padding: 0.2rem; border-radius: 12px; display: grid; place-items: center; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--muted); -webkit-touch-callout: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
-.dicaPoder .poderIcone { width: 30px; height: 30px; }
-.comoObter { display: grid; gap: 0.15rem; margin-bottom: 0.45rem; padding-bottom: 0.45rem; border-bottom: 1px solid rgb(255 255 255 / 0.22); }
-.comoObter small { font-size: 0.8rem; font-weight: 500; opacity: 0.85; }
-.dicaPoder strong { display: block; font-size: 0.9rem; }
+.quadroRetrato { width: 100%; height: auto; pointer-events: none; }
+.quadro[data-bloqueado] { opacity: 0.55; }
+.quadro[data-bloqueado] .icone svg { width: 20px; height: 20px; }
+.quadro[aria-pressed="true"] { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 11%, var(--surface)); box-shadow: inset 0 0 0 2px var(--primary); }
+/* o marcador do atual, no canto */
+.quadro[aria-pressed="true"]::after {
+  content: "✓"; position: absolute; top: -5px; right: -5px; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--primary); color: var(--primary-ink); font-size: 0.7rem; font-weight: 900;
+}
+/* o que a ficha está mostrando (o dedo ou o mouse por cima) */
+.quadro[data-mostrado]:not([aria-pressed="true"]) { box-shadow: 0 0 0 2px var(--accent); }
+.personagens[data-deslizando] .quadro[data-mostrado] { transform: scale(1.1); z-index: 1; }
+.ficha {
+  display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 0.65rem; align-items: start; margin-top: 0.5rem; min-height: 5.4rem;
+  padding: 0.6rem 0.7rem; border-radius: 14px; border: 1px solid var(--border); background: color-mix(in srgb, var(--primary) 5%, var(--surface)); text-align: left;
+}
+.fichaRetrato { width: 64px; height: 57px; }
+span.fichaRetrato { color: var(--muted); }
+span.fichaRetrato svg { width: 26px; height: 26px; }
+.fichaTexto { display: grid; gap: 0.3rem; min-width: 0; }
+.fichaNome { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.5rem; }
+.fichaNome strong { font-size: 1rem; }
+.fichaEtiqueta { font-size: 0.72rem; font-weight: 700; color: var(--muted); }
+.fichaEtiqueta[data-atual] { color: var(--primary); background: color-mix(in srgb, var(--primary) 12%, transparent); padding: 0.05rem 0.45rem; border-radius: 999px; }
+.fichaTexto > small { font-size: 0.78rem; color: var(--muted); line-height: 1.35; }
+.fichaPoder {
+  display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; gap: 0.5rem; align-items: center; padding: 0.4rem 0.55rem; border-radius: 10px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; font-size: 0.8rem; line-height: 1.35; text-align: left;
+}
+.fichaPoder img { width: 26px; height: 26px; }
+/* o nome do poder pode ser uma palavra só e comprida ("Arquivamento"), que na fonte maior não cabe na linha */
+.fichaPoder > span, .fichaNome strong, .trilhaTexto small b { overflow-wrap: anywhere; }
+.fichaPoder .icone { color: var(--primary); }
 
 /* ---------- Modo "Celular" (ver src/lib/modo.ts) ---------- */
-.girar {
-  position: absolute; top: 0.5rem; left: 50%; transform: translateX(-50%); z-index: 60; white-space: nowrap;
-  display: flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; border-radius: 999px;
-  background: rgb(3 17 44 / 0.88); color: #fff; font-weight: 700; font-size: 0.85rem; pointer-events: none;
-}
-.girarAtivo .menu { padding-top: 3.4rem; }
-.girar span { display: inline-block; font-size: 1.2rem; }
-@media (prefers-reduced-motion: no-preference) {
-  .girar span { animation: girarIcone 2.4s ease-in-out infinite; }
-}
-@keyframes girarIcone { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(90deg); } }
 :global(:root[data-layout="celular"]) .hudBtns button,
 :global(:root[data-layout="celular"]) .telaCheia { width: 44px; height: 44px; }
 :global(:root[data-layout="celular"]) .dica { white-space: normal; max-width: calc(100% - 2rem); text-align: center; }
 :global(:root[data-layout="celular"]) .estilos { grid-template-columns: repeat(auto-fill, minmax(min(100%, 130px), 1fr)); }
+:global(:root[data-layout="celular"]) .menuBox { gap: 0.7rem; }
 @media (max-width: 420px) {
-  :global(:root[data-layout="celular"]) .menuBox { padding: 1rem; --menu-pad-y: 1rem; }
+  :global(:root[data-layout="celular"]) .menuBox { --menu-pad-y: 1rem; --menu-pad-x: 1rem; }
+  .segmento { font-size: 0.8rem; padding: 0.25rem 0.6rem 0.25rem 0.45rem; }
+}
+/* celular em pé: o palco ocupa a tela até embaixo do cabeçalho (o jogo fica mais alto, e a pergunta cabe melhor) */
+@media (orientation: portrait) {
+  :global(:root[data-layout="celular"]) .stage { height: calc(100dvh - 96px); min-height: 440px; }
 }
 @media (orientation: landscape) and (max-height: 500px) {
   :global(:root[data-layout="celular"]) .stage { height: calc(100dvh - 72px); min-height: 0; }
-  :global(:root[data-layout="celular"]) .menuBox { padding: 0.75rem 1rem; gap: 0.5rem; --menu-pad-y: 0.75rem; }
-  :global(:root[data-layout="celular"]) .menuTitulo { font-size: 1.6rem; }
+  :global(:root[data-layout="celular"]) .menuBox { gap: 0.5rem; --menu-pad-y: 0.75rem; --menu-pad-x: 1rem; }
+  :global(:root[data-layout="celular"]) .menuTitulo { font-size: 1.35rem; }
   :global(:root[data-layout="celular"]) .jogar { padding: 0.6rem 1.5rem; }
-  :global(:root[data-layout="celular"]) .jogarBarra { margin: 0 -1rem; }
+  :global(:root[data-layout="celular"]) .poderPainel, :global(:root[data-layout="celular"]) .previaPoder { scroll-margin-top: 3.6rem; }
 }
 
 /* ---------- Pop-up de aviso (dentro do palco) ---------- */
@@ -209,3 +287,83 @@
 .jogoCapa { aspect-ratio: 16 / 9; width: 100%; object-fit: cover; background: linear-gradient(180deg, #5a9ed6, #bfe0f7); display: grid; place-items: center; font-size: 4rem; }
 .jogoInfo { padding: 1rem 1.2rem 1.2rem; }
 .breve { opacity: 0.6; }
+
+/* modo automático das perguntas: o aviso de que subiu de nível ou mudou de tipo, por cima do jogo, por alguns segundos */
+.avisoAuto {
+  position: absolute; left: 50%; top: 18%; z-index: 30; transform: translateX(-50%); padding: 0.55rem 1.1rem; border-radius: 999px;
+  background: rgb(3 17 44 / 0.88); color: var(--festa-claro); font-weight: 800; font-size: 0.95rem; white-space: nowrap; pointer-events: none;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3); animation: avisoAuto 3.2s ease both;
+}
+@keyframes avisoAuto {
+  0% { opacity: 0; transform: translate(-50%, 10px) scale(0.92); }
+  10%, 80% { opacity: 1; transform: translate(-50%, 0) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -8px); }
+}
+@media (prefers-reduced-motion: reduce) { .avisoAuto { animation-name: avisoAutoFade; } @keyframes avisoAutoFade { 0%, 85% { opacity: 1; } 100% { opacity: 0; } } }
+
+/* ---------- Poderes: melhorias com moedas (PainelPoderes.tsx), nas cores do estilo escolhido ---------- */
+.poderesMenu {
+  --estilo-fundo: var(--surface); --estilo-borda: var(--border); --estilo-acento: var(--primary); --estilo-texto: #fff;
+  display: grid; gap: 0.6rem;
+}
+.poderesGrade { position: relative; display: flex; flex-wrap: wrap; gap: 0.4rem; -webkit-user-select: none; user-select: none; }
+.poderesGrade[data-deslizando] .poderBotao[data-mostrado] { transform: scale(1.15); box-shadow: 0 0 0 2px var(--accent); z-index: 1; }
+.poderBotao {
+  -webkit-touch-callout: none; transition: transform 0.12s ease;
+  position: relative; width: 46px; height: 46px; padding: 0; border-radius: 50%; display: grid; place-items: center; cursor: pointer;
+  border: 1px solid var(--border); background: color-mix(in srgb, var(--estilo-fundo) 30%, var(--surface));
+}
+.poderBotao img { width: 26px; height: 26px; }
+.poderBotao[aria-pressed="true"] { border-color: var(--estilo-acento); box-shadow: 0 0 0 2px var(--estilo-acento); }
+.poderBotao:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.poderAnel { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); pointer-events: none; }
+.poderAnel circle { fill: none; stroke-width: 3; stroke: color-mix(in srgb, var(--estilo-borda) 22%, transparent); }
+.poderAnel circle + circle { stroke: var(--estilo-acento); stroke-linecap: round; }
+.poderPainel {
+  scroll-margin-top: 4.8rem; scroll-margin-bottom: 0.75rem;
+  display: grid; gap: 0.6rem; padding: 0.75rem; border-radius: 16px; border: 2px solid var(--estilo-borda);
+  background: color-mix(in srgb, var(--estilo-fundo) 18%, var(--surface));
+}
+/* estilo Pixel: a moldura 8-bit do menu (9-slice), sem o canto arredondado */
+.poderPainel[data-pixel] { border: 0; border-radius: 0; border-image: var(--moldura) 3 fill / 12px stretch; image-rendering: pixelated; }
+.poderTopo { display: flex; gap: 0.75rem; align-items: center; }
+.poderTopo strong { font-size: 1rem; }
+.poderTopo p { margin: 0.15rem 0 0; font-size: 0.82rem; color: var(--muted); }
+.poderTopo .poderAjuda { font-size: 0.74rem; }
+.previaPoder { width: 150px; height: 96px; flex: none; border-radius: 12px; border: 1px solid var(--estilo-borda); scroll-margin: 4.8rem 0 0.75rem; }
+.trilhas { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.trilha {
+  display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 0.5rem; align-items: center;
+  padding: 0.4rem 0.5rem; border-radius: 10px; background: var(--surface); border: 1px solid var(--border);
+}
+.trilhaIcone {
+  width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; color: var(--estilo-acento);
+  background: color-mix(in srgb, var(--estilo-acento) 16%, transparent);
+}
+.trilhaIcone svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.trilhaTexto { display: grid; gap: 0.1rem; min-width: 0; }
+.trilhaNome { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; font-size: 0.86rem; font-weight: 700; }
+.trilhaTexto small { font-size: 0.75rem; line-height: 1.3; color: var(--muted); }
+.trilhaTexto small b { color: var(--text); }
+.trilhaTexto .contrapeso { color: color-mix(in srgb, var(--bad) 72%, var(--text)); }
+.pips { display: inline-flex; gap: 3px; }
+.pips span { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--estilo-acento); }
+.pips span[data-cheio] { background: var(--estilo-acento); }
+.melhorar {
+  display: inline-flex; align-items: center; gap: 0.3rem; border: 0; border-radius: 999px; padding: 0.35rem 0.7rem; cursor: pointer;
+  font-size: 0.82rem; font-weight: 800; background: var(--estilo-acento); color: var(--estilo-texto);
+}
+.melhorar .moedaIcone { font-size: 1.4rem; }
+.melhorar[data-falta] { opacity: 0.5; }
+.melhorar:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.maximo { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--estilo-acento); }
+@media (max-width: 480px) {
+  .poderTopo { flex-direction: column; align-items: stretch; }
+  .previaPoder { width: 100%; height: 110px; }
+}
+/* desbloqueio (só em desenvolvimento): editar as moedas guardadas */
+.editarMoedas { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; font-weight: 700; color: var(--muted); }
+.editarMoedas input {
+  width: 7.5rem; padding: 0.25rem 0.45rem; border-radius: 8px; border: 1px dashed var(--border);
+  background: var(--surface); color: var(--text); font: inherit; font-size: 0.85rem;
+}

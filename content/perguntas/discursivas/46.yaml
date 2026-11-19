@@ -1,444 +1,168 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "46"
+introducoes:
+  peca: "Jorge foi denunciado por integrar a milícia privada de Adilson, armada, que explora jogos de azar, contravenção penal, na Zona Leste de Flores. Policiais o abordaram e nada acharam, mas, por uma denúncia anônima, vasculharam o celular dele sem sua autorização e acharam mensagens a Adilson, a quem chamava de “chefe”. Só com esses dados ele foi denunciado, sem que a denúncia dissesse qual era a função dele na milícia. O juiz recebeu a denúncia, e Jorge foi citado em 8/6/2026."
+  q1: "Numa festa, Rafael viu Fernanda desacordada pela bebida e decidiu manter relação sexual com ela. Entrou no quarto, mas, cansado, mudou de ideia, embora pudesse continuar, e foi dormir sem tocar nela. Foi denunciado por estupro de vulnerável tentado, e o juiz decretou de ofício a preventiva, com base numa lei municipal que manda prender sempre que recebida denúncia por crime hediondo."
+  q2: "Clovis, de 81 anos, atirou várias vezes em Fábio, de 50, para matá-lo, mas errou a pontaria e matou Yuri, de 12 anos. Foi preso em flagrante por homicídio qualificado pela idade da vítima, e a polícia e o Ministério Público pediram, com base concreta, a conversão em preventiva na audiência de custódia."
+  q3: "Luana, primária, cumpria 4 anos no semiaberto por tortura e fugiu em 10/1/2021, depois de cumprir 2 anos e 1 mês. Foi recapturada em 10/2/2025 e, em processo disciplinar regular, teve reconhecida a falta grave da fuga e decretada a perda de todos os dias remidos."
+  q4: "Oscar, primário, foi condenado por lesão corporal leve contra a esposa, Adriana, a 2 anos de reclusão no regime aberto, com todas as circunstâncias judiciais favoráveis. A sentença nada disse sobre benefícios penais."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["46-peca-1"]
 perguntas:
-  - id: 46-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288-A do CP, sendo acusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores, Estado de Campo Belo.
-
-      De acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de explorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os membros da sua milícia teriam funções variadas de segurança, tais como arrecadação e “apontadores”, todas essenciais para a consecução do fim do grupo que é a exploração do jogo ilícito naquela região.
-
-      A denúncia relatou que policiais militares, em patrulhamento de rotina na Zona Leste, legitimamente abordaram Jorge e, na abordagem, nada ilícito foi localizado. Contudo, os policiais haviam recebido uma denúncia anônima no sentido de que Jorge era integrante da milícia, razão pela qual passaram a vasculhar o celular dele, sem sua autorização, localizando diversas mensagens para Adilson, a quem Jorge se referia como “chefe”, no aplicativo de troca de mensagens.
-
-      Por isso, com base nos dados extraídos do telefone celular de Jorge pelos policiais militares, a denúncia foi oferecida, sem que fosse esclarecida qual a função de Jorge dentro da milícia privada. O rol de testemunhas incluía os policiais militares que participaram da abordagem, soldado Garcia e sargento Andrade.
-
-      O Juiz competente da Vara Criminal de Flores recebeu a denúncia e determinou a citação do denunciado.
-
-      Jorge foi citado no dia 8 de junho de 2026, segunda-feira, sendo certo que todos os dias são úteis em todo o país, exceto sábados e domingos.
-
-      Jorge apresentou a você, na condição de advogado(a), dez amigos (identificados como “Amigo” 1 a 10) que poderiam abonar o seu caráter.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Jorge, redija a peça jurídica cabível, diferente de habeas corpus, considerando que a decisão não padece de vícios de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: Vara Criminal da Comarca de Flores/CB.
-    opcoes:
-      correta: Vara Criminal da Comarca de Flores/CB.
-      erradas:
-        - "Endereçamento correto: juízo da 5ª Vara Criminal."
-        - "Endereçamento: Juiz da Vara do Tribunal do Júri."
-        - "Endereçamento correto: Tribunal de Justiça do Estado do Rio Grande do Norte"
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-        - "Endereçamento: Tribunal de Justiça do Estado de São Paulo"
-    revisao: &a1
-      status: revisado
   - id: 46-peca-4
     categoria: peca-detalhe
     parte: peca
     item: "4"
     secao: preliminar
-    caso: |-
-      Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288-A do CP, sendo acusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores, Estado de Campo Belo.
-
-      De acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de explorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os membros da sua milícia teriam funções variadas de segurança, tais como arrecadação e “apontadores”, todas essenciais para a consecução do fim do grupo que é a exploração do jogo ilícito naquela região.
-
-      A denúncia relatou que policiais militares, em patrulhamento de rotina na Zona Leste, legitimamente abordaram Jorge e, na abordagem, nada ilícito foi localizado. Contudo, os policiais haviam recebido uma denúncia anônima no sentido de que Jorge era integrante da milícia, razão pela qual passaram a vasculhar o celular dele, sem sua autorização, localizando diversas mensagens para Adilson, a quem Jorge se referia como “chefe”, no aplicativo de troca de mensagens.
-
-      Por isso, com base nos dados extraídos do telefone celular de Jorge pelos policiais militares, a denúncia foi oferecida, sem que fosse esclarecida qual a função de Jorge dentro da milícia privada. O rol de testemunhas incluía os policiais militares que participaram da abordagem, soldado Garcia e sargento Andrade.
-
-      O Juiz competente da Vara Criminal de Flores recebeu a denúncia e determinou a citação do denunciado.
-
-      Jorge foi citado no dia 8 de junho de 2026, segunda-feira, sendo certo que todos os dias são úteis em todo o país, exceto sábados e domingos.
-
-      Jorge apresentou a você, na condição de advogado(a), dez amigos (identificados como “Amigo” 1 a 10) que poderiam abonar o seu caráter.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Jorge, redija a peça jurídica cabível, diferente de habeas corpus, considerando que a decisão não padece de vícios de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Preliminarmente, deve ser arguida a inépcia da denúncia, que não descreve qualquer conduta típica praticada pelo acusado no contexto do delito de milícia privada, nos termos do Art. 41 do CPP.
-    opcoes:
-      correta: Preliminarmente, deve ser arguida a inépcia da denúncia, que não descreve qualquer conduta típica praticada pelo acusado no contexto do delito de milícia privada, nos termos do Art. 41 do CPP.
-      erradas:
-        - "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
-        - "Preliminar: ilicitude do meio de obtenção da prova, tendo em vista ter sido obtida por meio ilícito, já que uma denúncia anônima é insuficiente para caracterizar a fundada suspeita de existência de flagrante delito, não autorizando o ingresso em domicílio, conforme trata o Art. 5º, inciso XI ou LVI, da CRFB/88 ou Art. 157, ou 241 ou 245, do CPP."
-        - Extinção da punibilidade pela decadência do direito de representação.
-        - Nulidade dos atos da instrução.
-        - Nulidade decorrente do não oferecimento de proposta de suspensão condicional do processo, tendo em vista que o crime não foi praticado no contexto da violência doméstica e familiar contra mulher ou tendo em vista não ser aplicável a previsão do Art. 41 da Lei nº 11.340 pelo fato de a vítima ser homem.
-    revisao: *a1
+    pergunta: "Que preliminar a defesa deve levantar contra a denúncia?"
+    tese: "Inépcia da denúncia, que não descreveu nenhuma conduta de Jorge na milícia"
+    aceitos: [ "inepcia | inepta | inepto | ineptidao" ]
+    artigos: [ "art. 41, CPP" ]
+    gabarito: "Preliminarmente, deve ser arguida a inépcia da denúncia, que não descreve qualquer conduta típica praticada pelo acusado no contexto do delito de milícia privada, nos termos do Art. 41 do CPP."
+    revisao: { status: revisado }
   - id: 46-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: merito
-    caso: |-
-      Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288-A do CP, sendo acusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores, Estado de Campo Belo.
-
-      De acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de explorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os membros da sua milícia teriam funções variadas de segurança, tais como arrecadação e “apontadores”, todas essenciais para a consecução do fim do grupo que é a exploração do jogo ilícito naquela região.
-
-      A denúncia relatou que policiais militares, em patrulhamento de rotina na Zona Leste, legitimamente abordaram Jorge e, na abordagem, nada ilícito foi localizado. Contudo, os policiais haviam recebido uma denúncia anônima no sentido de que Jorge era integrante da milícia, razão pela qual passaram a vasculhar o celular dele, sem sua autorização, localizando diversas mensagens para Adilson, a quem Jorge se referia como “chefe”, no aplicativo de troca de mensagens.
-
-      Por isso, com base nos dados extraídos do telefone celular de Jorge pelos policiais militares, a denúncia foi oferecida, sem que fosse esclarecida qual a função de Jorge dentro da milícia privada. O rol de testemunhas incluía os policiais militares que participaram da abordagem, soldado Garcia e sargento Andrade.
-
-      O Juiz competente da Vara Criminal de Flores recebeu a denúncia e determinou a citação do denunciado.
-
-      Jorge foi citado no dia 8 de junho de 2026, segunda-feira, sendo certo que todos os dias são úteis em todo o país, exceto sábados e domingos.
-
-      Jorge apresentou a você, na condição de advogado(a), dez amigos (identificados como “Amigo” 1 a 10) que poderiam abonar o seu caráter.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Jorge, redija a peça jurídica cabível, diferente de habeas corpus, considerando que a decisão não padece de vícios de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Ilicitude do meio de obtenção da prova, diante da necessidade de autorização judicial para acesso a dados telemáticos armazenados em dispositivos eletrônicos, nos termos do Art. 5º, inciso XII, da CRFB/88.
-    opcoes:
-      correta: Ilicitude do meio de obtenção da prova, diante da necessidade de autorização judicial para acesso a dados telemáticos armazenados em dispositivos eletrônicos, nos termos do Art. 5º, inciso XII, da CRFB/88.
-      erradas:
-        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-        - Possibilidade de substituição da pena privativa de liberdade por restritiva de direitos, conforme Art. 44 do CP OU possibilidade de aplicação da pena de multa, conforme art. 155, § 2º, do CP.
-        - Aplicação do regime inicial aberto para cumprimento de pena, pois a fixação do regime inicial fechado obrigatório para crimes hediondos e equiparados trazida pelo Art. 2º, § 1º, da Lei nº 8072 foi considerada inconstitucional pelo STF por violação do princípio da individualização da pena.
-        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
+    pergunta: "Que tese a defesa deve sustentar quanto às mensagens tiradas do celular de Jorge?"
+    tese: "Ilicitude da prova: os policiais vasculharam o celular de Jorge sem autorização judicial"
+    aceitos: [ "ilicit* | autorizacao judicial | ordem judicial" ]
+    artigos: [ "art. 5, XII, CRFB", "art. 5, X, CRFB" ]
+    gabarito: "Ilicitude do meio de obtenção da prova, diante da necessidade de autorização judicial para acesso a dados telemáticos armazenados em dispositivos eletrônicos, nos termos do Art. 5º, inciso XII, da CRFB/88."
+    revisao: { status: revisado }
   - id: 46-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288-A do CP, sendo acusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores, Estado de Campo Belo.
-
-      De acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de explorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os membros da sua milícia teriam funções variadas de segurança, tais como arrecadação e “apontadores”, todas essenciais para a consecução do fim do grupo que é a exploração do jogo ilícito naquela região.
-
-      A denúncia relatou que policiais militares, em patrulhamento de rotina na Zona Leste, legitimamente abordaram Jorge e, na abordagem, nada ilícito foi localizado. Contudo, os policiais haviam recebido uma denúncia anônima no sentido de que Jorge era integrante da milícia, razão pela qual passaram a vasculhar o celular dele, sem sua autorização, localizando diversas mensagens para Adilson, a quem Jorge se referia como “chefe”, no aplicativo de troca de mensagens.
-
-      Por isso, com base nos dados extraídos do telefone celular de Jorge pelos policiais militares, a denúncia foi oferecida, sem que fosse esclarecida qual a função de Jorge dentro da milícia privada. O rol de testemunhas incluía os policiais militares que participaram da abordagem, soldado Garcia e sargento Andrade.
-
-      O Juiz competente da Vara Criminal de Flores recebeu a denúncia e determinou a citação do denunciado.
-
-      Jorge foi citado no dia 8 de junho de 2026, segunda-feira, sendo certo que todos os dias são úteis em todo o país, exceto sábados e domingos.
-
-      Jorge apresentou a você, na condição de advogado(a), dez amigos (identificados como “Amigo” 1 a 10) que poderiam abonar o seu caráter.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Jorge, redija a peça jurídica cabível, diferente de habeas corpus, considerando que a decisão não padece de vícios de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "A milícia explorava jogos de azar. Que tese de mérito isso permite?"
+    tese: "Atipicidade da milícia privada, que exige a finalidade de praticar crimes do Código Penal, e não contravenções"
+    aceitos: [ "atipic* | so crimes | crimes do codigo penal | crimes previstos no codigo" ]
+    artigos: [ "art. 288-A, CP" ]
     gabarito: "Mérito: atipicidade da conduta, porque o crime de milícia privada pressupõe a prática de crimes previstos no Código Penal, ao passo que a milícia supostamente existente se destina à prática de contravenção, (ou) prevista em lei especial."
-    opcoes:
-      correta: "Mérito: atipicidade da conduta, porque o crime de milícia privada pressupõe a prática de crimes previstos no Código Penal, ao passo que a milícia supostamente existente se destina à prática de contravenção, (ou) prevista em lei especial."
-      erradas:
-        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-        - Possibilidade de substituição da pena privativa de liberdade por restritiva de direitos, conforme Art. 44 do CP OU possibilidade de aplicação da pena de multa, conforme art. 155, § 2º, do CP.
-        - Aplicação do regime inicial aberto para cumprimento de pena, pois a fixação do regime inicial fechado obrigatório para crimes hediondos e equiparados trazida pelo Art. 2º, § 1º, da Lei nº 8072 foi considerada inconstitucional pelo STF por violação do princípio da individualização da pena.
-        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 46-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: pedido
-    caso: |-
-      Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288-A do CP, sendo acusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores, Estado de Campo Belo.
-
-      De acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de explorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os membros da sua milícia teriam funções variadas de segurança, tais como arrecadação e “apontadores”, todas essenciais para a consecução do fim do grupo que é a exploração do jogo ilícito naquela região.
-
-      A denúncia relatou que policiais militares, em patrulhamento de rotina na Zona Leste, legitimamente abordaram Jorge e, na abordagem, nada ilícito foi localizado. Contudo, os policiais haviam recebido uma denúncia anônima no sentido de que Jorge era integrante da milícia, razão pela qual passaram a vasculhar o celular dele, sem sua autorização, localizando diversas mensagens para Adilson, a quem Jorge se referia como “chefe”, no aplicativo de troca de mensagens.
-
-      Por isso, com base nos dados extraídos do telefone celular de Jorge pelos policiais militares, a denúncia foi oferecida, sem que fosse esclarecida qual a função de Jorge dentro da milícia privada. O rol de testemunhas incluía os policiais militares que participaram da abordagem, soldado Garcia e sargento Andrade.
-
-      O Juiz competente da Vara Criminal de Flores recebeu a denúncia e determinou a citação do denunciado.
-
-      Jorge foi citado no dia 8 de junho de 2026, segunda-feira, sendo certo que todos os dias são úteis em todo o país, exceto sábados e domingos.
-
-      Jorge apresentou a você, na condição de advogado(a), dez amigos (identificados como “Amigo” 1 a 10) que poderiam abonar o seu caráter.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Jorge, redija a peça jurídica cabível, diferente de habeas corpus, considerando que a decisão não padece de vícios de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Deve ser requerido o desentranhamento das provas ilícitas, nos termos do Art. 157 do CPP, ou do Art. 5º, inciso LVI, da CRFB/88.
-    opcoes:
-      correta: Deve ser requerido o desentranhamento das provas ilícitas, nos termos do Art. 157 do CPP, ou do Art. 5º, inciso LVI, da CRFB/88.
-      erradas:
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Absolvição, com argumento e base legal.
-        - Substituição da pena privativa de liberdade por restritiva de direitos.
-        - Aplicação da pena base no mínimo legal ou reconhecimento da atenuante da confissão.
-        - Fixação do regime aberto OU concessão de suspensão condicional da pena
-    revisao: *a1
+    pergunta: "Que pedido a defesa deve fazer quanto às provas tiradas do celular?"
+    tese: "Desentranhamento das provas ilícitas"
+    aceitos: [ "desentranh*" ]
+    artigos: [ "art. 157, CPP", "art. 5, LVI, CRFB" ]
+    gabarito: "Deve ser requerido o desentranhamento das provas ilícitas, nos termos do Art. 157 do CPP, ou do Art. 5º, inciso LVI, da CRFB/88."
+    revisao: { status: revisado }
   - id: 46-peca-8
     categoria: peca-detalhe
     parte: peca
     item: "8"
     secao: pedido
-    caso: |-
-      Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288-A do CP, sendo acusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores, Estado de Campo Belo.
-
-      De acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de explorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os membros da sua milícia teriam funções variadas de segurança, tais como arrecadação e “apontadores”, todas essenciais para a consecução do fim do grupo que é a exploração do jogo ilícito naquela região.
-
-      A denúncia relatou que policiais militares, em patrulhamento de rotina na Zona Leste, legitimamente abordaram Jorge e, na abordagem, nada ilícito foi localizado. Contudo, os policiais haviam recebido uma denúncia anônima no sentido de que Jorge era integrante da milícia, razão pela qual passaram a vasculhar o celular dele, sem sua autorização, localizando diversas mensagens para Adilson, a quem Jorge se referia como “chefe”, no aplicativo de troca de mensagens.
-
-      Por isso, com base nos dados extraídos do telefone celular de Jorge pelos policiais militares, a denúncia foi oferecida, sem que fosse esclarecida qual a função de Jorge dentro da milícia privada. O rol de testemunhas incluía os policiais militares que participaram da abordagem, soldado Garcia e sargento Andrade.
-
-      O Juiz competente da Vara Criminal de Flores recebeu a denúncia e determinou a citação do denunciado.
-
-      Jorge foi citado no dia 8 de junho de 2026, segunda-feira, sendo certo que todos os dias são úteis em todo o país, exceto sábados e domingos.
-
-      Jorge apresentou a você, na condição de advogado(a), dez amigos (identificados como “Amigo” 1 a 10) que poderiam abonar o seu caráter.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Jorge, redija a peça jurídica cabível, diferente de habeas corpus, considerando que a decisão não padece de vícios de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Rejeição da denúncia por inépcia da inicial nos termos do Art. 395, inciso I, do CPP.
-    opcoes:
-      correta: Rejeição da denúncia por inépcia da inicial nos termos do Art. 395, inciso I, do CPP.
-      erradas:
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Pedido de relaxamento de prisão em razão da nulidade do auto de prisão em flagrante e expedição de alvará de soltura.
-        - "Diante da condenação, de forma subsidiária: a) Afastamento do concurso material de crimes, ou reconhecimento de crime único.. b) Incidência da atenuante da menoridade penal relativa.. c) Afastamento da agravante da embriaguez preordenada.. d) Fixação da pena-base no mínimo legal ou diminuição da pena e) Fixação de regime semiaberto."
-        - Redução do máximo em razão da tentativa.
-        - Requerimento do juízo de retratação ou exercício do efeito regressivo, nos termos do Art. 589 do CPP
-    revisao: *a1
+    pergunta: "Que pedido a defesa deve fazer, já que a denúncia não descreve a conduta de Jorge?"
+    tese: "Rejeição da denúncia por inépcia"
+    aceitos: [ "rejeic* | rejeit*", "inepcia | inepta | inepto | ineptidao" ]
+    artigos: [ "art. 395, I, CPP" ]
+    gabarito: "Rejeição da denúncia por inépcia da inicial nos termos do Art. 395, inciso I, do CPP."
+    revisao: { status: revisado }
   - id: 46-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: pedido
-    caso: |-
-      Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288-A do CP, sendo acusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores, Estado de Campo Belo.
-
-      De acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de explorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os membros da sua milícia teriam funções variadas de segurança, tais como arrecadação e “apontadores”, todas essenciais para a consecução do fim do grupo que é a exploração do jogo ilícito naquela região.
-
-      A denúncia relatou que policiais militares, em patrulhamento de rotina na Zona Leste, legitimamente abordaram Jorge e, na abordagem, nada ilícito foi localizado. Contudo, os policiais haviam recebido uma denúncia anônima no sentido de que Jorge era integrante da milícia, razão pela qual passaram a vasculhar o celular dele, sem sua autorização, localizando diversas mensagens para Adilson, a quem Jorge se referia como “chefe”, no aplicativo de troca de mensagens.
-
-      Por isso, com base nos dados extraídos do telefone celular de Jorge pelos policiais militares, a denúncia foi oferecida, sem que fosse esclarecida qual a função de Jorge dentro da milícia privada. O rol de testemunhas incluía os policiais militares que participaram da abordagem, soldado Garcia e sargento Andrade.
-
-      O Juiz competente da Vara Criminal de Flores recebeu a denúncia e determinou a citação do denunciado.
-
-      Jorge foi citado no dia 8 de junho de 2026, segunda-feira, sendo certo que todos os dias são úteis em todo o país, exceto sábados e domingos.
-
-      Jorge apresentou a você, na condição de advogado(a), dez amigos (identificados como “Amigo” 1 a 10) que poderiam abonar o seu caráter.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Jorge, redija a peça jurídica cabível, diferente de habeas corpus, considerando que a decisão não padece de vícios de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Rejeição da denúncia por ausência de justa causa, nos termos do Art. 395, inciso III, do CPP.
-    opcoes:
-      correta: Rejeição da denúncia por ausência de justa causa, nos termos do Art. 395, inciso III, do CPP.
-      erradas:
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Pedido de habilitação, na interposição, do pai da vítima como assistente de acusação.
-        - a) designação de audiência preliminar ou de conciliação b) a citação da querelada; c) recebimento da queixa d) a oitiva das testemunhas arroladas; e) a condenação da querelada pelo crime de injúria (Art. 140 do CP) e pelo crime de difamação (Art. 139 do CP) com a causa de aumento de pena (Art. 141, III do CP) em concurso formal de delitos (Art. 70 do CP) f) a fixação de valor mínimo de indenização, nos termos do Art. 387, IV, do CPP. OBS:. A mera indicação de dispositivo legal não pontua.
-        - Aplicação de regime inicial aberto ou semiaberto.
-        - Conhecimento e provimento do recurso
-    revisao: *a1
+    pergunta: "Que outro pedido a defesa deve fazer, já que a prova que sustenta a denúncia é ilícita?"
+    tese: "Rejeição da denúncia por falta de justa causa"
+    aceitos: [ "rejeic* | rejeit*", "justa causa" ]
+    artigos: [ "art. 395, III, CPP" ]
+    gabarito: "Rejeição da denúncia por ausência de justa causa, nos termos do Art. 395, inciso III, do CPP."
+    revisao: { status: revisado }
   - id: 46-peca-10
     categoria: peca-detalhe
     parte: peca
     item: "10"
     secao: pedido
-    caso: |-
-      Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288-A do CP, sendo acusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores, Estado de Campo Belo.
-
-      De acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de explorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os membros da sua milícia teriam funções variadas de segurança, tais como arrecadação e “apontadores”, todas essenciais para a consecução do fim do grupo que é a exploração do jogo ilícito naquela região.
-
-      A denúncia relatou que policiais militares, em patrulhamento de rotina na Zona Leste, legitimamente abordaram Jorge e, na abordagem, nada ilícito foi localizado. Contudo, os policiais haviam recebido uma denúncia anônima no sentido de que Jorge era integrante da milícia, razão pela qual passaram a vasculhar o celular dele, sem sua autorização, localizando diversas mensagens para Adilson, a quem Jorge se referia como “chefe”, no aplicativo de troca de mensagens.
-
-      Por isso, com base nos dados extraídos do telefone celular de Jorge pelos policiais militares, a denúncia foi oferecida, sem que fosse esclarecida qual a função de Jorge dentro da milícia privada. O rol de testemunhas incluía os policiais militares que participaram da abordagem, soldado Garcia e sargento Andrade.
-
-      O Juiz competente da Vara Criminal de Flores recebeu a denúncia e determinou a citação do denunciado.
-
-      Jorge foi citado no dia 8 de junho de 2026, segunda-feira, sendo certo que todos os dias são úteis em todo o país, exceto sábados e domingos.
-
-      Jorge apresentou a você, na condição de advogado(a), dez amigos (identificados como “Amigo” 1 a 10) que poderiam abonar o seu caráter.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Jorge, redija a peça jurídica cabível, diferente de habeas corpus, considerando que a decisão não padece de vícios de contradição, omissão, obscuridade ou ambiguidade, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para apresentação. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Absolvição sumária, em razão de o fato não constituir infração penal, nos termos do Art. 397, inciso III, do CPP.
-    opcoes:
-      correta: Absolvição sumária, em razão de o fato não constituir infração penal, nos termos do Art. 397, inciso III, do CPP.
-      erradas:
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Pedido de habilitação, na interposição, do pai da vítima como assistente de acusação.
-        - "Diante da condenação, de forma subsidiária: a) Afastamento do concurso material de crimes, ou reconhecimento de crime único.. b) Incidência da atenuante da menoridade penal relativa.. c) Afastamento da agravante da embriaguez preordenada.. d) Fixação da pena-base no mínimo legal ou diminuição da pena e) Fixação de regime semiaberto."
-        - Redução do máximo em razão da tentativa.
-        - Conhecimento e provimento do recurso.
-    revisao: *a1
+    pergunta: "No mérito, que decisão a defesa deve pedir ao juiz?"
+    tese: "Absolvição sumária, porque o fato narrado evidentemente não constitui crime"
+    aceitos: [ "absolvicao sumaria | absolvido sumariamente | absolver sumariamente | absolvicao* sumaria*" ]
+    artigos: [ "art. 397, III, CPP" ]
+    gabarito: "Absolvição sumária, em razão de o fato não constituir infração penal, nos termos do Art. 397, inciso III, do CPP."
+    revisao: { status: revisado }
   - id: 46-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Rafael foi denunciado por estupro de vulnerável na modalidade tentada, na forma do Art. 217-A, combinado com o Art. 14, inciso II, ambos do CP, porque, no dia indicado na denúncia, em uma festa, ao ver Fernanda desacordada após grande ingestão de álcool, decidiu com ela praticar conjunção carnal.
-
-      Para tanto, Rafael adentrou o quarto onde Fernanda estava repousada mas, nesse momento, repensou seu plano, pois também havia consumido bebida alcóolica. Por isso, por estar ligeiramente cansado, mesmo tendo condições físicas de continuar, mudou de ideia e resolveu dormir, sem encostar em Fernanda.
-
-      O Juiz, ao receber a denúncia, decretou a prisão preventiva de Rafael, de ofício, com base em lei municipal que determina a decretação de prisão pelo Juiz, independentemente de requerimento do Ministério Público, sempre que houver recebimento de denúncia por delitos hediondos.
-
-      Rafael constituiu você, como advogado(a), para atuar em sua defesa. Assim, responda aos itens a seguir.
-    comando: Qual a tese correta de Direito Penal a ser defendida? Justifique.
-    gabarito: Em favor de Rafael, deve ser alegada a ocorrência de desistência voluntária, na forma do Art. 15 do CP ou atipicidade da conduta por serem meros atos preparatórios.
-    opcoes:
-      correta: Desistência voluntária, nos termos do Art. 15 do CP ou atipicidade da conduta por serem meros atos preparatórios.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
-        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
-        - Aplicação do perdão judicial, nos termos do Art. 121, § 5º, do CP.
-        - A queixa-crime somente poderia ter sido apresentada por procurador com poderes especiais OU a procuração apenas previa poderes gerais, o que não é admitido, nos termos do Art. 44 do CPP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese de direito penal favorece Rafael?"
+    tese: "Desistência voluntária: Rafael parou por vontade própria, sem nem tocar em Fernanda"
+    aceitos: [ "desistencia voluntaria | desistencia | atos preparatorios | preparatori*" ]
+    artigos: [ "art. 15, CP" ]
+    gabarito: "Em favor de Rafael, deve ser alegada a ocorrência de desistência voluntária, na forma do Art. 15 do CP ou atipicidade da conduta por serem meros atos preparatórios."
+    revisao: { status: revisado }
   - id: 46-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Rafael foi denunciado por estupro de vulnerável na modalidade tentada, na forma do Art. 217-A, combinado com o Art. 14, inciso II, ambos do CP, porque, no dia indicado na denúncia, em uma festa, ao ver Fernanda desacordada após grande ingestão de álcool, decidiu com ela praticar conjunção carnal.
-
-      Para tanto, Rafael adentrou o quarto onde Fernanda estava repousada mas, nesse momento, repensou seu plano, pois também havia consumido bebida alcóolica. Por isso, por estar ligeiramente cansado, mesmo tendo condições físicas de continuar, mudou de ideia e resolveu dormir, sem encostar em Fernanda.
-
-      O Juiz, ao receber a denúncia, decretou a prisão preventiva de Rafael, de ofício, com base em lei municipal que determina a decretação de prisão pelo Juiz, independentemente de requerimento do Ministério Público, sempre que houver recebimento de denúncia por delitos hediondos.
-
-      Rafael constituiu você, como advogado(a), para atuar em sua defesa. Assim, responda aos itens a seguir.
-    comando: Com base na Constituição da República, qual a tese a ser defendida para afastar a aplicação da lei municipal mencionada? Justifique.
-    gabarito: Inconstitucionalidade da lei municipal, pois apenas a União pode legislar sobre Direito Processual Penal, na forma do Art. 22, inciso I, da CRFB/88, ou inconstitucionalidade da lei municipal, por violação aos princípios do devido processo legal, ou presunção de inocência, ou ampla defesa e/ou contraditório, na forma do Art. 5º, inciso LIV, ou LV, ou LVII, da CRFB/88.
-    opcoes:
-      correta: Inconstitucionalidade da lei municipal, pois apenas a União pode legislar sobre Direito Processual Penal ou por violação aos princípios do devido processo legal ou presunção de inocência, ou ampla defesa ou contraditório, nos termos do Art. 22, inciso I, ou do Art. 5º, incisos LIV, ou LV, ou LVII, ambos da CRFB/88.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Com base na Constituição, que tese afasta a lei municipal?"
+    tese: "Inconstitucionalidade da lei municipal: só a União legisla sobre processo penal"
+    aceitos: [ "inconstitucional* | uniao | competencia privativa" ]
+    artigos: [ "art. 22, I, CRFB", "art. 5, LVII, CRFB" ]
+    gabarito: "Inconstitucionalidade da lei municipal, pois apenas a União pode legislar sobre Direito Processual Penal, na forma do Art. 22, inciso I, da CRFB/88, ou inconstitucionalidade da lei municipal, por violação aos princípios do devido processo legal, ou presunção de inocência, ou ampla defesa e/ou contraditório, na forma do Art. 5º, inciso LIV, ou LV, ou LVII, da CRFB/88."
+    revisao: { status: revisado }
   - id: 46-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Clovis, desejando causar a morte de Fábio, de 50 anos de idade, efetuou diversos disparos de arma de fogo contra seu desafeto. Entretanto, ante o erro de pontaria, Clovis atingiu Yuri, criança de 12 anos, levando-a a óbito.
-
-      Assim, Clovis foi regularmente preso em flagrante pelo delito e autuado pelo homicídio qualificado em razão da idade da vítima (Art. 121, § 2º, inciso IX, do CP). Levado à audiência de custódia, a autoridade policial indicou concretamente a necessidade de prisão preventiva para a garantia da ordem pública, representando pela conversão da prisão em flagrante, no que foi seguido pelo Ministério Público.
-
-      Na qualidade de advogado(a) de Clovis, sabendo que seu cliente tem 81 anos de idade, responda às questões a seguir.
-    comando: Por ocasião da audiência de custódia, qual pedido de natureza processual deve ser feito? Justifique.
-    gabarito: Deve ser requerida a concessão de prisão domiciliar, nos termos do Art. 318, inciso I, do CPP.
-    opcoes:
-      correta: Deve ser requerida a concessão de prisão domiciliar, nos termos do Art. 318, inciso I, do CPP.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
-        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
-        - Aplicação do perdão judicial, nos termos do Art. 121, § 5º, do CP.
-        - A queixa-crime somente poderia ter sido apresentada por procurador com poderes especiais OU a procuração apenas previa poderes gerais, o que não é admitido, nos termos do Art. 44 do CPP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que pedido processual a defesa de Clovis deve fazer na audiência de custódia?"
+    tese: "Substituição da preventiva por prisão domiciliar, porque Clovis tem mais de 80 anos"
+    aceitos: [ "domiciliar" ]
+    artigos: [ "art. 318, I, CPP" ]
+    gabarito: "Deve ser requerida a concessão de prisão domiciliar, nos termos do Art. 318, inciso I, do CPP."
+    revisao: { status: revisado }
   - id: 46-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Clovis, desejando causar a morte de Fábio, de 50 anos de idade, efetuou diversos disparos de arma de fogo contra seu desafeto. Entretanto, ante o erro de pontaria, Clovis atingiu Yuri, criança de 12 anos, levando-a a óbito.
-
-      Assim, Clovis foi regularmente preso em flagrante pelo delito e autuado pelo homicídio qualificado em razão da idade da vítima (Art. 121, § 2º, inciso IX, do CP). Levado à audiência de custódia, a autoridade policial indicou concretamente a necessidade de prisão preventiva para a garantia da ordem pública, representando pela conversão da prisão em flagrante, no que foi seguido pelo Ministério Público.
-
-      Na qualidade de advogado(a) de Clovis, sabendo que seu cliente tem 81 anos de idade, responda às questões a seguir.
-    comando: Qual a tese correta de Direito Penal a ser sustentada pela defesa? Justifique.
-    gabarito: A ocorrência de erro na execução, devendo Clovis responder como se tivesse atingido a pessoa pretendida, afastando-se a qualificadora, nos termos do Art. 73 do CP.
-    opcoes:
-      correta: A ocorrência de erro na execução, devendo Clovis responder como se tivesse atingido a pessoa pretendida, afastando-se a qualificadora, nos termos do Art. 73 do CP.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese de direito penal a defesa de Clovis deve sustentar?"
+    tese: "Erro na execução: Clovis responde como se tivesse atingido Fábio, e a qualificadora da idade da vítima é afastada"
+    aceitos: [ "erro na execucao | erro de execucao | aberratio ictus | aberratio" ]
+    artigos: [ "art. 73, CP", "art. 20, § 3º, CP" ]
+    gabarito: "A ocorrência de erro na execução, devendo Clovis responder como se tivesse atingido a pessoa pretendida, afastando-se a qualificadora, nos termos do Art. 73 do CP."
+    revisao: { status: revisado }
   - id: 46-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Luana, primária, cumpria pena após ter sido, definitivamente, condenada a uma pena de quatro anos, em regime semiaberto, pelo delito de tortura. A apenada se evadiu do sistema penitenciário no dia 10/01/2021, depois de cumprir dois anos e um mês da pena.
-
-      O Juízo, após constatar a fuga, expediu mandado de prisão em desfavor de Luana, o qual foi cumprido em 10/02/2025. Luana foi submetida a regular processo administrativo disciplinar, que concluiu pela prática de falta grave, nos termos do Art. 50, inciso II, da LEP, tendo sido determinada a perda da totalidade dos dias remidos.
-
-      Na defesa de Luana, responda às questões a seguir.
-    comando: Qual tese correta de Direito Penal deve ser usada a fim de defender a extinção do processo de execução penal? Fundamente.
-    gabarito: A extinção da punibilidade pela ocorrência de prescrição da pretensão executória, pois o prazo restante da pena é inferior a dois anos, remetendo-se ao prazo prescricional de quatro anos, lapso temporal já decorrido entre a data da fuga e da recaptura, nos termos do Art. 109, inciso V, (ou) o Art. 113, (ou) o Art. 117, inciso V, todos do Código Penal.
-    opcoes:
-      correta: A extinção da punibilidade pela ocorrência de prescrição da pretensão executória, pois o prazo restante da pena é inferior a dois anos, remetendo-se ao prazo prescricional de 4 anos, lapso temporal já decorrido entre a data da fuga e da recaptura, nos termos do Art. 109, inciso V, (ou) o Art. 113, (ou) o Art. 117, inciso V, todos do Código Penal.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
-        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
-        - Aplicação do perdão judicial, nos termos do Art. 121, § 5º, do CP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese de direito penal extingue a execução da pena de Luana?"
+    tese: "Prescrição da pretensão executória: o restante da pena, de menos de 2 anos, prescreve em 4 anos, que passaram entre a fuga e a recaptura"
+    aceitos: [ "prescricao da pretensao executoria | prescricao executoria | pretensao executoria" ]
+    artigos: [ "art. 113, CP", "art. 109, V, CP", "art. 112, II, CP", "art. 107, IV, CP" ]
+    gabarito: "A extinção da punibilidade pela ocorrência de prescrição da pretensão executória, pois o prazo restante da pena é inferior a dois anos, remetendo-se ao prazo prescricional de quatro anos, lapso temporal já decorrido entre a data da fuga e da recaptura, nos termos do Art. 109, inciso V, (ou) o Art. 113, (ou) o Art. 117, inciso V, todos do Código Penal."
+    revisao: { status: revisado }
   - id: 46-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Luana, primária, cumpria pena após ter sido, definitivamente, condenada a uma pena de quatro anos, em regime semiaberto, pelo delito de tortura. A apenada se evadiu do sistema penitenciário no dia 10/01/2021, depois de cumprir dois anos e um mês da pena.
-
-      O Juízo, após constatar a fuga, expediu mandado de prisão em desfavor de Luana, o qual foi cumprido em 10/02/2025. Luana foi submetida a regular processo administrativo disciplinar, que concluiu pela prática de falta grave, nos termos do Art. 50, inciso II, da LEP, tendo sido determinada a perda da totalidade dos dias remidos.
-
-      Na defesa de Luana, responda às questões a seguir.
-    comando: Qual o fundamento a ser utilizado para impugnar a parte da decisão que impõe a perda dos dias remidos? Justifique.
-    gabarito: A falta grave apenas permite a revogação de até um terço dos dias remidos, nos termos do Art. 127 da LEP.
-    opcoes:
-      correta: A falta grave apenas permite a revogação de até 1/3 dos dias remidos, nos termos do Art. 127 da LEP.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
-        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
-        - Aplicação do perdão judicial, nos termos do Art. 121, § 5º, do CP.
-        - A queixa-crime somente poderia ter sido apresentada por procurador com poderes especiais OU a procuração apenas previa poderes gerais, o que não é admitido, nos termos do Art. 44 do CPP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que fundamento contesta a perda de todos os dias remidos?"
+    tese: "A perda dos dias remidos pela falta grave é limitada a 1/3"
+    aceitos: [ "1/3 | um terco | ate um terco" ]
+    artigos: [ "art. 127, LEP" ]
+    gabarito: "A falta grave apenas permite a revogação de até um terço dos dias remidos, nos termos do Art. 127 da LEP."
+    revisao: { status: revisado }
   - id: 46-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      Oscar, primário e sem antecedentes, foi condenado pelo delito de lesão corporal leve praticado em desfavor de sua esposa, Adriana, a uma pena de dois anos de reclusão, em regime aberto, considerando positivas todas as circunstâncias judiciais. O Juízo não se pronunciou sobre o cabimento ou não de alternativas penais ou benefícios penais.
-
-      Como advogado(a) de Oscar, responda às questões a seguir.
-    comando: Em face da omissão da sentença, qual a peça processual a ser oposta? Justifique.
-    gabarito: Devem ser opostos embargos de declaração, nos termos do Art. 382 do CPP.
-    opcoes:
-      correta: Devem ser opostos embargos de declaração, nos termos do Art. 382 do CPP.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
-        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
-        - Aplicação do perdão judicial, nos termos do Art. 121, § 5º, do CP.
-        - A queixa-crime somente poderia ter sido apresentada por procurador com poderes especiais OU a procuração apenas previa poderes gerais, o que não é admitido, nos termos do Art. 44 do CPP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que medida a defesa deve usar diante da omissão da sentença?"
+    tese: "Embargos de declaração para suprir a omissão da sentença"
+    aceitos: [ "embargos de declaracao | embargos declaratorios" ]
+    artigos: [ "art. 382, CPP" ]
+    gabarito: "Devem ser opostos embargos de declaração, nos termos do Art. 382 do CPP."
+    revisao: { status: revisado }
   - id: 46-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Oscar, primário e sem antecedentes, foi condenado pelo delito de lesão corporal leve praticado em desfavor de sua esposa, Adriana, a uma pena de dois anos de reclusão, em regime aberto, considerando positivas todas as circunstâncias judiciais. O Juízo não se pronunciou sobre o cabimento ou não de alternativas penais ou benefícios penais.
-
-      Como advogado(a) de Oscar, responda às questões a seguir.
-    comando: Há algum benefício penal cabível em favor de Oscar? Justifique.
-    gabarito: Sim. É cabível a suspensão condicional da pena ou sursis penal, nos termos do Art. 77 do Código Penal.
-    opcoes:
-      correta: Sim. É cabível a suspensão condicional da pena ou sursis penal, nos termos do Art. 77 do Código Penal.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
-        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
-        - Aplicação do perdão judicial, nos termos do Art. 121, § 5º, do CP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que benefício penal cabe a Oscar?"
+    tese: "Suspensão condicional da pena, que cabe mesmo na violência doméstica, em que a substituição por restritivas de direitos é vedada"
+    aceitos: [ "suspensao condicional da pena | sursis" ]
+    artigos: [ "art. 77, CP" ]
+    gabarito: "Sim. É cabível a suspensão condicional da pena ou sursis penal, nos termos do Art. 77 do Código Penal."
+    revisao: { status: revisado }

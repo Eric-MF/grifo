@@ -312,10 +312,20 @@ questoes:
         valores: [ 0, 0.5, 0.6 ]
         componentes:
           - { id: c1, valor: 0.5, termos: [ apelacao ] }
-          - { id: c2, valor: 0.1, dispositivo: [ "art. 76, § 5º, Lei 9" ], requer: c1 }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 76, § 5º, Lei 9.099" ], requer: c1 }
       - n: B
         descricao: Sim. Considerando que não poderia ser aplicado o instituto da transação penal, tendo em vista que o crime foi praticado quando o agente transitava em velocidade superior à máxima permitida para a via em mais de 50 km/h (0,55), conforme o Art. 291, § 1º, inciso III, do CTB (0,10).
         valores: [ 0, 0.55, 0.65 ]
         componentes:
           - { id: c1, valor: 0.55, termos: [ transacao penal, 50 km/h | 50 km | velocidade ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 291, § 1º, III, Lei 9503" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q3, lei: "Lei 14.994/2024", texto: "Hoje, a lesão corporal contra a mulher por razões da condição do sexo feminino, o que inclui a violência doméstica e familiar, está no art. 129, § 13, do Código Penal, com pena de reclusão de 2 a 5 anos, e o § 9º também passou a prever reclusão de 2 a 5 anos. As teses da questão continuam valendo." }
+  nomes:
+    peca: { Breno: Odisseu, Carlos: Aquiles }   # o plano; o adolescente que escondeu quem era
+    q1: { Jorge: Asclépio }   # o estudante que socorre
+    q2: { Bernardo: Polifemo, Bruno: Odisseu, Joana: Galateia }   # a pedra arremessada; o alvo; quem foi atingida
+    q3: { Beatriz: Afrodite, José: Hefesto }   # o casal
+    q4: { Talita: Selene, Lauro: Faetonte }   # a batida a 120 km/h

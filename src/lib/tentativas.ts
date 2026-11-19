@@ -12,8 +12,13 @@ interface Rascunho {
   tempos?: Record<string, number>;
   /** a parte em que o examinando estava ("peca", "q1"…): ao continuar, a prova volta para ela */
   aba?: string;
+  /** a versão da prova em que o rascunho foi escrito (ausente nos antigos: a original) */
+  versao?: VersaoSimulado;
   atualizadoEm: number;
 }
+
+/** "original": a prova como caiu; "atualizada": a dos PDFs atualizados (nomes novos, erros corrigidos, avisos de lei nova) */
+export type VersaoSimulado = "original" | "atualizada";
 
 export interface Tentativa {
   id: string;
@@ -24,6 +29,8 @@ export interface Tentativa {
   /** segundos gastos em cada parte; ausente nas tentativas feitas antes de o tempo por parte existir */
   tempos?: { peca: number; questoes: number[] };
   resultado: ResultadoExame;
+  /** ausente nas tentativas antigas e nas da prova original */
+  versao?: VersaoSimulado;
   ia?: ResultadoIA;
   codigo?: string;
   impressao?: number;

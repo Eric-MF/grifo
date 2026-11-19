@@ -88,12 +88,55 @@ const romanOrNum = (t: string | undefined): string | null => {
   return r ? String(r) : null;
 };
 
+const REMISSAO = new Set(["mesmo", "referido", "citado", "aludido", "mencionado"]);
+
+/**
+ * O parágrafo, o inciso ou a alínea escritos antes do artigo: "§ 1º do art. 28", "alínea d do inciso II do art. 61",
+ * "§ 1º do mesmo artigo". Lê a partir de `i` e para no "do"/"da" que leva ao artigo. `ate` é o índice desse "do"
+ * (ou do "deste"); `alvo` diz o que vem depois: um artigo com número ou uma remissão ao último artigo citado.
+ */
+function dispositivoAntes(tokens: string[], i: number) {
+  const pars: string[] = [];
+  const incs: string[] = [];
+  const als: string[] = [];
+  let mode: "par" | "inc" | "al" | null = null;
+  let k = i;
+  for (; k < tokens.length && k < i + 16; k++) {
+    const w = tokens[k]!;
+    if (w === "paragrafo" || w === "paragrafos") {
+      mode = "par";
+      if (tokens[k + 1] === "unico") {
+        pars.push("unico");
+        k++;
+      }
+    } else if (w === "inciso" || w === "incisos") mode = "inc";
+    else if (w === "alinea" || w === "alineas") mode = "al";
+    else if (mode === "par" && (/^\d+$/.test(w) ? Number(w) <= 20 : /^\d+-[a-z]$/.test(w))) pars.push(w);
+    else if (mode === "inc" && /^\d+$/.test(w) && Number(w) <= 90) incs.push(w);
+    else if (mode === "inc" && /^(?:[ivx][ivxlc]*|l[ivxlc]+)$/.test(w) && romanOrNum(w)) incs.push(romanOrNum(w)!);
+    else if (mode === "al" && LETRA_ALINEA.test(w)) als.push(w);
+    else if (w === "e" || w === "ou") continue;
+    else if ((w === "do" || w === "da" || w === "no" || w === "na") && /^(paragrafo|inciso|alinea)s?$/.test(tokens[k + 1] ?? "")) continue;
+    else break;
+  }
+  if (!pars.length && !incs.length && !als.length) return null;
+  const w = tokens[k];
+  const prox = tokens[k + 1];
+  if ((w === "do" || w === "no") && prox === "art" && isNum(tokens[k + 2])) return { pars, incs, als, ate: k, alvo: "artigo" as const, fim: k };
+  if ((w === "do" || w === "no") && REMISSAO.has(prox ?? "") && (tokens[k + 2] === "art" || tokens[k + 2] === "dispositivo"))
+    return { pars, incs, als, ate: k, alvo: "remissao" as const, fim: k + 2 };
+  if ((w === "deste" || w === "desse" || w === "daquele") && prox === "art") return { pars, incs, als, ate: k, alvo: "remissao" as const, fim: k + 1 };
+  return null;
+}
+
 export function extrairCitacoes(norm: string, lex: Lexico): Citacao[] {
   const tokens = norm.trim().split(" ");
   const out: Citacao[] = [];
   const diplomaMarks: { pos: number; id: string; fim: number }[] = [];
   let pending: CitacaoArtigo[] = [];
   let lastArtPos = -1;
+  // "§ 1º do art. 28": o parágrafo lido antes, que entra no artigo seguinte
+  let antes: { pars: string[]; incs: string[]; als: string[]; pos: number; artEm: number } | null = null;
 
   const flushWith = (id: string, fim: number) => {
     for (const c of pending) {
@@ -155,6 +198,26 @@ export function extrairCitacoes(norm: string, lex: Lexico): Citacao[] {
       continue;
     }
 
+    // --- Parágrafo, inciso ou alínea antes do artigo ------------------------
+    if (/^(paragrafo|inciso|alinea)s?$/.test(t!)) {
+      const a = dispositivoAntes(tokens, i);
+      if (a?.alvo === "artigo") {
+        antes = { pars: a.pars, incs: a.incs, als: a.als, pos: i, artEm: a.ate + 1 };
+        i = a.ate;
+        continue;
+      }
+      // "§ 1º do mesmo artigo": o último artigo citado, com o diploma dele
+      const ultimo = [...out].reverse().find((c): c is CitacaoArtigo => c.tipo === "art");
+      if (a?.alvo === "remissao" && ultimo) {
+        const c: CitacaoArtigo = { tipo: "art", art: ultimo.art, pars: a.pars, incs: a.incs, als: a.als, caput: false, diploma: ultimo.diploma, pos: i, fim: a.fim };
+        out.push(c);
+        // o diploma do artigo ainda por vir ("art. 28, II, e o § 1º do mesmo artigo, do CP") vale também para este
+        if (!c.diploma && pending.includes(ultimo)) pending.push(c);
+        i = a.fim;
+        continue;
+      }
+    }
+
     // --- Artigos -----------------------------------------------------------
     if ((t === "art" || t === "arts") && isNum(tokens[i + 1])) {
       let j = i + 1;
@@ -167,6 +230,14 @@ export function extrairCitacoes(norm: string, lex: Lexico): Citacao[] {
         mode = "art";
       };
       startNew(tokens[j], i);
+      if (antes && antes.artEm === i) {
+        const c = cur as unknown as CitacaoArtigo;
+        c.pars.push(...antes.pars);
+        c.incs.push(...antes.incs);
+        c.als.push(...antes.als);
+        c.pos = antes.pos;
+      }
+      antes = null;
       j++;
       for (; j < tokens.length; j++) {
         const w = tokens[j];
@@ -205,7 +276,13 @@ export function extrairCitacoes(norm: string, lex: Lexico): Citacao[] {
             // "art 5 65" é improvável; trata número solto logo após o artigo como fim
             break;
           } else startNew(w, j); // novo artigo na mesma enumeração ("e 69")
-        } else if (/^\d+-[a-z]$/.test(w)) startNew(w, j);
+        } else if (/^\d+-[a-z]$/.test(w)) {
+          // "§ 2º-A": o parágrafo com letra; fora do parágrafo, é um novo artigo ("e 28-A")
+          if (mode === "par") {
+            c.pars.push(w);
+            c.fim = j;
+          } else startNew(w, j);
+        }
         else if ((mode === "art" || mode === "par" || mode === "inc") && /^(?:[ivx][ivxlc]*|l[ivxlc]+)$/.test(w) && romanOrNum(w)) {
           c.incs.push(romanOrNum(w)!);
           mode = "inc";
@@ -270,13 +347,19 @@ export function formatarCitacao(c: Citacao, leis?: Leis): string {
   }
   const parts = [`Art. ${c.art.toUpperCase()}`];
   if (c.caput) parts.push("caput");
-  for (const p of c.pars) parts.push(p === "unico" ? "parágrafo único" : `§ ${p}º`);
+  for (const p of c.pars) parts.push(p === "unico" ? "parágrafo único" : paragrafo(p));
   for (const i of c.incs) parts.push(`inciso ${toRoman(Number(i))}`);
   for (const a of c.als) parts.push(`alínea ${a}`);
   const nome = c.diploma
     ? (leis?.diplomas[c.diploma]?.nome.split(" (")[0] ?? c.diploma.replace(/^lei-(\d+)$/, "Lei $1").toUpperCase())
     : "";
   return parts.join(", ") + (nome ? ` — ${nome}` : "");
+}
+
+/** "2" → "§ 2º", "2-a" → "§ 2º-A", "10" → "§ 10": ordinal até o nono, cardinal do décimo em diante (LC 95/1998, art. 10). */
+function paragrafo(p: string): string {
+  const [, n, letra] = p.match(/^(\d+)(?:-([a-z]))?$/) ?? [, p];
+  return `§ ${n}${Number(n) <= 9 ? "º" : ""}${letra ? `-${letra.toUpperCase()}` : ""}`;
 }
 
 export function toRoman(n: number): string {

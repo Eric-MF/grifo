@@ -8,12 +8,13 @@ export const LIMITE_SEG: Record<Nivel, number> = { 1: 45, 2: 90, 3: 150 };
 /** Segundos de vantagem: até eles, a rapidez vale inteira; o bônus só começa a cair depois. */
 export const FOLGA_SEG: Record<Nivel, number> = { 1: 13, 2: 15, 3: 20 };
 const LIMITE_OBJETIVA: Record<Nivel, number> = { 1: 60, 2: 45, 3: 30 };
-const LIMITE_ITEM: Record<Nivel, number> = { 1: 60, 2: 180, 3: 240 };
+/** A tese: no médio, um ponto central curto; no difícil, ele e o artigo (como a peça e o fundamento). */
+const LIMITE_TESE: Record<Nivel, number> = { 1: 50, 2: 90, 3: 150 };
 
 /** Segundos até a bonificação de rapidez zerar: depende do nível e do formato da pergunta. */
 export function limiteSeg(p: Pergunta, nivel: Nivel): number {
   if (p.formato === "objetiva") return LIMITE_OBJETIVA[nivel];
-  if (p.formato === "item") return LIMITE_ITEM[nivel];
+  if (p.formato === "tese") return LIMITE_TESE[nivel];
   return LIMITE_SEG[nivel];
 }
 
@@ -24,13 +25,8 @@ export function palavrasDaQuestao(p: Pergunta, nivel: Nivel): number {
   let total = contar(p.caso) + contar(p.comando);
   // objetiva: as quatro alternativas sempre aparecem
   if (p.formato === "objetiva") total += Object.values(p.alternativas).reduce((soma, t) => soma + contar(t), 0);
-  // item no fácil: a correta e as erradas (a média delas, três vezes) entram na tela
-  if (p.formato === "item" && nivel === 1) {
-    const certa = p.opcoes.find((o) => o.correta);
-    const erradas = p.opcoes.filter((o) => !o.correta);
-    const mediaErradas = erradas.length ? erradas.reduce((soma, o) => soma + contar(o.texto), 0) / erradas.length : 0;
-    total += (certa ? contar(certa.texto) : 0) + Math.round(mediaErradas * 3);
-  }
+  // tese no fácil: quatro alternativas (teses, do tamanho da certa, ou artigos, curtos) e a tese ou o artigo dados
+  if (p.formato === "tese" && nivel === 1) total += contar(p.tese) * 3;
   // peça no fácil: quatro nomes de peça curtos (três palavras cada)
   if (p.formato === "peca" && nivel === 1) total += 4 * 3;
   return total;

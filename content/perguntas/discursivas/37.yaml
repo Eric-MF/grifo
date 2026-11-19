@@ -1,657 +1,179 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "37"
+introducoes:
+  peca: "Ricardo e Roberto passaram 30 minutos numa agência bancária tentando, com serrote e chave de fenda, romper a placa de aço de um caixa eletrônico, mas só conseguiram arranhá-la; desistiram e foram presos ao sair. Foram denunciados por furto qualificado pelo rompimento de obstáculo e pelo concurso de pessoas, na forma tentada; a prova se resumiu aos depoimentos dos policiais e dos réus. O banco informou que a estrutura de aço é imune à ação mecânica da força humana. Ricardo, que tinha uma condenação por furto com pena extinta em 10/4/2019, ficou 30 dias preso preventivamente; Roberto, 2 dias. Os dois confessaram. O Ministério Público pediu a condenação nos termos da denúncia, e você foi intimado para a manifestação final."
+  q1: "Em 15/7/2020, numa discussão num bar, Júnior jogou uma caneca de cerveja em Pedro para machucá-lo, mas errou e acertou o próprio irmão, Geraldo, que usava uma camisa igual à de Pedro, causando-lhe lesão leve. Pedro e Geraldo registraram o fato na delegacia no dia seguinte, mas, uma semana depois, voltaram e disseram que não queriam mais ver Júnior processado. Em março de 2021, Júnior foi denunciado por lesão corporal leve, com a agravante de crime contra irmão."
+  q2: "Luís foi condenado por sonegação fiscal de R$ 1.500.000 a 2 anos no regime aberto, substituídos por duas penas restritivas de direitos. O juiz da execução fixou prestação de serviços à comunidade e uma prestação pecuniária igual a todo o prejuízo apurado."
+  q3: "Débora e Cristiane conversavam reservadamente num restaurante e disseram que Jéssica era “ridícula” e que “se acha”. Sem que percebessem, Jenifer, amiga de Jéssica, gravou a conversa com amplificação sonora e entregou a gravação a Jéssica, que ofereceu queixa-crime por injúria contra as duas."
+  q4: "Lúcio apontava a arma para a cabeça de Vilma enquanto Adamastor exigia as chaves do carro, ameaçando-a de morte, e os dois levaram o veículo. Ambos foram condenados por roubo com emprego de arma de fogo, e só Adamastor apelou, dizendo que a arma era só de Lúcio e que ela não disparava."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["37-peca-1", "37-peca-4-1", "37-peca-11"]
 perguntas:
-  - id: 37-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
-
-      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
-
-      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
-
-      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
-
-      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
-
-      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
-
-      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
-
-      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
-
-      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
-
-      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
-
-      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: A petição deve ser endereçada à 05ª Vara Criminal da Comarca de Barnabeu/CN.
-    opcoes:
-      correta: A petição deve ser endereçada à 05ª Vara Criminal da Comarca de Barnabeu/CN.
-      erradas:
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - "Endereçamento correto: juízo da 5ª Vara Criminal."
-        - "Endereçamento correto: Tribunal de Justiça do Rio de Janeiro."
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-        - "Endereçamento: Juízo do Tribunal do Júri da Comarca de São Paulo/SP"
-    revisao: &a1
-      status: revisado
-  - id: 37-peca-4-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "4.1"
-    secao: merito
-    caso: |-
-      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
-
-      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
-
-      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
-
-      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
-
-      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
-
-      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
-
-      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
-
-      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
-
-      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
-
-      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
-
-      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Atipicidade da conduta.
-    opcoes:
-      correta: Atipicidade da conduta.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Absolvição sumária, tendo em vista que a conduta narrada evidentemente não constitui crime.
-        - Reconhecimento da atenuante da menoridade relativa, já que o réu era menor de 21 anos na data dos fatos, nos termos do Art. 65, inciso I, do CP.
-    revisao: *a1
   - id: 37-peca-4-2
     categoria: peca-detalhe
     parte: peca
     item: "4.2"
     secao: pedido
-    caso: |-
-      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
-
-      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
-
-      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
-
-      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
-
-      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
-
-      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
-
-      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
-
-      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
-
-      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
-
-      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
-
-      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
-    opcoes:
-      correta: Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP.
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - Fixação do regime aberto OU concessão de suspensão condicional da pena
-        - Conhecimento e provimento do recurso, com a desclassificação para homicídio culposo na direção de veículo automotor.
-        - Rol de testemunhas (Maria, José e Natália).
-        - Oferecimento de proposta de suspensão condicional do processo.
-    revisao: *a1
+    pergunta: "O caixa era imune à força humana. Que tese a defesa deve sustentar quanto ao furto tentado?"
+    tese: "Crime impossível, pela absoluta ineficácia do meio empregado"
+    aceitos: [ "crime impossivel" ]
+    artigos: [ "art. 17, CP" ]
+    gabarito: "Pedido de reconhecimento do crime impossível, ante a absoluta ineficácia do meio empregado, nos termos do Art. 17 do CP."
+    revisao: { status: revisado }
   - id: 37-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: merito
-    caso: |-
-      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
-
-      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
-
-      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
-
-      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
-
-      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
-
-      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
-
-      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
-
-      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
-
-      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
-
-      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
-
-      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Impõe-se o afastamento da qualificadora de rompimento de obstáculo, ante a ausência de prova pericial nos termos do Art. 158 do CPP.
-    opcoes:
-      correta: Impõe-se o afastamento da qualificadora de rompimento de obstáculo, ante a ausência de prova pericial nos termos do Art. 158 do CPP.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Aplicação de regime inicial aberto.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-    revisao: *a1
+    pergunta: "Que tese a defesa deve sustentar quanto à qualificadora do rompimento de obstáculo?"
+    tese: "Afastamento da qualificadora do rompimento de obstáculo, porque não houve perícia"
+    aceitos: [ [ "afast* | exclu* | decote | nao incid*", "qualificadora | rompimento | obstaculo" ], [ "sem pericia | falta de pericia | ausencia de pericia | nao houve pericia | sem laudo | sem exame" ] ]
+    artigos: [ "art. 158, CPP", "art. 171, CPP" ]
+    gabarito: "Impõe-se o afastamento da qualificadora de rompimento de obstáculo, ante a ausência de prova pericial nos termos do Art. 158 do CPP."
+    revisao: { status: revisado }
   - id: 37-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
-
-      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
-
-      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
-
-      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
-
-      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
-
-      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
-
-      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
-
-      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
-
-      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
-
-      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
-
-      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Reconhecimento da atenuante da confissão espontânea, nos termos do Art. 65, inciso III, alínea d, do CP.
-    opcoes:
-      correta: Reconhecimento da atenuante da confissão espontânea, nos termos do Art. 65, inciso III, alínea d, do CP.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-    revisao: *a1
+    pergunta: "Os réus admitiram a tentativa de arrombamento. Que atenuante a defesa deve pedir?"
+    tese: "Atenuante da confissão espontânea"
+    aceitos: [ "confissao espontanea | confissao" ]
+    artigos: [ "art. 65, III, d, CP" ]
+    gabarito: "Reconhecimento da atenuante da confissão espontânea, nos termos do Art. 65, inciso III, alínea d, do CP."
+    revisao: { status: revisado }
   - id: 37-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
-
-      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
-
-      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
-
-      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
-
-      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
-
-      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
-
-      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
-
-      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
-
-      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
-
-      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
-
-      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Aplicação da pena base no mínimo legal e aplicação da fração máxima da causa de diminuição pelo crime tentado, nos moldes do Art. 14, inciso II, do CP.
-    opcoes:
-      correta: Aplicação da pena base no mínimo legal e aplicação da fração máxima da causa de diminuição pelo crime tentado, nos moldes do Art. 14, inciso II, do CP.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - No mérito, absolvição de Lauro.
-        - Da substituição da pena privativa de liberdade por restritiva de direitos, nos termos do artigo 44 do CP.
-        - Patrick agiu amparado pela legítima defesa, prevista no Art. 25 do CP OU no Art. 23, II, do CP.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
+    pergunta: "Se mantida a condenação pela tentativa, que fração de redução a defesa deve pedir?"
+    tese: "Pena-base no mínimo e redução máxima da tentativa, de 2/3, porque o crime ficou longe da consumação"
+    aceitos: [ "2/3 | dois tercos | fracao maxima | reducao maxima" ]
+    artigos: [ "art. 14, parágrafo único, CP", "art. 14, II, CP" ]
+    gabarito: "Aplicação da pena base no mínimo legal e aplicação da fração máxima da causa de diminuição pelo crime tentado, nos moldes do Art. 14, inciso II, do CP."
+    revisao: { status: revisado }
   - id: 37-peca-8-1
     categoria: peca-detalhe
     parte: peca
     item: "8.1"
     secao: merito
-    caso: |-
-      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
-
-      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
-
-      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
-
-      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
-
-      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
-
-      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
-
-      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
-
-      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
-
-      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
-
-      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
-
-      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Em relação a Roberto, fixação do regime aberto OU aplicação de penas substitutivas, na forma do Art. 33, § 2º, alínea c OU Art. 44, ambos do CP.
-    opcoes:
-      correta: Em relação a Roberto, fixação do regime aberto OU aplicação de penas substitutivas, na forma do Art. 33, § 2º, alínea c OU Art. 44, ambos do CP.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
-        - O delito não foi praticado após o trânsito em julgado de condenação anterior; sentença condenatória recorrível não gera reincidência.
-        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
-        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
-    revisao: *a1
+    pergunta: "Que regime ou espécie de pena a defesa deve pedir para Roberto, que é primário?"
+    tese: "Regime aberto ou substituição da pena por restritivas de direitos para o réu primário"
+    aceitos: [ "aberto | substitui* | restritiva*" ]
+    artigos: [ "art. 33, § 2º, c, CP", "art. 44, CP" ]
+    gabarito: "Em relação a Roberto, fixação do regime aberto OU aplicação de penas substitutivas, na forma do Art. 33, § 2º, alínea c OU Art. 44, ambos do CP."
+    revisao: { status: revisado }
   - id: 37-peca-8-2
     categoria: peca-detalhe
     parte: peca
     item: "8.2"
     secao: merito
-    caso: |-
-      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
-
-      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
-
-      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
-
-      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
-
-      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
-
-      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
-
-      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
-
-      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
-
-      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
-
-      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
-
-      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Em relação a Ricardo, fixação de regime semiaberto, na forma do Art. 33, § 2º, alínea b, do CP ou Súmula 269 do STJ.
-    opcoes:
-      correta: Em relação a Ricardo, fixação de regime semiaberto, na forma do Art. 33, § 2º, alínea b, do CP ou Súmula 269 do STJ.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Aplicação de regime inicial aberto.
-        - O delito não foi praticado após o trânsito em julgado de condenação anterior; sentença condenatória recorrível não gera reincidência.
-        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
-        - Aplicação do regime inicial semiaberto ou aberto com base na pena a ser aplicada e primariedade do réu, nos termos do Art. 33, § 2º, alíneas b ou c, do CP.
-    revisao: *a1
+    pergunta: "Ricardo é reincidente. Que regime inicial a defesa deve pedir para ele?"
+    tese: "Regime inicial semiaberto para o reincidente com pena de até 4 anos e circunstâncias judiciais favoráveis"
+    aceitos: [ "semiaberto | semi-aberto | semi aberto" ]
+    artigos: [ "Súmula 269 STJ", "art. 33, § 2º, b, CP" ]
+    gabarito: "Em relação a Ricardo, fixação de regime semiaberto, na forma do Art. 33, § 2º, alínea b, do CP ou Súmula 269 do STJ."
+    revisao: { status: revisado }
   - id: 37-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: merito
-    caso: |-
-      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
-
-      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
-
-      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
-
-      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
-
-      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
-
-      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
-
-      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
-
-      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
-
-      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
-
-      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
-
-      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Deve ser reconhecida a detração do período de prisão preventiva, de 30 dias para Ricardo e 2 (dois) dias para Roberto, nos termos do Art. 387, § 2º, do CPP.
-    opcoes:
-      correta: Deve ser reconhecida a detração do período de prisão preventiva, de 30 dias para Ricardo e 2 (dois) dias para Roberto, nos termos do Art. 387, § 2º, do CPP.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Aplicação de regime inicial aberto.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-    revisao: *a1
+    pergunta: "O que a defesa deve pedir quanto aos dias em que os réus ficaram presos?"
+    tese: "Detração do tempo de prisão provisória: 30 dias para Ricardo e 2 para Roberto"
+    aceitos: [ "detracao | tempo de prisao provisoria | tempo de prisao preventiva | desconto do tempo" ]
+    artigos: [ "art. 387, § 2º, CPP" ]
+    gabarito: "Deve ser reconhecida a detração do período de prisão preventiva, de 30 dias para Ricardo e 2 (dois) dias para Roberto, nos termos do Art. 387, § 2º, do CPP."
+    revisao: { status: revisado }
   - id: 37-peca-10
     categoria: peca-detalhe
     parte: peca
     item: "10"
     secao: pedido
-    caso: |-
-      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
-
-      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
-
-      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
-
-      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
-
-      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
-
-      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
-
-      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
-
-      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
-
-      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
-
-      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
-
-      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Absolvição, na forma do Art. 386, inciso III, do CPP.
-    opcoes:
-      correta: Absolvição, na forma do Art. 386, inciso III, do CPP.
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - afastamento da causa de aumento.
-        - "Pedidos, com fundamento no art. 626 do CPP: desclassificação para furto simples; diminuição da pena; fixação do regime semiaberto."
-        - Pedido de retratação pelo juízo a quo
-        - Requerimento do juízo de retratação ou exercício do efeito regressivo, nos termos do Art. 589 do CPP
-    revisao: *a1
-  - id: 37-peca-11
-    categoria: peca-detalhe
-    parte: peca
-    item: "11"
-    secao: pedido
-    caso: |-
-      Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam da agência bancária do Banco Peixe, localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de equipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que, remotamente, por meio de câmeras de segurança, acompanharam a ação de Ricardo e Roberto, que tentaram utilizar o serrote para romper a placa de aço e, assim, ter acesso ao conteúdo dos caixas eletrônicos da agência.
-
-      Após 30 minutos de tentativas, Ricardo e Roberto deixaram a agência, momento em que, já ao lado de fora, foram abordados pelos policiais militares.
-
-      Com base em tais fatos, e constando como elemento informativo produzido no inquérito apenas a oitiva dos acusados e dos policiais, Ricardo e Roberto foram denunciados como incursos nas penas do Art. 155, § 4º, incisos I e IV, e do Art. 14, inciso II, ambos do Código Penal.
-
-      A denúncia foi distribuída ao Juízo competente da 5ª Vara Criminal da Comarca de Barnabeu-CN.
-
-      A prisão em flagrante de Ricardo foi convertida em preventiva, para a garantia da ordem pública, salientando-se que Ricardo possuía condenação anterior pela prática de furto de caixa eletrônico, cuja pena foi cumprida e extinta em 10/04/2019. Já Roberto obteve liberdade provisória na audiência de custódia, realizada no dia seguinte à prisão em flagrante.
-
-      Ricardo obteve ordem de habeas corpus, que o pôs em liberdade após 30 (trinta) dias preso, condicionada a cautelares diversas da prisão.
-
-      A instrução processual repetiu as provas orais realizadas na fase inquisitiva, tendo sido ouvidos os Policiais Militares e, em seguida, realizado o interrogatório dos réus, que confessaram a tentativa de arrombamento do caixa eletrônico. Afirmaram que, com o serrote e a chave de fenda, tentaram romper a ferragem do caixa ou abrir os parafusos, mas, após cerca de 30 minutos dentro da agência, apenas conseguiram realizar arranhões na proteção de aço existente, razão pela qual paralisaram a ação e saíram da agência, quando então, do lado de fora, foram abordados por Policiais Militares.
-
-      Finalizada a instrução, o Ministério Público não requereu a produção de outras provas.
-
-      Em diligência requerida pela defesa, foi juntado aos autos um ofício do Banco Peixe, que informou ao Juízo que a estrutura do caixa eletrônico é de aço, imune à ação mecânica por força humana, e que os acusados não lograram danificar a estrutura do caixa eletrônico.
-
-      Os autos foram enviados ao Ministério Público para manifestação, o qual postulou pela condenação dos acusados, nos termos da denúncia.
-
-      O(A) advogado(a) constituído(a) foi intimado(a) no dia 11/04/2023 (terça-feira).
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Ricardo e Roberto, a peça jurídica cabível, diferente do habeas corpus e embargos de declaração, expondo todas as teses pertinentes de direito material e processual. A peça deverá ser datada no último dia do prazo para apresentação, devendo segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
-    opcoes:
-      correta: Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - Fixação do regime aberto OU concessão de suspensão condicional da pena
-        - Conhecimento e provimento do recurso, com a desclassificação para homicídio culposo na direção de veículo automotor.
-        - Rol de testemunhas (Maria, José e Natália).
-        - Oferecimento de proposta de suspensão condicional do processo.
-    revisao: *a1
+    pergunta: "Qual é o pedido principal da defesa?"
+    tese: "Absolvição, porque o fato não constitui crime (crime impossível)"
+    aceitos: [ "absolvi* | absolver" ]
+    artigos: [ "art. 386, III, CPP" ]
+    gabarito: "Absolvição, na forma do Art. 386, inciso III, do CPP."
+    revisao: { status: revisado }
   - id: 37-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Em 15 de julho de 2020, surgiu uma calorosa discussão entre os amigos Pedro e Júnior, durante uma comemoração de aniversário em um bar da cidade. Pedro, sem querer mais discussões, levantou-se para ir embora. Júnior, ainda transtornado, olhou para a porta do bar e, vendo que o amigo ia embora, arremessou uma caneca de cerveja contra ele, no intuito de lesioná-lo. Ocorre que Júnior errou o alvo e acabou acertando seu próprio irmão, Geraldo, que usava uma camisa idêntica à de Pedro, causando-lhe lesão leve.
-
-      Em 16 de julho de 2020, a lesão leve foi atestada em laudo pericial e o fato foi registrado na Delegacia, por Pedro e Geraldo, que acharam absurda a reação de Júnior.
-
-      Em 23 de julho de 2020, Pedro e Geraldo mudaram de ideia. Eles retornaram à Delegacia, afirmando que Júnior tem sangue quente e que não merecia ser processado, porque era boa pessoa. Relataram que se conhecem há muitos anos, que é comum discutirem daquela forma e que já tinham esquecido o ocorrido.
-
-      Em 30 de março de 2021, o Ministério Público ofereceu denúncia em face de Júnior, como incurso nas sanções do Art. 129, caput, agravada pelo Art. 61, inciso II, alínea e, ambos do CP, crime de lesão corporal leve agravado por ter sido cometido contra irmão.
-
-      Sobre o caso narrado, responda aos itens a seguir.
-    comando: Qual o argumento de direito processual que pode ser alegado em favor de Júnior para o não recebimento da denúncia? Justifique.
-    gabarito: Embora tenha feito o registro de ocorrência sobre o fato, dias após e antes do oferecimento da denúncia, Geraldo manifestou na Delegacia que não tinha interesse em processar Júnior. Houve, portanto, retratação da representação, na forma do Art. 25, a contrario sensu, do CPP. Ausente a condição de procedibilidade para a ação penal pública condicionada, a denúncia deve ser rejeitada pelo juiz, na forma do Art. 395, inciso II, do CPP.
-    opcoes:
-      correta: Ausência de condição de procedibilidade pois houve a retratação da representação antes do oferecimento da denúncia, nos moldes do Art. 395, inciso II do CPP OU Art. 25, a contrario sensu, do CPP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que argumento processual impede o recebimento da denúncia?"
+    tese: "Falta de condição de procedibilidade: as vítimas se retrataram da representação antes da denúncia"
+    aceitos: [ "retrata* | condicao de procedibilidade | falta de representacao | ausencia de representacao" ]
+    artigos: [ "art. 395, II, CPP", "art. 25, CPP" ]
+    gabarito: "Embora tenha feito o registro de ocorrência sobre o fato, dias após e antes do oferecimento da denúncia, Geraldo manifestou na Delegacia que não tinha interesse em processar Júnior. Houve, portanto, retratação da representação, na forma do Art. 25, a contrario sensu, do CPP. Ausente a condição de procedibilidade para a ação penal pública condicionada, a denúncia deve ser rejeitada pelo juiz, na forma do Art. 395, inciso II, do CPP."
+    revisao: { status: revisado }
   - id: 37-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Em 15 de julho de 2020, surgiu uma calorosa discussão entre os amigos Pedro e Júnior, durante uma comemoração de aniversário em um bar da cidade. Pedro, sem querer mais discussões, levantou-se para ir embora. Júnior, ainda transtornado, olhou para a porta do bar e, vendo que o amigo ia embora, arremessou uma caneca de cerveja contra ele, no intuito de lesioná-lo. Ocorre que Júnior errou o alvo e acabou acertando seu próprio irmão, Geraldo, que usava uma camisa idêntica à de Pedro, causando-lhe lesão leve.
-
-      Em 16 de julho de 2020, a lesão leve foi atestada em laudo pericial e o fato foi registrado na Delegacia, por Pedro e Geraldo, que acharam absurda a reação de Júnior.
-
-      Em 23 de julho de 2020, Pedro e Geraldo mudaram de ideia. Eles retornaram à Delegacia, afirmando que Júnior tem sangue quente e que não merecia ser processado, porque era boa pessoa. Relataram que se conhecem há muitos anos, que é comum discutirem daquela forma e que já tinham esquecido o ocorrido.
-
-      Em 30 de março de 2021, o Ministério Público ofereceu denúncia em face de Júnior, como incurso nas sanções do Art. 129, caput, agravada pelo Art. 61, inciso II, alínea e, ambos do CP, crime de lesão corporal leve agravado por ter sido cometido contra irmão.
-
-      Sobre o caso narrado, responda aos itens a seguir.
-    comando: É cabível a incidência da agravante imputada em desfavor de Júnior? Justifique.
-    gabarito: |-
-      Não. Houve erro de tipo acidental, erro quanto à pessoa, previsto no Art. 20, § 3º, do CP. Nesse caso, não se consideram as condições ou qualidades da vítima, senão as da pessoa contra quem o agente queria praticar o crime. Júnior, pensando que seu amigo ia embora, arremessou uma caneca de cerveja no intuito de lesioná-lo.
-
-      Entretanto, Júnior acabou acertando Geraldo, seu irmão, causando-lhe lesão leve. Alternativamente, admite-se aplicação do Art. 73, do CP, com a conclusão de ter havido erro na execução. De todo modo, Júnior está incurso nas sanções do crime de lesão corporal leve, na forma do Art. 129, caput, do CP, devendo ser afastada a agravante do Art. 61, inciso II, alínea e, do CP.
-    opcoes:
-      correta: Não. Houve erro quanto à pessoa OU erro na execução. Nesse caso, não se consideram as condições ou qualidades da vítima, e sim as da pessoa contra quem o agente queria praticar o crime, conforme o Art. 20, § 3º, do CP OU Art. 73 do CP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior. OBS.1: A justificativa correta é essencial para atribuição de pontos, pois não há intervalo de pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
-        - Não foi válida a citação de Carla, já que ela não estava em local incerto e não sabido ou que não estava se ocultando para não ser citada, já que Carla possuía endereço fixo e conhecido, conforme Art. 361 ou 362 ambos do CPP
-    revisao: *a1
+    item: "B"
+    pergunta: "Cabe a agravante de crime contra irmão?"
+    tese: "Erro na execução (aberratio ictus): consideram-se as condições da vítima visada, e não as do irmão atingido"
+    aceitos: [ "erro sobre a pessoa | erro quanto a pessoa | erro na execucao | aberratio ictus | error in persona" ]
+    artigos: [ "art. 73, CP", "art. 20, § 3º, CP" ]
+    gabarito: "Não. Houve erro de tipo acidental, erro quanto à pessoa, previsto no Art. 20, § 3º, do CP. Nesse caso, não se consideram as condições ou qualidades da vítima, senão as da pessoa contra quem o agente queria praticar o crime. Júnior, pensando que seu amigo ia embora, arremessou uma caneca de cerveja no intuito de lesioná-lo.\n\nEntretanto, Júnior acabou acertando Geraldo, seu irmão, causando-lhe lesão leve. Alternativamente, admite-se aplicação do Art. 73, do CP, com a conclusão de ter havido erro na execução. De todo modo, Júnior está incurso nas sanções do crime de lesão corporal leve, na forma do Art. 129, caput, do CP, devendo ser afastada a agravante do Art. 61, inciso II, alínea e, do CP."
+    revisao: { status: revisado }
   - id: 37-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Luís, sócio administrador de Exatas Contábeis S/A, foi condenado pela supressão de tributos praticada pela prestação de informações falsas às autoridades fazendárias (Art. 1º, inciso I, da Lei nº 8.137/90), apurado definitivamente em procedimento fiscal, no montante de R$ 1.500.000,00 (um milhão e quinhentos mil reais).
-
-      A sentença condenou o acusado a uma pena de dois anos de reclusão, em regime aberto, substituída por duas penas restritivas de direito a serem fixadas pelo MM Juízo de Execução Penal. Expedida a carta de execução ao Juízo de Execução Penal, este fixou as penas restritivas substitutivas da pena privativa de liberdade em prestação de serviços à comunidade, em jornada semanal de 8h (oito horas), calculada à razão de uma hora por dia de condenação, e prestação pecuniária, esta equivalente ao valor do prejuízo apurado (R$ 1.500.000,00). Insatisfeito com a decisão do Juiz de Execução Penal, Luís solicita que você, como advogado(a), adote as providências necessárias à observância da legalidade estrita na aplicação das penas restritivas de direitos.
-
-      Na qualidade de advogado de Luís, responda aos itens a seguir.
-    comando: Qual o recurso cabível contra a decisão mencionada? Fundamente.
-    gabarito: Tendo em vista que foi prolatada decisão pelo Juízo de Execução Penal, a decisão deve ser atacada pela via de agravo em execução, na forma do Art. 197 da LEP.
-    opcoes:
-      correta: Agravo em execução, na forma do Art. 197 da LEP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - A defesa deveria alegar a proibição de aplicação de sanções coletivas, nos termos do Art. 45, §3º, da LEP
-        - "A hipótese é de resultado diverso do pretendido (art. 74 do CP), devendo responder por dano em concurso formal com o crime de homicídio culposo. OBS.: a mera indicação de dispositivo legal ou transcrição de seu conteúdo não será pontuada."
-        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que recurso cabe contra a decisão do juiz da execução?"
+    tese: "Agravo em execução contra a decisão do juiz da execução"
+    aceitos: [ "agravo em execucao | agravo de execucao" ]
+    artigos: [ "art. 197, LEP" ]
+    gabarito: "Tendo em vista que foi prolatada decisão pelo Juízo de Execução Penal, a decisão deve ser atacada pela via de agravo em execução, na forma do Art. 197 da LEP."
+    revisao: { status: revisado }
   - id: 37-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Luís, sócio administrador de Exatas Contábeis S/A, foi condenado pela supressão de tributos praticada pela prestação de informações falsas às autoridades fazendárias (Art. 1º, inciso I, da Lei nº 8.137/90), apurado definitivamente em procedimento fiscal, no montante de R$ 1.500.000,00 (um milhão e quinhentos mil reais).
-
-      A sentença condenou o acusado a uma pena de dois anos de reclusão, em regime aberto, substituída por duas penas restritivas de direito a serem fixadas pelo MM Juízo de Execução Penal. Expedida a carta de execução ao Juízo de Execução Penal, este fixou as penas restritivas substitutivas da pena privativa de liberdade em prestação de serviços à comunidade, em jornada semanal de 8h (oito horas), calculada à razão de uma hora por dia de condenação, e prestação pecuniária, esta equivalente ao valor do prejuízo apurado (R$ 1.500.000,00). Insatisfeito com a decisão do Juiz de Execução Penal, Luís solicita que você, como advogado(a), adote as providências necessárias à observância da legalidade estrita na aplicação das penas restritivas de direitos.
-
-      Na qualidade de advogado de Luís, responda aos itens a seguir.
-    comando: Qual o argumento de mérito a ser deduzido em favor de Luís? Fundamente.
-    gabarito: O advogado de Luís deve alegar que a pena de prestação pecuniária é limitada ao valor de 360 salários mínimos, conforme Art. 45, § 1º, do Código Penal.
-    opcoes:
-      correta: Inobservância da limitação da pena de prestação pecuniária ao montante de 360 salários mínimos, na forma do Art. 45, § 1º, do Código Penal.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "Sim, é competente a Justiça Estadual, pois conforme já mencionado não houve dolo de traficar para o exterior. OBS.1: A justificativa correta é essencial para atribuição de pontos, pois não há intervalo de pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - Sim, poderia ser buscada a suspensão condicional da pena, já que Arnaldo era maior de 70 anos na data dos fatos E a sanção penal aplicada é inferior a 4 anos, nos termos do Art. 77, §2º, do Código Penal.
-        - Não foi válida a citação de Carla, já que ela não estava em local incerto e não sabido ou que não estava se ocultando para não ser citada, já que Carla possuía endereço fixo e conhecido, conforme Art. 361 ou 362 ambos do CPP
-    revisao: *a1
+    item: "B"
+    pergunta: "Que argumento de mérito favorece Luís?"
+    tese: "A prestação pecuniária tem o limite de 360 salários mínimos"
+    aceitos: [ "360 salarios | 360 salarios minimos | limite" ]
+    artigos: [ "art. 45, § 1º, CP" ]
+    gabarito: "O advogado de Luís deve alegar que a pena de prestação pecuniária é limitada ao valor de 360 salários mínimos, conforme Art. 45, § 1º, do Código Penal."
+    revisao: { status: revisado }
   - id: 37-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Débora e Cristiane são amigas e se encontraram em um restaurante. Durante o almoço, elas começaram a conversar, de forma reservada e sem expectativa de estarem sendo ouvidas por terceiros, sobre Jéssica, conhecida de ambas. As amigas mencionaram que Jéssica era “ridícula” e que “se acha”.
-
-      Jenifer, amiga de Jéssica, sem que Débora e Cristiane percebessem, aproximou-se da mesa de ambas de forma discreta e iniciou uma gravação ambiental (com amplificação sonora), captando o áudio da conversa com todas as qualidades negativas que Débora e Cristiane atribuiam a Jéssica.
-
-      Jenifer entregou a gravação à ofendida. De posse da referida gravação ambiental, Jéssica ajuízou uma queixa-crime contra Débora e Cristiane, dando-as como incursas nas penas do Art. 140, caput, do Código Penal.
-
-      Na qualidade de advogado(a) contratado(a) por Débora e Cristiane, responda às questões a seguir.
-    comando: Qual a tese de direito processual a ser deduzida em favor das quereladas, notadamente, sobre a prova utilizada para embasar a queixa? Justifique.
-    gabarito: A questão processual envolve conhecimentos sobre a (i)licitude de provas produzidas mediante gravação ambiental, sem autorização judicial e sem conhecimento de qualquer dos interlocutores, devendo ser destacada a inexistência de qualquer objetivo de autodefesa. Assim, a conduta de Jenifer viola o direito à intimidade das quereladas, tratando-se de prova ilícita, ante a violação expressa do que dispõe o Art. 8º-A da Lei nº 9.296/96 (ou Art. 157, do CPP ou Art. 5º, inciso LVI, da CRFB/88). A conduta de Jenifer, inclusive, poderia em tese ser tipificada no Art. 10-A, da mesma lei, pois não autorizada por nenhuma das interlocutoras.
-    opcoes:
-      correta: Ilicitude do meio de obtenção da prova, produzida a partir da captação ambiental realizada por Jenifer, pois a gravação ambiental dependeria de autorização judicial, na forma do Art. 8º-A da Lei nº 9.296/96 OU Art. 157, do CPP OU Art. 5º, inciso LVI, da CRFB/88.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese processual contesta a prova que embasou a queixa?"
+    tese: "Ilicitude da prova: a captação ambiental de conversa reservada, feita por terceiro sem autorização judicial, é ilícita"
+    aceitos: [ "ilicit* | ilegal* | autorizacao judicial" ]
+    artigos: [ "art. 8-A, Lei 9.296", "art. 157, CPP", "art. 5, LVI, CRFB" ]
+    gabarito: "A questão processual envolve conhecimentos sobre a (i)licitude de provas produzidas mediante gravação ambiental, sem autorização judicial e sem conhecimento de qualquer dos interlocutores, devendo ser destacada a inexistência de qualquer objetivo de autodefesa. Assim, a conduta de Jenifer viola o direito à intimidade das quereladas, tratando-se de prova ilícita, ante a violação expressa do que dispõe o Art. 8º-A da Lei nº 9.296/96 (ou Art. 157, do CPP ou Art. 5º, inciso LVI, da CRFB/88). A conduta de Jenifer, inclusive, poderia em tese ser tipificada no Art. 10-A, da mesma lei, pois não autorizada por nenhuma das interlocutoras."
+    revisao: { status: revisado }
   - id: 37-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Débora e Cristiane são amigas e se encontraram em um restaurante. Durante o almoço, elas começaram a conversar, de forma reservada e sem expectativa de estarem sendo ouvidas por terceiros, sobre Jéssica, conhecida de ambas. As amigas mencionaram que Jéssica era “ridícula” e que “se acha”.
-
-      Jenifer, amiga de Jéssica, sem que Débora e Cristiane percebessem, aproximou-se da mesa de ambas de forma discreta e iniciou uma gravação ambiental (com amplificação sonora), captando o áudio da conversa com todas as qualidades negativas que Débora e Cristiane atribuiam a Jéssica.
-
-      Jenifer entregou a gravação à ofendida. De posse da referida gravação ambiental, Jéssica ajuízou uma queixa-crime contra Débora e Cristiane, dando-as como incursas nas penas do Art. 140, caput, do Código Penal.
-
-      Na qualidade de advogado(a) contratado(a) por Débora e Cristiane, responda às questões a seguir.
-    comando: Qual a tese de direito material a ser deduzida em favor das quereladas? Justifique.
-    gabarito: Quanto à questão material, deve ser observado que o delito de injúria se caracteriza por ser um delito doloso, requer o dolo direto de causar ofensa à honra subjetiva da vítima. Dessa forma, somente é possível a prática do delito se houver intenção deliberada de atingir o destinatário da ofensa, o que não ocorreu no caso presente, pois Débora e Cristiane conversavam entre si, sem qualquer expectativa de fazer chegar à Jéssica as ofensas proferidas. Por isso, deve ser reconhecida a atipicidade da conduta.
-    opcoes:
-      correta: Atipicidade da conduta, diante da inexistência de dolo de atingimento da honra subjetiva da vítima Jéssica OU ausência de intenção das quereladas de fazer chegar à Jéssica o teor da conversa privada havida entre elas.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese de direito material leva à absolvição das quereladas?"
+    tese: "Atipicidade da injúria: faltou o dolo de ofender, porque a conversa era privada e não era para chegar a Jéssica"
+    aceitos: [ "atipic* | dolo de ofender | animus injuriandi | sem dolo | falta de dolo | ausencia de dolo" ]
+    artigos: [ "art. 140, CP" ]
+    gabarito: "Quanto à questão material, deve ser observado que o delito de injúria se caracteriza por ser um delito doloso, requer o dolo direto de causar ofensa à honra subjetiva da vítima. Dessa forma, somente é possível a prática do delito se houver intenção deliberada de atingir o destinatário da ofensa, o que não ocorreu no caso presente, pois Débora e Cristiane conversavam entre si, sem qualquer expectativa de fazer chegar à Jéssica as ofensas proferidas. Por isso, deve ser reconhecida a atipicidade da conduta."
+    revisao: { status: revisado }
   - id: 37-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      Lúcio e Adamastor, em comunhão de ações e desígnios, com o emprego de arma de fogo, subtraíram o veículo dirigido pela vítima, Vilma. Pela dinâmica delituosa, Lúcio empunhava a arma de fogo contra a cabeça da vítima, enquanto Adamastor exigia a entrega das chaves do veículo, sob palavras de ordem e graves ameaças contra a vida de Vilma, afirmando que “caso não entregasse o veículo, levaria um tiro.”
-
-      Ambos foram condenados, sendo que Lúcio e o Ministério Público não recorreram da condenação.
-
-      Adamastor, por meio de sua defesa técnica (distinta da defesa de Lúcio), interpôs recurso, alegando que a arma de fogo era portada apenas por Lúcio e que esta era incapaz de produzir disparos.
-
-      Lúcio afirma ao advogado que se sentiu traído pelo argumento deduzido por Adamastor, sendo sua intenção, apenas, que ambos tivessem a mesma condenação.
-
-      Na qualidade de advogado de Lúcio, responda às questões a seguir.
-    comando: A primeira tese recursal pode garantir tratamento penal mais vantajoso a Adamastor? Justifique, levando em consideração o Direito Penal aplicável.
-    gabarito: Não, pois a dinâmica delitiva deixa claro que ambos agiram com dolo, conhecimento e vontade de empregar a arma de fogo na atividade criminosa. Nesse sentido, era exigido do examinando o conhecimento do Art. 30 do Código Penal, que trata sobre a incomunicabilidade das circunstâncias pessoais, salvo quando elementares do crime. Assim, pouco importa se quem portava a arma era Lúcio, havendo concurso de pessoas, e sendo o emprego de arma uma circunstância objetiva, há comunicabilidade a todos os co-autores. Por isso, a alegação de que apenas Lúcio portava a arma não poderia, no caso, prejudicá-lo ou conceder a Adamastor tratamento penal mais vantajoso.
-    opcoes:
-      correta: Não, pois o emprego de arma é uma circunstância objetiva elementar do delito, razão pela qual há comunicabilidade, nos termos do Art. 30, do CP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "A"
+    pergunta: "A tese de que só Lúcio portava a arma favorece Adamastor?"
+    tese: "O emprego da arma é circunstância objetiva e se comunica ao coautor que sabia dela"
+    aceitos: [ "objetiva | comunica* | elementar" ]
+    artigos: [ "art. 30, CP" ]
+    gabarito: "Não, pois a dinâmica delitiva deixa claro que ambos agiram com dolo, conhecimento e vontade de empregar a arma de fogo na atividade criminosa. Nesse sentido, era exigido do examinando o conhecimento do Art. 30 do Código Penal, que trata sobre a incomunicabilidade das circunstâncias pessoais, salvo quando elementares do crime. Assim, pouco importa se quem portava a arma era Lúcio, havendo concurso de pessoas, e sendo o emprego de arma uma circunstância objetiva, há comunicabilidade a todos os co-autores. Por isso, a alegação de que apenas Lúcio portava a arma não poderia, no caso, prejudicá-lo ou conceder a Adamastor tratamento penal mais vantajoso."
+    revisao: { status: revisado }
   - id: 37-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Lúcio e Adamastor, em comunhão de ações e desígnios, com o emprego de arma de fogo, subtraíram o veículo dirigido pela vítima, Vilma. Pela dinâmica delituosa, Lúcio empunhava a arma de fogo contra a cabeça da vítima, enquanto Adamastor exigia a entrega das chaves do veículo, sob palavras de ordem e graves ameaças contra a vida de Vilma, afirmando que “caso não entregasse o veículo, levaria um tiro.”
-
-      Ambos foram condenados, sendo que Lúcio e o Ministério Público não recorreram da condenação.
-
-      Adamastor, por meio de sua defesa técnica (distinta da defesa de Lúcio), interpôs recurso, alegando que a arma de fogo era portada apenas por Lúcio e que esta era incapaz de produzir disparos.
-
-      Lúcio afirma ao advogado que se sentiu traído pelo argumento deduzido por Adamastor, sendo sua intenção, apenas, que ambos tivessem a mesma condenação.
-
-      Na qualidade de advogado de Lúcio, responda às questões a seguir.
-    comando: Caso o Tribunal acolha a segunda tese recursal de Adamastor, esta poderia ser aproveitada a Lúcio? Justifique, considerando as normas de Direito Processual Penal aplicáveis.
-    gabarito: Em razão do exposto acima, quanto à questão processual, esperava-se a resposta positiva, pois o efeito extensivo do recurso beneficia Lúcio por ser embasado em circunstância objetiva, na forma do Art. 580, do CPP.
-    opcoes:
-      correta: Sim, pois o efeito extensivo do recurso beneficia Lúcio por ser embasado em circunstância objetiva, na forma do Art. 580, do CPP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "B"
+    pergunta: "Se o Tribunal reconhecer que a arma não disparava, Lúcio se beneficia?"
+    tese: "Efeito extensivo do recurso: a tese objetiva da arma inapta beneficia também o corréu que não recorreu"
+    aceitos: [ "efeito extensivo | extensao | se estende | estende" ]
+    artigos: [ "art. 580, CPP" ]
+    gabarito: "Em razão do exposto acima, quanto à questão processual, esperava-se a resposta positiva, pois o efeito extensivo do recurso beneficia Lúcio por ser embasado em circunstância objetiva, na forma do Art. 580, do CPP."
+    revisao: { status: revisado }

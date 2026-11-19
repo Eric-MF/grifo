@@ -211,3 +211,10 @@ questoes:
         componentes:
           - { id: c1, valor: 0.35, termos: [ erika, particip* ] }
 observacoes: "A FGV aceitou duas peças neste exame: Revisão Criminal (tabela usada aqui) ou Justificação Criminal (art. 861 do CPC c/c art. 3º do CPP), com tabela própria. O corretor automático avalia pela tabela da Revisão Criminal."
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Jane: Atalanta, Gabriela: Penélope, Gabriel: Telêmaco }   # a que fugiu com o carro; a mãe e o filho
+    q2: { Maria: Éris, Josefa: Héstia }   # a discórdia; a deusa do lar (a casa danificada)
+    q3: { José: Hermes }   # o viajante
+    q4: { Erika: Afrodite, Ana: Galateia, Wilson: Poseidon }   # a praia; o salva-vidas

@@ -2,6 +2,7 @@
 import type { ArtigoTexto } from "./busca";
 import type { Bloco, Datas, InfoBloco } from "./linha-do-tempo";
 import { corrigido, corrigirBlocos } from "./texto";
+import { jsonDeGzip } from "@/lib/gzip";
 
 export interface LeiCompleta {
   id: string;
@@ -100,20 +101,15 @@ export interface Remissivo {
 export const carregarRemissivo = (lei: string) => obter<Remissivo>(`/dados/remissivos/${lei}.json`);
 
 /** O que a página inicial do Vade Mecum mostra das súmulas (gerado no build). Lido sem cache: acompanha as atualizações. */
-export type ResumoSumulas = Record<"stf" | "stj", { total: number; baixadas: number; coletadoEm: string; unidades: number }>;
+export type ResumoSumulas = Record<"stf" | "stj" | "vinculantes", { total: number; baixadas: number; coletadoEm: string; unidades: number }>;
 export async function carregarResumoSumulas(): Promise<ResumoSumulas> {
   const r = await fetch("/dados/leis/_sumulas.json", { cache: "no-store" });
   if (!r.ok) throw new Error(`${r.status} no resumo das súmulas`);
   return r.json();
 }
 
-/** Descomprime um arquivo gzip que o próprio site serve (o navegador devolve o que o servidor manda, então o gzip do arquivo fica). */
-async function baixarGzip<T>(url: string): Promise<T> {
-  const r = await fetch(url);
-  if (!r.ok || !r.body) throw new Error(`${r.status} em ${url}`);
-  if (typeof DecompressionStream === "undefined") throw new Error("este navegador não descomprime o arquivo");
-  return new Response(r.body.pipeThrough(new DecompressionStream("gzip"))).json() as Promise<T>;
-}
+/** Um arquivo .json.gz que o próprio site serve, comprimido ou já descomprimido pelo navegador (src/lib/gzip.ts). */
+const baixarGzip = <T,>(url: string): Promise<T> => fetch(url).then((r) => jsonDeGzip<T>(r));
 
 const infosDasSumulas = new Map<string, Promise<Record<string, InfoBloco[]>>>();
 /** As informações adicionais de cada súmula (dispositivo → linhas). Baixa só quando o leitor as pede, uma vez. */
@@ -129,13 +125,13 @@ export function carregarInfoSumulas(lei: string): Promise<Record<string, InfoBlo
   return infosDasSumulas.get(lei)!;
 }
 
-/** Súmulas de um tribunal (content/sumulas/, gerado por scripts/sumulas/baixar.ts). */
+/** Súmulas de um tribunal, ou as vinculantes (content/sumulas/, gerado por scripts/sumulas/atualizar.ts). */
 export interface SumulaVide {
   texto: string;
-  alvo?: { tribunal: "stf" | "stj"; numero: number };
+  alvo?: { tribunal: "stf" | "stj" | "vinculantes"; numero: number };
 }
 export interface SumulaDados {
-  tribunal: "stf" | "stj";
+  tribunal: "stf" | "stj" | "vinculantes";
   numero: number;
   status: "vigente" | "superada" | "cancelada";
   /** false quando só a lista foi baixada: o texto ainda não está no Grifo */
@@ -148,6 +144,9 @@ export interface SumulaDados {
     julgamento?: string;
     fonte?: string;
     dataAprovacao?: string;
+    dataPublicacao?: string;
+    teses?: string[];
+    precedentesRepresentativos?: { titulo?: string; ementa: string; referencia: string }[];
     jurisprudencia?: { titulo?: string; ementa: string; referencia: string }[];
     observacoes?: string[];
     referenciaLegislativa?: { norma: string; artigos: string[] }[];
@@ -155,7 +154,7 @@ export interface SumulaDados {
   };
 }
 export interface SumulasDoTribunal {
-  tribunal: "stf" | "stj";
+  tribunal: "stf" | "stj" | "vinculantes";
   fonte: string;
   coletadoEm: string;
   total: number;

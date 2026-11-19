@@ -302,3 +302,12 @@ questoes:
         componentes:
           - { id: c1, valor: 0.5, termos: [ efeito extensivo | extensao ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 580, CPP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Ricardo: Ícaro, Roberto: Dédalo }   # as ferramentas contra o cofre do Banco Hefesto
+    q1: { Pedro: Aquiles, Júnior: Heitor, Geraldo: Pátroclo }   # o tiro em quem vestia igual ao alvo
+    q2: { Luís: Midas }
+    q3: { Débora: Hera, Cristiane: Atena, Jéssica: Afrodite, Jenifer: Hebe }   # a conversa reservada; a que "se acha"; a que ouviu
+    q4: { Lúcio: Ares, Adamastor: Polifemo, Vilma: Ariadne }   # o roubo do carro
+    empresas: { Banco Peixe: Banco Hefesto, Exatas Contábeis S/A: Mercúrio Contábeis S/A }   # o cofre que resiste a ferramentas; o deus romano do comércio e da astúcia

@@ -317,3 +317,13 @@ questoes:
         componentes:
           - { id: c1, valor: 0.5, termos: [ justo receio | receio, novas infracoes | novos crimes | reitera* ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 319, VI, CPP", "art. 282, II, CPP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: peca, lei: "Lei 14.994/2024", texto: "A Lei 14.994/2024 revogou o inciso VI do § 2º do art. 121 do Código Penal e transformou o feminicídio em crime autônomo (art. 121-A), com pena de reclusão de 20 a 40 anos. Hoje, a denúncia imputaria o art. 121-A, c/c o art. 14, II. A tese da irretroatividade continua valendo: o fato, de 2010, é anterior até à Lei 13.104/2015, que criou a qualificadora." }
+  nomes:
+    peca: { Rômulo: Menelau, Paola: Helena, Bruno: Páris }   # o ciúme por causa da mensagem
+    q1: { Luciano: Midas, Gilberto: Tântalo }   # o peculato
+    q2: { Paulo: Baco, Lúcia: Eurídice }   # o álcool ao volante; a atropelada
+    q3: { Carlos: Ares }   # a arma
+    q4: { Paulo: Hermes, Jaqueline: Cassandra }   # o furto; a quem contou

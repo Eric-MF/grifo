@@ -1,549 +1,158 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "28"
+introducoes:
+  peca: "Túlio, nascido em 1/1/1996 e primário, comprou um remédio abortivo de venda controlada e o deu à namorada, Joaquina, de 15 anos, que acreditava estar grávida do ex-namorado e pediu ajuda para abortar. Ela tomou o remédio em 3/1/2014, mas os médicos constataram que nunca estivera grávida: tinha um cisto. Túlio foi denunciado por aborto com consentimento da gestante, tentado; a denúncia foi recebida em 22/1/2014, e o Ministério Público não ofereceu nenhum benefício despenalizador, apesar do pedido da defesa. Depois das alegações finais, foram juntados o boletim médico, a folha de antecedentes e o exame de corpo de delito, e o juiz, na mesma hora, pronunciou Túlio, em 18/6/2018. Você é o advogado dele."
+  q1: "Matheus atropelou uma pessoa ao fazer uma manobra indevida em alta velocidade. Ele recusou o bafômetro, mas o delegado disse que ele era obrigado a fazê-lo, e Matheus acabou soprando. Foi denunciado por lesão corporal culposa na direção de veículo, e o juiz decretou a preventiva a pedido do Ministério Público, porque ele seria reincidente específico: tinha uma condenação definitiva por outra lesão corporal culposa no trânsito."
+  q2: "Hugo foi condenado por apropriação indébita majorada a 1 ano e 6 meses. Era reincidente: no ano anterior ao crime, transitou em julgado sua condenação por lesão corporal dolosa contra a mulher, em violência doméstica. Por causa da reincidência, o juiz fixou o regime fechado e negou a substituição da pena, dizendo que a lei a veda para o reincidente em crime doloso, embora Hugo trabalhe e cuide de filhos pequenos."
+  q3: "Leal cumpre pena de 6 anos no semiaberto por lesão corporal seguida de morte, sem nenhuma falta disciplinar. Quer progredir para o aberto, mas soube que não há vagas em estabelecimentos do regime aberto no estado."
+  q4: "Em Bom Jesus de Itabapoana, Talles furtou, em continuidade delitiva, dinheiro, uma arma de brinquedo, uma touca ninja, um celular e uma moto. Depois, em Cardoso Moreira, com a arma de brinquedo e a touca, segurou Joana pelos braços, tomou o celular dela e fugiu. Foi preso em São Fidélis e indiciado pelos furtos e por roubo majorado pela restrição da liberdade da vítima."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["28-peca-1", "28-peca-4", "28-peca-7", "28-peca-10", "28-peca-11", "28-q3-a"]
 perguntas:
-  - id: 28-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS."
-    opcoes:
-      correta: "Endereçamento: Juízo de Direito do Tribunal do Júri da Comarca de Porto Alegre/RS."
-      erradas:
-        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
-        - "Endereçamento da petição de interposição: Juiz da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’."
-        - "Endereçamento: Tribunal de Justiça do Rio de Janeiro"
-        - "Endereçamento: 1ª Vara Criminal da Comarca de Maceió/AL."
-        - "Endereçamento: Juízo Federal da Vara Federal Criminal de Alfa."
-    revisao: &a1
-      status: revisado
   - id: 28-peca-3
     categoria: peca-detalhe
     parte: peca
     item: "3"
     secao: pedido
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Requerimento do exercício do juízo de retratação, nos termos do Art. 589 do CPP.
-    opcoes:
-      correta: Requerimento do exercício do juízo de retratação, nos termos do Art. 589 do CPP.
-      erradas:
-        - "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
-        - Absolvição por falta de provas OU por não haver prova da existência do fato.
-        - "Pedidos: Absolvição, na forma do Art. 386, inciso VI, do CPP"
-        - Não provimento do recurso OU manutenção da sentença.
-        - Pedido de retratação, na forma do Art. 589 do CPP.
-    revisao: *a1
-  - id: 28-peca-4
-    categoria: peca-detalhe
-    parte: peca
-    item: "4"
-    secao: enderecamento
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem devem ser endereçadas as razões?
-    gabarito: "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-    opcoes:
-      correta: "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-      erradas:
-        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - "Endereçamento: Vara Criminal da Comarca do Rio de Janeiro"
-        - "Endereçamento: Vara Criminal da Comarca de Porto Alegre/RS."
-        - A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
-    revisao: *a1
+    pergunta: "Ao interpor o recurso contra a pronúncia, o que a defesa deve pedir ao próprio juiz?"
+    tese: "Juízo de retratação: o juiz pode reformar a pronúncia ao receber o recurso em sentido estrito"
+    aceitos: [ "retrata* | efeito regressivo | reconsidera*" ]
+    artigos: [ "art. 589, CPP" ]
+    gabarito: "Requerimento do exercício do juízo de retratação, nos termos do Art. 589 do CPP."
+    revisao: { status: revisado }
   - id: 28-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: pedido
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
-    opcoes:
-      correta: Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP.
-      erradas:
-        - "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
-        - Absolvição sumária com fundamento no art. 397, III, do CPP e art. 397, IV, do CPP; produção de prova testemunhal ou rol de testemunhas.
-        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
-        - Aplicação de regime inicial aberto ou semiaberto.
-        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
-    revisao: *a1
+    pergunta: "Entre o recebimento da denúncia e a pronúncia passaram mais de 4 anos. Que causa extingue a punibilidade de Túlio?"
+    tese: "Prescrição da pretensão punitiva, que extingue a punibilidade"
+    aceitos: [ "prescri*" ]
+    artigos: [ "art. 107, IV, CP", "art. 109, IV, CP" ]
+    gabarito: "Requerimento de reconhecimento da prescrição da pretensão punitiva do Estado, com consequente extinção da punibilidade do agente, nos termos do Art. 107, inciso IV, do CP."
+    revisao: { status: revisado }
   - id: 28-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A prescrição ocorreu porque, entre a data do recebimento da denúncia e da pronúncia foi ultrapassado o prazo de 4 anos OU o prazo de 4 anos foi ultrapassado porque o prazo prescricional deveria ser computado pela metade, já que o réu era menor de 21 anos.
-    opcoes:
-      correta: A prescrição ocorreu porque, entre a data do recebimento da denúncia e da pronúncia foi ultrapassado o prazo de 4 anos OU o prazo de 4 anos foi ultrapassado porque o prazo prescricional deveria ser computado pela metade, já que o réu era menor de 21 anos.
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
-        - Substituição da pena privativa de liberdade por restritiva de direitos, tendo em vista que a condenação anterior foi pela prática de crime culposo, de acordo com o Art. 44, inciso II, do Código Penal. 5/
-        - "Subsidiariamente: aplicação da pena base no mínimo legal, tendo em vista que o fato posterior ao crime julgado não pode ser considerado maus antecedentes."
-    revisao: *a1
-  - id: 28-peca-7
-    categoria: peca-detalhe
-    parte: peca
-    item: "7"
-    secao: preliminar
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Preliminarmente, nulidade da decisão de pronúncia:.
-    opcoes:
-      correta: Preliminarmente, nulidade da decisão de pronúncia:.
-      erradas:
-        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
-        - Nulidade da busca e apreensão genérica e sem fundamentação, art. 93, IX, CF.
-        - Prescrição em razão de entre a data do recebimento da denúncia e a manifestação do advogado ter sido ultrapassado o prazo prescricional de 04 anos, já que Gabriela era menor de 21 anos na data dos fatos, devendo o prazo ser computado pela metade. Citação do art. 109, IV E do art. 115 do CP
-        - Preliminarmente, extinção da punibilidade do agente OU nulidade em razão da ausência de representação, com reconhecimento da decadência, conforme o Art. 107, inciso IV, do CP OU 564, inciso III, alínea a, ou inciso IV, CPP
-        - Nulidade da sentença, ante a violação ao princípio da identidade física do Juiz ou do Juiz Natural, nos termos do Art. 399, § 2º, do CPP ou Art. 5º, LIII, CRFB.
-    revisao: *a1
+    pergunta: "Por que o prazo prescricional de Túlio é de só 4 anos?"
+    tese: "Prazo prescricional pela metade, porque o réu era menor de 21 anos na data do fato"
+    aceitos: [ "metade | menor de 21 | 21 anos" ]
+    artigos: [ "art. 115, CP" ]
+    gabarito: "A prescrição ocorreu porque, entre a data do recebimento da denúncia e da pronúncia foi ultrapassado o prazo de 4 anos OU o prazo de 4 anos foi ultrapassado porque o prazo prescricional deveria ser computado pela metade, já que o réu era menor de 21 anos."
+    revisao: { status: revisado }
   - id: 28-peca-7-1
     categoria: peca-detalhe
     parte: peca
     item: "7.1"
     secao: preliminar
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Nulidade em razão do não oferecimento de proposta de suspensão condicional do processo, nos termos do Art. 89 da Lei 9.099, já que a pena mínima do delito imputado é de 1 ano.
-    opcoes:
-      correta: Nulidade em razão do não oferecimento de proposta de suspensão condicional do processo, nos termos do Art. 89 da Lei 9.099, já que a pena mínima do delito imputado é de 1 ano.
-      erradas:
-        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
-        - Nulidade da interceptação telefônica decretada como primeira medida investigatória (art. 2º, II, Lei 9.296/96) e sem fundamentação adequada (art. 5º da Lei 9.296/96 ou art. 93, IX, CF).
-        - "Preliminarmente: Não conhecimento do recurso de Apelação, em razão da intempestividade, nos termos do art. 593 do CPP Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
-        - Preliminarmente, extinção da punibilidade do agente OU nulidade em razão da ausência de representação, com reconhecimento da decadência, conforme o Art. 107, inciso IV, do CP OU 564, inciso III, alínea a, ou inciso IV, CPP
-        - Nulidade da sentença, ante a violação ao princípio da identidade física do Juiz ou do Juiz Natural, nos termos do Art. 399, § 2º, do CPP ou Art. 5º, LIII, CRFB.
-    revisao: *a1
+    pergunta: "Que preliminar a defesa deve levantar quanto ao benefício que o Ministério Público não ofereceu?"
+    tese: "Nulidade pela falta de proposta de suspensão condicional do processo, cabível porque a pena mínima é de 1 ano"
+    aceitos: [ "suspensao condicional do processo | sursis processual" ]
+    artigos: [ "art. 89, Lei 9.099" ]
+    gabarito: "Nulidade em razão do não oferecimento de proposta de suspensão condicional do processo, nos termos do Art. 89 da Lei 9.099, já que a pena mínima do delito imputado é de 1 ano."
+    revisao: { status: revisado }
   - id: 28-peca-7-2
     categoria: peca-detalhe
     parte: peca
     item: "7.2"
     secao: preliminar
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Nulidade em razão do cerceamento de defesa OU violação ao princípio da ampla defesa OU violação ao princípio do contraditório, já que o juiz proferiu decisão após juntada de documentação, sem dar vista às partes.
-    opcoes:
-      correta: Nulidade em razão do cerceamento de defesa OU violação ao princípio da ampla defesa OU violação ao princípio do contraditório, já que o juiz proferiu decisão após juntada de documentação, sem dar vista às partes.
-      erradas:
-        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
-        - Nulidade da interceptação telefônica decretada como primeira medida investigatória (art. 2º, II, Lei 9.296/96) e sem fundamentação adequada (art. 5º da Lei 9.296/96 ou art. 93, IX, CF).
-        - "Preliminarmente: Não conhecimento do recurso de Apelação, em razão da intempestividade, nos termos do art. 593 do CPP Obs.: A mera indicação do dispositivo legal ou do número de súmula não pontua."
-        - Extinção da punibilidade em relação ao crime de lesão corporal, em razão da decadência, nos termos do Art. 107, IV, do CP OU 38 do CPP.
-        - "Preliminar: cerceamento de defesa (ou violação ao contraditório ou ampla defesa, ou ao devido processo legal ou nulidade por omissão de formalidade essencial), porque não poderia ter sido concedido prazo comum ao colaborador e ao corréu delatado, em violação ao Art. 4º, § 10-A, da Lei nº 12.850/2013, ao Art. 5º, inciso LIV ou LV, da CRFB/88, ou ao Art. 564, inciso IV, do CPP."
-    revisao: *a1
+    pergunta: "Que outra preliminar a defesa deve levantar contra a pronúncia, dada logo após a juntada dos documentos?"
+    tese: "Nulidade da pronúncia por cerceamento de defesa: o juiz decidiu logo após a juntada de documentos, sem dar vista às partes"
+    aceitos: [ "cerceamento | ampla defesa | contraditorio | sem vista | sem dar vista | nao deu vista | vista as partes" ]
+    artigos: [ "art. 5, LV, CRFB", "art. 564, IV, CPP" ]
+    gabarito: "Nulidade em razão do cerceamento de defesa OU violação ao princípio da ampla defesa OU violação ao princípio do contraditório, já que o juiz proferiu decisão após juntada de documentação, sem dar vista às partes."
+    revisao: { status: revisado }
   - id: 28-peca-8
     categoria: peca-detalhe
     parte: peca
     item: "8"
     secao: merito
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: No mérito, absolvição sumária em razão de o fato evidentemente não constituir crime OU diante da atipicidade da conduta, nos termos do Art. 415, III, CPP
-    opcoes:
-      correta: No mérito, absolvição sumária em razão de o fato evidentemente não constituir crime OU diante da atipicidade da conduta, nos termos do Art. 415, III, CPP
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese da prática de crime único, pois o delito de estupro de vulnerável é um tipo misto alternativo (de conteúdo múltiplo ou variado).
-        - Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
-        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
-        - Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
-    revisao: *a1
+    pergunta: "No mérito, que decisão a defesa deve pedir no lugar da pronúncia?"
+    tese: "Absolvição sumária, porque o fato não constitui crime"
+    aceitos: [ "absolvicao sumaria | absolvido sumariamente | absolver sumariamente | absolvicao* sumaria*" ]
+    artigos: [ "art. 415, III, CPP" ]
+    gabarito: "No mérito, absolvição sumária em razão de o fato evidentemente não constituir crime OU diante da atipicidade da conduta, nos termos do Art. 415, III, CPP"
+    revisao: { status: revisado }
   - id: 28-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: merito
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A conduta de Túlio configura crime impossível, nos termos do Art. 17 do CP.
-    opcoes:
-      correta: A conduta de Túlio configura crime impossível, nos termos do Art. 17 do CP.
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - Substituição da pena privativa de liberdade por restritiva de direitos,pois preenchidos os requisitos do Art. 44 do CP.
-        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
-        - Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
-    revisao: *a1
-  - id: 28-peca-10
-    categoria: peca-detalhe
-    parte: peca
-    item: "10"
-    secao: merito
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Houve absoluta impropriedade do objeto, tendo em vista que Joaquina não estava grávida quando da ação visando causar aborto.
-    opcoes:
-      correta: Houve absoluta impropriedade do objeto, tendo em vista que Joaquina não estava grávida quando da ação visando causar aborto.
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - Substituição da pena privativa de liberdade por restritiva de direitos,pois preenchidos os requisitos do Art. 44 do CP.
-        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
-        - Aplicação do regime inicial aberto para cumprimento da pena, na forma do Art. 33, § 2º, alínea c, do CP.
-    revisao: *a1
-  - id: 28-peca-11
-    categoria: peca-detalhe
-    parte: peca
-    item: "11"
-    secao: pedido
-    caso: |-
-      Túlio, nascido em 01/01/1996, primário, começa a namorar Joaquina, jovem que recém completou 15 anos. Logo após o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estaria grávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstra toda a sua preocupação com a reação de seus pais diante desta gravidez quando tão jovem e, em desespero, solicita ajuda de Túlio para realizar um aborto.
-
-      Diante disso, no dia 03/01/2014, em Porto Alegre, Túlio adquire remédio abortivo cuja venda era proibida sem prescrição médica e o entrega para a namorada, que, de imediato, passa a fazer uso dele. Joaquina, então, expele algo não identificado pela vagina, que ela acredita ser o feto. Os pais presenciam os fatos e levam a filha imediatamente ao hospital; em seguida, comparecem à Delegacia e narram o ocorrido. No hospital, foi informado pelos médicos que, na verdade, Joaquina possuía um cisto, mas nunca estivera grávida, e o que fora expelido não era um feto.
-
-      Após investigação, no dia 20/01/2014, Túlio vem a ser denunciado pelo crime do Art. 126, caput, c/c. o Art. 14, inciso II, ambos do Código Penal, perante o juízo do Tribunal do Júri da Comarca de Porto Alegre/RS, não sendo oferecido qualquer instituto despenalizador, apesar do reclamo defensivo. A inicial acusatória foi recebida em 22/01/2014.
-
-      Durante a instrução da primeira fase do procedimento especial, são ouvidas as testemunhas e Joaquina, assim como interrogado o réu, todos confirmando o ocorrido. As partes apresentaram alegações finais orais, e o juiz determinou a conclusão do feito para decisão. Antes de ser proferida decisão, mas após manifestação das partes em alegações finais, foram juntados aos autos o boletim de atendimento médico de Joaquina, no qual consta a informação de que ela não estivera grávida no momento dos fatos, a Folha de Antecedentes Criminais de Túlio sem outras anotações e um exame de corpo de delito, que indicava que o remédio utilizado não causara lesões na adolescente.
-
-      Com a juntada da documentação, de imediato, sem a adoção de qualquer medida, o magistrado proferiu decisão de pronúncia nos termos da denúncia, sendo publicada na mesma data, qual seja, 18 de junho de 2018, segunda-feira, ocasião em que as partes foram intimadas.
-
-      Considerando apenas as informações narradas, na condição de advogado(a) de Túlio, redija a peça jurídica cabível, diferente de habeas corpus, apresentando todas as teses jurídicas pertinentes. A peça deverá ser datada no último dia do prazo para interposição, considerando-se que todos os dias de segunda a sexta-feira são úteis em todo o país. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Conhecimento e provimento do recurso.
-    opcoes:
-      correta: Conhecimento e provimento do recurso.
-      erradas:
-        - "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
-        - Pronúncia da ré nos exatos termos da denúncia OU pronúncia por homicídio triplamente qualificado OU pronúncia da ré por infanticídio
-        - a) designação de audiência preliminar ou de conciliação b) a citação da querelada; c) recebimento da queixa d) a oitiva das testemunhas arroladas; e) a condenação da querelada pelo crime de injúria (Art. 140 do CP) e pelo crime de difamação (Art. 139 do CP) com a causa de aumento de pena (Art. 141, III do CP) em concurso formal de delitos (Art. 70 do CP) f) a fixação de valor mínimo de indenização, nos termos do Art. 387, IV, do CPP. OBS:. A mera indicação de dispositivo legal não pontua.
-        - Afastamento da agravante do Art. 61, II, ´f´, do CP.
-        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
-    revisao: *a1
+    pergunta: "Joaquina nunca esteve grávida. Que tese de mérito isso permite?"
+    tese: "Crime impossível, pela absoluta impropriedade do objeto: não havia gravidez"
+    aceitos: [ "crime impossivel | impropriedade" ]
+    artigos: [ "art. 17, CP" ]
+    gabarito: "A conduta de Túlio configura crime impossível, nos termos do Art. 17 do CP."
+    revisao: { status: revisado }
   - id: 28-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Matheus conduzia seu automóvel em alta velocidade. Em razão de manobra indevida, acabou por atropelar uma vítima, causando-lhe lesões corporais. Com a chegada da Polícia Militar, foi solicitado que Matheus realizasse exame de etilômetro (bafômetro); diante de sua recusa, foi informado pela autoridade policial, que comparecera ao local, que ele seria obrigado a realizar o exame para verificar eventual prática também do crime previsto no Art. 306 da Lei nº 9.503/97.
-
-      Diante da afirmativa da autoridade policial, Matheus, apesar de não desejar, viu-se obrigado a realizar o teste do bafômetro. Após conclusão do inquérito policial, com oitiva e representação da vítima, foi o feito encaminhado ao Ministério Público, que ofereceu denúncia imputando a Matheus apenas a prática do crime do Art. 303, da Lei nº 9.503/97, prosseguindo as investigações com relação ao crime do Art. 306 do mesmo diploma legal. Ainda na exordial acusatória, foi requerida a decretação da prisão preventiva de Matheus, pelo risco de reiteração delitiva, tendo em vista que ele seria reincidente específico, já que a única anotação constante de sua Folha de Antecedentes Criminais, para além do presente processo, seria a condenação definitiva pela prática de outro crime de lesão corporal culposa praticada na direção de veículo automotor. No recebimento da denúncia, o juiz competente decretou a prisão preventiva.
-
-      Considerando as informações narradas, na condição de advogado(a) de Matheus, responda aos itens a seguir.
-    comando: Poderia Matheus ter sido obrigado a realizar o teste de bafômetro, conforme informado pela autoridade policial, mesmo diante de sua recusa? Justifique.
-    gabarito: |-
-      Com base nas informações constantes do enunciado, não poderia Matheus ser obrigado a realizar o teste de bafômetro nos termos informados pela autoridade policial. Matheus foi o autor de um atropelamento de vítima que sofreu lesões corporais em razão de sua conduta com violação do dever objetivo de cuidado.
-
-      Independentemente, a autoridade policial não poderia exigir a contribuição de Matheus para produção de provas contra ele próprio em relação ao crime do Art. 306 da Lei nº 9.503/97 (CTB). O princípio do nemo tenetur se detegere, trazido, dentre outros diplomas, pelo Pacto de San Jose da Costa Rica, estabelece que ninguém é obrigado a produzir provas contra si. Apesar de haver controvérsia sobre a extensão desse princípio, em relação à exigência de conduta positiva do investigado/acusado na produção de prova que pode lhe prejudicar, prevalece o entendimento no sentido de que não existe obrigatoriedade na contribuição. O exame de etilômetro exige que o investigado adote um comportamento positivo, já que é preciso que ele sopre ar em determinado aparelho, de modo que não pode Matheus ser obrigado a realizar tal teste se assim não o desejar, podendo o crime do Art. 306 do CTB ser identificado por outros meios de prova.
-    opcoes:
-      correta: Não poderia Matheus ter sido obrigado a realizar o teste do bafômetro, em respeito ao princípio de que ninguém é obrigado a produzir prova contra si OU diante do princípio nemo tenetur se detegere
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "A"
+    pergunta: "Matheus podia ser obrigado a fazer o teste do bafômetro?"
+    tese: "Violação do direito de não produzir prova contra si mesmo: ninguém pode ser obrigado a fazer o teste do bafômetro"
+    aceitos: [ "produzir prova contra si | nemo tenetur | autoincrimina* | nao autoincriminacao" ]
+    artigos: [ "art. 5, LXIII, CRFB" ]
+    gabarito: "Com base nas informações constantes do enunciado, não poderia Matheus ser obrigado a realizar o teste de bafômetro nos termos informados pela autoridade policial. Matheus foi o autor de um atropelamento de vítima que sofreu lesões corporais em razão de sua conduta com violação do dever objetivo de cuidado.\n\nIndependentemente, a autoridade policial não poderia exigir a contribuição de Matheus para produção de provas contra ele próprio em relação ao crime do Art. 306 da Lei nº 9.503/97 (CTB). O princípio do nemo tenetur se detegere, trazido, dentre outros diplomas, pelo Pacto de San Jose da Costa Rica, estabelece que ninguém é obrigado a produzir provas contra si. Apesar de haver controvérsia sobre a extensão desse princípio, em relação à exigência de conduta positiva do investigado/acusado na produção de prova que pode lhe prejudicar, prevalece o entendimento no sentido de que não existe obrigatoriedade na contribuição. O exame de etilômetro exige que o investigado adote um comportamento positivo, já que é preciso que ele sopre ar em determinado aparelho, de modo que não pode Matheus ser obrigado a realizar tal teste se assim não o desejar, podendo o crime do Art. 306 do CTB ser identificado por outros meios de prova."
+    revisao: { status: revisado }
   - id: 28-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Matheus conduzia seu automóvel em alta velocidade. Em razão de manobra indevida, acabou por atropelar uma vítima, causando-lhe lesões corporais. Com a chegada da Polícia Militar, foi solicitado que Matheus realizasse exame de etilômetro (bafômetro); diante de sua recusa, foi informado pela autoridade policial, que comparecera ao local, que ele seria obrigado a realizar o exame para verificar eventual prática também do crime previsto no Art. 306 da Lei nº 9.503/97.
-
-      Diante da afirmativa da autoridade policial, Matheus, apesar de não desejar, viu-se obrigado a realizar o teste do bafômetro. Após conclusão do inquérito policial, com oitiva e representação da vítima, foi o feito encaminhado ao Ministério Público, que ofereceu denúncia imputando a Matheus apenas a prática do crime do Art. 303, da Lei nº 9.503/97, prosseguindo as investigações com relação ao crime do Art. 306 do mesmo diploma legal. Ainda na exordial acusatória, foi requerida a decretação da prisão preventiva de Matheus, pelo risco de reiteração delitiva, tendo em vista que ele seria reincidente específico, já que a única anotação constante de sua Folha de Antecedentes Criminais, para além do presente processo, seria a condenação definitiva pela prática de outro crime de lesão corporal culposa praticada na direção de veículo automotor. No recebimento da denúncia, o juiz competente decretou a prisão preventiva.
-
-      Considerando as informações narradas, na condição de advogado(a) de Matheus, responda aos itens a seguir.
-    comando: Qual requerimento deveria ser formulado, em busca da liberdade de Matheus, diante da decisão do magistrado, que decretou sua prisão preventiva em razão de sua reincidência? Justifique.
-    gabarito: Em busca da liberdade de Matheus, o advogado deveria formular requerimento de relaxamento da prisão, tendo em vista que a decretação da prisão preventiva exige a presença dos requisitos e pressupostos trazidos pelos Arts. 312 e 313 do Código de Processo Penal. Independentemente do risco de reiteração delitiva, os pressupostos do Art. 313 do CPP não foram atendidos. O crime imputado não é doloso e não tem pena máxima superior a 04 anos, ainda que considerada eventual causa de aumento. Em relação à reincidência, o Art. 313, inciso II, do CPP apenas admite a prisão se aquela for em crimes dolosos. No caso, o enunciado deixa claro que Matheus era reincidente específico na prática de crimes culposos, logo não preenchidos os requisitos legais desde o início, a decretação da prisão torna-se ilegal, devendo ser relaxada, nos termos do Art. 5º, inciso LXV, CRFB/88.
-    opcoes:
-      correta: O requerimento a ser formulado é de relaxamento da prisão, conforme Art. 5º, inciso LXV, da CRFB/88, tendo em vista que Matheus é reincidente na prática de crimes culposos OU tendo em vista que não foram preenchidos os requisitos do Art. 313 do CPP.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que pedido a defesa deve fazer contra a preventiva decretada pela reincidência?"
+    tese: "Relaxamento da prisão ilegal: a reincidência em crime culposo não autoriza a preventiva"
+    aceitos: [ "relaxamento | relaxar" ]
+    artigos: [ "art. 5, LXV, CRFB", "art. 313, II, CPP" ]
+    gabarito: "Em busca da liberdade de Matheus, o advogado deveria formular requerimento de relaxamento da prisão, tendo em vista que a decretação da prisão preventiva exige a presença dos requisitos e pressupostos trazidos pelos Arts. 312 e 313 do Código de Processo Penal. Independentemente do risco de reiteração delitiva, os pressupostos do Art. 313 do CPP não foram atendidos. O crime imputado não é doloso e não tem pena máxima superior a 04 anos, ainda que considerada eventual causa de aumento. Em relação à reincidência, o Art. 313, inciso II, do CPP apenas admite a prisão se aquela for em crimes dolosos. No caso, o enunciado deixa claro que Matheus era reincidente específico na prática de crimes culposos, logo não preenchidos os requisitos legais desde o início, a decretação da prisão torna-se ilegal, devendo ser relaxada, nos termos do Art. 5º, inciso LXV, CRFB/88."
+    revisao: { status: revisado }
   - id: 28-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Após regular processamento em que figurava na condição de réu solto, Hugo foi condenado pela prática de crime de apropriação indébita majorada ao cumprimento da pena de 01 ano e 06 meses de reclusão e 14 dias-multa, sendo reconhecida a agravante da reincidência, tendo em vista que foi juntada aos autos Folha de Antecedentes Criminais a demonstrar trânsito em julgado, no ano anterior ao da prática da apropriação indébita, de condenação pelo crime de lesão corporal dolosa, praticada no contexto de violência doméstica e familiar contra a mulher.
-
-      No momento da sentença, considerando a reincidência, o magistrado aplicou o regime inicial fechado de cumprimento da pena. Destacou, ainda, que, apesar de Hugo estar trabalhando e cuidando de filhos menores, não poderia substituir a pena privativa de liberdade por restritiva de direitos por expressa vedação legal no caso de reincidência dolosa.
-
-      Intimado da sentença, Hugo procura seu advogado para a adoção das medidas cabíveis.
-
-      Considerando apenas o narrado, na condição de advogado(a) de Hugo, responda aos questionamentos a seguir.
-    comando: Diante da reincidência, de acordo com a jurisprudência do Superior Tribunal de Justiça, existe argumento a ser apresentado, em sede de recurso, em busca da aplicação de regime inicial mais benéfico de cumprimento de pena? Justifique.
-    gabarito: Sim, existe argumento em busca da aplicação do regime inicial semiaberto para cumprimento da pena. De acordo com a literalidade do Art. 33, § 2º, do Código Penal, em sendo o réu reincidente, cabível a aplicação do regime inicial fechado. Ocorre que tal previsão poderá ser extremamente severa diante de situações concretas onde outro regime de cumprimento de pena se mostre mais adequado. Diante disso, procurando mitigar as consequências dessa previsão do Código Penal, a jurisprudência dos Tribunais Superiores, inclusive através da Súmula 269 do Superior Tribunal de Justiça, admite a aplicação do regime inicial semiaberto aos reincidentes condenados ao cumprimento de pena fixada em até 04 anos, desde que favoráveis as demais circunstâncias judiciais. No caso, apesar da reincidência, a pena foi aplicada em 1 ano e 06 meses de reclusão, não sendo reconhecidas circunstâncias judiciais desfavoráveis. Ademais, a reincidência anterior sequer era específica. Diante disso, possível ao advogado de Hugo pleitear a fixação do regime inicial semiaberto de cumprimento de pena. A mera indicação do candidato de que com base na pena imposta o regime inicial adequado seria aberto não é suficiente para atribuição de pontos.
-    opcoes:
-      correta: Sim. O advogado poderá argumentar que, apesar da reincidência, as circunstâncias judiciais são favoráveis e que a pena foi fixada abaixo de 04 anos, sendo cabível aplicação do regime semiaberto, nos termos da Súmula 269 do STJ.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "A"
+    pergunta: "Apesar da reincidência, que regime inicial a defesa pode pedir, segundo o STJ?"
+    tese: "Regime inicial semiaberto para o reincidente com pena de até 4 anos e circunstâncias judiciais favoráveis"
+    aceitos: [ "semiaberto | semi-aberto | semi aberto | circunstancias judiciais favoraveis" ]
+    artigos: [ "Súmula 269 STJ" ]
+    gabarito: "Sim, existe argumento em busca da aplicação do regime inicial semiaberto para cumprimento da pena. De acordo com a literalidade do Art. 33, § 2º, do Código Penal, em sendo o réu reincidente, cabível a aplicação do regime inicial fechado. Ocorre que tal previsão poderá ser extremamente severa diante de situações concretas onde outro regime de cumprimento de pena se mostre mais adequado. Diante disso, procurando mitigar as consequências dessa previsão do Código Penal, a jurisprudência dos Tribunais Superiores, inclusive através da Súmula 269 do Superior Tribunal de Justiça, admite a aplicação do regime inicial semiaberto aos reincidentes condenados ao cumprimento de pena fixada em até 04 anos, desde que favoráveis as demais circunstâncias judiciais. No caso, apesar da reincidência, a pena foi aplicada em 1 ano e 06 meses de reclusão, não sendo reconhecidas circunstâncias judiciais desfavoráveis. Ademais, a reincidência anterior sequer era específica. Diante disso, possível ao advogado de Hugo pleitear a fixação do regime inicial semiaberto de cumprimento de pena. A mera indicação do candidato de que com base na pena imposta o regime inicial adequado seria aberto não é suficiente para atribuição de pontos."
+    revisao: { status: revisado }
   - id: 28-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Após regular processamento em que figurava na condição de réu solto, Hugo foi condenado pela prática de crime de apropriação indébita majorada ao cumprimento da pena de 01 ano e 06 meses de reclusão e 14 dias-multa, sendo reconhecida a agravante da reincidência, tendo em vista que foi juntada aos autos Folha de Antecedentes Criminais a demonstrar trânsito em julgado, no ano anterior ao da prática da apropriação indébita, de condenação pelo crime de lesão corporal dolosa, praticada no contexto de violência doméstica e familiar contra a mulher.
-
-      No momento da sentença, considerando a reincidência, o magistrado aplicou o regime inicial fechado de cumprimento da pena. Destacou, ainda, que, apesar de Hugo estar trabalhando e cuidando de filhos menores, não poderia substituir a pena privativa de liberdade por restritiva de direitos por expressa vedação legal no caso de reincidência dolosa.
-
-      Intimado da sentença, Hugo procura seu advogado para a adoção das medidas cabíveis.
-
-      Considerando apenas o narrado, na condição de advogado(a) de Hugo, responda aos questionamentos a seguir.
-    comando: É possível, em sede de recurso, buscar a substituição da pena privativa de liberdade por restritiva de direitos? Justifique.
-    gabarito: |-
-      Sim, é possível ao advogado buscar a substituição da pena privativa de liberdade por restritiva de direitos. De fato, como destacado pelo magistrado, a princípio, o Art. 44, inciso II, do Código Penal, veda a substituição da pena privativa de liberdade por restritiva de direitos na hipótese de o réu ser reincidente na prática de crimes dolosos. Não há dúvida que Hugo era reincidente, já que possuía condenação pela prática de crime doloso anterior, com trânsito em julgado, sendo o crime de apropriação indébita praticado posteriormente.
-
-      Todavia, o próprio Art. 44, § 3º, do Código Penal, admite a substituição, mesmo diante de reincidência, desde que essa não seja específica e a medida seja socialmente recomendável. Na situação apresentada, Hugo não é reincidente específico sequer na prática de crimes contra o patrimônio, já que a condenação anterior refere-se ao crime de lesão corporal dolosa. Ademais, com base nas informações expostas, a medida seria socialmente recomendável, tendo em vista que Hugo estava trabalhando e cuidava de filhos menores de idade. O crime não envolveria violência ou grave ameaça à pessoa. Assim, excepcionalmente, possível a substituição da pena privativa de liberdade por restritiva de direitos.
-    opcoes:
-      correta: É possível a substituição da pena privativa de liberdade por restritiva de direitos, tendo em vista que a reincidência não é específica e a medida é socialmente recomendável, nos termos do Art. 44, § 3º, do CP.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
-  - id: 28-q3-a
-    categoria: discursiva
-    parte: q3
-    item: A
-    caso: |-
-      Leal cumpre pena em regime semiaberto após condenação definitiva pela prática de crime de lesão corporal seguida de morte, ocasião em que foi aplicada pena de 06 anos de reclusão. Após permanecer 11 meses da pena penitenciário, em “serviço extramuros”, por 120 dias, pretende a obtenção de progressão para o regime aberto.
-
-      Diante disso, em visita realizada pela defesa técnica, demonstra sua intenção para o advogado, informando que não sofreu qualquer punição administrativa no período, mas demonstrou preocupação com o fato de que soube, por meio de outros detentos, que não haveria vagas disponíveis em estabelecimentos de regime aberto no Estado.
-
-      Sob o ponto de vista técnico, de acordo com a jurisprudência pacificada dos Tribunais Superiores, na condição de advogado(a) de Leal, esclareça os itens a seguir.
-    comando: Leal preencheu os requisitos objetivos para a progressão para o regime aberto? Justifique.
-    gabarito: |-
-      Sim, os requisitos legais estão preenchidos. De acordo com o Art. 112 da Lei nº 7.210/84, o requisito objetivo para progressão de regime é o cumprimento de 1/6 da pena aplicada, que, no caso, significaria 01 ano de pena privativa de liberdade. Segundo consta do enunciado, Leal ficou 11 meses preso em cumprimento da pena, o que, a princípio, não atenderia ao requisito objetivo. Todavia, há período de pena remida que justifica a progressão de regime. Leal trabalhou por 120 dias, o que gera uma remição de 40 dias de acordo com o Art. 126 da LEP, devendo ser esclarecido que o “trabalho extramuros” justifica a remição de pena, nos termos da Súmula 562 do STJ. Ademais, o tempo remido será computado como pena cumprida para todos os efeitos (Art. 128 da LEP).
-
-      Dessa forma, cumprido mais de 01 ano da pena aplicada, possível a progressão de regime.
-    opcoes:
-      correta: Sim, tendo em vista que foi cumprido mais de 1/6 da pena aplicada OU mais de 01 ano da pena imposta, nos termos do Art. 112 OU do Art. 126, ambos da LEP OU da Súmula 562 do STJ, considerando como pena cumprida o tempo remido em razão do trabalho extramuros.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "B"
+    pergunta: "A reincidência impede a substituição da pena de Hugo por restritivas de direitos?"
+    tese: "Substituição por restritivas de direitos para o reincidente não específico, quando a medida é socialmente recomendável"
+    aceitos: [ "nao especific* | reincidencia generica | reincidente generico | socialmente recomendavel" ]
+    artigos: [ "art. 44, § 3º, CP" ]
+    gabarito: "Sim, é possível ao advogado buscar a substituição da pena privativa de liberdade por restritiva de direitos. De fato, como destacado pelo magistrado, a princípio, o Art. 44, inciso II, do Código Penal, veda a substituição da pena privativa de liberdade por restritiva de direitos na hipótese de o réu ser reincidente na prática de crimes dolosos. Não há dúvida que Hugo era reincidente, já que possuía condenação pela prática de crime doloso anterior, com trânsito em julgado, sendo o crime de apropriação indébita praticado posteriormente.\n\nTodavia, o próprio Art. 44, § 3º, do Código Penal, admite a substituição, mesmo diante de reincidência, desde que essa não seja específica e a medida seja socialmente recomendável. Na situação apresentada, Hugo não é reincidente específico sequer na prática de crimes contra o patrimônio, já que a condenação anterior refere-se ao crime de lesão corporal dolosa. Ademais, com base nas informações expostas, a medida seria socialmente recomendável, tendo em vista que Hugo estava trabalhando e cuidava de filhos menores de idade. O crime não envolveria violência ou grave ameaça à pessoa. Assim, excepcionalmente, possível a substituição da pena privativa de liberdade por restritiva de direitos."
+    revisao: { status: revisado }
   - id: 28-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Leal cumpre pena em regime semiaberto após condenação definitiva pela prática de crime de lesão corporal seguida de morte, ocasião em que foi aplicada pena de 06 anos de reclusão. Após permanecer 11 meses da pena penitenciário, em “serviço extramuros”, por 120 dias, pretende a obtenção de progressão para o regime aberto.
-
-      Diante disso, em visita realizada pela defesa técnica, demonstra sua intenção para o advogado, informando que não sofreu qualquer punição administrativa no período, mas demonstrou preocupação com o fato de que soube, por meio de outros detentos, que não haveria vagas disponíveis em estabelecimentos de regime aberto no Estado.
-
-      Sob o ponto de vista técnico, de acordo com a jurisprudência pacificada dos Tribunais Superiores, na condição de advogado(a) de Leal, esclareça os itens a seguir.
-    comando: A inexistência de vagas no regime pretendido pelo apenado pode ser considerada fundamento idôneo para a não concessão do benefício por ocasião do preenchimento dos requisitos objetivos e subjetivos para progressão? Justifique.
+    item: "B"
+    pergunta: "Não há vagas no regime aberto. Isso justifica negar a progressão de Leal?"
+    tese: "A falta de vaga não mantém o preso em regime mais grave: ele vai para o regime adequado, para a liberdade ou para medida alternativa"
+    aceitos: [ "falta de vaga* | ausencia de vaga* | inexistencia de vaga* | deficit de vaga* | nao pode permanecer | nao pode ficar | mais gravoso | mais grave" ]
+    artigos: [ "Súmula Vinculante 56" ]
     gabarito: "A inexistência de vagas em regime compatível não é fundamento idôneo para manutenção do apenado em regime mais severo, nos termos da Súmula Vinculante 56 do STF. Preenchidos os requisitos legais, o apenado possui direito à progressão para regime compatível ao cumprimento de sua pena, não podendo a deficiência do estado lhe prejudicar. De acordo com a jurisprudência do STF, havendo déficit de vagas, deverão ser determinados: (i) a saída antecipada de sentenciado no regime com falta de vagas; (ii) a liberdade eletronicamente monitorada ao sentenciado que sai antecipadamente ou é posto em prisão domiciliar por falta de vagas; (iii) o cumprimento de penas restritivas de direito e/ou estudo ao sentenciado que progride ao regime aberto. Até que sejam estruturadas as medidas alternativas propostas, poderá ser deferida a prisão domiciliar ao sentenciado."
-    opcoes:
-      correta: Não pode o apenado permanecer em regime mais gravoso em razão da falta de estabelecimento penal adequado, devendo ser colocado em liberdade ou regime mais favorável, nos termos da Súmula Vinculante 56/STF.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 28-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      Na manhã do dia 09 de outubro de 2018, Talles, na cidade de Bom Jesus de Itabapoana, praticou 03 crimes de furto simples em continuidade delitiva, subtraindo, do primeiro estabelecimento, dinheiro e uma arma de brinquedo; do segundo estabelecimento, uma touca ninja e um celular; e, do terceiro estabelecimento, uma motocicleta.
-
-      De posse dos bens subtraídos, Talles foi até a cidade de Cardoso Moreira, abordou Joana, que passava pela rua segurando seu celular, e, utilizando-se do simulacro da arma para emprego de grave ameaça e da touca, segurou-a pelos braços e subtraiu o celular de suas mãos. De imediato, Talles empreendeu fuga, mas Joana compareceu em sede policial, narrou o ocorrido e Talles foi localizado e preso em flagrante na cidade de São Fidélis, ainda na posse dos bens da vítima e da motocicleta utilizada.
-
-      Assegurado o direito ao silêncio e o acompanhamento da defesa técnica, Talles prestou declarações na delegacia e confessou integralmente os fatos, sendo ele indiciado pela prática dos crimes previstos no Art. 155, caput, por três vezes, n/f do Art. 71 do CP e do Art. 157, § 2º, inciso V, também do CP.
-
-      Considerando as informações expostas, responda, na condição de advogado(a) de Talles, aos itens a seguir.
-    comando: Considerando que os delitos são conexos, de qual cidade será o juízo criminal competente para o julgamento de Talles? Justifique.
-    gabarito: Será competente para julgamento de Talles o juízo da Comarca de Cardoso Moreira, local onde teria sido praticado o crime de roubo. De acordo com as informações constantes do enunciado, três crimes de furto foram praticados em conexão com um crime de roubo, tendo em vista que o agente, em continuidade, subtraiu bens de estabelecimentos diversos para obter instrumentos para a prática do crime de roubo. A conexão probatória, então, é clara. Havendo conexão entre crimes que foram praticados em diferentes comarcas, sendo que todos os juízos seriam de mesma categoria, aplicam-se as previsões do Art. 78, inciso II, do Código de Processo Penal. Não há que se falar em competência da cidade de São Fidélis, pois nenhum dos crimes foi consumado do local, somente lá ocorrendo a prisão em flagrante. Restariam as cidades de Bom Jesus de Itabapoana e Cardoso Moreira. De acordo com o Art. 78, inciso II, alínea a, do CPP, o primeiro critério a ser observado é o local onde foi praticado o crime à qual for cominada a pena mais grave. O crime mais grave imputado é o de roubo majorado, logo competente a Comarca de Cardoso Moreira. O critério do número de crimes praticados somente seria relevante se a todos os delitos fosse prevista a mesma pena.
-    opcoes:
-      correta: Será competente o juízo da Comarca de Cardoso Moreira, local onde foi praticada a infração penal mais grave, nos termos do Art. 78, inciso II, alínea a, do CPP.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "A"
+    pergunta: "Sendo os crimes conexos, que juízo é competente para julgar Talles?"
+    tese: "Competência do juízo de Cardoso Moreira, local da infração mais grave (o roubo)"
+    aceitos: [ [ "cardoso moreira", "mais grave" ], [ "infracao mais grave | crime mais grave | delito mais grave" ] ]
+    artigos: [ "art. 78, II, a, CPP" ]
+    gabarito: "Será competente para julgamento de Talles o juízo da Comarca de Cardoso Moreira, local onde teria sido praticado o crime de roubo. De acordo com as informações constantes do enunciado, três crimes de furto foram praticados em conexão com um crime de roubo, tendo em vista que o agente, em continuidade, subtraiu bens de estabelecimentos diversos para obter instrumentos para a prática do crime de roubo. A conexão probatória, então, é clara. Havendo conexão entre crimes que foram praticados em diferentes comarcas, sendo que todos os juízos seriam de mesma categoria, aplicam-se as previsões do Art. 78, inciso II, do Código de Processo Penal. Não há que se falar em competência da cidade de São Fidélis, pois nenhum dos crimes foi consumado do local, somente lá ocorrendo a prisão em flagrante. Restariam as cidades de Bom Jesus de Itabapoana e Cardoso Moreira. De acordo com o Art. 78, inciso II, alínea a, do CPP, o primeiro critério a ser observado é o local onde foi praticado o crime à qual for cominada a pena mais grave. O crime mais grave imputado é o de roubo majorado, logo competente a Comarca de Cardoso Moreira. O critério do número de crimes praticados somente seria relevante se a todos os delitos fosse prevista a mesma pena."
+    revisao: { status: revisado }
   - id: 28-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Na manhã do dia 09 de outubro de 2018, Talles, na cidade de Bom Jesus de Itabapoana, praticou 03 crimes de furto simples em continuidade delitiva, subtraindo, do primeiro estabelecimento, dinheiro e uma arma de brinquedo; do segundo estabelecimento, uma touca ninja e um celular; e, do terceiro estabelecimento, uma motocicleta.
-
-      De posse dos bens subtraídos, Talles foi até a cidade de Cardoso Moreira, abordou Joana, que passava pela rua segurando seu celular, e, utilizando-se do simulacro da arma para emprego de grave ameaça e da touca, segurou-a pelos braços e subtraiu o celular de suas mãos. De imediato, Talles empreendeu fuga, mas Joana compareceu em sede policial, narrou o ocorrido e Talles foi localizado e preso em flagrante na cidade de São Fidélis, ainda na posse dos bens da vítima e da motocicleta utilizada.
-
-      Assegurado o direito ao silêncio e o acompanhamento da defesa técnica, Talles prestou declarações na delegacia e confessou integralmente os fatos, sendo ele indiciado pela prática dos crimes previstos no Art. 155, caput, por três vezes, n/f do Art. 71 do CP e do Art. 157, § 2º, inciso V, também do CP.
-
-      Considerando as informações expostas, responda, na condição de advogado(a) de Talles, aos itens a seguir.
-    comando: Qual o argumento de direito material para questionar a capitulação delitiva realizada pela autoridade policial? Justifique.
-    gabarito: O argumento de direito material é o de que não haveria que se falar em crime de roubo majorado pela restrição da liberdade da vítima, tendo em vista que a restrição em questão foi a normal do tipo para subtração dos bens, não se estendendo por tempo significativo relevante, para além daquele necessário para a subtração, conforme exige a doutrina e a jurisprudência.
-    opcoes:
-      correta: Não houve restrição da liberdade da vítima por tempo significativo/suficiente para ultrapassar o normal do tipo, devendo ser afastada a causa de aumento de pena.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que argumento de direito material contesta a capitulação do roubo?"
+    tese: "Afastamento da majorante da restrição da liberdade: a vítima ficou presa só pelo tempo necessário à subtração"
+    aceitos: [ [ "afast* | nao incid* | exclu* | decote", "majorante | causa de aumento | restricao" ], [ "tempo necessario | tempo relevante | tempo juridicamente relevante | tempo significativo | normal do tipo" ] ]
+    artigos: [ "art. 157, § 2º, V, CP" ]
+    gabarito: "O argumento de direito material é o de que não haveria que se falar em crime de roubo majorado pela restrição da liberdade da vítima, tendo em vista que a restrição em questão foi a normal do tipo para subtração dos bens, não se estendendo por tempo significativo relevante, para além daquele necessário para a subtração, conforme exige a doutrina e a jurisprudência."
+    revisao: { status: revisado }

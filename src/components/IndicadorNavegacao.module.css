@@ -1,0 +1,22 @@
+/* a barrinha do link clicado enquanto a página nova carrega (IndicadorNavegacao.tsx) */
+.rotulo { position: relative; display: inline-block; }
+.indicador {
+  position: absolute; left: 0; right: 0; bottom: -0.3em; height: 2px; border-radius: 2px; overflow: hidden;
+  opacity: 0; pointer-events: none; background: color-mix(in srgb, var(--primary) 25%, transparent);
+}
+.indicador::after {
+  content: ""; position: absolute; inset: 0; width: 45%;
+  background: var(--primary); border-radius: inherit; animation: correr 0.9s ease-in-out infinite;
+}
+/* só aparece se a espera passa de um instante: a navegação já pré-carregada não pisca */
+.indicador[data-pendente] { opacity: 1; transition: opacity 0.15s 0.12s; }
+@keyframes correr {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(230%); }
+}
+/* o cursor também avisa que a página está vindo */
+:global(a):has(> .rotulo > .indicador[data-pendente]) { cursor: progress; }
+@media (prefers-reduced-motion: reduce) {
+  .indicador::after { width: 100%; animation: pulsar 1.2s ease-in-out infinite; }
+  @keyframes pulsar { 50% { opacity: 0.35; } }
+}

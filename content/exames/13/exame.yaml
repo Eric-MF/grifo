@@ -3,6 +3,7 @@
 id: "13"
 numero: 13
 numeral: XIII
+aplicacao: 2014-06-01
 revisao:
   status: rascunho
   por: ""
@@ -270,3 +271,11 @@ questoes:
         componentes:
           - { id: c1, valor: 0.45, termos: [ substitui* | conversao, inconstitucional* ] }
           - { id: c2, valor: 0.2, termos: [ requisitos ], dispositivo: [ art. 44 CP ], rotulo: Desde que preenchidos os requisitos do Art. 44 do CP }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Diogo: Páris }   # entrou na casa alheia
+    q1: { Gustavo: Dionísio }   # a festa e a blitz
+    q2: { Antônio: Pigmaleão }   # a escultura
+    q3: { Jeremias: Ícaro }   # o voo para fora do país
+    q4: { Pedro: Morfeu }   # o tráfico

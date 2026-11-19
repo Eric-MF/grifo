@@ -286,3 +286,14 @@ questoes:
         valores: [ 0, 0.6 ]
         componentes:
           - { id: c1, valor: 0.6, termos: [ substitui*, inconstitucional* | individualizacao | resolucao ] }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: peca, lei: "Lei 15.160/2025", texto: "A Lei 15.160/2025 alterou os arts. 65, I, e 115 do Código Penal: a atenuante da menoridade relativa e a redução do prazo prescricional pela metade não valem mais quando o crime envolve violência sexual contra a mulher. Para um estupro cometido hoje, Caio não teria a atenuante da menoridade." }
+  nomes:
+    peca: { Joana: Psiquê, Caio: Eros }   # entrou no quarto à noite, sem ser visto
+    q1: { Karen: Proserpina }   # o caixa do Supermercado Deméter
+    q2: { João: Jasão }   # o bando
+    q3: { Fernando: Aquiles, Henrique: Heitor }
+    q4: { John: Morfeu }
+    empresas: { Supermercado Rei: Supermercado Deméter }   # a deusa da fartura

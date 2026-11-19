@@ -1,650 +1,158 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "45"
+introducoes:
+  peca: "Gabriel, de 20 anos, com um simulacro de arma, mandou o casal Andrea e Fabiano sair do carro em 10/4/2025, mas policiais viram e deram voz de prisão antes que ele pegasse o veículo; ele fugiu e foi identificado depois. A perícia confirmou que a arma era um simulacro. Denunciado por roubo com emprego de arma de fogo, confessou. Tem uma condenação anterior por crime doloso, só à pena de multa, extinta pelo cumprimento em 2024. Nos memoriais, o Ministério Público pediu a condenação nos termos da denúncia, a pena-base elevada por maus antecedentes e, pela mesma anotação, a agravante da reincidência. Você foi intimado para a manifestação final."
+  q1: "Irritada com a derrota do time, Nina jogou uma pedra no ônibus do clube para danificá-lo, achando que estava vazio, sem se certificar disso. A pedra atingiu Maria, funcionária que estava lá dentro, que ficou gravemente ferida e representou. Recusada a transação no Juizado, o Ministério Público denunciou Nina por dano e por lesão corporal culposa, em concurso material."
+  q2: "Cristiano, endividado com apostas, falsificou um contracheque e obteve R$ 100.000 de empréstimo pessoal num banco privado. O Ministério Público Federal o denunciou por obter financiamento mediante fraude, crime contra o sistema financeiro, equiparando financiamento a empréstimo. A denúncia foi rejeitada, o Ministério Público Federal recorreu, e o tribunal, depois de nomear um defensor dativo porque Cristiano ainda não fora citado, recebeu a denúncia."
+  q3: "Amauri foi condenado em 20/2/2023 pelo feminicídio da esposa, Joana, a 12 anos, a pena mínima da época. Só ele apelou, e o tribunal anulou o júri. No novo julgamento, em 10/11/2024, foi condenado a 20 anos, a pena mínima do feminicídio pela Lei 14.994/2024, vigente na data do novo júri."
+  q4: "Antenor cumpre 10 anos no regime fechado por um roubo com arma de fogo cometido em 2020, como reincidente em crime doloso sem violência, e já cumpriu 4 anos sem nenhuma falta. A defesa quer pedir o benefício cabível."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["45-peca-1", "45-peca-3", "45-peca-10", "45-peca-11", "45-peca-12", "45-peca-13", "45-peca-14", "45-q4-a"]
 perguntas:
-  - id: 45-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: A petição deve ser endereçada à Vara Criminal da Comarca de Flores/Campo Belo.
-    opcoes:
-      correta: A petição deve ser endereçada à Vara Criminal da Comarca de Flores/Campo Belo.
-      erradas:
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - "Endereçamento correto: Tribunal de Justiça do Estado de Mato Grosso."
-        - "Endereçamento correto: 1ª Vara Criminal da Comarca de Natal/RN"
-        - "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
-        - "Endereçamento: Tribunal de Justiça do Estado de São Paulo"
-    revisao: &a1
-      status: revisado
-  - id: 45-peca-3
-    categoria: peca-detalhe
-    parte: peca
-    item: "3"
-    secao: prazo
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Qual o prazo da peça e o seu fundamento?
-    gabarito: "Tempestividade: prazo de cinco dias."
-    opcoes:
-      correta: "Tempestividade: prazo de cinco dias."
-      erradas:
-        - "Prazo: 1º de setembro de 2023."
-        - "Tempestividade: 5 dias, na forma do Art. 593, caput, do CPP."
-        - Prazo de 3 (três) dias, na forma do Art. 600, §1º, do CPP.
-    revisao: *a1
   - id: 45-peca-4
     categoria: peca-detalhe
     parte: peca
     item: "4"
     secao: merito
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Afastamento da causa de aumento de pena relativa no caso de emprego de arma de fogo, pois efetivamente comprovado que não havia potencialidade lesiva, sendo impossível a caracterização do simulacro como arma de fogo.
-    opcoes:
-      correta: Afastamento da causa de aumento de pena relativa no caso de emprego de arma de fogo, pois efetivamente comprovado que não havia potencialidade lesiva, sendo impossível a caracterização do simulacro como arma de fogo.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Aplicação de regime inicial aberto.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-    revisao: *a1
+    pergunta: "A arma usada era um simulacro. Que tese a defesa deve sustentar quanto à causa de aumento?"
+    tese: "Afastamento da majorante da arma de fogo: o simulacro não tem potencial lesivo e não é arma de fogo"
+    aceitos: [ [ "afast* | exclu* | nao incid* | decote", "majorante | causa de aumento | aumento" ], [ "simulacro nao e arma | nao e arma de fogo | sem potencial lesivo | potencialidade lesiva | potencial lesivo" ] ]
+    artigos: [ "art. 157, § 2º-A, I, CP" ]
+    gabarito: "Afastamento da causa de aumento de pena relativa no caso de emprego de arma de fogo, pois efetivamente comprovado que não havia potencialidade lesiva, sendo impossível a caracterização do simulacro como arma de fogo."
+    revisao: { status: revisado }
   - id: 45-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: merito
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Reconhecimento da incidência da causa de diminuição da tentativa, diante de não ter havido a inversão da posse, sequer por breve espaço de tempo, ante a eficiente ação da Polícia, nos termos do Art. 14, inciso II, do CP ou Súmula 582, do STJ.
-    opcoes:
-      correta: Reconhecimento da incidência da causa de diminuição da tentativa, diante de não ter havido a inversão da posse, sequer por breve espaço de tempo, ante a eficiente ação da Polícia, nos termos do Art. 14, inciso II, do CP ou Súmula 582, do STJ.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Aplicação de regime inicial aberto.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Não há que se falar em punição da tentativa, tendo em vista que houve crime impossível, previsto no Art. 17 do CP.
-        - Reconhecimento da causa de diminuição de pena da tentativa, já que o crime não se consumou por circunstâncias alheias à vontade dos agentes OU porque não houve subtração do dinheiro que estava no caixa do estabelecimento OU porque não houve inversão da posse como exige a Súmula 582 do STJ.
-    revisao: *a1
+    pergunta: "Gabriel não chegou a pegar o carro. Que tese a defesa deve sustentar quanto à consumação?"
+    tese: "Tentativa: não houve inversão da posse do veículo, nem por um instante"
+    aceitos: [ "tentativa | tentado | nao se consumou | nao consumado | nao consumou" ]
+    artigos: [ "art. 14, II, CP", "Súmula 582 STJ" ]
+    gabarito: "Reconhecimento da incidência da causa de diminuição da tentativa, diante de não ter havido a inversão da posse, sequer por breve espaço de tempo, ante a eficiente ação da Polícia, nos termos do Art. 14, inciso II, do CP ou Súmula 582, do STJ."
+    revisao: { status: revisado }
   - id: 45-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Fixação da pena-base no mínimo legal, pois a reincidência não pode ser usada, simultaneamente, como circunstância judicial e agravante, nos termos da Súmula 241 do STJ.
-    opcoes:
-      correta: Fixação da pena-base no mínimo legal, pois a reincidência não pode ser usada, simultaneamente, como circunstância judicial e agravante, nos termos da Súmula 241 do STJ.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - No mérito, absolvição de Lauro.
-        - Da consequente diminuição de pena.
-        - Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
+    pergunta: "O Ministério Público quer usar a mesma condenação como maus antecedentes e como reincidência. Que tese a defesa deve opor?"
+    tese: "Pena-base no mínimo: a mesma condenação não pode ser maus antecedentes e reincidência (bis in idem)"
+    aceitos: [ "minimo | bis in idem" ]
+    artigos: [ "Súmula 241 STJ", "art. 59, CP" ]
+    gabarito: "Fixação da pena-base no mínimo legal, pois a reincidência não pode ser usada, simultaneamente, como circunstância judicial e agravante, nos termos da Súmula 241 do STJ."
+    revisao: { status: revisado }
   - id: 45-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Compensação da reincidência com a atenuante de confissão, prevista no Art. 65, inciso III, alínea d, do CP e
-    opcoes:
-      correta: Compensação da reincidência com a atenuante de confissão, prevista no Art. 65, inciso III, alínea d, do CP e
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - A nulidade decorre da ausência de intimação do réu para realização da audiência de instrução e julgamento, o que representa cerceamento de defesa OU configurando violação ao princípio da ampla defesa, nos termos do Art. 5º, LV, CRFB/88 OU Art. 564, IV, do CPP.
-        - O delito não foi praticado após o trânsito em julgado de condenação anterior; sentença condenatória recorrível não gera reincidência.
-        - Absolvição sumária, tendo em vista que há manifesta causa excludente da ilicitude.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
+    pergunta: "Na segunda fase, como a confissão de Gabriel deve repercutir diante da reincidência?"
+    tese: "Compensação da reincidência com a atenuante da confissão espontânea"
+    aceitos: [ "compensac*" ]
+    artigos: [ "art. 65, III, d, CP", "art. 67, CP" ]
+    gabarito: "Compensação da reincidência com a atenuante de confissão, prevista no Art. 65, inciso III, alínea d, do CP e"
+    revisao: { status: revisado }
   - id: 45-peca-7-1
     categoria: peca-detalhe
     parte: peca
     item: "7.1"
     secao: merito
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: com a atenuante da menoridade relativa, prevista no Art. 65, inciso I, do CP.
-    opcoes:
-      correta: com a atenuante da menoridade relativa, prevista no Art. 65, inciso I, do CP.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
-        - Da consequente fixação do regime aberto, nos termos do artigo 33, § 2º, c, do CP.
-        - Patrick utilizou dos meios necessários para repelir injusta agressão atual.
-        - No mérito, pedido de absolvição sumária, diante da manifesta causa de isenção de pena ou excludente de culpabilidade, nos termos do Art. 415, inciso IV, do CPP
-    revisao: *a1
+    pergunta: "Que outra atenuante cabe pela idade de Gabriel?"
+    tese: "Atenuante da menoridade relativa: o réu tinha menos de 21 anos na data do fato"
+    aceitos: [ "menoridade relativa | menor de 21 | menos de 21" ]
+    artigos: [ "art. 65, I, CP" ]
+    gabarito: "com a atenuante da menoridade relativa, prevista no Art. 65, inciso I, do CP."
+    revisao: { status: revisado }
   - id: 45-peca-8
     categoria: peca-detalhe
     parte: peca
     item: "8"
     secao: merito
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Fixação de regime inicial semiaberto, nos termos da Súmula 269 do STJ ou do Art. 33, § 2º, alínea b, do CP.
-    opcoes:
-      correta: Fixação de regime inicial semiaberto, nos termos da Súmula 269 do STJ ou do Art. 33, § 2º, alínea b, do CP.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Substituição da pena privativa de liberdade por restritiva de direitos
-        - "Da aplicação do princípio da consunção ou absorção: o crime de violação de domicílio deve ser absorvido pelo delito de furto qualificado, pois configurou crime-meio, essencial à execução do crime-fim; deve ser excluída a condenação pela violação de domicílio."
-        - Absolvição sumária, tendo em vista que a conduta narrada evidentemente não constitui crime.
-        - Reconhecimento da atenuante da menoridade relativa, já que o réu era menor de 21 anos na data dos fatos, nos termos do Art. 65, inciso I, do CP.
-    revisao: *a1
+    pergunta: "Que regime inicial a defesa deve pedir para Gabriel, que é reincidente?"
+    tese: "Regime inicial semiaberto para o reincidente com pena de até 4 anos e circunstâncias judiciais favoráveis"
+    aceitos: [ "semiaberto | semi-aberto | semi aberto" ]
+    artigos: [ "Súmula 269 STJ", "art. 33, § 2º, b, CP" ]
+    gabarito: "Fixação de regime inicial semiaberto, nos termos da Súmula 269 do STJ ou do Art. 33, § 2º, alínea b, do CP."
+    revisao: { status: revisado }
   - id: 45-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: merito
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Concessão de suspensão condicional da pena, nos termos do Art. 77, §1º, do CP ou Súmula 499 do STF.
-    opcoes:
-      correta: Concessão de suspensão condicional da pena, nos termos do Art. 77, §1º, do CP ou Súmula 499 do STF.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - Aplicação de regime inicial aberto.
-        - O delito não foi praticado após o trânsito em julgado de condenação anterior; sentença condenatória recorrível não gera reincidência.
-        - A arma de fogo utilizada não era apta a efetuar disparos, logo houve absoluta ineficácia do meio utilizado.
-        - Houve inadequada inversão da ordem de oitiva das testemunhas ou as testemunhas de defesa foram ouvidas antes das testemunhas de acusação, em desrespeito à previsão do Art. 411 do CPP
-    revisao: *a1
-  - id: 45-peca-10
-    categoria: peca-detalhe
-    parte: peca
-    item: "10"
-    secao: pedido
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: afastamento da causa de aumento.
-    opcoes:
-      correta: afastamento da causa de aumento.
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - Aplicação da pena no mínimo legal OU reconhecimento das atenuantes
-        - "Pedido subsidiário: aplicação do furto privilegiado, já que Rita é primária e o objeto furtado é de pequeno valor, conforme o § 2º do artigo 155 do CP."
-        - Conhecimento e provimento do recurso. 0
-        - Oferecimento de proposta de suspensão condicional do processo.
-    revisao: *a1
-  - id: 45-peca-11
-    categoria: peca-detalhe
-    parte: peca
-    item: "11"
-    secao: pedido
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: reconhecimento da causa da diminuição da tentativa.
-    opcoes:
-      correta: reconhecimento da causa da diminuição da tentativa.
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - Aplicação da pena no mínimo legal OU reconhecimento das atenuantes
-        - Conhecimento e provimento do recurso, com a desclassificação para homicídio culposo na direção de veículo automotor.
-        - Absolvição sumária, com fundamento no Art. 397, inciso I, do CPP e no Art. 397, inciso III, do CPP.
-        - Pedido de nulidade do recebimento da denúncia ou rejeição da denúncia por ausência de justa causa, nos termos do Art. 395, inciso III, do CPP ou Art. 564, inciso III, alínea b, do CPP.
-    revisao: *a1
-  - id: 45-peca-12
-    categoria: peca-detalhe
-    parte: peca
-    item: "12"
-    secao: pedido
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: fixação da pena no mínimo legal ou pena-base no mínimo legal, com a incidência das atenuantes.
-    opcoes:
-      correta: fixação da pena no mínimo legal ou pena-base no mínimo legal, com a incidência das atenuantes.
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - Absolvição, na forma do Art. 386, inciso III, do CPP.
-        - "Subsidiariamente: furto privilegiado; diminuição da pena pelo afastamento da reincidência; regime aberto; substituição da pena privativa de liberdade por restritiva de direitos."
-        - Não provimento do recurso OU manutenção da sentença.
-        - Absolvição sumária, nos termos do Art. 397, inciso II, do CPP.
-    revisao: *a1
-  - id: 45-peca-13
-    categoria: peca-detalhe
-    parte: peca
-    item: "13"
-    secao: pedido
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: fixação do regime inicial semiaberto.
-    opcoes:
-      correta: fixação do regime inicial semiaberto.
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - Fixação do regime aberto OU concessão de suspensão condicional da pena
-        - "Pedido subsidiário: aplicação do furto privilegiado, já que Rita é primária e o objeto furtado é de pequeno valor, conforme o § 2º do artigo 155 do CP."
-        - Absolvição sumária, com fundamento no Art. 397, inciso I, do CPP e no Art. 397, inciso III, do CPP.
-        - "Pedido: Conhecimento e provimento do recurso."
-    revisao: *a1
-  - id: 45-peca-14
-    categoria: peca-detalhe
-    parte: peca
-    item: "14"
-    secao: pedido
-    caso: |-
-      Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de simulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo grave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido por esforço comum na constância da sociedade conjugal.
-
-      Quando as vítimas deixaram o veículo para entregá-lo a Gabriel, policiais militares que patrulhavam a região visualizaram a ação delitiva e imediatamente deram voz de prisão em flagrante ao acusado, não permitindo que Gabriel se apossasse do veículo. Entretanto, Gabriel fugiu, mas foi identificado após regular investigação policial. A arma usada na empreitada delitiva foi apreendida no local e periciada, sendo constatado que se tratava de simulacro.
-
-      A denúncia foi oferecida ao Juízo da Vara Criminal da Comarca de Flores, do Estado de Campo Belo, local dos fatos.
-
-      O processo transcorreu sem intercorrências, as vítimas foram ouvidas, em seguida, os Policiais Militares que participaram da abordagem e, por fim, foi interrogado o acusado, que confessou os fatos.
-
-      A folha de antecedentes criminais de Gabriel apontou uma condenação por crime doloso anterior, tendo sido apenado exclusivamente por multa, pena extinta, pelo cumprimento, em 2024. Todos os fatos aqui relatados foram provados.
-
-      O Juiz convolou os debates orais em memoriais, manifestando-se o Ministério Público pela condenação do acusado nos termos da denúncia, bem como pela fixação da pena-base acima do mínimo legal, diante dos maus antecedentes do acusado, verificado pela anotação existente em sua folha de antecedentes. Ainda, postulou que a anotação existente fosse também considerada como reincidência, agravando a pena intermediária.
-
-      Em seguida, a defesa foi intimada para a manifestação cabível no dia 2/2/2026, segunda-feira.
-
-      Considerando apenas as informações expostas, apresente, na condição de advogado(a) de Gabriel, a peça jurídica única cabível, diferente do habeas corpus, expondo todas as teses cabíveis de Direito Material e Processual. A peça deverá ser datada no último dia do prazo para a apresentação, devendo de segunda a sexta-feira serem considerados dias úteis em todo o país. (Valor: 5,00)
-
-      Obs.: o(a) examinando(a) deve abordar todas os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A mera citação do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: concessão de sursis penal.
-    opcoes:
-      correta: concessão de sursis penal.
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - Aplicação da pena no mínimo legal OU reconhecimento das atenuantes
-        - Conhecimento e provimento do recurso, com a desclassificação para homicídio culposo na direção de veículo automotor.
-        - Absolvição sumária, com fundamento no Art. 397, inciso I, do CPP e no Art. 397, inciso III, do CPP.
-        - Pedido de nulidade do recebimento da denúncia ou rejeição da denúncia por ausência de justa causa, nos termos do Art. 395, inciso III, do CPP ou Art. 564, inciso III, alínea b, do CPP.
-    revisao: *a1
+    pergunta: "A condenação anterior de Gabriel foi só à multa. Que benefício isso permite pedir?"
+    tese: "Suspensão condicional da pena: a condenação anterior só à multa não a impede"
+    aceitos: [ "suspensao condicional da pena | sursis" ]
+    artigos: [ "art. 77, § 1º, CP", "Súmula 499 STF" ]
+    gabarito: "Concessão de suspensão condicional da pena, nos termos do Art. 77, §1º, do CP ou Súmula 499 do STF."
+    revisao: { status: revisado }
   - id: 45-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Nina, irritada com a derrota de seu time de futebol, arremessou uma pedra no ônibus do clube. A intenção dela se restringia a danificar o ônibus, pois acreditava que este estava vazio, já que os jogadores ainda não haviam saído do vestiário. Como Nina não se certificara se o ônibus estava efetivamente vazio, a pedra atingiu Maria, funcionária do clube, que estava no interior do veículo, que ficou gravemente lesionada.
-
-      Maria representou regularmente em sede policial, desejando ver Nina processada pelos fatos. Por isso, Nina foi autuada pelo delito de dano do Art. 163 em concurso material (Art. 69) com o delito de lesão corporal culposa do Art. 129, § 6º, todos do Código Penal.
-
-      O termo circunstanciado foi distribuído ao Juizado Especial Criminal competente, e, recusada a transação, foi oferecida a denúncia pelo Ministério Público que imputou a Nina a prática dos delitos acima indicados.
-
-      Nesse caso, considerando as informações do enunciado, como advogado(a) de Nina, responda às questões a seguir.
-    comando: Qual a tese correta de Direito Penal a ser apresentada em favor de Nina? Justifique.
-    gabarito: Deveria o examinando identificar a ocorrência de resultado diverso do pretendido, atraindo a ocorrência de concurso formal perfeito entre as condutas imputadas, na forma do Art. 70 ou do Art. 74, ambos do CP.
-    opcoes:
-      correta: Resultado diverso do pretendido (ou) atraindo a ocorrência de concurso formal perfeito entre as condutas imputadas, na forma do Art. 70 ou do Art. 74, ambos do CP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese de direito penal favorece Nina?"
+    tese: "Resultado diverso do pretendido, com concurso formal entre o dano e a lesão culposa, e não concurso material"
+    aceitos: [ "resultado diverso | aberratio | concurso formal" ]
+    artigos: [ "art. 74, CP", "art. 70, CP" ]
+    gabarito: "Deveria o examinando identificar a ocorrência de resultado diverso do pretendido, atraindo a ocorrência de concurso formal perfeito entre as condutas imputadas, na forma do Art. 70 ou do Art. 74, ambos do CP."
+    revisao: { status: revisado }
   - id: 45-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Nina, irritada com a derrota de seu time de futebol, arremessou uma pedra no ônibus do clube. A intenção dela se restringia a danificar o ônibus, pois acreditava que este estava vazio, já que os jogadores ainda não haviam saído do vestiário. Como Nina não se certificara se o ônibus estava efetivamente vazio, a pedra atingiu Maria, funcionária do clube, que estava no interior do veículo, que ficou gravemente lesionada.
-
-      Maria representou regularmente em sede policial, desejando ver Nina processada pelos fatos. Por isso, Nina foi autuada pelo delito de dano do Art. 163 em concurso material (Art. 69) com o delito de lesão corporal culposa do Art. 129, § 6º, todos do Código Penal.
-
-      O termo circunstanciado foi distribuído ao Juizado Especial Criminal competente, e, recusada a transação, foi oferecida a denúncia pelo Ministério Público que imputou a Nina a prática dos delitos acima indicados.
-
-      Nesse caso, considerando as informações do enunciado, como advogado(a) de Nina, responda às questões a seguir.
-    comando: Em relação ao delito de dano, indique a tese de Direito Processual Penal que deve ser alegada pela defesa de Nina. Justifique.
-    gabarito: Ilegitimidade ativa do Ministério Público quanto ao delito de dano (ou ausência de condição da ação penal), tendo em vista que o delito de dano é de ação penal privada, na forma do Art. 167 do CP, ou do Art. 95, inciso IV, ou do Art. 564, inciso II, ou do Art. 395, II, todos do CPP.
-    opcoes:
-      correta: Ilegitimidade do Ministério Público (ou ausência de condição da ação), tendo em vista que o delito de dano é de ação penal privada, na forma do Art. 167 do CP, ou do Art. 95, inciso IV, ou do Art. 564, inciso II, ou do Art. 395, II, todos do CPP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese processual a defesa de Nina deve alegar quanto ao dano?"
+    tese: "Ilegitimidade do Ministério Público quanto ao dano simples, crime de ação penal privada"
+    aceitos: [ "ilegitim* | acao penal privada | acao privada | queixa" ]
+    artigos: [ "art. 167, CP", "art. 395, II, CPP" ]
+    gabarito: "Ilegitimidade ativa do Ministério Público quanto ao delito de dano (ou ausência de condição da ação penal), tendo em vista que o delito de dano é de ação penal privada, na forma do Art. 167 do CP, ou do Art. 95, inciso IV, ou do Art. 564, inciso II, ou do Art. 395, II, todos do CPP."
+    revisao: { status: revisado }
   - id: 45-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Cristiano, após ficar totalmente endividado por apostar dinheiro em jogos eletrônicos, decidiu obter vantagem indevida sobre o Banco Tigre, instituição financeira privada. Para tanto, falsificou um contracheque e logrou induzir o banco em erro e obter um empréstimo pessoal no montante de R$ 100.000,00 (cem mil reais).
-
-      Ao constatar a fraude, o Banco Tigre acionou as autoridades. Após a recusa de Cristiano em celebrar um Acordo de Não Persecução Penal (ANPP), o Ministério Público Federal denunciou Cristiano, dando-o como incurso nas penas do Art. 19 da Lei de Crimes Financeiros (Lei nº 7.492/1986), tendo em vista a analogia entre o financiamento, modalidade de empréstimo vinculada a uma finalidade específica, e o empréstimo pessoal obtido por Cristiano.
-
-      A denúncia foi rejeitada pelo Juiz, de forma que o Ministério Público Federal interpôs recurso em sentido estrito em face dessa decisão. O Tribunal Regional Federal nomeou um defensor dativo para oferecer contrarrazões, pois Cristiano ainda não havia sido citado. Em seguida, o Tribunal deu provimento ao recurso do MPF e recebeu a denúncia.
-
-      Como advogado(a) constituído(a) por Cristiano, responda às questões a seguir.
-    comando: Em face da decisão do Tribunal Regional Federal, qual a tese preliminar pertinente a ser defendida? Fundamente.
-    gabarito: Constitui nulidade a falta de intimação do denunciado para oferecer contrarrazões ao recurso interposto da rejeição da denúncia, não a suprindo a nomeação de defensor dativo, nos termos da Súmula 707 da jurisprudência do Supremo Tribunal Federal ou Art. 263, do CPP ou Art. 5º, LV da CRFB.
-    opcoes:
-      correta: Constitui nulidade a falta de intimação do denunciado para oferecer contrarrazões ao recurso interposto da rejeição da denúncia, não a suprindo a nomeação de defensor dativo, nos termos da Súmula 707 da Jurisprudência do Supremo Tribunal Federal ou Art. 263, do CPP ou Art. 5º, LV da CRFB.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - A defesa deveria alegar a proibição de aplicação de sanções coletivas, nos termos do Art. 45, §3º, da LEP
-        - "A hipótese é de resultado diverso do pretendido (art. 74 do CP), devendo responder por dano em concurso formal com o crime de homicídio culposo. OBS.: a mera indicação de dispositivo legal ou transcrição de seu conteúdo não será pontuada."
-        - O requerimento a ser formulado é de relaxamento da prisão, tendo em vista que não está presente nenhuma das situações de flagrante elencadas no Art. 302 do CPP.
-        - O argumento seria o de que deveria ter sido reconhecida a atenuante da reparação do dano, tendo em vista que o denunciado devolveu o valor obtido indevidamente, nos termos do Art. 65, inciso III, alínea b, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que preliminar a defesa de Cristiano deve levantar contra a decisão do tribunal?"
+    tese: "Nulidade: o denunciado devia ser intimado para contra-arrazoar o recurso, e o defensor dativo não supre essa falta"
+    aceitos: [ "nulidade | nula | nulo | contrarrazo* | contra-arrazo*" ]
+    artigos: [ "Súmula 707 STF", "art. 263, CPP" ]
+    gabarito: "Constitui nulidade a falta de intimação do denunciado para oferecer contrarrazões ao recurso interposto da rejeição da denúncia, não a suprindo a nomeação de defensor dativo, nos termos da Súmula 707 da jurisprudência do Supremo Tribunal Federal ou Art. 263, do CPP ou Art. 5º, LV da CRFB."
+    revisao: { status: revisado }
   - id: 45-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Cristiano, após ficar totalmente endividado por apostar dinheiro em jogos eletrônicos, decidiu obter vantagem indevida sobre o Banco Tigre, instituição financeira privada. Para tanto, falsificou um contracheque e logrou induzir o banco em erro e obter um empréstimo pessoal no montante de R$ 100.000,00 (cem mil reais).
-
-      Ao constatar a fraude, o Banco Tigre acionou as autoridades. Após a recusa de Cristiano em celebrar um Acordo de Não Persecução Penal (ANPP), o Ministério Público Federal denunciou Cristiano, dando-o como incurso nas penas do Art. 19 da Lei de Crimes Financeiros (Lei nº 7.492/1986), tendo em vista a analogia entre o financiamento, modalidade de empréstimo vinculada a uma finalidade específica, e o empréstimo pessoal obtido por Cristiano.
-
-      A denúncia foi rejeitada pelo Juiz, de forma que o Ministério Público Federal interpôs recurso em sentido estrito em face dessa decisão. O Tribunal Regional Federal nomeou um defensor dativo para oferecer contrarrazões, pois Cristiano ainda não havia sido citado. Em seguida, o Tribunal deu provimento ao recurso do MPF e recebeu a denúncia.
-
-      Como advogado(a) constituído(a) por Cristiano, responda às questões a seguir.
-    comando: Qual a tese correta de Direito Penal que deve ser sustentada em defesa de Cristiano? Fundamente.
-    gabarito: Deve ser sustentada a atipicidade ou a desclassificação da conduta, pois a obtenção de empréstimo fraudulento se amolda, em tese, ao delito de estelionato, uma vez que é inadmissível a analogia em prejuízo do acusado.
-    opcoes:
-      correta: Deve ser sustentada a atipicidade ou a desclassificação da conduta, pois a obtenção de empréstimo fraudulento se amolda, em tese, ao delito de estelionato, uma vez que é inadmissível a analogia em prejuízo do acusado.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese de direito penal favorece Cristiano?"
+    tese: "Desclassificação para estelionato: o empréstimo pessoal não é financiamento, e a analogia contra o réu é proibida"
+    aceitos: [ [ "desclassific* | atipic*" ], [ "estelionato" ], [ "analogia in malam partem | analogia prejudicial | analogia contra o reu" ] ]
+    artigos: [ "art. 171, CP", "art. 1, CP" ]
+    gabarito: "Deve ser sustentada a atipicidade ou a desclassificação da conduta, pois a obtenção de empréstimo fraudulento se amolda, em tese, ao delito de estelionato, uma vez que é inadmissível a analogia em prejuízo do acusado."
+    revisao: { status: revisado }
   - id: 45-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Amauri, acusado do feminicídio de sua esposa, Joana, foi condenado em 20/02/2023 a uma pena de 12 anos de reclusão, em regime fechado, pena mínima então vigente cominada ao feminicídio.
-
-      Em face da condenação, apenas Amauri interpôs tempestivo recurso de apelação, sustentando que a decisão dos jurados foi manifestamente contrária à prova dos autos. Assim, o Tribunal de Justiça deu provimento ao recurso de apelação e anulou a primeira sessão de julgamento. Submetido a novo plenário, em 10/11/2024, Amauri foi novamente condenado. Porém, tendo em vista a vigência da Lei nº 14.994/2024, foi aplicada a Amauri a pena de 20 anos de reclusão, correspondente à pena mínima cominada ao delito vigente por ocasião do julgamento.
-
-      Na qualidade de advogado(a) de Amauri, visando garantir a redução da pena que lhe foi aplicada, responda às questões a seguir.
-    comando: Qual a tese correta de Direito Penal cabível? Justifique.
-    gabarito: A tese de direito penal cabível é a irretroatividade da lei penal mais gravosa, uma vez que, ao tempo do fato, a pena abstratamente cominada era inferior, conforme o Art. 2º, parágrafo único, do CP, ou o Art. 5º, inciso XL, da CRFB/88.
-    opcoes:
-      correta: A irretroatividade da lei penal mais gravosa, uma vez que, ao tempo do fato, a pena abstratamente cominada era inferior, conforme o Art. 2º, parágrafo único, do CP, ou o Art. 5º, inciso XL, da CRFB/88.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese de direito penal reduz a pena de Amauri?"
+    tese: "Irretroatividade da lei penal mais grave: vale a pena do tempo do crime"
+    aceitos: [ "irretroativ* | nao retroage | tempo do crime" ]
+    artigos: [ "art. 5, XL, CRFB", "art. 2, parágrafo único, CP", "art. 1, CP" ]
+    gabarito: "A tese de direito penal cabível é a irretroatividade da lei penal mais gravosa, uma vez que, ao tempo do fato, a pena abstratamente cominada era inferior, conforme o Art. 2º, parágrafo único, do CP, ou o Art. 5º, inciso XL, da CRFB/88."
+    revisao: { status: revisado }
   - id: 45-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Amauri, acusado do feminicídio de sua esposa, Joana, foi condenado em 20/02/2023 a uma pena de 12 anos de reclusão, em regime fechado, pena mínima então vigente cominada ao feminicídio.
-
-      Em face da condenação, apenas Amauri interpôs tempestivo recurso de apelação, sustentando que a decisão dos jurados foi manifestamente contrária à prova dos autos. Assim, o Tribunal de Justiça deu provimento ao recurso de apelação e anulou a primeira sessão de julgamento. Submetido a novo plenário, em 10/11/2024, Amauri foi novamente condenado. Porém, tendo em vista a vigência da Lei nº 14.994/2024, foi aplicada a Amauri a pena de 20 anos de reclusão, correspondente à pena mínima cominada ao delito vigente por ocasião do julgamento.
-
-      Na qualidade de advogado(a) de Amauri, visando garantir a redução da pena que lhe foi aplicada, responda às questões a seguir.
-    comando: Qual a tese correta de Direito Processual Penal cabível? Justifique.
-    gabarito: Em relação à tese processual, visto que apenas a defesa recorreu da condenação, o novo julgamento não pode impor pena mais severa que o julgamento anterior, ante a vedação à reformatio in pejus indireta, com aplicação do Art. 617 do CPP.
-    opcoes:
-      correta: Tendo havido anulação do julgamento anterior por recurso da defesa, o novo julgamento não pode impor pena mais severa que o julgamento anterior, ante a vedação à reformatio in pejus indireta, com aplicação do Art. 617 do CPP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
-  - id: 45-q4-a
-    categoria: discursiva
-    parte: q4
-    item: A
-    caso: |-
-      Antenor foi condenado a uma pena de dez anos de reclusão, em regime inicial fechado, pela prática do delito de roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do CP), fato ocorrido em 2020. Antenor foi considerado reincidente, porque anteriormente havia sido condenado pela prática de crime doloso, cometido sem violência ou grave ameaça à pessoa, cuja pena já havia sido extinta, pelo cumprimento.
-
-      Após iniciar o cumprimento da pena relativa ao roubo, transcorrido o período de quatro anos sem que a execução penal tenha sofrido interrupções e sem que Antenor tenha praticado qualquer falta disciplinar, na qualidade de advogado(a) de Antenor, responda às questões a seguir.
-    comando: Em favor de Antenor, qual benefício de execução penal é cabível? Fundamente.
-    gabarito: É cabível a progressão para o regime semiaberto, diante do cumprimento de lapso temporal de 40% da condenação, considerando que Antenor não é reincidente em crime hediondo ou equiparado (ou não é reincidente específico), nos termos do Art. 112, inciso V, da LEP.
-    opcoes:
-      correta: Progressão para o regime semiaberto, diante do cumprimento de 40% da pena privativa de liberdade, pois Antenor não é reincidente em crime hediondo ou equiparado (ou não é reincidente específico), nos termos do Art. 112, inciso V, da LEP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese processual reduz a pena de Amauri?"
+    tese: "Vedação da reformatio in pejus indireta: anulado o júri por recurso só da defesa, a nova pena não pode ser maior"
+    aceitos: [ "reformatio | nao pode ser maior | nao pode agravar" ]
+    artigos: [ "art. 617, CPP" ]
+    gabarito: "Em relação à tese processual, visto que apenas a defesa recorreu da condenação, o novo julgamento não pode impor pena mais severa que o julgamento anterior, ante a vedação à reformatio in pejus indireta, com aplicação do Art. 617 do CPP."
+    revisao: { status: revisado }
   - id: 45-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Antenor foi condenado a uma pena de dez anos de reclusão, em regime inicial fechado, pela prática do delito de roubo circunstanciado pelo emprego de arma de fogo (Art. 157, § 2º-A, inciso I, do CP), fato ocorrido em 2020. Antenor foi considerado reincidente, porque anteriormente havia sido condenado pela prática de crime doloso, cometido sem violência ou grave ameaça à pessoa, cuja pena já havia sido extinta, pelo cumprimento.
-
-      Após iniciar o cumprimento da pena relativa ao roubo, transcorrido o período de quatro anos sem que a execução penal tenha sofrido interrupções e sem que Antenor tenha praticado qualquer falta disciplinar, na qualidade de advogado(a) de Antenor, responda às questões a seguir.
-    comando: Para requerer o benefício, qual meio a defesa de Antenor deve utilizar e a quem deve ser dirigido o requerimento? Justifique.
-    gabarito: Por simples petição, deve a defesa dirigir-se ao Juízo da Execução Penal, na forma do Art. 66, inciso III, alínea b, da LEP.
-    opcoes:
-      correta: Simples petição, dirigida ao Juízo da Execução Penal, nos moldes do Art. 66, inciso III, alínea b, da LEP.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não pode ser considerado fato posterior como falta grave a afastar o preenchimento do requisito subjetivo OU o decreto mencionava que o apenado não poderia ter praticado falta grave nos 12 meses anteriores ao decreto, em respeito ao princípio da legalidade OU porque a decisão que reconhece o indulto é meramente declaratória
-        - "O órgão competente é a Justiça Estadual, haja vista que as duas cidades mencionadas ficam no Brasil OU porque não houve efetivo tráfico internacional OU porque deve ser observado o disposto no Verbete 522 da Súmula do STF OU nos termos do art. 70 da Lei 11.343/06.. OBS.1: A mera indicação de justificativa cabível, dissociada da adequada menção à competência da Justiça Estadual, não enseja pontuação. OBS.2: A mera indicação ou transcrição do conteúdo de dispositivo legal ou de verbete sumular não será pontuada."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Sim, o argumento seria o de que não poderia o réu ser obrigado a fornecer sua voz para perícia ou que não poderia o magistrado ter exigido um comportamento positivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de Flávio, já que o acusado não pode ser obrigado a produzir prova contra si, conforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do Decreto 678/1992.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que meio a defesa de Antenor deve usar para pedir o benefício, e a quem?"
+    tese: "Simples petição ao juízo da execução penal"
+    aceitos: [ [ "peticao | requerimento", "execucao" ] ]
+    artigos: [ "art. 66, III, b, LEP" ]
+    gabarito: "Por simples petição, deve a defesa dirigir-se ao Juízo da Execução Penal, na forma do Art. 66, inciso III, alínea b, da LEP."
+    revisao: { status: revisado }

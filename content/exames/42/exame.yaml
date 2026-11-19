@@ -298,3 +298,11 @@ questoes:
         componentes:
           - { id: c1, valor: 0.5, termos: [ condicao especial | condicoes especiais, substitutiv* | restritiv* | alternativ* ] }
           - { id: c2, valor: 0.1, dispositivo: [ Súmula 493 STJ ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { Diogo: Morfeu, Fernando: Ájax, Fábio: Diomedes }   # as drogas; os dois policiais
+    q1: { Frederico: Héracles, Jonas: Órion }   # o policial contra a fera
+    q2: { Rui: Hefesto, Vânia: Afrodite }   # expôs a nudez da ex (a rede de Hefesto)
+    q3: { Douglas: Faetonte }   # o racha
+    q4: { Thiago: Prometeu }   # a progressão

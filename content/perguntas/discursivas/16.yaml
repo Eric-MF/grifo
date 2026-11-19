@@ -1,388 +1,135 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "16"
+introducoes:
+  peca: "Gilberto, primário mas com maus antecedentes, foi condenado por roubo simples (um celular, recuperado pela vítima) a 4 anos e 6 meses no regime fechado. Cumpre a pena desde 15/9/2013, sem falta grave, e já progrediu de regime. Em 25/2/2015, pediu o livramento condicional, que o juiz da execução negou por três razões: o roubo seria hediondo, exigindo 2/3 da pena; mesmo que não fosse, Gilberto teria de cumprir metade, por ter maus antecedentes; e seria indispensável o exame criminológico, porque o roubo é, em abstrato, muito grave. Você foi intimado da decisão em 23/3/2015."
+  q1: "Carlos foi condenado por tráfico (5 anos, regime fechado) e posse de arma (1 ano) em concurso material. Só a defesa apelou, pedindo outro regime para o tráfico. O Tribunal negou e, por conta própria, sem mudar a pena total, reclassificou o fato para tráfico com a causa de aumento do emprego de arma, afastando o crime autônomo."
+  q2: "Em 2008, Luan foi condenado a 12 anos por estupro e atentado violento ao pudor, em concurso material, por obrigar Carla, numa mesma ocasião em 2007, à conjunção carnal e a outro ato libidinoso. Já com a condenação transitada em julgado, ele soube que um colega de cela, por fatos semelhantes e mais recentes, pegou só 7 anos."
+  q3: "Numa discussão de futebol, Rubens e Enrico chamaram Eduardo de 'ladrão' e 'estelionatário', e ele ofereceu queixa-crime contra os dois. Rubens pediu desculpas e recebeu o perdão de Eduardo, que aceitou, mas Eduardo recusou o perdão a Enrico."
+  q4: "Wesley, estudante de 20 anos, primário, foi preso em flagrante dirigindo um carro que sabia ser produto de crime. Como respondia a outro processo, por furto qualificado, o delegado pediu a conversão do flagrante em preventiva, pela 'ordem pública'."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["16-peca-1", "16-peca-3", "16-peca-4", "16-peca-5", "16-peca-9"]
 perguntas:
-  - id: 16-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Gilberto, quando primário, apesar de portador de maus antecedentes, praticou um crime de roubo simples, pois, quando tinha 20 anos de idade, subtraiu de Renata, mediante grave ameaça, um aparelho celular. Apesar de o crime restar consumado, o telefone celular foi recuperado pela vítima. Os fatos foram praticados em 12 de dezembro de 2011. Por tal conduta, foi Gilberto denunciado e condenado como incurso nas sanções penais do Art. 157, caput, do Código Penal a uma pena privativa de liberdade de 04 anos e 06 meses de reclusão em regime inicial fechado e 12 dias multa, tendo a sentença transitada em julgado para ambas as partes em 11 de setembro de 2013. Gilberto havia respondido ao processo em liberdade, mas, desde o dia 15 de setembro de 2013, vem cumprindo a sanção penal que lhe foi aplicada regularmente, inclusive obtendo progressão de regime. Nunca foi punido pela prática de falta grave e preenchia os requisitos subjetivos para obtenção dos benefícios da execução penal.
-
-      No dia 25 de fevereiro de 2015, você, advogado(a) de Gilberto, formulou pedido de obtenção de livramento condicional junto ao Juízo da Vara de Execução Penal da comarca do Rio de Janeiro/RJ, órgão efetivamente competente. O pedido, contudo, foi indeferido, apesar de, em tese, os requisitos subjetivos estarem preenchidos, sob os seguintes argumentos: a) o crime de roubo é crime hediondo, não tendo sido cumpridos, até o momento do requerimento, 2/3 da pena privativa de liberdade; b) ainda que não fosse hediondo, não estariam preenchidos os requisitos objetivos para o benefício, tendo em vista que Gilberto, por ser portador de maus antecedentes, deveria cumprir metade da pena imposta para obtenção do livramento condicional; c) indispensabilidade da realização de exame criminológico, tendo em vista que os crimes de roubo, de maneira abstrata, são extremamente graves e causam severos prejuízos para a sociedade. Você, advogado(a) de Gilberto, foi intimado dessa decisão em 23 de março de 2015, uma segunda-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para sua interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Responda justificadamente, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento correto: Juízo da Vara de Execuções Penais do Rio de Janeiro/RJ."
-    opcoes:
-      correta: "Endereçamento correto: Juízo da Vara de Execuções Penais do Rio de Janeiro/RJ."
-      erradas:
-        - "Endereçamento: Tribunal de Justiça do Estado de Minas Gerais"
-        - "Endereçamento correto: Tribunal de Justiça do Estado de Mato Grosso."
-        - "Endereçamento: Tribunal de Justiça do Rio de Janeiro"
-        - "Endereçamento: Tribunal de Justiça do Estado de Alagoas."
-        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
-    revisao: &a1
-      status: revisado
-  - id: 16-peca-3
-    categoria: peca-detalhe
-    parte: peca
-    item: "3"
-    secao: pedido
-    caso: |-
-      Gilberto, quando primário, apesar de portador de maus antecedentes, praticou um crime de roubo simples, pois, quando tinha 20 anos de idade, subtraiu de Renata, mediante grave ameaça, um aparelho celular. Apesar de o crime restar consumado, o telefone celular foi recuperado pela vítima. Os fatos foram praticados em 12 de dezembro de 2011. Por tal conduta, foi Gilberto denunciado e condenado como incurso nas sanções penais do Art. 157, caput, do Código Penal a uma pena privativa de liberdade de 04 anos e 06 meses de reclusão em regime inicial fechado e 12 dias multa, tendo a sentença transitada em julgado para ambas as partes em 11 de setembro de 2013. Gilberto havia respondido ao processo em liberdade, mas, desde o dia 15 de setembro de 2013, vem cumprindo a sanção penal que lhe foi aplicada regularmente, inclusive obtendo progressão de regime. Nunca foi punido pela prática de falta grave e preenchia os requisitos subjetivos para obtenção dos benefícios da execução penal.
-
-      No dia 25 de fevereiro de 2015, você, advogado(a) de Gilberto, formulou pedido de obtenção de livramento condicional junto ao Juízo da Vara de Execução Penal da comarca do Rio de Janeiro/RJ, órgão efetivamente competente. O pedido, contudo, foi indeferido, apesar de, em tese, os requisitos subjetivos estarem preenchidos, sob os seguintes argumentos: a) o crime de roubo é crime hediondo, não tendo sido cumpridos, até o momento do requerimento, 2/3 da pena privativa de liberdade; b) ainda que não fosse hediondo, não estariam preenchidos os requisitos objetivos para o benefício, tendo em vista que Gilberto, por ser portador de maus antecedentes, deveria cumprir metade da pena imposta para obtenção do livramento condicional; c) indispensabilidade da realização de exame criminológico, tendo em vista que os crimes de roubo, de maneira abstrata, são extremamente graves e causam severos prejuízos para a sociedade. Você, advogado(a) de Gilberto, foi intimado dessa decisão em 23 de março de 2015, uma segunda-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para sua interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Responda justificadamente, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Pedido de retratação.
-    opcoes:
-      correta: Pedido de retratação.
-      erradas:
-        - "Pedidos: Conhecimento e provimento do recurso OU concessão da progressão de regime"
-        - "Pedidos, com fundamento no art. 626 do CPP: desclassificação para furto simples; diminuição da pena; fixação do regime semiaberto."
-        - "Pedidos: absolvição do crime de furto, na forma do artigo 386, III, CPP;subsidiariamente, aplicação da pena base no mínimo legal;reconhecimento das atenuantes da confissão espontânea e da menoridade relativa;reconhecimento da forma privilegiada do furto;substituição da pena privativa de liberdade por restritiva de direitos;fixação do regime aberto; sursis da pena."
-        - Conhecimento e provimento do recurso.
-        - Absolvição, na forma do Art. 386, inciso III, do CPP.
-    revisao: *a1
-  - id: 16-peca-4
-    categoria: peca-detalhe
-    parte: peca
-    item: "4"
-    secao: enderecamento
-    caso: |-
-      Gilberto, quando primário, apesar de portador de maus antecedentes, praticou um crime de roubo simples, pois, quando tinha 20 anos de idade, subtraiu de Renata, mediante grave ameaça, um aparelho celular. Apesar de o crime restar consumado, o telefone celular foi recuperado pela vítima. Os fatos foram praticados em 12 de dezembro de 2011. Por tal conduta, foi Gilberto denunciado e condenado como incurso nas sanções penais do Art. 157, caput, do Código Penal a uma pena privativa de liberdade de 04 anos e 06 meses de reclusão em regime inicial fechado e 12 dias multa, tendo a sentença transitada em julgado para ambas as partes em 11 de setembro de 2013. Gilberto havia respondido ao processo em liberdade, mas, desde o dia 15 de setembro de 2013, vem cumprindo a sanção penal que lhe foi aplicada regularmente, inclusive obtendo progressão de regime. Nunca foi punido pela prática de falta grave e preenchia os requisitos subjetivos para obtenção dos benefícios da execução penal.
-
-      No dia 25 de fevereiro de 2015, você, advogado(a) de Gilberto, formulou pedido de obtenção de livramento condicional junto ao Juízo da Vara de Execução Penal da comarca do Rio de Janeiro/RJ, órgão efetivamente competente. O pedido, contudo, foi indeferido, apesar de, em tese, os requisitos subjetivos estarem preenchidos, sob os seguintes argumentos: a) o crime de roubo é crime hediondo, não tendo sido cumpridos, até o momento do requerimento, 2/3 da pena privativa de liberdade; b) ainda que não fosse hediondo, não estariam preenchidos os requisitos objetivos para o benefício, tendo em vista que Gilberto, por ser portador de maus antecedentes, deveria cumprir metade da pena imposta para obtenção do livramento condicional; c) indispensabilidade da realização de exame criminológico, tendo em vista que os crimes de roubo, de maneira abstrata, são extremamente graves e causam severos prejuízos para a sociedade. Você, advogado(a) de Gilberto, foi intimado dessa decisão em 23 de março de 2015, uma segunda-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para sua interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Responda justificadamente, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento correto: Tribunal de Justiça do Rio de Janeiro."
-    opcoes:
-      correta: "Endereçamento correto: Tribunal de Justiça do Rio de Janeiro."
-      erradas:
-        - "Endereçamento: Juízo da Vara de Execuções Penais de Belo Horizonte/MG"
-        - "Endereçamento: Juiz da Vara do Tribunal do Júri."
-        - "Endereçamento: Vara Criminal da Comarca de Goiânia/GO."
-        - "Endereçamento: 1ª Vara Criminal da Comarca de Maceió/AL."
-        - A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
-    revisao: *a1
-  - id: 16-peca-5
-    categoria: peca-detalhe
-    parte: peca
-    item: "5"
-    secao: merito
-    caso: |-
-      Gilberto, quando primário, apesar de portador de maus antecedentes, praticou um crime de roubo simples, pois, quando tinha 20 anos de idade, subtraiu de Renata, mediante grave ameaça, um aparelho celular. Apesar de o crime restar consumado, o telefone celular foi recuperado pela vítima. Os fatos foram praticados em 12 de dezembro de 2011. Por tal conduta, foi Gilberto denunciado e condenado como incurso nas sanções penais do Art. 157, caput, do Código Penal a uma pena privativa de liberdade de 04 anos e 06 meses de reclusão em regime inicial fechado e 12 dias multa, tendo a sentença transitada em julgado para ambas as partes em 11 de setembro de 2013. Gilberto havia respondido ao processo em liberdade, mas, desde o dia 15 de setembro de 2013, vem cumprindo a sanção penal que lhe foi aplicada regularmente, inclusive obtendo progressão de regime. Nunca foi punido pela prática de falta grave e preenchia os requisitos subjetivos para obtenção dos benefícios da execução penal.
-
-      No dia 25 de fevereiro de 2015, você, advogado(a) de Gilberto, formulou pedido de obtenção de livramento condicional junto ao Juízo da Vara de Execução Penal da comarca do Rio de Janeiro/RJ, órgão efetivamente competente. O pedido, contudo, foi indeferido, apesar de, em tese, os requisitos subjetivos estarem preenchidos, sob os seguintes argumentos: a) o crime de roubo é crime hediondo, não tendo sido cumpridos, até o momento do requerimento, 2/3 da pena privativa de liberdade; b) ainda que não fosse hediondo, não estariam preenchidos os requisitos objetivos para o benefício, tendo em vista que Gilberto, por ser portador de maus antecedentes, deveria cumprir metade da pena imposta para obtenção do livramento condicional; c) indispensabilidade da realização de exame criminológico, tendo em vista que os crimes de roubo, de maneira abstrata, são extremamente graves e causam severos prejuízos para a sociedade. Você, advogado(a) de Gilberto, foi intimado dessa decisão em 23 de março de 2015, uma segunda-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para sua interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Responda justificadamente, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
-    opcoes:
-      correta: Desenvolvimento jurídico acerca da concessão do livramento condicional, pois a fundamentação trazida pelo magistrado é equivocada.
-      erradas:
-        - Possibilidade de concessão de progressão do regime, tendo em vista que a decisão do magistrado foi equivocada
-        - Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
-        - Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
-        - No mérito, absolvição de Lauro.
-        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
-    revisao: *a1
   - id: 16-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Gilberto, quando primário, apesar de portador de maus antecedentes, praticou um crime de roubo simples, pois, quando tinha 20 anos de idade, subtraiu de Renata, mediante grave ameaça, um aparelho celular. Apesar de o crime restar consumado, o telefone celular foi recuperado pela vítima. Os fatos foram praticados em 12 de dezembro de 2011. Por tal conduta, foi Gilberto denunciado e condenado como incurso nas sanções penais do Art. 157, caput, do Código Penal a uma pena privativa de liberdade de 04 anos e 06 meses de reclusão em regime inicial fechado e 12 dias multa, tendo a sentença transitada em julgado para ambas as partes em 11 de setembro de 2013. Gilberto havia respondido ao processo em liberdade, mas, desde o dia 15 de setembro de 2013, vem cumprindo a sanção penal que lhe foi aplicada regularmente, inclusive obtendo progressão de regime. Nunca foi punido pela prática de falta grave e preenchia os requisitos subjetivos para obtenção dos benefícios da execução penal.
-
-      No dia 25 de fevereiro de 2015, você, advogado(a) de Gilberto, formulou pedido de obtenção de livramento condicional junto ao Juízo da Vara de Execução Penal da comarca do Rio de Janeiro/RJ, órgão efetivamente competente. O pedido, contudo, foi indeferido, apesar de, em tese, os requisitos subjetivos estarem preenchidos, sob os seguintes argumentos: a) o crime de roubo é crime hediondo, não tendo sido cumpridos, até o momento do requerimento, 2/3 da pena privativa de liberdade; b) ainda que não fosse hediondo, não estariam preenchidos os requisitos objetivos para o benefício, tendo em vista que Gilberto, por ser portador de maus antecedentes, deveria cumprir metade da pena imposta para obtenção do livramento condicional; c) indispensabilidade da realização de exame criminológico, tendo em vista que os crimes de roubo, de maneira abstrata, são extremamente graves e causam severos prejuízos para a sociedade. Você, advogado(a) de Gilberto, foi intimado dessa decisão em 23 de março de 2015, uma segunda-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para sua interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Responda justificadamente, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Afastamento da hediondez do crime de roubo simples, pois este não está no rol dos crimes hediondos ou por violação ao princípio da taxatividade.
-    opcoes:
-      correta: Afastamento da hediondez do crime de roubo simples, pois este não está no rol dos crimes hediondos ou por violação ao princípio da taxatividade.
-      erradas:
-        - Possibilidade de concessão de progressão do regime, tendo em vista que a decisão do magistrado foi equivocada
-        - Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
-        - Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
-        - No mérito, absolvição de Lauro.
-        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
-    revisao: *a1
+    pergunta: "Por que o roubo de Gilberto não pode ser tratado como crime hediondo?"
+    tese: "O roubo simples não está no rol taxativo dos crimes hediondos"
+    aceitos: [ [ "rol" ], [ "nao e hediondo | nao hediondo | nao e crime hediondo" ], [ "taxativ*" ] ]
+    artigos: [ "art. 1, Lei 8.072" ]
+    gabarito: "Afastamento da hediondez do crime de roubo simples, pois este não está no rol dos crimes hediondos ou por violação ao princípio da taxatividade."
+    revisao: { status: revisado }
   - id: 16-peca-7-1
     categoria: peca-detalhe
     parte: peca
     item: "7.1"
     secao: merito
-    caso: |-
-      Gilberto, quando primário, apesar de portador de maus antecedentes, praticou um crime de roubo simples, pois, quando tinha 20 anos de idade, subtraiu de Renata, mediante grave ameaça, um aparelho celular. Apesar de o crime restar consumado, o telefone celular foi recuperado pela vítima. Os fatos foram praticados em 12 de dezembro de 2011. Por tal conduta, foi Gilberto denunciado e condenado como incurso nas sanções penais do Art. 157, caput, do Código Penal a uma pena privativa de liberdade de 04 anos e 06 meses de reclusão em regime inicial fechado e 12 dias multa, tendo a sentença transitada em julgado para ambas as partes em 11 de setembro de 2013. Gilberto havia respondido ao processo em liberdade, mas, desde o dia 15 de setembro de 2013, vem cumprindo a sanção penal que lhe foi aplicada regularmente, inclusive obtendo progressão de regime. Nunca foi punido pela prática de falta grave e preenchia os requisitos subjetivos para obtenção dos benefícios da execução penal.
-
-      No dia 25 de fevereiro de 2015, você, advogado(a) de Gilberto, formulou pedido de obtenção de livramento condicional junto ao Juízo da Vara de Execução Penal da comarca do Rio de Janeiro/RJ, órgão efetivamente competente. O pedido, contudo, foi indeferido, apesar de, em tese, os requisitos subjetivos estarem preenchidos, sob os seguintes argumentos: a) o crime de roubo é crime hediondo, não tendo sido cumpridos, até o momento do requerimento, 2/3 da pena privativa de liberdade; b) ainda que não fosse hediondo, não estariam preenchidos os requisitos objetivos para o benefício, tendo em vista que Gilberto, por ser portador de maus antecedentes, deveria cumprir metade da pena imposta para obtenção do livramento condicional; c) indispensabilidade da realização de exame criminológico, tendo em vista que os crimes de roubo, de maneira abstrata, são extremamente graves e causam severos prejuízos para a sociedade. Você, advogado(a) de Gilberto, foi intimado dessa decisão em 23 de março de 2015, uma segunda-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para sua interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Responda justificadamente, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: O requisito objetivo para a concessão do livramento condicional de condenado não reincidente portador de maus antecedentes é de 1/3 e não de metade;
-    opcoes:
-      correta: O requisito objetivo para a concessão do livramento condicional de condenado não reincidente portador de maus antecedentes é de 1/3 e não de metade;
-      erradas:
-        - Possibilidade de concessão de progressão do regime, tendo em vista que a decisão do magistrado foi equivocada
-        - Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
-        - Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
-        - No mérito, absolvição de Lauro.
-        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
-    revisao: *a1
+    pergunta: "Primário, mas com maus antecedentes, que fração da pena Gilberto precisa cumprir para o livramento condicional?"
+    tese: "Livramento condicional com um terço da pena para o primário de maus antecedentes"
+    aceitos: [ "1/3 | um terco | terco" ]
+    artigos: [ "art. 83, I, CP" ]
+    gabarito: "O requisito objetivo para a concessão do livramento condicional de condenado não reincidente portador de maus antecedentes é de 1/3 e não de metade;"
+    revisao: { status: revisado }
   - id: 16-peca-7-2
     categoria: peca-detalhe
     parte: peca
     item: "7.2"
     secao: merito
-    caso: |-
-      Gilberto, quando primário, apesar de portador de maus antecedentes, praticou um crime de roubo simples, pois, quando tinha 20 anos de idade, subtraiu de Renata, mediante grave ameaça, um aparelho celular. Apesar de o crime restar consumado, o telefone celular foi recuperado pela vítima. Os fatos foram praticados em 12 de dezembro de 2011. Por tal conduta, foi Gilberto denunciado e condenado como incurso nas sanções penais do Art. 157, caput, do Código Penal a uma pena privativa de liberdade de 04 anos e 06 meses de reclusão em regime inicial fechado e 12 dias multa, tendo a sentença transitada em julgado para ambas as partes em 11 de setembro de 2013. Gilberto havia respondido ao processo em liberdade, mas, desde o dia 15 de setembro de 2013, vem cumprindo a sanção penal que lhe foi aplicada regularmente, inclusive obtendo progressão de regime. Nunca foi punido pela prática de falta grave e preenchia os requisitos subjetivos para obtenção dos benefícios da execução penal.
-
-      No dia 25 de fevereiro de 2015, você, advogado(a) de Gilberto, formulou pedido de obtenção de livramento condicional junto ao Juízo da Vara de Execução Penal da comarca do Rio de Janeiro/RJ, órgão efetivamente competente. O pedido, contudo, foi indeferido, apesar de, em tese, os requisitos subjetivos estarem preenchidos, sob os seguintes argumentos: a) o crime de roubo é crime hediondo, não tendo sido cumpridos, até o momento do requerimento, 2/3 da pena privativa de liberdade; b) ainda que não fosse hediondo, não estariam preenchidos os requisitos objetivos para o benefício, tendo em vista que Gilberto, por ser portador de maus antecedentes, deveria cumprir metade da pena imposta para obtenção do livramento condicional; c) indispensabilidade da realização de exame criminológico, tendo em vista que os crimes de roubo, de maneira abstrata, são extremamente graves e causam severos prejuízos para a sociedade. Você, advogado(a) de Gilberto, foi intimado dessa decisão em 23 de março de 2015, uma segunda-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para sua interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Responda justificadamente, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Aplicação do Art. 83, I, do CP (OU não aplicabilidade do Art. 83, II, do CP), diante do princípio da legalidade, que veda a aplicação de analogia in malam partem (OU aplicação da interpretação mais favorável ao apenado).
-    opcoes:
-      correta: Aplicação do Art. 83, I, do CP (OU não aplicabilidade do Art. 83, II, do CP), diante do princípio da legalidade, que veda a aplicação de analogia in malam partem (OU aplicação da interpretação mais favorável ao apenado).
-      erradas:
-        - Possibilidade de concessão de progressão do regime, tendo em vista que a decisão do magistrado foi equivocada
-        - Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
-        - Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
-        - No mérito, absolvição de Lauro.
-        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
-    revisao: *a1
+    pergunta: "Por que não se pode exigir de Gilberto a metade da pena, a fração do reincidente?"
+    tese: "Aplicar a regra do reincidente a quem só tem maus antecedentes seria analogia contra o réu, vedada pela legalidade"
+    aceitos: [ [ "analogia" ], [ "legalidade" ], [ "interpretacao mais favoravel" ] ]
+    artigos: [ "art. 83, I, CP", "art. 83, II, CP" ]
+    gabarito: "Aplicação do Art. 83, I, do CP (OU não aplicabilidade do Art. 83, II, do CP), diante do princípio da legalidade, que veda a aplicação de analogia in malam partem (OU aplicação da interpretação mais favorável ao apenado)."
+    revisao: { status: revisado }
   - id: 16-peca-8
     categoria: peca-detalhe
     parte: peca
     item: "8"
     secao: merito
-    caso: |-
-      Gilberto, quando primário, apesar de portador de maus antecedentes, praticou um crime de roubo simples, pois, quando tinha 20 anos de idade, subtraiu de Renata, mediante grave ameaça, um aparelho celular. Apesar de o crime restar consumado, o telefone celular foi recuperado pela vítima. Os fatos foram praticados em 12 de dezembro de 2011. Por tal conduta, foi Gilberto denunciado e condenado como incurso nas sanções penais do Art. 157, caput, do Código Penal a uma pena privativa de liberdade de 04 anos e 06 meses de reclusão em regime inicial fechado e 12 dias multa, tendo a sentença transitada em julgado para ambas as partes em 11 de setembro de 2013. Gilberto havia respondido ao processo em liberdade, mas, desde o dia 15 de setembro de 2013, vem cumprindo a sanção penal que lhe foi aplicada regularmente, inclusive obtendo progressão de regime. Nunca foi punido pela prática de falta grave e preenchia os requisitos subjetivos para obtenção dos benefícios da execução penal.
-
-      No dia 25 de fevereiro de 2015, você, advogado(a) de Gilberto, formulou pedido de obtenção de livramento condicional junto ao Juízo da Vara de Execução Penal da comarca do Rio de Janeiro/RJ, órgão efetivamente competente. O pedido, contudo, foi indeferido, apesar de, em tese, os requisitos subjetivos estarem preenchidos, sob os seguintes argumentos: a) o crime de roubo é crime hediondo, não tendo sido cumpridos, até o momento do requerimento, 2/3 da pena privativa de liberdade; b) ainda que não fosse hediondo, não estariam preenchidos os requisitos objetivos para o benefício, tendo em vista que Gilberto, por ser portador de maus antecedentes, deveria cumprir metade da pena imposta para obtenção do livramento condicional; c) indispensabilidade da realização de exame criminológico, tendo em vista que os crimes de roubo, de maneira abstrata, são extremamente graves e causam severos prejuízos para a sociedade. Você, advogado(a) de Gilberto, foi intimado dessa decisão em 23 de março de 2015, uma segunda-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para sua interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Responda justificadamente, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A realização do exame criminológico não é indispensável, porque a decisão que determina o exame criminológico deve ser devidamente fundamentada em fatores concretos (OU a mera gravidade em abstrato do delito não é suficiente para a exigência do exame criminológico), conforme Súmula 439 do STJ.
-    opcoes:
-      correta: A realização do exame criminológico não é indispensável, porque a decisão que determina o exame criminológico deve ser devidamente fundamentada em fatores concretos (OU a mera gravidade em abstrato do delito não é suficiente para a exigência do exame criminológico), conforme Súmula 439 do STJ.
-      erradas:
-        - Possibilidade de concessão de progressão do regime, tendo em vista que a decisão do magistrado foi equivocada
-        - Como a ré não é reincidente, faz jus ao regime aberto, conforme o Art. 33, § 2º, ‘c’, do CP ou Súmula 269 do STJ.
-        - "No mérito: absolvição do crime de furto, pois a coisa perdida (res desperdicta) não pode ser objeto de tal crime. Deve, ainda, ser mencionado que a hipótese não é de desclassificação para o crime de apropriação de coisa achada, pois a elementar de apropriação pelo prazo de 15 dias não foi realizada."
-        - Não foram iniciados atos executórios do crime de estupro, sendo certo que os atos preparatórios são impuníveis.
-        - No mérito, absolvição de Júlio, na forma do Art. 386, incisos III ou VI, do CPP.
-    revisao: *a1
-  - id: 16-peca-9
-    categoria: peca-detalhe
-    parte: peca
-    item: "9"
-    secao: merito
-    caso: |-
-      Gilberto, quando primário, apesar de portador de maus antecedentes, praticou um crime de roubo simples, pois, quando tinha 20 anos de idade, subtraiu de Renata, mediante grave ameaça, um aparelho celular. Apesar de o crime restar consumado, o telefone celular foi recuperado pela vítima. Os fatos foram praticados em 12 de dezembro de 2011. Por tal conduta, foi Gilberto denunciado e condenado como incurso nas sanções penais do Art. 157, caput, do Código Penal a uma pena privativa de liberdade de 04 anos e 06 meses de reclusão em regime inicial fechado e 12 dias multa, tendo a sentença transitada em julgado para ambas as partes em 11 de setembro de 2013. Gilberto havia respondido ao processo em liberdade, mas, desde o dia 15 de setembro de 2013, vem cumprindo a sanção penal que lhe foi aplicada regularmente, inclusive obtendo progressão de regime. Nunca foi punido pela prática de falta grave e preenchia os requisitos subjetivos para obtenção dos benefícios da execução penal.
-
-      No dia 25 de fevereiro de 2015, você, advogado(a) de Gilberto, formulou pedido de obtenção de livramento condicional junto ao Juízo da Vara de Execução Penal da comarca do Rio de Janeiro/RJ, órgão efetivamente competente. O pedido, contudo, foi indeferido, apesar de, em tese, os requisitos subjetivos estarem preenchidos, sob os seguintes argumentos: a) o crime de roubo é crime hediondo, não tendo sido cumpridos, até o momento do requerimento, 2/3 da pena privativa de liberdade; b) ainda que não fosse hediondo, não estariam preenchidos os requisitos objetivos para o benefício, tendo em vista que Gilberto, por ser portador de maus antecedentes, deveria cumprir metade da pena imposta para obtenção do livramento condicional; c) indispensabilidade da realização de exame criminológico, tendo em vista que os crimes de roubo, de maneira abstrata, são extremamente graves e causam severos prejuízos para a sociedade. Você, advogado(a) de Gilberto, foi intimado dessa decisão em 23 de março de 2015, uma segunda-feira.
-
-      Com base nas informações acima expostas e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para sua interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Responda justificadamente, empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: "Dos Pedidos: Conhecimento e provimento do recurso OU concessão do livramento condicional; com a consequente expedição do alvará de soltura"
-    opcoes:
-      correta: "Dos Pedidos: Conhecimento e provimento do recurso OU concessão do livramento condicional; com a consequente expedição do alvará de soltura"
-      erradas:
-        - Possibilidade de concessão de progressão do regime, tendo em vista que a decisão do magistrado foi equivocada
-        - Não há reincidência, pois o furto foi cometido antes do trânsito em julgado definitivo do estelionato, ausentes os pressupostos do Art. 63 do CP.
-        - Aplicação da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343; substituição da pena privativa de liberdade por restritiva de direitos; aplicação de regime inicial aberto.
-        - No mérito, absolvição de Lauro.
-        - Ainda de maneira subsidiária, afastamento da causa de aumento imputada na denúncia, tendo em vista que somente aplicável ao homicídio culposo ou tendo em vista que foi imputada a prática do crime de homicídio doloso
-    revisao: *a1
+    pergunta: "O juiz pode exigir o exame criminológico só por causa da gravidade do tipo de crime?"
+    tese: "O exame criminológico não é obrigatório: só pode ser exigido em decisão motivada nas peculiaridades concretas do caso"
+    aceitos: [ [ "concret*" ], [ "peculiaridade*" ], [ "nao e indispensavel | dispensavel | nao obrigatorio | nao e obrigatorio" ] ]
+    artigos: [ "Súmula 439 STJ" ]
+    gabarito: "A realização do exame criminológico não é indispensável, porque a decisão que determina o exame criminológico deve ser devidamente fundamentada em fatores concretos (OU a mera gravidade em abstrato do delito não é suficiente para a exigência do exame criminológico), conforme Súmula 439 do STJ."
+    revisao: { status: revisado }
   - id: 16-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Carlos foi condenado pelos crimes de tráfico de entorpecentes e posse de arma de fogo de uso permitido, em concurso material, sendo sua conduta tipificada da seguinte forma: Art. 33 da Lei nº 11.343/06 e Art. 12 da Lei nº 10.826/03, na forma do Art. 69 do Código Penal. A pena ficou estabelecida em 05 anos de reclusão em regime fechado para o crime de tráfico e 01 ano de detenção em regime semiaberto pelo crime de posse de arma de fogo. Apenas a defesa técnica apelou, requerendo a mudança do regime de pena aplicado para o crime do Art. 33 da Lei nº 11.343/06, tendo o feito transitado em julgado para a acusação. O recurso foi desprovido. Todavia, de ofício, sem reflexo no quantum, que permaneceu em 06 anos de pena privativa de liberdade, o Tribunal reclassificou o fato para o Art. 33 c/c o Art. 40, IV, da Lei nº 11343/06, afastando o crime autônomo da lei de armas e aplicando a causa de aumento respectiva.
-
-      Considerando as informações narradas na hipótese, responda aos itens a seguir.
-    comando: Poderia ser aplicado regime inicial de cumprimento da pena diverso do fechado para o crime de tráfico ilícito de entorpecentes, previsto no Art. 33, caput, da Lei nº 11.343/06?
-    gabarito: A questão narra que Carlos foi condenado pela prática de um crime de tráfico de drogas e posse de arma de fogo de uso permitido. Em que pese o crime de tráfico ser equiparado a hediondo, hoje o entendimento que prevalece no âmbito do Supremo Tribunal Federal é no sentido de que é possível a aplicação de regime inicial de cumprimento de pena diverso do fechado, sendo a previsão do Art. 2º, §1º, da Lei nº 8.072/90 inconstitucional, pois violadora do princípio da individualização da pena. Assim, analisando as circunstâncias do caso concreto, nada impede que o magistrado fixe o regime semiaberto ao caso, até porque a pena base não se afastou do mínimo legal, o que indica que as circunstâncias do artigo 59 do CP são favoráveis.
-    opcoes:
-      correta: "Sim, pois o STF considerou inconstitucional a obrigatoriedade do início de cumprimento de pena em regime fechado para os crimes hediondos e assemelhados, prevista no Art. 2º, § 1º, da Lei nº 8.072/90, por violar o Princípio da Individualização da Pena Obs.: a mera citação do dispositivo legal não será pontuada."
-      erradas:
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
-        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "No tráfico, o regime inicial poderia ser diferente do fechado?"
+    tese: "Inconstitucionalidade do regime fechado obrigatório para os crimes hediondos e equiparados"
+    aceitos: [ "inconstitucional*" ]
+    artigos: [ "art. 33, § 2º, CP", "art. 5, XLVI, CRFB" ]
+    gabarito: "A questão narra que Carlos foi condenado pela prática de um crime de tráfico de drogas e posse de arma de fogo de uso permitido. Em que pese o crime de tráfico ser equiparado a hediondo, hoje o entendimento que prevalece no âmbito do Supremo Tribunal Federal é no sentido de que é possível a aplicação de regime inicial de cumprimento de pena diverso do fechado, sendo a previsão do Art. 2º, §1º, da Lei nº 8.072/90 inconstitucional, pois violadora do princípio da individualização da pena. Assim, analisando as circunstâncias do caso concreto, nada impede que o magistrado fixe o regime semiaberto ao caso, até porque a pena base não se afastou do mínimo legal, o que indica que as circunstâncias do artigo 59 do CP são favoráveis."
+    revisao: { status: revisado }
   - id: 16-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Carlos foi condenado pelos crimes de tráfico de entorpecentes e posse de arma de fogo de uso permitido, em concurso material, sendo sua conduta tipificada da seguinte forma: Art. 33 da Lei nº 11.343/06 e Art. 12 da Lei nº 10.826/03, na forma do Art. 69 do Código Penal. A pena ficou estabelecida em 05 anos de reclusão em regime fechado para o crime de tráfico e 01 ano de detenção em regime semiaberto pelo crime de posse de arma de fogo. Apenas a defesa técnica apelou, requerendo a mudança do regime de pena aplicado para o crime do Art. 33 da Lei nº 11.343/06, tendo o feito transitado em julgado para a acusação. O recurso foi desprovido. Todavia, de ofício, sem reflexo no quantum, que permaneceu em 06 anos de pena privativa de liberdade, o Tribunal reclassificou o fato para o Art. 33 c/c o Art. 40, IV, da Lei nº 11343/06, afastando o crime autônomo da lei de armas e aplicando a causa de aumento respectiva.
-
-      Considerando as informações narradas na hipótese, responda aos itens a seguir.
-    comando: Poderia o Tribunal de Justiça em sede de recurso da defesa realizar a reclassificação adotada?
-    gabarito: |-
-      Ainda consta do enunciado que o Tribunal de Justiça, em julgamento exclusivo da defesa, optou por realizar uma reclassificação da conduta, aplicando a causa de aumento de pena do Art. 40, inciso IV, da Lei nº 11.343, em vez de manter a condenação pelo crime de posse de arma de fogo. Não poderia, porém, o Tribunal ter adotado essa conduta, pois ela é prejudicial ao réu. Como o recurso foi exclusivo da defesa, a reclassificação viola o princípio da vedação da reformatio in pejus. O prejuízo da nova classificação decorre de alguns fatores:
-
-      para o cálculo de eventual prescrição, tendo em vista que a causa de aumento é considerada para fixação do prazo prescricional, enquanto que, havendo dois crimes, o prazo seria fixado de maneira separada para cada um; um dos crimes é punido com detenção, o que impede fixação do regime inicial fechado, deixando isso de ocorrer com a causa de aumento; na execução, a progressão de regime, no caso da causa de aumento, será calculada em 2/5 (ou 3/5, se reincidente) do total de 06 anos, enquanto que, se mantidas as condenações separadas, esse percentual somente seria aplicado sobre a pena de 05 anos, pois sobre 01 ano seria aplicado o percentual de 1/6, já que a posse de arma de fogo não é crime hediondo.
-    opcoes:
-      correta: Não, pois viola o princípio da vedação da reformatio in pejus, tendo em vista que geraria prejuízo na aplicação do regime OU na prescrição OU na execução da pena
-      erradas:
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
-        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Em recurso só da defesa, o Tribunal podia reclassificar o fato, mesmo sem mudar a pena?"
+    tese: "Reformatio in pejus: em recurso só da defesa, a reclassificação piora a situação do réu"
+    aceitos: [ "reformatio in pejus | reforma para pior" ]
+    artigos: [ "art. 617, CPP" ]
+    gabarito: "Ainda consta do enunciado que o Tribunal de Justiça, em julgamento exclusivo da defesa, optou por realizar uma reclassificação da conduta, aplicando a causa de aumento de pena do Art. 40, inciso IV, da Lei nº 11.343, em vez de manter a condenação pelo crime de posse de arma de fogo. Não poderia, porém, o Tribunal ter adotado essa conduta, pois ela é prejudicial ao réu. Como o recurso foi exclusivo da defesa, a reclassificação viola o princípio da vedação da reformatio in pejus. O prejuízo da nova classificação decorre de alguns fatores:\n\npara o cálculo de eventual prescrição, tendo em vista que a causa de aumento é considerada para fixação do prazo prescricional, enquanto que, havendo dois crimes, o prazo seria fixado de maneira separada para cada um; um dos crimes é punido com detenção, o que impede fixação do regime inicial fechado, deixando isso de ocorrer com a causa de aumento; na execução, a progressão de regime, no caso da causa de aumento, será calculada em 2/5 (ou 3/5, se reincidente) do total de 06 anos, enquanto que, se mantidas as condenações separadas, esse percentual somente seria aplicado sobre a pena de 05 anos, pois sobre 01 ano seria aplicado o percentual de 1/6, já que a posse de arma de fogo não é crime hediondo."
+    revisao: { status: revisado }
   - id: 16-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      No dia 03/05/2008, Luan foi condenado à pena privativa de liberdade de 12 anos de reclusão pela prática dos crimes previstos nos artigos 213 e 214 do Código Penal, na forma do Art. 69 do mesmo diploma legal, pois, no dia 11/07/2007, por volta das 19h, constrangeu Carla, mediante grave ameaça, a com ele praticar conjunção carnal e ato libidinoso diverso. Ainda cumprindo pena em razão dessa sentença condenatória, Luan, conversando com outro preso, veio a saber que ele havia sido condenado por fatos extremamente semelhantes a uma pena de 07 anos de reclusão. Luan, então, pergunta o nome do advogado do colega de cela, que lhe fornece a informação.
-
-      Luan entra em contato pelo telefone indicado e pergunta se algo pode ser feito para reduzir sua pena, apesar de sua decisão ter transitado em julgado.
-
-      Diante dessa situação, responda aos itens a seguir.
-    comando: Qual a tese de direito material que poderia ser suscitada pelo novo advogado em favor de Luan?
-    gabarito: |-
-      Luan foi condenado pela prática de crimes de estupro e atentado violento ao pudor em concurso material. O entendimento que prevalecia antes da edição da Lei nº 12.015 era a da impossibilidade de aplicação da continuidade delitiva entre essas duas infrações, pois não seriam crimes da mesma espécie. Ocorre que, com a inovação legislativa ocorrida no ano de 2009, a conduta antes prevista no Art. 214 do Código Penal passou a ser englobada pela figura típica do Art. 213 do CP. Apesar de não ter havido abolitio criminis, certo é que a lei é mais benéfica. Sendo assim, poderá retroagir para atingir situações anteriores e caberá a redução de pena de Luan.
-
-      A jurisprudência amplamente majoritária entende que, de acordo com a nova redação, o Art. 213 do CP passou a prever um tipo misto alternativo. Assim, quando praticada conjunção carnal e outro ato libidinoso diverso em um mesmo contexto e contra a mesma vítima, haveria crime único. Outros, minoritariamente, entendem que o artigo traz um tipo misto cumulativo, de modo que ainda seria possível punir o agente que pratica conjunção carnal e outro ato libidinoso diverso por dois crimes. De qualquer forma, mesmo para essa segunda corrente, caberia a redução de pena de Luan, pois agora seria possível a aplicação da continuidade delitiva, já que os crimes são de mesma espécie.
-
-      O examinando poderá adotar qualquer uma das duas correntes, desde que assegure a aplicação da nova lei mais benéfica para Luan.
-    opcoes:
-      correta: A tese adequada é a da aplicação da lei mais benéfica ao condenado, que importará na redução da sua pena, tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto alternativo, portanto crime único OU tendo em vista que a alteração legislativa transformou o tipo penal do estupro em misto cumulativo, sujeito à aplicação da continuidade delitiva o que permite sua aplicação para fatos praticados antes de sua entrada em vigor, ainda que a decisão seja definitiva.
-      erradas:
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
-        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese de direito material o novo advogado pode levantar em favor de Luan?"
+    tese: "A retroatividade da lei mais benéfica, que fez do estupro um crime único"
+    aceitos: [ [ "lei mais benefica | lei mais favoravel | novatio legis in mellius | retroativ*" ], [ "crime unico" ] ]
+    artigos: [ "art. 2, parágrafo único, CP", "art. 5, XL, CRFB" ]
+    gabarito: "Luan foi condenado pela prática de crimes de estupro e atentado violento ao pudor em concurso material. O entendimento que prevalecia antes da edição da Lei nº 12.015 era a da impossibilidade de aplicação da continuidade delitiva entre essas duas infrações, pois não seriam crimes da mesma espécie. Ocorre que, com a inovação legislativa ocorrida no ano de 2009, a conduta antes prevista no Art. 214 do Código Penal passou a ser englobada pela figura típica do Art. 213 do CP. Apesar de não ter havido abolitio criminis, certo é que a lei é mais benéfica. Sendo assim, poderá retroagir para atingir situações anteriores e caberá a redução de pena de Luan.\n\nA jurisprudência amplamente majoritária entende que, de acordo com a nova redação, o Art. 213 do CP passou a prever um tipo misto alternativo. Assim, quando praticada conjunção carnal e outro ato libidinoso diverso em um mesmo contexto e contra a mesma vítima, haveria crime único. Outros, minoritariamente, entendem que o artigo traz um tipo misto cumulativo, de modo que ainda seria possível punir o agente que pratica conjunção carnal e outro ato libidinoso diverso por dois crimes. De qualquer forma, mesmo para essa segunda corrente, caberia a redução de pena de Luan, pois agora seria possível a aplicação da continuidade delitiva, já que os crimes são de mesma espécie.\n\nO examinando poderá adotar qualquer uma das duas correntes, desde que assegure a aplicação da nova lei mais benéfica para Luan."
+    revisao: { status: revisado }
   - id: 16-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      No dia 03/05/2008, Luan foi condenado à pena privativa de liberdade de 12 anos de reclusão pela prática dos crimes previstos nos artigos 213 e 214 do Código Penal, na forma do Art. 69 do mesmo diploma legal, pois, no dia 11/07/2007, por volta das 19h, constrangeu Carla, mediante grave ameaça, a com ele praticar conjunção carnal e ato libidinoso diverso. Ainda cumprindo pena em razão dessa sentença condenatória, Luan, conversando com outro preso, veio a saber que ele havia sido condenado por fatos extremamente semelhantes a uma pena de 07 anos de reclusão. Luan, então, pergunta o nome do advogado do colega de cela, que lhe fornece a informação.
-
-      Luan entra em contato pelo telefone indicado e pergunta se algo pode ser feito para reduzir sua pena, apesar de sua decisão ter transitado em julgado.
-
-      Diante dessa situação, responda aos itens a seguir.
-    comando: A pretensão deverá ser manejada perante qual órgão?
-    gabarito: O órgão competente perante o qual deverá ser formulado o pedido de aplicação da lei mais benigna e, consequentemente, da redução da pena é o juízo da Vara de Execuções Penais, considerando que já ocorreu o trânsito em julgado da sentença condenatória, na forma da Súmula 611 do STF ou do Art. 66, inciso I, da LEP.
-    opcoes:
-      correta: "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-      erradas:
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
-        - O requerimento a ser formulado é de substituição da prisão preventiva por prisão domiciliar, nos termos do Art. 318, inciso IV, do CPP.
-        - Em preliminar de defesa, deve ser alegada a extinção de punibilidade pela decadência, tendo em vista que Paulo deixou de oferecer representação no prazo de 6 meses, conhecendo a autoria desde a data do fato, conforme estabelecido no Art. 38 do CPP c/c. o Art. 107, inciso IV, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Perante que órgão Luan deve fazer o pedido?"
+    tese: "Competência do juízo da execução penal para aplicar a lei mais benéfica depois do trânsito em julgado"
+    aceitos: [ "execu*" ]
+    artigos: [ "Súmula 611 STF", "art. 66, I, LEP" ]
+    gabarito: "O órgão competente perante o qual deverá ser formulado o pedido de aplicação da lei mais benigna e, consequentemente, da redução da pena é o juízo da Vara de Execuções Penais, considerando que já ocorreu o trânsito em julgado da sentença condenatória, na forma da Súmula 611 do STF ou do Art. 66, inciso I, da LEP."
+    revisao: { status: revisado }
   - id: 16-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Em uma discussão de futebol, Rubens e Enrico, em comunhão de ações e desígnios, chamaram Eduardo de “ladrão” e “estelionatário”, razão pela qual Eduardo formulou uma queixa-crime em face de ambos.
-
-      No curso da ação penal, porém, Rubens procurou Eduardo para pedir desculpas pelos seus atos, razão pela qual Eduardo expressamente concedeu perdão do ofendido em seu favor, sendo esse prontamente aceito e, consequentemente, extinta a punibilidade de Rubens. Eduardo, contudo, se recusou a conceder o perdão para Enrico, pois disse que não era a primeira vez que o querelado tinha esse tipo de atitude.
-
-      Considerando apenas as informações narradas, responda aos itens a seguir.
-    comando: Qual o crime praticado, em tese, por Rubens e Enrico?
-    gabarito: O crime praticado por Rubens e Enrico foi o de injúria, na forma do Art. 140 do Código Penal. Apesar das ofensas serem relacionadas à pessoa que pratica crimes, já que Eduardo foi chamado de “ladrão” e “estelionatário”, não há que se falar em crime de calúnia. A calúnia exige, para sua configuração, que seja atribuída ao ofendido a prática de determinado fato que configure crime. No caso, porém, não foram atribuídos fatos, mas sim qualidades pejorativas. Em razão disso, o crime praticado foi o de injúria.
-    opcoes:
-      correta: "O crime é de injúria, pois apenas foi atribuída qualidade negativa e não houve narração de um fato delitivo, conforme o Art. 140 do CP. Obs.: a mera citação do dispositivo legal não será pontuada."
-      erradas:
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
-        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que crime Rubens e Enrico cometeram, em tese?"
+    tese: "Injúria: atribuíram qualidade negativa, sem narrar um fato"
+    aceitos: [ "injuria" ]
+    artigos: [ "art. 140, CP" ]
+    gabarito: "O crime praticado por Rubens e Enrico foi o de injúria, na forma do Art. 140 do Código Penal. Apesar das ofensas serem relacionadas à pessoa que pratica crimes, já que Eduardo foi chamado de “ladrão” e “estelionatário”, não há que se falar em crime de calúnia. A calúnia exige, para sua configuração, que seja atribuída ao ofendido a prática de determinado fato que configure crime. No caso, porém, não foram atribuídos fatos, mas sim qualidades pejorativas. Em razão disso, o crime praticado foi o de injúria."
+    revisao: { status: revisado }
   - id: 16-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Em uma discussão de futebol, Rubens e Enrico, em comunhão de ações e desígnios, chamaram Eduardo de “ladrão” e “estelionatário”, razão pela qual Eduardo formulou uma queixa-crime em face de ambos.
-
-      No curso da ação penal, porém, Rubens procurou Eduardo para pedir desculpas pelos seus atos, razão pela qual Eduardo expressamente concedeu perdão do ofendido em seu favor, sendo esse prontamente aceito e, consequentemente, extinta a punibilidade de Rubens. Eduardo, contudo, se recusou a conceder o perdão para Enrico, pois disse que não era a primeira vez que o querelado tinha esse tipo de atitude.
-
-      Considerando apenas as informações narradas, responda aos itens a seguir.
-    comando: Que argumento poderá ser formulado pelo advogado de Enrico para evitar sua punição?
-    gabarito: O argumento a ser formulado pela defesa é o de que o perdão do ofendido oferecido a um dos querelados a todos aproveita (Art. 51 do CPP), gerando a extinção da punibilidade dos coautores, caso seja aceito (Art. 107, V, do CP). Ao conceder perdão para Rubens, necessariamente esse perdão deve ser estendido para Enrico, de modo que, com sua aceitação, haverá extinção da sua punibilidade.
-    opcoes:
-      correta: "O argumento a ser apresentado é de que o perdão do ofendido concedido a um dos querelados a todos aproveita, desde que aceito, na forma do Art. 51, do CPP OU do Art. 106, I, do CP. Obs.: a mera citação do dispositivo legal não será pontuada."
-      erradas:
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
-        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que argumento a defesa de Enrico pode usar para evitar a punição?"
+    tese: "O perdão concedido a um dos querelados se estende aos outros"
+    aceitos: [ "perdao", "todos | aproveita | estende | extensivo" ]
+    artigos: [ "art. 51, CPP", "art. 106, I, CP" ]
+    gabarito: "O argumento a ser formulado pela defesa é o de que o perdão do ofendido oferecido a um dos querelados a todos aproveita (Art. 51 do CPP), gerando a extinção da punibilidade dos coautores, caso seja aceito (Art. 107, V, do CP). Ao conceder perdão para Rubens, necessariamente esse perdão deve ser estendido para Enrico, de modo que, com sua aceitação, haverá extinção da sua punibilidade."
+    revisao: { status: revisado }
   - id: 16-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      Wesley, estudante, foi preso em flagrante no dia 03 de março de 2015 porque conduzia um veículo automotor que sabia ser produto de crime pretérito registrado em Delegacia da área em que residia. Na data dos fatos, Wesley tinha 20 anos, era primário, mas existia um processo criminal em curso em seu desfavor, pela suposta prática de um crime de furto qualificado. Diante dessa anotação em sua Folha de Antecedentes Criminais, a autoridade policial representou pela conversão da prisão em flagrante em preventiva, afirmando que existiria risco concreto para a ordem pública, pois o indiciado possuía outros envolvimentos com o aparato judicial. Você, como advogado(a) indicado por Wesley, é comunicado da ocorrência da prisão em flagrante, além de tomar conhecimento da representação formulada pelo Delegado. Da mesma forma, o comunicado de prisão já foi encaminhado para o Ministério Público e para o magistrado, sendo todas as legalidades da prisão em flagrante observadas.
-
-      Considerando as informações narradas, responda aos itens a seguir.
-    comando: "Qual a medida processual, diferente de habeas corpus, a ser adotada pela defesa técnica de Wesley? (Valor:"
-    gabarito: Considerando que o enunciado narra que foi realizada validamente a prisão em flagrante de Wesley pela prática do crime de receptação simples, a medida processual a ser formulada é o pedido de liberdade provisória, evitando que seja decretada a prisão preventiva do indiciado.
-    opcoes:
-      correta: "Formulação de pedido de liberdade provisória, com fundamento no Art. 321 do CPP ou no Art. 310, III, do CPP. Obs.: a mera citação do dispositivo legal não será pontuada."
-      erradas:
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
-        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Fora o habeas corpus, que medida a defesa de Wesley deve adotar?"
+    tese: "Pedido de liberdade provisória"
+    aceitos: [ "liberdade provisoria" ]
+    artigos: [ "art. 321, CPP", "art. 310, III, CPP" ]
+    gabarito: "Considerando que o enunciado narra que foi realizada validamente a prisão em flagrante de Wesley pela prática do crime de receptação simples, a medida processual a ser formulada é o pedido de liberdade provisória, evitando que seja decretada a prisão preventiva do indiciado."
+    revisao: { status: revisado }
   - id: 16-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Wesley, estudante, foi preso em flagrante no dia 03 de março de 2015 porque conduzia um veículo automotor que sabia ser produto de crime pretérito registrado em Delegacia da área em que residia. Na data dos fatos, Wesley tinha 20 anos, era primário, mas existia um processo criminal em curso em seu desfavor, pela suposta prática de um crime de furto qualificado. Diante dessa anotação em sua Folha de Antecedentes Criminais, a autoridade policial representou pela conversão da prisão em flagrante em preventiva, afirmando que existiria risco concreto para a ordem pública, pois o indiciado possuía outros envolvimentos com o aparato judicial. Você, como advogado(a) indicado por Wesley, é comunicado da ocorrência da prisão em flagrante, além de tomar conhecimento da representação formulada pelo Delegado. Da mesma forma, o comunicado de prisão já foi encaminhado para o Ministério Público e para o magistrado, sendo todas as legalidades da prisão em flagrante observadas.
-
-      Considerando as informações narradas, responda aos itens a seguir.
-    comando: A representação da autoridade policial foi elaborada de modo adequado?
-    gabarito: A representação da autoridade policial não foi elaborada de maneira adequada em relação à sua fundamentação, pois não estão preenchidos os requisitos do Art. 313 do Código de Processo Penal, sendo estes indispensáveis para a conversão da prisão em flagrante em preventiva. O crime praticado pelo indiciado não tem pena privativa de liberdade máxima superior a 04 anos. Ademais, não é o acusado reincidente na prática de crime doloso, devendo ser destacado que a existência de ação em curso não afasta a ausência de configuração do inciso II do Art. 313. Os requisitos do inciso III também não estão atendidos, sendo incabível a prisão preventiva, independentemente da fundamentação com os pressupostos do Art. 312 do CPP.
-    opcoes:
-      correta: "A representação da autoridade policial não foi elaborada de maneira adequada em relação à sua fundamentação, pois não estão preenchidos os requisitos para a decretação da prisão preventiva, do Art. 313 do CPP. Obs.: a mera citação do dispositivo legal não será pontuada."
-      erradas:
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - "Poderia argumentar que não agiu com dolo, / agiu em erro de tipo (0,6), nos termos do art. 20 caput OU art. 20, §2º, do CP. (0,2). Obs.: A mera indicação do artigo não é pontuada."
-        - A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
-        - Bruna era inimputável na data dos fatos OU Bruna deveria responder por ato infracional, tendo em vista que era menor de 18 anos na data dos fatos, ainda que maior no momento do resultado OU em razão da Teoria da Atividade, nos termos do Art. 4º OU Art. 27 do Código de Processo Penal OU Art. 228 da CRFB/88.
-        - A medida a ser adotada pelo defensor técnico do acusado para viabilizar proposta de transação penal é requerer ao Juízo a remessa dos autos ao órgão superior do Ministério Público para reexame do cabimento dessa proposta. Isso porque a extinção da pena há mais de cinco anos deixa de produzir efeitos jurídicos, nos termos do Art. 64, inciso I, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Por que não cabe a preventiva pedida pelo delegado?"
+    tese: "Descabimento da preventiva: o crime tem pena máxima de até 4 anos e o indiciado é primário"
+    aceitos: [ [ "4 anos | quatro anos" ], [ "hipotese de cabimento | hipoteses de cabimento" ] ]
+    artigos: [ "art. 313, I, CPP" ]
+    gabarito: "A representação da autoridade policial não foi elaborada de maneira adequada em relação à sua fundamentação, pois não estão preenchidos os requisitos do Art. 313 do Código de Processo Penal, sendo estes indispensáveis para a conversão da prisão em flagrante em preventiva. O crime praticado pelo indiciado não tem pena privativa de liberdade máxima superior a 04 anos. Ademais, não é o acusado reincidente na prática de crime doloso, devendo ser destacado que a existência de ação em curso não afasta a ausência de configuração do inciso II do Art. 313. Os requisitos do inciso III também não estão atendidos, sendo incabível a prisão preventiva, independentemente da fundamentação com os pressupostos do Art. 312 do CPP."
+    revisao: { status: revisado }

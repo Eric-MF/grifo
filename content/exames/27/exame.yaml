@@ -314,3 +314,14 @@ questoes:
           - { id: c1, valor: 0.15, termos: [ legitima defesa putativa ] }
           - { id: c2, valor: 0.35, termos: [ descriminante putativa | erro de tipo permissivo ] }
           - { id: c3, valor: 0.1, dispositivo: [ "art. 20, § 1º, CP" ], requer: c2 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: peca, lei: "Lei 13.964/2019", texto: "A Lei 13.964/2019 incluiu o § 5º no art. 112 da LEP: o tráfico privilegiado (art. 33, § 4º, da Lei 11.343/2006) não é considerado hediondo nem equiparado, como o STF já havia decidido (HC 118.533, 2016). A tese contra o regime fechado ganhou base legal expressa." }
+    - { alvo: q2, lei: "Lei 13.964/2019", texto: "O parágrafo único do art. 16 da Lei 10.826/2003 virou § 1º, e a posse ou o porte de arma com numeração suprimida está hoje no art. 16, § 1º, IV. A lei também criou o § 2º, com pena maior para a arma de uso proibido." }
+  nomes:
+    peca: { João: Dédalo, Marcelo: Ícaro }   # o adulto e o adolescente
+    q1: { Rafael: Procusto, Joana: Andrômeda, Carla: Cassandra }   # a testemunha que viu de longe
+    q2: { Jorge: Hermes, Lucas: Hefesto }   # o oficial de justiça; as armas
+    q3: { Alberto: Odisseu, João: Diomedes, Francisco: Nestor, Ronaldo: Menelau, Lucas: Ares }   # a conversa no ônibus; o fuzil
+    q4: { Clara: Ártemis, João: Órion, Maria: Hera }   # a policial armada; o ex; o ciúme

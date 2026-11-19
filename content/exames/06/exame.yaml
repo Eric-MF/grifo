@@ -3,6 +3,7 @@
 id: "06"
 numero: 6
 numeral: VI
+aplicacao: 2012-03-25
 revisao:
   status: rascunho
   por: ""
@@ -211,3 +212,12 @@ questoes:
         componentes:
           - { id: c1, valor: 0.6, alternativas: [ [ erro de tipo ], [ nao agiu com dolo | sem dolo | ausencia de dolo ] ] }
           - { id: c2, valor: 0.2, dispositivo: [ "art. 20, CP", "art. 20, § 2º, CP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { José: Baco }   # o vinho e o volante
+    q1: { Caio: Ájax, Tício: Odisseu }   # bebeu para criar coragem contra o rival
+    q2: { Hugo: Odisseu, José: Menelau, Luiz: Páris }   # o enganador; o marido; o falso sedutor
+    q3: { Caio: Jasão, Mévio: Héracles, Tício: Castor, José: Pólux }   # o grupo (argonautas)
+    q4: { Carlos: Ícaro, Augusto: Tântalo }   # o jovem que seguiu as ordens; quem enganou os deuses
+    empresas: { ABC: Midas }   # os relatórios que dourariam a companhia

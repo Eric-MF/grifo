@@ -260,3 +260,14 @@ questoes:
         componentes:
           - { id: c1, valor: 0.5, termos: [ santos ] }
           - { id: c2, valor: 0.1, dispositivo: [ Súmula 521 STF ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: peca, lei: "Lei 15.397/2026", texto: "A Lei 15.397/2026 elevou a pena do furto simples (art. 155, caput, do CP) para reclusão de 1 a 6 anos (antes, de 1 a 4). Para o fato de 2010 vale a pena antiga, que não retroage em prejuízo. Mesmo pela lei nova, com a redução mínima da tentativa (1/3) a pena máxima fica em 4 anos, e o prazo prescricional continua de 8 anos (art. 109, IV), reduzido à metade para a ré menor de 21 anos." }
+    - { alvo: q4, lei: "Lei 14.155/2021 e Lei 13.964/2019", texto: "A Lei 14.155/2021 incluiu o § 4º no art. 70 do Código de Processo Penal: no estelionato cometido com cheque sem fundos, a competência é a do domicílio da vítima, e não mais a do local da recusa do pagamento (Súmula 521 do STF). A Lei 13.964/2019 tornou o estelionato, em regra, de ação penal pública condicionada à representação (art. 171, § 5º, do Código Penal)." }
+  nomes:
+    peca: { Gabriela: Dafne, Patrick: Ares, Maria: Antígona }   # fugiu da violência; o agressor; a amiga leal
+    q1: { Paulo: Aquiles, Júlio: Pátroclo }   # os amigos
+    q2: { Vinícius: Hefesto, Vinicius: Hefesto }   # a arma na oficina ("Hefesto House")
+    q3: { Mário: Menelau, Paulo: Páris }   # o roubado; o que levou
+    q4: { Diana: Aracne }   # a inveja

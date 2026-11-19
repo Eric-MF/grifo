@@ -8,7 +8,7 @@ export type IdComando =
   | "original" | "revogados" | "vide" | "anotacoes" | "informacoes" | "planalto" | "prontos" | "erros"
   | "tudo" | "sogrifos" | "soerros" | "soautomaticos"
   | "grifar" | "borracha" | "grifos" | "buscar" | "leis" | "indice" | "remissivo" | "leitura" | "mais"
-  | "inicio" | "fim" | "parei" | "compartilhar" | "imprimir" | "barra" | "comandos";
+  | "inicio" | "fim" | "parei" | "compartilhar" | "imprimir" | "barra" | "ouvir" | "comandos";
 
 export interface Comando {
   id: IdComando;
@@ -105,6 +105,7 @@ export const COMANDOS: Comando[] = [
   { id: "parei", nome: "parei", apelidos: ["ondeparei", "continuar"], titulo: "Voltar para onde parei" },
   { id: "compartilhar", nome: "compartilhar", apelidos: ["link"], titulo: "Compartilhar" },
   { id: "imprimir", nome: "imprimir", apelidos: ["pdf"], titulo: "Imprimir ou salvar em PDF" },
+  { id: "ouvir", nome: "ouvir", apelidos: ["voz", "ler", "audio", "falar", "escutar", "vozalta"], titulo: "Ouvir a lei em voz alta" },
   { id: "barra", nome: "barra", apelidos: ["rolagem", "barradorolagem"], titulo: "Barra de rolagem do navegador (liga e desliga)" },
   { id: "comandos", nome: "comandos", apelidos: ["ajuda", "help"], titulo: "Lista dos comandos" },
 ];

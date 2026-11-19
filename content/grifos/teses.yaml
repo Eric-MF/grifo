@@ -1,0 +1,177 @@
+# Grifos do GRIFO (.examples/Marcações GRIFO.md): Teses (marca-texto amarelo): preliminares, principais e subsidiárias.
+# Cada entrada grifa só as palavras-chave do dispositivo (`palavras`, trechos exatos do texto vigente).
+# Os "extras" do .md (itens 1 a 56, depois do ---) foram distribuídos pelos três grupos; o número do extra vai no comentário.
+# Súmulas que sustentam uma tese levam `cor: sumulas` e o grupo da tese.
+# Mesmo `tema` em lugares diferentes = "vide" automático entre eles.
+
+# ── Preliminares ─────────────────────────────────────────────────────────────
+
+# Constituição Federal
+- { cor: teses, grupo: preliminares, tema: "Devido processo legal", lei: cf, disp: art5.i54, palavras: ["sem o devido processo legal"] }
+- { cor: teses, grupo: preliminares, tema: "Ampla defesa e contraditório", lei: cf, disp: art5.i55, palavras: ["o contraditório e ampla defesa"] }
+- { cor: teses, grupo: preliminares, tema: "Provas ilícitas", lei: cf, disp: art5.i56, palavras: ["provas obtidas por meios ilícitos"] }
+# art. 93, IX, CF: no texto coletado o inciso IX vigente veio sem hífen ("IX todos...") e ficou dentro de art93.i8-b
+- { cor: teses, grupo: preliminares, tema: "Fundamentação das decisões", lei: cf, disp: art93.i8-b, palavras: ["fundamentadas todas as decisões, sob pena de nulidade"], nota: "Art. 93, IX, CF" }
+- { cor: teses, grupo: preliminares, tema: "Inviolabilidade de domicílio", lei: cf, disp: art5.i11, palavras: ["a casa é asilo inviolável do indivíduo", "sem consentimento do morador", "durante o dia, por determinação judicial"] } # extra 1
+- { cor: teses, grupo: preliminares, tema: "Inviolabilidade das correspondências e comunicações telefônicas", lei: cf, disp: art5.i12, palavras: ["é inviolável o sigilo da correspondência", "comunicações telefônicas, salvo, no último caso, por ordem judicial"], nota: "Vide Interceptação telefônica (Lei n. 9.296/96)" } # extra 2
+- { cor: teses, grupo: preliminares, tema: "Comunicação da prisão ao juiz e à família", lei: cf, disp: art5.i62, palavras: ["comunicados imediatamente ao juiz competente e à família do preso"] } # extra 3
+- { cor: teses, grupo: preliminares, tema: "Direito de permanecer calado", lei: cf, disp: art5.i63, palavras: ["o de permanecer calado", "assistência da família e de advogado"] } # extra 4
+# extra 5: Competência (CF, CPP, Súmula 603 STF e Lei 9.099/95)
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: cf, disp: art102.i1.ab, palavras: ["nas infrações penais comuns"], nota: "STF: foro por prerrogativa de função" }
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: cf, disp: art102.i1.ac, palavras: ["nas infrações penais comuns e nos crimes de responsabilidade"], nota: "STF: foro por prerrogativa de função" }
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: cf, disp: art105.i1.aa, palavras: ["nos crimes comuns, os Governadores dos Estados e do Distrito Federal"], nota: "STJ: foro por prerrogativa de função" }
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: cf, disp: art108.i1.aa, palavras: ["os juízes federais da área de sua jurisdição", "membros do Ministério Público da União"], nota: "TRF: foro por prerrogativa de função" }
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: cf, disp: art109.i4, palavras: ["infrações penais praticadas em detrimento de bens, serviços ou interesse da União", "excluídas as contravenções"], nota: "Justiça Federal" }
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: cf, disp: art109.i5, palavras: ["crimes previstos em tratado ou convenção internacional"], nota: "Justiça Federal" }
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: cf, disp: art109.i6, palavras: ["crimes contra a organização do trabalho"], nota: "Justiça Federal" }
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: cf, disp: art109.i9, palavras: ["crimes cometidos a bordo de navios ou aeronaves"], nota: "Justiça Federal" }
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: cf, disp: art125.p4, palavras: ["Compete à Justiça Militar estadual processar e julgar os militares dos Estados", "ressalvada a competência do júri quando a vítima for civil"] }
+
+# Código Penal
+- { cor: teses, grupo: preliminares, tema: "Causas extintivas da punibilidade", lei: cp, disp: art107, palavras: ["Extingue-se a punibilidade"] } # também o extra 11 (Extinção da punibilidade)
+# extra 10: Decadência (art. 103, CP; art. 38, CPP)
+- { cor: teses, grupo: preliminares, tema: "Decadência", lei: cp, disp: art103, palavras: ["decai do direito de queixa ou de representação", "prazo de 6 (seis) meses"] }
+- { cor: teses, grupo: preliminares, tema: "Prescrição", lei: cp, disp: art109, palavras: ["A prescrição, antes de transitar em julgado a sentença final", "máximo da pena privativa de liberdade cominada ao crime"] } # extra 12
+- { cor: teses, grupo: preliminares, tema: "Redução da prescrição", lei: cp, disp: art115, palavras: ["São reduzidos de metade os prazos de prescrição", "menor de 21 (vinte e um) anos", "maior de 70 (setenta) anos"], nota: "Vide Prescrição (art. 109, CP)" } # extra 13
+- { cor: teses, grupo: preliminares, tema: "Causas interruptivas da prescrição", lei: cp, disp: art117, palavras: ["O curso da prescrição interrompe-se"], nota: "Vide Prescrição (art. 109, CP)" } # extra 14
+- { cor: teses, grupo: preliminares, tema: "Isenção de pena na calúnia e difamação", lei: cp, disp: art143, palavras: ["se retrata cabalmente da calúnia ou da difamação", "fica isento de pena"], nota: "Retratação: extingue a punibilidade (art. 107, VI, CP)" } # extra 21
+# extra 27 (art. 182): imunidade relativa, a ação passa a depender de representação
+- { cor: teses, grupo: preliminares, tema: "Escusas absolutórias", lei: cp, disp: art182, palavras: ["Somente se procede mediante representação"], nota: "Imunidade relativa: sem representação, falta condição de procedibilidade" }
+
+# Código de Processo Penal
+- { cor: teses, grupo: preliminares, tema: "Procuração", lei: cpp, disp: art44, palavras: ["procurador com poderes especiais", "o nome do querelante e a menção do fato criminoso"], nota: "Vide Queixa-crime" }
+- { cor: teses, grupo: preliminares, tema: "Causas extintivas da punibilidade", lei: cpp, disp: art61, palavras: ["se reconhecer extinta a punibilidade, deverá declará-lo de ofício"] }
+- { cor: teses, grupo: preliminares, tema: "Questões prejudiciais", lei: cpp, disp: art92, palavras: ["séria e fundada", "estado civil das pessoas", "o curso da ação penal ficará suspenso"] }
+- { cor: teses, grupo: preliminares, tema: "Questões prejudiciais", lei: cpp, disp: art93, palavras: ["questão diversa da prevista no artigo anterior, da competência do juízo cível", "suspender o curso do processo"] }
+- { cor: teses, grupo: preliminares, tema: "Provas ilícitas", lei: cpp, disp: art157.p1, palavras: ["provas derivadas das ilícitas"] }
+- { cor: teses, grupo: preliminares, tema: "Rejeição da denúncia ou queixa", lei: cpp, disp: art395, palavras: ["A denúncia ou queixa será rejeitada"] }
+- { cor: teses, grupo: preliminares, tema: "Nulidades", lei: cpp, disp: art564, palavras: ["A nulidade ocorrerá nos seguintes casos"] }
+- { cor: teses, grupo: preliminares, tema: "Decadência", lei: cpp, disp: art38, palavras: ["prazo de seis meses", "contado do dia em que vier a saber quem é o autor do crime"] } # extra 10
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: cpp, disp: art69, palavras: ["Determinará a competência jurisdicional"] } # extra 5
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: cpp, disp: art74.p1, palavras: ["Compete ao Tribunal do Júri o julgamento dos crimes", "consumados ou tentados"] } # extra 5
+- { cor: teses, grupo: preliminares, tema: "Perempção", lei: cpp, disp: art60, palavras: ["considerar-se-á perempta a ação penal"] } # extra 32
+- { cor: teses, grupo: preliminares, tema: "Perícia", lei: cpp, disp: art158, palavras: ["será indispensável o exame de corpo de delito", "não podendo supri-lo a confissão do acusado"], nota: "Sem exame de corpo de delito: nulidade (art. 564, III, b, CPP)" } # extra 33
+- { cor: teses, grupo: preliminares, tema: "Reconhecimento de pessoas e coisas", lei: cpp, disp: art226, palavras: ["reconhecimento de pessoa, proceder-se-á pela seguinte forma"] } # extra 34
+# extra 35: Busca e apreensão (o art. 240 só abre; a tese está nas fundadas razões e na fundada suspeita)
+- { cor: teses, grupo: preliminares, tema: "Busca e apreensão", lei: cpp, disp: art240.p1, palavras: ["busca domiciliar, quando fundadas razões a autorizarem"] }
+- { cor: teses, grupo: preliminares, tema: "Busca e apreensão", lei: cpp, disp: art240.p2, palavras: ["busca pessoal quando houver fundada suspeita"] }
+- { cor: teses, grupo: preliminares, tema: "Flagrante", lei: cpp, disp: art302, palavras: ["Considera-se em flagrante delito quem"] } # extra 36
+# extra 37: Prisão preventiva (arts. 312 e 313, CPP)
+- { cor: teses, grupo: preliminares, tema: "Prisão preventiva", lei: cpp, disp: art312, palavras: ["garantia da ordem pública", "ordem econômica", "conveniência da instrução criminal", "assegurar a aplicação da lei penal", "prova da existência do crime", "indício suficiente de autoria", "perigo gerado pelo estado de liberdade do imputado"] }
+- { cor: teses, grupo: preliminares, tema: "Prisão preventiva", lei: cpp, disp: art313, palavras: ["será admitida a decretação da prisão preventiva"] }
+- { cor: teses, grupo: preliminares, tema: "Prisão preventiva", lei: cpp, disp: art313.i1, palavras: ["crimes dolosos", "pena privativa de liberdade máxima superior a 4 (quatro) anos"] }
+- { cor: teses, grupo: preliminares, tema: "Suspensão do processo", lei: cpp, disp: art366, palavras: ["citado por edital, não comparecer, nem constituir advogado", "ficarão suspensos o processo e o curso do prazo prescricional"] } # extra 39
+- { cor: teses, grupo: preliminares, tema: "Citação de réu preso", lei: cpp, disp: art360, palavras: ["Se o réu estiver preso, será pessoalmente citado"] } # extra 40
+- { cor: teses, grupo: preliminares, tema: "Citação por edital", lei: cpp, disp: art361, palavras: ["Se o réu não for encontrado, será citado por edital"] } # extra 41
+- { cor: teses, grupo: preliminares, tema: "Mutatio libelli", lei: cpp, disp: art384, palavras: ["nova definição jurídica do fato", "o Ministério Público deverá aditar a denúncia ou queixa"] } # extra 43
+- { cor: teses, grupo: preliminares, tema: "Número de jurados", lei: cpp, disp: art447, palavras: ["25 (vinte e cinco) jurados", "7 (sete) dos quais constituirão o Conselho de Sentença"] } # extra 44
+- { cor: teses, grupo: preliminares, tema: "Quesitos", lei: cpp, disp: art483, palavras: ["Os quesitos serão formulados na seguinte ordem"] } # extra 45
+# extra 47: Prazos (art. 798, CPP)
+- { cor: teses, grupo: preliminares, tema: "Prazos", lei: cpp, disp: art798, palavras: ["contínuos e peremptórios"] }
+- { cor: teses, grupo: preliminares, tema: "Prazos", lei: cpp, disp: art798.p1, palavras: ["Não se computará no prazo o dia do começo", "incluindo-se, porém, o do vencimento"] }
+
+# Legislação especial
+- { cor: teses, grupo: preliminares, tema: "Competência", lei: lei-9099, disp: art61, palavras: ["infrações penais de menor potencial ofensivo", "pena máxima não superior a 2 (dois) anos"] } # extra 5
+# extra 52: Interceptação telefônica (arts. 2º e 5º, Lei n. 9.296/96)
+- { cor: teses, grupo: preliminares, tema: "Interceptação telefônica", lei: lei-9296, disp: art2, palavras: ["Não será admitida a interceptação de comunicações telefônicas"], nota: "Vide art. 5º, XII, CF" }
+- { cor: teses, grupo: preliminares, tema: "Interceptação telefônica", lei: lei-9296, disp: art2.i1, palavras: ["não houver indícios razoáveis da autoria ou participação"] }
+- { cor: teses, grupo: preliminares, tema: "Interceptação telefônica", lei: lei-9296, disp: art2.i2, palavras: ["a prova puder ser feita por outros meios disponíveis"] }
+- { cor: teses, grupo: preliminares, tema: "Interceptação telefônica", lei: lei-9296, disp: art2.i3, palavras: ["punida, no máximo, com pena de detenção"] }
+- { cor: teses, grupo: preliminares, tema: "Interceptação telefônica", lei: lei-9296, disp: art5, palavras: ["A decisão será fundamentada, sob pena de nulidade", "não poderá exceder o prazo de quinze dias, renovável por igual tempo"] }
+- { cor: teses, grupo: preliminares, tema: "Renúncia à representação na violência doméstica", lei: lei-11340, disp: art16, palavras: ["só será admitida a renúncia à representação perante o juiz", "audiência especialmente designada com tal finalidade", "antes do recebimento da denúncia"] } # extra 53
+- { cor: teses, grupo: preliminares, tema: "Flagrante controlado", lei: lei-12850, disp: art3.i3, palavras: ["ação controlada"], nota: "Ação controlada (flagrante diferido): art. 8º, Lei n. 12.850/13" } # extra 55
+
+# Súmulas
+
+# ── Principais ───────────────────────────────────────────────────────────────
+
+# Código Penal
+- { cor: teses, grupo: principais, tema: "Princípio da legalidade", lei: cp, disp: art1, palavras: ["Não há crime sem lei anterior que o defina", "Não há pena sem prévia cominação legal"] }
+- { cor: teses, grupo: principais, tema: "Abolitio criminis", lei: cp, disp: art2, palavras: ["lei posterior deixa de considerar crime", "cessando em virtude dela a execução e os efeitos penais"] }
+- { cor: teses, grupo: principais, tema: "Lei penal mais benéfica", lei: cp, disp: art2.pu, palavras: ["de qualquer modo favorecer o agente, aplica-se aos fatos anteriores"] }
+- { cor: teses, grupo: principais, tema: "Desistência voluntária e arrependimento eficaz", lei: cp, disp: art15, palavras: ["voluntariamente, desiste de prosseguir na execução", "impede que o resultado se produza", "só responde pelos atos já praticados"] }
+- { cor: teses, grupo: principais, tema: "Crime impossível", lei: cp, disp: art17, palavras: ["ineficácia absoluta do meio", "absoluta impropriedade do objeto"] }
+- { cor: teses, grupo: principais, tema: "Erro de tipo", lei: cp, disp: art20, palavras: ["erro sobre elemento constitutivo do tipo legal", "exclui o dolo"] }
+- { cor: teses, grupo: principais, tema: "Erro de tipo", lei: cp, disp: art20.p1, palavras: ["erro plenamente justificado pelas circunstâncias", "supõe situação de fato que, se existisse, tornaria a ação legítima"], nota: "Descriminantes putativas" }
+- { cor: teses, grupo: principais, tema: "Erro de tipo", lei: cp, disp: art20.p3, palavras: ["erro quanto à pessoa contra a qual o crime é praticado", "senão as da pessoa contra quem o agente queria praticar o crime"], nota: "Erro sobre a pessoa" }
+- { cor: teses, grupo: principais, tema: "Erro de proibição", lei: cp, disp: art21, palavras: ["erro sobre a ilicitude do fato, se inevitável, isenta de pena"] }
+- { cor: teses, grupo: principais, tema: "Coação moral irresistível", lei: cp, disp: art22, palavras: ["coação irresistível", "só é punível o autor da coação"], nota: "Inexigibilidade de conduta diversa" }
+- { cor: teses, grupo: principais, tema: "Excludentes de ilicitude", lei: cp, disp: art23, palavras: ["Não há crime quando o agente pratica o fato"] }
+- { cor: teses, grupo: principais, tema: "Estado de necessidade", lei: cp, disp: art24, palavras: ["estado de necessidade", "salvar de perigo atual, que não provocou por sua vontade"] }
+- { cor: teses, grupo: principais, tema: "Legítima defesa", lei: cp, disp: art25, palavras: ["legítima defesa", "usando moderadamente dos meios necessários", "repele injusta agressão, atual ou iminente"] }
+# Inimputabilidade (arts. 26 a 28, CP): do art. 28 só o § 1º favorece a defesa (o caput diz o que NÃO exclui a imputabilidade)
+- { cor: teses, grupo: principais, tema: "Inimputabilidade", lei: cp, disp: art26, palavras: ["É isento de pena", "inteiramente incapaz de entender o caráter ilícito do fato"] }
+- { cor: teses, grupo: principais, tema: "Inimputabilidade", lei: cp, disp: art27, palavras: ["menores de 18 (dezoito) anos são penalmente inimputáveis"] }
+- { cor: teses, grupo: principais, tema: "Inimputabilidade", lei: cp, disp: art28.p1, palavras: ["embriaguez completa, proveniente de caso fortuito ou força maior"] }
+# extras 18 e 19: crimes contra a honra (ausência das elementares: o fato não é o crime imputado)
+- { cor: teses, grupo: principais, tema: "Calúnia", lei: cp, disp: art138, palavras: ["imputando-lhe falsamente fato definido como crime"] }
+- { cor: teses, grupo: principais, tema: "Difamação", lei: cp, disp: art139, palavras: ["imputando-lhe fato ofensivo à sua reputação"] }
+- { cor: teses, grupo: principais, tema: "Injúria", lei: cp, disp: art140, palavras: ["ofendendo-lhe a dignidade ou o decoro"] }
+# extra 27: Escusas absolutórias (arts. 181 e 183; o 182 está nas preliminares)
+- { cor: teses, grupo: principais, tema: "Escusas absolutórias", lei: cp, disp: art181, palavras: ["É isento de pena quem comete qualquer dos crimes previstos neste título"] }
+- { cor: teses, grupo: principais, tema: "Escusas absolutórias", lei: cp, disp: art183, palavras: ["Não se aplica o disposto nos dois artigos anteriores"], nota: "Quando as escusas não se aplicam" }
+
+# Código de Processo Penal
+- { cor: teses, grupo: principais, tema: "Absolvição", lei: cpp, disp: art386, palavras: ["inexistência do fato", "não haver prova da existência do fato", "não constituir o fato infração penal", "o réu não concorreu para a infração penal", "não existir prova de ter o réu concorrido", "circunstâncias que excluam o crime ou isentem o réu de pena", "fundada dúvida sobre sua existência", "não existir prova suficiente para a condenação"] }
+- { cor: teses, grupo: principais, tema: "Valor mínimo de indenização", lei: cpp, disp: art387.i4, palavras: ["fixará valor mínimo"] }
+- { cor: teses, grupo: principais, tema: "Absolvição sumária", lei: cpp, disp: art397, palavras: ["excludente da ilicitude do fato", "excludente da culpabilidade do agente", "salvo inimputabilidade", "evidentemente não constitui crime", "extinta a punibilidade do agente"] }
+- { cor: teses, grupo: principais, tema: "Impronúncia", lei: cpp, disp: art414, palavras: ["Não se convencendo da materialidade do fato", "indícios suficientes de autoria ou de participação"] }
+- { cor: teses, grupo: principais, tema: "Absolvição sumária", lei: cpp, disp: art415, palavras: ["provada a inexistência do fato", "não ser ele autor ou partícipe do fato", "o fato não constituir infração penal", "causa de isenção de pena ou de exclusão do crime"], nota: "Júri" }
+- { cor: teses, grupo: principais, tema: "Desclassificação", lei: cpp, disp: art419, palavras: ["em discordância com a acusação, da existência de crime diverso"], nota: "Júri" }
+
+# Súmulas
+
+# ── Subsidiárias ─────────────────────────────────────────────────────────────
+
+# Código Penal
+- { cor: teses, grupo: subsidiarias, tema: "Crime tentado", lei: cp, disp: art14.i2, palavras: ["não se consuma por circunstâncias alheias à vontade do agente"] }
+- { cor: teses, grupo: subsidiarias, tema: "Arrependimento posterior", lei: cp, disp: art16, palavras: ["reparado o dano ou restituída a coisa", "até o recebimento da denúncia ou da queixa", "a pena será reduzida de um a dois terços"] } # extra 6
+- { cor: teses, grupo: subsidiarias, tema: "Regime de cumprimento da pena", lei: cp, disp: art33.p2.ab, palavras: ["não reincidente", "superior a 4 (quatro) anos e não exceda a 8 (oito)", "regime semi-aberto"] }
+- { cor: teses, grupo: subsidiarias, tema: "Regime de cumprimento da pena", lei: cp, disp: art33.p2.ac, palavras: ["não reincidente", "igual ou inferior a 4 (quatro) anos", "regime aberto"] }
+- { cor: teses, grupo: subsidiarias, tema: "Penas restritivas de direitos", lei: cp, disp: art44, palavras: ["autônomas e substituem as privativas de liberdade"] }
+- { cor: teses, grupo: subsidiarias, tema: "Penas restritivas de direitos", lei: cp, disp: art46.p3, palavras: ["uma hora de tarefa por dia de condenação", "não prejudicar a jornada normal de trabalho"] }
+- { cor: teses, grupo: subsidiarias, tema: "Agravantes", lei: cp, disp: art61, palavras: ["sempre agravam a pena, quando não constituem ou qualificam o crime"] } # extra 7
+- { cor: teses, grupo: subsidiarias, tema: "Reincidência", lei: cp, disp: art63, palavras: ["comete novo crime, depois de transitar em julgado a sentença"] } # extra 8
+- { cor: teses, grupo: subsidiarias, tema: "Atenuantes", lei: cp, disp: art65, palavras: ["circunstâncias que sempre atenuam a pena"] }
+- { cor: teses, grupo: subsidiarias, tema: "Atenuantes", lei: cp, disp: art66, palavras: ["circunstância relevante, anterior ou posterior ao crime"] }
+- { cor: teses, grupo: subsidiarias, tema: "Concurso formal", lei: cp, disp: art70, palavras: ["mediante uma só ação ou omissão, pratica dois ou mais crimes", "aumentada, em qualquer caso, de um sexto até metade"] }
+- { cor: teses, grupo: subsidiarias, tema: "Crime continuado", lei: cp, disp: art71, palavras: ["devem os subseqüentes ser havidos como continuação do primeiro", "aumentada, em qualquer caso, de um sexto a dois terços"] }
+# extra 9: Erro na execução (arts. 73 e 74, CP)
+- { cor: teses, grupo: subsidiarias, tema: "Erro na execução", lei: cp, disp: art73, palavras: ["por acidente ou erro no uso dos meios de execução", "responde como se tivesse praticado o crime contra aquela"] }
+- { cor: teses, grupo: subsidiarias, tema: "Erro na execução", lei: cp, disp: art74, palavras: ["sobrevém resultado diverso do pretendido", "o agente responde por culpa"] }
+- { cor: teses, grupo: subsidiarias, tema: "Suspensão condicional da pena", lei: cp, disp: art77, palavras: ["não superior a 2 (dois) anos", "poderá ser suspensa, por 2 (dois) a 4 (quatro) anos"], nota: "Sursis" }
+- { cor: teses, grupo: subsidiarias, tema: "Homicídio privilegiado", lei: cp, disp: art121.p1, palavras: ["relevante valor social ou moral", "domínio de violenta emoção", "logo em seguida a injusta provocação da vítima"] } # extra 15
+- { cor: teses, grupo: subsidiarias, tema: "Infanticídio", lei: cp, disp: art123, palavras: ["sob a influência do estado puerperal"] } # extra 16
+- { cor: teses, grupo: subsidiarias, tema: "Lesão corporal privilegiada", lei: cp, disp: art129.p4, palavras: ["relevante valor social ou moral", "domínio de violenta emoção", "logo em seguida a injusta provocação da vítima"] } # extra 17
+- { cor: teses, grupo: subsidiarias, tema: "Aumento de pena", lei: cp, disp: art141, palavras: ["aumentam-se de um terço"], nota: "Crimes contra a honra" } # extra 20
+- { cor: teses, grupo: subsidiarias, tema: "Furto privilegiado", lei: cp, disp: art155.p2, palavras: ["criminoso é primário", "pequeno valor a coisa furtada", "substituir a pena de reclusão pela de detenção", "diminuí-la de um a dois terços", "aplicar somente a pena de multa"] } # extra 22
+- { cor: teses, grupo: subsidiarias, tema: "Delação premiada", lei: cp, disp: art159.p4, palavras: ["denunciar à autoridade", "facilitando a libertação do seqüestrado", "terá sua pena reduzida de um a dois terços"], nota: "Vide Colaboração premiada (art. 4º, Lei n. 12.850/13)" } # extra 23
+# extra 24: Apropriação de coisa havida por erro, caso fortuito ou força da natureza (art. 169 e parágrafo único, II; art. 170, CP)
+- { cor: teses, grupo: subsidiarias, tema: "Apropriação de coisa havida por erro, caso fortuito ou força da natureza", lei: cp, disp: art169, palavras: ["por erro, caso fortuito ou força da natureza"] }
+- { cor: teses, grupo: subsidiarias, tema: "Apropriação de coisa havida por erro, caso fortuito ou força da natureza", lei: cp, disp: art169.pu.i2, palavras: ["quem acha coisa alheia perdida e dela se apropria"], nota: "Apropriação de coisa achada" }
+- { cor: teses, grupo: subsidiarias, tema: "Apropriação de coisa havida por erro, caso fortuito ou força da natureza", lei: cp, disp: art170, palavras: ["aplica-se o disposto no art. 155, § 2º"], nota: "Privilégio do furto (art. 155, § 2º, CP)" }
+- { cor: teses, grupo: subsidiarias, tema: "Estelionato privilegiado", lei: cp, disp: art171.p1, palavras: ["criminoso é primário, e é de pequeno valor o prejuízo"] } # extra 25
+- { cor: teses, grupo: subsidiarias, tema: "Estupro", lei: cp, disp: art213, palavras: ["conjunção carnal", "outro ato libidinoso"], nota: "Atentar à Lei n. 12.015/09, que trouxe para o estupro a conduta de atentado violento ao pudor" } # extra 28
+- { cor: teses, grupo: subsidiarias, tema: "Peculato culposo", lei: cp, disp: art312.p2, palavras: ["concorre culposamente para o crime de outrem"] } # extra 29
+- { cor: teses, grupo: subsidiarias, tema: "Exercício arbitrário das próprias razões", lei: cp, disp: art345, palavras: ["Fazer justiça pelas próprias mãos, para satisfazer pretensão, embora legítima"] } # extra 30
+- { cor: teses, grupo: subsidiarias, tema: "Favorecimento real", lei: cp, disp: art349, palavras: ["fora dos casos de co-autoria ou de receptação", "auxílio destinado a tornar seguro o proveito do crime"] } # extra 31
+
+# Código de Processo Penal
+- { cor: teses, grupo: subsidiarias, tema: "Medidas cautelares alternativas à prisão", lei: cpp, disp: art319, palavras: ["São medidas cautelares diversas da prisão"] } # extra 38
+# extra 42: Emendatio libelli (arts. 383 e 418, CPP)
+- { cor: teses, grupo: subsidiarias, tema: "Emendatio libelli", lei: cpp, disp: art383, palavras: ["sem modificar a descrição do fato contida na denúncia ou queixa", "atribuir-lhe definição jurídica diversa"] }
+- { cor: teses, grupo: subsidiarias, tema: "Emendatio libelli", lei: cpp, disp: art418, palavras: ["dar ao fato definição jurídica diversa da constante da acusação"] }
+- { cor: teses, grupo: subsidiarias, tema: "Ne reformatio in pejus", lei: cpp, disp: art617, palavras: ["não podendo, porém, ser agravada a pena", "quando somente o réu houver apelado"] } # extra 46
+
+# Legislação especial
+- { cor: teses, grupo: subsidiarias, tema: "Delação premiada", lei: lei-8137, disp: art16.pu, palavras: ["confissão espontânea", "toda a trama delituosa"] } # extra 23
+- { cor: teses, grupo: subsidiarias, tema: "Delação premiada", lei: lei-11343, disp: art41, palavras: ["colaborar voluntariamente com a investigação policial e o processo criminal", "terá pena reduzida de um terço a dois terços"] } # extra 23
+# extra 48: Crimes hediondos (art. 2º, Lei n. 8.072/90)
+- { cor: teses, grupo: subsidiarias, tema: "Crimes hediondos", lei: lei-8072, disp: art2, palavras: ["Os crimes hediondos", "são insuscetíveis de"], nota: "Prestar atenção se o crime foi cometido antes ou depois de 2007" }
+- { cor: teses, grupo: subsidiarias, tema: "Crimes hediondos", lei: lei-8072, disp: art2.p1, palavras: ["cumprida inicialmente em regime fechado"], nota: "Prestar atenção se o crime foi cometido antes ou depois de 2007" }
+- { cor: teses, grupo: subsidiarias, tema: "Transação penal", lei: lei-9099, disp: art76, palavras: ["propor a aplicação imediata de pena restritiva de direitos ou multas"] } # extra 50
+- { cor: teses, grupo: subsidiarias, tema: "Suspensão condicional do processo", lei: lei-9099, disp: art89, palavras: ["pena mínima cominada for igual ou inferior a um ano", "poderá propor a suspensão do processo, por dois a quatro anos"], nota: "Sursis processual" } # extra 51
+- { cor: teses, grupo: subsidiarias, tema: "Tráfico privilegiado", lei: lei-11343, disp: art33.p4, palavras: ["reduzidas de um sexto a dois terços", "seja primário, de bons antecedentes", "não se dedique às atividades criminosas nem integre organização criminosa"] } # extra 54
+- { cor: teses, grupo: subsidiarias, tema: "Colaboração premiada", lei: lei-12850, disp: art4, palavras: ["conceder o perdão judicial", "reduzir em até 2/3 (dois terços)", "substituí-la por restritiva de direitos", "colaborado efetiva e voluntariamente"], nota: "Vide Delação premiada" } # extra 56
+
+# Súmulas

@@ -41,9 +41,30 @@
 }
 @keyframes reflexo { 0%, 55% { translate: -120% 0; } 85%, 100% { translate: 120% 0; } }
 .liquido[data-perdeu] { animation: tremer 0.45s ease; }
-.liquido[data-fez] .nivel { animation: piscar 0.5s ease-in-out infinite alternate; }
 @keyframes tremer { 20%, 60% { transform: translateX(-3px); } 40%, 80% { transform: translateX(3px); } }
 @keyframes piscar { to { filter: brightness(1.35) saturate(1.3); } }
+/* strike: o líquido vira ouro e reluz durante a comemoração (o botão ganha um halo dourado e o reflexo passa mais
+   vezes); depois escorre devagar, como líquido grosso, até o nível do strike novo */
+.liquido[data-fez] .nivel {
+  background: linear-gradient(180deg, var(--festa-brilho), var(--festa-ouro) 35%, var(--festa-escuro));
+  animation: reluzir 0.9s ease-in-out infinite alternate;
+}
+.liquido[data-fez] .brilho::after { animation-duration: 1.3s; background: linear-gradient(115deg, transparent 35%, color-mix(in srgb, var(--festa-brilho) 85%, transparent) 50%, transparent 65%); }
+@keyframes reluzir { from { filter: brightness(1) saturate(1.1); } to { filter: brightness(1.35) saturate(1.35); } }
+.botao[data-fez] { animation: halo 1.1s ease-in-out infinite alternate; }
+@keyframes halo {
+  from { box-shadow: inset 0 0 0 1px var(--festa-medio), 0 0 6px 1px color-mix(in srgb, var(--festa-ouro) 55%, transparent); }
+  to { box-shadow: inset 0 0 0 1px var(--festa-brilho), 0 0 16px 5px color-mix(in srgb, var(--festa-ouro) 80%, transparent); }
+}
+/* escorrendo, continua ouro (o mesmo degradê) até vazio; só então volta à cor do placar */
+.liquido[data-escorrendo] .nivel { background: linear-gradient(180deg, var(--festa-brilho), var(--festa-ouro) 35%, var(--festa-escuro)); transition: height 2.2s cubic-bezier(0.55, 0, 0.75, 0.6); }
+/* enquanto escorre, a superfície se alonga em gotas que descem */
+.liquido[data-escorrendo] .nivel::before { animation-duration: 2.2s; }
+.liquido[data-escorrendo]::after {
+  content: ""; position: absolute; left: 30%; top: 0; width: 4px; height: 7px; border-radius: 50% 50% 50% 50% / 35% 35% 65% 65%;
+  background: var(--festa-ouro); box-shadow: 9px -4px 0 -1px var(--festa-medio); animation: gota 0.75s ease-in 3 both;
+}
+@keyframes gota { from { translate: 0 -4px; opacity: 1; } to { translate: 0 44px; opacity: 0.2; } }
 
 /* o anel: o tempo que não tira pontos, do cheio ao vazio; perto do fim fica vermelho; respondida, para */
 .anel { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); pointer-events: none; }
@@ -109,9 +130,46 @@
 .xp { display: inline-grid; gap: 3px; justify-items: stretch; line-height: 1; }
 .xpLinha { display: inline-flex; align-items: center; gap: 0.3rem; }
 .xpLinha strong { font-size: 1.05rem; font-weight: 900; font-variant-numeric: tabular-nums; color: var(--text); }
-.estrela { width: 1.9rem; height: 1.9rem; flex: none; fill: var(--accent); stroke: var(--navy); stroke-width: 1.2; stroke-linejoin: round;
-  filter: drop-shadow(0 1px 2px rgb(214 156 69 / 0.45)); }
-.estrela text { fill: var(--navy); stroke: none; font-family: var(--font-body); font-size: 8px; font-weight: 900; }
+/* a estrela: lisa no começo; cada strike soma um enfeite (data-enfeite 1 a 6) */
+.estrelaCaixa { position: relative; display: inline-grid; place-items: center; width: 2rem; height: 2rem; flex: none; isolation: isolate; }
+.estrela { width: 100%; height: 100%; fill: var(--accent); stroke: color-mix(in srgb, var(--accent) 55%, #000); stroke-width: 0.8; stroke-linejoin: round; overflow: visible; }
+.estrela text { fill: #1d1503; stroke: none; font-family: var(--font-body); font-size: 7.4px; font-weight: 900; letter-spacing: -0.2px; }
+/* 1: ouro (o degradê vem do SVG); 2: brilho em volta */
+.estrelaCaixa[data-enfeite="1"] .estrela, .estrelaCaixa:not([data-enfeite="0"]) .estrela { stroke: var(--festa-fundo); }
+.estrelaCaixa:is([data-enfeite="2"], [data-enfeite="3"], [data-enfeite="4"], [data-enfeite="5"], [data-enfeite="6"]) .estrela {
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--festa-ouro) 90%, transparent));
+}
+/* 3: um reflexo passa pela estrela (recortado no formato dela) */
+.estrelaCaixa:is([data-enfeite="3"], [data-enfeite="4"], [data-enfeite="5"], [data-enfeite="6"])::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(115deg, transparent 38%, rgb(255 255 255 / 0.85) 50%, transparent 62%) no-repeat; background-size: 250% 100%;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1.8l3.05 6.2 6.85 1-4.95 4.8 1.17 6.8L12 17.4l-6.12 3.2 1.17-6.8L2.1 9l6.85-1z'/%3E%3C/svg%3E") center / 100% 100%;
+  animation: reflexoEstrela 3.2s ease-in-out infinite;
+}
+@keyframes reflexoEstrela { 0%, 50% { background-position: 130% 0; } 85%, 100% { background-position: -130% 0; } }
+/* 4: raios dourados girando atrás */
+.estrelaCaixa:is([data-enfeite="4"], [data-enfeite="5"], [data-enfeite="6"])::before {
+  content: ""; position: absolute; inset: -38%; z-index: -1; border-radius: 50%; pointer-events: none;
+  background: repeating-conic-gradient(color-mix(in srgb, var(--festa-ouro) 55%, transparent) 0deg 7deg, transparent 7deg 30deg);
+  mask: radial-gradient(circle, transparent 28%, #000 36%, transparent 70%); animation: girar 9s linear infinite;
+}
+/* 5: duas faíscas em órbita; 6: e um halo que pulsa */
+.estrelaCaixa:is([data-enfeite="5"], [data-enfeite="6"]) .contaStrikes::before {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 3.2rem; height: 3.2rem; margin: -1.6rem; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle at 50% 4%, var(--festa-brilho) 0 2px, transparent 3px), radial-gradient(circle at 50% 96%, var(--festa-ouro) 0 1.5px, transparent 2.5px);
+  animation: girar 2.8s linear infinite;
+}
+.estrelaCaixa[data-enfeite="6"] .estrela { animation: haloEstrela 1.6s ease-in-out infinite alternate; }
+@keyframes haloEstrela { from { filter: drop-shadow(0 0 3px color-mix(in srgb, var(--festa-ouro) 70%, transparent)); } to { filter: drop-shadow(0 0 7px color-mix(in srgb, var(--festa-ouro) 100%, transparent)) brightness(1.12); } }
+/* quantos strikes: um número pequeno no canto de baixo da estrela */
+.contaStrikes {
+  position: absolute; right: -0.3rem; bottom: -0.2rem; z-index: 2; min-width: 0.95rem; height: 0.95rem; padding: 0 0.2rem; border-radius: 999px;
+  display: grid; place-items: center; background: #1d1503; color: var(--festa-claro); font-size: 0.62rem; font-weight: 900; line-height: 1;
+  box-shadow: 0 0 0 1.5px var(--surface); font-variant-numeric: tabular-nums;
+}
+.estrelaCaixa[data-novo] { animation: ganhou 0.9s cubic-bezier(0.3, 1.8, 0.45, 1) both; }
+.estrelaCaixa[data-novo] .estrela { filter: drop-shadow(0 0 8px var(--festa-ouro)) brightness(1.2); }
+@keyframes ganhou { from { scale: 0.4; rotate: -40deg; } 60% { scale: 1.35; } }
 /* a proporção na horizontal: verde até a taxa de acertos, vermelho no resto (a divisa desliza a cada resposta) */
 @property --taxa { syntax: "<number>"; inherits: false; initial-value: 1; }
 .taxa {
@@ -126,7 +184,7 @@
 
 /* as barrinhas do nível: acertos feitos (acesas) e os que faltam para subir; a cor esquenta com o nível */
 .barras { display: inline-flex; gap: 3px; vertical-align: middle; margin-left: 0.5rem; }
-.barras { --c: #e6b13b; }
+.barras { --c: var(--festa-medio); }
 .barras[data-nivel="2"] { --c: #ff8a3d; }
 .barras[data-nivel="3"] { --c: #ff3d4a; }
 .barras span { width: 14px; height: 5px; border-radius: 3px; background: color-mix(in srgb, var(--c) 18%, var(--border)); transition: background 0.3s, box-shadow 0.3s; }
@@ -138,5 +196,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .nivel::before, .nivel::after, .brilho::after, .taxa, .barras span[data-cheia], .liquido[data-fez] .nivel { animation: none; }
+  .botao[data-fez], .estrelaCaixa::before, .estrelaCaixa::after, .estrelaCaixa[data-novo], .estrela, .contaStrikes::before { animation: none; }
+  .liquido[data-escorrendo]::after { display: none; }
   .bolinha { animation-duration: 0.01ms; }
 }

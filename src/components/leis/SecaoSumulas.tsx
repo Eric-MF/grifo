@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { type CSSProperties, useEffect, useState } from "react";
 import { carregarResumoSumulas, type ResumoSumulas } from "@/lib/leis/dados";
-import { COR_SUMULAS, idSumulas, NOME_SUMULAS, type Tribunal } from "@/lib/leis/sumulas";
+import { COR_SUMULAS, idSumulas, NOME_SUMULAS, TRIBUNAIS as LISTAS, type Tribunal } from "@/lib/leis/sumulas";
 import styles from "@/app/(site)/leis/leis.module.css";
 import { ProgressoLei } from "./BarraLeitura";
 
-const TRIBUNAIS: Tribunal[] = ["stf", "stj"];
+const TRIBUNAIS = Object.keys(LISTAS) as Tribunal[];
 
 /**
  * A seção das súmulas na página inicial do Vade Mecum. O resumo (quantas há, quantas têm texto) é lido a cada abertura,
@@ -35,10 +35,15 @@ export function SecaoSumulas() {
         <ul className={styles.lista}>
           {TRIBUNAIS.map((t) => {
             const d = resumo[t];
+            // o resumo de antes das vinculantes (cache do navegador) não tem a lista
+            if (!d) return null;
             return (
               <li key={t} className={styles.item}>
                 <Link href={`/leis/sumulas/${t}/`}>
-                  <strong>{NOME_SUMULAS(t)}</strong>
+                  <strong>
+                    {NOME_SUMULAS(t)}
+                    {t === "vinculantes" && <span className="muted"> do STF</span>}
+                  </strong>
                   <span className="muted">
                     {d.total} súmulas · {d.baixadas} com texto · lista de {d.coletadoEm.split("-").reverse().join("/")}
                   </span>

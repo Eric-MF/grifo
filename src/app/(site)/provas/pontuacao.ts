@@ -1,4 +1,4 @@
-import type { Componente, Exame, Item } from "@/content/schema";
+import type { Componente, Item } from "@/content/schema";
 
 export interface ComponentePontos {
   id: string;
@@ -33,8 +33,8 @@ const itemDe = (it: Item): ItemPontos => ({
   componentes: it.componentes.map((c) => ({ id: c.id, valor: c.valor, rotulo: rotuloDe(c) })),
 });
 
-/** Pontuação de cada parte do exame, como está no YAML. */
-export function pontuacaoDo(exame: Exame): PartePontos[] {
+/** Pontuação de cada parte do exame, como está no YAML (serve o exame inteiro e o recorte de /dados/exames). */
+export function pontuacaoDo(exame: { peca: { valor: number; itens: Item[] }; questoes: { n: number; valor: number; itens: Item[] }[] }): PartePontos[] {
   return [
     { titulo: "Peça", valor: exame.peca.valor, itens: exame.peca.itens.map(itemDe) },
     ...exame.questoes.map((q) => ({ titulo: `Questão ${q.n}`, valor: q.valor, itens: q.itens.map(itemDe) })),

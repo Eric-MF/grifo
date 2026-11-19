@@ -259,3 +259,13 @@ questoes:
         componentes:
           - { id: c1, valor: 0.2, termos: [ roubo ] }
           - { id: c2, valor: 0.35, termos: [ isencao | escusa | 183, nao se aplica | nao incide | inaplica* | afastad* | nao alcanca | nao abrange ] }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q3, lei: "Lei 13.968/2019", texto: "O art. 122 do Código Penal foi alterado pela Lei 13.968/2019. Induzir, instigar ou auxiliar alguém a se suicidar passou a ser crime mesmo sem resultado (reclusão de 6 meses a 2 anos). A lesão corporal grave ou gravíssima qualifica o crime (§ 1º, reclusão de 1 a 3 anos), e a morte também (§ 2º, reclusão de 2 a 6 anos). Hoje, João responderia pelo crime mesmo com Maria só arranhada." }
+  nomes:
+    peca: { Ana: Medeia }   # infanticídio
+    q1: { Ricardo: Sísifo }   # a fraude
+    q2: { Larissa: Báucis }   # a senhora devota, enganada por quem se disfarçou
+    q3: { Maria: Dido, João: Eneias }   # o suicídio
+    q4: { Maurício: Páris, Mauricio: Páris, Joana: Helena }   # o príncipe e a moça

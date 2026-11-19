@@ -113,7 +113,7 @@ peca:
       valores: [ 0, 0.5, 0.6 ]
       componentes:
         - { id: c1, valor: 0.5, termos: [ suspensao condicional do processo | sursis processual ] }
-        - { id: c2, valor: 0.1, dispositivo: [ "art. 89, Lei 9" ], requer: c1 }
+        - { id: c2, valor: 0.1, dispositivo: [ "art. 89, Lei 9.099" ], requer: c1 }
     - n: "5.2"
       secao: Fundamentação
       descricao: O sursis processual é admitido mesmo a infração não sendo de menor potencial ofensivo ou relevante é que a pena mínima seja fixada em até 01 ano e não a pena máxima (0,20).
@@ -321,3 +321,13 @@ questoes:
         componentes:
           - { id: c1, valor: 0.55, termos: [ regime aberto | aberto, reincidentes | reincidencia | primarios ] }
           - { id: c2, valor: 0.1, dispositivo: [ "art. 33, § 2º, c, CP" ], requer: c1 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q1, lei: "Lei 15.397/2026", texto: "A Lei 15.397/2026 revogou o § 5º do art. 171 do Código Penal, incluído pela Lei 13.964/2019, e o estelionato voltou a ser crime de ação penal pública incondicionada. A tese do item B, da falta de representação, não vale para os fatos de hoje." }
+  nomes:
+    peca: { Matheus: Aquiles, Caio: Heitor, Carlos: Ganimedes, José: Castor, Antônio: Pólux }   # a briga dos rivais; o garçom (o copeiro dos deuses); os amigos
+    q1: { Ana: Circe, Rita: Ariadne }   # o golpe
+    q2: { David: Jasão }   # o que veio de fora (descaminho)
+    q3: { Marcelo: Sísifo }   # a remição
+    q4: { Bruno: Castor, Leila: Atalanta, Valter: Pólux, Vinícius: Jasão }   # o grupo (argonautas)

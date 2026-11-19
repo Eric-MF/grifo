@@ -16,6 +16,11 @@ export function carregarExame(id: string): Exame {
   return JSON.parse(readFileSync(join(process.cwd(), "src/content/generated/exames", `${id}.json`), "utf8"));
 }
 
+/** O exame dos PDFs atualizados (/print): com os nomes da mitologia nas pessoas e nas empresas (atualizado.nomes). */
+export function carregarExameAtualizado(id: string): Exame {
+  return JSON.parse(readFileSync(join(process.cwd(), "src/content/generated/atualizados", `${id}.json`), "utf8"));
+}
+
 /** Parâmetros estáticos das rotas de simulado: só os exames que têm correção. */
 export function examesCorrigiveis() {
   return listarExames()

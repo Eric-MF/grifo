@@ -1,409 +1,135 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "08"
+introducoes:
+  peca: "José devia a Caio R$ 20 mil, por uma nota promissória vencida, e não pagou. Depois de cobranças educadas por telefone, presenciadas por Joaquim e Manoel, Caio foi ao restaurante de José em 24/5/2010, mostrou uma pistola e disse que a dívida tinha de ser paga na hora, senão José pagaria com a vida. Caio foi denunciado por extorsão qualificada pelo emprego de arma, a denúncia foi recebida pela 5ª Vara Criminal e ele foi citado em 18/1/2011. Você é o advogado de Caio."
+  q2: "Sem combinarem nada entre si, Abel e Felipe vestiram uniformes de manobrista de um restaurante. Tércio, enganado, entregou a Abel a chave do carro, e Abel fugiu com o veículo. Narcísio não entregou a chave, mas Felipe a pegou sem que ele percebesse e também fugiu com o carro."
+  q3: "João e José foram denunciados por concussão. Terminada a instrução, viu-se que os fatos eram de corrupção passiva, e o juiz mandou os autos ao Ministério Público para aditar a denúncia com a nova capitulação."
+  q4: "João, reincidente, foi condenado por falsidade ideológica a 1 ano, 11 meses e 10 dias de reclusão. A denúncia foi recebida em 30/10/2000 e a sentença foi publicada em 29/7/2005; só a defesa apelou. O Tribunal negou a extinção da punibilidade por causa da reincidência."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["08-peca-1"]
 perguntas:
-  - id: 08-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Visando abrir um restaurante, José pede vinte mil reais emprestados a Caio, assinando, como garantia, uma nota promissória no aludido valor, com vencimento para o dia 15 de maio de 2010. Na data mencionada, não tendo havido pagamento, Caio telefona para José e, educadamente, cobra a dívida, obtendo do devedor a promessa de que o valor seria pago em uma semana.
-
-      Findo o prazo, Caio novamente contata José, que, desta vez, afirma estar sem dinheiro, pois o restaurante não apresentara o lucro esperado. Indignado, Caio comparece no dia 24 de maio de 2010 ao restaurante e, mostrando para José uma pistola que trazia consigo, afirma que a dívida deveria ser saldada imediatamente, pois, do contrário, José pagaria com a própria vida. Aterrorizado, José entra no restaurante e telefona para a polícia, que, entretanto, não encontra Caio quando chega ao local.
-
-      Os fatos acima referidos foram levados ao conhecimento do delegado de polícia da localidade, que instaurou inquérito policial para apurar as circunstâncias do ocorrido. Ao final da investigação, tendo Caio confirmado a ocorrência dos eventos em sua integralidade, o Ministério Público o denuncia pela prática do crime de extorsão qualificada pelo emprego de arma de fogo. Recebida a inicial pelo juízo da 5ª Vara Criminal, o réu é citado no dia 18 de janeiro de 2011.
-
-      Procurado apenas por Caio para representá-lo na ação penal instaurada, sabendo-se que Joaquim e Manoel presenciaram os telefonemas de Caio cobrando a dívida vencida, e com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija, no último dia do prazo, a peça cabível, invocando todos os argumentos em favor de seu constituinte.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento correto: juízo da 5ª Vara Criminal."
-    opcoes:
-      correta: "Endereçamento correto: juízo da 5ª Vara Criminal."
-      erradas:
-        - A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
-        - "Endereçamento: Juiz da Vara do Tribunal do Júri."
-        - "Endereçamento correto: Tribunal de Justiça do Estado de Minas Gerais."
-        - "Endereçamento: Tribunal de Justiça do Estado de São Paulo."
-        - "Endereçamento: Tribunal de Justiça do Estado de Santa Catarina."
-    revisao: &a1
-      status: revisado
   - id: 08-peca-3
     categoria: peca-detalhe
     parte: peca
     item: "3"
     secao: merito
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Visando abrir um restaurante, José pede vinte mil reais emprestados a Caio, assinando, como garantia, uma nota promissória no aludido valor, com vencimento para o dia 15 de maio de 2010. Na data mencionada, não tendo havido pagamento, Caio telefona para José e, educadamente, cobra a dívida, obtendo do devedor a promessa de que o valor seria pago em uma semana.
-
-      Findo o prazo, Caio novamente contata José, que, desta vez, afirma estar sem dinheiro, pois o restaurante não apresentara o lucro esperado. Indignado, Caio comparece no dia 24 de maio de 2010 ao restaurante e, mostrando para José uma pistola que trazia consigo, afirma que a dívida deveria ser saldada imediatamente, pois, do contrário, José pagaria com a própria vida. Aterrorizado, José entra no restaurante e telefona para a polícia, que, entretanto, não encontra Caio quando chega ao local.
-
-      Os fatos acima referidos foram levados ao conhecimento do delegado de polícia da localidade, que instaurou inquérito policial para apurar as circunstâncias do ocorrido. Ao final da investigação, tendo Caio confirmado a ocorrência dos eventos em sua integralidade, o Ministério Público o denuncia pela prática do crime de extorsão qualificada pelo emprego de arma de fogo. Recebida a inicial pelo juízo da 5ª Vara Criminal, o réu é citado no dia 18 de janeiro de 2011.
-
-      Procurado apenas por Caio para representá-lo na ação penal instaurada, sabendo-se que Joaquim e Manoel presenciaram os telefonemas de Caio cobrando a dívida vencida, e com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija, no último dia do prazo, a peça cabível, invocando todos os argumentos em favor de seu constituinte.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A conduta de extorsão seria atípica por ausência da elementar “vantagem indevida”.
-    opcoes:
-      correta: A conduta de extorsão seria atípica por ausência da elementar “vantagem indevida”.
-      erradas:
-        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Reconhecimento das atenuantes do Art. 65, incisos I e III, alíneas “c” e “d” do CP;
-        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
-        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
-    revisao: *a1
+    pergunta: "Caio cobrava uma dívida verdadeira de José. Que elementar da extorsão falta na conduta dele?"
+    tese: "Atipicidade da extorsão: falta a vantagem indevida, porque a dívida existia"
+    aceitos: [ "indevida" ]
+    artigos: [ "art. 158, CP" ]
+    gabarito: "A conduta de extorsão seria atípica por ausência da elementar “vantagem indevida”."
+    revisao: { status: revisado }
   - id: 08-peca-4-1
     categoria: peca-detalhe
     parte: peca
     item: "4.1"
     secao: merito
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Visando abrir um restaurante, José pede vinte mil reais emprestados a Caio, assinando, como garantia, uma nota promissória no aludido valor, com vencimento para o dia 15 de maio de 2010. Na data mencionada, não tendo havido pagamento, Caio telefona para José e, educadamente, cobra a dívida, obtendo do devedor a promessa de que o valor seria pago em uma semana.
-
-      Findo o prazo, Caio novamente contata José, que, desta vez, afirma estar sem dinheiro, pois o restaurante não apresentara o lucro esperado. Indignado, Caio comparece no dia 24 de maio de 2010 ao restaurante e, mostrando para José uma pistola que trazia consigo, afirma que a dívida deveria ser saldada imediatamente, pois, do contrário, José pagaria com a própria vida. Aterrorizado, José entra no restaurante e telefona para a polícia, que, entretanto, não encontra Caio quando chega ao local.
-
-      Os fatos acima referidos foram levados ao conhecimento do delegado de polícia da localidade, que instaurou inquérito policial para apurar as circunstâncias do ocorrido. Ao final da investigação, tendo Caio confirmado a ocorrência dos eventos em sua integralidade, o Ministério Público o denuncia pela prática do crime de extorsão qualificada pelo emprego de arma de fogo. Recebida a inicial pelo juízo da 5ª Vara Criminal, o réu é citado no dia 18 de janeiro de 2011.
-
-      Procurado apenas por Caio para representá-lo na ação penal instaurada, sabendo-se que Joaquim e Manoel presenciaram os telefonemas de Caio cobrando a dívida vencida, e com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija, no último dia do prazo, a peça cabível, invocando todos os argumentos em favor de seu constituinte.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: A conduta se amoldaria ao exercício arbitrário das próprias razões, previsto no artigo 345, caput, do CP.
-    opcoes:
-      correta: A conduta se amoldaria ao exercício arbitrário das próprias razões, previsto no artigo 345, caput, do CP.
-      erradas:
-        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Reconhecimento das atenuantes do Art. 65, incisos I e III, alíneas “c” e “d” do CP;
-        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
-        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
-    revisao: *a1
+    pergunta: "Afastada a extorsão, em que crime a conduta de Caio se encaixa?"
+    tese: "Desclassificação para exercício arbitrário das próprias razões"
+    aceitos: [ "exercicio arbitrario" ]
+    artigos: [ "art. 345, CP" ]
+    gabarito: "A conduta se amoldaria ao exercício arbitrário das próprias razões, previsto no artigo 345, caput, do CP."
+    revisao: { status: revisado }
   - id: 08-peca-4-2
     categoria: peca-detalhe
     parte: peca
     item: "4.2"
     secao: merito
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Visando abrir um restaurante, José pede vinte mil reais emprestados a Caio, assinando, como garantia, uma nota promissória no aludido valor, com vencimento para o dia 15 de maio de 2010. Na data mencionada, não tendo havido pagamento, Caio telefona para José e, educadamente, cobra a dívida, obtendo do devedor a promessa de que o valor seria pago em uma semana.
-
-      Findo o prazo, Caio novamente contata José, que, desta vez, afirma estar sem dinheiro, pois o restaurante não apresentara o lucro esperado. Indignado, Caio comparece no dia 24 de maio de 2010 ao restaurante e, mostrando para José uma pistola que trazia consigo, afirma que a dívida deveria ser saldada imediatamente, pois, do contrário, José pagaria com a própria vida. Aterrorizado, José entra no restaurante e telefona para a polícia, que, entretanto, não encontra Caio quando chega ao local.
-
-      Os fatos acima referidos foram levados ao conhecimento do delegado de polícia da localidade, que instaurou inquérito policial para apurar as circunstâncias do ocorrido. Ao final da investigação, tendo Caio confirmado a ocorrência dos eventos em sua integralidade, o Ministério Público o denuncia pela prática do crime de extorsão qualificada pelo emprego de arma de fogo. Recebida a inicial pelo juízo da 5ª Vara Criminal, o réu é citado no dia 18 de janeiro de 2011.
-
-      Procurado apenas por Caio para representá-lo na ação penal instaurada, sabendo-se que Joaquim e Manoel presenciaram os telefonemas de Caio cobrando a dívida vencida, e com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija, no último dia do prazo, a peça cabível, invocando todos os argumentos em favor de seu constituinte.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: O exercício arbitrário das próprias razões é persequível por ação penal privada.
-    opcoes:
-      correta: O exercício arbitrário das próprias razões é persequível por ação penal privada.
-      erradas:
-        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Reconhecimento das atenuantes do Art. 65, incisos I e III, alíneas “c” e “d” do CP;
-        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
-        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
-    revisao: *a1
+    pergunta: "Sem emprego de violência, como se processa o exercício arbitrário das próprias razões?"
+    tese: "Ação penal privada: sem violência, o exercício arbitrário das próprias razões se processa mediante queixa"
+    aceitos: [ "privada | queixa" ]
+    artigos: [ "art. 345, parágrafo único, CP" ]
+    gabarito: "O exercício arbitrário das próprias razões é persequível por ação penal privada."
+    revisao: { status: revisado }
   - id: 08-peca-4-3
     categoria: peca-detalhe
     parte: peca
     item: "4.3"
     secao: merito
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Visando abrir um restaurante, José pede vinte mil reais emprestados a Caio, assinando, como garantia, uma nota promissória no aludido valor, com vencimento para o dia 15 de maio de 2010. Na data mencionada, não tendo havido pagamento, Caio telefona para José e, educadamente, cobra a dívida, obtendo do devedor a promessa de que o valor seria pago em uma semana.
-
-      Findo o prazo, Caio novamente contata José, que, desta vez, afirma estar sem dinheiro, pois o restaurante não apresentara o lucro esperado. Indignado, Caio comparece no dia 24 de maio de 2010 ao restaurante e, mostrando para José uma pistola que trazia consigo, afirma que a dívida deveria ser saldada imediatamente, pois, do contrário, José pagaria com a própria vida. Aterrorizado, José entra no restaurante e telefona para a polícia, que, entretanto, não encontra Caio quando chega ao local.
-
-      Os fatos acima referidos foram levados ao conhecimento do delegado de polícia da localidade, que instaurou inquérito policial para apurar as circunstâncias do ocorrido. Ao final da investigação, tendo Caio confirmado a ocorrência dos eventos em sua integralidade, o Ministério Público o denuncia pela prática do crime de extorsão qualificada pelo emprego de arma de fogo. Recebida a inicial pelo juízo da 5ª Vara Criminal, o réu é citado no dia 18 de janeiro de 2011.
-
-      Procurado apenas por Caio para representá-lo na ação penal instaurada, sabendo-se que Joaquim e Manoel presenciaram os telefonemas de Caio cobrando a dívida vencida, e com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija, no último dia do prazo, a peça cabível, invocando todos os argumentos em favor de seu constituinte.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Decadência do direito de queixa, razão pela qual está extinta a punibilidade.
-    opcoes:
-      correta: Decadência do direito de queixa, razão pela qual está extinta a punibilidade.
-      erradas:
-        - Atipicidade do art. 239, parágrafo único, do ECA, por ausência de dolo.
-        - "Da inaplicabilidade da reincidência: não há que se falar em reincidência, nos termos do artigo 63 do CP."
-        - Reconhecimento das atenuantes do Art. 65, incisos I e III, alíneas “c” e “d” do CP;
-        - Aplicação da pena base no mínimo legal, já que as circunstâncias do Art. 59 do CP são favoráveis.
-        - A imputabilidade penal restou afastada em razão da embriaguez, que foi completa, decorrente de caso fortuito ou força maior, e que tornou o réu inteiramente incapaz de entender o caráter ilícito do fato, conforme o Art. 28, §1º, do CP
-    revisao: *a1
+    pergunta: "O fato foi em 24/5/2010, e nada foi feito pelo ofendido até a citação, em 18/1/2011. Que causa extingue a punibilidade, sendo o crime de ação privada?"
+    tese: "Extinção da punibilidade pela decadência do direito de queixa"
+    aceitos: [ "decaden*" ]
+    artigos: [ "art. 103, CP", "art. 38, CPP", "art. 107, IV, CP" ]
+    gabarito: "Decadência do direito de queixa, razão pela qual está extinta a punibilidade."
+    revisao: { status: revisado }
   - id: 08-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: pedido
-    caso: |-
-      Leia com atenção o caso concreto a seguir:
-
-      Visando abrir um restaurante, José pede vinte mil reais emprestados a Caio, assinando, como garantia, uma nota promissória no aludido valor, com vencimento para o dia 15 de maio de 2010. Na data mencionada, não tendo havido pagamento, Caio telefona para José e, educadamente, cobra a dívida, obtendo do devedor a promessa de que o valor seria pago em uma semana.
-
-      Findo o prazo, Caio novamente contata José, que, desta vez, afirma estar sem dinheiro, pois o restaurante não apresentara o lucro esperado. Indignado, Caio comparece no dia 24 de maio de 2010 ao restaurante e, mostrando para José uma pistola que trazia consigo, afirma que a dívida deveria ser saldada imediatamente, pois, do contrário, José pagaria com a própria vida. Aterrorizado, José entra no restaurante e telefona para a polícia, que, entretanto, não encontra Caio quando chega ao local.
-
-      Os fatos acima referidos foram levados ao conhecimento do delegado de polícia da localidade, que instaurou inquérito policial para apurar as circunstâncias do ocorrido. Ao final da investigação, tendo Caio confirmado a ocorrência dos eventos em sua integralidade, o Ministério Público o denuncia pela prática do crime de extorsão qualificada pelo emprego de arma de fogo. Recebida a inicial pelo juízo da 5ª Vara Criminal, o réu é citado no dia 18 de janeiro de 2011.
-
-      Procurado apenas por Caio para representá-lo na ação penal instaurada, sabendo-se que Joaquim e Manoel presenciaram os telefonemas de Caio cobrando a dívida vencida, e com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija, no último dia do prazo, a peça cabível, invocando todos os argumentos em favor de seu constituinte.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Absolvição sumária com fundamento no art. 397, III, do CPP e art. 397, IV, do CPP; produção de prova testemunhal ou rol de testemunhas.
-    opcoes:
-      correta: Absolvição sumária com fundamento no art. 397, III, do CPP e art. 397, IV, do CPP; produção de prova testemunhal ou rol de testemunhas.
-      erradas:
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - Absolvição, com argumento e base legal.
-        - Substituição da pena privativa de liberdade por restritiva de direitos.
-        - Aplicação da pena base no mínimo legal ou reconhecimento da atenuante da confissão.
-        - Fixação do regime aberto OU concessão de suspensão condicional da pena
-    revisao: *a1
+    pergunta: "Na resposta à acusação, que decisão a defesa deve pedir ao juiz?"
+    tese: "Absolvição sumária pela extinção da punibilidade"
+    aceitos: [ "absolvicao sumaria | absolvido sumariamente | absolver sumariamente | absolvicao sumariamente" ]
+    artigos: [ "art. 397, III, CPP", "art. 397, IV, CPP" ]
+    gabarito: "Absolvição sumária com fundamento no art. 397, III, do CPP e art. 397, IV, do CPP; produção de prova testemunhal ou rol de testemunhas."
+    revisao: { status: revisado }
   - id: 08-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Abel e Felipe observavam diariamente um restaurante com a finalidade de cometer um crime. Sabendo que poderiam obter alguma vantagem sobre os clientes que o frequentavam, Abel e Felipe, sem qualquer combinação prévia, conseguiram, cada um, uniformes semelhantes aos utilizados pelos manobristas de tal restaurante.
-
-      No início da tarde, aproveitando a oportunidade em que não havia nenhum funcionário no local, a dupla, vestindo os uniformes de manobristas, permaneceu à espera de suas vítimas, mas, agindo de modo separado.
-
-      Tércio, o primeiro cliente, ao chegar ao restaurante, iludido por Abel, entrega de forma voluntária a chave de seu carro. Abel, ao invés de conduzir o veículo para o estacionamento, evade-se do local. Narcísio, o segundo cliente, chega ao restaurante e não entrega a chave de seu carro, mas Felipe a subtrai sem que ele o percebesse. Felipe também se evade do local.
-
-      Empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso, responda às questões a seguir.
-    comando: Qual a responsabilidade jurídico-penal de Abel ao praticar tal conduta? (responda motivando sua imputação)
-    gabarito: |-
-      Relativamente ao item “A” da questão, o examinando, para garantir a atribuição integral dos pontos respectivos, deverá desenvolver raciocínio no sentido de que Abel cometeu apenas o crime de estelionato, previsto no art. 171 do Código Penal brasileiro.
-
-      Outrossim, deverá indicar que o crime caracteriza-se pela fraude que é usada como meio de obter o consentimento da vítima que, iludida, entrega voluntariamente a chave de seu carro para Abel.
-
-      No que tange ao item “B”, deverá ser desenvolvido raciocínio no sentido de que Felipe cometeu apenas o delito de furto simples, capitulado no artigo 155 caput do Código Penal.
-
-      Saliente-se que, no caso em tela, não serão admitidas respostas que indicarem a incidência de qualificadoras, uma vez que, apesar de o agente ter se vestido de manobrista, tal fato em nada interferiu na subtração do bem.
-
-      Tampouco se pode falar em crime cometido mediante destreza, haja vista o fato de que, no enunciado da questão, não há qualquer referência ao fato de Felipe possuir habilidades especiais que pudessem fazer com que efetivasse a subtração sem que a vítima percebesse.
-
-      Assim sendo, o delito por ele praticado foi, apenas, o de furto na forma simples, descrito no caput do artigo 155 do Código Penal.
-
-      Ainda no item “B”, de maneira alternativa e com o fim de privilegiar demonstração de conhecimento jurídico, será pontuado o examinando esclarecer somente estar presente o núcleo do tipo e, por conta disso, a conduta de Felipe apenas se enquadraria no caput do artigo citado.
-
-      Por fim, em nenhum dos itens poderá ser atribuída pontuação pela mera explicação da atuação dos agentes se essa estiver dissociada da correta tipificação do crime.
-    opcoes:
-      correta: "Abel cometeu o crime de estelionato, previsto no art. 171 do Código Penal brasileiro. O crime caracteriza-se pela fraude que é usada como meio de obter o consentimento da vítima.. OBS.: Não será atribuída pontuação para a mera explicação, dissociada da correta tipificação do crime."
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que crime Abel cometeu ao fugir com o carro de Tércio?"
+    tese: "Estelionato: a fraude levou a vítima a entregar a chave"
+    aceitos: [ "estelionato" ]
+    artigos: [ "art. 171, CP" ]
+    gabarito: "Relativamente ao item “A” da questão, o examinando, para garantir a atribuição integral dos pontos respectivos, deverá desenvolver raciocínio no sentido de que Abel cometeu apenas o crime de estelionato, previsto no art. 171 do Código Penal brasileiro.\n\nOutrossim, deverá indicar que o crime caracteriza-se pela fraude que é usada como meio de obter o consentimento da vítima que, iludida, entrega voluntariamente a chave de seu carro para Abel.\n\nNo que tange ao item “B”, deverá ser desenvolvido raciocínio no sentido de que Felipe cometeu apenas o delito de furto simples, capitulado no artigo 155 caput do Código Penal.\n\nSaliente-se que, no caso em tela, não serão admitidas respostas que indicarem a incidência de qualificadoras, uma vez que, apesar de o agente ter se vestido de manobrista, tal fato em nada interferiu na subtração do bem.\n\nTampouco se pode falar em crime cometido mediante destreza, haja vista o fato de que, no enunciado da questão, não há qualquer referência ao fato de Felipe possuir habilidades especiais que pudessem fazer com que efetivasse a subtração sem que a vítima percebesse.\n\nAssim sendo, o delito por ele praticado foi, apenas, o de furto na forma simples, descrito no caput do artigo 155 do Código Penal.\n\nAinda no item “B”, de maneira alternativa e com o fim de privilegiar demonstração de conhecimento jurídico, será pontuado o examinando esclarecer somente estar presente o núcleo do tipo e, por conta disso, a conduta de Felipe apenas se enquadraria no caput do artigo citado.\n\nPor fim, em nenhum dos itens poderá ser atribuída pontuação pela mera explicação da atuação dos agentes se essa estiver dissociada da correta tipificação do crime."
+    revisao: { status: revisado }
   - id: 08-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Abel e Felipe observavam diariamente um restaurante com a finalidade de cometer um crime. Sabendo que poderiam obter alguma vantagem sobre os clientes que o frequentavam, Abel e Felipe, sem qualquer combinação prévia, conseguiram, cada um, uniformes semelhantes aos utilizados pelos manobristas de tal restaurante.
-
-      No início da tarde, aproveitando a oportunidade em que não havia nenhum funcionário no local, a dupla, vestindo os uniformes de manobristas, permaneceu à espera de suas vítimas, mas, agindo de modo separado.
-
-      Tércio, o primeiro cliente, ao chegar ao restaurante, iludido por Abel, entrega de forma voluntária a chave de seu carro. Abel, ao invés de conduzir o veículo para o estacionamento, evade-se do local. Narcísio, o segundo cliente, chega ao restaurante e não entrega a chave de seu carro, mas Felipe a subtrai sem que ele o percebesse. Felipe também se evade do local.
-
-      Empregando os argumentos jurídicos apropriados e a fundamentação legal pertinente ao caso, responda às questões a seguir.
-    comando: Qual a responsabilidade jurídico-penal de Felipe ao praticar tal conduta? (responda motivando sua imputação)
-    gabarito: |-
-      Relativamente ao item “A” da questão, o examinando, para garantir a atribuição integral dos pontos respectivos, deverá desenvolver raciocínio no sentido de que Abel cometeu apenas o crime de estelionato, previsto no art. 171 do Código Penal brasileiro.
-
-      Outrossim, deverá indicar que o crime caracteriza-se pela fraude que é usada como meio de obter o consentimento da vítima que, iludida, entrega voluntariamente a chave de seu carro para Abel.
-
-      No que tange ao item “B”, deverá ser desenvolvido raciocínio no sentido de que Felipe cometeu apenas o delito de furto simples, capitulado no artigo 155 caput do Código Penal.
-
-      Saliente-se que, no caso em tela, não serão admitidas respostas que indicarem a incidência de qualificadoras, uma vez que, apesar de o agente ter se vestido de manobrista, tal fato em nada interferiu na subtração do bem.
-
-      Tampouco se pode falar em crime cometido mediante destreza, haja vista o fato de que, no enunciado da questão, não há qualquer referência ao fato de Felipe possuir habilidades especiais que pudessem fazer com que efetivasse a subtração sem que a vítima percebesse.
-
-      Assim sendo, o delito por ele praticado foi, apenas, o de furto na forma simples, descrito no caput do artigo 155 do Código Penal.
-
-      Ainda no item “B”, de maneira alternativa e com o fim de privilegiar demonstração de conhecimento jurídico, será pontuado o examinando esclarecer somente estar presente o núcleo do tipo e, por conta disso, a conduta de Felipe apenas se enquadraria no caput do artigo citado.
-
-      Por fim, em nenhum dos itens poderá ser atribuída pontuação pela mera explicação da atuação dos agentes se essa estiver dissociada da correta tipificação do crime.
-    opcoes:
-      correta: "Felipe cometeu o crime de furto, previsto no art. 155, caput, do Código Penal. Tendo em vista que não estão presentes os elementos que qualifiquem o referido crime, OU, a atuação de Felipe só perfaz o núcleo do tipo previsto no caput.. OBS.: Não será atribuída pontuação para a mera explicação, dissociada da correta tipificação do crime."
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que crime Felipe cometeu ao fugir com o carro de Narcísio?"
+    tese: "Furto simples: a chave foi tirada sem que a vítima percebesse"
+    aceitos: [ "furto" ]
+    artigos: [ "art. 155, CP" ]
+    gabarito: "Relativamente ao item “A” da questão, o examinando, para garantir a atribuição integral dos pontos respectivos, deverá desenvolver raciocínio no sentido de que Abel cometeu apenas o crime de estelionato, previsto no art. 171 do Código Penal brasileiro.\n\nOutrossim, deverá indicar que o crime caracteriza-se pela fraude que é usada como meio de obter o consentimento da vítima que, iludida, entrega voluntariamente a chave de seu carro para Abel.\n\nNo que tange ao item “B”, deverá ser desenvolvido raciocínio no sentido de que Felipe cometeu apenas o delito de furto simples, capitulado no artigo 155 caput do Código Penal.\n\nSaliente-se que, no caso em tela, não serão admitidas respostas que indicarem a incidência de qualificadoras, uma vez que, apesar de o agente ter se vestido de manobrista, tal fato em nada interferiu na subtração do bem.\n\nTampouco se pode falar em crime cometido mediante destreza, haja vista o fato de que, no enunciado da questão, não há qualquer referência ao fato de Felipe possuir habilidades especiais que pudessem fazer com que efetivasse a subtração sem que a vítima percebesse.\n\nAssim sendo, o delito por ele praticado foi, apenas, o de furto na forma simples, descrito no caput do artigo 155 do Código Penal.\n\nAinda no item “B”, de maneira alternativa e com o fim de privilegiar demonstração de conhecimento jurídico, será pontuado o examinando esclarecer somente estar presente o núcleo do tipo e, por conta disso, a conduta de Felipe apenas se enquadraria no caput do artigo citado.\n\nPor fim, em nenhum dos itens poderá ser atribuída pontuação pela mera explicação da atuação dos agentes se essa estiver dissociada da correta tipificação do crime."
+    revisao: { status: revisado }
   - id: 08-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: João e José foram denunciados pela prática da conduta descrita no art. 316 do CP (concussão). Durante a instrução, percebeu-se que os fatos narrados na denúncia não corresponderiam àquilo que efetivamente teria ocorrido, razão pela qual, ao cabo da instrução criminal e após a respectiva apresentação de memoriais pelas partes, apurou-se que a conduta típica adequada seria aquela descrita no art. 317 do CP (corrupção passiva). O magistrado, então, fez remessa dos autos ao Ministério Público para fins de aditamento da denúncia, com a nova capitulação dos fatos. Nesse sentido, atento(a) ao caso narrado e considerando apenas as informações contidas no texto, responda fundamentadamente, aos itens a seguir.
-    comando: Estamos diante de hipótese de mutatio libelli ou de emendatio libelli? Qual dispositivo legal deve ser aplicado?
-    gabarito: |-
-      Para garantir pontuação à questão, o examinando deverá, no item “A”, responder, nos termos do questionado, que a hipótese tratada é de mutatio libelli, instituto descrito no art. 384 do CPP.
-
-      Não serão admitidas respostas que tragam emendatio libelli, tendo em vista que o enunciado da questão é claro ao dispor que “os fatos narrados na denúncia não corresponderiam àquilo que efetivamente teria ocorrido”. Tal expressão, por si só, ainda afastaria a incidência do disposto no art. 383, do CPP, uma vez que aquele dispositivo legal traz explicitamente restrição à sua utilização para hipóteses em que não ocorra modificação na “descrição do fato contida na denúncia ou queixa”.
-
-      Quanto ao item “B”, para garantir a pontuação pertinente, o examinando deverá responder que o juiz não poderia, na sentença, dar nova capitulação (e com base nela condenar os réus) porque deve obediência aos princípios da imparcialidade e inércia da jurisdição.
-
-      De maneira alternativa e com o fim de privilegiar a demonstração de conhecimento jurídico, será admitida resposta no sentido de que tal conduta, por parte do magistrado, feriria o sistema/princípio acusatório ou, ainda, no sentido de que tal conduta feriria o princípio da correlação/congruência entre acusação e sentença.
-
-      Ressalte-se que no tocante ao item “B” a questão solicita análise acerca da conduta do magistrado que, na sentença, daria nova capitulação aos fatos em decorrência de elemento ou circunstância da infração penal não contida na acusação.
-
-      Nesse sentido, cabe destacar que à luz do sistema acusatório adotado pela Constituição da República Federativa do Brasil, o julgador deve ser imparcial e, por isso, suas decisões devem estar balizadas pelo contexto fático descrito na peça acusatória (princípio da correlação entre acusação e sentença).
-
-      Assim, caso o magistrado viesse a condenar os réus com fundamento em fatos não narrados na denúncia – tal como descrito no enunciado - não só estaria substituindo-se ao acusador (a quem pertence a atribuição de determinar quais fatos serão imputados aos acusados), mas também estaria violando as garantias do contraditório e ampla defesa dos réus, uma vez que lhes teria subtraído a possibilidade de debater as eventuais provas de tais fatos.
-
-      Por fim, para garantir a pontuação relativa ao item “C”, o examinando deverá responder que NÃO é possível que o Tribunal de Justiça, ao analisar o recurso de apelação, proceda à mutatio libelli pois, nos termos do verbete 453 da Súmula do STF, verbis: “não se aplicam à segunda instância o art. 384 (...).”.
-
-      Tal conclusão, no item “C”, decorre do reconhecimento de que, advindo inovação no contexto fático que envolve a conduta imputada ao réu no curso da instrução, não pode haver julgamento com base nesse novo contexto fático antes que as partes possam exercer o contraditório em sua plenitude.
-
-      Nessa esteira, cabe destacar que a sede própria do contraditório acerca dos fatos e das provas é o primeiro grau de jurisdição, sob pena de supressão de instância. Tomadas essas duas premissas, alcança-se a conclusão de que eventual modificação da definição jurídica do fato decorrente de elemento ou circunstância da infração penal não contida na acusação não pode ser realizada diretamente pelo segundo grau de jurisdição.
-    opcoes:
-      correta: A hipótese é de mutatio libelli, instituto descrito no art. 384 do CPP.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
-        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
-        - Não foi correta a capitulação delitiva do Ministério Público, pois em sendo o crime culposo, a idade da vítima não é relevante para imputação da causa de aumento do Art. 121, § 4º, do CP, OU pois a causa de aumento em razão de a vítima ser menor de 14 anos somente será aplicada ao crime de homicídio doloso.
-        - Sim, deveria a defesa técnica alegar a existência de excludente de ilicitude, em razão do estado de necessidade, nos termos do Art. 24 ou do Art. 23, inciso I, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Ao mandar os autos ao Ministério Público para aditar a denúncia, que instituto o juiz aplicou?"
+    tese: "Mutatio libelli: diante de fato novo, o juiz manda aditar a denúncia"
+    aceitos: [ "mutatio libelli" ]
+    artigos: [ "art. 384, CPP" ]
+    gabarito: "Para garantir pontuação à questão, o examinando deverá, no item “A”, responder, nos termos do questionado, que a hipótese tratada é de mutatio libelli, instituto descrito no art. 384 do CPP.\n\nNão serão admitidas respostas que tragam emendatio libelli, tendo em vista que o enunciado da questão é claro ao dispor que “os fatos narrados na denúncia não corresponderiam àquilo que efetivamente teria ocorrido”. Tal expressão, por si só, ainda afastaria a incidência do disposto no art. 383, do CPP, uma vez que aquele dispositivo legal traz explicitamente restrição à sua utilização para hipóteses em que não ocorra modificação na “descrição do fato contida na denúncia ou queixa”.\n\nQuanto ao item “B”, para garantir a pontuação pertinente, o examinando deverá responder que o juiz não poderia, na sentença, dar nova capitulação (e com base nela condenar os réus) porque deve obediência aos princípios da imparcialidade e inércia da jurisdição.\n\nDe maneira alternativa e com o fim de privilegiar a demonstração de conhecimento jurídico, será admitida resposta no sentido de que tal conduta, por parte do magistrado, feriria o sistema/princípio acusatório ou, ainda, no sentido de que tal conduta feriria o princípio da correlação/congruência entre acusação e sentença.\n\nRessalte-se que no tocante ao item “B” a questão solicita análise acerca da conduta do magistrado que, na sentença, daria nova capitulação aos fatos em decorrência de elemento ou circunstância da infração penal não contida na acusação.\n\nNesse sentido, cabe destacar que à luz do sistema acusatório adotado pela Constituição da República Federativa do Brasil, o julgador deve ser imparcial e, por isso, suas decisões devem estar balizadas pelo contexto fático descrito na peça acusatória (princípio da correlação entre acusação e sentença).\n\nAssim, caso o magistrado viesse a condenar os réus com fundamento em fatos não narrados na denúncia – tal como descrito no enunciado - não só estaria substituindo-se ao acusador (a quem pertence a atribuição de determinar quais fatos serão imputados aos acusados), mas também estaria violando as garantias do contraditório e ampla defesa dos réus, uma vez que lhes teria subtraído a possibilidade de debater as eventuais provas de tais fatos.\n\nPor fim, para garantir a pontuação relativa ao item “C”, o examinando deverá responder que NÃO é possível que o Tribunal de Justiça, ao analisar o recurso de apelação, proceda à mutatio libelli pois, nos termos do verbete 453 da Súmula do STF, verbis: “não se aplicam à segunda instância o art. 384 (...).”.\n\nTal conclusão, no item “C”, decorre do reconhecimento de que, advindo inovação no contexto fático que envolve a conduta imputada ao réu no curso da instrução, não pode haver julgamento com base nesse novo contexto fático antes que as partes possam exercer o contraditório em sua plenitude.\n\nNessa esteira, cabe destacar que a sede própria do contraditório acerca dos fatos e das provas é o primeiro grau de jurisdição, sob pena de supressão de instância. Tomadas essas duas premissas, alcança-se a conclusão de que eventual modificação da definição jurídica do fato decorrente de elemento ou circunstância da infração penal não contida na acusação não pode ser realizada diretamente pelo segundo grau de jurisdição."
+    revisao: { status: revisado }
   - id: 08-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: João e José foram denunciados pela prática da conduta descrita no art. 316 do CP (concussão). Durante a instrução, percebeu-se que os fatos narrados na denúncia não corresponderiam àquilo que efetivamente teria ocorrido, razão pela qual, ao cabo da instrução criminal e após a respectiva apresentação de memoriais pelas partes, apurou-se que a conduta típica adequada seria aquela descrita no art. 317 do CP (corrupção passiva). O magistrado, então, fez remessa dos autos ao Ministério Público para fins de aditamento da denúncia, com a nova capitulação dos fatos. Nesse sentido, atento(a) ao caso narrado e considerando apenas as informações contidas no texto, responda fundamentadamente, aos itens a seguir.
-    comando: Por que o próprio juiz, na sentença, não poderia dar a nova capitulação e, com base nela, condenar os réus?
-    gabarito: |-
-      Para garantir pontuação à questão, o examinando deverá, no item “A”, responder, nos termos do questionado, que a hipótese tratada é de mutatio libelli, instituto descrito no art. 384 do CPP.
-
-      Não serão admitidas respostas que tragam emendatio libelli, tendo em vista que o enunciado da questão é claro ao dispor que “os fatos narrados na denúncia não corresponderiam àquilo que efetivamente teria ocorrido”. Tal expressão, por si só, ainda afastaria a incidência do disposto no art. 383, do CPP, uma vez que aquele dispositivo legal traz explicitamente restrição à sua utilização para hipóteses em que não ocorra modificação na “descrição do fato contida na denúncia ou queixa”.
-
-      Quanto ao item “B”, para garantir a pontuação pertinente, o examinando deverá responder que o juiz não poderia, na sentença, dar nova capitulação (e com base nela condenar os réus) porque deve obediência aos princípios da imparcialidade e inércia da jurisdição.
-
-      De maneira alternativa e com o fim de privilegiar a demonstração de conhecimento jurídico, será admitida resposta no sentido de que tal conduta, por parte do magistrado, feriria o sistema/princípio acusatório ou, ainda, no sentido de que tal conduta feriria o princípio da correlação/congruência entre acusação e sentença.
-
-      Ressalte-se que no tocante ao item “B” a questão solicita análise acerca da conduta do magistrado que, na sentença, daria nova capitulação aos fatos em decorrência de elemento ou circunstância da infração penal não contida na acusação.
-
-      Nesse sentido, cabe destacar que à luz do sistema acusatório adotado pela Constituição da República Federativa do Brasil, o julgador deve ser imparcial e, por isso, suas decisões devem estar balizadas pelo contexto fático descrito na peça acusatória (princípio da correlação entre acusação e sentença).
-
-      Assim, caso o magistrado viesse a condenar os réus com fundamento em fatos não narrados na denúncia – tal como descrito no enunciado - não só estaria substituindo-se ao acusador (a quem pertence a atribuição de determinar quais fatos serão imputados aos acusados), mas também estaria violando as garantias do contraditório e ampla defesa dos réus, uma vez que lhes teria subtraído a possibilidade de debater as eventuais provas de tais fatos.
-
-      Por fim, para garantir a pontuação relativa ao item “C”, o examinando deverá responder que NÃO é possível que o Tribunal de Justiça, ao analisar o recurso de apelação, proceda à mutatio libelli pois, nos termos do verbete 453 da Súmula do STF, verbis: “não se aplicam à segunda instância o art. 384 (...).”.
-
-      Tal conclusão, no item “C”, decorre do reconhecimento de que, advindo inovação no contexto fático que envolve a conduta imputada ao réu no curso da instrução, não pode haver julgamento com base nesse novo contexto fático antes que as partes possam exercer o contraditório em sua plenitude.
-
-      Nessa esteira, cabe destacar que a sede própria do contraditório acerca dos fatos e das provas é o primeiro grau de jurisdição, sob pena de supressão de instância. Tomadas essas duas premissas, alcança-se a conclusão de que eventual modificação da definição jurídica do fato decorrente de elemento ou circunstância da infração penal não contida na acusação não pode ser realizada diretamente pelo segundo grau de jurisdição.
-    opcoes:
-      correta: Porque deve obediência aos princípios da imparcialidade e inércia da jurisdição OU Porque tal conduta feriria o sistema/princípio acusatório. OU Porque tal conduta feriria o princípio da correlação/congruência entre acusação e sentença.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Por que o próprio juiz não poderia dar a nova capitulação na sentença e condenar os réus?"
+    tese: "Ofensa ao sistema acusatório, que exige a imparcialidade e a inércia do juiz e a correlação entre acusação e sentença"
+    aceitos: [ [ "acusatorio" ], [ "imparcialidade" ], [ "inercia" ], [ "correlacao | congruencia" ] ]
+    artigos: [ "art. 384, CPP", "art. 129, I, CRFB" ]
+    gabarito: "Para garantir pontuação à questão, o examinando deverá, no item “A”, responder, nos termos do questionado, que a hipótese tratada é de mutatio libelli, instituto descrito no art. 384 do CPP.\n\nNão serão admitidas respostas que tragam emendatio libelli, tendo em vista que o enunciado da questão é claro ao dispor que “os fatos narrados na denúncia não corresponderiam àquilo que efetivamente teria ocorrido”. Tal expressão, por si só, ainda afastaria a incidência do disposto no art. 383, do CPP, uma vez que aquele dispositivo legal traz explicitamente restrição à sua utilização para hipóteses em que não ocorra modificação na “descrição do fato contida na denúncia ou queixa”.\n\nQuanto ao item “B”, para garantir a pontuação pertinente, o examinando deverá responder que o juiz não poderia, na sentença, dar nova capitulação (e com base nela condenar os réus) porque deve obediência aos princípios da imparcialidade e inércia da jurisdição.\n\nDe maneira alternativa e com o fim de privilegiar a demonstração de conhecimento jurídico, será admitida resposta no sentido de que tal conduta, por parte do magistrado, feriria o sistema/princípio acusatório ou, ainda, no sentido de que tal conduta feriria o princípio da correlação/congruência entre acusação e sentença.\n\nRessalte-se que no tocante ao item “B” a questão solicita análise acerca da conduta do magistrado que, na sentença, daria nova capitulação aos fatos em decorrência de elemento ou circunstância da infração penal não contida na acusação.\n\nNesse sentido, cabe destacar que à luz do sistema acusatório adotado pela Constituição da República Federativa do Brasil, o julgador deve ser imparcial e, por isso, suas decisões devem estar balizadas pelo contexto fático descrito na peça acusatória (princípio da correlação entre acusação e sentença).\n\nAssim, caso o magistrado viesse a condenar os réus com fundamento em fatos não narrados na denúncia – tal como descrito no enunciado - não só estaria substituindo-se ao acusador (a quem pertence a atribuição de determinar quais fatos serão imputados aos acusados), mas também estaria violando as garantias do contraditório e ampla defesa dos réus, uma vez que lhes teria subtraído a possibilidade de debater as eventuais provas de tais fatos.\n\nPor fim, para garantir a pontuação relativa ao item “C”, o examinando deverá responder que NÃO é possível que o Tribunal de Justiça, ao analisar o recurso de apelação, proceda à mutatio libelli pois, nos termos do verbete 453 da Súmula do STF, verbis: “não se aplicam à segunda instância o art. 384 (...).”.\n\nTal conclusão, no item “C”, decorre do reconhecimento de que, advindo inovação no contexto fático que envolve a conduta imputada ao réu no curso da instrução, não pode haver julgamento com base nesse novo contexto fático antes que as partes possam exercer o contraditório em sua plenitude.\n\nNessa esteira, cabe destacar que a sede própria do contraditório acerca dos fatos e das provas é o primeiro grau de jurisdição, sob pena de supressão de instância. Tomadas essas duas premissas, alcança-se a conclusão de que eventual modificação da definição jurídica do fato decorrente de elemento ou circunstância da infração penal não contida na acusação não pode ser realizada diretamente pelo segundo grau de jurisdição."
+    revisao: { status: revisado }
   - id: 08-q3-c
     categoria: discursiva
     parte: q3
-    item: C
-    caso: João e José foram denunciados pela prática da conduta descrita no art. 316 do CP (concussão). Durante a instrução, percebeu-se que os fatos narrados na denúncia não corresponderiam àquilo que efetivamente teria ocorrido, razão pela qual, ao cabo da instrução criminal e após a respectiva apresentação de memoriais pelas partes, apurou-se que a conduta típica adequada seria aquela descrita no art. 317 do CP (corrupção passiva). O magistrado, então, fez remessa dos autos ao Ministério Público para fins de aditamento da denúncia, com a nova capitulação dos fatos. Nesse sentido, atento(a) ao caso narrado e considerando apenas as informações contidas no texto, responda fundamentadamente, aos itens a seguir.
-    comando: É possível que o Tribunal de Justiça de determinado estado da federação, ao analisar recurso de apelação, proceda à mutatio libelli?
-    gabarito: |-
-      Para garantir pontuação à questão, o examinando deverá, no item “A”, responder, nos termos do questionado, que a hipótese tratada é de mutatio libelli, instituto descrito no art. 384 do CPP.
-
-      Não serão admitidas respostas que tragam emendatio libelli, tendo em vista que o enunciado da questão é claro ao dispor que “os fatos narrados na denúncia não corresponderiam àquilo que efetivamente teria ocorrido”. Tal expressão, por si só, ainda afastaria a incidência do disposto no art. 383, do CPP, uma vez que aquele dispositivo legal traz explicitamente restrição à sua utilização para hipóteses em que não ocorra modificação na “descrição do fato contida na denúncia ou queixa”.
-
-      Quanto ao item “B”, para garantir a pontuação pertinente, o examinando deverá responder que o juiz não poderia, na sentença, dar nova capitulação (e com base nela condenar os réus) porque deve obediência aos princípios da imparcialidade e inércia da jurisdição.
-
-      De maneira alternativa e com o fim de privilegiar a demonstração de conhecimento jurídico, será admitida resposta no sentido de que tal conduta, por parte do magistrado, feriria o sistema/princípio acusatório ou, ainda, no sentido de que tal conduta feriria o princípio da correlação/congruência entre acusação e sentença.
-
-      Ressalte-se que no tocante ao item “B” a questão solicita análise acerca da conduta do magistrado que, na sentença, daria nova capitulação aos fatos em decorrência de elemento ou circunstância da infração penal não contida na acusação.
-
-      Nesse sentido, cabe destacar que à luz do sistema acusatório adotado pela Constituição da República Federativa do Brasil, o julgador deve ser imparcial e, por isso, suas decisões devem estar balizadas pelo contexto fático descrito na peça acusatória (princípio da correlação entre acusação e sentença).
-
-      Assim, caso o magistrado viesse a condenar os réus com fundamento em fatos não narrados na denúncia – tal como descrito no enunciado - não só estaria substituindo-se ao acusador (a quem pertence a atribuição de determinar quais fatos serão imputados aos acusados), mas também estaria violando as garantias do contraditório e ampla defesa dos réus, uma vez que lhes teria subtraído a possibilidade de debater as eventuais provas de tais fatos.
-
-      Por fim, para garantir a pontuação relativa ao item “C”, o examinando deverá responder que NÃO é possível que o Tribunal de Justiça, ao analisar o recurso de apelação, proceda à mutatio libelli pois, nos termos do verbete 453 da Súmula do STF, verbis: “não se aplicam à segunda instância o art. 384 (...).”.
-
-      Tal conclusão, no item “C”, decorre do reconhecimento de que, advindo inovação no contexto fático que envolve a conduta imputada ao réu no curso da instrução, não pode haver julgamento com base nesse novo contexto fático antes que as partes possam exercer o contraditório em sua plenitude.
-
-      Nessa esteira, cabe destacar que a sede própria do contraditório acerca dos fatos e das provas é o primeiro grau de jurisdição, sob pena de supressão de instância. Tomadas essas duas premissas, alcança-se a conclusão de que eventual modificação da definição jurídica do fato decorrente de elemento ou circunstância da infração penal não contida na acusação não pode ser realizada diretamente pelo segundo grau de jurisdição.
-    opcoes:
-      correta: Não, nos termos do verbete 453 da Súmula do STF. OU Não, pois nesse caso haveria supressão de instância.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
-        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
-        - Não foi correta a capitulação delitiva do Ministério Público, pois em sendo o crime culposo, a idade da vítima não é relevante para imputação da causa de aumento do Art. 121, § 4º, do CP, OU pois a causa de aumento em razão de a vítima ser menor de 14 anos somente será aplicada ao crime de homicídio doloso.
-        - Sim, deveria a defesa técnica alegar a existência de excludente de ilicitude, em razão do estado de necessidade, nos termos do Art. 24 ou do Art. 23, inciso I, do CP.
-    revisao: *a1
+    item: "C"
+    pergunta: "O Tribunal de Justiça, ao julgar a apelação, poderia aplicar a mutatio libelli?"
+    tese: "Vedação da mutatio libelli em segundo grau, que causaria supressão de instância"
+    aceitos: [ "supressao de instancia" ]
+    artigos: [ "Súmula 453 STF" ]
+    gabarito: "Para garantir pontuação à questão, o examinando deverá, no item “A”, responder, nos termos do questionado, que a hipótese tratada é de mutatio libelli, instituto descrito no art. 384 do CPP.\n\nNão serão admitidas respostas que tragam emendatio libelli, tendo em vista que o enunciado da questão é claro ao dispor que “os fatos narrados na denúncia não corresponderiam àquilo que efetivamente teria ocorrido”. Tal expressão, por si só, ainda afastaria a incidência do disposto no art. 383, do CPP, uma vez que aquele dispositivo legal traz explicitamente restrição à sua utilização para hipóteses em que não ocorra modificação na “descrição do fato contida na denúncia ou queixa”.\n\nQuanto ao item “B”, para garantir a pontuação pertinente, o examinando deverá responder que o juiz não poderia, na sentença, dar nova capitulação (e com base nela condenar os réus) porque deve obediência aos princípios da imparcialidade e inércia da jurisdição.\n\nDe maneira alternativa e com o fim de privilegiar a demonstração de conhecimento jurídico, será admitida resposta no sentido de que tal conduta, por parte do magistrado, feriria o sistema/princípio acusatório ou, ainda, no sentido de que tal conduta feriria o princípio da correlação/congruência entre acusação e sentença.\n\nRessalte-se que no tocante ao item “B” a questão solicita análise acerca da conduta do magistrado que, na sentença, daria nova capitulação aos fatos em decorrência de elemento ou circunstância da infração penal não contida na acusação.\n\nNesse sentido, cabe destacar que à luz do sistema acusatório adotado pela Constituição da República Federativa do Brasil, o julgador deve ser imparcial e, por isso, suas decisões devem estar balizadas pelo contexto fático descrito na peça acusatória (princípio da correlação entre acusação e sentença).\n\nAssim, caso o magistrado viesse a condenar os réus com fundamento em fatos não narrados na denúncia – tal como descrito no enunciado - não só estaria substituindo-se ao acusador (a quem pertence a atribuição de determinar quais fatos serão imputados aos acusados), mas também estaria violando as garantias do contraditório e ampla defesa dos réus, uma vez que lhes teria subtraído a possibilidade de debater as eventuais provas de tais fatos.\n\nPor fim, para garantir a pontuação relativa ao item “C”, o examinando deverá responder que NÃO é possível que o Tribunal de Justiça, ao analisar o recurso de apelação, proceda à mutatio libelli pois, nos termos do verbete 453 da Súmula do STF, verbis: “não se aplicam à segunda instância o art. 384 (...).”.\n\nTal conclusão, no item “C”, decorre do reconhecimento de que, advindo inovação no contexto fático que envolve a conduta imputada ao réu no curso da instrução, não pode haver julgamento com base nesse novo contexto fático antes que as partes possam exercer o contraditório em sua plenitude.\n\nNessa esteira, cabe destacar que a sede própria do contraditório acerca dos fatos e das provas é o primeiro grau de jurisdição, sob pena de supressão de instância. Tomadas essas duas premissas, alcança-se a conclusão de que eventual modificação da definição jurídica do fato decorrente de elemento ou circunstância da infração penal não contida na acusação não pode ser realizada diretamente pelo segundo grau de jurisdição."
+    revisao: { status: revisado }
   - id: 08-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      João foi denunciado pela prática do delito previsto no art. 299 caput e parágrafo único do Código Penal. A inicial acusatória foi recebida em 30/10/2000 e o processo teve seu curso normal. A sentença penal, publicada em 29/07/2005, condenou o réu à pena de 01 (um) ano, 11 (onze) meses e 10 (dez) dias de reclusão, em regime semi-aberto, mais pagamento de 16 (dezesseis) dias-multa. Irresignada, somente a defesa interpôs apelação.
-
-      Todavia, o Egrégio Tribunal de Justiça negou provimento ao apelo, ao argumento de que não haveria que se falar em extinção da punibilidade pela prescrição, haja vista o fato de que o réu era reincidente, circunstância devidamente comprovada mediante certidão cartorária juntada aos autos.
-
-      Nesse sentido, considerando apenas os dados narrados no enunciado, responda aos itens a seguir.
-    comando: Está extinta a punibilidade do réu pela prescrição? Em caso positivo, indique a espécie; em caso negativo, indique o motivo.
-    gabarito: |-
-      A questão visa obter do examinando o conhecimento acerca da extinção da punibilidade pela prescrição. Desta forma, para obtenção da pontuação relativa ao item “A”, o examinando deve indicar que a punibilidade do réu está extinta com base na prescrição da pretensão punitiva retroativa, pois entre a data do recebimento da denúncia e a data da publicação da sentença condenatória transcorreu lapso de tempo superior a quatro anos.
-
-      Cumpre destacar que tal modalidade de prescrição é a única que se coaduna com o caso apresentado pelos seguintes fatos:
-
-      i. tendo havido o trânsito em julgado para a acusação (pois somente a defesa interpôs recurso de apelação), deve ser considerado o quantum de pena aplicada por ocasião da sentença condenatória, ou seja, 01 (um) ano, 11 (onze) meses e 10 (dez) dias de reclusão, não podendo esta ser majorada por força do princípio que impede a sua reforma para pior (non reformatio in pejus). Assim, o prazo prescricional é de 4 (quatro) anos, conforme artigos 107, inciso IV, c/c 109, inciso V e 110, § 1º, todos do CP;
-
-      ii. considerando apenas os dados narrados no enunciado, os únicos marcos interruptivos da prescrição, segundo o art. 117 do CP, são o recebimento da denúncia (30/10/2000) e a publicação da sentença penal condenatória (29/07/2005).
-
-      Assim, com base na pena aplicada na sentença (com trânsito em julgado para o Ministério Público), retroagindo-se ao primeiro marco interruptivo narrado pela questão (recebimento da denúncia), observa-se que entre este e o segundo marco interruptivo (publicação da sentença condenatória), transcorreu lapso temporal maior do que quatro anos, com a consequente prescrição da pretensão punitiva.
-
-      Ressalte-se que justamente pela objetividade do item “A”, e por não ter havido o trânsito em julgado para ambas as partes, a indicação de espécie distinta de prescrição, que não a punitiva, macula a integralidade da resposta e impede a atribuição de pontuação. Não há que se falar, no caso em comento, em prescrição da pretensão executória.
-
-      Em relação ao item “B” o examinando, para fazer jus à pontuação respectiva, deve responder que o disposto no art. 110, caput, do CP não é aplicável ao caso narrado, pois tal artigo somente é aplicado em se tratando de prescrição da pretensão executória. Como o caso apresentado demonstra a ocorrência da prescrição da pretensão punitiva, não há que se falar no aumento de 1/3 (um terço) no prazo prescricional. Este entendimento é corroborado pelo verbete 220 da Súmula do STJ ao afirmar que “a reincidência não influi no prazo da prescrição da pretensão punitiva”.
-    opcoes:
-      correta: "Sim, resta configurada a prescrição da pretensão punitiva retroativa. Obs.: A indicação de espécie distinta de prescrição macula a integralidade do item “A”."
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Habeas corpus e agravo em execução penal (0,15 cada).
-        - "Mário não se sujeita ao artigo 2º, § 2º, da Lei 8.072/90 por se tratar de novatio legis in pejus OU com base na irretroatividade da lei penal mais gravosa o artigo 2º, § 2º, da Lei 8.072/90 não se aplica a situação de Mário OU a antiga redação do artigo 2º, da Lei 8.072/90 é inconstitucional, razão pela qual a progressão deve ocorrer com base no Art. 112 da LEP, observando o quantum de 1/6 de cumprimento de pena. / Tal entendimento é fundamentado nos verbetes 26 da súmula vinculante do STF ou 471 do STJ. Obs.: A justificativa é essencial para atribuição de pontos."
-        - O argumento a ser apresentado em favor de Arnaldo é que a infração deixou vestígios e não existe prova da materialidade do crime de lesão corporal OU que não foi realizado exame de corpo de delito na vítima, não o suprindo a confissão do acusado, nos termos do Art. 158 do CPP.
-        - Houve aberratio criminis OU houve resultado diverso do pretendido, devendo o agente responder apenas pelo crime de lesão corporal culposa, nos termos do Art. 74 do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que espécie de prescrição extingue a punibilidade de João?"
+    tese: "Prescrição da pretensão punitiva retroativa"
+    aceitos: [ "retroativa" ]
+    artigos: [ "art. 110, § 1º, CP", "art. 109, V, CP" ]
+    gabarito: "A questão visa obter do examinando o conhecimento acerca da extinção da punibilidade pela prescrição. Desta forma, para obtenção da pontuação relativa ao item “A”, o examinando deve indicar que a punibilidade do réu está extinta com base na prescrição da pretensão punitiva retroativa, pois entre a data do recebimento da denúncia e a data da publicação da sentença condenatória transcorreu lapso de tempo superior a quatro anos.\n\nCumpre destacar que tal modalidade de prescrição é a única que se coaduna com o caso apresentado pelos seguintes fatos:\n\ni. tendo havido o trânsito em julgado para a acusação (pois somente a defesa interpôs recurso de apelação), deve ser considerado o quantum de pena aplicada por ocasião da sentença condenatória, ou seja, 01 (um) ano, 11 (onze) meses e 10 (dez) dias de reclusão, não podendo esta ser majorada por força do princípio que impede a sua reforma para pior (non reformatio in pejus). Assim, o prazo prescricional é de 4 (quatro) anos, conforme artigos 107, inciso IV, c/c 109, inciso V e 110, § 1º, todos do CP;\n\nii. considerando apenas os dados narrados no enunciado, os únicos marcos interruptivos da prescrição, segundo o art. 117 do CP, são o recebimento da denúncia (30/10/2000) e a publicação da sentença penal condenatória (29/07/2005).\n\nAssim, com base na pena aplicada na sentença (com trânsito em julgado para o Ministério Público), retroagindo-se ao primeiro marco interruptivo narrado pela questão (recebimento da denúncia), observa-se que entre este e o segundo marco interruptivo (publicação da sentença condenatória), transcorreu lapso temporal maior do que quatro anos, com a consequente prescrição da pretensão punitiva.\n\nRessalte-se que justamente pela objetividade do item “A”, e por não ter havido o trânsito em julgado para ambas as partes, a indicação de espécie distinta de prescrição, que não a punitiva, macula a integralidade da resposta e impede a atribuição de pontuação. Não há que se falar, no caso em comento, em prescrição da pretensão executória.\n\nEm relação ao item “B” o examinando, para fazer jus à pontuação respectiva, deve responder que o disposto no art. 110, caput, do CP não é aplicável ao caso narrado, pois tal artigo somente é aplicado em se tratando de prescrição da pretensão executória. Como o caso apresentado demonstra a ocorrência da prescrição da pretensão punitiva, não há que se falar no aumento de 1/3 (um terço) no prazo prescricional. Este entendimento é corroborado pelo verbete 220 da Súmula do STJ ao afirmar que “a reincidência não influi no prazo da prescrição da pretensão punitiva”."
+    revisao: { status: revisado }
   - id: 08-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      João foi denunciado pela prática do delito previsto no art. 299 caput e parágrafo único do Código Penal. A inicial acusatória foi recebida em 30/10/2000 e o processo teve seu curso normal. A sentença penal, publicada em 29/07/2005, condenou o réu à pena de 01 (um) ano, 11 (onze) meses e 10 (dez) dias de reclusão, em regime semi-aberto, mais pagamento de 16 (dezesseis) dias-multa. Irresignada, somente a defesa interpôs apelação.
-
-      Todavia, o Egrégio Tribunal de Justiça negou provimento ao apelo, ao argumento de que não haveria que se falar em extinção da punibilidade pela prescrição, haja vista o fato de que o réu era reincidente, circunstância devidamente comprovada mediante certidão cartorária juntada aos autos.
-
-      Nesse sentido, considerando apenas os dados narrados no enunciado, responda aos itens a seguir.
-    comando: O disposto no art. 110 caput do CP é aplicável ao caso narrado?
-    gabarito: |-
-      A questão visa obter do examinando o conhecimento acerca da extinção da punibilidade pela prescrição. Desta forma, para obtenção da pontuação relativa ao item “A”, o examinando deve indicar que a punibilidade do réu está extinta com base na prescrição da pretensão punitiva retroativa, pois entre a data do recebimento da denúncia e a data da publicação da sentença condenatória transcorreu lapso de tempo superior a quatro anos.
-
-      Cumpre destacar que tal modalidade de prescrição é a única que se coaduna com o caso apresentado pelos seguintes fatos:
-
-      i. tendo havido o trânsito em julgado para a acusação (pois somente a defesa interpôs recurso de apelação), deve ser considerado o quantum de pena aplicada por ocasião da sentença condenatória, ou seja, 01 (um) ano, 11 (onze) meses e 10 (dez) dias de reclusão, não podendo esta ser majorada por força do princípio que impede a sua reforma para pior (non reformatio in pejus). Assim, o prazo prescricional é de 4 (quatro) anos, conforme artigos 107, inciso IV, c/c 109, inciso V e 110, § 1º, todos do CP;
-
-      ii. considerando apenas os dados narrados no enunciado, os únicos marcos interruptivos da prescrição, segundo o art. 117 do CP, são o recebimento da denúncia (30/10/2000) e a publicação da sentença penal condenatória (29/07/2005).
-
-      Assim, com base na pena aplicada na sentença (com trânsito em julgado para o Ministério Público), retroagindo-se ao primeiro marco interruptivo narrado pela questão (recebimento da denúncia), observa-se que entre este e o segundo marco interruptivo (publicação da sentença condenatória), transcorreu lapso temporal maior do que quatro anos, com a consequente prescrição da pretensão punitiva.
-
-      Ressalte-se que justamente pela objetividade do item “A”, e por não ter havido o trânsito em julgado para ambas as partes, a indicação de espécie distinta de prescrição, que não a punitiva, macula a integralidade da resposta e impede a atribuição de pontuação. Não há que se falar, no caso em comento, em prescrição da pretensão executória.
-
-      Em relação ao item “B” o examinando, para fazer jus à pontuação respectiva, deve responder que o disposto no art. 110, caput, do CP não é aplicável ao caso narrado, pois tal artigo somente é aplicado em se tratando de prescrição da pretensão executória. Como o caso apresentado demonstra a ocorrência da prescrição da pretensão punitiva, não há que se falar no aumento de 1/3 (um terço) no prazo prescricional. Este entendimento é corroborado pelo verbete 220 da Súmula do STJ ao afirmar que “a reincidência não influi no prazo da prescrição da pretensão punitiva”.
-    opcoes:
-      correta: Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-      erradas:
-        - "Prova ilícita: a gravação informal da confissão viola o direito ao silêncio; as demais provas são ilícitas por derivação (art. 157, § 1º, CPP)."
-        - Recurso em sentido estrito, art. 581, IV, do CPP; interposição dirigida ao juiz da vara do Tribunal do Júri.
-        - "Agravo, artigo 197 da LEP. Obs.: A mera indicação do artigo não pontua."
-        - Não foi correta a capitulação delitiva do Ministério Público, pois em sendo o crime culposo, a idade da vítima não é relevante para imputação da causa de aumento do Art. 121, § 4º, do CP, OU pois a causa de aumento em razão de a vítima ser menor de 14 anos somente será aplicada ao crime de homicídio doloso.
-        - Sim, deveria a defesa técnica alegar a existência de excludente de ilicitude, em razão do estado de necessidade, nos termos do Art. 24 ou do Art. 23, inciso I, do CP.
-    revisao: *a1
+    item: "B"
+    pergunta: "O aumento de um terço do prazo pela reincidência vale para essa prescrição?"
+    tese: "O aumento de um terço pela reincidência vale só para a prescrição da pretensão executória, não para a punitiva"
+    aceitos: [ "executoria" ]
+    artigos: [ "Súmula 220 STJ", "art. 110, CP" ]
+    gabarito: "A questão visa obter do examinando o conhecimento acerca da extinção da punibilidade pela prescrição. Desta forma, para obtenção da pontuação relativa ao item “A”, o examinando deve indicar que a punibilidade do réu está extinta com base na prescrição da pretensão punitiva retroativa, pois entre a data do recebimento da denúncia e a data da publicação da sentença condenatória transcorreu lapso de tempo superior a quatro anos.\n\nCumpre destacar que tal modalidade de prescrição é a única que se coaduna com o caso apresentado pelos seguintes fatos:\n\ni. tendo havido o trânsito em julgado para a acusação (pois somente a defesa interpôs recurso de apelação), deve ser considerado o quantum de pena aplicada por ocasião da sentença condenatória, ou seja, 01 (um) ano, 11 (onze) meses e 10 (dez) dias de reclusão, não podendo esta ser majorada por força do princípio que impede a sua reforma para pior (non reformatio in pejus). Assim, o prazo prescricional é de 4 (quatro) anos, conforme artigos 107, inciso IV, c/c 109, inciso V e 110, § 1º, todos do CP;\n\nii. considerando apenas os dados narrados no enunciado, os únicos marcos interruptivos da prescrição, segundo o art. 117 do CP, são o recebimento da denúncia (30/10/2000) e a publicação da sentença penal condenatória (29/07/2005).\n\nAssim, com base na pena aplicada na sentença (com trânsito em julgado para o Ministério Público), retroagindo-se ao primeiro marco interruptivo narrado pela questão (recebimento da denúncia), observa-se que entre este e o segundo marco interruptivo (publicação da sentença condenatória), transcorreu lapso temporal maior do que quatro anos, com a consequente prescrição da pretensão punitiva.\n\nRessalte-se que justamente pela objetividade do item “A”, e por não ter havido o trânsito em julgado para ambas as partes, a indicação de espécie distinta de prescrição, que não a punitiva, macula a integralidade da resposta e impede a atribuição de pontuação. Não há que se falar, no caso em comento, em prescrição da pretensão executória.\n\nEm relação ao item “B” o examinando, para fazer jus à pontuação respectiva, deve responder que o disposto no art. 110, caput, do CP não é aplicável ao caso narrado, pois tal artigo somente é aplicado em se tratando de prescrição da pretensão executória. Como o caso apresentado demonstra a ocorrência da prescrição da pretensão punitiva, não há que se falar no aumento de 1/3 (um terço) no prazo prescricional. Este entendimento é corroborado pelo verbete 220 da Súmula do STJ ao afirmar que “a reincidência não influi no prazo da prescrição da pretensão punitiva”."
+    revisao: { status: revisado }

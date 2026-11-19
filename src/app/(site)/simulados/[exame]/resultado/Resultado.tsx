@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { PromoSlot } from "@/components/PromoSlot";
+import { RichText } from "@/components/RichText";
 import { ShareCard } from "@/components/ShareCard";
 import { SITE } from "@/config/site";
 import { useMostrarPeca } from "@/components/NomePeca";
@@ -13,6 +14,7 @@ import { numeralComArabico } from "@/content/titulo";
 import { gerarCodigo, impressao, impressaoHex, type ModoCorrecao } from "@/lib/codigo/codigo";
 import { NOTA_CORTE, type ResultadoParte } from "@/lib/correcao/grader";
 import type { DadosCard } from "@/lib/share/card";
+import { caminhoPreviaNota } from "@/lib/share/previas";
 import { atualizarTentativa, listarTentativas, obterTentativa, type Tentativa } from "@/lib/tentativas";
 import { CorrecaoIA } from "./CorrecaoIA";
 import { CorrecaoParte, PainelCorrecao, RotulosLaterais } from "./CorrecaoParte";
@@ -35,14 +37,27 @@ function irParaPrimeiraTabela() {
   window.scrollTo({ top: window.scrollY + alvo.getBoundingClientRect().top - margem, behavior: "smooth" });
 }
 
+/** Enquanto a tentativa é lida do navegador (e no HTML estático, antes de a página ganhar vida). */
+export function CarregandoResultado() {
+  return (
+    <div className={`container section ${styles.carregando}`} role="status" aria-live="polite">
+      <span className={styles.carregador} aria-hidden />
+      <p>Abrindo a correção…</p>
+    </div>
+  );
+}
+
 /** O nome curto de uma parte na correção: "Peça", ou "Q1", "Q2"… (economiza espaço nas listas). */
 function rotuloCurto(parte: string) {
   return parte === "peca" ? "Peça" : `Q${parte.slice(1)}`;
 }
 
-export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: string }) {
+export function Resultado({ original, atualizado, fundoCard }: { original: Exame; atualizado: Exame; fundoCard?: string }) {
   const params = useSearchParams();
   const [t, setT] = useState<Tentativa | null | undefined>(undefined);
+  // a correção usa a versão em que a prova foi feita (as tentativas antigas são da original)
+  const exame = t?.versao === "atualizada" ? atualizado : original;
+  const naAtualizada = t?.versao === "atualizada";
   const [fonte, setFonte] = useState<"auto" | "ia">("auto");
   const [codigos, setCodigos] = useState<{ auto?: string; ia?: string; imp?: number }>({});
   const [mostrarPeca] = useMostrarPeca();
@@ -65,10 +80,10 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
 
   useEffect(() => {
     const id = params.get("t");
-    const tent = id ? obterTentativa(id) : listarTentativas().find((x) => x.exameId === exame.id) ?? null;
+    const tent = id ? obterTentativa(id) : listarTentativas().find((x) => x.exameId === original.id) ?? null;
     // eslint-disable-next-line react-hooks/set-state-in-effect -- lê URL e localStorage após montar (site estático)
     setT(tent);
-  }, [params, exame.id]);
+  }, [params, original.id]);
 
   // Gera (uma vez) a impressão digital e os códigos de verificação.
   useEffect(() => {
@@ -80,7 +95,7 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
         tipo: "simulado" as const,
         exame: exame.numero,
         variante: exame.variante ? 1 : 0,
-        atualizado: false,
+        atualizado: t.versao === "atualizada",
         data: new Date(t.criadaEm),
         duracaoMin: Math.round(t.duracaoSeg / 60),
         impressao: imp,
@@ -125,7 +140,7 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
     };
   }, [t, fonte, codigos, exame, nota, aprovado, partesNota, mostrarPeca]);
 
-  if (t === undefined) return <div className="container section">Carregando…</div>;
+  if (t === undefined) return <CarregandoResultado />;
   if (t === null) {
     return (
       <div className="container section">
@@ -147,7 +162,9 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
       <RotulosLaterais texto={`${exame.numero}º Exame · 2ª fase · Direito Penal`} />
       <div className={styles.hero}>
         <div>
-          <span className="eyebrow">Resultado · {numeralComArabico(exame)} Exame</span>
+          <span className="eyebrow">
+            Resultado · {numeralComArabico(exame)} Exame{naAtualizada ? " · versão atualizada" : ""}
+          </span>
           <h1 className={styles.nota}>
             <span className={aprovado ? styles.ok : undefined}>{fmtNota(nota)}</span>
             <small> / {fmtNota(r.maximo)}</small>
@@ -188,6 +205,26 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
       </div>
 
       {exame.observacoes && <p className={styles.disclaimer}>ℹ️ {exame.observacoes}</p>}
+      {naAtualizada && (exame.atualizado?.notas.length || exame.atualizado?.correcoes.length) ? (
+        <section className={styles.versaoAtual} aria-labelledby="versao-atual">
+          <h2 id="versao-atual">O que muda na versão atualizada</h2>
+          {exame.atualizado.correcoes.map((c, i) => (
+            <div key={`c${i}`}>
+              <b>{rotuloCurto(c.alvo)} · Erro material corrigido</b>
+              <RichText text={c.motivo} data={exame.aplicacao} />
+            </div>
+          ))}
+          {exame.atualizado.notas.map((n, i) => (
+            <div key={`n${i}`}>
+              <b>
+                {rotuloCurto(n.alvo)}
+                {n.item ? `, item ${n.item}` : ""} · {n.lei}
+              </b>
+              <RichText text={n.texto} data={exame.aplicacao} />
+            </div>
+          ))}
+        </section>
+      ) : null}
       <p className={styles.disclaimer}>
         A correção automática aplica a tabela oficial de distribuição de pontos da FGV e procura na sua resposta as teses e
         os dispositivos de cada item. É uma estimativa: o examinador avalia fundamentação e coerência de um jeito que nenhum
@@ -226,6 +263,7 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
             dados={card}
             fundo={fundoCard}
             nomeArquivo={`grifo-exame-${exame.id}-nota-${fmtNota(nota)}.png`}
+            previa={caminhoPreviaNota(nota, exame.id)}
             textoPost={`Tirei ${fmtNota(nota)} no simulado do ${numeralComArabico(exame)} Exame da OAB (2ª fase Penal) no Grifo!`}
           />
         )}
@@ -243,7 +281,7 @@ export function Resultado({ exame, fundoCard }: { exame: Exame; fundoCard?: stri
       <div className={styles.fim}>
         <PromoSlot local="resultado" variant="compact" />
         <div className={styles.ctas}>
-          <Link className="btn btn-ghost" href={`/simulados/${exame.id}/`}>
+          <Link className="btn btn-ghost" href={`/simulados/${exame.id}/${naAtualizada ? "" : "?versao=original"}`}>
             Refazer este exame
           </Link>
           <Link className="btn btn-primary" href="/simulados/">

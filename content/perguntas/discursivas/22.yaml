@@ -1,620 +1,201 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "22"
+introducoes:
+  peca: "Leonardo, de 19 anos e sem antecedentes, entrou numa loja para roubar o caixa, simulou estar armado e fez o único cliente sair. Já no caixa, viu que o funcionário era um senhor em cadeira de rodas, arrependeu-se e saiu sem levar nada, sendo preso do lado de fora; não tinha arma. O cliente ameaçado nunca foi ouvido e não quis vê-lo processado. Leonardo confessou. O advogado dele renunciou, e o juiz abriu vista direto à Defensoria, sem intimar Leonardo. Na sentença por roubo tentado com emprego de arma, o juiz considerou maus antecedentes um ato infracional, aplicou a majorante pela arma simulada, reduziu a pena em só 1/3 pela tentativa e fixou o regime fechado pela gravidade do roubo. Você defende Leonardo na apelação."
+  q1: "Por uma denúncia identificada, a polícia pediu a interceptação do telefone de Cássio, e o juiz a deferiu pelo prazo inicial de 30 dias. As conversas mostraram que Cássio comprou cocaína, pela primeira vez, para consumir com os amigos Pedro e Paulo no aniversário; no dia, ele foi preso oferecendo os papelotes aos dois e denunciado por tráfico."
+  q2: "Antônio conheceu Joana numa festa de música eletrônica; ela disse que cursava Direito, e os dois foram a um motel. Depois, ele soube que Joana tinha 13 anos. Foi denunciado por estupro de vulnerável pela promotora Carla, grande amiga da mãe de Joana, que até aconselhou a família sobre o caso."
+  q3: "Em Porto Alegre, Maurício tentou cometer uma contravenção penal contra o patrimônio de uma autarquia federal, sem conseguir. O Ministério Público iniciou o procedimento na Justiça Federal e ofereceu transação penal, que ele não quer aceitar."
+  q4: "Marcos foi acusado de roubar, com um simulacro de arma, as mochilas e os celulares de Diego e Júlio, numa só abordagem. Oito horas depois, a polícia o achou perto do local, sem nenhum dos bens; as vítimas o reconheceram na delegacia, e o delegado lavrou o flagrante, indiciando-o por dois roubos em concurso material."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["22-peca-1", "22-peca-3", "22-peca-12"]
 perguntas:
-  - id: 22-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento correto: Juízo da 1ª Vara Criminal da Comarca de Belo Horizonte-MG."
-    opcoes:
-      correta: "Endereçamento correto: Juízo da 1ª Vara Criminal da Comarca de Belo Horizonte-MG."
-      erradas:
-        - "Endereçamento correto das razões: Tribunal de Justiça do Estado."
-        - "Endereçamento: Tribunal de Justiça do Estado do Rio Grande do Sul."
-        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
-        - "Endereçamento correto: Tribunal de Justiça do Rio de Janeiro."
-        - "Endereçamento: Juízo do Tribunal do Júri da Comarca de Maricá/RJ"
-    revisao: &a1
-      status: revisado
-  - id: 22-peca-3
-    categoria: peca-detalhe
-    parte: peca
-    item: "3"
-    secao: enderecamento
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem devem ser endereçadas as razões?
-    gabarito: "Endereçamento correto: Tribunal de Justiça do Estado de Minas Gerais."
-    opcoes:
-      correta: "Endereçamento correto: Tribunal de Justiça do Estado de Minas Gerais."
-      erradas:
-        - "Endereçamento correto da interposição: 1ª Vara Criminal do Município X."
-        - "Endereçamento: Juízo de Direito da 2ª Vara Criminal da Comarca de Florianópolis/SC."
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - Endereçamento:Vara Criminal da Comarca de Belo Horizonte/MG..
-        - "Endereçamento: Juízo da Vara de Execução Penal da Comarca de São Paulo/SP."
-    revisao: *a1
   - id: 22-peca-4
     categoria: peca-detalhe
     parte: peca
     item: "4"
     secao: preliminar
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
+    pergunta: "O advogado renunciou e o juiz deu vista direto à Defensoria, sem intimar Leonardo. Que preliminar a defesa deve levantar?"
+    tese: "Nulidade, por violação da ampla defesa: Leonardo devia ser intimado para constituir outro advogado"
+    aceitos: [ [ "nulidade | nula | nulo" ], [ "ampla defesa" ] ]
+    artigos: [ "art. 5, LV, CRFB", "art. 263, CPP" ]
     gabarito: "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
-    opcoes:
-      correta: "Preliminarmente: Nulidade da sentença ou de todos os atos processuais desde as alegações finais apresentadas pela Defensoria Pública, tendo em vista que não houve intimação do réu para manifestar interesse em indicar novo advogado OU tendo em vista que houve prejuízo para ampla defesa."
-      erradas:
-        - Extinção da punibilidade em relação ao crime de lesão corporal, em razão da decadência, nos termos do Art. 107, IV, do CP OU 38 do CPP.
-        - "Incompetência da Justiça Estadual: crime de competência federal, art. 109, V (ou IV), da CF."
-        - Violação das regras da mutatio libelli, art. 384 do CPP, c/c art. 411, § 3º, do CPP.
-        - Preliminarmente, deve ser requerido o reconhecimento da nulidade do ato de citação, nos termos do art. 564, inciso III, “e”, do CPP
-        - Preliminar de nulidade do processo OU reconhecimento da extinção da punibilidade OU decadência OU oferecimento de proposta de suspensão condicional do processo
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 22-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: merito
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "Se o fato for desclassificado para ameaça, que causa extingue a punibilidade, já que a vítima não quis processar Leonardo?"
+    tese: "Extinção da punibilidade pela decadência do direito de representação"
+    aceitos: [ "decaden*" ]
+    artigos: [ "art. 103, CP", "art. 147, § 2º, CP" ]
     gabarito: "No mérito: absolvição de Leonardo OU desclassificação para o delito de ameaça com consequente reconhecimento da decadência"
-    opcoes:
-      correta: "No mérito: absolvição de Leonardo OU desclassificação para o delito de ameaça com consequente reconhecimento da decadência"
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
-        - Reconhecimento da atenuação da confissão, nos termos do Art. 65, inciso III, alínea d, do CP.
-        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 22-peca-5-1
     categoria: peca-detalhe
     parte: peca
     item: "5.1"
     secao: merito
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Houve desistência voluntária, nos termos do Art. 15 do CP
-    opcoes:
-      correta: Houve desistência voluntária, nos termos do Art. 15 do CP
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
-        - Subsidiariamente, aplicação de pena base no mínimo legal, já que as circunstâncias do Art. 59 são favoráveis.
-        - A prática de falta grave não gera o reinício da contagem do prazo do livramento condicional, nos termos da Súmula 441 do STJ.
-    revisao: *a1
+    pergunta: "Leonardo se arrependeu e saiu sem levar nada, antes de ser notado. Que tese afasta o roubo tentado?"
+    tese: "Desistência voluntária"
+    aceitos: [ "desistencia voluntaria" ]
+    artigos: [ "art. 15, CP" ]
+    gabarito: "Houve desistência voluntária, nos termos do Art. 15 do CP"
+    revisao: { status: revisado }
   - id: 22-peca-5-2
     categoria: peca-detalhe
     parte: peca
     item: "5.2"
     secao: merito
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Leonardo deve responder apenas pelos atos já praticados OU não deve responder pela tentativa.
-    opcoes:
-      correta: Leonardo deve responder apenas pelos atos já praticados OU não deve responder pela tentativa.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
-        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
+    pergunta: "Com a desistência, por qual crime Leonardo pode responder, no máximo?"
+    tese: "Na desistência voluntária, o agente responde só pelos atos já praticados: a ameaça ao cliente"
+    aceitos: [ "ameaca" ]
+    artigos: [ "art. 147, CP" ]
+    gabarito: "Leonardo deve responder apenas pelos atos já praticados OU não deve responder pela tentativa."
+    revisao: { status: revisado }
   - id: 22-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
+    pergunta: "O ato infracional de Leonardo, quando era adolescente, pode ser usado como maus antecedentes?"
+    tese: "Ato infracional não gera maus antecedentes"
+    aceitos: [ "nao gera | nao configura | nao serve | nao pode | nao caracteriz* | nao sao" ]
+    artigos: [ "art. 59, CP" ]
     gabarito: "Subsidiariamente: a pena base deve ser fixada no mínimo legal, pois a existência de ação socioeducativa julgada procedente não justifica o reconhecimento de maus antecedentes"
-    opcoes:
-      correta: "Subsidiariamente: a pena base deve ser fixada no mínimo legal, pois a existência de ação socioeducativa julgada procedente não justifica o reconhecimento de maus antecedentes"
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Excludente de culpabilidade, em razão da inimputabilidade.
-        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 22-peca-7
     categoria: peca-detalhe
     parte: peca
     item: "7"
     secao: merito
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Reconhecimento da atenuante da menoridade relativa, nos termos do Art. 65, inciso I, do CP.
-    opcoes:
-      correta: Reconhecimento da atenuante da menoridade relativa, nos termos do Art. 65, inciso I, do CP.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - "Subsidiariamente: aplicação da pena base no mínimo legal, tendo em vista que o fato posterior ao crime julgado não pode ser considerado maus antecedentes."
-        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
-        - Aplicação do regime inicial aberto, nos termos do Art. 33, §2º, alínea c, do Código Penal.
-        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    revisao: *a1
+    pergunta: "Leonardo tinha 19 anos no fato. Que atenuante deve ser reconhecida?"
+    tese: "Atenuante da menoridade relativa"
+    aceitos: [ "menoridade | menor de 21" ]
+    artigos: [ "art. 65, I, CP" ]
+    gabarito: "Reconhecimento da atenuante da menoridade relativa, nos termos do Art. 65, inciso I, do CP."
+    revisao: { status: revisado }
   - id: 22-peca-8
     categoria: peca-detalhe
     parte: peca
     item: "8"
     secao: merito
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Reconhecimento da atenuante da confissão, nos termos do Art. 65, inciso III, alínea d, do CP
-    opcoes:
-      correta: Reconhecimento da atenuante da confissão, nos termos do Art. 65, inciso III, alínea d, do CP
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
-        - Desenvolvimento jurídico acerca da necessidade de manutenção da pena- base no mínimo legal para o crime de estupro de vulnerável
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    revisao: *a1
+    pergunta: "Leonardo confirmou os fatos no interrogatório. Que outra atenuante cabe?"
+    tese: "Atenuante da confissão espontânea"
+    aceitos: [ "confissao" ]
+    artigos: [ "art. 65, III, d, CP" ]
+    gabarito: "Reconhecimento da atenuante da confissão, nos termos do Art. 65, inciso III, alínea d, do CP"
+    revisao: { status: revisado }
   - id: 22-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: merito
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Afastamento da causa de aumento do Art. 157, §2º, inciso I, do CP, pois houve apenas simulação de porte de arma de fogo, sem incremento do potencial lesivo OU pois não existe prova do emprego de arma de fogo.
-    opcoes:
-      correta: Afastamento da causa de aumento do Art. 157, §2º, inciso I, do CP, pois houve apenas simulação de porte de arma de fogo, sem incremento do potencial lesivo OU pois não existe prova do emprego de arma de fogo.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
-        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
+    pergunta: "Leonardo só simulou estar armado. O que a defesa deve pedir quanto à majorante aplicada?"
+    tese: "Afastamento da majorante: a arma simulada não aumenta o potencial lesivo"
+    aceitos: [ "afast* | exclu* | decote | nao incid*" ]
+    artigos: [ "art. 157, § 2º-A, I, CP" ]
+    gabarito: "Afastamento da causa de aumento do Art. 157, §2º, inciso I, do CP, pois houve apenas simulação de porte de arma de fogo, sem incremento do potencial lesivo OU pois não existe prova do emprego de arma de fogo."
+    revisao: { status: revisado }
   - id: 22-peca-10
     categoria: peca-detalhe
     parte: peca
     item: "10"
     secao: merito
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Redução da tentativa em seu patamar máximo, permitindo aplicação da suspensão condicional da pena
-    opcoes:
-      correta: Redução da tentativa em seu patamar máximo, permitindo aplicação da suspensão condicional da pena
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
-        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
+    pergunta: "Leonardo ficou longe da consumação. Qual deve ser a redução da pena pela tentativa?"
+    tese: "Redução máxima da tentativa, de 2/3, porque o crime ficou longe da consumação"
+    aceitos: [ "2/3 | dois tercos | maxim*" ]
+    artigos: [ "art. 14, parágrafo único, CP" ]
+    gabarito: "Redução da tentativa em seu patamar máximo, permitindo aplicação da suspensão condicional da pena"
+    revisao: { status: revisado }
   - id: 22-peca-11
     categoria: peca-detalhe
     parte: peca
     item: "11"
     secao: merito
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Aplicação do regime inicial semiaberto ou aberto do cumprimento de pena, pois a gravidade em abstrato não justifica regime de pena mais severo OU a fixação de regime de cumprimento mais severo exige motivação concreta, nos termos da Súmula 718/STF OU 719/STF OU 440/STJ.
-    opcoes:
-      correta: Aplicação do regime inicial semiaberto ou aberto do cumprimento de pena, pois a gravidade em abstrato não justifica regime de pena mais severo OU a fixação de regime de cumprimento mais severo exige motivação concreta, nos termos da Súmula 718/STF OU 719/STF OU 440/STJ.
-      erradas:
-        - Falta de observância da formalidade legal do reconhecimento, prevista no art. 226, II, do CPP.
-        - Pois a embriaguez era completa e proveniente de caso fortuito ou de força maior, na forma do Art. 28, §1º, do CP.
-        - "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-        - Reconhecimento da causa de diminuição do arrependimento posterior, tendo em vista que houve restituição da coisa subtraída, nos termos do Art. 16 do Código Penal.
-        - O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    revisao: *a1
-  - id: 22-peca-12
-    categoria: peca-detalhe
-    parte: peca
-    item: "12"
-    secao: pedido
-    caso: |-
-      Desejando comprar um novo carro, Leonardo, jovem com 19 anos, decidiu praticar um crime de roubo em um estabelecimento comercial, com a intenção de subtrair o dinheiro constante do caixa. Narrou o plano criminoso para Roberto, seu vizinho, mas este se recusou a contribuir. Leonardo decidiu, então, praticar o delito sozinho.
-
-      Dirigiu-se ao estabelecimento comercial, nele ingressou e, no momento em que restava apenas um cliente, simulou portar arma de fogo e o ameaçou de morte, o que fez com ele saísse, já que a intenção de Leonardo era apenas a de subtrair bens do estabelecimento. Leonardo, em seguida, consegue acesso ao caixa onde fica guardado o dinheiro, mas, antes de subtrair qualquer quantia, verifica que o único funcionário que estava trabalhando no horário era um senhor que utilizava cadeiras de rodas. Arrependido, antes mesmo de ser notada sua presença pelo funcionário, deixa o local sem nada subtrair, mas, já do lado de fora da loja, é surpreendido por policiais militares. Estes realizam a abordagem, verificam que não havia qualquer arma com Leonardo e esclarecem que Roberto narrara o plano criminoso do vizinho para a Polícia.
-
-      Tomando conhecimento dos fatos, o Ministério Público requereu a conversão da prisão em flagrante em preventiva e denunciou Leonardo como incurso nas sanções penais do Art. 157, § 2º, inciso I, c/c o Art. 14, inciso II, ambos do Código Penal.
-
-      Após decisão do magistrado competente, qual seja, o da 1ª Vara Criminal de Belo Horizonte/MG, de conversão da prisão e recebimento da denúncia, o processo teve seu prosseguimento regular. O homem que fora ameaçado nunca foi ouvido em juízo, pois não foi localizado, e, na data dos fatos, demonstrou não ter interesse em ver Leonardo responsabilizado. Em seu interrogatório, Leonardo confirma integralmente os fatos, inclusive destacando que se arrependeu do crime que pretendia praticar. Constavam no processo a Folha de Antecedentes Criminais do acusado sem qualquer anotação e a Folha de Antecedentes Infracionais, ostentando uma representação pela prática de ato infracional análogo ao crime de tráfico, com decisão definitiva de procedência da ação socioeducativa. O magistrado concedeu prazo para as partes se manifestarem em alegações finais por memoriais. O Ministério Público requereu a condenação nos termos da denúncia. O advogado de Leonardo, contudo, renunciou aos poderes, razão pela qual, de imediato, o magistrado abriu vista para a Defensoria Pública apresentar alegações finais.
-
-      Em sentença, o juiz julgou procedente a pretensão punitiva estatal. No momento de fixar a pena-base, reconheceu a existência de maus antecedentes em razão da representação julgada procedente em face de Leonardo enquanto era inimputável, aumentando a pena em 06 meses de reclusão. Não foram reconhecidas agravantes ou atenuantes. Na terceira fase, incrementou o magistrado em 1/3 a pena, justificando ser desnecessária a apreensão de arma de fogo, bastando a simulação de porte do material diante do temor causado à vítima. Com a redução de 1/3 pela modalidade tentada, a pena final ficou acomodada em 4 (quatro) anos de reclusão. O regime inicial de cumprimento de pena foi o fechado, justificando o magistrado que o crime de roubo é extremamente grave e que atemoriza os cidadãos de Belo Horizonte todos os dias. Intimado, o Ministério Público apenas tomou ciência da decisão.
-
-      A irmã de Leonardo o procura para, na condição de advogado, adotar as medidas cabíveis. Constituída nos autos, a intimação da sentença pela defesa ocorreu em 08 de maio de 2017, segunda-feira, sendo terça-feira dia útil em todo o país.
-
-      Com base nas informações expostas acima e naquelas que podem ser inferidas do caso concreto, redija a peça cabível, excluída a possibilidade de habeas corpus, no último dia do prazo para interposição, sustentando todas as teses jurídicas pertinentes. (Valor: 5,00)
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Pedido de provimento do recurso, com expedição de alvará de soltura.
-    opcoes:
-      correta: Pedido de provimento do recurso, com expedição de alvará de soltura.
-      erradas:
-        - Absolvição, com argumento e base legal.
-        - Requerimento de declaração das nulidades, absolvição sumária e, alternativamente, produção de provas.
-        - "Pedidos: Absolvição, na forma do Art. 386, inciso VI, do CPP"
-        - Não provimento do recurso OU manutenção da sentença.
-        - Apresentação de rol de testemunhas.
-    revisao: *a1
+    pergunta: "Por que o regime fechado fixado pela gravidade do roubo deve ser afastado?"
+    tese: "A gravidade em abstrato do crime não justifica regime mais severo que o da pena"
+    aceitos: [ [ "abstrata | em abstrato" ], [ "motivacao idonea | fundamentacao idonea | concret*" ] ]
+    artigos: [ "Súmula 718 STF", "Súmula 719 STF", "Súmula 440 STJ" ]
+    gabarito: "Aplicação do regime inicial semiaberto ou aberto do cumprimento de pena, pois a gravidade em abstrato não justifica regime de pena mais severo OU a fixação de regime de cumprimento mais severo exige motivação concreta, nos termos da Súmula 718/STF OU 719/STF OU 440/STJ."
+    revisao: { status: revisado }
   - id: 22-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Chegou ao Ministério Público denúncia de pessoa identificada apontando Cássio como traficante de drogas. Com base nessa informação, entendendo haver indícios de autoria e não havendo outra forma de obter prova do crime, a autoridade policial representou pela interceptação da linha telefônica que seria utilizada por Cássio e que fora mencionada na denúncia recebida, tendo o juiz da comarca deferido a medida pelo prazo inicial de 30 dias.
-
-      Nas conversas ouvidas, ficou certo que Cássio havia adquirido certa quantidade de cocaína, pela primeira vez, para ser consumida por ele, juntamente com seus amigos Pedro e Paulo, na comemoração de seu aniversário, no dia seguinte. Diante dessa prova, policiais militares obtiveram ordem judicial e chegaram à casa de Cássio quando este consumia e oferecia a seus amigos os seis papelotes de cocaína para juntos consumirem. Cássio, portador de maus antecedentes, foi preso em flagrante e autuado pela prática do crime de tráfico, sendo, depois, denunciado como incurso nas penas do Art. 33, caput, da Lei nº 11.343/06.
-
-      Considerando os fatos narrados, responda, na qualidade de advogado(a) de Cássio, aos itens a seguir.
-    comando: Qual a tese de direito processual a ser suscitada para afastar a validade da prova obtida?
-    gabarito: |-
-      A tese de direito processual a ser suscitada para defesa de Cássio para afastar a prova obtida é a invalidade da decisão que determinou a interceptação telefônica de Cássio, tendo em vista que, de início, foi determinada pelo prazo de 30 dias. Inicialmente deve ser destacado que a autoridade policial possui legitimidade para representar pela decretação da interceptação de comunicações telefônicas, nos termos do Art. 3º, inciso I, da Lei nº 9.296/96.
-
-      Ademais, o crime investigado é punido com pena de reclusão e consta do enunciado que a prova não poderia ser obtida por outros meios disponíveis. Todavia, prevê o Art. 5º do mesmo diploma legal que a decisão que concede a medida deverá ser fundamentada e que não poderá exceder o prazo de 15 dias, renovável por igual período se comprovada a indispensabilidade do meio de prova. Diante disso, ainda que possa o período de 15 dias ser renovado, não pode, de início, a autoridade judicial determinar a interceptação por mais de 15 dias, sob pena de nulidade.
-    opcoes:
-      correta: A nulidade da decisão que decretou a interceptação das comunicações telefônicas OU ilicitude da prova obtida a partir das interceptações telefônicas, pois decretada a medida pelo prazo inicial de 30 dias, em desacordo com a previsão do Art. 5º da Lei nº 9.296/96
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "A interceptação foi deferida pelo prazo inicial de 30 dias. Que tese processual afasta a prova?"
+    tese: "Ilicitude da interceptação deferida por 30 dias: o prazo legal é de 15 dias"
+    aceitos: [ [ "nulidade | nula | ilicit* | ilegal*" ], [ "15 dias | quinze dias" ] ]
+    artigos: [ "art. 5, Lei 9.296" ]
+    gabarito: "A tese de direito processual a ser suscitada para defesa de Cássio para afastar a prova obtida é a invalidade da decisão que determinou a interceptação telefônica de Cássio, tendo em vista que, de início, foi determinada pelo prazo de 30 dias. Inicialmente deve ser destacado que a autoridade policial possui legitimidade para representar pela decretação da interceptação de comunicações telefônicas, nos termos do Art. 3º, inciso I, da Lei nº 9.296/96.\n\nAdemais, o crime investigado é punido com pena de reclusão e consta do enunciado que a prova não poderia ser obtida por outros meios disponíveis. Todavia, prevê o Art. 5º do mesmo diploma legal que a decisão que concede a medida deverá ser fundamentada e que não poderá exceder o prazo de 15 dias, renovável por igual período se comprovada a indispensabilidade do meio de prova. Diante disso, ainda que possa o período de 15 dias ser renovado, não pode, de início, a autoridade judicial determinar a interceptação por mais de 15 dias, sob pena de nulidade."
+    revisao: { status: revisado }
   - id: 22-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Chegou ao Ministério Público denúncia de pessoa identificada apontando Cássio como traficante de drogas. Com base nessa informação, entendendo haver indícios de autoria e não havendo outra forma de obter prova do crime, a autoridade policial representou pela interceptação da linha telefônica que seria utilizada por Cássio e que fora mencionada na denúncia recebida, tendo o juiz da comarca deferido a medida pelo prazo inicial de 30 dias.
-
-      Nas conversas ouvidas, ficou certo que Cássio havia adquirido certa quantidade de cocaína, pela primeira vez, para ser consumida por ele, juntamente com seus amigos Pedro e Paulo, na comemoração de seu aniversário, no dia seguinte. Diante dessa prova, policiais militares obtiveram ordem judicial e chegaram à casa de Cássio quando este consumia e oferecia a seus amigos os seis papelotes de cocaína para juntos consumirem. Cássio, portador de maus antecedentes, foi preso em flagrante e autuado pela prática do crime de tráfico, sendo, depois, denunciado como incurso nas penas do Art. 33, caput, da Lei nº 11.343/06.
-
-      Considerando os fatos narrados, responda, na qualidade de advogado(a) de Cássio, aos itens a seguir.
-    comando: Reconhecidos como verdadeiros os fatos narrados, qual a tese de direito material a ser alegada para tornar menos gravosa a tipificação da conduta de Cássio?
-    gabarito: |-
-      A tese de direito material a ser alegada para tornar a conduta de Cássio menos gravosa é que foi praticado o delito previsto no Art. 33, § 3º da Lei nº 11.343/06, já que o agente oferecia drogas, de maneira eventual, sem objetivo de lucro, para seus amigos para juntos consumirem. Não há, assim, que se falar em prática de tráfico do Art. 33 da Lei nº 11.343/06 e nem mesmo na aplicação do §4º do mesmo dispositivo, já que o agente era portador de maus antecedentes.
-
-      Tabela de Pontos
-    opcoes:
-      correta: A tese de direito material é que foi praticado o crime previsto no Art. 33, § 3º da Lei nº 11.343/06, tendo em vista que o agente tinha o material e o oferecia para junto consumir com seus amigos, de maneira eventual e sem intenção de lucro
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que tese de direito material torna menos grave a tipificação da conduta de Cássio?"
+    tese: "Desclassificação para o uso compartilhado: oferecer droga eventualmente, sem lucro, para consumir junto com os amigos"
+    aceitos: [ [ "compartilhad*" ], [ "juntos consumir | juntos consumirem | consumirem juntos | consumo conjunto" ], [ "cessao gratuita" ] ]
+    artigos: [ "art. 33, § 3º, Lei 11.343" ]
+    gabarito: "A tese de direito material a ser alegada para tornar a conduta de Cássio menos gravosa é que foi praticado o delito previsto no Art. 33, § 3º da Lei nº 11.343/06, já que o agente oferecia drogas, de maneira eventual, sem objetivo de lucro, para seus amigos para juntos consumirem. Não há, assim, que se falar em prática de tráfico do Art. 33 da Lei nº 11.343/06 e nem mesmo na aplicação do §4º do mesmo dispositivo, já que o agente era portador de maus antecedentes.\n\nTabela de Pontos"
+    revisao: { status: revisado }
   - id: 22-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Em inquérito policial, Antônio é indiciado pela prática de crime de estupro de vulnerável, figurando como vítima Joana, filha da grande amiga da Promotora de Justiça Carla, que, inclusive, aconselhou a família sobre como agir diante do ocorrido.
-
-      Segundo consta do inquérito, Antônio encontrou Joana durante uma festa de música eletrônica e, após conversa em que Joana afirmara que cursava a Faculdade de Direito, foram para um motel onde mantiveram relações sexuais, vindo Antônio, posteriormente, a tomar conhecimento de que Joana tinha apenas 13 anos de idade.
-
-      Recebido o inquérito concluído, Carla oferece denúncia em face de Antônio, imputando-lhe a prática do crime previsto no Art. 217-A do Código Penal, ressaltando a jurisprudência do Supremo Tribunal Federal no sentido de que, para a configuração do delito, não se deve analisar o passado da vítima, bastando que a mesma seja menor de 14 anos.
-
-      Considerando a situação narrada, na condição de advogado(a) de Antônio, responda aos itens a seguir.
-    comando: Existe alguma medida a ser apresentada pela defesa técnica para impedir Carla de participar do processo? Justifique.
-    gabarito: Sim, o advogado de Antônio, já no momento de apresentar resposta à acusação, deveria apresentar exceção de suspeição em face da Promotora de Justiça, tendo em vista a presença da causa de suspeição prevista no Art. 254, incisos I e IV, do Código de Processo Penal (CPP). Prevê o dispositivo em questão que o juiz dar-se-á por suspeito quando for amigo íntimo de alguma das partes ou quando tiver aconselhado uma das partes. Carla é muito amiga da genitora da vítima e ainda aconselhou a ofendida e sua família sobre como agir diante do ocorrido. Ademais, o Art. 258 do CPP estabelece que as previsões referentes às causas de impedimento e suspeição do magistrado são aplicáveis, no que couber, ao Ministério Público. Claro está o envolvimento de Carla com a causa, de modo que sua suspeição deve ser reconhecida. Considerando que a mesma não se declarou suspeita, oferecendo denúncia, caberia ao advogado apresentar exceção de suspeição, nos termos do Art. 95, inciso I, do CPP, e do Art. 104 do CPP.
-    opcoes:
-      correta: Sim, com apresentação de exceção de suspeição, nos termos do Art. 95, inciso I, do CPP OU do Art. 104 do CPP
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que medida a defesa pode usar para impedir a promotora Carla de atuar no processo?"
+    tese: "Arguição (exceção) de suspeição da promotora"
+    aceitos: [ "suspeicao" ]
+    artigos: [ "art. 104, CPP", "art. 95, I, CPP" ]
+    gabarito: "Sim, o advogado de Antônio, já no momento de apresentar resposta à acusação, deveria apresentar exceção de suspeição em face da Promotora de Justiça, tendo em vista a presença da causa de suspeição prevista no Art. 254, incisos I e IV, do Código de Processo Penal (CPP). Prevê o dispositivo em questão que o juiz dar-se-á por suspeito quando for amigo íntimo de alguma das partes ou quando tiver aconselhado uma das partes. Carla é muito amiga da genitora da vítima e ainda aconselhou a ofendida e sua família sobre como agir diante do ocorrido. Ademais, o Art. 258 do CPP estabelece que as previsões referentes às causas de impedimento e suspeição do magistrado são aplicáveis, no que couber, ao Ministério Público. Claro está o envolvimento de Carla com a causa, de modo que sua suspeição deve ser reconhecida. Considerando que a mesma não se declarou suspeita, oferecendo denúncia, caberia ao advogado apresentar exceção de suspeição, nos termos do Art. 95, inciso I, do CPP, e do Art. 104 do CPP."
+    revisao: { status: revisado }
   - id: 22-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Em inquérito policial, Antônio é indiciado pela prática de crime de estupro de vulnerável, figurando como vítima Joana, filha da grande amiga da Promotora de Justiça Carla, que, inclusive, aconselhou a família sobre como agir diante do ocorrido.
-
-      Segundo consta do inquérito, Antônio encontrou Joana durante uma festa de música eletrônica e, após conversa em que Joana afirmara que cursava a Faculdade de Direito, foram para um motel onde mantiveram relações sexuais, vindo Antônio, posteriormente, a tomar conhecimento de que Joana tinha apenas 13 anos de idade.
-
-      Recebido o inquérito concluído, Carla oferece denúncia em face de Antônio, imputando-lhe a prática do crime previsto no Art. 217-A do Código Penal, ressaltando a jurisprudência do Supremo Tribunal Federal no sentido de que, para a configuração do delito, não se deve analisar o passado da vítima, bastando que a mesma seja menor de 14 anos.
-
-      Considerando a situação narrada, na condição de advogado(a) de Antônio, responda aos itens a seguir.
-    comando: Qual a principal alegação defensiva de direito material a ser apresentada em busca da absolvição do denunciado? Justifique.
-    gabarito: |-
-      A principal alegação defensiva, de mérito, de direito material, é a de que houve erro de tipo por parte do denunciado, nos termos do Art. 20 do Código Penal, de modo que fica afastado o seu dolo. Diante da situação apresentada, claro está que Antônio não tinha conhecimento que Joana tinha apenas 13 anos de idade, merecendo destaque as partes se conheceram em uma festa de música eletrônica, ocasião em que a ofendida afirmara estar na faculdade, o que, por si só, já afastaria as suspeitas de que fosse menor de 14 anos. Ainda que se entendesse que o erro foi vencível, não poderia Antônio ser responsabilizado, tendo em vista que esse afasta o dolo e não há previsão de responsabilização culposa pelo crime de estupro de vulnerável. No caso, é irrelevante a posição dos Tribunais Superiores no sentido de que o passado sexual da vítima não deve ser analisado, bastando que a mesma tenha, objetivamente, menos de 14 anos de idade. Ocorre que o problema apresentado em nada com esse tema se confunde, já que sequer sabia o réu a idade da vítima, que é uma das elementares do tipo.
-
-      Tabela de Pontos
-    opcoes:
-      correta: A principal tese defensiva é a ocorrência de erro de tipo, nos termos do Art. 20 do CP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Qual a principal tese de direito material para a absolvição de Antônio?"
+    tese: "Erro de tipo: ele não sabia que Joana tinha menos de 14 anos"
+    aceitos: [ "erro de tipo" ]
+    artigos: [ "art. 20, CP" ]
+    gabarito: "A principal alegação defensiva, de mérito, de direito material, é a de que houve erro de tipo por parte do denunciado, nos termos do Art. 20 do Código Penal, de modo que fica afastado o seu dolo. Diante da situação apresentada, claro está que Antônio não tinha conhecimento que Joana tinha apenas 13 anos de idade, merecendo destaque as partes se conheceram em uma festa de música eletrônica, ocasião em que a ofendida afirmara estar na faculdade, o que, por si só, já afastaria as suspeitas de que fosse menor de 14 anos. Ainda que se entendesse que o erro foi vencível, não poderia Antônio ser responsabilizado, tendo em vista que esse afasta o dolo e não há previsão de responsabilização culposa pelo crime de estupro de vulnerável. No caso, é irrelevante a posição dos Tribunais Superiores no sentido de que o passado sexual da vítima não deve ser analisado, bastando que a mesma tenha, objetivamente, menos de 14 anos de idade. Ocorre que o problema apresentado em nada com esse tema se confunde, já que sequer sabia o réu a idade da vítima, que é uma das elementares do tipo.\n\nTabela de Pontos"
+    revisao: { status: revisado }
   - id: 22-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Na cidade de Porto Alegre, no Rio Grande do Sul, Maurício iniciou a execução de determinada contravenção penal que visava atingir e gerar prejuízo em detrimento de patrimônio de entidade autárquica federal, mas a infração penal não veio a se consumar por circunstâncias alheias à sua vontade.
-
-      Ao tomar conhecimento dos fatos, o Ministério Público dá início a procedimento criminal perante juízo do Tribunal Regional Federal com competência para atuar no local dos fatos, imputando ao agente a prática da contravenção penal em sua modalidade tentada, oferecendo, desde já, proposta de transação penal.
-
-      Maurício conversa com sua família e procura um(a) advogado(a) para patrocinar seus interesses, destacando que não tem interesse em aceitar transação penal, suspensão condicional do processo ou qualquer outro benefício despenalizador.
-
-      Com base apenas nas informações narradas e na condição de advogado(a) de Maurício, responda:
-    comando: Considerando que a contravenção penal causaria prejuízo ao patrimônio de entidade autárquica federal, o órgão perante o qual o procedimento criminal foi iniciado é competente para julgamento da infração penal imputada? Justifique.
-    gabarito: Apesar de a contravenção penal causar prejuízo ao patrimônio de autarquia federal, a Justiça Federal não é competente para julgar a infração penal, tendo em vista que o Art. 109, inciso IV, da Constituição da República Federativa do Brasil prevê expressamente que a Justiça Federal terá competência para julgar infrações penais patricadas em detrimento de bens, serviços ou interesses da União e de suas entidades autárquicas e empresas públicas, excluídas as contravenções penais. Diferente da regra geral, as contravenções penais, ainda que nas circunstâncias do dispositivo acima mencionado, devem ser julgadas perante a Justiça Estadual, no caso, Juizado Especial Criminal Estadual.
-    opcoes:
-      correta: Não, a Justiça Federal não é competente para julgamento de contravenções penais, ainda que praticadas em detrimento de bens, serviços e patrimônio de entidade autárquica da União, nos termos do Art. 109, inciso IV, da CRFB/88 OU Súmula 38/STJ.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, pois o auxílio foi proposto após a consumação do crime de furto OU Não, pois inexistente liame subjetivo e identidade da infração penal entre ambos.
-        - Extinção da punibilidade pela decadência,pois a ação penal no caso de furto praticado por sobrinho contra tio com quem coabite é pública condicionada à representação, na forma do Art. 182, inciso III, do CP.
-        - A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "A Justiça Federal pode julgar a contravenção imputada a Maurício?"
+    tese: "Competência da Justiça Estadual para as contravenções, mesmo contra bens da União"
+    aceitos: [ [ "justica estadual" ], [ "ressalv*" ] ]
+    artigos: [ "art. 109, IV, CRFB", "Súmula 38 STJ" ]
+    gabarito: "Apesar de a contravenção penal causar prejuízo ao patrimônio de autarquia federal, a Justiça Federal não é competente para julgar a infração penal, tendo em vista que o Art. 109, inciso IV, da Constituição da República Federativa do Brasil prevê expressamente que a Justiça Federal terá competência para julgar infrações penais patricadas em detrimento de bens, serviços ou interesses da União e de suas entidades autárquicas e empresas públicas, excluídas as contravenções penais. Diferente da regra geral, as contravenções penais, ainda que nas circunstâncias do dispositivo acima mencionado, devem ser julgadas perante a Justiça Estadual, no caso, Juizado Especial Criminal Estadual."
+    revisao: { status: revisado }
   - id: 22-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Na cidade de Porto Alegre, no Rio Grande do Sul, Maurício iniciou a execução de determinada contravenção penal que visava atingir e gerar prejuízo em detrimento de patrimônio de entidade autárquica federal, mas a infração penal não veio a se consumar por circunstâncias alheias à sua vontade.
-
-      Ao tomar conhecimento dos fatos, o Ministério Público dá início a procedimento criminal perante juízo do Tribunal Regional Federal com competência para atuar no local dos fatos, imputando ao agente a prática da contravenção penal em sua modalidade tentada, oferecendo, desde já, proposta de transação penal.
-
-      Maurício conversa com sua família e procura um(a) advogado(a) para patrocinar seus interesses, destacando que não tem interesse em aceitar transação penal, suspensão condicional do processo ou qualquer outro benefício despenalizador.
-
-      Com base apenas nas informações narradas e na condição de advogado(a) de Maurício, responda:
-    comando: Qual argumento de direito material deverá ser apresentado para evitar a punição de Maurício? Justifique.
-    gabarito: |-
-      Apesar de Maurício ter iniciado a execução de uma contravenção penal e a mesma não ter se consumado por circunstâncias alheias à vontade do agente, o que, em tese, configura tentativa, que, pela regra do Código Penal, impõe a punição pelo crime pretendido com redução de pena, na hipótese apresentada, a infração penal que não restou consumada foi uma contravenção. Nos termos do previsto no Art. 4º do Decreto-Lei 3.688/41, não se pune a tentativa de contravenção penal. Assim, no momento em que Maurício não conseguiu consumar o delito por circunstâncias alheias à sua vontade, sua conduta não é punível.
-
-      Tabela de Pontos
-    opcoes:
-      correta: O argumento a ser apresentado é que não se pune a tentativa de contravenção penal, nos termos do Art. 4º do DL 3.688/41.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que argumento de direito material evita a punição de Maurício?"
+    tese: "Atipicidade: a tentativa de contravenção não é punível"
+    aceitos: [ "nao se pune | nao e punivel | impunivel | nao punivel | nao se punem" ]
+    artigos: [ "art. 4º LCP" ]
+    gabarito: "Apesar de Maurício ter iniciado a execução de uma contravenção penal e a mesma não ter se consumado por circunstâncias alheias à vontade do agente, o que, em tese, configura tentativa, que, pela regra do Código Penal, impõe a punição pelo crime pretendido com redução de pena, na hipótese apresentada, a infração penal que não restou consumada foi uma contravenção. Nos termos do previsto no Art. 4º do Decreto-Lei 3.688/41, não se pune a tentativa de contravenção penal. Assim, no momento em que Maurício não conseguiu consumar o delito por circunstâncias alheias à sua vontade, sua conduta não é punível.\n\nTabela de Pontos"
+    revisao: { status: revisado }
   - id: 22-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      Diego e Júlio caminham pela rua, por volta das 21h, retornando para suas casas após mais um dia de aula na faculdade, quando são abordados por Marcos, que, mediante grave ameaça de morte e utilizando simulacro de arma de fogo, exige que ambos entreguem as mochilas e os celulares que carregavam.
-
-      Após os fatos, Diego e Júlio comparecem em sede policial, narram o ocorrido e descrevem as características físicas do autor do crime. Por volta das 5h da manhã do dia seguinte, policiais militares em patrulhamento se deparam com Marcos nas proximidades do local do fato e verificam que ele possuía as mesmas características físicas do roubador. Todavia, não são encontrados com Marcos quaisquer dos bens subtraídos, nem o simulacro de arma de fogo. Ele é encaminhado para a Delegacia e, tendo-se verificado que era triplamente reincidente na prática de crimes patrimoniais, a autoridade policial liga para as residências de Diego e Júlio, que comparecem em sede policial e, em observância de todas as formalidades legais, realizam o reconhecimento de Marcos como responsável pelo assalto. O Delegado, então, lavra auto de prisão em flagrante em desfavor de Marcos, permanecendo este preso, e o indicia pela prática do crime previsto no Art. 157, caput, do Código Penal, por duas vezes, na forma do Art. 69 do Código Penal.
-
-      Diante disso, Marcos liga para seu advogado para informar sua prisão. Este comparece, imediatamente, em sede policial, para acesso aos autos do procedimento originado do Auto de Prisão em Flagrante.
-
-      Considerando apenas as informações narradas, na condição de advogado de Marcos, responda, de acordo com a jurisprudência dos Tribunais Superiores, aos itens a seguir.
-    comando: Qual requerimento deverá ser formulado, de imediato, em busca da liberdade de Marcos e sob qual fundamento? Justifique.
-    gabarito: |-
-      A defesa de Marcos deverá formular requerimento de relaxamento da prisão, tendo em vista que não havia situação de flagrante a justificar a formalização do Auto de Prisão em Flagrante. Narra o enunciado que, de fato, Marcos, mediante grave ameaça, inclusive com emprego de simulacro de arma de fogo, subtraiu coisas alheias móveis de Diego e Julio, logo praticou dois crimes de roubo. As vítimas reconheceram o acusado, de modo que há justa causa para o oferecimento de denúncia. Todavia, não havia situação de flagrante a justificar a prisão do acusado. Isso porque o reconhecimento e prisão de Marcos ocorreram mais de 07 horas após o fato, sendo certo que não houve perseguição e nem com o agente foram encontrados instrumentos ou produtos do crime.
-
-      Dessa forma, nenhuma das situações previstas no Art. 302 do Código de Processo Penal restou configurada. Em sendo a prisão ilegal, o requerimento a ser formulado é de relaxamento da prisão. Insuficiente, no caso, o examinando apresentar requerimento de liberdade provisória. Primeiro porque, em sendo a prisão ilegal, sequer deveriam ser analisados os pressupostos dos Artigos 312 e 313 do Código de Processo Penal nesse momento.
-
-      Além disso, a princípio, não seria caso de reconhecimento de ausência dos motivos da preventiva, já que foi praticado crime com circunstâncias graves e o agente é triplamente reincidente.
-    opcoes:
-      correta: O requerimento a ser formulado é de relaxamento da prisão, tendo em vista que não está presente nenhuma das situações de flagrante elencadas no Art. 302 do CPP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que pedido deve ser feito de imediato pela liberdade de Marcos?"
+    tese: "Relaxamento da prisão ilegal: não havia nenhuma situação de flagrante"
+    aceitos: [ "relaxamento" ]
+    artigos: [ "art. 302, CPP" ]
+    gabarito: "A defesa de Marcos deverá formular requerimento de relaxamento da prisão, tendo em vista que não havia situação de flagrante a justificar a formalização do Auto de Prisão em Flagrante. Narra o enunciado que, de fato, Marcos, mediante grave ameaça, inclusive com emprego de simulacro de arma de fogo, subtraiu coisas alheias móveis de Diego e Julio, logo praticou dois crimes de roubo. As vítimas reconheceram o acusado, de modo que há justa causa para o oferecimento de denúncia. Todavia, não havia situação de flagrante a justificar a prisão do acusado. Isso porque o reconhecimento e prisão de Marcos ocorreram mais de 07 horas após o fato, sendo certo que não houve perseguição e nem com o agente foram encontrados instrumentos ou produtos do crime.\n\nDessa forma, nenhuma das situações previstas no Art. 302 do Código de Processo Penal restou configurada. Em sendo a prisão ilegal, o requerimento a ser formulado é de relaxamento da prisão. Insuficiente, no caso, o examinando apresentar requerimento de liberdade provisória. Primeiro porque, em sendo a prisão ilegal, sequer deveriam ser analisados os pressupostos dos Artigos 312 e 313 do Código de Processo Penal nesse momento.\n\nAlém disso, a princípio, não seria caso de reconhecimento de ausência dos motivos da preventiva, já que foi praticado crime com circunstâncias graves e o agente é triplamente reincidente."
+    revisao: { status: revisado }
   - id: 22-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Diego e Júlio caminham pela rua, por volta das 21h, retornando para suas casas após mais um dia de aula na faculdade, quando são abordados por Marcos, que, mediante grave ameaça de morte e utilizando simulacro de arma de fogo, exige que ambos entreguem as mochilas e os celulares que carregavam.
-
-      Após os fatos, Diego e Júlio comparecem em sede policial, narram o ocorrido e descrevem as características físicas do autor do crime. Por volta das 5h da manhã do dia seguinte, policiais militares em patrulhamento se deparam com Marcos nas proximidades do local do fato e verificam que ele possuía as mesmas características físicas do roubador. Todavia, não são encontrados com Marcos quaisquer dos bens subtraídos, nem o simulacro de arma de fogo. Ele é encaminhado para a Delegacia e, tendo-se verificado que era triplamente reincidente na prática de crimes patrimoniais, a autoridade policial liga para as residências de Diego e Júlio, que comparecem em sede policial e, em observância de todas as formalidades legais, realizam o reconhecimento de Marcos como responsável pelo assalto. O Delegado, então, lavra auto de prisão em flagrante em desfavor de Marcos, permanecendo este preso, e o indicia pela prática do crime previsto no Art. 157, caput, do Código Penal, por duas vezes, na forma do Art. 69 do Código Penal.
-
-      Diante disso, Marcos liga para seu advogado para informar sua prisão. Este comparece, imediatamente, em sede policial, para acesso aos autos do procedimento originado do Auto de Prisão em Flagrante.
-
-      Considerando apenas as informações narradas, na condição de advogado de Marcos, responda, de acordo com a jurisprudência dos Tribunais Superiores, aos itens a seguir.
-    comando: Oferecida denúncia na forma do indiciamento, qual argumento de direito material poderá ser apresentado pela defesa para questionar a capitulação delitiva constante da nota de culpa, em busca de uma punição mais branda? Justifique.
-    gabarito: |-
-      O equívoco a ser alegado em relação à capitulação delitiva refere-se ao concurso de crimes. Sem dúvidas, confirmados os fatos, houve crime de roubo, já que foram subtraídas coisas alheias móveis e houve emprego de grave ameaça, ainda que apenas através de palavras de ordem e emprego de simulacro de arma de fogo. Da mesma forma, dois foram os crimes patrimoniais praticados. Isso porque dois patrimônios foram atingidos e presente o elemento subjetivo, tendo em vista que Marcos sabia que estava subtraindo pertences de duas pessoas diversas. Todavia, com uma só ação, mediante uma ameaça, foram subtraídos bens de dois patrimônios diferentes. Assim, deverá ser reconhecido o concurso formal de delitos, aplicando-se a regra da exasperação da pena, e não o concurso material, com aplicação do cúmulo material de sanções.
-
-      Tabela de Pontos
-    opcoes:
-      correta: O argumento é que houve concurso formal de crimes, tendo em vista que, com uma só ação, foram praticados dois delitos, nos termos do Art. 70 do CP.
-      erradas:
-        - "Sim: apropriação indébita qualificada (ou majorada) em razão do ofício, art. 168, § 1º, III, do CP."
-        - A vítima não pode se retratar, pois o delito de lesão corporal leve no âmbito da violência doméstica e familiar contra a mulher é de ação penal pública incondicionada (ou porque a Lei nº 9.099/95 não é aplicável no âmbito da violência doméstica e familiar contra a mulher), na forma do Art. 41 da Lei nº 11.340/2006 ou da Súmula 542 do STJ.
-        - Não, o referido dispositivo somente é aplicado em se tratando de prescrição da pretensão executória. OU Não, conforme o verbete 220 da Súmula do STJ.
-        - Sim, o argumento defensivo é de que houve decadência, já que o crime de injúria racial é de ação penal pública condicionada à representação, nos termos do Art. 145, parágrafo único, do Código Penal.
-        - Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que argumento de direito material contesta a capitulação de dois roubos em concurso material?"
+    tese: "Concurso formal: com uma só ação, foram dois crimes"
+    aceitos: [ "concurso formal" ]
+    artigos: [ "art. 70, CP" ]
+    gabarito: "O equívoco a ser alegado em relação à capitulação delitiva refere-se ao concurso de crimes. Sem dúvidas, confirmados os fatos, houve crime de roubo, já que foram subtraídas coisas alheias móveis e houve emprego de grave ameaça, ainda que apenas através de palavras de ordem e emprego de simulacro de arma de fogo. Da mesma forma, dois foram os crimes patrimoniais praticados. Isso porque dois patrimônios foram atingidos e presente o elemento subjetivo, tendo em vista que Marcos sabia que estava subtraindo pertences de duas pessoas diversas. Todavia, com uma só ação, mediante uma ameaça, foram subtraídos bens de dois patrimônios diferentes. Assim, deverá ser reconhecido o concurso formal de delitos, aplicando-se a regra da exasperação da pena, e não o concurso material, com aplicação do cúmulo material de sanções.\n\nTabela de Pontos"
+    revisao: { status: revisado }

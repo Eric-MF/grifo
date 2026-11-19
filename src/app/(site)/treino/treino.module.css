@@ -178,6 +178,9 @@
 :global(body[data-foco]) .cabecalho .situacaoAuto { order: 6; flex-basis: 100%; margin: 0; }
 :global(body[data-foco]) .ajustes, :global(body[data-foco]) .abandonar { max-width: min(100%, var(--foco-largura, 52rem)); }
 
+/* o botão de começar (ou continuar) vem antes das opções, no computador e no celular */
+.comecar { order: -1; justify-self: stretch; }
+
 /* a opção de pular os acertos, abaixo da questão */
 .opcaoQuestao { max-width: 46rem; margin: 1rem auto 0; font-size: 0.9rem; }
 .opcaoQuestao small { display: block; color: var(--muted); }
@@ -211,8 +214,9 @@
     padding: 0.2rem 0.2rem 0.2rem 0.7rem; border-radius: 999px; background: color-mix(in srgb, var(--surface) 88%, transparent);
     box-shadow: 0 4px 16px rgb(3 17 44 / 0.14); backdrop-filter: blur(6px);
   }
-  /* o número da questão e o tempo correm ao lado do menu flutuante */
-  :global(body[data-foco]) .cabecalho .linhaFoco { padding-right: 9.5rem; }
+  /* o número da questão corre ao lado do menu flutuante, com a altura dele: o caso começa abaixo do menu, sem a primeira
+     linha coberta */
+  :global(body[data-foco]) .cabecalho .linhaFoco { padding-right: 9.5rem; min-height: 3.4rem; display: flex; flex-wrap: wrap; align-items: center; column-gap: 0.25em; }
 }
 
 /* modo foco: "Q2·Peça e fundamento" numa linha, as barrinhas do nível embaixo */
@@ -232,7 +236,6 @@
   .pagina:global(.section) { padding-top: 0.75rem; }
   .intro :global(.lead) { margin-bottom: 0; }
   .painel { margin-top: 1rem; }
-  .comecar { order: -1; justify-self: stretch; }
   /* o título fica em cima, as opções (com o botão) logo abaixo dele e a explicação longa depois */
   .pagina { display: flex; flex-direction: column; }
   /* numa coluna flex, quem tem margem automática encolhe ao conteúdo; a questão no modo foco (que mede a própria
@@ -246,3 +249,77 @@
 @media (max-width: 760px) {
   :global(body[data-foco][data-digitando]) .cabecalho .controlesFoco { top: calc(env(safe-area-inset-top, 0px) + 2.3rem); }
 }
+/* digitando, a faixa da barra de notificações ocupa o alto da tela: a página toda desce junto com o XP e o menu, para o
+   menu não cobrir a primeira linha do caso */
+@media (max-width: 760px) {
+  :global(body[data-foco][data-digitando]) .pagina { padding-top: calc(env(safe-area-inset-top, 0px) + 2.6rem); }
+}
+
+/* a resposta da questão anterior, numa janela por cima da atual */
+.anterior {
+  width: min(46rem, calc(100vw - 1.5rem)); max-height: calc(100dvh - 2rem); padding: 0; border: 1px solid var(--border); border-radius: 18px;
+  background: var(--bg); color: var(--text); box-shadow: 0 24px 60px rgb(0 0 0 / 0.35); overflow: auto; overscroll-behavior: contain;
+}
+.anterior[open] { animation: abrirJanela 0.22s ease-out; }
+.anterior::backdrop { background: rgb(3 10 24 / 0.55); backdrop-filter: blur(2px); }
+@keyframes abrirJanela { from { opacity: 0; transform: translateX(-1.5rem); } }
+.anteriorCorpo { display: grid; gap: 0.8rem; padding: 1rem 1.1rem 1.2rem; }
+.anteriorTopo {
+  position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; flex-wrap: wrap;
+  margin: -1rem -1.1rem 0; padding: 0.8rem 1.1rem; background: var(--bg); border-bottom: 1px solid var(--border);
+}
+.anteriorTopo h2 { margin: 0; display: grid; gap: 0.1rem; font-size: 1.05rem; }
+.anteriorTopo small { font-size: 0.78rem; font-weight: 500; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .anterior[open] { animation: none; } }
+
+/* o recorde do modo escolhido, logo abaixo do botão de começar (os dois vêm antes das opções); no resultado guardado,
+   a mesma caixa abre a página, acima do "Resultado" */
+.seuRecorde {
+  order: -1; display: flex; align-items: flex-start; gap: 0.8rem; padding: 0.8rem 1rem; border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border)); background: color-mix(in srgb, var(--accent) 9%, var(--bg));
+}
+.trofeu { width: 30px; height: 30px; flex: none; margin-top: 0.1rem; fill: none; stroke: var(--accent-ink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.seuRecordeCorpo { display: grid; gap: 0.25rem; min-width: 0; }
+.seuRecordeTitulo { margin: 0; font-family: var(--font-body); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-ink); }
+.seuRecordeTitulo small { margin-left: 0.4rem; font-size: inherit; font-weight: 600; letter-spacing: 0.04em; text-transform: none; color: var(--muted); }
+.seuRecordeValor { margin: 0; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+.seuRecordeValor strong { font-size: 1.5rem; font-weight: 900; color: var(--text); }
+.seuRecordeValor small { font-size: 0.85rem; }
+.seuRecordeLinks { margin: 0.1rem 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 1.1rem; font-size: 0.9rem; font-weight: 600; }
+.seuRecordeLinks .regras { font-size: 0.85rem; font-weight: 400; }
+/* no fim do treino: o recorde novo ou o que ficou para bater */
+.avisoRecorde { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.6rem; }
+.avisoRecorde:empty { display: none; }
+.avisoRecorde :global(.badge) { margin: 0; font-size: 0.85rem; }
+
+/* responder falando: a linha do microfone acima da questão (RespostaFalada.tsx) */
+.linhaVoz {
+  display: flex; align-items: center; gap: 0.6rem; margin: 0.2rem 0 0.7rem; padding: 0.45rem 0.5rem 0.45rem 0.65rem; border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, var(--border)); background: color-mix(in srgb, var(--primary) 7%, var(--surface));
+  font-size: 0.9rem;
+}
+.linhaVoz p { margin: 0; flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.linhaVoz q { font-style: italic; }
+.linhaVoz svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.pontoVoz { flex: none; width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center; color: var(--muted); background: var(--surface-2); }
+/* ouvindo: o microfone em vermelho, pulsando devagar */
+.linhaVoz[data-estado="ouvindo"] .pontoVoz { color: #fff; background: var(--bad); animation: pulsoVoz 1.6s ease-in-out infinite; }
+.linhaVoz[data-estado="problema"] { border-color: color-mix(in srgb, var(--bad) 45%, var(--border)); background: color-mix(in srgb, var(--bad) 7%, var(--surface)); }
+.linhaVoz[data-entendeu="1"] p { color: color-mix(in srgb, var(--ok) 75%, var(--text)); font-weight: 600; }
+.desligarVoz {
+  flex: none; width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--border);
+  background: var(--surface); color: var(--muted); cursor: pointer;
+}
+.desligarVoz:hover { color: var(--text); }
+.desligarVoz:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+@keyframes pulsoVoz { 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--bad) 22%, transparent); } }
+@media (prefers-reduced-motion: reduce) { .linhaVoz[data-estado="ouvindo"] .pontoVoz { animation: none; } }
+/* no modo foco, a linha ocupa a largura toda, abaixo do resto do topo */
+:global(body[data-foco]) .cabecalho .linhaVoz { order: 7; flex-basis: 100%; margin: 0.2rem 0 0; }
+@media (max-width: 760px) { .cabecalho .linhaVoz { order: 6; flex: 1 1 100%; } }
+.linhaVoz .depoisVoz { font-weight: 400; color: var(--muted); }
+/* "Ouvir as questões", dentro de "Responder falando" */
+.opcaoVoz { display: grid; gap: 0.6rem; }
+.opcaoDentro { margin-left: 1.75rem; }
+/* lendo a questão: o microfone fica cinza (só ouve "parar", "repetir") */
+.linhaVoz[data-estado="lendo"] .pontoVoz { color: var(--primary); background: color-mix(in srgb, var(--primary) 14%, var(--surface)); }

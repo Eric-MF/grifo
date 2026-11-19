@@ -1,480 +1,125 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "15"
+introducoes:
+  peca: "No dia do aniversário, Enrico convidou os amigos pela rede social. Helena, sua ex-namorada, comentou no perfil dele, à vista de todos os contatos: 'Enrico não passa de um idiota, bêbado, irresponsável e sem vergonha!', e acrescentou que ele trabalha embriagado e que, no mês anterior, a empresa teve de chamar uma ambulância porque ele estava bêbado no expediente. Os amigos Carlos, Miguel e Ramirez estavam com ele e viram a publicação. Cinco meses depois, Enrico procura você para processar Helena, em Niterói."
+  q1: "Miguel, condenado por roubo a 5 anos e 4 meses, já tinha cumprido 4 anos quando saiu, em 24/12/2013, um decreto de indulto para penas de até 8 anos, cumprido 1/3 da pena (primário) e sem falta grave nos 12 meses anteriores. Cinco dias depois do decreto, antes da análise do pedido, Miguel cometeu falta grave, e o juiz da execução negou o indulto."
+  q2: "Vencido o prazo do inquérito por extorsão mediante sequestro, o delegado pediu só a renovação do prazo. O juiz, antes de ouvir o Ministério Público, decretou a prisão preventiva do investigado, considerando só a gravidade do tipo de crime."
+  q3: "A Receita Federal apurou que Raquel teria sonegado R$ 27 mil de Imposto de Renda e abriu procedimento administrativo, ainda sem lançamento definitivo do crédito. Mesmo assim, o Ministério Público Federal a denunciou por sonegação fiscal, e o juiz manteve o recebimento da denúncia depois da resposta à acusação."
+  q4: "Júlia, nascida em 6/4/1991, furtou a carteira de Ricardo em 6/7/2010. A denúncia foi recebida em 11/8/2011, e ela foi condenada a 1 ano de reclusão em sentença publicada em 8/10/2014, que transitou em julgado sem recurso."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["15-peca-1", "15-peca-3-1", "15-peca-5", "15-peca-6", "15-q1-b"]
 perguntas:
-  - id: 15-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Enrico, engenheiro de uma renomada empresa da construção civil, possui um perfil em uma das redes sociais existentes na Internet e o utiliza diariamente para entrar em contato com seus amigos, parentes e colegas de trabalho. Enrico utiliza constantemente as ferramentas da Internet para contatos profissionais e lazer, como o fazem milhares de pessoas no mundo contemporâneo.
-
-      No dia 19/04/2014, sábado, Enrico comemora aniversário e planeja, para a ocasião, uma reunião à noite com parentes e amigos para festejar a data em uma famosa churrascaria da cidade de Niterói, no estado do Rio de Janeiro. Na manhã de seu aniversário, resolveu, então, enviar o convite por meio da rede social, publicando postagem alusiva à comemoração em seu perfil pessoal, para todos os seus contatos.
-
-      Helena, vizinha e ex-namorada de Enrico, que também possui perfil na referida rede social e está adicionada nos contatos de seu ex, soube, assim, da festa e do motivo da comemoração. Então, de seu computador pessoal, instalado em sua residência, um prédio na praia de Icaraí, em Niterói, publicou na rede social uma mensagem no perfil pessoal de Enrico.
-
-      Naquele momento, Helena, com o intuito de ofender o ex-namorado, publicou o seguinte comentário: “não sei o motivo da comemoração, já que Enrico não passa de um idiota, bêbado, irresponsável e sem vergonha!”, e, com o propósito de prejudicar Enrico perante seus colegas de trabalho e denegrir sua reputação acrescentou, ainda, “ele trabalha todo dia embriagado! No dia 10 do mês passado, ele cambaleava bêbado pelas ruas do Rio, inclusive, estava tão bêbado no horário do expediente que a empresa em que trabalha teve que chamar uma ambulância para socorrê-lo!”.
-
-      Imediatamente, Enrico, que estava em seu apartamento e conectado à rede social por meio de seu tablet, recebeu a mensagem e visualizou a publicação com os comentários ofensivos de Helena em seu perfil pessoal.
-
-      Enrico, mortificado, não sabia o que dizer aos amigos, em especial a Carlos, Miguel e Ramirez, que estavam ao seu lado naquele instante. Muito envergonhado, Enrico tentou disfarçar o constrangimento sofrido, mas perdeu todo o seu entusiasmo, e a festa comemorativa deixou de ser realizada. No dia seguinte, Enrico procurou a Delegacia de Polícia Especializada em Repressão aos Crimes de Informática e narrou os fatos à autoridade policial, entregando o conteúdo impresso da mensagem ofensiva e a página da rede social na Internet onde ela poderia ser visualizada. Passados cinco meses da data dos fatos, Enrico procurou seu escritório de advocacia e narrou os fatos acima. Você, na qualidade de advogado de Enrico, deve assisti-lo. Informa-se que a cidade de Niterói, no Estado do Rio de Janeiro, possui Varas Criminais e Juizados Especiais Criminais.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de habeas corpus, sustentando, para tanto, as teses jurídicas pertinentes. (Valor: 5,00 pontos)
-
-      A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento correto: Juizado Especial Criminal de Niterói."
-    opcoes:
-      correta: "Endereçamento correto: Juizado Especial Criminal de Niterói."
-      erradas:
-        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
-        - "Endereçamento das razões: Tribunal de Justiça do Estado ___."
-        - "Endereçamento correto: Tribunal de Justiça do Estado de Minas Gerais."
-        - "Endereçamento: Tribunal de Justiça do Estado de São Paulo."
-        - A petição deve ser endereçada à 05ª Vara Criminal da Comarca de Barnabeu/CN.
-    revisao: &a1
-      status: revisado
-  - id: 15-peca-3-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "3.1"
-    secao: merito
-    caso: |-
-      Enrico, engenheiro de uma renomada empresa da construção civil, possui um perfil em uma das redes sociais existentes na Internet e o utiliza diariamente para entrar em contato com seus amigos, parentes e colegas de trabalho. Enrico utiliza constantemente as ferramentas da Internet para contatos profissionais e lazer, como o fazem milhares de pessoas no mundo contemporâneo.
-
-      No dia 19/04/2014, sábado, Enrico comemora aniversário e planeja, para a ocasião, uma reunião à noite com parentes e amigos para festejar a data em uma famosa churrascaria da cidade de Niterói, no estado do Rio de Janeiro. Na manhã de seu aniversário, resolveu, então, enviar o convite por meio da rede social, publicando postagem alusiva à comemoração em seu perfil pessoal, para todos os seus contatos.
-
-      Helena, vizinha e ex-namorada de Enrico, que também possui perfil na referida rede social e está adicionada nos contatos de seu ex, soube, assim, da festa e do motivo da comemoração. Então, de seu computador pessoal, instalado em sua residência, um prédio na praia de Icaraí, em Niterói, publicou na rede social uma mensagem no perfil pessoal de Enrico.
-
-      Naquele momento, Helena, com o intuito de ofender o ex-namorado, publicou o seguinte comentário: “não sei o motivo da comemoração, já que Enrico não passa de um idiota, bêbado, irresponsável e sem vergonha!”, e, com o propósito de prejudicar Enrico perante seus colegas de trabalho e denegrir sua reputação acrescentou, ainda, “ele trabalha todo dia embriagado! No dia 10 do mês passado, ele cambaleava bêbado pelas ruas do Rio, inclusive, estava tão bêbado no horário do expediente que a empresa em que trabalha teve que chamar uma ambulância para socorrê-lo!”.
-
-      Imediatamente, Enrico, que estava em seu apartamento e conectado à rede social por meio de seu tablet, recebeu a mensagem e visualizou a publicação com os comentários ofensivos de Helena em seu perfil pessoal.
-
-      Enrico, mortificado, não sabia o que dizer aos amigos, em especial a Carlos, Miguel e Ramirez, que estavam ao seu lado naquele instante. Muito envergonhado, Enrico tentou disfarçar o constrangimento sofrido, mas perdeu todo o seu entusiasmo, e a festa comemorativa deixou de ser realizada. No dia seguinte, Enrico procurou a Delegacia de Polícia Especializada em Repressão aos Crimes de Informática e narrou os fatos à autoridade policial, entregando o conteúdo impresso da mensagem ofensiva e a página da rede social na Internet onde ela poderia ser visualizada. Passados cinco meses da data dos fatos, Enrico procurou seu escritório de advocacia e narrou os fatos acima. Você, na qualidade de advogado de Enrico, deve assisti-lo. Informa-se que a cidade de Niterói, no Estado do Rio de Janeiro, possui Varas Criminais e Juizados Especiais Criminais.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de habeas corpus, sustentando, para tanto, as teses jurídicas pertinentes. (Valor: 5,00 pontos)
-
-      A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-    opcoes:
-      correta: "Qualificação do querelante e da querelada: Indicação da qualificação do querelante e da querelada"
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - "No mérito: Absolvição OU atipicidade, pois não houve dolo de ter a coisa para si OU não há a elementar “ para si ou para outrem” OU “furto de uso” é indiferente penal"
-        - No mérito, absolvição de Roberta.
-        - Manutenção do reconhecimento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343, eis que o fato de o réu responder à ação penal por crime de furto não justifica o reconhecimento de maus antecedentes, nos termos da Súmula 444 do STJ, por analogia OU conforme o Art. 5º, LVII, da CRFB/88 (princípio da não culpabilidade ou da presunção de inocência).
-        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
-    revisao: *a1
   - id: 15-peca-3-2
     categoria: peca-detalhe
     parte: peca
     item: "3.2"
     secao: merito
-    caso: |-
-      Enrico, engenheiro de uma renomada empresa da construção civil, possui um perfil em uma das redes sociais existentes na Internet e o utiliza diariamente para entrar em contato com seus amigos, parentes e colegas de trabalho. Enrico utiliza constantemente as ferramentas da Internet para contatos profissionais e lazer, como o fazem milhares de pessoas no mundo contemporâneo.
-
-      No dia 19/04/2014, sábado, Enrico comemora aniversário e planeja, para a ocasião, uma reunião à noite com parentes e amigos para festejar a data em uma famosa churrascaria da cidade de Niterói, no estado do Rio de Janeiro. Na manhã de seu aniversário, resolveu, então, enviar o convite por meio da rede social, publicando postagem alusiva à comemoração em seu perfil pessoal, para todos os seus contatos.
-
-      Helena, vizinha e ex-namorada de Enrico, que também possui perfil na referida rede social e está adicionada nos contatos de seu ex, soube, assim, da festa e do motivo da comemoração. Então, de seu computador pessoal, instalado em sua residência, um prédio na praia de Icaraí, em Niterói, publicou na rede social uma mensagem no perfil pessoal de Enrico.
-
-      Naquele momento, Helena, com o intuito de ofender o ex-namorado, publicou o seguinte comentário: “não sei o motivo da comemoração, já que Enrico não passa de um idiota, bêbado, irresponsável e sem vergonha!”, e, com o propósito de prejudicar Enrico perante seus colegas de trabalho e denegrir sua reputação acrescentou, ainda, “ele trabalha todo dia embriagado! No dia 10 do mês passado, ele cambaleava bêbado pelas ruas do Rio, inclusive, estava tão bêbado no horário do expediente que a empresa em que trabalha teve que chamar uma ambulância para socorrê-lo!”.
-
-      Imediatamente, Enrico, que estava em seu apartamento e conectado à rede social por meio de seu tablet, recebeu a mensagem e visualizou a publicação com os comentários ofensivos de Helena em seu perfil pessoal.
-
-      Enrico, mortificado, não sabia o que dizer aos amigos, em especial a Carlos, Miguel e Ramirez, que estavam ao seu lado naquele instante. Muito envergonhado, Enrico tentou disfarçar o constrangimento sofrido, mas perdeu todo o seu entusiasmo, e a festa comemorativa deixou de ser realizada. No dia seguinte, Enrico procurou a Delegacia de Polícia Especializada em Repressão aos Crimes de Informática e narrou os fatos à autoridade policial, entregando o conteúdo impresso da mensagem ofensiva e a página da rede social na Internet onde ela poderia ser visualizada. Passados cinco meses da data dos fatos, Enrico procurou seu escritório de advocacia e narrou os fatos acima. Você, na qualidade de advogado de Enrico, deve assisti-lo. Informa-se que a cidade de Niterói, no Estado do Rio de Janeiro, possui Varas Criminais e Juizados Especiais Criminais.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de habeas corpus, sustentando, para tanto, as teses jurídicas pertinentes. (Valor: 5,00 pontos)
-
-      A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Existência de Procuração com poderes especiais de acordo com o artigo 44 do CPP em anexo ou menção acerca de sua existência no corpo da qualificação.
-    opcoes:
-      correta: Existência de Procuração com poderes especiais de acordo com o artigo 44 do CPP em anexo ou menção acerca de sua existência no corpo da qualificação.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - "No mérito: Absolvição OU atipicidade, pois não houve dolo de ter a coisa para si OU não há a elementar “ para si ou para outrem” OU “furto de uso” é indiferente penal"
-        - No mérito, absolvição de Roberta.
-        - Manutenção do reconhecimento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343, eis que o fato de o réu responder à ação penal por crime de furto não justifica o reconhecimento de maus antecedentes, nos termos da Súmula 444 do STJ, por analogia OU conforme o Art. 5º, LVII, da CRFB/88 (princípio da não culpabilidade ou da presunção de inocência).
-        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
-    revisao: *a1
+    pergunta: "Além da queixa, que documento o advogado de Enrico precisa apresentar para propor a ação?"
+    tese: "Procuração com poderes especiais"
+    aceitos: [ "procuracao", "poderes especiais" ]
+    artigos: [ "art. 44, CPP" ]
+    gabarito: "Existência de Procuração com poderes especiais de acordo com o artigo 44 do CPP em anexo ou menção acerca de sua existência no corpo da qualificação."
+    revisao: { status: revisado }
   - id: 15-peca-4
     categoria: peca-detalhe
     parte: peca
     item: "4"
     secao: merito
-    caso: |-
-      Enrico, engenheiro de uma renomada empresa da construção civil, possui um perfil em uma das redes sociais existentes na Internet e o utiliza diariamente para entrar em contato com seus amigos, parentes e colegas de trabalho. Enrico utiliza constantemente as ferramentas da Internet para contatos profissionais e lazer, como o fazem milhares de pessoas no mundo contemporâneo.
-
-      No dia 19/04/2014, sábado, Enrico comemora aniversário e planeja, para a ocasião, uma reunião à noite com parentes e amigos para festejar a data em uma famosa churrascaria da cidade de Niterói, no estado do Rio de Janeiro. Na manhã de seu aniversário, resolveu, então, enviar o convite por meio da rede social, publicando postagem alusiva à comemoração em seu perfil pessoal, para todos os seus contatos.
-
-      Helena, vizinha e ex-namorada de Enrico, que também possui perfil na referida rede social e está adicionada nos contatos de seu ex, soube, assim, da festa e do motivo da comemoração. Então, de seu computador pessoal, instalado em sua residência, um prédio na praia de Icaraí, em Niterói, publicou na rede social uma mensagem no perfil pessoal de Enrico.
-
-      Naquele momento, Helena, com o intuito de ofender o ex-namorado, publicou o seguinte comentário: “não sei o motivo da comemoração, já que Enrico não passa de um idiota, bêbado, irresponsável e sem vergonha!”, e, com o propósito de prejudicar Enrico perante seus colegas de trabalho e denegrir sua reputação acrescentou, ainda, “ele trabalha todo dia embriagado! No dia 10 do mês passado, ele cambaleava bêbado pelas ruas do Rio, inclusive, estava tão bêbado no horário do expediente que a empresa em que trabalha teve que chamar uma ambulância para socorrê-lo!”.
-
-      Imediatamente, Enrico, que estava em seu apartamento e conectado à rede social por meio de seu tablet, recebeu a mensagem e visualizou a publicação com os comentários ofensivos de Helena em seu perfil pessoal.
-
-      Enrico, mortificado, não sabia o que dizer aos amigos, em especial a Carlos, Miguel e Ramirez, que estavam ao seu lado naquele instante. Muito envergonhado, Enrico tentou disfarçar o constrangimento sofrido, mas perdeu todo o seu entusiasmo, e a festa comemorativa deixou de ser realizada. No dia seguinte, Enrico procurou a Delegacia de Polícia Especializada em Repressão aos Crimes de Informática e narrou os fatos à autoridade policial, entregando o conteúdo impresso da mensagem ofensiva e a página da rede social na Internet onde ela poderia ser visualizada. Passados cinco meses da data dos fatos, Enrico procurou seu escritório de advocacia e narrou os fatos acima. Você, na qualidade de advogado de Enrico, deve assisti-lo. Informa-se que a cidade de Niterói, no Estado do Rio de Janeiro, possui Varas Criminais e Juizados Especiais Criminais.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de habeas corpus, sustentando, para tanto, as teses jurídicas pertinentes. (Valor: 5,00 pontos)
-
-      A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Descrição do delito de injúria e sua classificação típica (Art. 140 do CP) Item 4.2- Descrição do delito de difamação e sua classificação típica (Art. 139 do CP)
-    opcoes:
-      correta: Descrição do delito de injúria e sua classificação típica (Art. 140 do CP) Item 4.2- Descrição do delito de difamação e sua classificação típica (Art. 139 do CP)
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - "No mérito: Absolvição OU atipicidade, pois não houve dolo de ter a coisa para si OU não há a elementar “ para si ou para outrem” OU “furto de uso” é indiferente penal"
-        - No mérito, absolvição de Roberta.
-        - Manutenção do reconhecimento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343, eis que o fato de o réu responder à ação penal por crime de furto não justifica o reconhecimento de maus antecedentes, nos termos da Súmula 444 do STJ, por analogia OU conforme o Art. 5º, LVII, da CRFB/88 (princípio da não culpabilidade ou da presunção de inocência).
-        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
-    revisao: *a1
+    pergunta: "Que crimes Helena cometeu com os comentários?"
+    tese: "Injúria e difamação"
+    aceitos: [ "injuria", "difamacao" ]
+    artigos: [ "art. 140, CP", "art. 139, CP" ]
+    gabarito: "Descrição do delito de injúria e sua classificação típica (Art. 140 do CP) Item 4.2- Descrição do delito de difamação e sua classificação típica (Art. 139 do CP)"
+    revisao: { status: revisado }
   - id: 15-peca-4-3
     categoria: peca-detalhe
     parte: peca
     item: "4.3"
     secao: merito
-    caso: |-
-      Enrico, engenheiro de uma renomada empresa da construção civil, possui um perfil em uma das redes sociais existentes na Internet e o utiliza diariamente para entrar em contato com seus amigos, parentes e colegas de trabalho. Enrico utiliza constantemente as ferramentas da Internet para contatos profissionais e lazer, como o fazem milhares de pessoas no mundo contemporâneo.
-
-      No dia 19/04/2014, sábado, Enrico comemora aniversário e planeja, para a ocasião, uma reunião à noite com parentes e amigos para festejar a data em uma famosa churrascaria da cidade de Niterói, no estado do Rio de Janeiro. Na manhã de seu aniversário, resolveu, então, enviar o convite por meio da rede social, publicando postagem alusiva à comemoração em seu perfil pessoal, para todos os seus contatos.
-
-      Helena, vizinha e ex-namorada de Enrico, que também possui perfil na referida rede social e está adicionada nos contatos de seu ex, soube, assim, da festa e do motivo da comemoração. Então, de seu computador pessoal, instalado em sua residência, um prédio na praia de Icaraí, em Niterói, publicou na rede social uma mensagem no perfil pessoal de Enrico.
-
-      Naquele momento, Helena, com o intuito de ofender o ex-namorado, publicou o seguinte comentário: “não sei o motivo da comemoração, já que Enrico não passa de um idiota, bêbado, irresponsável e sem vergonha!”, e, com o propósito de prejudicar Enrico perante seus colegas de trabalho e denegrir sua reputação acrescentou, ainda, “ele trabalha todo dia embriagado! No dia 10 do mês passado, ele cambaleava bêbado pelas ruas do Rio, inclusive, estava tão bêbado no horário do expediente que a empresa em que trabalha teve que chamar uma ambulância para socorrê-lo!”.
-
-      Imediatamente, Enrico, que estava em seu apartamento e conectado à rede social por meio de seu tablet, recebeu a mensagem e visualizou a publicação com os comentários ofensivos de Helena em seu perfil pessoal.
-
-      Enrico, mortificado, não sabia o que dizer aos amigos, em especial a Carlos, Miguel e Ramirez, que estavam ao seu lado naquele instante. Muito envergonhado, Enrico tentou disfarçar o constrangimento sofrido, mas perdeu todo o seu entusiasmo, e a festa comemorativa deixou de ser realizada. No dia seguinte, Enrico procurou a Delegacia de Polícia Especializada em Repressão aos Crimes de Informática e narrou os fatos à autoridade policial, entregando o conteúdo impresso da mensagem ofensiva e a página da rede social na Internet onde ela poderia ser visualizada. Passados cinco meses da data dos fatos, Enrico procurou seu escritório de advocacia e narrou os fatos acima. Você, na qualidade de advogado de Enrico, deve assisti-lo. Informa-se que a cidade de Niterói, no Estado do Rio de Janeiro, possui Varas Criminais e Juizados Especiais Criminais.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de habeas corpus, sustentando, para tanto, as teses jurídicas pertinentes. (Valor: 5,00 pontos)
-
-      A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Incidência da causa de aumento de pena por estar na presença de várias pessoas ou por meio que facilite a divulgação da calúnia, da difamação ou da injúria-, nos termos do Art. 141, III do CP.
-    opcoes:
-      correta: Incidência da causa de aumento de pena por estar na presença de várias pessoas ou por meio que facilite a divulgação da calúnia, da difamação ou da injúria-, nos termos do Art. 141, III do CP.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - "No mérito: Absolvição OU atipicidade, pois não houve dolo de ter a coisa para si OU não há a elementar “ para si ou para outrem” OU “furto de uso” é indiferente penal"
-        - No mérito, absolvição de Roberta.
-        - Manutenção do reconhecimento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343, eis que o fato de o réu responder à ação penal por crime de furto não justifica o reconhecimento de maus antecedentes, nos termos da Súmula 444 do STJ, por analogia OU conforme o Art. 5º, LVII, da CRFB/88 (princípio da não culpabilidade ou da presunção de inocência).
-        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
-    revisao: *a1
+    pergunta: "Os comentários foram publicados na rede social, à vista de todos os contatos. Que causa de aumento incide?"
+    tese: "Causa de aumento do crime contra a honra cometido em rede social, meio que facilita a divulgação"
+    aceitos: [ [ "facilit*", "divulga*" ], [ "triplo" ] ]
+    artigos: [ "art. 141, § 2º, CP", "art. 141, III, CP" ]
+    gabarito: "Incidência da causa de aumento de pena por estar na presença de várias pessoas ou por meio que facilite a divulgação da calúnia, da difamação ou da injúria-, nos termos do Art. 141, III do CP."
+    revisao: { status: revisado }
   - id: 15-peca-4-4
     categoria: peca-detalhe
     parte: peca
     item: "4.4"
     secao: merito
-    caso: |-
-      Enrico, engenheiro de uma renomada empresa da construção civil, possui um perfil em uma das redes sociais existentes na Internet e o utiliza diariamente para entrar em contato com seus amigos, parentes e colegas de trabalho. Enrico utiliza constantemente as ferramentas da Internet para contatos profissionais e lazer, como o fazem milhares de pessoas no mundo contemporâneo.
-
-      No dia 19/04/2014, sábado, Enrico comemora aniversário e planeja, para a ocasião, uma reunião à noite com parentes e amigos para festejar a data em uma famosa churrascaria da cidade de Niterói, no estado do Rio de Janeiro. Na manhã de seu aniversário, resolveu, então, enviar o convite por meio da rede social, publicando postagem alusiva à comemoração em seu perfil pessoal, para todos os seus contatos.
-
-      Helena, vizinha e ex-namorada de Enrico, que também possui perfil na referida rede social e está adicionada nos contatos de seu ex, soube, assim, da festa e do motivo da comemoração. Então, de seu computador pessoal, instalado em sua residência, um prédio na praia de Icaraí, em Niterói, publicou na rede social uma mensagem no perfil pessoal de Enrico.
-
-      Naquele momento, Helena, com o intuito de ofender o ex-namorado, publicou o seguinte comentário: “não sei o motivo da comemoração, já que Enrico não passa de um idiota, bêbado, irresponsável e sem vergonha!”, e, com o propósito de prejudicar Enrico perante seus colegas de trabalho e denegrir sua reputação acrescentou, ainda, “ele trabalha todo dia embriagado! No dia 10 do mês passado, ele cambaleava bêbado pelas ruas do Rio, inclusive, estava tão bêbado no horário do expediente que a empresa em que trabalha teve que chamar uma ambulância para socorrê-lo!”.
-
-      Imediatamente, Enrico, que estava em seu apartamento e conectado à rede social por meio de seu tablet, recebeu a mensagem e visualizou a publicação com os comentários ofensivos de Helena em seu perfil pessoal.
-
-      Enrico, mortificado, não sabia o que dizer aos amigos, em especial a Carlos, Miguel e Ramirez, que estavam ao seu lado naquele instante. Muito envergonhado, Enrico tentou disfarçar o constrangimento sofrido, mas perdeu todo o seu entusiasmo, e a festa comemorativa deixou de ser realizada. No dia seguinte, Enrico procurou a Delegacia de Polícia Especializada em Repressão aos Crimes de Informática e narrou os fatos à autoridade policial, entregando o conteúdo impresso da mensagem ofensiva e a página da rede social na Internet onde ela poderia ser visualizada. Passados cinco meses da data dos fatos, Enrico procurou seu escritório de advocacia e narrou os fatos acima. Você, na qualidade de advogado de Enrico, deve assisti-lo. Informa-se que a cidade de Niterói, no Estado do Rio de Janeiro, possui Varas Criminais e Juizados Especiais Criminais.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de habeas corpus, sustentando, para tanto, as teses jurídicas pertinentes. (Valor: 5,00 pontos)
-
-      A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Incidência do concurso formal de delitos, previsto no Art. 70, do CP
-    opcoes:
-      correta: Incidência do concurso formal de delitos, previsto no Art. 70, do CP
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - "No mérito: Absolvição OU atipicidade, pois não houve dolo de ter a coisa para si OU não há a elementar “ para si ou para outrem” OU “furto de uso” é indiferente penal"
-        - No mérito, absolvição de Roberta.
-        - Manutenção do reconhecimento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343, eis que o fato de o réu responder à ação penal por crime de furto não justifica o reconhecimento de maus antecedentes, nos termos da Súmula 444 do STJ, por analogia OU conforme o Art. 5º, LVII, da CRFB/88 (princípio da não culpabilidade ou da presunção de inocência).
-        - Reconhecimento da atenuante da confissão espontânea, na forma do Art. 65, inciso III, alínea d, do CP.
-    revisao: *a1
-  - id: 15-peca-5
-    categoria: peca-detalhe
-    parte: peca
-    item: "5"
-    secao: pedido
-    caso: |-
-      Enrico, engenheiro de uma renomada empresa da construção civil, possui um perfil em uma das redes sociais existentes na Internet e o utiliza diariamente para entrar em contato com seus amigos, parentes e colegas de trabalho. Enrico utiliza constantemente as ferramentas da Internet para contatos profissionais e lazer, como o fazem milhares de pessoas no mundo contemporâneo.
-
-      No dia 19/04/2014, sábado, Enrico comemora aniversário e planeja, para a ocasião, uma reunião à noite com parentes e amigos para festejar a data em uma famosa churrascaria da cidade de Niterói, no estado do Rio de Janeiro. Na manhã de seu aniversário, resolveu, então, enviar o convite por meio da rede social, publicando postagem alusiva à comemoração em seu perfil pessoal, para todos os seus contatos.
-
-      Helena, vizinha e ex-namorada de Enrico, que também possui perfil na referida rede social e está adicionada nos contatos de seu ex, soube, assim, da festa e do motivo da comemoração. Então, de seu computador pessoal, instalado em sua residência, um prédio na praia de Icaraí, em Niterói, publicou na rede social uma mensagem no perfil pessoal de Enrico.
-
-      Naquele momento, Helena, com o intuito de ofender o ex-namorado, publicou o seguinte comentário: “não sei o motivo da comemoração, já que Enrico não passa de um idiota, bêbado, irresponsável e sem vergonha!”, e, com o propósito de prejudicar Enrico perante seus colegas de trabalho e denegrir sua reputação acrescentou, ainda, “ele trabalha todo dia embriagado! No dia 10 do mês passado, ele cambaleava bêbado pelas ruas do Rio, inclusive, estava tão bêbado no horário do expediente que a empresa em que trabalha teve que chamar uma ambulância para socorrê-lo!”.
-
-      Imediatamente, Enrico, que estava em seu apartamento e conectado à rede social por meio de seu tablet, recebeu a mensagem e visualizou a publicação com os comentários ofensivos de Helena em seu perfil pessoal.
-
-      Enrico, mortificado, não sabia o que dizer aos amigos, em especial a Carlos, Miguel e Ramirez, que estavam ao seu lado naquele instante. Muito envergonhado, Enrico tentou disfarçar o constrangimento sofrido, mas perdeu todo o seu entusiasmo, e a festa comemorativa deixou de ser realizada. No dia seguinte, Enrico procurou a Delegacia de Polícia Especializada em Repressão aos Crimes de Informática e narrou os fatos à autoridade policial, entregando o conteúdo impresso da mensagem ofensiva e a página da rede social na Internet onde ela poderia ser visualizada. Passados cinco meses da data dos fatos, Enrico procurou seu escritório de advocacia e narrou os fatos acima. Você, na qualidade de advogado de Enrico, deve assisti-lo. Informa-se que a cidade de Niterói, no Estado do Rio de Janeiro, possui Varas Criminais e Juizados Especiais Criminais.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de habeas corpus, sustentando, para tanto, as teses jurídicas pertinentes. (Valor: 5,00 pontos)
-
-      A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: a) designação de audiência preliminar ou de conciliação b) a citação da querelada; c) recebimento da queixa d) a oitiva das testemunhas arroladas; e) a condenação da querelada pelo crime de injúria (Art. 140 do CP) e pelo crime de difamação (Art. 139 do CP) com a causa de aumento de pena (Art. 141, III do CP) em concurso formal de delitos (Art. 70 do CP) f) a fixação de valor mínimo de indenização, nos termos do Art. 387, IV, do CPP. OBS:. A mera indicação de dispositivo legal não pontua.
-    opcoes:
-      correta: a) designação de audiência preliminar ou de conciliação b) a citação da querelada; c) recebimento da queixa d) a oitiva das testemunhas arroladas; e) a condenação da querelada pelo crime de injúria (Art. 140 do CP) e pelo crime de difamação (Art. 139 do CP) com a causa de aumento de pena (Art. 141, III do CP) em concurso formal de delitos (Art. 70 do CP) f) a fixação de valor mínimo de indenização, nos termos do Art. 387, IV, do CPP. OBS:. A mera indicação de dispositivo legal não pontua.
-      erradas:
-        - Reconhecimento da preliminar e extinção da punibilidade; impronúncia, nos termos do art. 414 do CPP (admite-se absolvição sumária, art. 415).
-        - "Subsidiariamente: furto privilegiado; diminuição da pena pelo afastamento da reincidência; regime aberto; substituição da pena privativa de liberdade por restritiva de direitos."
-        - "Pedidos: Conhecimento e provimento do recurso OU concessão da progressão de regime"
-        - Pedido de desclassificação para afastar o reconhecimento de crime doloso contra a vida, nos termos do Art. 419 do CPP
-        - Conhecimento e provimento do recurso.
-    revisao: *a1
-  - id: 15-peca-6
-    categoria: peca-detalhe
-    parte: peca
-    item: "6"
-    secao: merito
-    caso: |-
-      Enrico, engenheiro de uma renomada empresa da construção civil, possui um perfil em uma das redes sociais existentes na Internet e o utiliza diariamente para entrar em contato com seus amigos, parentes e colegas de trabalho. Enrico utiliza constantemente as ferramentas da Internet para contatos profissionais e lazer, como o fazem milhares de pessoas no mundo contemporâneo.
-
-      No dia 19/04/2014, sábado, Enrico comemora aniversário e planeja, para a ocasião, uma reunião à noite com parentes e amigos para festejar a data em uma famosa churrascaria da cidade de Niterói, no estado do Rio de Janeiro. Na manhã de seu aniversário, resolveu, então, enviar o convite por meio da rede social, publicando postagem alusiva à comemoração em seu perfil pessoal, para todos os seus contatos.
-
-      Helena, vizinha e ex-namorada de Enrico, que também possui perfil na referida rede social e está adicionada nos contatos de seu ex, soube, assim, da festa e do motivo da comemoração. Então, de seu computador pessoal, instalado em sua residência, um prédio na praia de Icaraí, em Niterói, publicou na rede social uma mensagem no perfil pessoal de Enrico.
-
-      Naquele momento, Helena, com o intuito de ofender o ex-namorado, publicou o seguinte comentário: “não sei o motivo da comemoração, já que Enrico não passa de um idiota, bêbado, irresponsável e sem vergonha!”, e, com o propósito de prejudicar Enrico perante seus colegas de trabalho e denegrir sua reputação acrescentou, ainda, “ele trabalha todo dia embriagado! No dia 10 do mês passado, ele cambaleava bêbado pelas ruas do Rio, inclusive, estava tão bêbado no horário do expediente que a empresa em que trabalha teve que chamar uma ambulância para socorrê-lo!”.
-
-      Imediatamente, Enrico, que estava em seu apartamento e conectado à rede social por meio de seu tablet, recebeu a mensagem e visualizou a publicação com os comentários ofensivos de Helena em seu perfil pessoal.
-
-      Enrico, mortificado, não sabia o que dizer aos amigos, em especial a Carlos, Miguel e Ramirez, que estavam ao seu lado naquele instante. Muito envergonhado, Enrico tentou disfarçar o constrangimento sofrido, mas perdeu todo o seu entusiasmo, e a festa comemorativa deixou de ser realizada. No dia seguinte, Enrico procurou a Delegacia de Polícia Especializada em Repressão aos Crimes de Informática e narrou os fatos à autoridade policial, entregando o conteúdo impresso da mensagem ofensiva e a página da rede social na Internet onde ela poderia ser visualizada. Passados cinco meses da data dos fatos, Enrico procurou seu escritório de advocacia e narrou os fatos acima. Você, na qualidade de advogado de Enrico, deve assisti-lo. Informa-se que a cidade de Niterói, no Estado do Rio de Janeiro, possui Varas Criminais e Juizados Especiais Criminais.
-
-      Com base somente nas informações de que dispõe e nas que podem ser inferidas pelo caso concreto acima, redija a peça cabível, excluindo a possibilidade de impetração de habeas corpus, sustentando, para tanto, as teses jurídicas pertinentes. (Valor: 5,00 pontos)
-
-      A peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Arrolar as testemunhas Carlos, Miguel e Ramirez. OBS:.É necessária indicação do nome das testemunhas.
-    opcoes:
-      correta: Arrolar as testemunhas Carlos, Miguel e Ramirez. OBS:.É necessária indicação do nome das testemunhas.
-      erradas:
-        - Memoriais endereçados ao Juiz do Tribunal do Júri.
-        - "No mérito: Absolvição OU atipicidade, pois não houve dolo de ter a coisa para si OU não há a elementar “ para si ou para outrem” OU “furto de uso” é indiferente penal"
-        - No mérito, absolvição de Roberta.
-        - Manutenção do reconhecimento da causa de diminuição do Art. 33, § 4º, da Lei nº 11.343, eis que o fato de o réu responder à ação penal por crime de furto não justifica o reconhecimento de maus antecedentes, nos termos da Súmula 444 do STJ, por analogia OU conforme o Art. 5º, LVII, da CRFB/88 (princípio da não culpabilidade ou da presunção de inocência).
-        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
-    revisao: *a1
+    pergunta: "Com um só comentário, Helena cometeu dois crimes. Que regra de concurso se aplica?"
+    tese: "Concurso formal: um só comentário gerou dois crimes"
+    aceitos: [ "concurso formal" ]
+    artigos: [ "art. 70, CP" ]
+    gabarito: "Incidência do concurso formal de delitos, previsto no Art. 70, do CP"
+    revisao: { status: revisado }
   - id: 15-q1-a
     categoria: discursiva
     parte: q1
-    item: A.1
-    caso: |-
-      Miguel foi condenado pela prática do crime previsto no Art. 157, § 2º, inciso V, do Código Penal, à pena privativa de liberdade de 05 anos e 04 meses de reclusão e 13 dias-multa. Após cumprir 04 anos da reprimenda penal aplicada, foi publicado, no dia 24/12/2013, um Decreto prevendo que caberia indulto para o condenado à pena privativa de liberdade não superior a 08 anos que tivesse cumprido 1/3 da pena, se primário, ou 1/2, se reincidente, além da inexistência de aplicação de sanção pela prática de falta grave nos 12 meses anteriores ao Decreto. Cinco dias após a publicação do Decreto, mas antes de apreciado seu pedido de indulto, Miguel praticou falta grave, razão pela qual teve seu requerimento indeferido pelo Juiz em atuação junto à Vara de Execução Penal.
-
-      Considerando apenas as informações contidas na presente hipótese, responda aos itens a seguir.
-    comando: Qual medida processual, diferente do habeas corpus, deve ser adotada pelo advogado de Miguel e qual seria o seu prazo?
-    gabarito: |-
-      A questão tem como objetivo extrair do examinando conhecimento acerca do tema Execução Penal. Conforme o enunciado informa, o Decreto de Indulto previa que apenas impediria o benefício a punição pela prática de falta grave nos 12 meses anteriores à sua publicação. Diante disso, a jurisprudência vem entendendo que a prática de falta grave após a publicação do Decreto, ainda que antes da análise do requerimento do benefício pelo órgão competente, não impede sua concessão, respeitando-se, assim, o princípio da legalidade. Miguel faz jus ao benefício, motivo pelo qual deve o seu advogado interpor Agravo de Execução da decisão do juiz da VEP, sendo o seu prazo de 05 dias, conforme artigos 197 da Lei nº 7.210 c/c 586, CPP e Súmula 700 do STF.
-
-      Cumpre destacar que a questão em análise foi dividida em dois itens. Nesse sentido, para fazer jus à pontuação relativa ao item ‘A’, o examinando deveria indicar de modo expresso o cabimento do recurso de Agravo em Execução, cuja previsão legal está no art. 197 da Lei de Execuções Penais; outrossim, deveria indicar que o prazo para a interposição de referido recurso é de 5 (cinco) dias, tal como indica o verbete 700 da Súmula do STF. Por fim, para receber a pontuação relativa ao item ‘B’, o examinando deveria indicar que Miguel fazia jus ao benefício do indulto porque preenchia os requisitos nele previstos, a saber: o tempo exigido pelo decreto e a ausência de cometimento de falta grave (ou ausência de sanção pela prática de falta grave no período mencionado em referido decreto), de modo que, em respeito ao princípio da legalidade, o magistrado não poderia estabelecer outros requisitos que não constassem expressamente do decreto.
-
-      Como determina o próprio espelho de correção, a simples indicação de dispositivo legal não pontua. De igual modo, as respostas devem ser sempre justificadas. Além disso, a indicação de duas ou mais medidas processuais (ainda que uma delas seja a correta), não será pontuada, pois o comando da questão determina a indicação de apenas uma.
-    opcoes:
-      correta: "Agravo em execução./ Art. 197 da LEP Obs.: a mera citação do artigo não pontua. 5 dias./ Verbete 700 da Súmula do STF OU art. 586 CPP Obs.: a mera citação do artigo não pontua."
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Como não houve eficácia no arrependimento OU como não houve atendimento à exigência do Art. 15, CP, Wilson deverá responder pelo resultado morte OU deverá responder pelo crime de homicídio doloso consumado.
-        - A medida processual a ser apresentada é o Agravo OU Agravo de Execução OU Agravo em Execução, na forma do Art. 197 da Lei nº 7.210/84.
-        - O número de majorantes não é fundamento adequado para aplicação da causa de aumento de pena acima do mínimo legal, nos termos da Súmula 443 do STJ.
-        - Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-    revisao: *a1
-  - id: 15-q1-b
-    categoria: discursiva
-    parte: q1
-    item: B
-    caso: |-
-      Miguel foi condenado pela prática do crime previsto no Art. 157, § 2º, inciso V, do Código Penal, à pena privativa de liberdade de 05 anos e 04 meses de reclusão e 13 dias-multa. Após cumprir 04 anos da reprimenda penal aplicada, foi publicado, no dia 24/12/2013, um Decreto prevendo que caberia indulto para o condenado à pena privativa de liberdade não superior a 08 anos que tivesse cumprido 1/3 da pena, se primário, ou 1/2, se reincidente, além da inexistência de aplicação de sanção pela prática de falta grave nos 12 meses anteriores ao Decreto. Cinco dias após a publicação do Decreto, mas antes de apreciado seu pedido de indulto, Miguel praticou falta grave, razão pela qual teve seu requerimento indeferido pelo Juiz em atuação junto à Vara de Execução Penal.
-
-      Considerando apenas as informações contidas na presente hipótese, responda aos itens a seguir.
-    comando: Miguel faz jus ao benefício do indulto?
-    gabarito: |-
-      A questão tem como objetivo extrair do examinando conhecimento acerca do tema Execução Penal. Conforme o enunciado informa, o Decreto de Indulto previa que apenas impediria o benefício a punição pela prática de falta grave nos 12 meses anteriores à sua publicação. Diante disso, a jurisprudência vem entendendo que a prática de falta grave após a publicação do Decreto, ainda que antes da análise do requerimento do benefício pelo órgão competente, não impede sua concessão, respeitando-se, assim, o princípio da legalidade. Miguel faz jus ao benefício, motivo pelo qual deve o seu advogado interpor Agravo de Execução da decisão do juiz da VEP, sendo o seu prazo de 05 dias, conforme artigos 197 da Lei nº 7.210 c/c 586, CPP e Súmula 700 do STF.
-
-      Cumpre destacar que a questão em análise foi dividida em dois itens. Nesse sentido, para fazer jus à pontuação relativa ao item ‘A’, o examinando deveria indicar de modo expresso o cabimento do recurso de Agravo em Execução, cuja previsão legal está no art. 197 da Lei de Execuções Penais; outrossim, deveria indicar que o prazo para a interposição de referido recurso é de 5 (cinco) dias, tal como indica o verbete 700 da Súmula do STF. Por fim, para receber a pontuação relativa ao item ‘B’, o examinando deveria indicar que Miguel fazia jus ao benefício do indulto porque preenchia os requisitos nele previstos, a saber: o tempo exigido pelo decreto e a ausência de cometimento de falta grave (ou ausência de sanção pela prática de falta grave no período mencionado em referido decreto), de modo que, em respeito ao princípio da legalidade, o magistrado não poderia estabelecer outros requisitos que não constassem expressamente do decreto.
-
-      Como determina o próprio espelho de correção, a simples indicação de dispositivo legal não pontua. De igual modo, as respostas devem ser sempre justificadas. Além disso, a indicação de duas ou mais medidas processuais (ainda que uma delas seja a correta), não será pontuada, pois o comando da questão determina a indicação de apenas uma.
-    opcoes:
-      correta: Sim, pois Miguel preencheu os requisitos do decreto. OU Sim, pois Miguel preencheu o requisito temporal e a falta grave ocorreu após o decreto. OU Sim, com base no princípio da legalidade. OU Sim, pois o juiz não pode estabelecer outros requisitos que não constem expressamente no decreto.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Como não houve eficácia no arrependimento OU como não houve atendimento à exigência do Art. 15, CP, Wilson deverá responder pelo resultado morte OU deverá responder pelo crime de homicídio doloso consumado.
-        - Nulidade dos atos processuais praticados após sua citação OU nulidade da sentença, pois a citação por edital foi inválida, já que Vanessa estava presa OU já que a citação de Vanessa deveria ter sido realizada pessoalmente, nos termos da Súmula 351 do STF OU do art. 360, CPP.
-        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
-        - Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-    revisao: *a1
+    item: "A.1"
+    pergunta: "Fora o habeas corpus, que medida a defesa de Miguel deve adotar contra a decisão que negou o indulto?"
+    tese: "Agravo em execução, em 5 dias"
+    aceitos: [ "agravo" ]
+    artigos: [ "art. 197, LEP" ]
+    gabarito: "A questão tem como objetivo extrair do examinando conhecimento acerca do tema Execução Penal. Conforme o enunciado informa, o Decreto de Indulto previa que apenas impediria o benefício a punição pela prática de falta grave nos 12 meses anteriores à sua publicação. Diante disso, a jurisprudência vem entendendo que a prática de falta grave após a publicação do Decreto, ainda que antes da análise do requerimento do benefício pelo órgão competente, não impede sua concessão, respeitando-se, assim, o princípio da legalidade. Miguel faz jus ao benefício, motivo pelo qual deve o seu advogado interpor Agravo de Execução da decisão do juiz da VEP, sendo o seu prazo de 05 dias, conforme artigos 197 da Lei nº 7.210 c/c 586, CPP e Súmula 700 do STF.\n\nCumpre destacar que a questão em análise foi dividida em dois itens. Nesse sentido, para fazer jus à pontuação relativa ao item ‘A’, o examinando deveria indicar de modo expresso o cabimento do recurso de Agravo em Execução, cuja previsão legal está no art. 197 da Lei de Execuções Penais; outrossim, deveria indicar que o prazo para a interposição de referido recurso é de 5 (cinco) dias, tal como indica o verbete 700 da Súmula do STF. Por fim, para receber a pontuação relativa ao item ‘B’, o examinando deveria indicar que Miguel fazia jus ao benefício do indulto porque preenchia os requisitos nele previstos, a saber: o tempo exigido pelo decreto e a ausência de cometimento de falta grave (ou ausência de sanção pela prática de falta grave no período mencionado em referido decreto), de modo que, em respeito ao princípio da legalidade, o magistrado não poderia estabelecer outros requisitos que não constassem expressamente do decreto.\n\nComo determina o próprio espelho de correção, a simples indicação de dispositivo legal não pontua. De igual modo, as respostas devem ser sempre justificadas. Além disso, a indicação de duas ou mais medidas processuais (ainda que uma delas seja a correta), não será pontuada, pois o comando da questão determina a indicação de apenas uma."
+    revisao: { status: revisado }
   - id: 15-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Durante inquérito policial que investigava a prática do crime de extorsão mediante sequestro, esgotado o prazo sem o fim das investigações, a autoridade policial encaminhou os autos para o Judiciário, requerendo apenas a renovação do prazo. O magistrado, antes de encaminhar o feito ao Ministério Público, verificando a gravidade em abstrato do crime praticado, decretou a prisão preventiva do investigado.
-
-      Considerando a narrativa apresentada, responda aos itens a seguir.
-    comando: Poderia o magistrado adotar tal medida? Justifique.
-    gabarito: |-
-      A questão em análise busca extrair conhecimento acerca do tema prisão preventiva. Durante muito tempo se controverteu sobre a possibilidade de o magistrado decretar a prisão preventiva de ofício, em especial durante as investigações policiais. A lei 12.403 conferiu novo tratamento ao tema. Na hipótese narrada, o juiz, ainda durante a fase de investigação, sem ação penal em curso, decretou a prisão preventiva do indiciado de ofício, o que não é admitido pelo artigo 311 do Código de Processo Penal, tendo em vista que violaria o princípio da imparcialidade, o princípio da inércia e até mesmo o sistema acusatório. Ainda que a decretação da prisão preventiva de ofício neste momento fosse admitida, a fundamentação apresentada seria insuficiente, pois a gravidade em abstrato do crime não pode justificar a aplicação de medidas cautelares pessoais. O juiz não fundamentou a prisão preventiva, medida excepcional considerando o princípio da presunção de inocência e o direito à liberdade, com circunstâncias em concreto do caso.
-
-      Nesse sentido, perceba-se que a questão em análise dividiu-se em dois itens distintos.
-
-      Para receber a pontuação relativa ao item ‘A’, considerando-se o comando da questão (“Poderia o magistrado adotar tal medida? Justifique.”), o examinando deveria responder que o magistrado não poderia ter agido daquela forma, calcando-se no sistema acusatório que norteia o processo penal brasileiro desde sua expressa adoção pela nossa Magna Carta. Consoante o sistema acusatório o juiz deve ser inerte e imparcial, de sorte que a decretação de uma prisão cautelar de ofício por parte do magistrado fere frontalmente tais postulados. Ademais, interpretando-se o art. 311 do CPP, resta claro que o juiz não pode decretar prisão preventiva de ofício na fase de inquérito. Tal interpretação decorre, obviamente, de uma leitura baseada no sistema acusatório. Nesse ínterim, é oportuno destacar que eventuais respostas calcadas no art. 311 do CPP, necessariamente, deveriam demonstrar que tal dispositivo veda a decretação de prisão preventiva de ofício pelo juiz na fase de inquérito policial; a tal constatação somente se chega a partir de uma interpretação principiológica, razão pela qual não merecem pontuação as respostas que se limitarem a indicar como fundamento da negativa o art. 311 do CPP, simplesmente, sem qualquer análise mais aprofundada.
-
-      Por fim, para fazer jus à pontuação relativa ao item ‘B’, considerando-se o comando da questão, o examinando deveria indicar que a fundamentação apresentada pelo magistrado não foi suficiente, pois a gravidade em abstrato do delito, segundo entendimento pacífico, não é argumento idôneo, capaz de justificar uma prisão cautelar. Mais uma vez, a simples indicação de dispositivo legal não deve ser pontuada, sendo necessário, tal como manda o enunciado, que o examinando justifique sua resposta.
-    opcoes:
-      correta: "Não poderia, sob pena de violação do princípio da imparcialidade OU princípio da inércia OU sistema/princípio acusatório, com base no Arts. 311 ou 282, §2º do CPP ou Art. 129, I, da CRFB/88 OU Não, com base no fato de que o juiz não pode decretar prisão preventiva de ofício na fase de inquérito, com base no art. 311 ou 282, §2º do CPP ou Art. 129, I, da CRFB/88 OU Não, com base no fato de que o juiz só poderia decretar prisão preventiva de ofício na fase processual, com base no art. 311 ou 282, §2º do CPP ou Art. 129, I, da CRFB/88. Obs.: a mera citação do artigo não pontua."
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não, pois Wilson será beneficiado pelo instituto do arrependimento eficaz, de modo que somente responderá pelos atos praticados OU somente responderá por lesões corporais graves.
-        - Não é possível a condenação exclusivamente com base nas declarações do agente colaborador, segundo o Art. 4º, § 16º, da Lei nº 12.850/13, devendo ser corroborada por outros elementos de prova.
-        - Recurso de apelação, no prazo de 10 dias, conforme Art. 82, caput OU §1º, da Lei nº 9.099/95.
-        - A tese jurídica processual é a necessidade de rejeição da denúncia por falta de representação da vítima, pois, a partir da Lei nº 13.964/19, o crime de estelionato, em regra, comporta ação penal de iniciativa pública condicionada à representação, segundo o Art. 171, § 5º, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "O juiz podia decretar a prisão preventiva por conta própria, no inquérito?"
+    tese: "Vedação da preventiva decretada de ofício pelo juiz (sistema acusatório)"
+    aceitos: [ [ "de oficio" ], [ "acusatorio" ], [ "imparcialidade" ], [ "inercia" ] ]
+    artigos: [ "art. 311, CPP", "art. 282, § 2º, CPP" ]
+    gabarito: "A questão em análise busca extrair conhecimento acerca do tema prisão preventiva. Durante muito tempo se controverteu sobre a possibilidade de o magistrado decretar a prisão preventiva de ofício, em especial durante as investigações policiais. A lei 12.403 conferiu novo tratamento ao tema. Na hipótese narrada, o juiz, ainda durante a fase de investigação, sem ação penal em curso, decretou a prisão preventiva do indiciado de ofício, o que não é admitido pelo artigo 311 do Código de Processo Penal, tendo em vista que violaria o princípio da imparcialidade, o princípio da inércia e até mesmo o sistema acusatório. Ainda que a decretação da prisão preventiva de ofício neste momento fosse admitida, a fundamentação apresentada seria insuficiente, pois a gravidade em abstrato do crime não pode justificar a aplicação de medidas cautelares pessoais. O juiz não fundamentou a prisão preventiva, medida excepcional considerando o princípio da presunção de inocência e o direito à liberdade, com circunstâncias em concreto do caso.\n\nNesse sentido, perceba-se que a questão em análise dividiu-se em dois itens distintos.\n\nPara receber a pontuação relativa ao item ‘A’, considerando-se o comando da questão (“Poderia o magistrado adotar tal medida? Justifique.”), o examinando deveria responder que o magistrado não poderia ter agido daquela forma, calcando-se no sistema acusatório que norteia o processo penal brasileiro desde sua expressa adoção pela nossa Magna Carta. Consoante o sistema acusatório o juiz deve ser inerte e imparcial, de sorte que a decretação de uma prisão cautelar de ofício por parte do magistrado fere frontalmente tais postulados. Ademais, interpretando-se o art. 311 do CPP, resta claro que o juiz não pode decretar prisão preventiva de ofício na fase de inquérito. Tal interpretação decorre, obviamente, de uma leitura baseada no sistema acusatório. Nesse ínterim, é oportuno destacar que eventuais respostas calcadas no art. 311 do CPP, necessariamente, deveriam demonstrar que tal dispositivo veda a decretação de prisão preventiva de ofício pelo juiz na fase de inquérito policial; a tal constatação somente se chega a partir de uma interpretação principiológica, razão pela qual não merecem pontuação as respostas que se limitarem a indicar como fundamento da negativa o art. 311 do CPP, simplesmente, sem qualquer análise mais aprofundada.\n\nPor fim, para fazer jus à pontuação relativa ao item ‘B’, considerando-se o comando da questão, o examinando deveria indicar que a fundamentação apresentada pelo magistrado não foi suficiente, pois a gravidade em abstrato do delito, segundo entendimento pacífico, não é argumento idôneo, capaz de justificar uma prisão cautelar. Mais uma vez, a simples indicação de dispositivo legal não deve ser pontuada, sendo necessário, tal como manda o enunciado, que o examinando justifique sua resposta."
+    revisao: { status: revisado }
   - id: 15-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Durante inquérito policial que investigava a prática do crime de extorsão mediante sequestro, esgotado o prazo sem o fim das investigações, a autoridade policial encaminhou os autos para o Judiciário, requerendo apenas a renovação do prazo. O magistrado, antes de encaminhar o feito ao Ministério Público, verificando a gravidade em abstrato do crime praticado, decretou a prisão preventiva do investigado.
-
-      Considerando a narrativa apresentada, responda aos itens a seguir.
-    comando: A fundamentação apresentada para a decretação da preventiva foi suficiente? Justifique.
-    gabarito: |-
-      A questão em análise busca extrair conhecimento acerca do tema prisão preventiva. Durante muito tempo se controverteu sobre a possibilidade de o magistrado decretar a prisão preventiva de ofício, em especial durante as investigações policiais. A lei 12.403 conferiu novo tratamento ao tema. Na hipótese narrada, o juiz, ainda durante a fase de investigação, sem ação penal em curso, decretou a prisão preventiva do indiciado de ofício, o que não é admitido pelo artigo 311 do Código de Processo Penal, tendo em vista que violaria o princípio da imparcialidade, o princípio da inércia e até mesmo o sistema acusatório. Ainda que a decretação da prisão preventiva de ofício neste momento fosse admitida, a fundamentação apresentada seria insuficiente, pois a gravidade em abstrato do crime não pode justificar a aplicação de medidas cautelares pessoais. O juiz não fundamentou a prisão preventiva, medida excepcional considerando o princípio da presunção de inocência e o direito à liberdade, com circunstâncias em concreto do caso.
-
-      Nesse sentido, perceba-se que a questão em análise dividiu-se em dois itens distintos.
-
-      Para receber a pontuação relativa ao item ‘A’, considerando-se o comando da questão (“Poderia o magistrado adotar tal medida? Justifique.”), o examinando deveria responder que o magistrado não poderia ter agido daquela forma, calcando-se no sistema acusatório que norteia o processo penal brasileiro desde sua expressa adoção pela nossa Magna Carta. Consoante o sistema acusatório o juiz deve ser inerte e imparcial, de sorte que a decretação de uma prisão cautelar de ofício por parte do magistrado fere frontalmente tais postulados. Ademais, interpretando-se o art. 311 do CPP, resta claro que o juiz não pode decretar prisão preventiva de ofício na fase de inquérito. Tal interpretação decorre, obviamente, de uma leitura baseada no sistema acusatório. Nesse ínterim, é oportuno destacar que eventuais respostas calcadas no art. 311 do CPP, necessariamente, deveriam demonstrar que tal dispositivo veda a decretação de prisão preventiva de ofício pelo juiz na fase de inquérito policial; a tal constatação somente se chega a partir de uma interpretação principiológica, razão pela qual não merecem pontuação as respostas que se limitarem a indicar como fundamento da negativa o art. 311 do CPP, simplesmente, sem qualquer análise mais aprofundada.
-
-      Por fim, para fazer jus à pontuação relativa ao item ‘B’, considerando-se o comando da questão, o examinando deveria indicar que a fundamentação apresentada pelo magistrado não foi suficiente, pois a gravidade em abstrato do delito, segundo entendimento pacífico, não é argumento idôneo, capaz de justificar uma prisão cautelar. Mais uma vez, a simples indicação de dispositivo legal não deve ser pontuada, sendo necessário, tal como manda o enunciado, que o examinando justifique sua resposta.
-    opcoes:
-      correta: A fundamentação não foi suficiente porque a gravidade em abstrato do crime não é argumento hábil a fundamentar uma prisão
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Como não houve eficácia no arrependimento OU como não houve atendimento à exigência do Art. 15, CP, Wilson deverá responder pelo resultado morte OU deverá responder pelo crime de homicídio doloso consumado.
-        - Nulidade dos atos processuais praticados após sua citação OU nulidade da sentença, pois a citação por edital foi inválida, já que Vanessa estava presa OU já que a citação de Vanessa deveria ter sido realizada pessoalmente, nos termos da Súmula 351 do STF OU do art. 360, CPP.
-        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
-        - Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-    revisao: *a1
+    item: "B"
+    pergunta: "A gravidade do tipo de crime basta para fundamentar a preventiva?"
+    tese: "A gravidade em abstrato do crime não justifica a preventiva: é preciso fundamento concreto"
+    aceitos: [ [ "abstrata | em abstrato" ], [ "concret*" ] ]
+    artigos: [ "art. 312, § 4º, CPP", "art. 312, CPP" ]
+    gabarito: "A questão em análise busca extrair conhecimento acerca do tema prisão preventiva. Durante muito tempo se controverteu sobre a possibilidade de o magistrado decretar a prisão preventiva de ofício, em especial durante as investigações policiais. A lei 12.403 conferiu novo tratamento ao tema. Na hipótese narrada, o juiz, ainda durante a fase de investigação, sem ação penal em curso, decretou a prisão preventiva do indiciado de ofício, o que não é admitido pelo artigo 311 do Código de Processo Penal, tendo em vista que violaria o princípio da imparcialidade, o princípio da inércia e até mesmo o sistema acusatório. Ainda que a decretação da prisão preventiva de ofício neste momento fosse admitida, a fundamentação apresentada seria insuficiente, pois a gravidade em abstrato do crime não pode justificar a aplicação de medidas cautelares pessoais. O juiz não fundamentou a prisão preventiva, medida excepcional considerando o princípio da presunção de inocência e o direito à liberdade, com circunstâncias em concreto do caso.\n\nNesse sentido, perceba-se que a questão em análise dividiu-se em dois itens distintos.\n\nPara receber a pontuação relativa ao item ‘A’, considerando-se o comando da questão (“Poderia o magistrado adotar tal medida? Justifique.”), o examinando deveria responder que o magistrado não poderia ter agido daquela forma, calcando-se no sistema acusatório que norteia o processo penal brasileiro desde sua expressa adoção pela nossa Magna Carta. Consoante o sistema acusatório o juiz deve ser inerte e imparcial, de sorte que a decretação de uma prisão cautelar de ofício por parte do magistrado fere frontalmente tais postulados. Ademais, interpretando-se o art. 311 do CPP, resta claro que o juiz não pode decretar prisão preventiva de ofício na fase de inquérito. Tal interpretação decorre, obviamente, de uma leitura baseada no sistema acusatório. Nesse ínterim, é oportuno destacar que eventuais respostas calcadas no art. 311 do CPP, necessariamente, deveriam demonstrar que tal dispositivo veda a decretação de prisão preventiva de ofício pelo juiz na fase de inquérito policial; a tal constatação somente se chega a partir de uma interpretação principiológica, razão pela qual não merecem pontuação as respostas que se limitarem a indicar como fundamento da negativa o art. 311 do CPP, simplesmente, sem qualquer análise mais aprofundada.\n\nPor fim, para fazer jus à pontuação relativa ao item ‘B’, considerando-se o comando da questão, o examinando deveria indicar que a fundamentação apresentada pelo magistrado não foi suficiente, pois a gravidade em abstrato do delito, segundo entendimento pacífico, não é argumento idôneo, capaz de justificar uma prisão cautelar. Mais uma vez, a simples indicação de dispositivo legal não deve ser pontuada, sendo necessário, tal como manda o enunciado, que o examinando justifique sua resposta."
+    revisao: { status: revisado }
   - id: 15-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      A Receita Federal identificou que Raquel possivelmente sonegou Imposto sobre a Renda, causando prejuízo ao erário no valor de R$27.000,00 (vinte e sete mil reais). Foi instaurado, então, procedimento administrativo, não havendo, até o presente momento, lançamento definitivo do crédito tributário. Ao mesmo tempo, a Receita Federal expediu ofício informando tais fatos ao Ministério Público Federal, que, considerando a autonomia das instâncias, ofereceu denúncia em face de Raquel pela prática do crime previsto no Art. 1º, inciso I, da Lei nº 8.137/90.
-
-      Assustada com a ratificação do recebimento da denúncia após a apresentação de resposta à acusação pela Defensoria Pública, Raquel o procura para, na condição de advogado, tomar as medidas cabíveis.
-
-      Diante disso, responda aos itens a seguir.
-    comando: "Qual a medida jurídica a ser adotada de imediato para impedir o prosseguimento da ação penal? (Valor:"
-    gabarito: |-
-      Para auferir a pontuação relativa ao item ‘A’, considerando-se o comando da questão, o examinando deve indicar que a medida jurídica a ser adotada para impedir de imediato o prosseguimento da ação penal é o Habeas Corpus, devendo fundamentar sua resposta no artigo 5º, LXVIII, CRFB/88, ou no art. 647 do CPP, ou no art. 648, incisos I ou VI, do CPP. Ressalte-se que em virtude da celeridade na tramitação inerente ao Habeas Corpus, tal medida é aquela que de imediato atenderia os interesses em jogo, sendo, portanto, a mais acertada ao caso narrado.
-
-      Cumpre destacar que o Habeas Corpus deveria ter por objetivo o trancamento da ação penal, tendo em vista que o fato praticado ainda não era típico. Além disso, não serão pontuadas as respostas que indicarem duas ou mais medidas jurídicas a serem adotadas, ainda que uma delas seja o Habeas Corpus, isso porque o comando da questão era claro ao pedir a indicação de apenas uma.
-
-      Por fim, no tocante ao item ‘B’, destaca-se que a situação narrada pelo enunciado representa um constrangimento ilegal a Raquel. Nesse sentido, levando-se em conta o comando da questão, resta evidente que a principal tese jurídica a ser apresentada é aquela calcada no verbete 24 da Súmula Vinculante do STF, segundo a qual não se tipifica crime material contra a ordem tributária antes do lançamento definitivo do tributo. Inclusive, dessa forma, vêm entendendo os Tribunais Superiores que, antes do esgotamento da instância administrativa com lançamento do tributo, não pode ser oferecida denúncia pela prática do crime (Art. 1º, incisos I ao IV, da Lei nº 8.137).
-
-      Ressalte-se que a mera indicação do verbete sumular não será pontuada, tampouco a resposta que indicar apenas a atipicidade ou a falta de lançamento definitivo do tributo, sem qualquer outra justificativa ou desenvolvimento. Esclareça-se: o fato praticado por Raquel é atípico porque não houve o efetivo lançamento definitivo do crédito tributário, sendo certo que tal justificativa é essencial para a atribuição dos pontos. De igual modo, o lançamento definitivo do tributo e/ou a necessidade de esgotamento da via administrativa e/ou a falta de justa causa para a propositura da ação penal, são teses alegáveis desde que calcadas no verbete 24 da Súmula Vinculante do STF.
-    opcoes:
-      correta: "Habeas Corpus. / Art. 5º, LXVIII, CRFB/88 OU Art. 647 do CPP OU Art. 648, incisos I ou VI do CPP. Obs.: a mera citação do artigo não pontua."
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não, pois Wilson será beneficiado pelo instituto do arrependimento eficaz, de modo que somente responderá pelos atos praticados OU somente responderá por lesões corporais graves.
-        - Não é possível a condenação exclusivamente com base nas declarações do agente colaborador, segundo o Art. 4º, § 16º, da Lei nº 12.850/13, devendo ser corroborada por outros elementos de prova.
-        - Recurso de apelação, no prazo de 10 dias, conforme Art. 82, caput OU §1º, da Lei nº 9.099/95.
-        - A tese jurídica processual é a necessidade de rejeição da denúncia por falta de representação da vítima, pois, a partir da Lei nº 13.964/19, o crime de estelionato, em regra, comporta ação penal de iniciativa pública condicionada à representação, segundo o Art. 171, § 5º, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que medida cabe, de imediato, para impedir o prosseguimento da ação penal contra Raquel?"
+    tese: "Habeas corpus, para trancar a ação penal"
+    aceitos: [ "habeas corpus" ]
+    artigos: [ "art. 648, I, CPP", "art. 5, LXVIII, CRFB", "art. 647, CPP" ]
+    gabarito: "Para auferir a pontuação relativa ao item ‘A’, considerando-se o comando da questão, o examinando deve indicar que a medida jurídica a ser adotada para impedir de imediato o prosseguimento da ação penal é o Habeas Corpus, devendo fundamentar sua resposta no artigo 5º, LXVIII, CRFB/88, ou no art. 647 do CPP, ou no art. 648, incisos I ou VI, do CPP. Ressalte-se que em virtude da celeridade na tramitação inerente ao Habeas Corpus, tal medida é aquela que de imediato atenderia os interesses em jogo, sendo, portanto, a mais acertada ao caso narrado.\n\nCumpre destacar que o Habeas Corpus deveria ter por objetivo o trancamento da ação penal, tendo em vista que o fato praticado ainda não era típico. Além disso, não serão pontuadas as respostas que indicarem duas ou mais medidas jurídicas a serem adotadas, ainda que uma delas seja o Habeas Corpus, isso porque o comando da questão era claro ao pedir a indicação de apenas uma.\n\nPor fim, no tocante ao item ‘B’, destaca-se que a situação narrada pelo enunciado representa um constrangimento ilegal a Raquel. Nesse sentido, levando-se em conta o comando da questão, resta evidente que a principal tese jurídica a ser apresentada é aquela calcada no verbete 24 da Súmula Vinculante do STF, segundo a qual não se tipifica crime material contra a ordem tributária antes do lançamento definitivo do tributo. Inclusive, dessa forma, vêm entendendo os Tribunais Superiores que, antes do esgotamento da instância administrativa com lançamento do tributo, não pode ser oferecida denúncia pela prática do crime (Art. 1º, incisos I ao IV, da Lei nº 8.137).\n\nRessalte-se que a mera indicação do verbete sumular não será pontuada, tampouco a resposta que indicar apenas a atipicidade ou a falta de lançamento definitivo do tributo, sem qualquer outra justificativa ou desenvolvimento. Esclareça-se: o fato praticado por Raquel é atípico porque não houve o efetivo lançamento definitivo do crédito tributário, sendo certo que tal justificativa é essencial para a atribuição dos pontos. De igual modo, o lançamento definitivo do tributo e/ou a necessidade de esgotamento da via administrativa e/ou a falta de justa causa para a propositura da ação penal, são teses alegáveis desde que calcadas no verbete 24 da Súmula Vinculante do STF."
+    revisao: { status: revisado }
   - id: 15-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      A Receita Federal identificou que Raquel possivelmente sonegou Imposto sobre a Renda, causando prejuízo ao erário no valor de R$27.000,00 (vinte e sete mil reais). Foi instaurado, então, procedimento administrativo, não havendo, até o presente momento, lançamento definitivo do crédito tributário. Ao mesmo tempo, a Receita Federal expediu ofício informando tais fatos ao Ministério Público Federal, que, considerando a autonomia das instâncias, ofereceu denúncia em face de Raquel pela prática do crime previsto no Art. 1º, inciso I, da Lei nº 8.137/90.
-
-      Assustada com a ratificação do recebimento da denúncia após a apresentação de resposta à acusação pela Defensoria Pública, Raquel o procura para, na condição de advogado, tomar as medidas cabíveis.
-
-      Diante disso, responda aos itens a seguir.
-    comando: Qual a principal tese jurídica a ser apresentada?
-    gabarito: |-
-      Para auferir a pontuação relativa ao item ‘A’, considerando-se o comando da questão, o examinando deve indicar que a medida jurídica a ser adotada para impedir de imediato o prosseguimento da ação penal é o Habeas Corpus, devendo fundamentar sua resposta no artigo 5º, LXVIII, CRFB/88, ou no art. 647 do CPP, ou no art. 648, incisos I ou VI, do CPP. Ressalte-se que em virtude da celeridade na tramitação inerente ao Habeas Corpus, tal medida é aquela que de imediato atenderia os interesses em jogo, sendo, portanto, a mais acertada ao caso narrado.
-
-      Cumpre destacar que o Habeas Corpus deveria ter por objetivo o trancamento da ação penal, tendo em vista que o fato praticado ainda não era típico. Além disso, não serão pontuadas as respostas que indicarem duas ou mais medidas jurídicas a serem adotadas, ainda que uma delas seja o Habeas Corpus, isso porque o comando da questão era claro ao pedir a indicação de apenas uma.
-
-      Por fim, no tocante ao item ‘B’, destaca-se que a situação narrada pelo enunciado representa um constrangimento ilegal a Raquel. Nesse sentido, levando-se em conta o comando da questão, resta evidente que a principal tese jurídica a ser apresentada é aquela calcada no verbete 24 da Súmula Vinculante do STF, segundo a qual não se tipifica crime material contra a ordem tributária antes do lançamento definitivo do tributo. Inclusive, dessa forma, vêm entendendo os Tribunais Superiores que, antes do esgotamento da instância administrativa com lançamento do tributo, não pode ser oferecida denúncia pela prática do crime (Art. 1º, incisos I ao IV, da Lei nº 8.137).
-
-      Ressalte-se que a mera indicação do verbete sumular não será pontuada, tampouco a resposta que indicar apenas a atipicidade ou a falta de lançamento definitivo do tributo, sem qualquer outra justificativa ou desenvolvimento. Esclareça-se: o fato praticado por Raquel é atípico porque não houve o efetivo lançamento definitivo do crédito tributário, sendo certo que tal justificativa é essencial para a atribuição dos pontos. De igual modo, o lançamento definitivo do tributo e/ou a necessidade de esgotamento da via administrativa e/ou a falta de justa causa para a propositura da ação penal, são teses alegáveis desde que calcadas no verbete 24 da Súmula Vinculante do STF.
-    opcoes:
-      correta: "A principal tese defensiva é a atipicidade da conduta, / nos termos do verbete 24 da Súmula Vinculante do STF. OU A principal tese defensiva é a de que primeiro deveria ocorrer o esgotamento da via administrativa, / nos termos do verbete 24 da Súmula Vinculante do STF. OU A principal tese defensiva é a de que não há crime, pois ainda não ocorreu o lançamento definitivo do tributo, / nos termos do verbete 24 da Súmula Vinculante do STF. OU A principal tese defensiva é de que não há justa causa para a propositura da ação penal, / nos termos do verbete 24 da Súmula Vinculante do STF. Obs.: a mera indicação de verbete sumular, sem nenhuma interpretação de seu conteúdo, não pontua."
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não, pois Wilson será beneficiado pelo instituto do arrependimento eficaz, de modo que somente responderá pelos atos praticados OU somente responderá por lesões corporais graves.
-        - Vanessa não foi corretamente condenada por peculato porque não tinha conhecimento da condição de funcionário público de João, dependendo a comunicação da elementar desse elemento subjetivo OU porque não pode ser aplicado o Art. 30 do CP pela ausência de elemento subjetivo.
-        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "B"
+    pergunta: "Qual a principal tese jurídica para trancar a ação penal contra Raquel?"
+    tese: "Atipicidade (falta de justa causa): o crime tributário material só se tipifica depois do lançamento definitivo"
+    aceitos: [ [ "atipic*" ], [ "justa causa" ], [ "esgotamento | via administrativa" ] ]
+    artigos: [ "Súmula Vinculante 24" ]
+    gabarito: "Para auferir a pontuação relativa ao item ‘A’, considerando-se o comando da questão, o examinando deve indicar que a medida jurídica a ser adotada para impedir de imediato o prosseguimento da ação penal é o Habeas Corpus, devendo fundamentar sua resposta no artigo 5º, LXVIII, CRFB/88, ou no art. 647 do CPP, ou no art. 648, incisos I ou VI, do CPP. Ressalte-se que em virtude da celeridade na tramitação inerente ao Habeas Corpus, tal medida é aquela que de imediato atenderia os interesses em jogo, sendo, portanto, a mais acertada ao caso narrado.\n\nCumpre destacar que o Habeas Corpus deveria ter por objetivo o trancamento da ação penal, tendo em vista que o fato praticado ainda não era típico. Além disso, não serão pontuadas as respostas que indicarem duas ou mais medidas jurídicas a serem adotadas, ainda que uma delas seja o Habeas Corpus, isso porque o comando da questão era claro ao pedir a indicação de apenas uma.\n\nPor fim, no tocante ao item ‘B’, destaca-se que a situação narrada pelo enunciado representa um constrangimento ilegal a Raquel. Nesse sentido, levando-se em conta o comando da questão, resta evidente que a principal tese jurídica a ser apresentada é aquela calcada no verbete 24 da Súmula Vinculante do STF, segundo a qual não se tipifica crime material contra a ordem tributária antes do lançamento definitivo do tributo. Inclusive, dessa forma, vêm entendendo os Tribunais Superiores que, antes do esgotamento da instância administrativa com lançamento do tributo, não pode ser oferecida denúncia pela prática do crime (Art. 1º, incisos I ao IV, da Lei nº 8.137).\n\nRessalte-se que a mera indicação do verbete sumular não será pontuada, tampouco a resposta que indicar apenas a atipicidade ou a falta de lançamento definitivo do tributo, sem qualquer outra justificativa ou desenvolvimento. Esclareça-se: o fato praticado por Raquel é atípico porque não houve o efetivo lançamento definitivo do crédito tributário, sendo certo que tal justificativa é essencial para a atribuição dos pontos. De igual modo, o lançamento definitivo do tributo e/ou a necessidade de esgotamento da via administrativa e/ou a falta de justa causa para a propositura da ação penal, são teses alegáveis desde que calcadas no verbete 24 da Súmula Vinculante do STF."
+    revisao: { status: revisado }
   - id: 15-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      No dia 06/07/2010, Júlia, nascida em 06/04/1991, aproveitando-se de um momento de distração de Ricardo, subtraiu-lhe a carteira. Após recebimento da denúncia, em 11/08/2011, e regular processamento do feito, Júlia foi condenada a uma pena privativa de liberdade de 01 ano de reclusão, em sentença publicada em 08/10/2014.
-
-      Nem o Ministério Público nem a defesa de Júlia interpuseram recurso, tendo o feito transitado em julgado em 22/10/2014.
-
-      Sobre esses fatos, responda aos itens a seguir.
-    comando: Diante do trânsito em julgado, qual a tese defensiva a ser alegada em favor de Júlia para impedir o cumprimento da pena?
-    gabarito: |-
-      A questão exige do candidato conhecimento acerca do tema prescrição. O enunciado deixa clara a data de nascimento de Julia, demonstrando que esta era menor de 21 anos na data dos fatos. Entre o recebimento da denúncia e a data da publicação da sentença condenatória foram ultrapassados mais de 03 anos. A pena privativa de liberdade definitiva aplicada para Julia foi de 01 ano, que, na forma do artigo 109, V, do Código Penal, prescreve em 04 anos. Ocorre que, como Julia era menor de 21 anos na data dos fatos, o prazo prescricional deverá ser contado pela metade, conforme prevê o artigo 115 do Código Penal; dois anos, portanto.
-
-      Nesse sentido, para fazer jus à pontuação relativa ao item ‘A’, considerando-se o comando da questão, a tese defensiva a ser alegada para impedir o cumprimento da pena é justamente a ocorrência da prescrição da pretensão punitiva retroativa, pois entre o recebimento da denúncia e a publicação da sentença condenatória foi ultrapassado o prazo prescricional de dois anos, nos termos acima descritos. Fundamenta-se, tal resposta, no artigo 109, V, c/c 115, ambos do CP.
-
-      Ressalte-se que somente poderá ser pontuada a resposta que indicar corretamente a espécie de prescrição incidente ao caso, até porque era esse o objeto da questão.
-
-      Todavia, para privilegiar a demonstração de conhecimento jurídico, a Banca pontuará a resposta que não destacar a “prescrição da pretensão punitiva retroativa”, desde que o examinando indique expressamente tratar-se de prescrição da pretensão punitiva e também aponte os marcos interruptivos em que ela se operou, a saber: entre a data do recebimento da denúncia e a publicação da sentença condenatória. Para ter direito a essa flexibilização, entretanto, o examinando deve atender ambas as exigências.
-
-      De igual modo, a resposta que traga duas ou mais espécies de prescrição (mesmo que uma delas seja a correta), não será pontuada por considerar-se contraditória.
-
-      Já no que tange ao item ‘B’, faz-se necessário à atribuição dos pontos respectivos que o examinando responda que a principal consequência do acolhimento da tese acima esposada é o reconhecimento da extinção da punibilidade de Júlia (art. 107, IV, CP) e, em decorrência disso, desaparecem também todos os demais efeitos penais e/ou civis, tais como a reincidência, os maus antecedentes ou mesmo a possibilidade de a condenação funcionar como título executivo no juízo cível.
-    opcoes:
-      correta: "A ocorrência da prescrição da pretensão punitiva retroativa, / conforme arts. 109, V, c/c 115, ambos do CP. OU A ocorrência da prescrição da pretensão punitiva entre a data do recebimento da denúncia e a publicação da sentença condenatória, / conforme arts. 109, V, c/c 115, ambos do CP. Obs.: a mera citação do artigo não pontua."
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Não, pois Wilson será beneficiado pelo instituto do arrependimento eficaz, de modo que somente responderá pelos atos praticados OU somente responderá por lesões corporais graves.
-        - Não é possível a condenação exclusivamente com base nas declarações do agente colaborador, segundo o Art. 4º, § 16º, da Lei nº 12.850/13, devendo ser corroborada por outros elementos de prova.
-        - Recurso de apelação, no prazo de 10 dias, conforme Art. 82, caput OU §1º, da Lei nº 9.099/95.
-        - A tese jurídica processual é a necessidade de rejeição da denúncia por falta de representação da vítima, pois, a partir da Lei nº 13.964/19, o crime de estelionato, em regra, comporta ação penal de iniciativa pública condicionada à representação, segundo o Art. 171, § 5º, do CP.
-    revisao: *a1
+    item: "A"
+    pergunta: "Com o trânsito em julgado, que tese a defesa de Júlia deve alegar para impedir o cumprimento da pena?"
+    tese: "A prescrição da pretensão punitiva retroativa, com o prazo pela metade (menor de 21 anos)"
+    aceitos: [ "prescri*" ]
+    artigos: [ "art. 109, V, CP", "art. 115, CP" ]
+    gabarito: "A questão exige do candidato conhecimento acerca do tema prescrição. O enunciado deixa clara a data de nascimento de Julia, demonstrando que esta era menor de 21 anos na data dos fatos. Entre o recebimento da denúncia e a data da publicação da sentença condenatória foram ultrapassados mais de 03 anos. A pena privativa de liberdade definitiva aplicada para Julia foi de 01 ano, que, na forma do artigo 109, V, do Código Penal, prescreve em 04 anos. Ocorre que, como Julia era menor de 21 anos na data dos fatos, o prazo prescricional deverá ser contado pela metade, conforme prevê o artigo 115 do Código Penal; dois anos, portanto.\n\nNesse sentido, para fazer jus à pontuação relativa ao item ‘A’, considerando-se o comando da questão, a tese defensiva a ser alegada para impedir o cumprimento da pena é justamente a ocorrência da prescrição da pretensão punitiva retroativa, pois entre o recebimento da denúncia e a publicação da sentença condenatória foi ultrapassado o prazo prescricional de dois anos, nos termos acima descritos. Fundamenta-se, tal resposta, no artigo 109, V, c/c 115, ambos do CP.\n\nRessalte-se que somente poderá ser pontuada a resposta que indicar corretamente a espécie de prescrição incidente ao caso, até porque era esse o objeto da questão.\n\nTodavia, para privilegiar a demonstração de conhecimento jurídico, a Banca pontuará a resposta que não destacar a “prescrição da pretensão punitiva retroativa”, desde que o examinando indique expressamente tratar-se de prescrição da pretensão punitiva e também aponte os marcos interruptivos em que ela se operou, a saber: entre a data do recebimento da denúncia e a publicação da sentença condenatória. Para ter direito a essa flexibilização, entretanto, o examinando deve atender ambas as exigências.\n\nDe igual modo, a resposta que traga duas ou mais espécies de prescrição (mesmo que uma delas seja a correta), não será pontuada por considerar-se contraditória.\n\nJá no que tange ao item ‘B’, faz-se necessário à atribuição dos pontos respectivos que o examinando responda que a principal consequência do acolhimento da tese acima esposada é o reconhecimento da extinção da punibilidade de Júlia (art. 107, IV, CP) e, em decorrência disso, desaparecem também todos os demais efeitos penais e/ou civis, tais como a reincidência, os maus antecedentes ou mesmo a possibilidade de a condenação funcionar como título executivo no juízo cível."
+    revisao: { status: revisado }
   - id: 15-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      No dia 06/07/2010, Júlia, nascida em 06/04/1991, aproveitando-se de um momento de distração de Ricardo, subtraiu-lhe a carteira. Após recebimento da denúncia, em 11/08/2011, e regular processamento do feito, Júlia foi condenada a uma pena privativa de liberdade de 01 ano de reclusão, em sentença publicada em 08/10/2014.
-
-      Nem o Ministério Público nem a defesa de Júlia interpuseram recurso, tendo o feito transitado em julgado em 22/10/2014.
-
-      Sobre esses fatos, responda aos itens a seguir.
-    comando: Quais as consequências do acolhimento da tese defensiva?
-    gabarito: |-
-      A questão exige do candidato conhecimento acerca do tema prescrição. O enunciado deixa clara a data de nascimento de Julia, demonstrando que esta era menor de 21 anos na data dos fatos. Entre o recebimento da denúncia e a data da publicação da sentença condenatória foram ultrapassados mais de 03 anos. A pena privativa de liberdade definitiva aplicada para Julia foi de 01 ano, que, na forma do artigo 109, V, do Código Penal, prescreve em 04 anos. Ocorre que, como Julia era menor de 21 anos na data dos fatos, o prazo prescricional deverá ser contado pela metade, conforme prevê o artigo 115 do Código Penal; dois anos, portanto.
-
-      Nesse sentido, para fazer jus à pontuação relativa ao item ‘A’, considerando-se o comando da questão, a tese defensiva a ser alegada para impedir o cumprimento da pena é justamente a ocorrência da prescrição da pretensão punitiva retroativa, pois entre o recebimento da denúncia e a publicação da sentença condenatória foi ultrapassado o prazo prescricional de dois anos, nos termos acima descritos. Fundamenta-se, tal resposta, no artigo 109, V, c/c 115, ambos do CP.
-
-      Ressalte-se que somente poderá ser pontuada a resposta que indicar corretamente a espécie de prescrição incidente ao caso, até porque era esse o objeto da questão.
-
-      Todavia, para privilegiar a demonstração de conhecimento jurídico, a Banca pontuará a resposta que não destacar a “prescrição da pretensão punitiva retroativa”, desde que o examinando indique expressamente tratar-se de prescrição da pretensão punitiva e também aponte os marcos interruptivos em que ela se operou, a saber: entre a data do recebimento da denúncia e a publicação da sentença condenatória. Para ter direito a essa flexibilização, entretanto, o examinando deve atender ambas as exigências.
-
-      De igual modo, a resposta que traga duas ou mais espécies de prescrição (mesmo que uma delas seja a correta), não será pontuada por considerar-se contraditória.
-
-      Já no que tange ao item ‘B’, faz-se necessário à atribuição dos pontos respectivos que o examinando responda que a principal consequência do acolhimento da tese acima esposada é o reconhecimento da extinção da punibilidade de Júlia (art. 107, IV, CP) e, em decorrência disso, desaparecem também todos os demais efeitos penais e/ou civis, tais como a reincidência, os maus antecedentes ou mesmo a possibilidade de a condenação funcionar como título executivo no juízo cível.
-    opcoes:
-      correta: A extinção da punibilidade / e o desaparecimento dos demais efeitos penais ou civis.
-      erradas:
-        - "Não: o valor mínimo da sentença (art. 387, IV, CPP) só pode ser executado após o trânsito em julgado (art. 63 do CPP)."
-        - Como não houve eficácia no arrependimento OU como não houve atendimento à exigência do Art. 15, CP, Wilson deverá responder pelo resultado morte OU deverá responder pelo crime de homicídio doloso consumado.
-        - Nulidade dos atos processuais praticados após sua citação OU nulidade da sentença, pois a citação por edital foi inválida, já que Vanessa estava presa OU já que a citação de Vanessa deveria ter sido realizada pessoalmente, nos termos da Súmula 351 do STF OU do art. 360, CPP.
-        - Houve cerceamento de defesa OU violação ao princípio do contraditório ou da ampla defesa, tendo em vista que as testemunhas referidas não são computadas no número máximo de testemunhas a serem ouvidas, nos termos do Art. 401, § 1º, do CPP OU Art. 209 do CPP OU Art. 5º, LV, CRFB.
-        - Carta testemunhável, na forma do Art. 639, inciso I, do CPP.
-    revisao: *a1
+    item: "B"
+    pergunta: "Acolhida essa tese, qual a consequência?"
+    tese: "Extinção da punibilidade, que afasta os demais efeitos da condenação"
+    aceitos: [ "extin* da punibilidade" ]
+    artigos: [ "art. 107, IV, CP" ]
+    gabarito: "A questão exige do candidato conhecimento acerca do tema prescrição. O enunciado deixa clara a data de nascimento de Julia, demonstrando que esta era menor de 21 anos na data dos fatos. Entre o recebimento da denúncia e a data da publicação da sentença condenatória foram ultrapassados mais de 03 anos. A pena privativa de liberdade definitiva aplicada para Julia foi de 01 ano, que, na forma do artigo 109, V, do Código Penal, prescreve em 04 anos. Ocorre que, como Julia era menor de 21 anos na data dos fatos, o prazo prescricional deverá ser contado pela metade, conforme prevê o artigo 115 do Código Penal; dois anos, portanto.\n\nNesse sentido, para fazer jus à pontuação relativa ao item ‘A’, considerando-se o comando da questão, a tese defensiva a ser alegada para impedir o cumprimento da pena é justamente a ocorrência da prescrição da pretensão punitiva retroativa, pois entre o recebimento da denúncia e a publicação da sentença condenatória foi ultrapassado o prazo prescricional de dois anos, nos termos acima descritos. Fundamenta-se, tal resposta, no artigo 109, V, c/c 115, ambos do CP.\n\nRessalte-se que somente poderá ser pontuada a resposta que indicar corretamente a espécie de prescrição incidente ao caso, até porque era esse o objeto da questão.\n\nTodavia, para privilegiar a demonstração de conhecimento jurídico, a Banca pontuará a resposta que não destacar a “prescrição da pretensão punitiva retroativa”, desde que o examinando indique expressamente tratar-se de prescrição da pretensão punitiva e também aponte os marcos interruptivos em que ela se operou, a saber: entre a data do recebimento da denúncia e a publicação da sentença condenatória. Para ter direito a essa flexibilização, entretanto, o examinando deve atender ambas as exigências.\n\nDe igual modo, a resposta que traga duas ou mais espécies de prescrição (mesmo que uma delas seja a correta), não será pontuada por considerar-se contraditória.\n\nJá no que tange ao item ‘B’, faz-se necessário à atribuição dos pontos respectivos que o examinando responda que a principal consequência do acolhimento da tese acima esposada é o reconhecimento da extinção da punibilidade de Júlia (art. 107, IV, CP) e, em decorrência disso, desaparecem também todos os demais efeitos penais e/ou civis, tais como a reincidência, os maus antecedentes ou mesmo a possibilidade de a condenação funcionar como título executivo no juízo cível."
+    revisao: { status: revisado }

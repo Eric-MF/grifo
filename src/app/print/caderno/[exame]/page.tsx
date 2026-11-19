@@ -1,5 +1,5 @@
 import { Caderno } from "@/components/print/Caderno";
-import { carregarExame, listarExames } from "@/content/load";
+import { carregarExameAtualizado, listarExames } from "@/content/load";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -10,5 +10,5 @@ export function generateStaticParams() {
 
 export default async function Page({ params }: { params: Promise<{ exame: string }> }) {
   const { exame } = await params;
-  return <Caderno exame={carregarExame(exame)} />;
+  return <Caderno exame={carregarExameAtualizado(exame)} />;
 }

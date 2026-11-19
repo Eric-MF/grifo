@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { carregarExame, examesCorrigiveis } from "@/content/load";
+import { carregarExame, carregarExameAtualizado, examesCorrigiveis } from "@/content/load";
 import { tituloSimulado } from "@/content/titulo";
 import { paraSimulado } from "@/lib/correcao/simulado";
-import { Simulador } from "./Simulador";
+import { Simulador, type MudancasAtualizada } from "./Simulador";
 
 export const dynamicParams = false;
 
@@ -18,5 +18,12 @@ export async function generateMetadata({ params }: { params: Promise<{ exame: st
 
 export default async function Page({ params }: { params: Promise<{ exame: string }> }) {
   const { exame } = await params;
-  return <Simulador exame={paraSimulado(carregarExame(exame))} />;
+  const atualizado = carregarExameAtualizado(exame);
+  const at = atualizado.atualizado;
+  const mudancas: MudancasAtualizada = {
+    nomes: Object.values(at?.nomes ?? {}).some((m) => Object.keys(m).length > 0),
+    correcoes: at?.correcoes.length ?? 0,
+    avisos: [...new Set((at?.notas ?? []).map((n) => (n.alvo === "peca" ? "Peça" : `Questão ${n.alvo.slice(1)}`)))],
+  };
+  return <Simulador original={paraSimulado(carregarExame(exame))} atualizado={paraSimulado(atualizado, "atualizada")} mudancas={mudancas} />;
 }

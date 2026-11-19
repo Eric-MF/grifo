@@ -1,594 +1,179 @@
-# Gerado por scripts/gerar-perguntas-exames.ts.
+# Teses de "Por dentro da peça" e "Questões discursivas" (ver PerguntaTese em src/quiz/types.ts e docs/COMO-ADICIONAR.md).
 exame: "31"
+introducoes:
+  peca: "Rômulo, nascido em 4/4/1991, deu facadas nas mãos da esposa, Paola, em 2/1/2010, por ciúmes, com a intenção de matá-la em seguida. Comovido com o sofrimento dela, foi embora, sabendo que os golpes não bastavam para matá-la; o exame constatou lesões graves. O inquérito durou anos, e a denúncia por feminicídio tentado foi recebida em 24/1/2020, no júri de Maricá. Rômulo não foi intimado para a audiência em que foram ouvidas a vítima e as testemunhas, e a defesa protestou; depois, no interrogatório, ficou em silêncio. O juiz o pronunciou nos termos da denúncia. Você foi intimado da pronúncia."
+  q1: "Sem inquérito, com base em vídeos da repartição, o Ministério Público denunciou Luciano por peculato doloso e Gilberto, funcionário que teria facilitado por descuido a subtração de R$ 2.000, por peculato culposo. Gilberto, reincidente, não teve oferecidos os benefícios despenalizadores. O juiz recebeu a denúncia de imediato, sem ouvir as partes, e marcou a audiência. Na véspera, Gilberto devolveu à Administração o valor do prejuízo. Você assumiu a defesa dele para os memoriais."
+  q2: "Em 5/6/2019, Paulo, com a capacidade psicomotora alterada pelo álcool, avançou o sinal e atropelou Lúcia, que ficou com debilidade permanente no braço. Ele pagou as despesas dela, e Lúcia não quis representar. Mesmo assim, o Ministério Público o denunciou por lesão corporal culposa no trânsito, sob influência de álcool, e por embriaguez ao volante."
+  q3: "Carlos foi condenado por transportar arma de uso permitido, em 2014, a 2 anos no regime aberto, substituídos por prestação de serviços e limitação de fim de semana; a sentença transitou em julgado para as duas partes em 25/11/2015. Ele se mudou para trabalhar em outra cidade sem avisar o juízo e não foi encontrado para começar a cumprir a pena. A pedido do Ministério Público, o juiz converteu de imediato as penas em prisão, e Carlos foi preso em 20/12/2019, ao renovar a carteira de motorista."
+  q4: "Paulo furtou o dinheiro do caixa da loja de conveniência de um posto sem ser notado. Já do lado de fora, contou o que tinha feito à ex-namorada Jaqueline, que abastecia o carro, e pediu carona para sair dali; ela o levou embora com o dinheiro. Os dois foram denunciados por furto qualificado pelo concurso de agentes. O juiz negou a preventiva, mas suspendeu Jaqueline, primária, do exercício da atividade econômica: ela é dona de uma loja de roupas."
+# itens fora do jogo: sem artigo (endereçamento, prazo, pedidos genéricos, rol) ou com a resposta superada por lei nova
+fora: ["31-peca-1", "31-peca-4", "31-peca-7", "31-peca-13"]
 perguntas:
-  - id: 31-peca-1
-    categoria: peca-detalhe
-    parte: peca
-    item: "1"
-    secao: enderecamento
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem deve ser endereçada a peça?
-    gabarito: "Endereçamento: Juízo do Tribunal do Júri da Comarca de Maricá/RJ"
-    opcoes:
-      correta: "Endereçamento: Juízo do Tribunal do Júri da Comarca de Maricá/RJ"
-      erradas:
-        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
-        - "Endereçamento da petição de interposição: Juiz da 41ª Vara Criminal da Comarca da Capital do Estado ‘X’."
-        - "Endereçamento: Tribunal de Justiça do Rio de Janeiro"
-        - Vara Criminal da Comarca de Campos/RJ.
-        - A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
-    revisao: &a1
-      status: revisado
   - id: 31-peca-3
     categoria: peca-detalhe
     parte: peca
     item: "3"
     secao: pedido
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Pedido de exercício do juízo de retratação, nos termos do Art. 589 do CPP
-    opcoes:
-      correta: Pedido de exercício do juízo de retratação, nos termos do Art. 589 do CPP
-      erradas:
-        - "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
-        - Absolvição por falta de provas OU por não haver prova da existência do fato.
-        - "Pedidos: Absolvição, na forma do Art. 386, inciso VI, do CPP"
-        - Não provimento do recurso OU manutenção da sentença.
-        - Conhecimento e provimento do recurso.
-    revisao: *a1
-  - id: 31-peca-4
-    categoria: peca-detalhe
-    parte: peca
-    item: "4"
-    secao: enderecamento
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: A quem devem ser endereçadas as razões?
-    gabarito: "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro"
-    opcoes:
-      correta: "Endereçamento: Tribunal de Justiça do Estado do Rio de Janeiro"
-      erradas:
-        - "Endereçamento correto (Juiz da 1ª Vara Criminal – Tribunal do Júri) e indicação da norma: art. 581, IV, CPP."
-        - A peça deve ser endereçada ao Juiz do Juizado Especial Criminal.
-        - "Endereçamento: Vara Criminal da Comarca do Rio de Janeiro"
-        - "Endereçamento: Vara Criminal da Comarca de Porto Alegre/RS."
-        - A resposta à acusação deve ser encaminhada à 2ª Vara Criminal da Comarca de Vitória/ES.
-    revisao: *a1
+    pergunta: "Ao interpor o recurso contra a pronúncia, o que a defesa deve pedir ao próprio juiz?"
+    tese: "Juízo de retratação: o juiz pode reformar a pronúncia ao receber o recurso em sentido estrito"
+    aceitos: [ "retrata* | efeito regressivo | reconsidera*" ]
+    artigos: [ "art. 589, CPP" ]
+    gabarito: "Pedido de exercício do juízo de retratação, nos termos do Art. 589 do CPP"
+    revisao: { status: revisado }
   - id: 31-peca-5
     categoria: peca-detalhe
     parte: peca
     item: "5"
     secao: pedido
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Pedido de extinção da punibilidade do agente em relação ao delito imputado na denúncia, em razão da prescrição da pretensão punitiva estatal pela pena em abstrato do crime de homicídio, nos termos do Art. 107, inciso IV, do CP OU 109, inciso I, c/c Art. 115, ambos do CP
-    opcoes:
-      correta: Pedido de extinção da punibilidade do agente em relação ao delito imputado na denúncia, em razão da prescrição da pretensão punitiva estatal pela pena em abstrato do crime de homicídio, nos termos do Art. 107, inciso IV, do CP OU 109, inciso I, c/c Art. 115, ambos do CP
-      erradas:
-        - "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
-        - Absolvição por falta de provas OU por não haver prova da existência do fato.
-        - "Pedidos: Absolvição, na forma do Art. 386, inciso VI, do CPP"
-        - Não provimento do recurso OU manutenção da sentença.
-        - Pedido de retratação, na forma do Art. 589 do CPP.
-    revisao: *a1
+    pergunta: "Entre o fato e o recebimento da denúncia passaram mais de 10 anos. Que causa extingue a punibilidade de Rômulo?"
+    tese: "Extinção da punibilidade pela prescrição da pretensão punitiva, calculada pela pena máxima em abstrato"
+    aceitos: [ "prescri*" ]
+    artigos: [ "art. 107, IV, CP", "art. 109, I, CP", "art. 115, CP" ]
+    gabarito: "Pedido de extinção da punibilidade do agente em relação ao delito imputado na denúncia, em razão da prescrição da pretensão punitiva estatal pela pena em abstrato do crime de homicídio, nos termos do Art. 107, inciso IV, do CP OU 109, inciso I, c/c Art. 115, ambos do CP"
+    revisao: { status: revisado }
   - id: 31-peca-6
     categoria: peca-detalhe
     parte: peca
     item: "6"
     secao: merito
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-    opcoes:
-      correta: Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese da incidência da atenuante da menoridade penal relativa
-        - Substituição da pena privativa de liberdade por restritiva de direitos,pois preenchidos os requisitos do Art. 44 do CP.
-        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
-        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
-    revisao: *a1
-  - id: 31-peca-7
-    categoria: peca-detalhe
-    parte: peca
-    item: "7"
-    secao: preliminar
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese preliminar deve ser alegada na peça, e com qual fundamento?
-    gabarito: Nulidade da pronúncia OU nulidade da instrução, tendo em vista que o réu não foi intimado para audiência em que foram ouvidas as testemunhas
-    opcoes:
-      correta: Nulidade da pronúncia OU nulidade da instrução, tendo em vista que o réu não foi intimado para audiência em que foram ouvidas as testemunhas
-      erradas:
-        - Ilegitimidade/ilicitude da interceptação telefônica por tratar-se de crime apenado com detenção OU por não terem sido esgotados previamente os meios de investigação.
-        - "Prescrição da pretensão punitiva: pena máxima de 4 anos prescreve em 8, mas a ré era menor de 21 anos e o prazo corre pela metade (CP, arts. 109, IV, 115 e 126)."
-        - Nulidade do processo, com a consequente extinção da punibilidade pela prescrição.
-        - Preliminarmente, reconhecimento da nulidade dos atos da instrução.
-        - Nulidade em razão da ausência de exame de corpo de delito, direto ou indireto, nos termos do Art. 158 do CPP.
-    revisao: *a1
+    pergunta: "Por que o prazo prescricional de Rômulo é de só 10 anos?"
+    tese: "Prazo prescricional pela metade, porque o réu era menor de 21 anos na data do fato"
+    aceitos: [ "metade | menor de 21 | 21 anos" ]
+    artigos: [ "art. 115, CP" ]
+    gabarito: "Entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional aplicável de 10 anos OU entre a data do fato e do recebimento da denúncia foi ultrapassado o prazo prescricional do crime de homicídio, que deverá ser computado pela metade considerando a idade do réu na data do fato"
+    revisao: { status: revisado }
   - id: 31-peca-8
     categoria: peca-detalhe
     parte: peca
     item: "8"
     secao: merito
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-    opcoes:
-      correta: O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
-        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
-        - Reconhecimento da atenuante da confissão espontânea, na forma do Art. 65, inciso III, alínea d, do CP.
-    revisao: *a1
+    pergunta: "Que preliminar a defesa deve levantar quanto à audiência sem a presença de Rômulo?"
+    tese: "Nulidade da instrução por violação da ampla defesa (autodefesa): o réu não foi intimado para a audiência das testemunhas"
+    aceitos: [ "ampla defesa | autodefesa | nulidade | nula | nulo" ]
+    artigos: [ "art. 5, LV, CRFB", "art. 564, IV, CPP" ]
+    gabarito: "O não comparecimento do réu configura violação ao princípio da ampla defesa, nos termos do Art. 5º, inciso LV, da CRFB"
+    revisao: { status: revisado }
   - id: 31-peca-9
     categoria: peca-detalhe
     parte: peca
     item: "9"
     secao: pedido
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Pedido de desclassificação para afastar o reconhecimento de crime doloso contra a vida, nos termos do Art. 419 do CPP
-    opcoes:
-      correta: Pedido de desclassificação para afastar o reconhecimento de crime doloso contra a vida, nos termos do Art. 419 do CPP
-      erradas:
-        - "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
-        - Absolvição sumária com fundamento no art. 397, III, do CPP e art. 397, IV, do CPP; produção de prova testemunhal ou rol de testemunhas.
-        - "Pedido: Não conhecimento do recurso e, subsidiariamente, não provimento do recurso OU que seja mantida a sentença de 1º grau em sua integralidade"
-        - Aplicação de regime inicial aberto ou semiaberto.
-        - Subsidiariamente, o acolhimento das teses defensivas de aplicação da pena.
-    revisao: *a1
+    pergunta: "Sem crime doloso contra a vida, que decisão a defesa deve pedir no lugar da pronúncia?"
+    tese: "Desclassificação, com a remessa do caso ao juízo singular"
+    aceitos: [ "desclassifica*" ]
+    artigos: [ "art. 419, CPP" ]
+    gabarito: "Pedido de desclassificação para afastar o reconhecimento de crime doloso contra a vida, nos termos do Art. 419 do CPP"
+    revisao: { status: revisado }
   - id: 31-peca-10
     categoria: peca-detalhe
     parte: peca
     item: "10"
     secao: merito
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Houve desistência voluntária, já que Rômulo optou por não prosseguir na empreitada criminosa OU já que não ocorreram circunstâncias alheias à vontade do agente, nos termos do Art. 15 do CP
-    opcoes:
-      correta: Houve desistência voluntária, já que Rômulo optou por não prosseguir na empreitada criminosa OU já que não ocorreram circunstâncias alheias à vontade do agente, nos termos do Art. 15 do CP
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
-        - Subsidiariamente, aplicação da suspensão condicional da pena, tendo em vista que a pena aplicada foi inferior a 4 anos e o réu era maior de 70 anos OU em razão do sursis etário, nos termos do Art. 77, §2º, do Código Penal
-        - Afastamento da agravante do Art. 61, inciso II, alínea d (ou b), do CP, pois a situação de perigo comum é elementar do tipo imputado ou por configurar bis in idem ou por não haver a intenção de ocultação, vantagem ou impunidade de outro crime.
-    revisao: *a1
+    pergunta: "Rômulo foi embora por vontade própria, sabendo que os golpes não matariam Paola. Que tese afasta a tentativa de homicídio?"
+    tese: "Desistência voluntária: o réu parou por vontade própria, sem circunstância alheia à vontade dele"
+    aceitos: [ "desistencia voluntaria" ]
+    artigos: [ "art. 15, CP" ]
+    gabarito: "Houve desistência voluntária, já que Rômulo optou por não prosseguir na empreitada criminosa OU já que não ocorreram circunstâncias alheias à vontade do agente, nos termos do Art. 15 do CP"
+    revisao: { status: revisado }
   - id: 31-peca-11
     categoria: peca-detalhe
     parte: peca
     item: "11"
     secao: merito
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Rômulo deverá responder apenas pelos atos já praticados, qual seja de lesão corporal grave
-    opcoes:
-      correta: Rômulo deverá responder apenas pelos atos já praticados, qual seja de lesão corporal grave
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
-        - Substituição da pena privativa de liberdade por restritiva de direitos, tendo em vista que a condenação anterior foi pela prática de crime culposo, de acordo com o Art. 44, inciso II, do Código Penal. 5/
-        - "Subsidiariamente: aplicação da pena base no mínimo legal, tendo em vista que o fato posterior ao crime julgado não pode ser considerado maus antecedentes."
-    revisao: *a1
+    pergunta: "Reconhecida a desistência, por qual crime Rômulo pode responder?"
+    tese: "Na desistência voluntária, o agente responde só pelos atos praticados: a lesão corporal grave"
+    aceitos: [ "atos ja praticados | atos praticados | lesao corporal grave | lesao grave" ]
+    artigos: [ "art. 15, CP", "art. 129, § 1º, CP" ]
+    gabarito: "Rômulo deverá responder apenas pelos atos já praticados, qual seja de lesão corporal grave"
+    revisao: { status: revisado }
   - id: 31-peca-12
     categoria: peca-detalhe
     parte: peca
     item: "12"
     secao: merito
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que tese de mérito deve ser desenvolvida na peça, e com qual fundamento?
-    gabarito: Afastamento da qualificadora do feminicídio (OU do Art. 121, § 2º, inciso VI, do CP), em razão do princípio da irretroatividade da lei penal desfavorável, nos termos do Art. 5º, inciso XL, da CRFB
-    opcoes:
-      correta: Afastamento da qualificadora do feminicídio (OU do Art. 121, § 2º, inciso VI, do CP), em razão do princípio da irretroatividade da lei penal desfavorável, nos termos do Art. 5º, inciso XL, da CRFB
-      erradas:
-        - Ausência de prova da materialidade do aborto por inexistência de perícia que vincule o óbito à substância abortiva.
-        - Da tese do afastamento da agravante da embriaguez preordenada.
-        - Reconhecimento da atenuante da confissão espontânea,na forma do Art. 65, inciso III, alínea d, do CP.
-        - Substituição da pena privativa de liberdade por restritiva de direitos, tendo em vista que a condenação anterior foi pela prática de crime culposo, de acordo com o Art. 44, inciso II, do Código Penal. 5/
-        - "Subsidiariamente: aplicação da pena base no mínimo legal, tendo em vista que o fato posterior ao crime julgado não pode ser considerado maus antecedentes."
-    revisao: *a1
-  - id: 31-peca-13
-    categoria: peca-detalhe
-    parte: peca
-    item: "13"
-    secao: pedido
-    caso: |-
-      Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de 2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um próspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a arma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua esposa após as facadas na mão, decidindo deixar o local dos fatos para se acalmar, apesar de ter consciência de que os atos praticados seriam insuficientes para causar a inicialmente pretendida morte de Paola.
-
-      Paola informou os fatos à sua mãe, que a levou ao hospital e, em seguida à Delegacia, onde ela narrou o ocorrido à autoridade policial. O Delegado instaurou inquérito policial, realizando, por vários anos, diligências para a confirmação da versão da vítima, ouvindo testemunhas, realizando laudo de exame de local, acostando o exame de corpo de delito de Paola, que constatou a existência de lesão corporal de natureza grave, dentre outras. Por fim, ouviu o indiciado, que confirmou sua pretensão inicial e todos os fatos descritos pela vítima.
-
-      Concluído o procedimento, após relatório final, os autos foram encaminhados ao Ministério Público, que ofereceu denúncia em face de Rômulo, no dia 22 de janeiro de 2020, perante o Tribunal do Júri da comarca de Maricá/Rio de Janeiro, imputando-lhe a prática do crime previsto no Art. 121, § 2º, inciso VI (feminicídio), com redação dada pela Lei 13.104/15, c/c. Art. 14, inciso II, todos do Código Penal. A inicial acusatória foi recebida em 24 de janeiro de 2020, sendo o denunciado citado pessoalmente, e juntada Folha de Antecedentes Criminais, em que constava apenas uma outra anotação por ação penal em curso pela suposta prática de crime de furto qualificado.
-
-      Após regular prosseguimento do feito até aquele momento, foi designada audiência na primeira fase do procedimento do Tribunal do Júri, ocasião em que foram ouvidas a vítima e as testemunhas de acusação e defesa.
-
-      Todos prestaram declarações que confirmaram efetivamente o ocorrido. Rômulo não compareceu porque não foi intimado, mas seu advogado estava presente e consignou inconformismo com a realização do ato sem a presença do réu. O magistrado, contudo, destacou que designaria nova data para interrogatório e que a defesa técnica estaria presente, não havendo, então, prejuízo.
-
-      De fato, foi marcada nova data para a realização do interrogatório, ocasião em que Rômulo compareceu e permaneceu em silêncio. Após, as partes apresentaram manifestação, reiterando, a defesa, o inconformismo com a realização da primeira audiência. Os autos foram para conclusão, e foi proferida decisão pronunciando o réu nos termos da denúncia. Pessoalmente intimado, o Ministério Público se manteve inerte. A defesa técnica e Rômulo foram intimados em 10 de março de 2020, uma terça-feira.
-
-      Considerando apenas as informações expostas, na condição de advogado(a) de Rômulo, apresente a peça jurídica cabível, diferente de habeas corpus e embargos de declaração, apresentando todas as teses jurídicas de direito material e direito processual cabíveis. A peça deverá ser datada no último dia do prazo para interposição, considerando que de segunda a sexta-feira são dias úteis em todo o país. (Valor: 5,00).
-
-      Obs.: a peça deve abranger todos os fundamentos de Direito que possam ser utilizados para dar respaldo à pretensão. A simples menção ou transcrição do dispositivo legal não confere pontuação.
-    comando: Que pedido deve ser formulado na peça?
-    gabarito: Conhecimento e provimento do recurso
-    opcoes:
-      correta: Conhecimento e provimento do recurso
-      erradas:
-        - "Pedido de reconsideração ao juiz de 1º grau e indicação da norma: art. 589, parágrafo único, CPP."
-        - Absolvição sumária com fundamento no art. 397, III, do CPP e art. 397, IV, do CPP; produção de prova testemunhal ou rol de testemunhas.
-        - Pedido de retratação.
-        - Redução do máximo em razão da tentativa.
-        - Pedido de retratação, na forma do Art. 589 do CPP.
-    revisao: *a1
+    pergunta: "O feminicídio foi incluído no Código Penal em 2015. Que tese a defesa deve sustentar quanto a ele?"
+    tese: "Afastamento do feminicídio, criado depois do fato: a lei penal mais grave não retroage"
+    aceitos: [ [ "feminicidio", "afast* | exclu* | decote | nao incid* | nao se aplica" ], [ "irretroativ* | nao retroage" ] ]
+    artigos: [ "art. 5, XL, CRFB", "art. 1, CP" ]
+    gabarito: "Afastamento da qualificadora do feminicídio (OU do Art. 121, § 2º, inciso VI, do CP), em razão do princípio da irretroatividade da lei penal desfavorável, nos termos do Art. 5º, inciso XL, da CRFB"
+    revisao: { status: revisado }
   - id: 31-q1-a
     categoria: discursiva
     parte: q1
-    item: A
-    caso: |-
-      Após receber informações de que teria ocorrido subtração de valores públicos por funcionários públicos no exercício da função, inclusive com vídeo das câmeras de segurança da repartição registrando o ocorrido, o Ministério Público ofereceu, sem prévio inquérito policial, uma única denúncia em face de Luciano e Gilberto, em razão da conexão, pela suposta prática do crime de peculato, sendo que, ao primeiro, foi imputada conduta dolosa e, ao segundo, conduta culposa.
-
-      De acordo com a denúncia, Gilberto, funcionário público, com violação do dever de cuidado, teria contribuído para a subtração de R$ 2.000,00 de repartição pública por parte de Luciano, que teria tido sua conduta facilitada pelo cargo público que exercia. Diante da reincidência de Gilberto, já condenado definitivamente por roubo, não foram à ele oferecidos os institutos despenalizadores.
-
-      O magistrado, de imediato, sem manifestação das partes, recebeu a denúncia e designou audiência de instrução e julgamento. No dia anterior à audiência, Gilberto ressarciu a Administração do prejuízo causado. Com a juntada de tal comprovação, após a audiência, foram os autos encaminhados às partes para apresentação de alegações finais.
-
-      O Ministério Público, diante da confirmação dos fatos, requereu a condenação dos réus nos termos da denúncia.
-
-      Insatisfeito com a assistência técnica que recebia, Gilberto procura você para, na condição de advogado(a), assumir a causa e apresentar memoriais.
-
-      Com base nas informações expostas, responda, como advogado(a) contratado por Gilberto, aos itens a seguir.
-    comando: Existe argumento de direito material a ser apresentado em favor de Gilberto para evitar sua condenação?
+    item: "A"
+    pergunta: "Que argumento de direito material evita a condenação de Gilberto?"
+    tese: "Extinção da punibilidade no peculato culposo pela reparação do dano antes da sentença irrecorrível"
+    aceitos: [ "repara* | ressarci*" ]
+    artigos: [ "art. 312, § 3º, CP" ]
     gabarito: "Sim, o advogado de Gilberto poderá requerer a imediata extinção da punibilidade, tendo em vista que houve reparação do dano antes de ser proferida sentença irrecorrível. Gilberto foi denunciado pela prática do crime de peculato culposo, delito esse previsto no Art. 312, § 2º, do Código Penal. O Art. 312, § 3º, do CP, prevê uma peculiaridade para essa espécie de crime: a reparação do dano, se precede à sentença irrecorrível, extingue a punibilidade do agente. Em geral, a reparação do dano, quando antes da denúncia, poderá funcionar como causa de diminuição de pena do arrependimento posterior. Em crimes que não admitem arrependimento posterior ou quando a reparação do dano for posterior ao recebimento da denúncia, aplica-se, em regra, a atenuante prevista no Art. 65, inciso III, alínea b, do CP. Considerando, porém, a peculiaridade da natureza culposa do delito, admitiu o legislador a extinção da punibilidade no crime de peculato praticado culposamente."
-    opcoes:
-      correta: Sim, o argumento de que ocorreu extinção da punibilidade diante da reparação do dano pelo réu, pagamento esse que precedeu sentença irrecorrível, nos termos do Art. 312, § 3º, do CP.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    revisao: { status: revisado }
   - id: 31-q1-b
     categoria: discursiva
     parte: q1
-    item: B
-    caso: |-
-      Após receber informações de que teria ocorrido subtração de valores públicos por funcionários públicos no exercício da função, inclusive com vídeo das câmeras de segurança da repartição registrando o ocorrido, o Ministério Público ofereceu, sem prévio inquérito policial, uma única denúncia em face de Luciano e Gilberto, em razão da conexão, pela suposta prática do crime de peculato, sendo que, ao primeiro, foi imputada conduta dolosa e, ao segundo, conduta culposa.
-
-      De acordo com a denúncia, Gilberto, funcionário público, com violação do dever de cuidado, teria contribuído para a subtração de R$ 2.000,00 de repartição pública por parte de Luciano, que teria tido sua conduta facilitada pelo cargo público que exercia. Diante da reincidência de Gilberto, já condenado definitivamente por roubo, não foram à ele oferecidos os institutos despenalizadores.
-
-      O magistrado, de imediato, sem manifestação das partes, recebeu a denúncia e designou audiência de instrução e julgamento. No dia anterior à audiência, Gilberto ressarciu a Administração do prejuízo causado. Com a juntada de tal comprovação, após a audiência, foram os autos encaminhados às partes para apresentação de alegações finais.
-
-      O Ministério Público, diante da confirmação dos fatos, requereu a condenação dos réus nos termos da denúncia.
-
-      Insatisfeito com a assistência técnica que recebia, Gilberto procura você para, na condição de advogado(a), assumir a causa e apresentar memoriais.
-
-      Com base nas informações expostas, responda, como advogado(a) contratado por Gilberto, aos itens a seguir.
-    comando: Qual o argumento de direito processual a ser apresentado em memoriais para questionar toda a instrução produzida?
-    gabarito: O argumento é o de que houve nulidade em razão da ausência de notificação do réu para apresentação de defesa prévia, desrespeitando-se o Art. 514 do CPP, que traz regras próprias para o procedimento dos crimes praticados por funcionário público. No caso, os crimes foram praticados por funcionários públicos contra a Administração Pública. Diante disso, antes mesmo do recebimento da denúncia, caberia notificação dos réus para apresentação de defesa, o que não foi determinado pelo magistrado, que recebeu a denúncia sem qualquer manifestação das partes. Cabe destacar que não se aplica a Súmula 330 do STJ, porque a ação penal não foi instruída por prévio inquérito policial. Diante do desrespeito à previsão do Art. 514 do CPP, caberia reconhecimento de que houve violação ao princípio da ampla defesa ou do devido processo legal.
-    opcoes:
-      correta: O argumento é de que houve nulidade em razão da ausência de notificação do réu para apresentação de defesa prévia, antes do recebimento da denúncia, nos termos do Art. 514 do CPP
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que argumento processual contesta toda a instrução?"
+    tese: "Nulidade pela falta de notificação do funcionário público para a defesa preliminar, antes do recebimento da denúncia"
+    aceitos: [ "defesa preliminar | resposta preliminar | defesa previa | notifica*" ]
+    artigos: [ "art. 514, CPP" ]
+    gabarito: "O argumento é o de que houve nulidade em razão da ausência de notificação do réu para apresentação de defesa prévia, desrespeitando-se o Art. 514 do CPP, que traz regras próprias para o procedimento dos crimes praticados por funcionário público. No caso, os crimes foram praticados por funcionários públicos contra a Administração Pública. Diante disso, antes mesmo do recebimento da denúncia, caberia notificação dos réus para apresentação de defesa, o que não foi determinado pelo magistrado, que recebeu a denúncia sem qualquer manifestação das partes. Cabe destacar que não se aplica a Súmula 330 do STJ, porque a ação penal não foi instruída por prévio inquérito policial. Diante do desrespeito à previsão do Art. 514 do CPP, caberia reconhecimento de que houve violação ao princípio da ampla defesa ou do devido processo legal."
+    revisao: { status: revisado }
   - id: 31-q2-a
     categoria: discursiva
     parte: q2
-    item: A
-    caso: |-
-      Em 05 de junho de 2019, Paulo dirigia veículo automotor em via pública, com capacidade psicomotora alterada em razão da influência de álcool, ocasião em que veio a atropelar Lúcia por avançar cruzamento com o sinal fechado para os veículos. Lúcia sofreu lesões que a deixaram com debilidade permanente no braço, o que foi reconhecido pelo laudo pericial respectivo, também ficando comprovado o estado clínico em que se encontrava o motorista atropelador. Considerando que Paulo arcou com as despesas que Lúcia teve que despender em razão do evento, a vítima não quis representar contra ele. Inobstante tal manifestação da vítima, o Ministério Público denunciou Paulo pela prática dos injustos do Art. 303, § 2º, e do Art. 306, ambos da Lei nº 9.503/97.
-
-      Considerando as informações narradas, esclareça, na condição de advogado(a), aos seguintes questionamentos formulados por Paulo, interessado em constituí-lo para apresentação de resposta à acusação.
-    comando: Qual a tese jurídica de direito material que a defesa de Paulo deverá alegar para contestar a tipificação apresentada?
-    gabarito: Para contestar a capitulação, deveria a defesa alegar aplicação do princípio da consunção, ficando o crime do Art. 306 do CTB absorvido pelo crime do Art. 303, § 2º, do CTB, tendo em vista que a circunstância da condução do veículo sob a influência de álcool, com capacidade psicomotora alterada, é elementar deste crime. Para que seja tipificada a forma qualificada do § 2º do Art. 303 da Lei 9.503/97, têm que restar demonstrada a conduta culposa do agente na direção de veículo automotor, o estado de embriaguez e o resultado lesão grave ou gravíssima. Presentes esses requisitos, a forma qualificada deve ser reconhecida, não podendo haver concurso com o crime do Art. 306 do mesmo diploma legal, porquanto aquele estado do agente é elementar do delito qualificado reconhecido.
-    opcoes:
-      correta: O crime do Art. 306, do CTB deve ser absorvido pelo crime do Art. 303, § 2º, do CTB, em razão da aplicação do princípio da consunção OU já que a capacidade psicomotora alterada em razão de álcool é elementar do crime de lesão corporal.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que tese de direito material contesta a tipificação dos dois crimes?"
+    tese: "Consunção: a embriaguez ao volante é absorvida pela lesão corporal culposa qualificada pela influência de álcool"
+    aceitos: [ "absorvid* | absorcao | absorve | consun*" ]
+    artigos: [ "art. 303, § 2º, Lei 9.503", "art. 306, Lei 9.503" ]
+    gabarito: "Para contestar a capitulação, deveria a defesa alegar aplicação do princípio da consunção, ficando o crime do Art. 306 do CTB absorvido pelo crime do Art. 303, § 2º, do CTB, tendo em vista que a circunstância da condução do veículo sob a influência de álcool, com capacidade psicomotora alterada, é elementar deste crime. Para que seja tipificada a forma qualificada do § 2º do Art. 303 da Lei 9.503/97, têm que restar demonstrada a conduta culposa do agente na direção de veículo automotor, o estado de embriaguez e o resultado lesão grave ou gravíssima. Presentes esses requisitos, a forma qualificada deve ser reconhecida, não podendo haver concurso com o crime do Art. 306 do mesmo diploma legal, porquanto aquele estado do agente é elementar do delito qualificado reconhecido."
+    revisao: { status: revisado }
   - id: 31-q2-b
     categoria: discursiva
     parte: q2
-    item: B
-    caso: |-
-      Em 05 de junho de 2019, Paulo dirigia veículo automotor em via pública, com capacidade psicomotora alterada em razão da influência de álcool, ocasião em que veio a atropelar Lúcia por avançar cruzamento com o sinal fechado para os veículos. Lúcia sofreu lesões que a deixaram com debilidade permanente no braço, o que foi reconhecido pelo laudo pericial respectivo, também ficando comprovado o estado clínico em que se encontrava o motorista atropelador. Considerando que Paulo arcou com as despesas que Lúcia teve que despender em razão do evento, a vítima não quis representar contra ele. Inobstante tal manifestação da vítima, o Ministério Público denunciou Paulo pela prática dos injustos do Art. 303, § 2º, e do Art. 306, ambos da Lei nº 9.503/97.
-
-      Considerando as informações narradas, esclareça, na condição de advogado(a), aos seguintes questionamentos formulados por Paulo, interessado em constituí-lo para apresentação de resposta à acusação.
-    comando: Diante da ausência de representação por parte da ofendida, o Ministério Público teria legitimidade para propor ação penal contra Paulo?
-    gabarito: Sim, o Ministério Público tem legitimidade para oferecimento da denúncia na presente hipótese. A princípio, os crimes de lesão corporal culposa, praticados ou não na direção de veículo automotor, são de ação penal pública condicionada à representação, nos termos do Art. 88 da Lei nº 9.099/95. O Art. 291, §1º, do CTB confirma a aplicabilidade do Art. 88 da Lei nº 9.099/95. Ocorre que esse mesmo dispositivo legal traz exceções. Apesar de a vítima não ter querido representar contra o acusado, considerando que o motorista dirigia sob a influência de substância alcoólica, na forma do Art. 291 § 1º, inciso I, da Lei nº 9.503/97, a ação penal é pública incondicionada, tendo o Ministério Público legitimidade para o oferecimento da denúncia.
-    opcoes:
-      correta: Sim, teria, tendo em vista que o agente estava sob a influência de álcool OU tendo em vista que a representação da vítima é desnecessária diante da embriaguez OU tendo em vista que não se aplica o Art. 88 da Lei 9.099/95 diante da embriaguez, nos termos do Art. 291, § 1º, inciso I, do CTB.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "B"
+    pergunta: "Sem a representação de Lúcia, o Ministério Público podia denunciar Paulo?"
+    tese: "Ação pública incondicionada: sob influência de álcool, a lesão culposa no trânsito não depende de representação"
+    aceitos: [ "incondicionada | nao depende de representacao | dispensa a representacao | desnecessaria a representacao | independe de representacao" ]
+    artigos: [ "art. 291, § 1º, I, Lei 9.503" ]
+    gabarito: "Sim, o Ministério Público tem legitimidade para oferecimento da denúncia na presente hipótese. A princípio, os crimes de lesão corporal culposa, praticados ou não na direção de veículo automotor, são de ação penal pública condicionada à representação, nos termos do Art. 88 da Lei nº 9.099/95. O Art. 291, §1º, do CTB confirma a aplicabilidade do Art. 88 da Lei nº 9.099/95. Ocorre que esse mesmo dispositivo legal traz exceções. Apesar de a vítima não ter querido representar contra o acusado, considerando que o motorista dirigia sob a influência de substância alcoólica, na forma do Art. 291 § 1º, inciso I, da Lei nº 9.503/97, a ação penal é pública incondicionada, tendo o Ministério Público legitimidade para o oferecimento da denúncia."
+    revisao: { status: revisado }
   - id: 31-q3-a
     categoria: discursiva
     parte: q3
-    item: A
-    caso: |-
-      Carlos, 43 anos, foi flagrado, no dia 10 de março de 2014, transportando arma de fogo de uso permitido. Foi denunciado, processado e condenado à pena de 02 anos de reclusão, a ser cumprida em regime aberto, e multa de 10 dias, à razão unitária mínima, sendo a pena privativa de liberdade substituída por duas penas restritivas de direitos, consistentes em prestação de serviços à comunidade e limitação de final de semana. A decisão transitou em julgado, para ambas as partes, em 25 de novembro de 2015.
-
-      Após a condenação definitiva, Carlos conseguiu emprego fixo em cidade diferente daquela em que morava e fora condenado, para onde se mudou, deixando de comunicar tal fato ao juizo respectivo, não sendo encontrado no endereço constante nos autos para dar início à execução da pena. Por tal motivo, o juiz, provocado pelo Ministério Público converteu, de imediato, as penas restritivas de direitos em pena privativa de liberdade, determinando a expedição de mandado de prisão.
-
-      A ordem de prisão foi cumprida em 20 de dezembro de 2019, quando Carlos foi ao DETRAN/RJ objetivando a renovação de sua habilitação, certo que, após aquele fato, nunca se envolveu em qualquer outro ilícito penal.
-
-      Desesperada, a família procura você, na condição de advogado(a), para a adoção das medidas cabíveis.
-
-      Considerando a situação apresentada, responda, na condição de advogado(a) de Carlos, aos itens a seguir.
-    comando: Para questionar a decisão do magistrado de converter a pena restritiva de direitos em privativa de liberdade e expedir mandado de prisão, qual o argumento de direito processual a ser apresentado? Justifique.
-    gabarito: A Pena Restritiva de Direito (PRD), em caso de descumprimento, poderá ser convertida em privativa de liberdade, desde que o descumprimento seja injustificado, nos termos do Art. 44, § 4º, do CP. Exatamente pela exigência de que o descumprimento seja injustificado que deve o apenado ser intimado para manifestação, em especial para esclarecer os motivos pelos quais não vem cumprindo a PRD imposta. Não se controverte que para garantir a efetividade das penas restritivas de direitos, faz-se necessária a existência de regras rígidas no sentido de que o seu descumprimento acarrete uma consequência rigorosa para o condenado faltoso. Assim, é prevista a conversão da PRD em PPL quando do seu descumprimento injustificado. Desta forma, antes da conversão, a defesa deve ser intimada para justificar aquele descumprimento, não podendo ser abandonados os princípios do contraditórido e da ampla defesa. Na hipótese, a conversão ocorreu sem a oitiva da defesa previamente, o que acarreta a nulidade da decisão respectiva.
-    opcoes:
-      correta: A conversão da pena restritiva de direitos em privativa de liberdade exige que haja descumprimento injustificado das medidas impostas, de modo que deveria o condenado ter sido intimado para justificar o descumprimento das penas substitutivas OU logo houve violação da ampla defesa/contraditório ao não ser possibilitado a Carlos o direito de manifestação sobre o descumprimento, nos termos do Art. 44, § 4º, do CP.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que argumento processual contesta a conversão das penas em prisão?"
+    tese: "Nulidade da conversão: o condenado devia ser intimado para justificar o descumprimento das penas restritivas de direitos"
+    aceitos: [ "justifica* | ampla defesa | contraditorio | ouvido | oitiva" ]
+    artigos: [ "art. 44, § 4º, CP", "art. 181, § 1º, LEP", "art. 5, LV, CRFB" ]
+    gabarito: "A Pena Restritiva de Direito (PRD), em caso de descumprimento, poderá ser convertida em privativa de liberdade, desde que o descumprimento seja injustificado, nos termos do Art. 44, § 4º, do CP. Exatamente pela exigência de que o descumprimento seja injustificado que deve o apenado ser intimado para manifestação, em especial para esclarecer os motivos pelos quais não vem cumprindo a PRD imposta. Não se controverte que para garantir a efetividade das penas restritivas de direitos, faz-se necessária a existência de regras rígidas no sentido de que o seu descumprimento acarrete uma consequência rigorosa para o condenado faltoso. Assim, é prevista a conversão da PRD em PPL quando do seu descumprimento injustificado. Desta forma, antes da conversão, a defesa deve ser intimada para justificar aquele descumprimento, não podendo ser abandonados os princípios do contraditórido e da ampla defesa. Na hipótese, a conversão ocorreu sem a oitiva da defesa previamente, o que acarreta a nulidade da decisão respectiva."
+    revisao: { status: revisado }
   - id: 31-q3-b
     categoria: discursiva
     parte: q3
-    item: B
-    caso: |-
-      Carlos, 43 anos, foi flagrado, no dia 10 de março de 2014, transportando arma de fogo de uso permitido. Foi denunciado, processado e condenado à pena de 02 anos de reclusão, a ser cumprida em regime aberto, e multa de 10 dias, à razão unitária mínima, sendo a pena privativa de liberdade substituída por duas penas restritivas de direitos, consistentes em prestação de serviços à comunidade e limitação de final de semana. A decisão transitou em julgado, para ambas as partes, em 25 de novembro de 2015.
-
-      Após a condenação definitiva, Carlos conseguiu emprego fixo em cidade diferente daquela em que morava e fora condenado, para onde se mudou, deixando de comunicar tal fato ao juizo respectivo, não sendo encontrado no endereço constante nos autos para dar início à execução da pena. Por tal motivo, o juiz, provocado pelo Ministério Público converteu, de imediato, as penas restritivas de direitos em pena privativa de liberdade, determinando a expedição de mandado de prisão.
-
-      A ordem de prisão foi cumprida em 20 de dezembro de 2019, quando Carlos foi ao DETRAN/RJ objetivando a renovação de sua habilitação, certo que, após aquele fato, nunca se envolveu em qualquer outro ilícito penal.
-
-      Desesperada, a família procura você, na condição de advogado(a), para a adoção das medidas cabíveis.
-
-      Considerando a situação apresentada, responda, na condição de advogado(a) de Carlos, aos itens a seguir.
-    comando: Existe argumento de direito material a ser apresentado para evitar que Carlos cumpra a sanção penal imposta na sentença? Justifique.
-    gabarito: Sim, o argumento é o de que ocorreu prescrição da pretensão executória, de modo que deve ser reconhecida a extinção da punibilidade do agente. Transitada em julgado a decisão condenatória, se inicia o prazo da prescrição da pretensão executória, que tem por base a pena aplicada, nos termos do Art. 110 do CP. Na hipótese, foi aplicada a pena de 02 anos de reclusão, de modo que o prazo prescricional é de 04 anos, com base no Art. 109, inciso V, do CP. Entre a data do trânsito em julgado (25/11/15) e a data da prisão de Carlos (20/12/19) foi ultrapassado o prazo prescricional de 04 anos. Assim, deverá ser declarada extinta a punibilidade pela prescrição da pretensão executória, nos termos do Art. 107, inciso IV, do CP.
-    opcoes:
-      correta: Sim, o argumento seria de que ocorreu a prescrição da pretensão executória, com consequente extinção da punibilidade do agente, conforme o Art. 107, inciso IV, do CP, OU o Art. 109, inciso V, do CP, OU o Art. 110 do CP.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que argumento de direito material evita que Carlos cumpra a pena?"
+    tese: "Prescrição da pretensão executória: passaram mais de 4 anos do trânsito em julgado sem que a pena começasse a ser cumprida"
+    aceitos: [ "prescricao da pretensao executoria | prescricao executoria | pretensao executoria" ]
+    artigos: [ "art. 110, CP", "art. 109, V, CP", "art. 112, I, CP", "art. 107, IV, CP" ]
+    gabarito: "Sim, o argumento é o de que ocorreu prescrição da pretensão executória, de modo que deve ser reconhecida a extinção da punibilidade do agente. Transitada em julgado a decisão condenatória, se inicia o prazo da prescrição da pretensão executória, que tem por base a pena aplicada, nos termos do Art. 110 do CP. Na hipótese, foi aplicada a pena de 02 anos de reclusão, de modo que o prazo prescricional é de 04 anos, com base no Art. 109, inciso V, do CP. Entre a data do trânsito em julgado (25/11/15) e a data da prisão de Carlos (20/12/19) foi ultrapassado o prazo prescricional de 04 anos. Assim, deverá ser declarada extinta a punibilidade pela prescrição da pretensão executória, nos termos do Art. 107, inciso IV, do CP."
+    revisao: { status: revisado }
   - id: 31-q4-a
     categoria: discursiva
     parte: q4
-    item: A
-    caso: |-
-      Paulo, estudante, condenado anteriormente por crime culposo no trânsito, em 20/08/2019 adentrou loja de conveniência de um posto de gasolina e, aproveitando-se de um descuido dos funcionários do estabelecimento, furtou todo o dinheiro que se encontrava no caixa.
-
-      Após sair da loja sem ter sua conduta percebida, consumado o delito, Paulo avistou sua antiga namorada Jaqueline, que abastecia seu carro no posto de gasolina, e contou-lhe sobre o crime que praticara momentos antes, pedindo que Jaqueline, igualmente estudante, primária e sem qualquer envolvimento anterior com fatos ilícitos, ajudasse-o a deixar o local, pois notou que os empregados do posto já tinham percebido que ocorrera a subtração. Jaqueline, então, dá carona a Paulo, que se evade com os valores subtraídos.
-
-      Após instauração de inquérito policial para apurar o fato, os policiais, a partir das câmeras de segurança da loja, identificaram Paulo como o autor do delito, bem como o veículo de Jaqueline utilizado pelo autor para deixar o local, tendo o Ministério Público denunciado ambos pela prática do crime de furto qualificado pelo concurso de agentes, na forma do Art. 155, § 4º, inciso IV, do Código Penal.
-
-      Por ocasião do recebimento da denúncia, o juiz indeferiu a representação pela decretação da prisão preventiva formulada pela autoridade policial, mas aplicou aos denunciados medidas cautelares alternativas, dentre as quais a suspensão do exercício de atividade de natureza econômica em relação a Jaqueline, já que ela seria proprietária de um estabelecimento de comércio de roupas no bairro em que residia, nos termos requeridos pelo Ministério Público.
-
-      Considerando os fatos acima narrados, responda, na condição de advogado(a) de Jaqueline, aos questionamentos a seguir.
-    comando: Qual argumento de direito material poderá ser apresentado pela defesa técnica de Jaqueline para questionar a capitulação delitiva imputada pelo Ministério Público? Justifique.
-    gabarito: |-
-      Narra o enunciado que Paulo praticou um crime de furto, já que subtraiu, sem violência ou grave ameaça à pessoa, dinheiro da loja de conveniência de determinado posto de gasolina. Após a consumação do delito, encontrou Jaqueline, sua ex-namorada, narrando sobre o crime praticado. Jaqueline, então, auxilia Paulo a deixar o local dos fatos. Após descoberta do ocorrido, o Ministério Público denunciou Jaqueline e Paulo pelo crime de furto qualificado pelo concurso de agentes, aplicando, dentre outras, a cautelar de suspensão do exercício de atividade de natureza econômica à Jaqueline.
-
-      A. O argumento é o de que Jaqueline não praticou crime de furto, já que sua contribuição ocorreu após a consumação do delito patrimonial. Não há que se falar em participação após a consumação do delito, salvo se a contribuição, apesar de ocorrer após a consumação, já houver sido previamente ajustada. No caso em tela, Jaqueline não havia ajustado previamente com Paulo que o auxiliaria na empreitada criminosa, tendo concorrido para o crime somente após a consumação deste por Paulo. Sendo assim, não há que se falar em concurso de pessoas, não devendo Jaqueline responder pela prática do furto qualificado. Nesse sentido, Paulo deveria responder apenas pelo crime de furto simples (Art. 155, caput, do CP).
-
-      B. Nos termos do Art. 319 do CPP é possível ao magistrado aplicar medidas cautelares alternativas. Para evitar a prisão, incentiva-se a aplicação de medidas cautelares alternativas. Ademais, o Art. 319, inciso VI, do CPP, prevê que poderá ser aplicada cautelar de suspensão do exercício da função pública ou de atividade de natureza econômica, desde que haja justo receio de sua utilização para prática de novas infrações penais.
-
-      O simples fato de Jaqueline ser denunciada por crime contra o patrimônio (de maneira inadequada, ainda!) não torna a medida de suspensão da atividade de natureza econômica adequada, qual seja atuar em comércio de roupas em estabelecimento do qual seria proprietária. Jaqueline era primária, de bons antecedentes e sem qualquer envolvimento pretérito com o aparato policial ou judicial, nada no enunciado permitindo concluir que haveria justo receio na utilização da atividade econômica para prática de novas infrações.
-    opcoes:
-      correta: Jaqueline não concorreu para o crime de furto, tendo em vista que sua contribuição ocorreu após a consumação do delito OU tendo em vista que não existe participação após a consumação OU tendo em vista que não havia liame subjetivo no momento da subtração,
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "A"
+    pergunta: "Que argumento de direito material contesta a imputação de furto qualificado a Jaqueline?"
+    tese: "Não há participação no furto: a ajuda veio depois da consumação, sem liame subjetivo na subtração"
+    aceitos: [ "nao concorreu | nao participou | nao ha participacao | depois da consumacao | apos a consumacao | sem liame | nao havia liame" ]
+    artigos: [ "art. 29, CP" ]
+    gabarito: "Narra o enunciado que Paulo praticou um crime de furto, já que subtraiu, sem violência ou grave ameaça à pessoa, dinheiro da loja de conveniência de determinado posto de gasolina. Após a consumação do delito, encontrou Jaqueline, sua ex-namorada, narrando sobre o crime praticado. Jaqueline, então, auxilia Paulo a deixar o local dos fatos. Após descoberta do ocorrido, o Ministério Público denunciou Jaqueline e Paulo pelo crime de furto qualificado pelo concurso de agentes, aplicando, dentre outras, a cautelar de suspensão do exercício de atividade de natureza econômica à Jaqueline.\n\nA. O argumento é o de que Jaqueline não praticou crime de furto, já que sua contribuição ocorreu após a consumação do delito patrimonial. Não há que se falar em participação após a consumação do delito, salvo se a contribuição, apesar de ocorrer após a consumação, já houver sido previamente ajustada. No caso em tela, Jaqueline não havia ajustado previamente com Paulo que o auxiliaria na empreitada criminosa, tendo concorrido para o crime somente após a consumação deste por Paulo. Sendo assim, não há que se falar em concurso de pessoas, não devendo Jaqueline responder pela prática do furto qualificado. Nesse sentido, Paulo deveria responder apenas pelo crime de furto simples (Art. 155, caput, do CP).\n\nB. Nos termos do Art. 319 do CPP é possível ao magistrado aplicar medidas cautelares alternativas. Para evitar a prisão, incentiva-se a aplicação de medidas cautelares alternativas. Ademais, o Art. 319, inciso VI, do CPP, prevê que poderá ser aplicada cautelar de suspensão do exercício da função pública ou de atividade de natureza econômica, desde que haja justo receio de sua utilização para prática de novas infrações penais.\n\nO simples fato de Jaqueline ser denunciada por crime contra o patrimônio (de maneira inadequada, ainda!) não torna a medida de suspensão da atividade de natureza econômica adequada, qual seja atuar em comércio de roupas em estabelecimento do qual seria proprietária. Jaqueline era primária, de bons antecedentes e sem qualquer envolvimento pretérito com o aparato policial ou judicial, nada no enunciado permitindo concluir que haveria justo receio na utilização da atividade econômica para prática de novas infrações."
+    revisao: { status: revisado }
   - id: 31-q4-b
     categoria: discursiva
     parte: q4
-    item: B
-    caso: |-
-      Paulo, estudante, condenado anteriormente por crime culposo no trânsito, em 20/08/2019 adentrou loja de conveniência de um posto de gasolina e, aproveitando-se de um descuido dos funcionários do estabelecimento, furtou todo o dinheiro que se encontrava no caixa.
-
-      Após sair da loja sem ter sua conduta percebida, consumado o delito, Paulo avistou sua antiga namorada Jaqueline, que abastecia seu carro no posto de gasolina, e contou-lhe sobre o crime que praticara momentos antes, pedindo que Jaqueline, igualmente estudante, primária e sem qualquer envolvimento anterior com fatos ilícitos, ajudasse-o a deixar o local, pois notou que os empregados do posto já tinham percebido que ocorrera a subtração. Jaqueline, então, dá carona a Paulo, que se evade com os valores subtraídos.
-
-      Após instauração de inquérito policial para apurar o fato, os policiais, a partir das câmeras de segurança da loja, identificaram Paulo como o autor do delito, bem como o veículo de Jaqueline utilizado pelo autor para deixar o local, tendo o Ministério Público denunciado ambos pela prática do crime de furto qualificado pelo concurso de agentes, na forma do Art. 155, § 4º, inciso IV, do Código Penal.
-
-      Por ocasião do recebimento da denúncia, o juiz indeferiu a representação pela decretação da prisão preventiva formulada pela autoridade policial, mas aplicou aos denunciados medidas cautelares alternativas, dentre as quais a suspensão do exercício de atividade de natureza econômica em relação a Jaqueline, já que ela seria proprietária de um estabelecimento de comércio de roupas no bairro em que residia, nos termos requeridos pelo Ministério Público.
-
-      Considerando os fatos acima narrados, responda, na condição de advogado(a) de Jaqueline, aos questionamentos a seguir.
-    comando: Existe argumento para questionar a medida cautelar alternativa de suspensão da atividade econômica aplicada a Jaqueline? Justifique.
-    gabarito: |-
-      Narra o enunciado que Paulo praticou um crime de furto, já que subtraiu, sem violência ou grave ameaça à pessoa, dinheiro da loja de conveniência de determinado posto de gasolina. Após a consumação do delito, encontrou Jaqueline, sua ex-namorada, narrando sobre o crime praticado. Jaqueline, então, auxilia Paulo a deixar o local dos fatos. Após descoberta do ocorrido, o Ministério Público denunciou Jaqueline e Paulo pelo crime de furto qualificado pelo concurso de agentes, aplicando, dentre outras, a cautelar de suspensão do exercício de atividade de natureza econômica à Jaqueline.
-
-      A. O argumento é o de que Jaqueline não praticou crime de furto, já que sua contribuição ocorreu após a consumação do delito patrimonial. Não há que se falar em participação após a consumação do delito, salvo se a contribuição, apesar de ocorrer após a consumação, já houver sido previamente ajustada. No caso em tela, Jaqueline não havia ajustado previamente com Paulo que o auxiliaria na empreitada criminosa, tendo concorrido para o crime somente após a consumação deste por Paulo. Sendo assim, não há que se falar em concurso de pessoas, não devendo Jaqueline responder pela prática do furto qualificado. Nesse sentido, Paulo deveria responder apenas pelo crime de furto simples (Art. 155, caput, do CP).
-
-      B. Nos termos do Art. 319 do CPP é possível ao magistrado aplicar medidas cautelares alternativas. Para evitar a prisão, incentiva-se a aplicação de medidas cautelares alternativas. Ademais, o Art. 319, inciso VI, do CPP, prevê que poderá ser aplicada cautelar de suspensão do exercício da função pública ou de atividade de natureza econômica, desde que haja justo receio de sua utilização para prática de novas infrações penais.
-
-      O simples fato de Jaqueline ser denunciada por crime contra o patrimônio (de maneira inadequada, ainda!) não torna a medida de suspensão da atividade de natureza econômica adequada, qual seja atuar em comércio de roupas em estabelecimento do qual seria proprietária. Jaqueline era primária, de bons antecedentes e sem qualquer envolvimento pretérito com o aparato policial ou judicial, nada no enunciado permitindo concluir que haveria justo receio na utilização da atividade econômica para prática de novas infrações.
-    opcoes:
-      correta: O argumento é o de que a cautelar de suspensão da atividade de natureza econômica exige que haja justo receio em sua utilização para a prática de novas infrações penais, o que não restou configurado na hipótese, conforme Art. 319, inciso VI, OU Art. 282, inciso II, ambos do CPP.
-      erradas:
-        - "Habeas corpus: não há recurso contra a decisão que não absolveu sumariamente."
-        - "Sim, pois Augusto César agiu com dolo, sendo autor do crime previsto no art. 6º da Lei 7.492/86 (0,2). Obs.: A mera indicação de artigo não é pontuada."
-        - "O pedido deverá ser formulado perante a Vara de Execuções Penais, pois existe decisão com trânsito em julgado, na forma da Súmula 611 do STF OU do Art. 66, inciso I, da LEP. Obs.: a mera citação do dispositivo legal não será pontuada."
-        - O fundamento a ser apresentado é o de que o valor do dia-multa deverá considerar a capacidade econômica do acusado e, no caso, Lucas se mostrou pessoa humilde, de modo que incompatível com sua situação econômica o valor do dia-multa aplicado, na forma do art. 60 do CP.
-        - A questão preliminar é que a condenação anterior à pena de multa não inviabiliza a suspensão condicional do processo, por aplicação analógica do Art. 77, § 1º, do CP, devendo haver a remessa dos autos à autoridade superior do Ministério Público Federal, nos termos da Súmula 696 do STF.
-    revisao: *a1
+    item: "B"
+    pergunta: "Que argumento contesta a suspensão da atividade econômica de Jaqueline?"
+    tese: "Descabimento da suspensão da atividade econômica: não há justo receio de que a loja seja usada para novas infrações"
+    aceitos: [ "justo receio | receio | nao ha relacao | sem relacao | nao tem relacao" ]
+    artigos: [ "art. 319, VI, CPP", "art. 282, II, CPP" ]
+    gabarito: "Narra o enunciado que Paulo praticou um crime de furto, já que subtraiu, sem violência ou grave ameaça à pessoa, dinheiro da loja de conveniência de determinado posto de gasolina. Após a consumação do delito, encontrou Jaqueline, sua ex-namorada, narrando sobre o crime praticado. Jaqueline, então, auxilia Paulo a deixar o local dos fatos. Após descoberta do ocorrido, o Ministério Público denunciou Jaqueline e Paulo pelo crime de furto qualificado pelo concurso de agentes, aplicando, dentre outras, a cautelar de suspensão do exercício de atividade de natureza econômica à Jaqueline.\n\nA. O argumento é o de que Jaqueline não praticou crime de furto, já que sua contribuição ocorreu após a consumação do delito patrimonial. Não há que se falar em participação após a consumação do delito, salvo se a contribuição, apesar de ocorrer após a consumação, já houver sido previamente ajustada. No caso em tela, Jaqueline não havia ajustado previamente com Paulo que o auxiliaria na empreitada criminosa, tendo concorrido para o crime somente após a consumação deste por Paulo. Sendo assim, não há que se falar em concurso de pessoas, não devendo Jaqueline responder pela prática do furto qualificado. Nesse sentido, Paulo deveria responder apenas pelo crime de furto simples (Art. 155, caput, do CP).\n\nB. Nos termos do Art. 319 do CPP é possível ao magistrado aplicar medidas cautelares alternativas. Para evitar a prisão, incentiva-se a aplicação de medidas cautelares alternativas. Ademais, o Art. 319, inciso VI, do CPP, prevê que poderá ser aplicada cautelar de suspensão do exercício da função pública ou de atividade de natureza econômica, desde que haja justo receio de sua utilização para prática de novas infrações penais.\n\nO simples fato de Jaqueline ser denunciada por crime contra o patrimônio (de maneira inadequada, ainda!) não torna a medida de suspensão da atividade de natureza econômica adequada, qual seja atuar em comércio de roupas em estabelecimento do qual seria proprietária. Jaqueline era primária, de bons antecedentes e sem qualquer envolvimento pretérito com o aparato policial ou judicial, nada no enunciado permitindo concluir que haveria justo receio na utilização da atividade econômica para prática de novas infrações."
+    revisao: { status: revisado }

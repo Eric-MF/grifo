@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Atkinson_Hyperlegible, Carlito, Cormorant_Garamond, Inter } from "next/font/google";
-import { SITE } from "@/config/site";
+import { IMAGEM_COMPARTILHAR, SITE } from "@/config/site";
 import { PREFS_BOOT_SCRIPT } from "@/lib/prefs";
 import "./globals.css";
 
@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     siteName: SITE.nome,
     title: `${SITE.nome} · ${SITE.slogan}`,
     description: SITE.descricao,
+    // a imagem da prévia do link (X, Facebook, LinkedIn, WhatsApp, Telegram): as redes não recebem imagem pelo link
+    // de compartilhar, só leem esta da página
+    images: [{ url: IMAGEM_COMPARTILHAR, width: 1200, height: 630, alt: `${SITE.nome} · 2ª fase OAB · Direito Penal` }],
   },
+  twitter: { card: "summary_large_image", images: [IMAGEM_COMPARTILHAR] },
 };
 
 export const viewport: Viewport = {

@@ -1,0 +1,103 @@
+/* Os resumos dos links do cabeçalho (o desempenho em "Estatísticas", as provas, os simulados, o Vade Mecum, os jogos e
+   o curso): um cartão de 340 px, abaixo do link, acima do cabeçalho (camada 60, como os menus dele). */
+.cartao {
+  position: fixed; z-index: 60; max-width: calc(100vw - 16px); padding: 0.9rem 1rem 0.8rem; border: 1px solid var(--border);
+  border-radius: 14px; background: var(--surface); color: var(--text); box-shadow: 0 16px 40px rgb(0 0 0 / 0.22);
+  font-size: 0.85rem; line-height: 1.4; animation: surgir 0.14s ease-out;
+}
+@keyframes surgir { from { opacity: 0; transform: translateY(-4px); } }
+.carregando { margin: 0; color: var(--muted); }
+.corpo, .vazio { display: grid; gap: 0.75rem; }
+.vazio p { margin: 0; }
+.titulo { margin: 0; font-family: var(--font-title); font-size: 1.15rem; font-weight: 700; }
+.titulo span { font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; color: var(--muted); }
+
+/* os três números: simulados feitos (com o anel), a média e o acerto do treino */
+.numeros { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 0.5rem; }
+.numeros > div {
+  position: relative; display: grid; align-content: start; gap: 0.1rem; padding: 0.5rem 0.55rem; border-radius: 10px; background: var(--surface-2);
+}
+.numeros b { font-size: 1.25rem; font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.numeros small { font-size: 0.7rem; color: var(--muted); line-height: 1.25; }
+.numeros > div:has(> .anel) { padding-left: 2.7rem; }
+.anel { position: absolute; left: 0.45rem; top: 0.5rem; width: 2rem; height: 2rem; transform: rotate(-90deg); }
+.anel circle { fill: none; stroke-width: 4; stroke: var(--border); }
+.anel circle + circle { stroke: var(--primary); stroke-linecap: round; }
+.cartao [data-estado="ok"] { color: var(--ok); }
+.cartao [data-estado="bad"] { color: var(--bad); }
+
+.bloco { display: grid; gap: 0.3rem; }
+.rotulo { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.notas { width: 100%; height: auto; overflow: visible; }
+.corte { stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.linha { fill: none; stroke: var(--primary); stroke-width: 2; stroke-linejoin: round; }
+.notas circle[data-estado] { stroke: var(--surface); stroke-width: 1.5; transition: r 0.12s; }
+.notas circle[data-estado="ok"] { fill: var(--ok); }
+.notas circle[data-estado="bad"] { fill: var(--bad); }
+/* cada bolinha é o link da correção: a área de toque (.alvo) é invisível e maior que o desenho */
+.ponto { cursor: pointer; outline: none; }
+.alvo { fill: transparent; stroke: none; }
+.ponto:hover circle[data-estado], .ponto:focus-visible circle[data-estado] { r: 5.5; }
+.ponto:focus-visible .alvo { stroke: var(--accent); stroke-width: 1.5; }
+.legenda { font-size: 0.78rem; color: var(--muted); }
+.legenda b { font-variant-numeric: tabular-nums; }
+
+/* as duas últimas semanas, como no calendário de estudo */
+.dias { display: grid; grid-template-columns: repeat(14, 1fr); gap: 3px; }
+.dias span { aspect-ratio: 1; border-radius: 3px; background: var(--surface-2); border: 1px solid color-mix(in srgb, var(--border) 70%, transparent); }
+.dias span[data-futuro] { background: transparent; border-color: transparent; }
+.dias span[data-hoje] { box-shadow: inset 0 0 0 2px var(--accent); }
+.dias span[data-visto] { outline: 2px solid var(--text); outline-offset: 1px; }
+.dias span[data-nivel="1"] { background: color-mix(in srgb, var(--primary) 28%, var(--surface)); border-color: transparent; }
+.dias span[data-nivel="2"] { background: color-mix(in srgb, var(--primary) 50%, var(--surface)); border-color: transparent; }
+.dias span[data-nivel="3"] { background: color-mix(in srgb, var(--primary) 75%, var(--surface)); border-color: transparent; }
+.dias span[data-nivel="4"] { background: var(--primary); border-color: transparent; }
+
+/* o dia sob o mouse (ou hoje): a data, as respostas, os tipos de pergunta e os simulados, que abrem a correção */
+.dia { min-height: 2.6em; font-size: 0.8rem; }
+.dia small { display: block; color: var(--muted); font-size: 0.74rem; }
+.dia a { display: block; font-weight: 600; text-decoration: none; }
+.dia a:hover { text-decoration: underline; }
+
+/* um item em destaque que é link: a prova mais recente, o simulado em andamento, cada jogo */
+.destaque {
+  display: grid; gap: 0.1rem; padding: 0.55rem 0.7rem; border-radius: 10px; background: var(--surface-2); color: var(--text);
+  text-decoration: none; border: 1px solid transparent;
+}
+.destaque:hover, .destaque:focus-visible { border-color: var(--primary); }
+.destaque b { font-size: 1rem; }
+.destaque span:not(.rotulo) { font-size: 0.8rem; color: var(--muted); }
+.destaque small { font-size: 0.78rem; font-weight: 700; color: var(--primary); }
+
+/* listas de links de uma linha: as últimas correções, as leis em que parou */
+.lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.15rem; }
+.lista a {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: baseline; gap: 0.6rem; padding: 0.3rem 0.45rem;
+  margin: 0 -0.45rem; border-radius: 8px; color: var(--text); text-decoration: none;
+}
+.lista a:hover, .lista a:focus-visible { background: var(--surface-2); }
+.lista span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lista small { color: var(--muted); font-size: 0.74rem; }
+.lista b { font-variant-numeric: tabular-nums; }
+
+/* as peças que mais caíram: nome, barra e vezes */
+.barras { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.25rem; }
+.barras li { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr) 1.6rem; align-items: center; gap: 0.5rem; font-size: 0.8rem; }
+.barras li > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.barras b { text-align: right; font-variant-numeric: tabular-nums; }
+.barra { height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
+.barra span { display: block; height: 100%; border-radius: inherit; background: var(--primary); }
+
+.texto { margin: 0; color: var(--muted); }
+.itens { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.2rem; }
+
+.pontos a { color: inherit; text-decoration: none; }
+.pontos a:hover b { text-decoration: underline; }
+.pontos { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.3rem; }
+.pontos li { display: flex; justify-content: space-between; gap: 0.75rem; padding-top: 0.3rem; border-top: 1px solid var(--border); }
+.pontos span { color: var(--muted); }
+.pontos b { text-align: right; }
+.acoes { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; margin: 0; font-weight: 700; }
+@media (prefers-reduced-motion: reduce) {
+  .cartao { animation: none; }
+}

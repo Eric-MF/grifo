@@ -5,15 +5,16 @@ import { LETRAS, type Nivel, type Pergunta } from "./types";
 import type { Correcao } from "./verificar";
 
 /**
- * Texto da questão como aparece na tela: id, enunciado, comando e as alternativas (quando há), na ordem exibida.
+ * Texto da questão como aparece na tela: id, enunciado, comando e as alternativas (quando há), na ordem exibida
+ * (`alts`: as peças do fácil de peça; `facil`: as alternativas do fácil de tese).
  * Com `resposta` (ver textoResposta), ela vai no fim, separada por uma linha em branco.
  */
-export function textoParaCopiar(p: Pergunta, nivel: Nivel, comando: string, alts: { nome: string }[], ordem: number[], resposta?: string): string {
+export function textoParaCopiar(p: Pergunta, nivel: Nivel, comando: string, alts: { nome: string }[], facil: { texto: string }[], resposta?: string): string {
   const opcoes: string[] = [];
   if (p.formato === "peca" && nivel === 1) {
     alts.forEach((a, i) => opcoes.push(`${LETRAS[i]}) ${a.nome}`));
-  } else if (p.formato === "item" && nivel === 1) {
-    for (const [i, idx] of ordem.entries()) opcoes.push(`${LETRAS[i]}) ${p.opcoes[idx].texto}`);
+  } else if (p.formato === "tese" && nivel === 1) {
+    facil.forEach((o, i) => opcoes.push(`${LETRAS[i]}) ${o.texto}`));
   } else if (p.formato === "objetiva") {
     for (const l of LETRAS) opcoes.push(`${l}) ${p.alternativas[l]}`);
   }
@@ -23,12 +24,12 @@ export function textoParaCopiar(p: Pergunta, nivel: Nivel, comando: string, alts
 
 /**
  * A resposta da questão, como aparece no feedback: a letra e o texto na objetiva, a peça e o fundamento na peça,
- * e o padrão de respostas na discursiva.
+ * e a tese, o artigo e o padrão de respostas na tese.
  */
 export function textoResposta(p: Pergunta, res: Correcao): string {
   if (res.formato === "peca") return `Resposta: ${res.pecaEsperada} — ${res.fundamentoEsperado}`;
   if (res.formato === "objetiva" && p.formato === "objetiva") return `Resposta: ${res.correta}) ${p.alternativas[res.correta]}`;
-  if (p.formato === "item") return `Resposta: ${p.explicacao}`;
+  if (res.formato === "tese") return `Resposta: ${res.teseEsperada} — ${res.artigoEsperado}\n\nPadrão de respostas: ${p.explicacao}`;
   return "";
 }
 

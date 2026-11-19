@@ -22,6 +22,31 @@ describe("extrairCitacoes", () => {
       { art: "69", pars: ["2"], diploma: "cp" },
     ]);
   });
+  it("parágrafo com letra (§ 2º-A) é parágrafo, não outro artigo", () => {
+    expect(cits("art. 157, § 2º-A, inciso I, do CP")).toMatchObject([{ art: "157", pars: ["2-a"], incs: ["1"], diploma: "cp" }]);
+    expect(cits("art. 4º, § 10-A, da Lei 12.850/13")).toMatchObject([{ art: "4", pars: ["10-a"], diploma: "lei-12850" }]);
+    expect(atende("art. 157, § 2º-A, I, CP", "art. 157, § 2-A, I, do CP")).toBe(true);
+    expect(atende("art. 157, § 2º-A, I, CP", "art. 157, I, do CP")).toBe(false);
+    expect(formatarCitacao(parseDispositivo("art. 157, § 2º-A, I, CP", ctx.lex)!, leis)).toBe("Art. 157, § 2º-A, inciso I — Código Penal");
+    expect(formatarCitacao(parseDispositivo("art. 4, § 16, III, Lei 12.850", ctx.lex)!)).toMatch(/^Art\. 4, § 16, inciso III — /);
+  });
+  it("parágrafo, inciso ou alínea antes do artigo", () => {
+    expect(cits("nos termos do § 1º do art. 28 do CP")).toMatchObject([{ art: "28", pars: ["1"], diploma: "cp" }]);
+    expect(cits("a alínea d do inciso II do art. 61 do Código Penal")).toMatchObject([{ art: "61", incs: ["2"], als: ["d"], diploma: "cp" }]);
+    expect(atende("art. 28, § 1º, CP", "isento de pena, conforme o parágrafo primeiro do art. 28 do CP")).toBe(true);
+  });
+  it("remissão ao último artigo citado: “o § 1º do mesmo artigo”", () => {
+    const texto = "nos termos do art. 28, inciso II, do Código Penal. Mas o § 1º do mesmo artigo isenta de pena o agente";
+    expect(cits(texto)).toMatchObject([
+      { art: "28", incs: ["2"], diploma: "cp" },
+      { art: "28", pars: ["1"], incs: [], diploma: "cp" },
+    ]);
+    expect(atende("art. 28, § 1º, CP", texto)).toBe(true);
+    expect(atende("art. 28, § 1º, CP", "art. 28, II, do CP. E o § 1º deste artigo prevê a isenção")).toBe(true);
+    expect(atende("art. 28, § 1º, CP", "art. 28, II, e o § 1º do referido artigo, do Código Penal")).toBe(true);
+    // sem artigo antes, a remissão não vira citação
+    expect(cits("o § 1º do mesmo artigo")).toEqual([]);
+  });
   it("inciso romano sem a palavra inciso", () => {
     expect(cits("com fundamento no art. 593, I, do CPP")).toMatchObject([{ art: "593", incs: ["1"], diploma: "cpp" }]);
   });

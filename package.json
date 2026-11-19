@@ -12,10 +12,12 @@
     "e2e": "node tests/e2e/run.mjs",
     "validar": "node scripts/build-content.ts --check",
     "content": "node scripts/build-content.ts && node scripts/gerar-zip-padrao.ts",
-    "prebuild": "node scripts/build-content.ts && node scripts/gerar-zip-padrao.ts && node scripts/optimize-images.mjs",
+    "previas": "node scripts/gerar-previas.ts",
+    "prebuild": "node scripts/build-content.ts && node scripts/gerar-zip-padrao.ts && node scripts/optimize-images.mjs && node scripts/gerar-previas.ts",
     "pdfs": "node scripts/build-pdfs.ts",
     "pdfs:leis": "node scripts/build-pdfs.ts --leis",
-    "build:completo": "npm run build && npm run pdfs && npm run build",
+    "build:completo": "npm run build && npm run pdfs && npm run pdfs:leis && npm run build",
+    "publicar": "bash scripts/publicar.sh",
     "revisar": "node scripts/marcar-revisado.ts",
     "leis": "node scripts/baixar-leis.ts",
     "novo:exame": "node scripts/novo-exame.ts",
@@ -33,6 +35,7 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@napi-rs/canvas": "^1.1.0",
     "@types/node": "^24.19.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",

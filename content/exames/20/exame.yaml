@@ -266,7 +266,7 @@ questoes:
         valores: [ 0, 0.5, 0.6 ]
         componentes:
           - { id: c1, valor: 0.5, termos: [ contraven* ] }
-          - { id: c2, valor: 0.1, dispositivo: [ "art. 89, Lei 9" ], requer: c1 }
+          - { id: c2, valor: 0.1, dispositivo: [ "art. 89, Lei 9.099" ], requer: c1 }
   - n: 4
     enunciado: |-
       Joana trabalha em uma padaria na cidade de Curitiba. Em um domingo pela manhã, Patrícia, freguesa da padaria, acreditando não estar sendo bem atendida por Joana, após com ela discutir, a chama de “macaca” em razão da cor de sua pele.
@@ -303,3 +303,13 @@ questoes:
           - { id: c1, valor: 0.35, termos: [ decaden* ] }
           - { id: c2, valor: 0.15, termos: [ condicionada, representacao ] }
           - { id: c3, valor: 0.1, dispositivo: [ "art. 145, parágrafo único, CP" ], requer: c2 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: q4, lei: "Lei 14.532/2023", texto: "A Lei 14.532/2023 tirou a injúria racial do § 3º do art. 140 do Código Penal e a levou para o art. 2º-A da Lei 7.716/1989, com pena de reclusão de 2 a 5 anos e ação penal pública incondicionada. Hoje, chamar Joana de 'macaca' pela cor da pele é injúria racial do art. 2º-A da Lei 7.716/1989, e não cabe a tese da decadência da representação." }
+  nomes:
+    peca: { Astolfo: Nestor, Russo: Hades }   # o idoso coagido; o chefe
+    q1: { Fausto: Faetonte, Lídia: Níobe }   # pegou o carro do pai sem saber dirigir; a mãe que perdeu as filhas
+    q2: { Lúcio: Hefesto }   # a oficina
+    q3: { Andy: Sísifo, Josefa: Báucis }   # o golpe; a senhora que abre a porta
+    q4: { Joana: Deméter, Patrícia: Éris }   # a padaria; a briga

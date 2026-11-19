@@ -9,25 +9,30 @@
 // reconhecíveis pelo parser, tipo de peça existente no catálogo e nenhum "TODO"
 // esquecido em valores (comentários YAML podem ter TODO à vontade).
 
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, watch, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, watch, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { gzipSync } from "node:zlib";
+import { gerarTextosDasProvas } from "./textos-provas.ts";
 import { parse } from "yaml";
 import {
   ExameSchema,
+  HistoricoSchema,
   LeisSchema,
   PecasCatalogoSchema,
   PromosSchema,
   PerguntasArquivoSchema,
   PerguntasItensArquivoSchema,
   ObjetivasArquivoSchema,
+  GrifoEntradaSchema,
   NomesPessoasSchema,
   NomesMitologiaSchema,
   type Exame,
   type PerguntaFixa,
   type Item,
 } from "../src/content/schema.ts";
-import { buildLexico, parseDispositivo, toRoman } from "../src/lib/correcao/citacoes.ts";
+import { buildLexico, citacaoAtende, extrairCitacoes, formatarCitacao, parseDispositivo, toRoman } from "../src/lib/correcao/citacoes.ts";
+import { avaliarItens, criarContexto } from "../src/lib/correcao/grader.ts";
+import { normalize } from "../src/lib/correcao/normalize.ts";
 import { aplicarRotulos } from "../src/content/rotulos.ts";
 import { paraSimulado } from "../src/lib/correcao/simulado.ts";
 import { datasComLocal, marcoDeRevogacao, textoAtual, type Bloco, type Datas, type DatasLei, type InfoBloco } from "../src/lib/leis/linha-do-tempo.ts";
@@ -35,7 +40,11 @@ import { vigenciasDaLei, type Vigencia } from "../src/lib/leis/vigencias.ts";
 import { blocosDaSumulas, disponiveisDe, idSumulas, NOME_SUMULAS, remissivoDasSumulas } from "../src/lib/leis/sumulas.ts";
 import { dividirEmPartes } from "../src/lib/leis/partes.ts";
 import { criarLeitor, marcarPessoas, nomesDesconhecidos, type Marcacao } from "../src/lib/nomes/marcar.ts";
+import { partesDoExame, trocarNomes } from "../src/lib/nomes/trocar.ts";
+import { aplicarVides, type GrupoVide, membrosSemDispositivo } from "../src/lib/leis/vides.ts";
 import type { Remissivo, SumulasDoTribunal } from "../src/lib/leis/dados.ts";
+import type { EntradaGrifo } from "../src/lib/leis/grifos.ts";
+import { compilarGrifos, dispositivosCitados, problemasDaEntrada, rotuloDoDispositivo } from "../src/lib/leis/grifos-compilar.ts";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const CONTENT = join(ROOT, "content");
@@ -70,11 +79,17 @@ function pendencias(v: unknown, caminho = ""): string[] {
   return [];
 }
 
+// os "Vide" do Grifo entre dispositivos do leitor (leis e súmulas); o build confere cada um no texto
+const ARQ_VIDES = join(CONTENT, "vides.yaml");
+const VIDES: GrupoVide[] = existsSync(ARQ_VIDES) ? (readYaml(ARQ_VIDES) ?? []) : [];
+
 /**
  * Publica o texto de uma lei (ou das súmulas de um tribunal) para o navegador: os blocos, o texto superado
  * (carregado só quando o leitor precisa) e os artigos vigentes (pop-up, busca e slide). Devolve quantos artigos tem.
  */
 function publicarTexto(pub: string, base: string, lei: { id: string; nome: string; url: string; coletadoEm: string; blocos: Bloco[] }): number {
+  // os "Vide" do Grifo entre dispositivos (content/vides.yaml)
+  lei = { ...lei, blocos: aplicarVides(lei.blocos, lei.id, VIDES) };
   // as informações adicionais (súmulas) saem do texto: vão comprimidas num arquivo à parte, que o leitor só baixa quando pedido
   const infos: Record<string, InfoBloco[]> = {};
   const semInfo = lei.blocos.map((b: Bloco) => {
@@ -189,6 +204,9 @@ function build(): boolean {
             const p = parseDispositivo(d, lex);
             if (!p) err(where, `${parte} item ${it.n}.${c.id}: dispositivo não reconhecido "${d}"`);
             else if (p.tipo === "art" && !p.diploma) err(where, `${parte} item ${it.n}.${c.id}: dispositivo sem diploma "${d}"`);
+            // "Lei 9" no lugar de "Lei 9.099": o aluno que cita a lei certa não pontua
+            else if (p.tipo === "art" && /^lei-\d{1,3}$/.test(p.diploma!))
+              err(where, `${parte} item ${it.n}.${c.id}: número da lei incompleto "${d}" (escreva o número inteiro, como "Lei 9.099")`);
             else if (p.tipo === "sumula" && !p.tribunal && !p.vinculante) err(where, `${parte} item ${it.n}.${c.id}: súmula sem tribunal "${d}" (use "Súmula 700 STF")`);
           }
           // súmula ou artigo escritos só como palavra (termo "sumula 160") acham qualquer súmula ou artigo: a regra é o dispositivo
@@ -206,6 +224,29 @@ function build(): boolean {
     if (ex.corrigivel && ![4, 5].includes(ex.questoes.length)) warnings.push(`! ${where}: ${ex.questoes.length} questões (esperado 4)`);
     if (ex.revisao.status !== "revisado") warnings.push(`· ${where}: revisão pendente`);
     exames.push(ex);
+  }
+
+  // ---------------- histórico das estatísticas (exames da OAB/SP e linha do tempo) ----------------
+  const arqHistorico = join(CONTENT, "historico.yaml");
+  const historico = existsSync(arqHistorico) ? HistoricoSchema.safeParse(readYaml(arqHistorico)) : null;
+  if (historico && !historico.success) err("historico.yaml", historico.error.message);
+  if (historico?.success) {
+    const h = historico.data;
+    for (const [tipo, p] of Object.entries(h.pecas_extras)) {
+      if (pecas.data[tipo]) err("historico.yaml", `pecas_extras.${tipo}: já existe em pecas.yaml`);
+      for (const f of p.fundamento) if (!parseDispositivo(f, lex)) err("historico.yaml", `pecas_extras.${tipo}: fundamento "${f}" não reconhecido`);
+    }
+    const numeros = new Set<number>();
+    for (const e of h.exames_antigos) {
+      if (numeros.has(e.numero)) err("historico.yaml", `exame ${e.numero} repetido`);
+      numeros.add(e.numero);
+      for (const p of e.pecas) if (!pecas.data[p] && !h.pecas_extras[p]) err("historico.yaml", `exame ${e.numero}: peça "${p}" não existe em pecas.yaml nem em pecas_extras`);
+      if (e.data && e.ano && Number(e.data.slice(0, 4)) !== e.ano) err("historico.yaml", `exame ${e.numero}: a data ${e.data} não é do ano ${e.ano}`);
+    }
+    for (const m of h.linha_do_tempo) {
+      if (m.exame && !exames.some((ex) => ex.id === m.exame)) err("historico.yaml", `linha_do_tempo "${m.rotulo}": exame "${m.exame}" não existe`);
+      if (m.ate && m.ate < m.de) err("historico.yaml", `linha_do_tempo "${m.rotulo}": "ate" (${m.ate}) vem antes de "de" (${m.de})`);
+    }
   }
 
   // ---------------- perguntas fixas do quiz ----------------
@@ -240,7 +281,7 @@ function build(): boolean {
     }
   }
 
-  // ---------------- perguntas tiradas dos itens das provas ----------------
+  // ---------------- teses tiradas dos itens das provas ("Por dentro da peça" e "Questões discursivas") ----------------
   const perguntasItens: Record<string, unknown>[] = [];
   const dirD = join(CONTENT, "perguntas", "discursivas");
   const yamls = (d: string) => (existsSync(d) ? readdirSync(d).filter((x) => x.endsWith(".yaml")).sort() : []);
@@ -250,6 +291,21 @@ function build(): boolean {
       if (!c || (c.tipo === "art" && !c.diploma)) err(where, `${id}: dispositivo não reconhecido "${d}"`);
     }
   };
+  const ctxCorrecao = criarContexto(leis.data, pecas.data);
+  const semMarkdown = (t: string) => t.replace(/\*\*|\*|__/g, "").replace(/\n{3,}/g, "\n\n").trim();
+  // o texto tem os termos aceitos: a leitura da correção do quiz (src/quiz/verificar.ts, atendeTese)
+  const temTese = (aceitos: string[][], texto: string) =>
+    (avaliarItens([{ n: "t", descricao: "", componentes: [{ id: "c1", valor: 1, alternativas: aceitos }] }], texto, ctxCorrecao)[0]?.obtido ?? 0) > 0;
+  // o texto cita um dos artigos aceitos (com parágrafo, inciso e alínea)
+  const citaArtigo = (artigos: string[], texto: string) => {
+    const achadas = extrairCitacoes(normalize(texto), lex);
+    return artigos.some((spec) => {
+      const e = parseDispositivo(spec, lex);
+      return !!e && achadas.some((a) => citacaoAtende(e, a));
+    });
+  };
+  /** as teses com o que o segundo passe (as alternativas erradas do fácil) precisa saber delas */
+  const teses: { q: Record<string, unknown>; exame: string; parte: string; categoria: string; secao?: string; tese: string; aceitos: string[][]; artigos: string[] }[] = [];
   for (const f of yamls(dirD)) {
     const where = `perguntas/discursivas/${f}`;
     const r = PerguntasItensArquivoSchema.safeParse(readYaml(join(dirD, f)));
@@ -264,28 +320,51 @@ function build(): boolean {
     }
     for (const q of r.data.perguntas) {
       if (perguntasItens.some((x) => x.id === q.id)) err(where, `id duplicado "${q.id}"`);
-      const itensParte = q.parte === "peca" ? ex.peca.itens : ex.questoes[Number(q.parte.slice(1)) - 1]?.itens;
-      const item = itensParte?.find((i) => String(i.n) === q.item);
-      if (!item) {
+      // no rascunho (que só aparece com ?rascunho=1, em desenvolvimento), o problema é aviso, não erro
+      const falha = (msg: string) => (q.revisao.status === "revisado" ? err(where, msg) : warnings.push(`! ${where} (rascunho): ${msg}`));
+      const parte = q.parte === "peca" ? ex.peca : ex.questoes[Number(q.parte.slice(1)) - 1];
+      const item = parte?.itens.find((i) => String(i.n) === q.item);
+      if (!parte || !item) {
         err(where, `${q.id}: item ${q.parte}/${q.item} não existe no exame ${ex.id}`);
         continue;
       }
-      if (!item.componentes.length) err(where, `${q.id}: item ${q.parte}/${q.item} não tem componentes de correção`);
-      dispositivosOk(where, q.id, q.dispositivos);
-      perguntasItens.push({
-        formato: "item",
+      for (const d of q.artigos) {
+        const c = parseDispositivo(d, lex);
+        if (!c || (c.tipo === "art" && !c.diploma)) falha(`${q.id}: dispositivo não reconhecido "${d}"`);
+      }
+      const introducao = q.introducao ?? r.data.introducoes[q.parte];
+      if (!introducao) {
+        err(where, `${q.id}: falta a introdução da parte ${q.parte} (em introducoes)`);
+        continue;
+      }
+      const aceitos = Array.isArray(q.aceitos[0]) ? (q.aceitos as string[][]) : [q.aceitos as string[]];
+      // a tese mostrada precisa passar na própria correção; a introdução e a pergunta não podem dar a resposta
+      if (!temTese(aceitos, q.tese)) falha(`${q.id}: a tese "${q.tese}" não tem os termos aceitos (${JSON.stringify(q.aceitos)})`);
+      if (temTese(aceitos, introducao)) warnings.push(`! ${where}: ${q.id}: a introdução já tem a resposta (os termos aceitos)`);
+      if (temTese(aceitos, q.pergunta)) warnings.push(`! ${where}: ${q.id}: a pergunta já tem a resposta (os termos aceitos)`);
+      if (citaArtigo(q.artigos, introducao) || citaArtigo(q.artigos, q.pergunta)) warnings.push(`! ${where}: ${q.id}: a introdução ou a pergunta cita o artigo da resposta`);
+      // no fácil, a tese aparece na pergunta ("Em que dispositivo se apoia esta tese: …?"): ela não pode trazer o artigo
+      if (extrairCitacoes(normalize(q.tese), lex).length) falha(`${q.id}: a tese cita artigo ("${q.tese}"): no fácil, ela entregaria a resposta`);
+      const valor = item.valores?.length ? Math.max(...item.valores) : (item.teto ?? item.componentes.reduce((t, c) => t + c.valor, 0));
+      const pergunta: Record<string, unknown> = {
+        formato: "tese",
         id: q.id,
         categorias: [q.categoria],
-        caso: q.caso,
-        comando: q.comando,
+        caso: introducao,
+        enunciado: semMarkdown(parte.enunciado),
+        comando: q.pergunta,
+        tese: q.tese,
+        aceitos,
+        artigos: q.artigos,
+        valor,
         explicacao: q.gabarito,
         fonte: `${ex.numeral} Exame`,
-        secao: q.secao,
-        itens: [item],
-        opcoes: [{ texto: q.opcoes.correta, correta: true }, ...q.opcoes.erradas.map((texto) => ({ texto, correta: false }))],
-        dispositivos: q.dispositivos.length ? q.dispositivos : item.componentes.flatMap((c) => c.dispositivo ?? []),
+        ...(q.secao ? { secao: q.secao } : {}),
+        erradas: { artigos: [], teses: [] },
         revisado: q.revisao.status === "revisado",
-      });
+      };
+      perguntasItens.push(pergunta);
+      teses.push({ q: pergunta, exame: ex.id, parte: q.parte, categoria: q.categoria, secao: q.secao, tese: q.tese, aceitos, artigos: q.artigos });
     }
   }
 
@@ -324,6 +403,33 @@ function build(): boolean {
     }
   }
 
+  // ---------------- grifos prontos do leitor ----------------
+  // Um arquivo por cor (content/grifos/*.yaml), cada um uma lista de entradas. YAML quebrado (ou que não é uma lista)
+  // para o build; uma entrada fora do formato só sai, com aviso: os grifos das outras continuam.
+  const entradasGrifos: { onde: string; entrada: EntradaGrifo }[] = [];
+  const dirGrifos = join(CONTENT, "grifos");
+  for (const f of yamls(dirGrifos)) {
+    const where = `grifos/${f}`;
+    let raw: unknown;
+    try {
+      raw = readYaml(join(dirGrifos, f));
+    } catch (e) {
+      err(where, `YAML inválido: ${(e as Error).message}`);
+      continue;
+    }
+    if (raw === null || raw === undefined) continue;
+    if (!Array.isArray(raw)) {
+      err(where, "o arquivo deve ser uma lista de entradas (- { cor, grupo, tema, lei, disp, palavras })");
+      continue;
+    }
+    raw.forEach((item, k) => {
+      const r = GrifoEntradaSchema.safeParse(item);
+      const quem = `${where} #${k + 1}${item && typeof item === "object" && "tema" in item ? ` (${String((item as { tema: unknown }).tema)})` : ""}`;
+      if (!r.success) warnings.push(`! ${quem}: ${r.error.issues.map((i) => `${i.path.join(".") || "entrada"}: ${i.message}`).join("; ")}`);
+      else entradasGrifos.push({ onde: quem, entrada: r.data });
+    });
+  }
+
   if (args.has("--check")) return report(errors, warnings);
   if (errors.length) return report(errors, warnings);
 
@@ -343,9 +449,22 @@ function build(): boolean {
   };
   // Exames só com PDF (sem transcrição) também aparecem em /provas, via manifesto.
   const manifestPath = join(DOWNLOADS, "originais", "manifest.json");
-  const manifest: { id: string; numero: number; variante: string | null; peca: string | null; fase2?: "aplicada" | "em-breve" }[] =
-    existsSync(manifestPath) ? JSON.parse(readFileSync(manifestPath, "utf8")) : [];
+  const manifest: {
+    id: string;
+    numero: number;
+    variante: string | null;
+    peca: string | null;
+    fase2?: "aplicada" | "em-breve";
+    gabaritoPreliminar?: boolean;
+    objetivaGabaritoPreliminar?: boolean;
+    fgv?: string;
+  }[] = existsSync(manifestPath) ? JSON.parse(readFileSync(manifestPath, "utf8")) : [];
   const fase2 = (id: string) => manifest.find((m) => m.id === id)?.fase2 ?? "aplicada";
+  // os gabaritos que ainda são o preliminar (a FGV não publicou o definitivo): a página de provas avisa
+  const preliminar = (id: string) => {
+    const m = manifest.find((x) => x.id === id);
+    return { gabarito: !!m?.gabaritoPreliminar, objetiva: !!m?.objetivaGabaritoPreliminar };
+  };
   const idsTranscritos = new Set(exames.map((e) => e.id));
   const soPdf = manifest
     .filter((m) => !idsTranscritos.has(m.id))
@@ -362,6 +481,8 @@ function build(): boolean {
       revisado: false,
       temAtualizacao: false,
       fase2: fase2(m.id),
+      preliminar: preliminar(m.id),
+      fgv: manifest.find((x) => x.id === m.id)?.fgv ?? null,
       downloads: downloads(m.id),
     }));
   const index = exames
@@ -378,6 +499,8 @@ function build(): boolean {
       revisado: ex.revisao.status === "revisado",
       temAtualizacao: !!ex.atualizado?.notas.length,
       fase2: fase2(ex.id),
+      preliminar: preliminar(ex.id),
+      fgv: manifest.find((x) => x.id === ex.id)?.fgv ?? null,
       downloads: downloads(ex.id),
     }))
     .concat(soPdf)
@@ -387,14 +510,48 @@ function build(): boolean {
     ex.questoes.forEach((q) => aplicarRotulos(q.itens));
   }
   for (const ex of exames) writeFileSync(join(OUT, "exames", `${ex.id}.json`), JSON.stringify(ex));
+  // os arquivos de apoio do pdf.js (WebAssembly, fontes padrão, mapas de caracteres, perfil de cor CMYK), para as páginas que desenham PDFs
+  // no navegador (ver src/lib/pdfjs.ts): copiados uma vez, e de novo quando o pdfjs-dist muda de versão
+  const pdfjsOrigem = join(ROOT, "node_modules", "pdfjs-dist");
+  const pdfjsDestino = join(ROOT, "public", "pdfjs");
+  const versaoPdfjs = existsSync(join(pdfjsOrigem, "package.json")) ? JSON.parse(readFileSync(join(pdfjsOrigem, "package.json"), "utf8")).version : null;
+  if (versaoPdfjs && (!existsSync(join(pdfjsDestino, "versao.txt")) || readFileSync(join(pdfjsDestino, "versao.txt"), "utf8") !== versaoPdfjs)) {
+    rmSync(pdfjsDestino, { recursive: true, force: true });
+    for (const pasta of ["wasm", "standard_fonts", "cmaps", "iccs"]) cpSync(join(pdfjsOrigem, pasta), join(pdfjsDestino, pasta), { recursive: true });
+    writeFileSync(join(pdfjsDestino, "versao.txt"), versaoPdfjs);
+  }
+  // o texto dos PDFs de provas, para a busca de /provas/todos/ (só lê de novo os PDFs que mudaram); corre por fora,
+  // e o processo só termina quando acaba
+  void gerarTextosDasProvas({ quieto: true }).catch((erro) => console.warn(`textos das provas: ${(erro as Error).message}`));
   // Recorte sem gabarito comentado, carregado pelo conferidor de texto da aba Provas.
   const pubExames = join(ROOT, "public", "dados", "exames");
   rmSync(pubExames, { recursive: true, force: true });
   mkdirSync(pubExames, { recursive: true });
   for (const ex of exames) if (ex.corrigivel) writeFileSync(join(pubExames, `${ex.id}.json`), JSON.stringify(paraSimulado(ex)));
+  // O texto de cada exame para a busca da lista de exames das estatísticas (/estatisticas/): o enunciado e o gabarito
+  // (o comentado e os itens da tabela de pontos) da peça e de cada questão. A página só baixa quando a busca é nos textos.
+  const pubEstatisticas = join(ROOT, "public", "dados", "estatisticas");
+  mkdirSync(pubEstatisticas, { recursive: true });
+  const gabaritoDe = (p: { gabarito_comentado: string; itens: { descricao: string }[] }) =>
+    [p.gabarito_comentado, ...p.itens.map((i) => i.descricao)].filter(Boolean).join("\n");
+  const textosDosExames = Object.fromEntries(
+    exames.map((ex) => [
+      ex.id,
+      [
+        { parte: "peca", tipo: "enunciado", texto: ex.peca.enunciado },
+        { parte: "peca", tipo: "gabarito", texto: gabaritoDe(ex.peca) },
+        ...ex.questoes.flatMap((q) => [
+          { parte: `q${q.n}`, tipo: "enunciado", texto: q.enunciado },
+          { parte: `q${q.n}`, tipo: "gabarito", texto: gabaritoDe(q) },
+        ]),
+      ].filter((t) => t.texto.trim()),
+    ]),
+  );
+  writeFileSync(join(pubEstatisticas, "textos.json.gz"), gzipSync(JSON.stringify(textosDosExames), { level: 9 }));
   writeFileSync(join(OUT, "exames-index.json"), JSON.stringify(index, null, 1));
   writeFileSync(join(OUT, "leis.json"), JSON.stringify(leis.data));
   writeFileSync(join(OUT, "pecas.json"), JSON.stringify(pecas.data));
+  writeFileSync(join(OUT, "historico.json"), JSON.stringify(historico?.success ? historico.data : { pecas_extras: {}, exames_antigos: [], linha_do_tempo: [] }));
   // As pessoas das questões viram marcas ({p1}…), trocadas na tela por nomes da mitologia (src/quiz/nomes.ts)
   const nomesPessoas = NomesPessoasSchema.safeParse(readYaml(join(CONTENT, "nomes-pessoas.yaml")));
   const nomesMitologia = NomesMitologiaSchema.safeParse(readYaml(join(CONTENT, "nomes-mitologia.yaml")));
@@ -407,10 +564,56 @@ function build(): boolean {
     for (const n of new Set(todos.filter((n, i) => todos.indexOf(n) !== i))) err("nomes-mitologia.yaml", `"${n}" repetido`);
     const daProva = new Set([...nomesPessoas.data.masculinos, ...nomesPessoas.data.femininos]);
     for (const n of todos.filter((n) => daProva.has(n))) err("nomes-mitologia.yaml", `"${n}" também é nome de pessoa das provas (nomes-pessoas.yaml)`);
+    // a pronúncia é dos nomes das listas
+    for (const n of Object.keys(nomesMitologia.data.pronuncia)) if (!todos.includes(n)) err("nomes-mitologia.yaml", `pronúncia de "${n}", que não está nas listas`);
     const pessoas = [...nomesPessoas.data.masculinos, ...nomesPessoas.data.femininos];
     for (const n of new Set(pessoas.filter((n, i) => pessoas.indexOf(n) !== i))) err("nomes-pessoas.yaml", `"${n}" repetido (ou nas duas listas)`);
   }
   const leitorDePessoas = criarLeitor(nomesPessoas.data);
+  // Os exames dos PDFs atualizados (/print): as pessoas e as empresas com os nomes da mitologia de `atualizado.nomes`
+  {
+    const generoMito = new Map<string, "m" | "f">([
+      ...nomesMitologia.data.masculinos.map((n) => [n, "m"] as const),
+      ...nomesMitologia.data.femininos.map((n) => [n, "f"] as const),
+    ]);
+    const pubAtualizados = join(OUT, "atualizados");
+    rmSync(pubAtualizados, { recursive: true, force: true });
+    mkdirSync(pubAtualizados, { recursive: true });
+    for (const ex of exames) {
+      // os erros materiais corrigidos (atualizado.correcoes) antes dos nomes: o trecho está escrito com os da prova
+      const corrigido = structuredClone(ex);
+      for (const c of ex.atualizado?.correcoes ?? []) {
+        const parte = partesDoExame(corrigido).find((p) => p.alvo === c.alvo)?.parte;
+        if (!parte) {
+          err(`exames/${ex.id}/exame.yaml (atualizado.correcoes)`, `parte desconhecida: ${c.alvo}`);
+          continue;
+        }
+        // cada troca vale em todos os textos da parte (enunciado, gabarito comentado, itens); tem de achar ao menos um
+        for (const t of c.trocas) {
+          let achou = 0;
+          const trocar = (o: Record<string, unknown>) => {
+            for (const [k, v] of Object.entries(o)) {
+              if (typeof v === "string" && v.includes(t.de)) {
+                o[k] = v.split(t.de).join(t.para);
+                achou++;
+              } else if (v && typeof v === "object") trocar(v as Record<string, unknown>);
+            }
+          };
+          trocar(parte as unknown as Record<string, unknown>);
+          if (!achou) err(`exames/${ex.id}/exame.yaml (atualizado.correcoes)`, `${c.alvo}: trecho não encontrado: "${t.de}"`);
+        }
+      }
+      const { exame, problemas } = trocarNomes(corrigido, leitorDePessoas, ex.atualizado?.nomes ?? {}, (n) => generoMito.get(n));
+      writeFileSync(join(pubAtualizados, `${ex.id}.json`), JSON.stringify(exame));
+      const where = `exames/${ex.id}/exame.yaml (atualizado.nomes)`;
+      const semNome = problemas.filter((x) => x.tipo === "sem-nome");
+      if (semNome.length) warnings.push(`! ${where}: sem nome da mitologia: ${semNome.map((x) => `${x.alvo} ${x.chave}`).join(", ")}`);
+      for (const x of problemas.filter((x) => x.tipo === "sobrando" || x.tipo === "empresa-ausente"))
+        warnings.push(`! ${where}: ${x.alvo} "${x.chave}" não aparece no texto`);
+      for (const x of problemas.filter((x) => x.tipo === "repetido" || x.tipo === "colide" || x.tipo === "genero"))
+        err(where, `${x.alvo} ${x.chave}: ${x.tipo === "repetido" ? "nome repetido na mesma parte" : x.tipo === "colide" ? "o nome novo é o de outra pessoa da parte" : "gênero trocado"} (${x.detalhe})`);
+    }
+  }
   {
     const textos: string[] = [];
     const juntar = (v: unknown): void => {
@@ -421,6 +624,56 @@ function build(): boolean {
     juntar([perguntas, perguntasItens, objetivas]);
     const novos = nomesDesconhecidos(textos, nomesPessoas.data);
     if (novos.length) warnings.push(`! nomes-pessoas.yaml: palavras com maiúscula que não estão em nenhuma lista (pessoa nova?): ${novos.join(", ")}`);
+  }
+  // As alternativas erradas do fácil de cada tese: outros artigos (os das outras teses da mesma parte, depois os da mesma
+  // lei, dos números mais perto) e outras teses (as da mesma parte, depois as do mesmo tipo em outros exames, sem
+  // pessoas: o nome de outra história confundiria). Nenhuma pode ser também uma resposta certa.
+  {
+    const chave = (spec: string) => {
+      const c = parseDispositivo(spec, lex);
+      return c ? formatarCitacao(c, leis.data) : spec;
+    };
+    const numero = (spec: string) => {
+      const c = parseDispositivo(spec, lex);
+      return c?.tipo === "art" ? { diploma: c.diploma ?? "", n: parseInt(c.art, 10) || 0 } : { diploma: c?.tipo ?? "", n: 0 };
+    };
+    const semPessoas = (t: string) => !leitorDePessoas.achar(t).length;
+    // o artigo e a lei, sem parágrafo, inciso ou alínea ("386 cpp"): para não usar como errada a tese do mesmo artigo
+    const doArtigo = (spec: string) => {
+      const n = numero(spec);
+      return `${n.diploma} ${n.n}`;
+    };
+    // artigos que sustentam teses demais (absolvição, nulidade, garantias): no fácil, só se pergunta o artigo da tese,
+    // nunca a tese do artigo (mais de uma alternativa estaria certa)
+    const GENERICOS = new Set(["cpp 386", "cpp 564", "cf 5", "cp 59", "cp 68", "cpp 157", "cpp 648", "cpp 626"]);
+    const todosArtigos = [...new Map(teses.map((t) => [chave(t.artigos[0]!), t.artigos[0]!])).values()];
+    for (const t of teses) {
+      const aceitas = new Set(t.artigos.map(chave));
+      const irmas = teses.filter((x) => x !== t && x.exame === t.exame && x.parte === t.parte);
+      const principal = numero(t.artigos[0]!);
+      const daLei = todosArtigos
+        .filter((a) => numero(a).diploma === principal.diploma)
+        .sort((a, b) => Math.abs(numero(a).n - principal.n) - Math.abs(numero(b).n - principal.n) || chave(a).localeCompare(chave(b)));
+      const artigos: string[] = [];
+      for (const a of [...irmas.map((x) => x.artigos[0]!), ...daLei, ...todosArtigos]) {
+        const k = chave(a);
+        if (aceitas.has(k) || artigos.some((x) => chave(x) === k)) continue;
+        artigos.push(a);
+        if (artigos.length >= 6) break;
+      }
+      const deOutros = teses.filter((x) => x.exame !== t.exame && x.categoria === t.categoria && (x.secao ?? "") === (t.secao ?? "") && semPessoas(x.tese));
+      const outras: string[] = [];
+      const meusArtigos = new Set(t.artigos.map(doArtigo));
+      // o fácil de tese mostra o primeiro artigo: é ele que não pode ser genérico
+      if (!GENERICOS.has(doArtigo(t.artigos[0]!)))
+        for (const x of [...irmas, ...deOutros]) {
+          if (x.tese === t.tese || outras.includes(x.tese) || x.artigos.some((a) => meusArtigos.has(doArtigo(a))) || temTese(t.aceitos, x.tese)) continue;
+          outras.push(x.tese);
+          if (outras.length >= 6) break;
+        }
+      t.q.erradas = { artigos, teses: outras };
+      if (artigos.length < 3) warnings.push(`! perguntas/discursivas: ${String(t.q.id)}: só ${artigos.length} artigos errados para o fácil`);
+    }
   }
   const relatorioNomes: string[] = [];
   const marcar = <T extends Record<string, unknown>>(lista: T[]) =>
@@ -464,6 +717,8 @@ function build(): boolean {
   const pubLeis = join(ROOT, "public", "dados", "leis");
   const indiceLeis: { id: string; nome: string; artigos: number }[] = [];
   const vigencias: Record<string, Vigencia> = {};
+  // o texto de cada lei do leitor (e das súmulas), para conferir os grifos prontos
+  const blocosDoLeitor = new Map<string, Bloco[]>();
   if (existsSync(dirLeis)) {
     rmSync(pubLeis, { recursive: true, force: true });
     mkdirSync(pubLeis, { recursive: true });
@@ -476,34 +731,41 @@ function build(): boolean {
       Object.assign(vigencias, vigenciasDaLei(lei.id, lei.blocos as Bloco[], datasPadrao));
       const artigos = publicarTexto(pubLeis, f.replace(/\.json$/, ""), lei);
       if (artigos) indiceLeis.push({ id: lei.id, nome: lei.nome, artigos });
+      blocosDoLeitor.set(lei.id, lei.blocos);
     }
-    // as súmulas com texto saem como leis ("sumulas-stf", "sumulas-stj"): o mesmo leitor, fora do índice do Vade Mecum
+    // as súmulas com texto saem como leis ("sumulas-stf", "sumulas-vinculantes", "sumulas-stj"): o mesmo leitor, fora do
+    // índice do Vade Mecum
     const dirSumulas = join(CONTENT, "sumulas");
-    if (existsSync(join(dirSumulas, "stf.json")) && existsSync(join(dirSumulas, "stj.json"))) {
-      const lidas = {
-        stf: JSON.parse(readFileSync(join(dirSumulas, "stf.json"), "utf8")) as SumulasDoTribunal,
-        stj: JSON.parse(readFileSync(join(dirSumulas, "stj.json"), "utf8")) as SumulasDoTribunal,
-      };
-      const disponiveis = disponiveisDe(lidas.stf, lidas.stj);
+    const LISTAS = ["vinculantes", "stf", "stj"] as const;
+    if (LISTAS.every((t) => existsSync(join(dirSumulas, `${t}.json`)))) {
+      const lidas = Object.fromEntries(LISTAS.map((t) => [t, JSON.parse(readFileSync(join(dirSumulas, `${t}.json`), "utf8")) as SumulasDoTribunal])) as Record<(typeof LISTAS)[number], SumulasDoTribunal>;
+      const disponiveis = disponiveisDe(lidas);
       const vocabulario = existsSync(dirRemissivos)
         ? readdirSync(dirRemissivos)
             .filter((x) => x.endsWith(".json"))
             .flatMap((x) => (JSON.parse(readFileSync(join(dirRemissivos, x), "utf8")) as Remissivo).entradas.map((e) => e.palavra))
         : [];
       // as súmulas que o leitor tem (com texto): as citações "Súmula N do STF" viram link para elas
-      writeFileSync(join(OUT, "sumulas-numeros.json"), JSON.stringify({ stf: [...disponiveis.stf].sort((x, y) => x - y), stj: [...disponiveis.stj].sort((x, y) => x - y) }));
+      writeFileSync(join(OUT, "sumulas-numeros.json"), JSON.stringify(Object.fromEntries(LISTAS.map((t) => [t, [...disponiveis[t]].sort((x, y) => x - y)]))));
       // o resumo que a página inicial do Vade Mecum mostra: lido sem cache, então acompanha as atualizações
       const resumo: Record<string, { total: number; baixadas: number; coletadoEm: string; unidades: number }> = {};
-      for (const t of ["stf", "stj"] as const) {
+      for (const t of LISTAS) {
         const d = lidas[t];
         const id = idSumulas(t);
         const blocos = blocosDaSumulas(d, disponiveis);
+        blocosDoLeitor.set(id, blocos);
         publicarTexto(pubLeis, id, { id, nome: NOME_SUMULAS(t), url: d.fonte, coletadoEm: d.coletadoEm, blocos });
         resumo[t] = { total: d.total, baixadas: d.baixadas, coletadoEm: d.coletadoEm, unidades: blocos.filter((b) => b.disp && !b.superada).length };
         // o índice alfabético das súmulas: as palavras-chave dos índices das leis, procuradas nos enunciados
         if (existsSync(dirRemissivos)) writeFileSync(join(pubRemissivos, `${id}.json`), JSON.stringify(remissivoDasSumulas(d, vocabulario)));
       }
       writeFileSync(join(pubLeis, "_sumulas.json"), JSON.stringify(resumo));
+    }
+    // cada membro dos "Vide" do Grifo existe, vigente, no texto do leitor
+    for (const lei of new Set(VIDES.flatMap((g) => g.membros.map((m) => m.lei)))) {
+      const blocos = blocosDoLeitor.get(lei);
+      if (!blocos) err("vides.yaml", `"${lei}" não é uma lei nem uma lista de súmulas do leitor`);
+      else for (const m of membrosSemDispositivo(blocos, lei, VIDES)) err("vides.yaml", `${lei} ${m.disp} não está (vigente) no texto`);
     }
     const ordem = Object.keys(leis.data.diplomas);
     indiceLeis.sort((a, b) => ordem.indexOf(a.id) - ordem.indexOf(b.id));
@@ -517,38 +779,40 @@ function build(): boolean {
   }
   writeFileSync(join(OUT, "leis-indice.json"), JSON.stringify(indiceLeis));
 
-  // Grifos prontos do leitor (content/grifos.yaml)
-  const arqGrifos = join(CONTENT, "grifos.yaml");
-  const grifos: Record<string, { rotulo: string; lei: string; artigos?: string; dispositivos?: string[]; nota?: string }[]> = existsSync(arqGrifos)
-    ? (readYaml(arqGrifos) ?? {})
-    : {};
-  // as súmulas com texto (as regras das súmulas citam o número delas em `artigos`)
-  const arqNumeros = join(OUT, "sumulas-numeros.json");
-  const numerosSumulas: Record<string, number[]> = existsSync(arqNumeros) ? JSON.parse(readFileSync(arqNumeros, "utf8")) : {};
-  const numerosDaFaixa = (t: string) =>
-    t.split(",").flatMap((p) => {
-      const [a, b = a] = p.trim().split("-").map(Number);
-      return Array.from({ length: Math.max(0, b! - a! + 1) }, (_, k) => a! + k);
-    });
-  for (const [sistema, regras] of Object.entries(grifos)) {
-    const jaPintadas = new Map<string, string>();
-    for (const r of regras) {
-      const tribunal = r.lei.match(/^sumulas-(stf|stj)$/)?.[1];
-      if (!tribunal && !indiceLeis.some((l) => l.id === r.lei)) warnings.push(`! grifos.yaml: ${sistema}: lei "${r.lei}" não está no leitor`);
-      if (!r.artigos && !r.dispositivos?.length) err("grifos.yaml", `${sistema}: regra sem artigos nem dispositivos (${r.lei})`);
-      if (tribunal && r.artigos) {
-        const tem = new Set(numerosSumulas[tribunal] ?? []);
-        for (const n of numerosDaFaixa(r.artigos)) {
-          if (!tem.has(n)) warnings.push(`! grifos.yaml: ${sistema}: a Súmula ${n} do ${tribunal.toUpperCase()} não está no leitor`);
-          // uma súmula em duas regras do mesmo sistema fica só com a primeira: provavelmente um engano
-          const antes = jaPintadas.get(`${r.lei}:${n}`);
-          if (antes) warnings.push(`! grifos.yaml: ${sistema}: a Súmula ${n} do ${tribunal.toUpperCase()} está em “${antes}” e em “${r.rotulo}”`);
-          else jaPintadas.set(`${r.lei}:${n}`, r.rotulo);
-        }
+  // Grifos prontos do leitor (content/grifos/*.yaml): cada entrada conferida no texto da lei (o dispositivo vigente e
+  // cada palavra), com o "essencial" (o dispositivo já foi citado nas provas: gabaritos e padrões de resposta da peça e
+  // das discursivas, e as objetivas) e o "vide" entre as entradas do mesmo tema.
+  {
+    const textosDasProvas: string[] = [];
+    for (const ex of exames)
+      for (const parte of [ex.peca, ...ex.questoes]) {
+        textosDasProvas.push(parte.gabarito_comentado);
+        for (const it of parte.itens) textosDasProvas.push(it.descricao, ...it.componentes.flatMap((c) => c.dispositivo ?? []));
       }
+    for (const q of objetivas) {
+      const o = q as { caso?: string; alternativas?: Record<string, string>; dispositivos?: string[] };
+      textosDasProvas.push(o.caso ?? "", ...Object.values(o.alternativas ?? {}), ...(o.dispositivos ?? []));
     }
+    const citados = dispositivosCitados(textosDasProvas, lex);
+    const siglaDaLei = (id: string) => {
+      const d = leis.data.diplomas[id];
+      if (!d) return id.toUpperCase();
+      return d.sigla ?? (d.numero && d.ano ? `Lei ${d.numero}/${String(d.ano).slice(-2)}` : d.nome);
+    };
+    const validas = entradasGrifos.filter(({ onde, entrada }) => {
+      const problemas = problemasDaEntrada(entrada, blocosDoLeitor.get(entrada.lei));
+      for (const p of problemas) warnings.push(`! ${onde}: ${p}`);
+      // a lei ou o dispositivo que não existem tiram a entrada; uma palavra que não se acha só deixa de ser grifada
+      return !problemas.some((p) => !p.startsWith("a palavra"));
+    });
+    const grifos = compilarGrifos(
+      validas.map((v) => v.entrada),
+      citados,
+      (lei, disp) => rotuloDoDispositivo(lei, disp, siglaDaLei(lei)),
+    );
+    writeFileSync(join(OUT, "grifos.json"), JSON.stringify(grifos));
+    if (grifos.length) console.log(`grifos prontos: ${grifos.length} (${grifos.filter((g) => g.essencial).length} essenciais)`);
   }
-  writeFileSync(join(OUT, "grifos.json"), JSON.stringify(grifos));
   writeFileSync(join(OUT, "promos.json"), JSON.stringify(promos?.success ? promos.data : { locais: {}, promos: [] }));
   console.log(
     `conteúdo: ${exames.length} exame(s), ${perguntas.length} pergunta(s) fixa(s), ${perguntasItens.length} pergunta(s) de itens e ` +

@@ -128,14 +128,14 @@ peca:
     - n: "6"
       secao: Razões Recursais
       descricao: Deverá ser aplicado o princípio da consunção (0,15), tendo em vista que se trata do crime meio para a prática do crime patrimonial (0,20). 5
-      valores: [ 0, 0.15, 0.2, 0.3 ]
+      valores: [ 0, 0.15, 0.2, 0.35 ]
       componentes:
         - { id: c1, valor: 0.15, termos: [ consun* ] }
         - { id: c2, valor: 0.2, termos: [ crime meio | crime-meio | meio ] }
     - n: "7"
       secao: Razões Recursais
       descricao: Redução da pena base ao mínimo legal (0,40), tendo em vista que o elemento subjetivo dolo já é inerente ao tipo (0,15). 5
-      valores: [ 0, 0.15, 0.4, 0.5 ]
+      valores: [ 0, 0.15, 0.4, 0.55 ]
       componentes:
         - { id: c1, valor: 0.4, termos: [ pena base | pena-base, minimo ] }
         - { id: c2, valor: 0.15, termos: [ dolo, inerente | elementar | bis in idem ] }
@@ -149,7 +149,7 @@ peca:
     - n: "9"
       secao: Razões Recursais
       descricao: Reconhecimento da tentativa (0,45), tendo em vista que o crime de estelionato é de natureza material e não houve obtenção da vantagem ilícita (0,10). 5
-      valores: [ 0, 0.1, 0.45, 0.5 ]
+      valores: [ 0, 0.1, 0.45, 0.55 ]
       componentes:
         - { id: c1, valor: 0.45, termos: [ tentativa | tentado ] }
         - { id: c2, valor: 0.1, termos: [ material, vantagem ] }
@@ -336,3 +336,14 @@ questoes:
           - { id: c1, valor: 0.35, termos: [ relativamente independente, superveniente ] }
           - { id: c2, valor: 0.15, termos: [ tentativa ] }
           - { id: c3, valor: 0.1, dispositivo: [ "art. 13, § 1º, CP" ], requer: c2 }
+atualizado:
+  revisao: { status: rascunho }
+  notas:
+    - { alvo: peca, lei: "Lei 13.964/2019 e Lei 15.397/2026", texto: "O estelionato passou a ser crime de ação penal pública condicionada à representação (art. 171, § 5º, do CP), salvo quando a vítima é a Administração Pública, criança ou adolescente, pessoa com deficiência mental, maior de 70 anos ou incapaz. Hoje, a defesa também verificaria se a vítima representou. O STJ entendeu que a regra não alcançava a denúncia já oferecida antes da lei, como a deste caso. A Lei 15.397/2026 revogou esse § 5º, e o estelionato voltou a ser de ação pública incondicionada." }
+    - { alvo: q3, lei: "Lei 13.964/2019", texto: "O art. 83, III, b, do CP passou a exigir, para o livramento condicional, que o condenado não tenha cometido falta grave nos últimos 12 meses. A falta grave continua sem interromper a contagem do prazo (Súmula 441 do STJ), mas adia o livramento por 12 meses." }
+  nomes:
+    peca: { Breno: Proteu }   # a assinatura falsa
+    q1: { Bruna: Hera, Júlia: Atena, Julia: Atena, Maria: Afrodite }   # a disputa por causa do namorado
+    q2: { João: Hades, Clara: Perséfone }   # levou a criança
+    q3: { Carlos: Sísifo }
+    q4: { Vitor: Páris, José: Aquiles }   # o tiro que pegou a perna de outro

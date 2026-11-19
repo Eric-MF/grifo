@@ -20,7 +20,7 @@ export function MarcaGrifo() {
 function Cabecalho({ exame }: { exame: Exame }) {
   return (
     <div className="cab">
-      <img src="/img/logo-grifo-em-progresso.svg" alt="Grifo em Progresso · grifo.net" />
+      <img src="/img/logo-grifo-em-progresso.svg" alt="Grifo em Progresso · grifo.net.br" />
       <span className="exame">{exame.numero}º Exame de Ordem Unificado</span>
     </div>
   );
@@ -82,7 +82,7 @@ function Capa({ exame }: { exame: Exame }) {
     <section className="folha">
       <Selo />
       <div className="capa-topo">
-        <img src="/img/logo-grifo-em-progresso.svg" alt="Grifo em Progresso · grifo.net" />
+        <img src="/img/logo-grifo-em-progresso.svg" alt="Grifo em Progresso · grifo.net.br" />
         <h1>
           {exame.numero}
           <sup style={{ fontSize: "0.6em", textDecoration: "underline" }}>o</sup> EXAME DE ORDEM UNIFICADO
@@ -144,7 +144,7 @@ function Capa({ exame }: { exame: Exame }) {
             <li>
               <b>Esta é uma versão de estudo elaborada pelo Grifo</b>, com o enunciado original da prova
               {exame.aplicacao ? ` aplicada em ${exame.aplicacao.split("-").reverse().join("/")}` : ""} no layout atual do
-              caderno. Notas de atualização legislativa, quando houver, aparecem ao final.
+              caderno. O que muda em relação à prova original (os nomes, as leis e a jurisprudência que mudaram) está ao final.
             </li>
           </Bloco>
         </div>
@@ -165,7 +165,6 @@ export function Caderno({ exame }: { exame: Exame }) {
   let pagina = 1;
   const prox = () => ++pagina;
   const paginasPeca = Math.ceil(exame.peca.linhas / 30);
-  const notas = exame.atualizado?.notas ?? [];
   return (
     <>
       <Capa exame={exame} />
@@ -179,7 +178,7 @@ export function Caderno({ exame }: { exame: Exame }) {
         </div>
         <h2 className="secao-tit">Peça Prático-Profissional</h2>
         <div className="texto ajuste" style={{ maxHeight: "180mm" }}>
-          <RichText text={exame.peca.enunciado} data={exame.aplicacao} />
+          <RichText text={exame.peca.enunciado} data={exame.aplicacao} citacoes={false} />
         </div>
         <Rodape rotulo={`Peça Prático-Profissional – Página ${prox()}`} />
       </section>
@@ -193,32 +192,13 @@ export function Caderno({ exame }: { exame: Exame }) {
             <Selo />
             <h2 className="secao-tit">Questão {q.n}</h2>
             <div className="texto ajuste" style={{ maxHeight: "235mm" }}>
-              <RichText text={q.enunciado} data={exame.aplicacao} />
+              <RichText text={q.enunciado} data={exame.aplicacao} citacoes={false} />
             </div>
             <Rodape rotulo={`Questão ${q.n} – Página ${prox()}`} />
           </section>
           <FolhaPautada exame={exame} inicio={1} total={q.linhas} rotulo={`Questão ${q.n} – Página ${prox()}`} />
         </div>
       ))}
-      {notas.length > 0 && (
-        <section className="folha">
-          <Cabecalho exame={exame} />
-          <Selo />
-          <h2 className="secao-tit">Notas de atualização legislativa</h2>
-          <div className="texto ajuste" style={{ maxHeight: "235mm" }}>
-            {notas.map((n, i) => (
-              <div key={i} className="nota-atual">
-                <b>
-                  {n.alvo === "peca" ? "Peça" : `Questão ${n.alvo.slice(1)}`}
-                  {n.item ? `, item ${n.item}` : ""} — {n.lei}
-                </b>
-                <RichText text={n.texto} data={exame.aplicacao} />
-              </div>
-            ))}
-          </div>
-          <Rodape rotulo={`Atualização – Página ${prox()}`} />
-        </section>
-      )}
       <section className="folha" style={{ display: "grid", placeItems: "center" }}>
         <div style={{ textAlign: "center" }}>
           <p style={{ fontSize: "9pt", margin: "0 0 3mm" }}>Realização</p>

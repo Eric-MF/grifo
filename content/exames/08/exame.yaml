@@ -235,3 +235,11 @@ questoes:
         valores: [ 0, 0.5 ]
         componentes:
           - { id: c1, valor: 0.5, dispositivo: [ Súmula 220 STJ ], alternativas: [ [ pretensao executoria | prescricao executoria ] ], rotulo: "Não: o aumento da reincidência só se aplica à prescrição executória OU Súmula 220 do STJ" }
+atualizado:
+  revisao: { status: rascunho }
+  nomes:
+    peca: { José: Sísifo, Caio: Midas, Joaquim: Castor, Manoel: Pólux }   # o devedor; o credor; as testemunhas (os gêmeos)
+    q1: { Lucile: Calipso }   # a que esconde (os rendimentos)
+    q2: { Abel: Hermes, Felipe: Sísifo, Tércio: Epimeteu, Narcísio: Narciso }   # os golpistas; o crédulo; o segundo cliente
+    q3: { João: Rômulo, José: Remo }
+    q4: { João: Proteu }   # a falsidade ideológica

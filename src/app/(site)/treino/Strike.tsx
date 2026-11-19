@@ -64,7 +64,33 @@ export function PlacarStrike({ estado, fez = false, perdeuEm, sons, aoSom }: { e
   );
 }
 
-const CORES_CONFETE = ["#f5b82e", "#ff6b4a", "#ff3d7f", "#7c5cff", "#2fb7ff", "#2fd38a", "#ffe066"];
+/** Frases curtas, de referência jurídica, para o strike: uma sorteada a cada vez. */
+const FRASES = [
+  "Trânsito em julgado!",
+  "Recurso provido!",
+  "Ordem concedida!",
+  "Tese acolhida!",
+  "Decisão unânime!",
+  "Pedido deferido!",
+  "Liminar concedida!",
+  "Coisa julgada!",
+  "Nada a reformar!",
+  "Data venia, impecável!",
+  "Notório saber jurídico!",
+  "Sentença irretocável!",
+  "Ex positis: brilhante!",
+  "Acórdão por unanimidade!",
+  "Jurisprudência firmada!",
+  "Parecer favorável!",
+  "Mérito reconhecido!",
+  "Embargos? Desnecessários!",
+];
+export const fraseDoStrike = (antes?: string) => {
+  const outras = FRASES.filter((f) => f !== antes);
+  return outras[Math.floor(Math.random() * outras.length)]!;
+};
+/** quanto dura a comemoração do strike (o CSS usa o mesmo tempo, em --duracao) */
+export const DURACAO_COMEMORACAO = 5800;
 
 /** Um número entre 0 e 1 que só depende das entradas: o mesmo desenho a cada renderização, outro a cada strike. */
 const sorte = (strike: number, i: number, k: number) => {
@@ -72,47 +98,69 @@ const sorte = (strike: number, i: number, k: number) => {
   return x - Math.floor(x);
 };
 
-function confetesDoStrike(strike: number) {
-  return Array.from({ length: 70 }, (_, i) => ({
+const OUROS = ["var(--festa-claro)", "var(--festa-ouro)", "var(--festa-medio)", "var(--festa-brilho)", "var(--festa-escuro)"];
+
+/** o pó dourado que cai depois da explosão: pontos, losangos e estrelinhas que piscam */
+function poDourado(strike: number) {
+  return Array.from({ length: 60 }, (_, i) => ({
     x: sorte(strike, i, 1) * 100,
-    atraso: sorte(strike, i, 2) * 0.5,
-    duracao: 1.6 + sorte(strike, i, 3) * 1.3,
-    giro: (sorte(strike, i, 4) - 0.5) * 1080,
-    deriva: (sorte(strike, i, 5) - 0.5) * 30,
-    cor: CORES_CONFETE[i % CORES_CONFETE.length]!,
+    atraso: 0.35 + sorte(strike, i, 2) * 1.6,
+    duracao: 2.6 + sorte(strike, i, 3) * 1.8,
+    giro: (sorte(strike, i, 4) - 0.5) * 720,
+    deriva: (sorte(strike, i, 5) - 0.5) * 24,
+    cor: OUROS[i % OUROS.length]!,
     forma: i % 3,
   }));
 }
 
 /**
- * A comemoração do strike: um clarão, anéis que se abrem, "STRIKE!" que salta e confetes caindo. Não bloqueia a
- * questão (o clique passa) e some sozinha. Com "reduzir movimento", só o letreiro aparece e some.
+ * As bolinhas do strike explodindo: cada uma voa do centro numa direção e estoura em faíscas. Do meio da tela, em
+ * círculo; do menu (no canto de cima, à direita), num leque para baixo e para a esquerda, para não sair da tela.
  */
-export function Comemoracao({ total, tamanho, proximo }: { total: number; tamanho: number; proximo: number }) {
-  const confetes = useMemo(() => confetesDoStrike(total), [total]);
+function estilhacos(strike: number, n: number, doCanto: boolean) {
+  const [de, ate] = doCanto ? [0.52 * Math.PI, 1.06 * Math.PI] : [0, 2 * Math.PI];
+  return Array.from({ length: n }, (_, i) => {
+    const ang = de + ((i + sorte(strike, i, 6) * 0.6) / n) * (ate - de);
+    const dist = (doCanto ? 30 : 22) + sorte(strike, i, 7) * (doCanto ? 34 : 20); // em vmin
+    return { x: Math.cos(ang) * dist, y: Math.sin(ang) * dist, atraso: sorte(strike, i, 8) * 0.12, cor: cor(i, n) };
+  });
+}
+
+/**
+ * A comemoração do strike: as bolinhas explodem (do menu, no modo foco; do meio da tela, fora dele) e estouram em
+ * faíscas, um clarão e raios dourados se abrem, uma frase curta salta em ouro com um brilho que corre, e um pó dourado
+ * cai devagar. Não bloqueia a questão (o clique passa) e some sozinha. Com "reduzir movimento", só a frase aparece.
+ */
+export function Comemoracao({ total, tamanho, proximo, frase, origem }: { total: number; tamanho: number; proximo: number; frase: string; origem?: { x: number; y: number } | null }) {
+  const po = useMemo(() => poDourado(total), [total]);
+  const pedacos = useMemo(() => estilhacos(total, tamanho, !!origem), [total, tamanho, origem]);
+  const estilo: Record<string, string> = { "--duracao": `${DURACAO_COMEMORACAO}ms` };
+  if (origem) Object.assign(estilo, { "--ox": `${origem.x}px`, "--oy": `${origem.y}px` });
   return (
-    <div className={styles.comemoracao} role="status" aria-live="polite">
+    <div className={styles.comemoracao} role="status" aria-live="polite" style={estilo as CSSProperties}>
       <div className={styles.clarao} />
-      <div className={styles.aneis}>
-        <span />
-        <span />
-        <span />
+      <div className={styles.raios} />
+      <div className={styles.explosao} aria-hidden>
+        <span className={styles.onda} />
+        {pedacos.map((p, i) => (
+          <span key={i} className={styles.estilhaco} style={{ "--x": `${p.x}vmin`, "--y": `${p.y}vmin`, "--atraso": `${p.atraso}s`, "--cor": p.cor } as CSSProperties} />
+        ))}
       </div>
       <div className={styles.letreiro}>
-        <strong className={styles.strike}>
-          {"STRIKE!".split("").map((l, i) => (
+        <strong className={styles.frase}>
+          {frase.split(" ").map((p, i) => (
             <span key={i} style={{ "--i": i } as CSSProperties}>
-              {l}
+              {p}
             </span>
           ))}
         </strong>
         <span className={styles.detalhe}>
-          {tamanho} acertos seguidos{total > 1 ? ` · ${total}º strike` : ""}
+          {tamanho} acertos seguidos{total > 1 ? ` · ★ ${total}` : ""}
         </span>
-        {proximo > tamanho && <span className={styles.proximo}>O próximo strike pede {proximo} seguidas</span>}
+        {proximo > tamanho && <span className={styles.proximo}>Agora, {proximo} seguidas</span>}
       </div>
       <div className={styles.confetes} aria-hidden>
-        {confetes.map((c, i) => (
+        {po.map((c, i) => (
           <span
             key={i}
             data-forma={c.forma}
