@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { palavrasDe } from "../src/lib/fala/comandos-voz.ts";
-import { comandoDeLeitura, pareceEco } from "../src/quiz/voz.ts";
+import { interpretarComando, palavrasDe } from "../src/lib/fala/comandos-voz.ts";
+import { ajusteDaVoz, comandoDaLeitura, comandoDeLeitura, pareceEco } from "../src/quiz/voz.ts";
 import { comPronuncia, correcaoFalada, textosDaQuestao } from "../src/quiz/locutor.ts";
 import type { PerguntaObjetiva, PerguntaPeca, PerguntaTese } from "../src/quiz/types.ts";
 import type { CorrecaoObjetiva, CorrecaoPeca, CorrecaoTese } from "../src/quiz/verificar.ts";
@@ -205,5 +205,93 @@ describe("correcaoFalada: a correção dita depois da resposta", () => {
 describe("comPronuncia: os nomes da mitologia como a voz os diz", () => {
   it("troca os nomes que a escrita engana, por palavra inteira", () => {
     expect(comPronuncia("Medeia e Ájax por Apolo; Apolônio, Hera e Heraclito.")).toBe("Medéia e Ájacs por Apólo; Apolônio, Héra e Heraclito.");
+  });
+});
+
+describe("comandoDaLeitura: os comandos do Ouvir na leitura do treino", () => {
+  const leia = (fala: string, estado: "lendo" | "pausado" | "parado", recentes: ReadonlySet<string> = new Set()) => comandoDaLeitura([fala], estado, recentes, interpretarComando);
+
+  it.each([
+    ["pausa", "pausar"],
+    ["pare", "pausar"],
+    ["espera", "pausar"],
+    ["parar a leitura", "parar"],
+    ["chega", "parar"],
+    ["volta", "trechoAnterior"],
+    ["avança", "proximoTrecho"],
+    ["repete", "repetirTrecho"],
+    ["mais rápido", "maisRapido"],
+    ["mais devagar", "maisDevagar"],
+    ["velocidade normal", "velocidadeNormal"],
+    ["mais alto", "maisAlto"],
+    ["ajuda", "ajuda"],
+    ["ler a questão", "reler"],
+    ["ler as alternativas", "alternativas"],
+  ])("lendo, “%s” → %s", (fala, cmd) => {
+    expect(leia(fala, "lendo")).toBe(cmd);
+  });
+
+  it("lendo, o comando vale no meio da frase que o microfone ouviu junto com a leitura", () => {
+    const recentes = new Set(palavrasDe("O réu foi condenado por furto qualificado"));
+    expect(leia("condenado por furto pausa", "lendo", recentes)).toBe("pausar");
+    expect(leia("furto qualificado ler as alternativas", "lendo", recentes)).toBe("alternativas");
+  });
+
+  it("a palavra que a própria voz acabou de dizer não vira comando", () => {
+    const recentes = new Set(palavrasDe("o recurso anterior foi negado"));
+    expect(leia("recurso anterior foi negado", "lendo", recentes)).toBeNull();
+  });
+
+  it("pausada: “continua” continua, e “repete” repete o trecho", () => {
+    expect(leia("continua", "pausado")).toBe("continuar");
+    expect(leia("pode continuar", "pausado")).toBe("continuar");
+    expect(leia("repete", "pausado")).toBe("repetirTrecho");
+  });
+
+  it("parada: “repete” relê a questão toda; “continua” e “próximo” ficam para a questão (a próxima)", () => {
+    expect(leia("repete", "parado")).toBe("reler");
+    expect(leia("continua", "parado")).toBeNull();
+    expect(leia("próximo", "parado")).toBeNull();
+  });
+
+  it.each([
+    ["ver a questão", "reler"],
+    ["ver questão", "reler"],
+    ["ler questão", "reler"],
+    ["rever a pergunta", "reler"],
+    ["ver as alternativas", "alternativas"],
+    ["ver os artigos", "artigos"],
+  ])("parada, “%s” → %s (o reconhecimento ouve “ler” como “ver”)", (fala, cmd) => {
+    expect(leia(fala, "parado")).toBe(cmd);
+  });
+
+  it.each(["letra b", "apelação", "recurso em sentido estrito", "apelação artigo 593 inciso terceiro alínea d do CPP", "legítima defesa artigo 25 do código penal"])(
+    "pausada ou parada, a resposta “%s” não é comando",
+    (fala) => {
+      expect(leia(fala, "pausado")).toBeNull();
+      expect(leia(fala, "parado")).toBeNull();
+    },
+  );
+});
+
+describe("ajusteDaVoz: a velocidade, o volume e o tom ditos no treino", () => {
+  const a = (fala: string, estado: "lendo" | "pausado" | "parado" = "lendo") => ajusteDaVoz([fala], estado, new Set(), interpretarComando);
+  it.each([
+    ["velocidade máxima", { tipo: "velocidade", extremo: "max" }],
+    ["velocidade 2", { tipo: "velocidade", valor: 2 }],
+    ["velocidade um e meio", { tipo: "velocidade", valor: 1.5 }],
+    ["muito mais rápido", { tipo: "velocidade", passo: 0.5 }],
+    ["volume 50%", { tipo: "volume", valor: 0.5 }],
+    ["voz mais grave", { tipo: "tom", passo: -1 }],
+    ["qual é a velocidade", { tipo: "info", sobre: "velocidade" }],
+  ])("“%s”", (fala, esperado) => {
+    expect(a(fala)).toEqual(esperado);
+  });
+
+  it("o resto não é ajuste: a resposta, a navegação do Ouvir, os grifos", () => {
+    expect(a("letra b", "parado")).toBeNull();
+    expect(a("apelação artigo 593", "parado")).toBeNull();
+    expect(a("próximo grifo")).toBeNull();
+    expect(a("que lei é essa")).toBeNull();
   });
 });

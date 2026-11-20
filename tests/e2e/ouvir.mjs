@@ -208,7 +208,11 @@ async function rodar(nome, opcoes) {
   const erros = [];
   p.on("pageerror", (e) => erros.push(e.message));
   await p.goto(`${BASE}/leis/cp/`, { waitUntil: "networkidle" });
-  await p.evaluate(() => localStorage.clear());
+  // no celular, o microfone fecha enquanto a voz lê (o padrão): aqui ele fica ouvindo, para os comandos no meio da leitura
+  await p.evaluate((celular) => {
+    localStorage.clear();
+    if (celular) localStorage.setItem("grifo:leitor:ouvir", JSON.stringify({ microfoneNaLeitura: "ouvir" }));
+  }, nome === "celular");
   await p.goto(`${BASE}/leis/cp/#art121`, { waitUntil: "networkidle" });
   // só o # mudou: sem recarregar, o leitor não salta
   await p.reload({ waitUntil: "networkidle" });
@@ -231,20 +235,22 @@ async function rodar(nome, opcoes) {
   checar(/Art\. 121/.test(await barra.textContent()), `${nome}: a barra não diz o artigo lido`);
   await capturar(p, `${nome}-barra`);
 
-  // 2. pausar e continuar
+  // 2. pausar e continuar (o toque no ▶ espera um instante: dois toques são outro gesto, src/lib/gestos.ts)
   await barra.getByRole("button", { name: "Pausar" }).click();
-  await esperar(250);
+  await esperar(550);
   const parado = (await ditos(p)).length;
   await esperar(500);
   checar((await ditos(p)).length === parado, `${nome}: a voz continuou depois de pausar`);
   checar(/Pausado/i.test(await barra.textContent()), `${nome}: a barra não mostra "Pausado"`);
   await barra.getByRole("button", { name: "Continuar a leitura" }).click();
-  await esperar(600);
+  await p.waitForFunction((n) => window.__fala.ditos.length > n, parado, { timeout: 4000 }).catch(() => {});
   checar((await ditos(p)).length > parado, `${nome}: a voz não continuou`);
 
   // 3. próximo artigo (pausado, para o artigo de partida não mudar antes do toque): o seguinte começa pela rubrica ou pelo "Artigo"
   await barra.getByRole("button", { name: "Pausar" }).click();
-  const artAntes = (await barra.textContent()).match(/Art\. [\dA-Z-]+/)?.[0];
+  await esperar(450);
+  // o rótulo de agora (pausada no nome de um crime, ele não tem "Art.")
+  const artAntes = (await barra.textContent()).match(/Art\. [\dA-Z-]+/)?.[0] ?? (await barra.textContent()).slice(0, 80);
   await limparDitos(p);
   await barra.getByRole("button", { name: "Próximo artigo" }).click();
   await esperar(500);
@@ -253,14 +259,17 @@ async function rodar(nome, opcoes) {
   checar(/^Artigo |^[A-ZÀ-Ú][a-zà-ú]+( [a-zà-ú]+)*$/.test((await ditos(p))[0] ?? ""), `${nome}: o próximo artigo não começou pelo começo (${(await ditos(p))[0]})`);
 
   // 4. velocidade: o botão troca, e a fala seguinte usa a nova
-  const jaDitos = await p.evaluate(() => window.__fala.taxas.length);
+  // a contagem começa logo depois do toque: o trecho que já começava a ser dito no instante dele pode sair na velocidade antiga
   await barra.getByRole("button", { name: /^Velocidade/ }).click();
+  await esperar(150);
+  const jaDitos = await p.evaluate(() => window.__fala.taxas.length);
   await esperar(1500);
   const taxas = await p.evaluate((k) => window.__fala.taxas.slice(k), jaDitos);
   checar(taxas.length > 0 && taxas.every((t) => Math.abs(t - 1.2) < 0.01), `${nome}: a velocidade não mudou para 1,2 (${taxas})`);
 
   // 5. tocar num parágrafo: "Ler daqui"
   await barra.getByRole("button", { name: "Pausar" }).click();
+  await esperar(450);
   await levar(p, "art129", (h) => h / 3);
   // no texto, longe do rótulo "Art. 129" (que abre o "citado por")
   const caixa129 = await p.evaluate(() => {
@@ -302,7 +311,7 @@ async function rodar(nome, opcoes) {
 
   // 8. comandos de voz
   await barra.getByRole("button", { name: "Ligar os comandos de voz" }).click();
-  await esperar(300);
+  await esperar(700);
   checar((await p.evaluate(() => window.__falar("pausa"))) > 0, `${nome}: o microfone não ligou`);
   await esperar(300);
   checar(/Pausado/i.test(await barra.textContent()), `${nome}: "pausa" não pausou`);

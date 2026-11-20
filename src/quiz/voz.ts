@@ -149,6 +149,27 @@ const CAMPO_FALADO: Record<string, CampoVoz> = {
   "o artigo": "artigo",
 };
 
+// o pedaço que continua a citação já dita: o reconhecimento às vezes parte a frase numa pausa ("artigo 321" e depois "do
+// CPP", "artigo 593" e depois "inciso terceiro, alínea d")
+const LEI_FALADA = "codigo|lei|decreto|constituicao|estatuto|cpp|cp|cpm|cf|lep|ctb|eca";
+const CONTINUA_A_CITACAO = new RegExp(String.raw`^(?:(?:e|do|da|dos|das|no|na|nos|nas|de|com)\s+)*(?:paragrafo|inciso|alinea|letra|caput|${LEI_FALADA})\b`);
+const TEM_LEI = new RegExp(String.raw`\b(?:${LEI_FALADA})\b`);
+
+/**
+ * A citação já dita (`atual`, como a correção a escreve: "Art. 321", "Art. 593 — Código de Processo Penal") completada pelo
+ * pedaço que a continua ("do CPP", "inciso III"); null se a frase não é um pedaço assim ou se nada muda.
+ */
+function continuarCitacao(atual: string, fala: string, rec: Required<Reconhecedores>): string | null {
+  const t = normal(fala);
+  if (!atual.trim() || !CONTINUA_A_CITACAO.test(t)) return null;
+  const [base, lei] = atual.split(" — ");
+  // a lei de antes continua valendo, se o pedaço não diz outra
+  // "letra d", no pedaço que continua a citação, é a alínea
+  const pedaco = numerosEmAlgarismos(fala.trim().replace(/\bletra\s+/i, "alínea "));
+  const junto = rec.artigo(`${base} ${pedaco}${lei && !TEM_LEI.test(t) ? ` do ${lei}` : ""}`);
+  return junto && junto !== atual ? junto : null;
+}
+
 /** Uma frase dita (o texto como o reconhecimento escreveu). Ver interpretarResposta. */
 /** Quem reconhece a peça e o artigo na frase (pecasFaladas e artigoFalado, em verificar.ts). */
 export interface Reconhecedores {
@@ -209,6 +230,9 @@ function interpretarFrase(fala: string, ctx: ContextoVoz, rec: Required<Reconhec
   // da frase não apaga o que já foi dito. Na frase, vale o primeiro: "apelação ou memoriais" é apelação
   const { antes, artigo } = separarArtigo(texto);
   const campos: Partial<Record<CampoVoz, string>> = {};
+  // o pedaço que continua o artigo já dito ("do CPP") completa o artigo, e não vira peça nem ponto central
+  const continuado = continuarCitacao(ctx.tipo === "peca" ? ctx.fundamento : ctx.tipo === "tese" && ctx.comArtigo ? ctx.artigo : "", texto, rec);
+  if (continuado) return { tipo: "preencher", campos: { [ctx.tipo === "peca" ? "fundamento" : "artigo"]: continuado }, enviar };
   if (ctx.tipo === "peca") {
     const citado = artigo ? rec.artigo(artigo) : null;
     if (citado) campos.fundamento = citado;
@@ -254,9 +278,11 @@ export function dicaDaVoz(ctx: ContextoVoz): string {
 
 /** Os comandos da leitura em voz alta: ler a questão de novo, só as alternativas, os artigos da correção, ou parar de ler. */
 export type ComandoDeLeitura = "reler" | "alternativas" | "artigos" | "parar";
-const RELER = /^(repetir|repete|repita|ler de novo|leia de novo|le de novo|ler novamente|ler a (questao|pergunta)|leia a (questao|pergunta)|repetir a (questao|pergunta)|de novo|outra vez)$/;
-const LER_ALTERNATIVAS = /^((ler|leia|le|repetir|repete|repita|quais sao)( as)? alternativas|alternativas)$/;
-const LER_ARTIGOS = /^((ler|leia|le|repetir|repete|repita)( o| os)? (artigo|artigos)( certo| certos)?|(o|os) artigos?)$/;
+// "ver a questão" e "rever": o reconhecimento ouve "ler" como "ver" (e a pessoa também diz assim)
+const RELER =
+  /^(repetir|repete|repita|ler de novo|leia de novo|le de novo|ler novamente|(ler|leia|le|ver|veja|rever|repetir)( a)? (questao|pergunta)( de novo| novamente)?|de novo|outra vez)$/;
+const LER_ALTERNATIVAS = /^((ler|leia|le|ver|veja|rever|repetir|repete|repita|quais sao)( as)? alternativas|alternativas)$/;
+const LER_ARTIGOS = /^((ler|leia|le|ver|veja|rever|repetir|repete|repita)( o| os)? (artigo|artigos)( certo| certos)?|(o|os) artigos?)$/;
 const PARAR_DE_LER = /^(parar|pare|para|silencio|chega|cala a boca|para de ler|parar de ler|pare de ler|parar a leitura|para a leitura|pausa|pausar)$/;
 
 export function comandoDeLeitura(falas: readonly string[]): ComandoDeLeitura | null {
@@ -269,6 +295,126 @@ export function comandoDeLeitura(falas: readonly string[]): ComandoDeLeitura | n
   }
   return null;
 }
+
+/**
+ * Os comandos da leitura em voz alta no treino, os mesmos do Ouvir do Vade Mecum: além dos de cima, pausar, continuar,
+ * repetir o trecho, o trecho seguinte e o anterior, a velocidade, o volume e a ajuda.
+ */
+export type ComandoDaLeitura =
+  | ComandoDeLeitura
+  | "pausar"
+  | "continuar"
+  | "repetirTrecho"
+  | "proximoTrecho"
+  | "trechoAnterior"
+  | "maisRapido"
+  | "maisDevagar"
+  | "velocidadeNormal"
+  | "maisAlto"
+  | "maisBaixo"
+  | "ajuda";
+
+// no meio de uma frase maior (o microfone ouvindo também a leitura): "… ler as alternativas", "… repete a questão"
+const ALTERNATIVAS_NA_FRASE = /\b(ler|leia|le|ver|veja|rever|repetir|repete|repita|quais sao)( as)? alternativas\b/;
+const ARTIGOS_NA_FRASE = /\b(ler|leia|le|ver|veja|rever|repetir|repete|repita)( o| os)? (artigo|artigos)( certo| certos)?$/;
+const QUESTAO_NA_FRASE =
+  /\b(ler|leia|le|ver|veja|rever|repetir|repete|repita)( a| de novo a| novamente a)? (questao|pergunta)( de novo| novamente| toda| inteira)?\b|\b(questao|pergunta) (de novo|novamente|toda de novo)\b/;
+/** Fora da leitura (pausada ou parada), um comando do Ouvir só vale em frase curta: a mais longa é a resposta. */
+const MAX_PALAVRAS_FORA = 4;
+
+/**
+ * O comando de leitura da fala, conforme a leitura: lendo, ele vale no meio de qualquer frase (o microfone também ouve a
+ * voz: `recentes` são as palavras dela, que não disparam comando); pausada ou parada, só em frase curta, para a resposta
+ * ("apelação, artigo 593") não virar comando. "Repete" lendo ou pausada repete o trecho; parada, a questão inteira.
+ * `interpretar`: o intérprete dos comandos do Ouvir (interpretarComando, em src/lib/fala/comandos-voz.ts).
+ */
+export function comandoDaLeitura(
+  falas: readonly string[],
+  estado: "lendo" | "pausado" | "parado",
+  recentes: ReadonlySet<string>,
+  interpretar: (fala: string, recentes: ReadonlySet<string>) => { tipo: string } | null,
+): ComandoDaLeitura | null {
+  const eco = (trecho: string) => {
+    const ps = trecho.split(" ").filter((p) => p.length > 2);
+    return ps.length > 0 && ps.every((p) => recentes.has(p));
+  };
+  for (const f of falas) {
+    const t = normal(f);
+    if (!t) continue;
+    const exato = comandoDeLeitura([f]);
+    if (exato === "reler") return estado === "parado" || QUESTAO_NA_FRASE.test(t) ? "reler" : "repetirTrecho";
+    // "pare" e "pausa", lendo, pausam (“continua” segue dali); "parar a leitura" e "chega" param
+    if (exato === "parar") return estado === "lendo" && /^(pausa|pausar|pare|para|parar|silencio)$/.test(t) ? "pausar" : "parar";
+    if (exato) return exato;
+    for (const [re, cmd] of [
+      [ALTERNATIVAS_NA_FRASE, "alternativas"],
+      [ARTIGOS_NA_FRASE, "artigos"],
+      [QUESTAO_NA_FRASE, "reler"],
+    ] as const) {
+      const m = re.exec(t);
+      if (m && !eco(m[0])) return cmd;
+    }
+    if (estado !== "lendo" && t.split(" ").length > MAX_PALAVRAS_FORA) continue;
+    const c = interpretar(f, recentes)?.tipo;
+    if (c === "pausar") return estado === "lendo" ? "pausar" : null;
+    if (c === "encerrar") return "parar";
+    if (c === "continuar") return estado === "pausado" ? "continuar" : null;
+    if (c === "repetir" || c === "repetirArtigo") return estado === "parado" ? "reler" : "repetirTrecho";
+    if (c === "proximo" || c === "proximoArtigo") return estado === "parado" ? null : "proximoTrecho";
+    if (c === "anterior" || c === "artigoAnterior") return estado === "parado" ? null : "trechoAnterior";
+    if (c === "maisRapido" || c === "maisDevagar" || c === "velocidadeNormal" || c === "maisAlto" || c === "maisBaixo" || c === "ajuda") return c;
+  }
+  return null;
+}
+
+/** A velocidade, o volume ou o tom ditos como no Ouvir ("velocidade máxima", "velocidade 2", "volume 50%", "voz mais grave"). */
+export type AjusteDaVoz =
+  | { tipo: "velocidade"; valor?: number; extremo?: "max" | "min"; passo?: number }
+  | { tipo: "volume"; valor?: number; extremo?: "max" | "min" }
+  | { tipo: "tom"; passo?: 1 | -1 }
+  | { tipo: "info"; sobre: "velocidade" | "volume" };
+/** Fora da leitura, o ajuste só vale em frase curta (a resposta é a mais longa). */
+const MAX_PALAVRAS_AJUSTE = 6;
+
+/** O ajuste da voz na fala, com `interpretar` (interpretarComando, em src/lib/fala/comandos-voz.ts); null se não é um. */
+export function ajusteDaVoz(
+  falas: readonly string[],
+  estado: "lendo" | "pausado" | "parado",
+  recentes: ReadonlySet<string>,
+  interpretar: (fala: string, recentes: ReadonlySet<string>) => { tipo: string; sobre?: string } | null,
+): AjusteDaVoz | null {
+  for (const f of falas) {
+    if (estado !== "lendo" && normal(f).split(" ").length > MAX_PALAVRAS_AJUSTE) continue;
+    const c = interpretar(f, recentes);
+    if (!c) continue;
+    if (c.tipo === "velocidade" || c.tipo === "volume" || c.tipo === "tom") return c as AjusteDaVoz;
+    if (c.tipo === "info" && (c.sobre === "velocidade" || c.sobre === "volume")) return c as AjusteDaVoz;
+  }
+  return null;
+}
+
+/** O que dizer em "ajuda", no treino. */
+export const AJUDA_DO_TREINO =
+  "Para responder, diga a letra, ou a resposta, e depois: responder. Depois da correção: próxima. Na leitura: pausa; continua; volta; avança; repete; ler a questão; ler as alternativas; ler os artigos; mais rápido; mais devagar; velocidade máxima; velocidade dois; mais alto; mais baixo; volume cinquenta por cento; voz mais grave; e parar a leitura. Para desligar o microfone: desligar o microfone.";
+
+/** A lista dos comandos da leitura no treino, para a tela: o que dizer e o que acontece. */
+export const COMANDOS_DO_TREINO: [dizer: string, faz: string][] = [
+  ["“pausa” ou “pare”", "pausa a leitura (para responder já)"],
+  ["“continua”", "continua de onde parou"],
+  ["“volta” / “avança”", "a frase anterior ou a seguinte"],
+  ["“repete”", "lê de novo a frase atual; com a leitura parada, a questão toda"],
+  ["“ler a questão”", "lê a questão inteira de novo"],
+  ["“ler as alternativas”", "só as alternativas"],
+  ["“ler os artigos”", "depois da correção, o artigo certo e o que você citou"],
+  ["“mais rápido” / “mais devagar”", "muda a velocidade; “velocidade normal” volta ao padrão"],
+  ["“velocidade máxima” / “velocidade 2”", "a velocidade dita: também “velocidade 1,5”, “velocidade mínima”, “muito mais rápido”"],
+  ["“mais alto” / “mais baixo”", "o volume da voz; também “volume máximo”, “volume 50%”"],
+  ["“voz mais grave” / “voz mais aguda”", "o tom da voz (“tom normal” volta)"],
+  ["“parar a leitura”", "para de ler"],
+  ["“responder” / “próxima”", "envia a resposta / segue para a próxima questão"],
+  ["“desligar o microfone”", "para de responder falando"],
+  ["“ajuda”", "diz os comandos"],
+];
 
 // palavras que não contam na comparação com o que a voz acabou de ler
 const VAZIAS_ECO = new Set(["o", "a", "os", "as", "e", "de", "do", "da", "dos", "das", "em", "no", "na", "um", "uma", "que", "se", "por", "para", "com"]);

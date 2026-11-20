@@ -54,7 +54,8 @@ import { CLASSES } from "./classes";
 import styles from "./leitor.module.css";
 import { DiagSelecao } from "./DiagSelecao";
 import { OpcaoCartao } from "./OpcaoCartao";
-import { useOuvir } from "./useOuvir";
+import { useOuvir, type AcoesDoLeitor } from "./useOuvir";
+import type { IdDoLeitor } from "@/lib/fala/comandos-voz";
 import { AjustesOuvir, BarraOuvir, BolhaLerDaqui } from "./OuvirLei";
 import { copiarTexto } from "@/lib/copiar";
 import { CORES_TEXTO, type CorTexto } from "@/lib/leis/opcoes";
@@ -516,7 +517,20 @@ export function Leitor({
   // a leitura em voz alta ("Ouvir"): lê o que está à mostra, do ponto da tela ou do parágrafo tocado
   const avisarOuvir = useCallback((texto: string, acao?: { rotulo: string; fazer: () => void }) => setAviso({ texto, acao }), []);
   const trocarDeLeiPelaVoz = useCallback((id: string) => router.push(rotaDaLei(id)), [router]);
-  const ouvir = useOuvir({ lei, folha, blocos, artigos, sumula, avisar: avisarOuvir, pronto, trocarDeLei: trocarDeLeiPelaVoz });
+  // o que a voz pede ao leitor (os comandos, a legenda, grifar e apagar): as funções de agora ficam em acoesDaVoz, que
+  // é atualizado depois de cada desenho (elas são criadas mais abaixo)
+  const acoesDaVoz = useRef<AcoesDoLeitor | null>(null);
+  const leitorPelaVoz = useMemo<AcoesDoLeitor>(
+    () => ({
+      comando: (id, ligar) => acoesDaVoz.current?.comando(id, ligar),
+      cores: () => acoesDaVoz.current?.cores() ?? [],
+      corDoMarcador: () => acoesDaVoz.current?.corDoMarcador() ?? null,
+      grifar: (trechos, cor) => acoesDaVoz.current?.grifar(trechos, cor) ?? false,
+      desgrifar: (trechos) => acoesDaVoz.current?.desgrifar(trechos) ?? 0,
+    }),
+    [],
+  );
+  const ouvir = useOuvir({ lei, folha, blocos, artigos, sumula, avisar: avisarOuvir, pronto, trocarDeLei: trocarDeLeiPelaVoz, leitor: leitorPelaVoz });
   const ouvirRef = useRef(ouvir);
   useEffect(() => {
     ouvirRef.current = ouvir;
@@ -2138,6 +2152,43 @@ export function Leitor({
         return;
     }
   };
+  // Os comandos pela voz: os que ligam e desligam, com o estado pedido ("mostrar o texto revogado" com ele já à mostra só
+  // avisa), e os grifos do trecho que está sendo lido
+  const ALTERNAVEL: Partial<Record<IdDoLeitor, [keyof PrefsLeitor, string]>> = {
+    original: ["original", "A redação original"],
+    revogados: ["revogados", sumula ? "As súmulas superadas" : "O texto revogado"],
+    vide: ["vide", "O “vide”"],
+    anotacoes: ["anotacoes", "As anotações de redação"],
+    informacoes: ["informacoes", "As informações adicionais"],
+    prontos: ["prontos", "Os grifos prontos"],
+    erros: ["erros", "A marca dos artigos com erro"],
+  };
+  useEffect(() => {
+    acoesDaVoz.current = {
+      comando: (id, ligar) => {
+        const alt = ALTERNAVEL[id];
+        if (alt && ligar !== undefined && !!prefs[alt[0]] === ligar) return setAviso({ texto: `${alt[1]} já está ${ligar ? "à mostra" : "escondido"}.` });
+        if (id === "telacheia" && ligar !== undefined && !!document.fullscreenElement === ligar) return;
+        executarComando(id);
+      },
+      cores: () => sistema.cores,
+      corDoMarcador: () => (corMarcador && corMarcador !== "borracha" ? corMarcador : (sistema.cores[0]?.cor ?? null)),
+      grifar: (trechos, cor) => !!criarMarca(trechos, cor),
+      desgrifar: (trechos) => {
+        const el = folha.current;
+        if (!el) return 0;
+        const bs = blocosDe(el);
+        const tocados = gruposTocados(
+          marcasAtuais.current,
+          bs.map((b) => txtDe(b)?.textContent ?? ""),
+          bs.map((b) => b.dataset.disp),
+          trechos,
+        );
+        if (tocados.size) apagarGrifos((m) => tocados.has(grupoDe(m)));
+        return tocados.size;
+      },
+    };
+  });
   // Durante o arrasto do slide, salta sem o realce; o realce fica para o artigo onde o dedo soltou.
   const irPorIndice = useCallback(
     (k: number, marcar = true) => {
@@ -2256,6 +2307,9 @@ export function Leitor({
     for (const b of blocosDe(el)) {
       const a = b.dataset.disp && b.dataset.sup === "0" ? porArtigo.get(b.dataset.disp) : undefined;
       let pontos = b.querySelector<HTMLElement>(`:scope > .${styles.pontosErro}`);
+      // o bloco do artigo com erro: a voz vai até ele ("próximo erro")
+      if (a) b.dataset.comErro = "1";
+      else delete b.dataset.comErro;
       if (!a) {
         pontos?.remove();
       } else {
@@ -2704,7 +2758,7 @@ export function Leitor({
         </div>
       </nav>
 
-      <BarraOuvir ouvir={ouvir} dockVisivel={!escondido} painelAberto={!!painel} abrirAjustes={() => abrir("ouvir")} />
+      <BarraOuvir ouvir={ouvir} dockVisivel={!escondido} painelAberto={!!painel} abrirAjustes={() => abrir("ouvir")} sumula={sumula} />
       <BolhaLerDaqui ouvir={ouvir} />
 
       {atalho !== null && (

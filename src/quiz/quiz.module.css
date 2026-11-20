@@ -205,6 +205,8 @@
   }
   :global(body[data-foco-lado]) .ladoResposta { display: block; }
   :global(body[data-foco-lado]) .ladoResposta > .comando { margin-top: 0; }
+  /* com a barra do microfone presa embaixo (responder falando), o caso para acima dela */
+  :global(html[data-dock-voz] body[data-foco-lado]) .ladoCaso { max-height: calc(100dvh - 2.5rem - var(--dock-voz, 0px)); }
 }
 }
 :global(body[data-foco]) .alts { gap: 0.55rem; }

@@ -26,9 +26,8 @@ checar((await grupo.count()) === 1, "fieldset 'Tipos de pergunta' ausente no Tre
 const rotulos = ["Peça e fundamento", "Por dentro da peça", "Questões discursivas", "Objetivas da 1ª fase"];
 for (const r of rotulos) checar((await grupo.getByLabel(r).count()) === 1, `categoria '${r}' ausente`);
 
-// por padrão, só a peça e fundamento
-checar(await grupo.getByLabel("Peça e fundamento").isChecked(), "'Peça e fundamento' não vem marcada por padrão");
-checar(!(await grupo.getByLabel("Objetivas da 1ª fase").isChecked()), "'Objetivas da 1ª fase' marcada por padrão");
+// por padrão, todos os tipos
+for (const r of rotulos) checar(await grupo.getByLabel(r).isChecked(), `'${r}' não vem marcada por padrão`);
 
 // dica: aparece ao passar o mouse e ao focar pelo teclado
 const dica = grupo.locator('[role="tooltip"]', { hasText: "Um caso curto" });
@@ -48,7 +47,8 @@ for (const r of rotulos) {
 }
 const disponiveis = rotulos.filter((r) => !vazias.includes(r));
 
-// a última categoria com acervo marcada não pode ser desmarcada
+// desmarcadas as outras, a última categoria com acervo marcada não pode ser desmarcada
+for (const r of disponiveis.filter((r) => r !== "Peça e fundamento")) await grupo.getByLabel(r).uncheck();
 checar(await grupo.getByLabel("Peça e fundamento").isDisabled(), "a única categoria marcada pode ser desmarcada");
 
 // acrescenta outra categoria disponível e confere a gravação

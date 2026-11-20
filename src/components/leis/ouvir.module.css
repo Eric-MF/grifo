@@ -7,6 +7,8 @@
   border: 1px solid var(--leitor-borda); box-shadow: 0 10px 30px rgb(0 0 0 / 0.18); backdrop-filter: blur(8px);
   font-family: var(--font-body), sans-serif; transition: bottom 0.22s ease;
 }
+/* com o menu de um botão aberto (segurar), a barra fica acima dos avisos do leitor, que cobririam o menu */
+.barra:has([role="menu"]) { z-index: 50; }
 /* com os controles do leitor à mostra, a barra fica logo acima deles */
 .barra[data-dock="1"] { bottom: calc(84px + env(safe-area-inset-bottom)); }
 @media (min-width: 641px) {
@@ -115,6 +117,8 @@
 .comandos { margin: 0.45rem 0 0; display: grid; font-size: 0.84rem; color: var(--leitor-fg); }
 .comandos div { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0.6rem; padding: 0.35rem 0; border-bottom: 1px dashed var(--leitor-borda); }
 .comandos dt { font-weight: 650; }
+/* os gestos da barra: as explicações são longas, o botão vai em cima */
+.gestos div { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
 .comandos dd { margin: 0; color: var(--leitor-muted); }
 .microfoneCaixa, .toques { display: grid; gap: 0.45rem; }
 .microfoneCaixa select, .toques select {

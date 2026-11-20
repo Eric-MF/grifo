@@ -48,7 +48,10 @@ try {
     await p.getByRole("button", { name: "Poder automático" }).click();
     ok((await p.getByRole("status").filter({ hasText: "Poder manual" }).count()) === 1, "tocar no poder automático diz o que ele faz");
     await p.getByRole("button", { name: "Poder automático" }).click();
-    // opções de pergunta: a explicação só aparece ao tocar
+    // opções de pergunta: por padrão, o automático e todos os tipos; a explicação só aparece ao tocar
+    ok((await p.getByRole("button", { name: "Automático", exact: true }).getAttribute("aria-pressed")) === "true", "o modo automático das perguntas não vem ligado por padrão");
+    for (const tipo of ["Peça e fundamento", "Por dentro da peça", "Questões discursivas", "Objetivas da 1ª fase"])
+      ok((await p.getByRole("button", { name: tipo, exact: true }).getAttribute("aria-pressed")) === "true", `o tipo ${tipo} não vem ligado por padrão`);
     ok((await p.locator('[class*="perguntas"] [class*="explica"]').count()) === 0, "a explicação começa fechada");
     await p.getByRole("button", { name: "Automático", exact: true }).click();
     const explica = p.locator('[class*="perguntas"] [class*="explica"]').first();
@@ -57,7 +60,9 @@ try {
     ok(/Recorde/.test((await explica.textContent()) ?? ""), "tocar na dificuldade mostra a explicação dela");
     await p.getByRole("button", { name: "Por dentro da peça" }).click();
     ok(/endereçamento/.test((await explica.textContent()) ?? ""), "tocar no tipo mostra o que ele cobra");
-    ok((await p.getByRole("button", { name: "Por dentro da peça" }).getAttribute("aria-pressed")) === "true", "o tipo tocado fica marcado");
+    ok((await p.getByRole("button", { name: "Por dentro da peça" }).getAttribute("aria-pressed")) === "false", "o tipo marcado, tocado, não fica desmarcado");
+    await p.getByRole("button", { name: "Por dentro da peça" }).click();
+    ok((await p.getByRole("button", { name: "Por dentro da peça" }).getAttribute("aria-pressed")) === "true", "o tipo tocado de novo não fica marcado");
     // personagens: o quadro só com o desenho, o nome na ficha
     ok((await nomeNaFicha(p)) === "Maleta do estagiário", "a ficha mostra o personagem atual");
     await p.getByRole("button", { name: "Grifo", exact: true }).click();

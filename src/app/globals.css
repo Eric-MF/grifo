@@ -317,6 +317,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
 ::selection { background: color-mix(in srgb, var(--accent) 45%, transparent); }
 /* leitura em voz alta no leitor de leis: o trecho que a voz está dizendo (CSS Custom Highlight; ver useOuvir.ts) */
 ::highlight(grifo-fala) { background-color: color-mix(in srgb, var(--primary) 24%, transparent); }
+/* o treino lendo a questão em voz alta (responder falando): a parte que está sendo lida, com o trecho no ::highlight acima */
+[data-questao] [data-lendo] { border-radius: 6px; background-color: color-mix(in srgb, var(--primary) 7%, transparent); box-shadow: 0 0 0 0.3rem color-mix(in srgb, var(--primary) 7%, transparent); }
+[data-questao] button[data-lendo], [data-questao] li[data-lendo] { outline: 2px solid color-mix(in srgb, var(--primary) 70%, transparent); outline-offset: 2px; }
+/* a barra do microfone do treino fica presa embaixo: a página ganha o espaço dela, para nada ficar escondido atrás */
+html[data-dock-voz] body { padding-bottom: calc(var(--dock-voz, 0px) + 16px); }
 
 .container { width: min(100% - 2rem, var(--maxw)); margin-inline: auto; }
 .section { padding-block: calc(var(--space) * 5); }

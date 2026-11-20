@@ -8,7 +8,7 @@ process.chdir(join(import.meta.dirname, "..", ".."));
 const PORTA = process.env.E2E_PORT ?? "3101";
 const BASE = `http://127.0.0.1:${PORTA}`;
 // poderes e fim-de-jogo usam window.__flap (?debug=1), que só existe fora de produção: rodam contra next dev
-const TESTES = ["leis", "provas", "quiz-categorias", "treino-recorde", "treino-voz", "tela-acesa", "menu-navegacao", "mobile", "estatisticas"];
+const TESTES = ["leis", "provas", "quiz-categorias", "treino-recorde", "treino-voz", "fone-bluetooth", "ouvir-comandos", "gestos-voz", "tela-acesa", "menu-navegacao", "mobile", "estatisticas"];
 
 const servidor = spawn("npx", ["--yes", "serve", process.env.E2E_OUT ?? "out", "-l", `tcp://127.0.0.1:${PORTA}`], { stdio: "ignore", detached: true });
 try {

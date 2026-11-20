@@ -292,34 +292,74 @@
 .avisoRecorde:empty { display: none; }
 .avisoRecorde :global(.badge) { margin: 0; font-size: 0.85rem; }
 
-/* responder falando: a linha do microfone acima da questão (RespostaFalada.tsx) */
-.linhaVoz {
-  display: flex; align-items: center; gap: 0.6rem; margin: 0.2rem 0 0.7rem; padding: 0.45rem 0.5rem 0.45rem 0.65rem; border-radius: 14px;
-  border: 1px solid color-mix(in srgb, var(--primary) 30%, var(--border)); background: color-mix(in srgb, var(--primary) 7%, var(--surface));
-  font-size: 0.9rem;
+/* responder falando: a barra do microfone, presa embaixo da tela como a do Ouvir (RespostaFalada.tsx): sempre à vista,
+   também com a questão rolada. A página ganha embaixo o espaço dela (globals.css, --dock-voz). */
+.barraVoz {
+  position: fixed; z-index: 45; left: 6px; right: 6px; bottom: calc(8px + env(safe-area-inset-bottom));
+  display: grid; gap: 0.1rem; padding: 0.4rem 0.45rem 0.25rem; border-radius: 18px; font-size: 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, var(--border)); background: color-mix(in srgb, var(--surface) 96%, transparent);
+  color: var(--text); box-shadow: 0 10px 30px rgb(0 0 0 / 0.18); backdrop-filter: blur(8px);
 }
-.linhaVoz p { margin: 0; flex: 1; min-width: 0; overflow-wrap: anywhere; }
-.linhaVoz q { font-style: italic; }
-.linhaVoz svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.pontoVoz { flex: none; width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center; color: var(--muted); background: var(--surface-2); }
-/* ouvindo: o microfone em vermelho, pulsando devagar */
-.linhaVoz[data-estado="ouvindo"] .pontoVoz { color: #fff; background: var(--bad); animation: pulsoVoz 1.6s ease-in-out infinite; }
-.linhaVoz[data-estado="problema"] { border-color: color-mix(in srgb, var(--bad) 45%, var(--border)); background: color-mix(in srgb, var(--bad) 7%, var(--surface)); }
-.linhaVoz[data-entendeu="1"] p { color: color-mix(in srgb, var(--ok) 75%, var(--text)); font-weight: 600; }
+@media (min-width: 641px) { .barraVoz { left: 50%; right: auto; width: min(46rem, calc(100vw - 32px)); transform: translateX(-50%); } }
+/* digitando no celular (com o teclado aberto), a barra sai da frente do campo */
+:global(body[data-digitando]) .barraVoz { display: none; }
+.topoVoz { display: flex; align-items: center; gap: 0.4rem; min-width: 0; }
+.textoVoz {
+  flex: 1 1 0; min-width: 0; padding: 0.2rem 0.3rem; border: 0; border-radius: 10px; background: none; color: inherit;
+  font: inherit; line-height: 1.35; text-align: left; overflow-wrap: anywhere; cursor: pointer;
+}
+.textoVoz:hover { background: color-mix(in srgb, var(--text) 5%, transparent); }
+.textoVoz > span { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.barraVoz q { font-style: italic; }
+.barraVoz svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.barraVoz .iconeCheio { fill: currentColor; stroke: none; }
+.pontoVoz {
+  flex: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; display: grid; place-items: center; border: 0; cursor: pointer;
+  color: var(--muted); background: var(--surface-2); --anel: 2.6rem;
+}
+.pontoVoz:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+/* ouvindo: o microfone em vermelho, com o anel do som em volta */
+.barraVoz[data-estado="ouvindo"] .pontoVoz { color: #fff; background: var(--bad); }
+.barraVoz[data-estado="lendo"] .pontoVoz { color: var(--primary); background: color-mix(in srgb, var(--primary) 14%, var(--surface)); }
+.barraVoz[data-estado="problema"] { border-color: color-mix(in srgb, var(--bad) 45%, var(--border)); background: color-mix(in srgb, var(--bad) 7%, var(--surface)); }
+.barraVoz[data-entendeu="1"] .textoVoz { color: color-mix(in srgb, var(--ok) 75%, var(--text)); font-weight: 600; }
+.depoisVoz { font-weight: 400; color: var(--muted); }
 .desligarVoz {
   flex: none; width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--border);
   background: var(--surface); color: var(--muted); cursor: pointer;
 }
 .desligarVoz:hover { color: var(--text); }
 .desligarVoz:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
-@keyframes pulsoVoz { 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--bad) 22%, transparent); } }
-@media (prefers-reduced-motion: reduce) { .linhaVoz[data-estado="ouvindo"] .pontoVoz { animation: none; } }
-/* no modo foco, a linha ocupa a largura toda, abaixo do resto do topo */
-:global(body[data-foco]) .cabecalho .linhaVoz { order: 7; flex-basis: 100%; margin: 0.2rem 0 0; }
-@media (max-width: 760px) { .cabecalho .linhaVoz { order: 6; flex: 1 1 100%; } }
-.linhaVoz .depoisVoz { font-weight: 400; color: var(--muted); }
 /* "Ouvir as questões", dentro de "Responder falando" */
 .opcaoVoz { display: grid; gap: 0.6rem; }
 .opcaoDentro { margin-left: 1.75rem; }
-/* lendo a questão: o microfone fica cinza (só ouve "parar", "repetir") */
-.linhaVoz[data-estado="lendo"] .pontoVoz { color: var(--primary); background: color-mix(in srgb, var(--primary) 14%, var(--surface)); }
+/* os controles da leitura: a frase anterior, pausar ou continuar, a seguinte, a voz e (respondida) a próxima questão */
+.controlesLeitura { display: flex; align-items: center; justify-content: center; gap: 0.2rem; }
+.controlesLeitura > button {
+  flex: 1 1 0; min-width: 0; max-width: 6rem; min-height: 48px; padding: 0.15rem 0; display: grid; justify-items: center; align-content: center; gap: 0.1rem;
+  border: 0; border-radius: 14px; background: none; color: var(--text); font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.controlesLeitura > button:hover:not(:disabled) { background: color-mix(in srgb, var(--text) 7%, transparent); }
+.controlesLeitura > button:active { transform: scale(0.96); }
+.controlesLeitura > button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.controlesLeitura > .tocarLeitura {
+  flex: 0 0 auto; width: 52px; height: 52px; min-height: 52px; margin: 0 0.2rem; border-radius: 50%; background: var(--primary); color: var(--primary-ink, #fff);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--primary) 40%, transparent);
+}
+.controlesLeitura > .tocarLeitura:hover:not(:disabled) { background: color-mix(in srgb, var(--primary) 86%, #000); }
+.tocarLeitura svg { width: 24px; height: 24px; }
+.velocidadeLeitura > span:first-child { font-size: 0.85rem; font-weight: 750; line-height: 20px; font-variant-numeric: tabular-nums; }
+.controlesLeitura > .proximaVoz { color: var(--primary); }
+.acordarVoz { box-shadow: 0 0 0 1px var(--primary); color: var(--primary); background: var(--surface); animation: pulsoAcordar 2.4s ease-in-out infinite; }
+@keyframes pulsoAcordar { 50% { box-shadow: 0 0 0 1px var(--primary), 0 0 0 5px color-mix(in srgb, var(--primary) 18%, transparent); } }
+@media (prefers-reduced-motion: reduce) { .acordarVoz { animation: none; } }
+/* os ajustes da voz e do microfone: a mesma janela da questão anterior, com as cores do site no lugar das do leitor */
+.ajustesVoz {
+  width: min(40rem, calc(100vw - 1.5rem)); max-height: calc(100dvh - 2rem); padding: 0; border: 1px solid var(--border); border-radius: 18px;
+  background: var(--bg); color: var(--text); box-shadow: 0 24px 60px rgb(0 0 0 / 0.35); overflow: auto; overscroll-behavior: contain;
+  --leitor-bg: var(--bg); --leitor-fg: var(--text); --leitor-muted: var(--muted); --leitor-borda: var(--border); --leitor-painel: var(--surface);
+}
+.ajustesVoz::backdrop { background: rgb(3 10 24 / 0.55); backdrop-filter: blur(2px); }
+.ajustesVoz[open] { animation: abrirJanela 0.22s ease-out; }
+@media (prefers-reduced-motion: reduce) { .ajustesVoz[open] { animation: none; } }
+

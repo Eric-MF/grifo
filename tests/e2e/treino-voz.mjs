@@ -1,8 +1,10 @@
 // Responder falando no treino: a questão é lida em voz alta (o caso, a pergunta e as alternativas), a resposta dita
-// durante a leitura não vale (pode ser o eco dela) e "parar", "repetir" e "ler as alternativas" mandam na leitura; a
-// letra e o nome da peça respondem as alternativas, a fala preenche a peça e o fundamento, "responder" envia, "próxima"
-// segue e "desligar o microfone" desliga; a tela fica acesa enquanto o microfone ouve. O reconhecimento de fala, a voz e
-// a trava da tela são falsos. node tests/e2e/treino-voz.mjs [BASE]
+// durante a leitura não vale (pode ser o eco dela) e os comandos do Ouvir mandam na leitura ("pausa" no meio da frase,
+// "continua", "volta", "avança", "repete", "mais rápido"), assim como os botões dela e "ler a questão" e "ler as
+// alternativas"; a letra e o nome da peça respondem as alternativas, a fala preenche a peça e o fundamento, "responder"
+// envia, "próxima" segue e "desligar o microfone" desliga; os ajustes da voz e do microfone abrem numa janela; a tela
+// fica acesa enquanto o microfone ouve. O reconhecimento de fala, a voz e a trava da tela são falsos.
+// node tests/e2e/treino-voz.mjs [BASE]
 import { chromium } from "playwright";
 
 const BASE = process.argv[2] ?? "http://localhost:3000";
@@ -154,7 +156,8 @@ const esperarLeitura = async () => {
     if (quieta) return;
   }
 };
-const linha = () => p.locator("[class*=linhaVoz]").textContent();
+// o texto da barra do microfone (sem os botões da leitura e dos ajustes)
+const linha = () => p.locator("[data-texto-voz]").textContent();
 const esperarOutra = (id) =>
   p.waitForFunction(
     (id) => {
@@ -217,19 +220,22 @@ await esperarOutra(q.id).catch(() => checar(false, "depois do acerto dito, a pr�
 k = (await ditos()).length;
 checar(await esperarDito(/^Letra á:/, k), "a questão que veio sozinha não foi lida");
 
-// 3. lendo: a resposta dita não vale (pode ser o eco), "parar" para; "repetir" e "ler as alternativas" leem de novo; o
-// nome da peça também responde
+// 3. lendo: a resposta dita não vale (pode ser o eco), "parar" pausa; "ler as alternativas" e "ler a questão" leem de
+// novo; pausada, o nome da peça responde
 await p.evaluate(() => (window.__fala.ms = 8));
 q = await questao();
 await p.waitForTimeout(300);
 checar(await p.evaluate(() => !!window.__fala.atual), "a questão nova não começou a ser lida");
+// a leitura recomeça devagar, do caso (a da questão que veio sozinha, ligeira, já pode estar no fim)
+await falar("ler a questão");
+await p.waitForTimeout(300);
 await falar(q.textos[q.certa]);
 await p.waitForTimeout(200);
 checar((await p.getByRole("button", { name: "Próxima pergunta" }).count()) === 0, "a resposta dita durante a leitura valeu (pode ser o eco dela)");
 await falar("parar");
 await p.waitForTimeout(150);
 checar(await p.evaluate(() => !window.__fala.atual && !window.__fala.fila.length), "“parar” não parou a leitura");
-checar(/Leitura parada/.test(await linha()), `“parar” não diz que parou: ${await linha()}`);
+checar(/Leitura pausada/.test(await linha()), `“parar” não diz que pausou: ${await linha()}`);
 // o primeiro trecho dito depois do comando (o que está sendo dito agora, ou o primeiro que acabou depois do dito número k)
 const primeiroDepois = (k) =>
   p
@@ -239,18 +245,70 @@ let k3 = (await ditos()).length;
 await falar("ler as alternativas");
 const alt3 = await primeiroDepois(k3);
 checar(/^Letra á:/.test(alt3), `“ler as alternativas” não começou pela letra A: ${alt3}`);
+// a mesma frase de novo logo em seguida é a repetida do Android (src/lib/fala/escuta.ts): uma pessoa leva mais que isso
+await p.waitForTimeout(700);
 await falar("parar");
 k3 = (await ditos()).length;
-await falar("repetir");
+await p.waitForTimeout(700);
+await falar("ler a questão");
 const rel3 = await primeiroDepois(k3);
-checar(!/^Letra/.test(rel3), `“repetir” não leu a questão desde o caso: ${rel3}`);
-await falar("parar");
+checar(!/^Letra/.test(rel3), `“ler a questão” não leu a questão desde o caso: ${rel3}`);
+
+// 3b. os comandos do Ouvir: "pausa" no meio da frase (com o eco da leitura junto) pausa; "continua" segue dali; "repete"
+// e "volta" voltam ao trecho; "mais rápido" acelera (e fica gravado, como no Ouvir); os botões da linha também
+const lendoAgora = () => p.evaluate(() => window.__fala.atual?.text ?? "");
+await p.waitForFunction(() => !!window.__fala.atual, null, { timeout: 5000 });
+const trecho = await lendoAgora();
+await falar(`${trecho.split(" ").slice(0, 4).join(" ")} pausa`, false);
+await p.waitForTimeout(150);
+checar(await p.evaluate(() => !window.__fala.atual && !window.__fala.fila.length), "“pausa” no meio da frase (com o eco junto) não pausou a leitura já");
+await falar(`${trecho.split(" ").slice(0, 4).join(" ")} pausa`);
+await p.waitForTimeout(150);
+checar(/Leitura pausada/.test(await linha()), `“pausa” no meio da frase não diz que pausou: ${await linha()}`);
+await falar("continua");
+await p.waitForFunction(() => !!window.__fala.atual, null, { timeout: 3000 }).catch(() => {});
+checar((await lendoAgora()) === trecho, `“continua” não seguiu do trecho em que parou: ${await lendoAgora()} (era ${trecho})`);
+await falar("mais rápido");
+await p.waitForTimeout(200);
+const vel = await p.evaluate(() => JSON.parse(localStorage.getItem("grifo:leitor:ouvir") ?? "{}").velocidade);
+checar(vel === 1.15, `“mais rápido” não acelerou a voz (gravada: ${vel})`);
+checar(await p.evaluate(() => window.__fala.atual?.rate === 1.15), "“mais rápido” não mudou a velocidade do trecho que está sendo lido");
+checar(/1,15×/.test((await p.locator("[class*=velocidadeLeitura]").textContent()) ?? ""), "o botão da velocidade não mostra a velocidade nova");
+await falar("mais devagar");
+await p.waitForTimeout(100);
+// os botões: pausar e continuar
+// (o toque espera um instante: dois toques seguidos são outro gesto, src/lib/gestos.ts)
+await p.getByRole("button", { name: "Pausar a leitura" }).click();
+await p.waitForTimeout(450);
+checar(await p.evaluate(() => !window.__fala.atual), "o botão de pausar não pausou a leitura");
+checar(/Leitura pausada/.test(await linha()), `pausada pelo botão, a linha não diz: ${await linha()}`);
+await p.getByRole("button", { name: "Continuar a leitura" }).click();
+await p.waitForTimeout(450);
+checar(await p.evaluate(() => !!window.__fala.atual), "o botão de continuar não continuou a leitura");
+await falar("pausa");
+await p.waitForTimeout(100);
+// os ajustes da voz e do microfone
+await p.getByRole("button", { name: "Ajustes da voz e do microfone" }).click();
+const janelaVoz = p.getByRole("dialog", { name: /Voz e microfone/ });
+await janelaVoz.waitFor({ timeout: 3000 }).catch(() => checar(false, "os ajustes da voz e do microfone não abriram"));
+const textoJanela = (await janelaVoz.textContent().catch(() => "")) ?? "";
+checar(/Enquanto a voz lê, o microfone/.test(textoJanela) && /O que dizer/.test(textoJanela) && /Velocidade/.test(textoJanela), `os ajustes da voz não têm o microfone, a velocidade e o que dizer: ${textoJanela.slice(0, 200)}`);
+await p.keyboard.press("Escape");
+await p.waitForTimeout(150);
+checar((await janelaVoz.count()) === 0, "os ajustes da voz não fecharam no Esc");
 await p.evaluate(() => (window.__fala.ms = 0.3));
 await falar(q.textos[q.certa]);
 await esperarOutra(q.id).catch(() => checar(false, `o nome da peça dito (${q.textos[q.certa]}) não deu acerto e a próxima`));
 
-// 4. o erro: a voz diz a peça certa e a errada; 2 s sem nada dito, lê o artigo certo e o errado, e segue sozinha
+// 4. o erro: a voz diz a peça certa e a errada; 2 s sem nada dito, lê o artigo certo e o errado, e segue sozinha. Uma em
+// cada cinco questões de peça é pronta (as objetivas sobre a peça cabível, sem artigo para ler): essas são respondidas certo
 q = await questao();
+for (let n = 0; q.formato !== "peca" && n < 8; n++) {
+  await esperarLeitura();
+  await falar(`letra ${"abcd"[q.certa]}`);
+  await esperarOutra(q.id).catch(() => {});
+  q = await questao();
+}
 await esperarLeitura();
 k = (await ditos()).length;
 await falar(`letra ${"abcd"[(q.certa + 1) % q.textos.length]}`);
@@ -279,7 +337,7 @@ checar(!(await ditos()).slice(k).some((d) => /^O artigo certo/.test(d)), "com �
 await esperarLeitura();
 await falar("desligar o microfone");
 await p.waitForTimeout(200);
-checar((await p.locator("[class*=linhaVoz]").count()) === 0, "a linha do microfone ficou depois de desligar");
+checar((await p.locator("[data-barra-voz]").count()) === 0, "a linha do microfone ficou depois de desligar");
 checar(!(await p.getByRole("checkbox", { name: /Responder falando/ }).isChecked()), "desligar pela voz não desmarcou a opção");
 checar((await p.evaluate(() => window.__tela.soltas)) >= 1, "desligado o microfone, a tela não foi solta");
 checar((await falar("letra a")) === 0, "desligado, o microfone continuou ouvindo");
@@ -288,6 +346,8 @@ checar((await falar("letra a")) === 0, "desligado, o microfone continuou ouvindo
 await p.getByRole("button", { name: /Encerrar e ver o resultado/ }).click();
 await p.getByRole("button", { name: "Mudar nível ou quantidade" }).click();
 await p.getByRole("button", { name: "Eu escolho" }).click();
+// por padrão vêm todos os tipos: aqui, só a peça e o fundamento (as de digitar a peça)
+for (const tipo of ["Por dentro da peça", "Questões discursivas", "Objetivas da 1ª fase"]) await p.getByRole("group", { name: "Tipos de pergunta" }).getByLabel(tipo).uncheck();
 await p.getByRole("button", { name: /^Médio/ }).click();
 await p.getByRole("checkbox", { name: /Responder falando/ }).check();
 await p.getByRole("button", { name: "Começar o modo infinito" }).click();
@@ -303,6 +363,12 @@ checar(/PeçaMemoriais/.test(await textoDita()), `“Memorias” não virou Memo
 await falar("artigo 593 inciso 3 alínea d do CPP");
 await p.waitForTimeout(100);
 checar(/Art\. 593, inciso III, alínea d — Código de Processo Penal/.test(await textoDita()) && /Memoriais/.test(await textoDita()), `o artigo dito não entrou (ou apagou a peça): ${await textoDita()}`);
+// o artigo partido numa pausa: "artigo 386" e, depois, "do CPP", completa o mesmo artigo
+await falar("artigo 386");
+await p.waitForTimeout(100);
+await falar("do CPP");
+await p.waitForTimeout(100);
+checar(/Art\. 386 — Código de Processo Penal/.test(await textoDita()) && /Memoriais/.test(await textoDita()), `“do CPP”, dito depois do artigo, não completou o artigo: ${await textoDita()}`);
 await falar("hum deixa eu ver");
 await p.waitForTimeout(100);
 checar(/Memoriais/.test(await textoDita()) && /Não entendi/.test(await linha()), "a frase sem peça nem artigo mudou a resposta (ou não disse que não entendeu)");
@@ -321,7 +387,10 @@ checar(await esperarDito(/^(Correto!|Errado\. A peça certa é|A peça está cer
 checar(!(await ditos()).slice(k).some((d) => /próxima/i.test(d)), "a correção dita fala “próxima” (o eco seguiria sozinho)");
 await p.screenshot({ path: process.env.CAPTURAS ? `${process.env.CAPTURAS}/treino-voz.png` : "/dev/null" }).catch(() => {});
 await esperarOutra(q.id).catch(() => checar(false, "depois da correção da peça, a próxima questão não veio sozinha"));
-checar((await p.locator("[data-resposta-dita]").count()) === 1, "a próxima questão de digitar não abriu com a resposta dita");
+// a seguinte pode ser uma pronta de alternativas (as objetivas sobre a peça cabível); a de digitar abre com a resposta dita
+await p.locator("[data-resposta-dita], [data-alt]").first().waitFor({ timeout: 5000 }).catch(() => {});
+const deDigitar = (await p.locator("[data-alt]").count()) === 0;
+checar(!deDigitar || (await p.locator("[data-resposta-dita]").count()) === 1, "a próxima questão de digitar não abriu com a resposta dita");
 
 // 8. a pronúncia dos nomes: nenhum dos que a escrita engana foi dito como está escrito
 const enganam = ["Medeia", "Galateia", "Reia", "Eneias", "Ájax", "Pólux", "Polixena", "Apolo", "Hefesto", "Minerva", "Laerte", "Diomedes", "Ganimedes"];
@@ -341,6 +410,7 @@ await c.evaluate(() => {
   localStorage.setItem("grifo:leitor:ouvir", JSON.stringify({ microfone: "padrao", sensibilidade: "normal" }));
   localStorage.setItem("grifo:treino:voz", "true");
   localStorage.setItem("grifo:treino:automatico:ligado", "false");
+  localStorage.setItem("grifo:quiz:categorias", JSON.stringify(["peca"]));
 });
 await c.reload({ waitUntil: "networkidle" });
 await c.getByRole("button", { name: /^Médio/ }).tap();
@@ -349,7 +419,7 @@ await c.locator("[data-resposta-dita]").waitFor();
 await c.waitForTimeout(600);
 checar(await c.evaluate(() => window.__fala.ditos.length > 0 || !!window.__fala.atual), "no celular, a questão não foi lida");
 checar(!(await c.evaluate(() => document.activeElement?.matches("input, textarea"))), "no celular, com a voz ligada, o teclado abriu sozinho");
-checar((await c.locator("[class*=linhaVoz]").count()) === 1, "no celular, a linha do microfone não aparece");
+checar((await c.locator("[data-barra-voz]").count()) === 1, "no celular, a linha do microfone não aparece");
 const larga = await c.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
 checar(!larga, "no celular, a página rola para o lado com a resposta dita");
 if (process.env.CAPTURAS) await c.screenshot({ path: `${process.env.CAPTURAS}/treino-voz-celular.png` });
@@ -361,4 +431,4 @@ if (falhas.length) {
   console.error(`treino-voz: ${falhas.length} falha(s)\n- ${falhas.join("\n- ")}`);
   process.exit(1);
 }
-console.log("treino-voz: ok (leitura, eco, parar, repetir, acerto que segue sozinho, erro com pausa e artigos, resposta dita única, próxima, desligar, pronúncia, tela acesa e celular)");
+console.log("treino-voz: ok (leitura, eco, comandos do Ouvir no meio da frase, botões da leitura, ajustes da voz, acerto que segue sozinho, erro com pausa e artigos, resposta dita única, próxima, desligar, pronúncia, tela acesa e celular)");

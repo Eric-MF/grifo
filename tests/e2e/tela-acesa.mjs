@@ -138,7 +138,7 @@ const tela = (p) => p.evaluate(() => ({ pedidos: window.__tela.pedidos, soltas: 
   checar(t.valendo, `recusada a trava, o toque na tela não a pediu de novo: ${JSON.stringify(t)}`);
   // pausada a leitura, a tela pode apagar
   await p.locator("[data-barra-ouvir]").getByRole("button", { name: "Pausar" }).click();
-  await p.waitForTimeout(300);
+  await p.waitForTimeout(600);
   t = await tela(p);
   checar(!t.valendo, `pausada a leitura, a tela continuou presa acesa: ${JSON.stringify(t)}`);
   await ctx.close();

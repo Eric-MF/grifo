@@ -446,7 +446,7 @@ function RevisarAlternativas({ itens, abertaDeInicio = false }: { itens: Alterna
   const [aberta, setAberta] = useState(abertaDeInicio);
   const id = useId();
   return (
-    <div className={styles.revisao} data-aberta={aberta ? "1" : undefined}>
+    <div className={styles.revisao} data-aberta={aberta ? "1" : undefined} data-ler="alternativas">
       <button type="button" className={styles.revisaoBotao} aria-expanded={aberta} aria-controls={id} onClick={() => setAberta((a) => !a)}>
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M9 6l6 6-6 6" />
@@ -456,7 +456,7 @@ function RevisarAlternativas({ itens, abertaDeInicio = false }: { itens: Alterna
       <div className={styles.revisaoCorpo} id={id} hidden={!aberta}>
         <ol className={styles.revisaoLista}>
           {itens.map((a) => (
-            <li key={a.letra} className={styles.revisaoItem} data-correta={a.correta ? "1" : undefined} data-errada={a.escolhida && !a.correta ? "1" : undefined}>
+            <li key={a.letra} className={styles.revisaoItem} data-alt-vista data-correta={a.correta ? "1" : undefined} data-errada={a.escolhida && !a.correta ? "1" : undefined}>
               <span className={styles.altLetra}>{a.letra}</span>
               <span className={styles.revisaoTexto}>{a.texto}</span>
               {(a.correta || a.escolhida) && (
@@ -547,7 +547,10 @@ function Caso({
       )}
       {/* copiarFora: no celular, o copiar fica no topo da questão (o do cartão some) */}
       <div className={styles.enunciado} data-copiar-fora={copiarFora ? "" : undefined} data-desliza={aoDeslizar ? "" : undefined} {...deslizarCaso(aoDeslizar)}>
-        <p className={styles.caso}>{pergunta.caso}</p>
+        {/* data-ler: as partes que a voz lê no treino (o trecho dito é destacado nelas) */}
+        <p className={styles.caso} data-ler="caso">
+          {pergunta.caso}
+        </p>
         <CopiarQuestao texto={copia} />
       </div>
       {/* a tese traz só a introdução curta; o caso inteiro da prova fica a um toque, para quem quiser os detalhes */}
@@ -576,6 +579,7 @@ function Resposta({ pergunta, nivel, res, anunciar = false, children }: { pergun
   return (
     <div
       className={`${styles.feedback} ${res.acertou ? styles.fbOk : styles.fbErro}`}
+      data-ler="correcao"
       aria-live={anunciar ? "assertive" : undefined}
       onClickCapture={(e) => {
         if ((e.target as Element).closest("a.citacao")) atualizarConquistas(registrarArtigo);
@@ -846,7 +850,9 @@ export function PerguntaCorpo({
           <Caso pergunta={pergunta} copia={copia(res)} copiarFora={typeof cabecalho === "function"} aoDeslizar={aoDeslizarCaso} />
         </div>
         <div className={styles.ladoResposta} data-resposta>
-          <p className={styles.comando}>{comando}</p>
+          <p className={styles.comando} data-ler="comando">
+            {comando}
+          </p>
           {!res && pergunta.formato === "peca" && <CorpoPeca pergunta={pergunta} nivel={nivel} alts={alts} concluir={concluir} bloqueada={bloqueada} vozRef={corpoVoz} falando={!!vozRef} />}
           {!res && pergunta.formato === "tese" && <CorpoTese pergunta={pergunta} nivel={nivel} facil={facil} concluir={concluir} bloqueada={bloqueada} vozRef={corpoVoz} falando={!!vozRef} />}
           {!res && pergunta.formato === "objetiva" && <CorpoObjetiva pergunta={pergunta} concluir={concluir} bloqueada={bloqueada} />}

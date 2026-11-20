@@ -164,7 +164,7 @@ export interface GameOptions {
   personagem?: string;
   /** tipos de pergunta que entram no quiz do jogo */
   categorias?: Categoria[];
-  /** modo automático das perguntas (o mesmo do treino): os tipos e os níveis sobem conforme o jogador acerta */
+  /** modo automático das perguntas (o mesmo do treino): os tipos e os níveis sobem conforme o jogador acerta (padrão: ligado) */
   automatico?: boolean;
   /** níveis das melhorias de poder compradas, por `"<poder>:<trilha>"` (vêm do progresso) */
   melhorias?: Record<string, number>;

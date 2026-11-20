@@ -113,7 +113,9 @@ function sortearDoAcervo(est: Estado, c: Categoria): Pergunta {
 export function sortearPergunta({ categorias = CATEGORIAS_PADRAO }: { categorias?: Categoria[] } = {}): Pergunta {
   const est = ler();
   const disponiveis = categorias.filter((c) => tamanhoAcervo(c) > 0);
-  const escolhidas = disponiveis.length ? disponiveis : CATEGORIAS_PADRAO;
+  // "Peça e fundamento" sempre tem perguntas (os geradores)
+  const sempre: Categoria[] = ["peca"];
+  const escolhidas = disponiveis.length ? disponiveis : sempre;
   const pesos = escolhidas.map((c) => {
     const s = est.categorias?.[c] ?? { e: 0, a: 0 };
     return (1 + Math.min(2, s.e * 0.3)) / (1 + Math.min(1, s.a * 0.05));

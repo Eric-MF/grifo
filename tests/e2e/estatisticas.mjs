@@ -347,7 +347,9 @@ await r.getByRole("dialog").waitFor({ timeout: 10_000 }).catch(() => {});
 checar(await r.getByRole("dialog").isVisible(), "/provas/?ver=45 não abriu o visualizador");
 checar(/XLV Exame/.test(await r.getByRole("dialog").innerText()), "o visualizador aberto não é o do XLV");
 await r.getByRole("dialog").getByRole("button", { name: "Fechar" }).click();
-checar(!(await r.evaluate(() => location.search.includes("ver="))), "fechar o visualizador não tirou o ?ver= do endereço");
+// a janela fecha com uma animação, e o endereço muda no fim dela
+const semVer = await r.waitForFunction(() => !location.search.includes("ver="), null, { timeout: 3000 }).then(() => true, () => false);
+checar(semVer, "fechar o visualizador não tirou o ?ver= do endereço");
 await r.goto(`${BASE}/provas/todos/?tipo=gabarito&versao=original&busca=prescri%C3%A7%C3%A3o`, { waitUntil: "networkidle" });
 await r.waitForFunction(() => document.querySelector("input[type=search]")?.value, null, { timeout: 10_000 }).catch(() => {});
 checar((await r.getByRole("searchbox").first().inputValue()) === "prescrição", "?busca= não preencheu a busca dos documentos");

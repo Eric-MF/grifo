@@ -3,10 +3,13 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { SITE } from "@/config/site";
-import { type CSSProperties, useEffect, useId, useRef, useState } from "react";
+import { type CSSProperties, useCallback, useEffect, useId, useRef, useState } from "react";
 import { lerJSON, gravarJSON } from "@/lib/storage";
-import { palavrasDe } from "@/lib/fala/comandos-voz";
-import { Escuta, escutaDisponivel, type EstadoEscuta, type Sensibilidade } from "@/lib/fala/escuta";
+import { interpretarComando, palavrasDe, pareceComando } from "@/lib/fala/comandos-voz";
+import { destacarFaixa, faixaDoTexto } from "@/lib/fala/destaque";
+import { Escuta, escutaDisponivel, ouveMicrofoneEscolhido, type EstadoEscuta } from "@/lib/fala/escuta";
+import type { EstadoNarrador } from "@/lib/fala/narrador";
+import { gravarPrefsDaVoz, lerPrefsDaVoz, outraVelocidade, outroVolume, PREFS_DA_VOZ, VELOCIDADE_MAX, VELOCIDADE_MIN, VOLUME_MIN, type PrefsDaVoz } from "@/lib/fala/prefs-voz";
 import { useTelaAcesa } from "@/lib/tela-acesa";
 import {
   ACERTOS_PARA_SUBIR,
@@ -46,11 +49,12 @@ import { progressoDoStrike, registrarStrike, STRIKE_ZERO, tamanhoDoStrike, type 
 import type { Categoria, Nivel, Pergunta } from "@/quiz/types";
 import type { Correcao } from "@/quiz/verificar";
 import { artigosParaLer } from "@/quiz/artigosFalados";
-import { correcaoFalada, desbloquearVoz, leituraDisponivel, Locutor, textosDaQuestao, type LeituraDaQuestao, type VozDoOuvir } from "@/quiz/locutor";
-import { comandoDeLeitura, dicaDaVoz, interpretarResposta, pareceEco, type ContextoVoz } from "@/quiz/voz";
+import { correcaoFalada, desbloquearVoz, leituraDisponivel, Locutor, partesDaQuestao, type LeituraDaQuestao, type TrechoLido } from "@/quiz/locutor";
+import { AJUDA_DO_TREINO, ajusteDaVoz, comandoDaLeitura, dicaDaVoz, interpretarResposta, pareceEco, type AjusteDaVoz, type ComandoDaLeitura, type ContextoVoz } from "@/quiz/voz";
 import { BarrasDoNivel, DURACAO_REVOADA, ItemMenu, MenuFoco, RevoadaStrike, SomDoMenu, XpFoco } from "./MenuFoco";
 import { fmt, ResultadoTreino } from "./ResultadoTreino";
-import { IconeMicrofone, LinhaDaVoz, OpcaoVoz, type Ouvido } from "./RespostaFalada";
+import { fmtVelocidade } from "@/components/leis/ControlesDaVoz";
+import { AjustesDaVoz, BarraDaVoz, IconeMicrofone, nomeDaParte, OpcaoVoz, type AcoesDaBarra, type Ouvido } from "./RespostaFalada";
 import { AvisoRecorde, SeuRecorde } from "./SeuRecorde";
 import { Comemoracao, DURACAO_COMEMORACAO, fraseDoStrike, PlacarStrike } from "./Strike";
 import styles from "./treino.module.css";
@@ -99,8 +103,6 @@ const CHAVE_SONS = "grifo:treino:sons";
 const CHAVE_VOZ = "grifo:treino:voz";
 /** respondendo falando, a questão é lida em voz alta (e a correção, depois da resposta) */
 const CHAVE_VOZ_LER = "grifo:treino:voz:ler";
-/** o microfone e a sensibilidade escolhidos no Ouvir (a leitura em voz alta das leis) valem também aqui */
-const CHAVE_OUVIR = "grifo:leitor:ouvir";
 const CHAVE_VOLUME = "grifo:treino:volume";
 /** o modo foco: o caso ao lado da resposta e a largura do texto (em rem) em cada disposição */
 const CHAVE_FOCO = "grifo:treino:foco";
@@ -116,8 +118,82 @@ const lerPrefsFoco = (g: Partial<PrefsFoco> | null): PrefsFoco => ({
   larguraLado: typeof g?.larguraLado === "number" ? Math.max(LARGURA_MINIMA, g.larguraLado) : PREFS_FOCO.larguraLado,
   larguraColuna: typeof g?.larguraColuna === "number" ? Math.max(LARGURA_MINIMA, g.larguraColuna) : PREFS_FOCO.larguraColuna,
 });
+/** O exemplo dos ajustes da voz. */
+const EXEMPLO_DA_VOZ = "Questão de exemplo. Qual a peça cabível? Letra á: Apelação. Letra bê: Memoriais.";
 /** O aviso de subiu ou desceu de nível aparece e some sozinho. */
 const DURACAO_AVANCO = 3600;
+/** Depois de a pessoa rolar a tela, por quanto tempo a leitura não a rola de volta até o trecho lido. */
+const ROLAGEM_MANUAL_MS = 4000;
+
+/** O locutor da questão (criado na primeira leitura, com a voz, a velocidade e o volume do Ouvir). */
+function criarLocutor(ref: { current: Locutor | null }, aoMudar: (e: EstadoNarrador) => void, prefs: PrefsDaVoz, aoTrecho: (t: TrechoLido | null) => void): Locutor {
+  if (!ref.current) {
+    ref.current = new Locutor(aoMudar, aoTrecho);
+    ref.current.configurar(prefs);
+  }
+  return ref.current;
+}
+
+/** A parte da questão, na tela, que a voz está lendo (o caso, a pergunta, uma alternativa, a correção). */
+function elDaParte(parte: string): HTMLElement | null {
+  const raiz = document.querySelector<HTMLElement>("[data-questao]");
+  if (!raiz) return null;
+  if (!parte.startsWith("alt")) return raiz.querySelector<HTMLElement>(`[data-ler="${parte}"]`);
+  const k = Number(parte.slice(3));
+  const visivel = (el: Element | undefined) => (el instanceof HTMLElement && el.getClientRects().length ? el : null);
+  // respondida, as alternativas saem da tela: as da revisão (abertas) ou o botão que as mostra
+  return visivel(raiz.querySelectorAll("[data-alt]")[k]) ?? visivel(raiz.querySelectorAll("[data-alt-vista]")[k]) ?? raiz.querySelector<HTMLElement>('[data-ler="alternativas"]');
+}
+
+/**
+ * Rola até o trecho ficar à vista: entre o topo (o cabeçalho do site; no modo foco do celular, o menu que flutua no alto)
+ * e a barra do microfone, embaixo. A coluna do caso (no modo foco, com o caso ao lado) rola antes, se for ela que rola.
+ */
+function mostrarNaTela(alvo: Range | null, el: HTMLElement) {
+  const suave = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const retangulo = () => {
+    const r = alvo?.getBoundingClientRect();
+    return r && r.height ? r : el.getBoundingClientRect();
+  };
+  const cabecalho = document.querySelector("header")?.getBoundingClientRect();
+  const focoNoCelular = document.body.hasAttribute("data-foco") && window.innerWidth <= 760;
+  const topo = Math.max(cabecalho && cabecalho.bottom > 0 ? cabecalho.bottom : 0, focoNoCelular ? 64 : 0) + 8;
+  const fundo = (document.querySelector("[data-barra-voz]")?.getBoundingClientRect().top ?? window.innerHeight) - 10;
+  for (let p = el.parentElement; p && p !== document.body; p = p.parentElement) {
+    const oy = getComputedStyle(p).overflowY;
+    if ((oy !== "auto" && oy !== "scroll") || p.scrollHeight <= p.clientHeight + 1) continue;
+    const c = p.getBoundingClientRect();
+    const alto = Math.max(c.top, topo);
+    const baixo = Math.min(c.bottom, fundo);
+    const r = retangulo();
+    const d = r.top < alto ? r.top - alto - 16 : r.bottom > baixo ? Math.min(r.bottom - baixo + 16, r.top - alto - 16) : 0;
+    if (d) p.scrollBy({ top: d, behavior: "instant" });
+    break;
+  }
+  const r = retangulo();
+  const d = r.top < topo ? r.top - topo - 12 : r.bottom > fundo ? Math.min(r.bottom - fundo + 12, r.top - topo - 12) : 0;
+  if (d) window.scrollBy({ top: d, behavior: suave ? "smooth" : "instant" });
+}
+
+/** Destaca o trecho lido (e a parte dele) e o mantém à vista; null tira o destaque. */
+function destacarNaQuestao(t: TrechoLido | null, rolar: boolean) {
+  const antes = document.querySelector<HTMLElement>("[data-questao] [data-lendo]");
+  const el = t ? elDaParte(t.parte) : null;
+  if (antes && antes !== el) antes.removeAttribute("data-lendo");
+  if (!t || !el) return destacarFaixa(null);
+  el.setAttribute("data-lendo", "1");
+  const r = t.faixa ? faixaDoTexto(el, t.faixa.ini, t.faixa.fim) : null;
+  destacarFaixa(r);
+  if (rolar) mostrarNaTela(r, el);
+}
+
+/** Grava a mudança da voz ou do microfone (vale também no Ouvir) e a aplica ao locutor, já no trecho que está sendo lido. */
+function aplicarPrefsVoz(m: Partial<PrefsDaVoz>, ref: { current: PrefsDaVoz }, setPrefs: (p: PrefsDaVoz) => void, locutor: { current: Locutor | null }) {
+  const n = gravarPrefsDaVoz(m);
+  ref.current = n;
+  setPrefs(n);
+  locutor.current?.configurar(n);
+}
 
 /** "Peça e fundamento · Médio": onde o modo automático está. */
 function ondeEsta(e: EstadoAutomatico): string {
@@ -345,8 +421,17 @@ export function Treino() {
   // a leitura em voz alta da questão: com a voz do Ouvir; a última questão lida fica para o "repetir"
   const [lerQuestoes, setLerQuestoes] = useState(true);
   const [podeLer, setPodeLer] = useState(false);
-  const [lendoQuestao, setLendoQuestao] = useState(false);
+  // a leitura da vez: lendo, pausada (continua de onde parou) ou parada
+  const [estadoLeitura, setEstadoLeitura] = useState<EstadoNarrador>("parado");
   const locutor = useRef<Locutor | null>(null);
+  // a voz e o microfone: os mesmos do Ouvir (grifo:leitor:ouvir), mudados nos ajustes da voz (ou por "mais rápido")
+  const [prefsVoz, setPrefsVoz] = useState<PrefsDaVoz>(PREFS_DA_VOZ);
+  const prefsVozRef = useRef(prefsVoz);
+  const [ajustesVoz, setAjustesVoz] = useState(false);
+  const [microfoneEmUso, setMicrofoneEmUso] = useState<string | null | undefined>(undefined);
+  const escutaAtual = useRef<Escuta | null>(null);
+  const estadoEscutaRef = useRef<EstadoEscuta>("desligada");
+  const respondidaRef = useRef(false);
   const leitura = useRef<LeituraDaQuestao | null>(null);
   const [volume, setVolume] = useState(1);
   // a revoada das bolinhas do strike no modo foco, a cada acerto
@@ -451,6 +536,9 @@ export function Treino() {
     setDescer(lerJSON<boolean>(CHAVE_AUTOMATICO_DESCER, true));
     setPularAcertos(lerJSON<boolean>(CHAVE_PULAR_ACERTOS, true));
     setPrefsFoco(lerPrefsFoco(lerJSON<Partial<PrefsFoco> | null>(CHAVE_FOCO, null)));
+    const pv = lerPrefsDaVoz();
+    prefsVozRef.current = pv;
+    setPrefsVoz(pv);
     /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
@@ -464,24 +552,37 @@ export function Treino() {
     if (v && lerQuestoes) desbloquearVoz();
     if (!v) locutor.current?.parar();
     // ligada no meio de uma questão ainda sem resposta: ela é lida
-    if (v && lerQuestoes && podeLer && fase === "pergunta" && !respondida && leitura.current) obterLocutor().ler(textosDaQuestao(leitura.current));
+    if (v && lerQuestoes && podeLer && fase === "pergunta" && !respondida && leitura.current) obterLocutor().ler(partesDaQuestao(leitura.current));
   };
   const mudarLer = (v: boolean) => {
     setLerQuestoes(v);
     gravarJSON(CHAVE_VOZ_LER, v);
     if (v) desbloquearVoz();
     else locutor.current?.parar();
-    if (v && voz && podeFalar && fase === "pergunta" && !respondida && leitura.current) obterLocutor().ler(textosDaQuestao(leitura.current));
+    if (v && voz && podeFalar && fase === "pergunta" && !respondida && leitura.current) obterLocutor().ler(partesDaQuestao(leitura.current));
   };
+  // o trecho que a voz está lendo fica destacado e à vista, menos logo depois de a pessoa rolar a tela (ela foi ler
+  // outra coisa); o toque no texto da barra o mostra de novo
+  const trechoLido = useRef<TrechoLido | null>(null);
+  const rolouEm = useRef(0);
+  const aoTrecho = useCallback((t: TrechoLido | null) => {
+    trechoLido.current = t;
+    destacarNaQuestao(t, Date.now() - rolouEm.current > ROLAGEM_MANUAL_MS);
+  }, []);
   /** O locutor da questão, criado na primeira leitura, com a voz, a velocidade e o volume do Ouvir. */
-  const obterLocutor = () => {
-    if (!locutor.current) {
-      locutor.current = new Locutor(setLendoQuestao);
-      locutor.current.configurar(lerJSON<VozDoOuvir>(CHAVE_OUVIR, {}));
-    }
-    return locutor.current;
-  };
-  useEffect(() => () => locutor.current?.fechar(), []);
+  const obterLocutor = () => criarLocutor(locutor, setEstadoLeitura, prefsVozRef.current, aoTrecho);
+  /** Muda a voz ou o microfone (aqui e no Ouvir); a voz nova vale já, no trecho que está sendo lido. */
+  const mudarPrefsVoz = (m: Partial<PrefsDaVoz>) => aplicarPrefsVoz(m, prefsVozRef, setPrefsVoz, locutor);
+  useEffect(() => {
+    respondidaRef.current = respondida;
+  }, [respondida]);
+  useEffect(
+    () => () => {
+      locutor.current?.fechar();
+      destacarNaQuestao(null, false);
+    },
+    [],
+  );
   // a questão da vez (para o que foi agendado numa questão não valer na seguinte) e a última fala ouvida
   const questaoDaVez = useRef(0);
   const ultimaFala = useRef(0);
@@ -492,7 +593,9 @@ export function Treino() {
   /** A questão que abre é lida (ao chegar sozinha, pelo "próxima" ou pelo botão). */
   const lerQuestao = (l: LeituraDaQuestao) => {
     leitura.current = l;
-    if (lendoEmVoz) obterLocutor().ler(textosDaQuestao(l));
+    // questão nova: o microfone em pausa pelos silêncios (no celular) volta a ouvir
+    escutaAtual.current?.acordar();
+    if (lendoEmVoz) obterLocutor().ler(partesDaQuestao(l));
   };
   /** Segue para a próxima questão, se a pessoa ainda está na mesma (não foi adiante pelo botão ou pela voz). */
   const seguirSozinho = (q: number) => {
@@ -507,83 +610,194 @@ export function Treino() {
     const q = questaoDaVez.current;
     ultimaCorrecao.current = { pergunta: p, correcao: c };
     const loc = obterLocutor();
-    if (c.acertou) return loc.ler([correcaoFalada(p, c)], { aoFim: () => seguirSozinho(q) });
-    loc.ler([correcaoFalada(p, c)], {
+    if (c.acertou) return loc.ler([{ texto: correcaoFalada(p, c), parte: "correcao" }], { aoFim: () => seguirSozinho(q) });
+    loc.ler([{ texto: correcaoFalada(p, c), parte: "correcao" }], {
       aoFim: () => {
         const fim = Date.now();
-        esperaDoErro.current = setTimeout(() => {
+        // os 2 s contam de quando o microfone ouve: o do fone Bluetooth, desligado na leitura, leva um instante para voltar
+        const conferir = () => {
+          esperaDoErro.current = null;
           if (questaoDaVez.current !== q || ultimaFala.current > fim) return;
+          const ouvindo = estadoEscutaRef.current === "ouvindo";
+          if (!ouvindo && estadoEscutaRef.current === "em-espera" && Date.now() - fim < 4000) {
+            esperaDoErro.current = setTimeout(conferir, 250);
+            return;
+          }
+          const desde = ouvindo ? Math.max(fim, escutaAtual.current?.ouvindoDesde ?? 0) : fim;
+          const falta = desde + 2000 - Date.now();
+          if (falta > 30) {
+            esperaDoErro.current = setTimeout(conferir, falta);
+            return;
+          }
           void artigosParaLer(p, c).then((textos) => {
             if (questaoDaVez.current !== q || ultimaFala.current > fim) return;
             if (!textos.length) return seguirSozinho(q);
-            obterLocutor().ler(textos, { aoFim: () => seguirSozinho(q) });
+            obterLocutor().ler(
+              textos.map((texto) => ({ texto, parte: "correcao" })),
+              { aoFim: () => seguirSozinho(q) },
+            );
           });
-        }, 2000);
+        };
+        esperaDoErro.current = setTimeout(conferir, 2000);
       },
     });
   };
   // Uma escuta só, de uma questão para a outra (ligar o microfone a cada questão perderia o começo da fala). A frase
-  // final vai para a questão da vez; a parcial só aparece na linha do microfone.
+  // final vai para a questão da vez; a parcial só aparece na linha do microfone. Com o microfone do fone Bluetooth, ela
+  // fecha enquanto a voz lê (src/lib/fala/vez.ts); trocado o microfone nos ajustes, ela abre de novo.
   useEffect(() => {
     if (!falando) return;
-    const prefs = lerJSON<{ microfone?: string; sensibilidade?: Sensibilidade }>(CHAVE_OUVIR, {});
+    const p = prefsVozRef.current;
     const tratadas = new Set<string>();
-    // "repetir", "ler as alternativas", "ler os artigos" e "parar": a leitura da questão
-    const comandoDaLeitura = (cmd: NonNullable<ReturnType<typeof comandoDeLeitura>>, texto: string) => {
+    // a pessoa começou um comando enquanto a voz lia: a leitura pausou à espera do fim da frase (como no Ouvir)
+    let tentativa: ReturnType<typeof setTimeout> | null = null;
+    const semTentativa = new Set<string>();
+    const encerrarTentativa = (retomar: boolean) => {
+      if (!tentativa) return;
+      clearTimeout(tentativa);
+      tentativa = null;
+      if (retomar) locutor.current?.continuar();
+    };
+    const obter = () => criarLocutor(locutor, setEstadoLeitura, prefsVozRef.current, aoTrecho);
+    const dizer = (texto: string, retorno: string) => setOuvido({ texto, final: true, retorno: { entendeu: true, texto: retorno } });
+    // os comandos da leitura: os do Ouvir (pausa, continua, volta, avança, repete, velocidade, volume) e os do treino
+    const executar = (cmd: ComandoDaLeitura, texto: string) => {
       const loc = locutor.current;
-      if (cmd === "parar") {
-        loc?.parar(true);
-        return setOuvido({ texto, final: true, retorno: { entendeu: true, texto: "Leitura parada." } });
+      switch (cmd) {
+        case "parar":
+          loc?.parar(true);
+          return dizer(texto, "Leitura parada.");
+        case "pausar":
+          loc?.pausar(true);
+          return dizer(texto, "Leitura pausada: responda, ou diga “continua”.");
+        case "continuar":
+          loc?.continuar();
+          return dizer(texto, "Continuando a leitura.");
+        case "repetirTrecho":
+          return dizer(texto, loc?.repetirTrecho() ? "De novo." : "Nada sendo lido: diga “ler a questão”.");
+        case "proximoTrecho":
+          return dizer(texto, loc?.pular(1) ? "Avançando." : "Já é o fim da leitura.");
+        case "trechoAnterior":
+          return dizer(texto, loc?.pular(-1) ? "Voltando." : "Já é o começo da leitura.");
+        case "maisRapido":
+        case "maisDevagar":
+        case "velocidadeNormal": {
+          const v = cmd === "velocidadeNormal" ? 1 : outraVelocidade(prefsVozRef.current.velocidade, cmd === "maisRapido" ? 1 : -1);
+          aplicarPrefsVoz({ velocidade: v }, prefsVozRef, setPrefsVoz, locutor);
+          return dizer(texto, `Velocidade ${fmtVelocidade(v)}.`);
+        }
+        case "maisAlto":
+        case "maisBaixo": {
+          const antes = prefsVozRef.current.volume;
+          const v = outroVolume(antes, cmd === "maisAlto" ? 1 : -1);
+          if (v === antes) return dizer(texto, cmd === "maisAlto" ? "A voz já está no volume máximo: aumente o do aparelho." : "A voz já está no volume mínimo.");
+          aplicarPrefsVoz({ volume: v }, prefsVozRef, setPrefsVoz, locutor);
+          return dizer(texto, `Volume da voz: ${Math.round(v * 100)}%.`);
+        }
+        case "ajuda":
+          obter().ler([AJUDA_DO_TREINO]);
+          return dizer(texto, "Dizendo os comandos.");
+        case "artigos": {
+          const u = ultimaCorrecao.current;
+          if (!u) return dizer(texto, "Responda primeiro: depois da correção, os artigos são lidos.");
+          dizer(texto, "Lendo os artigos.");
+          void artigosParaLer(u.pergunta, u.correcao).then((textos) => {
+            if (!textos.length) return dizer(texto, "Não há artigo do Vade Mecum para ler nesta questão.");
+            obter().ler(textos.map((t) => ({ texto: t, parte: "correcao" })));
+          });
+          return;
+        }
+        case "reler":
+        case "alternativas": {
+          const l = leitura.current;
+          if (!l) return;
+          const lista = partesDaQuestao(l, cmd === "alternativas" ? "alternativas" : "tudo");
+          if (!lista.length) return dizer(texto, "Esta questão não tem alternativas: é de digitar.");
+          obter().ler(lista);
+          return dizer(texto, cmd === "alternativas" ? "Lendo as alternativas." : "Lendo a questão de novo.");
+        }
       }
-      if (cmd === "artigos") {
-        const u = ultimaCorrecao.current;
-        if (!u) return setOuvido({ texto, final: true, retorno: { entendeu: true, texto: "Responda primeiro: depois da correção, os artigos são lidos." } });
-        setOuvido({ texto, final: true, retorno: { entendeu: true, texto: "Lendo os artigos." } });
-        void artigosParaLer(u.pergunta, u.correcao).then((textos) => {
-          if (!textos.length) return setOuvido({ texto, final: true, retorno: { entendeu: true, texto: "Não há artigo do Vade Mecum para ler nesta questão." } });
-          if (!locutor.current) {
-            locutor.current = new Locutor(setLendoQuestao);
-            locutor.current.configurar(lerJSON<VozDoOuvir>(CHAVE_OUVIR, {}));
-          }
-          locutor.current.ler(textos);
-        });
-        return;
+    };
+    // a velocidade, o volume e o tom ditos como no Ouvir ("velocidade máxima", "velocidade 2", "volume 50%")
+    const ajustar = (a: AjusteDaVoz, texto: string) => {
+      const p = prefsVozRef.current;
+      if (a.tipo === "info")
+        return dizer(texto, a.sobre === "velocidade" ? `Velocidade ${fmtVelocidade(p.velocidade)}.` : `Volume da voz: ${Math.round(p.volume * 100)}%.`);
+      if (a.tipo === "tom") {
+        const tom = a.passo ? Math.round(Math.min(1.5, Math.max(0.5, p.tom + a.passo * 0.1)) * 100) / 100 : 1;
+        aplicarPrefsVoz({ tom }, prefsVozRef, setPrefsVoz, locutor);
+        return dizer(texto, a.passo ? `Tom da voz: ${tom.toLocaleString("pt-BR")} (algumas vozes não mudam de tom).` : "Tom normal.");
       }
-      const l = leitura.current;
-      if (!l) return;
-      const lista = textosDaQuestao(l, cmd === "alternativas" ? "alternativas" : "tudo");
-      if (!lista.length) return setOuvido({ texto, final: true, retorno: { entendeu: true, texto: "Esta questão não tem alternativas: é de digitar." } });
-      if (!locutor.current) {
-        locutor.current = new Locutor(setLendoQuestao);
-        locutor.current.configurar(lerJSON<VozDoOuvir>(CHAVE_OUVIR, {}));
+      if (a.tipo === "volume") {
+        const v = a.extremo === "max" ? 1 : a.extremo === "min" ? VOLUME_MIN : Math.round(Math.min(1, Math.max(VOLUME_MIN, a.valor ?? 1)) * 100) / 100;
+        aplicarPrefsVoz({ volume: v }, prefsVozRef, setPrefsVoz, locutor);
+        return dizer(texto, `Volume da voz: ${Math.round(v * 100)}%.`);
       }
-      locutor.current.ler(lista);
-      setOuvido({ texto, final: true, retorno: { entendeu: true, texto: cmd === "alternativas" ? "Lendo as alternativas." : "Lendo a questão de novo." } });
+      const pedida = a.extremo === "max" ? VELOCIDADE_MAX : a.extremo === "min" ? VELOCIDADE_MIN : (a.valor ?? p.velocidade + (a.passo ?? 0));
+      const v = Math.round(Math.min(VELOCIDADE_MAX, Math.max(VELOCIDADE_MIN, pedida)) * 100) / 100;
+      aplicarPrefsVoz({ velocidade: v }, prefsVozRef, setPrefsVoz, locutor);
+      return dizer(texto, `Velocidade ${fmtVelocidade(v)}${v === VELOCIDADE_MAX ? " (a máxima)" : v === VELOCIDADE_MIN ? " (a mínima)" : ""}.`);
     };
     const escuta = new Escuta(
       (alternativas, final, id) => {
         if (tratadas.has(id)) return;
-        // enquanto a voz lê, o microfone pode estar ouvindo a própria leitura: só os comandos dela valem. Logo depois de
-        // ela parar, o eco do fim ainda pode chegar: o que repete o que ela acabou de ler fica de fora, o resto vale
-        const lendo = !!locutor.current?.lendo;
-        const eco = !!locutor.current?.ocupado && pareceEco(palavrasDe(alternativas[0]!), locutor.current.recentes());
+        const loc = locutor.current;
+        const lendo = !!loc?.lendo;
+        // enquanto a voz lê, o microfone pode estar ouvindo a própria leitura (as `recentes` não disparam comando); logo
+        // depois de ela parar, o eco do fim ainda pode chegar: o que repete o que ela acabou de ler fica de fora. O
+        // microfone que estava fechado na leitura (o do fone Bluetooth) e abriu depois dela não ouviu eco nenhum
+        const abriuDepois = !!loc && !loc.lendo && (escutaAtual.current?.ouvindoDesde ?? 0) >= loc.terminouEm;
+        const recentes = (!abriuDepois && loc?.recentes()) || new Set<string>();
+        const eco = !!loc?.ocupado && !abriuDepois && pareceEco(palavrasDe(alternativas[0]!), recentes);
         if (!final) {
+          // a pessoa começou um comando: a leitura pausa já, para ela falar sem a voz por cima (e o microfone ouvir melhor)
+          if (lendo && !tentativa && !semTentativa.has(id) && alternativas.some((a) => pareceComando(a, recentes))) {
+            loc!.pausar();
+            tentativa = setTimeout(() => encerrarTentativa(true), 5000);
+          } else if (tentativa) {
+            // a frase não terminou em alguns segundos: a leitura volta
+            clearTimeout(tentativa);
+            tentativa = setTimeout(() => encerrarTentativa(true), 5000);
+          }
           if (lendo || eco) return;
           // a pessoa começou a falar (depois do erro, a leitura dos artigos espera por ela)
           ultimaFala.current = Date.now();
           return setOuvido({ texto: alternativas[0]!, final: false });
         }
         tratadas.add(id);
-        if (eco) return;
+        const pausouPelaFrase = tentativa !== null;
+        if (eco && !pausouPelaFrase) return;
         ultimaFala.current = Date.now();
-        const cmd = comandoDeLeitura(alternativas);
-        if (cmd) return comandoDaLeitura(cmd, alternativas[0]!);
-        if (lendo) {
-          // lendo a correção, "próxima" segue (a correção não diz "próxima": não há eco dela); e "desligar o microfone" vale sempre
-          const geral = interpretarResposta(alternativas, { tipo: "respondida" })?.tipo;
-          if (geral !== "proxima" && geral !== "desligar") return;
-          locutor.current?.parar(true);
+        // a frase dita com a voz lendo vale como dita na leitura, mesmo que a leitura tenha pausado por ela
+        const estado = pausouPelaFrase ? "lendo" : (loc?.estado ?? "parado");
+        const ajuste = ajusteDaVoz(alternativas, estado, recentes, interpretarComando);
+        if (ajuste) {
+          encerrarTentativa(false);
+          // pausada pela frase, a leitura segue com a voz nova
+          if (pausouPelaFrase) locutor.current?.continuar();
+          return ajustar(ajuste, alternativas[0]!);
         }
+        const cmd = comandoDaLeitura(alternativas, estado, recentes, interpretarComando);
+        const geral = interpretarResposta(alternativas, { tipo: "respondida" })?.tipo;
+        if (cmd === "continuar") {
+          encerrarTentativa(false);
+          return executar(cmd, alternativas[0]!);
+        }
+        // "desligar o microfone" vale sempre; respondida, "próxima" segue (também lendo a correção)
+        const seguir = geral === "desligar" || (geral === "proxima" && respondidaRef.current);
+        if (cmd && !seguir) {
+          encerrarTentativa(false);
+          // pausada pela frase, a velocidade, o volume e a ajuda deixam a leitura seguir
+          if (pausouPelaFrase && ["maisRapido", "maisDevagar", "velocidadeNormal", "maisAlto", "maisBaixo"].includes(cmd)) locutor.current?.continuar();
+          return executar(cmd, alternativas[0]!);
+        }
+        if (estado === "lendo" && !seguir) {
+          // não é comando: a leitura volta (se pausou por esta frase); para responder, a pessoa pausa antes (a linha diz)
+          semTentativa.add(id);
+          return encerrarTentativa(true);
+        }
+        encerrarTentativa(false);
+        if (seguir && (lendo || pausouPelaFrase)) locutor.current?.parar(true);
         const retorno = vozRef.current?.(alternativas) ?? { entendeu: false, texto: "" };
         setOuvido({ texto: alternativas[0]!, final: true, retorno });
         if (retorno.desligar) {
@@ -591,12 +805,26 @@ export function Treino() {
           gravarJSON(CHAVE_VOZ, false);
         }
       },
-      setEstadoEscuta,
-      { microfone: prefs.microfone ?? "auto", sensibilidade: prefs.sensibilidade ?? "alta" },
+      (e) => {
+        estadoEscutaRef.current = e;
+        setEstadoEscuta(e);
+      },
+      { microfone: p.microfone, sensibilidade: p.sensibilidade, naLeitura: p.microfoneNaLeitura, aoMicrofone: setMicrofoneEmUso },
     );
+    escutaAtual.current = escuta;
     escuta.ligar();
     return () => {
+      encerrarTentativa(false);
       escuta.desligar();
+      escutaAtual.current = null;
+    };
+  }, [falando, prefsVoz.microfone, prefsVoz.sensibilidade, prefsVoz.microfoneNaLeitura, aoTrecho]);
+  // desligado o responder falando (ou fora das questões), a leitura para
+  useEffect(() => {
+    if (!falando) return;
+    return () => {
+      // o locutor da hora (criado na primeira leitura, depois deste efeito), não um nó do React
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       locutor.current?.parar();
       if (esperaDoErro.current) clearTimeout(esperaDoErro.current);
       esperaDoErro.current = null;
@@ -604,6 +832,31 @@ export function Treino() {
   }, [falando]);
   // respondendo falando, a tela do celular não apaga
   useTelaAcesa(falando);
+  // a pessoa rolou a tela (o dedo, a roda do mouse, as teclas): a leitura deixa de rolar até o trecho por um instante
+  useEffect(() => {
+    if (!falando) return;
+    const rolou = (e: Event) => {
+      if ((e.target as Element | null)?.closest?.("[data-barra-voz]")) return;
+      if (e.type === "keydown" && !["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes((e as KeyboardEvent).key)) return;
+      rolouEm.current = Date.now();
+    };
+    const opc = { passive: true, capture: true } as const;
+    window.addEventListener("wheel", rolou, opc);
+    window.addEventListener("touchmove", rolou, opc);
+    window.addEventListener("keydown", rolou, opc);
+    return () => {
+      window.removeEventListener("wheel", rolou, opc);
+      window.removeEventListener("touchmove", rolou, opc);
+      window.removeEventListener("keydown", rolou, opc);
+      destacarNaQuestao(null, false);
+    };
+  }, [falando]);
+  // o navegador deixa escolher o microfone (e reforçar o som): a sensibilidade aparece no menu do microfone
+  const [comSensibilidade, setComSensibilidade] = useState(false);
+  useEffect(() => {
+    if (falando) setComSensibilidade(ouveMicrofoneEscolhido()); // eslint-disable-line react-hooks/set-state-in-effect -- o teste do navegador só roda no cliente
+  }, [falando]);
+  const somDoMicrofone = useCallback(() => escutaAtual.current?.atividade() ?? null, []);
 
   const mudarCategorias = (c: Categoria[]) => {
     setCategorias(c);
@@ -801,6 +1054,119 @@ export function Treino() {
     continuarRef.current = aoContinuar;
   });
 
+  /** O que a barra do microfone faz (os toques, os dois toques, os menus de segurar e o deslizar dos botões). */
+  const acoesDaBarra: AcoesDaBarra = {
+    alternar: () => {
+      const loc = obterLocutor();
+      setOuvido(null);
+      if (loc.estado === "lendo") {
+        loc.pausar(true);
+        return "Pausado: responda, ou toque para continuar";
+      }
+      if (loc.continuar()) return "Continuando";
+      if (!leitura.current) return;
+      loc.ler(partesDaQuestao(leitura.current));
+      return "Lendo a questão";
+    },
+    doComeco: () => {
+      if (!leitura.current) return;
+      setOuvido(null);
+      obterLocutor().ler(partesDaQuestao(leitura.current));
+      return "A questão do começo";
+    },
+    pular: (passo) => {
+      const loc = obterLocutor();
+      if (!loc.posicao()) return "Nada sendo lido: toque em ▶";
+      if (!loc.pular(passo)) return passo > 0 ? "Já é a última frase" : "Já é a primeira frase";
+      const p = loc.posicao();
+      return p ? `Frase ${p.k + 1} de ${p.total}` : undefined;
+    },
+    pularParte: (passo) => {
+      const loc = obterLocutor();
+      if (!loc.posicao()) return "Nada sendo lido: toque em ▶";
+      if (!loc.pularParte(passo)) return passo > 0 ? "Já é a última parte" : "Já é a primeira parte";
+      const p = loc.posicao();
+      return (p && nomeDaParte(loc.previa(p.k)?.parte)) || undefined;
+    },
+    posicao: () => locutor.current?.posicao() ?? null,
+    previa: (k) => {
+      const pv = locutor.current?.previa(k);
+      // a alternativa como está na tela ("Apelação"), não como é dita ("Letra á: Apelação")
+      return pv ? { texto: pv.parte?.startsWith("alt") ? pv.texto.replace(/^Letra \S+:\s*/, "") : pv.texto, parte: nomeDaParte(pv.parte) } : null;
+    },
+    irPara: (k) => void obterLocutor().irPara(k),
+    irParaParte: (parte) => {
+      if (!leitura.current) return;
+      setOuvido(null);
+      obterLocutor().ler(partesDaQuestao(leitura.current), { aPartirDe: parte });
+    },
+    parar: () => locutor.current?.parar(true),
+    lerAlternativas: () => {
+      const l = leitura.current;
+      if (l?.alternativas.length) obterLocutor().ler(partesDaQuestao(l, "alternativas"));
+    },
+    lerCorrecao: () => {
+      const u = ultimaCorrecao.current;
+      if (u) obterLocutor().ler([{ texto: correcaoFalada(u.pergunta, u.correcao), parte: "correcao" }]);
+    },
+    lerArtigos: () => {
+      const u = ultimaCorrecao.current;
+      if (!u) return;
+      void artigosParaLer(u.pergunta, u.correcao).then((textos) => {
+        if (textos.length) obterLocutor().ler(textos.map((texto) => ({ texto, parte: "correcao" })));
+      });
+    },
+    ajuda: () => obterLocutor().ler([AJUDA_DO_TREINO]),
+    mostrarTrecho: () => {
+      rolouEm.current = 0;
+      if (trechoLido.current) return destacarNaQuestao(trechoLido.current, true);
+      document.querySelector("[data-questao]")?.scrollIntoView({ block: "start", behavior: "smooth" });
+    },
+    repetirFrase: () => (locutor.current?.repetirTrecho() ? "De novo" : "Nada sendo lido: toque em ▶"),
+    mudarVoz: mudarPrefsVoz,
+    microfone: () => {
+      const e = escutaAtual.current;
+      if (!e) return;
+      if (estadoEscutaRef.current === "em-pausa") {
+        e.acordar();
+        return "Ouvindo de novo";
+      }
+      if (e.estaSilenciada) {
+        e.retomar();
+        return "Microfone ligado";
+      }
+      e.silenciar();
+      return "Microfone silenciado";
+    },
+    falarAgora: () => {
+      const e = escutaAtual.current;
+      if (locutor.current?.lendo) locutor.current.pausar(true);
+      e?.retomar();
+      e?.acordar();
+      return "Pode falar: a leitura pausou";
+    },
+    proxima: () => aoContinuar(),
+    ajustes: () => setAjustesVoz(true),
+    desligar: () => mudarVoz(false),
+  };
+
+  const janelaDaVoz = ajustesVoz && (
+    <AjustesDaVoz
+      prefs={prefsVoz}
+      aoMudar={mudarPrefsVoz}
+      podeLer={podeLer}
+      aoExemplo={() => {
+        desbloquearVoz();
+        obterLocutor().ler([EXEMPLO_DA_VOZ]);
+      }}
+      ligada={falando}
+      escuta={estadoEscuta}
+      microfoneEmUso={microfoneEmUso}
+      nivelDoMicrofone={() => escutaAtual.current?.nivel() ?? null}
+      aoFechar={() => setAjustesVoz(false)}
+    />
+  );
+
   if (fase === "inicio") {
     const fixo = typeof tamanho === "number" ? tamanho : null;
     const tiposDoAuto = tiposComPerguntas(tiposAuto);
@@ -886,7 +1252,7 @@ export function Treino() {
           <SeletorCategorias valor={categorias} onChange={mudarCategorias} />
         )}
         <OpcaoPular valor={pularAcertos} onChange={mudarPular} />
-        <OpcaoVoz valor={voz} onChange={mudarVoz} disponivel={podeFalar} ler={lerQuestoes} aoLer={mudarLer} podeLer={podeLer} />
+        <OpcaoVoz valor={voz} onChange={mudarVoz} disponivel={podeFalar} ler={lerQuestoes} aoLer={mudarLer} podeLer={podeLer} aoAjustes={() => setAjustesVoz(true)} />
         {/* no celular, o botão sobe para o topo do painel (treino.module.css) */}
         <button type="button" className={`btn btn-gold ${styles.comecar}`} onClick={continua ? continuarNoFoco : comecarDoToque}>
           {automatico
@@ -897,6 +1263,7 @@ export function Treino() {
         </button>
         {/* logo abaixo do botão: o recorde do modo escolhido, com a página final dele */}
         <SeuRecorde recordes={recordes} chave={chaveDoModo({ automatico, tamanho, nivel })} />
+        {janelaDaVoz}
       </div>
     );
   }
@@ -1026,19 +1393,23 @@ export function Treino() {
                 </p>
               )}
               {!foco && <Tempo key={n} inicio={inicio} limite={janela} folga={folga} ultima={respondida && ultima ? ultima : null} />}
-              {falando && (
-                <LinhaDaVoz
-                  estado={estadoEscuta}
-                  ouvido={ouvido}
-                  dica={dicaDaVoz(ctxVoz)}
-                  depois={respondida ? dicaDaVoz(ctxVoz) : undefined}
-                  lendo={lendoQuestao}
-                  aoDesligar={() => mudarVoz(false)}
-                />
-              )}
             </div>
           )}
         />
+        {falando && (
+          <BarraDaVoz
+            estado={estadoEscuta}
+            ouvido={ouvido}
+            dica={dicaDaVoz(ctxVoz)}
+            depois={respondida ? dicaDaVoz(ctxVoz) : undefined}
+            leitura={lerQuestoes && podeLer ? estadoLeitura : null}
+            prefs={prefsVoz}
+            nivel={somDoMicrofone}
+            respondida={respondida}
+            comSensibilidade={comSensibilidade}
+            acoes={acoesDaBarra}
+          />
+        )}
         {revoada && <RevoadaStrike key={revoada.id} acertos={revoada.acertos} n={revoada.n} fez={revoada.fez} />}
         {/* aparece por instantes, por cima da página, e some sozinho: não empurra a questão */}
         {automatico && avanco && (
@@ -1075,6 +1446,7 @@ export function Treino() {
           </section>
         )}
         {comemoracao && <Comemoracao {...comemoracao} />}
+        {janelaDaVoz}
         {verAnterior && anterior && <RespostaAnterior
             n={n - 1}
             rodada={anterior}
@@ -1086,7 +1458,7 @@ export function Treino() {
           />}
         <div className={styles.opcaoQuestao}>
           <OpcaoPular valor={pularAcertos} onChange={mudarPular} />
-          <OpcaoVoz valor={voz} onChange={mudarVoz} disponivel={podeFalar} ler={lerQuestoes} aoLer={mudarLer} podeLer={podeLer} />
+          <OpcaoVoz valor={voz} onChange={mudarVoz} disponivel={podeFalar} ler={lerQuestoes} aoLer={mudarLer} podeLer={podeLer} aoAjustes={() => setAjustesVoz(true)} />
         </div>
         <p className={styles.abandonar}>
           {/* sem fim ou no automático (que não tem recorde), dá para parar e ver o resultado; no treino com recorde, só abandonar */}

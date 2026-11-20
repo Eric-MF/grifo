@@ -4,6 +4,7 @@
 // Pausar é cancelar e lembrar o pedaço: o pause() da voz não funciona no Android. Um vigia recupera a voz que se perde
 // (o Chrome às vezes não avisa o fim de uma fala, ou corta as longas).
 import type { Peca, TipoBloco } from "./texto";
+import { esperaParaFalar, marcarVoz } from "./vez";
 
 export interface ItemFala {
   /** o bloco do texto (data-i) */
@@ -131,8 +132,10 @@ export class Narrador {
     this.mudarEstado("lendo");
     this.ligarVigia();
     // depois de cancelar uma fala, o Safari ignora a próxima se ela vier logo; sem nada falando, vai na hora (no iPhone a
-    // primeira fala precisa sair dentro do toque)
-    if (ocupada) this.espera = setTimeout(() => this.liberarEEncher(), 120);
+    // primeira fala precisa sair dentro do toque). O microfone do fone Bluetooth que acabou de fechar para a voz falar
+    // (src/lib/fala/vez.ts): espera o fone voltar ao som normal
+    const espera = Math.max(ocupada ? 120 : 0, esperaParaFalar(this.agora()));
+    if (espera) this.espera = setTimeout(() => this.liberarEEncher(), espera);
     else this.encher();
   }
 
@@ -223,11 +226,19 @@ export class Narrador {
       if (feito || gen !== this.gen) return;
       feito = true;
       if (continuar && voltar) this.ler(voltar.item, voltar.p);
+      else marcarVoz(this, false);
     };
     f.onend = depois;
     f.onerror = depois;
     if (!continuar) this.mudarEstado(this.atual ? "pausado" : "parado");
-    this.sintese.speak(f);
+    // o aviso também é a voz falando: o microfone do fone fecha, e ele espera o som voltar ao normal
+    marcarVoz(this, true);
+    const espera = esperaParaFalar(this.agora());
+    if (!espera) return this.sintese.speak(f);
+    this.espera = setTimeout(() => {
+      this.espera = null;
+      if (gen === this.gen) this.sintese.speak(f);
+    }, espera);
   }
 
   /** Muda a voz, a velocidade ou o tom; lendo, o pedaço atual recomeça com a voz nova. */
@@ -266,6 +277,7 @@ export class Narrador {
       clearInterval(this.viva);
       this.viva = null;
     }
+    marcarVoz(this, e === "lendo");
     if (this.estado === e) return;
     this.estado = e;
     this.eventos.estado?.(e);

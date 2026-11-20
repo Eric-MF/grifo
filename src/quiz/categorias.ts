@@ -25,7 +25,8 @@ export const CATEGORIAS: { id: Categoria; nome: string; resumo: string }[] = [
   },
 ];
 
-export const CATEGORIAS_PADRAO: Categoria[] = ["peca"];
+/** Por padrão, todos os tipos de pergunta. */
+export const CATEGORIAS_PADRAO: Categoria[] = CATEGORIAS.map((c) => c.id);
 export const CHAVE_CATEGORIAS = "grifo:quiz:categorias";
 
 export const nomeCategoria = (c: Categoria) => CATEGORIAS.find((x) => x.id === c)?.nome ?? c;

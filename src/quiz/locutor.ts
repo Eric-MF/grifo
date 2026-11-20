@@ -1,8 +1,9 @@
 // A questão lida em voz alta no treino (responder falando): o caso, o comando e as alternativas, e depois da resposta a
 // correção. Usa o narrador do Ouvir (a voz do navegador, nenhum arquivo de som), com a voz, a velocidade e o volume
-// escolhidos lá. Guarda as palavras recém-ditas: o microfone que ouve a própria leitura (o eco) não vira resposta.
+// escolhidos lá. Guarda as palavras recém-ditas: o microfone que ouve a própria leitura (o eco) não vira resposta. Diz
+// também que parte da questão está lendo, e onde no texto dela (o treino destaca o trecho e o mantém à vista).
 import { palavrasDe } from "@/lib/fala/comandos-voz";
-import { Narrador, vozesEmPortugues, type Fala, type ItemFala, type Sintese } from "@/lib/fala/narrador";
+import { Narrador, vozesEmPortugues, type EstadoNarrador, type Fala, type ItemFala, type Sintese } from "@/lib/fala/narrador";
 import { pecasDoTexto } from "@/lib/fala/texto";
 import nomes from "@/content/generated/nomes-mitologia.json";
 import { LETRAS, type Letra, type Pergunta } from "./types";
@@ -47,10 +48,33 @@ export const comPronuncia = (texto: string) => (RE_NOMES ? texto.replace(RE_NOME
 
 /** As letras como a voz deve dizê-las ("Letra bê"). */
 const LETRA_FALADA = ["á", "bê", "cê", "dê", "é"];
+
+/**
+ * Um texto a ler e a parte da tela a que ele corresponde: "caso", "comando", "alt0"… (a alternativa A…), "correcao".
+ * Sem parte, o texto não está na tela (a ajuda, o exemplo da voz).
+ */
+export interface ParteLida {
+  texto: string;
+  parte?: string;
+  /** onde o texto está escrito na tela, se é ele mesmo (o caso e o comando); sem isso, a parte inteira é destacada */
+  naTela?: boolean;
+}
+/** As partes de uma questão, como a voz as lê: o caso, o comando e cada alternativa ("Letra bê: Apelação"). */
+export function partesDaQuestao(l: LeituraDaQuestao, so: "tudo" | "alternativas" = "tudo"): ParteLida[] {
+  const alternativas = l.alternativas.map((t, k): ParteLida => ({ texto: `Letra ${LETRA_FALADA[k] ?? k + 1}: ${t}`, parte: `alt${k}` }));
+  if (so === "alternativas") return alternativas;
+  return [{ texto: l.caso, parte: "caso", naTela: true }, { texto: l.comando, parte: "comando", naTela: true }, ...alternativas].filter((t) => t.texto.trim());
+}
 /** O que dizer de uma questão, item a item: o caso, o comando e cada alternativa ("Letra bê: Apelação."). */
 export function textosDaQuestao(l: LeituraDaQuestao, so: "tudo" | "alternativas" = "tudo"): string[] {
-  const alternativas = l.alternativas.map((t, k) => `Letra ${LETRA_FALADA[k] ?? k + 1}: ${t}`);
-  return so === "alternativas" ? alternativas : [l.caso, l.comando, ...alternativas].filter((t) => t.trim());
+  return partesDaQuestao(l, so).map((p) => p.texto);
+}
+
+/** O trecho que a voz está dizendo: a parte, e o começo e o fim dele no texto da parte (null: a parte inteira). */
+export interface TrechoLido {
+  parte: string;
+  /** o trecho no texto da parte, quando o texto é o da tela */
+  faixa: { ini: number; fim: number } | null;
 }
 
 // por quanto tempo as palavras ditas contam como eco: o reconhecimento entrega a frase com uns segundos de atraso
@@ -62,13 +86,19 @@ export class Locutor {
   private n: Narrador | null = null;
   /** o que está sendo lido: a questão ou, depois da resposta, a correção */
   private lista: ItemFala[] = [];
+  /** de cada item da lista: o texto de que ele veio (o índice), a parte da tela e o trecho escrito */
+  private origem: { j: number; parte?: string; naTela: boolean; trecho: string }[] = [];
   private eco: { t: number; palavras: string[] }[] = [];
   private fimEm = 0;
   private prefs: VozDoOuvir = {};
   /** o que fazer quando a leitura da vez termina sozinha (parada ou trocada por outra, não) */
   private aoFim: (() => void) | null = null;
 
-  constructor(private aoMudar: (lendo: boolean) => void = () => {}) {}
+  /** `aoMudar`: lendo, pausada (continua de onde parou) ou parada; `aoTrecho`: o trecho dito agora (null: parou) */
+  constructor(
+    private aoMudar: (estado: EstadoNarrador) => void = () => {},
+    private aoTrecho: (t: TrechoLido | null) => void = () => {},
+  ) {}
 
   configurar(p: VozDoOuvir) {
     this.prefs = p;
@@ -95,21 +125,76 @@ export class Locutor {
 
   /**
    * Lê os textos, um depois do outro, cortando o que estava sendo lido. `aoFim`: chamado quando a leitura termina
-   * sozinha (não quando é parada ou trocada por outra).
+   * sozinha (não quando é parada ou trocada por outra). Cada frase é um trecho: "volta" e "avança" andam de frase em frase.
+   * `aPartirDe`: começa na primeira frase da parte cujo nome começa assim ("alt": as alternativas).
    */
-  ler(textos: string[], opcoes: { aoFim?: () => void } = {}) {
+  ler(textos: (string | ParteLida)[], opcoes: { aoFim?: () => void; aPartirDe?: string } = {}) {
     this.aoFim = null;
     if (!temVoz()) return void opcoes.aoFim?.();
-    const itens: ItemFala[] = textos
-      .map((t, i): ItemFala => ({ i, art: "questao", tipo: "texto", pecas: pecasDoTexto(comPronuncia(t), "texto") }))
-      .filter((it) => it.pecas.length);
+    const itens: ItemFala[] = [];
+    const origem: Locutor["origem"] = [];
+    textos.forEach((t, j) => {
+      const { texto, parte, naTela = false } = typeof t === "string" ? { texto: t } : t;
+      // os pedaços saem do texto como está na tela (o destaque acha o trecho nele); a pronúncia vale só no que é dito
+      for (const peca of pecasDoTexto(texto, "texto")) {
+        itens.push({ i: itens.length, art: "questao", tipo: "texto", pecas: [{ ...peca, falar: comPronuncia(peca.falar) }] });
+        origem.push({ j, parte, naTela, trecho: texto.slice(peca.ini, peca.fim) });
+      }
+    });
     if (!itens.length) return void opcoes.aoFim?.();
     this.aoFim = opcoes.aoFim ?? null;
     this.lista = itens;
+    this.origem = origem;
     const n = this.narrador();
     // a voz pode ter carregado depois (as vozes do navegador chegam aos poucos)
     n.configurar(this.config());
-    n.ler(itens[0]!, 0);
+    const k = opcoes.aPartirDe ? origem.findIndex((o) => o.parte?.startsWith(opcoes.aPartirDe!)) : 0;
+    n.ler(itens[Math.max(0, k)]!, 0);
+  }
+
+  /** A frase em que a leitura está (ou de onde ela continua) e quantas há; null: nada sendo lido. */
+  posicao(): { k: number; total: number } | null {
+    const at = this.n?.atual;
+    if (!at || this.n?.estado === "parado") return null;
+    const k = this.lista.indexOf(at.item);
+    return k < 0 ? null : { k, total: this.lista.length };
+  }
+
+  /** O começo da frase `k`, para mostrar ("“Tício foi denunciado…”"), com a parte de que ela é. */
+  previa(k: number): { texto: string; parte?: string } | null {
+    const o = this.origem[k];
+    if (!o) return null;
+    const t = o.trecho.replace(/\s+/g, " ").trim();
+    if (t.length <= 70) return { texto: t, parte: o.parte };
+    // cortado no espaço, sem partir a palavra
+    const corte = t.lastIndexOf(" ", 68);
+    return { texto: `${t.slice(0, corte > 40 ? corte : 68).replace(/[\s,;:]+$/, "")}…`, parte: o.parte };
+  }
+
+  /** Lê a partir da frase `k` (vale também com a leitura pausada). false: não há essa frase. */
+  irPara(k: number): boolean {
+    const it = this.lista[k];
+    if (!it || !this.n) return false;
+    this.n.ler(it, 0);
+    return true;
+  }
+
+  /**
+   * A parte seguinte (o caso, a pergunta, cada alternativa) ou, para trás, o começo desta (se já está nele, a anterior).
+   * false: não há para onde ir.
+   */
+  pularParte(passo: 1 | -1): boolean {
+    const pos = this.posicao();
+    if (!pos) return false;
+    const j = this.origem[pos.k]!.j;
+    const inicio = this.origem.findIndex((o) => o.j === j);
+    const alvo =
+      passo > 0
+        ? this.origem.findIndex((o) => o.j > j)
+        : pos.k > inicio
+          ? inicio
+          : this.origem.findIndex((o) => o.j === this.origem[inicio - 1]?.j);
+    return alvo >= 0 && this.irPara(alvo);
   }
 
   private narrador(): Narrador {
@@ -126,13 +211,19 @@ export class Locutor {
       {
         estado: (e) => {
           if (e !== "lendo") this.fimEm = Date.now();
-          this.aoMudar(e === "lendo");
+          if (e === "parado") this.aoTrecho(null);
+          this.aoMudar(e);
         },
         falando: (item, p) => {
           this.eco.push({ t: Date.now(), palavras: palavrasDe(item.pecas[p]?.falar ?? "") });
+          const o = this.origem[this.lista.indexOf(item)];
+          const pc = item.pecas[p];
+          if (!o?.parte) return this.aoTrecho(null);
+          this.aoTrecho({ parte: o.parte, faixa: o.naTela && pc && pc.ini >= 0 ? { ini: pc.ini, fim: pc.fim } : null });
         },
         fimDaLei: () => {
           this.fimEm = Date.now();
+          this.aoTrecho(null);
           const f = this.aoFim;
           this.aoFim = null;
           f?.();
@@ -149,8 +240,43 @@ export class Locutor {
     if (aPedido) this.fimEm = 0;
   }
 
+  /** Pausa no trecho em que está ("continua" segue dali). `aPedido`: a pessoa pediu, e a resposta já pode vir. */
+  pausar(aPedido = false) {
+    this.n?.pausar();
+    if (aPedido) this.fimEm = 0;
+  }
+
+  /** Continua a leitura pausada. false: não havia o que continuar. */
+  continuar(): boolean {
+    if (this.n?.estado !== "pausado") return false;
+    this.n.continuar();
+    return true;
+  }
+
+  /** O trecho (a frase) seguinte ou o anterior; pausada, a leitura volta a andar. false: não há para onde ir. */
+  pular(passo: 1 | -1): boolean {
+    if (!this.n || this.n.estado === "parado") return false;
+    return this.n.pular(passo);
+  }
+
+  /** De novo o trecho em que está. */
+  repetirTrecho(): boolean {
+    if (!this.n || this.n.estado === "parado") return false;
+    this.n.repetir();
+    return true;
+  }
+
   get lendo(): boolean {
     return this.n?.estado === "lendo";
+  }
+
+  /** Quando a voz parou de ler pela última vez (0: ainda não leu). */
+  get terminouEm(): number {
+    return this.fimEm;
+  }
+
+  get estado(): EstadoNarrador {
+    return this.n?.estado ?? "parado";
   }
 
   /**

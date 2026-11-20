@@ -282,3 +282,35 @@ describe("dicaDaVoz", () => {
     expect(dicaDaVoz(TESE3)).toContain("artigo");
   });
 });
+
+describe("interpretarResposta: o artigo partido em duas frases", () => {
+  // o reconhecimento às vezes parte a frase numa pausa: "artigo 321" e, depois, "do CPP"
+  const rec: Reconhecedores = { peca: pecasFaladas, artigo: artigoFalado };
+  const peca = (fala: string, fundamento: string) => interpretarResposta([fala], { tipo: "peca", peca: "Apelação", fundamento }, rec);
+
+  it.each([
+    ["do CPP", "Art. 321", "Art. 321 — Código de Processo Penal"],
+    ["do código de processo penal", "Art. 321", "Art. 321 — Código de Processo Penal"],
+    ["inciso terceiro alínea d", "Art. 593 — Código de Processo Penal", "Art. 593, inciso III, alínea d — Código de Processo Penal"],
+    ["letra d", "Art. 593, inciso III — Código de Processo Penal", "Art. 593, inciso III, alínea d — Código de Processo Penal"],
+    ["e parágrafo 2", "Art. 155", "Art. 155, § 2º"],
+  ])("“%s” depois de “%s” completa o fundamento", (fala, antes, depois) => {
+    expect(peca(fala, antes)).toEqual({ tipo: "preencher", campos: { fundamento: depois }, enviar: false });
+  });
+
+  it("sem artigo dito antes, o pedaço sozinho não vira nada (nem peça)", () => {
+    expect(peca("do CPP", "")).toBeNull();
+  });
+
+  it("uma peça dita depois do artigo continua sendo a peça", () => {
+    expect(peca("memoriais", "Art. 321")).toEqual({ tipo: "preencher", campos: { peca: "Memoriais" }, enviar: false });
+  });
+
+  it("no difícil das teses, completa o artigo e não troca o ponto central", () => {
+    expect(interpretarResposta(["do CP"], { tipo: "tese", comArtigo: true, tese: "Legítima defesa", artigo: "Art. 25" }, rec)).toEqual({
+      tipo: "preencher",
+      campos: { artigo: "Art. 25 — Código Penal" },
+      enviar: false,
+    });
+  });
+});

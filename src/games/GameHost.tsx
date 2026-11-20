@@ -151,7 +151,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
   const jogo = useRef<GameInstance | null>(null);
   const [mod, setMod] = useState<GameModule | null>(null);
   const [fase, setFase] = useState<Fase>("carregando");
-  const [opcoes, setOpcoes] = useState<GameOptions>({ estilo: "classico", nivel: 1, som: true, movimentoReduzido: false, autoPoder: true, personagem: "maleta" });
+  const [opcoes, setOpcoes] = useState<GameOptions>({ estilo: "classico", nivel: 1, som: true, movimentoReduzido: false, autoPoder: true, personagem: "maleta", automatico: true });
   const [progresso, setProgresso] = useState<Progresso>(PROGRESSO_INICIAL);
   const progressoRef = useRef(progresso);
   useLayoutEffect(() => {
@@ -352,7 +352,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
         perguntar: ({ tipo, poderNome, poderIcone, poderDescricao, poderDuracao, carrega }) =>
           new Promise<boolean>((resolve) => {
             // no automático, a pergunta é a da vez no modo (o tipo e o nível que o jogador alcançou)
-            const a = opcoesRef.current.automatico && autoRef.current ? proximaDoAutomatico(autoRef.current) : undefined;
+            const a = (opcoesRef.current.automatico ?? true) && autoRef.current ? proximaDoAutomatico(autoRef.current) : undefined;
             setQuiz({
               auto: a,
               titulo: tipo === "reviver" ? "Revisão Criminal: responda para continuar" : `Poder: ${poderNome}`,
@@ -800,7 +800,7 @@ export function GameHost({ slug, fundoCard }: { slug: string; fundoCard?: string
                   </div>
                 )}
                 <OpcoesPerguntas
-                  automatico={!!opcoes.automatico}
+                  automatico={opcoes.automatico ?? true}
                   nivel={opcoes.nivel}
                   categorias={opcoes.categorias ?? CATEGORIAS_PADRAO}
                   recordes={recordes}

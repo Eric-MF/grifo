@@ -13,9 +13,11 @@ import { LISTAS_SUMULAS } from "@/lib/leis/sumulas";
 import indice from "@/content/generated/leis-indice.json";
 import { paraFala, pecasDoTexto, type TipoBloco } from "@/lib/fala/texto";
 import { Narrador, vozesEmPortugues, type AoFimDoArtigo, type EstadoNarrador, type Fala, type ItemFala, type Sintese } from "@/lib/fala/narrador";
-import { Escuta, escutaDisponivel, type EstadoEscuta, type Sensibilidade } from "@/lib/fala/escuta";
+import { Escuta, escutaDisponivel, type EstadoEscuta, type NaLeitura, type Sensibilidade } from "@/lib/fala/escuta";
 import { bipe, silencioWav, type AcaoDoFone } from "@/lib/fala/fone";
-import { AJUDA_FALADA, interpretarComando, palavrasDe, pareceComando, type ComandoVoz } from "@/lib/fala/comandos-voz";
+import { AJUDA_FALADA, interpretarComando, palavrasDe, pareceComando, type Alcance, type ComandoVoz, type IdDoLeitor, type Ordem } from "@/lib/fala/comandos-voz";
+import { corDita, corParaGrifar, type CorDaLegenda } from "@/lib/fala/cores-faladas";
+import { destacarFaixa, faixaDoTexto } from "@/lib/fala/destaque";
 import {
   NIVEIS,
   acharDivisao,
@@ -61,6 +63,8 @@ export interface PrefsOuvir {
   microfone: string;
   /** o reforço do som do microfone (com o microfone longe, a voz chega fraca) */
   sensibilidade: Sensibilidade;
+  /** o microfone enquanto a voz lê: "auto" fecha o do fone Bluetooth (que põe o som no modo de chamada) */
+  microfoneNaLeitura: NaLeitura;
   /** o volume da voz, de 0,2 a 1 */
   volume: number;
   /** os botões do fone e as teclas de mídia controlam a leitura */
@@ -84,6 +88,7 @@ export const PREFS_OUVIR: PrefsOuvir = {
   comandos: false,
   microfone: "auto",
   sensibilidade: "alta",
+  microfoneNaLeitura: "auto",
   volume: 1,
   botoesDoFone: true,
   doisToques: "comando",
@@ -104,6 +109,8 @@ const PROBLEMAS_DA_ESCUTA: Partial<Record<EstadoEscuta, string>> = {
 };
 /** por quanto tempo o que a voz disse conta como eco no microfone */
 const JANELA_ECO_MS = 40_000;
+/** depois de o microfone ouvir a própria leitura (o alto-falante), por quanto tempo o eco é temido */
+const ECO_OUVIDO_MS = 60_000;
 
 const temVoz = () => typeof window !== "undefined" && "speechSynthesis" in window && typeof SpeechSynthesisUtterance !== "undefined";
 const limitar = (v: number) => Math.round(Math.min(VELOCIDADE_MAX, Math.max(VELOCIDADE_MIN, v)) * 100) / 100;
@@ -112,25 +119,6 @@ function faixaLivre() {
   const topo = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--topo-livre")) || 90;
   const barra = document.querySelector<HTMLElement>("[data-barra-ouvir]")?.getBoundingClientRect();
   return { topo, fundo: barra && barra.height ? barra.top - 8 : window.innerHeight - 8 };
-}
-/** o intervalo [ini, fim) do texto de `el` como Range (para destacar o trecho dito) */
-function faixaDoTexto(el: HTMLElement, ini: number, fim: number): Range | null {
-  const andar = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-  let pos = 0;
-  let r: Range | null = null;
-  for (let n = andar.nextNode() as Text | null; n; n = andar.nextNode() as Text | null) {
-    const tam = n.data.length;
-    if (!r && ini <= pos + tam) {
-      r = document.createRange();
-      r.setStart(n, Math.max(0, ini - pos));
-    }
-    if (r && fim <= pos + tam) {
-      r.setEnd(n, Math.max(0, fim - pos));
-      return r;
-    }
-    pos += tam;
-  }
-  return null;
 }
 const visivel = (r: DOMRect) => {
   const { topo, fundo } = faixaLivre();
@@ -146,7 +134,6 @@ function desbloquear() {
   u.volume = 0;
   window.speechSynthesis.speak(u);
 }
-type Destaques = { set(nome: string, h: unknown): void; delete(nome: string): void };
 /** "Código de Processo Penal", "Lei de Drogas", "Súmulas do STJ": o nome da lei para dizer e mostrar */
 function nomeDaLei(id: string): string {
   const nome = (indice as { id: string; nome: string }[]).find((l) => l.id === id)?.nome ?? LISTAS_SUMULAS.find((l) => l.id === id)?.nome ?? id;
@@ -168,7 +155,49 @@ function avisoDaDivisao(div: Divisao, titulos: boolean): string | undefined {
   return dizer ? `${maiuscula(dizer)}.${!titulos && div.nome ? ` ${paraFala(div.nome)}.` : ""}` : undefined;
 }
 /** os comandos que não mudam o lugar da leitura: depois deles, a leitura pausada para ouvir o comando continua */
-const SEGUE_LENDO = new Set<ComandoVoz["tipo"]>(["maisRapido", "maisDevagar", "velocidadeNormal", "maisAlto", "maisBaixo", "ondeEstou", "ajuda"]);
+const SEGUE_LENDO = new Set<ComandoVoz["tipo"]>([
+  "maisRapido",
+  "maisDevagar",
+  "velocidadeNormal",
+  "maisAlto",
+  "maisBaixo",
+  "ondeEstou",
+  "ajuda",
+  "velocidade",
+  "volume",
+  "tom",
+  "info",
+  "grifar",
+  "desgrifar",
+  "pararEm",
+  "aoFimDoArtigo",
+  "lerTambem",
+  "pausaEntre",
+  "acompanhar",
+]);
+
+/** Um trecho do texto de um bloco (o bloco inteiro: `inteiro`), para grifar ou apagar os grifos dele. */
+export interface TrechoDoBloco {
+  i: number;
+  ini: number;
+  fim: number;
+  inteiro: boolean;
+}
+/** O que a voz pede ao leitor: os comandos dele, as cores da legenda e grifar ou apagar grifos. */
+export interface AcoesDoLeitor {
+  /** um comando do leitor (o fundo, a letra, os filtros…); `ligar`: o estado pedido, nos que ligam e desligam */
+  comando(id: IdDoLeitor, ligar?: boolean): void;
+  /** as cores da legenda em uso */
+  cores(): CorDaLegenda[];
+  /** a cor do marcador (a última escolhida, ou a primeira da legenda) */
+  corDoMarcador(): string | null;
+  /** grifa os trechos na cor; false se não deu */
+  grifar(trechos: TrechoDoBloco[], cor: string): boolean;
+  /** apaga os grifos que tocam os trechos; devolve quantos */
+  desgrifar(trechos: TrechoDoBloco[]): number;
+}
+const fmtVel = (v: number) => `${v.toLocaleString("pt-BR", { maximumFractionDigits: 2 })}×`;
+const ORDINAL: Record<Ordem, string> = { primeiro: "Primeiro", ultimo: "Último", proximo: "Próximo", anterior: "Anterior" };
 /** "capítulo segundo do título segundo": o caminho falado, como foi pedido */
 const caminhoFalado = (caminho: readonly PassoCaminho[]) =>
   caminho
@@ -182,8 +211,6 @@ const caminhoFalado = (caminho: readonly PassoCaminho[]) =>
  * texto dela chegar, com os comandos ainda ligados.
  */
 let pendente: { lei: string; comando: ComandoVoz | null; ate: number } | null = null;
-const destaques = (): Destaques | null => (typeof CSS !== "undefined" && "highlights" in CSS ? (CSS as unknown as { highlights: Destaques }).highlights : null);
-const NOME_DESTAQUE = "grifo-fala";
 
 export interface Ouvir {
   suportado: boolean;
@@ -226,8 +253,16 @@ export interface Ouvir {
   microfoneEmUso: string | null | undefined;
   /** o nível do som que os comandos ouvem, de 0 a 1 (null: não dá para medir) */
   nivelDoMicrofone(): number | null;
+  /** quanto som chega ao microfone, para o anel do botão (sem a medida, o que o reconhecimento percebe); null: fechado */
+  somDoMicrofone(): number | null;
+  /** faz o que o comando de voz faria (os gestos da barra usam os mesmos comandos) */
+  comando(c: ComandoVoz): void;
+  /** o rótulo do trecho (ou, com `artigo`, do artigo) `n` passos adiante (negativo: para trás); null: nada sendo lido */
+  previaAdiante(n: number, artigo: boolean): string | null;
   /** pausa a leitura e ouve um comando (os dois toques no fone); com os comandos desligados, o microfone abre só para ele */
   ouvirUmComando(): void;
+  /** o microfone em pausa (no celular, depois de alguns silêncios seguidos) volta a ouvir */
+  acordarMicrofone(): void;
   /** esperando o comando dos dois toques */
   esperandoComando: boolean;
 }
@@ -241,6 +276,7 @@ export function useOuvir({
   avisar,
   pronto,
   trocarDeLei,
+  leitor,
 }: {
   lei: string;
   folha: RefObject<HTMLDivElement | null>;
@@ -252,6 +288,8 @@ export function useOuvir({
   pronto: boolean;
   /** abre outra lei do leitor (os comandos de voz com "… do CPP") */
   trocarDeLei: (id: string) => void;
+  /** os comandos do leitor e os grifos, pela voz */
+  leitor?: AcoesDoLeitor;
 }): Ouvir {
   const [suportado, setSuportado] = useState(false);
   const [ativo, setAtivo] = useState(false);
@@ -264,6 +302,10 @@ export function useOuvir({
   const [seguindo, setSeguindo] = useState(true);
   const [bolha, setBolha] = useState<Ouvir["bolha"]>(null);
   const [prazo, setPrazo] = useState<Ouvir["prazo"]>(null);
+  const prazoRef = useRef(prazo);
+  useEffect(() => {
+    prazoRef.current = prazo;
+  }, [prazo]);
   const [microfoneEmUso, setMicrofoneEmUso] = useState<string | null | undefined>(undefined);
 
   const prefsRef = useRef(prefs);
@@ -274,6 +316,8 @@ export function useOuvir({
   const ultimoGesto = useRef(0);
   const rolagemNossa = useRef(0);
   const tratadas = useRef(new Set<string>());
+  /** quando o microfone ouviu a própria leitura pela última vez (uma frase quase toda do que a voz disse) */
+  const ecoOuvidoEm = useRef(-Infinity);
   const parciais = useRef(new Map<string, ComandoVoz["tipo"]>());
   const avisarRef = useRef(avisar);
   useEffect(() => {
@@ -283,6 +327,10 @@ export function useOuvir({
   useEffect(() => {
     trocarDeLeiRef.current = trocarDeLei;
   }, [trocarDeLei]);
+  const leitorRef = useRef(leitor);
+  useEffect(() => {
+    leitorRef.current = leitor;
+  }, [leitor]);
   /** o que dizer antes da próxima leitura (o nome da lei, ao chegar de outra pela voz) */
   const prefixo = useRef("");
   /** a última busca de palavras: "próximo resultado" segue dela */
@@ -460,10 +508,7 @@ export function useOuvir({
       const peca = item.pecas[p];
       const txt = el.querySelector<HTMLElement>(`:scope > .${CLASSES.txt}`);
       const r = peca && peca.ini >= 0 && txt ? faixaDoTexto(txt, peca.ini, peca.fim) : null;
-      const reg = destaques();
-      const H = (globalThis as { Highlight?: new (...r: Range[]) => unknown }).Highlight;
-      if (reg && H && r) reg.set(NOME_DESTAQUE, new H(r));
-      else reg?.delete(NOME_DESTAQUE);
+      destacarFaixa(r);
       if (seguindoRef.current && prefsRef.current.acompanhar) rolarAte(el, r);
     },
     [elDe, rolarAte],
@@ -471,7 +516,7 @@ export function useOuvir({
   const apagarDestaque = useCallback(() => {
     falandoEl.current?.removeAttribute("data-falando");
     falandoEl.current = null;
-    destaques()?.delete(NOME_DESTAQUE);
+    destacarFaixa(null);
   }, []);
   const mudarSeguindo = useCallback((v: boolean) => {
     seguindoRef.current = v;
@@ -970,6 +1015,195 @@ export function useOuvir({
     const d = divisaoMaisFunda(estrutura().divs, at.item.i);
     return d ? `${base} ${maiuscula(divisaoFalada(d))}${d.nome ? `: ${paraFala(d.nome)}` : ""}.` : base;
   }, [rotuloDoItem, sumula, estrutura]);
+  /** o trecho que está sendo lido (o começo e o fim dele no texto do bloco), ou o bloco no alto da tela */
+  const trechoAtual = useCallback((): { i: number; ini: number; fim: number } | null => {
+    const at = narradorRef.current?.atual;
+    if (at) {
+      const pc = at.item.pecas[at.p];
+      return pc && pc.ini >= 0 ? { i: at.item.i, ini: pc.ini, fim: pc.fim } : { i: at.item.i, ini: 0, fim: Infinity };
+    }
+    const el = elNaTela();
+    return el ? { i: Number(el.dataset.i), ini: -1, fim: -1 } : null;
+  }, [elNaTela]);
+  /** o item lido, ou, num título ou capítulo, o primeiro do artigo que vem logo depois dele */
+  const itemDoArtigo = useCallback((): ItemFala | null => {
+    let it: ItemFala | null = narradorRef.current?.atual?.item ?? null;
+    for (let n = 0; it && !it.art && n < 12; n++) {
+      const el = elDe(it.i);
+      it = el ? andar(el, 1) : null;
+    }
+    return it?.art ? it : null;
+  }, [elDe, andar]);
+  /** os blocos à mostra (os escondidos pelo filtro, pelo revogado desligado ou pela linha do tempo, não) */
+  const blocosAMostra = useCallback((): HTMLElement[] => {
+    const raiz = folha.current;
+    if (!raiz) return [];
+    const tempo = raiz.dataset.tempo === "1";
+    return [...raiz.children].filter(
+      (e): e is HTMLElement => e instanceof HTMLElement && e.dataset.i !== undefined && !(e.dataset.sup === "1" && !tempo) && e.getClientRects().length > 0,
+    );
+  }, [folha]);
+  /** lê a partir da posição `pos` do texto do bloco `i` (o pedaço em que ela está), dizendo antes o aviso */
+  const lerDaPosicao = useCallback(
+    (i: number, pos: number, aviso: string): ItemFala | null => {
+      const el = elDe(i);
+      const item = el ? andar(el, 1, true) : null;
+      if (!item) return null;
+      let p = 0;
+      if (item.i === i) item.pecas.forEach((pc, j) => (pc.ini >= 0 && pc.ini <= pos ? (p = j) : null));
+      desbloquear();
+      lerItem(item, p, aviso);
+      return item;
+    },
+    [elDe, andar, lerItem],
+  );
+  /** os grifos à mostra, na ordem do texto: o bloco, onde começam no texto dele e a cor (os do usuário e os prontos) */
+  const grifosAMostra = useCallback(
+    (de?: "meus" | "prontos"): { i: number; pos: number; cor: string }[] => {
+      const saida: { i: number; pos: number; cor: string }[] = [];
+      const seletor = de === "meus" ? "mark[data-m]" : de === "prontos" ? "mark[data-pronto]" : "mark[data-m], mark[data-pronto]";
+      for (const el of blocosAMostra()) {
+        const i = Number(el.dataset.i);
+        // o parágrafo inteiro grifado é uma forma só no bloco ("ponte" é o bloco do meio, sem texto a grifar)
+        if (de !== "prontos" && el.dataset.marcaBloco === "1") {
+          saida.push({ i, pos: 0, cor: el.style.getPropertyValue("--c").trim() });
+          continue;
+        }
+        const txt = el.querySelector<HTMLElement>(`:scope > .${CLASSES.txt}`);
+        if (!txt) continue;
+        let anterior: HTMLElement | null = null;
+        for (const m of txt.querySelectorAll<HTMLElement>(seletor)) {
+          // a mesma marca partida (ela atravessa um link) conta uma vez
+          const mesma = !!anterior && ((m.dataset.m && anterior.dataset.m === m.dataset.m) || (m.dataset.pronto && anterior.nextSibling === m));
+          anterior = m;
+          if (mesma) continue;
+          const r = document.createRange();
+          r.setStart(txt, 0);
+          r.setEndBefore(m);
+          const cor = (m.style.getPropertyValue("--c") || m.style.getPropertyValue("--pronto-fundo") || m.style.getPropertyValue("--pronto-linha")).trim();
+          saida.push({ i, pos: r.toString().length, cor });
+        }
+      }
+      return saida;
+    },
+    [blocosAMostra],
+  );
+  const irAoGrifo = useCallback(
+    (c: Extract<ComandoVoz, { tipo: "grifo" }>) => {
+      let lista = grifosAMostra(c.de);
+      let nomeDaCor = "";
+      if (c.cor) {
+        const legenda = leitorRef.current?.cores() ?? [];
+        const dita = corDita(c.cor, legenda);
+        if (!dita) return responder(`Não conheço a cor “${c.cor}”.${legenda.length ? ` As da legenda são: ${legenda.map((x) => x.rotulo).join(", ")}.` : ""}`);
+        nomeDaCor = dita.nome;
+        lista = lista.filter((g) => dita.casa(g.cor));
+      }
+      const de = c.de === "meus" ? " seus" : c.de === "prontos" ? " prontos" : "";
+      const qualCor = nomeDaCor ? ` ${nomeDaCor.toLowerCase()}` : "";
+      if (!lista.length) return responder(`Não há grifos${de}${qualCor} à mostra ${sumula ? "nas súmulas" : "nesta lei"}.`);
+      const aqui = trechoAtual() ?? { i: -1, ini: -1, fim: -1 };
+      const alvo =
+        c.qual === "primeiro"
+          ? lista[0]
+          : c.qual === "ultimo"
+            ? lista.at(-1)
+            : c.qual === "proximo"
+              ? lista.find((g) => g.i > aqui.i || (g.i === aqui.i && g.pos >= aqui.fim))
+              : [...lista].reverse().find((g) => g.i < aqui.i || (g.i === aqui.i && g.pos < aqui.ini));
+      if (!alvo) return responder(c.qual === "proximo" ? `Não há mais grifos${qualCor} depois daqui.` : `Não há grifos${qualCor} antes daqui.`);
+      const item = lerDaPosicao(alvo.i, alvo.pos, `${ORDINAL[c.qual]} grifo${qualCor}.`);
+      if (item) avisarRef.current(`Grifo${qualCor} ${lista.indexOf(alvo) + 1} de ${lista.length}: ${rotuloDoItem(item)}`);
+    },
+    [grifosAMostra, responder, sumula, trechoAtual, lerDaPosicao, rotuloDoItem],
+  );
+  /** os trechos do que está sendo lido: o pedaço dito, o bloco inteiro ou o artigo inteiro */
+  const trechosDe = useCallback(
+    (alcance: Alcance): TrechoDoBloco[] => {
+      const at = narradorRef.current?.atual;
+      if (!at) return [];
+      const inteiro = (el: HTMLElement): TrechoDoBloco | null => {
+        const n = el.querySelector<HTMLElement>(`:scope > .${CLASSES.txt}`)?.textContent?.length ?? 0;
+        return n ? { i: Number(el.dataset.i), ini: 0, fim: n, inteiro: true } : null;
+      };
+      if (alcance === "artigo" && at.item.art)
+        return blocosAMostra()
+          .filter((el) => artigoDoEl(el) === at.item.art && tipoDe(el) !== "estrutura")
+          .map(inteiro)
+          .filter((x): x is TrechoDoBloco => !!x);
+      const el = elDe(at.item.i);
+      const todo = el ? inteiro(el) : null;
+      const pc = at.item.pecas[at.p];
+      if (alcance === "dispositivo" || !pc || pc.ini < 0) return todo ? [todo] : [];
+      return [{ i: at.item.i, ini: pc.ini, fim: pc.fim, inteiro: !!todo && pc.ini === 0 && pc.fim >= todo.fim }];
+    },
+    [blocosAMostra, artigoDoEl, tipoDe, elDe],
+  );
+  /** vai ao artigo (com estrela, com erro) seguinte, anterior, primeiro ou último; `casa`: o bloco do artigo que vale */
+  const irAoArtigoMarcado = useCallback(
+    (casa: (el: HTMLElement) => boolean, qual: Ordem, nome: string, nenhum: string) => {
+      const els = blocosAMostra().filter(casa);
+      if (!els.length) return responder(nenhum);
+      const at = narradorRef.current?.atual;
+      const aqui = at?.item.i ?? trechoAtual()?.i ?? -1;
+      const artAqui = at?.item.art ?? null;
+      const outro = (el: HTMLElement) => artigoDoEl(el) !== artAqui;
+      const alvo =
+        qual === "primeiro"
+          ? els[0]
+          : qual === "ultimo"
+            ? els.at(-1)
+            : qual === "proximo"
+              ? els.find((el) => Number(el.dataset.i) > aqui && outro(el))
+              : [...els].reverse().find((el) => Number(el.dataset.i) < aqui && outro(el));
+      if (!alvo) return responder(qual === "proximo" ? `Não há ${nome} depois daqui.` : `Não há ${nome} antes daqui.`);
+      if (lerDoIndice(Number(alvo.dataset.i), undefined, true)) avisarRef.current(`${rotulosRef.current.get(artigoDoEl(alvo) ?? "") ?? "Artigo"} · ${els.indexOf(alvo) + 1} de ${els.length}`);
+    },
+    [blocosAMostra, responder, trechoAtual, artigoDoEl, lerDoIndice],
+  );
+  /** dentro do artigo: o parágrafo, o inciso ou a alínea seguinte, o anterior ou o de número dito */
+  const irAoDispositivo = useCallback(
+    (c: Extract<ComandoVoz, { tipo: "dispositivo" }>) => {
+      const item = itemDoArtigo();
+      const NOME = { paragrafo: "parágrafo", inciso: "inciso", alinea: "alínea" }[c.nivel];
+      if (!item?.art || !item.disp) return responder(`Comece a leitura de um artigo para ir a um ${NOME} dele.`);
+      const at = { item };
+      const art = item.art;
+      const segs = item.disp.split(".");
+      const nivelDe = (seg: string) => (/^p/.test(seg) ? "paragrafo" : /^i\d/.test(seg) ? "inciso" : /^a[a-z]/.test(seg) ? "alinea" : null);
+      const doArtigo = blocosAMostra().filter((el) => artigoDoEl(el) === art && el.dataset.disp);
+      if (c.passo) {
+        const lista = c.passo > 0 ? doArtigo.filter((el) => Number(el.dataset.i) > at.item.i) : [...doArtigo.filter((el) => Number(el.dataset.i) < at.item.i)].reverse();
+        // o início de outro dispositivo do nível pedido (o bloco que continua o mesmo dispositivo não conta)
+        const alvo = lista.find((el) => {
+          const d = el.dataset.disp!;
+          if (nivelDe(d.split(".").at(-1)!) !== c.nivel || d === at.item.disp) return false;
+          const antes = el.previousElementSibling as HTMLElement | null;
+          return antes?.dataset.disp !== d;
+        });
+        if (!alvo) return responder(c.passo > 0 ? `Não há ${c.nivel === "alinea" ? "próxima" : "próximo"} ${NOME} neste artigo.` : `Não há ${NOME} anterior neste artigo.`);
+        lerDoIndice(Number(alvo.dataset.i));
+        return;
+      }
+      // o de número dito: o parágrafo do artigo; o inciso do parágrafo em que se está (ou do caput); a alínea do inciso
+      const base = segs[0]!;
+      const par = segs.find((x) => /^p/.test(x));
+      const inc = segs.find((x) => /^i\d/.test(x));
+      const alvoDisp =
+        c.nivel === "paragrafo"
+          ? `${base}.p${c.n}`
+          : c.nivel === "inciso"
+            ? [base, par, `i${c.n}`].filter(Boolean).join(".")
+            : inc
+              ? [base, par, inc, `a${c.n}`].filter(Boolean).join(".")
+              : null;
+      const el = alvoDisp ? doArtigo.find((x) => x.dataset.disp === alvoDisp) : null;
+      const rotuloN = c.nivel === "paragrafo" ? (c.n === "u" ? "único" : `${c.n}º`) : c.n;
+      if (!el) return responder(c.nivel === "alinea" && !inc ? "Vá antes a um inciso: as alíneas são dele." : `Não encontrei ${c.nivel === "alinea" ? "a" : "o"} ${NOME} ${rotuloN} aqui.`);
+      lerDoIndice(Number(el.dataset.i));
+    },
+    [responder, blocosAMostra, artigoDoEl, lerDoIndice, itemDoArtigo],
+  );
   const executar = useCallback(
     (c: ComandoVoz) => {
       // outra lei: a página dela executa o comando quando o texto chegar
@@ -1046,6 +1280,125 @@ export function useOuvir({
           if (!procurarTexto(u.texto, u.artigo, u, c.passo)) responder(`Não encontrei mais “${u.texto}”.`);
           return;
         }
+        case "velocidade": {
+          const antes = prefsRef.current.velocidade;
+          const pedida = c.extremo === "max" ? VELOCIDADE_MAX : c.extremo === "min" ? VELOCIDADE_MIN : (c.valor ?? antes + (c.passo ?? 0));
+          const v = limitar(pedida);
+          const ponta = v === VELOCIDADE_MAX ? " (a máxima)" : v === VELOCIDADE_MIN ? " (a mínima)" : "";
+          if (v === antes) return avisarRef.current(`A velocidade já é ${fmtVel(v)}${ponta}.`);
+          mudarPrefs({ velocidade: v });
+          return avisarRef.current(`Velocidade ${fmtVel(v)}${ponta}.`);
+        }
+        case "volume": {
+          const v = c.extremo === "max" ? 1 : c.extremo === "min" ? 0.2 : Math.round(Math.min(1, Math.max(0.2, c.valor ?? 1)) * 100) / 100;
+          mudarPrefs({ volume: v });
+          return avisarRef.current(`Volume da voz: ${Math.round(v * 100)}%${v === 1 && c.extremo === "max" ? " (para mais, aumente o volume do aparelho)" : ""}.`);
+        }
+        case "tom": {
+          const t = c.passo ? Math.round(Math.min(1.5, Math.max(0.5, prefsRef.current.tom + c.passo * 0.1)) * 100) / 100 : 1;
+          mudarPrefs({ tom: t });
+          return avisarRef.current(c.passo ? `Tom da voz: ${t.toLocaleString("pt-BR")} (algumas vozes não mudam de tom).` : "Tom normal.");
+        }
+        case "info": {
+          if (c.sobre === "velocidade") return responder(`Velocidade ${prefsRef.current.velocidade.toLocaleString("pt-BR")} vezes.`, `Velocidade ${fmtVel(prefsRef.current.velocidade)}.`);
+          if (c.sobre === "volume") return responder(`Volume da voz: ${Math.round(prefsRef.current.volume * 100)} por cento.`, `Volume da voz: ${Math.round(prefsRef.current.volume * 100)}%.`);
+          if (c.sobre === "lei") return responder(`Você está n${sumula ? "as" : "o"} ${nomeDaLei(lei)}.`);
+          const pz = prazoRef.current;
+          if (!pz) return responder("A leitura não tem hora para parar. Diga, por exemplo: parar daqui a 20 minutos.");
+          const min = Math.max(1, Math.ceil((pz.fim - Date.now()) / 60_000));
+          return responder(`A leitura para daqui a ${min} ${min === 1 ? "minuto" : "minutos"}, no fim do trecho.`);
+        }
+        case "grifo":
+          return irAoGrifo(c);
+        case "grifar":
+        case "desgrifar": {
+          const L = leitorRef.current;
+          if (!L) return responder("Aqui não dá para grifar.");
+          const trechos = trechosDe(c.alcance);
+          if (!trechos.length) return responder("Comece a leitura: o trecho que estiver sendo lido é o grifado.");
+          const qual = { artigo: "artigo", dispositivo: "dispositivo", trecho: "trecho" }[c.alcance];
+          if (c.tipo === "desgrifar") {
+            const n = L.desgrifar(trechos);
+            return avisarRef.current(n ? `${n === 1 ? "Grifo apagado" : `${n} grifos apagados`} do ${qual}. Para desfazer, use o Desfazer do menu.` : `Não há grifo seu neste ${qual}.`);
+          }
+          const legenda = L.cores();
+          const cor = c.cor ? corParaGrifar(c.cor, legenda)?.cor : L.corDoMarcador();
+          if (!cor) return responder(c.cor ? `A legenda em uso não tem a cor “${c.cor}”. As cores dela são: ${legenda.map((x) => x.rotulo).join(", ")}.` : "Escolha uma cor da legenda para grifar.");
+          if (!L.grifar(trechos, cor)) return responder("Não deu para grifar este trecho.");
+          const significado = legenda.find((x) => x.cor === cor)?.rotulo;
+          return avisarRef.current(`${qual.charAt(0).toUpperCase()}${qual.slice(1)} grifado${significado ? ` (${significado})` : ""}.`);
+        }
+        case "importante": {
+          const estrelaDe = (el: HTMLElement | null) => el?.querySelector<HTMLButtonElement>(":scope > button[data-estrela]") ?? null;
+          if (c.acao === "marcar" || c.acao === "desmarcar") {
+            const art = itemDoArtigo()?.art;
+            if (!art) return responder("Comece a leitura de um artigo para marcá-lo como importante.");
+            const bloco = blocosAMostra().find((el) => el.dataset.disp === art && estrelaDe(el));
+            const b = estrelaDe(bloco ?? null);
+            if (!b) return responder("Este dispositivo não tem a estrela de importante.");
+            const marcado = b.getAttribute("aria-pressed") === "true";
+            const nomeArt = rotulosRef.current.get(art) ?? "O artigo";
+            if (marcado === (c.acao === "marcar")) return avisarRef.current(`${nomeArt} ${marcado ? "já está" : "não está"} marcado como importante.`);
+            b.click();
+            return avisarRef.current(`${nomeArt}: ${c.acao === "marcar" ? "marcado como importante" : "a estrela saiu"}.`);
+          }
+          return irAoArtigoMarcado((el) => estrelaDe(el)?.getAttribute("aria-pressed") === "true", c.acao, "artigo importante", "Não há artigos marcados como importantes (com a estrela) à mostra.");
+        }
+        case "erro":
+          return irAoArtigoMarcado((el) => el.dataset.comErro === "1", c.qual, "artigo com erro", "Não há artigos com erro à mostra (ligue “Marcar os artigos em que mais errei”, em Leitura).");
+        case "dispositivo":
+          return irAoDispositivo(c);
+        case "pularVarios": {
+          const nar = narrador();
+          const inicio = n?.atual?.item;
+          if (!inicio) return responder("Comece a leitura para pular.");
+          let item: ItemFala = inicio;
+          let k = 0;
+          for (; k < c.n; k++) {
+            const el = elDe(item.i);
+            const prox: ItemFala | null = c.artigo ? nar.artigoVizinho(item, c.passo) : el ? andar(el, c.passo) : null;
+            if (!prox) break;
+            item = prox;
+          }
+          if (!k) return responder(c.passo > 0 ? "Não há mais para onde avançar." : "Não há mais para onde voltar.");
+          desbloquear();
+          lerItem(item, 0, k < c.n ? `Só deu para ${c.passo > 0 ? "avançar" : "voltar"} ${k}.` : undefined);
+          return;
+        }
+        case "pararEm":
+          pararDepoisDe(c.minutos);
+          return avisarRef.current(c.minutos === null ? "A leitura não tem mais hora para parar." : `A leitura para daqui a ${c.minutos} ${c.minutos === 1 ? "minuto" : "minutos"}, no fim do trecho.`);
+        case "aoFimDoArtigo":
+          mudarPrefs({ aoFimDoArtigo: c.modo });
+          return avisarRef.current(
+            c.modo === "repetir" ? `Repetindo ${sumula ? "a súmula" : "o artigo"} sem parar (diga “leitura contínua” para seguir).` : c.modo === "parar" ? `A leitura pausa no fim de cada ${sumula ? "súmula" : "artigo"}.` : "Leitura contínua.",
+          );
+        case "lerTambem": {
+          mudarPrefs({ [c.opcao]: c.ligar } as Partial<PrefsOuvir>);
+          const nome = { titulos: "os títulos e capítulos", rubricas: "o nome do crime acima do artigo", notas: "as anotações entre parênteses" }[c.opcao];
+          return avisarRef.current(`${c.ligar ? "Lendo também" : "Sem ler"} ${nome}.`);
+        }
+        case "pausaEntre":
+          mudarPrefs({ pausaArtigo: c.ms });
+          return avisarRef.current(c.ms ? `Pausa ${c.ms <= 700 ? "curta" : c.ms <= 1500 ? "média" : "longa"} entre ${sumula ? "as súmulas" : "os artigos"}.` : `Sem pausa entre ${sumula ? "as súmulas" : "os artigos"}.`);
+        case "acompanhar":
+          mudarPrefs({ acompanhar: c.ligar });
+          if (c.ligar) voltarAoTrecho();
+          return avisarRef.current(c.ligar ? "A tela acompanha a leitura." : "A tela não rola mais com a leitura.");
+        case "voltarAoTrecho":
+          return voltarAoTrecho();
+        case "lerDaTela":
+          return lerDaTela();
+        case "desligarComandos":
+          return alternarComandos(false);
+        case "leitor": {
+          const L = leitorRef.current;
+          if (!L) return responder("Este comando é do leitor das leis.");
+          L.comando(c.id, c.ligar);
+          // "ler de onde parei": o leitor vai até lá, e a leitura começa dali
+          if (c.id === "parei") window.setTimeout(() => lerDaTela(), 500);
+          return;
+        }
       }
     },
     [
@@ -1070,6 +1423,19 @@ export function useOuvir({
       artigoDoAlvo,
       procurarTexto,
       posicaoAtual,
+      irAoGrifo,
+      trechosDe,
+      blocosAMostra,
+      irAoArtigoMarcado,
+      irAoDispositivo,
+      itemDoArtigo,
+      elDe,
+      andar,
+      lerItem,
+      pararDepoisDe,
+      voltarAoTrecho,
+      lerDaTela,
+      alternarComandos,
     ],
   );
   const executarRef = useRef(executar);
@@ -1134,6 +1500,8 @@ export function useOuvir({
     const n = narradorRef.current;
     const retomar = n?.estado === "lendo";
     if (retomar) n!.pausar();
+    // o microfone em pausa pelos silêncios volta a ouvir (e a janela abre quando ele estiver ouvindo)
+    escutaRef.current?.acordar();
     janela.current = { aberta: false, retomar, timer: 0 };
     setEsperandoComando(true);
     setAtivo(true);
@@ -1157,8 +1525,19 @@ export function useOuvir({
       if (!naJanela && !prefsRef.current.comandos) return;
       const agora = Date.now();
       eco.current = eco.current.filter((x) => agora - x.t < JANELA_ECO_MS);
+      const ditas = new Set(eco.current.flatMap((x) => x.palavras));
+      // o microfone está ouvindo a leitura (pelo alto-falante): uma frase de 3 palavras ou mais, quase toda do que a voz disse.
+      // Sem eco assim há um minuto (o fone de ouvido, ou o microfone fechado enquanto a voz lê), as palavras da leitura não
+      // barram os comandos: "parágrafo 2" vale mesmo logo depois de a voz ler "parágrafo segundo"
+      if (
+        alternativas.some((a) => {
+          const ps = palavrasDe(a).filter((x) => x.length > 2);
+          return ps.length >= 3 && ps.filter((x) => ditas.has(x)).length / ps.length >= 0.7;
+        })
+      )
+        ecoOuvidoEm.current = agora;
       // na janela, a leitura está pausada: não há eco a temer
-      const recentes = naJanela ? new Set<string>() : new Set(eco.current.flatMap((x) => x.palavras));
+      const recentes = naJanela || agora - ecoOuvidoEm.current > ECO_OUVIDO_MS ? new Set<string>() : ditas;
       // ainda falando: a janela espera a frase acabar
       if (naJanela && !final) prazoDaJanela(4000);
       // a pessoa começou um comando: a leitura pausa já, para ela falar sem a voz por cima (e o microfone ouvir melhor)
@@ -1217,7 +1596,7 @@ export function useOuvir({
       setEscutaAvulsa(false);
     };
     const p = prefsRef.current;
-    const e = new Escuta(ouviu, aoEstado, { microfone: p.microfone, sensibilidade: p.sensibilidade, aoMicrofone: setMicrofoneEmUso });
+    const e = new Escuta(ouviu, aoEstado, { microfone: p.microfone, sensibilidade: p.sensibilidade, naLeitura: p.microfoneNaLeitura, aoMicrofone: setMicrofoneEmUso });
     escutaRef.current = e;
     e.ligar();
     return () => {
@@ -1225,8 +1604,30 @@ export function useOuvir({
       escutaRef.current = null;
       estadoEscutaRef.current = "desligada";
     };
-  }, [ouvindoComandos, prefs.microfone, prefs.sensibilidade, mudarPrefs, abrirJanela, fecharJanela, prazoDaJanela, encerrarTentativa]);
+  }, [ouvindoComandos, prefs.microfone, prefs.sensibilidade, prefs.microfoneNaLeitura, mudarPrefs, abrirJanela, fecharJanela, prazoDaJanela, encerrarTentativa]);
   const nivelDoMicrofone = useCallback(() => escutaRef.current?.nivel() ?? null, []);
+  const somDoMicrofone = useCallback(() => escutaRef.current?.atividade() ?? null, []);
+  const comando = useCallback((c: ComandoVoz) => executarRef.current(c), []);
+  const previaAdiante = useCallback(
+    (n: number, artigo: boolean): string | null => {
+      const nar = narradorRef.current;
+      let item = nar?.atual?.item ?? null;
+      if (!nar || !item) return null;
+      const passo = n > 0 ? 1 : -1;
+      for (let k = 0; k < Math.abs(n); k++) {
+        const el = elDe(item.i);
+        const prox: ItemFala | null = artigo ? nar.artigoVizinho(item, passo) : el ? andar(el, passo) : null;
+        if (!prox) break;
+        item = prox;
+      }
+      // o artigo pelo número, com o nome do crime quando a leitura começa por ele ("Art. 123 · Infanticídio")
+      const nome = artigo && item.art ? rotulosRef.current.get(item.art) : null;
+      if (!nome) return rotuloDoItem(item);
+      return item.disp ? nome : `${nome} · ${rotuloDoItem(item)}`;
+    },
+    [elDe, andar, rotuloDoItem],
+  );
+  const acordarMicrofone = useCallback(() => escutaRef.current?.acordar(), []);
   useEffect(() => {
     if (ativo) return;
     fecharJanela(false);
@@ -1351,7 +1752,11 @@ export function useOuvir({
     alternarComandos,
     microfoneEmUso,
     nivelDoMicrofone,
+    somDoMicrofone,
+    comando,
+    previaAdiante,
     ouvirUmComando,
+    acordarMicrofone,
     esperandoComando,
   };
 }
