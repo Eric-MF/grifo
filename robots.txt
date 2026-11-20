@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /print/
+Disallow: /treino/resultado/
+Disallow: /leis/minha-leitura/
+
+Host: https://grifo.net.br
+Sitemap: https://grifo.net.br/sitemap.xml

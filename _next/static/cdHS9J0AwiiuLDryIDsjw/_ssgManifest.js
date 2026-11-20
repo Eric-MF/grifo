@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fjogos\u002F[slug]","\u002Fleis\u002F[diploma]","\u002Fleis\u002Fsumulas\u002F[tribunal]","\u002Fprint\u002Fcaderno\u002F[exame]","\u002Fprint\u002Fgabarito\u002F[exame]","\u002Fsimulados\u002F[exame]","\u002Fsimulados\u002F[exame]\u002Fresultado"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
