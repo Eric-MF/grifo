@@ -149,12 +149,19 @@ await p.evaluate(() => {
     for (const m of ms) if (m.target.dataset?.falando) window.__lidos.push(m.target.getAttribute("data-disp"));
   }).observe(document.body, { attributes: true, subtree: true, attributeFilter: ["data-falando"] });
 });
-/** fala o comando e devolve o primeiro dispositivo lido depois dele */
-const irPorVoz = async (t) => {
-  const k = await p.evaluate(() => window.__lidos.length);
+/**
+ * fala o comando e devolve o primeiro dispositivo lido depois dele. Com `outro` (o destino é com certeza outro bloco: os
+ * grifos, os artigos), as marcações do bloco que estava sendo lido não contam: o pedaço seguinte dele pode ser marcado
+ * logo antes do salto. Sem `outro`, contam ("parágrafo 2" dito já no § 2º lê o § 2º de novo).
+ */
+const irPorVoz = async (t, { outro = false } = {}) => {
+  const [k, antes] = await p.evaluate(() => [window.__lidos.length, document.querySelector("[data-falando]")?.getAttribute("data-disp") ?? null]);
   await falar(t);
-  await p.waitForFunction((k) => window.__lidos.length > k, k, { timeout: 4000 }).catch(() => {});
-  return p.evaluate((k) => window.__lidos[k] ?? null, k);
+  const destino = ([k, antes]) => window.__lidos.slice(k).find((d) => d !== antes) ?? null;
+  const primeiro = ([k]) => window.__lidos[k] ?? null;
+  const ler = outro ? destino : primeiro;
+  await p.waitForFunction(ler, [k, antes], { timeout: 4000 }).catch(() => {});
+  return p.evaluate(ler, [k, antes]);
 };
 /** o prazo escolhido nos ajustes (o botão marcado em "Parar sozinho") */
 const prefsPrazo = async () => {
@@ -215,10 +222,10 @@ checar(
   (await p.locator(`[data-i][data-disp="${grifado}"] mark[data-m], [data-i][data-disp="${grifado}"][data-marca-bloco]`).count()) > 0,
   `o grifo feito pela voz não aparece no trecho que estava sendo lido (${grifado})`,
 );
-lido = await irPorVoz("primeiro grifo");
+lido = await irPorVoz("primeiro grifo", { outro: true });
 const noPrimeiro = await p.evaluate((d) => !!document.querySelector(`[data-i][data-disp="${d}"] mark[data-m], [data-i][data-disp="${d}"] mark[data-pronto]`), lido);
 checar(noPrimeiro, `“primeiro grifo” não foi a um trecho grifado: ${lido}`);
-lido = await irPorVoz("meu próximo grifo");
+lido = await irPorVoz("meu próximo grifo", { outro: true });
 checar(lido === grifado, `“meu próximo grifo” não foi ao grifo feito pela voz (${grifado}): ${lido}`);
 await falar("pausa");
 await falar("apaga o grifo");
@@ -236,7 +243,7 @@ const ordem = await p.evaluate(() =>
   [...document.querySelectorAll("[data-i][data-disp]")].map((e) => e.getAttribute("data-disp").split(".")[0]).filter((d, k, l) => /^art/.test(d) && l.indexOf(d) === k),
 );
 const deOnde = (await lendoDisp())?.split(".")[0];
-lido = await irPorVoz("pula três artigos");
+lido = await irPorVoz("pula três artigos", { outro: true });
 const esperado = ordem[ordem.indexOf(deOnde) + 3];
 checar(lido?.split(".")[0] === esperado, `“pula três artigos” não foi do ${deOnde} ao ${esperado}: ${lido}`);
 

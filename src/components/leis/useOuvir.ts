@@ -5,6 +5,7 @@
 // tocado, destaca o trecho dito e rola junto. Com os comandos de voz ligados, o microfone ouve "pausa", "próximo artigo",
 // "último artigo do título 2", "procura motivo torpe", "ir para o RESE"… (e "… do CPP" abre a outra lei).
 import { type RefObject, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { AVISO_VOZ, LINK_AVISO_VOZ, primeiraVezDoMicrofone } from "@/lib/fala/aviso-voz";
 import { avisoDaTela, useTelaAcesa, type EstadoTela } from "@/lib/tela-acesa";
 import { gravarJSON, lerJSON } from "@/lib/storage";
 import type { Bloco } from "@/lib/leis/linha-do-tempo";
@@ -732,6 +733,9 @@ export function useOuvir({
       if (!v) return avisarRef.current("Comandos de voz desligados.");
       // a barra abre junto: com ela aberta, o microfone ouve (e “lê” começa a leitura)
       setAtivo(true);
+      // na primeira vez, o aviso diz para onde vai o áudio (a privacidade da voz)
+      if (primeiraVezDoMicrofone())
+        return avisarRef.current(`Comandos de voz ligados. ${AVISO_VOZ}`, { rotulo: "Privacidade", fazer: () => window.open(LINK_AVISO_VOZ, "_blank", "noopener") });
       avisarRef.current("Comandos de voz ligados: diga “pausa”, “continua”, “próximo artigo”, “ir para o artigo 121”…");
     },
     [mudarPrefs],

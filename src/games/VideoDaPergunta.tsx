@@ -149,6 +149,8 @@ export function VideoDaPergunta({ seed, aoGanharMoedas }: { seed: number; aoGanh
       if (!vivo) return;
       player = new YT.Player(alvo, {
         videoId: video.id,
+        // o modo de privacidade reforçada do YouTube: sem cookies até a pessoa tocar o vídeo
+        host: "https://www.youtube-nocookie.com",
         width: "100%",
         height: "100%",
         playerVars: { autoplay: 1, rel: 0, playsinline: 1, modestbranding: 1, fs: 1 },

@@ -72,3 +72,27 @@ export const ADS = {
  * (content/videos-youtube.json).
  */
 export const CANAL_VIDEOS = { nome: "Grifo", id: "UCjUg50FbIlF7tXXFzLVz7gw", url: "https://www.youtube.com/@grifo-net-br" } as const;
+
+/** Quem responde pelos dados pessoais do site (o controlador, na LGPD) e o canal dos pedidos de privacidade. */
+export const CONTROLADOR = { nome: "Eric Mussi Fernandes", email: "contatos.grifo@gmail.com" } as const;
+/** A data da versão da política de privacidade (/privacidade/). */
+export const PRIVACIDADE_ATUALIZADA = "2026-11-25";
+
+/**
+ * O Google Tag Manager do site. Só existe no domínio publicado (grifo.net.br): o servidor de desenvolvimento, os
+ * testes e as prévias locais não mandam visitas para o Google. E só carrega depois que a pessoa aceita os cookies de
+ * estatística (o aviso de cookies): sem a escolha, ou recusando, nada vai para o Google. Vazio desliga a tag.
+ */
+export const GTM_ID = "GTM-58FT9VPR";
+export const DOMINIOS_COM_TAG: readonly string[] = [SITE.dominio, `www.${SITE.dominio}`];
+/** Onde fica a escolha do aviso de cookies: "aceito" ou "recusado" (texto puro, lido também pelo script do <head>). */
+export const CHAVE_CONSENTIMENTO = "grifo:consentimento";
+
+/**
+ * O script da tag (no <head>): o Modo de consentimento do Google começa negando tudo; com a escolha "aceito" guardada,
+ * libera as estatísticas e carrega o contêiner. `window.__grifoTag(escolha)` aplica uma escolha nova sem recarregar.
+ * Os cookies de anúncio ficam sempre negados (o site não tem anúncios).
+ */
+export const GTM_SCRIPT = GTM_ID
+  ? `(function(){if(${JSON.stringify(DOMINIOS_COM_TAG)}.indexOf(location.hostname)<0)return;var w=window,d=document;w.dataLayer=w.dataLayer||[];function gtag(){w.dataLayer.push(arguments);}w.gtag=gtag;var c=null;try{c=localStorage.getItem(${JSON.stringify(CHAVE_CONSENTIMENTO)})}catch(_){}gtag("consent","default",{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:c==="aceito"?"granted":"denied"});var feito=false;function carregar(){if(feito)return;feito=true;gtag("js",new Date());w.dataLayer.push({"gtm.start":new Date().getTime(),event:"gtm.js"});var s=d.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtm.js?id=${GTM_ID}";d.head.appendChild(s);}w.__grifoTag=function(e){gtag("consent","update",{analytics_storage:e==="aceito"?"granted":"denied"});if(e==="aceito")carregar();};if(c==="aceito")carregar();})();`
+  : "";

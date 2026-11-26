@@ -11,7 +11,7 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const url = (caminho: string) => `${SITE.url}${caminho}`;
-  const fixas = ["/", "/provas/", "/provas/todos/", "/simulados/", "/estatisticas/", "/leis/", "/vademecum/", "/jogos/", "/treino/", "/verificar/"];
+  const fixas = ["/", "/provas/", "/provas/todos/", "/simulados/", "/estatisticas/", "/leis/", "/vademecum/", "/jogos/", "/treino/", "/verificar/", "/privacidade/"];
   return [
     ...fixas.map((c) => ({ url: url(c), changeFrequency: "weekly" as const, priority: c === "/" ? 1 : 0.8 })),
     ...examesCorrigiveis().map(({ exame }) => ({ url: url(`/simulados/${exame}/`), changeFrequency: "monthly" as const, priority: 0.6 })),

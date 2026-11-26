@@ -904,9 +904,27 @@ export function Leitor({
     return versoesPedidas.current;
   }, [lei, url, original]);
 
+  // o aviso também fecha com um toque fora dele ou com Esc (o toque segue para onde foi: não é engolido)
+  const toastRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!aviso) return;
-    const t = setTimeout(() => setAviso(null), 6000);
+    const fora = (e: PointerEvent) => {
+      if (!toastRef.current?.contains(e.target as Node)) setAviso(null);
+    };
+    const esc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setAviso(null);
+    };
+    document.addEventListener("pointerdown", fora, true);
+    document.addEventListener("keydown", esc);
+    return () => {
+      document.removeEventListener("pointerdown", fora, true);
+      document.removeEventListener("keydown", esc);
+    };
+  }, [aviso]);
+  useEffect(() => {
+    if (!aviso) return;
+    // os avisos longos (o da privacidade da voz) ficam mais: uns 15 caracteres por segundo, de 6 a 16 s
+    const t = setTimeout(() => setAviso(null), Math.min(16_000, Math.max(6000, aviso.texto.length * 65)));
     return () => clearTimeout(t);
   }, [aviso]);
 
@@ -3681,8 +3699,8 @@ export function Leitor({
       )}
 
       {aviso && (
-        <div className={styles.toast} role="status">
-          {aviso.texto}
+        <div ref={toastRef} className={styles.toast} role="status">
+          <span className={styles.toastTexto}>{aviso.texto}</span>
           {aviso.acao && (
             <button
               type="button"
@@ -3695,6 +3713,9 @@ export function Leitor({
               {aviso.acao.rotulo}
             </button>
           )}
+          <button type="button" className={styles.toastFechar} aria-label="Fechar o aviso" onClick={() => setAviso(null)}>
+            ×
+          </button>
         </div>
       )}
     </div>

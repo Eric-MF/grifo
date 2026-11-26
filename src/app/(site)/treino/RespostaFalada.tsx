@@ -5,12 +5,14 @@
 // com os mesmos gestos) e os ajustes da voz e do microfone. A escuta em si fica no Treino (uma só, de uma questão para a outra); a interpretação
 // da fala, em src/quiz/voz.ts.
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
+import Link from "next/link";
 import { createPortal } from "react-dom";
 import { AnelDoSom, BotaoGesto, Camada, CamadaDosGestos, type ItemDoMenu } from "@/components/BotaoGesto";
 import { BotaoDaVoz, fmtVelocidade, GESTOS_DO_TREINO, itensDoMicrofone, MENU_SEM_TOQUE } from "@/components/leis/ControlesDaVoz";
 import { MicrofoneDosComandos } from "@/components/leis/MicrofoneDosComandos";
 import leitor from "@/components/leis/leitor.module.css";
 import ouvirCss from "@/components/leis/ouvir.module.css";
+import { AVISO_VOZ, LINK_AVISO_VOZ } from "@/lib/fala/aviso-voz";
 import type { EstadoEscuta } from "@/lib/fala/escuta";
 import { vozesEmPortugues, type EstadoNarrador } from "@/lib/fala/narrador";
 import { VELOCIDADE_MAX, VELOCIDADE_MIN, VOLUME_MIN, type PrefsDaVoz } from "@/lib/fala/prefs-voz";
@@ -73,7 +75,12 @@ export function OpcaoVoz({
           <strong>Responder falando</strong>
           <small>
             {disponivel
-              ? "Diga a letra da alternativa ou a resposta (a peça e o artigo, ou o ponto central); “responder” envia e “próxima” segue. A tela do celular não apaga enquanto o microfone ouve."
+              ? (
+                <>
+                  Diga a letra da alternativa ou a resposta (a peça e o artigo, ou o ponto central); “responder” envia e “próxima” segue. A tela do celular
+                  não apaga enquanto o microfone ouve. {AVISO_VOZ} <Link href={LINK_AVISO_VOZ}>Privacidade</Link>
+                </>
+              )
               : "Este navegador não reconhece fala: use o Chrome, o Edge ou o Safari."}
           </small>
         </span>

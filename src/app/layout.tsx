@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Atkinson_Hyperlegible, Carlito, Cormorant_Garamond, Inter } from "next/font/google";
-import { IMAGEM_COMPARTILHAR, SITE } from "@/config/site";
+import { GTM_SCRIPT, IMAGEM_COMPARTILHAR, SITE } from "@/config/site";
 import { PREFS_BOOT_SCRIPT } from "@/lib/prefs";
 import "./globals.css";
 
@@ -53,6 +53,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: PREFS_BOOT_SCRIPT }} />
+        {GTM_SCRIPT && <script dangerouslySetInnerHTML={{ __html: GTM_SCRIPT }} />}
       </head>
       <body>{children}</body>
     </html>

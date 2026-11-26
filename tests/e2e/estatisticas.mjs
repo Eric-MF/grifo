@@ -135,7 +135,8 @@ await p.keyboard.press("Escape");
 
 // a ficha da peça abre e fecha
 await p.locator("[data-andar='1']").first().click();
-const ficha = p.getByRole("dialog");
+// a ficha, e não a prévia do artigo, que também é um diálogo e pode estar aberta por cima dela
+const ficha = p.locator("dialog[aria-labelledby='ficha-titulo']");
 checar(await ficha.isVisible(), "a ficha da peça não abriu");
 checar(/593/.test(await ficha.innerText()) && /5 dias/.test(await ficha.innerText()), "a ficha da Apelação não tem o art. 593 e o prazo");
 // a prévia do fundamento abre por cima da ficha, e o Esc fecha uma de cada vez
@@ -143,8 +144,10 @@ await ficha.locator("a[data-lei]").first().click();
 await previa.waitFor({ timeout: 10_000 }).catch(() => {});
 checar(await previa.isVisible(), "o fundamento da ficha não abriu a prévia do artigo");
 await p.keyboard.press("Escape");
+await previa.waitFor({ state: "hidden", timeout: 2000 }).catch(() => {});
 checar(!(await previa.isVisible()) && (await ficha.isVisible()), "o 1º Esc não fechou só a prévia");
 await p.keyboard.press("Escape");
+await ficha.waitFor({ state: "hidden", timeout: 2000 }).catch(() => {});
 checar(!(await ficha.isVisible()), "Esc não fechou a ficha");
 
 // a sequência leva ao exame na lista

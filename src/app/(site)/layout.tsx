@@ -1,3 +1,4 @@
+import { AvisoCookies } from "@/components/AvisoCookies";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PopupArtigos } from "@/components/leis/PopupArtigos";
@@ -14,6 +15,7 @@ export default function SiteLayout({ children }: Readonly<{ children: React.Reac
       <SiteFooter />
       <PopupArtigos />
       <RegistroDeUso />
+      <AvisoCookies />
     </>
   );
 }

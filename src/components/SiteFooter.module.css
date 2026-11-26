@@ -1,6 +1,8 @@
 .footer { background: var(--navy); color: #dbe4ee; margin-top: 4rem; }
 :global(:root[data-theme="contraste"]) .footer { background: #000; border-top: 1px solid #fff; }
 .footer a { color: #fff; }
+/* o botão "Cookies" (reabre o aviso) com cara de link, como os vizinhos */
+.botaoLink { padding: 0; border: 0; background: none; font: inherit; color: #fff; cursor: pointer; text-decoration: underline; }
 .inner { padding-block: 2.5rem; display: grid; gap: 1.25rem; }
 .brand { display: flex; align-items: center; gap: 0.8rem; color: var(--gold); }
 .brand strong { font-family: var(--font-title); font-size: 1.5rem; color: #fff; }

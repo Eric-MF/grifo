@@ -225,7 +225,11 @@ checar(await esperarDito(/^Letra á:/, k), "a questão que veio sozinha não foi
 await p.evaluate(() => (window.__fala.ms = 8));
 q = await questao();
 await p.waitForTimeout(300);
-checar(await p.evaluate(() => !!window.__fala.atual), "a questão nova não começou a ser lida");
+// lendo, ou já lida inteira (a voz falsa, ligeira, pode ter chegado ao fim): o “Letra á:” acima mostrou que ela foi lida
+checar(
+  await p.evaluate((k) => !!window.__fala.atual || window.__fala.ditos.slice(k).some((t) => /^Letra á:/.test(t)), k),
+  "a questão nova não começou a ser lida",
+);
 // a leitura recomeça devagar, do caso (a da questão que veio sozinha, ligeira, já pode estar no fim)
 await falar("ler a questão");
 await p.waitForTimeout(300);

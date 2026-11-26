@@ -196,8 +196,20 @@
 .toast {
   position: fixed; left: 50%; bottom: calc(92px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 45;
   display: flex; gap: 0.75rem; align-items: center; padding: 0.6rem 1rem; border-radius: 999px; background: var(--text); color: var(--bg);
-  font-size: 0.88rem; box-shadow: 0 10px 30px rgb(0 0 0 / 0.25); max-width: calc(100vw - 32px);
+  font-size: 0.88rem; box-shadow: 0 10px 30px rgb(0 0 0 / 0.25); max-width: min(36rem, calc(100vw - 32px));
+  /* left: 50% deixaria só meia tela para o texto: o aviso longo (o da privacidade da voz) quebra na largura toda */
+  width: max-content; line-height: 1.4;
 }
+/* o aviso de várias linhas perde a cara de pílula */
+.toast:has(> .link) { border-radius: 18px; }
+.toast { padding-right: 0.35rem; }
+.toastTexto { flex: 1 1 auto; min-width: 0; }
+/* o × de fechar: alvo de toque de 40px, sem pesar no desenho */
+.toastFechar {
+  flex: none; display: grid; place-items: center; width: 40px; height: 40px; margin: -0.4rem 0; border: 0; border-radius: 50%;
+  background: none; color: inherit; font: inherit; font-size: 1.35rem; line-height: 1; opacity: 0.75; cursor: pointer;
+}
+.toastFechar:hover, .toastFechar:focus-visible { opacity: 1; background: color-mix(in srgb, var(--bg) 15%, transparent); }
 .toast .link { color: inherit; }
 /* com a barra do Ouvir embaixo, o aviso sobe para cima dela */
 .leitor[data-ouvindo="1"] .toast { bottom: calc(200px + env(safe-area-inset-bottom)); }

@@ -6,6 +6,7 @@
 // pelos trechos e artigos, a velocidade e o volume), para não precisar abrir os ajustes. O motor é useOuvir.
 import { useEffect, useState, type CSSProperties, type FormEvent, type ReactNode } from "react";
 import { AnelDoSom, BotaoGesto, Camada, CamadaDosGestos, type Deslizar, type ItemDoMenu } from "@/components/BotaoGesto";
+import { AVISO_VOZ } from "@/lib/fala/aviso-voz";
 import { ouveMicrofoneEscolhido } from "@/lib/fala/escuta";
 import { avisoDaTela, telaPodeFicarAcesa } from "@/lib/tela-acesa";
 import { COMANDOS_FALADOS } from "@/lib/fala/comandos-voz";
@@ -605,7 +606,7 @@ export function AjustesOuvir({ ouvir, sumula, fecharPainel }: { ouvir: Ouvir; su
               tipo="checkbox"
               marcada={prefs.comandos}
               titulo="Ouvir comandos pelo microfone"
-              dica={prefs.comandos ? ESCUTA[ouvir.escuta] : "Para controlar sem as mãos: o navegador pede o microfone na primeira vez."}
+              dica={prefs.comandos ? ESCUTA[ouvir.escuta] : `Para controlar sem as mãos: o navegador pede o microfone na primeira vez. ${AVISO_VOZ}`}
               onChange={(v) => ouvir.alternarComandos(v)}
             />
             <MicrofoneDosComandos

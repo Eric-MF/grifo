@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CONTATO, linkContato, NAV, SITE } from "@/config/site";
+import { BotaoCookies } from "./AvisoCookies";
 import { Logo } from "./Logo";
 import styles from "./SiteFooter.module.css";
 
@@ -22,6 +23,8 @@ export function SiteFooter() {
             </Link>
           ))}
           <Link href="/verificar/">Verificar nota</Link>
+          <Link href="/privacidade/">Privacidade</Link>
+          <BotaoCookies className={styles.botaoLink} />
         </nav>
         <p className={styles.small}>
           Sugestões: <a href={linkContato("sugestao")}>{CONTATO.sugestao}</a> · Erros: <a href={linkContato("erro")}>{CONTATO.erro}</a>
