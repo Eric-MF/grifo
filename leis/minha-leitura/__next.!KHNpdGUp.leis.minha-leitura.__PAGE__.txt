@@ -1,0 +1,25 @@
+1:"$Sreact.fragment"
+2:I[98500,["8500","static/chunks/8500-01a63dafd809e317.js","7056","static/chunks/7056-80278fbe637b7bdd.js","2149","static/chunks/2149-67ee857a30e1e500.js","8265","static/chunks/8265-77ab5c2564db8153.js","9700","static/chunks/9700-af5600d07c1a9c4c.js","92","static/chunks/app/(site)/leis/minha-leitura/page-f2a8c3a0021b965d.js"],""]
+3:I[50458,["8500","static/chunks/8500-01a63dafd809e317.js","7056","static/chunks/7056-80278fbe637b7bdd.js","2149","static/chunks/2149-67ee857a30e1e500.js","8265","static/chunks/8265-77ab5c2564db8153.js","9700","static/chunks/9700-af5600d07c1a9c4c.js","92","static/chunks/app/(site)/leis/minha-leitura/page-f2a8c3a0021b965d.js"],"MinhaLeitura"]
+4:I[90484,[],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[90484,[],"ViewportBoundary"]
+a:I[90484,[],"MetadataBoundary"]
+b:I[86869,[],"IconMark"]
+d:I[57121,[],""]
+e:I[74581,[],""]
+:HL["/_next/static/css/728eee51acee2366.css","style"]
+:HL["/_next/static/css/d35b1c03385f4fec.css","style"]
+8:X
+10:X
+10:C
+0:{"buildId":"P2GprlNnOxlXcGNWj-S7p","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"container section","children":[["$","span",null,{"className":"eyebrow","children":["$","$L2",null,{"href":"/leis/","children":"Vade Mecum"}]}],["$","h1",null,{"children":"Minha leitura"}],["$","p",null,{"className":"lead","children":"Os artigos que você mais errou no treino, nos jogos e nos simulados, mais os que você marcou como importantes (☆ no leitor). Escolha o nível de erro e o período; tudo fica só no seu navegador."}],["$","$L3",null,{}]]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/728eee51acee2366.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/d35b1c03385f4fec.css","precedence":"next"}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#f7f4ee","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#03112c","media":"(prefers-color-scheme: dark)"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Minha leitura · Grifo"}],["$","meta","1",{"name":"description","content":"Os artigos que você mais erra no treino, nos jogos e nos simulados, para ler na lei seca."}],["$","meta","2",{"property":"og:title","content":"Grifo · Aprovação na 2ª Fase OAB – Penal"}],["$","meta","3",{"property":"og:description","content":"Provas anteriores, gabaritos, simulados com correção automática e jogos para a 2ª fase da OAB em Direito Penal."}],["$","meta","4",{"property":"og:site_name","content":"Grifo"}],["$","meta","5",{"property":"og:locale","content":"pt_BR"}],["$","meta","6",{"property":"og:image","content":"https://grifo.net.br/compartilhar-1200x630.jpg"}],["$","meta","7",{"property":"og:image:width","content":"1200"}],["$","meta","8",{"property":"og:image:height","content":"630"}],["$","meta","9",{"property":"og:image:alt","content":"Grifo · 2ª fase OAB · Direito Penal"}],["$","meta","10",{"property":"og:type","content":"website"}],["$","meta","11",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","12",{"name":"twitter:title","content":"Grifo · Aprovação na 2ª Fase OAB – Penal"}],["$","meta","13",{"name":"twitter:description","content":"Provas anteriores, gabaritos, simulados com correção automática e jogos para a 2ª fase da OAB em Direito Penal."}],["$","meta","14",{"name":"twitter:image","content":"https://grifo.net.br/compartilhar-1200x630.jpg"}],["$","link","15",{"rel":"icon","href":"/icon.svg?8676b351d0439d15","type":"image/svg+xml","sizes":"any"}],["$","link","16",{"rel":"apple-touch-icon","href":"/apple-icon.png?a92a82220ec88790","type":"image/png","sizes":"180x180"}],["$","$Lb","17",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":"$@c","staleTime":"$8","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Ld",null,{"parallelRouterKey":"children","template":["$","$Le",null,{}]}]]}],"isPartial":"$@f","staleTime":"$8","varyParams":"$10"},{"rsc":["$","$1","c",{"children":[null,["$","$Ld",null,{"parallelRouterKey":"children","template":["$","$Le",null,{}]}]]}],"isPartial":"$@11","staleTime":"$8","varyParams":"$10"}],"isUpgradeableISRFallback":false,"a":"$@12","rootVaryParams":null,"needsRuntimeRequest":"$@13"}
+6:null
+13:true
+8:300
+8:C
+12:0
+c:"$undefined"
+f:"$undefined"
+11:"$undefined"
+7:"$undefined"

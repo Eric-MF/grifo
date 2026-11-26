@@ -1,0 +1,10 @@
+:HL["/_next/static/media/7b89a4fd5e90ede0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/846a71793ca31e40-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/9816a0e0ed309b6c-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/bc08e10e1c60a660-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/bc8fc1be4088a964-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/d1691339a996982e.css","style"]
+:HL["/_next/static/css/d39fdf564f8323e1.css","style"]
+:HL["/img/logo-grifo-em-progresso.svg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"print","param":null,"prefetchHints":4192,"slots":{"children":{"name":"gabarito","param":null,"prefetchHints":4192,"slots":{"children":{"name":"exame","param":{"type":"d","key":"42","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"P2GprlNnOxlXcGNWj-S7p"}
